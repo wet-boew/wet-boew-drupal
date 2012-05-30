@@ -6,7 +6,7 @@
 
 The WET Distribution now uses Drush Make for rapid built out of the Drupal codebase. A drush make file is similar to "ant script" which allows for us to just host the code that we are developing (Installation Profile and Custom Modules, Features, and Themes) on GitHub. Any user who has Drush installed can then query this GitHub repository at the specified make file location (steps outlined below) and can then perform a build out of both the Drupal Core package + and various Contributed Modules hosted on Drupal.org.
 
-If you do not wish to compile Drupal and its various packages we host the complete codebase at: [Drupal Pre-Built](https://github.com/Web-Experience-Toolkit/Drupal7-WET-Distro-Compiled). It should be noted that this repository will only be updated on a monthly basis.
+If you do not wish to compile Drupal and its various packages we host the complete codebase at: [Drupal Pre-Built](https://github.com/sylus/wet-boew-drupal-compiled). It should be noted that this repository will only be updated on a monthly basis.
 
 ## Linux, Mac OSX, etc
 
