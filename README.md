@@ -16,7 +16,7 @@ If you do not wish to compile Drupal and its various packages we host the comple
 >
 > 2. Perform the build out procedure by typing:
 <pre>
-drush make --no-gitinfofile --working-copy https://github.com/Web-Experience-Toolkit/Drupal7-WET-Distro/raw/master/distro.build &lt;directory_name&gt;
+drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.build &lt;directory_name&gt;
 </pre>
 >
 > 3. Rapid Installation (via Drush):
@@ -41,11 +41,7 @@ drush si webexp --db-url=mysql://&lt;username&gt;:&lt;password&gt;@&lt;domain&gt
 >
 > 3. Build the complete Drupal installation software profile using the following command on the Bash command promprt.
 <pre>
-drush make --no-gitinfofile --working-copy https://github.com/Web-Experience-Toolkit/Drupal7-WET-Distro/raw/7.x-1.0.dev/distro.build &lt;directory_name&gt;
-</pre>
-> Note in this example, that the branch name is included. For the master branch use this command instead.
-<pre>
-drush make --no-gitinfofile --working-copy https://github.com/Web-Experience-Toolkit/Drupal7-WET-Distro/raw/master/distro.build &lt;directory_name&gt;
+drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.build &lt;directory_name&gt;
 </pre>
 > 4. To quickly install using the Drush command line, change to the directory where Drupal (for example C:/apache2/htdocs) was installed and enter this command.
 > Be sure to use a password that meets the password policy for WET.
