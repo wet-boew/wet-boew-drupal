@@ -1,0 +1,22 @@
+language: php
+
+php:
+  - 5.3
+
+mysql:
+  database: wetkit_db
+  username: root
+  encoding: utf8
+
+before_script: 
+  - mysql -e 'create database wetkit_db;'
+  - pyrus channel-discover pear.drush.org
+  - pyrus install drush/drush
+  - phpenv rehash
+  - drush make distro.build ../github_wet_distro
+  - cd ../github_wet_distro
+
+script:
+  - sudo chmod -R 777 sites/all/modules
+  - sudo drush si webexp webexp_theme_form.theme=web_usability_zen --sites-subdir=default --db-url=mysql://root:@localhost/wetkit_db --account-name=admin --account-pass=St@tcan@2012 --site-mail=admin@example.com --site-name="Web Experience Toolkit" --yes
+

@@ -1,0 +1,19 @@
+# Ignore Pesky Dev Files
+.DS_Store
+
+# Ignore Contributed Modules
+/modules/contrib/*
+/modules/experimental/*
+
+# Ignore Contributed Libraries
+/libraries/*
+
+# Ignore Contributed Themes
+/themes/genesis
+/themes/mobile_jquery
+/themes/rubik
+/themes/tao
+/themes/zen
+
+# SCSS + Compass Development Files
+/themes/web_usability_zen/.sass-cache/
