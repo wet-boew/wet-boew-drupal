@@ -1,0 +1,27 @@
+.token-group span.expander {
+  margin-left: 0px !important;
+}
+
+body.admin-menu {
+  margin-top: 0px !important;
+}
+
+/* Temp Fix for Rules Known Error */
+div.error {
+  
+}
+
+/* Fix for Block X not assigned to Block Y Known Error */
+.db-offline .absolute-messages-message {
+  display: none !important;
+}
+
+.ckeditor_links {
+  margin-bottom: 20px;
+  display: block;
+}
+
+#webexp-theme-form img {
+  width: 125px;
+  padding-right: 10px;
+}

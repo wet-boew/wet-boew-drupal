@@ -1,0 +1,50 @@
+<?php
+/**
+ * @file
+ * Code for the wetkit_security feature.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function wetkit_security_install() {
+  if (module_exists('password_policy')) {
+    wetkit_defaults_create_password_policy();
+  }
+}
+
+/**
+ * Installs the default password policy for all user roles
+ */
+function wetkit_defaults_create_password_policy() {
+  $policy = array(
+    'complexity' => 3,
+    'lowercase' => 1,
+    'uppercase' => 1,
+    'history' => 'all',
+    'length' => 8,
+    'username' => 1,
+  );
+  db_insert('password_policy')
+    ->fields(array(
+      'name' => 'WetKit Security Policy',
+      'enabled' => 1,
+      'policy' => serialize($policy),
+      'expiration' => 90,
+      'warning' => 10,
+      'weight' => 0,
+      )
+    )
+    ->execute();
+  // Can't be sure the user roles have installed yet, so we can't grab from the db.
+  $roles = array("2", "3");
+  foreach ($roles as $id) {
+    db_insert('password_policy_role')
+      ->fields(array(
+        'pid' => 1,
+        'rid' => $id,
+      )
+    )
+    ->execute();
+  }
+}

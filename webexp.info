@@ -1,0 +1,125 @@
+name = Web Experience Toolkit
+description = Install Profile created for the Web Experience Toolkit using Drupal 7
+core = 7.x
+version = 7.x-1.0
+
+;DRUPAL CORE
+dependencies[] = block
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = locale
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = dblog
+dependencies[] = search
+dependencies[] = shortcut
+;dependencies[] = overlay
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = rdf
+dependencies[] = statistics
+dependencies[] = simpletest
+
+;CONTRIB
+dependencies[] = absolute_messages
+dependencies[] = admin
+dependencies[] = apps
+dependencies[] = better_formats
+dependencies[] = boxes
+dependencies[] = conditional_styles
+dependencies[] = context
+dependencies[] = context_layouts
+dependencies[] = context_ui
+dependencies[] = ctools
+dependencies[] = custom_breadcrumbs
+dependencies[] = custom_formatters
+dependencies[] = diff
+dependencies[] = ds
+dependencies[] = ds_extras
+dependencies[] = ds_forms
+dependencies[] = elements
+dependencies[] = features
+;dependencies[] = fences
+dependencies[] = filefield_paths
+dependencies[] = filefield_sources
+dependencies[] = html5_tools
+dependencies[] = imageapi
+dependencies[] = insert
+dependencies[] = image_resize_filter
+dependencies[] = imce
+dependencies[] = imce_wysiwyg
+dependencies[] = jquery_update
+dependencies[] = libraries
+dependencies[] = link
+dependencies[] = linkchecker
+dependencies[] = module_filter
+dependencies[] = menu_block
+dependencies[] = pathauto
+dependencies[] = pathologic
+;dependencies[] = relation
+;dependencies[] = relation_endpoint
+dependencies[] = skinr
+dependencies[] = skinr_ui
+dependencies[] = skinr_context
+dependencies[] = skinr_context_ui
+dependencies[] = stringoverrides
+dependencies[] = strongarm
+dependencies[] = token
+dependencies[] = transliteration
+dependencies[] = variable
+dependencies[] = variable_admin
+dependencies[] = variable_advanced
+dependencies[] = variable_realm
+dependencies[] = variable_store
+dependencies[] = views
+dependencies[] = views_ui
+
+;CONTRIB ENTITY
+dependencies[] = entity
+dependencies[] = entitycache
+dependencies[] = entity_autocomplete
+dependencies[] = entity_token
+;dependencies[] = entity_translation
+;dependencies[] = title
+
+;CONTRIB SECURITY
+dependencies[] = password_policy
+
+;CONTRIB SEARCH
+dependencies[] = facetapi
+dependencies[] = ds_search
+dependencies[] = search404
+
+;WYSIWYG
+dependencies[] = wysiwyg
+dependencies[] = wysiwyg_filter
+
+;WET CUSTOM MODULES + FEATURES
+dependencies[] = wetkit_admin_menu
+dependencies[] = wetkit_box
+dependencies[] = wetkit_content_types
+dependencies[] = wetkit_custom_search
+dependencies[] = wetkit_i18n
+dependencies[] = wetkit_metatag
+dependencies[] = wetkit_migrate
+dependencies[] = wetkit_users
+dependencies[] = wetkit_web_usability
+dependencies[] = wetkit_wysiwyg
+dependencies[] = wetkit_security
+dependencies[] = wetkit_styles
+;dependencies[] = wetkit_workflow_rules
+;dependencies[] = wetkit_solr
+;dependencies[] = wetkit_slider
+
+;FILES
+files[] = webexp.install
+files[] = webexp.profile
+
+;CSS
+stylesheets[all][] = css/webexp.css

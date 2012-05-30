@@ -1,0 +1,8 @@
+name = "WetKit MetaTags"
+description = "Core Feature: Installs and configures default metatags that can be easily extended for your site"
+core = "7.x"
+package = "WetKit"
+php = "5.2.4"
+version = "7.x-1.0"
+dependencies[] = "metatag"
+features['features_api']['api:1'] = TRUE;

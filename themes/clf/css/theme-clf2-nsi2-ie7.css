@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+Terms and conditions of use: http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Terms
+Conditions régissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Conditions
+*/
+#cn-bcrumb h2, #cn-cmb h2, #cn-in-pd h3 {clip: rect(1px 1px 1px 1px);}
+#cn-skip-head {float: none;}
+#cn-skip-head #cn-sh-link-1 {right: 51%;}
+#cn-skip-head #cn-sh-link-2 {left: 51%;}
+
+#cn-head {float: none;}
+#cn-cmb ul {height: auto; overflow: hidden;}
+#cn-cmb ul li {width: 16.6%;}
+#cn-bcrumb ol {margin: 1px 0 3px 0; clear: left; line-height: 1.25em;}
+#cn-bcrumb li {padding-bottom: 3px;}
+
+.cn-left-col-default ul, .cn-right-col-default ul {margin-left: 0px;}
+.cn-left-col-default ul ul, .cn-right-col-default ul ul {margin-left: 40px;}
+.cn-left-col-default li, .cn-right-col-default li {margin-left: auto;}
+.cn-left-col-default #cn-search-box, .cn-search-box {margin-top: -15px;}
+.cn-left-col-default #cn-search-box a, .cn-search-box a {margin-bottom: -19px;}
+.cn-left-col-default #cn-search-box #cn-search-submit, .cn-search-box .cn-search-submit {overflow: visible; padding: 0 8px;}
+.cn-left-col-default h3 a:hover, .cn-left-col-default h3 a:active, .cn-left-col-default h3 a:focus, .cn-right-col-default h3 a:hover, .cn-right-col-default h3 a:active, .cn-right-col-default h3 a:focus {zoom: 1;}
+#cn-pd-link {clip: rect(1px 1px 1px 1px);}
+.cn-right-col-default h3 + div p {margin-top: 1em; margin-bottom: 1em;}
+.cn-right-col-default {margin-bottom: -10px;}
+
+#cn-pd-ul li {margin-left: -40px;}
+#cn-toppage-foot, #cn-in-pd-links {width: 28%;}

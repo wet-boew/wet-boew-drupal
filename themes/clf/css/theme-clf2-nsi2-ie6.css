@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+Terms and conditions of use: http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Terms
+Conditions régissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Conditions
+*/
+#cn-body-inner-3col, #cn-body-inner-2col, #cn-body-inner-1col {width: auto;}
+body {margin: 0 auto; width: 780px; position: relative;}
+
+/*** Expandable page CSS / Le CSS pour une page extensible ***/
+/* body {width: auto;}
+#cn-body-inner-2col #cn-centre-col-gap, #cn-body-inner-3col #cn-centre-col-gap {width: 90% !important; margin-left: -150px;}
+#cn-right-col-gap {right: 2% !important;} */
+
+#cn-bcrumb h2, #cn-cmb h2, #cn-in-pd h3 {clip: rect(1px 1px 1px 1px);}
+#cn-skip-head {float: none;}
+#cn-skip-head #cn-sh-link-1 {right: 51%;}
+#cn-skip-head #cn-sh-link-2 {left: 51%;}
+
+#cn-head {float: none; margin-top: -10px; padding-top: 10px;}
+#cn-sig, #cn-wmms{width: 45%;}
+#cn-leaf {background-image: url(../images/lffl.gif);}
+#cn-banner, #cn-banner-eng, #cn-banner-fra {height: 80px;}
+#cn-cmb ul {height: auto; overflow: hidden;}
+#cn-cmb ul li {width: 16.1%; padding-bottom: 1px; margin-bottom: -1px;}
+#cn-cmb ul li a {height: 1.25em;}
+#cn-cmb #cn-cmb1 a {border: none;}
+#cn-cmb6 a:hover, #cn-cmb6 a:active, #cn-cmb6 a:focus {width: 104%; position: relative;}
+#cn-bcrumb ol {margin: 1px 0 0 0; clear: left; line-height: 1.25em; margin-top: -13px;}
+#cn-bcrumb li {padding-bottom: 3px;}
+
+#cn-left-col li, #cn-right-col li {display: inline-block;}
+.cn-left-col-default h3, .cn-right-col-default h3 {position: relative; top: 0; left: 0;}
+.cn-left-col-default h3 {width: 93%; margin-bottom: -1px;}
+.cn-left-col-default ul, .cn-right-col-default ul {margin-left: 0px;}
+.cn-left-col-default ul ul, .cn-right-col-default ul ul {margin-left: 40px;}
+.cn-left-col-default li, .cn-right-col-default li {margin-left: auto;}
+.cn-left-col-default ul li li, .cn-right-col-default ul li li {margin-right: -5px;}
+.cn-left-col-default ul li li a, .cn-right-col-default ul li li a {margin-left: auto; position: relative; left: -5px;}
+.cn-left-col-default form a {margin-right: -5px; width: 100%;}
+.cn-left-col-default #cn-search-box, .cn-search-box {margin-top: -15px;}
+.cn-left-col-default #cn-search-box, .cn-search-box {margin-bottom: -19px;}
+.cn-left-col-default #cn-search-box #cn-search-submit, .cn-search-box .cn-search-submit {overflow: visible; padding: 0 8px;}
+#cn-pd-link {clip: rect(1px 1px 1px 1px);}
+#cn-pd-ul li {border-top: none;}
+.cn-right-col-default div {border: 1px solid #000; margin-bottom: 10px;}
+.cn-right-col-default div p {margin: 1em 9px 1em 9px;}
+.cn-right-col-default h3 {width: 95%;}
+.cn-right-col-default h3 a {margin: -2px 0 -2px -5px;}
+
+#cn-right-col-gap {right: 2.6%;}
+#cn-centre-col-inner {margin-bottom: 1em;}
+#cn-body-inner-2col #cn-centre-col-gap {width: 605px;}
+#cn-body-inner-3col #cn-centre-col-gap {width: 405px;}
+
+#cn-foot {position: absolute; height: 1000em; border: none; border-left: 10px solid #FFF; border-right: 10px solid #FFF; margin-left: -10px;}
+#cn-foot-inner {position: absolute;}
+#cn-in-pd {border-top-width: 16px; margin-top: -1px;}
+#cn-pd-ul {padding-left: 0;}
+#cn-toppage-foot, #cn-in-pd-links {width: 28%;}
+.cn-toppage {padding-right: 0.2em;}

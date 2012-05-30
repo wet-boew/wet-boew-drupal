@@ -1,0 +1,31 @@
+<?php
+/**
+ * @file
+ *   Module-related functionality for Skinr grids.
+ */
+
+/**
+ * Implements hook_skinr_api().
+ */
+function wetkit_styles_skinr_api_2() {
+  return array(
+    'directory' => 'skins',
+  );
+}
+
+/**
+ * Implements hook_skinr_group_info().
+ */
+function wetkit_styles_skinr_group_info() {
+  $groups['gridcss'] = array(
+    'title' => t('Grid and Modules CSS'),
+    'weight' => -10,
+  );
+  $groups['placementcss'] = array(
+    'title' => t('Placement CSS'),
+  );
+  $groups['stylecss'] = array(
+    'title' => t('Styling CSS'),
+  );
+  return $groups;
+}

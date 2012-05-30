@@ -1,0 +1,121 @@
+@charset "utf-8";
+/*!
+ * CSS presentation layer v1.3a6 / Couche présentation de CSS v1.3a6
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * Terms and conditions of use: http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Terms
+ * Conditions régissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Conditions
+ */
+
+/* Generic utility CSS / CSS d'utilité générique */
+.fontsize200, .fontSize200 {font-size: 200%;}
+.fontsize195, .fontSize195 {font-size: 195%;}
+.fontsize190, .fontSize190 {font-size: 190%;}
+.fontsize185, .fontSize185 {font-size: 185%;}
+.fontsize180, .fontSize180 {font-size: 180%;}
+.fontsize175, .fontSize175 {font-size: 175%;}
+.fontsize170, .fontSize170 {font-size: 170%;}
+.fontsize165, .fontSize165 {font-size: 165%;}
+.h1size, .fontsize160, .h1Size, .fontSize160 {font-size: 160%;}
+.fontsize155, .fontSize155 {font-size: 155%;}
+.h2size, .fontsize150, .h2Size, .fontSize150 {font-size: 150%;}
+.fontsize145, .fontSize145 {font-size: 145%;}
+.h3size, .fontsize140, .big, .h3Size, .fontSize140 {font-size: 140%;}
+.fontsize135, .fontSize135 {font-size: 135%;}
+.h4size, .fontsize130, .h4Size, .fontSize130 {font-size: 130%;}
+.fontsize125, .fontSize125 {font-size: 125%;}
+.h5size, .fontsize120, .h5Size, .fontSize120 {font-size: 120%;}
+.fontsize115, .fontSize115  {font-size: 115%;}
+.h6size, .fontsize110, .h6Size, .fontSize110, .headline {font-size: 110%;}
+.fontsize105, .fontSize105 {font-size: 105%;}
+.fontsize100, .fontSize100 {font-size: 100%;}
+.fontsize95, .fontSize95 {font-size: 95%;}
+.fontsize90, .fontSize90 {font-size: 90%;}
+.mediumfont, .fontsize85, .mediumFont, .fontSize85 {font-size: 85%;}
+.fontsize80, .fontSize80 {font-size: 80%;}
+.smallfont, .fontsize75, .smallFont, .fontSize75 {font-size: 75%;}
+.fontsize70, .fontSize70 {font-size: 70%;}
+
+/**** Deprecated - Use .cn-invisible instead ****/
+.navaid {height: 1px; width: 1px; overflow: hidden; float: right; font-size: 0; position: absolute; top:auto; left: -10000px;}
+.navaid a {color: #FFFFFF;}
+/************************************************/
+
+.widthfull, .widthFull {width: 98.5%;}
+.width95 {width: 95%;}
+.width90 {width: 90%;}
+.width85 {width: 85%;}
+.width80 {width: 80%;}
+.width75 {width: 75%;}
+.width70 {width: 70%;}
+.width65 {width: 65%;}
+.width60 {width: 60%;}
+.width55 {width: 55%;}
+.width50 {width: 50%;}
+.width45 {width: 45%;}
+.width40 {width: 40%;}
+.width35 {width: 35%;}
+.width30 {width: 30%;}
+.width25 {width: 25%;}
+.width20 {width: 20%;}
+.width15 {width: 15%;}
+.width10 {width: 10%;}
+.width5 {width: 5%;}
+
+div.gcinits {float: left; padding-bottom: 5px;}
+div.gcinit div {width: 191px; height: 5.16em; border: 1px solid #000;}
+div.gcinit a, div.gcinit a:visited {width: 100%; height: 100%; float: left; text-decoration: none;}
+
+/* Alignment utility CSS / CSS d'utilité d'alignement */
+.align-right, .alignRight {text-align: right;}
+.align-center, .alignCenter {text-align: center;}
+.align-left, .alignLeft {text-align: left;}
+.align-top, .alignTop {vertical-align: top;}
+.align-bottom, .alignBottom {vertical-align: bottom;}
+.align-topright, .alignTopRight {text-align: right; vertical-align: top;}
+.align-topcenter, .alignTopCenter {text-align: center; vertical-align: top;}
+.align-topleft, .alignTopLeft {text-align: left; vertical-align: top;}
+.align-bottomright, .alignBottomRight {text-align: right; vertical-align: bottom;}
+.align-bottomcenter, .alignBottomCenter {text-align: center; vertical-align: bottom;}
+.align-bottomleft, .alignBottomLeft {text-align: left; vertical-align: bottom;}
+.float-right, .floatRight {float: right;}
+.float-left, .floatLeft {float: left;}
+.image-left {float: left; vertical-align: text-top;}
+.image-right {float: right; vertical-align: text-top; margin-left: 10px;}
+
+.indent1 {padding-left: 18px;}
+.indent2 {padding-left: 36px;}
+.indent3 {padding-left: 54px;}
+.indent4 {padding-left: 72px;}
+.indent5 {padding-left: 90px;}
+
+/* List utility CSS / CSS d'utilité de liste */
+ul.nobullet, ul.noBullet {list-style-type: none;}
+ul.disc {list-style-type: disc;}
+ul.square {list-style-type: square;}
+ul.circle {list-style-type: circle;}
+ol.lower-alpha {list-style-type: lower-alpha;}
+ol.upper-alpha {list-style-type: upper-alpha;}
+ol.lower-roman {list-style-type: lower-roman;}
+ol.upper-roman {list-style-type: upper-roman;}
+
+/* Text utility CSS / CSS d'utilité de texte */
+.nowrap, .noWrap {white-space: nowrap;}
+.doublelinespace, .doubleLineSpace {line-height: 200%;}
+.uppercase {text-transform: uppercase;}
+.lowercase {text-transform: lowercase;}
+.color-black, .black {color: #000; background-color: transparent;}
+.color-white, .white {color: #FFF; background-color: transparent;}
+.color-red, .red {color: #C00; background-color: transparent;}
+.color-blue, .blue {color: #00F; background-color: transparent;}
+.color-green, .green {color: #093; background-color: transparent;}
+.color-grey, .grey {color: #999; background-color: transparent;}
+.color-deepyellow, .deepyellow {color: #FC3; background-color: transparent;}
+.bg-black, .blackBG {background-color: #000;}
+.bg-white, .whiteBG {background-color: #FFF;}
+.bg-red, .redBG {background-color: #C00;}
+.bg-blue, .blueBG {background-color: #00F;}
+.bg-green, .greenBG {background-color: #093;}
+.bg-lightgrey, .lightgreyBG {background-color: #CCC;}
+.bg-deepyellow, .deepyellowBG {background-color: #FC3;}
+.highlight {border: 1px solid #030; background-color: #9F9; padding: 5px;}
+.wrapcontainer, .wrapContainer {float: left; width: 100%;}

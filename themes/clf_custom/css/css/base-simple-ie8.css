@@ -1,0 +1,13 @@
+@charset "utf-8";
+/*!
+ * CSS presentation layer v1.3a6 / Couche présentation de CSS v1.3a6
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * Terms and conditions of use: http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Terms
+ * Conditions régissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Conditions
+ */
+ 
+/* Element normalization / Normalisation des éléments */
+input, select, button, textarea {font-size:100%}
+ 
+.cn-show-onhover {-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)";}
+.cn-show-onhover:hover, .cn-show-onhover:focus, .cn-show-onhover:active {-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=100)";}

@@ -1,0 +1,87 @@
+<?php
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function wetkit_metatag_ctools_plugin_api($owner, $api) {
+  if ($owner == 'metatag' && $api == 'metatag') {
+    return array('version' => 1);
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function wetkit_metatag_theme() {
+  $info['wetkit_metatag'] = array(
+    'render element' => 'element',
+  );
+  $info['wetkit_metatag_scheme'] = array(
+    'render element' => 'element',
+  );
+  $info['wetkit_metatag_language'] = array(
+    'render element' => 'element',
+  );
+  $info['wetkit_metatag_title'] = array(
+    'render element' => 'element',
+  );
+  return $info;
+}
+
+/**
+ * Theme callback for an WetKit meta tag.
+ */
+function theme_wetkit_metatag($variables) {
+  $element = &$variables['element'];
+  element_set_attributes($element, array('#name' => 'name', '#value' => 'content'));
+  unset($element['#value']);
+  return theme('html_tag', $variables);
+}
+
+/**
+ * Theme callback for an WetKit meta tag.
+ */
+function theme_wetkit_metatag_scheme($variables) {
+  $element = &$variables['element'];
+  element_set_attributes($element, array('#name' => 'name', '#value' => 'content'));
+  $element['#attributes']['scheme'] = 'W3CDTF';
+  unset($element['#value']);
+  return theme('html_tag', $variables);
+}
+
+/**
+ * Theme callback for an WetKit meta tag (language).
+ */
+function theme_wetkit_metatag_language($variables) {
+  $element = &$variables['element'];
+  element_set_attributes($element, array('#name' => 'name', '#value' => 'content'));
+  $element['#attributes']['scheme'] = 'ISO639-2/T';
+  unset($element['#value']);
+  return theme('html_tag', $variables);
+}
+
+/**
+ * Theme callback for an WetKit meta tag.
+ */
+function theme_wetkit_metatag_title($variables) {
+  $element = &$variables['element'];
+  element_set_attributes($element, array('#name' => 'name', '#value' => 'content'));
+  $element['#attributes']['name'] = 'title';
+  unset($element['#value']);
+  return theme('html_tag', $variables);
+}
+
+/**
+ * Get Current Language of User Interface
+ */
+function wetkit_current_lang() {
+  global $language;
+  if ($language->name == 'French') {
+    $val_lang = "fra";
+  }
+  else {
+    $val_lang = "eng";
+  }
+  return $val_lang;
+}
+

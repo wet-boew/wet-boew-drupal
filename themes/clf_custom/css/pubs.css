@@ -1,0 +1,544 @@
+/* Style sheet for pubs and ads */
+
+/*
+1. Logo with publication title
+2. Text alignment
+3. Divider between LH nav list items -- No longer used
+4. 2-column image-text alignment -- No longer used.
+5. Box around text
+6. Quoted text
+7. Styles for CST main page
+8. Indent row stub text after LIFT coding
+9. Table styles
+10. Reference list, display problem correction
+12. Align text to images in paragraphs
+13. Space list items
+14. Sub-headings in the sidebar
+15. Re-size release date text
+16. Right-hand menu, divider
+17. 2-column list (each list has a width of 48%)
+18. Floating right-hand menu version 1
+19. Floating right-hand menu version 2; as of July 30, 2010
+19a. Fix for h1 titles on pages with floating rhm
+20. Styles for anchored links at top of page, in <ul>
+*/
+
+/* 1. Logo with publication title */
+
+img.logo {
+	float:right;
+	padding:0 0 0.5em 0.5em;
+}
+
+/* 1a. CLF 2.0 Logo with publication title */
+.publogo {
+	float:right; margin-top:-2.8em;
+}
+/* 1b. CLF 2.0 Logo with publication title CST */
+.cstlogo {
+	float:right; margin-top:-1.0em;
+}
+
+/* 2. Text alignment */
+
+.ct {text-align:center;}
+.lf {text-align:left;}
+.rt {text-align:right;}
+.bt {vertical-align:bottom;} 
+.tp {vertical-align:top;}
+
+/* Used in Lift */
+.alignlf {text-align:left;}
+.alignrt {text-align:right;}
+.alignct {text-align:center;}
+/* end */
+
+.nowrap {white-space:nowrap;}
+
+/* 3. Divider between LH nav list items */
+
+#navpr01 li.navspcr {border-bottom: 2px solid #3678D4;}
+
+/* 4. 2-column image-text alignment */
+
+/* 4.1. Floats */
+.floatlf {
+	float:left;
+	margin:0 1em 1em 0;
+	vertical-align:top;
+}
+ 
+/* 4.2. Margins, padding, line-height and related */
+.mgtp0 {margin-top:0 !important;}
+
+/* 4.3. Two column image/text display -- No longer used*/
+
+.col02imgtxt01 {margin:0;}
+ 
+.col02imgtxt01 img {
+	left:-70px;
+	margin-bottom: 45px;
+	border:none;
+}
+
+.col02imgtxt01 p {
+	color: #000099;
+	font-weight: bold;
+	margin-bottom: 35px;
+}
+
+/* 5. Box around text */ 
+
+.bx {
+	border: 2px solid #000;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+.bx1 {
+	border: 6px outset #CCCCCC;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.bx2 {
+	border: 1px solid #000;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+}
+.bxgray {
+	border: solid 3px #CCCCCC;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* 6. Quoted text */
+
+.quotxt {
+	margin-left: 20px; 
+	margin-right: 40px;
+}
+
+/* 7. Styles for CST main page */
+
+/* Add to the h1 tag */
+.cst1 {
+	color: #3366CC;
+	font-style: italic;
+	border-bottom-style: double;
+	border-bottom-color: #CCCCCC;
+	border-top-style: double;
+	border-top-color: #CCCCCC;
+}
+
+/* Use with <span> around the month and year on the main page */
+.cst2 {
+	font-size: 14px;
+	color: #3366CC;
+	font-style: normal;
+	width: 100px;
+	top: 0px;
+	display: block;
+}
+
+/* Use with a span around the PDF link */
+.cst3 {
+	margin-left: 3em;
+}
+
+/* 8. Indent row stub text after LIFT coding */
+
+/* Add the code to the class for unnormalized cells */
+/* For example, class="un_normalize_header rsin1" */
+
+/* Level 1 indent */
+.rsin1 {
+	white-space: nowrap;
+	text-indent: 10px;
+}
+
+/* Level 2 indent */
+.rsin2 {
+	text-indent: 20px;
+	white-space: nowrap;
+}
+
+/* Level 3 indent */
+.rsin3 {
+	text-indent: 30px;
+	white-space: nowrap;
+}
+
+/* 9. Table styles */
+/* Updated 2009-08-18 to include vertical alignment of data and header cells */
+table.data  {
+                width: 100%;
+                background-color: #ffffff;
+                border: 1px #000000 solid;
+                border-collapse: collapse;
+                border-spacing: 0px;
+}
+
+th.header, td.header  {
+                background-color: #ddeeff;
+                border: 1px #000000 solid;
+                padding: 2px;
+				vertical-align: top;
+}
+
+td.data, th.data {
+	background-color: #ffffff;
+	border: 1px #000000 solid;
+	padding: 2px;
+	vertical-align: top;
+}
+
+/* For use when cell contents should not be aligned at the top of the data cell */
+td.data1, th.data1 {
+	background-color: #ffffff;
+	border: 1px #000000 solid;
+	padding: 2px;
+}
+
+/* Styles to avoid attaching styles to all cells */
+/* Use class="data" on <th> in data section to remove blue background */
+
+/* Updated October 22, 2010 */
+/* Lift code */
+th.un_normalize_header {
+	text-align: left;
+	font-weight: normal;
+}
+/* End Lift code */
+
+table.data2  {
+	width: 100%;
+	background-color: #ffffff;
+	border: 1px #000000 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+.data2 td, .data2 th {
+	border: 1px #000000 solid;
+	padding: 2px;
+	vertical-align: top;
+}
+
+.data2 th {
+	background-color: #ddeeff;
+}
+
+.data2 th.un_normalize_header {
+	background-color: #ffffff;
+}
+
+.data2 td {
+	background-color: #ffffff;
+}
+
+td.rowstub {
+	background-color: #ddeeff;
+}
+
+/* 10. Reference list, display problem correction */
+.w95 {
+	width: 95%;
+}
+
+/* 12. Align text to images in paragraphs */
+.parameters {
+	vertical-align: middle;
+}
+
+/* 13. Space list items */
+
+.ListSpacing {
+	padding-bottom: .5em;
+}
+
+/* 14. Sub-headings in the sidebar */
+
+div.left h2.sections, div.left h2.sections a:link, div.left h2.sections a:visited {
+	background-color: #555555;
+	color: #FFF;
+	text-decoration: none;
+}
+
+div.left h2.sections a:hover, div.left h2.sections a:active, div.left h2.sections a:focus {
+	text-decoration: underline;
+}
+
+h2.sections {
+	font-size: 10pt;
+	font-weight: 700;
+	line-height: 1.6em;
+	border-width: 0pt;
+	border-style: none;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 0 0 1pt;
+}
+
+h2.sections {
+	font-size: 100%;
+}
+
+/* 15. Re-size release date text */
+.release {
+	font-size:0.8em;
+	margin: 0;
+	padding: 0;
+}
+
+.lessp {                     
+	margin-bottom: 0;          
+	padding-bottom: 0;         
+} 
+
+/* 16. Right-hand menu, divider */
+.dotted {
+	border-bottom: 1px dashed #ccc;
+}
+
+/* 17. 2-column list (each list has a width of 48%) */
+#colbx {
+	padding: 0; 
+	margin: 0 0 4px 0;
+	width: 100%;
+	min-width: 460px;
+	max-width: 780px;
+}
+
+div.col {
+	float: left; 
+	margin: 4px 10px 0 0; 
+	width: 45%;
+}
+
+/* 18. Floating right-hand menu version 1*/
+
+/* Safari fix */
+@media screen and (-webkit-min-device-pixel-ratio:ø)
+{
+	div.floatMenu {
+		margin-top: -3.1em;
+	}
+}
+/* Safari fix ends */
+
+ul.rhfloatnav {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px 0px 10px 0px;
+}
+
+ul.rhfloatnav li {
+	margin: 0px;
+}
+
+/** 19. Floating right-hand menu version 2; as of July 30, 2010 **/
+div.floatMenu {
+	float: right;
+	width: 195px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	margin-top: -3.0em;
+}
+
+/* Use when h1 wraps on 2 lines */
+div.floatMenu2 {
+	float: right;
+	width: 195px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	margin-top: -5em;
+}
+
+/* Use when h1 wraps on 3 lines */
+div.floatMenu3 {
+	float: right;
+	width: 195px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	margin-top: -7em;
+}
+
+/* Use when h1 wraps on 4 lines */
+div.floatMenu4 {
+	float: right;
+	width: 195px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	margin-top: -11.2em;
+}
+
+/* Use when h1 wraps on 5 lines */
+div.floatMenu5 {
+	float: right;
+	width: 195px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	margin-top: -13.1em;
+}
+
+div.roundCorner {
+	font-size: 1px;
+	overflow: hidden;
+	display: block;
+}
+
+div.roundCornerRhnavBlue1 {
+	height: 1px;
+	background: #2255EE;
+	margin: 0px 5px;
+}
+
+div.roundCornerRhnavBlue2 {
+	height: 1px;
+	background: #2255EE;
+	border-right: 2px solid #2255EE ;
+	border-left: 2px solid #2255EE;
+	margin: 0px 3px;
+}
+
+div.roundCornerRhnavBlue3 {
+	height: 1px;
+	background: #2255EE;
+	border-right: 1px solid #2255EE;
+	border-left: 1px solid #2255EE;
+	margin: 0px 2px;
+}
+
+div.roundCornerRhnavBlue4 {
+	height: 3px;
+	background: #2255EE;
+	border-right: 1px solid #2255EE;
+	border-left: 1px solid #2255EE;
+	margin: 0px 1px;
+}
+
+div.custHeadBlue h2 {
+	background-color: #2255EE;
+	color: #fff;
+	font-size: 10pt;
+	font-weight: 700;
+	line-height: 1.6em;
+	margin: 0;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-decoration: none;
+	font-size: 100%;
+}
+
+ul.rhfnav {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	border-bottom: 1px solid #6185C1;
+	border-left: 1px solid #6185C1;
+	border-right: 1px solid #6185C1;
+	margin-bottom: 0.5em !important;
+}
+
+ul.rhfnav li {
+	margin: 0px;
+}
+
+ul.rhfnav li ul.rhfloatnav li {
+	height: 70px;
+}
+
+/*** Use the numbers instead of bullets for right menu***/
+ol.rhfnav {
+	margin: 0px;
+	padding-left: 20px; padding-right: 0px; padding-bottom: 0px; padding-top: 0px;
+	border-bottom: 1px solid #6185C1;
+	border-left: 1px solid #6185C1;
+	border-right: 1px solid #6185C1;
+	margin-bottom: 0.5em !important;
+}
+
+ol.rhfnav li {
+	margin: 0px;
+}
+
+ol.rhfnav li ol.rhfloatnav li {
+	height: 70px;
+}
+
+/* Use when h1 wraps on 4 lines, copied from above, but it not works with PUMF site, so moidfy it as follow: */
+div.floatMenu4Pumf {
+	float: right;
+	width: 195px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	margin-top: -8.5em;
+}
+
+/* Use when h1 wraps on 5 lines, copied from above, but it not works with PUMF site, so moidfy it as follow: */
+div.floatMenu5Pumf {
+	float: right;
+	width: 195px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	margin-top: -10em;
+}
+
+/*** Modification end ***/
+
+li.rhfmenucontent, div.rhfmenucontent, li.rhfmenucontent2, div.rhfmenucontent2 {
+	color: #000;
+	background-color: #fff;
+}
+
+a.rhfmenulink {
+	color: #000 !important;
+	text-decoration: none;
+}
+
+a.rhfmenulink {
+	background-color: #fff;
+}
+
+a.rhfmenulink:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+a.rhfmenulink:hover {
+	text-decoration: underline;
+}
+
+li.rhfmenucontent, div.rhfmenucontent, li.rhfmenucontent2, div.rhfmenucontent2 {
+	padding: 2px 3px 2px 5px;
+}
+
+li.rhfmenucontent, li.rhfmenucontent li, div.rhfmenucontent, div.rhfmenucontent li, li.rhfmenucontent2, li.rhfmenucontent2 li, div.rhfmenucontent2, div.rhfmenucontent2 li {
+	font-size: 10.0pt;
+	vertical-align: middle;
+	margin: 0;
+}
+
+li.rhfmenucontent {
+	border-bottom: 1px dashed #ccc;
+}
+
+div.clear {
+	clear: both;
+}
+/** Floating RHN version 2 ends **/
+
+/** 19a. Fix for h1 titles on pages with floating rhm **/
+.h1w {
+	width: 65%;
+}
+/** end 19a **/
+
+
+/** 20. Styles for anchored links at top of page, in <ul> **/
+.anchorList {
+	font-size: 85%;
+	list-style-type: none;
+	margin-left: 0px;
+	padding-left: 0px;
+}

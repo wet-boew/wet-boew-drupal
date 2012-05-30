@@ -1,0 +1,233 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  template-overrides.php: n/a
+#  template-preprocess.php: n/a
+#  genesis_clf.info: n/a
+#  templates/pages/page--front.tpl.php: n/a
+#  templates/pages/page--panels.tpl.php: n/a
+#  templates/pages/page.tpl.php: n/a
+#  css/layouts/clf_threecol/clf_threecol.inc: n/a
+#  templates/html.tpl.php: n/a
+#  templates/blocks/search-block-form.tpl.php: n/a
+#  templates/misc/aggregator-feed-source.tpl.php: n/a
+#  templates/misc/aggregator-item.tpl.php: n/a
+#  templates/misc/aggregator-summary-items.tpl.php: n/a
+#  templates/misc/book-navigation.tpl.php: n/a
+#  templates/node/node.tpl.php: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2012-01-31 20:13-0500\n"
+"PO-Revision-Date: 2012-01-31 20:13-0500\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: template-overrides.php:6
+msgid "Drupal Primary tabs"
+msgstr "Onglets principaux de Drupal"
+
+#: template-overrides.php:12
+msgid "Drupal Secondary tabs"
+msgstr "Onglets secondaires de Drupal"
+
+#: template-preprocess.php:186
+msgid "Main menu"
+msgstr "Menu principal"
+
+#: genesis_clf.info:0
+msgid "Genesis CLF Internet 3.0 (Web Usability)"
+msgstr "NSI 3.0 avec Genesis (facilité d’emploi des sites Web)"
+
+#: genesis_clf.info:0
+msgid "Web Experience Toolkit Implementation for Drupal 7"
+msgstr "Mise en œuvre de la Boîte à outils de l'expérience Web pour Drupal 7"
+
+#: genesis_clf.info:0
+msgid "Sidebar first"
+msgstr "Premier encadré"
+
+#: genesis_clf.info:0
+msgid "Sidebar second"
+msgstr "Deuxième encadré"
+
+#: genesis_clf.info:0
+msgid "Main Content"
+msgstr "Contenu principal"
+
+#: genesis_clf.info:0
+msgid "Highlighted"
+msgstr "Mis en évidence"
+
+#: genesis_clf.info:0
+msgid "Leaderboard"
+msgstr "Bannière"
+
+#: genesis_clf.info:0
+msgid "Header"
+msgstr "En-tête"
+
+#: genesis_clf.info:0
+msgid "Secondary"
+msgstr "Secondaire"
+
+#: genesis_clf.info:0
+msgid "Tertiary"
+msgstr "Tertiaire"
+
+#: genesis_clf.info:0 templates/pages/page--front.tpl.php:280 templates/pages/page--panels.tpl.php:214 templates/pages/page.tpl.php:284
+msgid "Footer"
+msgstr "Pied de page"
+
+#: genesis_clf.info:0
+msgid "Help"
+msgstr "Aide"
+
+#: genesis_clf.info:0
+msgid "Page top"
+msgstr "Haut de la page"
+
+#: genesis_clf.info:0
+msgid "Page bottom"
+msgstr "Bas de la page"
+
+#: genesis_clf.info:0
+msgid "Headlines"
+msgstr "Manchettes"
+
+#: genesis_clf.info:0
+msgid "Videos"
+msgstr "Vidéos"
+
+#: genesis_clf.info:0
+msgid "Priorities"
+msgstr "Priorités"
+
+#: genesis_clf.info:0
+msgid "Minister"
+msgstr "Ministère"
+
+#: genesis_clf.info:0
+msgid "Connected"
+msgstr "Connecté"
+
+#: genesis_clf.info:0
+msgid "Slideshow"
+msgstr "Diaporama"
+
+#: css/layouts/clf_threecol/clf_threecol.inc:8
+msgid "CLF Three Column"
+msgstr "Disposition en trois colonnes de la NSI"
+
+#: css/layouts/clf_threecol/clf_threecol.inc:9
+msgid "CLF"
+msgstr "NSI"
+
+#: css/layouts/clf_threecol/clf_threecol.inc:15
+msgid "Left side"
+msgstr "Côté gauche"
+
+#: css/layouts/clf_threecol/clf_threecol.inc:16
+msgid "Content column"
+msgstr "Colonne de contenu"
+
+#: css/layouts/clf_threecol/clf_threecol.inc:17
+msgid "Right side"
+msgstr "Côté droit"
+
+#: templates/html.tpl.php:62
+msgid "Skip to main content"
+msgstr "Passer au contenu principal"
+
+#: templates/html.tpl.php:65
+msgid "Skip to footer"
+msgstr "Passer au pied de page"
+
+#: templates/blocks/search-block-form.tpl.php:34
+msgid "Search form"
+msgstr "Formulaire de recherche"
+
+#: templates/misc/aggregator-feed-source.tpl.php:10
+msgid "URL:"
+msgstr "URL :"
+
+#: templates/misc/aggregator-feed-source.tpl.php:13
+msgid "Updated:"
+msgstr "Mis à jour :"
+
+#: templates/misc/aggregator-item.tpl.php:20
+msgid "Categories"
+msgstr "Catégories"
+
+#: templates/misc/aggregator-summary-items.tpl.php:6
+msgid "More"
+msgstr "Plus"
+
+#: templates/misc/book-navigation.tpl.php:9
+msgid "Go to previous page"
+msgstr "Aller à la page précédente"
+
+#: templates/misc/book-navigation.tpl.php:9
+msgid "‹ "
+msgstr "‹ "
+
+#: templates/misc/book-navigation.tpl.php:12
+msgid "Go to parent page"
+msgstr "Aller à la page parente"
+
+#: templates/misc/book-navigation.tpl.php:12
+msgid "up"
+msgstr "haut"
+
+#: templates/misc/book-navigation.tpl.php:15
+msgid "Go to next page"
+msgstr "Aller à la page suivante"
+
+#: templates/misc/book-navigation.tpl.php:15
+msgid " ›"
+msgstr " ›"
+
+#: templates/node/node.tpl.php:116
+msgid "Date modified:"
+msgstr "Mise à jour:"
+
+#: templates/pages/page--front.tpl.php:79 templates/pages/page--panels.tpl.php:79 templates/pages/page.tpl.php:79
+msgid "Government of Canada navigation bar"
+msgstr "Gouvernement du Canada barre de navigation"
+
+#: templates/pages/page--front.tpl.php:148 templates/pages/page--panels.tpl.php:148 templates/pages/page.tpl.php:148
+msgid "Search"
+msgstr "Recherche"
+
+#: templates/pages/page--front.tpl.php:165 templates/pages/page--panels.tpl.php:165 templates/pages/page.tpl.php:165
+msgid "Primary site navigation bar"
+msgstr "Barre de navigation du site principal"
+
+#: templates/pages/page--front.tpl.php:217
+msgid "Government of Canada - Drupal CLF3"
+msgstr "Gouvernement du Canada – NSI3 avec Drupal"
+
+#: templates/pages/page--front.tpl.php:249
+msgid "Supplemental Content"
+msgstr "Contenu supplémentaire"
+
+#: templates/pages/page--front.tpl.php:285 templates/pages/page--panels.tpl.php:219 templates/pages/page.tpl.php:289
+msgid "Site Footer"
+msgstr "Pied de page du site"
+
+#: templates/pages/page--front.tpl.php:338 templates/pages/page--panels.tpl.php:274 templates/pages/page.tpl.php:342
+msgid "Government of Canada Footer"
+msgstr "Pied de page du gouvernement du Canada"
+
+#: templates/pages/page--panels.tpl.php:187 templates/pages/page.tpl.php:187
+msgid "Breadcrumbs"
+msgstr "Piste de navigation"
+

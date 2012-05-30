@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <langcode>fr</langcode>
+  <path>webexp</path>
+  <name>Profil d'installation personnalisée de l'expérience Web</name>
+  <description><![CDATA[<p>Cette distribution de Drupal fondée sur la Boîte à outils de l'expérience Web (BOEW) est une plateforme logicielle préconfigurée pour aider les ministères du gouvernement à utiliser un système de gestion du contenu configuré correctement à l'avance conformément aux exigences fonctionnelles et opérationnelles du gouvernement.</p>
+    <h2>Aperçu des fonctions mises en œuvre</h2>
+    <ul>
+      <li>Profil d'installation personnalisée de l'expérience Web</li>
+      <li>Meilleure intégration du thème de la NSI à Drupal et héritage approprié au moyen de CFL_Custom</li>
+      <li>Contrôle d'accès complexe et flux de travail (module Workbench)</li>
+      <li>Rôles, utilisateurs et permissions préconfigurés</li>
+      <li>Multilinguisme</li>
+      <li>Thème de la BOEW remplacé dans le module WETKIT</li>
+      <li>Intégration des bibliothèques de la BOEW au moyen du module WETKIT personnalisé</li>
+      <li>Installation et configuration des modules de pratiques exemplaires</li>
+    </ul> ]]></description>
+</document>

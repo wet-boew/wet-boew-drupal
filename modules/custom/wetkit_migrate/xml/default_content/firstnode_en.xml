@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <langcode>en</langcode>
+  <path>webexp</path>
+  <name>Web Experience Toolkit Drupal Prototype</name>
+  <description><![CDATA[<p>This Drupal Distribution based on the Web Experience Toolkit is a pre-configured software platform that assists Governmental Departments in using a Content Management System that is already properly configured to Governmental functional and business requirements.</p>
+    <h2>Brief Overview of Functionality Implemented</h2>
+    <ul>
+      <li>Custom Installation Profile Web Experience</li>
+      <li>Improved CLF Theme Integration in Drupal + Proper Inheritance with CLF_Custom</li>
+      <li>Complex Access Control + Workflow (Workbench Module)</li>
+      <li>Pre-Configured Roles + Users + Permissions</li>
+      <li>Multilingualism</li>
+      <li>WET Theme has been replaced into Module WETKIT</li>
+      <li>WET Libraries Integration through custom WETKIT Module</li>
+      <li>Installation + Configuration of best practice modules</li>
+    </ul> ]]></description>
+</document>

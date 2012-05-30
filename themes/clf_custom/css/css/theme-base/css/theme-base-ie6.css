@@ -1,0 +1,9 @@
+@charset "utf-8";
+/*!
+ * CSS presentation layer v1.3a6 / Couche présentation de CSS v1.3a6
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * Terms and conditions of use: http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Terms
+ * Conditions régissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Conditions
+ */
+#cn-skip-head a:link, #cn-skip-head a:visited {color: #FF9;}
+#cn-skip-head a:hover, #cn-skip-head a:focus, #cn-skip-head a:active {color: #FFF;}

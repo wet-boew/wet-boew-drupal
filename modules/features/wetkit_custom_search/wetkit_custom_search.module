@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the wetkit_custom_search feature.
+ */
+
+include_once('wetkit_custom_search.features.inc');

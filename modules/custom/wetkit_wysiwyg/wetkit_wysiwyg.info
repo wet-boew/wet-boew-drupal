@@ -1,0 +1,7 @@
+name = WetKit Wysiwyg
+description = Helper module to improve the WYSIWYG experience
+dependencies[] = wetkit_wysiwyg_feature
+dependencies[] = wysiwyg
+package = WetKit
+core = 7.x
+version = 7.x-1.0

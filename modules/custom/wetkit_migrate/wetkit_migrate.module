@@ -1,0 +1,81 @@
+<?php
+
+/**
+ * Implements hook_migrate_api().
+ */
+function wetkit_migrate_migrate_api() {
+  $api = array(
+    'api' => 2,
+  );
+  return $api;
+}
+
+/**
+ * Implements hook_init().
+ */
+function wetkit_migrate_init() {
+
+}
+
+/**
+ * Implements Custom Function _wetkit_migrate_fixPath().
+ */
+function _wetkit_migrate_fixPath($fileName) {
+  //parse "/html/"
+  $file = drupal_substr($fileName, 6);
+  //parse ".html"
+  $file = drupal_substr($file, 0, strrpos($file, '.'));
+  return $file;
+}
+
+/**
+ * Implements Custom Function _wetkit_migrate_fixLink().
+ */
+function _wetkit_migrate_fixLink($fileName) {
+  //parse "/html/"
+  $file = drupal_substr($fileName, 6);
+  //parse to nearest "/"
+  $file = drupal_substr($file, 0, strrpos($file, '/'));
+  return $file;
+}
+
+/**
+ * Implements Custom Function _wetkit_migrate_menulinks_generate().
+ */
+function _wetkit_migrate_menulinks_generate($linkpath, $menuname, $linktitle) {
+    db_query('UPDATE {menu_links} SET link_path = :linkpath WHERE menu_name = :menuname AND link_title = :linktitle',
+      array( ':linkpath' => $linkpath,
+          ':menuname' => $menuname,
+          ':linktitle' => $linktitle ));
+}
+
+/**
+ * Implements Custom Function _wetkit_migrate_add_custom_menu_item_depth().
+ */
+function _wetkit_migrate_add_custom_menu_item_depth($link, $title, $desc, $menu, $weight, $language, $expanded, $depth = 0) {
+  $options = array();
+  $options += array(
+    'attributes' => array(
+      'title' => $desc,
+    ),
+  );
+  $item = array(
+    'link_path' => drupal_get_normal_path($link, $language),
+    'link_title' => $title,
+    'menu_name' => $menu,
+    'weight' => $weight,
+    'language' => $language,
+    'customized' => 1,
+    'options' => $options,
+    'expanded' => $expanded,
+    'plid' => $depth,
+  );
+  return menu_link_save($item);
+}
+
+/**
+ * Implements Custom Function _wetkit_migrate_delete_menu_docs().
+ */
+function _wetkit_migrate_delete_menu_docs($menu_name) {
+  db_query('DELETE FROM {menu_links} WHERE menu_name = :menu_name', array( ':menu_name' => $menu_name, ));
+}

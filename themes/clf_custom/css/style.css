@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+/*************************************************
+  Body background colour
+**************************************************/
+body {
+  background-color: #DDEEDD; 
+}
+
+/*************************************************
+  Skip to content, navigation background colour
+**************************************************/
+#cn-skip-head a:hover, 
+#cn-skip-head a:focus, 
+#cn-skip-head a:active {
+  background-color: #25E;
+}
+
+/*************************************************
+  Banner background colour and image
+**************************************************/
+#cn-banner, 
+#cn-banner-eng, 
+#cn-banner-fra  {
+  background-color: #FFF; 
+  background-image: url('../images/banner_stat.jpg');
+}
+
+/*************************************************
+  Left column header colour, background colour, border, etc. 
+ **************************************************/
+#cn-left-col-inner, #cn-left-col-gap {
+  background-color: #ffffff;
+}
+
+
+#cn-left-col h3 {
+  background-color: #25E;
+  color: #EEF3E0; 
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+
+/*************************************************
+  Left column menu 
+ **************************************************/
+#cn-left-col ul {
+}
+
+#cn-left-col li:first-child {  
+}
+
+#cn-left-col li {
+  border-top: 1px solid #fff;  
+}
+
+#cn-left-col li a {
+}
+
+#cn-left-col li a:link,
+#cn-left-col li a:visited {
+  color: #000;     
+}
+
+#cn-left-col li a:hover, 
+#cn-left-col li a:focus, 
+#cn-left-col li a:active {  
+  background-color: transparent;
+  text-decoration: underline;
+  color: #000; 
+}
+
+/*************************************************
+  Right column header colour, background colour, border, etc.
+ **************************************************/
+#cn-right-col-inner {
+  background-color: #ffffff;
+}
+  
+#cn-right-col h3 {
+  background-color: #25E;
+  color: #EEF3E0; 
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.cn-right-col-default h3 + div {
+  background-color: #E9E9E9;
+}
+
+#cn-right-col li a:link,
+#cn-right-col li a:visited {
+  color: #000;     
+}
+
+#cn-right-col li a:hover, 
+#cn-right-col li a:focus, 
+#cn-right-col li a:active {  
+  background-color: #25E;
+  color: #ffffff; 
+}
+
+/*************************************************
+  Footer line background colour
+ **************************************************/
+#cn-in-pd {
+  border-top-color: #25E;
+}

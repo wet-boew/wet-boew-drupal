@@ -1,0 +1,1968 @@
+/* CLF 2.0 TEMPLATE VERSION 1.04 | VERSION 1.04 DU GABARIT NSI 2.0 */
+
+
+
+
+
+
+
+/* GENERAL CSS BEGINS | DEBUT DU CSS GENERAL */
+
+
+
+
+
+
+
+/* BASE-INSTITUTION OVERRIDES AND ADDITIONS STARTS*/
+
+
+
+
+
+
+
+/* New Homepage Design - CSS Document - add december 9th 2009 */
+
+
+
+
+
+
+
+/* HEADING SIZES OVERRIDE STARTS */
+
+
+
+h1, .h1Size, .fontSize160 {
+	font-size: 160%;
+}
+h2, .h2Size, .fontSize130 {
+	font-size: 130%;
+}
+h3, .h3Size, .big, .fontSize120 {
+	font-size: 120%;
+}
+h4, .h4Size, .fontSize105 {
+	font-size: 105%;
+}
+/* HEADING SIZES OVERRIDE ENDS */
+
+
+
+
+
+
+
+/*MENU BAR OVERRIDES STARTS */
+
+
+
+div.left li.last, div.left div.last {
+	color: #000;
+	background-color: #E9E9E9;
+}
+
+div.left h2.module, div.left h2.module a:link, div.left h2.module a:visited {
+	background-color: #CC3300;
+	color: #FFF;
+	text-decoration: none;
+}
+div.left h2.submoddk, div.left h2.submoddk a:link, div.left h2.submoddk a:visited {
+	background-color: #555555;
+	color: #FFF;
+	text-decoration: none;
+}
+div.left li h2.module a:hover, div.left li h2.module a:active, div.left li h2.module a:focus, div.left h2.submoddk a:hover, div.left h2.submoddk a:active, div.left h2.submoddk a:focus {
+	text-decoration: underline;
+}
+/*Add to style in base.css */
+
+
+
+h2.module, h2.submoddk {
+	font-size: 10pt;
+	font-weight: 700;
+	line-height: 1.6em;
+	border-top-width: 0pt;
+	border-right-width: 0pt;
+	border-bottom-width: 0pt;
+	border-left-width: 0pt;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 0pt;
+	margin-right: 0pt;
+	margin-bottom: 0pt;
+	margin-left: 0pt;
+}
+/*Add to style in base2.css */
+
+
+
+h2.module, h2.submoddk {
+	font-size: 100%;
+}
+/* MENU BAR OVERRIDES ENDS */
+
+
+
+
+
+
+
+/* MISCELLANEOUS STYLES STARTS */
+
+
+
+p.warning1col {
+	text-align: center;
+	font-style: italic;
+}
+caption {
+	font-size:1.15em;
+	font-weight:bold;
+	caption-side:top;
+	text-align:left;
+	padding-top:12px;
+	padding-left:0;
+}
+.indentBoth {
+	padding-left: 36px;
+	padding-right: 36px;
+}
+/* MISCELLANEOUS STYLES ENDS */
+
+
+
+/* BASE-INSTITUTION OVERRIDES AND ADDITIONS ENDS */
+
+
+
+
+
+
+
+/* WIP STYLES CARRIED OVER STARTS*/
+
+
+
+/* ***** 1. Boxes ***** */
+
+
+
+
+
+
+
+.box01,  .box01warn01 {
+	/*background:#f6f6f6;*/
+
+
+
+border:1px solid #bbb;
+	margin:0 0 1em 0;
+	padding:0 0 0.25em 0;
+}
+.box01 dl,  .box01 h2,  .box01 h3,  .box01 h4,  .box01 h5,  .box01 h6,  .box01 img,  .box01 ol,  .box01 p,  .box01 table,  .box01 ul,  .box01warn01 dl,  .box01warn01 h2,  .box01warn01 h3,  .box01warn01 h4,  .box01warn01 h5,  .box01warn01 h6,  .box01warn01 img,  .box01warn01 ol,  .box01warn01 p,  .box01warn01 table,  .box01warn01 ul {
+	padding:0 1em;
+}
+.box01 ol li,  .box01 ul li,  .box01warn01 ol li,  .box01warn01 ul li {
+	margin:0 0 0 1.5em;
+}
+.box01 .boxhd,  .box01warn01 .boxhd {
+	/*background:#d6dde4;*/
+
+
+
+color:#444;
+	line-height:1.5em;
+	margin:0 0 0.75em 0;
+	padding:0.25em 1em;
+}
+.box01.nobox {
+	background:transparent;
+}
+.box01.nobox,  .box01.nobox *,  .box01.nobox img {
+	border:none;
+	padding:0;
+}
+/* Mod IE06-02010 */
+
+
+
+
+
+
+
+.box01.nobox *.boxhd {
+	background:transparent;
+	color:#000;
+	margin-bottom:0.25em;
+}
+.box01warn01 {
+	background:#fd6;
+	border:1px solid #bbb;
+	margin:0 0 1em 0;
+	padding:0.75em 0;
+}
+.box01warn01 .boxhd {
+	background:#fc3;
+	border-bottom:1px solid #fff;
+	color:#444;
+	margin:0 0 0.75em 0;
+}
+/* ***** 8.1. Tables: Data 01 ***** */
+
+
+
+
+
+
+
+.data01 {
+	font-family:verdana, arial, sans-serif;
+	margin:1px;
+}
+.data01 caption {
+	font:bold 120% arial, sans-serif;
+	margin:2em 0 0.5em 0;
+}
+.data01 tbody tr td,  .data01 tbody tr th {
+	border-top:1px solid #ddd;
+}
+.data01 td,  .data01 th {
+	padding:0.13em 0.5em;
+	text-align:right;
+	vertical-align:top;
+	width:auto;
+}
+.data01 th {
+	background:#e6e6e6;
+}
+.data01 td.stb01,  .data01 th.stb01 {
+	text-align:left;
+}
+.data01 thead tr th {
+	border-bottom:1px solid #999;
+}
+.data01 tfoot tr td {
+	background:#e6e6e6;
+}
+.data01 col.stb tbody tr td {
+	text-align:left;
+	width:auto;
+}
+.data01 tfoot tr td p.hindcont01 * {
+	font-family:verdana, arial, sans-serif;
+}
+.data01 tfoot tr td p.hindcont01 span.hindlf01 {
+	width:2em;
+}
+.data01 tfoot tr td p.hindcont01 span.hindrt01 {
+	left:2.5em;
+}
+/* ==== Tables: Info 01 (modified) ==== */
+
+
+
+
+
+
+
+#indicators {
+	clear:both;
+	margin-top:2em;
+}
+#indicators table {
+	font-size:100%;
+}
+#indicators a {
+	font:normal 102% arial, sans-serif;
+	padding-right:0.25em;
+}
+#indicators .info01 {
+	background:transparent;
+	border:none;
+	margin:0 0 1em 0;
+	padding:0;
+	width:99.9%;
+}
+#indicators .info01 caption,  #indicators .info01 thead {
+	display:inline;
+	left:-3400px;
+	position:absolute;
+}
+/* mod hm1t ie060w 002 */
+
+
+
+
+
+
+
+
+
+
+
+#indicators .info01 tfoot td,  #indicators .info01 tfoot th {
+	border-bottom:none;
+}
+#indicators .info01 * {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+}
+#indicators .info01 caption {
+	margin:0;
+	text-align:left;
+}
+#indicators .info01 td,  #indicators .info01 th {
+	background:#ffffff;
+	border-bottom:1px solid #bbb;
+	font-weight:bold;
+	padding:0.25em 0.75em;
+	text-align:right;
+	vertical-align:top;
+}
+#indicators .info01 td {
+	white-space:nowrap;
+}
+#indicators .info01 tr td.stb01,  #indicators .info01 tr th.stb01 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	text-align:left;
+	padding:0.25em 0.75em;
+	white-space:normal;
+}
+/* mod hm1 ie060w 001 */
+
+
+
+
+
+
+
+#indicators .info01 th span.break {
+	display:block;
+}
+#indicators .info01 tfoot td {
+	text-align:left;
+}
+#indicators .info01 tfoot td a {
+	font-weight:bold;
+}
+/* 1. Banners in rhnav */
+
+
+
+
+
+
+
+img.banner {
+	float:right;
+	padding:0 0 0.5em 0.5em;
+}
+img.banner {
+	float:right;
+	padding:0 0 0.5em 0.5em;
+}
+/* WIP STYLES CARRIED OVER ENDS */
+
+
+
+/* GENERAL CSS ENDS | FIN DU CSS GENERAL */
+
+
+
+
+
+
+
+
+
+
+
+/* SEARCH BOX CSS BEGINS */
+
+
+
+
+
+
+
+.corpicspace {
+	margin: 0px 0px 8px;
+	background-color: #000;
+}
+.inputedt2 {
+	padding: 0 0 0 0;
+	font-size: 70%;
+	margin: 0px 0px 0px 4px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.leftnavform {
+	padding-top: 8px;
+	padding-right: 3px;
+	padding-bottom: 8px;
+	padding-left: 4px;
+	margin: 0px;
+}
+.hidefieldset {
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	padding: 0 0 0 0;
+	display: block;
+	margin: 0px;
+}
+
+
+
+/* SEARCH BOX CSS ENDS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***** Classes added post CLF 2.0 impelmentation (after January 1, 2009)*****/
+
+
+
+
+
+
+
+/*** Screen display and print preview (The Daily) ***/
+
+
+
+
+
+
+
+/* Screen display */
+
+
+
+
+
+
+
+@media print {
+.sview {
+	display: none;
+}
+}
+
+
+
+
+
+
+
+/* Print preview */
+
+
+
+@media screen {
+.pview {
+	display: none;
+}
+}
+/* New HomeDesign - CSS Document */
+
+
+
+
+
+
+
+/*
+
+
+
+0- Center page
+
+
+
+1- Rounded corners
+
+
+
+2- Search box
+
+
+
+3- In the new box
+
+
+
+4- Tabs
+
+
+
+5- Left Navigation Box
+
+
+
+6- Right Navigation Box
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+/***** 0- Center page *****/
+
+
+
+
+
+
+
+*div#box1.blackborder { /*IE6 fix*/
+	width:97%;
+	overflow:hidden;
+}
+div#headbox {
+	margin-top:0em;
+}
+
+/***** 1- Rounded corners *****/
+
+
+
+
+
+
+
+div.roundCorner {
+	font-size: 1px;
+	overflow: hidden;
+	display: block;
+}
+div.roundCornerBlue1 {
+	height:1px;
+	background:#476FB2;
+	margin:0px 5px;
+}
+div.roundCornerBlue2 {
+	height:1px;
+	background:#476FB2;
+	border-right:2px solid #476FB2;
+	border-left:2px solid #476FB2;
+	margin:0px 3px;
+}
+div.roundCornerBlue3 {
+	height:1px;
+	background:#476FB2;
+	border-right:1px solid #476FB2;
+	border-left:1px solid #476FB2;
+	margin:0px 2px;
+}
+div.roundCornerBlue4 {
+	height:2px;
+	background:#476FB2;
+	border-right:1px solid #476FB2;
+	border-left:1px solid #476FB2;
+	margin:0px 1px;
+}
+div.headerBlueIndex {
+	background-color:#476FB2 !important;
+	padding-left:5px;
+	margin-top:-1.1em;
+}
+*div.headerBlueIndex {/*IE6 fix*/
+	background-color:#476FB2 !important;
+	padding-left:5px;
+	margin-top:-1em;
+}
+div.headerBlueIndex h2 {
+	color:#fff !important;
+	padding-bottom:5px;
+	margin-bottom:-13px;
+}
+*div.headerBlueIndex h2 { /*IE6 fix*/
+	padding-bottom:4px;
+	padding-top:3px;
+}
+div.roundCornerBlueF1 {
+	height:1px;
+	background:#2255EE;
+	margin:0px 5px;
+}
+div.roundCornerBlueF2 {
+	height:1px;
+	background:#2255EE;
+	border-right:2px solid #2255EE;
+	border-left:2px solid #2255EE;
+	margin:0px 3px;
+}
+div.roundCornerBlueF3 {
+	height:2px;
+	background:#2255EE;
+	border-right:1px solid #2255EE;
+	border-left:1px solid #2255EE;
+	margin:0px 2px;
+}
+div.roundCornerBlueF4 {
+	height:2px;
+	background:#2255EE;
+	border-right:1px solid #2255EE;
+	border-left:1px solid #2255EE;
+	margin:0px 1px;
+}
+div.roundCornerOrangeF1 {
+	height:1px;
+	background:#CC3300;
+	margin:0px 5px;
+}
+div.roundCornerOrangeF2 {
+	height:1px;
+	background:#CC3300;
+	border-right:2px solid #CC3300;
+	border-left:2px solid #CC3300;
+	margin:0px 3px;
+}
+div.roundCornerOrangeF3 {
+	height:2px;
+	background:#CC3300;
+	border-right:1px solid #CC3300;
+	border-left:1px solid #CC3300;
+	margin:0px 2px;
+}
+div.roundCornerOrangeF4 {
+	height:2px;
+	background:#CC3300;
+	border-right:1px solid #CC3300;
+	border-left:1px solid #CC3300;
+	margin:0px 1px;
+}
+div.headerBlueFIndex {
+	background-color:#2255EE !important;
+	padding-left:5px;
+	padding-bottom:5px;
+	margin-top:-1.1em;
+}
+div.headerOrangeFIndex {
+	background-color:#CC3300 !important;
+	padding-left:5px;
+	padding-bottom:5px;
+	margin-top:-1.1em;
+}
+div.roundCornerGreen1 {
+	height:1px;
+	background:#6F7151;
+	margin:0px 5px;
+}
+div.roundCornerGreen2 {
+	height:1px;
+	background:#6F7151;
+	border-right:2px solid #6F7151;
+	border-left:2px solid #6F7151;
+	margin:0px 3px;
+}
+div.roundCornerGreen3 {
+	height:1px;
+	background:#6F7151;
+	border-right:1px solid #6F7151;
+	border-left:1px solid #6F7151;
+	margin:0px 2px;
+}
+div.roundCornerGreen4 {
+	height:2px;
+	background:#6F7151;
+	border-right:1px solid #6F7151;
+	border-left:1px solid #6F7151;
+	margin:0px 1px;
+}
+div.headerGreenIndex {
+	background-color:#6F7151 !important;
+	padding-left:5px;
+	margin-top:-1.1em;
+}
+*div.headerGreenIndex { /*IE6 fix*/
+	background-color:#6F7151 !important;
+	padding-left:5px;
+	margin-top:-1.5em;
+}
+div.headerGreenIndex h2 {
+	color:#fff !important;
+	padding-bottom:2px;
+	margin-bottom:-13px;
+}
+div.roundCornerBlueL1 {
+	height:1px;
+	background:#C6D2E1;
+	margin:0px 5px;
+}
+div.roundCornerBlueL2 {
+	height:2px;
+	background:#C6D2E1;
+	border-right:2px solid #DAE4EB;
+	border-left:2px solid #DAE4EB;
+	margin:0px 3px;
+}
+div.roundCornerBlueL3 {
+	height:1px;
+	background:#C6D2E1;
+	border-right:1px solid #DAE4EB;
+	border-left:1px solid #DAE4EB;
+	margin:0px 2px;
+}
+div.roundCornerBlueL4 {
+	height:3px;
+	background:#C6D2E1;
+	border-right:1px solid #DAE4EB;
+	border-left:1px solid #DAE4EB;
+	margin:0px 1px;
+}
+div.headerBlueLIndex {
+	background-color:#C6D2E1 !important;
+	padding-left:5px;
+	margin-top:-1.2em;
+}
+*div.headerBlueLIndex { /*IE6 fix*/
+	background-color:#C6D2E1 !important;
+	padding-left:5px;
+	margin-top:-1.6em;
+}
+div.headerBlueLIndex h3 {
+	color:#000 !important;
+	padding-bottom:3px;
+	margin-bottom:-13px;
+	font-size:small;
+	font-weight:normal;
+}
+*div.headerBlueLIndex h3 {
+	margin-bottom:3px;
+}
+div.roundCornerWhite1 {
+	height:1px;
+	background:#fff;
+	margin:0px 5px;
+}
+div.roundCornerWhite2 {
+	height:1px;
+	background:#fff;
+	border-right:2px solid #fff;
+	border-left:2px solid #fff;
+	margin:0px 3px;
+}
+div.roundCornerWhite3 {
+	height:1px;
+	background:#fff;
+	border-right:1px solid #fff;
+	border-left:1px solid #fff;
+	margin:0px 2px;
+}
+div.roundCornerWhite4 {
+	height:2px;
+	background:#fff;
+	border-right:1px solid #fff;
+	border-left:1px solid #fff;
+	margin:0px 1px;
+}
+div.headerWhiteIndex {
+	background-color:#fff !important;
+	padding-left:5px;
+	margin-top:-1em;
+}
+*div.headerWhiteIndex { /*IE6 fix*/
+	background-color:#fff !important;
+	padding-left:5px;
+	margin-top:-1.0em;
+}
+div.headerWhiteIndex h3 {
+	color:#000 !important;
+	padding-bottom:1px;
+	margin-bottom:-12px;
+	margin-top:12px;
+	font-size:small;
+	font-weight:normal;
+}
+*div.headerWhiteIndex h3 { /*IE6 fix*/
+	padding-bottom:15px;
+}
+div.roundCornerRed1 {
+	height:1px;
+	background:#BB0000;
+	margin:0px 5px;
+}
+div.roundCornerRed2 {
+	height:1px;
+	background:#BB0000;
+	border-right:2px solid #BB0000;
+	border-left:2px solid #BB0000;
+	margin:0px 3px;
+}
+div.roundCornerRed3 {
+	height:2px;
+	background:#BB0000;
+	border-right:1px solid #BB0000;
+	border-left:1px solid #BB0000;
+	margin:0px 2px;
+}
+div.roundCornerRed4 {
+	height:2px;
+	background:#BB0000;
+	border-right:1px solid #BB0000;
+	border-left:1px solid #BB0000;
+	margin:0px 1px;
+}
+div.headerRedIndex {
+	background-color:#BB0000 !important;
+	padding-left:5px;
+	padding-bottom:5px;
+	margin-top:-1.1em;
+}
+div.roundCornerOrange1 {
+	height:1px;
+	background:#BB5E09;
+	margin:0px 5px;
+}
+div.roundCornerOrange2 {
+	height:1px;
+	background:#BB5E09;
+	border-right:2px solid #BB5E09;
+	border-left:2px solid #BB5E09;
+	margin:0px 3px;
+}
+div.roundCornerOrange3 {
+	height:2px;
+	background:#BB5E09;
+	border-right:1px solid #BB5E09;
+	border-left:1px solid #BB5E09;
+	margin:0px 2px;
+}
+div.roundCornerOrange4 {
+	height:2px;
+	background:#BB5E09;
+	border-right:1px solid #BB5E09;
+	border-left:1px solid #BB5E09;
+	margin:0px 1px;
+}
+div.headerOrangeIndex {
+	background-color:#BB5E09 !important;
+	padding-left:5px;
+	padding-bottom:5px;
+	margin-top:-1.1em;
+	color:#fff;
+}
+div.headerOrangeIndex h2 a {
+	color:#FFF;
+}
+
+/**** Rounded Corner for NHS****/
+div.roundCornerBlueD1 {
+	height:1px;
+	background:#081E53;
+	margin:0px 5px;
+}
+div.roundCornerBlueD2 {
+	height:1px;
+	background:#081E53;
+	border-right:2px solid #081E53;
+	border-left:2px solid #081E53;
+	margin:0px 3px;
+}
+div.roundCornerBlueD3 {
+	height:1px;
+	background:#081E53;
+	border-right:1px solid #081E53;
+	border-left:1px solid #081E53;
+	margin:0px 2px;
+}
+div.roundCornerBlueD4 {
+	height:2px;
+	background:#081E53;
+	border-right:1px solid #081E53;
+	border-left:1px solid #081E53;
+	margin:0px 1px;
+}
+
+div.headerBlueDIndex {
+	background-color:#081E53 !important;
+	padding-left:5px;
+	padding-bottom:12px;
+	margin-top:-0.9em;
+}
+div.headerBlueDIndex h2 {
+	color:#fff !important;
+	font-size:small;
+	padding-bottom:5px;
+	margin-bottom:-13px;
+}
+*div.headerBlueDIndex {/*IE6 fix*/
+	background-color:#081E53 !important;
+	padding-left:5px;
+	margin-top:-1em;
+}
+
+*div.headerBlueDIndex h2 { /*IE6 fix*/
+	padding-bottom:4px;
+	padding-top:3px;
+	font-size:small;
+	margin-bottom:-13px;
+}
+
+/**** End of Rounded corner for NHS ****/
+
+/***** 2- Search box *****/
+
+
+
+
+
+
+
+.searchbox01center {
+	background-color:#D7E0E8;
+	border-bottom:#6185C1 solid 1px;
+	border-left:#6185C1 solid 1px;
+	border-right:#6185C1 solid 1px;
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	padding-left:0.3em;
+	margin-bottom:0.5em;
+}
+
+form.allstats {
+	width:100%;
+	margin-left:-1em;
+	padding-left:3px;
+	margin-top:-0.3em;
+}
+*form.allstats { /*IE6*/
+	padding-bottom:2em;
+	margin-bottom:1em;
+}
+fieldset.all {
+	border:none;
+}
+
+input.nobutton {
+	text-decoration:underline;
+	text-align:left;
+	color:#003399;
+	background-color:#DAE4EB;
+	border-style:none;
+	margin:0px;
+	padding:0px;
+	overflow:visible;
+	cursor: pointer;
+	display: inline-block;
+}
+/***** 3-In the new box *****/
+
+
+
+
+
+
+
+.news {
+	margin-top:1em;
+	border:none;
+}
+#design {
+	background-color:#FAFBF1;
+	border-bottom:solid #91976C 1px;
+	border-left:solid #91976C 1px;
+	border-right:solid #91976C 1px;
+	min-height:195px;
+	width:97.5%;
+	padding-bottom:0.5em;
+	/*margin-top:1em;*/
+}
+*li.menucontent#design { /*IE6 fix*/
+	padding-bottom:0em;
+	padding-top:1em;
+	margin-bottom:1em;
+}
+div.headerGreenIndex h2 img {
+	border:#FFFFFF solid 1px;
+}
+.dailyalign {
+	text-align:right;
+	font-size:medium;
+	font-weight:bold;
+	float:right;
+	margin-right:7px;
+}
+div.headerGreenIndex h2 a.dailyalign {
+	color:#FFFFFF;
+}
+*div.headerGreenIndex h2 a.dailyalign { /*IE6 fix*/
+	margin-top:-22px;
+}
+div.headerGreenIndex h2 a:visited.dailyalign {
+	color:#FFFFFF;
+}
+div.boutonalign {
+	margin-top:10px;
+}
+#imgA {
+	float:left;
+	padding-right:5px;
+	width:150px;
+	height:175px;
+	padding-bottom:20px;
+}
+.txtaligndr {
+	display:block;
+	padding-bottom:10px;
+}
+.titleText {
+	font-weight:bold;
+}
+div.moreLink {
+	float:right;
+	margin-left:1em;
+	margin-top:0em;
+}
+*div.moreLink { /*IE6*/
+	float:right;
+	margin-right:0em;
+	margin-top:-1.5em;
+}
+/***** 4-Tabs *****/
+
+
+
+
+
+
+
+*div.bigBoxResource { /*IE6*/
+	margin-top:-1.2em;
+}
+div.resourceBox {
+	background-color:#C6D2E1;
+	border-bottom:#6185C1 solid 1px;
+	border-left:#6185C1 solid 1px;
+	border-right:#6185C1 solid 1px;
+	height:100%;
+	font-size:90%;
+	margin-top:-1px;
+	overflow:hidden;
+}
+*div.resourceBox { /*IE6*/
+	margin-top:-6px;
+}
+ul.browse {
+	list-style-type:none;
+	padding-left:0em;
+}
+.colL {
+	margin-left:0em;
+	float:left;
+	width:50%;
+}
+*div.colL { /*IE6 */
+	margin-left:-3em;
+	margin-top:0.5em;
+}
+.colR {
+	margin-left:-0.5em;
+	float:right;
+	width:50%
+}
+*div.colR { /*IE6 */
+	margin-top:0.5em;
+	width:60%;
+}
+.tabs {
+	float:left;
+	display:block;
+	margin-top:-3px;
+}
+*div.tabs { /*IE6 */
+	float:left;
+	position:relative;
+	top:-1.6em;
+	left:2.5em;
+}
+#tabnav h2 {
+	font-size:small;
+	font-weight:normal;
+}
+ol#tabnav {
+	list-style:none;
+	margin-left:5.2em;
+	margin-top:-1.5em;
+}
+*ol#tabnav { /*IE6*/
+	display:inline;
+	overflow:visible;
+	zoom:1;
+	width:90%!important;
+}
+ol#tabnav li {
+	float:left;
+	margin-left:0.3em;
+	font-weight:normal;
+}
+*ol#tabnav li { /*IE6 */
+	position:relative;
+	top:1.5em;
+	display:inline-block;
+	height:23px;
+	padding-left:0em;
+	max-width:110px;
+	width:auto!important;
+	width:110px;
+}
+ol#tabnav li.active {
+	font-weight:bold;
+	text-decoration:none;
+}
+*ol#tabnav li.active {/*IE6*/
+	display:inline-block;
+	max-width:110px;
+	width:auto!important;
+	width:110px;
+}
+/***** 5-Left Navigation Box *****/
+
+
+
+
+
+
+
+div.headerBlueIndex h2 {
+	color:#000;
+	font-size:small;
+	margin-bottom:0em;
+	margin-top:1em;
+}
+div.headerRedIndex h2 {
+	color:#FFF;
+	font-size:small;
+	margin-bottom:0em;
+	margin-top:1em;
+}
+div.headerOrangeIndex h2 {
+	color:#FFF;
+	font-size:small;
+	margin-bottom:0em;
+	margin-top:1em;
+	text-decoration:underline;
+}
+
+div.headerBlueFIndex h2 {
+	color:#FFFFFF;
+	font-size:small;
+	padding-top:1px;
+	margin-bottom:0em;
+	margin-top:1em;
+}
+div.headerOrangeFIndex h2 {
+	color:#fff;
+	font-size:small;
+	padding-top:1px;
+	margin-bottom:0em;
+	margin-top:1em;
+}
+div.headerOrangeFIndex h2 a {
+	color: #fff;
+	text-decoration:none;
+}
+div.headerOrangeFIndex h2 a:visited {
+	color: #fff;
+	text-decoration:none;
+}
+div.headerOrangeFIndex h2 a:hover {
+	color: #fff;
+	text-decoration:underline !important;
+}
+div.headerBlueFIndex h3 {
+	color:#FFFFFF;
+	font-size:small;
+	padding-top:1px;
+	margin-bottom:-1em;
+	margin-top:1em;
+}
+.borderBox {
+	border-bottom:solid #6185C1 1px;
+	border-left:solid #6185C1 1px;
+	border-right:solid #6185C1 1px;
+	margin-bottom:0.5em !important;
+}
+.borderBoxBlack {
+	border-bottom:solid #000 1px;
+	border-left:solid #000 1px;
+	border-right:solid #000 1px;
+	margin-bottom:0.5em !important;
+}
+.lightb {
+	background-color:#D7E0E8!important;
+}
+.lightb1 {
+	background-color:#C6D2E1!important;
+}
+
+
+/***** Right Navigation Box *****/
+
+div.headerBlueIndex h2 a {
+	color:#FFFFFF;
+}
+
+div.headerBlueIndex h2 a:visited {
+	color:#FFFFFF;
+}
+#bgcolorB {
+	background-color:#DAE4EB;
+}
+
+.bottomLine {
+	border-bottom:solid #6185C1 1px;
+}
+
+
+li.bottomLine img {
+	vertical-align:bottom;
+}
+
+li.bottomLineLast img {
+	vertical-align:bottom;
+	padding-top:2px;
+}
+
+div.space {
+	margin-top:0.5em;
+}
+
+ul.censusBox {
+	list-style-type: none;
+	margin:0;
+	padding:0px;
+	border-bottom:1px solid #6185C1;
+	border-left:1px solid #6185C1;
+	border-right:1px solid #6185C1;
+	margin-bottom:0.5em !important;
+}
+
+ul.censusBox li {
+	padding:2px;
+}
+
+/* Stay connected box */
+div.stayConnectedBox {
+	list-style-type: none;
+	margin:0;
+	padding-top:5px;
+	border-bottom:1px solid #BB5E09;
+	border-left:1px solid #BB5E09;
+	border-right:1px solid #BB5E09;
+	margin-bottom:0.5em !important;
+}
+
+div.mobile {
+	float:left;
+	padding-left:1px;
+	padding-right:1px;
+}
+
+div.rss {
+	float:right;
+	padding-left:1px;
+	padding-right:7.6em;
+	margin-top:-3.8em;
+}
+
+div.twitter {
+	float:right;
+	padding-left:1px;
+	padding-right:4em;
+	margin-top:-3.8em;
+}
+
+div.widgets {
+	float:right;
+	padding-left:1px;
+	padding-right:1px;
+	margin-top:-3.8em;
+}
+/* End of Stay connected box */
+
+
+li.dashedBottom {
+	border-bottom:1px dashed #BBBBBB;
+!important;
+}
+
+
+/** Fix for small footnotes in IE8 **/
+
+/** IE8 displays small footnotes when coded <sup><a>...</a></sup> **/
+
+sup a {
+	font-size: 100%;
+}
+/** end of footnote fix **/
+
+
+
+/** Conform-e table styles **/
+
+ 
+
+/* Table with headings in blue, thin lines for cells */
+
+ 
+
+table.customTable {
+
+                width: 100%;
+
+                background-color: #fff;
+
+                border: 1px #000 solid;
+
+                border-collapse: collapse;
+
+                border-spacing: 0px;
+
+}
+
+.customTable td, .customTable th {
+
+                border: 1px #000 solid;
+
+                padding: 2px;
+
+                vertical-align: top;
+
+}
+
+/* Column headings */
+
+ 
+
+/* Column 1 - left aligned, blue */
+
+ 
+
+th.colHeadingLeft {
+
+                background-color: #ddeeff;
+
+                text-align: left;
+
+}
+
+/* Spanned columns headings or UOM - center aligned, blue */
+
+ 
+
+th.colHeadingCenter {
+
+                background-color: #ddeeff;
+
+                text-align: center;
+
+}
+
+/* Columns - right aligned, blue */
+
+ 
+
+th.colHeadingRight {
+
+                background-color: #ddeeff;
+
+                text-align: right;
+
+}
+
+/* Row headings */
+
+ 
+
+/* Row span bold, left aligned */
+
+ 
+
+th.rowSpanBold {
+
+                background-color: #ddeeff;
+
+                text-align: left;
+
+}
+
+/* Normal font, left aligned */  
+
+ 
+
+th.rowHeading {
+
+                background-color: #fff;
+
+                font-weight: normal;
+
+                text-align: left;
+
+}
+
+/* Bold, left aligned */  
+
+ 
+
+th.rowHeadingBold {
+
+                background-color: #fff;
+
+                font-weight: bold;
+
+                text-align: left;
+
+}
+
+/* Blue, bold and left aligned */
+
+ 
+
+th.rowHeadingBoldBlue {
+
+                background-color: #ddeeff;
+
+                font-weight: bold;
+
+                text-align: left;
+
+}
+
+/* Shade row headings dark gray */
+
+ 
+
+.customTable th.rowHeadingDarkGray {
+
+                background-color: #dadada;
+
+                font-weight: normal;
+
+                text-align: left;
+
+}
+
+/* Bold row headings in dark gray cells */
+
+ 
+
+.customTable th.rowHeadingDarkGrayBold {
+
+                background-color: #dadada;
+
+                text-align: left;
+
+}
+
+/* Shade row headings light gray */
+
+ 
+
+.customTable th.rowHeadingLightGray {
+
+                background-color: #eee;
+
+                font-weight: normal;
+
+                text-align: left;
+
+}
+
+/* Bold row headings in light gray cells */
+
+ 
+
+.customTable th.rowHeadingLightGrayBold {
+
+                background-color: #eee;
+
+                text-align: left;
+
+}
+
+/* Indents */
+
+ 
+
+/* Level 1 in a spanned row*/
+
+ 
+
+.customTable th.rowSpanIndent1 {
+
+                background-color: #ddeeff;
+
+                border: 1px #000000 solid;
+
+                padding-left: 10px;
+
+                text-align: left;
+
+                vertical-align: top;
+
+}
+
+/* Level 1 in a spanned row, bold*/
+
+ 
+
+.customTable th.rowSpanBoldIndent1 {
+
+                background-color: #ddeeff;
+
+                border: 1px #000000 solid;
+
+                padding-left: 10px;
+
+                text-align: left;
+
+                vertical-align: top;
+
+}
+
+/* Level 1 indent not in a spanned row, bold*/
+
+ 
+
+.customTable th.rowHeadingBoldIndent1 {
+
+                background-color: #fff;
+
+                border: 1px #000000 solid;
+
+                padding-left: 10px;
+
+                text-align: left;
+
+                vertical-align: top;
+
+}
+
+/* Level 1 indent not in a spanned row, bold, blue*/
+
+ 
+
+.customTable th.rowHeadingBoldBlueIndent1 {
+
+                background-color: #ddeeff;
+
+                border: 1px #000000 solid;
+
+                padding-left: 10px;
+
+                text-align: left;
+
+                vertical-align: top;
+
+}
+
+/* Level 1 indent not in a spanned row */
+
+ 
+
+.customTable th.rowHeadingIndent1 {
+
+                background-color: #fff;
+
+                border: 1px #000000 solid;
+
+                font-weight: normal;
+
+                padding-left: 10px;
+
+                text-align: left;
+
+                vertical-align: top;
+
+}
+
+/* Level 2 */
+
+ 
+
+.customTable th.rowHeadingIndent2 {
+
+                background-color: #fff;
+
+                border: 1px #000000 solid;
+
+                font-weight: normal;
+
+                padding-left: 20px;
+
+                text-align: left;
+
+                vertical-align: top;
+
+}
+
+/* Level 3 */
+
+ 
+
+.customTable th.rowHeadingIndent3 {
+
+                background-color: #fff;
+
+                border: 1px #000000 solid;
+
+                font-weight: normal;
+
+                padding-left: 30px;
+
+                text-align: left;
+
+                vertical-align: top;
+
+}
+
+/* Level 4 */
+
+.customTable th.rowHeadingIndent4 {
+
+                background-color: #fff;
+
+                border: 1px #000000 solid;
+
+                font-weight: normal;
+
+                padding-left: 40px;
+
+                text-align: left;
+
+                vertical-align: top;
+
+}
+
+/* Level 5 */
+
+.customTable th.rowHeadingIndent5 {
+
+                background-color: #fff;
+
+                border: 1px #000000 solid;
+
+                font-weight: normal;
+
+                padding-left: 50px;
+
+                text-align: left;
+
+                vertical-align: top;
+
+}
+
+ 
+
+/* Level 2 indent bold*/
+
+.customTable th.rowHeadingBoldIndent2 {
+
+                background-color: #fff;
+
+                border: 1px #000000 solid;
+
+                font-weight: bold;
+
+                padding-left: 20px;
+
+                text-align: left;
+
+                vertical-align: top;
+
+}
+
+/* Level 2 indent bold blue*/
+
+.customTable th.rowHeadingBoldBlueIndent2 {
+
+                background-color: #ddeeff;
+
+                border: 1px #000000 solid;
+
+                font-weight: bold;
+
+                padding-left: 20px;
+
+                text-align: left;
+
+                vertical-align: top;
+
+}
+
+/* Level 3 indent bold */
+
+.customTable th.rowHeadingBoldIndent3 {
+
+                background-color: #fff;
+
+                border: 1px #000000 solid;
+
+                font-weight: bold;
+
+                padding-left: 30px;
+
+                text-align: left;
+
+                vertical-align: top;
+
+}
+
+/* Level 4 indent bold */
+
+.customTable th.rowHeadingBoldIndent4 {
+
+                background-color: #fff;
+
+                border: 1px #000000 solid;
+
+                font-weight: bold;
+
+                padding-left: 40px;
+
+                text-align: left;
+
+                vertical-align: top;
+
+}
+
+/* Level 5 indent bold */
+
+.customTable th.rowHeadingBoldIndent5 {
+
+                background-color: #fff;
+
+                border: 1px #000000 solid;
+
+                font-weight: bold;
+
+                padding-left: 50px;
+
+                text-align: left;
+
+                vertical-align: top;
+
+}
+
+ 
+
+/* Data cells */
+
+ 
+
+/* Add white background colour and right alignment to data cells */
+
+ 
+
+.customTable td {
+
+                background-color: #fff;
+
+                text-align: right;
+
+                white-space: nowrap;
+
+}
+
+/* Used for empty cells for row headings */
+
+ 
+
+.customTable td.emptyData {
+
+                background-color: #ddeeff;
+
+}
+
+/* Use for bolded data cells */
+
+ 
+
+.customTable td.dataBold {
+
+                background-color: #fff;
+
+                font-weight: bold;
+
+                text-align: right;
+
+}
+
+/* Shade data cells dark gray */
+
+ 
+
+.customTable td.dataDarkGray {
+
+                background-color: #dadada;
+
+                text-align: right;
+
+}
+
+/* Bold data in dark gray cells */
+
+ 
+
+.customTable td.dataDarkGrayBold {
+
+                background-color: #dadada;
+
+                font-weight: bold;
+
+                text-align: right;
+
+}
+
+/* Shade data cells light gray */
+
+ 
+
+.customTable td.dataLightGray {
+
+                background-color: #eee;
+
+                text-align: right;
+
+}
+
+/* Bold data in dark gray cells */
+
+ 
+
+.customTable td.dataLightGrayBold {
+
+                background-color: #eee;
+
+                font-weight: bold;
+
+                text-align: right;
+
+}
+
+/* Used to left align text in the data area */
+
+.customTable td.dataLeft {
+
+                background-color: #fff;
+
+                text-align: left;
+
+                white-space: normal;
+
+}
+
+ 
+
+/* Used to center text in the data area */
+
+.customTable td.dataCenter {
+
+                background-color: #fff;
+
+                text-align: center;
+
+                white-space: normal;
+
+}
+
+ 
+
+/* Add blue colour to empty td if required */
+
+ 
+
+td.rowstub {
+
+                background-color: #ddeeff;
+
+}
+
+td.source {
+
+                background-color: #fff;
+
+                border: 1px #000000 solid;
+
+                font-size: 85%;
+
+                padding: 2px;
+
+                text-align: left;
+
+                white-space: normal;
+
+}
+
+/** end of Conform-e styles **/
+
+
+
+/* CLF 2.0 compliant table, map, chart and figure icons */ 
+
+img.pubicon {
+	float: left;
+	border: none;
+	margin-right: 5px;
+	margin-bottom: inherit;
+}
+/* Use if the third line wraps under the image */
+
+img.pubicon3 {
+	float: left;
+	border: none;
+	margin-right: 5px;
+	margin-bottom: 25px;
+}
+p.pubtext {
+	font-weight: bold;
+	vertical-align: top;
+}
+/* End of CLF 2.0 compliant table, map, chart and figure icons */ 
+
+
+div.clearBoth {
+	clear:both;
+}
+
+
+/*used for the archiving strategy*/
+
+.archived {
+	background-image:url(/clf2/images/arch-eng.gif) !important;
+}
+.archived_fra {
+	background-image:url(/clf2/images/arch-fra.gif) !important;
+}

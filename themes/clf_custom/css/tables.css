@@ -1,0 +1,483 @@
+/**
+ * Tables
+ */
+
+.view-flags table caption,
+.view-health-indicators table caption {
+	font-weight: bold;
+	color: #000 !important;
+		
+}
+
+.view-flags table,
+.view-health-indicators table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.view-flags th,
+.view-flags td,
+.view-health-indicators th,
+.view-health-indicators td {
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.view-flags td.help,
+.view-flags td.permissions,
+.view-flags td.configure,
+.view-health-indicators td.help,
+.view-health-indicators td.permissions,
+.view-health-indicators td.configure {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.view-flags td.active,
+.view-health-indicators td.active {
+  background-color: #eee;
+}
+
+.view-flags td.empty,
+.view-health-indicators td.empty {
+  background: none;
+}
+
+.view-flags th.checkbox,
+.view-health-indicators th.checkbox {
+  padding-left: 14px;
+  padding-right: 7px;
+}
+
+.view-flags th.views-field-last-comment-timestamp {
+    width: 90px;
+}
+
+.view-flags table tr {
+    background-color: #CCC !important;   
+}
+
+.view-flags thead,
+.view-flags thead th,
+.view-health-indicators th,
+.view-health-indicators thead,
+.view-health-indicators thead th {
+  background-color: #476FB2 ;
+  color: #fcfcf8;
+  border: none;
+}
+
+.view-flags tr,
+.view-flags tr.even,
+.view-flags tr.odd,
+.view-health-indicators tr,
+.view-health-indicators tr.even,
+.view-health-indicators tr.odd {
+  border-bottom: 1px solid #ccc;
+  background: none;
+}
+
+.view-flags caption,
+.view-health-indicators caption {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+/* Health Indicator Table Styles */
+
+.view-flags table,
+.node-health-indicators table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.view-flags table caption,
+.node-health-indicators table caption {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+
+/* Qibo table styles */
+table.cst-tbl-data {
+    border-right: #000 0px solid;
+    border-top: #000 2px solid;
+    margin-top: 0.5em;
+    font-size: 87%;
+    vertical-align: top;
+    border-left: #000 0px solid;
+    width: 85%;
+    border-bottom: #000 2px solid;
+    background-color: #ffffff;
+       }
+td.cst-tbl-zzzdefdata {
+    border-right: #000 0px solid;
+    border-top: #000 2px solid;
+    margin-top: 0.5em;
+    font-size: 95%;
+    vertical-align: top;
+    border-left: #000 0px solid;
+    width: 100%;
+    border-bottom: #000 0px solid;
+}
+caption.cst-tbl-titlexbottom {
+    font-weight: bold;
+    font-size: 100%;
+    color: #000;
+    line-height: 1.25em;
+    text-align: left;
+}
+caption.cst-tbl-title {
+    font-weight: bold;
+    font-size: 130%;
+    color: #000;
+    line-height: 1.25em;
+    text-align: left;
+}
+th.cst-tbl-title {
+    font-weight: bold;
+    font-size: 100%;
+    color: #000;
+    line-height: 1.25em;
+    text-align: left;
+}
+td.cst-tbl-title {
+    font-weight: bold;
+    font-size: 100%;
+    color: #000;
+    line-height: 1.25em;
+    text-align: left;
+}
+th.cst-tbl-refper {
+    font-weight: bold;
+    font-size: 100%;
+    color: #000;
+    border-bottom: #000 1px solid;
+    text-align: center;
+}
+td.cst-tbl-refper {
+    font-weight: bold;
+    font-size: 100%;
+    color: #000;
+    border-bottom: #000 1px solid;
+    text-align: center;
+}
+th.cst-tbl-header {
+    font-weight: bold;
+    font-size: 97%;
+    vertical-align: top;
+    color: #000;
+    border-bottom: #000 1px solid;
+    text-align: center;
+}
+
+td.cst-tbl-header1, 
+th.cst-tbl-header1 {
+    font-weight: bold;
+    font-size: 97%;
+    vertical-align: top;
+    color: #000;
+    border-bottom: #000 1px solid;
+    text-align: right;
+}
+td.cst-tbl-header {
+    font-weight: bold;
+    font-size: 97%;
+    vertical-align: top;
+    color: #000;
+    border-bottom: #000 1px solid;
+    text-align: center;
+}
+th.cst-tbl-header a {
+    font-weight: bold;
+    vertical-align: top;
+    color: #0000ff;
+    text-decoration: underline;
+}
+td.cst-tbl-header a {
+    font-weight: bold;
+    vertical-align: top;
+    color: #0000ff;
+    text-decoration: underline;
+}
+th.cst-tbl-unit {
+    border-right: #e1e6e8 1px dotted;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: bottom;
+    color: #000;
+    border-bottom: #000 1px solid;
+    text-align: center
+}
+th.cst-tbl-unit1 {
+    border-right: #e1e6e8 1px dotted;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: bottom;
+    color: #000;
+    border-bottom: #000 1px solid;
+    text-align: right
+}
+td.cst-tbl-unit {
+    border-right: #e1e6e8 1px dotted;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: top;
+    color: #000;
+    border-bottom: #000 1px solid;
+    text-align: center
+}
+td.cst-tbl-unit1 {
+    border-right: #e1e6e8 1px dotted;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: top;
+    color: #000;
+    border-bottom: #000 1px solid;
+    text-align: right
+}
+td.cst-tbl-unit {
+    border-right: #e1e6e8 1px dotted;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: top;
+    color: #000;
+    border-bottom: #000 1px solid;
+    text-align: center
+}
+td.cst-tbl-textdata {
+    border-right: #e1e6e8 1px dotted;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: bottom;
+    color: #000;
+    border-bottom: #e1e6e8 1px dotted;
+    text-align: right
+}
+td.cst-tbl-textdata-media {
+    border-right: #e1e6e8 1px dotted;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: bottom;
+    color: #000;
+    border-bottom: #e1e6e8 1px dotted;
+    text-align: center
+
+}
+caption.cst-tbl-deftitle {
+    margin-top: 2em;
+    font-weight: bold;
+    font-size: 100%;
+    margin-bottom: 2em;
+    color: #000;
+    border-bottom: #000 2px solid;
+    text-align: left
+}
+td.cst-tbl-defrefper {
+    border-top: #000 0px solid;
+    margin-top: 2em;
+    font-weight: bold;
+    font-size: 100%;
+    color: black;
+    text-align: left
+}
+th.cst-tbl-defrefper {
+    border-top: #000 0px solid;
+    margin-top: 2em;
+    font-weight: bold;
+    font-size: 100%;
+    color: black;
+    text-align: left
+}
+td.cst-tbl-defunit {
+    border-top: #000 0px solid;
+    margin-top: 2em;
+    font-weight: bold;
+    font-size: 100%;
+    color: black;
+    text-align: left
+}
+th.cst-tbl-defunit {
+    border-top: #000 0px solid;
+    margin-top: 2em;
+    font-weight: bold;
+    font-size: 100%;
+    color: black;
+    text-align: left
+}
+td.cst-tbl-defr1 {
+    border-right: #e1e6e8 1px solid;
+    font-weight: normal;
+    font-size: 80%;
+    vertical-align: top;
+    text-align: left
+}
+td.cst-tbl-defr1b {
+    border-right: #e1e6e8 1px solid;
+    font-weight: bold;
+    font-size: 80%;
+    vertical-align: top;
+    text-align: left
+}
+td.cst-tbl-data {
+    border-right: #e1e6e8 1px solid;
+    font-size: 97%;
+    vertical-align: bottom;
+    border-bottom: #e1e6e8 1px dotted;
+    text-align: right;
+
+}
+
+xxxxxtd.cst-tbl-data.hover {
+    border-right: #e1e6e8 1px solid;
+    font-size: 97%;
+    vertical-align: bottom;
+    border-bottom: #e1e6e8 1px dotted;
+    text-align: right;
+background: red; 
+}
+
+
+
+
+
+
+td.cst-tbl-data_withnowrap_disabled4dsbbcan_clf2 {
+    border-right: #e1e6e8 1px solid;
+    font-size: 100%;
+    vertical-align: bottom;
+    border-bottom: #e1e6e8 1px dotted;
+    text-align: right;
+    white-space: nowrap;
+}
+td.cst-tbl-datab {
+    border-right: #e1e6e8 1px solid;
+    font-weight: bold;
+    font-size: 100%;
+    vertical-align: bottom;
+    border-bottom: #e1e6e8 1px dotted;
+    text-align: right;
+    white-space: nowrap;
+}
+td.cst-tbl-footer {
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 96%;
+    color: #000;
+    background-color: #e6ecee;
+    font-family: arial, helvetica, sans-serif
+}
+xxtd.cst-tbl-footer {
+    font-size: 95%;
+    border-bottom: #cccccc 0px solid;
+    background-color: #e6ecee;
+    text-align: justify;
+}
+p.cst-cnt-posttext {
+    font-size: 100%;
+    font-family: arial;
+    text-align: left;
+}
+td.cst-tbl-r1 {
+    border-right: #e1e6e8 1px solid;
+    font-size: 100%;
+    vertical-align: top;
+    border-bottom: #e1e6e8 1px dotted;
+    text-align: left;
+  padding-left:0em;
+}
+
+xxxnowraptd.cst-tbl-r4indent {
+    border-right: #e1e6e8 1px solid;
+    font-size: 100%;
+    vertical-align: top;
+    border-bottom: #e1e6e8 1px dotted;
+    text-align: left;
+        padding-left:2em;
+    white-space: nowrap;
+}
+
+
+td.cst-tbl-r2 {
+    border-right: #e1e6e8 1px solid;
+    padding-left: .75em;
+    font-size: 100%;
+    vertical-align: top;
+    border-bottom: #e1e6e8 1px dotted;
+    text-align: left;
+    }
+td.cst-tbl-r3 {
+    border-right: #e1e6e8 1px solid;
+    padding-left: 1.5em;
+    font-size: 100%;
+    vertical-align: top;
+    border-bottom: #e1e6e8 1px dotted;
+    text-align: left;
+}
+td.cst-tbl-r4 {
+    border-right: #e1e6e8 1px solid;
+    padding-left: 2.25em;
+    font-size: 100%;
+    vertical-align: top;
+    border-bottom: #e1e6e8 1px dotted;
+    text-align: left;
+}
+td.cst-tbl-indlet {
+    font-weight: bold;
+    font-size: 110%;
+    color: #000;
+    line-height: 1.25em;
+    padding-top: 8px;
+    border-bottom: #000 1px solid;
+    background-color: #e6e6e6;
+    text-align: left
+}
+td.cst-tbl-letset {
+    border-top: #000 0px solid;
+    font-weight: bold;
+    font-size: 110%;
+    background-image: url(/images/bg4.gif);
+    color: #000;
+    line-height: 2.25em;
+    padding-top: 8px;
+    border-bottom: #000 3px solid;
+    text-align: left
+}
+table.cst-tbl-indlet {
+    border-right: #000 0px solid;
+    border-top: #000 0px solid;
+    margin-top: 0.5em;
+    font-size: 95%;
+    vertical-align: top;
+    border-left: #000 0px solid;
+    width: 100%;
+    border-bottom: #000 0px solid;
+    background-color: #ffffff;
+}
+hr {
+    width:100%;
+    margin-top: 2px;
+    margin-bottom: 7px
+}
+caption.cst-tbl-deftitle {
+    margin-top: 2em;
+    font-weight: bold;
+    font-size: 100%;
+    margin-bottom: 2em;
+    color: #000;
+    border-bottom: #000 2px solid;
+    text-align: left
+}
+td.cst-tbl-r1b {
+    border-right: #e1e6e8 1px solid;
+    font-weight: bold;
+    font-size: 100%;
+    vertical-align: top;
+    text-align: left
+}
+
+th {
+	border-bottom: #E1E6E8 1px solid
+}

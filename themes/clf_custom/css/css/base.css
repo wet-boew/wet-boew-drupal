@@ -1,0 +1,525 @@
+@charset "utf-8";
+/*!
+ * CSS presentation layer v1.3a6 / Couche présentation de CSS v1.3a6
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * Terms and conditions of use: http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Terms
+ * Conditions régissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Conditions
+ */
+
+/* Element normalization / Normalisation des éléments */
+body {margin: 0; padding: 0;}
+a:active, a:focus {cursor: auto;}
+a img {border: none;}
+abbr, acronym {cursor: help; border-bottom: 1px dotted #000;} 
+q:before, q:after {content: "";}
+dl, ol, ul {margin-top: 1em; margin-bottom: 1em;}
+table {border-collapse: collapse; border-spacing: 0;}
+a[href]:hover, a[href]:active, a[href]:focus {color: #C00;}
+body {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 80%;}
+pre, code, kbd, samp, tt {font-family: "Courier New", Courier, monospace; font-size: 112%;}
+address {font-style: normal;}
+h1, h2, h3, h4, h5, h6 {margin: 1em 0; font-weight: bold;}
+h1 {font-size: 170%;}
+h2 {font-size: 155%;}
+h3 {font-size: 140%;}
+h4 {font-size: 130%;}
+h5 {font-size: 120%;}
+h6 {font-size: 110%;}
+
+/* Hide non-visual elements / Cacher les éléments non-visuel */
+.cn-invisible, .cn-show-onfocus, #cn-skip-head a, #cn-skip-head a:link, #cn-skip-head a:visited, #cn-left-col h2#cn-nav, #cn-right-col h2, #cn-foot h2 {position: absolute; clip: rect(1px, 1px, 1px, 1px); height: 1px !important; width: 1px !important; overflow: hidden !important; margin: 0 !important;}
+.cn-show-onfocus:focus, .cn-show-onfocus:active, #cn-skip-head a:focus, #cn-skip-head a:active {position: static; clip: auto; height: inherit !important; width: inherit !important; overflow: inherit !important; margin: inherit !important;}
+.cn-show-onhover {opacity: 0;}
+.cn-show-onhover:hover, .cn-show-onhover:focus, .cn-show-onhover:active {opacity: 1;}
+
+/* Skip header / Début de l'en-tête */
+#cn-skip-head {height: 0; float: left;}
+#cn-skip-head ul {list-style-type: none; margin-top: -1.8em;}
+#cn-skip-head li {position: absolute; top: 0; width: auto; z-index: 3;}
+#cn-skip-head #cn-sh-link-1 {right: 50%;}
+#cn-skip-head #cn-sh-link-2 {left: 50%;}
+#cn-skip-head a {padding: 5px; display: inline-block; width: 100%;}
+#cn-skip-head a, #cn-skip-head a:link, #cn-skip-head a:visited {color: #FFF; background-color: transparent; font-weight: bold;}
+#cn-skip-head a:hover, #cn-skip-head a:focus, #cn-skip-head a:active {background-color: #000; text-decoration: none; color: #FFF;}
+
+/* Basic grid / Grille simple */
+#cn-cols {clear: both; float: left; width: 100%;}
+#cn-body-inner-3col, #cn-body-inner-2col, #cn-body-inner-2col-right, #cn-body-inner-1col {margin: 0px 3%; border: 10px solid #FFF; position: relative;}
+#cn-centre-col, #cn-head, #cn-foot, #cn-left-col, #cn-right-col {position: relative;}
+#cn-left-col-gap, #cn-right-col-gap, #cn-centre-col-gap {position: absolute; top: 0; bottom: 0;}
+#cn-head, #cn-foot, #cn-left-col, #cn-right-col {z-index: 2;}
+#cn-left-col-gap, #cn-right-col-gap {z-index: 1;}
+#cn-head, #cn-foot {width: 100%; clear: both;}
+
+/* Default background colours / Couleurs d'arrère-plan par défaut */
+#cn-body-inner-3col, #cn-body-inner-2col, #cn-body-inner-2col-right, #cn-body-inner-1col, #cn-head, #cn-foot, #cn-centre-col-inner, #cn-centre-col-gap, #cn-left-col-inner, #cn-left-col-gap, #cn-right-col-inner, #cn-right-col-gap  {background: #FFF;}
+
+#cn-left-col, #cn-left-col-gap {width: 25%;}
+#cn-left-col {float: left; margin-right: -25%;}
+#cn-left-col-gap {left: 0;}
+
+#cn-right-col, #cn-right-col-gap {width: 25%;}
+#cn-right-col {float: right;}
+#cn-right-col-gap {right: 0;}
+
+#cn-centre-col {width: 100%;}
+#cn-centre-col, #cn-centre-col-gap {float: left;}
+#cn-centre-col-inner {padding: 1px 0;}
+
+#cn-body-inner-3col #cn-centre-col, #cn-body-inner-2col #cn-centre-col, #cn-body-inner-2col-right #cn-centre-col {margin-right: -100%;}
+
+/* 3 column / 3 colonne */
+#cn-body-inner-3col #cn-centre-col-inner {margin-left: 25%; margin-right: 25%;}
+#cn-body-inner-3col #cn-centre-col-gap {left: 25%; right: 25%;}
+
+/* 2 column / 2 colonne */
+#cn-body-inner-2col #cn-centre-col-inner {margin-left: 25%;}
+#cn-body-inner-2col #cn-centre-col-gap {left: 25%; right: 0;}
+
+/* 2 column with navigation on the right / 2 colonne avec la navigation à droite */
+#cn-body-inner-2col-right #cn-centre-col-inner {margin-right: 25%;}
+#cn-body-inner-2col-right #cn-centre-col-gap {left: 0; right: 25%;}
+
+/* Link description / Description de lien */
+a.cn-linkdesc {position: relative; z-index: 24;}
+a.cn-linkdesc:hover, a.cn-linkdesc:focus, a.cn-linkdesc:active {z-index: 25; outline: 0; text-decoration: none;}
+a.cn-linkdesc span span {position: absolute; clip: rect(1px, 1px, 1px, 1px); height: 1px !important; width: 1px !important; overflow: hidden !important;}
+a.cn-linkdesc:hover span span, a.cn-linkdesc:focus span span, a.cn-linkdesc:active span span {clip: auto; height: auto !important; width: auto !important; overflow: visible !important; top: 2em; left: 2.2em; white-space: nowrap; border: 1px solid InfoText; background: InfoBackground; color: InfoText; font: message-box; font-size: 0.85em; padding: 2px 4px; text-align: left;}
+
+
+
+/* CUSTOM */
+
+ul.nav, ul.nav2 {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+ul.nav2 {
+	margin-left: 18px;
+	list-style-type: disc;
+}
+div.right li ul.nav {
+	margin-bottom: 10px;
+}
+ul.nav li, ul.nav2 li {
+	margin: 0px;
+}
+h2.nav, div.left div.h2nav, div.left p.h2nav {
+	font-size: 10.0pt;
+	font-weight: 700;
+	line-height: 1.6em;
+	border: 0;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 0;
+}
+div.right li div.nav, div.right li p.nav {
+	margin-bottom: 10px;
+	padding: 2px 5px 2px 12px;
+}
+div.right li p.nav {
+	margin-top: 0px;
+}
+/* GENERAL NAVIGATION CSS ENDS | FIN DU CSS DE NAVIGATION GENERALE */
+
+/* SIDE MENU CSS BEGINS | DEBUT DU CSS DU MENU LATERAL */
+div.left, div.right {
+	background-color: #FFF;
+	min-width: 9.0em;
+}
+li.menucontent, li.menucontent li, div.menucontent, div.menucontent li {
+	font-size: 10.0pt;
+	vertical-align: middle;
+	margin: 0;
+}
+li.menucontent, div.menucontent {
+	padding: 2px 3px 2px 12px;
+}
+a.menulink {
+	text-decoration: none;
+}
+a.menulink:hover {
+	text-decoration: underline;
+}
+div.hideprodis {
+	display:none;
+}
+div.prodis {
+	height: 15px;
+	min-height: 0.9375em;
+	padding: 0;
+	margin: 0;
+}
+
+/* SIDE MENU CSS ENDS | FIN DU CSS DU MENU LATERAL */
+
+/* CONTENT CSS BEGINS | DEBUT DU CSS DU CONTENU */
+div.center {
+	background-color: #FFF;
+}
+div.center h1, h2, h3, h4, h5, h6 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: transparent;
+	font-weight: bold;
+}
+* html div.center h1 {
+	width: 100%;
+}
+div.blackborder {
+	padding: 5px;
+	min-height: 158px;
+	min-width: 9.5em;
+}
+h1.headline, h2.headline, h3.headline, h4.headline, h5.headline, h6.headline, h1.compress, h2.compress, h3.compress, h4.compress, h5.compress, h6.compress, p.compress, ul.compress, ol.compress {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+h1.headline a:link, h1.headline a:visited, h2.headline a:link, h2.headline a:visited, h3.headline a:link, h3.headline a:visited, h4.headline a:link, h4.headline a:visited, h5.headline a:link, h5.headline a:visited, h6.headline a:link, h6.headline a:visited {
+	text-decoration: none;
+}
+h1.headline a:hover, h2.headline a:hover, h3.headline a:hover, h4.headline a:hover, h5.headline a:hover, h6.headline a:hover {
+	text-decoration: underline;
+}
+/* CONTENT CSS ENDS | FIN DU CSS DU CONTENU */
+
+/* FOOTER CSS BEGINS | DEBUT DU CSS DU PIED DE LA PAGE */
+div.footer {
+	width: 100%;	
+	clear: both; 
+	font-size: 10.0pt;
+	margin-top: 5px;
+	height: 4.69em;
+	min-height: 40px;
+	background-color: #FFF;
+}
+div.footer div.footerline {
+	color: #FFF;
+	height: 15px;
+	min-height: 0.9375em;
+	margin-bottom: 7px;
+}
+div.foot1, div.foot2, div.foot3 {
+	float: left;
+	width: 33.25%;
+	min-width: 6.6em;
+	margin: 0;
+	padding: 0;
+}
+div.foot1 {
+	text-align: left;	
+}
+div.foot2 {
+	text-align: center;
+}
+div.foot3 {
+	text-align: right;
+}
+img.uparrow {
+	border: 0;
+}
+span.date {
+	white-space: nowrap;
+}
+/* FOOTER CSS ENDS | FIN DU CSS DU PIED DE LA PAGE */
+
+/* GENERIC UTILITY CSS BEGINS | DEBUT DU CSS D'UTILITE GENERIQUE */
+.widthFull {
+	width: 98.5%;
+}
+.width95 {
+	width: 95%;
+}
+.width90 {
+	width: 90%;
+}
+.width85 {
+	width: 85%;
+}
+.width80 {
+	width: 80%;
+}
+.width75 {
+	width: 75%;
+}
+.width70 {
+	width: 70%;
+}
+.width65 {
+	width: 65%;
+}
+.width60 {
+	width: 60%;
+}
+.width55 {
+	width: 55%;
+}
+.width50 {
+	width: 50%;
+}
+.width45 {
+	width: 45%;
+}
+.width40 {
+	width: 40%;
+}
+.width35 {
+	width: 35%;
+}
+.width30 {
+	width: 30%;
+}
+.width25 {
+	width: 25%;
+}
+.width20 {
+	width: 20%;
+}
+.width15 {
+	width: 15%;
+}
+.width10 {
+	width: 10%;
+}
+.width5 {
+	width: 5%;
+}
+abbr, acronym, span.abbr {
+	cursor: help;
+}
+blockquote {
+	background-color: #CC9;
+	color: #000;
+	border: 1px solid #000;
+	font-style: italic;
+}
+div.gcinits {
+	float: left;
+	padding-bottom: 5px;
+}
+div.gcinit div {
+	width: 191px;
+	height: 5.16em;
+	border: 1px solid #000;
+}
+div.center div.gcinit div {
+	margin-right: 4px;
+	margin-bottom: 5px;
+	float: left;
+}
+div.gcinit a, div.gcinit a:visited {
+	width: 100%;
+	height: 100%;
+	float: left;
+	text-decoration: none;
+}
+div.srvMsgCol {
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 49%;
+}
+div.srvMsgCol div {
+	padding: 1.56em 10px 5px 0px;
+}
+/* GENERIC UTILITY CSS ENDS | FIN DU CSS D'UTILITE GENERIQUE */
+
+/* ALIGNMENT UTILITY CSS BEGINS | DEBUT DU CSS D'UTILITE D'ALIGNEMENT */
+.alignRight {
+	text-align: right;
+}
+.alignCenter {
+	text-align: center;
+}
+.alignLeft {
+	text-align: left;
+}
+.alignTop {
+	vertical-align: top;
+}
+.alignBottom {
+	vertical-align: bottom;
+}
+.alignTopRight {
+	text-align: right;
+	vertical-align: top;
+}
+.alignTopCenter {
+	text-align: center;
+	vertical-align: top;
+}
+.alignTopLeft {
+	text-align: left;
+	vertical-align: top;
+}
+.alignBottomRight {
+	text-align: right;
+	vertical-align: bottom;
+}
+.alignBottomCenter {
+	text-align: center;
+	vertical-align: bottom;
+}
+.alignBottomLeft {
+	text-align: left;
+	vertical-align: bottom;
+}
+.floatRight {
+	float: right;
+}
+.floatLeft {
+	float: left;
+}
+.image-left { 
+	float: left;
+	vertical-align: text-top;
+}
+.image-right {
+	float: right;
+	vertical-align: text-top;
+	margin-left: 10px;
+}
+.indent1 {
+	padding-left: 18px;
+}
+.indent2 {
+	padding-left: 36px;
+}
+.indent3 {
+	padding-left: 54px;
+}
+.indent4 {
+	padding-left: 72px;
+}
+.indent5 {
+	padding-left: 90px;
+}
+/* ALIGNMENT UTILITY CSS ENDS | FIN DU CSS D'UTILITE D'ALIGNEMENT */
+
+/* LIST UTILITY CSS BEGINS | DEBUT DU CSS D'UTILITE DE LISTE */
+ul.noBullet {
+	list-style-type: none;
+}
+ul.disc {
+	list-style-type: disc;
+}
+ul.square {
+	list-style-type: square;
+}
+ul.circle {
+	list-style-type: circle;
+}
+ol.lower-alpha {
+	list-style-type: lower-alpha;
+}
+ol.upper-alpha {
+	list-style-type: upper-alpha;
+}
+ol.lower-roman {
+	list-style-type: lower-roman;
+}
+ol.upper-roman {
+	list-style-type: upper-roman;
+}
+/* LIST UTILITY CSS ENDS | FIN DU CSS D'UTILITE DE LISTE */
+
+/* TEXT UTILITY CSS BEGINS | DEBUT DU CSS D'UTILITE DE TEXTE */
+.noWrap {
+	white-space: nowrap;
+}
+.doubleLineSpace {
+	line-height: 24.0pt;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.lowercase {
+	text-transform: lowercase;
+}
+.black {
+	color: #000000;
+	background-color: transparent;
+}
+.white {
+	color: #FFFFFF;
+	background-color: transparent;
+}
+.red {
+	color: #FF0000;
+	background-color: transparent;
+}
+.blue {
+	color: #0000FF;
+	background-color: transparent;
+}
+.green {
+	color: #009933;
+	background-color: transparent;
+}
+.grey {
+	color: #999999;
+	background-color: transparent;
+}
+.deepyellow {
+	color: #FFCC33;
+	background-color: transparent;
+}
+.blackBG {
+	background-color: #000000;
+}
+.whiteBG {
+	background-color: #FFFFFF;
+}
+.redBG {
+	background-color: #FF0000;
+}
+.blueBG {
+	background-color: #0000FF;
+}
+.greenBG {
+	background-color: #009933;
+}
+.lightgreyBG {
+	background-color: #CCCCCC;
+}
+.deepyellowBG {
+	background-color: #FFCC33;
+}
+div.highlight, p.highlight {
+	border: 1px solid #030;
+	background-color: #9F9;
+	padding: 5px;
+}
+div.topPage, p.topPage {
+	float: right;
+	text-align: center;
+}
+div.foot2 img, div.topPage img, p.topPage img {
+	width: 1.46em;
+	height: 0.92em;
+}
+div.center div.wrapContainer {
+	float: left;	
+	width: 99.5%;
+}
+div.left div.wrapContainer, div.right div.wrapContainer {
+	float: left;	
+	width: 100%;
+}
+* html div.center h1.wrap {
+	width: auto;
+}
+
+.floatrt { float:right; border: none; }
+
+div.floatRight {
+	width: 195px;
+	margin-left:5px;	
+}
+
+div.floatRight h2.nav 
+{
+	background-color:#2255EE;
+	color:#FFFFFF;
+	text-decoration:none;
+}

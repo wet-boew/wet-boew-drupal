@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/2col-intranet.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<!--
+	GC Web Usability theme v1.0a3 / Thème de la facilité d'emploi GC v1.0a3
+	Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+	Terms and conditions of use: http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Terms
+	Conditions régissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Conditions
+	-->
+
+	<!-- Title begins / Début du titre -->
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>CSS: Basic styles </title>
+	<!-- InstanceEndEditable -->
+	<!-- Title ends / Fin du titre -->
+
+	<!-- Favicon (optional) begins / Début du favicon (optionnel) -->
+	<link rel="shortcut icon" href="../../../../theme-gcwu-fegc/fip-pcim/images/favicon.ico" />
+	<!-- Favicon (optional) ends / Fin du favicon (optionnel) -->
+
+	<!-- Meta-data begins / Début des métadonnées -->
+	<meta name="dcterms.description" content="English description / Description en anglais" />
+	<meta name="description" content="English description / Description en anglais" />
+	<meta name="keywords" content="English keywords / Mots-clés en anglais" />
+	<meta name="dcterms.creator" content="English name of the content author / Nom en anglais de l'auteur du contenu" />
+	<meta name="dcterms.title" content="English title / Titre en anglais" />
+	<meta name="dcterms.issued" title="W3CDTF" content="Date published (YYYY-MM-DD) / Date de publication (AAAA-MM-JJ)" />
+	<meta name="dcterms.modified" title="W3CDTF" content="Date modified (YYYY-MM-DD) / Date de modification (AAAA-MM-JJ)" />
+	<meta name="dcterms.subject" title="scheme" content="English subject terms / Termes de sujet en anglais" />
+	<meta name="dcterms.language" title="ISO639-2" content="eng" />
+	<!-- Meta-data ends / Fin des métadonnées -->
+
+	<!-- WET scripts/CSS begin / Début des scripts/CSS de la BOEW --><!--[if IE 6]><![endif]-->
+	<link href="../../../../css/base.css" rel="stylesheet" />
+	<!--[if IE 8]><link href="http://alpha.gcwwwtemplates.tbs-sct.ircan.gc.ca/css/base-ie8.css" rel="stylesheet" /><![endif]-->
+	<!--[if IE 7]><link href="http://alpha.gcwwwtemplates.tbs-sct.ircan.gc.ca/css/base-ie7.css" rel="stylesheet" /><![endif]-->
+	<!--[if lte IE 6]><link href="http://alpha.gcwwwtemplates.tbs-sct.ircan.gc.ca/css/base-ie6.css" media="screen" rel="stylesheet" /><![endif]-->
+<!-- CSS Grid System begins / Début du système de grille de CSS -->
+	<link href="../../../../grids/css/grid.css" media="screen" rel="stylesheet" />
+	<link href="../../../../grids/css/util.css" media="screen" rel="stylesheet" />
+<!-- CSS Grid System ends / Fin du système de grille de CSS -->
+<!-- GC Web Usability theme begins / Début du thème de la facilité d'emploi GC -->
+	<link href="../../../../theme-gcwu-fegc/css/framework-default-theme-gcwu-fegc.css" media="screen" rel="stylesheet" id="framework-responsive" />
+	<link href="../../../../theme-gcwu-fegc/css/theme-gcwu-fegc.css" rel="stylesheet" />
+	<!--[if IE 8]><link href="http://alpha.gcwwwtemplates.tbs-sct.ircan.gc.ca/theme-gcwu-fegc/css/theme-gcwu-fegc-ie8.css" rel="stylesheet" /><![endif]-->
+	<!--[if IE 7]><link href="http://alpha.gcwwwtemplates.tbs-sct.ircan.gc.ca/theme-gcwu-fegc/css/theme-gcwu-fegc-ie7.css" rel="stylesheet" /><![endif]-->
+	<!--[if lte IE 6]><link href="http://alpha.gcwwwtemplates.tbs-sct.ircan.gc.ca/theme-gcwu-fegc/css/theme-gcwu-fegc-ie6.css" rel="stylesheet" /><![endif]-->
+<!-- GC Web Usability theme ends / Fin du thème de la facilité d'emploi GC -->
+<!-- Menu bar begins / Début de la barre de menu -->
+	<link href="../../../../js/support/menubar/style.css" rel="stylesheet" />
+<!-- Menu bar ends /Fin de la barre de menu -->
+<!-- FIP visual elements and identifiers begin / Début des éléments et identificateurs visuels de PCIM -->
+	<link href="../../../../theme-gcwu-fegc/fip-pcim/css/fip-pcim.css" rel="stylesheet" />
+	<!--[if IE 8]><link href="http://alpha.gcwwwtemplates.tbs-sct.ircan.gc.ca/theme-gcwu-fegc/fip-pcim/css/fip-pcim-ie8.css" rel="stylesheet" /><![endif]-->
+	<!--[if IE 7]><link href="http://alpha.gcwwwtemplates.tbs-sct.ircan.gc.ca/theme-gcwu-fegc/fip-pcim/css/fip-pcim-ie7.css" rel="stylesheet" /><![endif]-->
+	<!--[if lte IE 6]><link href="http://alpha.gcwwwtemplates.tbs-sct.ircan.gc.ca/theme-gcwu-fegc/fip-pcim/css/fip-pcim-ie6.css" rel="stylesheet" /><![endif]-->
+<!-- FIP visual elements and identifiers end / Fin des éléments et identificateurs visuels de PCIM -->
+<!-- Intranet override begins -->
+	<link href="../../../css/default.css" rel="stylesheet" />
+	<link href="../../../css/branding.css" rel="stylesheet" />
+<!-- Intranet override ends -->
+	<!-- WET scripts/CSS end / Fin des scripts/CSS de la BOEW -->
+
+	<!-- Progressive enhancement begins / Début de l'amélioration progressive -->
+	<script src="../../../../js/lib/jquery.min.js"></script>
+	<script src="../../../../js/pe-ap.js" id="progressive"></script>
+	<script>
+	/* <![CDATA[ */
+		var params = {
+			menubar : ""
+		};
+		PE.progress(params);
+	/* ]]> */
+	</script>
+	<!-- Progressive enhancement ends / Fin de l'amélioration progressive -->
+
+	<!-- Custom scripts/CSS begin / Début des scripts/CSS personnalisés -->
+	<script src="http://infozone/wet20/js/plugins/syntax.js" type="text/javascript"></script>
+	<link href="http://infozone/wet20/js/support/syntax/style.css" rel="stylesheet" />
+	<!-- Custom scripts/CSS end / Fin des scripts/CSS personnalisés -->
+    <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+<!-- Two column layout begins / Début de la mise en page de deux colonnes -->
+<div id="cn-body-inner-2col">
+	<!-- Skip header begins / Début du saut de l'en-tête -->
+	<div id="cn-skip-head">
+		<ul id="cn-tphp">
+			<li id="cn-sh-link-1"><a href="#cn-cont">Skip to main content</a></li>
+			<li id="cn-sh-link-2"><a href="#cn-nav">Skip to primary navigation</a></li>
+		</ul>
+	</div>
+	<!-- Skip header ends / Fin du saut de l'en-tête -->
+
+	<!-- Header begins / Début de l'en-tête -->
+	<div id="cn-head"><div id="cn-head-inner">
+	<header itemscope itemtype="http://schema.org/WPHeader">
+<!-- GC Web Usability theme begins / Début du thème de la facilité d'emploi GC -->
+		<!-- GC navigation bar begins / Début de la barre de navigation GC -->
+		<nav role="navigation">
+			<div id="cn-gcnb">
+				<h2>Intranet navigation bar</h2>
+				<div id="cn-gcnb-inner">		
+					<div id="cn-intranetnb">
+						<div id="cn-intranetnb-inner">
+							<ul>
+								<li><a href="http://sagegc-gedsgc.tpsgc-pwgsc.gc.ca/cgi-bin/web500/eng/TE?FN=index.htm" rel="external"><abbr title="Government Electronic Directory Services">GEDS</abbr></a></li>
+								<li><a href="http://publiservice.gc.ca/menu_e.html" rel="external">Publiservice</a></li>
+								<li class="cn-gcnb-lang">
+								<!-- InstanceBeginEditable name="French Link | Lien français" --><a href="/francais/r1713497/org/sa/sa06/sb/sb01/tlr/cnt2/bscs-fra.html" lang="fr" >Français</a>				 <!-- InstanceEndEditable -->								</li>
+							</ul>
+						</div>
+					</div>
+					<div id="fip-pcim-gcnb" itemscope itemtype="http://schema.org/WPAdBlock">
+						<div id="cn-sig"><div id="cn-sig-inner"><div id="fip-pcim-sig-eng" title="Government of Canada"><img src="../../../../theme-gcwu-fegc/fip-pcim/images/sig-eng.gif" width="214" height="20" alt="Government of Canada" /></div></div></div>
+						<div id="cn-wmms"><div id="cn-wmms-inner"><div id="fip-pcim-wmms" title="Symbol of the Government of Canada"><img src="../../../../theme-gcwu-fegc/fip-pcim/images/wmms.gif" width="126" height="30"  alt="Symbol of the Government of Canada" /></div></div></div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		<!-- GC navigation bar ends / Fin de la barre de navigation GC -->
+
+		<!-- Banner begins / Début de la bannière -->
+		<div id="cn-banner" role="banner"><div id="cn-banner-inner">
+			
+
+			<!-- Site title begins / Début du titre du site -->
+			<div id="cn-site-title"><p id="cn-site-title-inner"><a href="../../index-e.html">GC Intranet</a></p>
+			</div>
+			<!-- Site title ends / Fin du titre du site -->
+
+			<!-- Site search begins / Début de la recherche du site -->
+			<section role="search">
+				<div id="cn-search-box">
+					<h2>Search</h2>
+					<form action="#" method="post">
+						<div id="cn-search-box-inner">
+							<label for="cn-search">Search Web site</label>
+							<input id="cn-search" name="cn-search" type="text" value="" size="27" maxlength="150" />
+							<input id="cn-search-submit" name="cn-search-submit" type="submit" value="Search" />
+						</div>
+					</form>
+				</div>
+			</section>
+			<!-- Site search ends / Fin de la recherche du site -->
+		</div></div>
+		<!-- Banner ends / Fin de la bannière -->
+
+		<nav role="navigation">
+			<!-- Primary site navigation bar begins / Début de la barre de navigation primaire du site -->
+			<div id="cn-psnb">
+				<h2>Primary site navigation bar</h2>
+				<div id="cn-psnb-inner">
+					<div class="wet-boew-menubar" itemscope itemtype="http://schema.org/SiteNavigationElement">
+						<ul class="wet-boew-menu wet-boew-megamenu">
+							<li>
+								<section>
+									<h3 class="toplevel"><a class="first" href="../../templates/index-e.html">Templates</a></h3>
+									<div class="showcase grid-12">
+									  <div class="border-right">
+										<div class="span-2">
+										  <section>
+											<p><a href="../../templates/prncpls-e.html">Template principles <img src="../../templates/images/principles.gif" width="220" height="220"></a></p>
+										  </section>
+										</div>
+									  </div>
+									  <div class="span-2">
+										<section>
+										  <p><a href="../../templates/ncl-e.html">1 column options <img src="../../templates/images/1col.gif" width="220" height="220"></a></p>
+										</section>
+									  </div>
+									   <div class="span-2">
+										<section>
+										  <p><a href="../../templates/twcl-e.html">2 column options <img src="../../templates/images/2col.gif" width="220" height="220"></a></p>
+										</section>
+									  </div>
+									  <div class="span-2">
+										<section>
+										  <p><a href="../../templates/msc-e.html">Miscellaneous options <img src="../../templates/images/misc.gif" width="220" height="220"></a></p>
+										</section>
+									  </div>
+									  <div class="border-left">
+										  <div class="span-2">
+											<section>
+											  <p><a href="../../templates/cdng-e.html">Internet <abbr title="versus">vs</abbr> intranet<img src="../../templates/images/intranet.gif" width="220" height="220"></a></p>
+											</section>
+										  </div>
+									  </div>
+									  <div class="clear"></div>
+									</div>
+								</section>
+							</li>
+							<li>
+								<section>
+									<h3 class="toplevel"><a href="../../dimensions/index-e.html">Dimensions</a></h3>
+										<div class="showcase grid-12">
+											<div class="span-2">
+											  <section>
+												<p><a href="../../dimensions/ph-e.html"> Background: Phi <img src="../../dimensions/images/phil.gif" width="220" height="220" ></a></p>
+											  </section>
+											</div>
+											<div class="span-2">
+											  <section>
+												<p><a href="../../dimensions/wrfrm-e.html">Wireframe <img src="../../dimensions/images/background.gif" width="220" height="220" ></a></p>
+											  </section>
+											</div>
+										  
+										</div>
+								</section>
+							</li>
+							<li>
+								<div class="toplevel"><a href="../../customization/index-e.html">Customization</a></div>
+								<div class="showcase position-left  grid-12">
+                      <div class="border-right">                              
+                              <div class="span-2 ">
+                                <section>
+                                  <p><a href="../../customization/clr-e.html">Colour and images <span class="cn-invisible">customization</span> <img src="../../customization/images/color.gif" width="220" height="220" class="float-left"></a></p>
+                                </section>
+                              </div>
+							  </div>
+                                <div class="span-2">
+                                  <section>
+                                    <p><a href="../../customization/hdr-e.html">Header <span class="cn-invisible">customization</span> <img src="../../customization/images/header.gif" width="220" height="220" class="float-left"></a></p>
+                                  </section>
+                                </div>
+                                <div class="span-2">
+                                  <section>
+                                    <p><a href="../../customization/lft-e.html">Left menu <span class="cn-invisible">customization</span> <img src="../../customization/images/left.gif" width="220" height="220" class="float-left"></a></p>
+                                  </section>
+                                </div>
+                                <div class="span-2">
+                                  <section>
+                                    <p><a href="../../customization/ftr-e.html">Footer <span class="cn-invisible">customization</span> <img src="../../customization/images/footer.gif" width="220" height="220" class="float-left"></a></p>
+                                  </section>
+                                </div>
+                            </div>
+							</li>
+							<li>
+								<div class="toplevel"><a href="../index-e.html">Style guide</a></div>
+								<div class="showcase grid-12">
+								 <div class="span-2">
+                                <section>
+                                  <p><a href="../dflt-e.html">Default design <img src="../dflt/images/default.gif" width="220" height="220" class="float-left"></a></p>
+                                </section>
+                              </div>
+                              <div class="span-2">
+                                <section>
+                                  <p><a href="../css-e.html"><abbr title="Cascading Style Sheet">CSS</abbr> styles <img src="images/css.gif" width="220" height="220" class="float-left"></a></p>
+                                </section>
+                              </div>
+                              <div class="span-2">
+                                <section>
+                                  <p><a href="../plgns-eng.html">Script plug-ins  <img src="../scrpt/images/script.gif" width="220" height="220" class="float-left"></a></p>
+                                </section>
+                              </div>
+                            </div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Primary site navigation bar ends / Fin de la barre de navigation primaire du site -->
+
+			<!-- Breadcrumbs begins / Début du fil d'Ariane -->
+			<div id="cn-bc">
+				<h2>Breadcrumbs</h2>
+				<div id="cn-bc-inner">
+				<!-- InstanceBeginEditable name="English bread crumb | Piste de navigation anglaise" -->
+				<ol itemprop="breadcrumb">
+                  <li><a href="../../../../home-accueil-megamenu-theme-gcwu-fegc-eng.html">Home</a></li>
+                  <li><a href="../index-e.html">Style guide</a></li>
+                  <li><a href="../css-e.html"><abbr title="Cascading Style Sheet">CSS</abbr> styles</a></li>
+				  <li><abbr title="Cascading Style Sheet">CSS</abbr>: Specialty effects</li>
+                </ol>
+				<!-- InstanceEndEditable -->
+				</div>
+			</div>
+			<!-- Breadcrumbs end / Fin du fil d'Ariane -->
+		</nav>
+<!-- GC Web Usability theme ends / Fin du thème de la facilité d'emploi GC -->
+	</header>
+	</div></div>
+	<!-- Header ends / Fin de l'en-tête -->
+
+	<!-- Columns begin / Début des colonnes -->
+	<div id="cn-cols"><div id="cn-cols-inner" class="equalize">
+		<!-- Main content begins / Début du contenu principal -->
+		<div id="cn-centre-col" role="main" itemprop="mainContentOfPage"><div id="cn-centre-col-inner">
+			<!-- Content title begins / Début du titre du contenu -->
+			<h1 id="cn-cont" itemprop="name">
+			<!-- InstanceBeginEditable name="English content title | Titre contenu anglais" --><abbr title="Cascading Style Sheet">CSS</abbr>: Basic styles        <!-- InstanceEndEditable -->
+			</h1>
+			<!-- Content Title ends / Fin du titre du contenu -->
+
+<!-- GC Web Usability theme begins / Début du thème de la facilité d'emploi GC -->
+			<!-- InstanceBeginEditable name="English content | Contenu anglais" -->
+<div class="span-4 module-table-contents">
+              <p>Table of contents </p>
+              <ul>
+              <li><a href="#size">Font size <abbr title="Cascading Style Sheet">CSS</abbr></a></li>
+              <li><a href="#colour">Font colour <abbr title="Cascading Style Sheet">CSS</abbr></a></li>
+              <li><a href="#list">List <abbr title="Cascading Style Sheet">CSS</abbr></a></li>
+              <li><a href="#alignment">Alignment and positioning <abbr title="Cascading Style Sheet">CSS</abbr></a></li>
+              <li><a href="#width">Width <abbr title="Cascading Style Sheet">CSS</abbr></a></li>
+              <li><a href="#tables">Table <abbr title="Cascading Style Sheet">CSS</abbr></a></li>
+              <li><a href="#background">Background colour <abbr title="Cascading Style Sheet">CSS</abbr></a></li>
+            </ul>
+            </div>
+<div class="clear"></div>
+<h2><a id="size"></a>Font size <abbr title="Cascading Style Sheet">CSS</abbr> </h2>
+<div class="span-2 module-versatile float-right">
+              <p> <strong>Introducing <abbr title="Cascading Style Sheet">CSS</abbr> classes:</strong> </p>
+              <ul>
+              <li><code>font-xsmall</code></li>
+              <li><code>font-small</code></li>
+              <li><code>font-medium</code></li>
+              <li><code>font-large</code></li>
+              <li><code>font-xlarge</code></li>
+            </ul>
+            </div>
+<p>The <abbr title="Cascading Style Sheet">CSS</abbr> provides several font size options that you can use to override the default size. The sizes range from 70% of the default, to 120%, which is the size of an <code>h2</code>. </p>
+<table>
+              <caption>
+            The different font size styling options
+            </caption>
+              <tr>
+              <th scope="col">Class</th>
+              <th scope="col">Details</th>
+              <th scope="col">Example</th>
+            </tr>
+              <tr>
+              <td><code>font-xsmall</code></td>
+              <td>Extra small font (70%) </td>
+              <td class="font-xsmall">Resulting text size</td>
+            </tr>
+              <tr>
+              <td><code>font-small</code></td>
+              <td>Small font (85%) </td>
+              <td class="font-small">Resulting text size</td>
+            </tr>
+              <tr>
+              <td><code>font-medium</code></td>
+              <td>Medium (100%)  = default size </td>
+              <td class="font-medium">Resulting text size</td>
+            </tr>
+              <tr>
+              <td><code>font-large</code></td>
+              <td>Large (110%) = same size as an <code>h3</code></td>
+              <td class="font-large">Resulting text size</td>
+            </tr>
+              <tr>
+              <td><code>font-xlarge</code></td>
+              <td>Extra large (120%) = same size as an <code>h2</code> </td>
+              <td class="font-xlarge">Resulting text size</td>
+            </tr>
+            </table>
+<h3>Points of compliance</h3>
+<p>The following points always apply:</p>
+<ul>
+              <li>Apply these styles as needed to your local content, but <strong>don't overuse them</strong>. </li>
+              <li>Use   font sizes consistently throughout your Web site.</li>
+            </ul>
+<h2><a id="colour"></a>Font colour <abbr title="Cascading Style Sheet">CSS</abbr></h2>
+<div class="span-2 module-versatile float-right">
+              <p> <strong>Introducing <abbr title="Cascading Style Sheet">CSS</abbr> classes:</strong> </p>
+              <ul>
+              <li><code>color-accent</code></li>
+              <li><code>color-attention</code></li>
+            </ul>
+            </div>
+<p> You can override the default font colour with the following <abbr title="Cascading Style Sheet">CSS</abbr>.  Use these classes <strong>only</strong> when they add value.</p>
+<table>
+              <caption>
+            The different font colour styling options
+            </caption>
+              <tr>
+              <th scope="col">Class</th>
+              <th scope="col">Details</th>
+              <th scope="col">Example</th>
+            </tr>
+              <tr>
+              <td><code>color-accent</code></td>
+              <td>Match the font colour to user's selected Web tool colour theme.</td>
+              <td class="color-accent">Resulting text colour </td>
+            </tr>
+              <tr>
+              <td><code>color-attention</code></td>
+              <td> Draw attention to something 
+                  extra important.</td>
+              <td class="color-attention">Resulting text colour </td>
+            </tr>
+            </table>
+<h3>Points of compliance</h3>
+<p>The following points always apply:</p>
+<ul>
+              <li>Apply as needed to your local content, but <strong>do  not overuse</strong>. </li>
+              <li>Use  font colours consistently throughout your Web site. </li>
+            </ul>
+
+<h2><a id="list"></a>List <abbr title="Cascading Style Sheet">CSS</abbr></h2>
+<div class="span-2 module-versatile float-right">
+              <p> <strong>Introducing <abbr title="Cascading Style Sheet">CSS</abbr> classes:</strong> </p>
+              <ul>
+              <li><code>list-bullet-none</code></li>
+              <li><code>list-lower-alpha</code></li>
+              <li><code>list-upper-alpha</code></li>
+              <li><code>list-lower-roman</code></li>
+              <li><code>list-upper-roman</code></li>
+              <li><code>zebra</code></li>
+            </ul>
+            </div>
+<p>The <abbr title="Cascading Style Sheet">CSS</abbr> allows for several list options. Since there are so many styling options, it is too difficult to account for all of them within the default <abbr title="Cascading Style Sheet">CSS</abbr>. Therefore, you need to override some of the default settings for second or third level list items, as they duplicate a first level style.</p>
+<p> With the <code>list-bullet-none</code> style, you need to <strong>manually add the bullet numbers</strong> &mdash; if required. </p>
+<table class="width-80">
+              <caption>
+            The different list styling options
+            </caption>
+              <tr>
+              <th scope="col">Class</th>
+              <th scope="col">Example</th>
+            </tr>
+              <tr>
+              <td>default <code>&lt;ol&gt;</code></td>
+              <td><ol>
+                  <li>First level list item defaults to Arabic numerals.
+                    <ol>
+                      <li>Second level list item defaults to lower-level alpha.
+                        <ol>
+                          <li>Third level list item defaults to lower-level Roman numerals.</li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                </ol></td>
+            </tr>
+              <tr>
+              <td><code>list-bullet-none</code></td>
+              <td><span><strong>List without bullets</strong></span>
+                  <ul class="list-bullet-none margin-bottom-medium">
+                  <li>First level list without bullets.</li>
+                  <li>First level list without bullets.
+                      <ul class="list-bullet-none">
+                      <li>Second level list without bullets.</li>
+                    </ul>
+                    </li>
+                </ul>
+                  <span><strong>List with manually inserted Arabic numerals. Avoid using this style, </strong>as it is difficult to maintain, and difficult for users to scan for information. </span>
+                  <ul class="list-bullet-none">
+                  <li>1. First level list item.
+                      <ul class="list-bullet-none">
+                      <li>1.1. Second level list item.
+                          <ul class="list-bullet-none margin-bottom-medium">
+                          <li>1.1.1 Third level list item. </li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+                  <li>2. First level list item.</li>
+                </ul>
+                  <span><strong>List with manually inserted Roman numerals</strong> (and acronym tags). <strong>Avoid using this style</strong>, as it is difficult to maintain, and difficult for users to scan for information. </span>
+                  <ul class="list-bullet-none margin-bottom-medium">
+                  <li><abbr title="Roman numeral one">I</abbr>. First level list item.
+                      <ul class="list-bullet-none">
+                      <li><abbr title="Roman numeral one, one">i.i</abbr>. Second level list item. </li>
+                      <li><abbr title="Roman numeral one, two">i.ii</abbr>. Second level list item. </li>
+                      <li><abbr title="Roman numeral one, three">i.iii</abbr>. Second level list item. </li>
+                      <li><abbr title="Roman numeral one, foure">i.iv</abbr>. Second level list item. </li>
+                    </ul>
+                    </li>
+                  <li><abbr title="Roman numeral two">II.</abbr> First level list item.</li>
+                </ul></td>
+            </tr>
+              <tr>
+              <td><code>list-lower-alpha</code></td>
+              <td><ol class="list-lower-alpha">
+                  <li>First level list item defaults to lower-case alpha.
+                    <ol>
+                      <li>Second level list item also defaults to lower-case 
+                        alpha. <strong>Use a class to override this default setting</strong> &mdash; to avoid confusing the user.
+                        <ol>
+                          <li>Third level  list item defaults to lower-case Roman numerals. </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                </ol></td>
+            </tr>
+              <tr>
+              <td><code>list-upper-alpha</code></td>
+              <td><ol class="list-upper-alpha">
+                  <li>First  level list item defaults to upper-case alpha
+                    <ol>
+                      <li>Second level list item defaults to lower-case alpha.
+                        <ol>
+                          <li>Third level list item defaults to lower-case Roman numerals. </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>First level list item defaults to upper-case alpha.</li>
+                </ol></td>
+            </tr>
+              <tr>
+              <td><code>list-lower-roman</code></td>
+              <td><ol class="list-lower-roman">
+                  <li>First list item defaults to lower-case Roman numerals. </li>
+                  <li>First level list item defaults to lower-case Roman numerals.
+                    <ol class="list-lower-roman">
+                      <li>Second level list item defaults to lower-case alpha.
+                        <ol class="list-lower-roman">
+                          <li>Third level list item defaults back to lower-case Roman numeral. <strong>Use a class to override this default setting</strong> &mdash; to avoid confusing the user. </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                </ol></td>
+            </tr>
+              <tr>
+              <td><code>list-upper-roman</code></td>
+              <td><ol class="list-upper-roman">
+                  <li>First level list item defaults to uppercase Roman numerals. </li>
+                  <li>First level  list item
+                    defaults to  upper-case Roman numerals.
+                    <ol class="list-upper-roman">
+                      <li>Second level list item defaults to lower-case alpha.
+                        <ol class="list-upper-roman">
+                          <li>Third level list item defaults to lower-case Roman numeral.</li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                </ol></td>
+            </tr>
+              <tr>
+              <td><code>list-numeric</code></td>
+              <td><ol class="list-numeric">
+                  <li>First  level list item
+                    <ol>
+                      <li>Second  level list item </li>
+                      <li>Second level list item
+                        <ol>
+                          <li>Third level list item</li>
+                          <li>Third  level list item </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>First  level list item </li>
+                </ol></td>
+            </tr>
+              <tr>
+              <td><code>zebra</code></td>
+              <td><p>This style has limitations and works best within the <code>module-comment</code></p>
+                  <ul class="zebra list-bullet-none">
+                  <li>First  level list item </li>
+                  <li>First  level list item</li>
+                  <li>First  level list item</li>
+                  <li>First  level list item</li>
+                </ul></td>
+            </tr>
+            </table>
+<h3>Points of compliance</h3>
+<p>The following points always apply:</p>
+<ul>
+              <li>Apply as needed to your local content, but <strong>do  not overuse</strong>. </li>
+              <li>The <code>zebra</code> has limited applications. For a working example of it , refer to: <a href="mdl/mdl14-eng.html#overview">Overview of <code>module-comment</code></a>.</li>
+            </ul>
+<h2><a id="alignment"></a>Alignment and positioning <abbr title="Cascading Style Sheet">CSS</abbr></h2>
+<p>The <abbr title="Cascading Style Sheet">CSS</abbr> allows for several alignment and positioning options. </p>
+<h3><a name="flt"></a>Floats</h3>
+<div class="span-2 module-versatile float-right">
+              <p> <strong>Introducing <abbr title="Cascading Style Sheet">CSS</abbr> classes:</strong> </p>
+              <ul>
+              <li><code>float-left</code></li>
+              <li><code>float-right</code></li>
+            </ul>
+            </div>
+<p>Apply  float styles <strong>only</strong> to block elements &mdash; elements that take up a full block of space on a page, for example images (<code>&lt;img /&gt;</code>), paragraphs (<code>&lt;p&gt;</code>), divisions (<code>&lt;div&gt;</code>), tables (<code>&lt;table&gt;</code>), and lists (<code>&lt;ul&gt;, &lt;ol&gt;</code>).</p>
+<table class="width-70" >
+              <caption>
+            The different float styling options
+            </caption>
+              <tr>
+              <th scope="col">Class</th>
+              <th scope="col">Example</th>
+            </tr>
+              <tr>
+              <td><code>float-left</code></td>
+              <td><p  class="float-left indent-none">Resulting text floats left</p></td>
+            </tr>
+              <tr>
+              <td><code>float-right</code></td>
+              <td ><p class="float-right">Resulting text floats right</p></td>
+            </tr>
+            </table>
+<h4>Points of compliance</h4>
+<p>The following point always applies:</p>
+<ul>
+              <li>Apply as needed to your local content, but<strong> do  not overuse</strong>. </li>
+            </ul>
+<h3><a id="verticalprox"></a>Vertical proximity <abbr title="Cascading Style Sheet">CSS</abbr></h3>
+<div class="span-2 module-versatile float-right">
+              <p> <strong>Introducing <abbr title="Cascading Style Sheet">CSS</abbr> classes:</strong> </p>
+              <ul>
+              <li><code>margin-bottom-none</code></li>
+              <li><code>margin-bottom-small</code></li>
+              <li><code>margin-bottom-medium</code></li>
+              <li><code>margin-bottom-large</code></li>
+              <li><code>margin-bottom-xlarge</code></li>
+              <li><code>margin-top-none</code></li>
+              <li><code>margin-top-small</code></li>
+              <li><code>margin-top-medium</code></li>
+              <li><code>margin-top-large</code></li>
+              <li><code>margin-top-xlarge</code></li>
+            </ul>
+            </div>
+<p>Vertical white space is an important design feature, and is automatically generated in the default layout. When you need to  either add or reduce space to provide more visual impact, use the following <abbr title="Cascading Style Sheet">CSS</abbr>:</p>
+<table>
+              <caption>
+            The different vertical proximity styling options
+            </caption>
+              <tr>
+              <th scope="col">Class</th>
+              <th scope="col">Details</th>
+              <th scope="col">Example</th>
+            </tr>
+              <tr>
+              <td><code>margin-bottom-none</code></td>
+              <td >margin-bottom: 0px</td>
+              <td ><p class="margin-bottom-none">Resulting  text, 0px bottom margin </p></td>
+            </tr>
+              <tr>
+              <td><code>margin-bottom-small</code></td>
+              <td>margin-bottom: 2px</td>
+              <td><p  class="margin-bottom-small">Resulting  text, 2px bottom margin</p></td>
+            </tr>
+              <tr>
+              <td><code>margin-bottom-medium</code></td>
+              <td >margin-bottom: 10px</td>
+              <td ><p class="margin-bottom-medium">Resulting  text, 10px bottom margin</p></td>
+            </tr>
+              <tr>
+              <td><code>margin-bottom-large</code></td>
+              <td>margin-bottom: 20px</td>
+              <td><p class="margin-bottom-large">Resulting  text, 20px bottom margin</p></td>
+            </tr>
+              <tr>
+              <td><code>margin-bottom-xlarge</code></td>
+              <td>margin-bottom: 50px </td>
+              <td><p class="margin-bottom-xlarge">Resulting text, 50px bottom margin</p></td>
+            </tr>
+              <tr>
+              <td><code>margin-top-none</code></td>
+              <td >margin-top: 0px</td>
+              <td ><p class="margin-top-none">Resulting  text, 0px top margin </p></td>
+            </tr>
+              <tr>
+              <td><code>margin-top-small</code></td>
+              <td>margin-top: 2px</td>
+              <td><p  class="margin-top-small">Resulting  text, 2px top margin</p></td>
+            </tr>
+              <tr>
+              <td><code>margin-top-medium</code></td>
+              <td >margin-top: 10px</td>
+              <td ><p class="margin-top-medium">Resulting  text, 10px top margin </p></td>
+            </tr>
+              <tr>
+              <td><code>margin-top-large</code></td>
+              <td>margin-top: 20px</td>
+              <td><p class="margin-top-large">Resulting  text, 20px top margin</p></td>
+            </tr>
+              <tr>
+              <td><code>margin-top-xlarge</code></td>
+              <td>margin-top: 50px</td>
+              <td><p class="margin-top-xlarge">Resulting text, 50px  top margin</p></td>
+            </tr>
+            </table>
+<h4>Points of compliance</h4>
+<p>The following point always applies:</p>
+<ul>
+              <li>Apply as needed to your local content, but <strong>do  not overuse</strong>. Refer to <a href="http://btb.termiumplus.gc.ca/tcdnstyl-chap?lang=eng&lettr=chapsect13&info0=13.06#zz13">The Canadian Style section 13.06 Layout and design</a> for further information on how to use white space.</li>
+            </ul>
+<h3><a name="ndnt"></a>Indent <abbr title="Cascading Style Sheet">CSS</abbr></h3>
+<div class="span-2 module-versatile float-right">
+              <p> <strong>Introducing <abbr title="Cascading Style Sheet">CSS</abbr> classes:</strong> </p>
+              <ul>
+              <li><code>indent-none</code></li>
+              <li><code>indent-small</code></li>
+              <li><code>indent-medium</code></li>
+              <li><code>indent-large</code></li>
+              <li><code>indent-xlarge</code></li>
+            </ul>
+            </div>
+<p>Indents are  an important design feature, and are automatically generated in the default layout. When you need to either add or reduce extra spacing to  align content, use the following <abbr title="Cascading Style Sheet">CSS</abbr>:</p>
+<table>
+              <caption>
+            The different indentation styling options
+            </caption>
+              <tr>
+              <th scope="col">Class</th>
+              <th scope="col">Details</th>
+              <th scope="col">Example</th>
+            </tr>
+              <tr>
+              <td><code>indent-none</code></td>
+              <td >margin-left: 0px</td>
+              <td ><p >Resulting  text, 0px left margin </p></td>
+            </tr>
+              <tr>
+              <td><code>indent-small</code></td>
+              <td>margin-left: 2px</td>
+              <td><p  class="indent-small">Resulting  text<span class="indent-none">, 2px left margin </span></p></td>
+            </tr>
+              <tr>
+              <td><code>indent-medium</code></td>
+              <td >margin-left: 10px</td>
+              <td ><p class="indent-medium">Resulting  text<span class="indent-none">, 10px left margin </span></p></td>
+            </tr>
+              <tr>
+              <td><code>indent-large</code></td>
+              <td>margin-left: 20px</td>
+              <td><p class="indent-large">Resulting  text<span class="indent-none">, 20px left margin </span></p></td>
+            </tr>
+              <tr>
+              <td><code>indent-xlarge</code></td>
+              <td>margin-left: 50px </td>
+              <td><p class="indent-xlarge">Resulting text<span class="indent-none">, 50px </span></p></td>
+            </tr>
+            </table>
+<h4>Points of compliance</h4>
+<p>The following point always applies:</p>
+<ul>
+              <li>Apply as needed to your local content, but <strong>do  not overuse</strong>. Refer to <a href="http://btb.termiumplus.gc.ca/tpv2guides/guides/tcdnstyl/index-eng.html?lang=eng">The Canadian Style</a> for further information (search for indentation).</li>
+            </ul>
+<h3><a id="lnhght"></a>Line height <abbr title="Cascading Style Sheet">CSS</abbr></h3>
+<div class="span-2 module-versatile float-right">
+              <p> <strong>Introducing <abbr title="Cascading Style Sheet">CSS</abbr> classes:</strong> </p>
+              <ul>
+              <li><code>line-height-xsmall</code></li>
+              <li><code>line-height-small</code></li>
+              <li><code>line-height-medium</code></li>
+              <li><code>line-height-large</code></li>
+              <li><code>line-height-xlarge</code></li>
+            </ul>
+            </div>
+<p>The <abbr title="Cascading Style Sheet">CSS</abbr> provides several line height options that you can use to override   the default size. The sizes   range from 1.0 to 2.0.</p>
+<table>
+              <caption>
+            The different line height styling options
+            </caption>
+              <tr>
+              <th scope="col">Class</th>
+              <th scope="col">Details</th>
+              <th scope="col">Example</th>
+            </tr>
+              <tr>
+              <td><code>line-height-xsmall</code></td>
+              <td>Extra small font (1.0) </td>
+              <td><ul class="line-height-xsmall">
+                  <li>Resulting   height</li>
+                  <li>Resulting  height</li>
+                </ul></td>
+            </tr>
+              <tr>
+              <td><code>line-height-small</code></td>
+              <td>Small font (1.2) </td>
+              <td><ul class="line-height-small">
+                  <li>Resulting   height</li>
+                  <li>Resulting  height</li>
+                </ul></td>
+            </tr>
+              <tr>
+              <td><code>line-height-medium</code></td>
+              <td>Medium (1.3) = default size </td>
+              <td><ul class="line-height-medium">
+                  <li>Resulting   height</li>
+                  <li>Resulting  height</li>
+                </ul></td>
+            </tr>
+              <tr>
+              <td><code>line-height-large</code></td>
+              <td>Large (1.5)</td>
+              <td><ul class="line-height-large">
+                  <li>Resulting   height</li>
+                  <li>Resulting  height</li>
+                </ul></td>
+            </tr>
+              <tr>
+              <td><code>line-height-xlarge</code></td>
+              <td>Extra large (2.0)</td>
+              <td><ul class="line-height-xlarge">
+                  <li>Resulting  height</li>
+                  <li>Resulting  height</li>
+                </ul></td>
+            </tr>
+            </table>
+<h4>Points of compliance</h4>
+<p>The following point always applies:</p>
+<ul>
+              <li>Apply as needed to your local content, but <strong>do  not overuse</strong>.</li>
+            </ul>
+<h3><a name="halign"></a>Horizontal alignment <abbr title="Cascading Style Sheet">CSS</abbr></h3>
+<div class="span-2 module-versatile float-right">
+              <p> <strong>Introducing <abbr title="Cascading Style Sheet">CSS</abbr> classes:</strong> </p>
+              <ul>
+              <li><code>align-left</code></li>
+              <li><code>align-center</code></li>
+              <li><code>align-right</code></li>
+            </ul>
+            </div>
+<p> You can apply these styles in numerous ways, unlike the vertical alignment styles. Apply this <abbr title="Cascading Style Sheet">CSS</abbr> to adjust the  horizontal alignment of the text (right, left or centre) in an element.</p>
+<table class="width-70" >
+              <caption>
+            The different horizontal alignment styling options
+            </caption>
+              <tr>
+              <th scope="col">Class</th>
+              <th scope="col">Example</th>
+            </tr>
+              <tr>
+              <td><code>align-left</code></td>
+              <td class="align-left">Resulting text, left horizontal alignment </td>
+            </tr>
+              <tr>
+              <td><code>align-center</code></td>
+              <td class="align-center">Resulting text, centre horizontal alignment </td>
+            </tr>
+              <tr>
+              <td><code>align-right</code></td>
+              <td class="align-right">Resulting text, right horizontal alignment </td>
+            </tr>
+            </table>
+<h4>Points of compliance</h4>
+<p>The following point always applies:</p>
+<ul>
+              <li>Apply as needed to your local content, but <strong>do  not overuse</strong>. </li>
+            </ul>
+<h3><a name="valign"></a>Vertical alignment <abbr title="Cascading Style Sheet">CSS</abbr></h3>
+<div class="span-2 module-versatile float-right">
+              <p> <strong>Introducing <abbr title="Cascading Style Sheet">CSS</abbr> classes:</strong> </p>
+              <ul>
+              <li><code>align-top</code></li>
+              <li><code>align-middle</code></li>
+              <li><code>align-bottom</code></li>
+            </ul>
+            </div>
+<p>This <abbr title="Cascading Style Sheet">CSS</abbr> adjusts the  vertical alignment (top, middle or bottom) of an inline element (an element that does not force extra spacing), and makes it relative to the parent element.</p>
+<p>Surprisingly, it is very difficult to vertically align content with pure <abbr title="Cascading Style Sheet">CSS</abbr> and this class has limited applications. Typically, this class only works with  table cell data (<code>&lt;td&gt;</code>) and images (<code>&lt;img /&gt;</code>).</p>
+<table>
+              <caption>
+            The different vertical alignment styling options
+            </caption>
+              <tr>
+              <th scope="col">Class</th>
+              <th scope="col">Example</th>
+            </tr>
+              <tr>
+              <td><div class="margin-bottom-xlarge"><code>align-top</code></div></td>
+              <td class="align-top">Resulting text, top vertical alignment </td>
+            </tr>
+              <tr>
+              <td><div class="margin-bottom-xlarge"><code>align-middle</code></div></td>
+              <td class="align-middle">Resulting text, middle vertical alignment</td>
+            </tr>
+              <tr>
+              <td><div class="margin-bottom-xlarge"><code>align-bottom</code></div></td>
+              <td class="align-bottom">Resulting text, bottom vertical alignment</td>
+            </tr>
+            </table>
+<h4>Points of compliance</h4>
+<p>The following point always applies:</p>
+<ul>
+              <li>Apply as needed to your local content, but <strong>do  not overuse</strong>. </li>
+            </ul>
+<h3> Positioning <abbr title="Cascading Style Sheet">CSS</abbr></h3>
+<p>Items can be layered and stacked on each, however the outer container must be a grid cell.  This is due to a <abbr title="Cascading Style Sheet">CSS</abbr> technical requirement.  The outer item (grid cell) has the attribute of <code>position:relative</code> and the inner item (can be anything) has the attribute of <code>position:absolute</code>. Refer to: <a href="grds-eng.html#position">Positioning grids</a></p>
+<h2><a id="width"></a>Width <abbr title="Cascading Style Sheet">CSS</abbr> </h2>
+<div class="span-2 module-versatile float-right">
+              <p> <strong>Introducing <abbr title="Cascading Style Sheet">CSS</abbr> classes:</strong> </p>
+              <ul>
+              <li><code>width-100</code></li>
+              <li><code>width-90</code></li>
+              <li><code>width-80</code></li>
+              <li><code>width-70</code></li>
+              <li><code>width60</code></li>
+              <li><code>width-50</code></li>
+              <li><code>width-40</code></li>
+              <li><code>width-30</code></li>
+              <li><code>width-20</code></li>
+              <li><code>width-10</code></li>
+            </ul>
+            </div>
+<p>Since the grid system has its own set of width standards, the below width <abbr title="Cascading Style Sheet">CSS</abbr> has little use, other than in  tables (<code>&lt;table&gt;</code>) or table headers (<code>&lt;th&gt;</code>).  There are rare situations  where these classes have a purpose elsewhere.</p>
+<div class="clear"></div>
+<table>
+              <caption>
+            The different table width styling options
+            </caption>
+              <tr>
+              <th scope="col">Class</th>
+              <th scope="col">Details and examples </th>
+            </tr>
+              <tr>
+              <td><code>width-100</code></td>
+              <td><p>This table uses the <code>width-100</code> style to stretch it across 100% of the available space. This styling suits the content, as  there is minimal word wrapping and white space. </p>
+                  <table class="width-100" >
+                  <caption>
+                    A table within a table &mdash; also with the <code>width-100</code> style
+                    </caption>
+                  <tr>
+                      <th scope="col">Header</th>
+                      <th scope="col">Header</th>
+                    </tr>
+                  <tr>
+                      <td>Data and and minimal white space. The width of  both data cells self-adjust to fit the content, and both have minimal word wrapping. </td>
+                      <td>Data and and minimal white space. </td>
+                    </tr>
+                </table></td>
+            </tr>
+              <tr>
+              <td><code>width-90</code></td>
+              <td > The same concept as <code>width-100</code> applies.</td>
+            </tr>
+              <tr>
+              <td><code>width-80</code></td>
+              <td>The same concept as <code>width-100</code> applies.</td>
+            </tr>
+              <tr>
+              <td><code>width-70</code></td>
+              <td>The same concept as <code>width-100</code> applies.</td>
+            </tr>
+              <tr>
+              <td><code>width-60</code></td>
+              <td>The same concept as <code>width-100</code> applies.</td>
+            </tr>
+              <tr>
+              <td><code>width-50</code></td>
+              <td >The same concept as <code>width-100</code> applies.</td>
+            </tr>
+              <tr>
+              <td><code>width-40</code></td>
+              <td >The same concept as <code>width-100</code> applies.</td>
+            </tr>
+              <tr>
+              <td><code>width-30</code></td>
+              <td>The same concept as <code>width-100</code> applies.</td>
+            </tr>
+              <tr>
+              <td><code>width-20</code></td>
+              <td >The same concept as <code>width-100</code> applies.</td>
+            </tr>
+              <tr>
+              <td><code>width-10</code></td>
+              <td >The same concept as <code>width-100</code> applies.</td>
+            </tr>
+            </table>
+<h3>Points of compliance</h3>
+<p>The following points always apply:</p>
+<ul>
+              <li>Apply as needed to your local content, but <strong>do  not overuse</strong>. </li>
+              <li>Use these classes strategically and with caution. White space is an important design feature. However, too much white space makes it difficult to associate related table data when it is overly spread out. The content becomes difficult for the eye to scan, and therefore more difficult to read. </li>
+              <li>Use these classes mainly to control the amount of white space. The browser automatically creates a table that optimizes the content. For the most part  it ensures there isn't too much white space between rows or columns, but it isn't foolproof. </li>
+            </ul>
+<h2><a id="tables"></a>Table <abbr title="Cascading Style Sheet">CSS</abbr></h2>
+<div class="span-2 module-versatile float-right">
+              <p> <strong>Introducing <abbr title="Cascading Style Sheet">CSS</abbr> classes:</strong> </p>
+              <ul>
+              <li><code>table-accent</code></li>
+              <li><code>zebra</code></li>
+            </ul>
+            </div>
+<p>There are a number of table layout options. Use the style that best suits the data. Don't use these styles unless you have a valid valid reason. </p>
+<div class="clear"></div>
+<table>
+              <caption>
+            The various table styling options
+            </caption>
+              <tr>
+              <th scope="col" >Class</th>
+              <th scope="col" >Details</th>
+              <th scope="col" class="width-50">Example</th>
+            </tr>
+              <tr>
+              <td>(default)</td>
+              <td>Default table style </td>
+              <td><table>
+                  <caption>
+                  Without added styles
+                  </caption>
+                  <tr>
+                    <th scope="col">Header</th>
+                    <th scope="col">Header</th>
+                    <th scope="col">Header</th>
+                  </tr>
+                  <tr>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                  </tr>
+                  <tr>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                  </tr>
+                </table></td>
+            </tr>
+              <tr>
+              <td><code>table-accent</code></td>
+              <td>Matches table colour to users selected colour theme.</td>
+              <td><table class="table-accent">
+                  <caption>
+                  With just <code>table-accent</code>
+                  </caption>
+                  <tr>
+                    <th scope="col">Header</th>
+                    <th scope="col">Header</th>
+                    <th scope="col">Header</th>
+                  </tr>
+                  <tr >
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                  </tr>
+                  <tr>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                  </tr>
+                </table></td>
+            </tr>
+              <tr>
+              <td><code>zebra</code></td>
+              <td>Dynamically  adds a stripe  to alternate rows, and adds a hover effect to each row </td>
+              <td><p >Rows highlight when you hover over them.</p>
+                  <table class="zebra float-left indent-none">
+                  <caption>
+                    With <code>zebra</code> styles
+                    </caption>
+                  <tr>
+                      <th scope="col">Header</th>
+                      <th scope="col">Header</th>
+                    </tr>
+                  <tr>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                  <tr>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                  <tr>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                  <tr>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                  <tr>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                  <tr>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                </table>
+                  <table class="table-accent zebra">
+                  <caption>
+                    With <code>zebra table-accent</code>
+                    </caption>
+                  <tr>
+                      <th scope="col">Header</th>
+                      <th scope="col">Header</th>
+                    </tr>
+                  <tr>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                  <tr>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                  <tr>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                  <tr>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                  <tr>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                  <tr>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                </table></td>
+            </tr>
+            </table>
+<h3>Points of compliance</h3>
+<p>The following points always apply:</p>
+<ul>
+              <li>Apply as needed to your local content, but <strong>do not overuse</strong>. </li>
+              <li>The default table colour is preferred over <code>table-accent</code>, as it is a more subtle design. </li>
+            </ul>
+<h2><a name="background"></a>Background colour <abbr title="Cascading Style Sheet">CSS</abbr></h2>
+<div class="span-2 module-versatile float-right">
+              <p> <strong>Introducing <abbr title="Cascading Style Sheet">CSS</abbr> classes:</strong> </p>
+              <ul>
+              <li><code>background-accent</code></li>
+              <li><code>background-dark</code></li>
+              <li><code>background-highlight</code></li>
+              <li><code>background-light</code></li>
+              <li><code>background-white</code></li>
+            </ul>
+            </div>
+<p>Add a background colour to various elements.</p>
+<div class="clear"></div>
+<table>
+              <tr>
+              <th scope="col">Class</th>
+              <th scope="col">Details</th>
+              <th scope="col">Example 1 </th>
+              <th scope="col">Example 2</th>
+              <th scope="col">Example 3</th>
+            </tr>
+              <tr>
+              <td><code>background-light</code></td>
+              <td>light branding colour</td>
+              <td><p class="background-light">On a paragraph</p></td>
+              <td><h2 class="background-light">On a heading</h2></td>
+              <td><div class="background-light">On a div</div></td>
+            </tr>
+              <tr>
+              <td><code>background-dark</code></td>
+              <td>dark branding colour</td>
+              <td><p class="background-dark">On a paragraph</p></td>
+              <td><h2 class="background-dark">On a heading</h2></td>
+              <td><div class="background-dark">On a div</div></td>
+            </tr>
+              <tr>
+              <td><code>background-accent</code></td>
+              <td>accent branding colour</td>
+              <td><p class="background-accent">On a paragraph</p></td>
+              <td><h2 class="background-accent">On a heading</h2></td>
+              <td><div class="background-accent">On a div</div></td>
+            </tr>
+              <tr>
+              <td><code>background-white</code></td>
+              <td>white - limited use, mainly layered inside something with a background colour and part of it needs to revert back to white</td>
+              <td><p class="background-accent">On a paragraph, this part is the accent colour and <span class="background-white">this part is white</span> and now back to the accent color</p></td>
+              <td><h2 class="background-accent">On a heading, this part is the accent colour and <span class="background-white">this part is white</span> and now back to the accent color</h2></td>
+              <td><div class="background-accent">On a div, this part is the accent colour and <span class="background-white">this part is white</span> and now back to the accent color</div></td>
+            </tr>
+              <tr>
+              <td><code>background-yellow</code></td>
+              <td>yellow - limited use, mainly to highlight text </td>
+              <td><p class="background-highlight">On a paragraph</p></td>
+              <td><h2 class="background-highlight">On a heading</h2></td>
+              <td><div class="background-highlight">On a div</div></td>
+            </tr>
+            </table>
+<h3>Points of compliance</h3>
+<p>The following points always apply:</p>
+<ul>
+              <li>White space can be more impactful than a block of colour, so <strong>do not overuse</strong>. </li>
+            </ul>
+			<!-- InstanceEndEditable -->
+			<!-- Date Modified begins / Début de la date de modification -->
+			<dl id="cn-doc-dates" role="contentinfo">
+				<dt>Date modified:</dt>
+				<dd><span>
+				<!-- InstanceBeginEditable name="English date (YYYY-MM-DD) | Date anglaise (AAAA-MM-JJ)" --> <time>2011-08-18</time> <!-- InstanceEndEditable -->
+				</span></dd>
+			</dl>
+			<div class="clear"></div>
+			<!-- Date Modified ends / Fin de la date de modification -->
+<!-- GC Web Usability theme ends / Fin du thème de la facilité d'emploi GC -->
+		</div></div>
+		<!-- Main content ends / Fin du contenu principal -->
+
+		<!-- Primary navigation (left column) ends / Fin de la navigation principale (colonne gauche) -->
+		<div id="cn-left-col" itemscope itemtype="http://schema.org/WPSideBar"><div id="cn-left-col-inner">
+		<nav role="navigation">
+			<h2 id="cn-nav">Primary navigation (left column)</h2>
+			<div class="cn-left-col-default">
+<!-- GC Web Usability theme begins / Début du thème de la facilité d'emploi GC -->
+				<!-- InstanceBeginEditable name="Side menu | Menu latéral" --><!-- #BeginLibraryItem "/Library/styleguide-css-e.lbi" --><ul>
+  <li><a href="../dflt-e.html">Default design</a></li>
+  <li><a href="../css-e.html"><abbr title="Cascading Style Sheet">CSS</abbr> styles</a>
+    <ul>
+      <li><a href="snpsht-eng.html"><abbr title="Cascading Style Sheet">CSS</abbr> snapshot</a></li>
+      <li><a href="bscs-eng.html" class="nav-current">Basic styles</a></li>
+      <li><a href="grds-eng.html">Grids</a></li>
+      <li><a href="spclt-eng.html">Speciality effects</a></li>
+      <li><a href="mdl-eng.html">Modules</a></li>
+    </ul>
+  </li>
+  <li><a href="../plgns-eng.html">Script plug-ins</a></li>
+</ul>
+<!-- #EndLibraryItem --><!-- InstanceEndEditable -->
+<!-- GC Web Usability theme ends / Fin du thème de la facilité d'emploi GC -->
+			</div>
+		</nav>
+		</div></div>
+		<!-- Primary navigation (left column) ends / Fin de la navigation principale (colonne gauche) -->
+	</div></div>
+	<!-- Columns end / Fin des colonnes -->
+
+	<!-- Footer begins / Début du pied de page -->
+	<div id="cn-foot"><div id="cn-foot-inner">
+	<footer itemscope itemtype="http://schema.org/WPFooter">
+		<h2>Footer</h2>
+<!-- GC Web Usability theme begins / Début du thème de la facilité d'emploi GC -->
+		<!-- Site footer begins / Début du pied de page du site -->
+		<nav role="navigation">
+			<div id="cn-sft">
+				<h3>Site footer</h3>
+				<div id="cn-sft-inner" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<section>
+						<div class="span-2">
+							<h4 class="col-head"><a href="#">About our department</a></h4>
+							<ul>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<div class="span-2">
+							<h4 class="col-head"><a href="#">Contacts</a></h4>
+							<address>
+								<ul>
+									<li><a href="#">Link</a></li>
+									<li><a href="#">Link</a></li>
+									<li><a href="#">Link</a></li>
+								</ul>
+							</address>
+						</div>
+					</section>
+					<section>
+						<div class="span-2">
+							<h4 class="col-head"><a href="#">Stay connected</a></h4>
+							<ul>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<div class="span-2">
+							<h4 class="col-head"><a href="#">Policies</a></h4>
+							<ul>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
+							</ul>
+						</div>
+					</section>
+					<div id="cn-ft-tctr">
+						<ul>
+							<li class="terms"><a href="#" rel="license">Terms and conditions</a></li>
+							<li class="trans"><a href="#">Transparency</a></li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+		</nav>
+		<!-- Site footer ends / Fin du pied de page du site -->
+
+<!-- GC Web Usability theme ends / Fin du thème de la facilité d'emploi GC -->
+	</footer>
+	</div></div>
+	<!-- Footer ends / Fin du pied de page -->
+</div>
+<!-- Two column layout ends / Fin de la mis en page de deux colonnes -->
+</body>
+<!-- InstanceEnd --></html>
