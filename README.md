@@ -12,7 +12,7 @@ If you do not wish to compile Drupal and its various packages we host the comple
 
 ### Installation
 
-> 1. Install Drush 5.0 (features Drush-Make) as per http://drupal.org/node/477684
+> 1. Install Drush 5.1 (features Drush-Make) as per http://drupal.org/node/477684
 >
 > 2. Perform the build out procedure by typing:
 <pre>
