@@ -13,4 +13,4 @@ projects[drupal][patch][] = http://drupal.org/files/drupal-7881-394-2.patch
 projects[webexp][type] = profile
 projects[webexp][download][type] = git
 ;projects[webexp][download][branch] = 7.x-1.0
-projects[webexp][download][url] = http://github.com/Web-Experience-Toolkit/Drupal7-WET-Distro.git
+projects[webexp][download][url] = http://github.com/wet-boew/wet-boew-drupal.git
