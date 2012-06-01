@@ -112,7 +112,7 @@ projects[apachesolr][subdir] = "contrib"
 projects[apachesolr_attachments][version] = "1.x-dev"
 projects[apachesolr_attachments][subdir] = "contrib"
 
-projects[apachesolr_views][version] = "1.x-dev"
+projects[apachesolr_views][version] = "1.0-beta1"
 projects[apachesolr_views][subdir] = "contrib"
 
 projects[search404][version] = "1.1"
