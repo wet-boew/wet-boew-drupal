@@ -133,7 +133,7 @@ function wetkit_web_usability_init() {
   }
   //Add WET pe-ap.js on hook_init
   $current_path = current_path();
-  if (function_exists('libraries_get_path') && (!path_is_admin($current_path)) && variable_get('wetkit_web_usability_v1')) {
+  if (function_exists('libraries_get_path') && (!path_is_admin($current_path)) && variable_get('wetkit_web_usability_v1', 1)) {
     $library_path = libraries_get_path('wet-boew');
     drupal_add_js($library_path . '/src/js/workers/menubar.js', array('scope' => 'footer', 'weight' => 5));
     drupal_add_js($library_path . '/src/js/workers/toolbar.js', array('scope' => 'footer', 'weight' => 5));
