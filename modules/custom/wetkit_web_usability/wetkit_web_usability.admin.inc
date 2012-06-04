@@ -29,7 +29,7 @@ function wetkit_web_usability_admin_settings() {
   $form['features']['wetkit_web_usability_v1'] = array(
     '#type' => 'checkbox',
     '#title' => t('Web Experience Toolkit: jQuery v3.0 (In Development)'),
-    '#default_value' => variable_get('wetkit_web_usability_v1', 0),
+    '#default_value' => variable_get('wetkit_web_usability_v1'),
     '#description' => t('Web Experience Toolkit: jQuery v3.0 (In Development)'),
   );
   $form['#submit'][] = 'wetkit_web_usability_admin_settings_submit';

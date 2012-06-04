@@ -34,4 +34,5 @@ features[variable][] = jquery_update_compression_type
 features[variable][] = jquery_update_jquery_admin_version
 features[variable][] = jquery_update_jquery_cdn
 features[variable][] = jquery_update_jquery_version
+features[variable][] = preprocess_css
 features[views_view][] = headlines_front_page
