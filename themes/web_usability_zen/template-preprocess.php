@@ -29,10 +29,19 @@ function web_usability_zen_preprocess_maintenance_page(&$variables, $hook) {
  *   The name of the template being rendered ("html" in this case.)
  */
 function web_usability_zen_preprocess_html(&$variables, $hook) {
+  //Support for Intranet Theme
+  $variables['intranet'] = '';
+  $variables['wetkit_sub_site'] = theme_get_setting('wetkit_sub_site');
+  if (theme_get_setting('wetkit_intranet_enable') == 1) {
+    $variables['intranet'] = 'Enabled';
+    $variables['base_path'] = base_path();
+    $variables['path_to_web_usability'] = drupal_get_path('theme', 'web_usability_zen');
+  }
+
   //Assign other skip link variables
   $variables['skip_link2_anchor'] = theme_get_setting('zen_skip_link2_anchor');
   $variables['skip_link2_text'] = theme_get_setting('zen_skip_link2_text');
-  
+
   //Support for two sidebars
   if ($variables['is_front']) {
     $variables['wetkit_col_array'] = 'wb-body';
@@ -130,7 +139,7 @@ function web_usability_zen_preprocess_page(&$variables, $hook) {
   $variables['wetkit_sub_site'] = theme_get_setting('wetkit_sub_site');
   if (theme_get_setting('wetkit_intranet_enable') == 1) {
     $variables['intranet'] = 'Enabled';
-    drupal_add_css(drupal_get_path('theme', 'web_usability_zen') . '/wet-boew/theme-gc-intranet/intranet.css', array('group' => CSS_THEME, 'every_page' => TRUE, 'weight' => 10));
+    //drupal_add_css(drupal_get_path('theme', 'web_usability_zen') . '/wet-boew/theme-gc-intranet/intranet.css', array('group' => CSS_THEME, 'every_page' => TRUE, 'weight' => 10));
   }
 }
 
