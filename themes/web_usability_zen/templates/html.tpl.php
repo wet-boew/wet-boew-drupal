@@ -87,6 +87,9 @@
   <meta http-equiv="cleartype" content="on">
 
   <?php print $styles; ?>
+  <?php if ($intranet): ?>
+    <style>@import url("<?php print $base_path . $path_to_web_usability; ?>/wet-boew/theme-gc-intranet/intranet.css");</style>
+  <?php endif; ?>
   <?php print $scripts; ?>
   <?php if ($add_respond_js): ?>
     <!--[if lt IE 9]>
