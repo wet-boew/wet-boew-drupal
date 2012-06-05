@@ -51,7 +51,7 @@
 
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
-    <h3 class="top-section"><a href="#"><?php print $title; ?></a></h3>
+    <h3><a href="#"><?php print $title; ?></a></h3>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 

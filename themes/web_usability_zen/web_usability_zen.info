@@ -129,7 +129,7 @@ features[] = secondary_menu
 ; Set the default values of settings on the theme-settings.php form.
 
 settings[zen_breadcrumb]           = yes
-settings[zen_breadcrumb_separator] = ' › '
+settings[zen_breadcrumb_separator] = ' '
 settings[zen_breadcrumb_home]      = 1
 settings[zen_breadcrumb_trailing]  = 1
 settings[zen_breadcrumb_title]     = 0

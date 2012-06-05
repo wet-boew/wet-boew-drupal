@@ -101,6 +101,6 @@
  *   http://drupal.org/node/223440 and http://drupal.org/node/1089656
  */
 
-require "template-preprocess.php";
-require "template-theme-links.php";
-require "template-menu-blocks.php";
+require "templates/template-preprocess.php";
+require "templates/template-theme-links.php";
+require "templates/template-menu-blocks.php";
