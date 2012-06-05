@@ -86,8 +86,7 @@ function _language_switcher_wetkit() {
  * Implements hook_preprocess_node().
  */
 function wetkit_i18n_preprocess_node(&$vars) {
-  $vars['content']['links']['translation']['#links']['translation_fr']['attributes']['lang'] = 'fr';
-  $vars['content']['links']['translation']['#links']['translation_en']['attributes']['lang'] = 'en';
+  
 }
 
 /**
