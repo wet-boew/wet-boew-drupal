@@ -20,13 +20,13 @@ function wetkit_web_usability_default_box() {
   $box->options = array(
     'en-title' => 'Stay Connected',
     'en-body' => array(
-      'value' => '<p><a href="http://twitter.com/#!/"><img alt="Twitter" class="image-actual" src="/profiles/webexp/themes/web_usability_zen/wet-boew/images/sl_twitter.png" /> </a> <a href="http://www.youtube.com/"> <img alt="YouTube" class="image-actual" src="/profiles/webexp/themes/web_usability_zen/wet-boew/images/sl_youtube.png" /> </a> <a href="/rss.xml"> <img alt="RSS" class="image-actual" src="/profiles/webexp/themes/web_usability_zen/wet-boew/images/sl_rss.png" /> </a></p>
+      'value' => '<p><a href="http://twitter.com/#!/"><img alt="Twitter" class="image-actual" src="/profiles/webexp/themes/web_usability_zen/images/sl_twitter.png" /> </a> <a href="http://www.youtube.com/"> <img alt="YouTube" class="image-actual" src="/profiles/webexp/themes/web_usability_zen/images/sl_youtube.png" /> </a> <a href="/rss.xml"> <img alt="RSS" class="image-actual" src="/profiles/webexp/themes/web_usability_zen/images/sl_rss.png" /> </a></p>
 ',
       'format' => 'full_html',
     ),
     'fr-title' => 'Restez connecté',
     'fr-body' => array(
-      'value' => '<p><a href="http://twitter.com/#!/"><img alt="Twitter" class="image-actual" src="/profiles/webexp/themes/gweb_usability_zen/wet-boew/images/sl_twitter.png" /> </a> <a href="http://www.youtube.com/"> <img alt="YouTube" class="image-actual" src="/profiles/webexp/themes/web_usability_zen/wet-boew/images/sl_youtube.png" /> </a> <a href="/rss.xml"> <img alt="RSS" class="image-actual" src="/profiles/webexp/themes/web_usability_zen/wet-boew/images/sl_rss.png" /> </a></p>
+      'value' => '<p><a href="http://twitter.com/#!/"><img alt="Twitter" class="image-actual" src="/profiles/webexp/themes/gweb_usability_zen/images/sl_twitter.png" /> </a> <a href="http://www.youtube.com/"> <img alt="YouTube" class="image-actual" src="/profiles/webexp/themes/web_usability_zen/images/sl_youtube.png" /> </a> <a href="/rss.xml"> <img alt="RSS" class="image-actual" src="/profiles/webexp/themes/web_usability_zen/images/sl_rss.png" /> </a></p>
 ',
       'format' => 'full_html',
     ),
@@ -48,7 +48,7 @@ function wetkit_web_usability_default_box() {
 <div class="gcwu-minister-in">
 	<div class="gcwu-minister-img">
 		<div>
-			<img alt="The Honourable minister name" height="149" src="/profiles/webexp/themes/web_usability_zen/wet-boew/images/minister.jpg" width="99" /></div>
+			<img alt="The Honourable minister name" height="149" src="/profiles/webexp/themes/web_usability_zen/images/minister.jpg" width="99" /></div>
 	</div>
 	<div class="gcwu-minister-info">
 		<p>The Honourable<br />
@@ -71,7 +71,7 @@ function wetkit_web_usability_default_box() {
 <div class="gcwu-minister-in">
 	<div class="gcwu-minister-img">
 		<div>
-			<img alt="Le nom de l&#39;honorable ministre" height="149" src="/profiles/webexp/themes/web_usability_zen/wet-boew/images/minister.jpg" width="99" /></div>
+			<img alt="Le nom de l&#39;honorable ministre" height="149" src="/profiles/webexp/themes/web_usability_zen/images/minister.jpg" width="99" /></div>
 	</div>
 	<div class="gcwu-minister-info">
 		<p>L&#39;honorable<br />
@@ -103,11 +103,11 @@ function wetkit_web_usability_default_box() {
       'value' => '<div id="cn-gc-priorities-inner">
 	<ul>
 		<li>
-			<img alt="Image 1 (220x70)" height="70" src="/profiles/webexp/themes/web_usability_zen/wet-boew/images/prio1-eng.png" title="Image 1 (220x70)" width="220" /></li>
+			<img alt="Image 1 (220x70)" height="70" src="/profiles/webexp/themes/web_usability_zen/images/prio1-eng.png" title="Image 1 (220x70)" width="220" /></li>
 		<li>
-			<img alt="Image 2 (220x70)" height="70" src="/profiles/webexp/themes/web_usability_zen/wet-boew/images/prio2-eng.png" title="Image 2 (220x70)" width="220" /></li>
+			<img alt="Image 2 (220x70)" height="70" src="/profiles/webexp/themes/web_usability_zen/images/prio2-eng.png" title="Image 2 (220x70)" width="220" /></li>
 		<li>
-			<img alt="Image 3 (220x70)" height="70" src="/profiles/webexp/themes/web_usability_zen/wet-boew/images/prio3-eng.png" title="Image 3 (220x70)" width="220" /></li>
+			<img alt="Image 3 (220x70)" height="70" src="/profiles/webexp/themes/web_usability_zen/images/prio3-eng.png" title="Image 3 (220x70)" width="220" /></li>
 	</ul>
 </div>
 ',
@@ -118,11 +118,11 @@ function wetkit_web_usability_default_box() {
       'value' => '<div id="cn-gc-priorities-inner">
 	<ul>
 		<li>
-			<img alt="Image 1 (220x70)" height="70" src="/profiles/webexp/themes/web_usability_zen/wet-boew/images/prio1-fra.png" title="Image 1 (220x70)" width="220" /></li>
+			<img alt="Image 1 (220x70)" height="70" src="/profiles/webexp/themes/web_usability_zen/images/prio1-fra.png" title="Image 1 (220x70)" width="220" /></li>
 		<li>
-			<img alt="Image 2 (220x70)" height="70" src="/profiles/webexp/themes/web_usability_zen/wet-boew/images/prio2-fra.png" title="Image 2 (220x70)" width="220" /></li>
+			<img alt="Image 2 (220x70)" height="70" src="/profiles/webexp/themes/web_usability_zen/images/prio2-fra.png" title="Image 2 (220x70)" width="220" /></li>
 		<li>
-			<img alt="Image 3 (220x70)" height="70" src="/profiles/webexp/themes/web_usability_zen/wet-boew/images/prio3-fra.png" title="Image 3 (220x70)" width="220" /></li>
+			<img alt="Image 3 (220x70)" height="70" src="/profiles/webexp/themes/web_usability_zen/images/prio3-fra.png" title="Image 3 (220x70)" width="220" /></li>
 	</ul>
 </div>
 ',
@@ -142,7 +142,7 @@ function wetkit_web_usability_default_box() {
     'en-title' => 'Videos',
     'en-body' => array(
       'value' => '<div id="gcwu-bg-dark">
-		<img alt="" class="posterimg" src="/profiles/webexp/themes/web_usability_zen/wet-boew/images/video.jpg" />
+		<img alt="" class="posterimg" src="/profiles/webexp/themes/web_usability_zen/images/video.jpg" />
 	<p><strong>Web Experience Toolkit Video</strong></p>
 	<p>This section is for video related content. Often this is the best place to introduce your department or organization.</p>
 </div>
@@ -159,7 +159,7 @@ function wetkit_web_usability_default_box() {
     'fr-title' => 'Vidéos',
     'fr-body' => array(
       'value' => '<div id="gcwu-bg-dark">
-		<img alt="" class="posterimg" src="/profiles/webexp/themes/web_usability_zen/wet-boew/images/video.jpg" />
+		<img alt="" class="posterimg" src="/profiles/webexp/themes/web_usability_zen/images/video.jpg" />
 	<p><strong>Exp&eacute;rience Web Toolkit Vid&eacute;o</strong></p>
 	<p>Cette section est pour le contenu vid&eacute;o li&eacute;. Souvent c&#39;est le meilleur endroit pour introduire votre minist&egrave;re ou organisme.</p>
 </div>

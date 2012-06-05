@@ -56,7 +56,7 @@ function web_usability_zen_preprocess_html(&$variables, $hook) {
     $variables['wetkit_col_array'] = 'wb-body-sec';
   }
   else {
-    $variables['wetkit_col_array'] = 'wb-body-sec';
+    $variables['wetkit_col_array'] = 'wb-body';
   }
     
   // The body tag's classes are controlled by the $classes_array variable. To
