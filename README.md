@@ -72,8 +72,12 @@ $conf['proxy_exceptions'] = array('127.0.0.1', 'localhost');
 </pre>
 > Use appropriate settings for each line.
 
-### A Note About Clean URLs
+## A Note About Clean URLs
 
 > Note that the drush installation process will enable "clean" URLs. In other words, your site will generate URLs that look like this: http://mysite.com/page rather than this: http://example.com/?q=page. However, if mod_rewrite has not been enabled for your Apache server, clean URLs will not work correctly. You can disable clean URLs for your site on this page: http://example.com//?q=admin/config/search/clean-urls. For more information, see the Clean URLs page in the Drupal documentation: http://drupal.org/getting-started/clean-urls.
 
 > The user login page is at http://example.com/?q=user or http://example.com/user (with clean URLs). You will need to input the user name and password that you provided in the installation procedure above.
+
+## Wiki Pages
+
+> Should you require more information not discussed in this README file please proceed to our wiki pages which offer some more information about this Drupal Distribution. The wiki pages will be constantly updated as work progresses. You can access the Wiki here: [Wiki Documentation](https://github.com/wet-boew/wet-boew-drupal/wiki)
