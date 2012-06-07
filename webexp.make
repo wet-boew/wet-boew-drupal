@@ -286,5 +286,4 @@ libraries[ckeditor][type] = "library"
 libraries[wet-boew][download][type] = "git"
 libraries[wet-boew][download][url] = "https://github.com/wet-boew/wet-boew.git"
 libraries[wet-boew][directory_name] = "wet-boew"
-libraries[wet-boew][patch][] = https://raw.github.com/gist/2766372/ba8fe6f86eb4e5645fa8e35a285bf9074da3c0c0/patch-001-wet-boew
 libraries[wet-boew][type] = "library"
