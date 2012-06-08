@@ -135,11 +135,14 @@ function wetkit_web_usability_init() {
   $current_path = current_path();
   if (function_exists('libraries_get_path') && (!path_is_admin($current_path)) && variable_get('wetkit_web_usability_v1', 1)) {
     $library_path = libraries_get_path('wet-boew');
-    drupal_add_js($library_path . '/src/theme-gcwu-fegc/js/theme.js', array('scope' => 'footer', 'weight' => 5));
-    drupal_add_js($library_path . '/src/js/workers/menubar.js', array('scope' => 'footer', 'weight' => 5));
-    drupal_add_js($library_path . '/src/js/workers/toolbar.js', array('scope' => 'footer', 'weight' => 5));
-    drupal_add_js($library_path . '/src/js/settings.js', array('scope' => 'footer', 'weight' => 5));
-    drupal_add_js($library_path . '/src/js/pe-ap.js', array('scope' => 'footer', 'weight' => 5));
+    //drupal_add_js($library_path . '/src/theme-gcwu-fegc/js/theme.js', array('scope' => 'footer', 'weight' => 5));
+    //drupal_add_js($library_path . '/src/js/workers/menubar.js', array('scope' => 'footer', 'weight' => 5));
+    //drupal_add_js($library_path . '/src/js/workers/toolbar.js', array('scope' => 'footer', 'weight' => 5));
+    //drupal_add_js($library_path . '/src/js/settings.js', array('scope' => 'footer', 'weight' => 5));
+    //drupal_add_js($library_path . '/src/js/pe-ap.js', array('scope' => 'footer', 'weight' => 5));
+    drupal_add_js($library_path . '/build/theme-gcwu-fegc/js/theme-min.js', array('scope' => 'footer', 'weight' => 5));
+    drupal_add_js($library_path . '/build/js/settings.js', array('scope' => 'footer', 'weight' => 5));
+    drupal_add_js($library_path . '/build/js/pe-ap-min.js', array('scope' => 'footer', 'weight' => 5));
   }
 }
 
