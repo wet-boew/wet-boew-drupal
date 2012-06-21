@@ -57,7 +57,7 @@ drush si webexp --db-url=mysql://&lt;username&gt;:&lt;password&gt;@&lt;domain&gt
 > In your Windows home directory, create a blank text file with the name "_curlrc" with no file extension and add two lines
 <pre>
 --proxy your.proxyserver.ca:80
---proxy-user &lt;proxy account ID&gt;: &lt;proxy password&gt;
+--proxy-user &lt;proxy account ID&gt;:&lt;proxy password&gt;
 </pre>
 > Replace the proxyserver server name and port and the proxy account name and password in the example with the appropriate values.
 
