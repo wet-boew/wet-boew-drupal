@@ -190,7 +190,7 @@ function webexp_apps_servers_info() {
       'profile' => $profile,
       'profile_version' => isset($info['version']) ? $info['version'] : '7.x-1.x-dev',
       'server_name' => $_SERVER['SERVER_NAME'],
-      'server_ip' => $_SERVER['SERVER_ADDR'],
+      'server_ip' => gethostbyname($_SERVER['SERVER_NAME']),
     ),
   );
 }
