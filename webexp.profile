@@ -4,54 +4,83 @@
  * Implements hook_install_tasks()
  */
 function webexp_install_tasks($install_state) {
-  // Start iterating through the tasks
+
+  // Start iterating through the tasks and attempt to increase the memory if
+  // provided with less than 196M
   $tasks = array();
-  
-  // Include the Apps Module Profile
+  if (ini_get('memory_limit') != '-1' && ini_get('memory_limit') <= '196M') {    
+    ini_set('memory_limit', '196M');
+  }
+
+  // Include the awesomesauce that is Apps
   require_once(drupal_get_path('module', 'apps') . '/apps.profile.inc');
-   // Set up a task to include secondary language (fr)
+
+  // Set up a task to include secondary language (fr)
   $tasks['webexp_batch_processing'] = array(
     'display_name' => t('Import French Language'),
     'type' => 'batch',
   );
-  // Set up a task to verify webexp capability to run apps
+
+  // Set up a task to verify wetkit capability to run apps
   $tasks['webexp_apps_check'] = array(
     'display_name' => t('Enable apps support'),
     'type' => 'form',
   );
-  if ($install_state['interactive']) {
-    // Set up the Webexp Apps install task
-    $webexp_server = array(
-      'machine name' => 'webexp',
-      'default apps' => array(
-        'wetkit_search',
-      ),
-      //'required apps' => array(
-      //  'wetkit_wysiwyg',
-      //),
-    );
-    $tasks = $tasks + apps_profile_install_tasks($install_state, $webexp_server);
-  }
+
+  // Set up the WetKit Apps install task
+  $local_server = array(
+    'machine name' => 'local',
+    'default apps' => array(
+      'wetkit_admin',
+      'wetkit_core',
+      'wetkit_demo',
+      'wetkit_images',
+      'wetkit_magic',
+      'wetkit_pages',
+      'wetkit_theme',
+      'wetkit_users',
+      'wetkit_widgets',
+      'wetkit_wysiwyg',
+      'wetkit_language',
+      'wetkit_web_usability',
+    ),
+  );
+
+  $webexp_server = array(
+    'machine name' => 'webexp',
+    'default apps' => array(
+
+    ),
+    'required apps' => array(
+      //'panopoly_core',
+    ),
+  );
+
+  // Add Apps Install tasks
+  $tasks = $tasks + apps_profile_install_tasks($install_state, $local_server);
+  //$tasks = $tasks + apps_profile_install_tasks($install_state, $webexp_server);
+
   // Rename one of the default apps tasks. In the case of a non-interactive
   // installation, apps_profile_install_tasks() never defines this task, so we
   // need to make sure we don't accidentally create it when it doesn't exist.
-  if (isset($tasks['apps_profile_apps_select_form_webexp'])) {
-    $tasks['apps_profile_apps_select_form_webexp']['display_name'] = t('Install apps for Webexp');
+  if (isset($tasks['apps_profile_apps_select_form_local'])) {
+    $tasks['apps_profile_apps_select_form_local']['display_name'] = t('Install apps for WetKit (local)');
   }
+  //if (isset($tasks['apps_profile_apps_select_form_webexp'])) {
+  //  $tasks['apps_profile_apps_select_form_webexp']['display_name'] = t('Install apps for WetKit');
+  //}
+
   // Set up the theme selection and configuration tasks
   $tasks['webexp_theme_form'] = array(
     'display_name' => t('Choose a theme'),
     'type' => 'form',
   );
-  $tasks['webexp_theme_configure_form'] = array(
-    'display_name' => t('Configure theme settings'),
-    'type' => 'form',
-  );
-  // Set up the prepare task to close it out
-  $tasks['webexp_prepare'] = array(
-    'display_name' => t('Prepare site'),
-    'type' => 'form',
-  );
+
+  //$tasks['webexp_theme_configure_form'] = array(
+  //  'display_name' => t('Configure theme settings'),
+  //  'type' => 'form',
+  //);
+
   return $tasks;
 }
 
@@ -59,6 +88,13 @@ function webexp_install_tasks($install_state) {
  * Implements hook_form_FORM_ID_alter()
  */
 function webexp_form_install_configure_form_alter(&$form, $form_state) {
+  
+  // Set the logo for WetKit
+  //$theme_data = _system_rebuild_theme_data();
+  //$seven_data = $theme_data['seven']->info['settings'];
+  //$seven_data['default_logo'] = 0;
+  //$seven_data['logo_path'] = 'profiles/webexp/images/webexp_large.png';  variable_set('theme_seven_settings', $seven_data);
+
   // Hide some messages from various modules that are just too chatty!
   drupal_get_messages('status');
   drupal_get_messages('warning');
@@ -159,6 +195,13 @@ function webexp_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
       ksort($options);
       $form['apps_fieldset']['apps']['#options'] = $options;
     }
+
+    // Remove the demo content selection option since this is
+    // handled through the Panopoly demo module.
+    $form['default_content_fieldset']['#access'] = FALSE;
+
+    // Remove the "skip this step" option since why would we want that?
+    $form['actions']['skip']['#access'] = FALSE;
   }
 }
 
@@ -183,33 +226,27 @@ function webexp_apps_servers_info() {
   $profile = variable_get('install_profile', 'webexp');
   $info =  drupal_parse_info_file(drupal_get_path('profile', $profile) . '/' . $profile . '.info');
   return array(
+    'local' => array(
+      'title' => 'Local',
+      'description' => 'Apps for the Web Experience Toolkit Drupal distro',
+      'featured app' => 'wetkit_web_usability',
+      'manifest' => '',
+      //'profile' => $profile,
+      //'profile_version' => isset($info['version']) ? $info['version'] : '7.x-1.x-dev',
+      //'server_name' => (!empty($_SERVER['SERVER_NAME'])) ? $_SERVER['SERVER_NAME'] : NULL,
+      //'server_ip' => (!empty($_SERVER['SERVER_ADDR'])) ? $_SERVER['SERVER_ADDR'] : NULL,
+    ),
     'webexp' => array(
       'title' => 'Webexp',
       'description' => 'Apps for the Web Experience Toolkit Drupal distro',
       'manifest' => 'http://wetkitappdev.devcloud.acquia-sites.com/app/query/WetKit%20App%20Server',
-      'profile' => $profile,
-      'profile_version' => isset($info['version']) ? $info['version'] : '7.x-1.x-dev',
-      'server_name' => $_SERVER['SERVER_NAME'],
-      'server_ip' => $_SERVER['SERVER_ADDR'],
+      //'profile' => $profile,
+      //'profile_version' => isset($info['version']) ? $info['version'] : '7.x-1.x-dev',
+      //'server_name' => (!empty($_SERVER['SERVER_NAME'])) ? $_SERVER['SERVER_NAME'] : NULL,
+      //'server_ip' => (!empty($_SERVER['SERVER_ADDR'])) ? $_SERVER['SERVER_ADDR'] : NULL,
     ),
   );
-}
-
-/**
- * Apps installer default content callback.
- *
- * Adapted from openenterprise_default_content()
- */
-function webexp_default_content(&$modules) {
-  $files = system_rebuild_module_data();
-  foreach($modules as $module) {
-    // This assumes a pattern MYMODULE_democontent which is probably not always true. Might be 
-    // better to check $_SESSION['apps_manifest'] and check to see if this exists:
-    // function_exists($_SESSION['module']['configure form'])
-    if (isset($files[$module . '_democontent'])) {
-      $modules[] = $module . '_democontent';
-    }
-  }
+  //'manifest' => (empty($info['version']) || $info['version'] == '7.x-1.x-dev') ? 'http://apps.getpantheon.com/panopoly-dev' : 'http://apps.getpantheon.com/panopoly',
 }
 
 /**
@@ -217,9 +254,10 @@ function webexp_default_content(&$modules) {
  */
 function webexp_apps_check($form, &$form_state) {
   $form = array();
-  $form['opening'] = array(
-    '#markup' => '<h1>' . t('Enable Support for Apps') . '</h1>',
-  );
+  
+  // Set the title
+  drupal_set_title(t('Enable Support for Apps'));
+
   $form['openingtext'] = array(
     '#markup' => '<p>' . t('Apps uses the same mechanism for installing modules as the update module in core. This depends on certain php extensions to be installed on your server. Below is the documentation for the various methods of installing.') . '</p>',
   );
@@ -249,6 +287,9 @@ function webexp_apps_check($form, &$form_state) {
  * Form to choose the starting theme from list of available options
  */
 function webexp_theme_form($form, &$form_state) {
+  // Set the page title
+  drupal_set_title(t('Choose a theme!'));
+
   // Create list of theme options, minus admin + testing + starter themes
   $themes = array();
   foreach(system_rebuild_theme_data() as $theme) {
@@ -256,16 +297,24 @@ function webexp_theme_form($form, &$form_state) {
       $themes[$theme->name] = theme('image', array('path' => $theme->info['screenshot'])) . '<strong>' . $theme->info['name'] . '</strong><br><p><em>' . $theme->info['description'] . '</em></p><p class="clearfix"></p>';
     }
   }
-  $form['theme'] = array(
+
+  $form['theme_wrapper'] = array(
     '#title' => t('Starting Theme'),
+    '#type' => 'fieldset',
+  );
+
+  $form['theme_wrapper']['theme'] = array(
     '#type' => 'radios',
     '#options' => $themes,
-    '#default_value' => 'web_usability_zen',
+    '#default_value' => 'wetkit_adaptivetheme',
   );
+
+  
   $form['submit'] = array(
     '#type' => 'submit',
     '#value' => 'Choose theme',
   );
+
   return $form;
 }
 
@@ -277,7 +326,15 @@ function webexp_theme_form_submit($form, &$form_state) {
   $theme = $form_state['input']['theme'];
   theme_enable(array($theme));
   variable_set('theme_default', $theme);
- 
+
+  // Set the AdaptiveTheme logo to be WetKit's logo
+  //if ($theme == 'bartik' || $theme == 'garland') {
+  //  $theme_data = _system_rebuild_theme_data();
+  //  $theme_data[$theme]->info['settings']['default_logo'] = 0;
+  //  $theme_data[$theme]->info['settings']['logo_path'] = 'profiles/panopoly/images/panopoly_icon_theme.png';
+  //  variable_set('theme_' . $theme . '_settings', $theme_data[$theme]->info['settings']);
+  //}
+
   // Flush theme caches so things are right
   system_rebuild_theme_data();
   drupal_theme_rebuild();
@@ -294,71 +351,26 @@ function webexp_theme_configure_form($form, &$form_state) {
 }
 
 /**
- * Form to talk about preparing the site for prime time
- */
-function webexp_prepare($form, &$form_state) {
-  $form = array();
-  $form['preparing_title'] = array(
-    '#markup' => '<h1>' . t('Preparing Site'),
-  );
-  $form['preparing_body'] = array(
-    '#markup' => '<h2>' . t('The installation now needs to do a bit more Drupal wizardry to finalize some settings.') . '</h2>',
-  );
-  $form['submit'] = array(
-    '#type' => 'submit',
-    '#value' => 'Prepare your site',
-  );
-  return $form;
-}
-
-/**
- * Submit form to prepare site for prime time
- */
-function webexp_prepare_submit($form, &$form_state) {
-  // Flush all caches to ensure that any full bootstraps during the installer
-  // do not leave stale cached data, and that any content types or other items
-  // registered by the install profile are registered correctly.
-  module_enable(array('fences'));
-  drupal_flush_all_caches();
-  // Fix for some blocks being added to Header Region for certain themes.
-  db_update('block')
-    ->fields(array('region' => '-1'))
-    ->condition('region', 'header')
-    ->execute();
-  // Remember the profile which was used.
-  variable_set('install_profile', drupal_get_profile());
-  // Install profiles are always loaded last
-  db_update('system')
-    ->fields(array('weight' => 1000))
-    ->condition('type', 'module')
-    ->condition('name', drupal_get_profile())
-    ->execute();
-  // Cache a fully-built schema.
-  drupal_get_schema(NULL, TRUE);
-  // Run cron to populate update status tables (if available) so that users
-  // will be warned if they've installed an out of date Drupal version.
-  // Will also trigger indexing of profile-supplied content or feeds.
-  drupal_cron_run();
-}
-
-/**
  * Form to finish it all out and send us on our way
  */
 function webexp_finished_install($form, &$form_state) {
+
+  // Hide some messages from various modules that are just too chatty!
+  drupal_get_messages('status');
+
   $form = array();
-  $form['opening'] = array(
-    '#markup' => '<h1>' . t('Finished!') . '</h1>',
-  );
+
+  // Set the title
+  drupal_set_title(t('Finished!'));
   $form['openingtext'] = array(
     '#markup' => '<h2>' . t('Congratulations, you just installed the Drupal 7 Web Experience Toolkit!') . '</h2>',
   );
-  $form['webexp_icon'] = array(
-    '#markup' => theme('image', array('path' => drupal_get_path('profile', 'webexp') . '/images/webexp_icon.png')),
-  );
+
   $form['submit'] = array(
     '#type' => 'submit',
     '#value' => 'Visit your new site!',
   );
+
   return $form;
 }
 
@@ -366,15 +378,38 @@ function webexp_finished_install($form, &$form_state) {
  * Submit form to finish it out and send us on our way!
  */
 function webexp_finished_install_submit($form, &$form_state) {
-  // Allow anonymous and authenticated users to see content
-  //user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content'));
-  //user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content'));
 
-  // Once more for good measure
+  // Flush all caches to ensure that any full bootstraps during the installer
+  // do not leave stale cached data, and that any content types or other items
+  // registered by the install profile are registered correctly.
+  _field_info_collate_fields(TRUE);
+  _field_info_collate_fields();
   drupal_flush_all_caches();
-  // And away we go
-  // $form_state['redirect'] won't work here since we are still in the
-  // installer, so use drupal_goto() (for interactive installs only) instead.
+  
+  // Remember the profile which was used.
+  variable_set('install_profile', drupal_get_profile());
+
+  // Install profiles are always loaded last
+  db_update('system')
+    ->fields(array('weight' => 1000))
+    ->condition('type', 'module')
+    ->condition('name', drupal_get_profile())
+    ->execute();
+
+  // Allow anonymous and authenticated users to see content
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content'));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content'));
+
+  // Cache a fully-built schema.
+  drupal_get_schema(NULL, TRUE);
+
+  // Run cron to populate update status tables (if available) so that users
+  // will be warned if they've installed an out of date Drupal version.
+  // Will also trigger indexing of profile-supplied content or feeds.
+  drupal_cron_run();
+
+  // And away we go! Redirect the user to the front page if they are using
+  // the interactive mode installer.
   $install_state = $form_state['build_info']['args'][0];
   if ($install_state['interactive']) {
     drupal_goto('<front>');

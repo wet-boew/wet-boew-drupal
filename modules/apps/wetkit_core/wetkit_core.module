@@ -1,0 +1,56 @@
+<?php
+
+include_once('wetkit_core.features.inc');
+
+/**
+ * Implementation of hook_init()
+ */
+function wetkit_core_init() {
+
+  //Set the current page title in the breadcrumb
+  $breadcrumb = drupal_get_breadcrumb();
+  if (count($breadcrumb) && drupal_get_title()) {
+    //$breadcrumb[] = drupal_get_title();
+
+    //If it is the homepage, remove the breadcrumb
+    if (drupal_is_front_page()) {
+      $breadcrumb = array();
+    }
+    drupal_set_breadcrumb($breadcrumb);
+  }
+}
+
+
+/**
+ * Implements hook_date_format_types()
+ */
+function wetkit_core_date_format_types() {
+  return array(
+    'wetkit_time' => t('Time'),
+    'wetkit_day' => t('Day'),
+  );
+}
+
+/**
+ * Implements hook_date_formats().
+ */
+function wetkit_core_date_formats() {
+  $formats = array();
+
+  // Time
+  $formats[] = array(
+    'type' => 'wetkit_time',
+    'format' => 'g:ia',
+    'locales' => array(),
+  );
+
+  // Day
+  $formats[] = array(
+    'type' => 'wetkit_day',
+    'format' => 'F j, Y',
+    'locales' => array(),
+  );
+
+  return $formats;
+}
+

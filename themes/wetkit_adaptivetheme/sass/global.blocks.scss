@@ -1,0 +1,165 @@
+
+@import "base.scss";
+
+//
+// @file
+// Block Styling
+//
+
+
+// Main wrapper for most blocks, block_system_main does not have it
+.block {
+  margin-bottom: 20px;
+}
+
+
+// Inner wrapper for most blocks, good for margin, padding and borders, block_system_main does not have it
+.block-inner {}
+
+
+// The first block in the region
+.block.first {}
+
+
+// The last block in the region
+.block.last {}
+
+
+// Zebra striping for each block in the region
+.block.odd {}
+
+
+// Zebra striping for each block in the region
+.block.even {}
+
+
+// Block title
+.block-title {}
+
+
+// Block content wrapper
+.block-content {}
+
+
+ // Match item list and block menu margin and padding
+.block-content {
+
+   ul,
+   ol {
+    margin: 0 0 0 15px;
+    padding: 0;
+  }
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+// Block for the latest news items in the first category
+#block-aggregator-category-1 {}
+
+
+// Block for the latest news items in the first feed
+#block-aggregator-feed-1 {}
+
+
+// First block created with "Add block" link
+#block-block-1 {}
+
+
+// "Recent blog posts" block
+#block-blog-recent {}
+
+
+// "Book navigation" block for the current book's table of contents
+#block-book-navigation {}
+
+
+// "Recent comments" block
+#block-comment-recent {}
+
+
+// "Active forum topics" block
+#block-forum-active {}
+
+
+// "New forum topics" block
+#block-forum-new {}
+
+
+// Language switcher block
+#block-locale-language {}
+
+
+// Custom menu block
+#block-menu-menu-NAME {}
+
+
+// "Recent content" block
+#block-node-recent {}
+
+
+// "Syndicate" block for primary RSS feed; see also page.css's .feed-icon
+#block-node-syndicate {}
+
+
+// "Most recent poll" block
+#block-poll-recent {}
+
+
+// "Author information" block for the profile of the page's author
+#block-profile-author-information {}
+
+
+// "Search form" block
+#block-search-form {}
+
+
+// "Shortcuts" block
+#block-shortcut-shortcuts {}
+
+
+// "Popular content" block
+#block-statistics-popular {}
+
+
+// "Main menu" block
+#block-system-main-menu {}
+
+
+// "Management" block for Drupal management menu
+#block-system-management {}
+
+
+// "Navigation" block for Drupal navigation menu
+#block-system-navigation {}
+
+
+// "User menu" block for Drupal user menu
+#block-system-user-menu {}
+
+
+// "System help" block
+#block-system-help {}
+
+
+// "Main page content" block
+#block-system-main {}
+
+
+// "Powered by Drupal" block
+#block-system-powered-by {}
+
+
+// "User login form" block
+#block-user-login {}
+
+
+// "Who's new" block for a list of the newest users
+#block-user-new {}
+
+
+// "Who's online" block for a list of the online users
+#block-user-online {}
+

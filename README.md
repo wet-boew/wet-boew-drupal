@@ -16,7 +16,7 @@ If you do not wish to compile Drupal and its various packages we host the comple
 >
 > 2. Perform the build out procedure by typing:
 <pre>
-drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.build &lt;directory_name&gt;
+drush make --no-gitinfofile --working-copy https://github.com/sylus/wet-boew-drupalexp/raw/master/distro.make &lt;directory_name&gt;
 </pre>
 >
 > 3. Rapid Installation (via Drush):
@@ -41,7 +41,7 @@ drush si webexp --db-url=mysql://&lt;username&gt;:&lt;password&gt;@&lt;domain&gt
 >
 > 3. Build the complete Drupal installation software profile using the following command on the Bash command promprt.
 <pre>
-drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.build &lt;directory_name&gt;
+drush make --no-gitinfofile --working-copy https://github.com/sylus/wet-boew-drupalexp/raw/master/distro.make &lt;directory_name&gt;
 </pre>
 > 4. To quickly install using the Drush command line, change to the directory where Drupal (for example C:/apache2/htdocs) was installed and enter this command.
 > Be sure to use a password that meets the password policy for WET.
@@ -57,7 +57,7 @@ drush si webexp --db-url=mysql://&lt;username&gt;:&lt;password&gt;@&lt;domain&gt
 > In your Windows home directory, create a blank text file with the name "_curlrc" with no file extension and add two lines
 <pre>
 --proxy your.proxyserver.ca:80
---proxy-user &lt;proxy account ID&gt;:&lt;proxy password&gt;
+--proxy-user &lt;proxy account ID&gt;: &lt;proxy password&gt;
 </pre>
 > Replace the proxyserver server name and port and the proxy account name and password in the example with the appropriate values.
 
@@ -81,3 +81,7 @@ $conf['proxy_exceptions'] = array('127.0.0.1', 'localhost');
 ## Wiki Pages
 
 > Should you require more information not discussed in this README file please proceed to our wiki pages which offer some more information about this Drupal Distribution. The wiki pages will be constantly updated as work progresses. You can access the Wiki here: [Wiki Documentation](https://github.com/wet-boew/wet-boew-drupal/wiki)
+
+## Acknowledgements
+
+> A substantial amount of the Panopoly Distribution has been integrated into this distribution due to its amazing UX features. If you do not need a multilingual and/or government branding site you are encouraged to take a look at: http://drupal.org/project/panopoly

@@ -1,0 +1,35 @@
+/**
+ * @file
+ * OA Burr panel layout
+**/
+
+.burr-flipped-container {
+  margin-bottom: 1em;
+}
+
+.burr-flipped-sidebar {
+  width: 31.915%;
+  float: left;
+}
+
+.burr-flipped-content {
+  float: left;
+  width: 68.085%;
+}
+
+  .burr-flipped-content-inner {
+    margin-right: 20px;
+  }
+  
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .burr-flipped-content,
+  .burr-flipped-sidebar {
+    width: 100%;
+    float: none;
+  }
+  
+  .burr-flipped-content-inner {
+    margin-right: 0;
+  }
+}

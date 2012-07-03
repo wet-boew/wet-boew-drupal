@@ -21,5 +21,4 @@ function webexp_install() {
     ->execute();
   
   variable_set('admin_theme', 'rubik');
-  variable_set('node_admin_theme', '1');
 }

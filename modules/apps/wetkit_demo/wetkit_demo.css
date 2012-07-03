@@ -1,0 +1,17 @@
+/**
+ * CSS Styles for Demo Content
+ */
+div .wetkit-image-half {
+  float: left;
+  margin-right: 1em;
+}
+
+div .wetkit-image-quarter {
+  float: left;
+  margin-right: .75em;
+  margin-top: .5em;
+}
+
+div.field-type-image img {
+  margin: .5em 1em .5em 0em;
+}

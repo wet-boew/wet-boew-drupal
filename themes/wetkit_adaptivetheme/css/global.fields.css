@@ -1,0 +1,11 @@
+.field .field-label { font-size: 1em; font-weight: 700; font-family: inherit; line-height: inherit; margin: 0; }
+
+.field-type-taxonomy-term-reference { margin-bottom: 1.5em; }
+.field-type-taxonomy-term-reference.field-label-inline .field-items { margin: 0; padding: 0; }
+.field-type-taxonomy-term-reference.field-label-inline .field-item { display: inline; list-style: none; padding: 0 10px 0 0; /* LTR */ }
+
+.ia-l .field-type-image { margin: 0.5em 15px 1.5em 0; }
+
+.ia-c .field-type-image { margin: 0.5em auto 1.5em; }
+
+.ia-r .field-type-image { margin: 0.5em 0 1.5em 15px; }

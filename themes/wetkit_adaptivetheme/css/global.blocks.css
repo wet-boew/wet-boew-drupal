@@ -1,0 +1,4 @@
+.block { margin-bottom: 20px; }
+
+.block-content ul, .block-content ol { margin: 0 0 0 15px; padding: 0; }
+.block-content li { margin: 0; padding: 0; }

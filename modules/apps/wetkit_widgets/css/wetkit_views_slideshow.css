@@ -1,0 +1,46 @@
+.views-slideshow-controls-top {
+  margin-right: 1em;
+  width: 100%;
+}
+
+.widget_pager_top {
+  float: right
+}
+
+.views_slideshow_pager_field_item {
+  width: auto;
+  height: auto;
+  float: left;
+  margin-left: .5em;
+}
+
+.views-slideshow-controls-top .views_slideshow_pager_field_item {
+  background-color: #FFF;
+  border: 1px solid #000;
+}
+
+.views-slideshow-controls-top .activeSlide {
+  background-color: #000;
+}
+
+/* TODO - remove double pager listing in PHP instead of CSS */
+.views-slideshow-controls-top a {
+  display: none;
+}
+
+.views-slideshow-controls-top .views_slideshow_pager_field_item a {
+  color: #000;
+  text-decoration: none;
+  padding: 0px 10px;
+  display: block;
+}
+
+.views-slideshow-controls-top .activeSlide a {
+  color: #FFF;
+}
+
+.views-slideshow-controls-top .activeSlide a {
+    font-weight: bold;
+}
+
+

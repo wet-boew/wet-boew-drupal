@@ -1,0 +1,387 @@
+
+@import "base.scss";
+
+//
+// global.base.scss
+// This is a big reset for html elements to set up global defaults.
+//
+
+//
+// Fonts
+//
+// By default there is no global font size is reset. A common
+// method is to reset it to 62.5%, or 10px. This makes it very
+// easy to calculate the required font sizes in em, for example:
+//
+// 1.6em = 16px
+// 2.4em = 24px
+//
+// In Adaptivetheme this should be applied to the HTML element,
+// so it will play nicely with the theme settings. If you use
+// the body element or #page wrapper you will get unpredicable
+// font scaling issues.
+//
+// Font size chart from http://pxtoem.com/
+//
+// 6px	 0.6em	 60%	 5pt
+// 7px	 0.7em	 70%	 5pt
+// 8px	 0.8em	 80%	 6pt
+// 9px	 0.9em	 90%	 7pt
+// 10px	 1em	   100%	 8pt
+// 11px	 1.1em	 110%	 8pt
+// 12px	 1.2em	 120%	 9pt
+// 13px	 1.3em	 130%	 10pt
+// 14px	 1.4em	 140%	 11pt
+// 15px	 1.5em	 150%	 11pt
+// 16px	 1.6em	 160%	 12pt
+// 17px	 1.7em	 170%	 13pt
+// 18px	 1.8em	 180%	 14pt
+// 19px	 1.9em	 190%	 14pt
+// 20px	 2em	   200%	 15pt
+// 21px	 2.1em	 210%	 16pt
+// 22px	 2.2em	 220%	 17pt
+// 23px	 2.3em	 230%	 17pt
+// 24px	 2.4em	 240%	 18pt
+//
+//
+// Font Theme Settings
+//
+// Adaptivetheme includes powerful theme settings for adding
+// webfonts and setting font sizes - you can enable these
+// under "Site Tweaks", simply enable the Fonts setting and
+// start using them. You can choose from standard websafe font
+// stacks, Google fonts, add your own custom stacks, and if you
+// have @font-your-face module installed just set the font to
+// "-- add selector in theme CSS --" and the font will automatically
+// be available to you in theme settings.
+// @see http://drupal.org/project/fontyourface
+//
+//
+// Font Stacks
+//
+// These are the font stacks that used for the websafe fonts
+// in theme settings (if you enabled the Fonts feature). They are
+// included here for easy reference if you prefer to set your fonts
+// in CSS.
+//
+// font-family: 'Trebuchet MS', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+// font-family: Verdana, Geneva, 'DejaVu Sans', Arial, Helvetica, sans-serif;
+// font-family: Arial, Helvetica, sans-serif;
+// font-family: Calibri, Candara, Arial, Helvetica, sans-serif;
+// font-family: Segoe UI', 'Myriad Pro', Myriad, Arial, Helvetica, sans-serif;
+// font-family: 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande', Verdana, Geneva, sans-serif;
+// font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', sans-serif;
+// font-family: Garamond, Perpetua, 'Times New Roman', serif;
+// font-family: Georgia, Baskerville, Palatino, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
+// font-family: Consolas, Monaco, 'Courier New', Courier, monospace, sans-serif;
+//
+
+
+// Always apply your global font size the the HTML element, not body or #page
+html {
+  line-height: 1.5;
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+
+body {
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+h1, h2, h3, h4, h5, h6,
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img,
+em, dfn, del, ins,
+a, tbody, tfoot, thead, tr,
+ul, li,
+label, legend,
+figure, figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+
+// Reset HTML5 elements
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+
+// Default font sizes for headings, can be overridden in theme settings or set them here
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5, h6 {}
+
+
+img,
+a img {
+  border: 0;
+}
+
+
+p {
+  margin: 0 0 1.5em;
+  padding: 0;
+}
+
+
+em,
+dfn {
+  font-style: italic;
+}
+
+
+ins {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+
+pre,
+code,
+tt,
+samp,
+kbd,
+var {
+  font-size: 1em;
+  font-family: Consolas, "Lucida Console", Menlo, Monaco, "DejaVu Sans Mono", monospace, sans-serif; // sans-serif Safari hack
+}
+
+
+blockquote,
+q {
+  font-style: italic;
+  quotes: "" "";
+  &:before, &:after {
+    content: "";
+  }
+}
+
+
+blockquote {
+  margin: 0 0 1.5em;
+  padding: 0 0 0 40px;
+
+  p {
+    margin: 0;
+  }
+}
+
+
+strong,
+dfn,
+caption,
+th {
+  font-weight: 700;
+}
+
+
+ul,
+ol {
+  margin: 0 0 1.5em 40px;
+  padding: 0;
+}
+
+
+.item-list {
+
+  ul, ol {
+    margin: 0 0 0 15px;
+    padding: 0;
+  }
+
+  ul li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+ul, ol {
+
+  ul, ol {
+    &, .block &, .item-list & {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+ul {
+  list-style-type: disc;
+
+  ul ul {
+    list-style-type: square;
+  }
+}
+
+
+ol {
+  list-style-type: decimal;
+
+  ol {
+
+    list-style-type: lower-alpha;
+
+    ol {
+      list-style-type: lower-roman;
+    }
+  }
+}
+
+
+ul ul {
+  list-style-type: circle;
+
+  ul ul {
+    list-style-type: circle;
+  }
+}
+
+
+dt {
+  font-weight: 700;
+}
+
+
+dd {
+  margin: 0 0 1.5em 40px;
+}
+
+
+//
+// Flexible Media and Cross browser improvements
+// - This can cause issues in table cells where no width is set on the column,
+//   only in some versions of webkit and IE 7/8.
+// - declaring the width attribute on image elements and using max-width causes
+//   the "dissappering images" bug in IE8.
+// - Google maps break also, see below for fixes.
+//
+img {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
+
+
+// Ethan Marcotte - http://front.ie/l8rJaA
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
+
+// Disable flexiblity for IE8 and below
+.lt-ie9 {
+  img,
+  object,
+  embed,
+  video {
+    max-width: none;
+  }
+}
+
+
+// Override max-width 100% for map displays, as much as possible anyway...
+#map img,
+.gmap img,
+.view-gmap img,
+.openlayers-map img,
+#getlocations_map_canvas img,
+#locationmap_map img,
+.geofieldMap img {
+  max-width: none !important;
+}
+
+
+// Improve IE's resizing of images
+svg:not(:root) {
+  overflow: hidden;
+}
+
+
+// Corrects inline-block display not defined in IE6/7/8/9 & FF3
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+
+// Prevents modern browsers from displaying 'audio' without controls
+audio:not([controls]) {
+  display: none;
+}
+
+
+// Prevent overflowing content
+header[role=banner],
+.content-inner,
+.nav,
+.region-sidebar-first,
+.region-sidebar-second,
+.region-secondary-content,
+.region-tertiary-content,
+.region-footer {
+  overflow: visible;
+  word-wrap: break-word;
+}
+
+
+// Helpful classes for hiding content
+.element-invisible {
+  border: 0;
+  clip: rect(1px 1px 1px 1px); // IE6, IE7
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+}
+
+.element-invisible.element-focusable:active,
+.element-invisible.element-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static !important;
+  width: auto;
+}
+
+.offscreen {
+  position: absolute;
+  top: -99999em;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  outline: 0;
+}
+
+.element-hidden {
+  display: none;
+}
