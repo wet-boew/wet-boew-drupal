@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the wetkit_wysiwyg_feature feature.
- */
-
-include_once('wetkit_wysiwyg_feature.features.inc');
