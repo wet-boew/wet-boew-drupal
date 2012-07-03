@@ -19,3 +19,4 @@
 # SCSS + Compass Development Files
 /themes/web_usability_zen/.sass-cache/
 /themes/wetkit_adaptivetheme/.sass-cache/
+compass_app_log.txt

@@ -12,14 +12,16 @@ If you do not wish to compile Drupal and its various packages we host the comple
 
 ### Installation
 
-> 1. Install Drush 5.1 (features Drush-Make) as per http://drupal.org/node/477684
+> 1. Install Drush 5.4 or higher (features Drush-Make) as per http://drupal.org/node/477684
 >
-> 2. Perform the build out procedure by typing:
+> 2. Install Git 1.7.11 or higher (Some lower versions of git do not apply patches from the make file with Drush Make):
+>
+> 3. Perform the build out procedure by typing:
 <pre>
-drush make --no-gitinfofile --working-copy https://github.com/sylus/wet-boew-drupal/raw/master/distro.make &lt;directory_name&gt;
+drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make &lt;directory_name&gt;
 </pre>
 >
-> 3. Rapid Installation (via Drush):
+> 4. Rapid Installation (via Drush):
 <pre>
 drush si webexp --db-url=mysql://&lt;username&gt;:&lt;password&gt;@&lt;domain&gt;:&lt;port&gt;/&lt;database&gt; --account-name=&lt;username&gt; --account-pass=&lt;userpassword&gt; --site-mail=&lt;siteemail&gt; --site-name=&lt;sitename&gt;
 </pre>
@@ -35,13 +37,13 @@ drush si webexp --db-url=mysql://&lt;username&gt;:&lt;password&gt;@&lt;domain&gt
 
 ### Installation
 
-> 1. Install Drush 5.1 (features Drush-Make) from http://drush.ws/drush_windows_installer
+> 1. Install Drush 5.4 or higher (features Drush-Make) from http://drush.ws/drush_windows_installer
 >
-> 2. Install msysgit (available from http://msysgit.github.com) and start a Git Bash terminal windows
+> 2. Install msysgit 1.7.11 or higher available from http://msysgit.github.com (Some lower versions of git do not apply patches from the make file with Drush Make) and start a Git Bash terminal windows
 >
 > 3. Build the complete Drupal installation software profile using the following command on the Bash command promprt.
 <pre>
-drush make --no-gitinfofile --working-copy https://github.com/sylus/wet-boew-drupal/raw/master/distro.make &lt;directory_name&gt;
+drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make &lt;directory_name&gt;
 </pre>
 > 4. To quickly install using the Drush command line, change to the directory where Drupal (for example C:/apache2/htdocs) was installed and enter this command.
 > Be sure to use a password that meets the password policy for WET.
@@ -82,6 +84,6 @@ $conf['proxy_exceptions'] = array('127.0.0.1', 'localhost');
 
 > Should you require more information not discussed in this README file please proceed to our wiki pages which offer some more information about this Drupal Distribution. The wiki pages will be constantly updated as work progresses. You can access the Wiki here: [Wiki Documentation](https://github.com/wet-boew/wet-boew-drupal/wiki)
 
-## Acknowledgements
+## Acknowledgments
 
-> A substantial amount of the Panopoly Distribution has been integrated into this distribution due to its amazing UX features. If you do not need a multilingual and/or government branding site you are encouraged to take a look at: http://drupal.org/project/panopoly
+> This distribution borrows a substantial amount from the Panopoly Project on drupal.org due to its amazing UX features and overall architecture. If you do not need a multilingual and/or government branded site with WET integration you are encouraged to take a look at: http://drupal.org/project/panopoly
