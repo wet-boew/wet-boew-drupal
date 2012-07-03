@@ -1,0 +1,54 @@
+<?php
+
+include_once('wetkit_images.features.inc');
+
+/**
+ * Implementation of drupal_alter() for media_wysiwyg_allowed_view_modes
+ */
+function wetkit_images_media_wysiwyg_allowed_view_modes_alter(&$options, $context) {
+
+  // Unset confusing options
+  if (isset($options['token'])) { unset($options['token']); }
+  if (isset($options['media_link'])) { unset($options['media_link']); }
+  if (isset($options['full'])) { unset($options['full']); }
+
+  // Relabel some options
+  $options['media_original']['label'] = t('Full Size');
+  $options['media_large']['label'] = t('Half Size');
+  $options['media_small']['label'] = t('Quarter Size');
+  $options['media_preview']['label'] = t('Thumbnail');
+}
+
+/**
+ * Implementation of hook_form_alter()
+ */
+function wetkit_images_form_alter(&$form, &$form_state, $form_id) {
+
+  // Improve the media upload form
+  if (!empty($form['upload'])) {
+    $form['upload']['#size'] = 30;
+  }
+
+  // Warm the image style cache by preloading some images. This is needed when the images are
+  // added in the WYSIWYG so they will be fully rendered and can be sized on insert.
+  if ($form_id == 'media_format_form') {
+    $form['preload'] = array(
+      '#prefix' => '<div style="display: none">',
+      '#suffix' => '</div>',
+    );
+    $image_path = $form['#media']->uri;
+    $image_formats = array('wetkit_image_full', 'wetkit_image_half', 'wetkit_image_quarter');
+    foreach($image_formats as $format) {
+      $form['preload'][$format] = array(
+        '#markup' => theme('image', array('path' => image_style_url($format, $image_path))),
+      );
+    }
+  }
+}
+
+/**
+ * Implementation of hook_preprocess_image_style()
+ */
+function wetkit_images_preprocess_image_style(&$variables) {
+  $variables['attributes']['class'][] = str_replace('_', '-', $variables['style_name']);
+}

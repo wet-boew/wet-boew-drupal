@@ -1,0 +1,8 @@
+/**
+ * CSS Overrides to TinyMCE Table Layout
+ * to allow table layout necessary for
+ * PDW plugin to work properly 
+ */
+table.mceToolbar td {
+ display: inline-block;
+}

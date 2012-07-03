@@ -1,284 +1,350 @@
-core = 7.x
 api = 2
-translations[] = "fr"
+core = 7.x
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Contributed Modules                                           ;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;projects[drupal][version] = "7.x"
+;translations[] = "fr"
 
-; Patches:
-; =========
-; WYSIWYG: we need the dev version for Features exportable support
-; WYSIWYG: as per http://drupal.org/node/746524#comment-4730732 adds font styles to CKeditor
-; FILEFIELD_PATHS: as per http://drupal.org/node/1017830 we require dev
-
-;;;;;;;;;;;
-; WYSIWYG ;
-;;;;;;;;;;;
-
-projects[better_formats][version] = "1.x-dev"
-projects[better_formats][subdir] = "contrib"
-
-projects[wysiwyg][subdir] = "contrib"
-projects[wysiwyg][version] = "2.x-dev"
-projects[wysiwyg][patch][746524] = "http://drupal.org/files/wysiwyg-746524-184.patch"
-
-projects[wysiwyg_filter][version] = "1.6-rc2"
-projects[wysiwyg_filter][subdir] = "contrib"
-
-;;;;;;;;;;;;;;;;;
-; FILE HANDLING ;
-;;;;;;;;;;;;;;;;;
-
-projects[imageapi][subdir] = "contrib"
-projects[imageapi][version] = "1.x-dev"
-
-projects[image_resize_filter][version] = "1.12"
-projects[image_resize_filter][subdir] = "contrib"
-
-projects[imce][version] = "1.5"
-projects[imce][subdir] = "contrib"
-
-projects[imce_wysiwyg][version] = "1.0"
-projects[imce_wysiwyg][subdir] = "contrib"
-
-projects[insert][version] = "1.1"
-projects[insert][subdir] = "contrib"
-
-projects[filefield_sources][version] = "1.4"
-projects[filefield_sources][subdir] = "contrib"
-
-;;;;;;;;;;;;;;;
-; SEO & PATHS ;
-;;;;;;;;;;;;;;;
-
-projects[filefield_paths][subdir] = "contrib"
-projects[filefield_paths][version] = "1.x-dev"
-
-projects[pathauto][version] = "1.0"
-projects[pathauto][subdir] = "contrib"
-
-projects[pathologic][version] = "1.3"
-projects[pathologic][subdir] = "contrib"
-
-projects[token][version] = "1.0-rc1"
-projects[token][subdir] = "contrib"
-
-projects[transliteration][version] = "3.0"
-projects[transliteration][subdir] = "contrib"
-
-;;;;;;;;;;;;;;;
-; DEVELOPMENT ;
-;;;;;;;;;;;;;;;
-
-projects[coder][version] = "1.x-dev"
-projects[coder][subdir] = "contrib"
-
-projects[defaultcontent][version] = "1.0-alpha6"
-projects[defaultcontent][subdir] = "contrib"
-projects[defaultcontent][patch][1446714] = "http://drupal.org/files/defaultcontent-1446714-16.patch"
-
-projects[devel][version] = "1.x-dev"
-projects[devel][subdir] = "contrib"
-
-projects[features][version] = "1.0-rc2"
-projects[features][subdir] = "contrib"
-
-projects[features_override][version] = "2.0-alpha1"
-projects[features_override][subdir] = "contrib"
-
-projects[features_plumber][version] = "1.0-alpha3"
-projects[features_plumber][subdir] = "contrib"
-
-projects[strongarm][version] = "2.0-rc1"
-projects[strongarm][subdir] = "contrib"
-
-projects[querypath][version] = "2.0"
-projects[querypath][subdir] = "contrib"
-
-;;;;;;;;;;
-; SEARCH ;
-;;;;;;;;;;
-
-projects[apachesolr][version] = "1.0-beta19"
-projects[apachesolr][subdir] = "contrib"
-
-projects[apachesolr_attachments][version] = "1.x-dev"
-projects[apachesolr_attachments][subdir] = "contrib"
-
-projects[apachesolr_views][version] = "1.x-dev"
-projects[apachesolr_views][subdir] = "contrib"
-
-projects[search404][version] = "1.1"
-projects[search404][subdir] = "contrib"
-
-;;;;;;;;;;;;;;;;
-; EXPERIMENTAL ;
-;;;;;;;;;;;;;;;;
-
-projects[entity_translation][version] = "1.x-dev"
-projects[entity_translation][subdir] = "experimental"
-
-projects[title][version] = "1.x-dev"
-projects[title][subdir] = "experimental"
-
-;;;;;;;;;
-; OTHER ;
-;;;;;;;;;
-
-projects[absolute_messages][version] = "1.3"
-projects[absolute_messages][subdir] = "contrib"
-
-projects[admin][version] = "2.x-dev"
-projects[admin][subdir] = "contrib"
-projects[admin][patch][1475074] = "http://drupal.org/files/jquery17_undefined-1475074-1.patch"
-
-projects[apps][version] = 1.x-dev
-projects[apps][subdir] = contrib
-projects[apps][type] = module
-projects[apps][patch][1479164] = http://drupal.org/files/1479164-apps-permissions-check-modules-not-conf-reroll.patch
-projects[apps][patch][1561652] = http://drupal.org/files/apps-allow-drush-site-install.patch
+;;;;;;;;;;;;;;
+; Foundation ;
+;;;;;;;;;;;;;;
 
 projects[boxes][version] = "1.0"
 projects[boxes][subdir] = "contrib"
 
-projects[ckeditor][version] = "1.8"
-projects[ckeditor][subdir] = "contrib"
-
-projects[ctools][version] = "1.0"
-projects[ctools][subdir] = "contrib"
-
-projects[conditional_styles][version] = "2.1"
-projects[conditional_styles][subdir] = "contrib"
+projects[browscap][version] = 1.3
+projects[browscap][subdir] = contrib
+projects[browscap][type] = module
 
 projects[context][version] = "3.0-beta2"
 projects[context][subdir] = "contrib"
+projects[context][type] = module
 
-projects[custom_breadcrumbs][version] = "1.0-alpha1"
-projects[custom_breadcrumbs][subdir] = "contrib"
+projects[ctools][version] = 1.0
+projects[ctools][subdir] = contrib
+projects[ctools][type] = module
 
-projects[custom_formatters][version] = "2.0"
-projects[custom_formatters][subdir] = "contrib"
+projects[diff][version] = 2.0
+projects[diff][subdir] = contrib
+projects[diff][type] = module
 
-projects[custom_search][version] = "1.9"
-projects[custom_search][subdir] = "contrib"
+projects[ds][version] = 1.5
+projects[ds][subdir] = contrib
+projects[ds][type] = module
 
-projects[delta][version] = "3.0-beta9"
-projects[delta][subdir] = "contrib"
+projects[fences][version] = 1.0
+projects[fences][subdir] = contrib
+projects[fences][type] = module
 
-projects[diff][version] = "2.0"
-projects[diff][subdir] = "contrib"
+projects[fieldable_panels_panes][version] = 1.x-dev
+projects[fieldable_panels_panes][subdir] = contrib
+projects[fieldable_panels_panes][type] = module
+projects[fieldable_panels_panes][download][type] = git
+projects[fieldable_panels_panes][download][revision] = 57000ec
+projects[fieldable_panels_panes][download][branch] = 7.x-1.x
 
-projects[ds][version] = "1.5"
-projects[ds][subdir] = "contrib"
+projects[jquery_update][version] = 2.x-dev
+projects[jquery_update][subdir] = contrib
+projects[jquery_update][type] = module
+projects[jquery_update][download][type] = git
+projects[jquery_update][download][revision] = 5d2a4b2
+projects[jquery_update][download][branch] = 7.x-2.x
+projects[jquery_update][patch][1524944] = http://drupal.org/files/allow-different-version-for-admin-pages-1524944-6.patch
 
-projects[elements][version] = "1.2"
-projects[elements][subdir] = "contrib"
+projects[libraries][version] = 2.0-alpha2
+projects[libraries][type] = module
+projects[libraries][subdir] = contrib
 
-projects[entity][version] = "1.0-rc1"
-projects[entity][subdir] = "contrib"
+projects[panels][version] = 3.x-dev
+projects[panels][subdir] = contrib
+projects[panels][type] = module
+projects[panels][download][type] = git
+projects[panels][download][revision] = 9c467ad
+projects[panels][download][branch] = 7.x-3.x
+projects[panels][patch][1555352] = http://drupal.org/files/panels-ipe-reset-html-ids-take3.patch
+;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/panels-add-hooks-to-integrate-i18n_panels-1179034-41.patch
+;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/uuids-for-exported-pids-1277908-19.patch
 
-projects[entity_autocomplete][version] = "1.0-beta1"
-projects[entity_autocomplete][subdir] = "contrib"
+projects[panels_breadcrumbs][version] = 1.6
+projects[panels_breadcrumbs][subdir] = contrib
+projects[panels_breadcrumbs][type] = module
 
-projects[entitycache][version] = "1.1"
-projects[entitycache][subdir] = "contrib"
+projects[panelizer][version] = 3.x-dev
+projects[panelizer][subdir] = contrib
+projects[panelizer][type] = module
+projects[panelizer][download][type] = git
+projects[panelizer][download][revision] = c7942f3
+projects[panelizer][download][branch] = 7.x-3.x
+projects[panelizer][patch][1648040] = http://drupal.org/files/panelizer-no-notice-view-modes-updated.patch
 
-projects[facetapi][version] = "1.0-rc4"
-projects[facetapi][subdir] = "contrib"
+projects[password_policy][version] = 1.0-rc3
+projects[password_policy][type] = module
+projects[password_policy][subdir] = contrib
 
-projects[fences][version] = "1.0"
-projects[fences][subdir] = "contrib"
+projects[pm_existing_pages][version] = 1.4
+projects[pm_existing_pages][type] = module
+projects[pm_existing_pages][subdir] = contrib
 
-projects[html5_tools][version] = "1.1"
-projects[html5_tools][subdir] = "contrib"
+projects[token][version] = 1.1
+projects[token][type] = module
+projects[token][subdir] = contrib
 
-projects[i18n][version] = "1.5"
-projects[i18n][subdir] = "contrib"
+projects[views][version] = 3.3
+projects[views][type] = module
+projects[views][subdir] = contrib
 
-projects[l10n_update][version] = "1.0-beta3"
-projects[l10n_update][subdir] = "contrib"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Field UI and Content Types ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-projects[i18nviews][version] = "3.x-dev"
-projects[i18nviews][subdir] = "contrib"
+projects[date][version] = 2.5
+projects[date][type] = module
+projects[date][subdir] = contrib
 
-projects[imce][version] = "1.5"
-projects[imce][subdir] = "contrib"
+projects[file_entity][version] = 2.x-dev
+projects[file_entity][type] = module
+projects[file_entity][subdir] = contrib
+projects[file_entity][download][type] = git
+projects[file_entity][download][revision] = 0739c8a
+projects[file_entity][download][branch] = 7.x-2.x
 
-projects[jquery_update][version] = "2.x-dev"
-projects[jquery_update][subdir] = "contrib"
-projects[jquery_update][patch][1524944] = "http://drupal.org/files/allow-different-version-for-admin-pages-1524944-6.patch"
+projects[field_group][version] = 1.1
+projects[field_group][type] = module
+projects[field_group][subdir] = contrib
 
-projects[libraries][version] = "1.0"
-projects[libraries][subdir] = "contrib"
+projects[link][version] = 1.0
+projects[link][type] = module
+projects[link][subdir] = contrib
 
-projects[link][version] = "1.x-dev"
-projects[link][subdir] = "contrib"
+projects[tablefield][version] = 2.0
+projects[tablefield][type] = module
+projects[tablefield][subdir] = contrib
 
-projects[linkchecker][version] = "1.0-beta1"
-projects[linkchecker][subdir] = "contrib"
+;;;;;;;;;;;;;;;;;;
+; Menus and URLs ;
+;;;;;;;;;;;;;;;;;;
 
-projects[metatag][version] = "1.0-alpha6"
-projects[metatag][subdir] = "contrib"
+projects[pathauto][version] = 1.1
+projects[pathauto][subdir] = contrib
+projects[pathauto][type] = module
+projects[pathauto][download][type] = git
+projects[pathauto][download][revision] = 75192ed
+projects[pathauto][download][branch] = 7.x-1.x
+projects[pathauto][patch][936222] = http://drupal.org/files/936222-pathauto-persist.patch
 
-projects[menu_block][version] = "2.3"
-projects[menu_block][subdir] = "contrib"
+projects[menu_block][version] = 2.3
+projects[menu_block][subdir] = contrib
+projects[menu_block][type] = module
 
-projects[migrate][version] = "2.x-dev"
-projects[migrate][subdir] = "contrib"
+projects[menu_views][version] = "1.3"
+projects[menu_views][type] = module
+projects[menu_views][subdir] = contrib
 
-projects[migrate_extras][version] = "2.x-dev"
-projects[migrate_extras][subdir] = "contrib"
+;;;;;;;;;;;;;;;;;;;
+; User Experience ;
+;;;;;;;;;;;;;;;;;;;
+
+projects[admin][version] = 2.x-dev
+projects[admin][subdir] = contrib
+projects[admin][type] = module
+projects[admin][download][type] = git
+projects[admin][download][revision] = ad9aed4
+projects[admin][download][branch] = 7.x-2.x
+projects[admin][patch][1475074] = http://drupal.org/files/jquery17_undefined-1475074-1.patch
+
+projects[backports][version] = 1.0-alpha1
+projects[backports][type] = module
+projects[backports][subdir] = contrib
+
+projects[better_formats][version] = 1.x-dev
+projects[better_formats][subdir] = contrib
+projects[better_formats][type] = module
+projects[better_formats][download][type] = git
+projects[better_formats][download][revision] = 9106bcf
+projects[better_formats][download][branch] = 7.x-1.x
+
+projects[caption_filter][version] = 1.2
+projects[caption_filter][type] = module
+projects[caption_filter][subdir] = contrib
+
+;projects[ckeditor][version] = 1.8
+;projects[ckeditor][type] = module
+;projects[ckeditor][subdir] = contrib
+
+projects[date_popup_authored][version] = 1.1
+projects[date_popup_authored][subdir] = contrib
+projects[date_popup_authored][type] = module
+
+projects[image_resize_filter][version] = 1.13
+projects[image_resize_filter][type] = module
+projects[image_resize_filter][subdir] = contrib
+
+projects[linkchecker][version] = 1.0-beta1
+projects[linkchecker][type] = module
+projects[linkchecker][subdir] = contrib
+
+projects[media][version] = 2.x-dev
+projects[media][type] = module
+projects[media][subdir] = contrib
+projects[media][download][type] = git
+projects[media][download][revision] = 0bc43d9
+projects[media][download][branch] = 7.x-2.x
 
 projects[module_filter][version] = "1.6"
-projects[module_filter][subdir] = "contrib"
-
-projects[password_policy][version] = "1.0-rc3"
-projects[password_policy][subdir] = "contrib"
-
-projects[relation][version] = "1.0-rc2"
-projects[relation][subdir] = "contrib"
-
-projects[rules][version] = "2.0"
-projects[rules][subdir] = "contrib"
-
-projects[skinr][version] = "2.0-beta1"
-projects[skinr][subdir] = "contrib"
-
-projects[stringoverrides][version] = "1.8"
-projects[stringoverrides][subdir] = "contrib"
-
-projects[variable][version] = "1.2"
-projects[variable][subdir] = "contrib"
-
-projects[views][version] = "3.3"
-projects[views][subdir] = "contrib"
+projects[module_filter][type] = module
+projects[module_filter][subdir] = contrib
 
 projects[workbench][version] = "1.1"
 projects[workbench][subdir] = "contrib"
+projects[workbench][type] = module
 
 projects[workbench_moderation][version] = "1.x-dev"
 projects[workbench_moderation][subdir] = "contrib"
+projects[workbench_moderation][type] = module
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Themes                                                        ;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+projects[wysiwyg][subdir] = contrib
+projects[wysiwyg][type] = module
+projects[wysiwyg][version] = 2.x-dev 
+projects[wysiwyg][patch][1489096] = http://drupal.org/files/wysiwyg-table-format.patch
+projects[wysiwyg][patch][356480] = http://drupal.org/files/wysiwyg-746524-184.patch
+projects[wysiwyg][download][type] = git
+projects[wysiwyg][download][branch] = 7.x-2.x
 
-projects[zen][version] = "5.0"
-projects[rubik][version] = "4.0-beta8"
-projects[tao][version] = "3.0-beta4"
+projects[wysiwyg_filter][version] = 1.6-rc2
+projects[wysiwyg_filter][subdir] = contrib
+projects[wysiwyg_filter][type] = module
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Libraries                                                     ;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+projects[references_dialog][version] = 1.0-alpha4
+projects[references_dialog][type] = module
+projects[references_dialog][subdir] = contrib
 
-libraries[ckeditor][download][type] = "get"
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.3/ckeditor_3.6.3.tar.gz"
-libraries[ckeditor][directory_name] = "ckeditor"
-libraries[ckeditor][type] = "library"
+projects[simplified_menu_admin][version] = 1.0-beta2
+projects[simplified_menu_admin][type] = module
+projects[simplified_menu_admin][subdir] = contrib
 
-libraries[wet-boew][download][type] = "git"
-libraries[wet-boew][download][url] = "https://github.com/wet-boew/wet-boew.git"
-libraries[wet-boew][directory_name] = "wet-boew"
-libraries[wet-boew][patch][] = https://raw.github.com/gist/2766372/ba8fe6f86eb4e5645fa8e35a285bf9074da3c0c0/patch-001-wet-boew
-libraries[wet-boew][type] = "library"
+projects[views_bulk_operations][version] = 3.0-rc1
+projects[views_bulk_operations][type] = module
+projects[views_bulk_operations][subdir] = contrib
+
+;;;;;;;;
+; Apps ;
+;;;;;;;;
+
+projects[apps][version] = 1.x-dev
+projects[apps][subdir] = contrib
+projects[apps][type] = module
+projects[apps][download][type] = git
+projects[apps][download][revision] = c435c95
+projects[apps][download][branch] = 7.x-1.x
+projects[apps][patch][1479164] = http://drupal.org/files/1479164-apps-permissions-check-modules-not-conf-reroll.patch
+projects[apps][patch][1561652] = http://drupal.org/files/apps-allow-drush-site-install.patch
+
+projects[defaultcontent][version] = 1.0-alpha5
+projects[defaultcontent][type] = module
+projects[defaultcontent][subdir] = contrib
+projects[defaultcontent][patch][1263536] = http://drupal.org/files/base64_encode_files-1263536-1_0.patch
+
+projects[entity][version] = 1.0-rc3
+projects[entity][type] = module
+projects[entity][subdir] = contrib
+
+projects[features][version] = 1.0-rc3
+projects[features][subdir] = contrib
+projects[features][type] = module
+projects[features][download][type] = git
+projects[features][download][revision] = 6239499
+projects[features][download][branch] = 7.x-1.x
+projects[features][patch][1647894] = http://drupal.org/files/features-1647894-1.patch
+
+projects[strongarm][version] = 2.0
+projects[strongarm][type] = module
+projects[strongarm][subdir] = contrib
+
+projects[uuid][version] = 1.x-dev
+projects[uuid][type] = module
+projects[uuid][subdir] = contrib
+projects[uuid][download][type] = git
+projects[uuid][download][revision] = bf06527
+projects[uuid][download][branch] = 7.x-1.x
+
+projects[variable][version] = 2.1
+projects[variable][type] = module
+projects[variable][subdir] = contrib
+
+;;;;;;;;;;;;
+; Language ;
+;;;;;;;;;;;;
+
+projects[i18n][version] = 1.7
+projects[i18n][subdir] = contrib
+projects[i18n][type] = module
+
+projects[stringoverrides][version] = 1.8
+projects[stringoverrides][subdir] = contrib
+projects[stringoverrides][type] = module
+
+;;;;;;;;;;;;;;;;
+; Experimental ;
+;;;;;;;;;;;;;;;;
+
+;projects[i18n_panels][type] = module
+;projects[i18n_panels][subdir] = contrib
+;projects[i18n_panels][download][type] = git
+;projects[i18n_panels][download][url] = git://git.drupal.org/sandbox/daspeter/1444130.git
+;projects[i18n_panels][download][branch] = 7.x-1.x
+
+projects[i18nviews][version] = 3.x-dev
+projects[i18nviews][subdir] = contrib
+projects[i18nviews][type] = module
+
+;;;;;;;;;;
+; Search ;
+;;;;;;;;;;
+
+projects[facetapi][version] = 1.0-rc4
+projects[facetapi][type] = module
+projects[facetapi][subdir] = contrib
+
+projects[metatag][version] = 1.0-alpha6
+projects[metatag][subdir] = contrib
+projects[metatag][type] = module
+
+projects[search404][version] = 1.1
+projects[search404][subdir] = contrib
+projects[search404][type] = module
+
+;;;;;;;;;;;;;
+; LIBRARIES ;
+;;;;;;;;;;;;;
+
+;libraries[ckeditor][download][type] = get
+;libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor 3.6.3/ckeditor_3.6.3.tar.gz
+;libraries[ckeditor][directory_name] = ckeditor
+;libraries[ckeditor][type] = "library"
+
+libraries[markitup][download][type] = get
+libraries[markitup][download][url] = https://github.com/markitup/1.x/tarball/master
+libraries[markitup][directory_name] = markitup
+libraries[markitup][type] = library
+
+libraries[tinymce][download][type] = git
+libraries[tinymce][download][url] = https://github.com/sylus/tinymce-cirkuit.git
+libraries[tinymce][directory_name] = tinymce
+libraries[tinymce][type] = library
+
+libraries[wet-boew][download][type] = git
+libraries[wet-boew][download][url] = https://github.com/wet-boew/wet-boew.git
+libraries[wet-boew][directory_name] = wet-boew
+libraries[wet-boew][type] = library
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; THEMES + THEME RELATED MODULES ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+projects[adaptivetheme][version] = 3.0-rc6
+projects[adaptivetheme][type] = theme
+
+projects[rubik][version] = 4.0-beta8
+projects[rubik][type] = theme
+
+projects[tao][version] = 3.0-beta4
+projects[tao][type] = theme

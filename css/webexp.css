@@ -1,27 +1,21 @@
-.token-group span.expander {
-  margin-left: 0px !important;
+/**
+ * Stylesheet for WetKit Profile
+ */
+
+#webexp-theme-form .form-item-theme {
+  clear: both;
+  margin-top: .5em;
+  margin-bottom: .5em;
 }
 
-body.admin-menu {
-  margin-top: 0px !important;
+#webexp-theme-form .form-item-theme label img {
+  float: left;
+  width: 100px;
+  margin-right: 1em;
 }
 
-/* Temp Fix for Rules Known Error */
-div.error {
-  
-}
-
-/* Fix for Block X not assigned to Block Y Known Error */
-.db-offline .absolute-messages-message {
-  display: none !important;
-}
-
-.ckeditor_links {
-  margin-bottom: 20px;
-  display: block;
-}
-
-#webexp-theme-form img {
-  width: 125px;
-  padding-right: 10px;
+#webexp-apps-check #edit-pantheon img {
+  float: right;
+  margin-left: 1em;
+  margin-bottom: 1em;
 }

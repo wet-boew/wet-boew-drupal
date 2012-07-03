@@ -1,0 +1,38 @@
+/**
+ * @file
+ * OA Geary panel layout
+**/
+
+.geary-container {
+  margin-bottom: 1em;
+}
+
+.geary-column-content-region {
+  width: 34.043%;
+  float: left;
+}
+
+.geary-column-content-region-inner {
+  margin-right: 20px;
+}
+
+  .geary-column3 {
+    width: 31.915%;
+  }
+
+    .geary-column3-inner {
+      margin-right: 0;
+    }
+    
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .geary-column-content-region,
+  .geary-column3 {
+    width: 100%;
+    float: none;
+  }
+  
+  .geary-column-content-region-inner {
+    margin-right: 0;
+  }
+}

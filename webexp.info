@@ -1,125 +1,129 @@
 name = Web Experience Toolkit
 description = Install Profile created for the Web Experience Toolkit using Drupal 7
-core = 7.x
 version = 7.x-1.0
+core = 7.x
 
-;DRUPAL CORE
-dependencies[] = block
-dependencies[] = contextual
-dependencies[] = dashboard
-dependencies[] = help
+; Core
+dependencies[] = menu
 dependencies[] = image
 dependencies[] = list
 dependencies[] = locale
-dependencies[] = menu
 dependencies[] = number
 dependencies[] = options
+dependencies[] = overlay
 dependencies[] = path
 dependencies[] = taxonomy
-dependencies[] = dblog
 dependencies[] = search
-dependencies[] = shortcut
-;dependencies[] = overlay
+dependencies[] = field
 dependencies[] = field_ui
 dependencies[] = file
-dependencies[] = rdf
-dependencies[] = statistics
-dependencies[] = simpletest
+dependencies[] = help
+dependencies[] = block
+dependencies[] = dblog
+dependencies[] = shortcut
+dependencies[] = toolbar
 
-;CONTRIB
-dependencies[] = absolute_messages
-dependencies[] = admin
-dependencies[] = apps
-dependencies[] = better_formats
+; Core Disabled
+;dependencies[] = contextual
+;dependencies[] = rdf
+;dependencies[] = statistics
+;dependencies[] = simpletest
+
+; Foundation
 dependencies[] = boxes
-dependencies[] = conditional_styles
+;dependencies[] = browscap
 dependencies[] = context
-dependencies[] = context_layouts
 dependencies[] = context_ui
 dependencies[] = ctools
-dependencies[] = custom_breadcrumbs
-dependencies[] = custom_formatters
+dependencies[] = page_manager
 dependencies[] = diff
 dependencies[] = ds
 dependencies[] = ds_extras
 dependencies[] = ds_forms
-dependencies[] = elements
-dependencies[] = features
 ;dependencies[] = fences
-dependencies[] = filefield_paths
-dependencies[] = filefield_sources
-dependencies[] = html5_tools
-dependencies[] = imageapi
-dependencies[] = insert
-dependencies[] = image_resize_filter
-dependencies[] = imce
-dependencies[] = imce_wysiwyg
+dependencies[] = fieldable_panels_panes
 dependencies[] = jquery_update
 dependencies[] = libraries
-dependencies[] = link
-dependencies[] = linkchecker
-dependencies[] = module_filter
-dependencies[] = menu_block
-dependencies[] = pathauto
-dependencies[] = pathologic
-;dependencies[] = relation
-;dependencies[] = relation_endpoint
-dependencies[] = skinr
-dependencies[] = skinr_ui
-dependencies[] = skinr_context
-dependencies[] = skinr_context_ui
-dependencies[] = stringoverrides
-dependencies[] = strongarm
+dependencies[] = panels
+dependencies[] = panels_ipe
+dependencies[] = panels_breadcrumbs
+dependencies[] = panelizer
+dependencies[] = password_policy
+dependencies[] = pm_existing_pages
 dependencies[] = token
-dependencies[] = transliteration
-dependencies[] = variable
-dependencies[] = variable_admin
-dependencies[] = variable_advanced
-dependencies[] = variable_realm
-dependencies[] = variable_store
 dependencies[] = views
+dependencies[] = views_content
 dependencies[] = views_ui
 
-;CONTRIB ENTITY
-dependencies[] = entity
-dependencies[] = entitycache
-dependencies[] = entity_autocomplete
-dependencies[] = entity_token
-;dependencies[] = entity_translation
-;dependencies[] = title
+; Field UI and Content Types
+dependencies[] = date
+dependencies[] = date_api
+dependencies[] = date_popup
+dependencies[] = date_views
+dependencies[] = file_entity
+dependencies[] = field_group
+dependencies[] = link
+dependencies[] = tablefield
 
-;CONTRIB SECURITY
-dependencies[] = password_policy
+; Menus and URLS
+dependencies[] = pathauto
+dependencies[] = menu_block
+;dependencies[] = menu_views
 
-;CONTRIB SEARCH
-dependencies[] = facetapi
-dependencies[] = ds_search
-dependencies[] = search404
-
-;WYSIWYG
+; User Experience
+;dependencies[] = admin
+dependencies[] = backports
+dependencies[] = better_formats
+dependencies[] = caption_filter
+;dependencies[] = ckeditor
+dependencies[] = date_popup_authored
+dependencies[] = image_resize_filter
+dependencies[] = linkchecker
+dependencies[] = media
+dependencies[] = media_internet
+dependencies[] = mediafield
+dependencies[] = module_filter
+;dependencies[] = workbench
+;dependencies[] = workbench_moderation
 dependencies[] = wysiwyg
 dependencies[] = wysiwyg_filter
+dependencies[] = references_dialog 
+dependencies[] = simplified_menu_admin
+dependencies[] = views_bulk_operations
 
-;WET CUSTOM MODULES + FEATURES
-dependencies[] = wetkit_admin_menu
-dependencies[] = wetkit_box
-dependencies[] = wetkit_content_types
-dependencies[] = wetkit_custom_search
-dependencies[] = wetkit_i18n
-dependencies[] = wetkit_metatag
-dependencies[] = wetkit_migrate
-dependencies[] = wetkit_users
-dependencies[] = wetkit_web_usability
-dependencies[] = wetkit_wysiwyg
-dependencies[] = wetkit_security
-dependencies[] = wetkit_styles
-;dependencies[] = wetkit_workflow_rules
-;dependencies[] = wetkit_solr
-;dependencies[] = wetkit_slider
+; Apps
+dependencies[] = apps
+dependencies[] = defaultcontent
+dependencies[] = entity
+dependencies[] = features
+dependencies[] = strongarm
+dependencies[] = uuid
+dependencies[] = variable
 
-;FILES
+; Language
+dependencies[] = i18n
+dependencies[] = i18n_block
+dependencies[] = i18n_contact
+dependencies[] = i18n_field
+dependencies[] = i18n_menu
+dependencies[] = i18n_node
+dependencies[] = i18n_path
+dependencies[] = i18n_redirect
+dependencies[] = i18n_string
+dependencies[] = i18n_sync
+dependencies[] = i18n_taxonomy
+dependencies[] = i18n_translation
+dependencies[] = i18n_variable
+dependencies[] = stringoverrides
+
+; Search
+;dependencies[] = facetapi
+dependencies[] = metatag
+dependencies[] = search404
+
+; CSS Stylesheets
+stylesheets[all][] = css/webexp.css
+
+; Files
 files[] = webexp.install
 files[] = webexp.profile
-
-;CSS
-stylesheets[all][] = css/webexp.css

@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Wetkit Admin Menu feature.
- */
-
-include_once 'wetkit_admin_menu.features.inc';

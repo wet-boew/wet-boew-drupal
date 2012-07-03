@@ -1,0 +1,23 @@
+@import url(global.base.css);
+@import url(global.tables.css);
+@import url(global.forms.css);
+@import url(global.pages.css);
+@import url(global.nav.css);
+@import url(global.fields.css);
+@import url(global.nodes.css);
+@import url(global.comments.css);
+@import url(global.blocks.css);
+@import url(global.views.css);
+@import url(global.panels.css);
+/** Global Styles  We use the "global" namespace to denote files that load for all devices as opposed to CSS embedded in media queries.  This file imports all the global stylesheets into one file. This is done purely as a house-keeping exercise and to make it easy to unset one stylesheet by simply commenting it out.  When CSS aggregation is ON the @imports are resolved and only one aggreated file is generated, so there is zero performance overhead in using @import. In other words this files content is replaced by all the CSS in the imported stylseheets, then compressed and cached by Drupal in the public files directory.  The modular structure is very similar to Zen and the actual CSS used in some of these files is lifted from the Zen theme - this is to  provide a consistant themer experience for those who have used Zen. Adaptivetheme adds additional classes, makes minor adjustments to some classes, id's and the actual styles, and adds base styles for tables and Panels. */
+/* Reset + additional styles to support modern web browsers */
+/* Global table styles, these can apply heavily to the admin area or front end */
+/* Global form styles */
+/* General styles for page template elements */
+/* Main navigation, menus, breadcrumbs, local tasks, action links, pager and skip navigation */
+/* Global styles for fields */
+/* Content types */
+/* Comment wrapper, commentss and the comment form */
+/* Block styles, includes all core blocks */
+/* Starter CSS for styling Views */
+/* Starter CSS for styling Panels and panel panes */

@@ -1,0 +1,15 @@
+<?php
+/**
+ * @file
+ * Code for the WetKit Demo feature.
+ */
+
+include_once 'wetkit_demo.features.inc';
+
+/**
+ * Implementation of hook_menu_alter()
+ */
+function wetkit_demo_menu_alter(&$items) {
+  $items['node']['page callback'] = 'drupal_goto';
+  $items['node']['page arguments'] = array('front/demo');
+}

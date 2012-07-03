@@ -1,0 +1,55 @@
+/**
+ * @file
+ * OA Hewston panel layout
+**/
+
+.hewston-flipped-container {
+  margin-bottom: 1em;
+}
+
+.hewston-flipped-slider {
+  float: left;
+  width: 65.957%;
+}
+
+.hewston-flipped-slider-gutter {
+  float: left;
+  width: 34.043%;
+}
+
+  .hewston-flipped-slider-gutter-inner {
+    margin-right: 20px
+  }
+
+.hewston-flipped-middle-region {
+  width: 34.043%;
+  float: left;
+}
+
+  .hewston-flipped-middle-region-inner {
+    margin-right: 20px;
+  }
+
+  .hewston-flipped-column3 {
+    width: 31.915%;
+  }
+  
+    .hewston-flipped-column3-inner {
+      margin-right: 0;
+    }
+    
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .hewston-flipped-slider,
+  .hewston-flipped-slider-gutter,
+  .hewston-flipped-middle-region,
+  .hewston-flipped-column3 {
+    width: 100%;
+    float: none;
+  }
+  
+  .hewston-flipped-slider-gutter-inner,
+  .hewston-flipped-middle-region-inner {
+    margin-right: 0;
+  }
+}

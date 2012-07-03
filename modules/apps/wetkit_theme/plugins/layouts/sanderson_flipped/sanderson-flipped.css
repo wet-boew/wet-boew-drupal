@@ -1,0 +1,55 @@
+/**
+ * @file
+ * OA Sanderson panel layout
+**/
+
+.sanderson-flipped-container {
+  margin-bottom: 1em;
+}
+
+.sanderson-flipped-secondary-column-content-region {
+  width: 51.064%;
+  float: left;
+}
+
+  .sanderson-flipped-secondary-column2 {
+    width: 48.936%;
+  }
+
+  .sanderson-flipped-secondary-column-content-region-inner {
+    margin-right: 20px;
+  }
+
+.sanderson-flipped-column-content-region {
+  width: 34.043%;
+  float: left;
+}
+
+  .sanderson-flipped-column-content-region-inner {
+    margin-right: 20px;
+  }
+
+  .sanderson-flipped-column3 {
+    width: 31.915%;
+  }
+  
+    .sanderson-flipped-secondary-column2-inner,
+    .sanderson-flipped-column3-inner {
+      margin-right: 0;
+    }
+    
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .sanderson-flipped-secondary-column-content-region,
+  .sanderson-flipped-secondary-column2,
+  .sanderson-flipped-column-content-region,
+  .sanderson-flipped-column3 {
+    width: 100%;
+    float: none;
+  }
+  
+  .sanderson-flipped-secondary-column-content-region-inner,
+  .sanderson-flipped-column-content-region-inner {
+    margin-right: 0;
+  }
+}

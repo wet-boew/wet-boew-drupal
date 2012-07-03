@@ -1,0 +1,101 @@
+.form-item { margin: 18px 0; }
+.form-item label { display: block; font-weight: bold; }
+.form-item label.option { display: inline; font-weight: normal; }
+
+.form-required { color: #c00; }
+
+.form-item .description { font-size: 0.8em; color: #555; }
+
+.form-type-radio .description, .form-type-checkbox .description { margin-left: 0; }
+
+.form-checkboxes .form-item, .form-radios .form-item { margin: 0; }
+
+.container-inline div, .container-inline label { display: inline; }
+
+fieldset { background: transparent; border: 1px solid #dadada; margin: 10px 0; padding: 10px; }
+fieldset fieldset:last-child { margin-bottom: 0; }
+
+legend, fieldset legend { border: 0; display: block; font-weight: 400; padding: 0 10px 0 0; white-space: normal; *margin-left: -7px; }
+
+html.js fieldset.collapsed { background: transparent; padding-top: 5px; }
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+button { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+
+button[disabled] { cursor: default; }
+
+input { margin: 0; }
+input .form-text { max-width: 100%; }
+input[disabled] { cursor: default; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *height: 13px; *width: 13px; }
+input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+
+input.form-text, textarea, select { border: 1px solid #ccc; height: auto; padding: 1px 2px; font-family: inherit; font-size: 1em; }
+
+html.js input.form-autocomplete { background-position: 100% 5px; }
+
+html.js input.throbbing { background-position: 100% -15px; }
+
+textarea { overflow: auto; vertical-align: top; }
+
+div.resizable-textarea textarea { margin-top: 0; }
+
+[hidden] { display: none; }
+
+.form-item input.error, .form-item textarea.error, .form-item select.error { border: 1px solid #ed541d; }
+
+.vertical-tabs ul.vertical-tabs-list li.vertical-tab-button-error a { color: #8c2e0b; background: #fef5f1; outline: 1px solid #ed541d; margin-right: 1px; }
+
+.tips { font-size: .857em; margin: 0 0 0 15px; padding: 0; }
+
+.field-type-text-long fieldset { padding: 10px 0; }
+.field-type-text-long fieldset .form-item { margin: 0; padding: 0 0 0 15px; }
+
+fieldset .filter-help { padding: 0 15px 5px; }
+
+.filter-guidelines { font-size: .923em; margin: 0; padding: 5px 18px 10px; }
+
+.password-parent, .confirm-parent { margin: 0; }
+
+#user-login-form { text-align: left; /* LTR */ }
+#user-login-form ul { margin: 0; padding: 0; }
+
+#user-login ul { margin: 0 0 5px; }
+#user-login ul li { margin: 0; }
+
+#user-login-form .item-list li { list-style: none; margin: 0; }
+#user-login-form li.openid-link { background: none; }
+
+#user-login li.openid-link { background: none; }
+
+#user-login-form ul { margin-bottom: 0; }
+
+html.js #user-login-form li.openid-link { cursor: pointer; }
+
+#user-login-form li.openid-link, #user-login-form li.user-link { cursor: pointer; }
+
+input[type="search"] { -webkit-appearance: textfield; -moz-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+.panel-pane #search-block-form { margin-bottom: 20px; }
+
+fieldset#edit-advanced fieldset { float: left; margin: 0 10px 10px 0; }
+fieldset#edit-advanced fieldset .fieldset-legend { background: none; padding-left: 1em; }
+
+.advanced-search-submit { clear: both; }
+
+.search-advanced .criterion { float: none; margin: 0 5px; }
+
+#edit-keywords-fieldset .form-item:first-child { margin-top: 5px; }
+
+#search-form { margin: 10px 0; }
+
+form th { text-align: left; /* LTR */ padding-right: 1em; /* LTR */ border-bottom: 3px solid #ccc; }
+form tbody { border-top: 1px solid #ccc; }
+form tr.even { background-color: #fff; }
+form table .item-list ul { margin: 0; }
+
+.lt-ie8 tr.even th, .lt-ie8 tr.even td, .lt-ie8 tr.odd th, .lt-ie8 tr.odd td { border-bottom: 1px solid #ccc; }
+
+#devel-switch-user-form { margin-bottom: 0; }

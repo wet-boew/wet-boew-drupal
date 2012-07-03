@@ -1,0 +1,434 @@
+
+@import "base.scss";
+
+//
+// @file
+// Form Styling
+//
+
+// Wrapper for a form element (or group of form elements) and its label
+.form-item {
+  margin: 18px 0;
+
+  // The label for a form element
+  label {
+    display: block;
+    font-weight: bold;
+
+    // The label for a radio button or checkbox
+    &.option {
+      display: inline;
+      font-weight: normal;
+    }
+  }
+}
+
+
+// The part of the label that indicates a required field
+.form-required {
+  color: #c00;
+}
+
+
+// The descriptive help text (separate from the label)
+.form-item .description {
+  font-size: 0.8em;
+  color: #555;
+}
+
+
+.form-type-radio .description,
+.form-type-checkbox .description {
+  margin-left: 0;
+}
+
+
+// Pack groups of checkboxes and radio buttons closer together
+.form-checkboxes .form-item,
+.form-radios .form-item {
+  // Drupal core uses "0.4em 0"
+  margin: 0;
+}
+
+
+// The submit button
+.form-submit {
+}
+
+
+// Inline labels and form divs
+.container-inline {
+
+  div,
+  label {
+    display: inline;
+  }
+}
+
+
+fieldset {
+  background: transparent;
+  border: 1px solid #dadada;
+  margin: 10px 0;
+  padding: 10px;
+
+  fieldset:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+legend,
+fieldset legend {
+  border: 0;
+  display: block;
+  font-weight: 400;
+  padding: 0 10px 0 0;
+  white-space: normal;
+  *margin-left: -7px;
+}
+
+
+html.js fieldset.collapsed {
+  background: transparent;
+  padding-top: 5px;
+}
+
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+
+button {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+
+
+button[disabled] {
+  cursor: default;
+}
+
+
+// Input
+input {
+  margin: 0;
+
+  .form-text {
+    max-width: 100%;
+  }
+
+  &[disabled] {
+    cursor: default;
+   }
+
+  &[type="checkbox"],
+  &[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+    *height: 13px;
+    *width: 13px;
+  }
+
+  &[type="button"],
+  &[type="reset"],
+  &[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+    *overflow: visible;
+  }
+}
+
+
+// Reset form-text, textarea and selects
+input.form-text,
+textarea,
+select {
+  border: 1px solid #ccc;
+  height: auto;
+  padding: 1px 2px;
+  font-family: inherit; // inherit the default site font and not the browsers monospace font
+  font-size: 1em;
+}
+
+
+// Adjust trobber background position when changing text field padding
+html.js input.form-autocomplete {
+  background-position: 100% 5px;
+}
+
+
+html.js input.throbbing {
+  background-position: 100% -15px;
+}
+
+
+// Textarea
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+
+div.resizable-textarea textarea {
+  margin-top: 0;
+}
+
+
+// Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+[hidden] {
+  display: none;
+}
+
+
+// Highlight the form elements that caused a form submission error
+.form-item {
+  input.error,
+  textarea.error,
+  select.error {
+    border: 1px solid #ed541d;
+  }
+}
+
+// Highlight vertical tabs that contain form errors
+.vertical-tabs ul.vertical-tabs-list li.vertical-tab-button-error a {
+  color: #8c2e0b;
+  background: #fef5f1;
+  outline: 1px solid #ed541d;
+  margin-right: 1px;
+}
+
+
+// Tips for Drupal's input formats
+.tips {
+  font-size: .857em;
+  margin: 0 0 0 15px;
+  padding: 0;
+}
+
+
+.field-type-text-long fieldset {
+  padding: 10px 0;
+  .form-item {
+    margin: 0;
+    padding: 0 0 0 15px;
+  }
+}
+
+
+fieldset .filter-help {
+  padding: 0 15px 5px;
+}
+
+
+.filter-guidelines {
+  font-size: .923em;
+  margin: 0;
+  padding: 5px 18px 10px;
+}
+
+
+// Password confirmation
+.password-parent,
+.confirm-parent {
+  margin: 0;
+}
+
+
+//
+// Drupal's default login form block
+//
+
+#user-login-form {
+  text-align: left; /* LTR */
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+
+    &.openid-link {}
+    &.user-link {}
+  }
+}
+
+
+#user-login ul {
+  margin: 0 0 5px;
+
+  li {
+    margin: 0;
+  }
+}
+
+
+#user-login-form {
+
+  .item-list li {
+    list-style: none;
+    margin: 0;
+  }
+
+  li.openid-link {
+    background: none;
+  }
+}
+
+
+#user-login li.openid-link {
+  background: none;
+}
+
+
+//
+// OpenID
+//
+// The default styling for the OpenID login link seems to assume Garland's
+// styling of list items.
+//
+
+// OpenID creates a new ul above the login form's links.
+#user-login-form ul {
+
+  // Position OpenID's ul next to the rest of the links.
+  margin-bottom: 0;
+}
+
+
+// The "Log in using OpenID" link.
+html.js #user-login-form li.openid-link,
+#user-login-form li.openid-link {}
+
+
+// The "Cancel OpenID login" link.
+#user-login-form li.user-link {}
+
+
+html.js #user-login-form li.openid-link {
+  cursor: pointer;
+}
+
+
+#user-login-form li {
+
+  &.openid-link,
+  &.user-link {
+    cursor: pointer;
+  }
+}
+
+
+#user-login ul {
+}
+
+
+//
+// Search
+//
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+}
+
+.panel-pane #search-block-form {
+  margin-bottom: 20px;
+}
+
+
+//
+// Advanced search form
+//
+
+fieldset#edit-advanced fieldset {
+  float: left;
+  margin: 0 10px 10px 0;
+
+  .fieldset-legend {
+    background: none;
+    padding-left: 1em;
+  }
+}
+
+
+.advanced-search-submit {
+  clear: both;
+}
+
+
+.search-advanced .criterion {
+  float: none;
+  margin: 0 5px;
+}
+
+
+#edit-keywords-fieldset .form-item:first-child {
+  margin-top: 5px;
+}
+
+
+#search-form {
+  margin: 10px 0;
+}
+
+
+//
+// Drupal admin tables
+//
+// We overrode these styles in html-reset.css, but restore them for the admin
+// section of the site.
+//
+
+form {
+
+  th {
+    text-align: left; /* LTR */
+    padding-right: 1em; /* LTR */
+    border-bottom: 3px solid #ccc;
+  }
+
+  tbody {
+    border-top: 1px solid #ccc;
+  }
+
+  tr.even {
+    background-color: #fff;
+  }
+
+  table .item-list ul {
+    margin: 0;
+  }
+}
+
+.lt-ie8 tr {
+
+  &.even,
+  &.odd {
+
+    th,
+    td {
+      // IE doesn't display borders on table rows
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}
+
+
+// Special case modules
+#devel-switch-user-form {
+  margin-bottom: 0;
+}

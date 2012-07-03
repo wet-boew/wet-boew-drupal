@@ -1,0 +1,128 @@
+
+@import "base.scss";
+
+//
+// @file
+// Comment Styling
+//
+
+// Wrapper for the list of comments and its title
+#comments {
+  margin: 1.5em 0;
+
+
+  // Heading for the list of comments
+  h2 {
+
+
+    // Heading for the list of comments
+    &.comment-title {}
+
+
+    // Heading for the comment form
+    &.comment-form {}
+  }
+}
+
+
+// Wrapper for a single comment
+.comment {
+  margin-bottom: 20px;
+
+
+  // The first comment in the list of comments
+  &.first {}
+
+
+  // The last comment in the list of comments
+  &.last {}
+
+
+  // An odd-numbered comment in the list of comments
+  &.odd {}
+
+
+  // An even-numbered comment in the list of comments
+  &.even {}
+
+
+  // The picture of the comment author
+  .user-picture {}
+
+
+  // The "posted by" information wrapper (uses the footer element)
+  .submitted {
+
+
+    // Submitted by elements are wrapped in a paragraph, is the equivalent to .comment footer.submitted > p
+    p {}
+
+
+    // Submitted by user name is wrapped in a span or an link depending on user permissions to view user profiles
+    .username {}
+
+
+    // Submitted by time element
+    time {
+    }
+  }
+
+
+  // The user's signature
+  .user-signature {}
+
+
+  // Comment links. See also the ul.links declaration in the pages.css.
+  ul.links {}
+}
+
+// Preview of the comment before submitting new or updated comment
+.comment-preview {
+  // Drupal core will use a #ffffea background. See #1110842
+  background-color: #ffffea;
+}
+
+
+// Comment is new for the current user
+.comment-new {}
+
+
+// A comment created by an anonymous user
+.comment-by-anonymous {}
+
+
+// A comment created by the node's author
+.comment-by-node-author {}
+
+
+// A comment created by the current user
+.comment-by-viewer {}
+
+
+// The comment title is hidden using element-invisible
+.comment-title-hidden {}
+
+
+// Comment user picture are enabled
+.comment-with-picture {}
+
+
+// User signatures are enabled
+.comment-with-signature {}
+
+
+// Comment title
+h3.comment-title {}
+
+
+// "New" marker for comments that are new for the current user
+.new {
+  color: #c00;
+}
+
+
+// Nested comments are indented
+.indented {
+  // Drupal core uses a 25px left margin
+  // margin-left: 25px;
+}

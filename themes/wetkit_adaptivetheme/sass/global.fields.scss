@@ -1,0 +1,168 @@
+
+@import "base.scss";
+
+//
+// @file
+// Field Styling
+//
+
+// Wrapper for any field.
+.field {}
+
+
+//
+// Field Labels
+//
+
+// Above and inline classes are on the field wrapper
+.field-label-above {}
+
+
+// When labels are set to inline in field display settings the clearfix class is automatically added
+.field-label-inline {}
+
+
+// Labels are h2 in Adaptivetheme. Use a strong selector to mitigate unwanted ineritance issues.
+.field .field-label {
+  font-size: 1em;
+  font-weight: 700;
+  font-family: inherit; // Forces the h2 to inherit the global font family instead of the h2 font family.
+  line-height: inherit;
+  margin: 0;
+}
+
+
+//
+// Field types (Core)
+//
+
+// Image fields use the <figure> and <figcaption> elements from HTML5.
+.field-type-image {
+
+  // The .caption class is applied to all captions regardless of view mode.
+  .caption {}
+
+  // View mode full.
+  .full-caption {}
+
+  // View mode teaser.
+  .teaser-caption {}
+}
+
+
+// Taxonomy
+.field-type-taxonomy-term-reference {
+
+  // The same bottom margin as p, blockquote, ul, ol and dl
+  margin-bottom: 1.5em;
+
+  // Restyle the list when the label is inline
+  &.field-label-inline .field-items {
+    margin: 0;
+    padding: 0;
+  }
+
+  &.field-label-inline .field-item {
+    display: inline;
+    list-style: none;
+    padding: 0 10px 0 0; /* LTR */
+  }
+}
+
+
+// Text
+.field-type-text {}
+
+
+// Long text
+.field-type-text-long {}
+
+
+// Text with summary
+.field-type-text-with-summary {}
+
+
+// File
+.field-type-file {}
+
+
+// Number/Integer
+.field-type-number-integer {}
+
+
+// Decimal
+.field-type-number-decimal {}
+
+
+// Number float
+.field-type-number-float {}
+
+
+// List
+.field-type-list-text {}
+
+
+// List boolean
+.field-type-list-boolean {}
+
+
+// List integer
+.field-type-list-integer {}
+
+
+// List float
+.field-type-list-float {}
+
+
+//
+// Field types (Contrib)
+//
+
+.field-type-datetime {}
+
+
+.field-type-node-reference {}
+
+
+.field-type-user-reference {}
+
+
+//
+// Named fields
+//
+
+.field-name-body {}
+
+
+.field-name-field-image {}
+
+
+.field-name-field-tags {}
+
+
+// Underscores in field name are replaced with dashes.
+.field-name-field-FIELDNAME {}
+
+
+//
+// Image Alignment Theme Settings - included here so you can easily override them if required
+//
+
+// Float none setting
+.ia-n .field-type-image {}
+
+// Float left setting
+.ia-l .field-type-image {
+  margin: 0.5em 15px 1.5em 0;
+}
+
+// Centered setting
+.ia-c .field-type-image {
+  margin: 0.5em auto 1.5em;
+}
+
+// Float right setting
+.ia-r .field-type-image {
+  margin: 0.5em 0 1.5em 15px;
+}
+

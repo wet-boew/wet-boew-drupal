@@ -1,0 +1,386 @@
+
+@import "base.scss";
+
+/**
+ * @file
+ * Page Styling
+ */
+
+//
+// Style the markup found in page.tpl.php. Also includes some styling of
+//  miscellaneous Drupal elements that appear in the $content variable, such as
+// ul.links, .more-link, etc.
+//
+
+//
+// Wrappers
+//
+
+html {}
+
+
+body {}
+
+
+// Main wrapper in page.tpl.php, the .container class sets the width of the page, do not add width to it!
+#page  {
+
+  .container {}
+}
+
+
+// Wraps all header elements - branding and .region-header
+#header {}
+
+
+// Wraps the sidebars the content column
+#columns {}
+
+
+// Main content column wrapper
+#content-column {}
+
+
+// Wraps the main-content-header, the content region and feed-icons. Use this wrapper to style the entire main content column
+#main-content {}
+
+
+// Wraps the content region, avoid applying styles to this wrapper, its used mainly for position and invisible gutters and can be problematic to style
+#content {}
+
+
+// Footer wrapper
+#footer {}
+
+
+//
+// Branding
+//
+
+// Wraps all the branding elements, logo, name and slogan
+#branding {}
+
+
+// Logo
+#logo {
+  padding: 10px 0;
+
+  img {
+    vertical-align: bottom;
+  }
+}
+
+
+// Wrapper for the site name and slogan (hgroup)
+#name-and-slogan {}
+
+
+// Site name (h1)
+#site-name a {
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+
+// Site slogan (h2)
+#site-slogan {}
+
+
+// Main content header wraps the page title, tabs and actions links (style nav elements in global.nav.scss)
+#main-content-header {}
+
+
+// The main page title (h1)
+#page-title {}
+
+
+// Feed icon
+.feed-icon {}
+
+
+// Generic styles for the more link
+.more-link {}
+
+
+// Generic styles for links. See the ul.links declaration in node and comment stylesheets
+ul.links {
+  margin: 0;
+  padding: 0;
+
+  &.inline {
+    display: block;
+  }
+
+  li {
+    display: inline;
+    list-style: none;
+    padding: 0 10px 0 0;
+  }
+}
+
+
+// Aggregator feed source
+#aggregator .feed-source .feed-icon {
+  display: inline;
+  float: none;
+  margin-right: 10px;
+}
+
+.feed-details dt,
+.feed-details dd {
+  display: inline;
+  margin: 0;
+}
+
+
+// Search results are an ordered list so reset the margin
+.search-results {
+  margin: 0;
+}
+
+
+//
+// Regions
+//
+
+// Standard region wrapper, don't add width to any regions, you will bork the layout - no margin, padding or borders etc
+.region {}
+
+
+// Regions have an inner div - perfect for adding margin, padding or borders
+.region-inner {}
+
+
+// Regions can be nested, such as when using Panels
+.region-inner .region-inner {
+}
+
+
+// Set the gutter width for you entire site, $gutter-width is set in base.scss
+.block-inner,
+.pane-inner,
+div.messages,
+#branding,
+#primary-nav,
+#secondary-nav,
+#breadcrumb,
+#main-content,
+#attribution,
+.at-panel .rounded-corner {
+  margin-left: $gutter-width;
+  margin-right: $gutter-width;
+}
+// Panel pages need negative margin applied to #content equal to the gutter width
+.page-panels #content {
+  margin-left: -$gutter-width;
+  margin-right: -$gutter-width;
+}
+
+
+// Header region, embedded in the #header
+.region-header {}
+
+
+// Generally used to output Drupals help block, if the help module is enabled
+.region-help {
+
+  .more-help-link {}
+}
+
+
+// Secondary content, like a preface or feature content region, is full width
+.region-secondary-content {}
+
+
+// Sits above the main content header, like a content-top region
+.region-highlighted {}
+
+
+// Sits below the main content, like a content-bottom region
+.region-content-aside {}
+
+
+// Sidebars - both
+.sidebar {}
+
+
+// First sidebar
+.region-sidebar-first {}
+
+
+// Second sidebar
+.region-sidebar-second {}
+
+
+ // Tertiary content, like a postfix region, is full width
+.region-tertiary-content {}
+
+
+// Footer region, is full width
+.region-footer {}
+
+
+//
+// Full Width Wrappers
+// These are used in the optional page--full-width-wrappers.tpl.php template.
+// All have internal .container classes. In the full width wrapper template the
+// .container classes set the width or max-width of the contained element - you
+// can style this but never add any width/margin/padding/borders etc to .container
+//
+
+// Wraps #page
+#page-wrapper {
+  .container {}
+}
+
+
+// Wraps the leaderboard
+#leaderboard-wrapper {
+  .container {}
+}
+
+
+// Wraps the header, if you want a true 100% header design use this and the the preceeding #leaderboard-wrapper
+#header-wrapper {
+  // Debug styles, is this working
+  background: #ddd;
+  .container {}
+}
+
+
+// Wraps the nav elements
+#nav-wrapper {
+  .container {}
+}
+
+
+// Wraps breadcrumb
+#breadcrumb-wrapper {
+  .container {}
+}
+
+
+// Wraps messages and help
+#messages-help-wrapper {
+  .container {}
+}
+
+
+// Wraps the secondary content/preface region
+#secondary-content-wrapper {
+  .container {}
+}
+
+
+// Wraps the main content column
+#content-wrapper {
+  .container {}
+}
+
+
+// Wraps the tertiary content/postfix region
+#tertiary-content-wrapper {
+  .container {}
+}
+
+
+// Footer wrapper
+#footer-wrapper {
+  // Debug styles, is this working?
+  background: #666;
+  color: #fff;
+
+  .container {}
+}
+
+
+//
+// Messages
+//
+
+div {
+  &.messages {
+    margin: 1.5em 0;
+
+    ul {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &.status {
+  }
+
+  &.warning {
+  }
+}
+
+tr.warning {
+}
+
+
+div.error,
+tr.error {
+}
+
+
+.error {
+}
+
+
+.warning {
+}
+
+
+// Unpublished nodes
+.node-unpublished,
+.comment-unpublished {
+}
+
+
+.node-unpublished,
+.comment-unpublished {
+
+  p.unpublished {
+    color: #fff;
+    color: rgba(239, 170, 170, 0.4);
+    font-family: Impact,"Arial Narrow",Helvetica,sans-serif;
+    font-size: 75px;
+    font-weight: bold;
+    height: 0;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    text-align: center;
+    text-transform: uppercase;
+    word-wrap: break-word;
+  }
+}
+
+
+// Otherwise these elements will appear below the "Unpublished" text
+.lt-ie8 {
+  .node-unpublished > *,
+  .comment-unpublished > * {
+    position: relative;
+
+  }
+}
+
+
+//
+// Devel Module
+//
+.dev-query {
+  background: #eee;
+  padding: 30px;
+}
