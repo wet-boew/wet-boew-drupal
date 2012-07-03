@@ -1,5 +1,0 @@
-name = "WetKit Solr"
-description = "Solr Feature: Configures various Solr Elements"
-core = "7.x"
-package = "WetKit"
-version = "7.x-1.0"

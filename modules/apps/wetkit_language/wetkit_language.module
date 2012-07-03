@@ -1,0 +1,118 @@
+<?php
+/**
+ * @file
+ * Code for the wetkit_language feature.
+ */
+
+include_once('wetkit_language.features.inc');
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function wetkit_language_preprocess_page(&$vars) {
+  //Language Switcher Code
+  $vars['menu_lang_bar'] = _language_switcher_wetkit();
+}
+
+/**
+ * Implements hook_init().
+ */
+function wetkit_language_init() {
+  //Set Flag
+  if (variable_get('wetkit_language_revert', 1) == 1) {
+    wetkit_language_features_revert(array('wetkit_language'));
+    variable_set('wetkit_language_revert', 0);
+  }
+}
+
+/**
+ * Implements hook_language_init().
+ */
+function wetkit_language_language_init() {
+  //Set Flag
+  if (variable_get('wetkit_language_db', 1) == 1) {
+    //Take care of language + domain
+  
+
+    variable_set('wetkit_language_db', 0);
+  }
+}
+
+/**
+ * Implements _language_switcher_wetkit().
+ */
+function _language_switcher_wetkit() {
+  global $language;
+  $term = '';
+  $language_paths = '';
+  $language_terms = '';
+  
+  $languages = language_list('enabled');
+  $path = drupal_is_front_page() ? '<front>' : $_GET['q'];
+
+  //handle node translations
+  if(arg(0) == 'node' && arg(1)>0) {
+    $node_path = 'node/'. arg(1);
+    $language_paths = translation_path_get_translations($node_path);
+  }
+
+  //handle term translations
+  if(arg(0) == 'taxonomy' && arg(1) == 'term' && arg(2)>0) {
+    $term = taxonomy_get_term_by_name(arg(2));
+    $language_terms = i18n_taxonomy_term_get_translation(array('tid' => arg(2)), $language->language);
+  }
+
+  if (count($languages[1])>1) {
+    $lang_switches = array();
+    foreach ($languages[1] as $lang) {
+      if($lang->language != $language->language) {
+        $modifier = $lang->native;
+        //we are translating a node. Check if not neutral or missing translations.
+        if($language_paths && !empty($language_paths))
+          $path = $language_paths[$lang->language];
+        //we are translating a term.
+        if($term) {
+          $path = 'taxonomy/term/'. $language_terms[$lang->language]->tid;
+        }
+        $attributes = array('class' => 'link', 'lang' => $lang->language);
+        $lang_switches[] = l($modifier, $path, array('attributes' => $attributes, 'language' => $lang));
+      }
+    }
+    return implode('<br />', $lang_switches);
+  }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function wetkit_language_preprocess_node(&$vars) {
+  
+}
+
+/**
+* Revert specified features.
+*
+* @TODO Check that it really is Forced features revert.  Currently an exact
+* copy of the function initially placed in feature_projects.install.
+*
+* Code mostly taken from drush.
+*/
+function wetkit_language_features_revert($modules) {
+  module_load_include('inc', 'features', 'features.export');
+  features_include();
+  foreach (
+  $modules as $module) {
+    if (($feature = feature_load($module, TRUE)) && module_exists($module)) {
+      $components = array();
+      // Forcefully revert all components of a feature.
+      foreach (array_keys($feature->info['features']) as $component) {
+        if (features_hook($component, 'features_revert')) {
+          $components[] = $component;
+        }
+      }
+    }
+    foreach ($components as $component) {
+      features_revert(array($module => array($component)));
+    }
+  }
+}

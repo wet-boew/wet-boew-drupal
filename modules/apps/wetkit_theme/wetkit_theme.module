@@ -1,0 +1,67 @@
+<?php
+
+include_once('wetkit_theme.features.inc');
+
+/**
+ * Implementation of hook_init()
+ */
+function wetkit_theme_init() {
+  drupal_add_library('system', 'ui.widget');
+  drupal_add_library('system', 'ui.tabs');
+  drupal_add_library('system', 'ui.accordion');
+}
+
+/**
+ * Implementation of hook_ctools_plugin_directory()
+ */
+function wetkit_theme_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+}
+
+/**
+ * Implementation of hook_css_alter().
+ */
+function wetkit_theme_css_alter(&$css) {
+  // Installs the jquery.ui themeroller theme to the theme.
+  if (isset($css['misc/ui/jquery.ui.theme.css'])) {
+    $css['misc/ui/jquery.ui.theme.css']['data'] = drupal_get_path('module', 'wetkit_theme') . '/css/wetkit-jquery-ui-theme.css';
+  }
+  
+  if (isset($css['misc/ui/jquery.ui.dialog.css'])) {
+    unset($css['misc/ui/jquery.ui.dialog.css']);
+  }
+  
+  if (isset($css['misc/ui/jquery.ui.tabs.css'])) {
+    unset($css['misc/ui/jquery.ui.tabs.css']);
+  }
+}
+
+/**
+ * Implementation hook_theme_registry_alter()
+ */
+function wetkit_theme_theme_registry_alter(&$theme_registry) {
+  $mod_path = drupal_get_path('module', 'wetkit_theme') . '/templates';
+  $theme_registry_copy = $theme_registry;
+  _theme_process_registry($theme_registry_copy, 'phptemplate', 'theme_engine', 'pow', $mod_path);
+  $theme_registry += array_diff_key($theme_registry_copy, $theme_registry);
+}
+
+/**
+ * Helper function for re-ordering arrays (needed by theme_registry_alter)
+ */
+function _wetkit_theme_insert_after_first_element(&$a, $element) {
+  if (is_array($a)) {
+    $first_element = array_shift($a);
+    array_unshift($a, $first_element, $element);
+  }
+}
+
+/**
+* Implements hook_entity_info_alter().
+*/
+function wetkit_theme_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['featured'] = array(
+    'label' => t('Featured'),
+    'custom settings' => TRUE,
+  );
+}

@@ -1,0 +1,362 @@
+<?php
+
+include_once('wetkit_magic.features.inc');
+
+/**
+ * Implementation of hook_menu()
+ */
+function wetkit_magic_menu() {
+  $items = array();
+
+  $items['autocomplete_wetkit'] = array(
+    'page callback' => 'wetkit_autocomplete_content',
+    'page arguments' => array(1, 2),
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+/**
+ * Implementation of hook_form_alter()
+ */
+function wetkit_magic_form_alter(&$form, $form_state, $form_id) {
+
+  // Add a custom preview to the content type edit form and style edit form. This is applied in all cases, except for cases where
+  // we are customizing an entity (i.e. fieldable panels panes) because we cannot reliable regenerate a preview without saving the
+  // entity first. 
+  if ((strpos($form_id, '_content_type_edit_form') && $form_id != 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form') || $form_id == 'panels_edit_style_type_form') {
+
+    // Start the magic
+    $pane = $form_state['pane'];
+    $display = $form_state['display'];
+    ctools_include('plugins', 'panels');
+    ctools_include('content');
+
+    // Determine the style
+    if (strpos($form_id, '_content_type_edit_form')) {
+      $style = (isset($pane->style['style'])) ? panels_get_style($pane->style['style']) : NULL;
+    }
+    elseif ($form_id == 'panels_edit_style_type_form') {
+      $style = ($form_state['rebuild'] && $form_id == 'panels_edit_style_type_form') ? panels_get_style($form_state['values']['style']) : panels_get_style($form_state['style']);
+    }
+    else {
+      $style = NULL;
+    }
+
+    // Determine the configuration
+    // TODO - if a cleverer person can save the entity and get a vuuid, then we can pass that
+    // as a "uuid:asds-adsa-dsad-adsd-adda-adssd" subtype and it all works wonderfully.
+    $configuration = ($form_state['rebuild'] && strpos($form_id, 'content_type_edit_form')) ? $form_state['input'] : $pane->configuration;
+
+    // Determine the content 
+    $content = ctools_content_render($pane->type, $pane->subtype, $configuration);
+
+    // Remove the clearfix for preview floating
+    // TODO - is there a cleaner way to handle this?
+    if (isset($form['aligner_start'])) {
+      $form['aligner_start']['#markup'] = str_replace('clearfix', '', $form['aligner_start']['#markup']);
+    }
+
+    // Create the preview fieldset
+    if ($content) {
+      $form['widget_preview'] = array(
+        '#type' => 'fieldset',
+        '#title' => 'Preview',
+        '#attributes' => array('class' => array('widget-preview', 'widget-preview-single')),
+        '#collapsible' => FALSE,
+        '#weight' => -100,
+      );
+      $form['widget_preview']['preview'] = array(
+        '#markup' => (!empty($style['render pane'])) ? theme($style['render pane'], array('content' => $content, 'pane' => $pane, 'display' => $display, 'style' => $style, 'settings' => $pane->style['settings'])) : theme('panels_pane', array('content' => $content, 'pane' => $pane, 'display' => $display)),
+      );
+
+      // Create the preview refresh button
+      $form['buttons']['preview'] = array(
+        '#type' => 'button',
+        '#value' => t('Update Preview'),
+        '#wizard type' => 'next',
+        // '#attributes' => array('class' => array('widget-preview-button', 'ctools-use-ajax', 'ctools-auto-submit-click')),
+        '#attributes' => array('class' => array('widget-preview-button')),
+      );
+
+      // Autosubmit the form
+      // ctools_add_js('auto-submit');
+      // $form['#attributes']['class'][] = 'ctools-auto-submit-full-form';
+    }
+  }
+
+  // Add customization to boxes pane style form
+  if ($form_id == 'boxes_box_form') {
+
+  }
+
+  // Add customization to panel pane style form
+  if ($form_id == 'panels_edit_style_type_form') {
+
+    // Unset options for which we have no need
+    //unset($form['style']['#options']['block']);
+    //unset($form['style']['#options']['rounded_corners']);
+    //unset($form['style']['#options']['naked']);
+
+    // Set "no style" to be the default style
+    $form['style']['#options']['default'] = t('Default Pane Style');
+
+    // Adding a fieldset around styling
+    $form['style'] = array('style' => $form['style']);
+    $form['style']['#type'] = 'fieldset';
+    $form['style']['#title'] = t('Style Settings');
+  }
+
+  // Add customization to panel pane settings form
+  if ($form_id == 'views_content_views_panes_content_type_edit_form') {
+
+    // Get the configuration
+    $conf = $form_state['conf'];
+
+    // Add the content setting fieldset
+    if (isset($form['exposed']) && count($form['exposed']) > 1) {
+      $form['exposed']['#title'] = t('General Settings');
+      $form['exposed']['#type'] = 'fieldset';
+      $form['exposed']['#weight'] = -10;
+    } 
+    else {
+      $form['exposed'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('General Settings'),
+        '#weight' => -10,
+      );
+    }
+
+    // Add a widget title setting
+    $form['exposed']['widget_title'] = array(
+      '#field_prefix' => t('Title'),
+      '#type' => 'textfield',
+      '#size' => 30,
+      '#weight' => -100,
+      '#attributes' => (empty($conf['widget_title']) || empty($form_state['view']->display_handler->options['title'])) ? array('placeholder' => '<No Title>') : array(),
+      '#default_value' => (isset($conf['widget_title'])) ? $conf['widget_title'] : $form_state['view']->display_handler->options['title'],
+    );
+
+    // Move items per page wiget to widget area
+    if (isset($form['items_per_page'])) {
+      $form['items_per_page']['#field_prefix'] = $form['items_per_page']['#title'];
+      $form['items_per_page']['#title'] = '';
+      $form['exposed']['items_per_page'] = $form['items_per_page'];
+      unset($form['items_per_page']);
+    }
+
+    // Update field setting options
+    if (isset($form['fields_override'])) {
+      $form['fields_override']['#title'] = t('Field Settings');
+      $form['fields_override']['#collapsible'] = FALSE;
+      foreach($form['fields_override'] as &$field) {
+        if (is_array($field)) {
+          $field['#title'] = t('Display') . ' ' . $field['#title'];
+        }
+      }
+    }
+
+    // Only add style settings when we are on a node view
+    if ($form_state['view']->display_handler->options['row_plugin'] == 'node' && in_array($form_state['view']->display_handler->options['style_plugin'], array('default', 'slideshow'))) {
+      // Add the style setting fieldset
+      $form['style_settings'] = array(
+        '#type' => 'fieldset',
+        '#title' => 'Style Settings',
+      );
+
+      // Add specific style options
+      $form['style_settings']['view_mode'] = array(
+        '#type' => 'radios',
+        '#options' => _wetkit_magic_view_mode_options(),
+        '#default_value' => $conf['view_mode'] ? $conf['view_mode'] : 'teaser',
+      );  
+    }
+
+    // Add a custom submit handler
+    $form['#submit'][] = 'wetkit_magic_views_view_mode_pane_submit';
+  }
+
+  // Add an autocomplete form for node title exposed filters in content pane editing forms
+  if ($form_id == 'views_content_views_panes_content_type_edit_form') {
+    if (isset($form['exposed']['filter-title']['title']) && isset($form_state['view']->display_handler->options['filters']['type']['value']) && count($form_state['view']->display_handler->options['filters']['type']['value']) == 1) {
+      $node_type = implode('', $form_state['view']->display_handler->options['filters']['type']['value']);
+      $form['exposed']['filter-title']['title']['#autocomplete_path'] = 'autocomplete_wetkit/' . $node_type;
+      $form['exposed']['filter-title']['title']['#size'] = 60;
+    }
+  }
+}
+
+/**
+ * Custom submit handler to save panels pane configuration for styling
+ */
+function wetkit_magic_views_view_mode_pane_submit(&$form, &$form_state) {
+  $form_state['conf']['view_mode'] = (isset($form_state['values']['view_mode'])) ? $form_state['values']['view_mode'] : NULL;
+
+  // Set the $conf['widget_title'] value. We need to do this a
+  // little funky since sometimes it comes inside of $form_state['values']
+  // and sometimes it doesn't. 
+  if (isset($form_state['values']['exposed']['widget_title'])) {
+    $form_state['conf']['widget_title'] = $form_state['values']['exposed']['widget_title'];
+  }
+  elseif (isset($form_state['values']['widget_title'])) {
+    $form_state['conf']['widget_title'] = $form_state['values']['widget_title'];
+  }
+  else {
+    $form_state['conf']['widget_title'] = NULL;
+  }
+
+  // Set the $conf['items_per_page'] value. We need to do this a
+  // little funky since sometimes it comes inside of $form_state['values']
+  // and sometimes it doesn't. 
+  if (isset($form_state['values']['exposed']['items_per_page'])) {
+    $form_state['conf']['items_per_page'] = $form_state['values']['exposed']['items_per_page'];
+  }
+  elseif (isset($form_state['values']['items_per_page'])) {
+    $form_state['conf']['items_per_page'] = $form_state['values']['items_per_page'];
+  }
+  else {
+    $form_state['conf']['items_per_page'] = NULL;
+  }
+}
+
+/**
+ * Implementation of hook_views_pre_render()
+ */
+function wetkit_magic_views_pre_render(&$view) {
+  if (isset($view->display_handler->options['pane_conf'])) {
+    $conf = $view->display_handler->options['pane_conf'];
+
+    // Set the view title depending on where it comes. We do this a little
+    // funky since sometimes it comes inside of $form_state['values'] and 
+    // sometimes it doesn't.
+    if (isset($conf['widget_title']) || isset($conf['exposed']['widget_title'])) {
+      $view->display_handler->options['title'] = (isset($conf['exposed']['widget_title'])) ? $conf['exposed']['widget_title'] : $conf['widget_title']; 
+    }
+
+    // Set the view mode
+    if (isset($conf['view_mode'])) {
+      $view->style_plugin->row_plugin->options['view_mode'] = $conf['view_mode'];
+    }
+  }
+}
+
+/**
+ * Implementation of hook_module_implements_alter()
+ */
+function wetkit_magic_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'form_alter') {
+    $group = $implementations['wetkit_magic'];
+    unset($implementations['wetkit_magic']);
+    $implementations['wetkit_magic'] = $group;
+  }
+}
+
+/**
+ * Helpfer function to get view modes
+ */
+function _wetkit_magic_view_mode_options() {
+  $entity_info = entity_get_info('node');
+  $options = array();
+  if (!empty($entity_info['view modes'])) {
+    foreach ($entity_info['view modes'] as $mode => $settings) {
+      if (!in_array($mode, array('rss', 'search_index', 'search_result', 'token'))) {
+        $options[$mode] = $settings['label'];
+      }
+    }
+  }
+  return $options;
+}
+
+/**
+ * Callback to do autocomplete for basic content
+ */
+function wetkit_autocomplete_content($node_type, $string) {
+  $matches = array();
+  if ($string) {
+    $result = db_select('node')
+      ->fields('node', array('title'))
+      ->condition('node.status','1')
+      ->condition('node.type', $node_type)
+      ->condition('title', '%' . db_like($string) . '%', 'LIKE')
+      ->range(0, 10)
+      ->execute();
+    foreach ($result as $node) {
+      $matches[$node->title] = check_plain($node->title);
+    }
+  }
+
+  drupal_json_output($matches);
+}
+
+/**
+ * Preprocess the panels_ipe_toolbar to change text for IPE buttons
+ */
+function wetkit_magic_preprocess_panels_ipe_toolbar(&$vars) {
+  foreach($vars['buttons'] as $panel_context_id => $panel_context) {
+    foreach($panel_context as $button_name => $button) {
+      switch($button_name) {
+        case 'panels-ipe-startedit':
+          $vars['buttons'][$panel_context_id][$button_name]['#title'] = 'Customize this page';
+          break;
+        case 'panels-ipe-change-layout':
+          $vars['buttons'][$panel_context_id][$button_name]['#title'] = 'Change this layout';
+          break;
+      }
+    }
+  }
+}
+
+/**
+ * Preprocess the panels_add_content_modal() function to add the HTML for the preview
+ */
+function wetkit_magic_preprocess_panels_add_content_modal(&$vars) {
+  // Generate the pane preview
+  if (!empty($vars['categories'][$vars['category']]['content'])) {
+    foreach($vars['categories'][$vars['category']]['content'] as &$plugin) {
+      $pane = panels_new_pane($plugin['type_name'], $plugin['subtype_name'], TRUE);
+      $display = $vars['renderer']->display;
+      $context = $vars['renderer']->display->context;
+      $args = $vars['renderer']->display->args;
+      $incoming_content = $vars['renderer']->display->incoming_content;
+      $keywords = (!empty($vars['renderer']->display->keywords)) ? $vars['renderer']->display->keywords : array();
+      if ($content = ctools_content_render($pane->type, $pane->subtype, $pane->configuration, $keywords, $args, $context, $incoming_content)) {
+        $plugin['preview'] = theme('panels_pane', array('content' => $content, 'pane' => $pane, 'display' => $display));
+      }
+    }
+  }
+}
+
+/** 
+ * Process the panels_add_content_modal() to adjust the markup to present the preview
+ */
+function wetkit_magic_process_panels_add_content_modal(&$vars) {
+  $content = !empty($vars['categories'][$vars['category']]['content']) ? $vars['categories'][$vars['category']]['content'] : array();
+
+  // If no category is selected or the category is empty or our special empty
+  // category render a 'header' that will appear instead of the columns.
+  if (empty($vars['category']) || empty($content) || $vars['category'] == 'root') {
+    // Nothing to do since there is no preview
+  }
+  else {
+    $titles = array_keys($content);
+    natcasesort($titles);
+    $col_size = count($titles) / $vars['column_count'];
+
+    // Zero out the existing column data
+    $count = 0;
+    foreach ($titles as $title) {
+      $which = floor($count++ / $col_size) + 1;
+      $vars['columns'][$which] = '';
+    }
+
+    // Readd the column data with our preview functionality
+    $count = 0;
+    foreach ($titles as $title) {
+      $which = floor($count++ / $col_size) + 1;
+      $content[$title]['title'] = 'Add';
+      $vars['columns'][$which] .= '<fieldset class="widget-preview"><legend><div class="widget-preview-title">' .  theme('panels_add_content_link', array('renderer' => $vars['renderer'], 'region' => $vars['region'], 'content_type' => $content[$title])) . '</div><span class="fieldset-legend">' . $title . '</span></legend><div class="fieldset-wrapper">' . $content[$title]['preview'] . '</div></fieldset>';
+    }
+  }
+}

@@ -1,0 +1,297 @@
+<?php
+
+include_once('wetkit_widgets.features.inc');
+include_once('wetkit_widgets.spotlight.inc');
+
+/**
+ * Implementation of hook_ctools_plugin_directory()
+ */
+function wetkit_widgets_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+}
+
+/**
+ * Implementation of hook_ctools_content_subtype_alter()
+ */
+function wetkit_widgets_ctools_content_subtype_alter(&$subtype, &$plugin) {
+
+  // Modify the menu block plugin to better fit into our UI
+  if ($plugin['module'] == 'menu_block' && $subtype['menu_title'] == 'Main menu') {
+    $subtype['category'][0] = 'Custom';
+    $subtype['top level'] = TRUE;
+    $subtype['title'] = 'Add submenu';
+    $subtype['icon'] = drupal_get_path('module', 'wetkit_widgets') . '/images/icon_submenu.png';
+    $subtype['admin css'] = array(drupal_get_path('module', 'menu_block') . '/menu-block-admin.css');
+    $subtype['admin js'] = array(drupal_get_path('module', 'menu_block') . '/menu-block.js');
+  }
+
+  // Modify the plugins so we do away with this "node" thing
+  if ($subtype['category'] == 'Node') {
+    $subtype['category'] = 'Page Content';
+  }
+
+}
+
+/**
+ * Implementation of hook_form_alter()
+ */
+function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
+
+  // Simplify the menu block edit form
+  if ($form_id == 'menu_block_menu_tree_content_type_edit_form') {
+    $form['admin_title']['#access'] = FALSE;
+    $form['depth']['#access'] = FALSE;
+    $form['display_options']['#default_value'] = 'advanced';
+    $form['display_options']['#access'] = FALSE;
+    $form['title_link']['#access'] = FALSE;
+    $form['buttons']['#prefix'] = '<div class="menu-block-ctools-buttons">';
+  }
+
+  if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form') {
+    
+    // Remove the revisioning information
+    $form['revision']['revision']['#type'] = 'value';
+    $form['revision']['log']['#access'] = FALSE;
+
+    // Add a widget setting
+    $form['widget_settings']['#type'] = 'fieldset';
+    $form['widget_settings']['#title'] = t('General Settings');
+    $form['title']['#attributes']['placeholder'] = $form['title']['#title'];
+    unset($form['title']['#title']);
+    $form['widget_settings']['title'] = $form['title'];
+    unset($form['title']);
+
+    // Add a content settings fieldset and custom element_validate function
+    $form['content_settings']['#type'] = 'fieldset';
+    $form['content_settings']['#title'] = t('Content Settings');
+    foreach($form as $key => $value) {
+      if (substr($key, 0, 6) == 'field_') {
+        $form['content_settings'][$key] = $value;
+        if (!empty($value['und']['0']['#bundle']) && ($value['und']['0']['#bundle'] == 'image' || $value['und']['0']['#bundle'] == 'file')) {
+          foreach($value['und'] as $subkey => $subvalue) {
+            if (is_numeric($subkey)) {
+              // Set custom validate function to avoid errors with submission handling of file field
+              $form['content_settings'][$key]['und'][$subkey]['#element_validate'][] = 'wetkit_widgets_file_hax';
+
+              // Change UUID to FID to resolve issue with UUID handling. This solves a bug with Fieldable Panels Panes that
+              // hopefully will be resolved soon.
+              if (!empty($subvalue['#default_value']['fid']) && strlen($subvalue['#default_value']['fid']) == 36){
+                $form['content_settings'][$key]['und'][$subkey]['#default_value']['fid'] = db_query('SELECT fid FROM {file_managed} WHERE uuid = :uuid', array(':uuid' => $subvalue['#default_value']['fid']))->fetchField();
+              }
+            }
+          }
+        }
+        unset($form[$key]);
+      }
+    }
+    
+
+    // Improve the reusable interface
+    $form['reusable']['#title'] = t('Reusable Settings');
+    $form['reusable']['#type'] = 'fieldset';
+    $form['reusable']['#process'] = array('ctools_dependent_process');
+    $form['reusable']['#id'] = 'reusable-settings';
+    if ($form['reusable']['reusable']['#default_value'] != 1) {
+      $form['reusable']['warning']['#access'] = FALSE;
+    }
+    $form['reusable']['category']['#value'] = 'Reusable Content';
+    $form['reusable']['category']['#type'] = 'value';
+    $form['reusable']['admin_description']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Form API Hax to prevent errors with file fields being submitted in fieldsets. Related to http://drupal.org/node/1468686
+ * and http://drupal.org/node/1329856. 
+ */
+function wetkit_widgets_file_hax($element, &$form_state, $form) {
+  if (!empty($form_state['triggering_element']['#array_parents']) && $form_state['triggering_element']['#array_parents'][0] == 'content_settings') {
+    array_shift($form_state['triggering_element']['#array_parents']);
+  }
+  if (!empty($form_state['clicked_button']['#array_parents']) && $form_state['clicked_button']['#array_parents'][0] == 'content_settings') {
+    array_shift($form_state['clicked_button']['#array_parents']);
+  }
+  return $element;
+}
+
+/** 
+ * Implementation of hook_entity_info_alter()
+ */
+function wetkit_widgets_entity_info_alter(&$entity_info) {
+
+  // Quick links
+  $entity_info['fieldable_panels_pane']['bundles']['quick_links'] = array(
+    'label' => t('Add links'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_link.png',
+    'admin' => array(
+      'path' => 'admin/structure/panels/entity/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 5,
+      'real path' => 'admin/structure/panels/entity/manage/quick_links',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+
+  // Basic file
+  $entity_info['fieldable_panels_pane']['bundles']['basic_file'] = array(
+    'label' => t('Add file'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_file.png',
+    'admin' => array(
+      'path' => 'admin/structure/panels/entity/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 5,
+      'real path' => 'admin/structure/panels/entity/manage/basic_file',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+
+  // Basic Image
+  $entity_info['fieldable_panels_pane']['bundles']['image'] = array(
+    'label' => t('Add image'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_image.png',
+    'admin' => array(
+      'path' => 'admin/structure/panels/entity/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 5,
+      'real path' => 'admin/structure/panels/entity/manage/image',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+
+  // Basic text
+  $entity_info['fieldable_panels_pane']['bundles']['text'] = array(
+    'label' => t('Add text'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_text.png',
+    'admin' => array(
+      'path' => 'admin/structure/panels/entity/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 5,
+      'real path' => 'admin/structure/panels/entity/manage/text',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+ 
+  // Basic table
+  $entity_info['fieldable_panels_pane']['bundles']['table'] = array(
+    'label' => t('Add table'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_table.png',
+    'admin' => array(
+      'path' => 'admin/structure/panels/entity/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 5,
+      'real path' => 'admin/structure/panels/entity/manage/table',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+
+  // Basic video
+  $entity_info['fieldable_panels_pane']['bundles']['video'] = array(
+    'label' => t('Add video'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_video.png',
+    'admin' => array(
+      'path' => 'admin/structure/panels/entity/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 5,
+      'real path' => 'admin/structure/panels/entity/manage/video',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+
+  // Spotlight
+  $entity_info['fieldable_panels_pane']['bundles']['spotlight'] = array(
+    'label' => t('Add spotlight'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_spotlight.png',
+    'admin' => array(
+      'path' => 'admin/structure/panels/entity/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 5,
+      'real path' => 'admin/structure/panels/entity/manage/spotlight',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_views_slideshow_widget_pager_info().
+ * 
+ * Adapted from http://drupal.org/sandbox/longwave/1340916
+ */
+function wetkit_widgets_views_slideshow_widget_pager_info($view) {
+  return array(
+    'wetkit_widgets' => array(
+      'name' => t('Simple counter'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_theme().
+ */
+function wetkit_widgets_theme($existing, $type, $theme, $path) {
+  return array(
+    'wetkit_widgets' => array(
+      'variables' => array('vss_id' => NULL, 'view' => NULL, 'settings' => array(), 'location' => NULL, 'attributes' => array()),
+      'template' => 'templates/views-slideshow-pager-fields',
+      'path' => drupal_get_path('module', 'wetkit_widgets'),
+    ),
+    'wetkit_widgets_pager_field_item' => array(
+      'variables' => array('vss_id' => NULL, 'item' => NULL, 'count' => NULL, 'location' => NULL),
+      'template' => 'templates/views-slideshow-pager-field-item',
+      'path' => drupal_get_path('module', 'wetkit_widgets'),
+    ),
+    'wetkit_spotlight_view' => array(
+      'variables' => array(
+        'items' => NULL,
+        'delta' => NULL,
+      ),
+    ),
+  );
+}
+
+/**
+ * Template preprocess function for Views Slideshow simple pager.
+ */
+function template_preprocess_wetkit_widgets(&$vars) {
+  // Call the fields pager preprocess function.
+  _views_slideshow_preprocess_views_slideshow_pager_fields($vars);
+
+  // Override the (empty) rendered field items with our simple pager.
+  $vars['rendered_field_items'] = '';
+  if (!($vars['settings']['hide_on_single_slide'] && count($vars['view']->result) == 1)) {
+    foreach ($vars['view']->result as $count => $node) {
+      $item = l(($count+1), '', array('fragment' => $count));
+      $vars['rendered_field_items'] .= theme('wetkit_widgets_pager_field_item', array('vss_id' => $vars['vss_id'], 'item' => $item, 'count' => $count, 'location' => $vars['location']));
+    }
+  }
+
+  // Clone the pager fields JavaScript object and methods.
+  drupal_add_js('Drupal.viewsSlideshowSimplePager = Drupal.viewsSlideshowPagerFields || {};', 'inline');
+}
+
+/**
+ * Implementation of hook_preprocess_views_slideshow_pager_field_item()
+ */
+function template_preprocess_wetkit_widgets_pager_field_item(&$vars) {
+  _wetkit_widgets_preprocess_wetkit_widgets_pager_field_item($vars);
+}
+
+/**
+ * Views Slideshow: pager item.
+ *
+ * @ingroup themeable
+ */
+function _wetkit_widgets_preprocess_wetkit_widgets_pager_field_item(&$vars) {
+  $vars['classes_array'][] = 'views_slideshow_pager_field_item';
+  if (!$vars['count']) {
+    $vars['classes_array'][] = 'activeSlide';
+  }
+  $vars['classes_array'][] = ($vars['count'] % 2) ? 'views-row-even' : 'views-row-odd';
+}
+

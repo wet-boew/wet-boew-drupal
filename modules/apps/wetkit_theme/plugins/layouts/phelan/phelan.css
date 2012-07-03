@@ -1,0 +1,34 @@
+/**
+ * @file
+ * OA Phelan panel layout
+**/
+
+.phelan-container {
+  margin-bottom: 1em;
+}
+
+.phelan-column {
+  width: 51.064%;
+  float: left;
+}
+
+.phelan-column1-inner {
+  margin-right: 20px;
+}
+
+.phelan-column2 {
+  width: 48.936%;
+}
+  
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .phelan-column,
+  .phelan-column2 {
+    width: 100%;
+    float: none;
+  }
+  
+  .phelan-column1-inner {
+    margin-right: 0;
+  }
+}

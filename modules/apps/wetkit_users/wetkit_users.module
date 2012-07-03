@@ -1,0 +1,70 @@
+<?php
+
+include_once('wetkit_users.features.inc');
+
+/**
+ * Implementation of hook_ctools_plugin_directory()
+ */
+function wetkit_users_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+} 
+
+/**
+ * Implementation of hook_menu_alter()
+ */
+function wetkit_users_menu_alter(&$items) {
+
+  // Remove tabs from user login page
+  $items['user/login']['type'] = MENU_CALLBACK;
+  $items['user/register']['type'] = MENU_CALLBACK;
+  $items['user/password']['type'] = MENU_CALLBACK;
+}
+
+/**
+ * Implementation of hook_pm_existing_pages_info()
+ */
+function wetkit_users_pm_existing_pages_info() {
+  $pm_existing_pages = array();
+
+  $pm_existing_page = new stdClass();
+  $pm_existing_page->api_version = 1;
+  $pm_existing_page->name = 'user_login';
+  $pm_existing_page->label = 'User Login';
+  $pm_existing_page->context = 'entity|user|uid';
+  $pm_existing_page->paths = 'user';
+  $pm_existing_pages['user_login'] = $pm_existing_page;
+
+  $pm_existing_page = new stdClass();
+  $pm_existing_page->api_version = 1;
+  $pm_existing_page->name = 'user_register';
+  $pm_existing_page->label = 'User Register';
+  $pm_existing_page->context = 'entity|user|uid';
+  $pm_existing_page->paths = 'user/register';
+  $pm_existing_pages['user_register'] = $pm_existing_page;
+
+  $pm_existing_page = new stdClass();
+  $pm_existing_page->api_version = 1;
+  $pm_existing_page->name = 'user_password';
+  $pm_existing_page->label = 'User Password';
+  $pm_existing_page->context = 'entity|user|uid';
+  $pm_existing_page->paths = 'user/password';
+  $pm_existing_pages['user_password'] = $pm_existing_page;
+
+  return $pm_existing_pages;
+}
+
+/**
+ * Implementation of hook_form_alter()
+ */
+function wetkit_users_form_alter(&$form, $form_state, $form_id) {
+
+  // Add a create account link below the username
+  if ($form_id == 'user_login' && variable_get('user_register')) {
+    $form['name']['#description'] .= '<br>' . t('If you don\'t have an username, !create.', array('!create' => l('create an account', 'user/register')));
+  }
+
+  // Add the request password link below the password
+  if ($form_id == 'user_login') {
+    $form['pass']['#description'] .= '<br>' . t('If you forgot your password, !request.', array('!request' => l('request a new password', 'user/password')));
+  }
+}

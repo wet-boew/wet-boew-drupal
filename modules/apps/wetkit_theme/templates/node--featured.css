@@ -1,0 +1,35 @@
+.node-featured {
+  background-color: #E6E6E6;
+  overflow: hidden;
+}
+
+.node-featured > div {
+  margin-bottom: 0em;
+}
+
+.node-featured .pane-node-field-featured-image {
+  margin-bottom: 0em;
+}
+
+.node-featured .pane-title {
+  margin-top: 1em;
+}
+
+.node-featured a.read-more {
+  font-weight: bold;
+}
+
+.node-featured  {
+  color: #333;
+  font: normal 1.071em/1.467em 'Open Sans', 'Lucida Sans', 'Lucida Grande', verdana sans-serif; /* 14px->15px / 22px */
+}
+
+.node-featured h2 {
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+  font: bold 1.429em/1.3em 'Open Sans', 'Lucida Sans', 'Lucida Grande', verdana sans-serif; /* 14px->20px / 26px */
+}
+
+.node-featured h2 a {
+ color: #333;
+}

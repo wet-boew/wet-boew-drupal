@@ -1,0 +1,100 @@
+
+@import "base.scss";
+
+/**
+ * @file
+ * Node Styling
+ */
+
+.node {
+  margin-bottom: 20px;
+
+
+  // Promoted to front
+  &.node-promoted {}
+
+
+  // Set to Sticky
+  &.node-sticky {}
+
+
+  // Node is by the current viewer
+  &.node-by-viewer {}
+
+
+  // View mode teaser
+  &.node-teaser {}
+
+
+  // View mode full
+  &.node-full {}
+
+
+  // Zebra odd
+  &.odd {}
+
+
+  // Zebra even
+  &.even {}
+
+
+  // Node title (h2)
+  .node-title {}
+
+
+  // User picture
+  .user-picture {}
+
+
+  // Submitted by auther and time stamp
+  .submitted {
+
+    .username {}
+
+    time {}
+  }
+
+
+  // Wrapper on the node content variable
+  .node-content {}
+
+
+  // Node links. See also the ul.links declaration in the pages.css
+  ul.links {
+
+    li {}
+    li a {}
+
+    // Classes to style individual links
+    li.node-read-more a {}
+    li.comment-add a {}
+    li.comment-comments a {}
+    li.comment-new-comments a {}
+    li.blog-sernames-blog a {}
+    li.print-html a {}
+    li.print-email a {}
+    li.print-pdf a {}
+  }
+}
+
+
+.preview .node {
+  // background-color: #ffffea;
+  // Drupal core uses a #ffffea background
+}
+
+
+//
+// All nodes are given a node-FOO class that describes the type of content that
+// it is. If you create a new content type called "my-custom-type", it will
+// receive a "node-my-custom-type" class.
+//
+.node-page {}
+
+.node-article {}
+
+.node-book {}
+
+.node-forum {}
+
+.node-poll {}

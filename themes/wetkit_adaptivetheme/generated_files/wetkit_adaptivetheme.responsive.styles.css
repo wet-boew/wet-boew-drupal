@@ -1,0 +1,27 @@
+/** responsive.custom.css is for custom media queries that are not set via the theme settings, such as cascading media queries.  By default all the other responsive stylesheets used in Adaptivetheme use a "stacking method", however cascading media queries use a waterfall method so you can leverage the cascade and inheritance for all browsers that support media queries, regardless of screen size.  @SEE http://zomigi.com/blog/essential-considerations-for-crafting-quality-media-queries/#mq-overlap-stack  NOTE: this file loads by default, to disable got to your theme settings and look under the "CSS" settings tab. */
+@media only screen and (max-width: 480px) { .region[class*="float-blocks"] .block { float: none; width: 100%; } }
+
+
+@media only screen and (max-width:320px) {
+/** Important Information about this CSS File  - Do not delete or rename this file, if you do not use it leave it blank (delete everything) and the file will be skipped when you enable Production Mode in the Global theme settings.  - There is an scss (SASS) version of this file in the /sass/ directory in your sub-theme, if you set Compass to watch it or the directory this file will be overwritten!  - Read the _README file in this directory, it contains useful help and other information. */
+html { font-size: 112.5%; /* Increase the default font size on small devices */ }
+
+}
+@media only screen and (min-width:321px) and (max-width:480px) {
+/** Important Information about this CSS File  - Do not delete or rename this file, if you do not use it leave it blank (delete everything) and the file will be skipped when you enable Production Mode in the Global theme settings.  - There is an scss (SASS) version of this file in the /sass/ directory in your sub-theme, if you set Compass to watch it or the directory this file will be overwritten!  - Read the _README file in this directory, it contains useful help and other information. */
+html { font-size: 112.5%; /* Increase the body font size on small devices */ }
+
+}
+@media only screen and (min-width:481px) and (max-width:768px) {
+/** Important Information about this CSS File  - Do not delete or rename this file, if you do not use it leave it blank (delete everything) and the file will be skipped when you enable Production Mode in the Global theme settings.  - There is an scss (SASS) version of this file in the /sass/ directory in your sub-theme, if you set Compass to watch it or the directory this file will be overwritten!  - Read the _README file in this directory, it contains useful help and other information. */
+html { font-size: 81.3%; /* Increase the body font size on small devices */ }
+
+}
+@media only screen and (min-width:769px) and (max-width:1024px) {
+/** Important Information about this CSS File  - Do not delete or rename this file, if you do not use it leave it blank (delete  everything) and the file will be skipped when you enable Production Mode in the Global theme settings.  - There is an scss (SASS) version of this file in the /sass/ directory in your sub-theme, if you set Compass to watch it or the directory this file will be overwritten!  - Read the _README file in this directory, it contains useful help and other information. */
+
+}
+@media only screen and (min-width:1025px) {
+/** Important Information about this CSS File  - Do not delete or rename this file, if you do not use it leave it blank (delete everything) and the file will be skipped when you enable Production Mode in the Global theme settings.  - There is an scss (SASS) version of this file in the /sass/ directory in your sub-theme, if you set Compass to watch it or the directory this file will be overwritten!  - Read the _README file in this directory, it contains useful help and other information. */
+
+}

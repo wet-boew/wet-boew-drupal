@@ -1,0 +1,49 @@
+/**
+ * Default image styling
+ */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/**
+ * Image styling 
+ */
+.wetkit-image-full {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.wetkit-image-half {
+  max-width: 50%;
+  width: 50%;
+  height: auto;
+}
+
+.wetkit-image-quarter {
+  max-width: 25%;
+  width: 25%;
+  height: auto;
+}
+
+.wetkit-image-featured {
+  max-width: 100%;
+  height: auto;
+}
+
+.wetkit-image-teaser {
+  max-width: 100%;
+  height: auto;
+}
+
+.wetkit-image-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.wetkit-image-square {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,17 @@
+name = WetKit Theme
+description = Helps with theming and provides many layouts.
+core = 7.x
+package = WetKit
+php = 5.2.4
+version = 7.x-1.0-beta3
+project = wetkit_theme
+dependencies[] = image
+dependencies[] = strongarm
+apps[server][] = local
+apps[manifests][] = app/manifest.app
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+features[variable][] = node_admin_theme
+features[variable][] = theme_wetkit_adaptivetheme_files_directory
+features[variable][] = theme_wetkit_adaptivetheme_settings
+project status url = http://apps.getpantheon.com/fserver

@@ -1,0 +1,233 @@
+<?php
+/**
+ * @file
+ */
+
+include_once('wetkit_admin.features.inc');
+
+/**
+ * Implementation of hook_init().
+ */
+function wetkit_admin_init() {
+
+  // Override the Chaos Tools Modal Default Settings
+  $default_style = array(
+    'CToolsModal' => array(
+      'modalSize' => array(
+        'type' => 'scale',
+        'width' => '.8',
+        'height' => '.8', 
+        'addWidth' => 0,
+        'addHeight' => 0,
+        'contentRight' => 25,
+        'contentBottom' => 75,
+      ),
+      'modalOptions' => array(
+        'opacity' => '.55',
+        'background-color' => '#FFF',
+      ),
+      'animationSpeed' => 'fast',
+      'modalTheme' => 'CToolsModalDialog',
+      'throbberTheme' => 'CToolsModalThrobber',
+    ),
+  );
+  drupal_add_js($default_style, 'setting');
+}
+
+/**
+ * Implementation of hook_ctools_plugin_directory()
+ */
+function wetkit_admin_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+}
+
+/**
+ * Implements hook_panels_pane_content_alter().
+ */
+function wetkit_admin_panels_pane_content_alter($content, $pane, $args, $context) {
+  // Pass the title properly through to style plugins rendering regions
+  // TODO - check with Earl on if this is best way to handle this data exchange
+  $pane->title = (isset($content->title)) ? $content->title : NULL;
+}
+
+/**
+ * Implementation of hook_form_alter()
+ */
+function wetkit_admin_form_alter(&$form, &$form_state, $form_id) {
+
+  // General styling to the content type edit form
+  if (strpos($form_id, 'content_type_edit_form')) {
+    $form['override_title_markup']['#access'] = FALSE;
+    $form['buttons']['cancel']['#access'] = FALSE;
+  }
+
+  // Style the context information
+  // TODO - move to WetKit Magic module
+  if (!empty($form['context'])) {
+    $form['context_settings'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Context Settings'),
+    );
+    $form['context_settings']['context'] = $form['context'];
+    unset($form['context']);
+  }
+
+  // Improve the title field
+  if (isset($form['title']['#title'])) {
+    $form['title']['#attributes']['placeholder'] = $form['title']['#title'];
+  }
+
+  // Improve the URL selection form
+  if (isset($form['#entity_type']) && $form['#entity_type'] == 'node' && isset($form['path']) && isset($form['path']['alias'])) {
+    unset($form['path']['#type']); // remove the fieldset
+    unset($form['path']['alias']['#description']); 
+    $form['path']['alias']['#title'] = '<strong>' . t('Permalink') . ':</strong> ';
+    $form['path']['alias']['#title'] .= (isset($_SERVER['HTTPS'])) ? 'https://' . $_SERVER['HTTP_HOST'] . '/' : 'http://' . $_SERVER['HTTP_HOST'] . '/';
+    if (isset($form['path']['pathauto'])) {
+      $form['path']['pathauto']['#default_value'] = 0;
+      if (!$form['path']['alias']['#default_value']) {
+        $form['path']['alias']['#attributes'] = array('placeholder' => '<' . t('magically generated') . '>');
+      }
+      $form['#submit'][] = 'wetkit_admin_pathauto_submit';
+    }
+  }
+
+  // Hide the machine name options
+  if (isset($form['machine_name_fs'])) {
+    $form['options']['machine_name_fs']['machine_name'] = $form['machine_name_fs']['machine_name'];
+    $form['options']['machine_name_fs']['machine_name']['#size'] = 27;
+    $form['options']['machine_name_fs']['#weight'] = 30;
+    $form['options']['machine_name_fs']['machine_name']['#title'] = 'UUID';
+    unset($form['options']['machine_name_fs']['machine_name']['#description']);
+    unset($form['machine_name_fs']);
+  }
+
+  // Improve the publishing options
+  if (isset($form['options'])) {
+    $form['options']['promote']['#access'] = FALSE;
+    $form['options']['sticky']['#access'] = FALSE;
+  }
+
+  // Improve authoring options
+  if (isset($form['author'])) {
+    unset($form['author']['name']['#description']);
+    $form['author']['name']['#title'] = t('Author');
+    $form['author']['name']['#size'] = '40';
+    $form['author']['name']['#weight'] = 4;
+    unset($form['author']['date']['#description']);
+    $form['author']['date']['#weight'] = 5;
+    unset($form['author']['date']['#title']);
+    $form['author']['date']['#size'] = 20;
+  }
+
+  // Make revisioning happen by default
+  if (isset($form['revision_information']['revision'])) {
+    unset($form['revision_information']['#type']);
+    $form['revision_information']['log']['#access'] = FALSE;
+    $form['options']['revision'] = $form['revision_information']['revision'];
+    unset($form['revision_information']['revision']);
+  }
+
+  // Improve the menu adding experience
+  if (isset($form['menu']) && isset($form['menu']['enabled'])) {
+    $form['menu']['link']['link_title']['#size'] = 35;
+    $form['menu']['link']['weight']['#access'] = FALSE;
+    $form['#validate'][] = 'wetkit_admin_menu_validate';
+  }
+}
+
+/**
+ * Implementation of hook_module_implements_alter()
+ */
+function wetkit_admin_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'form_alter') {
+    $group = $implementations['wetkit_admin'];
+    unset($implementations['wetkit_admin']);
+    $implementations['wetkit_admin'] = $group;
+  }
+}
+
+/**
+ * Submit function for adding pathauto settings
+ */
+function wetkit_admin_pathauto_submit($form, &$form_state) {
+  // If the user hasn't specified a path, autogenerate
+  if (!$form_state['input']['path']['alias']) {
+    $form_state['values']['path']['pathauto'] = 1;
+    $form_state['input']['path']['pathauto'] = 1;
+  }
+}
+
+/**
+ * Submit function for adding menu validation
+ */
+function wetkit_admin_menu_validate($form, &$form_state) {
+  if ($form_state['input']['menu']['enabled'] && !$form_state['input']['menu']['link_title']) {
+    form_set_error('link_title', t('Menu link title is required.'));
+  }
+}
+
+/**
+ * Implementation of hook_menu
+ */
+function wetkit_admin_menu() {
+  $items['admin/wetkit_apps/configure/%ctools_js/%/%'] = array(
+    'type' => MENU_CALLBACK,
+    'page callback' =>  'wetkit_admin_apps_app_config_page',
+    'page arguments' => array(3, 4, 5),
+    'access arguments' => array('administer apps'),
+  );
+  $items['admin/wetkit_theme/configure/%ctools_js/%/%'] = array(
+    'type' => MENU_CALLBACK,
+    'page callback' =>  'wetkit_admin_theme_config_page',
+    'page arguments' => array(3, 4),
+    'access arguments' => array('administer themes'),
+  );
+  return $items;
+}
+
+/**
+ * Implementation of hook_menu_alter()
+ */
+function wetkit_admin_menu_alter(&$items) {
+  // Set weight of dashboard to be good
+  $items['admin/site']['weight'] = -100;
+}
+
+/**
+ * Menu callback to generate the apps_app_config_page in the ctools modal
+ */
+function wetkit_admin_apps_app_config_page($js = FALSE, $server_name, $app_name) {
+  ctools_include('apps.pages', 'apps', '');
+  $title = 'Configure ' . $app_name;
+  $output = drupal_render(apps_app_config_page($server_name, $app_name));
+  if ($js) {
+    ctools_include('ajax');
+    ctools_include('modal');
+    ctools_modal_render($title, $output);
+  } 
+  else {
+    drupal_set_title($title);
+    return $output;
+  }
+}
+
+/** 
+ * Menu callback to geneate the theme configuration page in the ctools modal
+ */
+function wetkit_admin_theme_config_page($js = FALSE, $theme_key) {
+  $theme_data = list_themes();
+  $title = 'Configure ' . $theme_data[$theme_key]->info['name'];
+  ctools_include('system.admin', 'system', '');
+  if (empty($form_state['executed']) && $js) {
+    ctools_include('ajax');
+    ctools_include('modal');
+    $form_state = array('theme_key' => $theme_key, 'ajax' => TRUE, 'title' => $title);
+    $form = drupal_get_form('system_theme_settings', $theme_key); // This is required to 
+    print ajax_render(ctools_modal_form_wrapper('system_theme_settings', $form_state, $theme_key));
+  }
+  else {
+    drupal_set_title($title);
+    return drupal_get_form('system_theme_settings', $theme_key);
+  }
+}

@@ -1,0 +1,105 @@
+//
+// Custom sass mixins
+//
+// To use a mixin in this file, add this line to the top of your .scss file:
+//   @import "base";
+// Then to use a mixin for a particular rule, add this inside the ruleset's
+// curly brackets:
+//   @include mix-in-name;
+
+// Markup free clearing
+// http://www.stubbornella.org/content/2012/05/02/cross-browser-debugging-css/
+@mixin cf {
+  overflow: hidden;   // New formatting context in better browsers
+  *overflow: visible; // Protect IE7 and older from the overflow property
+  *zoom: 1;           // Give IE hasLayout, a new formatting context equivalent
+}
+
+//
+// Image replacement
+// Kellum Method: http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement
+// Additional helpers from http://html5boilerplate.com/docs/css/
+// This is also included as a SASS mixin, see: sass/custom.rb
+//
+@mixin ir {
+  // Kellum Method
+  display: block !important;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  // Additional helpers
+  border: 0;                     // Remove the default border from elements like <button>
+  font: 0/0 a;                   // Crush the text down to take up no space
+  text-shadow: none;             // Remove any text shadows
+  color: transparent;            // Hide any residual text in Safari 4 and any mobile devices that may need it
+  background-color: transparent; // Hide the default background color on elements like <button>
+}
+
+// element-invisible improved and more robust
+@mixin element-invisible {
+  border: 0;
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+// Shift content offscreen, can be usefull when you reall need to do this
+@mixin offscreen {
+  position: absolute;
+  top: -99999em;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  outline: 0;
+}
+
+// Hide content from all users
+@mixin element-hidden {
+  display: none;
+}
+
+// The word "Unpublished" displayed underneath unpublished nodes and comments.
+@mixin unpublished-div {
+  color: pink; // target browsers that do not support rgba
+  color: rgba(239, 170, 170, 0.4);
+  font-family: $impact;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  text-align: center;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    .ie6-7 &>* {
+      position: relative; // Otherwise these elements will appear below the "Unpublished" text.
+    }
+  }
+}

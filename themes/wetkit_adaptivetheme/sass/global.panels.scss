@@ -1,0 +1,160 @@
+
+@import "base.scss";
+
+/**
+ * @file
+ * Panels, AT Panels/GPanels
+ */
+
+//
+// AT Panels (Gpanels + the AT Core Panels layouts) use different classes to
+// standard Panels layouts, instead AT Panels mimic Drupal core regions and
+// use "region region-[region-name]" classes instead of bespoke Panels-esque
+// class naming. You will find both sets of classes below.
+//
+
+// Generic wrapper class for all AT Panels
+.at-panel {
+
+
+  // Like all regions in AT, do not add width to this, no margin, paddings or borders
+  .region {}
+
+
+  // Add margin, padding and borders to the region-inner
+  .region-inner {}
+
+
+  // A wrapper used in some layouts, careful with row styles, they are critical to the responsive layout!!!
+  .panel-row {}
+
+
+  // Used on the two inset layouts
+  .inset-wrapper {}
+
+
+  // Most AT Panel layouts are stacked, which means they have optional prefix and postfix
+  // full width regions, these all get the special class .region-conditional-stack
+  .region-conditional-stack {}
+}
+
+
+//
+// There are 14 AT Panels layouts - thats 14 Gpanels and 14 Panels layout plugins.
+//
+
+// One column
+.one-column {}
+
+
+// Two column
+.two-50 {}
+
+.two-33-66 {}
+
+.two-66-33 {}
+
+.two-brick {
+
+  .row-1 {}
+  .row-2 {}
+}
+
+
+// Three column
+.three-3x33 {}
+
+.three-50-25-25 {}
+
+.three-25-50-25 {}
+
+.three-25-25-50  {}
+
+
+// Four column
+.four-4x25 {
+
+  .row-1 {}
+  .row-2 {}
+}
+
+
+// Five column
+.five-5x20 {
+
+  .row-1 {}
+  .row-2 {}
+}
+
+
+// Six column
+.six-6x16 {
+
+  .row-1 {}
+  .row-2 {}
+  .row-3 {}
+}
+
+
+// Inset Right
+.three-inset-right  {
+
+  .inset-wrapper {}
+}
+
+
+// Inset Left
+.three-inset-left  {
+
+  .inset-wrapper {}
+}
+
+
+//
+// Panels Module panels
+//
+
+// Body class for panels pages
+.page-panels {}
+
+
+// Generic wrapper for all Panels module layouts, this is used in AT Panels also
+.panel-display {}
+
+
+// Panels module layouts inner div
+.panel-panel .inside {}
+
+
+//
+// Panes
+//
+
+.panel-pane {
+  margin-bottom: 20px;
+
+  .pane-inner {}
+
+  .pane-title {}
+
+  .pane-content {}
+
+  .feed {}
+
+  .links {}
+
+  .more-link {}
+}
+
+
+//
+// Mini Panels
+//
+
+.block-panels_mini {
+  padding: 0;
+}
+
+
+.block-panels-mini .block-inner {}
+

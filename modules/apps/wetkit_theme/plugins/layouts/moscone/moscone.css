@@ -1,0 +1,35 @@
+/**
+ * @file
+ * OA Moscone panel layout
+**/
+
+.moscone-container {
+  margin-bottom: 1em;
+}
+
+.moscone-sidebar {
+  width: 34.043%;
+  float: left;
+}
+
+  .moscone-sidebar-inner {
+    margin-right: 20px;
+  }
+
+.moscone-content {
+  width: 65.957%;
+  float: left;
+}
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .moscone-content,
+  .moscone-sidebar {
+    width: 100%;
+    float: none;
+  }
+  
+  .moscone-sidebar-inner {
+    margin-right: 0;
+  }
+}

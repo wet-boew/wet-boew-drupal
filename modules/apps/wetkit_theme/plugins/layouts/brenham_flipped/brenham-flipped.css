@@ -1,0 +1,35 @@
+/**
+ * @file
+ * OA Brenham Flipped panel layout
+**/
+
+.brenham-flipped-container {
+  margin-bottom: 1em;
+}
+
+.brenham-flipped-sidebar {
+  width: 31.915%;
+  float: left;
+}
+
+.brenham-flipped-content {
+  width: 68.085%;
+  float: left;
+}
+
+  .brenham-flipped-content-inner {
+    margin-right: 20px;
+  }
+  
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .brenham-flipped-content,
+  .brenham-flipped-sidebar {
+    width: 100%;
+    float: none;
+  }
+  
+  .brenham-flipped-content-inner {
+    margin-right: 0;
+  }
+}

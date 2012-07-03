@@ -1,0 +1,38 @@
+/**
+ * @file
+ * OA McCoppin panel layout
+**/
+
+.mccoppin-container {
+  margin-bottom: 1em;
+}
+
+.mccoppin-column-content-region {
+  width: 34.043%;
+  float: left;
+}
+
+  .mccoppin-column-content-region-inner {
+    margin-right: 20px;
+  }
+
+  .mccoppin-column3 {
+    width: 31.915%;
+  }
+  
+    .mccoppin-column3-inner {
+      margin-right: 0;
+    }
+    
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .mccoppin-column-content-region,
+  .mccoppin-column3 {
+    width: 100%;
+    float: none;
+  }
+  
+  .mccoppin-column-content-region-inner {
+    margin-right: 0;
+  }
+}

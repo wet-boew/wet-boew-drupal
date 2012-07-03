@@ -1,0 +1,43 @@
+/**
+ * @file
+ * OA Harris panel layout
+**/
+
+.harris-container {
+  margin-bottom: 1em;
+}
+
+.harris-column-content-region {
+  width: 25.532%;
+  float: left;
+}
+
+  .harris-column-content-region-inner {
+    margin-right: 20px;
+  }
+
+  .harris-column2 {
+    width: 23.404%;
+  }
+  
+    .harris-column2-inner {
+      margin-right: 0;
+    }
+  
+  .harris-content {
+    width: 51.064%;
+  }
+  
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .harris-column-content-region,
+  .harris-column2,
+  .harris-content {
+    width: 100%;
+    float: none;
+  }
+  
+  .harris-column-content-region-inner {
+    margin-right: 0;
+  }
+}

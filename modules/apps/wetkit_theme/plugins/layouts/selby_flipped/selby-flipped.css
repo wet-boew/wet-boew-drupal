@@ -1,0 +1,67 @@
+/**
+ * @file
+ * OA Selby Flipped panel layout
+**/
+
+.selby-flipped-container,
+.selby-flipped-content-header,
+.selby-flipped-content-container-column-container {
+  margin-bottom: 1em;
+}
+
+.selby-flipped-column {
+  width: 34.043%;
+  float: left;
+}
+
+  .selby-flipped-column-inner {
+    margin-right: 20px;
+  }
+
+    .selby-flipped-content-column2-inner {
+      margin-right: 0;
+    }
+    
+.selby-flipped-content-container { /* This is floated to the left of the sidebar,
+  which is styled by the generic "selby-flipped-column" class */
+  float: left;
+  width: 68.085%;
+}
+
+  .selby-flipped-content-container-inner {
+    margin-right: 20px;
+  }
+  
+  .selby-flipped-content-container .selby-flipped-column {
+    width: 51.613%;
+  }
+  
+  .selby-flipped-content-container .selby-flipped-content-column2 {
+    width: 48.387%;
+  }
+  
+  .selby-flipped-sidebar {
+    width: 31.915%;
+  }
+  
+  .selby-flipped-content-column2-inner,
+  .selby-sidebar {
+    margin-right: 0;
+  }
+  
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .selby-flipped-column,
+  .selby-flipped-content-container,
+  .selby-flipped-content-container .selby-flipped-column,
+  .selby-flipped-content-container .selby-flipped-content-column2,
+  .selby-flipped-sidebar {
+    width: 100%;
+    float: none;
+  }
+  
+  .selby-flipped-column-inner,
+  .selby-flipped-content-container-inner {
+    margin-right: 0;
+  }
+}

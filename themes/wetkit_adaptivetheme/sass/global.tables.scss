@@ -1,0 +1,117 @@
+
+@import "base.scss";
+
+/**
+ * @file
+ * Tables
+ */
+
+table {
+  border: 1px solid;
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-size: inherit;
+  font: 100%;
+  margin: 10px 0;
+  padding: 0;
+  width: 100%;
+  border-color: #ccc;
+}
+
+
+thead,
+tbody,
+tr,
+th,
+td {
+  border-color: #ccc;
+}
+
+
+table {
+  vertical-align: middle;
+
+  &.sticky-header {
+    z-index: 10;
+  }
+
+}
+
+
+td,
+th {
+  vertical-align: middle;
+}
+
+
+caption,
+th,
+td {
+  text-align: left;
+}
+
+
+thead th {
+  color: #494949;
+  font-weight: 700;
+}
+
+
+td,
+th {
+  border-bottom: 0;
+  margin: 0;
+  padding: 5px 7px; // Reset the padding on th and td to something more usable
+}
+
+
+tbody {}
+
+
+tr {
+
+  &.even {
+    border-bottom: 0;
+    background-color: #fff;
+  }
+
+  &.info,
+  &.odd,
+  &:nth-child(2n+1)  {
+    border-bottom: 0;
+    background-color: #f5f5f5;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &.drag {}
+
+  &.drag-previous {}
+
+  &.odd td.active {
+    background-color: #eee;
+  }
+
+  &.even td.active {
+    background-color: #f7f7f7;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+//
+// Forum tables
+//
+
+// Core sets white-space to nowrap, which makes no sense at all
+#forum td {
+
+  .created,
+  .posts,
+  .topics,
+  .last-reply,
+  .replies,
+  .pager {
+     white-space: normal;
+  }
+}
+
