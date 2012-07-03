@@ -1,9 +1,0 @@
-<?php
-/**
- * @file
- * Code for the wetkit_content_types feature.
- */
-
-include_once('wetkit_content_types.features.inc');
-
-
