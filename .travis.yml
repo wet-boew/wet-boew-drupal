@@ -13,10 +13,10 @@ before_script:
   - pyrus channel-discover pear.drush.org
   - pyrus install drush/drush
   - phpenv rehash
-  - drush make distro.build ../github_wet_distro
+  - drush make distro.make ../github_wet_distro
   - cd ../github_wet_distro
 
 script:
   - sudo chmod -R 777 sites/all/modules
-  - sudo drush si webexp webexp_theme_form.theme=web_usability_zen --sites-subdir=default --db-url=mysql://root:@localhost/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name="Web Experience Toolkit" --yes
+  - sudo drush si webexp webexp_theme_form.theme=wetkit_adaptivetheme --sites-subdir=default --db-url=mysql://root:@localhost/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name="Web Experience Toolkit" --yes
 
