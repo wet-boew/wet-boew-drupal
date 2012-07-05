@@ -4,8 +4,8 @@
 $plugin = array(
   'title' => t('Accordion style'),
   'description' => t('Display panes as accordion.'),
-  'render region' => 'wetkit_theme_wetkit_accordion_style_render_region',
-  'settings form' => 'wetkit_theme_wetkit_accordion_style_settings_form',
+  'render region' => 'panopoly_theme_panopoly_accordion_style_render_region',
+  'settings form' => 'panopoly_theme_panopoly_accordion_style_settings_form',
   'weight' => -15,
 );
 
@@ -14,7 +14,7 @@ $plugin = array(
  *
  * @ingroup themeable
  */
-function theme_wetkit_theme_wetkit_accordion_style_render_region($vars) {
+function theme_panopoly_theme_panopoly_accordion_style_render_region($vars) {
 
   // Include Some Basic Information
   $display = $vars['display'];
@@ -50,7 +50,7 @@ function theme_wetkit_theme_wetkit_accordion_style_render_region($vars) {
   return $output;
 }
 
-function wetkit_theme_wetkit_accordion_style_settings_form($style_settings) {
+function panopoly_theme_panopoly_accordion_style_settings_form($style_settings) {
   $form['active'] = array(
     '#type' => 'textfield',
     '#title' => t('Set active'),

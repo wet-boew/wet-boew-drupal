@@ -576,6 +576,7 @@ function wetkit_widgets_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
+        'default_image' => 0,
         'file_directory' => 'general',
         'file_extensions' => 'jpg jpeg gif png',
         'max_filesize' => '',
@@ -590,6 +591,59 @@ function wetkit_widgets_field_default_fields() {
         'settings' => array(),
         'type' => 'wetkit_spotlight_form',
         'weight' => '-4',
+      ),
+    ),
+  );
+
+  // Exported field: 'fieldable_panels_pane-spotlight-field_spotlight_rotation_time'
+  $fields['fieldable_panels_pane-spotlight-field_spotlight_rotation_time'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_spotlight_rotation_time',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'module' => 'number',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'number_integer',
+    ),
+    'field_instance' => array(
+      'bundle' => 'spotlight',
+      'default_value' => array(
+        0 => array(
+          'value' => '4',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => 'How long (in seconds) before the spotlight rotates to the next image.',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '1',
+        ),
+      ),
+      'entity_type' => 'fieldable_panels_pane',
+      'field_name' => 'field_spotlight_rotation_time',
+      'label' => 'Rotation Time',
+      'required' => 0,
+      'settings' => array(
+        'max' => '',
+        'min' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'number',
+        'settings' => array(),
+        'type' => 'number',
+        'weight' => '-3',
       ),
     ),
   );
@@ -877,11 +931,13 @@ function wetkit_widgets_field_default_fields() {
   t('Author');
   t('Caption');
   t('File');
+  t('How long (in seconds) before the spotlight rotates to the next image.');
   t('Image');
   t('Items');
   t('Links');
   t('Quote');
   t('Read More Link');
+  t('Rotation Time');
   t('Table');
   t('Text');
   t('Video');
