@@ -231,6 +231,15 @@ function wetkit_widgets_field_prepare_view($entity_type, $entities, $field, $ins
       }
     }
   }
+
+  //Add appropriate JS variables for rotation time.
+  //@TODO: Allow different rotation speeds to be set for different
+  //spotlights in the page.
+  $rotation_time = (int) $entities[1]->field_spotlight_rotation_time['und'][0]['value'];
+  empty($rotation_time) ? $rotation_time = 4 : '';
+  $rotation_time = 1000 * $rotation_time;
+  $js_variables = array('spotlight_settings' => array('rotation_time' => $rotation_time)); 
+  drupal_add_js($js_variables, 'setting'); 
 }
 
 /**
@@ -253,5 +262,6 @@ function theme_wetkit_spotlight_view($variables) {
   $output .= '</div>';
   $output .= '</div>';
   $output .= '</div>';
+
   return $output;
 }

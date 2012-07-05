@@ -25,11 +25,10 @@ function wetkit_widgets_ctools_content_subtype_alter(&$subtype, &$plugin) {
     $subtype['admin js'] = array(drupal_get_path('module', 'menu_block') . '/menu-block.js');
   }
 
-  // Modify the plugins so we do away with this "node" thing
-  if ($subtype['category'] == 'Node') {
+  // Modify the plugins so we do away with this "node" and "entity" thing
+  if ($subtype['category'] == 'Node' || $subtype['category'] == 'Entity' || $subtype['category'] == 'User') {
     $subtype['category'] = 'Page Content';
   }
-
 }
 
 /**
@@ -64,15 +63,13 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
     // Add a content settings fieldset and custom element_validate function
     $form['content_settings']['#type'] = 'fieldset';
     $form['content_settings']['#title'] = t('Content Settings');
+
     foreach($form as $key => $value) {
       if (substr($key, 0, 6) == 'field_') {
         $form['content_settings'][$key] = $value;
         if (!empty($value['und']['0']['#bundle']) && ($value['und']['0']['#bundle'] == 'image' || $value['und']['0']['#bundle'] == 'file')) {
           foreach($value['und'] as $subkey => $subvalue) {
             if (is_numeric($subkey)) {
-              // Set custom validate function to avoid errors with submission handling of file field
-              $form['content_settings'][$key]['und'][$subkey]['#element_validate'][] = 'wetkit_widgets_file_hax';
-
               // Change UUID to FID to resolve issue with UUID handling. This solves a bug with Fieldable Panels Panes that
               // hopefully will be resolved soon.
               if (!empty($subvalue['#default_value']['fid']) && strlen($subvalue['#default_value']['fid']) == 36){
@@ -98,20 +95,6 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
     $form['reusable']['category']['#type'] = 'value';
     $form['reusable']['admin_description']['#access'] = FALSE;
   }
-}
-
-/**
- * Form API Hax to prevent errors with file fields being submitted in fieldsets. Related to http://drupal.org/node/1468686
- * and http://drupal.org/node/1329856. 
- */
-function wetkit_widgets_file_hax($element, &$form_state, $form) {
-  if (!empty($form_state['triggering_element']['#array_parents']) && $form_state['triggering_element']['#array_parents'][0] == 'content_settings') {
-    array_shift($form_state['triggering_element']['#array_parents']);
-  }
-  if (!empty($form_state['clicked_button']['#array_parents']) && $form_state['clicked_button']['#array_parents'][0] == 'content_settings') {
-    array_shift($form_state['clicked_button']['#array_parents']);
-  }
-  return $element;
 }
 
 /** 
@@ -171,6 +154,20 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
       'path' => 'admin/structure/panels/entity/manage/%fieldable_panels_panes_type',
       'bundle argument' => 5,
       'real path' => 'admin/structure/panels/entity/manage/text',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+
+  // Basic Map
+  $entity_info['fieldable_panels_pane']['bundles']['map'] = array(
+    'label' => t('Add map'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'panopoly_widgets') . '/images/icon_map.png',
+    'admin' => array(
+      'path' => 'admin/structure/panels/entity/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 5,
+      'real path' => 'admin/structure/panels/entity/manage/map',
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );

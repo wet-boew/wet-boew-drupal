@@ -48,11 +48,11 @@ function webexp_install_tasks($install_state) {
 
   $webexp_server = array(
     'machine name' => 'webexp',
-    'default apps' => array(
+      'default apps' => array(
 
     ),
     'required apps' => array(
-      //'panopoly_core',
+
     ),
   );
 
