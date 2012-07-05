@@ -27,7 +27,7 @@ projects[diff][version] = 2.0
 projects[diff][subdir] = contrib
 projects[diff][type] = module
 
-projects[ds][version] = 1.5
+projects[ds][version] = 2.0-beta1
 projects[ds][subdir] = contrib
 projects[ds][type] = module
 
