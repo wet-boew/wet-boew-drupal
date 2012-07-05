@@ -199,6 +199,10 @@ projects[workbench][type] = module
 projects[workbench_moderation][version] = "1.x-dev"
 projects[workbench_moderation][subdir] = "contrib"
 projects[workbench_moderation][type] = module
+projects[workbench_moderation][download][type] = git
+projects[workbench_moderation][download][revision] = 6bdb20e
+projects[workbench_moderation][download][branch] = 7.x-1.x
+projects[workbench_moderation][patch][1285090] = http://drupal.org/files/playnicewithpanels-1285090-7.patch
 
 projects[wysiwyg][subdir] = contrib
 projects[wysiwyg][type] = module
