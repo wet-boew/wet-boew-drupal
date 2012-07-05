@@ -13,5 +13,18 @@ div .wetkit-image-quarter {
 }
 
 div.field-type-image img {
-  margin: .5em 1em .5em 0em;
+  margin: .5em 1em .5em 0;
+}
+
+/**
+ * CSS Styles for Demo Style Plugins
+ */
+.pane-blue-background {
+  background-color: #00BFFF;
+  padding: 1em;
+}
+
+.pane-red-background {
+  background-color: #DC143C;
+  padding: 1em;
 }

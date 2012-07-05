@@ -10,7 +10,7 @@
 function wetkit_pages_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-wetkit_page-body'.
+  // Exported field: 'node-wetkit_page-body'
   $fields['node-wetkit_page-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -33,7 +33,6 @@ function wetkit_pages_field_default_fields() {
           0 => 'format',
         ),
       ),
-      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -50,7 +49,7 @@ function wetkit_pages_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '2',
+          'weight' => '1',
         ),
         'featured' => array(
           'label' => 'hidden',
@@ -59,13 +58,22 @@ function wetkit_pages_field_default_fields() {
             'trim_length' => '400',
           ),
           'type' => 'text_summary_or_trimmed',
-          'weight' => '2',
+          'weight' => '1',
         ),
         'grid' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
+        ),
+        'search_result' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(
+            'trim_length' => 600,
+          ),
+          'type' => 'text_trimmed',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -74,7 +82,7 @@ function wetkit_pages_field_default_fields() {
             'trim_length' => 600,
           ),
           'type' => 'text_summary_or_trimmed',
-          'weight' => '2',
+          'weight' => '1',
         ),
       ),
       'entity_type' => 'node',
@@ -99,7 +107,7 @@ function wetkit_pages_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-wetkit_page-field_featured_image'.
+  // Exported field: 'node-wetkit_page-field_featured_image'
   $fields['node-wetkit_page-field_featured_image'] = array(
     'field_config' => array(
       'active' => '1',
@@ -120,7 +128,6 @@ function wetkit_pages_field_default_fields() {
           0 => 'fid',
         ),
       ),
-      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -142,7 +149,7 @@ function wetkit_pages_field_default_fields() {
             'image_style' => 'wetkit_image_half',
           ),
           'type' => 'image',
-          'weight' => '1',
+          'weight' => '0',
         ),
         'featured' => array(
           'label' => 'hidden',
@@ -152,13 +159,23 @@ function wetkit_pages_field_default_fields() {
             'image_style' => 'wetkit_image_half',
           ),
           'type' => 'image',
-          'weight' => '1',
+          'weight' => '0',
         ),
         'grid' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
+        ),
+        'search_result' => array(
+          'label' => 'hidden',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => 'content',
+            'image_style' => 'wetkit_image_quarter',
+          ),
+          'type' => 'image',
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -168,7 +185,7 @@ function wetkit_pages_field_default_fields() {
             'image_style' => 'wetkit_image_quarter',
           ),
           'type' => 'image',
-          'weight' => '1',
+          'weight' => '0',
         ),
       ),
       'entity_type' => 'node',

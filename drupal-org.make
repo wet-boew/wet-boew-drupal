@@ -27,7 +27,7 @@ projects[diff][version] = 2.0
 projects[diff][subdir] = contrib
 projects[diff][type] = module
 
-projects[ds][version] = 1.5
+projects[ds][version] = 2.0-beta1
 projects[ds][subdir] = contrib
 projects[ds][type] = module
 
@@ -72,9 +72,8 @@ projects[panelizer][version] = 3.x-dev
 projects[panelizer][subdir] = contrib
 projects[panelizer][type] = module
 projects[panelizer][download][type] = git
-projects[panelizer][download][revision] = c7942f3
+projects[panelizer][download][revision] = 186f4bc
 projects[panelizer][download][branch] = 7.x-3.x
-projects[panelizer][patch][1648040] = http://drupal.org/files/panelizer-no-notice-view-modes-updated.patch
 
 projects[password_policy][version] = 1.0-rc3
 projects[password_policy][type] = module
