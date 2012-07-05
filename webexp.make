@@ -23,9 +23,13 @@ projects[ctools][version] = 1.0
 projects[ctools][subdir] = contrib
 projects[ctools][type] = module
 
-projects[diff][version] = 2.0
+projects[diff][version] = 2.x-dev
 projects[diff][subdir] = contrib
 projects[diff][type] = module
+projects[diff][download][type] = git
+projects[diff][download][revision] = 27c9185
+projects[diff][download][branch] = 7.x-2.x
+projects[diff][patch][1285090] = http://drupal.org/files/diff-hide-show-markup-372957-93.patch
 
 projects[ds][version] = 2.0-beta1
 projects[ds][subdir] = contrib
