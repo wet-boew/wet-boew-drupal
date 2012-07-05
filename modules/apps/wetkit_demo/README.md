@@ -6,6 +6,7 @@ Key features
 * Demonstration Content
 * Demonstration Homepage
 * Demonstration Views/Panels Integration
+* Demonstration background styles
 
 TODO
 * Better demonstration of menu/menu-block integration

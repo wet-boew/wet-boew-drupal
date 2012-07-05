@@ -9,7 +9,7 @@
  * Implements hook_panelizer_defaults().
  */
 function wetkit_pages_panelizer_defaults() {
-  $panelizers = array();
+  $export = array();
 
   $panelizer = new stdClass();
   $panelizer->disabled = FALSE; /* Edit this to true to make a default panelizer disabled initially */
@@ -25,11 +25,6 @@ function wetkit_pages_panelizer_defaults() {
   $panelizer->contexts = array();
   $panelizer->relationships = array();
   $panelizer->did = 1;
-  $panelizer->access = '';
-  $panelizer->view_mode = '';
-  $panelizer->css_class = '';
-  $panelizer->title_element = 'H2';
-  $panelizer->link_to_entity = TRUE;
   $display = new panels_display();
   $display->layout = 'wetkit_33_66';
   $display->layout_settings = array();
@@ -168,7 +163,7 @@ function wetkit_pages_panelizer_defaults() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
-  $panelizers['node:wetkit_page:default'] = $panelizer;
+  $export['node:wetkit_page:default'] = $panelizer;
 
-  return $panelizers;
+  return $export;
 }

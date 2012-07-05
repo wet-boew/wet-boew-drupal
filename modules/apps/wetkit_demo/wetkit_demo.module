@@ -13,3 +13,10 @@ function wetkit_demo_menu_alter(&$items) {
   $items['node']['page callback'] = 'drupal_goto';
   $items['node']['page arguments'] = array('front/demo');
 }
+
+/**
+ * Implementation of hook_ctools_plugin_directory()
+ */
+function wetkit_demo_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+}
