@@ -23,8 +23,9 @@ first load a set of global styles, the progressively add styles for larger
 devices using media queries.
 
 Its important to note that you do not have to follow a mobile first approach.
-Many designers and themers simply load the majority of their themes design
-in the global styles and then override them in media queries.
+Adaptivetheme can support Desktop first approach as well, which means you will
+progressively add styles to override things for mobile, rather than progressively
+adding style for larger devices.
 
 You can do both in Adaptivetheme - it's merely a matter of where you place
 the majority of your styles, and what theme settings you choose in the
@@ -36,21 +37,38 @@ for you, and where you should be placing your CSS.
 
 
 
+
+Moible First or Desktop First - that is the Question!
+-----------------------------------------------
+
+Depending on your approach AT will load the stylesheets in a different order,
+indeed it will load different stylesheets.  You MUST make a conscious decision
+which to use and set this in theme settings.
+
+Look under CSS settings. By default AT is set to Mobile first, if you want to do
+Desktop first you should change this setting.
+
+
+
+
 Global Styles
 -------------
 
 The global styles do not target any specific device - they always load for all
-devices, however you can unset each one indeviducally or all them.
+devices.
 
-global.css holds an array of @imports that pull in all the others. You can
-comment out unwanted stylesheets.
-
-All the global stylesheets are prefixed with the name "global", for example:
+There are two main global stylesheets:
 
   - global.base.css
-  - global.blocks.css
+  - global.styles.css
+  
+global.base.css - this holds a few imoportant declarations that should probably
+not be removed, however you can modify them, such as gutter width and flexibile
+image/media styles.
 
-...and so on.
+global.styles.css - includes a slighly modified normalize reset and many empty
+selectors for elements and drupal classes and id's. If you prefer you can delete
+everything in global.styles.css and start with a clean slate.
 
 The selectors are extensive and you should delete unused selectors before
 going live to reduce CSS weight. You can use cleancss.com or a better way is
@@ -76,7 +94,7 @@ Depending on what mode you are in the stylesheets will load differently.
 Mode changes automatically depending on CSS aggregation settings. When CSS
 aggregation is ON, the its in Production mode.
 
-If you don't know what CSS aggregation is, looke here:
+If you don't know what CSS aggregation is, look here:
 
   ~/admin/config/development/performance
 
@@ -106,7 +124,7 @@ files only load when in Development Mode.
 ## Responsive Styles - Production mode
 
 When in production mode all the responsive stylesheets are aggregated into one
-file and use embedded @media queries. AT Core will automatically aggregarte
+file and use embedded @media queries. AT Core will automatically aggregate
 the CSS from each of the development mode stylesheets and wrap it in the right
 media query. This reduces the number of HTTP requests from 5 to 1.
 
@@ -121,11 +139,11 @@ You will find this file at:
 NOTE: please see the section below titled "Relative Paths in Responsive Styles".
 
 
-## Important Note about CSS Aggreation and Responsive Stylesheets
+## Important Note about CSS Aggregation and Responsive Stylesheets
 
-Once you have CSS aggregation ON, and you make changes to any responsive
+Once you have CSS aggregation ON if you make changes to any responsive
 stylesheet, you MUST re-save the theme settings AND clear the sites cache. AT
-Core will re-write the saved files, then clearning the cache tells Drupal to
+Core will re-write the saved files, then clearing the cache tells Drupal to
 use the new file.
 
 
@@ -210,8 +228,5 @@ Or, you could get radical and file a support issue, even post a patch (which
 makes me very happy):
 
   http://drupal.org/project/issues/adaptivetheme
-
-
-
 
 

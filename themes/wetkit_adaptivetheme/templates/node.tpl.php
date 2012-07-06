@@ -14,6 +14,11 @@
  * - $last_update: last updated date/time, formatted with time element and
  *   pubdate attribute.
  * - $custom_date_and_time: date time string used in $last_update.
+ * - $header_attributes: attributes such as classes to apply to the header element.
+ * - $footer_attributes: attributes such as classes to apply to the footer element.
+ * - $links_attributes: attributes such as classes to apply to the nav element.
+ * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
+ *   devices. Use to test for a mobile context.
  *
  * Available variables:
  * - $title: the (sanitized) title of the node.

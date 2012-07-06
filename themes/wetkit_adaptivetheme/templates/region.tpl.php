@@ -39,11 +39,13 @@
  *   file to theme both sidebars.
  *
  *
- * Adativetheme supplied variables:
+ * Adativetheme variables:
  * - $outer_prefix: Outer div with region classes.
  * - $outer_suffix: Closing element.
  * - $inner_prefix: Inner div with .region-inner and .clearfix classes.
  * - $inner_suffix: Closing div.
+ * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
+ *   devices. Use to test for a mobile context.
  *
  * Available variables:
  * - $content: The content for this region, typically blocks.

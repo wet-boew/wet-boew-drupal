@@ -1,5 +1,5 @@
 /* Gutters are not currently overridden in theme settings, but may be in theme CSS */
-/* smartphone_portrait is default, mobile first dude - you rock the hardest! */
+
 /* smartphone_landscape one_col_vert */
 @media only screen and (min-width:321px) and (max-width:480px) {
 .container {width:100%}

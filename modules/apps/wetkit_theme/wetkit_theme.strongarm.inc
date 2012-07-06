@@ -141,13 +141,9 @@ function wetkit_theme_strongarm() {
     'custom_files_path' => '',
     'disable_responsive_styles' => 0,
     'load_html5js' => 1,
+    'load_onmediaqueryjs' => 0,
     'load_ltie8css' => 0,
     'load_respondjs' => 0,
-    'load_boxsizinghtc' => 0,
-    'load_pie' => 0,
-    'which_pie' => 'PIE.htc',
-    'disble_pie_for_ie9' => 0,
-    'load_selectivizr' => 0,
     'load_scalefixjs' => 1,
     'adaptivetheme_meta_viewport' => 'width=device-width, initial-scale=1',
     'adaptivetheme_meta_mobileoptimized' => 'width',
@@ -160,26 +156,6 @@ function wetkit_theme_strongarm() {
     'atcore_version_test' => 0,
     'load_all_panels' => 0,
     'load_all_panels_no_sidebars' => 0,
-    'check' => 0,
-    'output' => '/* Smartphone portrait */
-@media only screen and (max-width:320px) {
-}
-
-/* Smartphone landscape */
-@media only screen and (min-width:321px) and (max-width:480px) {
-}
-
-/* Tablet portrait */
-@media only screen and (min-width:481px) and (max-width:768px) {
-}
-
-/* Tablet landscape */
-@media only screen and (min-width:769px) and (max-width:1024px) {
-}
-
-/* Standard layout */
-@media only screen and (min-width:1025px) {
-}',
     'enable_extensions' => 1,
     'enable_font_settings' => 0,
     'enable_heading_settings' => 0,
@@ -190,12 +166,6 @@ function wetkit_theme_strongarm() {
     'enable_context_regions' => 0,
     'enable_float_region_blocks' => 0,
     'enable_markup_overides' => 1,
-    'skip_link_anchor' => 'wb-cont',
-    'skip_link_text' => 'Skip to main content',
-    'skip_link2_anchor' => 'wb-nav',
-    'skip_link2_text' => 'Skip to footer',
-    'wetkit_intranet_enable' => 0,
-    'wetkit_sub_site' => 'Sub Site Name',
     'at-settings__active_tab' => 'edit-bigscreen',
     'unset_css_modules-field-theme-fieldcss' => 0,
     'unset_css_modules-node-nodecss' => 0,
@@ -240,7 +210,6 @@ function wetkit_theme_strongarm() {
     'unset_css_profiles-webexp-modules-contrib-views-css-viewscss' => 0,
     'unset_css_profiles-webexp-css-webexpcss' => 0,
     'unset_css_profiles-webexp-modules-apps-wetkit-admin-wetkit-admincss' => 0,
-    'unset_css_profiles-webexp-modules-apps-wetkit-demo-wetkit-democss' => 0,
     'unset_css_profiles-webexp-modules-apps-wetkit-images-wetkit-imagescss' => 0,
     'unset_css_profiles-webexp-modules-apps-wetkit-magic-wetkit-magiccss' => 0,
     'unset_css_profiles-webexp-modules-apps-wetkit-widgets-css-wetkit-spotlightcss' => 0,
@@ -289,6 +258,7 @@ function wetkit_theme_strongarm() {
     'unset_css_profiles-webexp-libraries-tinymce-jscripts-tiny-mce-plugins-advhr-css-advhrcss' => 0,
     'unset_css_profiles-webexp-libraries-tinymce-examples-css-contentcss' => 0,
     'unset_css_profiles-webexp-libraries-tinymce-examples-css-wordcss' => 0,
+    'unset_css_profiles-webexp-libraries-wet-boew-src-theme-gcwu-intranet-jquerymobile-jquerymobilethemecss' => 0,
     'unset_css_profiles-webexp-libraries-wet-boew-src-theme-gcwu-fegc-jquerymobile-jquerymobilethemecss' => 0,
     'unset_css_profiles-webexp-libraries-wet-boew-src-js-jquerymobile-jquerymobilestructurecss' => 0,
     'unset_css_profiles-webexp-libraries-wet-boew-src-js-jquerymobile-jquerymobilestructuremincss' => 0,
@@ -298,6 +268,13 @@ function wetkit_theme_strongarm() {
     'unset_css_profiles-webexp-libraries-wet-boew-docs-api-styles-node-darkcss' => 0,
     'unset_css_profiles-webexp-libraries-wet-boew-docs-api-jsdoc3-templates-default-static-styles-jsdoc-defaultcss' => 0,
     'unset_css_profiles-webexp-libraries-wet-boew-docs-api-jsdoc3-templates-default-static-styles-node-darkcss' => 0,
+    'unset_css_profiles-webexp-libraries-wet-boew-build-theme-gcwu-intranet-css-jquerymobile-mincss' => 0,
+    'unset_css_profiles-webexp-libraries-wet-boew-build-theme-gcwu-intranet-css-theme-ie-mincss' => 0,
+    'unset_css_profiles-webexp-libraries-wet-boew-build-theme-gcwu-intranet-css-theme-mincss' => 0,
+    'unset_css_profiles-webexp-libraries-wet-boew-build-theme-gcwu-intranet-css-theme-serv-ie-mincss' => 0,
+    'unset_css_profiles-webexp-libraries-wet-boew-build-theme-gcwu-intranet-css-theme-serv-mincss' => 0,
+    'unset_css_profiles-webexp-libraries-wet-boew-build-theme-gcwu-intranet-css-theme-sp-pe-ie-mincss' => 0,
+    'unset_css_profiles-webexp-libraries-wet-boew-build-theme-gcwu-intranet-css-theme-sp-pe-mincss' => 0,
     'unset_css_profiles-webexp-libraries-wet-boew-build-theme-gcwu-fegc-css-jquerymobile-mincss' => 0,
     'unset_css_profiles-webexp-libraries-wet-boew-build-theme-gcwu-fegc-css-theme-ie-mincss' => 0,
     'unset_css_profiles-webexp-libraries-wet-boew-build-theme-gcwu-fegc-css-theme-mincss' => 0,
@@ -307,6 +284,10 @@ function wetkit_theme_strongarm() {
     'unset_css_profiles-webexp-libraries-wet-boew-build-theme-gcwu-fegc-css-theme-sp-pe-mincss' => 0,
     'unset_css_profiles-webexp-libraries-wet-boew-build-js-css-pe-ap-ie-mincss' => 0,
     'unset_css_profiles-webexp-libraries-wet-boew-build-js-css-pe-ap-mincss' => 0,
+    'unset_css_profiles-webexp-libraries-wet-boew-build-grids-css-responsive-1200-mincss' => 0,
+    'unset_css_profiles-webexp-libraries-wet-boew-build-grids-css-responsive-768-mincss' => 0,
+    'unset_css_profiles-webexp-libraries-wet-boew-build-grids-css-responsive-mincss' => 0,
+    'unset_css_profiles-webexp-libraries-wet-boew-build-grids-css-util-ie-mincss' => 0,
     'unset_css_profiles-webexp-libraries-wet-boew-build-grids-css-util-mincss' => 0,
     'libraries_check_all' => 0,
     'global_gutter_width' => '',
@@ -318,6 +299,8 @@ function wetkit_theme_strongarm() {
     'breadcrumb_label' => 1,
     'breadcrumb_title' => 1,
     'breadcrumb_separator' => '',
+    'login_block_remove_links' => 0,
+    'login_block_remove_openid' => 0,
     'horizontal_login_block' => 0,
     'frontpage_remove_title' => 0,
     'unset_block_system_main_front' => 0,

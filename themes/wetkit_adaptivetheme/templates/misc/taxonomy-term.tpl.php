@@ -4,6 +4,10 @@
  * @file
  * Adaptivetheme implementation to display a term.
  *
+ * Adaptivetheme variables:
+ * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
+ *   devices. Use to test for a mobile context.
+ *
  * Available variables:
  * - $name: the (sanitized) name of the term.
  * - $content: An array of items for the content of the term (fields and

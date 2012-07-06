@@ -5,6 +5,10 @@
  *
  * Each iteration generates a single feed source or category.
  *
+ * Adaptivetheme variables:
+ * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
+ *   devices. Use to test for a mobile context.
+ *
  * Available variables:
  * - $title: Title of the feed or category.
  * - $summary_list: Unordered list of linked feed items generated through

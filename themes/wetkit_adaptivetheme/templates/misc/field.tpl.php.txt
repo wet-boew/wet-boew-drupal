@@ -32,10 +32,12 @@
  * field for the caption text, so you must have titles enabled on image fields
  * for this to work.
  *
- * Adaptivetheme supplied variables:
+ * Adaptivetheme variables:
  * - $field_view_mode: The view mode so we can test for it inside a template.
  * - $image_caption_teaser: Boolean value to test for a theme setting.
  * - $image_caption_full: Boolean value to test for a theme setting.
+ * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
+ *   devices. Use to test for a mobile context.
  *
  * Available variables:
  * - $items: An array of field values. Use render() to output them.

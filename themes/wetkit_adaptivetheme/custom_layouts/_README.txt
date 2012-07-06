@@ -13,4 +13,5 @@ three_col_grail inc file also.
 You can enable the "naked" example layout plugin by uncommenting the
 info file entry in your subthemes info file. Look for:
 
+Custom Page Layout Plugins:
 plugins[page_layout][layouts] = custom_layouts
