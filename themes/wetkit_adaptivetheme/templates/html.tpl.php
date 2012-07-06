@@ -61,9 +61,6 @@
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
-  <?php if ($intranet): ?>
-    <style>@import url("<?php print $base_path . $path_to_web_usability; ?>/wet-boew/theme-gc-intranet/intranet.css");</style>
-  <?php endif; ?>
   <?php print $scripts; ?>
   <?php print $polyfills; ?>
 </head>
