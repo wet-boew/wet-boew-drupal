@@ -211,7 +211,27 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
   $variables['wetkit_sub_site'] = theme_get_setting('wetkit_sub_site');
   if (theme_get_setting('wetkit_intranet_enable') == 1) {
     $variables['intranet'] = 'Enabled';
-    //drupal_add_css(drupal_get_path('theme', 'wetkit_adaptivetheme') . '/wet-boew/theme-gc-intranet/intranet.css', array('group' => CSS_THEME, 'every_page' => TRUE, 'weight' => 10));
+    drupal_add_css(
+      path_to_theme() . '/wet-boew/theme-gcwu-intranet/css/theme-min-intranet.css', array(
+      'group' => CSS_THEME,
+      'media' => 'screen',
+      'preprocess' => TRUE,
+      'weight' => 0,
+      )
+    );
+    drupal_add_css(
+      path_to_theme() . '/wet-boew/theme-gcwu-intranet/css/theme-ie-min-intranet.css', array(
+      'group' => CSS_THEME,
+      'browsers' => array(
+        'IE' => 'lte IE 7',
+        '!IE' => FALSE,
+      ),
+      'media' => 'screen',
+      'preprocess' => TRUE,
+      'weight' => 0,
+      )
+    );
+    
   }
 }
 
