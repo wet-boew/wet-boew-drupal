@@ -9,7 +9,7 @@
 // This base partial is organized in this way:
 // - First we set any shared variables.
 // - Next we import plug-ins (mixin libraries).
-// - Last we import a custom.scss partial that includes our custom mixins.
+// - Last we import a _custom.scss partial that includes our custom mixins.
 //
 
 
@@ -70,6 +70,5 @@ $gutter-width: 10px;
 @import 'compass/utilities/sprites';           // See http://compass-style.org/help/tutorials/spriting/
 @import 'compass/css3';                        // Use one CSS3 mixin instead of multiple vendor prefixes.
 
-//@import 'bourbon/bourbon'; // Import Bourbon lib if available: http://thoughtbot.com/bourbon/
-
-@import 'custom'; // Import our custom mixins.
+// Import custom partial - mixins and variables defined for your theme
+@import "_custom.scss";

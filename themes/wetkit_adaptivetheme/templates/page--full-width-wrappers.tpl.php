@@ -24,6 +24,8 @@
  * - $primary_local_tasks: Split local tasks - primary.
  * - $secondary_local_tasks: Split local tasks - secondary.
  * - $tag: Generates the wrapper element for the main content.
+ * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
+ *   devices. Use to test for a mobile context.
  *
  * General utility variables:
  * - $base_path: The base URL path of the Drupal installation. At the very

@@ -1,8 +1,11 @@
 <?php
-
 /**
  * @file
  * Adaptivetheme panel pane template
+ *
+ * Adaptivetheme variables:
+ * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
+ *   devices. Use to test for a mobile context.
  *
  * Variables available:
  * - $pane->type: the content type inside this pane

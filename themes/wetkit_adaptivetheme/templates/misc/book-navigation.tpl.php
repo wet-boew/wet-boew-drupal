@@ -4,6 +4,10 @@
  * Adaptivetheme implementation to navigate books. Presented under nodes that
  * are a part of book outlines.
  *
+ * Adaptivetheme variables:
+ * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
+ *   devices. Use to test for a mobile context.
+ *
  * Available variables:
  * - $tree: The immediate children of the current node rendered as an
  *   unordered list.

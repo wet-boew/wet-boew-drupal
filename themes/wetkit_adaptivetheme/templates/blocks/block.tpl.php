@@ -36,6 +36,8 @@
  * - $title: Holds the block->subject.
  * - $content_processed: Pre-wrapped in div and attributes, but for some
  *   blocks these are stripped away, e.g. menu bar and main content.
+ * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
+ *   devices. Use to test for a mobile context.
  *
  * Available variables:
  * - $block->subject: Block title.
@@ -83,7 +85,7 @@
   <?php if ($title): ?>
     <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
   <?php endif; ?>
-  
+
   <?php print $content_processed; ?>
 
   <?php print render($title_suffix); ?>

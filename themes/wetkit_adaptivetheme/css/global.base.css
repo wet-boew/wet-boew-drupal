@@ -1,70 +1,168 @@
-html { line-height: 1.5; height: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+/**
+ * @file
+ * Base styles
+ *
+ * - Gutter widths.
+ * - Default container alignment.
+ * - Flexible images and media declarations.
+ * - Copies of the SCSS mixins for reference, which includes improved
+ *   element-invisible and focusable styles.
+ */
 
-body { min-height: 100%; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+/* =============================================================================
+   Gutters
+   ========================================================================== */
 
-h1, h2, h3, h4, h5, h6, h1 img, h2 img, h3 img, h4 img, h5 img, h6 img, em, dfn, del, ins, a, tbody, tfoot, thead, tr, ul, li, label, legend, figure, figcaption { margin: 0; padding: 0; }
+/* If gutters are set in theme settings they will override these
+   values: see Extensions > Modify Output > Design */
+#main-content,
+.block-inner,
+.pane-inner,
+.menu-wrapper,
+.branding-elements,
+.breadcrumb-wrapper,
+.attribution,
+.at-panel .rounded-corner,
+div.messages {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 
-img, a img { border: 0; }
+/* Panel pages need negative margin equal to the gutter width applied to #content,
+  this is taken care of in theme settings as per above for normal gutters */
+.page-panels #content {
+  margin-left: -10px;
+  margin-right: -10px;
+}
 
-p { margin: 0 0 1.5em; padding: 0; }
 
-em, dfn { font-style: italic; }
+/* =============================================================================
+   Flexible Media and Cross browser improvements
+   ========================================================================== */
 
-ins { border-bottom: none; text-decoration: none; }
+/**
+ * - This can cause issues in table cells where no width is set on the column,
+ *   only in some versions of webkit and IE 7/8.
+ * - declaring the width attribute on image elements and using max-width causes
+ *   the "dissappering images" bug in IE8.
+ * - Mapping services such as Google Maps may break also, see below for fixes.
+ */
 
-pre, code, tt, samp, kbd, var { font-size: 1em; font-family: Consolas, "Lucida Console", Menlo, Monaco, "DejaVu Sans Mono", monospace, sans-serif; }
+img {
+  height: auto;
+}
 
-blockquote, q { font-style: italic; quotes: "" ""; }
-blockquote:before, blockquote:after, q:before, q:after { content: ""; }
 
-blockquote { margin: 0 0 1.5em; padding: 0 0 0 40px; }
-blockquote p { margin: 0; }
+/* /ht Ethan Marcotte - http://front.ie/l8rJaA */
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
 
-strong, dfn, caption, th { font-weight: 700; }
 
-ul, ol { margin: 0 0 1.5em 40px; padding: 0; }
+/* Disable flexiblity for IE8 and below */
+.lt-ie9 img,
+.lt-ie9 object,
+.lt-ie9 embed,
+.lt-ie9 video {
+  max-width: none;
+}
 
-.item-list ul, .item-list ol { margin: 0 0 0 15px; padding: 0; }
-.item-list ul li { margin: 0; padding: 0; }
 
-ul ul, .block ul ul, .item-list ul ul, ul ol, .block ul ol, .item-list ul ol, ol ul, .block ol ul, .item-list ol ul, ol ol, .block ol ol, .item-list ol ol { margin-bottom: 0; }
+/* Override max-width 100% for map displays */
+#map img,
+.gmap img,
+.view-gmap img,
+.openlayers-map img,
+#getlocations_map_canvas img,
+#locationmap_map img,
+.geofieldMap img,
+.views_horizontal_slider img {
+  max-width: none !important;
+}
 
-ul { list-style-type: disc; }
-ul ul ul { list-style-type: square; }
 
-ol { list-style-type: decimal; }
-ol ol { list-style-type: lower-alpha; }
-ol ol ol { list-style-type: lower-roman; }
+/* =============================================================================
+   Misc helpers, Accessibility classes etc
+   ========================================================================== */
 
-ul ul { list-style-type: circle; }
-ul ul ul ul { list-style-type: circle; }
+/* Prevent overflowing content */
+header[role=banner],
+.content-inner,
+.nav,
+.region-sidebar-first,
+.region-sidebar-second,
+.region-secondary-content,
+.region-tertiary-content,
+.region-footer {
+  overflow: visible;
+  word-wrap: break-word;
+}
 
-dt { font-weight: 700; }
 
-dd { margin: 0 0 1.5em 40px; }
+/**
+ * General classes for hiding content. These are all included as SASS mixins.
+ * @SEE: sass/custom.scss
+ */
 
-img { max-width: 100%; height: auto; -ms-interpolation-mode: bicubic; }
+/**
+ * Image replacement
+ * Kellum Method: http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement
+ * Additional helpers from http://html5boilerplate.com/docs/css/
+ */
+.ir {
+  /* Kellum Method */
+  display: block !important;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  /* Additional helpers */
+  border: 0; /* Remove the default border from elements like button */
+  font: 0/0 a; /* Crush the text down to take up no space */
+  text-shadow: none; /* Remove any text shadows */
+  color: transparent; /* Hide any residual text in Safari 4 and any mobile devices that may need it */
+  background-color: transparent; /* Hide the default background color on elements like button */
+}
 
-embed, object, video { max-width: 100%; }
 
-.lt-ie9 img, .lt-ie9 object, .lt-ie9 embed, .lt-ie9 video { max-width: none; }
+/* More robust element-invisible and element-focuable classes */
+.element-invisible {
+  border: 0;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
 
-#map img, .gmap img, .view-gmap img, .openlayers-map img, #getlocations_map_canvas img, #locationmap_map img, .geofieldMap img { max-width: none !important; }
 
-svg:not(:root) { overflow: hidden; }
+.element-invisible.element-focusable:active,
+.element-invisible.element-focusable:focus {
+  clip: auto;
+  height: auto;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
 
-audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 
-audio:not([controls]) { display: none; }
+/* Shift content offscreen, can be usefull when you reall need to do this */
+.offscreen {
+  position: absolute;
+  top: -99999em;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  outline: 0;
+}
 
-header[role=banner], .content-inner, .nav, .region-sidebar-first, .region-sidebar-second, .region-secondary-content, .region-tertiary-content, .region-footer { overflow: visible; word-wrap: break-word; }
 
-.element-invisible { border: 0; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute !important; width: 1px; }
-
-.element-invisible.element-focusable:active, .element-invisible.element-focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static !important; width: auto; }
-
-.offscreen { position: absolute; top: -99999em; width: 1px; height: 1px; overflow: hidden; outline: 0; }
-
-.element-hidden { display: none; }
+/* Hide content from all users */
+.element-hidden {
+  display: none;
+}

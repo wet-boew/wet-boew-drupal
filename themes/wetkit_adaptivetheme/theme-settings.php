@@ -12,8 +12,8 @@
  */
 
 function wetkit_adaptivetheme_form_system_theme_settings_alter(&$form, &$form_state)  {
-  // Work-around for a core bug affecting admin themes. See issue #943212.
-  if (isset($form_id)) {
+  // Your knarly custom theme settings go here...
+if (isset($form_id)) {
     return;
   }
   // Create the form using Forms API: http://api.drupal.org/api/7
