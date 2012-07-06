@@ -347,8 +347,11 @@ libraries[wet-boew][type] = library
 ; THEMES + THEME RELATED MODULES ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-projects[adaptivetheme][version] = 3.0-rc6
+projects[adaptivetheme][version] = 3.x-dev
 projects[adaptivetheme][type] = theme
+projects[adaptivetheme][download][type] = git
+projects[adaptivetheme][download][revision] = 6daae43
+projects[adaptivetheme][download][branch] = 7.x-3.x
 
 projects[rubik][version] = 4.0-beta8
 projects[rubik][type] = theme
