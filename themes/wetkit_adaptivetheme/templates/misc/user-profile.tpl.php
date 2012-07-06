@@ -14,6 +14,10 @@
  * history. Other data can be included by modules. $user_profile['user_picture']
  * is available for showing the account picture.
  *
+ * Adaptivetheme variables:
+ * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
+ *   devices. Use to test for a mobile context.
+ *
  * Available variables:
  *   - $user_profile: An array of profile items. Use render() to print them.
  *   - Field variables: for each field instance attached to the user a

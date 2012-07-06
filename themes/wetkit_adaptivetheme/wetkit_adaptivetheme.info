@@ -12,11 +12,11 @@
 
 ;----------// Stylesheets
 
-  ; Globals CSS, loads all global.[type].css files in /css/
-  ; stylesheets[screen][] = css/globals.css
+  ; See each stylesheet for extensive documentation and help.
+  ;stylesheets[screen][] = css/global.base.css
+  ;stylesheets[screen][] = css/global.styles.css
 
-  ; Print
-  ; Uncomment to load basic print styles.
+  ; Print - uncomment to load basic print styles.
   ; stylesheets[print][] = css/print.css
 
   ; Web Usability Theme
@@ -29,32 +29,37 @@
   ;
   ; AT can load stylesheets in conditional comments from the info file.
   ;
-  ; Syntax: ie_stylesheets[media][condition] = path/to/file (path must be relative to your theme root)
+  ; Syntax: ie_stylesheets[media][condition][] = path/to/file (path must be
+  ; relative to your theme root)
   ;
-  ; For example if you want to load a stylesheet just for IE7 use the following (note: you need to create "ie7.css" in the /css/ directory):
-  ; ie_stylesheets[screen][IE 7] = css/ie7.css
+  ; For example if you want to load a stylesheet just for IE7 use the
+  ; following (note: you need to create "ie7.css" in the /css/ directory):
+  ; ie_stylesheets[screen][IE 7][] = css/ie7.css
   ;
-  ; By default the sub-theme has one IE stylesheet which loads for "less than IE9" but "not IEMobile 7".
+  ; By default the sub-theme has one IE stylesheet which loads for
+  ; "less than IE9" but "not IEMobile 7".
   ; Uncomment the following to use the included IE styleseet:
 
-  ; ie_stylesheets[screen][(lt IE 9)&(!IEMobile 7)] = css/lt-ie9.css
+  ;ie_stylesheets[screen][(lt IE 9)&(!IEMobile 7)][] = css/lt-ie9.css
 
-  ie_stylesheets[all][lte IE 8] = wet-boew/js/css/pe-ap-ie-min.css
-  ie_stylesheets[all][lte IE 8] = wet-boew/theme-gcwu-fegc/css/theme-ie-min.css
-
+  ie_stylesheets[all][lte IE 8][] = wet-boew/js/css/pe-ap-ie-min.css
+  ie_stylesheets[all][lte IE 8][] = wet-boew/theme-gcwu-fegc/css/theme-ie-min.css
 
   ; Unset Module CSS or other Stylesheets
   ;
-  ; In your theme settings you can unset many stylesheets using the Unset CSS Extension. If for some
-  ; reason the file you want to unset is not showing, you can explicitly declare it here. Once you have
-  ; finished adding your declarations you must clear the sites cache, then go to your theme settings and
-  ; check the checkbox for the file, then save the theme settings and the file will be unset thereafter.
+  ; In your theme settings you can unset many stylesheets using the Unset CSS
+  ; Extension. If for some reason the file you want to unset is not showing,
+  ; you can explicitly declare it here. Once you have finished adding your
+  ; declarations you must clear the sites cache, then go to your theme settings
+  ; and check the checkbox for the file, then save the theme settings and the
+  ; file will be unset thereafter.
   ;
   ; Follow the syntax:
   ;
   ; unset_css[path/to/css/file.css] = 1
   ;
   ; For example to unset foobar_module.css you might use something like this:
+
   ; unset_css[sites/all/modules/foobar_module/foobar_module.css] = 1
 
 
@@ -62,13 +67,16 @@
 
   ; Internet Explorer Scripts
   ;
-  ; AT can load scripts in conditional comments from the info file. If you are planning to use a polyfill be sure to check
-  ; the "Settings" tab in theme settings - this includes checkboxes to enable the HTML5 Shiv (on by default), Respond.js and
-  ; boxsizing.htc. See the js folder in at_core to view these scripts.
+  ; AT can load scripts in conditional comments from the info file. If you are
+  ; planning to use a polyfill be sure to check the "Settings" tab in theme
+  ; settings for existing Polyfills.
   ;
-  ; Syntax: ie_scripts[condition] = path/to/file (path must be relative to your theme root)
+  ; Syntax: ie_scripts[condition] = path/to/file (path must be relative to your
+  ; theme root)
   ;
-  ; For example if you want to load a script just for IE 8 and below use the following as a guide:
+  ; For example if you want to load a script just for IE 8 and below use the
+  ; following as a guide:
+
   ; ie_scripts[lte IE 8] = js/my-script.js
 
 
@@ -105,19 +113,21 @@
 
 ;----------// Gpanel Regions
 
-  ; If you are using Gpanels copy and paste the region definitions here. You will find them
-  ; in each layout PHP file in adaptivetheme/layouts/gpanels
+  ; If you are using Gpanels copy and paste the region definitions here. You
+  ; will find them in each layout PHP file in adaptivetheme/layouts/gpanels
 
 
 ;----------// Custom Page Layout Plugins
 
-  ; Don't uncomment this unless you are actually developing a page layout plugin,
-  ; it will add a layout to all device groups that does little else except provide
-  ; and example page_layout plugin.
-  ;plugins[page_layout][layouts] = custom_layouts
+  ; Don't uncomment this unless you are actually developing a page layout
+  ; plugin, it will add a layout to all device groups that does little else
+  ; except provide and example page_layout plugin.
 
-   ; Panels Module layouts
+  ; plugins[page_layout][layouts] = custom_layouts
+
+  ; Panels Module layouts
   plugins[panels][layouts] = custom_layouts/panels
+
 
 ;----------// Site Features
 
@@ -271,10 +281,6 @@
   settings[load_html5js]       = 1
   settings[load_respondjs]     = 0
   settings[load_ltie8css]      = 0
-  settings[load_pie]           = 0
-  settings[which_pie]          = 'PIE.htc'
-  settings[disble_pie_for_ie9] = 0
-  settings[load_selectivizr]   = 0
   settings[load_scalefixjs]    = 0
 
 
@@ -376,12 +382,15 @@
   settings[breadcrumb_display]   = 1
   settings[breadcrumb_home]      = 0
   settings[breadcrumb_label]     = 0
+  settings[breadcrumb_title]     = 0
   settings[breadcrumb_separator] = ' &#187; '
 
 
   ; Login block options
-  settings[horizontal_login_block]        = 0
   settings[horizontal_login_block_enable] = 'on'
+  settings[horizontal_login_block]    = 0
+  settings[login_block_remove_links]  = 0
+  settings[login_block_remove_openid] = 0
 
 
   ; Design
@@ -404,6 +413,7 @@
   settings[comments_hide_title]           = 0
   settings[feed_icons]                    = 0
   settings[unset_block_system_main_front] = 0
+  settings[unset_menu_titles]             = 0
 
 
   ; Accessibility
@@ -435,9 +445,9 @@
   ; Custom CSS
   settings[custom_css] = ''
 
-; Information added by drupal.org packaging script on 2012-06-21
-version = "7.x-3.0-rc6"
+; Information added by drupal.org packaging script on 2012-07-06
+version = "7.x-3.0-rc6+16-dev"
 core = "7.x"
 project = "adaptivetheme"
-datestamp = "1340286371"
+datestamp = "1341576129"
 
