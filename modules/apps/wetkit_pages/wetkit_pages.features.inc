@@ -30,7 +30,15 @@ function wetkit_pages_node_info() {
     'wetkit_page' => array(
       'name' => t('Basic Page'),
       'base' => 'node_content',
-      'description' => t('An important page to display to users on your site.'),
+      'description' => t('An important page to display to users on your site. This is included as the preferred standard for a panels based workflow.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'wetkit_page_other' => array(
+      'name' => t('Basic Page (Non Panelized)'),
+      'base' => 'node_content',
+      'description' => t('An non panelized important page to display to users on your site. This is included for people who are used to using blocks and regions to manage content.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
