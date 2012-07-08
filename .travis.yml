@@ -18,5 +18,5 @@ before_script:
 
 script:
   - sudo chmod -R 777 sites/all/modules
-  - sudo drush si webexp webexp_theme_form.theme=wetkit_adaptivetheme --sites-subdir=default --db-url=mysql://root:@localhost/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name="Web Experience Toolkit" --yes
+  - sudo drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-subdir=default --db-url=mysql://root:@localhost/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name="Web Experience Toolkit" --yes
 
