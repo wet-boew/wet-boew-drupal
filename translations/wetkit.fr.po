@@ -3,8 +3,8 @@
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
-#  webexp.info: n/a
-#  webexp.profile: n/a
+#  wetkit.info: n/a
+#  wetkit.profile: n/a
 #
 #, fuzzy
 msgid ""
@@ -19,61 +19,61 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: webexp.info:0
+#: wetkit.info:0
 msgid "Web Experience Toolkit"
 msgstr ""
 
-#: webexp.info:0
+#: wetkit.info:0
 msgid "Install Profile created for the Web Experience Toolkit using Drupal 7"
 msgstr ""
 "Profile d'installation créé au moyen de Drupal 7 pour la Boîte à "
 "outils de l’expérience Web"
 
-#: webexp.profile:20
+#: wetkit.profile:20
 msgid "Import French Language"
 msgstr ""
 
-#: webexp.profile:26
+#: wetkit.profile:26
 msgid "Enable apps support"
 msgstr ""
 
-#: webexp.profile:67
+#: wetkit.profile:67
 msgid "Install apps for WetKit (local)"
 msgstr ""
 
-#: webexp.profile:75
+#: wetkit.profile:75
 msgid "Choose a theme"
 msgstr ""
 
-#: webexp.profile:218;364
+#: wetkit.profile:218;364
 msgid "Finished!"
 msgstr ""
 
-#: webexp.profile:259
+#: wetkit.profile:259
 msgid "Enable Support for Apps"
 msgstr ""
 
-#: webexp.profile:262
+#: wetkit.profile:262
 msgid "Apps uses the same mechanism for installing modules as the update module in core. This depends on certain php extensions to be installed on your server. Below is the documentation for the various methods of installing."
 msgstr ""
 
-#: webexp.profile:265
+#: wetkit.profile:265
 msgid "FTP"
 msgstr "FTP"
 
-#: webexp.profile:270
+#: wetkit.profile:270
 msgid "SSH"
 msgstr "SSH"
 
-#: webexp.profile:291
+#: wetkit.profile:291
 msgid "Choose a theme!"
 msgstr ""
 
-#: webexp.profile:302
+#: wetkit.profile:302
 msgid "Starting Theme"
 msgstr ""
 
-#: webexp.profile:366
+#: wetkit.profile:366
 msgid "Congratulations, you just installed the Drupal 7 Web Experience Toolkit!"
 msgstr ""
 

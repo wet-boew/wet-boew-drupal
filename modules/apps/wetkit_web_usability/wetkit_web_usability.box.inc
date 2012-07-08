@@ -20,13 +20,13 @@ function wetkit_web_usability_default_box() {
   $box->options = array(
     'en-title' => 'Stay Connected',
     'en-body' => array(
-      'value' => '<p><a href="http://twitter.com/#!/"><img alt="Twitter" class="image-actual" src="/profiles/webexp/modules/apps/wetkit_web_usability/images/sl_twitter.png" /> </a> <a href="http://www.youtube.com/"> <img alt="YouTube" class="image-actual" src="/profiles/webexp/modules/apps/wetkit_web_usability/images/sl_youtube.png" /> </a> <a href="/rss.xml"> <img alt="RSS" class="image-actual" src="/profiles/webexp/modules/apps/wetkit_web_usability/images/sl_rss.png" /> </a></p>
+      'value' => '<p><a href="http://twitter.com/#!/"><img alt="Twitter" class="image-actual" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/sl_twitter.png" /> </a> <a href="http://www.youtube.com/"> <img alt="YouTube" class="image-actual" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/sl_youtube.png" /> </a> <a href="/rss.xml"> <img alt="RSS" class="image-actual" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/sl_rss.png" /> </a></p>
 ',
       'format' => 'wetkit_wysiwyg_text',
     ),
     'fr-title' => 'Restez connecté',
     'fr-body' => array(
-      'value' => '<p><a href="http://twitter.com/#!/"><img alt="Twitter" class="image-actual" src="/profiles/webexp/modules/apps/wetkit_web_usability/images/sl_twitter.png" /> </a> <a href="http://www.youtube.com/"> <img alt="YouTube" class="image-actual" src="/profiles/webexp/modules/apps/wetkit_web_usability/images/sl_youtube.png" /> </a> <a href="/rss.xml"> <img alt="RSS" class="image-actual" src="/profiles/webexp/modules/apps/wetkit_web_usability/images/sl_rss.png" /> </a></p>
+      'value' => '<p><a href="http://twitter.com/#!/"><img alt="Twitter" class="image-actual" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/sl_twitter.png" /> </a> <a href="http://www.youtube.com/"> <img alt="YouTube" class="image-actual" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/sl_youtube.png" /> </a> <a href="/rss.xml"> <img alt="RSS" class="image-actual" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/sl_rss.png" /> </a></p>
 ',
       'format' => 'wetkit_wysiwyg_text',
     ),
@@ -46,7 +46,7 @@ function wetkit_web_usability_default_box() {
       'value' => '<h3>Meet the Minister</h3>
 <div class="gcwu-minister-in">
 	<div class="gcwu-minister-img">
-            <div><img alt="The Honourable minister name" height="149" src="/profiles/webexp/modules/apps/wetkit_web_usability/images/minister.jpg" width="99" /></div>
+            <div><img alt="The Honourable minister name" height="149" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/minister.jpg" width="99" /></div>
 	</div>
 	<div class="gcwu-minister-info">
             <p>The Honourable<br />
@@ -65,7 +65,7 @@ function wetkit_web_usability_default_box() {
       'value' => '<h3>Rencontrez le ministre</h3>
 <div class="gcwu-minister-in">
 	<div class="gcwu-minister-img">
-            <div><img alt="Le nom de l&#39;honorable ministre" height="149" src="/profiles/webexp/modules/apps/wetkit_web_usability/images/minister.jpg" width="99" /></div>
+            <div><img alt="Le nom de l&#39;honorable ministre" height="149" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/minister.jpg" width="99" /></div>
 	</div>
 	<div class="gcwu-minister-info">
             <p>L&#39;honorable<br />
@@ -94,9 +94,9 @@ function wetkit_web_usability_default_box() {
     'en-body' => array(
       'value' => '<div id="cn-gc-priorities-inner">
 	<ul>
-            <li><img alt="Image 1" src="/profiles/webexp/modules/apps/wetkit_web_usability/images/prio1-eng.png" /></li>
-            <li><img alt="Image 2" src="/profiles/webexp/modules/apps/wetkit_web_usability/images/prio2-eng.png" /></li>
-            <li><img alt="Image 3" src="/profiles/webexp/modules/apps/wetkit_web_usability/images/prio3-eng.png" /></li>
+            <li><img alt="Image 1" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/prio1-eng.png" /></li>
+            <li><img alt="Image 2" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/prio2-eng.png" /></li>
+            <li><img alt="Image 3" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/prio3-eng.png" /></li>
 	</ul>
 </div>
 ',
@@ -106,9 +106,9 @@ function wetkit_web_usability_default_box() {
     'fr-body' => array(
       'value' => '<div id="cn-gc-priorities-inner">
 	<ul>
-            <li><img alt="Image 1" src="/profiles/webexp/modules/apps/wetkit_web_usability/images/prio1-fra.png" /></li>
-            <li><img alt="Image 2" src="/profiles/webexp/modules/apps/wetkit_web_usability/images/prio2-fra.png" /></li>
-            <li><img alt="Image 3" src="/profiles/webexp/modules/apps/wetkit_web_usability/images/prio3-fra.png" /></li>
+            <li><img alt="Image 1" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/prio1-fra.png" /></li>
+            <li><img alt="Image 2" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/prio2-fra.png" /></li>
+            <li><img alt="Image 3" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/prio3-fra.png" /></li>
 	</ul>
 </div>
 ',
@@ -128,7 +128,7 @@ function wetkit_web_usability_default_box() {
     'en-title' => 'Videos',
     'en-body' => array(
       'value' => '<div id="gcwu-bg-dark">
-	<img alt="" class="posterimg" src="/profiles/webexp/modules/apps/wetkit_web_usability/images/video.jpg" />
+	<img alt="" class="posterimg" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/video.jpg" />
 	<p><strong>Web Experience Toolkit Video</strong></p>
 	<p>This section is for video related content. Often this is the best place to introduce your department or organization.</p>
 </div>
@@ -142,7 +142,7 @@ function wetkit_web_usability_default_box() {
     'fr-title' => 'Vidéos',
     'fr-body' => array(
       'value' => '<div id="gcwu-bg-dark">
-	<img alt="" class="posterimg" src="/profiles/webexp/modules/apps/wetkit_web_usability/images/video.jpg" />
+	<img alt="" class="posterimg" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/video.jpg" />
 	<p><strong>Exp&eacute;rience Web Toolkit Vid&eacute;o</strong></p>
 	<p>Cette section est pour le contenu vid&eacute;o li&eacute;. Souvent c&#39;est le meilleur endroit pour introduire votre minist&egrave;re ou organisme.</p>
 </div>

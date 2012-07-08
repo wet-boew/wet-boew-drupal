@@ -20,7 +20,7 @@ function wetkit_language_preprocess_page(&$vars) {
 function wetkit_language_init() {
   //Set Flag
   if (variable_get('wetkit_language_revert', 1) == 1) {
-    wetkit_language_features_revert(array('wetkit_language'));
+    //wetkit_language_features_revert(array('wetkit_language'));
     variable_set('wetkit_language_revert', 0);
   }
 }

@@ -2,19 +2,19 @@
  * Stylesheet for WetKit Profile
  */
 
-#webexp-theme-form .form-item-theme {
+#wetkit-theme-form .form-item-theme {
   clear: both;
   margin-top: .5em;
   margin-bottom: .5em;
 }
 
-#webexp-theme-form .form-item-theme label img {
+#wetkit-theme-form .form-item-theme label img {
   float: left;
   width: 100px;
   margin-right: 1em;
 }
 
-#webexp-apps-check #edit-pantheon img {
+#wetkit-apps-check #edit-pantheon img {
   float: right;
   margin-left: 1em;
   margin-bottom: 1em;
