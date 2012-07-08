@@ -26,7 +26,7 @@ function wetkit_pages_panelizer_defaults() {
   $panelizer->relationships = array();
   $panelizer->did = 1;
   $display = new panels_display();
-  $display->layout = 'wetkit_33_66';
+  $display->layout = 'wetkit_two_33_66';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -34,12 +34,12 @@ function wetkit_pages_panelizer_defaults() {
       'center' => NULL,
       'sidebar' => NULL,
       'contentmain' => NULL,
-      'wetkit_33_66_top' => NULL,
-      'wetkit_33_66_first' => NULL,
-      'wetkit_33_66_bottom' => NULL,
-      'wetkit_33_66_second' => NULL,
+      'wetkit_two_33_66_top' => NULL,
+      'wetkit_two_33_66_first' => NULL,
+      'wetkit_two_33_66_bottom' => NULL,
+      'wetkit_two_33_66_second' => NULL,
     ),
-    'wetkit_33_66_second' => array(
+    'wetkit_two_33_66_second' => array(
       'style' => '-1',
     ),
   );
@@ -49,7 +49,7 @@ function wetkit_pages_panelizer_defaults() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'wetkit_33_66_first';
+    $pane->panel = 'wetkit_two_33_66_first';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
     $pane->shown = TRUE;
@@ -70,10 +70,10 @@ function wetkit_pages_panelizer_defaults() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['wetkit_33_66_first'][0] = 'new-1';
+    $display->panels['wetkit_two_33_66_first'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'wetkit_33_66_first';
+    $pane->panel = 'wetkit_two_33_66_first';
     $pane->type = 'page_tabs';
     $pane->subtype = 'page_tabs';
     $pane->shown = TRUE;
@@ -96,10 +96,10 @@ function wetkit_pages_panelizer_defaults() {
     $pane->position = 1;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['wetkit_33_66_first'][1] = 'new-2';
+    $display->panels['wetkit_two_33_66_first'][1] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'wetkit_33_66_first';
+    $pane->panel = 'wetkit_two_33_66_first';
     $pane->type = 'node_content';
     $pane->subtype = 'node_content';
     $pane->shown = TRUE;
@@ -124,10 +124,10 @@ function wetkit_pages_panelizer_defaults() {
     $pane->position = 2;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
-    $display->panels['wetkit_33_66_first'][2] = 'new-3';
+    $display->panels['wetkit_two_33_66_first'][2] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
-    $pane->panel = 'wetkit_33_66_second';
+    $pane->panel = 'wetkit_two_33_66_second';
     $pane->type = 'menu_tree';
     $pane->subtype = 'main-menu';
     $pane->shown = TRUE;
@@ -159,7 +159,7 @@ function wetkit_pages_panelizer_defaults() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-4'] = $pane;
-    $display->panels['wetkit_33_66_second'][0] = 'new-4';
+    $display->panels['wetkit_two_33_66_second'][0] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
