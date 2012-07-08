@@ -9,6 +9,26 @@ function wetkit_metatag_ctools_plugin_api($owner, $api) {
   }
 }
 
+function wetkit_metatag_form_alter(&$form, &$form_state, $form_id) {
+   if ($form_id == 'wetkit_page_node_form' || $form_id == 'wetkit_page_other_node_form') {
+    $form['metatags_advanced'] = $form['metatags']['advanced'];
+    $form['metatags_advanced']['#title'] = 'Metatags Advanced';
+    $form['metatags_advanced']['#group'] = 'additional_settings';
+    $form['metatags_advanced']['##tree'] = TRUE;
+    $form['metatags_advanced']['#weight'] = 11;
+    
+    $form['wetkit_metadata'] = $form['metatags']['wetkit-metadata'];
+    $form['wetkit_metadata']['#title'] = 'Metatags WetKit';
+    $form['wetkit_metadata']['#group'] = 'additional_settings';
+    $form['wetkit_metadata']['##tree'] = TRUE;
+    $form['wetkit_metadata']['#weight'] = 12;
+  }
+  
+  unset($form['metatags']['advanced']);
+  unset($form['metatags']['tokens']);
+  unset($form['metatags']['wetkit-metadata']);
+}
+
 /**
  * Implements hook_theme().
  */
