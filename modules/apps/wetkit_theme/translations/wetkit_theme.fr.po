@@ -1,0 +1,331 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  wetkit_theme.module: n/a
+#  wetkit_theme.info: n/a
+#  plugins/layouts/bartlett/bartlett.inc: n/a
+#  plugins/layouts/bartlett_flipped/bartlett_flipped.inc: n/a
+#  plugins/layouts/boxton/boxton.inc: n/a
+#  plugins/layouts/brenham/brenham.inc: n/a
+#  plugins/layouts/brenham_flipped/brenham_flipped.inc: n/a
+#  plugins/layouts/brown/brown.inc: n/a
+#  plugins/layouts/bryant/bryant.inc: n/a
+#  plugins/layouts/bryant_flipped/bryant_flipped_flipped.inc: n/a
+#  plugins/layouts/burr/burr.inc: n/a
+#  plugins/layouts/burr_flipped/burr_flipped.inc: n/a
+#  plugins/layouts/geary/geary.inc: n/a
+#  plugins/layouts/harris/harris.inc: n/a
+#  plugins/layouts/hewston/hewston.inc: n/a
+#  plugins/layouts/hewston_flipped/hewston_flipped.inc: n/a
+#  plugins/layouts/mccoppin/mccoppin.inc: n/a
+#  plugins/layouts/moscone/moscone.inc: n/a
+#  plugins/layouts/moscone_flipped/moscone_flipped.inc: n/a
+#  plugins/layouts/phelan/phelan.inc: n/a
+#  plugins/layouts/pond/pond.inc: n/a
+#  plugins/layouts/sanderson/sanderson.inc: n/a
+#  plugins/layouts/sanderson_flipped/sanderson_flipped.inc: n/a
+#  plugins/layouts/selby/selby.inc: n/a
+#  plugins/layouts/selby_flipped/selby_flipped.inc: n/a
+#  plugins/layouts/sutro/sutro.inc: n/a
+#  plugins/layouts/webb_flipped/webb_flipped.inc: n/a
+#  plugins/layouts/whelan/whelan.inc: n/a
+#  plugins/styles/accordion/wetkit_accordion.inc: n/a
+#  templates/date_views_pager.tpl.php: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2012-07-08 15:55-0400\n"
+"PO-Revision-Date: 2012-07-08 15:55-0400\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: wetkit_theme.module:64
+msgid "Featured"
+msgstr "Recommandés"
+
+#: wetkit_theme.info:0
+msgid "WetKit Theme"
+msgstr ""
+
+#: wetkit_theme.info:0
+msgid "Helps with theming and provides many layouts."
+msgstr ""
+
+#: wetkit_theme.info:0
+msgid "WetKit"
+msgstr ""
+
+#: plugins/layouts/bartlett/bartlett.inc:4
+msgid "Bartlett"
+msgstr ""
+
+#: plugins/layouts/bartlett/bartlett.inc:6 plugins/layouts/bartlett_flipped/bartlett_flipped.inc:6 plugins/layouts/boxton/boxton.inc:6 plugins/layouts/brenham/brenham.inc:6 plugins/layouts/brenham_flipped/brenham_flipped.inc:6 plugins/layouts/brown/brown.inc:6 plugins/layouts/bryant/bryant.inc:6 plugins/layouts/bryant_flipped/bryant_flipped_flipped.inc:6 plugins/layouts/burr/burr.inc:6 plugins/layouts/burr_flipped/burr_flipped.inc:6 plugins/layouts/geary/geary.inc:6 plugins/layouts/harris/harris.inc:6 plugins/layouts/hewston/hewston.inc:6 plugins/layouts/hewston_flipped/hewston_flipped.inc:6 plugins/layouts/mccoppin/mccoppin.inc:6 plugins/layouts/moscone/moscone.inc:6 plugins/layouts/moscone_flipped/moscone_flipped.inc:6 plugins/layouts/phelan/phelan.inc:6 plugins/layouts/pond/pond.inc:6 plugins/layouts/sanderson/sanderson.inc:6 plugins/layouts/sanderson_flipped/sanderson_flipped.inc:6 plugins/layouts/selby/selby.inc:6 plugins/layouts/selby_flipped/selby_flipped.inc:6 plugins/layouts/sutro/sutro.inc:6 plugins/layouts/webb_flipped/webb_flipped.inc:6 plugins/layouts/whelan/whelan.inc:6
+msgid "Panopoly"
+msgstr ""
+
+#: plugins/layouts/bartlett/bartlett.inc:10 plugins/layouts/bartlett_flipped/bartlett_flipped.inc:10 plugins/layouts/bryant/bryant.inc:10 plugins/layouts/bryant_flipped/bryant_flipped_flipped.inc:10 plugins/layouts/burr/burr.inc:10 plugins/layouts/burr_flipped/burr_flipped.inc:10 plugins/layouts/selby/selby.inc:10 plugins/layouts/selby_flipped/selby_flipped.inc:10 plugins/layouts/webb_flipped/webb_flipped.inc:11
+msgid "Sidebar"
+msgstr ""
+
+#: plugins/layouts/bartlett/bartlett.inc:11 plugins/layouts/bartlett_flipped/bartlett_flipped.inc:11 plugins/layouts/selby/selby.inc:11 plugins/layouts/selby_flipped/selby_flipped.inc:11 plugins/layouts/webb_flipped/webb_flipped.inc:12
+msgid "Content Header"
+msgstr ""
+
+#: plugins/layouts/bartlett/bartlett.inc:12 plugins/layouts/bartlett_flipped/bartlett_flipped.inc:12 plugins/layouts/selby/selby.inc:12 plugins/layouts/selby_flipped/selby_flipped.inc:12 plugins/layouts/webb_flipped/webb_flipped.inc:13
+msgid "Content Column 1"
+msgstr ""
+
+#: plugins/layouts/bartlett/bartlett.inc:13 plugins/layouts/bartlett_flipped/bartlett_flipped.inc:13 plugins/layouts/selby/selby.inc:13 plugins/layouts/selby_flipped/selby_flipped.inc:13 plugins/layouts/webb_flipped/webb_flipped.inc:14
+msgid "Content Column 2"
+msgstr ""
+
+#: plugins/layouts/bartlett_flipped/bartlett_flipped.inc:4
+msgid "Bartlett Flipped"
+msgstr ""
+
+#: plugins/layouts/boxton/boxton.inc:4
+msgid "Boxton"
+msgstr ""
+
+#: plugins/layouts/boxton/boxton.inc:9 plugins/layouts/brenham/brenham.inc:12 plugins/layouts/brenham_flipped/brenham_flipped.inc:12 plugins/layouts/bryant/bryant.inc:11 plugins/layouts/bryant_flipped/bryant_flipped_flipped.inc:11 plugins/layouts/burr/burr.inc:11 plugins/layouts/burr_flipped/burr_flipped.inc:11 plugins/layouts/harris/harris.inc:13 plugins/layouts/moscone/moscone.inc:12 plugins/layouts/moscone_flipped/moscone_flipped.inc:12 plugins/layouts/whelan/whelan.inc:12
+msgid "Content"
+msgstr "Contenu"
+
+#: plugins/layouts/brenham/brenham.inc:4
+msgid "Brenham"
+msgstr ""
+
+#: plugins/layouts/brenham/brenham.inc:10 plugins/layouts/brenham_flipped/brenham_flipped.inc:10 plugins/layouts/geary/geary.inc:10 plugins/layouts/harris/harris.inc:10 plugins/layouts/moscone/moscone.inc:10 plugins/layouts/moscone_flipped/moscone_flipped.inc:10 plugins/layouts/pond/pond.inc:10 plugins/layouts/sutro/sutro.inc:10 plugins/layouts/webb_flipped/webb_flipped.inc:10
+msgid "Header"
+msgstr "Entête"
+
+#: plugins/layouts/brenham/brenham.inc:11 plugins/layouts/brenham_flipped/brenham_flipped.inc:11 plugins/layouts/moscone/moscone.inc:11 plugins/layouts/moscone_flipped/moscone_flipped.inc:11
+msgid "Content Sidebar"
+msgstr ""
+
+#: plugins/layouts/brenham_flipped/brenham_flipped.inc:4
+msgid "Brenham Flipped"
+msgstr ""
+
+#: plugins/layouts/brown/brown.inc:4
+msgid "Brown"
+msgstr ""
+
+#: plugins/layouts/brown/brown.inc:10 plugins/layouts/hewston/hewston.inc:10 plugins/layouts/hewston_flipped/hewston_flipped.inc:10
+msgid "Slider"
+msgstr ""
+
+#: plugins/layouts/brown/brown.inc:11 plugins/layouts/hewston/hewston.inc:11 plugins/layouts/hewston_flipped/hewston_flipped.inc:11
+msgid "Slider Gutter"
+msgstr ""
+
+#: plugins/layouts/brown/brown.inc:12 plugins/layouts/geary/geary.inc:11 plugins/layouts/harris/harris.inc:11 plugins/layouts/hewston/hewston.inc:12 plugins/layouts/hewston_flipped/hewston_flipped.inc:12 plugins/layouts/mccoppin/mccoppin.inc:10 plugins/layouts/phelan/phelan.inc:10 plugins/layouts/sutro/sutro.inc:11 plugins/layouts/whelan/whelan.inc:10
+msgid "First Column"
+msgstr ""
+
+#: plugins/layouts/brown/brown.inc:13 plugins/layouts/geary/geary.inc:12 plugins/layouts/harris/harris.inc:12 plugins/layouts/hewston/hewston.inc:13 plugins/layouts/hewston_flipped/hewston_flipped.inc:13 plugins/layouts/mccoppin/mccoppin.inc:11 plugins/layouts/phelan/phelan.inc:11 plugins/layouts/sutro/sutro.inc:12 plugins/layouts/whelan/whelan.inc:11
+msgid "Second Column"
+msgstr ""
+
+#: plugins/layouts/brown/brown.inc:14 plugins/layouts/geary/geary.inc:13 plugins/layouts/hewston/hewston.inc:14 plugins/layouts/hewston_flipped/hewston_flipped.inc:14 plugins/layouts/mccoppin/mccoppin.inc:12
+msgid "Third Column"
+msgstr ""
+
+#: plugins/layouts/brown/brown.inc:15
+msgid "Footer First Column"
+msgstr ""
+
+#: plugins/layouts/brown/brown.inc:16
+msgid "Footer Second Column"
+msgstr ""
+
+#: plugins/layouts/brown/brown.inc:17
+msgid "Footer Third Column"
+msgstr ""
+
+#: plugins/layouts/bryant/bryant.inc:4
+msgid "Bryant"
+msgstr ""
+
+#: plugins/layouts/bryant_flipped/bryant_flipped_flipped.inc:4
+msgid "Bryant Flipped"
+msgstr ""
+
+#: plugins/layouts/burr/burr.inc:4
+msgid "Burr"
+msgstr ""
+
+#: plugins/layouts/burr_flipped/burr_flipped.inc:4
+msgid "Burr Flipped"
+msgstr ""
+
+#: plugins/layouts/geary/geary.inc:4
+msgid "Geary"
+msgstr ""
+
+#: plugins/layouts/harris/harris.inc:4
+msgid "Harris"
+msgstr ""
+
+#: plugins/layouts/hewston/hewston.inc:4
+msgid "Hewston"
+msgstr ""
+
+#: plugins/layouts/hewston_flipped/hewston_flipped.inc:4
+msgid "Hewston Flipped"
+msgstr ""
+
+#: plugins/layouts/mccoppin/mccoppin.inc:4
+msgid "McCoppin"
+msgstr ""
+
+#: plugins/layouts/moscone/moscone.inc:4
+msgid "Moscone"
+msgstr ""
+
+#: plugins/layouts/moscone/moscone.inc:13 plugins/layouts/moscone_flipped/moscone_flipped.inc:13 plugins/layouts/pond/pond.inc:17 plugins/layouts/sutro/sutro.inc:13
+msgid "Footer"
+msgstr "Pied de page"
+
+#: plugins/layouts/moscone_flipped/moscone_flipped.inc:4
+msgid "Moscone Flipped"
+msgstr ""
+
+#: plugins/layouts/phelan/phelan.inc:4
+msgid "Phelan"
+msgstr ""
+
+#: plugins/layouts/pond/pond.inc:4
+msgid "Pond"
+msgstr ""
+
+#: plugins/layouts/pond/pond.inc:11 plugins/layouts/sanderson/sanderson.inc:10 plugins/layouts/sanderson_flipped/sanderson_flipped.inc:10
+msgid "Row 1: First Column"
+msgstr ""
+
+#: plugins/layouts/pond/pond.inc:12 plugins/layouts/sanderson/sanderson.inc:11 plugins/layouts/sanderson_flipped/sanderson_flipped.inc:11
+msgid "Row 1: Second Column"
+msgstr ""
+
+#: plugins/layouts/pond/pond.inc:13 plugins/layouts/sanderson_flipped/sanderson_flipped.inc:12
+msgid "Row 1: Third Column"
+msgstr ""
+
+#: plugins/layouts/pond/pond.inc:14 plugins/layouts/sanderson/sanderson.inc:12 plugins/layouts/sanderson_flipped/sanderson_flipped.inc:13
+msgid "Row 2: First Column"
+msgstr ""
+
+#: plugins/layouts/pond/pond.inc:15 plugins/layouts/sanderson/sanderson.inc:13 plugins/layouts/sanderson_flipped/sanderson_flipped.inc:14
+msgid "Row 2: Second Column"
+msgstr ""
+
+#: plugins/layouts/pond/pond.inc:16 plugins/layouts/sanderson/sanderson.inc:14
+msgid "Row 2: Third Column"
+msgstr ""
+
+#: plugins/layouts/sanderson/sanderson.inc:4
+msgid "Sanderson"
+msgstr ""
+
+#: plugins/layouts/sanderson_flipped/sanderson_flipped.inc:4
+msgid "Sanderson Flipped"
+msgstr ""
+
+#: plugins/layouts/selby/selby.inc:4
+msgid "Selby"
+msgstr ""
+
+#: plugins/layouts/selby/selby.inc:14 plugins/layouts/selby_flipped/selby_flipped.inc:14
+msgid "Content Footer"
+msgstr ""
+
+#: plugins/layouts/selby_flipped/selby_flipped.inc:4
+msgid "Selby Flipped"
+msgstr ""
+
+#: plugins/layouts/sutro/sutro.inc:4
+msgid "Sutro"
+msgstr ""
+
+#: plugins/layouts/webb_flipped/webb_flipped.inc:4
+msgid "Webb Flipped"
+msgstr ""
+
+#: plugins/layouts/whelan/whelan.inc:4
+msgid "Whelan"
+msgstr ""
+
+#: plugins/styles/accordion/wetkit_accordion.inc:5
+msgid "Accordion style"
+msgstr ""
+
+#: plugins/styles/accordion/wetkit_accordion.inc:6
+msgid "Display panes as accordion."
+msgstr ""
+
+#: plugins/styles/accordion/wetkit_accordion.inc:56
+msgid "Set active"
+msgstr ""
+
+#: plugins/styles/accordion/wetkit_accordion.inc:57
+msgid "Set to -1 if you want no pane active"
+msgstr ""
+
+#: plugins/styles/accordion/wetkit_accordion.inc:62
+msgid "Set to autoheight"
+msgstr ""
+
+#: plugins/styles/accordion/wetkit_accordion.inc:68
+msgid "If set, clears height and overflow styles after finishing animations. This enables accordions to work with dynamic content. Won't work together with autoHeight."
+msgstr ""
+
+#: plugins/styles/accordion/wetkit_accordion.inc:69
+msgid "Clear heights after animation"
+msgstr ""
+
+#: plugins/styles/accordion/wetkit_accordion.inc:75
+msgid "Whether all the sections can be closed at once. Allows collapsing the active section by the triggering event (click is the default)."
+msgstr ""
+
+#: plugins/styles/accordion/wetkit_accordion.inc:76
+msgid "Can close all section"
+msgstr ""
+
+#: plugins/styles/accordion/wetkit_accordion.inc:82
+msgid "The event on which to trigger the accordion."
+msgstr ""
+
+#: plugins/styles/accordion/wetkit_accordion.inc:83
+msgid "On click"
+msgstr ""
+
+#: plugins/styles/accordion/wetkit_accordion.inc:83
+msgid "On mouse over"
+msgstr ""
+
+#: plugins/styles/accordion/wetkit_accordion.inc:88
+msgid "If set, the accordion completely fills the height of the parent element. Overrides autoheight."
+msgstr ""
+
+#: plugins/styles/accordion/wetkit_accordion.inc:94
+msgid "If set, looks for the anchor that matches location.href and activates it. Great for href-based state-saving. Use navigationFilter to implement your own matcher.."
+msgstr ""
+
+#: templates/date_views_pager.tpl.php:46
+msgctxt "date_nav"
+msgid "Prev"
+msgstr "Préc."
+
+#: templates/date_views_pager.tpl.php:51
+msgctxt "date_nav"
+msgid "Next"
+msgstr "Suivant"
+
