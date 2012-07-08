@@ -224,20 +224,13 @@
   
   <div id="wb-core">
     <div id="wb-core-in" class="equalize">
-
+                        
         <<?php print $tag; ?> id="main-content">
-
-            <?php print render($title_prefix); // Does nothing by default in D7 core ?>
 
             <!-- region: Main Content -->
             <?php if ($content = render($page['content'])): ?>
                 <?php print $content; ?>
             <?php endif; ?>
-
-            <!-- Feed icons (RSS, Atom icons etc -->
-            <?php print $feed_icons; ?>
-
-            <?php print render($title_suffix); // Prints page level contextual links ?>
 
         </<?php print $tag; ?>><!-- /end #main-content -->
      

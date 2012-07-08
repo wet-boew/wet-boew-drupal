@@ -234,6 +234,10 @@
                 <!-- region: Highlighted -->
                 <?php print render($page['highlighted']); ?>
 
+                <!-- Messages and Help -->
+                <?php print $messages; ?>
+                <?php print render($page['help']); ?>
+                  
                 <<?php print $tag; ?> id="main-content">
 
                   <?php print render($title_prefix); // Does nothing by default in D7 core ?>
