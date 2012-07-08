@@ -3,7 +3,7 @@
 /**
  * Implements hook_install_tasks()
  */
-function webexp_install_tasks($install_state) {
+function wetkit_install_tasks($install_state) {
 
   // Start iterating through the tasks and attempt to increase the memory if
   // provided with less than 196M
@@ -16,13 +16,13 @@ function webexp_install_tasks($install_state) {
   require_once(drupal_get_path('module', 'apps') . '/apps.profile.inc');
 
   // Set up a task to include secondary language (fr)
-  $tasks['webexp_batch_processing'] = array(
+  $tasks['wetkit_batch_processing'] = array(
     'display_name' => t('Import French Language'),
     'type' => 'batch',
   );
 
   // Set up a task to verify wetkit capability to run apps
-  $tasks['webexp_apps_check'] = array(
+  $tasks['wetkit_apps_check'] = array(
     'display_name' => t('Enable apps support'),
     'type' => 'form',
   );
@@ -46,8 +46,8 @@ function webexp_install_tasks($install_state) {
     ),
   );
 
-  $webexp_server = array(
-    'machine name' => 'webexp',
+  $wetkit_server = array(
+    'machine name' => 'wetkit',
       'default apps' => array(
 
     ),
@@ -58,7 +58,7 @@ function webexp_install_tasks($install_state) {
 
   // Add Apps Install tasks
   $tasks = $tasks + apps_profile_install_tasks($install_state, $local_server);
-  //$tasks = $tasks + apps_profile_install_tasks($install_state, $webexp_server);
+  //$tasks = $tasks + apps_profile_install_tasks($install_state, $wetkit_server);
 
   // Rename one of the default apps tasks. In the case of a non-interactive
   // installation, apps_profile_install_tasks() never defines this task, so we
@@ -66,17 +66,17 @@ function webexp_install_tasks($install_state) {
   if (isset($tasks['apps_profile_apps_select_form_local'])) {
     $tasks['apps_profile_apps_select_form_local']['display_name'] = t('Install apps for WetKit (local)');
   }
-  //if (isset($tasks['apps_profile_apps_select_form_webexp'])) {
-  //  $tasks['apps_profile_apps_select_form_webexp']['display_name'] = t('Install apps for WetKit');
+  //if (isset($tasks['apps_profile_apps_select_form_wetkit'])) {
+  //  $tasks['apps_profile_apps_select_form_wetkit']['display_name'] = t('Install apps for WetKit');
   //}
 
   // Set up the theme selection and configuration tasks
-  $tasks['webexp_theme_form'] = array(
+  $tasks['wetkit_theme_form'] = array(
     'display_name' => t('Choose a theme'),
     'type' => 'form',
   );
 
-  //$tasks['webexp_theme_configure_form'] = array(
+  //$tasks['wetkit_theme_configure_form'] = array(
   //  'display_name' => t('Configure theme settings'),
   //  'type' => 'form',
   //);
@@ -87,13 +87,13 @@ function webexp_install_tasks($install_state) {
 /**
  * Implements hook_form_FORM_ID_alter()
  */
-function webexp_form_install_configure_form_alter(&$form, $form_state) {
+function wetkit_form_install_configure_form_alter(&$form, $form_state) {
   
   // Set the logo for WetKit
   //$theme_data = _system_rebuild_theme_data();
   //$seven_data = $theme_data['seven']->info['settings'];
   //$seven_data['default_logo'] = 0;
-  //$seven_data['logo_path'] = 'profiles/webexp/images/webexp_large.png';  variable_set('theme_seven_settings', $seven_data);
+  //$seven_data['logo_path'] = 'profiles/wetkit/images/wetkit_large.png';  variable_set('theme_seven_settings', $seven_data);
 
   // Hide some messages from various modules that are just too chatty!
   drupal_get_messages('status');
@@ -124,14 +124,14 @@ function webexp_form_install_configure_form_alter(&$form, $form_state) {
     }
   }
   // Set a custom form validate and submit handlers.
-  $form['#validate'][] = 'webexp_password_validate';
-  $form['#submit'][] = 'webexp_password_submit';
+  $form['#validate'][] = 'wetkit_password_validate';
+  $form['#submit'][] = 'wetkit_password_submit';
 }
 
 /**
  * Password Policy save validate handler.
  */
-function webexp_password_validate($form, &$form_state) {
+function wetkit_password_validate($form, &$form_state) {
   $values = $form_state['values'];
   $account = (object)array('uid' => 1);
   $account->roles = array(DRUPAL_AUTHENTICATED_RID => DRUPAL_AUTHENTICATED_RID);
@@ -147,7 +147,7 @@ function webexp_password_validate($form, &$form_state) {
 /**
  * Password Policy save submit handler.
  */
-function webexp_password_submit($form, &$form_state) {
+function wetkit_password_submit($form, &$form_state) {
   global $user;
   $values = $form_state['values'];
   $account = (object)array('uid' => 1);
@@ -160,7 +160,7 @@ function webexp_password_submit($form, &$form_state) {
 /**
  * Batch Processing for French Language import.
  */
-function webexp_batch_processing(&$install_state) {
+function wetkit_batch_processing(&$install_state) {
   //Import the additonal language po file and translate the interface;
   //Require once is only added here because too early in the bootstrap
   require_once 'includes/locale.inc';
@@ -177,7 +177,7 @@ function webexp_batch_processing(&$install_state) {
 /**
  * Implements hook_form_FORM_ID_alter()
  */
-function webexp_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
+function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
   // If App Manifest Exists
   if (isset($_SESSION['apps_manifest'])) {
     // For some things there are no need
@@ -208,13 +208,13 @@ function webexp_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
 /**
  * Implements hook_install_tasks_alter()
  */
-function webexp_install_tasks_alter(&$tasks, $install_state) {
+function wetkit_install_tasks_alter(&$tasks, $install_state) {
   //If using French Locale as default remove associated Install Task
   unset($tasks['install_import_locales']);
   unset($tasks['install_import_locales_remaining']);
 
   // Create a more fun finished page with our Open Academy Saurus
-  $tasks['install_finished']['function'] = 'webexp_finished_install';
+  $tasks['install_finished']['function'] = 'wetkit_finished_install';
   $tasks['install_finished']['display_name'] = t('Finished!');
   $tasks['install_finished']['type'] = 'form';
 }
@@ -222,8 +222,8 @@ function webexp_install_tasks_alter(&$tasks, $install_state) {
 /**
  * Implements hook_appstore_stores_info()
  */
-function webexp_apps_servers_info() {
-  $profile = variable_get('install_profile', 'webexp');
+function wetkit_apps_servers_info() {
+  $profile = variable_get('install_profile', 'wetkit');
   $info =  drupal_parse_info_file(drupal_get_path('profile', $profile) . '/' . $profile . '.info');
   return array(
     'local' => array(
@@ -236,8 +236,8 @@ function webexp_apps_servers_info() {
       //'server_name' => (!empty($_SERVER['SERVER_NAME'])) ? $_SERVER['SERVER_NAME'] : NULL,
       //'server_ip' => (!empty($_SERVER['SERVER_ADDR'])) ? $_SERVER['SERVER_ADDR'] : NULL,
     ),
-    'webexp' => array(
-      'title' => 'Webexp',
+    'wetkit' => array(
+      'title' => 'wetkit',
       'description' => 'Apps for the Web Experience Toolkit Drupal distro',
       'manifest' => 'http://wetkitappdev.devcloud.acquia-sites.com/app/query/WetKit%20App%20Server',
       //'profile' => $profile,
@@ -252,7 +252,7 @@ function webexp_apps_servers_info() {
 /**
  * Form to check to see if Apps support is possible
  */
-function webexp_apps_check($form, &$form_state) {
+function wetkit_apps_check($form, &$form_state) {
   $form = array();
   
   // Set the title
@@ -286,7 +286,7 @@ function webexp_apps_check($form, &$form_state) {
 /**
  * Form to choose the starting theme from list of available options
  */
-function webexp_theme_form($form, &$form_state) {
+function wetkit_theme_form($form, &$form_state) {
   // Set the page title
   drupal_set_title(t('Choose a theme!'));
 
@@ -321,7 +321,7 @@ function webexp_theme_form($form, &$form_state) {
 /**
  * Form submit handler to select the theme
  */
-function webexp_theme_form_submit($form, &$form_state) {
+function wetkit_theme_form_submit($form, &$form_state) {
   // Enable and set the theme of choice
   $theme = $form_state['input']['theme'];
   theme_enable(array($theme));
@@ -343,7 +343,7 @@ function webexp_theme_form_submit($form, &$form_state) {
 /**
  * Form to choose the starting theme
  */
-function webexp_theme_configure_form($form, &$form_state) {
+function wetkit_theme_configure_form($form, &$form_state) {
   $theme = variable_get('theme_default');
   ctools_include('system.admin', 'system', '');
   $form = system_theme_settings($form, $form_state, $theme); 
@@ -353,7 +353,7 @@ function webexp_theme_configure_form($form, &$form_state) {
 /**
  * Form to finish it all out and send us on our way
  */
-function webexp_finished_install($form, &$form_state) {
+function wetkit_finished_install($form, &$form_state) {
 
   // Hide some messages from various modules that are just too chatty!
   drupal_get_messages('status');
@@ -377,7 +377,7 @@ function webexp_finished_install($form, &$form_state) {
 /**
  * Submit form to finish it out and send us on our way!
  */
-function webexp_finished_install_submit($form, &$form_state) {
+function wetkit_finished_install_submit($form, &$form_state) {
 
   // Flush all caches to ensure that any full bootstraps during the installer
   // do not leave stale cached data, and that any content types or other items

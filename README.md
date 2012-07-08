@@ -1,4 +1,4 @@
-<img src="http://github.com/wet-boew/wet-boew-drupal/raw/master/images/webexp_large.png">
+<img src="http://github.com/wet-boew/wet-boew-drupal/raw/master/images/wetkit_large.png">
 
 # Drupal 7 Web Experience Toolkit Distribution
 
@@ -23,7 +23,7 @@ drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-
 >
 > 4. Rapid Installation (via Drush):
 <pre>
-drush si webexp webexp_theme_form.theme=wetkit_adaptivetheme --sites-subdir=&lt;domain&gt; --db-url=mysql://&lt;username&gt;:&lt;password&gt;@&lt;domain&gt;:&lt;port&gt;/&lt;database&gt; --account-name=&lt;username&gt; --account-pass=&lt;userpassword&gt; --site-mail=&lt;siteemail&gt; --site-name=&lt;sitename&gt;
+drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-subdir=&lt;domain&gt; --db-url=mysql://&lt;username&gt;:&lt;password&gt;@&lt;domain&gt;:&lt;port&gt;/&lt;database&gt; --account-name=&lt;username&gt; --account-pass=&lt;userpassword&gt; --site-mail=&lt;siteemail&gt; --site-name=&lt;sitename&gt;
 </pre>
 
 ### Proxy Support
@@ -48,7 +48,7 @@ drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-
 > 4. To quickly install using the Drush command line, change to the directory where Drupal (for example C:/apache2/htdocs) was installed and enter this command.
 > Be sure to use a password that meets the password policy for WET.
 <pre>
-drush si webexp webexp_theme_form.theme=wetkit_adaptivetheme --sites-subdir=&lt;domain&gt; --db-url=mysql://&lt;username&gt;:&lt;password&gt;@&lt;domain&gt;:&lt;port&gt;/&lt;database&gt; --account-name=&lt;username&gt; --account-pass=&lt;userpassword&gt; --site-mail=&lt;siteemail&gt; --site-name=&lt;sitename&gt;
+drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-subdir=&lt;domain&gt; --db-url=mysql://&lt;username&gt;:&lt;password&gt;@&lt;domain&gt;:&lt;port&gt;/&lt;database&gt; --account-name=&lt;username&gt; --account-pass=&lt;userpassword&gt; --site-mail=&lt;siteemail&gt; --site-name=&lt;sitename&gt;
 </pre>
 
 ### Proxy Support

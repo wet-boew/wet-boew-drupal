@@ -226,7 +226,7 @@ function wetkit_magic_strongarm() {
     'block-boxes-videos_box' => 'block-boxes-videos_box',
     'block-boxes-boxes_add__wetkit_box' => 'block-boxes-boxes_add__wetkit_box',
     'block-apps-manage_apps__local' => 0,
-    'block-apps-manage_apps__webexp' => 0,
+    'block-apps-manage_apps__wetkit' => 0,
     'block-boxes-boxes_add__simple' => 0,
     'block-context_ui-editor' => 0,
     'block-diff-inline' => 0,
