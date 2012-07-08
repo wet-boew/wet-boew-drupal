@@ -136,7 +136,7 @@
   plugins[page_layout][layouts] = custom_layouts
 
   ; Panels Module layouts
-  plugins[panels][layouts] = custom_panels/panels
+  plugins[panels][layouts] = custom_panels
 
 
 ;----------// Site Features
