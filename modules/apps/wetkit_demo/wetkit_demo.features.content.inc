@@ -70,7 +70,7 @@ function wetkit_demo_content_defaults() {
           'filesize' => '214157',
           'status' => '1',
           'type' => 'image',
-          'uuid' => '36a6ade6-1b5e-8304-5ddb-d6854310dfb0',
+          'uuid' => 'ba354666-3ebd-3954-b544-401e03aede74',
           'metatags' => array(),
           'image_dimensions' => array(
             'width' => '700',
@@ -153,7 +153,7 @@ function wetkit_demo_content_defaults() {
           'filesize' => '351759',
           'status' => '1',
           'type' => 'image',
-          'uuid' => '048c87a8-7d9c-1b94-2d0d-fdadf2ed460c',
+          'uuid' => 'ea3aedab-fc45-d0e4-09bf-114860fef9d1',
           'metatags' => array(),
           'image_dimensions' => array(
             'width' => '730',
@@ -225,7 +225,7 @@ function wetkit_demo_content_defaults() {
           'filesize' => '62557',
           'status' => '1',
           'type' => 'image',
-          'uuid' => '6fb6e4df-68d0-7f34-3550-fef0f0be7839',
+          'uuid' => 'c3baa726-1cb1-b3b4-0d55-ab0c471d80c4',
           'metatags' => array(),
           'image_dimensions' => array(
             'width' => '599',
@@ -307,7 +307,7 @@ function wetkit_demo_content_defaults() {
           'filesize' => '204638',
           'status' => '1',
           'type' => 'image',
-          'uuid' => 'f68390d9-f839-b054-610f-afb858072600',
+          'uuid' => 'fa3cde2d-7afc-cc94-c504-2ddc41e3db46',
           'metatags' => array(),
           'image_dimensions' => array(
             'width' => '700',

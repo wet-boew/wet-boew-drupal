@@ -1,46 +1,26 @@
 /* Gutters are not currently overridden in theme settings, but may be in theme CSS */
 
-/* smartphone_landscape one_col_vert */
+/* smartphone_landscape wetkit */
 @media only screen and (min-width:321px) and (max-width:480px) {
 .container {width:100%}
-.two-sidebars .content-inner,.one-sidebar .content-inner,.region-sidebar-first,.region-sidebar-second {margin-left: 0; margin-right: 0}
-.region-sidebar-first {width: 50%}
-.region-sidebar-second {width: 50%}
-.one-sidebar .sidebar {width: 100%}
-.region-sidebar-first,.region-sidebar-second {overflow: hidden; margin-top: 20px; float: left; clear: none}
-.region-sidebar-first.block,.region-sidebar-second .block {width: 100%}
+/* Nothing to output, this style is wetkit! */
 .at-panel .region {display:inline;float:left}.two-brick > .panel-row > .region,.two-66-33 > .region,.two-50 > .region,.two-33-66 > .region,.three-inset-right > .inset-wrapper,.three-inset-right > .inset-wrapper > .region,.three-inset-right > .region-three-inset-right-sidebar,.three-inset-left > .inset-wrapper,.three-inset-left > .inset-wrapper > .region,.three-inset-left > .region-three-inset-left-sidebar,.three-50-25-25 > .region,.three-3x33 > .region,.three-25-50-25 > .region,.three-25-25-50 > .region,.six-6x16 > .panel-row > .region,.six-6x16 > .panel-row ,.four-4x25 > .panel-row > .region,.four-4x25 > .panel-row,.five-5x20 > .panel-row > .region,.five-5x20 > .panel-row {float:none;display:block;width:100%;clear:both}
 }
-/* tablet_portrait one_col_vert */
+/* tablet_portrait wetkit */
 @media only screen and (min-width:481px) and (max-width:768px) {
 .container {width:100%}
-.two-sidebars .content-inner,.one-sidebar .content-inner,.region-sidebar-first,.region-sidebar-second {margin-left: 0; margin-right: 0}
-.region-sidebar-first {width: 50%}
-.region-sidebar-second {width: 50%}
-.one-sidebar .sidebar {width: 100%}
-.region-sidebar-first,.region-sidebar-second {overflow: hidden; margin-top: 20px; float: left; clear: none}
-.region-sidebar-first.block,.region-sidebar-second .block {width: 100%}
+/* Nothing to output, this style is wetkit! */
 .at-panel .region {display:inline;float:left}.two-brick > .panel-row {float:none}.two-brick > .panel-row > .region,.two-50 > .region,.three-50-25-25 > .region-three-50-25-25-second,.three-50-25-25 .region-three-50-25-25-third,.three-3x33 > .region,.four-4x25 > .panel-row > .region,.five-5x20 > .panel-row > div.region {width:50%}.two-66-33 > .region-two-66-33-first,.two-33-66 > .region-two-33-66-second {width:66.666666%}.two-66-33 > .region-two-66-33-second,.two-33-66 > .region-two-33-66-first {width:33.333333%}.three-inset-right > .region-three-inset-right-sidebar,.three-25-50-25 > div.region-three-25-50-25-third,.three-25-25-50 > div.region-three-25-25-50-second {width:25%}.three-inset-right > .inset-wrapper {width:75%;float:left}.three-inset-right > .inset-wrapper > .region,.three-inset-left > .inset-wrapper > .region,.three-50-25-25 > .region-three-50-25-25-first,.three-3x33 > div.region-three-33-first,.three-25-50-25 > .region-three-25-50-25-first,.three-25-25-50 > .region-three-25-25-50-first,.six-6x16 > .panel-row,.four-4x25 > .panel-row,.five-5x20 > div.panel-row,.five-5x20 > div.panel-row > div.region-five-fifth {float:none;display:block;width:100%;clear:both}.three-inset-left > .region-three-inset-left-sidebar {width:25%;float:right}.three-inset-left > .inset-wrapper {width:75%;float:right}.three-25-50-25 > div.region-three-25-50-25-second,.three-25-25-50 > div.region-three-25-25-50-third {width:75%}.six-6x16 > .panel-row > .region {width:50%;float:left}
 }
-/* tablet_landscape three_col_grail */
+/* tablet_landscape wetkit */
 @media only screen and (min-width:769px) and (max-width:1024px) {
 .container {width:100%}
-#content-column,.content-column,div.sidebar {float: left; clear: none}
-.two-sidebars .content-inner {margin-left: 20%; margin-right: 20%}
-.sidebar-first .content-inner {margin-left: 20%; margin-right: 0}
-.sidebar-second .content-inner {margin-right: 20%; margin-left: 0}
-.region-sidebar-first {width: 20%; margin-left: -100%}
-.region-sidebar-second {width: 20%; margin-left: -20%}
+/* Nothing to output, this style is wetkit! */
 .at-panel .region {display:inline;float:left}.two-brick > .panel-row {float:none}.two-brick > .panel-row > .region,.two-50 > .region,.three-50-25-25 > div.region-three-50-25-25-first,.three-25-50-25 > div.region-three-25-50-25-second,.three-25-25-50 > div.region-three-25-25-50-third,.five-5x20 > .row-1 div.region-five-first,.five-5x20 .row-1 div.region-five-second {width:50%}.two-66-33 > .region-two-66-33-first,.two-33-66 > .region-two-33-66-second,.three-inset-right > .inset-wrapper > div.region-three-inset-right-middle,.three-inset-left > .inset-wrapper > div.region-three-inset-left-middle {width:66.666666%}.two-66-33 > .region-two-66-33-second,.two-33-66 > .region-two-33-66-first,.three-inset-right > .inset-wrapper > div.region-three-inset-right-inset,.three-inset-left > .inset-wrapper > div.region-three-inset-left-inset,.three-3x33 > .region,.five-5x20 > .panel-row > .region {width:33.333333%}.three-inset-right > .region-three-inset-right-sidebar,.three-inset-left > .region-three-inset-left-sidebar,.three-50-25-25 > .region,.three-25-50-25 > .region,.three-25-25-50 > .region {width:25%}.three-inset-right > .inset-wrapper {width:75%;float:left}.three-inset-right > .inset-wrapper > .region,.three-inset-left > .inset-wrapper > .region {width:100%}.three-inset-left > .region-three-inset-left-sidebar,.three-inset-left > .inset-wrapper,.three-inset-left > .inset-wrapper > .region-three-inset-left-middle {float:right}.three-inset-left > .inset-wrapper {width:75%}.six-6x16 > .panel-row {width:33.333333%;float:left}.six-6x16 > .panel-row > .region,.five-5x20 > .panel-row {float:none;display:block;width:100%;clear:both}.four-4x25 > .panel-row > .region,.four-4x25 > .panel-row {width:50%;float:left}
 }
-/* bigscreen three_col_grail */
+/* bigscreen wetkit */
 @media only screen and (min-width:1025px) {
 .container {width:100%;max-width:1140px}
-#content-column,.content-column,div.sidebar {float: left; clear: none}
-.two-sidebars .content-inner {margin-left: 25%; margin-right: 25%}
-.sidebar-first .content-inner {margin-left: 25%; margin-right: 0}
-.sidebar-second .content-inner {margin-right: 25%; margin-left: 0}
-.region-sidebar-first {width: 25%; margin-left: -100%}
-.region-sidebar-second {width: 25%; margin-left: -25%}
+/* Nothing to output, this style is wetkit! */
 .at-panel .region {display:inline;float:left}.two-brick > .panel-row {float:none}.two-brick > .panel-row > .region,.two-50 > .region,.three-50-25-25 > div.region-three-50-25-25-first,.three-25-50-25 > div.region-three-25-50-25-second,.three-25-25-50 > div.region-three-25-25-50-third,.five-5x20 > .row-1 div.region-five-first,.five-5x20 .row-1 div.region-five-second {width:50%}.two-66-33 > .region-two-66-33-first,.two-33-66 > .region-two-33-66-second,.three-inset-right > .inset-wrapper > div.region-three-inset-right-middle,.three-inset-left > .inset-wrapper > div.region-three-inset-left-middle {width:66.666666%}.two-66-33 > .region-two-66-33-second,.two-33-66 > .region-two-33-66-first,.three-inset-right > .inset-wrapper > div.region-three-inset-right-inset,.three-inset-left > .inset-wrapper > div.region-three-inset-left-inset,.three-3x33 > .region,.five-5x20 > .panel-row > .region {width:33.333333%}.three-inset-right > .region-three-inset-right-sidebar,.three-inset-left > .region-three-inset-left-sidebar,.three-50-25-25 > .region,.three-25-50-25 > .region,.three-25-25-50 > .region {width:25%}.three-inset-right > .inset-wrapper {width:75%;float:left}.three-inset-right > .inset-wrapper > .region,.three-inset-left > .inset-wrapper > .region {width:100%}.three-inset-left > .region-three-inset-left-sidebar,.three-inset-left > .inset-wrapper,.three-inset-left > .inset-wrapper > .region-three-inset-left-middle {float:right}.three-inset-left > .inset-wrapper {width:75%}.six-6x16 > .panel-row {width:33.333333%;float:left}.six-6x16 > .panel-row > .region,.five-5x20 > .panel-row {float:none;display:block;width:100%;clear:both}.four-4x25 > .panel-row > .region,.four-4x25 > .panel-row {width:50%;float:left}
 }
