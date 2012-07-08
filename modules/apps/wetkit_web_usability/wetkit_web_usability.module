@@ -131,7 +131,7 @@ function wetkit_web_usability_init() {
   //Set Documentation Text
   if ((variable_get('wetkit_web_usability_doc', 1) == 1) && user_is_logged_in()) {
     drupal_set_message(t('Please proceed to the <a href="@settings">WetKit Web Usability Page</a> to configure additional settings.', array('@settings' => url('admin/config/wetkit_web_usability/settings'))), 'status');
-    drupal_set_message(t('Please read the online <a href="@documentation">Documentation</a>', array('@documentation' => url('http://wetkit.atlassian.com/wiki'))), 'warning');
+    drupal_set_message(t('Please read the online <a href="@documentation">Documentation</a>', array('@documentation' => url('https://github.com/wet-boew/wet-boew-drupal/wiki'))), 'warning');
     variable_set('wetkit_web_usability_doc', 0);
   }
   //Add WET pe-ap.js on hook_init
