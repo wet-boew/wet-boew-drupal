@@ -1,290 +1,71 @@
-/**
- * Basic styles for print.
- * TODO: This probably needs work, but is a good starting point.
- */
-
-/* Body */
-body {
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  line-height: 1.4;
-  word-spacing: 1.1pt;
-  letter-spacing: 0.2pt;
-  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-  color: rgb(0, 0, 0);
-  background: none;
-  font-size: 11pt;
-}
-
-
-/* Links */
-a {
-  background: transparent;
-  font-weight: 700;
-  text-decoration: underline;
-  color: rgb(0, 0, 238);
-}
-
-
-a[href^="http://"]:after,
-a[href^="http://"]:visited:after {
-  content:" (" attr(href) ") ";
-  font-size: 10pt;
-}
-
-
-/* Strip backgrounds of likely candidates */
-header,
-footer,
-#branding,
-#container,
-#columns,
-.columns-inner,
-#content-column,
-.content-inner,
-.region,
-.region-header,
-.region-content,
-.article,
-.article-title,
-.article-content,
-.comment,
-.comment-title,
-.comment-content,
-.block,
-.block-inner,
-.block-title,
-.block-content,
-table {
-  background:none !important;
-}
-
-
-/* Hide various parts of the site. */
-.sidebar,
-#breadcrumb,
-.nav,
-.field-type-taxonomy-term-reference,
-ul.links,
-ul.links a,
-.feed-icon,
-.poll .bar,
-.poll .bar .foreground,
-.comment-form,
-#comment-form,
-.book-navigation,
-.tabs,
-.pager,
-.messages,
-.help {
-  display: none;
-}
-
-
-/* Display the main content region */
-.region-content {
-  display: block !important;
-}
-
-
-/* Layout */
-#header {
-  margin-bottom: 20px;
-}
-
-
-.content-inner {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
+/* @file Print Styles This probably needs work, but it's a good starting point. */
+body { width: 100% !important; margin: 0 !important; padding: 0 !important; line-height: 1.4; word-spacing: 1.1pt; letter-spacing: 0.2pt; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: black; background: none; font-size: 11pt; }
 
-/* HTML elements */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: rgb(51, 51, 51);
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-}
+a { background: transparent; font-weight: 700; text-decoration: underline; color: #0000ee; }
+a[href^="http://"]:after, a[href^="http://"]:visited:after { content: "(" attr(href) ")"; font-size: 10pt; }
 
+div[id*="wrapper"], [class*="title"], [class*="inner"], header, footer, #branding, #container, #columns, .columns-inner, #content-column, .content-inner, .region, .region-header, .region-content, .article, .article-title, .article-content, .comment, .comment-title, .comment-content, .block, .block-inner, .block-title, .block-content, table, table * { background: none !important; }
 
-h1 {
-  font-size: 14pt;
-}
+.sidebar, #breadcrumb, .nav, .field-type-taxonomy-term-reference, ul.links, .feed-icon, .poll .bar, .poll .foreground, .comment-form, #comment-form, .book-navigation, .tabs, .action-links, .pager, .messages, .help { display: none; }
 
+#content { display: block !important; }
 
-h2{
-  font-size: 13pt;
-}
+#header { margin-bottom: 20px; }
 
+.content-inner { margin: 0 !important; padding: 0 !important; }
 
-h3{
-  font-size: 12pt;
-}
+h1, h2, h3, h4, h5, h6 { color: #333333; margin: 0; padding: 0; line-height: 1; }
 
+h1 { font-size: 14pt; }
 
-h4, h5, h6{
-  font-size: 11pt;
-}
+h2 { font-size: 13pt; }
 
+h3 { font-size: 12pt; }
 
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a,
-#site-name a,
-#site-slogan {
-  text-decoration: none !important;
-  color: rgb(51, 51, 51);
-}
+h4, h5, h6 { font-size: 11pt; }
 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, #site-name a, #site-slogan { text-decoration: none !important; color: #333333; }
 
-hgroup a:link,
-hgroup a:visited {
-  text-decoration: none;
-}
+hgroup a:link, hgroup a:visited { text-decoration: none; }
 
+#page-title { margin-top: 20px; }
 
-#page-title {
-  margin-top: 20px;
-}
+pre, code, tt, samp, kbd, var { font-size: 10pt; font-family: Consolas, "Lucida Console", Menlo, Monaco, "DejaVu Sans Mono", monospace, sans-serif; }
 
+blockquote { margin: 20px; padding: 10px; font-size: 10pt; font-style: italic; background: #eeeeee; }
 
-pre,
-code,
-tt,
-samp,
-kbd,
-var {
-  font-size: 10pt;
-  font-family: Consolas, "Lucida Console", Menlo, Monaco, "DejaVu Sans Mono", monospace, sans-serif; /* Safari hack */
-}
+hr { background-color: #666666; }
 
+#header { padding-bottom: 20px; }
 
-blockquote {
-  margin: 20px;
-  padding: 10px;
-  font-size: 10pt;
-  font-style: italic;
-  background: rgb(238, 238, 238);
-}
+#logo img { padding: 0 10px 0 0; margin: 0 !important; float: none !important; }
 
+img { float: left; margin: 4px 20px 10px 0; page-break-inside: avoid; }
 
-hr {
-  background-color: rgb(102, 102, 102);
-}
+a img { border: none; }
 
+table { margin: 1px; text-align: left; }
 
-/* Header, Logo, Site name */
-header {
-  padding-bottom: 20px;
-}
+th { border-bottom: 1px solid #333333; font-weight: 700; }
 
+td { border-bottom: 1px solid #333333; }
 
-#logo img {
-  padding: 0 10px 0 0;
-  margin: 0 !important;
-  float: none !important;
-}
+th, td { padding: 4px 10px 4px 0; }
 
+tfoot { font-style: italic; }
 
-/* Images */
-img {
-  float:left;
-  margin: 4px 20px 10px 0;
-  page-break-inside: avoid;
-}
+caption { margin-bottom: 10px; text-align: left; }
 
+thead { display: table-header-group; }
 
-a img {
-  border:none;
-}
+tr { page-break-inside: avoid; }
 
+form { margin-bottom: 10px; }
 
-/* Table */
-table {
-  margin: 1px;
-  text-align: left;
-}
+.poll .text, .poll .percent, .poll .total { text-align: left; }
+.poll form { margin-bottom: 0; }
 
+.node, .comment { margin-bottom: 20px; overflow: hidden; page-break-inside: avoid; }
 
-th {
-  border-bottom: 1px solid rgb(51, 51, 51);
-  font-weight: 700;
-}
-
-
-td {
-  border-bottom: 1px solid rgb(51, 51, 51);
-}
-
-th,td {
-  padding: 4px 10px 4px 0;
-}
-
-
-tfoot {
-  font-style: italic;
-}
-
-
-caption {
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-
-thead {
-  display: table-header-group;
-}
-
-
-tr {
-  page-break-inside: avoid;
-}
-
-
-/* Forms */
-form {
-  margin-bottom: 10px;
-}
-
-
-/* Poll module */
-.poll .text,
-.poll .percent,
-.poll .total {
-  text-align: left;
-}
-
-
-.poll form {
-  margin-bottom: 0;
-}
-
-
-/* Articles */
-.article {
-  margin-bottom: 20px;
-  overflow: hidden;
-  page-break-inside: avoid;
-}
-
-
-.submitted,
-.submitted a {
-  color: rgb(102, 102, 102);
-  text-decoration: none;
-  font-size: 9pt;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-}
+.submitted { color: #666666; text-decoration: none; font-size: 9pt; font-weight: 400; margin: 0; padding: 0; }
+.submitted a { color: #666666; text-decoration: none; font-size: 9pt; font-weight: 400; margin: 0; padding: 0; }

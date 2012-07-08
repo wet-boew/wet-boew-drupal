@@ -1,0 +1,140 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  wetkit_demo.context.inc: n/a
+#  wetkit_demo.views_default.inc: n/a
+#  wetkit_demo.info: n/a
+#  plugins/styles/blue_background/blue_background.inc: n/a
+#  plugins/styles/red_background/red_background.inc: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2012-07-08 15:53-0400\n"
+"PO-Revision-Date: 2012-07-08 15:53-0400\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: wetkit_demo.context.inc:75
+msgid "Layout"
+msgstr ""
+
+#: wetkit_demo.context.inc:76
+msgid "WetKit Default Layout for WetKit Web Usability"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:491
+msgid "Master"
+msgstr "Maître"
+
+#: wetkit_demo.views_default.inc:492
+msgid "more"
+msgstr "plus"
+
+#: wetkit_demo.views_default.inc:493
+msgid "Apply"
+msgstr "Appliquer"
+
+#: wetkit_demo.views_default.inc:494
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#: wetkit_demo.views_default.inc:495
+msgid "Sort by"
+msgstr "Trier selon"
+
+#: wetkit_demo.views_default.inc:496
+msgid "Asc"
+msgstr "Ascendant"
+
+#: wetkit_demo.views_default.inc:497
+msgid "Desc"
+msgstr "Descendant"
+
+#: wetkit_demo.views_default.inc:498
+msgid "Empty Text"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:499
+msgid "There is no news to be shown. "
+msgstr ""
+
+#: wetkit_demo.views_default.inc:500
+msgid "author"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:501
+msgid "Sidebar of Demo Items"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:502
+msgid "Recent Demo"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:503
+msgid "Demo"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:504
+msgid "All Demo Items"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:505
+msgid "Items per page"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:506
+msgid "- All -"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:507
+msgid "Offset"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:508
+msgid "By [name] / [created]"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:509
+msgid "Featured Demo Item"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:510
+msgid "Featured News"
+msgstr ""
+
+#: wetkit_demo.info:0
+msgid "WetKit Demo"
+msgstr ""
+
+#: wetkit_demo.info:0
+msgid "Demo content and functionality to help show off WetKit"
+msgstr ""
+
+#: wetkit_demo.info:0
+msgid "WetKit"
+msgstr ""
+
+#: plugins/styles/blue_background/blue_background.inc:3
+msgid "Blue Background"
+msgstr ""
+
+#: plugins/styles/blue_background/blue_background.inc:4
+msgid "Wraps panes in the Berkeley blue style."
+msgstr ""
+
+#: plugins/styles/red_background/red_background.inc:3
+msgid "Red Background"
+msgstr ""
+
+#: plugins/styles/red_background/red_background.inc:4
+msgid "Wraps panes in the Berkeley red style."
+msgstr ""
+

@@ -58,7 +58,7 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
   
   //Support for Intranet Theme
   $variables['intranet'] = '';
-  $variables['wetkit_sub_site'] = theme_get_setting('wetkit_sub_site');
+  $variables['wetkit_sub_site'] = t('Sub Site Name');
   if (theme_get_setting('wetkit_intranet_enable') == 1) {
     $variables['intranet'] = 'Enabled';
     $variables['base_path'] = base_path();
@@ -66,10 +66,10 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
   }
 
   //Assign other skip link variables
-  $variables['skip_link_anchor'] = theme_get_setting('skip_link_anchor');
-  $variables['skip_link_text'] = theme_get_setting('skip_link_text');
-  $variables['skip_link2_anchor'] = theme_get_setting('skip_link2_anchor');
-  $variables['skip_link2_text'] = theme_get_setting('skip_link2_text');
+  $variables['skip_link_content_anchor'] = theme_get_setting('skip_link_content_anchor');
+  $variables['skip_link_text'] = t('Skip to main content');
+  $variables['skip_link_nav_anchor'] = theme_get_setting('skip_link_nav_anchor');
+  $variables['skip_link2_text'] = t('Skip to footer');
 
   //Detect Panels Layout if Exists
   $panel_page = page_manager_get_current_page();
@@ -208,7 +208,7 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
   
   //Support for Intranet Theme
   $variables['intranet'] = '';
-  $variables['wetkit_sub_site'] = theme_get_setting('wetkit_sub_site');
+  $variables['wetkit_sub_site'] = t('Sub Site Name');
   if (theme_get_setting('wetkit_intranet_enable') == 1) {
     $variables['intranet'] = 'Enabled';
     drupal_add_css(

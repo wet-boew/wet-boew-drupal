@@ -67,4 +67,8 @@ figure { display: block; margin: 0px; padding: 0px; }
 
 .page-node-edit .pane-page-tabs ul.tabs { margin: 0px 0px; }
 
-.page-node-edit div.vertical-tabs { margin-top: 3em; }
+.page-node-add div.vertical-tabs, .page-node-edit div.vertical-tabs { margin-top: 3em; }
+
+.mcecontentbody { overflow: hidden; }
+
+#block-workbench-block { width: 99%; display: block; margin-left: auto; margin-right: auto; }

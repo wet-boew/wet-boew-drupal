@@ -1,0 +1,519 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  wetkit_web_usability.admin.inc: n/a
+#  wetkit_web_usability.features.menu_custom.inc: n/a
+#  wetkit_web_usability.views_default.inc: n/a
+#  wetkit_slider/wetkit_slider.views_default.inc: n/a
+#  wetkit_web_usability.module: n/a
+#  wetkit_web_usability.info: n/a
+#  wetkit_box/wetkit_box.info: n/a
+#  wetkit_default_layout/wetkit_default_layout.info: n/a
+#  wetkit_metatag/wetkit_metatag.info: n/a
+#  wetkit_security/wetkit_security.info: n/a
+#  wetkit_slider/wetkit_slider.info: n/a
+#  wetkit_styles/wetkit_styles.info: n/a
+#  plugins/styles/wetkitnav/wetkitnav.inc: n/a
+#  wetkit_box/plugins/wetkit_box.inc: n/a
+#  wetkit_slider/wetkit_slider.features.inc: n/a
+#  wetkit_default_layout/wetkit_default_layout.context.inc: n/a
+#  wetkit_metatag/wetkit_metatag.metatag.inc: n/a
+#  wetkit_slider/wetkit_slider.features.field.inc: n/a
+#  wetkit_styles/wetkit_styles.module: n/a
+#  wetkit_styles/skins/styles/styles.inc: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2012-07-08 15:55-0400\n"
+"PO-Revision-Date: 2012-07-08 15:55-0400\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: wetkit_web_usability.admin.inc:14
+msgid "Migrate"
+msgstr ""
+
+#: wetkit_web_usability.admin.inc:20
+msgid "Migrate Demo Content"
+msgstr ""
+
+#: wetkit_web_usability.admin.inc:25
+msgid "Enable / Disable WetKit jQuery Progressive Enhancement"
+msgstr ""
+
+#: wetkit_web_usability.admin.inc:31;33
+msgid "Web Experience Toolkit: jQuery v3.0 (In Development)"
+msgstr ""
+
+#: wetkit_web_usability.features.menu_custom.inc:55
+msgid "Footer Section for Web Experience Toolkit"
+msgstr "Section Pied de page de la Boîte à outils de l'expérience Web"
+
+#: wetkit_web_usability.features.menu_custom.inc:56
+msgid "Header Section for Web Experience Toolkit"
+msgstr "Section En-tête de la Boîte à outils de l'expérience Web"
+
+#: wetkit_web_usability.features.menu_custom.inc:57
+msgid "Mid Footer Section for Web Experience Toolkit"
+msgstr ""
+
+#: wetkit_web_usability.features.menu_custom.inc:58
+msgid "Terms Section for Web Experience Toolkit"
+msgstr "Section Termes de la Boîte à outils de l'expérience Web"
+
+#: wetkit_web_usability.features.menu_custom.inc:59
+msgid "The <em>Main</em> megamenu for Web Experience Toolkit"
+msgstr ""
+"Mégamenu <em>Menu principal</em> de la Boîte à outils de "
+"l'expérience Web"
+
+#: wetkit_web_usability.features.menu_custom.inc:60
+msgid "WET: Footer"
+msgstr "BOEW: Pied de page"
+
+#: wetkit_web_usability.features.menu_custom.inc:61
+msgid "WET: Header"
+msgstr "BOEW: En-tête"
+
+#: wetkit_web_usability.features.menu_custom.inc:62
+msgid "WET: Mega Menu"
+msgstr "BOEW: Mégamenu"
+
+#: wetkit_web_usability.features.menu_custom.inc:63
+msgid "WET: Mid Footer"
+msgstr ""
+
+#: wetkit_web_usability.features.menu_custom.inc:64
+msgid "WET: Terms"
+msgstr "BOEW: Termes"
+
+#: wetkit_web_usability.views_default.inc:133 wetkit_slider/wetkit_slider.views_default.inc:172
+msgid "Master"
+msgstr "Maître"
+
+#: wetkit_web_usability.views_default.inc:134
+msgid "Headlines"
+msgstr "Manchettes"
+
+#: wetkit_web_usability.views_default.inc:135 wetkit_slider/wetkit_slider.views_default.inc:173
+msgid "more"
+msgstr "plus"
+
+#: wetkit_web_usability.views_default.inc:136 wetkit_slider/wetkit_slider.views_default.inc:174
+msgid "Apply"
+msgstr "Appliquer"
+
+#: wetkit_web_usability.views_default.inc:137 wetkit_slider/wetkit_slider.views_default.inc:175
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#: wetkit_web_usability.views_default.inc:138 wetkit_slider/wetkit_slider.views_default.inc:176
+msgid "Sort by"
+msgstr "Trier selon"
+
+#: wetkit_web_usability.views_default.inc:139 wetkit_slider/wetkit_slider.views_default.inc:177
+msgid "Asc"
+msgstr "Ascendant"
+
+#: wetkit_web_usability.views_default.inc:140 wetkit_slider/wetkit_slider.views_default.inc:178
+msgid "Desc"
+msgstr "Descendant"
+
+#: wetkit_web_usability.views_default.inc:141
+msgid "No Content"
+msgstr ""
+
+#: wetkit_web_usability.views_default.inc:142
+msgid "No content has yet been created for this website. Please manually create some content or run the migration scripts that come with this distribution. This section will then be appropriately rendered using a zebra style."
+msgstr ""
+
+#: wetkit_web_usability.views_default.inc:143
+msgid "[body]"
+msgstr "[corps]"
+
+#: wetkit_web_usability.views_default.inc:144 wetkit_slider/wetkit_slider.views_default.inc:179
+msgid "Block"
+msgstr "Bloc"
+
+#: wetkit_web_usability.module:133
+msgid "Please proceed to the <a href=\"@settings\">WetKit Web Usability Page</a> to configure additional settings."
+msgstr ""
+
+#: wetkit_web_usability.module:134
+msgid "Please read the online <a href=\"@documentation\">Documentation</a>"
+msgstr ""
+
+#: wetkit_web_usability.module:157
+msgid "WetKit Web Usability"
+msgstr ""
+
+#: wetkit_web_usability.module:158
+msgid "Manage specific features related to the Web Experience Toolkit."
+msgstr ""
+
+#: wetkit_web_usability.module:167
+msgid "WetKit Web Usability Settings"
+msgstr ""
+
+#: wetkit_web_usability.module:168
+msgid "Change how certain settings behave from the Web Experience Toolkit."
+msgstr ""
+
+#: wetkit_web_usability.info:0
+msgid "WetKit Web Usability Setup"
+msgstr ""
+
+#: wetkit_web_usability.info:0
+msgid "Core Feature: Installs settings for default menus, blocks, views, and content"
+msgstr ""
+"Fonction principale: Installer les paramètres des menus, des blocs, "
+"des vues et du contenu par défaut"
+
+#: wetkit_web_usability.info:0 wetkit_box/wetkit_box.info:0 wetkit_default_layout/wetkit_default_layout.info:0 wetkit_metatag/wetkit_metatag.info:0 wetkit_security/wetkit_security.info:0 wetkit_slider/wetkit_slider.info:0 wetkit_styles/wetkit_styles.info:0
+msgid "WetKit"
+msgstr ""
+
+#: plugins/styles/wetkitnav/wetkitnav.inc:10
+msgid "WetKit Nav"
+msgstr ""
+
+#: plugins/styles/wetkitnav/wetkitnav.inc:11
+msgid "Display the pane or region with no markup, not even a title."
+msgstr ""
+
+#: plugins/styles/wetkitnav/wetkitnav.inc:71
+msgid "Headings"
+msgstr ""
+
+#: plugins/styles/wetkitnav/wetkitnav.inc:73
+msgid "h1"
+msgstr ""
+
+#: plugins/styles/wetkitnav/wetkitnav.inc:74
+msgid "h2"
+msgstr ""
+
+#: plugins/styles/wetkitnav/wetkitnav.inc:75
+msgid "h3"
+msgstr ""
+
+#: plugins/styles/wetkitnav/wetkitnav.inc:76
+msgid "h4"
+msgstr ""
+
+#: plugins/styles/wetkitnav/wetkitnav.inc:77
+msgid "h5"
+msgstr ""
+
+#: plugins/styles/wetkitnav/wetkitnav.inc:78
+msgid "h6"
+msgstr ""
+
+#: plugins/styles/wetkitnav/wetkitnav.inc:85
+msgid "Class"
+msgstr ""
+
+#: plugins/styles/wetkitnav/wetkitnav.inc:87;97
+msgid "Empty"
+msgstr "Vide"
+
+#: plugins/styles/wetkitnav/wetkitnav.inc:88
+msgid "span-2"
+msgstr ""
+
+#: plugins/styles/wetkitnav/wetkitnav.inc:95
+msgid "ID"
+msgstr ""
+
+#: plugins/styles/wetkitnav/wetkitnav.inc:98
+msgid "gcwu-connect"
+msgstr ""
+
+#: wetkit_box/wetkit_box.info:0
+msgid "WetKit Boxes"
+msgstr "Boîtes WetKit"
+
+#: wetkit_box/wetkit_box.info:0
+msgid "Core Feature: Provides plugin for multilingual boxes"
+msgstr "Fonction principale: Fournit plugin pour boîtes multilingues "
+
+#: wetkit_box/plugins/wetkit_box.inc:45 wetkit_slider/wetkit_slider.features.inc:62
+msgid "Title"
+msgstr "Titre"
+
+#: wetkit_box/plugins/wetkit_box.inc:47
+msgid "The title of the box as shown to the user."
+msgstr "Le titre de la boîte comme indiqué à l'utilisateur."
+
+#: wetkit_box/plugins/wetkit_box.inc:52
+msgid "Body"
+msgstr "Corps"
+
+#: wetkit_box/plugins/wetkit_box.inc:56
+msgid "The content of the block as shown to the user."
+msgstr "Le contenu du bloc vu par l'utilisateur."
+
+#: wetkit_default_layout/wetkit_default_layout.context.inc:66
+msgid "Default Layout (front) for WetKit Distro"
+msgstr ""
+
+#: wetkit_default_layout/wetkit_default_layout.context.inc:67;136
+msgid "Layout"
+msgstr ""
+
+#: wetkit_default_layout/wetkit_default_layout.context.inc:135
+msgid "Default Layout for WetKit Distro"
+msgstr ""
+
+#: wetkit_default_layout/wetkit_default_layout.info:0
+msgid "WetKit Default Layout"
+msgstr ""
+
+#: wetkit_default_layout/wetkit_default_layout.info:0
+msgid "WetKit Default Layout for WetKit Web Usability"
+msgstr ""
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:63
+msgid "WetKit Metadata"
+msgstr "Métadonnées de la BOEW"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:66;75
+msgid "WetKit Metadata title"
+msgstr "Métadonnées de la BOEW – Titre"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:67
+msgid "The main title of your object as it should appear within the display."
+msgstr ""
+"Titre principal de votre objet tel qu'il doit apparaître dans "
+"l'affichage."
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:76
+msgid "The title of your object as it should appear within the display."
+msgstr "Titre de votre objet tel qu'il doit apparaître dans l'affichage."
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:84
+msgid "WetKit Metadata site name"
+msgstr "Métadonnées de la BOEW – Nom de site"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:85
+msgid "A human-readable name for your site, e.g., <em>Web Experience Toolkit</em>."
+msgstr ""
+"Nom en clair du site, p. ex. <em>Boîte à outils de l'expérience "
+"Web</em>."
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:94
+msgid "WetKit Metadata URL"
+msgstr "Métadonnées de la BOEW – URL"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:95
+msgid "The canonical URL of your object that will be used as its permanent ID in the website."
+msgstr "URL canonique de l'objet: identificateur permanent dans le site Web."
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:103
+msgid "WetKit Metadata Language"
+msgstr "Métadonnées de la BOEW – Langue"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:104
+msgid "The language of your object"
+msgstr "Langue de votre objet"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:112
+msgid "WetKit Metadata Creator"
+msgstr "Métadonnées de la BOEW – Créateur"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:113
+msgid "The creator of the overall site content"
+msgstr "Créateur du contenu global du site"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:121
+msgid "WetKit Metadata description"
+msgstr "Métadonnées de la BOEW – Description"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:122
+msgid "A one to two sentence description of your page."
+msgstr "Courte description (une ou deux phrases) de la page."
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:130
+msgid "WetKit Metadata date"
+msgstr "Métadonnées de la BOEW – Date"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:131
+msgid "The date of your object as it was most recently changed."
+msgstr "Date de l'objet (dernier changement)."
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:139
+msgid "WetKit Metadata Date Created"
+msgstr "Métadonnées de la BOEW – Date de création"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:140
+msgid "The date of your object as it was created."
+msgstr "Date de création de l'objet."
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:148
+msgid "WetKit Metadata Date Modified"
+msgstr "Métadonnées de la BOEW – Date de modification"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:149
+msgid "The date of your object as it was modified."
+msgstr "Date de modification de l'objet."
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:157
+msgid "WetKit Metadata Author"
+msgstr "Métadonnées de la BOEW – Auteur"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:158
+msgid "The main Author of the page."
+msgstr "Auteur principal de la page."
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:166
+msgid "WetKit Metadata type"
+msgstr "Métadonnées de la BOEW – Type"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:167
+msgid "The type of your object, for example:, <em>Graph</em>."
+msgstr "Type de l'objet, par exemple <em>Graphique</em>."
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:173
+msgid "- None -"
+msgstr "- Aucun -"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:180
+msgid "WetKit Metadata image"
+msgstr "Métadonnées de la BOEW – Image"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:181
+msgid "An image URL which should represent your object within the page. (PNG, JPEG and GIF formats)"
+msgstr ""
+"Image liée à l'URL pour représenter l'objet dans la page (en format "
+"PNG, JPEG, GIF)"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:193
+msgid "Graph"
+msgstr "Graphique"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:194
+msgid "bar"
+msgstr "à barres"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:195
+msgid "line"
+msgstr "linéaire"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:197
+msgid "Media"
+msgstr "Média"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:198
+msgid "Image"
+msgstr "Image"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:199
+msgid "Video"
+msgstr "Vidéo"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:200
+msgid "Diagram"
+msgstr "Diagramme"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:201
+msgid "Audio"
+msgstr "Audio"
+
+#: wetkit_metatag/wetkit_metatag.metatag.inc:202
+msgid "Text"
+msgstr "Texte"
+
+#: wetkit_metatag/wetkit_metatag.info:0
+msgid "WetKit MetaTags"
+msgstr "Balises méta de la BOEW"
+
+#: wetkit_metatag/wetkit_metatag.info:0
+msgid "Core Feature: Installs and configures default metatags that can be easily extended for your site"
+msgstr ""
+"Fonction principale: Installer et configurer les balises méta qui "
+"peuvent facilement être adaptées pour votre site"
+
+#: wetkit_security/wetkit_security.info:0
+msgid "WetKit Security"
+msgstr ""
+
+#: wetkit_security/wetkit_security.info:0
+msgid "WetKit Security Feature(s)"
+msgstr ""
+
+#: wetkit_slider/wetkit_slider.features.field.inc:247
+msgid "Slider Description"
+msgstr "Description de la case de défilement"
+
+#: wetkit_slider/wetkit_slider.features.field.inc:248
+msgid "Slider Photo"
+msgstr "Photo de la case de défilement"
+
+#: wetkit_slider/wetkit_slider.features.field.inc:249
+msgid "Slider Title"
+msgstr "Titre de la case de défilement"
+
+#: wetkit_slider/wetkit_slider.features.inc:58
+msgid "Main Slider"
+msgstr "Case de défilement principale"
+
+#: wetkit_slider/wetkit_slider.features.inc:60
+msgid "Main Slider for the Government of Canada"
+msgstr "Case de défilement principale pour le gouvernement du Canada"
+
+#: wetkit_slider/wetkit_slider.views_default.inc:180
+msgid "Attachment"
+msgstr "Pièce jointe"
+
+#: wetkit_slider/wetkit_slider.info:0
+msgid "WetKit Slider"
+msgstr "Case de défilement de la BOEW"
+
+#: wetkit_slider/wetkit_slider.info:0
+msgid "Extra Feature: Installs an accessible rotating banner on the front page"
+msgstr ""
+"Fonction supplémentaire: Installer une bannière rotative accessible "
+"dans la page d'accueil"
+
+#: wetkit_styles/wetkit_styles.module:21
+msgid "Grid and Modules CSS"
+msgstr "Grille et modules CSS"
+
+#: wetkit_styles/wetkit_styles.module:25 wetkit_styles/skins/styles/styles.inc:204
+msgid "Placement CSS"
+msgstr "Positionnement CSS"
+
+#: wetkit_styles/wetkit_styles.module:28 wetkit_styles/skins/styles/styles.inc:213
+msgid "Styling CSS"
+msgstr "Application de styles CSS"
+
+#: wetkit_styles/wetkit_styles.info:0
+msgid "WetKit Styles"
+msgstr "Styles de la BOEW"
+
+#: wetkit_styles/wetkit_styles.info:0
+msgid "Extra Feature: Installs classes related to Web Usability Theme + Skinr Settings"
+msgstr ""
+"Fonction supplémentaire: Installer des classes associées au thème "
+"de facilité d’emploi Web Theme et aux paramètres de Skinr"
+
+#: wetkit_styles/skins/styles/styles.inc:195
+msgid "Grid and Module CSS"
+msgstr "Grille et module CSS"
+
+#: wetkit_styles/skins/styles/styles.inc:197;206;215
+msgid "Select the appropriate classes you wish to apply"
+msgstr "Sélectionnez les classes à appliquer"
+
+#: wetkit_styles/skins/styles/styles.inc:227
+msgid "@value"
+msgstr ""
+
