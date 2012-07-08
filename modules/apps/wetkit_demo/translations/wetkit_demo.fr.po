@@ -112,7 +112,7 @@ msgstr ""
 
 #: wetkit_demo.info:0
 msgid "WetKit Demo"
-msgstr ""
+msgstr "Démo WetKit"
 
 #: wetkit_demo.info:0
 msgid "Demo content and functionality to help show off WetKit"

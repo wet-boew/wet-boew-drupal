@@ -72,3 +72,7 @@ figure { display: block; margin: 0px; padding: 0px; }
 .mcecontentbody { overflow: hidden; }
 
 #block-workbench-block { width: 99%; display: block; margin-left: auto; margin-right: auto; }
+
+.page-node-add label[for="edit-language"], .page-node-edit label[for="edit-language"] { display: inline; }
+
+.page-node-add .node-form h3.pane-title, .page-node-edit .node-form h3.pane-title { background: #DDD; padding: 2px 4px; }

@@ -42,7 +42,7 @@ function wetkit_web_usability_views_default_views() {
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['label'] = 'No Content';
   $handler->display->display_options['empty']['area']['empty'] = FALSE;
-  $handler->display->display_options['empty']['area']['content'] = 'No content has yet been created for this website. Please manually create some content or run the migration scripts that come with this distribution. This section will then be appropriately rendered using a zebra style.';
+  $handler->display->display_options['empty']['area']['content'] = 'No content has yet been created for this language.';
   $handler->display->display_options['empty']['area']['format'] = 'wetkit_wysiwyg_text';
   $handler->display->display_options['empty']['area']['tokenize'] = 0;
   /* Field: Content: Title */
@@ -139,7 +139,7 @@ function wetkit_web_usability_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('No Content'),
-    t('No content has yet been created for this website. Please manually create some content or run the migration scripts that come with this distribution. This section will then be appropriately rendered using a zebra style.'),
+    t('No content has yet been created for this language.'),
     t('[body]'),
     t('Block'),
   );

@@ -132,8 +132,8 @@ msgid "No Content"
 msgstr ""
 
 #: wetkit_web_usability.views_default.inc:142
-msgid "No content has yet been created for this website. Please manually create some content or run the migration scripts that come with this distribution. This section will then be appropriately rendered using a zebra style."
-msgstr ""
+msgid "No content has yet been created for this language."
+msgstr "Aucun contenu n'a encore été créé pour cette langue."
 
 #: wetkit_web_usability.views_default.inc:143
 msgid "[body]"
