@@ -155,12 +155,10 @@
 ;----------// Theme Settings
 
   ; Web Usability
-  settings[skip_link_anchor]         = wb-cont
-  settings[skip_link_text]           = Skip to main content
-  settings[skip_link2_anchor]        = wb-nav
-  settings[skip_link2_text]          = Skip to footer
+  settings[skip_link_content_anchor] = wb-cont
+  settings[skip_link_nav_anchor]     = wb-nav
   settings[wetkit_intranet_enable]   = 0
-  settings[wetkit_sub_site]          = Sub Site Name
+
 
   ; Layout settings - Standard layout
   settings[bigscreen_layout]         = 'three_col_grail'

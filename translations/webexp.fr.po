@@ -2,14 +2,16 @@
 #
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
-# Generated from file: webexp.info: n/a
+# Generated from files:
+#  webexp.info: n/a
+#  webexp.profile: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-01-31 20:11-0500\n"
-"PO-Revision-Date: 2012-01-31 20:11-0500\n"
+"POT-Creation-Date: 2012-07-08 15:49-0400\n"
+"PO-Revision-Date: 2012-07-08 15:49-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -18,10 +20,60 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: webexp.info:0
-msgid "WebExp"
-msgstr "WebExp"
+msgid "Web Experience Toolkit"
+msgstr ""
 
 #: webexp.info:0
 msgid "Install Profile created for the Web Experience Toolkit using Drupal 7"
-msgstr "Profile d'installation créé au moyen de Drupal 7 pour la Boîte à outils de l’expérience Web"
+msgstr ""
+"Profile d'installation créé au moyen de Drupal 7 pour la Boîte à "
+"outils de l’expérience Web"
+
+#: webexp.profile:20
+msgid "Import French Language"
+msgstr ""
+
+#: webexp.profile:26
+msgid "Enable apps support"
+msgstr ""
+
+#: webexp.profile:67
+msgid "Install apps for WetKit (local)"
+msgstr ""
+
+#: webexp.profile:75
+msgid "Choose a theme"
+msgstr ""
+
+#: webexp.profile:218;364
+msgid "Finished!"
+msgstr ""
+
+#: webexp.profile:259
+msgid "Enable Support for Apps"
+msgstr ""
+
+#: webexp.profile:262
+msgid "Apps uses the same mechanism for installing modules as the update module in core. This depends on certain php extensions to be installed on your server. Below is the documentation for the various methods of installing."
+msgstr ""
+
+#: webexp.profile:265
+msgid "FTP"
+msgstr "FTP"
+
+#: webexp.profile:270
+msgid "SSH"
+msgstr "SSH"
+
+#: webexp.profile:291
+msgid "Choose a theme!"
+msgstr ""
+
+#: webexp.profile:302
+msgid "Starting Theme"
+msgstr ""
+
+#: webexp.profile:366
+msgid "Congratulations, you just installed the Drupal 7 Web Experience Toolkit!"
+msgstr ""
 

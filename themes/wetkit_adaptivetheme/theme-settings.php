@@ -21,30 +21,30 @@ if (isset($form_id)) {
     '#type'          => 'fieldset',
     '#title'         => t('Accessibility Settings'),
   );
-  $form['at-settings']['accessibility']['skip_link_anchor'] = array(
+  $form['at-settings']['accessibility']['skip_link_content_anchor'] = array(
     '#type'          => 'textfield',
     '#title'         => t('Anchor ID for the “skip link” 1'),
-    '#default_value' => theme_get_setting('skip_link_anchor'),
+    '#default_value' => theme_get_setting('skip_link_content_anchor'),
     '#field_prefix'  => '#',
     '#description'   => t('Specify the HTML ID of the element that the accessible-but-hidden “skip link” should link to. (<a href="!link">Read more about skip links</a>.)', array('!link' => 'http://drupal.org/node/467976')),
   );
   $form['at-settings']['accessibility']['skip_link_text'] = array(
     '#type'          => 'textfield',
     '#title'         => t('Text for the “skip link” 1'),
-    '#default_value' => theme_get_setting('skip_link_text'),
+    '#default_value' => t('Skip to main content'),
     '#description'   => t('For example: <em>Jump to navigation</em>, <em>Skip to content</em>'),
   );
-  $form['at-settings']['accessibility']['skip_link2_anchor'] = array(
+  $form['at-settings']['accessibility']['skip_link_nav_anchor'] = array(
     '#type'          => 'textfield',
     '#title'         => t('Anchor ID for the “skip link” 2'),
-    '#default_value' => theme_get_setting('skip_link2_anchor'),
+    '#default_value' => theme_get_setting('skip_link_nav_anchor'),
     '#field_prefix'  => '#',
     '#description'   => t('Specify the HTML ID of the element that the accessible-but-hidden “skip link” should link to. (<a href="!link">Read more about skip links</a>.)', array('!link' => 'http://drupal.org/node/467976')),
   );
   $form['at-settings']['accessibility']['skip_link2_text'] = array(
     '#type'          => 'textfield',
     '#title'         => t('Text for the “skip link” 2'),
-    '#default_value' => theme_get_setting('skip_link2_text'),
+    '#default_value' => t('Skip to footer'),
     '#description'   => t('For example: <em>Jump to navigation</em>, <em>Skip to content</em>'),
   );
   $form['at-settings']['intranet'] = array(
@@ -61,7 +61,7 @@ if (isset($form_id)) {
     '#type' => 'textfield',
     '#title' => t('Intranet web site name'),
     '#description' => t('The display name for the Intranet web site'),
-    '#default_value' => theme_get_setting('wetkit_sub_site'),
+    '#default_value' => t('Sub Site Name'),
   );
   // We are editing the $form in place, so we don't need to return anything.
 }

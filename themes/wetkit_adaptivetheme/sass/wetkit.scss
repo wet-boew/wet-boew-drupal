@@ -172,6 +172,18 @@ figure {
   margin: 0px 0px;
 }
 
+.page-node-add div.vertical-tabs,
 .page-node-edit div.vertical-tabs {
  margin-top: 3em;
+}
+
+.mcecontentbody {
+  overflow: hidden;
+}
+
+#block-workbench-block {
+  width: 99%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
