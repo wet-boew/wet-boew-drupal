@@ -133,10 +133,10 @@
   ; plugin, it will add a layout to all device groups that does little else
   ; except provide and example page_layout plugin.
 
-  ; plugins[page_layout][layouts] = custom_layouts
+  plugins[page_layout][layouts] = custom_layouts
 
   ; Panels Module layouts
-  plugins[panels][layouts] = custom_layouts/panels
+  plugins[panels][layouts] = custom_panels/panels
 
 
 ;----------// Site Features
