@@ -12,7 +12,7 @@
  *   added by Adaptivetheme in the appropriate process function.
  * - $panel_suffix: closing element for the $prefix.
  *
- * @see adaptivetheme_preprocess_wetkit_33_66()
+ * @see adaptivetheme_preprocess_wetkit_two_33_66()
  * @see adaptivetheme_preprocess_node()
  * @see adaptivetheme_process_node()
  */
@@ -27,11 +27,11 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
 
 <?php print $panel_prefix; ?>
 
-<div class="at-panel panel-display wetkit-33-66 clearfix" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
-<?php if ($content['wetkit_33_66_top']): ?>
-    <div class="region region-wetkit-33-66-top region-conditional-stack">
+<div class="at-panel panel-display wetkit-two-33-66 clearfix" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
+<?php if ($content['wetkit_two_33_66_top']): ?>
+    <div class="region region-wetkit-two-33-66-top region-conditional-stack">
     <div class="region-inner clearfix">
-        <?php print $content['wetkit_33_66_top']; ?>
+        <?php print $content['wetkit_two_33_66_top']; ?>
     </div>
     </div>
 <?php endif; ?>
@@ -39,9 +39,9 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
 <div id="wb-main" role="main">
     <div id="wb-main-in">
 
-        <div class="region-wetkit-33-66-first">
+        <div class="region-wetkit-two-33-66-first">
             <div class="region-inner clearfix">
-            <?php print $content['wetkit_33_66_first']; ?>
+            <?php print $content['wetkit_two_33_66_first']; ?>
             </div>
         </div>
 
@@ -54,9 +54,9 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
     
         <nav role="navigation">
             <div class="wb-sec-def">
-    <div class="region-wetkit-33-66-second">
+    <div class="region-wetkit-two-33-66-second">
         <div class="region-inner clearfix">
-        <?php print $content['wetkit_33_66_second']; ?>
+        <?php print $content['wetkit_two_33_66_second']; ?>
         </div>
     </div>
             </div>
@@ -64,10 +64,10 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
 
     </div>
 </div>
-<?php if ($content['wetkit_33_66_bottom']): ?>
-    <div class="region region-wetkit-33-66-bottom region-conditional-stack">
+<?php if ($content['wetkit_two_33_66_bottom']): ?>
+    <div class="region region-wetkit-two-33-66-bottom region-conditional-stack">
     <div class="region-inner clearfix">
-        <?php print $content['wetkit_33_66_bottom']; ?>
+        <?php print $content['wetkit_two_33_66_bottom']; ?>
     </div>
     </div>
 <?php endif; ?>
