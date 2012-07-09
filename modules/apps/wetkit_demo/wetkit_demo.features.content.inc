@@ -43,15 +43,33 @@ function wetkit_demo_content_defaults() {
     'body' => array(
       'und' => array(
         0 => array(
-          'value' => '<p>Burdock, cauliflower mooli burdock gobo tepary bean collard greens ginger! Bell pepper lotus root pignut bamboo shoot; cardoon. Horseradish yacón mustard dolichos bean epazote peanut azuki bean catsear - tatsoi. Cassava turnip greens jícama moth bean; corn salad, soko beetroot hamburg parsley ginger. Garden Rocket celery bitter gourd winter melon kuka; fiddlehead. Aubergine, collard greens gobo, tigernut zucchini, earthnut pea pumpkin pak choy rutabaga.</p><p>Chickweed kohlrabi ulluco melokhia lentil.</p><p>Jícama leaves chickweed, guar chinese artichoke fluted pumpkin prairie turnip; lima bean soybean soybean watercress, tatsoi! Water chestnut chicory collard greens. Carrot courgette; nopal. Onion - tarwi plectranthus rutabaga. Lagos bologi ricebean, mizuna greens okra.</p><p>Plectranthus napa cabbage - okra. Pumpkin taro lettuce chinese mallow lagos bologi yam. Parsnip soybean radish - drumstick scallion brinjal swiss chard. Chicory sorrel lotus root summer purslane celtuce bamboo shoot leaves elephant foot yam soybean? Tomato winter melon garden rocket spinach, bok choy. Ti sea beet; kale good king henry cauliflower lotus root! Dolichos bean camas; fat hen kohlrabi; winged bean.</p><p>Leek cardoon mustard, land cress leaves broccoli rabe. Hamburg parsley asparagus tatsoi - ceylon spinach daikon broccoli rabe! Bamboo shoot tomatillo. Sea beet guar water chestnut?</p><p>Photo Credit: http://www.flickr.com/photos/mhaller1979/3456875252&nbsp;</p>',
+          'value' => '<p><span>Drupal is open source software maintained and developed by a community of 630,000+ users and developers. It\'s distributed under the terms of the&nbsp;</span><a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</a><span>&nbsp;(or "GPL"), which means anyone is free to download it and share it with others. This open development model means that people are constantly working to make sure </span></p><p><span>Drupal is a cutting-edge platform that supports the latest technologies that the Web has to offer. The Drupal project\'s&nbsp;</span><a href="http://drupal.org/principles">principles</a><span>&nbsp;encourage modularity, standards, collaboration, ease-of-use, and more.</span></p><p><span style="text-decoration: underline;">Drupal offers a wide variety of features including the following:</span></p><div><ul><li>Organize and find web content</li><li>Ease of use and creative content</li><li>Powerful fine-grained administration and security</li><li>Enables controlled collaboration</li><li>Customizeable and extendable</li><li>Easy connection to other IT systems and support for SOA and the Semantic Web</li><li>Extensive framework for building web applications</li></ul><p><span style="text-decoration: underline;">What Specific Features Help GoC?</span></p><div><ul><li>Drupal has been integrated with the upcoming WET 3.0</li><li>Full support for bilingual sites</li><li>WCAG 2.0 Compliance</li><li>Open source / no license costs</li><li>TBS WCMS Tiger Team Endorsement</li></ul></div></div>',
           'summary' => '',
           'format' => 'wetkit_wysiwyg_text',
-          'safe_value' => '<p>Burdock, cauliflower mooli burdock gobo tepary bean collard greens ginger! Bell pepper lotus root pignut bamboo shoot; cardoon. Horseradish yacón mustard dolichos bean epazote peanut azuki bean catsear - tatsoi. Cassava turnip greens jícama moth bean; corn salad, soko beetroot hamburg parsley ginger. Garden Rocket celery bitter gourd winter melon kuka; fiddlehead. Aubergine, collard greens gobo, tigernut zucchini, earthnut pea pumpkin pak choy rutabaga.</p>
-<p>Chickweed kohlrabi ulluco melokhia lentil.</p>
-<p>Jícama leaves chickweed, guar chinese artichoke fluted pumpkin prairie turnip; lima bean soybean soybean watercress, tatsoi! Water chestnut chicory collard greens. Carrot courgette; nopal. Onion - tarwi plectranthus rutabaga. Lagos bologi ricebean, mizuna greens okra.</p>
-<p>Plectranthus napa cabbage - okra. Pumpkin taro lettuce chinese mallow lagos bologi yam. Parsnip soybean radish - drumstick scallion brinjal swiss chard. Chicory sorrel lotus root summer purslane celtuce bamboo shoot leaves elephant foot yam soybean? Tomato winter melon garden rocket spinach, bok choy. Ti sea beet; kale good king henry cauliflower lotus root! Dolichos bean camas; fat hen kohlrabi; winged bean.</p>
-<p>Leek cardoon mustard, land cress leaves broccoli rabe. Hamburg parsley asparagus tatsoi - ceylon spinach daikon broccoli rabe! Bamboo shoot tomatillo. Sea beet guar water chestnut?</p>
-<p>Photo Credit: <a href="http://www.flickr.com/photos/mhaller1979/3456875252">http://www.flickr.com/photos/mhaller1979/3456875252</a> </p>
+          'safe_value' => '<p><span>Drupal is open source software maintained and developed by a community of 630,000+ users and developers. It\'s distributed under the terms of the </span><a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</a><span> (or "GPL"), which means anyone is free to download it and share it with others. This open development model means that people are constantly working to make sure </span></p>
+<p><span>Drupal is a cutting-edge platform that supports the latest technologies that the Web has to offer. The Drupal project\'s </span><a href="http://drupal.org/principles">principles</a><span> encourage modularity, standards, collaboration, ease-of-use, and more.</span></p>
+<p><span style="text-decoration:underline">Drupal offers a wide variety of features including the following:</span></p>
+<div>
+<ul>
+<li>Organize and find web content</li>
+<li>Ease of use and creative content</li>
+<li>Powerful fine-grained administration and security</li>
+<li>Enables controlled collaboration</li>
+<li>Customizeable and extendable</li>
+<li>Easy connection to other IT systems and support for SOA and the Semantic Web</li>
+<li>Extensive framework for building web applications</li>
+</ul>
+<p><span style="text-decoration:underline">What Specific Features Help GoC?</span></p>
+<div>
+<ul>
+<li>Drupal has been integrated with the upcoming WET 3.0</li>
+<li>Full support for bilingual sites</li>
+<li>WCAG 2.0 Compliance</li>
+<li>Open source / no license costs</li>
+<li>TBS WCMS Tiger Team Endorsement</li>
+</ul>
+</div>
+</div>
 ',
           'safe_summary' => '',
         ),
@@ -198,15 +216,13 @@ function wetkit_demo_content_defaults() {
     'body' => array(
       'und' => array(
         0 => array(
-          'value' => '<p>Chinese Mallow kurrat garbanzo ulluco, yam sierra leone bologi pea eggplant, bamboo shoot salsify kale. Sea kale ti lagos bologi sea beet. Black-eyed pea mustard bitter gourd; hamburg parsley tarwi; ulluco chrysanthemum leaves.</p><p>Dandelion chinese cabbage garbanzo ceylon spinach canna, lizard\'s tail pigeon pea wild leek orache. Sorrel manioc lizard\'s tail scorzonera moth bean drumstick. Chaya epazote bok choy, cauliflower, mooli paracress orache.</p><p>Tatsoi bamboo shoot paracress elephant foot yam samphire. Mooli; zucchini cauliflower daikon new zealand spinach salsify catsear bitter gourd dandelion elephant foot yam. Plectranthus turnip greens earthnut pea; napa cabbage swede; onion ti polk, winter purslane mooli. Kai-lan drumstick parsnip. Melokhia chaya, pigeon pea.</p><p>Good King Henry winter purslane mizuna greens mustard swede, drumstick. Chickpea chard yarrow good king henry drumstick.</p><p>Welsh onion moth bean pak choy kale lettuce kai-lan mizuna greens broccoli rabe, miner\'s lettuce greater plantain good king henry. Yam leaves carrot beetroot, catsear kale beet greens mustard carrot kuka celery? American groundnut fava bean sea beet lotus root. Soko, pea sprouts velvet bean squash, canna - greater plantain burdock onion mooli.</p><p>Photo Credit:&nbsp;http://www.flickr.com/photos/philocrites/214133779</p>',
+          'value' => '<p>A major goal of the WetKit Drupal Variant is to enable and encourage collaboration on various activities involving the Web Experience Toolkit and in particular the Drupal platform.</p><p>This project is always looking for contributors in a wide array of areas. If you are designer or developer then we could use your help!</p><p>We believe the real strength behind this distribution should be the community supporting it. If you use the distribution and devise a novel solution that you think would help, please contribute it back!</p><p>Together we can make an open source government enterprise solution that is secure, accessible, and efficient.</p>',
           'summary' => '',
           'format' => 'wetkit_wysiwyg_text',
-          'safe_value' => '<p>Chinese Mallow kurrat garbanzo ulluco, yam sierra leone bologi pea eggplant, bamboo shoot salsify kale. Sea kale ti lagos bologi sea beet. Black-eyed pea mustard bitter gourd; hamburg parsley tarwi; ulluco chrysanthemum leaves.</p>
-<p>Dandelion chinese cabbage garbanzo ceylon spinach canna, lizard\'s tail pigeon pea wild leek orache. Sorrel manioc lizard\'s tail scorzonera moth bean drumstick. Chaya epazote bok choy, cauliflower, mooli paracress orache.</p>
-<p>Tatsoi bamboo shoot paracress elephant foot yam samphire. Mooli; zucchini cauliflower daikon new zealand spinach salsify catsear bitter gourd dandelion elephant foot yam. Plectranthus turnip greens earthnut pea; napa cabbage swede; onion ti polk, winter purslane mooli. Kai-lan drumstick parsnip. Melokhia chaya, pigeon pea.</p>
-<p>Good King Henry winter purslane mizuna greens mustard swede, drumstick. Chickpea chard yarrow good king henry drumstick.</p>
-<p>Welsh onion moth bean pak choy kale lettuce kai-lan mizuna greens broccoli rabe, miner\'s lettuce greater plantain good king henry. Yam leaves carrot beetroot, catsear kale beet greens mustard carrot kuka celery? American groundnut fava bean sea beet lotus root. Soko, pea sprouts velvet bean squash, canna - greater plantain burdock onion mooli.</p>
-<p>Photo Credit: <a href="http://www.flickr.com/photos/philocrites/214133779">http://www.flickr.com/photos/philocrites/214133779</a></p>
+          'safe_value' => '<p>A major goal of the WetKit Drupal Variant is to enable and encourage collaboration on various activities involving the Web Experience Toolkit and in particular the Drupal platform.</p>
+<p>This project is always looking for contributors in a wide array of areas. If you are designer or developer then we could use your help!</p>
+<p>We believe the real strength behind this distribution should be the community supporting it. If you use the distribution and devise a novel solution that you think would help, please contribute it back!</p>
+<p>Together we can make an open source government enterprise solution that is secure, accessible, and efficient.</p>
 ',
           'safe_summary' => '',
         ),
