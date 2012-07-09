@@ -20,3 +20,6 @@
   margin-bottom: 1em;
 }
 
+#admin-menu .dropdown li li.expandable ul {
+  margin: -22px 0 0 160px !important;
+}
