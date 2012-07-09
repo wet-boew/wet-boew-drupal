@@ -4,7 +4,9 @@
 #panels-dnd-main .region-wetkit-two-33-66-bottom {clear: both}
 
 #panels-dnd-main #wb-main {width:75%; float: right;}
-#panels-dnd-main #wb-sec-in {margin: 0px; width: 25%; float: left; margin-bottom: 5px}
+#panels-dnd-main #wb-sec-in {margin: 0px; width: 24.5%; float: left; margin-right: 0.5%; margin-bottom: 5px}
+#panels-dnd-main #wb-sec {float: none;}
+#panels-dnd-main #wb-sec h2 {overflow: visible; position: relative; height: auto !important; width: auto !important;}
 
 /* Two col sprite */
 [id^=edit-two] .form-type-radio label {background: url(wetkitcol-sprite.png)}
