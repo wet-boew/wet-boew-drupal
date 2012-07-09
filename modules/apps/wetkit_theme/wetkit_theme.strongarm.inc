@@ -223,7 +223,7 @@ function wetkit_theme_strongarm() {
     'unset_css_profiles-wetkit-modules-contrib-date-date-api-datecss' => 0,
     'unset_css_profiles-wetkit-modules-contrib-date-date-popup-themes-datepicker17css' => 0,
     'unset_css_profiles-wetkit-modules-contrib-views-css-viewscss' => 0,
-    'unset_css_profiles-wetkit-css-wetkitcss' => 0,
+    'unset_css_profiles-wetkit-css-wetkit-adaptivetheme-customcss' => 0,
     'unset_css_profiles-wetkit-modules-apps-wetkit-admin-wetkit-admincss' => 0,
     'unset_css_profiles-wetkit-modules-apps-wetkit-images-wetkit-imagescss' => 0,
     'unset_css_profiles-wetkit-modules-apps-wetkit-magic-wetkit-magiccss' => 0,
