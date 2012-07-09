@@ -32,7 +32,7 @@
   stylesheets[all][] = wet-boew/theme-gcwu-fegc/css/theme-min.css
 
   ; Web Usability Theme - Custom CSS
-  stylesheets[all][] = css/wetkit.css
+  stylesheets[all][] = css/wetkit-adaptivetheme-custom.css
 
   ; Internet Explorer Stylesheets
   ;
