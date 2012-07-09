@@ -28,49 +28,48 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
 <?php print $panel_prefix; ?>
 
 <div class="at-panel panel-display wetkit-two-33-66 clearfix" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
+
 <?php if ($content['wetkit_two_33_66_top']): ?>
     <div class="region region-wetkit-two-33-66-top region-conditional-stack">
-    <div class="region-inner clearfix">
+      <div class="region-inner clearfix">
         <?php print $content['wetkit_two_33_66_top']; ?>
-    </div>
+      </div>
     </div>
 <?php endif; ?>
 
 <div id="wb-main" role="main">
     <div id="wb-main-in">
-
         <div class="region-wetkit-two-33-66-first">
-            <div class="region-inner clearfix">
+          <div class="region-inner clearfix">
             <?php print $content['wetkit_two_33_66_first']; ?>
-            </div>
+          </div>
         </div>
-
         <div class="clear"></div>
     </div>
 </div>
 
 <div id="wb-sec">
-    <div id="wb-sec-in" class="equalize">
-    
-        <nav role="navigation">
-            <div class="wb-sec-def">
-    <div class="region-wetkit-two-33-66-second">
-        <div class="region-inner clearfix">
-        <?php print $content['wetkit_two_33_66_second']; ?>
+  <div id="wb-sec-in" class="equalize">
+    <nav role="navigation">
+      <div class="wb-sec-def">
+        <div class="region-wetkit-two-33-66-second">
+          <div class="region-inner clearfix">
+            <?php print $content['wetkit_two_33_66_second']; ?>
+          </div>
         </div>
-    </div>
-            </div>
-        </nav>
-
-    </div>
+      </div>
+    </nav>
+  </div>
 </div>
+
 <?php if ($content['wetkit_two_33_66_bottom']): ?>
-    <div class="region region-wetkit-two-33-66-bottom region-conditional-stack">
+  <div class="region region-wetkit-two-33-66-bottom region-conditional-stack">
     <div class="region-inner clearfix">
-        <?php print $content['wetkit_two_33_66_bottom']; ?>
+      <?php print $content['wetkit_two_33_66_bottom']; ?>
     </div>
-    </div>
+  </div>
 <?php endif; ?>
+
 </div>
 
 <?php print $panel_suffix; ?>
