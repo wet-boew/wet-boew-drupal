@@ -72,6 +72,7 @@ dependencies[] = menu_block
 
 ; User Experience
 ;dependencies[] = admin
+dependencies[] = admin_menu
 dependencies[] = backports
 dependencies[] = better_formats
 dependencies[] = caption_filter

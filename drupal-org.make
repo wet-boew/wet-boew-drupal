@@ -154,6 +154,10 @@ projects[admin][download][revision] = ad9aed4
 projects[admin][download][branch] = 7.x-2.x
 projects[admin][patch][1475074] = http://drupal.org/files/jquery17_undefined-1475074-1.patch
 
+projects[admin_menu][version] = 3.0-rc3
+projects[admin_menu][subdir] = contrib
+projects[admin_menu][type] = module
+
 projects[backports][version] = 1.0-alpha1
 projects[backports][type] = module
 projects[backports][subdir] = contrib
@@ -207,6 +211,7 @@ projects[workbench_moderation][download][type] = git
 projects[workbench_moderation][download][revision] = 6bdb20e
 projects[workbench_moderation][download][branch] = 7.x-1.x
 projects[workbench_moderation][patch][1285090] = http://drupal.org/files/playnicewithpanels-1285090-7.patch
+projects[workbench_moderation][patch][1260112] = http://drupal.org/files/workbench_moderation-is_current-1260112-15.patch
 
 projects[wysiwyg][subdir] = contrib
 projects[wysiwyg][type] = module
