@@ -154,6 +154,10 @@ projects[admin][download][revision] = ad9aed4
 projects[admin][download][branch] = 7.x-2.x
 projects[admin][patch][1475074] = http://drupal.org/files/jquery17_undefined-1475074-1.patch
 
+projects[admin_menu][version] = 3.0-rc3
+projects[admin_menu][subdir] = contrib
+projects[admin_menu][type] = module
+
 projects[backports][version] = 1.0-alpha1
 projects[backports][type] = module
 projects[backports][subdir] = contrib
