@@ -22,6 +22,29 @@ function wetkit_demo_ctools_plugin_directory($module, $plugin) {
 }
 
 /**
+ * Implementation of hook_install()
+ */
+function wetkit_demo_install() {
+  /* Custom Demo Content Nav */
+  //$menu_depth1 = _demo_add_custom_menu('<front>', 'WetKit Demo', NULL, 'main-menu', 0, 'en');
+  //_demo_add_custom_menu('<front>', 'WET Drupal Distribution', NULL, 'main-menu', 0, 'en', 0, $menu_depth1);
+  //_demo_add_custom_menu('<front>', 'WET Collaboration', NULL, 'main-menu', 1, 'en', 0, $menu_depth1);
+  //_demo_add_custom_menu('<front>', 'WET Features', NULL, 'main-menu', 2, 'en', 0, $menu_depth1);
+  
+  //$menu_depth1 = _demo_add_custom_menu('<front>', 'Démo Wetkit', NULL, 'main-menu', 0, 'fr');
+  //_demo_add_custom_menu('<front>', 'WET Distribution Drupal', NULL, 'main-menu', 0, 'fr', 0, $menu_depth1);
+  //_demo_add_custom_menu('<front>', 'WET Collaboration', NULL, 'main-menu', 1, 'fr', 0, $menu_depth1);
+  //_demo_add_custom_menu('<front>', 'WET Traits', NULL, 'main-menu', 2, 'fr', 0, $menu_depth1);
+}
+
+/**
+ * Implementation of hook_uninstall()
+ */
+function wetkit_demo_uninstall() {
+  //menu_link_delete(null, '<front>');
+}
+
+/**
  * Implementation of hook_init()
  */
 function wetkit_demo_init() {
@@ -40,4 +63,32 @@ function wetkit_demo_init() {
     }
     variable_set('wetkit_demo_load', 0);
   }
+}
+
+/* HELPER FUNCTIONS */
+
+/**
+ * Implements _add_custom_menu().
+ */
+function _demo_add_custom_menu($link, $title, $desc, $menu, $weight, $language, $mlid = 0, $plid = 0) {
+  $options = array();
+  if ($desc != NULL) {
+    $options += array(
+      'attributes' => array(
+        'title' => $desc,
+      ),
+    );
+  }
+  $item = array(
+    'link_path' => $link,
+    'link_title' => $title,
+    'menu_name' => $menu,
+    'weight' => $weight,
+    'language' => $language,
+    'customized' => 1,
+    'options' => $options,
+    'mlid' => $mlid,
+    'plid' => $plid,
+  );
+  return menu_link_save($item);
 }

@@ -12,24 +12,6 @@ function wetkit_demo_content_defaults() {
 
   $content['wetkit-demo-0'] = (object) array(
     'exported_path' => 'content/wet-features',
-    'link' => array(
-      'menu_name' => 'main-menu',
-      'link_path' => 'node-name/wetkit-demo-0',
-      'router_path' => 'node/%',
-      'link_title' => 'Features',
-      'options' => array(
-        'node_type' => 'wetkit_page',
-        'langcode' => 'en',
-      ),
-      'module' => 'menu',
-      'hidden' => '0',
-      'external' => '0',
-      'has_children' => '1',
-      'expanded' => '0',
-      'weight' => '0',
-      'parent_path' => 'node-name/wetkit-demo-3',
-      'identifier' => 'main-menu:node-name/wetkit-demo-0',
-    ),
     'title' => 'WET Features',
     'status' => '1',
     'promote' => '1',
@@ -102,24 +84,6 @@ function wetkit_demo_content_defaults() {
 
   $content['wetkit-demo-1'] = (object) array(
     'exported_path' => 'content/wet-drupal-distribution',
-    'link' => array(
-      'menu_name' => 'main-menu',
-      'link_path' => 'node-name/wetkit-demo-1',
-      'router_path' => 'node/%',
-      'link_title' => 'WET Drupal Distribution',
-      'options' => array(
-        'node_type' => 'wetkit_page',
-        'langcode' => 'en',
-      ),
-      'module' => 'menu',
-      'hidden' => '0',
-      'external' => '0',
-      'has_children' => '0',
-      'expanded' => '0',
-      'weight' => '0',
-      'parent_path' => 'node-name/wetkit-demo-3',
-      'identifier' => 'main-menu:node-name/wetkit-demo-1',
-    ),
     'title' => 'WET Drupal Distribution',
     'status' => '1',
     'promote' => '1',
@@ -185,24 +149,6 @@ function wetkit_demo_content_defaults() {
 
   $content['wetkit-demo-2'] = (object) array(
     'exported_path' => 'content/wet-collaboration',
-    'link' => array(
-      'menu_name' => 'main-menu',
-      'link_path' => 'node-name/wetkit-demo-2',
-      'router_path' => 'node/%',
-      'link_title' => 'Collaboration',
-      'options' => array(
-        'node_type' => 'wetkit_page',
-        'langcode' => 'en',
-      ),
-      'module' => 'menu',
-      'hidden' => '0',
-      'external' => '0',
-      'has_children' => '1',
-      'expanded' => '0',
-      'weight' => '0',
-      'parent_path' => 'node-name/wetkit-demo-3',
-      'identifier' => 'main-menu:node-name/wetkit-demo-2',
-    ),
     'title' => 'WET Collaboration',
     'status' => '1',
     'promote' => '1',
@@ -255,23 +201,6 @@ function wetkit_demo_content_defaults() {
 
   $content['wetkit-demo-3'] = (object) array(
     'exported_path' => 'content/content-demo',
-    'link' => array(
-      'menu_name' => 'main-menu',
-      'link_path' => 'node-name/wetkit-demo-3',
-      'router_path' => 'node/%',
-      'link_title' => 'WetKit Demo',
-      'options' => array(
-        'node_type' => 'wetkit_page',
-        'langcode' => 'en',
-      ),
-      'module' => 'menu',
-      'hidden' => '0',
-      'external' => '0',
-      'has_children' => '1',
-      'expanded' => '0',
-      'weight' => '0',
-      'identifier' => 'main-menu:node-name/wetkit-demo-3',
-    ),
     'title' => 'WetKit Demo',
     'status' => '1',
     'promote' => '1',
@@ -335,6 +264,48 @@ function wetkit_demo_content_defaults() {
     ),
   );
 
+  $content['wetkit-demo-1-fr'] = (object) array(
+    'exported_path' => 'content/wet-drupal-distribution',
+    'title' => 'WET Distribution Drupal',
+    'status' => '1',
+    'promote' => '1',
+    'sticky' => '0',
+    'type' => 'wetkit_page',
+    'language' => 'fr',
+    'created' => '1341876967',
+    'comment' => '0',
+    'translate' => '0',
+    'machine_name' => 'wetkit-demo-1-fr',
+    'body' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<p><strong>Vue d\'ensemble</strong></p><p>La Boîte à outils de l’expérience Web (BOEW) rassemble différents composants réutilisables et prêts-à-utiliser pour la conception et la mise à jour de sites Web innovateurs qui sont à la fois accessibles, conviviaux et interopérables. Tous ces composants réutilisables sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes.</p><p>La Boîte à outils est conforme à la Norme sur l\'accessibilité des sotes Web et la Norme sur la facilité des sites Web et sera conforme à la Norme sur l’interopérabilité du Web. Il est fortement recommandé d’utiliser la BOEW pour tous les sites Web du gouvernement du Canada.</p><p><strong>Avantages</strong></p><ul><li>Fournit composants réutilisables pour la conception et la mise à jour de sites Web innovateurs.</li><li>Respecte l\'accessibilité (WCAG 2.0&nbsp;AA et&nbsp;WAI-ARIA), la facilité d’emploi et l\'interoperabilité.</li><li>Réduit les coûts par consolider les outils et solutions axés sur le Web.</li><li>Sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes.</li><li>Fait appel à des technologies nouvelles et novatrices pour rendre les sites plus novateurs et interactifs : **&nbsp;HTML5,&nbsp;CSS3&nbsp;et&nbsp;jQuery&nbsp;(cadre JavaScript); ** liste croissante de plugiciels et gadgets de source ouverte.</li><li>Permet d’avoir accès à une grande diversité de mises en page et de conceptions pour les sites Web internes et externes (y compris les applications).</li></ul><p><strong>Resources clés</strong></p><ul><li>Exemples pratiques</li><li>Conditions régissant l\'utilisation</li></ul>',
+          'summary' => '',
+          'format' => 'wetkit_wysiwyg_text',
+          'safe_value' => '<p><strong>Vue d\'ensemble</strong></p>
+<p>La Boîte à outils de l’expérience Web (BOEW) rassemble différents composants réutilisables et prêts-à-utiliser pour la conception et la mise à jour de sites Web innovateurs qui sont à la fois accessibles, conviviaux et interopérables. Tous ces composants réutilisables sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes.</p>
+<p>La Boîte à outils est conforme à la Norme sur l\'accessibilité des sotes Web et la Norme sur la facilité des sites Web et sera conforme à la Norme sur l’interopérabilité du Web. Il est fortement recommandé d’utiliser la BOEW pour tous les sites Web du gouvernement du Canada.</p>
+<p><strong>Avantages</strong></p>
+<ul>
+<li>Fournit composants réutilisables pour la conception et la mise à jour de sites Web innovateurs.</li>
+<li>Respecte l\'accessibilité (WCAG 2.0 AA et WAI-ARIA), la facilité d’emploi et l\'interoperabilité.</li>
+<li>Réduit les coûts par consolider les outils et solutions axés sur le Web.</li>
+<li>Sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes.</li>
+<li>Fait appel à des technologies nouvelles et novatrices pour rendre les sites plus novateurs et interactifs : ** HTML5, CSS3 et jQuery (cadre JavaScript); ** liste croissante de plugiciels et gadgets de source ouverte.</li>
+<li>Permet d’avoir accès à une grande diversité de mises en page et de conceptions pour les sites Web internes et externes (y compris les applications).</li>
+</ul>
+<p><strong>Resources clés</strong></p>
+<ul>
+<li>Exemples pratiques</li>
+<li>Conditions régissant l\'utilisation</li>
+</ul>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
+  );
+  
   $content['wetkit-demo-3-fr'] = (object) array(
     'exported_path' => 'content/content-demo',
     'title' => 'Démo Wetkit',

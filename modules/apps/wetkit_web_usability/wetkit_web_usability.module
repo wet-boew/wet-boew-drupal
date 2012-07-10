@@ -21,14 +21,14 @@ function wetkit_web_usability_install() {
   
   /* Mega Menu Top Level Navigation */
   _add_custom_menu('<front>', 'Home', NULL, 'main-menu', 0, 'en');
-  _add_custom_menu('<front>', 'Help', NULL, 'main-menu', 1, 'en');
-  _add_custom_menu('<front>', 'Contact Us', NULL, 'main-menu', 2, 'en');
+  _add_custom_menu('search404', 'Help', NULL, 'main-menu', 1, 'en');
+  _add_custom_menu('contact', 'Contact Us', NULL, 'main-menu', 2, 'en');
   _add_custom_menu('search', 'Search', NULL, 'main-menu', 3, 'en');
   _add_custom_menu('http://www.canada.gc.ca', 'canada.gc.ca', NULL, 'main-menu', 4, 'en');
 
   _add_custom_menu('<front>', 'Accueil', NULL, 'main-menu', 0, 'fr');
-  _add_custom_menu('<front>', 'Aide', NULL, 'main-menu', 1, 'fr');
-  _add_custom_menu('<front>', 'Nous Contacter', NULL, 'main-menu', 2, 'fr');
+  _add_custom_menu('search404', 'Aide', NULL, 'main-menu', 1, 'fr');
+  _add_custom_menu('contact', 'Nous Contacter', NULL, 'main-menu', 2, 'fr');
   _add_custom_menu('search', 'Recherche', NULL, 'main-menu', 3, 'fr');
   _add_custom_menu('http://www.canada.gc.ca', 'canada.gc.ca', NULL, 'main-menu', 4, 'fr');
   

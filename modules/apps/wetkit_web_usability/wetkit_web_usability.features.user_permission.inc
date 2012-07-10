@@ -20,6 +20,15 @@ function wetkit_web_usability_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: access site-wide contact form.
+  $permissions['access site-wide contact form'] = array(
+    'name' => 'access site-wide contact form',
+    'roles' => array(
+      0 => 'anonymous user',
+    ),
+    'module' => 'contact',
+  );
+
   // Exported permission: search content.
   $permissions['search content'] = array(
     'name' => 'search content',
