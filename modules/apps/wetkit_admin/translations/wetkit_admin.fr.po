@@ -64,7 +64,7 @@ msgstr ""
 
 #: wetkit_admin.views_default.inc:520;736;1172
 msgid "Offset"
-msgstr ""
+msgstr "offset"
 
 #: wetkit_admin.views_default.inc:521;737;1173
 msgid "Empty Text"
