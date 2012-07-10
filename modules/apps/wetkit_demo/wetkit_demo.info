@@ -20,6 +20,7 @@ features[content][] = wetkit-demo-0
 features[content][] = wetkit-demo-1
 features[content][] = wetkit-demo-2
 features[content][] = wetkit-demo-3
+features[content][] = wetkit-demo-3-fr
 features[context][] = wetkit_default_content
 features[ctools][] = context:context:3
 features[ctools][] = page_manager:pages_default:1
