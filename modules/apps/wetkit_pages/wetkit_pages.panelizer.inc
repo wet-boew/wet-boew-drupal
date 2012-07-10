@@ -137,7 +137,7 @@ function wetkit_pages_panelizer_defaults() {
       'parent_mlid' => 'main-menu:0',
       'title_link' => 0,
       'admin_title' => 'Main Menu',
-      'level' => '2',
+      'level' => '1',
       'follow' => 0,
       'depth' => 0,
       'expanded' => 0,
