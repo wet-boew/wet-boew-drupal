@@ -18,18 +18,18 @@ If you do not wish to compile Drupal and its various packages we host the comple
 >
 > 3. Perform the build out procedure by typing:
 <pre>
-Command: drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make &lt;directory_name&gt;
-Example: drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make drupal_wet
+Command: drush make --prepare-install --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make &lt;directory_name&gt; -v --debug
+Example: drush make --prepare-install --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make drupal_wet
 </pre>
 >
 > 4. Rapid Installation (via Drush):
 <pre>
 Command: drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-subdir=&lt;domain&gt; --db-url=mysql://&lt;username&gt;:&lt;password&gt;@&lt;domain&gt;:&lt;port&gt;/&lt;database&gt; --account-name=&lt;username&gt; --account-mail=&lt;accountemail&gt; --account-pass=&lt;userpassword&gt; --site-mail=&lt;siteemail&gt; --site-name=&lt;sitename&gt;
-Example: drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-subdir=drupal_wet --db-url=mysql://drupalusr:drupalusr_pass@localhost:3306/wetkit_db; --account-name=admin --account-pass=WetKit@2012 --account-mail=admin@example.com --site-mail=admin@example.com --site-name="Web Experience Toolkit"
+Example: drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-subdir=drupal_wet --db-url=mysql://drupalusr:drupalusr_pass@localhost:3306/wetkit_db --account-name=admin --account-pass=WetKit@2012 --account-mail=admin@example.com --site-mail=admin@example.com --site-name="Web Experience Toolkit"
 </pre>
 >
 > 5. Fix Permissions On files directory served by Web Server:
-> Depending on your server set-up you will have to make sure that the /sites/default/files or /sites/&lt;domain&gt;/files directory has the correct permissions:
+> Depending on your server set-up you will have to make sure that the /sites/default/files or /sites/&lt;domain&gt;/files directory has the correct owner (webserver):
 <pre>
 chown -R apache:apache /sites/&lt;domain&gt;/files
 </pre>
@@ -51,17 +51,17 @@ chown -R apache:apache /sites/&lt;domain&gt;/files
 >
 > 3. Build the complete Drupal installation software profile using the following command on the Bash command promprt.
 <pre>
-Command: drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make &lt;directory_name&gt;
-Example: drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make drupal_wet
+Command: drush make --prepare-install --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make &lt;directory_name&gt; -v --debug
+Example: drush make --prepare-install --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make drupal_wet
 </pre>
 > 4. To quickly install using the Drush command line, change to the directory where Drupal (for example C:/apache2/htdocs) was installed and enter this command.
 > Be sure to use a password that meets the password policy for WET.
 <pre>
 Command: drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-subdir=&lt;domain&gt; --db-url=mysql://&lt;username&gt;:&lt;password&gt;@&lt;domain&gt;:&lt;port&gt;/&lt;database&gt; --account-name=&lt;username&gt; --account-mail=&lt;accountemail&gt; --account-pass=&lt;userpassword&gt; --site-mail=&lt;siteemail&gt; --site-name=&lt;sitename&gt;
-Example: drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-subdir=drupal_wet --db-url=mysql://drupalusr:drupalusr_pass@localhost:3306/wetkit_db; --account-name=admin --account-pass=WetKit@2012 --account-mail=admin@example.com --site-mail=admin@example.com --site-name="Web Experience Toolkit"
+Example: drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-subdir=drupal_wet --db-url=mysql://drupalusr:drupalusr_pass@localhost:3306/wetkit_db --account-name=admin --account-pass=WetKit@2012 --account-mail=admin@example.com --site-mail=admin@example.com --site-name="Web Experience Toolkit"
 </pre>
 > 5. Fix Permissions On files directory served by Web Server:
-> Depending on your server set-up you will have to make sure that the /sites/default/files or /sites/&lt;domain&gt;/files directory has the correct permissions:
+> Depending on your server set-up you will have to make sure that the /sites/default/files or /sites/&lt;domain&gt;/files directory has the correct owner (webserver):
 <pre>
 chown -R apache:apache /sites/&lt;domain&gt;/files
 </pre>
