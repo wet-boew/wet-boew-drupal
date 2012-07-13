@@ -1,33 +1,168 @@
-/** @file Base styles  - Gutter widths, see $gutter-width in _base.scss - Default container alignment. - Flexible images and media declarations. - Copies of the SCSS mixins for reference, which includes improved element-invisible and focusable styles. */
-#main-content, .block-inner, .pane-inner, .menu-wrapper, .branding-elements, .breadcrumb-wrapper, .attribution, .at-panel .rounded-corner, div.messages { margin-left: 10px; margin-right: 10px; }
+/**
+ * @file
+ * Base styles
+ *
+ * - Gutter widths.
+ * - Default container alignment.
+ * - Flexible images and media declarations.
+ * - Copies of the SCSS mixins for reference, which includes improved
+ *   element-invisible and focusable styles.
+ */
 
-.page-panels #content { margin-left: -10px; margin-right: -10px; }
+/* =============================================================================
+   Gutters
+   ========================================================================== */
 
-img { height: auto; -ms-interpolation-mode: bicubic; }
+/* If gutters are set in theme settings they will override these
+   values: see Extensions > Modify Output > Design */
+#main-content,
+.block-inner,
+.pane-inner,
+.menu-wrapper,
+.branding-elements,
+.breadcrumb-wrapper,
+.attribution,
+.at-panel .rounded-corner,
+div.messages {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+/* Panel pages need negative margin equal to the gutter width applied to #content,
+  this is taken care of in theme settings as per above for normal gutters */
+.page-panels #content {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+
+/* =============================================================================
+   Flexible Media and Cross browser improvements
+   ========================================================================== */
+
+/**
+ * - This can cause issues in table cells where no width is set on the column,
+ *   only in some versions of webkit and IE 7/8.
+ * - declaring the width attribute on image elements and using max-width causes
+ *   the "dissappering images" bug in IE8.
+ * - Mapping services such as Google Maps may break also, see below for fixes.
+ */
+
+img {
+  height: auto;
+}
+
 
 /* /ht Ethan Marcotte - http://front.ie/l8rJaA */
-img, embed, object, video { max-width: 100%; }
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
 
 /* Disable flexiblity for IE8 and below */
-.lt-ie9 img, .lt-ie9 object, .lt-ie9 embed, .lt-ie9 video { max-width: none; }
+.lt-ie9 img,
+.lt-ie9 object,
+.lt-ie9 embed,
+.lt-ie9 video {
+  max-width: none;
+}
+
 
 /* Override max-width 100% for map displays */
-#map img, .gmap img, .view-gmap img, .openlayers-map img, #getlocations_map_canvas img, #locationmap_map img, .geofieldMap img, .views_horizontal_slider img { max-width: none !important; }
+#map img,
+.gmap img,
+.view-gmap img,
+.openlayers-map img,
+#getlocations_map_canvas img,
+#locationmap_map img,
+.geofieldMap img,
+.views_horizontal_slider img {
+  max-width: none !important;
+}
+
+
+/* =============================================================================
+   Misc helpers, Accessibility classes etc
+   ========================================================================== */
 
 /* Prevent overflowing content */
-header[role=banner], .content-inner, .nav, .region-sidebar-first, .region-sidebar-second, .region-secondary-content, .region-tertiary-content, .region-footer { overflow: visible; word-wrap: break-word; }
+header[role=banner],
+.content-inner,
+.nav,
+.region-sidebar-first,
+.region-sidebar-second,
+.region-secondary-content,
+.region-tertiary-content,
+.region-footer {
+  overflow: visible;
+  word-wrap: break-word;
+}
 
-/** General classes for hiding content. These are all included as SASS mixins. @SEE: sass/custom.scss */
-/** Image replacement Kellum Method: http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement Additional helpers from http://html5boilerplate.com/docs/css/ */
-.ir { /* Kellum Method */ display: block !important; text-indent: 100%; white-space: nowrap; overflow: hidden; /* Additional helpers */ border: 0; /* Remove the default border from elements like button */ font: 0/0 a; /* Crush the text down to take up no space */ text-shadow: none; /* Remove any text shadows */ color: transparent; /* Hide any residual text in Safari 4 and any mobile devices that may need it */ background-color: transparent; /* Hide the default background color on elements like button */ }
+
+/**
+ * General classes for hiding content. These are all included as SASS mixins.
+ * @SEE: sass/custom.scss
+ */
+
+/**
+ * Image replacement
+ * Kellum Method: http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement
+ * Additional helpers from http://html5boilerplate.com/docs/css/
+ */
+.ir {
+  /* Kellum Method */
+  display: block !important;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  /* Additional helpers */
+  border: 0; /* Remove the default border from elements like button */
+  font: 0/0 a; /* Crush the text down to take up no space */
+  text-shadow: none; /* Remove any text shadows */
+  color: transparent; /* Hide any residual text in Safari 4 and any mobile devices that may need it */
+  background-color: transparent; /* Hide the default background color on elements like button */
+}
+
 
 /* More robust element-invisible and element-focuable classes */
-.element-invisible { border: 0; clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px, 1px, 1px, 1px); height: 1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.element-invisible {
+  border: 0;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
 
-.element-invisible.element-focusable:active, .element-invisible.element-focusable:focus { clip: auto; height: auto; overflow: visible; position: static; width: auto; }
+
+.element-invisible.element-focusable:active,
+.element-invisible.element-focusable:focus {
+  clip: auto;
+  height: auto;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
 
 /* Shift content offscreen, can be usefull when you reall need to do this */
-.offscreen { position: absolute; top: -99999em; width: 1px; height: 1px; overflow: hidden; outline: 0; }
+.offscreen {
+  position: absolute;
+  top: -99999em;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  outline: 0;
+}
+
 
 /* Hide content from all users */
-.element-hidden { display: none; }
+.element-hidden {
+  display: none;
+}

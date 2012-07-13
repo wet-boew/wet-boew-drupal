@@ -1,2 +1,30 @@
-/* Target IE 6, 7 and 8 */
-html { font-size: 81.3%; }
+/**
+ * @file
+ * Internet Explorer overrides and fixes for lt IE9.
+ *
+ * To use this file uncomment the declaration in your themes info file.
+ *
+ * Adaptivetheme includes several powerful tools for dealing with IE.
+ *
+ * 1. You can set IE conditional stylesheets from the info file - see your themes
+ *    info file for documentation.
+ * 
+ * 2. Use IE conditional classes - in html.tpl.php the html element is wrapped
+ *    in conditional comments to allow to you target different versions of IE.
+ * 
+ *    These are the classes you can use:
+ * 
+ *    .iem7 (IE7 Mobile)
+ *    .lt-ie7 (less than IE7)
+ *    .lt-ie8 (less than IE8)
+ *    .lt-ie9 (less than IE9)
+ *
+ *    You can use these classes in any CSS file, including this one, so you only
+ *    need to load one conditional stylesheet, or even none by placing all IE
+ *    styles in your regular stylesheets using the conditional classes.
+ */
+
+/* Assuming a mobile first approach with respond.js OFF, we must reset the font size for lt IE9 */
+html {
+  font-size: 81.3%; /* If you are NOT doing mobile first, you might want to remove this... */
+}

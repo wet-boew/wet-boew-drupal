@@ -14,6 +14,7 @@
  * function to control the markup. For example a typical navigation tempate might look
  * like this:
  *
+ * @code
  * <nav id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
  *   <div class="block-inner clearfix">
  *     <?php print render($title_prefix); ?>
@@ -26,6 +27,7 @@
  *     </div>
  *   </div>
  * </nav>
+ * @endcode
  *
  * Adativetheme supplied variables:
  * - $outer_prefix: Holds a conditional element such as nav, section or div and

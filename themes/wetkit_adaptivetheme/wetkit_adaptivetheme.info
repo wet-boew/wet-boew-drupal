@@ -49,7 +49,7 @@
   ; "less than IE9" but "not IEMobile 7".
   ; Uncomment the following to use the included IE styleseet:
 
-  ;ie_stylesheets[screen][(lt IE 9)&(!IEMobile 7)][] = css/lt-ie9.css
+  ; ie_stylesheets[screen][(lt IE 9)&(!IEMobile 7)][] = css/lt-ie9.css
 
   ie_stylesheets[all][lte IE 8][] = wet-boew/grids/css/util-ie-min.css
   ie_stylesheets[all][lte IE 8][] = wet-boew/js/css/pe-ap-ie-min.css
@@ -453,9 +453,9 @@
   ; Custom CSS
   settings[custom_css] = ''
 
-; Information added by drupal.org packaging script on 2012-07-06
-version = "7.x-3.0-rc6+16-dev"
+; Information added by drupal.org packaging script on 2012-07-13
+version = "7.x-3.0-rc6+20-dev"
 core = "7.x"
 project = "adaptivetheme"
-datestamp = "1341576129"
+datestamp = "1342180933"
 
