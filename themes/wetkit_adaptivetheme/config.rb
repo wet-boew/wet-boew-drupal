@@ -13,8 +13,8 @@
 # Using :development enables the use of FireSass but will bloat the stylesheets
 # with debug code, be sure to change to :production when moving from development
 # to production servers.
-#environment = :development
-environment = :production
+environment = :development
+#environment = :production
 
 
 # Location of the theme's resources.
