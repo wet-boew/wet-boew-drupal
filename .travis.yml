@@ -22,7 +22,7 @@ before_script:
  - "export DISPLAY=:99.0"
  - "sh -e /etc/init.d/xvfb start"
  - sleep 3 # give xvfb some time to start
- - drush runserver --server=builtin 8080 &
+ - drush runserver 8080 &
  - sleep 3 # give Web server some time to bind to sockets, etc
  - cd ..
  - git clone git://github.com/n1k0/casperjs.git
@@ -31,4 +31,5 @@ before_script:
  - cd ./bin
  
 script:
- - "DISPLAY=:99.0 ./casperjs test ../../test/casperjs/"
+ - ls -al
+ - "DISPLAY=:99.0 ./casperjs test ../../github_wet_distro/test/casperjs/"
