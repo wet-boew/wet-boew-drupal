@@ -9,7 +9,7 @@ mysql:
   encoding: utf8
 
 before_script:
- - yum install php-cgi
+ - sudo apt-get install php5-cgi
  - mysql -e 'create database wetkit_db;'
  - pyrus channel-discover pear.drush.org
  - pyrus install drush/drush
