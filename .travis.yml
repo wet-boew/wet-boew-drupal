@@ -32,4 +32,7 @@ before_script:
  
 script:
  - ls -al
+ - cd ../../
+ - ls -al
+ - pwd
  - "DISPLAY=:99.0 ./casperjs test ../../github_wet_distro/test/casperjs/"
