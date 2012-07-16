@@ -1,14 +1,15 @@
 language: php
 
 php:
-  - 5.4
+  - 5.3
 
 mysql:
   database: wetkit_db
   username: root
   encoding: utf8
 
-before_script: 
+before_script:
+ - yum install php-cgi
  - mysql -e 'create database wetkit_db;'
  - pyrus channel-discover pear.drush.org
  - pyrus install drush/drush
@@ -22,7 +23,7 @@ before_script:
  - "export DISPLAY=:99.0"
  - "sh -e /etc/init.d/xvfb start"
  - sleep 3 # give xvfb some time to start
- - drush runserver --server=builtin 8080 &
+ - drush runserver 8080 &
  - sleep 3 # give Web server some time to bind to sockets, etc
  - cd ..
  - git clone git://github.com/n1k0/casperjs.git
