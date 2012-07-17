@@ -7,6 +7,10 @@ img {
   vertical-align: bottom;
 }
 
+#edit-field-featured-image .image-preview {
+  float: none !important;
+}
+
 /**
  * Image styling 
  */
