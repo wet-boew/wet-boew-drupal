@@ -13,7 +13,7 @@ before_script:
  - pyrus channel-discover pear.drush.org
  - pyrus install drush/drush
  - phpenv rehash
- - drush make distro.make ../github_wet_distro
+ - drush make --prepare-install distro.make ../github_wet_distro
  - cd ../github_wet_distro
  - sudo chmod -R 777 sites/all/modules
  - "export PHANTOMJS_EXECUTABLE='phantomjs --local-to-remote-url-access=yes --ignore-ssl-errors=yes'"
