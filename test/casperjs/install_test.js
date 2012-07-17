@@ -5,7 +5,7 @@
 casper.test.comment('Making sure our test site is loaded correctly');
 
 // Make sure the site is up
-casper.start('http://localhost:8080/', function() {
+casper.start('http://127.0.0.1:8080/', function() {
   this.test.assertHttpStatus(200, 'Testing site is up');
   
   this.test.assertTitle('Web Experience Toolkit', 'Title seems correct');
