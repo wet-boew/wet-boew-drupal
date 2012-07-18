@@ -13,10 +13,11 @@ before_script:
  - pyrus channel-discover pear.drush.org
  - pyrus install drush/drush
  - phpenv rehash
- - drush make --prepare-install distro.make ../github_wet_distro
+ - drush make distro.make ../github_wet_distro
  - cd ../github_wet_distro
  - sudo chmod -R 777 sites/all/modules
- - drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-subdir=default --db-url=mysql://root:@127.0.0.1/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name="Web Experience Toolkit" --yes 
+ - drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-subdir=default --db-url=mysql://root:@127.0.0.1/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name="Web Experience Toolkit" --yes
+ - drush cc all --yes
  - "export PHANTOMJS_EXECUTABLE='phantomjs --local-to-remote-url-access=yes --ignore-ssl-errors=yes'"
  - "export DISPLAY=:99.0"
  - "sh -e /etc/init.d/xvfb start"
@@ -24,12 +25,12 @@ before_script:
  - drush runserver --server=builtin 8080 &
  - sleep 3 # give Web server some time to bind to sockets, etc
  - cd ..
- # - wget http://selenium.googlecode.com/files/selenium-server-standalone-2.15.0.jar
+ - wget http://selenium.googlecode.com/files/selenium-server-standalone-2.15.0.jar
  - git clone git://github.com/n1k0/casperjs.git
  - cd casperjs
  - git checkout tags/0.6.10
  - cd ./bin
  
 script:
- # - java -jar ../../selenium-server-standalone-2.15.0.jar -htmlSuite "*firefox" "http://127.0.0.1:8080" "../../github_wet_distro/profiles/wetkit/test/selenium/WetKitTestSuite.html" "../../github_wet_distro/profiles/wetkit/test/selenium/Result.html"
  - "DISPLAY=:99.0 ./casperjs test ../../github_wet_distro/profiles/wetkit/test/casperjs/"
+ - java -jar ../../selenium-server-standalone-2.15.0.jar -htmlSuite "*firefox" "http://127.0.0.1:8080" "../../github_wet_distro/profiles/wetkit/test/selenium/SeleniumTestSuite.html" "../../github_wet_distro/profiles/wetkit/test/selenium/Result.html"
