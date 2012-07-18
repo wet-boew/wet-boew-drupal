@@ -22,6 +22,8 @@ projects[context][type] = module
 projects[ctools][version] = 1.0
 projects[ctools][subdir] = contrib
 projects[ctools][type] = module
+projects[ctools][patch][1444732] = https://drupal.org/files/1444732-exposed-sort-as-pane-config.patch
+projects[ctools][patch][1198808] = http://drupal.org/files/1198808-work-around-jquery-bug-with-auto-submit-ctools-1.0.patch
 
 projects[diff][version] = 2.x-dev
 projects[diff][subdir] = contrib
@@ -43,7 +45,7 @@ projects[fieldable_panels_panes][version] = 1.x-dev
 projects[fieldable_panels_panes][subdir] = contrib
 projects[fieldable_panels_panes][type] = module
 projects[fieldable_panels_panes][download][type] = git
-projects[fieldable_panels_panes][download][revision] = 57000ec
+projects[fieldable_panels_panes][download][revision] = 851c1b1
 projects[fieldable_panels_panes][download][branch] = 7.x-1.x
 
 projects[jquery_update][version] = 2.x-dev
@@ -62,9 +64,8 @@ projects[panels][version] = 3.x-dev
 projects[panels][subdir] = contrib
 projects[panels][type] = module
 projects[panels][download][type] = git
-projects[panels][download][revision] = 9c467ad
+projects[panels][download][revision] = 3f50718
 projects[panels][download][branch] = 7.x-3.x
-projects[panels][patch][1555352] = http://drupal.org/files/panels-ipe-reset-html-ids-take3.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/panels-add-hooks-to-integrate-i18n_panels-1179034-41.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/uuids-for-exported-pids-1277908-19.patch
 
@@ -107,7 +108,7 @@ projects[file_entity][version] = 2.x-dev
 projects[file_entity][type] = module
 projects[file_entity][subdir] = contrib
 projects[file_entity][download][type] = git
-projects[file_entity][download][revision] = 0739c8a
+projects[file_entity][download][revision] = ba18f8b
 projects[file_entity][download][branch] = 7.x-2.x
 
 projects[field_group][version] = 1.1
@@ -193,10 +194,10 @@ projects[media][version] = 2.x-dev
 projects[media][type] = module
 projects[media][subdir] = contrib
 projects[media][download][type] = git
-projects[media][download][revision] = 0bc43d9
+projects[media][download][revision] = cc55948
 projects[media][download][branch] = 7.x-2.x
 
-projects[module_filter][version] = "1.6"
+projects[module_filter][version] = "1.7"
 projects[module_filter][type] = module
 projects[module_filter][subdir] = contrib
 
@@ -275,7 +276,7 @@ projects[uuid][version] = 1.x-dev
 projects[uuid][type] = module
 projects[uuid][subdir] = contrib
 projects[uuid][download][type] = git
-projects[uuid][download][revision] = bf06527
+projects[uuid][download][revision] = 806c301
 projects[uuid][download][branch] = 7.x-1.x
 
 projects[variable][version] = 2.1
@@ -312,7 +313,7 @@ projects[i18nviews][type] = module
 ; Search ;
 ;;;;;;;;;;
 
-projects[facetapi][version] = 1.0-rc4
+projects[facetapi][version] = 1.0
 projects[facetapi][type] = module
 projects[facetapi][subdir] = contrib
 

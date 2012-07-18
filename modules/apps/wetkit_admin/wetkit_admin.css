@@ -596,6 +596,10 @@ div .markItUpHeader ul a {
   overflow: hidden;
 }
 
+#views-ajax-body form {
+  background-color: #FFF;
+}
+
 #media-browser-page {
   background: transparent;
   -moz-border-radius: 0;
