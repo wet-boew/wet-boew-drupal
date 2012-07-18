@@ -20,6 +20,7 @@ dependencies[] = file
 dependencies[] = help
 dependencies[] = block
 dependencies[] = dblog
+dependencies[] = update
 dependencies[] = shortcut
 dependencies[] = toolbar
 

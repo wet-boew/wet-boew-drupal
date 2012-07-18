@@ -77,13 +77,12 @@ function wetkit_magic_form_alter(&$form, $form_state, $form_id) {
         '#type' => 'button',
         '#value' => t('Update Preview'),
         '#wizard type' => 'next',
-        // '#attributes' => array('class' => array('widget-preview-button', 'ctools-use-ajax', 'ctools-auto-submit-click')),
-        '#attributes' => array('class' => array('widget-preview-button')),
+        '#attributes' => array('style' => 'display: none', 'class' => array('widget-preview-button', 'ctools-use-ajax', 'ctools-auto-submit-click')),
       );
 
       // Autosubmit the form
-      // ctools_add_js('auto-submit');
-      // $form['#attributes']['class'][] = 'ctools-auto-submit-full-form';
+      ctools_add_js('auto-submit');
+      $form['#attributes']['class'][] = 'ctools-auto-submit-full-form';
     }
   }
 
@@ -138,11 +137,23 @@ function wetkit_magic_form_alter(&$form, $form_state, $form_id) {
       '#attributes' => (empty($conf['widget_title']) || empty($form_state['view']->display_handler->options['title'])) ? array('placeholder' => '<No Title>') : array(),
       '#default_value' => (isset($conf['widget_title'])) ? $conf['widget_title'] : $form_state['view']->display_handler->options['title'],
     );
+    
+    // Improve presentation of exposed sort options
+    if (!empty($form['exposed']['sort_by'])) {
+      $form['exposed']['sort_by']['#field_prefix'] = $form['exposed']['sort_by']['#title'];
+      $form['exposed']['sort_by']['#title'] = '';
+    }
+    if (!empty($form['exposed']['sort_order'])) {
+      $form['exposed']['sort_order']['#title'] = t('Sort order');
+      $form['exposed']['sort_order']['#field_prefix'] = $form['exposed']['sort_order']['#title'];
+      $form['exposed']['sort_order']['#title'] = '';
+    }    
 
     // Move items per page wiget to widget area
     if (isset($form['items_per_page'])) {
       $form['items_per_page']['#field_prefix'] = $form['items_per_page']['#title'];
       $form['items_per_page']['#title'] = '';
+      $form['items_per_page']['#weight'] = -90;
       $form['exposed']['items_per_page'] = $form['items_per_page'];
       unset($form['items_per_page']);
     }
