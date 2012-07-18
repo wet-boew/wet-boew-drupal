@@ -409,9 +409,11 @@ function wetkit_finished_install_submit($form, &$form_state) {
   drupal_cron_run();
 
   // And away we go! Redirect the user to the front page if they are using
-  // the interactive mode installer.
+  // the interactive mode installer. Make sure to set the install task to 
+  // done so the installer knows Drupal is ready to rock.
   $install_state = $form_state['build_info']['args'][0];
   if ($install_state['interactive']) {
+    variable_set('install_task', 'done');
     drupal_goto('<front>');
   }
 }

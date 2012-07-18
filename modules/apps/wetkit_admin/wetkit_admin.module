@@ -110,6 +110,12 @@ function wetkit_admin_form_alter(&$form, &$form_state, $form_id) {
       $form['#submit'][] = 'wetkit_admin_pathauto_submit';
     }
   }
+   
+  // Add clearfix to node body container to prevent clearing issue with
+  // vertical tabs - @see https://drupal.org/node/1686500
+  if (isset($form['#entity_type']) && $form['#entity_type'] == 'node' && isset($form['body']['#type']) && $form['body']['#type'] == 'container') {
+    $form['body']['#attributes']['class'][] = 'clearfix';
+  }
 
   // Hide the machine name options
   if (isset($form['machine_name_fs'])) {
@@ -128,7 +134,7 @@ function wetkit_admin_form_alter(&$form, &$form_state, $form_id) {
   }
 
   // Improve authoring options
-  if (isset($form['author'])) {
+  if (isset($form['author']) && isset($form['#entity_type']) && $form['#entity_type'] == 'node') {
     unset($form['author']['name']['#description']);
     $form['author']['name']['#title'] = t('Author');
     $form['author']['name']['#size'] = '40';
