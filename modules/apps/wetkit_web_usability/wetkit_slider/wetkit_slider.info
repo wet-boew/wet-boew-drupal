@@ -26,3 +26,4 @@ features[variable][] = "node_options_main_slider"
 features[variable][] = "node_preview_main_slider"
 features[variable][] = "node_submitted_main_slider"
 features[views_view][] = "slider"
+stylesheets[all][] = css/wetkit_slider.css

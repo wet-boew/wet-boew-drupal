@@ -29,8 +29,8 @@ function wetkit_slider_init() {
     //Flush Drupal Caches
     drupal_flush_all_caches();
     //Create managed File object and associate with file field.
-    $file1 = _slider_add_file('default_sliderpic1.png', drupal_get_path('theme', variable_get('theme_default')) . '/images/slider01.png');
-    $file2 = _slider_add_file('default_sliderpic2.png', drupal_get_path('theme', variable_get('theme_default')) . '/images/slider02.png');
+    $file1 = _slider_add_file('default_sliderpic1.png', drupal_get_path('module', 'wetkit_slider') . '/images/slider01.png');
+    $file2 = _slider_add_file('default_sliderpic2.png', drupal_get_path('module', 'wetkit_slider') . '/images/slider02.png');
 
     //Slider Content
     $field_text_1_en = '<div class="tabs-content-pad">
@@ -50,6 +50,25 @@ function wetkit_slider_init() {
     variable_set('views_slider', 0);
   }
 }
+
+/**
+ * Implementation hook_theme_registry_alter()
+ */
+function wetkit_slider_theme_registry_alter(&$theme_registry) {
+  $mod_path = drupal_get_path('module', 'wetkit_slider') . '/templates';
+  $theme_registry_copy = $theme_registry;
+  _theme_process_registry($theme_registry_copy, 'phptemplate', 'theme_engine', 'pow', $mod_path);
+  $theme_registry += array_diff_key($theme_registry_copy, $theme_registry);
+}
+
+/**
+* Implementation of hook_ctools_plugin_directory().
+function wetkit_slider_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'page_manager' || $module == 'panels') {
+    return 'plugins/' . $plugin;
+  }
+}
+*/
 
 /**
  * Implements _slider_add_file().
@@ -83,7 +102,7 @@ function _slider_add_node($title, $langval, $tnid, $slider_title, $slider_file, 
   $node->field_slider_title['und'][0]['value'] = $slider_title;
   $node->field_slider_photo['und'][0] = (array)$slider_file;
   $node->field_slider_description['und'][0]['value'] = $slider_desc;
-  $node->field_slider_description['und'][0]['format'] = 'full_html';
+  $node->field_slider_description['und'][0]['format'] = 'wetkit_wysiwyg_text';
   $node->field_slider_description['und'][0]['safe_value'] = $slider_desc;
   node_save($node); 
 }
