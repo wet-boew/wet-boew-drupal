@@ -40,6 +40,10 @@ projects[ds][type] = module
 projects[fences][version] = 1.0
 projects[fences][subdir] = contrib
 projects[fences][type] = module
+projects[fences][download][type] = git
+projects[fences][download][revision] = d9ca337
+projects[fences][download][branch] = 7.x-1.x
+projects[fences][patch][1561244] = http://drupal.org/files/undefined-index-1561244-7.patch
 
 projects[fieldable_panels_panes][version] = 1.x-dev
 projects[fieldable_panels_panes][subdir] = contrib
@@ -87,6 +91,10 @@ projects[password_policy][subdir] = contrib
 projects[pm_existing_pages][version] = 1.4
 projects[pm_existing_pages][type] = module
 projects[pm_existing_pages][subdir] = contrib
+
+projects[rules][version] = 2.1
+projects[rules][type] = module
+projects[rules][subdir] = contrib
 
 projects[token][version] = 1.1
 projects[token][type] = module
@@ -173,10 +181,6 @@ projects[better_formats][download][branch] = 7.x-1.x
 projects[caption_filter][version] = 1.2
 projects[caption_filter][type] = module
 projects[caption_filter][subdir] = contrib
-
-;projects[ckeditor][version] = 1.8
-;projects[ckeditor][type] = module
-;projects[ckeditor][subdir] = contrib
 
 projects[date_popup_authored][version] = 1.1
 projects[date_popup_authored][subdir] = contrib
