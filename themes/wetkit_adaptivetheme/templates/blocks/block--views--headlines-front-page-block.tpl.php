@@ -49,20 +49,22 @@
 ?>
 
 <section>
-  <div id="gcwu-headlines" class="span-3">
+  <div id="gcwu-headlines">
   <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
     <?php print render($title_prefix); ?>
+
     <?php if ($title): ?>
       <?php global $language; ?>
       <?php if ($language->language == 'en'): ?>
-        <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
+        <h2 id="wb-cont" <?php print $title_attributes; ?>><?php print $title; ?></h2>
       <?php endif;?>
       
       <?php if ($language->language == 'fr'): ?>
         <h2<?php print $title_attributes; ?>>Titres</h2>
       <?php endif;?>        
     <?php endif;?>
+
     <?php print render($title_suffix); ?>
 
     <?php print $content ?>
