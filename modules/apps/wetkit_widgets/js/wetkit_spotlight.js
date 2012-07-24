@@ -1,3 +1,5 @@
+Drupal.settings.spotlight_settings = Drupal.settings.spotlight_settings || {};
+
 (function ($) {
  /**
    * Form behavior for Spotlight

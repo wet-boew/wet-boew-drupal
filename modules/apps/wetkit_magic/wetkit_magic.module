@@ -197,6 +197,29 @@ function wetkit_magic_form_alter(&$form, $form_state, $form_id) {
       $form['exposed']['filter-title']['title']['#size'] = 60;
     }
   }
+  
+  // Override default entity view mode behavior for fieldable panel panes.
+  if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form') {
+    $view_mode = $form['view_mode'];
+    unset($form['view_mode']);
+
+    // Remove "tokens" from the list of available view modes.
+    if (!empty($view_mode['#options']['token'])) {
+      unset($view_mode['#options']['token']);
+    }
+
+    // If we're left with only one option, don't display the dropdown.
+    if (count($view_mode['#options']) < 2) {
+      $view_type = reset(array_keys($view_mode['#options']));
+      $view_mode = array(
+        '#type' => 'value',
+        '#value' => $view_type,
+      );
+    }
+
+    // Re-insert the view mode selection under the "General settings" fieldset.
+    $form['widget_settings']['view_mode'] = $view_mode;
+  }
 }
 
 /**
