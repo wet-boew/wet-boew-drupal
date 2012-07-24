@@ -40,6 +40,9 @@ div.contextual-links-wrapper { z-index: 10; }
 /* Intranet Overrides */
 #gcwu-bnr-in #gcwu-title { margin-top: 0px; padding-top: 7px; }
 
+/* Maintenance Page */
+.maintenance-page #main-content #content { padding: 10px; }
+
 /* Adaptive Theme Overrides */
 #breadcrumb, .breadcrumb-wrapper { margin-left: 0px; margin-right: 0px; }
 
