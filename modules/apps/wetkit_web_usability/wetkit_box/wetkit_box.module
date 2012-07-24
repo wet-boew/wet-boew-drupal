@@ -31,3 +31,13 @@ function wetkit_box_boxes_plugins() {
   );
   return $info;
 }
+
+/**
+ * Implementation hook_theme_registry_alter()
+ */
+function wetkit_box_theme_registry_alter(&$theme_registry) {
+  $mod_path = drupal_get_path('module', 'wetkit_box') . '/templates';
+  $theme_registry_copy = $theme_registry;
+  _theme_process_registry($theme_registry_copy, 'phptemplate', 'theme_engine', 'pow', $mod_path);
+  $theme_registry += array_diff_key($theme_registry_copy, $theme_registry);
+}

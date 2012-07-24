@@ -246,7 +246,7 @@
                     <header id="main-content-header">
 
                       <?php if ($title): ?>
-                        <h1 id="page-title"<?php print $attributes; ?>>
+                        <h1 id="wb-cont page-title"<?php print $attributes; ?>>
                           <?php print $title; ?>
                         </h1>
                       <?php endif; ?>
@@ -325,7 +325,7 @@
     <div id="wb-foot-in">
       <footer>
 
-        <h2><?php print t('Footer'); ?></h2>
+        <h2 id="wb-nav"><?php print t('Footer'); ?></h2>
         <nav role="navigation">
           <div id="gcwu-sft">
             <h3><?php print t('Site Footer'); ?></h3>

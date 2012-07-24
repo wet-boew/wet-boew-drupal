@@ -57,7 +57,7 @@ function wetkit_pages_panelizer_defaults() {
     $pane->configuration = array(
       'markup' => 'h1',
       'class' => '',
-      'id' => '',
+      'id' => 'wb-cont',
       'override_title' => 0,
       'override_title_text' => '',
     );
