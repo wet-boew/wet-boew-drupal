@@ -68,3 +68,25 @@ function wetkit_users_form_alter(&$form, $form_state, $form_id) {
     $form['pass']['#description'] .= '<br>' . t('If you forgot your password, !request.', array('!request' => l('request a new password', 'user/password')));
   }
 }
+
+/**
+ * Implements hook_page_build().
+ *
+ * Hide the toolbar for user 1 and administrator role because uses the admin menu instead
+ */
+function wetkit_users_page_build(&$page) {
+  $page['page_top']['toolbar']['#access'] = wetkit_users_toolbar_access();
+}
+
+/**
+ * Implements wetkit_users_toolbar_access().
+ */
+function wetkit_users_toolbar_access() {
+  global $user;
+  if (($user->uid == 1) || (in_array('administrative user', array_values($user->roles)))) {
+    return FALSE;
+  }
+  else {
+    return user_access('access toolbar');
+  }
+}
