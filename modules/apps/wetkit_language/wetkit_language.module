@@ -32,7 +32,6 @@ function wetkit_language_language_init() {
   //Set Flag
   if (variable_get('wetkit_language_db', 1) == 1) {
     //Take care of language + domain
-  
 
     variable_set('wetkit_language_db', 0);
   }
