@@ -327,14 +327,6 @@ function wetkit_theme_form_submit($form, &$form_state) {
   theme_enable(array($theme));
   variable_set('theme_default', $theme);
 
-  // Set the AdaptiveTheme logo to be WetKit's logo
-  //if ($theme == 'bartik' || $theme == 'garland') {
-  //  $theme_data = _system_rebuild_theme_data();
-  //  $theme_data[$theme]->info['settings']['default_logo'] = 0;
-  //  $theme_data[$theme]->info['settings']['logo_path'] = 'profiles/panopoly/images/panopoly_icon_theme.png';
-  //  variable_set('theme_' . $theme . '_settings', $theme_data[$theme]->info['settings']);
-  //}
-
   // Flush theme caches so things are right
   system_rebuild_theme_data();
   drupal_theme_rebuild();

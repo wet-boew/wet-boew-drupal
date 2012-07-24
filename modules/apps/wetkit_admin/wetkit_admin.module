@@ -35,25 +35,6 @@ function wetkit_admin_init() {
 }
 
 /**
- * Implements hook_page_build().
- *
- * Hide the toolbar for user 1 because he uses the admin menu instead
- */
-function wetkit_admin_page_build(&$page) {
-  $page['page_top']['toolbar']['#access'] = wetkit_admin_toolbar_access();
-}
-
-function wetkit_admin_toolbar_access() {
-  global $user;
-  if ($user->uid == 1) {
-    return FALSE;
-  }
-  else {
-    return user_access('access toolbar');
-  }
-}
-
-/**
  * Implementation of hook_ctools_plugin_directory()
  */
 function wetkit_admin_ctools_plugin_directory($module, $plugin) {
