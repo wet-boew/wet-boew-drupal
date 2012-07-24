@@ -15,6 +15,14 @@ function wetkit_language_preprocess_page(&$vars) {
 }
 
 /**
+ * Implements hook_preprocess_page().
+ */
+function wetkit_language_preprocess_maintenance_page(&$vars) {
+  //Language Switcher Code
+  $vars['menu_lang_bar'] = _language_switcher_wetkit();
+}
+
+/**
  * Implements hook_init().
  */
 function wetkit_language_init() {
