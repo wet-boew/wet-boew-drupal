@@ -22,7 +22,7 @@ projects[context][type] = module
 projects[ctools][version] = 1.0
 projects[ctools][subdir] = contrib
 projects[ctools][type] = module
-projects[ctools][patch][1444732] = https://drupal.org/files/1444732-exposed-sort-as-pane-config.patch
+projects[ctools][patch][1444732] = http://drupal.org/files/1444732-exposed-sort-as-pane-config.patch
 projects[ctools][patch][1198808] = http://drupal.org/files/1198808-work-around-jquery-bug-with-auto-submit-ctools-1.0.patch
 projects[ctools][patch][1294478] = http://drupal.org/files/1294478-modal-dynamic-mode.patch
 
