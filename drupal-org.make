@@ -22,7 +22,7 @@ projects[context][type] = module
 projects[ctools][version] = 1.0
 projects[ctools][subdir] = contrib
 projects[ctools][type] = module
-projects[ctools][patch][1444732] = https://drupal.org/files/1444732-exposed-sort-as-pane-config.patch
+projects[ctools][patch][1444732] = http://drupal.org/files/1444732-exposed-sort-as-pane-config.patch
 projects[ctools][patch][1198808] = http://drupal.org/files/1198808-work-around-jquery-bug-with-auto-submit-ctools-1.0.patch
 projects[ctools][patch][1294478] = http://drupal.org/files/1294478-modal-dynamic-mode.patch
 
@@ -50,8 +50,9 @@ projects[fieldable_panels_panes][version] = 1.x-dev
 projects[fieldable_panels_panes][subdir] = contrib
 projects[fieldable_panels_panes][type] = module
 projects[fieldable_panels_panes][download][type] = git
-projects[fieldable_panels_panes][download][revision] = 851c1b1
+projects[fieldable_panels_panes][download][revision] = b4ae222
 projects[fieldable_panels_panes][download][branch] = 7.x-1.x
+projects[fieldable_panels_panes][patch][1536944] = http://drupal.org/files/translatable-panes-1536944-6.patch
 
 projects[jquery_update][version] = 2.x-dev
 projects[jquery_update][subdir] = contrib
@@ -305,6 +306,20 @@ projects[stringoverrides][type] = module
 ;;;;;;;;;;;;;;;;
 ; Experimental ;
 ;;;;;;;;;;;;;;;;
+
+projects[entity_translation][version] = 1.x-dev
+projects[entity_translation][type] = module
+projects[entity_translation][subdir] = contrib
+projects[entity_translation][download][type] = git
+projects[entity_translation][download][revision] = 48a00d3
+projects[entity_translation][download][branch] = 7.x-1.x
+
+;projects[title][version] = 1.x-dev
+;projects[title][type] = module
+;projects[title][subdir] = contrib
+;projects[title][download][type] = git
+;projects[title][download][revision] = a2f6f70
+;projects[title][download][branch] = 7.x-1.x
 
 ;projects[i18n_panels][type] = module
 ;projects[i18n_panels][subdir] = contrib
