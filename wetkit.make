@@ -307,12 +307,12 @@ projects[stringoverrides][type] = module
 ; Experimental ;
 ;;;;;;;;;;;;;;;;
 
-projects[entity_translation][version] = 1.x-dev
-projects[entity_translation][type] = module
-projects[entity_translation][subdir] = contrib
-projects[entity_translation][download][type] = git
-projects[entity_translation][download][revision] = 48a00d3
-projects[entity_translation][download][branch] = 7.x-1.x
+;projects[entity_translation][version] = 1.x-dev
+;projects[entity_translation][type] = module
+;projects[entity_translation][subdir] = contrib
+;projects[entity_translation][download][type] = git
+;projects[entity_translation][download][revision] = 48a00d3
+;projects[entity_translation][download][branch] = 7.x-1.x
 
 ;projects[title][version] = 1.x-dev
 ;projects[title][type] = module
