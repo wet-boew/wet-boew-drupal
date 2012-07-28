@@ -50,7 +50,7 @@ projects[fieldable_panels_panes][version] = 1.x-dev
 projects[fieldable_panels_panes][subdir] = contrib
 projects[fieldable_panels_panes][type] = module
 projects[fieldable_panels_panes][download][type] = git
-projects[fieldable_panels_panes][download][revision] = b4ae222
+projects[fieldable_panels_panes][download][revision] = a4ea924
 projects[fieldable_panels_panes][download][branch] = 7.x-1.x
 projects[fieldable_panels_panes][patch][1536944] = http://drupal.org/files/translatable-panes-1536944-6.patch
 
