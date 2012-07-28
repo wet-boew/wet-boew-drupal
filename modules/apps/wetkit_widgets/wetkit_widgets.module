@@ -109,7 +109,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane top level' => TRUE,
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_link.png',
     'admin' => array(
-      'path' => 'admin/structure/panels/entity/manage/%fieldable_panels_panes_type',
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 5,
       'real path' => 'admin/structure/panels/entity/manage/quick_links',
       'access arguments' => array('administer fieldable panels panes'),
@@ -123,7 +123,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane top level' => TRUE,
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_file.png',
     'admin' => array(
-      'path' => 'admin/structure/panels/entity/manage/%fieldable_panels_panes_type',
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 5,
       'real path' => 'admin/structure/panels/entity/manage/basic_file',
       'access arguments' => array('administer fieldable panels panes'),
@@ -137,7 +137,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane top level' => TRUE,
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_image.png',
     'admin' => array(
-      'path' => 'admin/structure/panels/entity/manage/%fieldable_panels_panes_type',
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 5,
       'real path' => 'admin/structure/panels/entity/manage/image',
       'access arguments' => array('administer fieldable panels panes'),
@@ -151,7 +151,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane top level' => TRUE,
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_text.png',
     'admin' => array(
-      'path' => 'admin/structure/panels/entity/manage/%fieldable_panels_panes_type',
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 5,
       'real path' => 'admin/structure/panels/entity/manage/text',
       'access arguments' => array('administer fieldable panels panes'),
@@ -165,7 +165,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane top level' => TRUE,
     'pane icon' => drupal_get_path('module', 'panopoly_widgets') . '/images/icon_map.png',
     'admin' => array(
-      'path' => 'admin/structure/panels/entity/manage/%fieldable_panels_panes_type',
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 5,
       'real path' => 'admin/structure/panels/entity/manage/map',
       'access arguments' => array('administer fieldable panels panes'),
@@ -179,7 +179,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane top level' => TRUE,
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_table.png',
     'admin' => array(
-      'path' => 'admin/structure/panels/entity/manage/%fieldable_panels_panes_type',
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 5,
       'real path' => 'admin/structure/panels/entity/manage/table',
       'access arguments' => array('administer fieldable panels panes'),
@@ -193,7 +193,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane top level' => TRUE,
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_video.png',
     'admin' => array(
-      'path' => 'admin/structure/panels/entity/manage/%fieldable_panels_panes_type',
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 5,
       'real path' => 'admin/structure/panels/entity/manage/video',
       'access arguments' => array('administer fieldable panels panes'),
@@ -207,7 +207,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane top level' => TRUE,
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_spotlight.png',
     'admin' => array(
-      'path' => 'admin/structure/panels/entity/manage/%fieldable_panels_panes_type',
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 5,
       'real path' => 'admin/structure/panels/entity/manage/spotlight',
       'access arguments' => array('administer fieldable panels panes'),
