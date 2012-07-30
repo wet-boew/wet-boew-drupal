@@ -49,7 +49,9 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
   }
 
   if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form') {
-    
+    // Add a custom pre-render method to deal with "Content Settings" fieldset.
+    $form['#pre_render'][] = 'wetkit_widgets_fieldable_panel_pane_pre_render';
+
     // Remove the revisioning information
     $form['revision']['revision']['#type'] = 'value';
     $form['revision']['log']['#access'] = FALSE;
@@ -62,25 +64,20 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
     $form['widget_settings']['title'] = $form['title'];
     unset($form['title']);
 
-    // Add a content settings fieldset and custom element_validate function
-    $form['content_settings']['#type'] = 'fieldset';
-    $form['content_settings']['#title'] = t('Content Settings');
-
+    // Find file / image fields and ensure they are using a FID instead of a UUID.
     foreach($form as $key => $value) {
       if (substr($key, 0, 6) == 'field_') {
-        $form['content_settings'][$key] = $value;
         if (!empty($value['und']['0']['#bundle']) && ($value['und']['0']['#bundle'] == 'image' || $value['und']['0']['#bundle'] == 'file')) {
           foreach($value['und'] as $subkey => $subvalue) {
             if (is_numeric($subkey)) {
               // Change UUID to FID to resolve issue with UUID handling. This solves a bug with Fieldable Panels Panes that
               // hopefully will be resolved soon.
               if (!empty($subvalue['#default_value']['fid']) && strlen($subvalue['#default_value']['fid']) == 36){
-                $form['content_settings'][$key]['und'][$subkey]['#default_value']['fid'] = db_query('SELECT fid FROM {file_managed} WHERE uuid = :uuid', array(':uuid' => $subvalue['#default_value']['fid']))->fetchField();
+                $form[$key]['und'][$subkey]['#default_value']['fid'] = db_query('SELECT fid FROM {file_managed} WHERE uuid = :uuid', array(':uuid' => $subvalue['#default_value']['fid']))->fetchField();
               }
             }
           }
         }
-        unset($form[$key]);
       }
     }
     
@@ -97,6 +94,31 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
     $form['reusable']['category']['#type'] = 'value';
     $form['reusable']['admin_description']['#access'] = FALSE;
   }
+}
+
+/**
+ * Implement the "Content Settings" fieldset in a pre-render. This fixes issues with image caused by initially
+ * doing this in a form_alter.
+ *
+ * @see http://drupal.org/node/1567704
+ */
+function wetkit_widgets_fieldable_panel_pane_pre_render($element) {
+  // Add a content settings fieldset.
+  $element['content_settings'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Content Settings'),
+    '#weight' => 1,
+  );
+
+  // Add any remaining fields to the content settings fieldset.
+  foreach($element as $key => $value) {
+    if (substr($key, 0, 6) == 'field_') {
+      $element['content_settings'][$key] = $value;
+      unset($element[$key]);
+    }
+  }
+
+  return $element;
 }
 
 /** 

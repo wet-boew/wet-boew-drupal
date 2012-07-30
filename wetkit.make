@@ -46,7 +46,7 @@ projects[fences][download][revision] = d9ca337
 projects[fences][download][branch] = 7.x-1.x
 projects[fences][patch][1561244] = http://drupal.org/files/undefined-index-1561244-7.patch
 
-projects[fieldable_panels_panes][version] = 1.x-dev
+projects[fieldable_panels_panes][version] = 1.1
 projects[fieldable_panels_panes][subdir] = contrib
 projects[fieldable_panels_panes][type] = module
 projects[fieldable_panels_panes][download][type] = git
@@ -62,7 +62,7 @@ projects[jquery_update][download][revision] = 5d2a4b2
 projects[jquery_update][download][branch] = 7.x-2.x
 projects[jquery_update][patch][1524944] = http://drupal.org/files/allow-different-version-for-admin-pages-1524944-6.patch
 
-projects[libraries][version] = 2.0-alpha2
+projects[libraries][version] = 2.0
 projects[libraries][type] = module
 projects[libraries][subdir] = contrib
 
@@ -83,8 +83,9 @@ projects[panelizer][version] = 3.x-dev
 projects[panelizer][subdir] = contrib
 projects[panelizer][type] = module
 projects[panelizer][download][type] = git
-projects[panelizer][download][revision] = 186f4bc
+projects[panelizer][download][revision] = c4022c5
 projects[panelizer][download][branch] = 7.x-3.x
+projects[panelizer][patch][1387634] = http://drupal.org/files/exporting_panelizer_defaults-1387634-9.patch
 
 projects[password_policy][version] = 1.0-rc3
 projects[password_policy][type] = module
@@ -226,12 +227,13 @@ projects[workbench_moderation][download][branch] = 7.x-1.x
 projects[workbench_moderation][patch][1285090] = http://drupal.org/files/playnicewithpanels-1285090-7.patch
 projects[workbench_moderation][patch][1260112] = http://drupal.org/files/workbench_moderation-is_current-1260112-15.patch
 
+projects[wysiwyg][version] = 2.x-dev 
 projects[wysiwyg][subdir] = contrib
 projects[wysiwyg][type] = module
-projects[wysiwyg][version] = 2.x-dev 
 projects[wysiwyg][patch][1489096] = http://drupal.org/files/wysiwyg-table-format.patch
-projects[wysiwyg][patch][356480] = http://drupal.org/files/wysiwyg-746524-184.patch
+projects[wysiwyg][patch][356480] = http://drupal.org/files/lazy_wysiwyg-356480-137.patch
 projects[wysiwyg][download][type] = git
+projects[wysiwyg][download][revision] = d17bf11
 projects[wysiwyg][download][branch] = 7.x-2.x
 
 projects[wysiwyg_filter][version] = 1.6-rc2
@@ -272,13 +274,9 @@ projects[entity][version] = 1.0-rc3
 projects[entity][type] = module
 projects[entity][subdir] = contrib
 
-projects[features][version] = 1.0-rc3
+projects[features][version] = 1.0
 projects[features][subdir] = contrib
 projects[features][type] = module
-projects[features][download][type] = git
-projects[features][download][revision] = 6239499
-projects[features][download][branch] = 7.x-1.x
-projects[features][patch][1647894] = http://drupal.org/files/features-1647894-1.patch
 
 projects[strongarm][version] = 2.0
 projects[strongarm][type] = module
