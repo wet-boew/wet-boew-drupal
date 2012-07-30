@@ -158,7 +158,7 @@ function wetkit_admin_module_implements_alter(&$implementations, $hook) {
  */
 function wetkit_admin_pathauto_submit($form, &$form_state) {
   // If the user hasn't specified a path, autogenerate
-  if (!$form_state['input']['path']['alias']) {
+  if (!isset($form_state['input']['path']['alias'])) {
     $form_state['values']['path']['pathauto'] = 1;
     $form_state['input']['path']['pathauto'] = 1;
   }
