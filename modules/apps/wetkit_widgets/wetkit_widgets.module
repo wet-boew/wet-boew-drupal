@@ -1,13 +1,15 @@
 <?php
 
 include_once('wetkit_widgets.features.inc');
-include_once('wetkit_widgets.spotlight.inc');
+include_once('wetkit_widgets.plugins.inc');
 
 /**
- * Implementation of hook_ctools_plugin_directory()
- */
+* Implementation of hook_ctools_plugin_directory().
+*/
 function wetkit_widgets_ctools_plugin_directory($module, $plugin) {
-  return 'plugins/' . $plugin;
+  if ($module == 'page_manager' || $module == 'panels') {
+    return 'plugins/' . $plugin;
+  }
 }
 
 /**
@@ -110,8 +112,8 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_link.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
-      'real path' => 'admin/structure/panels/entity/manage/quick_links',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/quick_links',
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
@@ -124,8 +126,8 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_file.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
-      'real path' => 'admin/structure/panels/entity/manage/basic_file',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/basic_file',
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
@@ -138,8 +140,8 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_image.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
-      'real path' => 'admin/structure/panels/entity/manage/image',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/image',
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
@@ -152,8 +154,8 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_text.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
-      'real path' => 'admin/structure/panels/entity/manage/text',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/text',
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
@@ -166,8 +168,8 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'panopoly_widgets') . '/images/icon_map.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
-      'real path' => 'admin/structure/panels/entity/manage/map',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/map',
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
@@ -180,8 +182,8 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_table.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
-      'real path' => 'admin/structure/panels/entity/manage/table',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/table',
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
@@ -194,8 +196,8 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_video.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
-      'real path' => 'admin/structure/panels/entity/manage/video',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/video',
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
@@ -208,8 +210,22 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_spotlight.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
-      'real path' => 'admin/structure/panels/entity/manage/spotlight',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/spotlight',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+  
+  // Tabbed Interface
+  $entity_info['fieldable_panels_pane']['bundles']['tabbed_interface'] = array(
+    'label' => t('Add tabbed interface'),
+    'pane category' => t('WetKit'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_tabbed_interface.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/tabbed_interface',
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
@@ -229,21 +245,43 @@ function wetkit_widgets_views_slideshow_widget_pager_info($view) {
 }
 
 /**
+ * Implementation hook_theme_registry_alter()
+ */
+function wetkit_widgets_theme_registry_alter(&$theme_registry) {
+  $mod_path = drupal_get_path('module', 'wetkit_widgets') . '/templates';
+  $theme_registry_copy = $theme_registry;
+  _theme_process_registry($theme_registry_copy, 'phptemplate', 'theme_engine', 'pow', $mod_path);
+  $theme_registry += array_diff_key($theme_registry_copy, $theme_registry);
+}
+
+/**
  * Implements hook_theme().
  */
 function wetkit_widgets_theme($existing, $type, $theme, $path) {
   return array(
     'wetkit_widgets' => array(
       'variables' => array('vss_id' => NULL, 'view' => NULL, 'settings' => array(), 'location' => NULL, 'attributes' => array()),
-      'template' => 'templates/views-slideshow-pager-fields',
+      'template' => 'templates/views/views-slideshow-pager-fields',
       'path' => drupal_get_path('module', 'wetkit_widgets'),
     ),
     'wetkit_widgets_pager_field_item' => array(
       'variables' => array('vss_id' => NULL, 'item' => NULL, 'count' => NULL, 'location' => NULL),
-      'template' => 'templates/views-slideshow-pager-field-item',
+      'template' => 'templates/views/views-slideshow-pager-field-item',
+      'path' => drupal_get_path('module', 'wetkit_widgets'),
+    ),
+    'fieldable_panels_pane' => array(
+      'render element' => 'elements',
+      'template'  => 'templates/panels/wetkit-widgets-fieldable-panels-pane',
       'path' => drupal_get_path('module', 'wetkit_widgets'),
     ),
     'wetkit_spotlight_view' => array(
+      'variables' => array(
+        'items' => NULL,
+        'delta' => NULL,
+        'settings' => NULL,
+      ),
+    ),
+    'wetkit_tab_interface_view' => array(
       'variables' => array(
         'items' => NULL,
         'delta' => NULL,
@@ -292,4 +330,3 @@ function _wetkit_widgets_preprocess_wetkit_widgets_pager_field_item(&$vars) {
   }
   $vars['classes_array'][] = ($vars['count'] % 2) ? 'views-row-even' : 'views-row-odd';
 }
-

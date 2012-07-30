@@ -18,6 +18,7 @@ function wetkit_widgets_uninstall() {
  * Implements hook_field_schema().
  */
 function wetkit_widgets_field_schema($field) {
+  //Spotlight Widget
   if ($field['type'] == 'wetkit_spotlight') {
     $schema['columns']['title'] = array(
       'type' => 'varchar',
@@ -38,6 +39,52 @@ function wetkit_widgets_field_schema($field) {
     );
 
     $schema['columns']['link'] = array(
+      'type' => 'varchar',
+      'length' => '255',
+      'not null' => FALSE,
+    );
+
+    $schema['indexes'] = array(
+      'fid' => array('fid'),
+    );
+
+    $schema['foreign keys'] = array(
+      'fid' => array(
+        'table' => 'file_managed',
+        'columns' => array('fid' => 'fid'),
+      ),
+    );
+
+    return $schema;
+  }
+  
+  //Tabbed Interface Widget
+  if ($field['type'] == 'wetkit_tabbed_interface') {
+    $schema['columns']['title'] = array(
+      'type' => 'varchar',
+      'length' => '255',
+      'not null' => FALSE,
+    );
+    
+    $schema['columns']['link'] = array(
+      'type' => 'varchar',
+      'length' => '255',
+      'not null' => FALSE,
+    );
+
+    $schema['columns']['description'] = array(
+      'type' => 'text',
+      'size' => 'big',
+      'not null' => FALSE,
+    );
+
+    $schema['columns']['fid'] = array(
+      'type' => 'int', 
+      'not null' => FALSE,
+      'unsigned' => TRUE,
+    );
+    
+    $schema['columns']['alt'] = array(
       'type' => 'varchar',
       'length' => '255',
       'not null' => FALSE,
