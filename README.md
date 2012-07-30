@@ -34,6 +34,22 @@ Example: drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-su
 chown -R apache:apache /sites/&lt;domain&gt;/files
 </pre>
 
+### Update
+
+> Drush Make can also be used to update an existing install without replacing additional files. (IMPORTANT: However Drush Make will replace all files that Drush Make knows about!)
+>
+> 1. Switch (cd) to your working Drupal Directory
+>
+> 2. To quickly update an existing site using the Drush command line, change to the directory where Drupal (for example C:/apache2/htdocs) was installed and enter this command.
+<pre>
+Command: drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make .
+</pre>
+> 3. Since we are just updating an site instead of using drush si we will instead just update the database to reflect any changes in the code.
+<pre>
+Command: drush -l http://&lt;domain&gt;:8082 updatedb
+Example: drush -l http://drupal_wet:8082 updatedb
+</pre>
+
 ### Proxy Support
 
 > To get around the Proxy when using Linux or Mac OSX all you have to do is edit the following files that come native to the environment.
@@ -64,6 +80,22 @@ Example: drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-su
 > Depending on your server set-up you will have to make sure that the /sites/default/files or /sites/&lt;domain&gt;/files directory has the correct owner (webserver):
 <pre>
 chown -R apache:apache /sites/&lt;domain&gt;/files
+</pre>
+
+### Update
+
+> Drush Make can also be used to update an existing install without replacing additional files. (IMPORTANT: However Drush Make will replace all files that Drush Make knows about!)
+>
+> 1. Switch (cd) to your working Drupal Directory
+>
+> 2. To quickly update an existing site using the Drush command line, change to the directory where Drupal (for example C:/apache2/htdocs) was installed and enter this command.
+<pre>
+Command: drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make .
+</pre>
+> 3. Since we are just updating an site instead of using drush si we will instead just update the database to reflect any changes in the code.
+<pre>
+Command: drush -l http://&lt;domain&gt;:8082 updatedb
+Example: drush -l http://drupal_wet:8082 updatedb
 </pre>
 
 ### Proxy Support
