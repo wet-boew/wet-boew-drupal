@@ -16,13 +16,14 @@ If you do not wish to compile Drupal and its various packages we host the comple
 >
 > 2. Install Git 1.7.11 or higher (Some lower versions of git do not apply patches from the make file with Drush Make):
 >
-> 3. Perform the build out procedure by typing:
+> 3. Build the complete Drupal installation software profile using the following command on the Bash command prompt.
 <pre>
 Command: drush make --prepare-install --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make &lt;directory_name&gt; -v --debug
 Example: drush make --prepare-install --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make drupal_wet
 </pre>
 >
-> 4. Rapid Installation (via Drush):
+> 4. To quickly install using the Drush command line, change to the directory where Drupal (for example /var/www/html) was installed and enter this command.
+> Be sure to use a password that meets the password policy for WET.
 <pre>
 Command: drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-subdir=&lt;domain&gt; --db-url=mysql://&lt;username&gt;:&lt;password&gt;@&lt;domain&gt;:&lt;port&gt;/&lt;database&gt; --account-name=&lt;username&gt; --account-mail=&lt;accountemail&gt; --account-pass=&lt;userpassword&gt; --site-mail=&lt;siteemail&gt; --site-name=&lt;sitename&gt;
 Example: drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-subdir=drupal_wet --db-url=mysql://drupalusr:drupalusr_pass@localhost:3306/wetkit_db --account-name=admin --account-pass=WetKit@2012 --account-mail=admin@example.com --site-mail=admin@example.com --site-name="Web Experience Toolkit"
@@ -65,7 +66,7 @@ Example: drush -l http://drupal_wet:8082 updatedb
 >
 > 2. Install msysgit 1.7.11 or higher available from http://msysgit.github.com (Some lower versions of git do not apply patches from the make file with Drush Make) and start a Git Bash terminal windows
 >
-> 3. Build the complete Drupal installation software profile using the following command on the Bash command promprt.
+> 3. Build the complete Drupal installation software profile using the following command on the Bash command prompt.
 <pre>
 Command: drush make --prepare-install --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make &lt;directory_name&gt; -v --debug
 Example: drush make --prepare-install --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make drupal_wet
