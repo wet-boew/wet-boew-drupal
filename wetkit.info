@@ -10,7 +10,6 @@ dependencies[] = list
 dependencies[] = locale
 dependencies[] = number
 dependencies[] = options
-dependencies[] = overlay
 dependencies[] = path
 dependencies[] = taxonomy
 dependencies[] = search
@@ -25,6 +24,7 @@ dependencies[] = shortcut
 dependencies[] = toolbar
 
 ; Core Disabled
+;dependencies[] = overlay
 ;dependencies[] = contextual
 ;dependencies[] = rdf
 ;dependencies[] = statistics
