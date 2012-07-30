@@ -14,6 +14,8 @@ Key Features
 * UI/UX improvements for Fieldable Panels Panels editing/reusing experience
 * UX/UX improvements for Menu Block adding/editing experience
 
+* Creation of a tabbed interface entity type/field formatter
+
 To Do
 * Cleanup of Views Slideshow Theming + CSS
 * Cleanup of Spotlight CSS
