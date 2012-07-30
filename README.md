@@ -8,6 +8,8 @@ The WET Distribution now uses Drush Make for rapid built out of the Drupal codeb
 
 If you do not wish to compile Drupal and its various packages we host the complete codebase at: [Drupal Pre-Built](https://github.com/sylus/wet-boew-drupal-compiled). It should be noted that this repository will only be updated on a monthly basis.
 
+Should you require further documentation discussed below please proceed to our Wiki Pages at: [Documentation](https://github.com/wet-boew/wet-boew-drupal/wiki).
+
 ## Linux, Mac OSX, etc
 
 ### Installation
@@ -16,13 +18,14 @@ If you do not wish to compile Drupal and its various packages we host the comple
 >
 > 2. Install Git 1.7.11 or higher (Some lower versions of git do not apply patches from the make file with Drush Make):
 >
-> 3. Perform the build out procedure by typing:
+> 3. Build the complete Drupal installation software profile using the following command on the Bash command prompt.
 <pre>
 Command: drush make --prepare-install --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make &lt;directory_name&gt; -v --debug
 Example: drush make --prepare-install --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make drupal_wet
 </pre>
 >
-> 4. Rapid Installation (via Drush):
+> 4. To quickly install using the Drush command line, change to the directory where Drupal (for example /var/www/html) was installed and enter this command.
+> Be sure to use a password that meets the password policy for WET.
 <pre>
 Command: drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-subdir=&lt;domain&gt; --db-url=mysql://&lt;username&gt;:&lt;password&gt;@&lt;domain&gt;:&lt;port&gt;/&lt;database&gt; --account-name=&lt;username&gt; --account-mail=&lt;accountemail&gt; --account-pass=&lt;userpassword&gt; --site-mail=&lt;siteemail&gt; --site-name=&lt;sitename&gt;
 Example: drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-subdir=drupal_wet --db-url=mysql://drupalusr:drupalusr_pass@localhost:3306/wetkit_db --account-name=admin --account-pass=WetKit@2012 --account-mail=admin@example.com --site-mail=admin@example.com --site-name="Web Experience Toolkit"
@@ -32,6 +35,22 @@ Example: drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-su
 > Depending on your server set-up you will have to make sure that the /sites/default/files or /sites/&lt;domain&gt;/files directory has the correct owner (webserver):
 <pre>
 chown -R apache:apache /sites/&lt;domain&gt;/files
+</pre>
+
+### Update
+
+> Drush Make can also be used to update an existing install without replacing additional files. (IMPORTANT: However Drush Make will replace all files that Drush Make knows about!)
+>
+> 1. Switch (cd) to your working Drupal Directory
+>
+> 2. To quickly update an existing site using the Drush command line, change to the directory where Drupal (for example C:/apache2/htdocs) was installed and enter this command.
+<pre>
+Command: drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make .
+</pre>
+> 3. Since we are just updating an site instead of using drush si we will instead just update the database to reflect any changes in the code.
+<pre>
+Command: drush -l http://&lt;domain&gt;:8082 updatedb
+Example: drush -l http://drupal_wet:8082 updatedb
 </pre>
 
 ### Proxy Support
@@ -49,7 +68,7 @@ chown -R apache:apache /sites/&lt;domain&gt;/files
 >
 > 2. Install msysgit 1.7.11 or higher available from http://msysgit.github.com (Some lower versions of git do not apply patches from the make file with Drush Make) and start a Git Bash terminal windows
 >
-> 3. Build the complete Drupal installation software profile using the following command on the Bash command promprt.
+> 3. Build the complete Drupal installation software profile using the following command on the Bash command prompt.
 <pre>
 Command: drush make --prepare-install --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make &lt;directory_name&gt; -v --debug
 Example: drush make --prepare-install --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make drupal_wet
@@ -64,6 +83,22 @@ Example: drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-su
 > Depending on your server set-up you will have to make sure that the /sites/default/files or /sites/&lt;domain&gt;/files directory has the correct owner (webserver):
 <pre>
 chown -R apache:apache /sites/&lt;domain&gt;/files
+</pre>
+
+### Update
+
+> Drush Make can also be used to update an existing install without replacing additional files. (IMPORTANT: However Drush Make will replace all files that Drush Make knows about!)
+>
+> 1. Switch (cd) to your working Drupal Directory
+>
+> 2. To quickly update an existing site using the Drush command line, change to the directory where Drupal (for example C:/apache2/htdocs) was installed and enter this command.
+<pre>
+Command: drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make .
+</pre>
+> 3. Since we are just updating an site instead of using drush si we will instead just update the database to reflect any changes in the code.
+<pre>
+Command: drush -l http://&lt;domain&gt;:8082 updatedb
+Example: drush -l http://drupal_wet:8082 updatedb
 </pre>
 
 ### Proxy Support
