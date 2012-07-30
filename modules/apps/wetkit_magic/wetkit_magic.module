@@ -220,6 +220,28 @@ function wetkit_magic_form_alter(&$form, $form_state, $form_id) {
     // Re-insert the view mode selection under the "General settings" fieldset.
     $form['widget_settings']['view_mode'] = $view_mode;
   }
+  
+  // Customize the search box edit form.
+  if ($form_id == 'wetkit_search_search_box_content_type_edit_form') {
+
+    // Grab child elements and create the fieldset.
+    $children = element_children($form);
+    if (count($children) > 1) {
+      $form['general_settings'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('General Settings'),
+      );
+
+
+      // Move all elements which aren't fieldsets or the submit buttons into the general settings fieldset.
+      foreach ($children as $child) {
+        if (!empty($form[$child]['#type']) && $form[$child]['#type'] != 'fieldset' && $child != 'buttons') {
+          $form['general_settings'][$child] = $form[$child];
+          unset($form[$child]);
+        }
+      }
+    }
+  }
 }
 
 /**
