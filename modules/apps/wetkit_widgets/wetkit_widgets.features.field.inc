@@ -658,79 +658,15 @@ function wetkit_widgets_field_default_fields() {
       ),
     ),
   );
-
-  // Exported field: 'fieldable_panels_pane-tabbed_interface-field_tabbed_body'.
-  $fields['fieldable_panels_pane-tabbed_interface-field_tabbed_body'] = array(
+  
+  // Exported field: 'fieldable_panels_pane-spotlight-field_tabbed_interface'.
+  $fields['fieldable_panels_pane-tabbed_interface-field_tabbed_interface'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_tabbed_body',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'text_with_summary',
-    ),
-    'field_instance' => array(
-      'bundle' => 'tabbed_interface',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '0',
-        ),
-      ),
-      'entity_type' => 'fieldable_panels_pane',
-      'fences_wrapper' => 'div',
-      'field_name' => 'field_tabbed_body',
-      'label' => 'Tabbed Body',
-      'required' => 0,
-      'settings' => array(
-        'display_summary' => 0,
-        'text_processing' => '1',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'rows' => '20',
-          'summary_rows' => 5,
-        ),
-        'type' => 'text_textarea_with_summary',
-        'weight' => '2',
-      ),
-    ),
-  );
-
-  // Exported field: 'fieldable_panels_pane-tabbed_interface-field_tabbed_image'.
-  $fields['fieldable_panels_pane-tabbed_interface-field_tabbed_image'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_tabbed_image',
+      'field_name' => 'field_tabbed_interface',
       'foreign keys' => array(
         'fid' => array(
           'columns' => array(
@@ -745,55 +681,49 @@ function wetkit_widgets_field_default_fields() {
         ),
       ),
       'locked' => '0',
-      'module' => 'image',
+      'module' => 'wetkit_widgets',
       'settings' => array(
         'default_image' => 0,
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
-      'type' => 'image',
+      'type' => 'wetkit_tabbed_interface',
     ),
     'field_instance' => array(
       'bundle' => 'tabbed_interface',
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => 'content',
-            'image_style' => '',
-          ),
-          'type' => 'image',
-          'weight' => '2',
+          'module' => 'wetkit_widgets',
+          'settings' => array(),
+          'type' => 'wetkit_tabbed_interface_default',
+          'weight' => '0',
         ),
       ),
       'entity_type' => 'fieldable_panels_pane',
-      'fences_wrapper' => 'div',
-      'field_name' => 'field_tabbed_image',
-      'label' => 'Tabbed Image',
+      'field_name' => 'field_tabbed_interface',
+      'label' => 'Items',
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
         'default_image' => 0,
-        'file_directory' => 'widgets/tabbed_interface',
-        'file_extensions' => 'png gif jpg jpeg',
+        'file_directory' => 'general',
+        'file_extensions' => 'jpg jpeg gif png',
         'max_filesize' => '',
         'max_resolution' => '',
         'min_resolution' => '',
-        'title_field' => 1,
+        'title_field' => 0,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 1,
-        'module' => 'image',
-        'settings' => array(
-          'preview_image_style' => 'thumbnail',
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'image_image',
-        'weight' => '1',
+        'active' => 0,
+        'module' => 'wetkit_widgets',
+        'settings' => array(),
+        'type' => 'wetkit_tabbed_interface_form',
+        'weight' => '-4',
       ),
     ),
   );
@@ -1098,8 +1028,6 @@ function wetkit_widgets_field_default_fields() {
   t('Quote');
   t('Read More Link');
   t('Rotation Time');
-  t('Tabbed Body');
-  t('Tabbed Image');
   t('Table');
   t('Text');
   t('Video');

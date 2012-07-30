@@ -1,7 +1,6 @@
 /* Drupal Specific Styling */
 .wet-boew-tabbedinterface .tabs {margin: 0px;}
 .wet-boew-tabbedinterface .tabs li.active {border-left: none;}
-.wet-boew-tabbedinterface .tabs-stop {margin: 0px 0px 5px 20px !important;}
 
 /* style 7  For use with the Multimedia Player */
 .tabs-style-7 {height:250px;overflow:hidden;position:relative;width:960px;background:#fff;}

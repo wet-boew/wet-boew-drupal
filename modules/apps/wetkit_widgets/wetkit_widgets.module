@@ -1,13 +1,15 @@
 <?php
 
 include_once('wetkit_widgets.features.inc');
-include_once('wetkit_widgets.spotlight.inc');
+include_once('wetkit_widgets.plugins.inc');
 
 /**
- * Implementation of hook_ctools_plugin_directory()
- */
+* Implementation of hook_ctools_plugin_directory().
+*/
 function wetkit_widgets_ctools_plugin_directory($module, $plugin) {
-  return 'plugins/' . $plugin;
+  if ($module == 'page_manager' || $module == 'panels') {
+    return 'plugins/' . $plugin;
+  }
 }
 
 /**
@@ -267,7 +269,19 @@ function wetkit_widgets_theme($existing, $type, $theme, $path) {
       'template' => 'templates/views/views-slideshow-pager-field-item',
       'path' => drupal_get_path('module', 'wetkit_widgets'),
     ),
+    'fieldable_panels_pane' => array(
+      'render element' => 'elements',
+      'template'  => 'templates/panels/wetkit-widgets-fieldable-panels-pane',
+      'path' => drupal_get_path('module', 'wetkit_widgets'),
+    ),
     'wetkit_spotlight_view' => array(
+      'variables' => array(
+        'items' => NULL,
+        'delta' => NULL,
+        'settings' => NULL,
+      ),
+    ),
+    'wetkit_tab_interface_view' => array(
       'variables' => array(
         'items' => NULL,
         'delta' => NULL,
@@ -316,4 +330,3 @@ function _wetkit_widgets_preprocess_wetkit_widgets_pager_field_item(&$vars) {
   }
   $vars['classes_array'][] = ($vars['count'] % 2) ? 'views-row-even' : 'views-row-odd';
 }
-

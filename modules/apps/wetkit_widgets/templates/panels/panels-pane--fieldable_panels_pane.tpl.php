@@ -40,7 +40,7 @@
       </div>
     <?php endif; ?>
 
-  <div class="wet-boew-tabbedinterface tabs-style-7 auto-play cycle">
+    <div class="pane-content">
       <?php print render($content); ?>
     </div>
 
