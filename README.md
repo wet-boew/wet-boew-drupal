@@ -8,6 +8,8 @@ The WET Distribution now uses Drush Make for rapid built out of the Drupal codeb
 
 If you do not wish to compile Drupal and its various packages we host the complete codebase at: [Drupal Pre-Built](https://github.com/sylus/wet-boew-drupal-compiled). It should be noted that this repository will only be updated on a monthly basis.
 
+Should you require further documentation discussed below please proceed to our Wiki Pages at [Documentation](https://github.com/wet-boew/wet-boew-drupal/wiki).
+
 ## Linux, Mac OSX, etc
 
 ### Installation
