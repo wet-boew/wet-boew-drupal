@@ -51,7 +51,7 @@ function wetkit_widgets_tabbed_interface_style_settings_form($style_settings) {
       'tabs-style-3 auto-play cycle' => t('Style 3'),
       'tabs-style-4 auto-play cycle' => t('Style 4'),
       'tabs-style-5 auto-play cycle' => t('Style 5'),
-      'tabs-style-7 auto-play cycle' => t('Style 7'),
+      'tabs-style-7 auto-play animate-slow cycle' => t('Style 7'),
     ),
     '#default_value' => (isset($style_settings['tabbed_interface_classes'])) ? $style_settings['tabbed_interface_classes'] : '',
   );
