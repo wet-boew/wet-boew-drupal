@@ -230,13 +230,12 @@ projects[workbench_moderation][download][branch] = 7.x-1.x
 projects[workbench_moderation][patch][1285090] = http://drupal.org/files/playnicewithpanels-1285090-7.patch
 projects[workbench_moderation][patch][1260112] = http://drupal.org/files/workbench_moderation-is_current-1260112-15.patch
 
+projects[wysiwyg][version] = 2.x-dev
 projects[wysiwyg][subdir] = contrib
 projects[wysiwyg][type] = module
-projects[wysiwyg][version] = 2.x-dev 
-projects[wysiwyg][patch][1489096] = http://drupal.org/files/wysiwyg-table-format.patch
-projects[wysiwyg][patch][356480] = http://drupal.org/files/356480-by-zhangtaihao-Shawn_Smiley-sun.-Lazy-load-ed-p0.patch
+projects[wysiwyg][patch][356480] = http://drupal.org/files/lazy_wysiwyg-356480-137.patch
 projects[wysiwyg][download][type] = git
-projects[wysiwyg][download][revision] = 7e6609e
+projects[wysiwyg][download][revision] = d17bf11
 projects[wysiwyg][download][branch] = 7.x-2.x
 
 projects[wysiwyg_filter][version] = 1.6-rc2
