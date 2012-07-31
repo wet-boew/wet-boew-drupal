@@ -234,9 +234,8 @@ projects[wysiwyg][subdir] = contrib
 projects[wysiwyg][type] = module
 projects[wysiwyg][version] = 2.x-dev 
 projects[wysiwyg][patch][1489096] = http://drupal.org/files/wysiwyg-table-format.patch
-projects[wysiwyg][patch][356480] = http://drupal.org/files/lazy_wysiwyg-356480-137.patch
+projects[wysiwyg][patch][356480] = http://drupal.org/files/wysiwyg-746524-184.patch
 projects[wysiwyg][download][type] = git
-projects[wysiwyg][download][revision] = 7e6609e
 projects[wysiwyg][download][branch] = 7.x-2.x
 
 projects[wysiwyg_filter][version] = 1.6-rc2
