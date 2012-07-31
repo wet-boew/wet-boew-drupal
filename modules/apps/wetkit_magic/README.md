@@ -2,6 +2,10 @@ WetKit Magic
 ==============
 Weaves together the chaos magic
 
+Customizations
+* App often pulls upstream from Panopoly Admin @ drupal.org/project/panopoly_magic
+* The latest upstream sync has been checked against commit: 45fd2de
+
 Key Features
 * Live preview of Panels panes as part of Add Content modal and Panel pane configuration/style screen
 * UX/UI improvements to the Panel pane configuration screen
@@ -11,6 +15,11 @@ Key Features
 * JS hax for adding node title and submitted information to $content region 
 * Strongarm settings for Panels to enable general panelizing and show correct layouts/content types
 * Styling for Menu Block + CTools Throbber + Change Layout IPE Screen
+
+Key Features (WetKit Demo)
+* French .po language exports
+* Local Apps Support
+* Recreated Features Export
 
 To Do
 * Autosubmit functionality for Panel pane configuration/style screen
