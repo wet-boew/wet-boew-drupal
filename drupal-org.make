@@ -1,22 +1,22 @@
 api = 2
 core = 7.x
 
-;projects[drupal][version] = "7.x"
-;translations[] = "fr"
+;projects[drupal][version] = 7.x
+;translations[] = fr
 
 ;;;;;;;;;;;;;;
 ; Foundation ;
 ;;;;;;;;;;;;;;
 
-projects[boxes][version] = "1.0"
-projects[boxes][subdir] = "contrib"
+projects[boxes][version] = 1.0
+projects[boxes][subdir] = contrib
 
 projects[browscap][version] = 1.3
 projects[browscap][subdir] = contrib
 projects[browscap][type] = module
 
-projects[context][version] = "3.0-beta2"
-projects[context][subdir] = "contrib"
+projects[context][version] = 3.0-beta2
+projects[context][subdir] = contrib
 projects[context][type] = module
 
 projects[ctools][version] = 1.0
@@ -158,7 +158,7 @@ projects[menu_block][version] = 2.3
 projects[menu_block][subdir] = contrib
 projects[menu_block][type] = module
 
-projects[menu_views][version] = "1.3"
+projects[menu_views][version] = 1.3
 projects[menu_views][type] = module
 projects[menu_views][subdir] = contrib
 
@@ -213,16 +213,16 @@ projects[media][download][revision] = cc55948
 projects[media][download][branch] = 7.x-2.x
 projects[media][patch][1307054] = http://drupal.org/files/1307054-d7-2.patch
 
-projects[module_filter][version] = "1.7"
+projects[module_filter][version] = 1.7
 projects[module_filter][type] = module
 projects[module_filter][subdir] = contrib
 
-projects[workbench][version] = "1.1"
-projects[workbench][subdir] = "contrib"
+projects[workbench][version] = 1.1
+projects[workbench][subdir] = contrib
 projects[workbench][type] = module
 
-projects[workbench_moderation][version] = "1.x-dev"
-projects[workbench_moderation][subdir] = "contrib"
+projects[workbench_moderation][version] = 1.x-dev
+projects[workbench_moderation][subdir] = contrib
 projects[workbench_moderation][type] = module
 projects[workbench_moderation][download][type] = git
 projects[workbench_moderation][download][revision] = 6bdb20e
@@ -354,11 +354,6 @@ projects[search404][type] = module
 ;;;;;;;;;;;;;
 ; LIBRARIES ;
 ;;;;;;;;;;;;;
-
-;libraries[ckeditor][download][type] = get
-;libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor 3.6.3/ckeditor_3.6.3.tar.gz
-;libraries[ckeditor][directory_name] = ckeditor
-;libraries[ckeditor][type] = "library"
 
 libraries[markitup][download][type] = get
 libraries[markitup][download][url] = https://github.com/markitup/1.x/tarball/master

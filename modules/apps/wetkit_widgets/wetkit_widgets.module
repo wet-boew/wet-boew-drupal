@@ -64,6 +64,10 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
     $form['widget_settings']['title'] = $form['title'];
     unset($form['title']);
 
+    // Move the link field into the general settings tab.
+    $form['widget_settings']['link'] = $form['link'];
+    unset($form['link']);
+
     // Find file / image fields and ensure they are using a FID instead of a UUID.
     foreach($form as $key => $value) {
       if (substr($key, 0, 6) == 'field_') {

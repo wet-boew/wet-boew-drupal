@@ -92,6 +92,7 @@ dependencies[] = wysiwyg_filter
 dependencies[] = references_dialog 
 dependencies[] = simplified_menu_admin
 dependencies[] = views_bulk_operations
+dependencies[] = views_autocomplete_filters
 
 ; Apps
 dependencies[] = apps

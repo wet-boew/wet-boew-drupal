@@ -492,6 +492,7 @@ div .markItUpHeader ul a {
 
 #modalContent .panels-add-content-modal {
   background: #FFF;
+  padding-top: .9em;
 }
 
 #modalContent .panels-add-content-modal a.panels-modal-add-category {
