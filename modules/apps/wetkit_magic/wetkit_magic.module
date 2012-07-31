@@ -3,22 +3,6 @@
 include_once('wetkit_magic.features.inc');
 
 /**
- * Implementation of hook_menu()
- */
-function wetkit_magic_menu() {
-  $items = array();
-
-  $items['autocomplete_wetkit'] = array(
-    'page callback' => 'wetkit_autocomplete_content',
-    'page arguments' => array(1, 2),
-    'access arguments' => array('access content'),
-    'type' => MENU_CALLBACK,
-  );
-
-  return $items;
-}
-
-/**
  * Implementation of hook_form_alter()
  */
 function wetkit_magic_form_alter(&$form, $form_state, $form_id) {
@@ -77,11 +61,12 @@ function wetkit_magic_form_alter(&$form, $form_state, $form_id) {
         '#type' => 'button',
         '#value' => t('Update Preview'),
         '#wizard type' => 'next',
-        '#attributes' => array('style' => 'display: none', 'class' => array('widget-preview-button', 'ctools-use-ajax', 'ctools-auto-submit-click')),
+        // '#attributes' => array('style' => 'display: none', 'class' => array('widget-preview-button', 'ctools-use-ajax', 'ctools-auto-submit-click')),
+        '#attributes' => array('class' => array('widget-preview-button', 'ctools-use-ajax', 'ctools-auto-submit-click')),
       );
 
       // Autosubmit the form
-      ctools_add_js('auto-submit');
+      // ctools_add_js('auto-submit');
       $form['#attributes']['class'][] = 'ctools-auto-submit-full-form';
     }
   }
@@ -124,7 +109,7 @@ function wetkit_magic_form_alter(&$form, $form_state, $form_id) {
       $form['exposed'] = array(
         '#type' => 'fieldset',
         '#title' => t('General Settings'),
-        '#weight' => -10,
+        '#weight' => -30,
       );
     }
 
@@ -138,16 +123,18 @@ function wetkit_magic_form_alter(&$form, $form_state, $form_id) {
       '#default_value' => (isset($conf['widget_title'])) ? $conf['widget_title'] : $form_state['view']->display_handler->options['title'],
     );
     
-    // Improve presentation of exposed sort options
-    if (!empty($form['exposed']['sort_by'])) {
-      $form['exposed']['sort_by']['#field_prefix'] = $form['exposed']['sort_by']['#title'];
-      $form['exposed']['sort_by']['#title'] = '';
-    }
+    // Change the naming of the sort order option
     if (!empty($form['exposed']['sort_order'])) {
       $form['exposed']['sort_order']['#title'] = t('Sort order');
-      $form['exposed']['sort_order']['#field_prefix'] = $form['exposed']['sort_order']['#title'];
-      $form['exposed']['sort_order']['#title'] = '';
-    }    
+    }
+
+    // Switch all exposed filters to use field_prefix display
+    foreach($form['exposed'] as $filter => $filter_array) {
+      if (!empty($form['exposed'][$filter]['#title']) && empty($form['exposed'][$filter]['#field_prefix'])) {
+        $form['exposed'][$filter]['#field_prefix'] = $form['exposed'][$filter]['#title'];
+        unset($form['exposed'][$filter]['#title']);
+      }
+    }
 
     // Move items per page wiget to widget area
     if (isset($form['items_per_page'])) {
@@ -189,15 +176,6 @@ function wetkit_magic_form_alter(&$form, $form_state, $form_id) {
     $form['#submit'][] = 'wetkit_magic_views_view_mode_pane_submit';
   }
 
-  // Add an autocomplete form for node title exposed filters in content pane editing forms
-  if ($form_id == 'views_content_views_panes_content_type_edit_form') {
-    if (isset($form['exposed']['filter-title']['title']) && isset($form_state['view']->display_handler->options['filters']['type']['value']) && count($form_state['view']->display_handler->options['filters']['type']['value']) == 1) {
-      $node_type = implode('', $form_state['view']->display_handler->options['filters']['type']['value']);
-      $form['exposed']['filter-title']['title']['#autocomplete_path'] = 'autocomplete_wetkit/' . $node_type;
-      $form['exposed']['filter-title']['title']['#size'] = 60;
-    }
-  }
-  
   // Override default entity view mode behavior for fieldable panel panes.
   if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form') {
     $view_mode = $form['view_mode'];
@@ -221,8 +199,9 @@ function wetkit_magic_form_alter(&$form, $form_state, $form_id) {
     $form['widget_settings']['view_mode'] = $view_mode;
   }
   
-  // Customize the search box edit form.
-  if ($form_id == 'wetkit_search_search_box_content_type_edit_form') {
+  // Make sure that all options are inside a fieldset. Currently just supporting a known list
+  // of forms, but persumably this can be generalized.
+  if (in_array($form_id, array('wetkit_search_search_box_content_type_edit_form', 'menu_block_menu_tree_content_type_edit_form', 'ctools_node_content_content_type_edit_form'))) {
 
     // Grab child elements and create the fieldset.
     $children = element_children($form);
@@ -230,6 +209,7 @@ function wetkit_magic_form_alter(&$form, $form_state, $form_id) {
       $form['general_settings'] = array(
         '#type' => 'fieldset',
         '#title' => t('General Settings'),
+        '#weight' => -30,
       );
 
 
@@ -323,27 +303,6 @@ function _wetkit_magic_view_mode_options() {
     }
   }
   return $options;
-}
-
-/**
- * Callback to do autocomplete for basic content
- */
-function wetkit_autocomplete_content($node_type, $string) {
-  $matches = array();
-  if ($string) {
-    $result = db_select('node')
-      ->fields('node', array('title'))
-      ->condition('node.status','1')
-      ->condition('node.type', $node_type)
-      ->condition('title', '%' . db_like($string) . '%', 'LIKE')
-      ->range(0, 10)
-      ->execute();
-    foreach ($result as $node) {
-      $matches[$node->title] = check_plain($node->title);
-    }
-  }
-
-  drupal_json_output($matches);
 }
 
 /**
