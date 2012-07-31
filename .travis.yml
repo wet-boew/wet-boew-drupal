@@ -32,5 +32,5 @@ before_script:
  - cd ./bin
  
 script:
- - "DISPLAY=:99.0 ./casperjs test ../../github_wet_distro/profiles/wetkit/test/casperjs/"
- - java -jar ../../selenium-server-standalone-2.15.0.jar -htmlSuite "*firefox" "http://127.0.0.1:8080" "../../github_wet_distro/profiles/wetkit/test/selenium/WetKitTestSuite.html" "../../github_wet_distro/profiles/wetkit/test/selenium/Result.html"
+ - "DISPLAY=:99.0 ./casperjs test ../../github_wet_distro/profiles/wetkit/tests/casperjs/"
+ - java -jar ../../selenium-server-standalone-2.15.0.jar -htmlSuite "*firefox" "http://127.0.0.1:8080" "../../github_wet_distro/profiles/wetkit/tests/selenium/WetKitTestSuite.html" "../../github_wet_distro/profiles/wetkit/tests/selenium/Result.html"
