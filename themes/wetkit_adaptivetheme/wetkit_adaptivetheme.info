@@ -81,13 +81,13 @@
   ; planning to use a polyfill be sure to check the "Settings" tab in theme
   ; settings for existing Polyfills.
   ;
-  ; Syntax: ie_scripts[condition] = path/to/file (path must be relative to your
+  ; Syntax: ie_scripts[condition][] = path/to/file (path must be relative to your
   ; theme root)
   ;
   ; For example if you want to load a script just for IE 8 and below use the
   ; following as a guide:
 
-  ; ie_scripts[lte IE 8] = js/my-script.js
+  ; ie_scripts[lte IE 8][] = js/my-script.js
 
 
 ;----------// Regions
@@ -104,21 +104,6 @@
   regions[help]           = Help
   regions[page_top]       = Page top
   regions[page_bottom]    = Page bottom
-
-  ;regions[sidebar_first]     = Sidebar first
-  ;regions[sidebar_second]    = Sidebar second
-  ;regions[content]           = Main Content
-  ;regions[highlighted]       = Highlighted
-  ;regions[content_aside]     = Aside
-  ;regions[secondary_content] = Secondary
-  ;regions[tertiary_content]  = Tertiary
-  ;regions[footer]            = Footer
-  ;regions[leaderboard]       = Leaderboard
-  ;regions[header]            = Header
-  ;regions[menu_bar]          = Menu Bar
-  ;regions[help]              = Help
-  ;regions[page_top]          = Page top
-  ;regions[page_bottom]       = Page bottom
 
 
 ;----------// Gpanel Regions
@@ -379,11 +364,12 @@
   settings[block_title_shadow]    = 'bts-n'
 
 
-  ; Image alignment
+  ; Images
   settings[image_alignment]        = 'ia-n'
   settings[image_alignment_teaser] = 'iat-n'
   settings[image_caption_full]     = 0
   settings[image_caption_teaser]   = 0
+  settings[image_teaser]           = 0
 
 
   ; Breadcrumb
@@ -453,9 +439,9 @@
   ; Custom CSS
   settings[custom_css] = ''
 
-; Information added by drupal.org packaging script on 2012-07-13
-version = "7.x-3.0-rc6+20-dev"
+; Information added by drupal.org packaging script on 2012-07-31
+version = "7.x-3.0"
 core = "7.x"
 project = "adaptivetheme"
-datestamp = "1342180933"
+datestamp = "1343717778"
 

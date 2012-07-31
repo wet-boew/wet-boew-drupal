@@ -58,13 +58,13 @@
 <!--[if IE 8]><html class="lt-ie9"<?php print $html_attributes; ?>><![endif]-->
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html<?php print $html_attributes . $rdf_namespaces; ?>><!--<![endif]-->
 <head>
-  <?php print $head; ?>
-  <title><?php print $head_title; ?></title>
-  <?php print $styles; ?>
-  <?php print $scripts; ?>
-  <?php print $polyfills; ?>
+<?php print $head; ?>
+<title><?php print $head_title; ?></title>
+<?php print $styles; ?>
+<?php print $scripts; ?>
+<?php print $polyfills; ?>
 </head>
-<body class="<?php print $classes; ?>" <?php print $attributes;?>>
+<body class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div id="<?php print $wetkit_col_array; ?>" data-role="page">
     <div id="wb-skip">
       <ul id="wb-tphp">
