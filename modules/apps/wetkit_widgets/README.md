@@ -2,6 +2,10 @@ WetKit Widgets
 ================
 Creates generic widget functionality to customize wide and far
 
+Customizations
+* App often pulls upstream from Panopoly Admin @ drupal.org/project/panopoly_widgets
+* The latest upstream sync has been checked against commit: 6aec32b
+
 Key Features
 * Implementation of basic field types (files, images, text) with Fieldable Panels Panes
 * Integration with Tablefield module to provide a table Fieldable Panels Pane
@@ -14,7 +18,10 @@ Key Features
 * UI/UX improvements for Fieldable Panels Panels editing/reusing experience
 * UX/UX improvements for Menu Block adding/editing experience
 
+Key Features (WetKit Widgets)
 * Creation of a tabbed interface entity type/field formatter
+* French .po language exports
+* Local Apps Support
 
 To Do
 * Cleanup of Views Slideshow Theming + CSS
