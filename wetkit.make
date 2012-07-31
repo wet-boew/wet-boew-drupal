@@ -75,9 +75,12 @@ projects[panels][download][branch] = 7.x-3.x
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/panels-add-hooks-to-integrate-i18n_panels-1179034-41.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/uuids-for-exported-pids-1277908-19.patch
 
-projects[panels_breadcrumbs][version] = 1.6
+projects[panels_breadcrumbs][version] = 2.x-dev
 projects[panels_breadcrumbs][subdir] = contrib
 projects[panels_breadcrumbs][type] = module
+projects[panels_breadcrumbs][download][type] = git
+projects[panels_breadcrumbs][download][revision] = 531f589
+projects[panels_breadcrumbs][download][branch] = 7.x-2.x
 
 projects[panelizer][version] = 3.x-dev
 projects[panelizer][subdir] = contrib
@@ -231,9 +234,9 @@ projects[wysiwyg][version] = 2.x-dev
 projects[wysiwyg][subdir] = contrib
 projects[wysiwyg][type] = module
 projects[wysiwyg][patch][1489096] = http://drupal.org/files/wysiwyg-table-format.patch
-projects[wysiwyg][patch][356480] = http://drupal.org/files/lazy_wysiwyg-356480-137.patch
+projects[wysiwyg][patch][356480] = http://drupal.org/files/356480-by-zhangtaihao-Shawn_Smiley-sun.-Lazy-load-ed-p0.patch
 projects[wysiwyg][download][type] = git
-projects[wysiwyg][download][revision] = d17bf11
+projects[wysiwyg][download][revision] = 7e6609e
 projects[wysiwyg][download][branch] = 7.x-2.x
 
 projects[wysiwyg_filter][version] = 1.6-rc2

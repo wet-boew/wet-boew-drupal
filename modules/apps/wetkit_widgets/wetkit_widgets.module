@@ -135,7 +135,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 4,
-      'real path' => 'admin/structure/fieldable-panels-panes/manage/quick_links',
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/quick-links',
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
@@ -149,7 +149,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 4,
-      'real path' => 'admin/structure/fieldable-panels-panes/manage/basic_file',
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/basic-file',
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
@@ -247,7 +247,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 4,
-      'real path' => 'admin/structure/fieldable-panels-panes/manage/tabbed_interface',
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/tabbed-interface',
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
