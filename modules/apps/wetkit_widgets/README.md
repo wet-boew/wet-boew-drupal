@@ -4,7 +4,7 @@ Creates generic widget functionality to customize wide and far
 
 Customizations
 * App often pulls upstream from Panopoly Admin @ drupal.org/project/panopoly_widgets
-* The latest upstream sync has been checked against commit: 6aec32b
+* The latest upstream sync has been checked against commit: 811c8af
 
 Key Features
 * Implementation of basic field types (files, images, text) with Fieldable Panels Panes

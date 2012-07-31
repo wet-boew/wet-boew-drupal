@@ -4,7 +4,7 @@ Weaves together the chaos magic
 
 Customizations
 * App often pulls upstream from Panopoly Admin @ drupal.org/project/panopoly_magic
-* The latest upstream sync has been checked against commit: 45fd2de
+* The latest upstream sync has been checked against commit: f3e636d
 
 Key Features
 * Live preview of Panels panes as part of Add Content modal and Panel pane configuration/style screen
