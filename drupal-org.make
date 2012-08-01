@@ -72,6 +72,7 @@ projects[panels][type] = module
 projects[panels][download][type] = git
 projects[panels][download][revision] = 3f50718
 projects[panels][download][branch] = 7.x-3.x
+projects[panels][patch][1706936] = http://drupal.org/files/panels-ipe-no-css-image.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/panels-add-hooks-to-integrate-i18n_panels-1179034-41.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/uuids-for-exported-pids-1277908-19.patch
 
@@ -246,13 +247,17 @@ projects[references_dialog][version] = 1.0-alpha4
 projects[references_dialog][type] = module
 projects[references_dialog][subdir] = contrib
 
-projects[simplified_menu_admin][version] = 1.0-beta2
-projects[simplified_menu_admin][type] = module
-projects[simplified_menu_admin][subdir] = contrib
-
 projects[views_bulk_operations][version] = 3.0-rc1
 projects[views_bulk_operations][type] = module
 projects[views_bulk_operations][subdir] = contrib
+
+projects[views_autocomplete_filters][version] = 1.x-dev
+projects[views_autocomplete_filters][subdir] = contrib
+projects[views_autocomplete_filters][type] = module
+projects[views_autocomplete_filters][download][type] = git
+projects[views_autocomplete_filters][download][revision] = 7d85509
+projects[views_autocomplete_filters][download][branch] = 7.x-1.x
+projects[views_autocomplete_filters][patch][1151292] = http://drupal.org/files/views_autocomplete_filters-1151292-10_0.patch
 
 ;;;;;;;;
 ; Apps ;

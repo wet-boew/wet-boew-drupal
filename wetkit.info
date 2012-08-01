@@ -89,8 +89,7 @@ dependencies[] = workbench
 dependencies[] = workbench_moderation
 dependencies[] = wysiwyg
 dependencies[] = wysiwyg_filter
-dependencies[] = references_dialog 
-dependencies[] = simplified_menu_admin
+dependencies[] = references_dialog
 dependencies[] = views_bulk_operations
 dependencies[] = views_autocomplete_filters
 

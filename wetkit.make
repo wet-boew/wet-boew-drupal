@@ -247,10 +247,6 @@ projects[references_dialog][version] = 1.0-alpha4
 projects[references_dialog][type] = module
 projects[references_dialog][subdir] = contrib
 
-projects[simplified_menu_admin][version] = 1.0-beta2
-projects[simplified_menu_admin][type] = module
-projects[simplified_menu_admin][subdir] = contrib
-
 projects[views_bulk_operations][version] = 3.0-rc1
 projects[views_bulk_operations][type] = module
 projects[views_bulk_operations][subdir] = contrib
