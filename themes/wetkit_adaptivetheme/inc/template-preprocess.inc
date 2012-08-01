@@ -178,12 +178,14 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
     $variables['custom_search']['actions']['submit']['#id'] = 'gcwu-srch-submit';
     $variables['search_box'] = render($variables['custom_search']);
   }
-  else {
-    // Drupal Search
-    //$search_box = drupal_render(drupal_get_form('search_form'));
-    //$variables['search_box'] = $search_box;
-  }
   
+  // Mega Menu Region
+  if (module_exists('menu_block')) {
+    $config = menu_block_get_config('wetkit_menu_blocks-1');
+    $data = menu_tree_build($config);
+    $variables['page']['mega_menu'] = $data['content'];
+  }
+
   // Terms Navigation
   $menu = ($is_multilingual) ? i18n_menu_navigation_links('menu-wet-terms') : menu_navigation_links('menu-wet-terms');
   $goc_terms_bar_markup = theme('links__menu_goc_terms_bar', array(
@@ -194,6 +196,13 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
       ),
     ));
   $variables['menu_gov_terms_bar'] = $goc_terms_bar_markup;
+  
+  // Footer Region
+  if (module_exists('menu_block')) {
+    $config = menu_block_get_config('wetkit_menu_blocks-2');
+    $data = menu_tree_build($config);
+    $variables['page']['footer'] = $data['content'];
+  }
   
   // Footer Navigation
   $menu = ($is_multilingual) ? i18n_menu_navigation_links('menu-wet-footer') : menu_navigation_links('menu-wet-footer');
