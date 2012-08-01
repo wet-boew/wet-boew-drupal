@@ -22,9 +22,9 @@
  * that intitiates sql-sync command.
  */
 function drush_policy_sql_sync_validate($source = NULL, $destination = NULL) {
-  if ($destination == '@prod') {
+  /*if ($destination == '@prod') {
     return drush_set_error(dt('Per examples/policy.drush.inc, you may never overwrite the production database.'));
-  }
+  }*/
 }
 
 /**
@@ -38,9 +38,9 @@ function drush_policy_sql_sync_validate($source = NULL, $destination = NULL) {
  * the option.
  */
 function policy_drush_help_alter($command) {
-  if ($command['command'] == 'updatedb') {
+  /*if ($command['command'] == 'updatedb') {
     $command['options']['token'] = 'Per site policy, you must specify a token in the --token option for all commands.';
-  }
+  }*/
 }
 
 /**
@@ -53,11 +53,11 @@ function policy_drush_help_alter($command) {
  */
 function drush_policy_updatedb_validate() {
   // Check for a token in the request. In this case, we require --token=secret.
-  if (!drush_get_option('token') == 'secret') {
+  /*if (!drush_get_option('token') == 'secret') {
     drush_log(dt('Per site policy, you must add a secret --token complete this command. See examples/policy.drush.inc.  If you are running a version of drush prior to 4.3 and are not sure why you are seeing this message, please see http://drupal.org/node/1024824.'), 'warning');
     drush_set_context('DRUSH_AFFIRMATIVE', FALSE);
     drush_set_context('DRUSH_NEGATIVE', TRUE);
-  }
+  }*/
 }
 
 /**
@@ -66,7 +66,7 @@ function drush_policy_updatedb_validate() {
  * Only sudo tells me to make a sandwich: http://xkcd.com/149/
  */
 function drush_policy_make_me_a_sandwich_validate() {
-  if (drush_is_windows()) {
+  /*if (drush_is_windows()) {
     // $name = getenv('USERNAME');
     // TODO: implement check for elevated process using w32api
     // as sudo is not available for Windows
@@ -78,5 +78,5 @@ function drush_policy_make_me_a_sandwich_validate() {
     if ($name['name'] !== 'root') {
       return drush_set_error('MAKE_IT_YOUSELF', dt('What? Make your own sandwich.'));
     }
-  }
+  }*/
 }
