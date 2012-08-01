@@ -114,7 +114,7 @@ function wetkit_web_usability_menu_block_blocks() {
       'follow'      => 0,
       'depth'       => 0,
       'expanded'    => 1,
-      'sort'        => 1,
+      'sort'        => 0,
     ),
     'wetkit_menu_blocks-2' => array(
       'menu_name'   => 'menu-wet-mid-footer',
