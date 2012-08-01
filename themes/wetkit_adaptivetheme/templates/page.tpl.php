@@ -83,7 +83,9 @@
 <div id="page" class="container <?php print $classes; ?>">
 
   <!-- region: Leaderboard -->
-  <?php print render($page['leaderboard']); ?>
+  <?php if ($page['leaderboard']): ?>
+    <?php print render($page['leaderboard']); ?>
+  <?php endif; ?>
 
   <div id="wb-head">
     <div id="wb-head-in">
@@ -196,10 +198,10 @@
               <div id="gcwu-psnb-in">
                 <div class="wet-boew-menubar mb-mega">
                   <div>
-                    <?php 
-                      $block = module_invoke('menu_block', 'block_view', 'wetkit_menu_blocks-1');
-                      print render($block['content']);
-                    ?>
+                    <!-- region: Mega Menu -->
+                    <?php if ($page['mega_menu']): ?>
+                      <?php print render($page['mega_menu']); ?>
+                    <?php endif; ?>
                   </div>
                 </div>                        
             </div>
@@ -334,10 +336,10 @@
                 <?php print $menu_gov_terms_bar; ?>
               </div>
               <div class="clear"></div>
-                <?php 
-                  $block = module_invoke('menu_block', 'block_view', 'wetkit_menu_blocks-2');
-                  print render($block['content']);
-                ?>
+              <!-- region: Footer -->
+              <?php if ($page['footer']): ?>
+                <?php print render($page['footer']); ?>
+              <?php endif; ?>
             </div>
 
           </div>
@@ -354,11 +356,6 @@
             </div>
           </div>
         </nav>
-        <?php endif; ?>
-
-        <!-- region: Footer -->
-        <?php if ($page['footer']): ?>
-          <?php print render($page['footer']); ?>
         <?php endif; ?>
 
       </footer>
