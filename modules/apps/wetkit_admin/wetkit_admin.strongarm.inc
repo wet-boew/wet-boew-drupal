@@ -24,14 +24,10 @@ function wetkit_admin_strongarm() {
   $strongarm->value = array(
     'layout' => 'vertical',
     'position' => 'nw',
-    'behavior' => 'df',
+    'behavior' => 'ah',
     'blocks' => array(
       'admin-create' => -1,
-      'admin-theme' => 1,
-      'admin-account' => -1,
       'admin-menu' => 1,
-      'shortcut-shortcuts' => -1,
-      'user-online' => -1,
     ),
   );
   $export['admin_toolbar'] = $strongarm;

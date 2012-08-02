@@ -10,7 +10,7 @@
 function wetkit_widgets_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'fieldable_panels_pane-basic_file-field_basic_file_file'.
+  // Exported field: 'fieldable_panels_pane-basic_file-field_basic_file_file'
   $fields['fieldable_panels_pane-basic_file-field_basic_file_file'] = array(
     'field_config' => array(
       'active' => '1',
@@ -31,7 +31,6 @@ function wetkit_widgets_field_default_fields() {
           0 => 'fid',
         ),
       ),
-      'locked' => '0',
       'module' => 'file',
       'settings' => array(
         'display_default' => 0,
@@ -77,7 +76,7 @@ function wetkit_widgets_field_default_fields() {
     ),
   );
 
-  // Exported field: 'fieldable_panels_pane-basic_file-field_basic_file_text'.
+  // Exported field: 'fieldable_panels_pane-basic_file-field_basic_file_text'
   $fields['fieldable_panels_pane-basic_file-field_basic_file_text'] = array(
     'field_config' => array(
       'active' => '1',
@@ -98,7 +97,6 @@ function wetkit_widgets_field_default_fields() {
           0 => 'format',
         ),
       ),
-      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -138,7 +136,7 @@ function wetkit_widgets_field_default_fields() {
     ),
   );
 
-  // Exported field: 'fieldable_panels_pane-callout-field_callout_text'.
+  // Exported field: 'fieldable_panels_pane-callout-field_callout_text'
   $fields['fieldable_panels_pane-callout-field_callout_text'] = array(
     'field_config' => array(
       'active' => '1',
@@ -159,7 +157,6 @@ function wetkit_widgets_field_default_fields() {
           0 => 'format',
         ),
       ),
-      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -199,7 +196,7 @@ function wetkit_widgets_field_default_fields() {
     ),
   );
 
-  // Exported field: 'fieldable_panels_pane-image-field_basic_image_caption'.
+  // Exported field: 'fieldable_panels_pane-image-field_basic_image_caption'
   $fields['fieldable_panels_pane-image-field_basic_image_caption'] = array(
     'field_config' => array(
       'active' => '1',
@@ -220,7 +217,6 @@ function wetkit_widgets_field_default_fields() {
           0 => 'format',
         ),
       ),
-      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -262,7 +258,7 @@ function wetkit_widgets_field_default_fields() {
     ),
   );
 
-  // Exported field: 'fieldable_panels_pane-image-field_basic_image_image'.
+  // Exported field: 'fieldable_panels_pane-image-field_basic_image_image'
   $fields['fieldable_panels_pane-image-field_basic_image_image'] = array(
     'field_config' => array(
       'active' => '1',
@@ -283,7 +279,6 @@ function wetkit_widgets_field_default_fields() {
           0 => 'fid',
         ),
       ),
-      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -313,8 +308,7 @@ function wetkit_widgets_field_default_fields() {
       'label' => 'Image',
       'required' => 1,
       'settings' => array(
-        'alt_field' => 0,
-        'default_image' => 0,
+        'alt_field' => 1,
         'file_directory' => 'general',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -336,7 +330,78 @@ function wetkit_widgets_field_default_fields() {
     ),
   );
 
-  // Exported field: 'fieldable_panels_pane-quick_links-field_quick_links_links'.
+  // Exported field: 'fieldable_panels_pane-map-field_map_address'
+  $fields['fieldable_panels_pane-map-field_map_address'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_map_address',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'map',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'simple_gmap',
+          'settings' => array(
+            'iframe_height' => '400',
+            'iframe_width' => '600',
+            'include_link' => 0,
+            'include_map' => 1,
+            'include_text' => 0,
+            'information_bubble' => 0,
+            'link_text' => 'View larger map',
+            'zoom_level' => '14',
+          ),
+          'type' => 'simple_gmap',
+          'weight' => '0',
+        ),
+      ),
+      'entity_type' => 'fieldable_panels_pane',
+      'field_name' => 'field_map_address',
+      'label' => 'Address',
+      'required' => 1,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '-4',
+      ),
+    ),
+  );
+
+  // Exported field: 'fieldable_panels_pane-quick_links-field_quick_links_links'
   $fields['fieldable_panels_pane-quick_links-field_quick_links_links'] = array(
     'field_config' => array(
       'active' => '1',
@@ -346,7 +411,6 @@ function wetkit_widgets_field_default_fields() {
       'field_name' => 'field_quick_links_links',
       'foreign keys' => array(),
       'indexes' => array(),
-      'locked' => '0',
       'module' => 'link',
       'settings' => array(
         'attributes' => array(
@@ -413,7 +477,7 @@ function wetkit_widgets_field_default_fields() {
     ),
   );
 
-  // Exported field: 'fieldable_panels_pane-quote-field_quote_author'.
+  // Exported field: 'fieldable_panels_pane-quote-field_quote_author'
   $fields['fieldable_panels_pane-quote-field_quote_author'] = array(
     'field_config' => array(
       'active' => '1',
@@ -434,7 +498,6 @@ function wetkit_widgets_field_default_fields() {
           0 => 'format',
         ),
       ),
-      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
@@ -475,7 +538,7 @@ function wetkit_widgets_field_default_fields() {
     ),
   );
 
-  // Exported field: 'fieldable_panels_pane-quote-field_quote_quote'.
+  // Exported field: 'fieldable_panels_pane-quote-field_quote_quote'
   $fields['fieldable_panels_pane-quote-field_quote_quote'] = array(
     'field_config' => array(
       'active' => '1',
@@ -496,7 +559,6 @@ function wetkit_widgets_field_default_fields() {
           0 => 'format',
         ),
       ),
-      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -536,7 +598,7 @@ function wetkit_widgets_field_default_fields() {
     ),
   );
 
-  // Exported field: 'fieldable_panels_pane-spotlight-field_basic_spotlight_items'.
+  // Exported field: 'fieldable_panels_pane-spotlight-field_basic_spotlight_items'
   $fields['fieldable_panels_pane-spotlight-field_basic_spotlight_items'] = array(
     'field_config' => array(
       'active' => '1',
@@ -557,7 +619,6 @@ function wetkit_widgets_field_default_fields() {
           0 => 'fid',
         ),
       ),
-      'locked' => '0',
       'module' => 'wetkit_widgets',
       'settings' => array(
         'default_image' => 0,
@@ -605,7 +666,7 @@ function wetkit_widgets_field_default_fields() {
     ),
   );
 
-  // Exported field: 'fieldable_panels_pane-spotlight-field_spotlight_rotation_time'.
+  // Exported field: 'fieldable_panels_pane-spotlight-field_spotlight_rotation_time'
   $fields['fieldable_panels_pane-spotlight-field_spotlight_rotation_time'] = array(
     'field_config' => array(
       'active' => '1',
@@ -615,7 +676,6 @@ function wetkit_widgets_field_default_fields() {
       'field_name' => 'field_spotlight_rotation_time',
       'foreign keys' => array(),
       'indexes' => array(),
-      'locked' => '0',
       'module' => 'number',
       'settings' => array(),
       'translatable' => '0',
@@ -658,7 +718,7 @@ function wetkit_widgets_field_default_fields() {
       ),
     ),
   );
-  
+
   // Exported field: 'fieldable_panels_pane-spotlight-field_tabbed_interface'.
   $fields['fieldable_panels_pane-tabbed_interface-field_tabbed_interface'] = array(
     'field_config' => array(
@@ -728,7 +788,7 @@ function wetkit_widgets_field_default_fields() {
     ),
   );
 
-  // Exported field: 'fieldable_panels_pane-table-field_basic_table_table'.
+  // Exported field: 'fieldable_panels_pane-table-field_basic_table_table'
   $fields['fieldable_panels_pane-table-field_basic_table_table'] = array(
     'field_config' => array(
       'active' => '1',
@@ -738,7 +798,6 @@ function wetkit_widgets_field_default_fields() {
       'field_name' => 'field_basic_table_table',
       'foreign keys' => array(),
       'indexes' => array(),
-      'locked' => '0',
       'module' => 'tablefield',
       'settings' => array(
         'cell_processing' => '0',
@@ -801,7 +860,7 @@ function wetkit_widgets_field_default_fields() {
     ),
   );
 
-  // Exported field: 'fieldable_panels_pane-text-field_basic_text_link'.
+  // Exported field: 'fieldable_panels_pane-text-field_basic_text_link'
   $fields['fieldable_panels_pane-text-field_basic_text_link'] = array(
     'field_config' => array(
       'active' => '1',
@@ -811,7 +870,6 @@ function wetkit_widgets_field_default_fields() {
       'field_name' => 'field_basic_text_link',
       'foreign keys' => array(),
       'indexes' => array(),
-      'locked' => '0',
       'module' => 'link',
       'settings' => array(
         'attributes' => array(
@@ -878,7 +936,7 @@ function wetkit_widgets_field_default_fields() {
     ),
   );
 
-  // Exported field: 'fieldable_panels_pane-text-field_basic_text_text'.
+  // Exported field: 'fieldable_panels_pane-text-field_basic_text_text'
   $fields['fieldable_panels_pane-text-field_basic_text_text'] = array(
     'field_config' => array(
       'active' => '1',
@@ -899,7 +957,6 @@ function wetkit_widgets_field_default_fields() {
           0 => 'format',
         ),
       ),
-      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -939,7 +996,7 @@ function wetkit_widgets_field_default_fields() {
     ),
   );
 
-  // Exported field: 'fieldable_panels_pane-video-field_video_video'.
+  // Exported field: 'fieldable_panels_pane-video-field_video_video'
   $fields['fieldable_panels_pane-video-field_video_video'] = array(
     'field_config' => array(
       'active' => '1',
@@ -947,20 +1004,12 @@ function wetkit_widgets_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_video_video',
-      'foreign keys' => array(
-        'file_managed' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
+      'foreign keys' => array(),
       'indexes' => array(
         'fid' => array(
           0 => 'fid',
         ),
       ),
-      'locked' => '0',
       'module' => 'mediafield',
       'settings' => array(),
       'translatable' => '0',
@@ -1018,6 +1067,7 @@ function wetkit_widgets_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Address');
   t('Author');
   t('Caption');
   t('File');

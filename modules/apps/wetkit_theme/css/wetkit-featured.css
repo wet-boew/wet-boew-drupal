@@ -1,0 +1,10 @@
+/**
+ * Basic CSS Treatement for Featured Element
+ */
+.node-featured .pane-node-title .pane-content a {
+  font-size: 1.5em;
+}
+
+.node-featured .pane-node-title .pane-content {
+  margin-bottom: 10px;
+}

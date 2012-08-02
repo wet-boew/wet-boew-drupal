@@ -88,12 +88,12 @@ div.ctools-ajaxing {
 /**
  * Custom styling for exposed views filter options
  */
-#edit-exposed .form-item-exposed-sort-order, 
-#edit-exposed .form-item-exposed-sort-by {
+.form-item-exposed-sort-order, 
+.form-item-exposed-sort-by {
   float: left;
 }
 
-#edit-exposed .form-item-exposed-sort-order {
+.form-item-exposed-sort-order {
   padding-left: 20px;
   clear: none;
 }
