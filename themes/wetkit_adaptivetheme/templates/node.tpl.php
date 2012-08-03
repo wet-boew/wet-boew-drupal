@@ -135,4 +135,10 @@ hide($content['links']);
   <?php print render($content['comments']); ?>
 
   <?php print render($title_suffix); ?>
+
+  <dl id="gcwu-date-mod" role="contentinfo">
+    <dt><?php print t('Date modified:'); ?></dt>
+    <dd><span><time><?php print $date; ?></time></span></dd>
+  </dl>
+  <div class="clear"></div>
 </article>
