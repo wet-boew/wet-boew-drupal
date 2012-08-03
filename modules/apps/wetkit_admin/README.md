@@ -2,18 +2,21 @@ WetKit Admin
 ==============
 Administrative dashboard and related editing interfaces for WetKit
 
-Customizations
-* App often pulls upstream from Panopoly Admin @ drupal.org/project/panopoly_admin
-* The latest upstream sync has been checked against commit: 6339710
+Important
+* This App is based on and often pulls upstream upstream from Panopoly Admin @ drupal.org/project/panopoly_admin
+* The latest upstream sync has been checked against commit: 8a6b797 (Verified)
+* Panopoly Admin is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
-Key Features
+Key Features (Panopoly Admin)
 * Administrative Dashboard
 * Content + User + Media Administration Pages
 * Content Editing Interface
 * Administrative user role
 
 Key Features (WetKit Admin)
-* CSS Improvements
-* French .po language exports
+* Addition of CSS File: wetkit_admin_custom.css
+* Addition of Strongarm Variable: admin_menu_position_fixed
+* Addition of Translation .po files
+* Addition of Translation t() to Views
+* Change of Namespace to WetKit
 * Local Apps Support
-* Strongarm Variables

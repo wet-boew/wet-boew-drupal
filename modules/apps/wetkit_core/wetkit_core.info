@@ -1,5 +1,5 @@
 name = WetKit Core
-description = The central core of the WetKit framework.
+description = The magical core of the WetKit framework.
 core = 7.x
 package = WetKit
 php = 5.2.4

@@ -162,7 +162,7 @@ function wetkit_wysiwyg_filter_default_formats() {
           'style_layout' => array(
             'clear' => 0,
             'display' => 0,
-            'float' => 0,
+            'float' => 1,
             'position' => 0,
             'visibility' => 0,
           ),
@@ -331,7 +331,7 @@ function wetkit_wysiwyg_filter_default_formats() {
           'style_layout' => array(
             'clear' => 0,
             'display' => 0,
-            'float' => 0,
+            'float' => 1,
             'position' => 0,
             'visibility' => 0,
           ),

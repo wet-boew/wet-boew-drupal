@@ -73,6 +73,7 @@ projects[panels][download][type] = git
 projects[panels][download][revision] = 3f50718
 projects[panels][download][branch] = 7.x-3.x
 projects[panels][patch][1706936] = http://drupal.org/files/panels-ipe-no-css-image.patch
+projects[panels][patch][1549660] = http://drupal.org/files/1549660-allow-region-style-settings.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/panels-add-hooks-to-integrate-i18n_panels-1179034-41.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/uuids-for-exported-pids-1277908-19.patch
 
@@ -114,6 +115,15 @@ projects[token][subdir] = contrib
 projects[views][version] = 3.3
 projects[views][type] = module
 projects[views][subdir] = contrib
+
+projects[simple_gmap][version] = 1.0-rc1
+projects[simple_gmap][type] = module
+projects[simple_gmap][subdir] = contrib
+
+;Marked for Removal
+projects[views_slideshow][version] = 3.0
+projects[views_slideshow][type] = module
+projects[views_slideshow][subdir] = contrib
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Field UI and Content Types ;
@@ -316,19 +326,19 @@ projects[stringoverrides][type] = module
 ; Experimental ;
 ;;;;;;;;;;;;;;;;
 
-;projects[entity_translation][version] = 1.x-dev
-;projects[entity_translation][type] = module
-;projects[entity_translation][subdir] = contrib
-;projects[entity_translation][download][type] = git
-;projects[entity_translation][download][revision] = 48a00d3
-;projects[entity_translation][download][branch] = 7.x-1.x
+projects[entity_translation][version] = 1.x-dev
+projects[entity_translation][type] = module
+projects[entity_translation][subdir] = contrib
+projects[entity_translation][download][type] = git
+projects[entity_translation][download][revision] = f396c23
+projects[entity_translation][download][branch] = 7.x-1.x
 
-;projects[title][version] = 1.x-dev
-;projects[title][type] = module
-;projects[title][subdir] = contrib
-;projects[title][download][type] = git
-;projects[title][download][revision] = a2f6f70
-;projects[title][download][branch] = 7.x-1.x
+projects[title][version] = 1.x-dev
+projects[title][type] = module
+projects[title][subdir] = contrib
+projects[title][download][type] = git
+projects[title][download][revision] = adec2dc
+projects[title][download][branch] = 7.x-1.x
 
 ;projects[i18n_panels][type] = module
 ;projects[i18n_panels][subdir] = contrib
