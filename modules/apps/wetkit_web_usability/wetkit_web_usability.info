@@ -11,6 +11,7 @@ dependencies[] = ctools
 dependencies[] = features
 dependencies[] = i18n
 dependencies[] = jquery_update
+dependencies[] = libraries
 dependencies[] = metatag
 dependencies[] = menu
 dependencies[] = menu_block
