@@ -259,6 +259,8 @@ function wetkit_adaptivetheme_preprocess_node(&$variables, $hook) {
   if (function_exists($function)) {
     $function($variables, $hook);
   }
+  $node = $variables['node'];
+  $variables['date'] = format_date($node->created, 'custom', 'l, d/m/Y');
 }
 
 /**
