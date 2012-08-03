@@ -9,29 +9,30 @@
 function wetkit_web_usability_admin_settings() {
   drupal_add_js(drupal_get_path('module', 'system') . '/system.js');
 
-  $form['migrate_content'] = array(
+  //$form['migrate_content'] = array(
+  //  '#type' => 'fieldset',
+  //  '#title' => t('Migrate'),
+  //  '#collapsible' => TRUE,
+  //  '#collapsed' => FALSE
+  //);
+  //$form['migrate_content']['migrate'] = array(
+  //  '#type' => 'submit',
+  //  '#value' => t('Migrate Demo Content'),
+  //  '#submit' => array('wetkit_web_usability_migrate_content_submit'),
+  //);
+  $form['wetboew'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Migrate'),
+    '#title' => t('WetKit jQuery Progressive Enhancement'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE
   );
-  $form['migrate_content']['migrate'] = array(
-    '#type' => 'submit',
-    '#value' => t('Migrate Demo Content'),
-    '#submit' => array('wetkit_web_usability_migrate_content_submit'),
-  );
-  $form['features'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Enable / Disable WetKit jQuery Progressive Enhancement'),
-    '#collapsible' => TRUE,
-    '#collapsed' => FALSE
-  );
-  $form['features']['wetkit_web_usability_v1'] = array(
+  $form['wetboew']['wetkit_web_usability_dev'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Web Experience Toolkit: jQuery v3.0 (In Development)'),
-    '#default_value' => variable_get('wetkit_web_usability_v1'),
-    '#description' => t('Web Experience Toolkit: jQuery v3.0 (In Development)'),
+    '#title' => t('Enable Web Experience Toolkit: jQuery v3.0 Development Mode'),
+    '#default_value' => variable_get('wetkit_web_usability_dev', 0),
+    '#description' => t('Selecting this checkbox will enable the unminified development version of WET-BOEW JS files'),
   );
+
   $form['#submit'][] = 'wetkit_web_usability_admin_settings_submit';
   return system_settings_form($form);
 }
