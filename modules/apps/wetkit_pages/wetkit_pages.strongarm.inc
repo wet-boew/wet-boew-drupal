@@ -16,7 +16,7 @@ function wetkit_pages_strongarm() {
   $strongarm->name = 'additional_settings__active_tab_wetkit_page';
   $strongarm->value = 'edit-i18n';
   $export['additional_settings__active_tab_wetkit_page'] = $strongarm;
-
+  
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -58,7 +58,7 @@ function wetkit_pages_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__wetkit_page'] = $strongarm;
-
+  
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -128,8 +128,8 @@ function wetkit_pages_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__wetkit_page_other'] = $strongarm;
-
-  $strongarm = new stdClass();
+  
+$strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_extended_wetkit_page';
@@ -193,7 +193,7 @@ function wetkit_pages_strongarm() {
     0 => 'main-menu',
   );
   $export['menu_options_wetkit_page'] = $strongarm;
-
+  
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -209,7 +209,7 @@ function wetkit_pages_strongarm() {
   $strongarm->name = 'menu_parent_wetkit_page';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_wetkit_page'] = $strongarm;
-
+  
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -227,7 +227,7 @@ function wetkit_pages_strongarm() {
     2 => 'revision',
   );
   $export['node_options_wetkit_page'] = $strongarm;
-
+  
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -245,7 +245,7 @@ function wetkit_pages_strongarm() {
   $strongarm->name = 'node_preview_wetkit_page';
   $strongarm->value = '0';
   $export['node_preview_wetkit_page'] = $strongarm;
-
+  
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -259,7 +259,7 @@ function wetkit_pages_strongarm() {
   $strongarm->name = 'node_submitted_wetkit_page';
   $strongarm->value = 0;
   $export['node_submitted_wetkit_page'] = $strongarm;
-
+  
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -273,25 +273,27 @@ function wetkit_pages_strongarm() {
   $strongarm->name = 'panelizer_defaults_node_wetkit_page';
   $strongarm->value = array(
     'status' => 1,
-    'page_manager' => array(
-      'status' => 1,
-      'default' => 1,
-      'choice' => 0,
-    ),
-    'default' => array(
-      'status' => 0,
-      'default' => 0,
-      'choice' => 0,
-    ),
-    'teaser' => array(
-      'status' => 0,
-      'default' => 0,
-      'choice' => 0,
-    ),
-    'featured' => array(
-      'status' => 0,
-      'default' => 0,
-      'choice' => 0,
+    'view modes' => array(
+      'page_manager' => array(
+        'status' => 1,
+        'default' => 1,
+        'choice' => 0,
+      ),
+      'default' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'teaser' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'featured' => array(
+        'status' => 1,
+        'default' => 1,
+        'choice' => 0,
+      ),
     ),
   );
   $export['panelizer_defaults_node_wetkit_page'] = $strongarm;

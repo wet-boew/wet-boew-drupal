@@ -1,19 +1,4 @@
 /**
- * WYSIWYG styling
- */
-table.mceLayout {
-  font-size: 1em;
-}
-
-.o2k7Skin table.mceLayout .mceListBox {
-  padding-left: 0;
-}
-
-.o2k7Skin table.mceLayout .mceOpen {
-  height: 24px;
-}
-
-/**
  * Title and body styling
  */
 #modal-content .form-item-title input, 
@@ -342,28 +327,9 @@ table.mceLayout {
   width: auto;
 }
 
-div .markItUpHeader {
-  background-color: #DFDFDF;
-  height: 28px;
-  padding-top: 1px;
-  border-top: 1px solid #CCC;
-  border-right: 1px solid #CCC;
-  border-left: 1px solid #CCC;
-}
-
-div .markItUpHeader ul li {
-  border: 1px solid #CCC;
-  background-color: #EEE;
-  border-radius: 4px;
-  margin-left: 2px;
-  margin-top: 2px;
-}
-
-div .markItUpHeader ul a {
-  margin: 2px 4px;
-  padding: 0;
-}
-
+/**
+ * Featured Image Styling
+ */
 #node-edit .form-item-field-featured-image-und-0-alt label {
   font-weight: 400;
   float: left;
@@ -583,8 +549,6 @@ div .markItUpHeader ul a {
   padding-top: 2px;
 }
 
-/** modal content, 
- main region **/
 #modalContent div.ctools-modal-content .modal-content {
   padding-bottom: 2px;
 }
@@ -659,7 +623,6 @@ ul#media-browser-library-list {
   padding: 0 13px 1px;
 }
 
-table.mceLayout, 
 .panels-section-column .content-type-button {
   font-size: 1em;
 }
@@ -757,7 +720,6 @@ table.mceLayout,
 
 #modal-content .widget-preview .fieldset-wrapper table img, 
 #modal-content .widget-preview .wetkit-image-featured, 
-div .markItUp, 
 #node-edit .field-name-field-featured-image .image-preview {
   width: 100%;
 }
@@ -786,9 +748,10 @@ div .markItUp,
   border: none;
 }
 
-.panels-layouts-checkboxes > .form-item,
-.panels-page-type-container > .form-item { 
-    display: inline;
-    display: inline-block; 
-    clear: both; 
+/**
+ * Fix positioning for autocomplete items in firefox.
+ *  @see http://drupal.org/node/1218684
+ */
+.form-item-uid {
+  position: relative;
 }

@@ -13,4 +13,5 @@ features[features_api][] = api:1
 features[variable][] = node_admin_theme
 features[variable][] = theme_wetkit_adaptivetheme_files_directory
 features[variable][] = theme_wetkit_adaptivetheme_settings
-;stylesheets[all][] = css/panopoly_fonts.css
+stylesheets[all][] = css/wetkit_fonts.css
+stylesheets[all][] = css/wetkit-featured.css

@@ -2,21 +2,27 @@ WetKit Theme
 ==============
 Helps with theming and provides many layouts
 
-Customizations
-* App often pulls upstream from Panopoly Admin @ drupal.org/project/panopoly_theme
-* The latest upstream sync has been checked against commit: a16a37e
+Important
+* This App is based on and often pulls upstream upstream from Panopoly Admin @ drupal.org/project/panopoly_theme
+* The latest upstream sync has been checked against commit: c76a933 (Verified)
+* Panopoly Theme is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
-Key Features
+Key Features (Panopoly Theme)
 * 26 responsive Panel layouts to choose from
 * Implements "Featured" view mode for all content types
 * Inclusion of the Open Sans font style for @font-face integration
 * jQuery Panopoly theme
-* Accordion Panels style plugin
+* Accordian Panels style plugin
+
+To Do (Panopoly Theme)
+* Review of accordian style plugin + standardization with other plugins
 
 Key Features (WetKit Demo)
-* Included AdaptiveTheme Strongarm Export
-* French .po language exports
+* Addition of Strongarm Variables:
+    - node_admin_theme
+    - theme_wetkit_adaptivetheme_files_directory
+    - theme_wetkit_adaptivetheme_settings
+* Modification of wetkit_theme.features.inc to include ctools plugin for strongarm
+* Addition of Translation .po files
+* Change of Namespace to WetKit
 * Local Apps Support
-
-To Do
-* Review of accordian style plugin + standardization with other plugins

@@ -24,7 +24,6 @@ features[panelizer_defaults][] = user:user:default
 features[user_permission][] = access administration menu
 features[user_permission][] = access administration pages
 features[user_permission][] = view the administration theme
-features[user_role][] = administrative user
 features[variable][] = page_manager_user_view_disabled
 features[variable][] = panelizer_defaults_user_user
 features[variable][] = panelizer_user:user.page_manager_allowed_layouts

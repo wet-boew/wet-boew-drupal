@@ -57,7 +57,7 @@ function wetkit_widgets_field_schema($field) {
 
     return $schema;
   }
-  
+
   //Tabbed Interface Widget
   if ($field['type'] == 'wetkit_tabbed_interface') {
     $schema['columns']['title'] = array(

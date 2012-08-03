@@ -7,6 +7,7 @@ project = wetkit_magic
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = menu
+dependencies[] = node
 dependencies[] = page_manager
 dependencies[] = panels_ipe
 dependencies[] = strongarm

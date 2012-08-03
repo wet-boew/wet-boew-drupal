@@ -7,15 +7,12 @@ img {
   vertical-align: bottom;
 }
 
-#edit-field-featured-image .image-preview {
-  float: none !important;
-}
-
 /**
  * Image styling 
  */
 .wetkit-image-full {
   max-width: 100%;
+  width: 100%;
   height: auto;
 }
 

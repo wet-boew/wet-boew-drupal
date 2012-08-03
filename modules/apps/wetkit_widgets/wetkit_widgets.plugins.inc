@@ -5,7 +5,6 @@
  */
 function wetkit_widgets_field_info() {
   return array(
-    //Spotlight Widget
     'wetkit_spotlight' => array(
       'label' => t('Spotlight'),
       'description' => t('A wonderfully widgetsal spotlight field'),
@@ -13,7 +12,7 @@ function wetkit_widgets_field_info() {
       'default_formatter' => 'wetkit_spotlight_default',
       'settings' => array(
         'uri_scheme' => variable_get('file_default_scheme', 'public'),
-        'default_image' => 0,
+        'default_image' => 1,
       ),
       'instance_settings' => array(
         'file_extensions' => 'jpg jpeg gif png',
@@ -23,10 +22,8 @@ function wetkit_widgets_field_info() {
         'title_field' => 0,
         'max_resolution' => '',
         'min_resolution' => '',
-        'default_image' => 0,
       ),
     ),
-    //Tabbed Interface Widget
     'wetkit_tabbed_interface' => array(
       'label' => t('Tabbed Interface'),
       'description' => t('WetKit Plugin for the Web Experience Toolkit\'s Tabbed Interface'),
@@ -66,7 +63,6 @@ function wetkit_widgets_field_is_empty($item, $field) {
  */
 function wetkit_widgets_field_widget_info() {
   return array(
-    //Spotlight Widget
     'wetkit_spotlight_form' => array(
       'label' => t('Spotlight'),
       'field types' => array('wetkit_spotlight'),
@@ -75,7 +71,6 @@ function wetkit_widgets_field_widget_info() {
         'default value' => FIELD_BEHAVIOR_DEFAULT,
       ),
     ),
-    //Tabbed Interface Widget
     'wetkit_tabbed_interface_form' => array(
       'label' => t('Tabbed Interface'),
       'field types' => array('wetkit_tabbed_interface'),
@@ -137,41 +132,88 @@ function wetkit_widgets_field_formatter_info() {
     'wetkit_spotlight_default' => array(
       'label' => t('Default'),
       'field types' => array('wetkit_spotlight'),
+      'settings' => array(
+        'image_style' => 'wetkit_image_spotlight',
+      ),
     ),
     'wetkit_tabbed_interface_default' => array(
       'label' => t('Default'),
       'field types' => array('wetkit_tabbed_interface'),
+      'settings' => array(
+        'image_style' => 'slider',
+      ),
     ),
   );
+}
+
+/**
+ * Implements hook_field_formatter_settings_form().
+ */
+function wetkit_widgets_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+  $element = array();
+
+  if ($display['type'] == 'wetkit_spotlight_default') {
+    $element['image_style'] = array(
+      '#title' => t('Image style'), 
+      '#type' => 'select',
+      '#options' => image_style_options(),
+      '#default_value' => $settings['image_style'],
+      '#required' => TRUE,
+    );
+  }
+
+  if ($display['type'] == 'wetkit_tabbed_interface_default') {
+    $element['image_style'] = array(
+      '#title' => t('Image style'), 
+      '#type' => 'select',
+      '#options' => image_style_options(),
+      '#default_value' => $settings['image_style'],
+      '#required' => TRUE,
+    );
+  }
+  return $element;
+}
+
+/**
+ * Implements hook_field_formatter_settings_summary().
+ */
+function wetkit_widgets_field_formatter_settings_summary($field, $instance, $view_mode) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+  
+  $summary = t('Image Style: @style', array('@style' => $settings['image_style']));
+  return $summary;
 }
 
 /**
  * Implements hook_field_formatter_view().
  */
 function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
-    $element = array();
-    $settings = $display['settings'];
-    $formatter = $display['type'];
-    drupal_add_library('system', 'ui.tabs');
+  $element = array();
+  $settings = $display['settings'];
+  $formatter = $display['type'];
+  drupal_add_library('system', 'ui.tabs');
 
-    // Assemble the tabs header for Spotlight
-    $header = '<ul>';
-    foreach($items as $delta => $item_data) {
-        $header .= '<li>' . '<a href="#wetkit-spotlight-' . $delta . '">' . ($delta+1) . '</a></li>'; 
-    }
-    $header .= '</ul>';  
+  // Assemble the tabs header
+  $header = '<ul>';
+  foreach($items as $delta => $item_data) {
+    $header .= '<li>' . '<a href="#wetkit-spotlight-' . $delta . '">' . ($delta+1) . '</a></li>'; 
+  }
+  $header .= '</ul>';
 
-    // Assemble the tabs content
-    foreach($items as $delta => $item_data) {
-      if ($display['type'] == 'wetkit_spotlight_default') {
-        $element[$delta]['#markup'] = ($delta == 0) ? $header . theme('wetkit_spotlight_view', array('items' => $item_data, 'delta' => $delta)) : theme('wetkit_spotlight_view', array('items' => $item_data, 'delta' => $delta));
-      }
-      if ($display['type'] == 'wetkit_tabbed_interface_default') {
-        $element[$delta]['#markup'] = theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta));
-        $element[$delta]['title'] = $item_data['title'];
-      }
+  // Assemble the tabs content
+  foreach($items as $delta => $item_data) {
+    if ($display['type'] == 'wetkit_spotlight_default') {
+      $element[$delta]['#markup'] = ($delta == 0) ? $header . theme('wetkit_spotlight_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings)) : theme('wetkit_spotlight_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings));
     }
-    return $element;
+    if ($display['type'] == 'wetkit_tabbed_interface_default') {
+      $element[$delta]['#markup'] = theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings));
+      $element[$delta]['title'] = $item_data['title'];
+    }
+  }
+  return $element;
 }
 
 /**
@@ -212,7 +254,7 @@ function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instanc
       '#default_value' => isset($items[$delta]['description']) ? $items[$delta]['description'] : NULL,
     );
   }
-  
+
   if ($instance['widget']['type'] == 'wetkit_tabbed_interface_form') {
    
     // Make it a multipart form  
@@ -252,7 +294,7 @@ function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instanc
       '#default_value' => isset($items[$delta]['description']) ? $items[$delta]['description'] : NULL,
     );
   }
-
+  
   return $element;
 }
 
@@ -319,13 +361,13 @@ function wetkit_widgets_field_prepare_view($entity_type, $entities, $field, $ins
   //Add appropriate JS variables for rotation time.
   //@TODO: Allow different rotation speeds to be set for different
   //spotlights in the page.
-  //if(!empty($entities[1]->field_spotlight_rotation_time)) {
-  //  $rotation_time = (int) $entities[1]->field_spotlight_rotation_time['und'][0]['value'];
-  //}
-  //empty($rotation_time) ? $rotation_time = 4 : '';
-  //$rotation_time = 1000 * $rotation_time;
-  //$js_variables = array('spotlight_settings' => array('rotation_time' => $rotation_time)); 
-  //drupal_add_js($js_variables, 'setting');
+  if(!empty($entities[1]->field_spotlight_rotation_time)) {
+    $rotation_time = (int) $entities[1]->field_spotlight_rotation_time['und'][0]['value'];
+  }
+  empty($rotation_time) ? $rotation_time = 4 : '';
+  $rotation_time = 1000 * $rotation_time;
+  $js_variables = array('spotlight_settings' => array('rotation_time' => $rotation_time)); 
+  drupal_add_js($js_variables, 'setting'); 
 }
 
 /**
@@ -337,9 +379,10 @@ function theme_wetkit_spotlight_view($variables) {
   $image_entity = entity_uuid_load('file', array($variables['items']['uuid']));
   $image = file_load(array_pop($image_entity)->fid);
   $link = $variables['items']['link'];
+  $settings = $variables['settings'];
 
   $output = '<div id="' . 'wetkit-spotlight-' . $variables['delta'] . '" class="' . 'wetkit-spotlight' . '">';
-  $output .= theme('image_style', array('style_name' => 'wetkit_image_spotlight', 'path' => $image->uri));
+  $output .= theme('image_style', array('style_name' => $settings['image_style'], 'path' => $image->uri));
   $output .= '<div class="wetkit-spotlight-wrapper">';
   $output .= '<h3 class="wetkit-spotlight-label">' . t('Spotlight') . '</h3>';
   $output .= '<div class="wetkit-spotlight-info">';
@@ -361,10 +404,11 @@ function theme_wetkit_tab_interface_view($variables) {
   $image_entity = entity_uuid_load('file', array($variables['items']['uuid']));
   $image = file_load(array_pop($image_entity)->fid);
   $link = $variables['items']['link'];
+  $settings = $variables['settings'];
   
   $output = '<div id="' . 'tabs1_' . $variables['delta'] . '" class="' . '' . '">';
   $output .= '<section>';
-  $output .= theme('image_style', array('style_name' => 'slider', 'path' => $image->uri, 'alt' => $variables['items']['alt']));
+  $output .= theme('image_style', array('style_name' => $settings['image_style'], 'path' => $image->uri, 'alt' => $variables['items']['alt']));
   $output .= '<div class="tabs-content-pad">';  
   $output .= '<h4>' . l($title, $link) . '</h4>';
   $output .= '<p>' . $description . '</p>';

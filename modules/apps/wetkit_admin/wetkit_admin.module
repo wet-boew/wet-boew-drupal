@@ -91,7 +91,7 @@ function wetkit_admin_form_alter(&$form, &$form_state, $form_id) {
       $form['#submit'][] = 'wetkit_admin_pathauto_submit';
     }
   }
-   
+  
   // Add clearfix to node body container to prevent clearing issue with
   // vertical tabs - @see https://drupal.org/node/1686500
   if (isset($form['#entity_type']) && $form['#entity_type'] == 'node' && isset($form['body']['#type']) && $form['body']['#type'] == 'container') {
