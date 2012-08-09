@@ -19,6 +19,7 @@ projects[context][version] = 3.0-beta2
 projects[context][subdir] = contrib
 projects[context][type] = module
 
+; http://drupal.org/node/1719548
 projects[ctools][version] = 1.1
 projects[ctools][subdir] = contrib
 projects[ctools][type] = module
