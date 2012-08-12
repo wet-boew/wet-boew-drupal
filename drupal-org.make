@@ -19,12 +19,14 @@ projects[context][version] = 3.0-beta2
 projects[context][subdir] = contrib
 projects[context][type] = module
 
-projects[ctools][version] = 1.0
+projects[ctools][version] = 1.1
 projects[ctools][subdir] = contrib
 projects[ctools][type] = module
-projects[ctools][patch][1444732] = http://drupal.org/files/1444732-exposed-sort-as-pane-config.patch
-projects[ctools][patch][1198808] = http://drupal.org/files/1198808-work-around-jquery-bug-with-auto-submit-ctools-1.0.patch
+projects[ctools][download][type] = git
+projects[ctools][download][revision] = 116c49e
+projects[ctools][download][branch] = 7.x-1.x
 projects[ctools][patch][1294478] = http://drupal.org/files/1294478-modal-dynamic-mode.patch
+projects[ctools][patch][1708438] = http://drupal.org/files/1708438-blur-event.patch
 
 projects[diff][version] = 2.x-dev
 projects[diff][subdir] = contrib
@@ -49,9 +51,7 @@ projects[fences][patch][1561244] = http://drupal.org/files/undefined-index-15612
 projects[fieldable_panels_panes][version] = 1.1
 projects[fieldable_panels_panes][subdir] = contrib
 projects[fieldable_panels_panes][type] = module
-projects[fieldable_panels_panes][download][type] = git
-projects[fieldable_panels_panes][download][revision] = a4ea924
-projects[fieldable_panels_panes][download][branch] = 7.x-1.x
+projects[fieldable_panels_panes][patch][1715918] = http://drupal.org/files/fieldable-panel-panes-load-vid.patch
 ;projects[fieldable_panels_panes][patch][1536944] = http://drupal.org/files/translatable-panes-1536944-6.patch
 
 projects[jquery_update][version] = 2.x-dev
@@ -70,10 +70,14 @@ projects[panels][version] = 3.x-dev
 projects[panels][subdir] = contrib
 projects[panels][type] = module
 projects[panels][download][type] = git
-projects[panels][download][revision] = 3f50718
+projects[panels][download][revision] = 33c439b
 projects[panels][download][branch] = 7.x-3.x
-projects[panels][patch][1706936] = http://drupal.org/files/panels-ipe-no-css-image.patch
-projects[panels][patch][1549660] = http://drupal.org/files/1549660-allow-region-style-settings.patch
+projects[panels][patch][1690124] = http://drupal.org/files/1690124-hide-ipe-toolbal-with-open-modal_2.patch
+projects[panels][patch][1711302] = http://drupal.org/files/1711302-panels_ipe_shorten_add_language_conditional_on_1690124.patch
+projects[panels][patch][1711494] = http://drupal.org/files/1711494-double-ids.patch
+projects[panels][patch][1549660] = http://drupal.org/files/1549660-list-region-style-dont-render-empty-placeholder.patch
+projects[panels][patch][1493130] = http://drupal.org/files/1493130-1.patch
+projects[panels][patch][1549660] = http://drupal.org/files/1549660-allow-region-style-settings_panopoly_2.patc
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/panels-add-hooks-to-integrate-i18n_panels-1179034-41.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/uuids-for-exported-pids-1277908-19.patch
 
@@ -88,9 +92,11 @@ projects[panelizer][version] = 3.x-dev
 projects[panelizer][subdir] = contrib
 projects[panelizer][type] = module
 projects[panelizer][download][type] = git
-projects[panelizer][download][revision] = c4022c5
+projects[panelizer][download][revision] = c1c00cb
 projects[panelizer][download][branch] = 7.x-3.x
 projects[panelizer][patch][1387634] = http://drupal.org/files/exporting_panelizer_defaults-1387634-9.patch
+projects[panelizer][patch][1555194] = http://drupal.org/files/1555194-panelizer-did-should-not-export.patch
+projects[panelizer][patch][1555194] = http://drupal.org/files/1555194-better-did-checking-on-subrecords.patch
 
 projects[password_policy][version] = 1.0-rc3
 projects[password_policy][type] = module
@@ -137,13 +143,17 @@ projects[file_entity][version] = 2.x-dev
 projects[file_entity][type] = module
 projects[file_entity][subdir] = contrib
 projects[file_entity][download][type] = git
-projects[file_entity][download][revision] = ba18f8b
+projects[file_entity][download][revision] = a8986e5
 projects[file_entity][download][branch] = 7.x-2.x
 projects[file_entity][patch][1553094] = http://drupal.org/files/Alt-and-Title-support-for-Images-1553094-62.patch
 
 projects[field_group][version] = 1.1
 projects[field_group][type] = module
 projects[field_group][subdir] = contrib
+
+projects[entityreference][version] = 1.0-rc3
+projects[entityreference][type] = module
+projects[entityreference][subdir] = contrib
 
 projects[link][version] = 1.0
 projects[link][type] = module
@@ -220,7 +230,7 @@ projects[media][version] = 2.x-dev
 projects[media][type] = module
 projects[media][subdir] = contrib
 projects[media][download][type] = git
-projects[media][download][revision] = cc55948
+projects[media][download][revision] = 1a0304d
 projects[media][download][branch] = 7.x-2.x
 projects[media][patch][1307054] = http://drupal.org/files/1307054-d7-2.patch
 
@@ -279,8 +289,10 @@ projects[apps][type] = module
 projects[apps][download][type] = git
 projects[apps][download][revision] = c435c95
 projects[apps][download][branch] = 7.x-1.x
-projects[apps][patch][1479164] = http://drupal.org/files/1479164-apps-permissions-check-modules-not-conf-reroll.patch
-projects[apps][patch][1561652] = http://drupal.org/files/apps-allow-drush-site-install.patch
+projects[apps][patch][1479164] = http://drupal.org/files/1479164-apps-has-write-access-check.patch
+projects[apps][patch][1561652] = http://drupal.org/files/1561652-apps-allow-drush-site-install-patch-reroll-1479164.patch
+projects[apps][patch][1721538] = http://drupal.org/files/1721538-rename-app-images-not-replace.patch
+projects[apps][patch][1721548] = http://drupal.org/files/1721548-silent-success-condition-profile.patch
 
 projects[defaultcontent][version] = 1.0-alpha5
 projects[defaultcontent][type] = module
@@ -354,7 +366,7 @@ projects[i18nviews][type] = module
 ; Search ;
 ;;;;;;;;;;
 
-projects[facetapi][version] = 1.0
+projects[facetapi][version] = 1.1
 projects[facetapi][type] = module
 projects[facetapi][subdir] = contrib
 
@@ -374,6 +386,7 @@ libraries[markitup][download][type] = get
 libraries[markitup][download][url] = https://github.com/markitup/1.x/tarball/master
 libraries[markitup][directory_name] = markitup
 libraries[markitup][type] = library
+libraries[markitup][patch][1715642] = http://drupal.org/files/1715642-adding-html-set-markitup-editor.patch
 
 libraries[tinymce][download][type] = git
 libraries[tinymce][download][url] = https://github.com/sylus/tinymce-cirkuit.git

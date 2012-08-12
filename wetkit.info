@@ -62,6 +62,7 @@ dependencies[] = date_api
 dependencies[] = date_popup
 dependencies[] = date_views
 dependencies[] = file_entity
+dependencies[] = entityreference
 dependencies[] = field_group
 dependencies[] = link
 dependencies[] = tablefield
@@ -99,7 +100,7 @@ dependencies[] = defaultcontent
 dependencies[] = entity
 dependencies[] = features
 dependencies[] = strongarm
-dependencies[] = uuid
+;dependencies[] = uuid
 dependencies[] = variable
 
 ; Language
