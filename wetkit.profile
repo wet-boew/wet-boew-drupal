@@ -3,7 +3,7 @@
 /**
  * Implements hook_install_tasks()
  */
-function wetkit_install_tasks($install_state) {
+function wetkit_install_tasks(&$install_state) {
 
   // Start it off
   $tasks = array();
@@ -30,7 +30,7 @@ function wetkit_install_tasks($install_state) {
 
   // Set up the Local Apps install task
   $local_server = array(
-    'machine name' => 'wetkit',
+    'machine name' => 'local',
     'default apps' => array(
       'wetkit_admin',
       'wetkit_core',
@@ -192,15 +192,15 @@ function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
 
     // Improve style of apps selection form
     if (isset($form['apps_fieldset'])) {
-        $options = array();
-        $manifest = apps_manifest(apps_servers('wetkit'));
-        foreach($manifest['apps'] as $name => $app) {
+      $options = array();
+      $manifest = apps_manifest(apps_servers('local'));
+      foreach($manifest['apps'] as $name => $app) {
         if ($name != '#theme') {
-            $options[$name] = '<strong>' . $app['name'] . '</strong><p><div class="admin-options"><div class="form-item">' . theme('image', array('path' => $app['logo']['path'], 'height' => '32', 'width' => '32')) . '</div>' . $app['description'] . '</div></p>';
+          $options[$name] = '<strong>' . $app['name'] . '</strong><p><div class="admin-options"><div class="form-item">' . theme('image', array('path' => $app['logo']['path'], 'height' => '32', 'width' => '32')) . '</div>' . $app['description'] . '</div></p>';
         }
-        }
-        ksort($options);
-        $form['apps_fieldset']['apps']['#options'] = $options;
+      }
+      ksort($options);
+      $form['apps_fieldset']['apps']['#options'] = $options;
     }
 
     // Remove the demo content selection option since this is
@@ -226,11 +226,11 @@ function wetkit_apps_servers_info() {
       'featured app' => 'wetkit_web_usability',
       'manifest' => '',
     ),
-    'wetkit' => array(
-      'title' => 'wetkit',
-      'description' => 'Apps for the Web Experience Toolkit Drupal distro',
-      'manifest' => 'http://wetkitappdev.devcloud.acquia-sites.com/app/query/WetKit%20App%20Server',
-    ),
+    //'wetkit' => array(
+    //  'title' => 'wetkit',
+    //  'description' => 'Apps for the Web Experience Toolkit Drupal distro',
+    //  'manifest' => 'http://wetkitappdev.devcloud.acquia-sites.com/app/query/WetKit%20App%20Server',
+    //),
   );
 }
 
