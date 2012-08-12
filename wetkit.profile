@@ -178,30 +178,32 @@ function wetkit_batch_processing(&$install_state) {
  * Implements hook_form_FORM_ID_alter()
  */
 function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
+  // If App Manifest Exists
+  if (isset($_SESSION['apps_manifest'])) {
+    // For some things there are no need
+    $form['apps_message']['#access'] = FALSE;
+    $form['apps_fieldset']['apps']['#title'] = NULL;
 
-  // For some things there are no need
-  $form['apps_message']['#access'] = FALSE;
-  $form['apps_fieldset']['apps']['#title'] = NULL;
-
-  // Improve style of apps selection form
-  if (isset($form['apps_fieldset'])) {
-    $options = array();
-    $manifest = apps_manifest(apps_servers('wetkit'));
-    foreach($manifest['apps'] as $name => $app) {
-      if ($name != '#theme') {
-        $options[$name] = '<strong>' . $app['name'] . '</strong><p><div class="admin-options"><div class="form-item">' . theme('image', array('path' => $app['logo']['path'], 'height' => '32', 'width' => '32')) . '</div>' . $app['description'] . '</div></p>';
-      }
+    // Improve style of apps selection form
+    if (isset($form['apps_fieldset'])) {
+        $options = array();
+        $manifest = apps_manifest(apps_servers('wetkit'));
+        foreach($manifest['apps'] as $name => $app) {
+        if ($name != '#theme') {
+            $options[$name] = '<strong>' . $app['name'] . '</strong><p><div class="admin-options"><div class="form-item">' . theme('image', array('path' => $app['logo']['path'], 'height' => '32', 'width' => '32')) . '</div>' . $app['description'] . '</div></p>';
+        }
+        }
+        ksort($options);
+        $form['apps_fieldset']['apps']['#options'] = $options;
     }
-    ksort($options);
-    $form['apps_fieldset']['apps']['#options'] = $options;
+
+    // Remove the demo content selection option since this is
+    // handled through the Panopoly demo module.
+    $form['default_content_fieldset']['#access'] = FALSE;
+
+    // Remove the "skip this step" option since why would we want that?
+    $form['actions']['skip']['#access'] = FALSE;
   }
-
-  // Remove the demo content selection option since this is
-  // handled through the Panopoly demo module.
-  $form['default_content_fieldset']['#access'] = FALSE;
-
-  // Remove the "skip this step" option since why would we want that?
-  $form['actions']['skip']['#access'] = FALSE;
 }
 
 /**
