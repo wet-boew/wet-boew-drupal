@@ -48,12 +48,13 @@ function wetkit_install_tasks($install_state) {
     'required apps' => array(
       'wetkit_admin',
       'wetkit_core',
-      'wetkit_images',      
-      'wetkit_magic',             
-      'wetkit_pages',                                          
-      'wetkit_theme',                               
-      'wetkit_users',                                     
-      'wetkit_widgets',                                         
+      'wetkit_demo',
+      'wetkit_images',
+      'wetkit_magic',
+      'wetkit_pages',
+      'wetkit_theme',
+      'wetkit_users',
+      'wetkit_widgets',
       'wetkit_wysiwyg',
       'wetkit_language',
       'wetkit_web_usability',
@@ -86,6 +87,7 @@ function wetkit_install_tasks($install_state) {
  * Implements hook_install_tasks_alter()
  */
 function wetkit_install_tasks_alter(&$tasks, $install_state) {
+
   //If using French Locale as default remove associated Install Task
   unset($tasks['install_import_locales']);
   unset($tasks['install_import_locales_remaining']);
@@ -132,6 +134,7 @@ function wetkit_form_install_configure_form_alter(&$form, $form_state) {
  * Password Policy save validate handler.
  */
 function wetkit_password_validate($form, &$form_state) {
+
   $values = $form_state['values'];
   $account = (object)array('uid' => 1);
   $account->roles = array(DRUPAL_AUTHENTICATED_RID => DRUPAL_AUTHENTICATED_RID);
@@ -148,6 +151,7 @@ function wetkit_password_validate($form, &$form_state) {
  * Password Policy save submit handler.
  */
 function wetkit_password_submit($form, &$form_state) {
+
   global $user;
   $values = $form_state['values'];
   $account = (object)array('uid' => 1);
@@ -161,6 +165,7 @@ function wetkit_password_submit($form, &$form_state) {
  * Batch Processing for French Language import.
  */
 function wetkit_batch_processing(&$install_state) {
+
   //Import the additonal language po file and translate the interface;
   //Require once is only added here because too early in the bootstrap
   require_once 'includes/locale.inc';
@@ -178,6 +183,7 @@ function wetkit_batch_processing(&$install_state) {
  * Implements hook_form_FORM_ID_alter()
  */
 function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
+
   // If App Manifest Exists
   if (isset($_SESSION['apps_manifest'])) {
     // For some things there are no need
@@ -210,6 +216,7 @@ function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
  * Implements hook_appstore_stores_info()
  */
 function wetkit_apps_servers_info() {
+
   $profile = variable_get('install_profile', 'wetkit');
   $info =  drupal_parse_info_file(drupal_get_path('profile', $profile) . '/' . $profile . '.info');
   return array(
@@ -231,6 +238,7 @@ function wetkit_apps_servers_info() {
  * Form to check to see if Apps support is possible
  */
 function wetkit_apps_check($form, &$form_state) {
+
   $form = array();
 
   // Set the title
