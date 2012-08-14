@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * An installation file for WetKit Widgets
+ */
+
+/**
  * Implements hook_install().
  */
 function wetkit_widgets_install() {

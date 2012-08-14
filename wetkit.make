@@ -66,6 +66,10 @@ projects[libraries][version] = 2.0
 projects[libraries][type] = module
 projects[libraries][subdir] = contrib
 
+projects[json2][type] = module
+projects[json2][version] = 1.0
+projects[json2][subdir] = contrib
+
 projects[panels][version] = 3.x-dev
 projects[panels][subdir] = contrib
 projects[panels][type] = module
@@ -109,7 +113,7 @@ projects[rules][download][revision] = 5273ea6
 projects[rules][download][branch] = 7.x-2.x
 projects[rules][patch][1329346] = http://drupal.org/files/remove-make-file-1329346-10.patch
 
-projects[token][version] = 1.1
+projects[token][version] = 1.2
 projects[token][type] = module
 projects[token][subdir] = contrib
 
@@ -138,7 +142,7 @@ projects[views_slideshow][subdir] = contrib
 ; Field UI and Content Types ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-projects[date][version] = 2.5
+projects[date][version] = 2.6
 projects[date][type] = module
 projects[date][subdir] = contrib
 
@@ -170,7 +174,7 @@ projects[tablefield][subdir] = contrib
 ; Menus and URLs ;
 ;;;;;;;;;;;;;;;;;;
 
-projects[pathauto][version] = 1.1
+projects[pathauto][version] = 1.2
 projects[pathauto][subdir] = contrib
 projects[pathauto][type] = module
 projects[pathauto][download][type] = git
@@ -298,10 +302,12 @@ projects[apps][patch][1721538] = http://drupal.org/files/1721538-rename-app-imag
 projects[apps][patch][1721548] = http://drupal.org/files/1721548-silent-success-condition-profile.patch
 projects[apps][patch][1665048] = http://drupal.org/files/reject-broken-images-1665048-2.patch
 
-projects[defaultcontent][version] = 1.0-alpha5
+projects[defaultcontent][version] = 1.x-dev
 projects[defaultcontent][type] = module
 projects[defaultcontent][subdir] = contrib
-projects[defaultcontent][patch][1263536] = http://drupal.org/files/base64_encode_files-1263536-1_0.patch
+projects[defaultcontent][download][type] = git
+projects[defaultcontent][download][revision] = d8806d8
+projects[defaultcontent][download][branch] = 7.x-1.x
 
 projects[entity][version] = 1.0-rc3
 projects[entity][type] = module
@@ -374,6 +380,20 @@ projects[facetapi][version] = 1.1
 projects[facetapi][type] = module
 projects[facetapi][subdir] = contrib
 
+;projects[search_api][version] = 1.2
+;projects[search_api][type] = module
+;projects[search_api][subdir] = contrib
+;projects[search_api][patch][1698098] = http://drupal.org/files/search-api-disabled-index-configure-link.patch
+
+;projects[search_api_solr][version] = 1.0-rc2
+;projects[search_api_solr][type] = module
+;projects[search_api_solr][subdir] = contrib
+;projects[search_api_solr][patch][1407282] = http://drupal.org/files/1407282--variable_solr_connection_class-27.patch
+
+;projects[search_api_db][version] = 1.0-beta3
+;projects[search_api_db][type] = module
+;projects[search_api_db][subdir] = contrib
+
 projects[metatag][version] = 1.0-alpha6
 projects[metatag][subdir] = contrib
 projects[metatag][type] = module
@@ -386,11 +406,18 @@ projects[search404][type] = module
 ; LIBRARIES ;
 ;;;;;;;;;;;;;
 
+libraries[json2][download][type] = get
+libraries[json2][download][url] = https://github.com/douglascrockford/JSON-js/blob/master/json2.js
+libraries[json2][revision] = fc535e9cc8fa78bbf45a85835c830e7f799a5084
+
 libraries[markitup][download][type] = get
 libraries[markitup][download][url] = https://github.com/markitup/1.x/tarball/master
 libraries[markitup][directory_name] = markitup
 libraries[markitup][type] = library
 libraries[markitup][patch][1715642] = http://drupal.org/files/1715642-adding-html-set-markitup-editor.patch
+
+;libraries[SolrPhpClient][download][type] = get
+;libraries[SolrPhpClient][download][url] = http://solr-php-client.googlecode.com/files/SolrPhpClient.r60.2011-05-04.zip
 
 libraries[tinymce][download][type] = git
 libraries[tinymce][download][url] = https://github.com/sylus/tinymce-cirkuit.git

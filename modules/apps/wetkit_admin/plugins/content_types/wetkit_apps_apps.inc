@@ -2,7 +2,7 @@
 
 /**
  * @file
- * A panel plugin to provide administrative information about the site's foundational apps
+ * A panel plugin to provide administrative information about the site's apps
  */
 
 $plugin = array(

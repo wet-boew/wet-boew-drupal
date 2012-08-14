@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * A specification for the custom spotlight entity that is part of WetKit Widgets
+ */
+
+/**
  * Implements hook_field_info().
  */
 function wetkit_widgets_field_info() {
@@ -198,13 +203,13 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
 
   // Assemble the tabs header
   $header = '<ul>';
-  foreach($items as $delta => $item_data) {
+  foreach ($items as $delta => $item_data) {
     $header .= '<li>' . '<a href="#wetkit-spotlight-' . $delta . '">' . ($delta+1) . '</a></li>'; 
   }
   $header .= '</ul>';
 
   // Assemble the tabs content
-  foreach($items as $delta => $item_data) {
+  foreach ($items as $delta => $item_data) {
     if ($display['type'] == 'wetkit_spotlight_default') {
       $element[$delta]['#markup'] = ($delta == 0) ? $header . theme('wetkit_spotlight_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings)) : theme('wetkit_spotlight_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings));
     }
@@ -361,7 +366,7 @@ function wetkit_widgets_field_prepare_view($entity_type, $entities, $field, $ins
   //Add appropriate JS variables for rotation time.
   //@TODO: Allow different rotation speeds to be set for different
   //spotlights in the page.
-  if(!empty($entities[1]->field_spotlight_rotation_time)) {
+  if (!empty($entities[1]->field_spotlight_rotation_time)) {
     $rotation_time = (int) $entities[1]->field_spotlight_rotation_time['und'][0]['value'];
   }
   empty($rotation_time) ? $rotation_time = 4 : '';

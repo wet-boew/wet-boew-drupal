@@ -45,6 +45,7 @@ dependencies[] = fences
 dependencies[] = fieldable_panels_panes
 dependencies[] = jquery_update
 dependencies[] = libraries
+dependencies[] = json2
 dependencies[] = panels
 dependencies[] = panels_ipe
 dependencies[] = panels_breadcrumbs
@@ -52,8 +53,8 @@ dependencies[] = panelizer
 dependencies[] = password_policy
 dependencies[] = pm_existing_pages
 dependencies[] = token
-dependencies[] = layout
-dependencies[] = gridbuilder
+;dependencies[] = layout
+;dependencies[] = gridbuilder
 dependencies[] = views
 dependencies[] = views_content
 dependencies[] = views_ui
@@ -121,7 +122,12 @@ dependencies[] = i18n_variable
 dependencies[] = stringoverrides
 
 ; Search
-;dependencies[] = facetapi
+dependencies[] = facetapi
+;dependencies[] = search_api
+;dependencies[] = search_api_solr
+;dependencies[] = search_api_facetapi
+;dependencies[] = search_api_views
+;dependencies[] = search_api_db
 dependencies[] = metatag
 dependencies[] = search404
 

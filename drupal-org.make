@@ -374,6 +374,20 @@ projects[facetapi][version] = 1.1
 projects[facetapi][type] = module
 projects[facetapi][subdir] = contrib
 
+;projects[search_api][version] = 1.2
+;projects[search_api][type] = module
+;projects[search_api][subdir] = contrib
+;projects[search_api][patch][1698098] = http://drupal.org/files/search-api-disabled-index-configure-link.patch
+
+;projects[search_api_solr][version] = 1.0-rc2
+;projects[search_api_solr][type] = module
+;projects[search_api_solr][subdir] = contrib
+;projects[search_api_solr][patch][1407282] = http://drupal.org/files/1407282--variable_solr_connection_class-27.patch
+
+;projects[search_api_db][version] = 1.0-beta3
+;projects[search_api_db][type] = module
+;projects[search_api_db][subdir] = contrib
+
 projects[metatag][version] = 1.0-alpha6
 projects[metatag][subdir] = contrib
 projects[metatag][type] = module

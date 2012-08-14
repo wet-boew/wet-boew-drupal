@@ -103,14 +103,14 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
 
 
     // Find file / image fields and ensure they are using a FID instead of a UUID.
-    foreach($form as $key => $value) {
+    foreach ($form as $key => $value) {
       if (substr($key, 0, 6) == 'field_') {
         if (!empty($value['und']['0']['#bundle']) && ($value['und']['0']['#bundle'] == 'image' || $value['und']['0']['#bundle'] == 'file')) {
-          foreach($value['und'] as $subkey => $subvalue) {
+          foreach ($value['und'] as $subkey => $subvalue) {
             if (is_numeric($subkey)) {
               // Change UUID to FID to resolve issue with UUID handling. This solves a bug with Fieldable Panels Panes that
               // hopefully will be resolved soon.
-              if (!empty($subvalue['#default_value']['fid']) && strlen($subvalue['#default_value']['fid']) == 36){
+              if (!empty($subvalue['#default_value']['fid']) && strlen($subvalue['#default_value']['fid']) == 36) {
                 $form[$key]['und'][$subkey]['#default_value']['fid'] = db_query('SELECT fid FROM {file_managed} WHERE uuid = :uuid', array(':uuid' => $subvalue['#default_value']['fid']))->fetchField();
               }
             }
@@ -148,7 +148,7 @@ function wetkit_widgets_fieldable_panel_pane_pre_render($element) {
   );
 
   // Add any remaining fields to the content settings fieldset.
-  foreach($element as $key => $value) {
+  foreach ($element as $key => $value) {
     if (substr($key, 0, 6) == 'field_') {
       $element['content_settings'][$key] = $value;
       unset($element[$key]);

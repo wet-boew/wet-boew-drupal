@@ -96,14 +96,16 @@ function wetkit_admin_pages_content_type_render($subtype, $conf, $panel_args, $c
   }
 
   // Assemble Layout Data
-  $layout_options = array();
-  foreach (layout_get_responsive_layouts() as $layout_option) {
-    $layout_options[] = array(
-      'data' => array(
-        $layout_option['title'],
-        l(t('Edit'), 'admin/structure/panels/layouts/list/' . str_replace('responsive:', '', $layout_option['name']) . '/edit'),
-      ),
-    );
+  if (module_exists('layout')) {
+    $layout_options = array();
+    foreach (layout_get_responsive_layouts() as $layout_option) {
+      $layout_options[] = array(
+        'data' => array(
+          $layout_option['title'],
+          l(t('Edit'), 'admin/structure/panels/layouts/list/' . str_replace('responsive:', '', $layout_option['name']) . '/edit'),
+        ),
+      );
+    }
   }
 
   // Assemble General Page Options
@@ -131,16 +133,18 @@ function wetkit_admin_pages_content_type_render($subtype, $conf, $panel_args, $c
   $page_templates_options = (!empty($page_templates_links)) ? theme('links__ctools_dropbutton', array('links' => $page_templates_links, 'attributes' => array('class' => array('links', 'inline', 'operations'))))  : '';
 
   // Assemble Layout Options
-  $layout_options_links = array();
-  $layout_options_links[] = array(
-    'title' => t('Add new'),
-    'href' => 'admin/structure/panels/layouts/add-responsive',
-  );
-  $layout_options_links[] = array(
-    'title' => t('Configure'),
-    'href' => 'admin/structure/panels/layouts',
-  );
-  $layout_options_options = (!empty($layout_options_links)) ? theme('links__ctools_dropbutton', array('links' => $layout_options_links, 'attributes' => array('class' => array('links', 'inline', 'operations'))))  : '';
+  if (module_exists('layout')) {
+    $layout_options_links = array();
+    $layout_options_links[] = array(
+      'title' => t('Add new'),
+      'href' => 'admin/structure/panels/layouts/add-responsive',
+    );
+    $layout_options_links[] = array(
+      'title' => t('Configure'),
+      'href' => 'admin/structure/panels/layouts',
+    );
+    $layout_options_options = (!empty($layout_options_links)) ? theme('links__ctools_dropbutton', array('links' => $layout_options_links, 'attributes' => array('class' => array('links', 'inline', 'operations'))))  : '';
+  }
 
   // Create the Output
   $pane->content .= '<div>' . $general_pages_options . '<h2 class="page-title">' . t('General Pages') . '</h2></div>';
@@ -149,7 +153,11 @@ function wetkit_admin_pages_content_type_render($subtype, $conf, $panel_args, $c
   $pane->content .= (!empty($page_templates)) ? theme('table', array('header' => array(), 'rows' => $page_templates, 'attributes' => array('class' => 'panelizer-templates'))) : t('No page templates have yet been created!');
   $pane->content .= '<h2 class="page-title">' . t('Overriden Page Templates') . '</h2>';
   $pane->content .= (!empty($overridden_templates)) ? theme('table', array('header' => array(), 'rows' => $overridden_templates, 'attributes' => array('class' => 'panelizer-overrides'))) : t('No page templates have yet been overridden!');
-  $pane->content .= '<div>' . $layout_options_options . '<h2 class="page-title">' . t('Custom Layouts') . '</h2></div>';
-  $pane->content .= (!empty($layout_options)) ?  theme('table', array('header' => array(), 'rows' => $layout_options, 'attributes' => array('class' => 'layout-options'))) : t('No custom layout options have yet been created!');
+
+  if (module_exists('layout')) {
+    $pane->content .= '<div>' . $layout_options_options . '<h2 class="page-title">' . t('Custom Layouts') . '</h2></div>';
+    $pane->content .= (!empty($layout_options)) ?  theme('table', array('header' => array(), 'rows' => $layout_options, 'attributes' => array('class' => 'layout-options'))) : t('No custom layout options have yet been created!');
+  }
+
   return $pane;
 }
