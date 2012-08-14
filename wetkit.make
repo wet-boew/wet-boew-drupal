@@ -78,7 +78,9 @@ projects[panels][download][revision] = 369c214
 projects[panels][download][branch] = 7.x-3.x
 ;projects[panels][patch][1711302] = http://drupal.org/files/1711302-improve-ipe-icons-for-add-content.patch
 projects[panels][patch][1549660] = http://drupal.org/files/1549660-list-region-style-dont-render-empty-placeholder.patch
-;projects[panels][patch][1690124] = http://drupal.org/files/1690124-hide-ipe-toolbal-with-open-modal_2.patch
+;projects[panels][patch][1690124] = http://drupal.org/files/1690124-hide-ipe-toolbar-with-open-modal_3_relies_1711302.patch
+projects[panels][patch][1690128] = http://drupal.org/files/1690128-add-panes-to-top-ipe.patch
+ 
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/panels-add-hooks-to-integrate-i18n_panels-1179034-41.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/uuids-for-exported-pids-1277908-19.patch
 

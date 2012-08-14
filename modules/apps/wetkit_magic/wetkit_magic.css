@@ -1,5 +1,5 @@
 /**
- * Wetkit Modal Magic Styles
+ * WetKit Modal Magic Styles
  */
 
 /**
@@ -7,16 +7,6 @@
  */
 .menu-block-processed {
   border: 0;
-}
-
-#menu-block-settings {
-  float: left;
-  width: 48%;
-}
-
-.menu-block-ctools-buttons {
-  float: left;
-  clear: left;
 }
 
 @media only screen and (max-width: 480px) {
@@ -130,6 +120,14 @@ div.ctools-modal-content .panels-choose-layout .dependent-options {
 
 #modal-content .form-item-exposed-pager-id label {
   font-weight: normal;
+}
+
+#modal-content .general-settings-fieldset label {
+  float: left;
+  font-weight: normal;
+  width: auto;
+  margin-top: 5px;
+  margin-right: 5px;
 }
 
 #modal-content #edit-context label {

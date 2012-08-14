@@ -81,6 +81,11 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
       // Do not run this through validation since it creates a wierd experience
       $form['#validate'] = array();
 
+      // Quick modification to get tablefield to render correctly
+      if ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id'])) {
+        $form_state['values']['field_basic_table_table']['und'] = $form_state['field']['field_basic_table_table']['und']['instance']['default_value'];
+      }
+
       // Run entity information through standard submission form
       fieldable_panels_panes_entity_edit_form_submit($form, $form_state);
 
@@ -188,6 +193,11 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
           unset($form[$child]);
         }
       }
+
+      // Deal with cases where there is override title markup
+      if (!empty($form['override_title_markup'])) {
+        $form['override_title_markup']['#access'] = FALSE;
+      }
     }
   }
 }
@@ -273,7 +283,7 @@ function wetkit_magic_form_views_content_views_panes_content_type_edit_form_alte
       '#default_value' => (isset($conf['widget_title'])) ? $conf['widget_title'] : $form_state['view']->display_handler->options['title'],
     );
   }
-  
+
   // Add an option to make the widget title a link if views allows this to happen
   if (!empty($form['link_to_view']) && !empty($form['path'])) {
     $form['link_to_view']['#title'] = t('Make title a link');
@@ -440,6 +450,7 @@ function wetkit_magic_form_views_content_views_panes_content_type_edit_form_alte
     $form['exposed']['#type'] = 'fieldset';
     $form['exposed']['#title'] = t('General Settings');
     $form['exposed']['#weight'] = -30;
+    $form['exposed']['#attributes'] = array('class' => array('general-settings-fieldset'));
   }
 
   // Define a context settings fieldset if we have exposed values
