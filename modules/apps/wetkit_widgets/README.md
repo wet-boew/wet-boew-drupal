@@ -3,8 +3,8 @@ WetKit Widgets
 Creates generic widget functionality to customize wide and far
 
 Important
-* This App is based on and often pulls upstream upstream from Panopoly Admin @ drupal.org/project/panopoly_widgets
-* The latest upstream sync has been checked against commit: 811c8af (Verified)
+* This App is based on and often pulls upstream upstream from Panopoly Widgets @ drupal.org/project/panopoly_widgets
+* The latest upstream sync has been checked against commit: 9ae1791 (Verified)
 * Panopoly Theme is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly Widgets)

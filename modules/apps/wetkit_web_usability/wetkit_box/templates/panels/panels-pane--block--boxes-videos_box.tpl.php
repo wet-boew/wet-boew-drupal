@@ -23,7 +23,7 @@
 <?php endif; ?>
 <?php $tag = $title ? 'section' : 'div'; ?>
 <<?php print $tag; ?> class="<?php print $classes; ?>" <?php print $id; ?>>
-  <div class="pane-inner clearfix">
+  <div id="gcwu-video" class="pane-inner clearfix">
     <?php if ($admin_links): ?>
       <?php print $admin_links; ?>
     <?php endif; ?>

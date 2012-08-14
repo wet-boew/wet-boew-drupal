@@ -3,13 +3,56 @@
 include_once('wetkit_magic.features.inc');
 
 /**
- * Implementation of hook_form_alter()
+ * Implements hook_apps_app_info()
  */
-function wetkit_magic_form_alter(&$form, $form_state, $form_id) {
-  // Add a custom preview to the content type edit form and style edit form. This is applied in all cases, except for cases where
-  // we are customizing an entity (i.e. fieldable panels panes) because we cannot reliable regenerate a preview without saving the
-  // entity first. 
-  if ((strpos($form_id, '_content_type_edit_form') && $form_id != 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form') || $form_id == 'panels_edit_style_type_form') {
+function wetkit_magic_apps_app_info() {
+  return array(
+    'configure form' => 'wetkit_magic_configure_form',
+  );
+}
+
+/**
+ * Configuration Form for WetKit Magic
+ */
+function wetkit_magic_configure_form($form, &$form_state) {
+  $form = array();
+
+  $form['wetkit_magic_live_preview'] = array(
+    '#title' => t('Live Preview'),
+    '#type' => 'select',
+    '#required' => TRUE,
+    '#options' => array(
+      '1' => 'Enabled',
+      '0' => 'Disabled',
+    ),
+    '#default_value' => '1',
+    '#description' => t('Do you want WetKit to provide a live preview for modal content through the in place editor?'),
+  );
+
+  return system_settings_form($form);
+}
+
+/**
+ * Implements hook_module_implements_alter()
+ */
+function wetkit_magic_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'form_alter') {
+    $group = $implementations['wetkit_magic'];
+    unset($implementations['wetkit_magic']);
+    $implementations['wetkit_magic'] = $group;
+  }
+}
+
+/**
+ * Implements hook_form_alter()
+ */
+function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
+
+  /**
+   * Add a custom preview to the content type edit form and style edit form. This is applied in all cases, except for cases where
+   * we are customizing an entity (i.e. fieldable panels panes) because we cannot reliable regenerate a preview without saving.
+   */
+  if (variable_get('wetkit_magic_live_preview', 1) && (strpos($form_id, '_content_type_edit_form') || $form_id == 'panels_edit_style_type_form')) {
 
     // Start the magic
     $pane = $form_state['pane'];
@@ -28,22 +71,55 @@ function wetkit_magic_form_alter(&$form, $form_state, $form_id) {
       $style = NULL;
     }
 
-    // Determine the configuration
-    // TODO - if a cleverer person can save the entity and get a vuuid, then we can pass that
-    // as a "uuid:asds-adsa-dsad-adsd-adda-adssd" subtype and it all works wonderfully.
-    $configuration = ($form_state['rebuild'] && strpos($form_id, 'content_type_edit_form')) ? $form_state['input'] : $pane->configuration;
+    // EXPERIEMENTAL: Handling Saving a Fieldable Panel Pane To Create a Live Preview. The trick
+    // here is to make sure we properly save a version to get a vid, but don't make it the real one.
+    // NOTE - I doubt this will be very good for performance. Let's call it RC1.
+    if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form' && ($form_state['clicked_button']['#value'] == 'Update Preview' || ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id'])))) {
+      // Make sure this will not be set as reusable
+      $form_state['values']['reusable'] = NULL;
+      
+      // Do not run this through validation since it creates a wierd experience
+      $form['#validate'] = array();
 
-    // Determine the content 
-    $content = ctools_content_render($pane->type, $pane->subtype, $configuration);
+      // Run entity information through standard submission form
+      fieldable_panels_panes_entity_edit_form_submit($form, $form_state);
 
-    // Remove the clearfix for preview floating
-    // TODO - is there a cleaner way to handle this?
-    if (isset($form['aligner_start'])) {
-      $form['aligner_start']['#markup'] = str_replace('clearfix', '', $form['aligner_start']['#markup']);
+      // Properly adjust the VID if we are dealing with an existing object
+      if (!empty($form_state['entity']->old_vid)) {
+        db_query("UPDATE {fieldable_panels_panes} SET vid = :vid WHERE fpid = :fpid", array(':vid' => $form_state['entity']->old_vid, ':fpid' => $form_state['entity']->fpid));
+      }
+
+      // Then tell Fieldable Panel Panes to render the correct version
+      $pane->subtype = 'vid:' . $form_state['entity']->vid;
     }
 
+    // Make some adjustments based on the way the data is being expected
+    // TODO - this should not be necessary, so find out why!
+    if (!empty($form_state['input']['sort_by'])) {
+      $form_state['input']['exposed']['sort_by'] = $form_state['input']['sort_by'];
+      $form_state['input']['exposed']['sort_order'] = $form_state['input']['sort_order'];
+    }
+    if (!empty($form_state['input']['exposed']['more_link'])) {
+      $form_state['input']['more_link'] = $form_state['input']['exposed']['more_link'];
+      $form_state['input']['path'] = $form_state['input']['exposed']['path'];
+    }
+    if (!empty($form_state['input']['exposed']['link_to_view'])) {
+      $form_state['input']['link_to_view'] = $form_state['input']['exposed']['link_to_view'];
+      $form_state['input']['path'] = $form_state['input']['exposed']['path'];
+    }
+    if (!empty($form_state['input']['exposed']['use_pager'])) {
+      $form_state['input']['use_pager'] = $form_state['input']['exposed']['use_pager'];
+      $form_state['input']['offset'] = $form_state['input']['exposed']['offset'];
+    }
+
+    // Set the configuration and determine the content for the pane
+    $configuration = ($form_state['rebuild'] && strpos($form_id, 'content_type_edit_form')) ? $form_state['input'] : $pane->configuration;
+    $content = ctools_content_render($pane->type, $pane->subtype, $configuration);
+
     // Create the preview fieldset
-    if ($content) {
+    if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form' || $content) {
+    
+      // Create the fieldset with appropriate content
       $form['widget_preview'] = array(
         '#type' => 'fieldset',
         '#title' => 'Preview',
@@ -54,196 +130,48 @@ function wetkit_magic_form_alter(&$form, $form_state, $form_id) {
       $form['widget_preview']['preview'] = array(
         '#markup' => (!empty($style['render pane'])) ? theme($style['render pane'], array('content' => $content, 'pane' => $pane, 'display' => $display, 'style' => $style, 'settings' => $pane->style['settings'])) : theme('panels_pane', array('content' => $content, 'pane' => $pane, 'display' => $display)),
       );
+      
+      // Remove the clearfix for preview floating
+      if (isset($form['aligner_start'])) {
+        $form['aligner_start']['#markup'] = str_replace('clearfix', '', $form['aligner_start']['#markup']);
+      }
 
       // Create the preview refresh button
       $form['buttons']['preview'] = array(
         '#type' => 'button',
         '#value' => t('Update Preview'),
         '#wizard type' => 'next',
-        // '#attributes' => array('style' => 'display: none', 'class' => array('widget-preview-button', 'ctools-use-ajax', 'ctools-auto-submit-click')),
-        '#attributes' => array('class' => array('widget-preview-button', 'ctools-use-ajax', 'ctools-auto-submit-click')),
+        '#attributes' => array('style' => 'display: none', 'class' => array('widget-preview-button', 'ctools-use-ajax', 'ctools-auto-submit-click')),
       );
 
       // Autosubmit the form
-      // ctools_add_js('auto-submit');
+      ctools_add_js('auto-submit');
       $form['#attributes']['class'][] = 'ctools-auto-submit-full-form';
     }
   }
-
-  // Add customization to panel pane style form
-  if ($form_id == 'panels_edit_style_type_form') {
-
-    // Unset options for which we have no need
-    unset($form['style']['#options']['block']);
-    unset($form['style']['#options']['rounded_corners']);
-    unset($form['style']['#options']['naked']);
-
-    // Better explain that "No Style" means "Default Pane Style"
-    if (!empty($form['style']['#options']['default'])) {
-      $form['style']['#options']['default'] = t('Default Pane Style');
+  
+   /**
+   * Globally improve the buttons for the Chaos Tools Content Type Settings Forms
+   */
+  if (strpos($form_id, 'content_type_edit_form')) {
+    $form['buttons']['cancel']['#access'] = FALSE;
+    if (!empty($form['buttons']['return'])) {
+      $form['buttons']['return']['#value'] = t('Save');
     }
-
-    // Improve the UI around region style selections
-    if (!empty($form['style']['#options']['-1'])) {
-      $form['style']['#options']['-1'] = t('Default Region Style');
-      unset($form['style']['#options']['default']);
-    }
-
-    // Adding a fieldset around styling
-    $form['style'] = array('style' => $form['style']);
-    $form['style']['#type'] = 'fieldset';
-    $form['style']['#title'] = t('Style Settings');
+    $form['buttons']['#weight'] = (!empty($form['widget_preview']['#weight'])) ? ($form['widget_preview']['#weight'] +1 ): -99;
   }
 
-  // Add customization to panel pane settings form
-  if ($form_id == 'views_content_views_panes_content_type_edit_form') {
-
-    // Get the configuration
-    $conf = $form_state['conf'];
-
-    // Add the content setting fieldset
-    if (isset($form['exposed']) && count($form['exposed']) > 1) {
-      $form['exposed']['#title'] = t('General Settings');
-      $form['exposed']['#type'] = 'fieldset';
-      $form['exposed']['#weight'] = -10;
-    } 
-    else {
-      $form['exposed'] = array(
-        '#type' => 'fieldset',
-        '#title' => t('General Settings'),
-        '#weight' => -30,
-      );
-    }
-
-    // Add a widget title setting
-    $form['exposed']['widget_title'] = array(
-      '#field_prefix' => t('Title'),
-      '#type' => 'textfield',
-      '#size' => 30,
-      '#weight' => -100,
-      '#attributes' => (empty($conf['widget_title']) || empty($form_state['view']->display_handler->options['title'])) ? array('placeholder' => '<No Title>') : array(),
-      '#default_value' => (isset($conf['widget_title'])) ? $conf['widget_title'] : $form_state['view']->display_handler->options['title'],
-    );
-
-    // Change the naming of the sort order option
-    if (!empty($form['exposed']['sort_order'])) {
-      $form['exposed']['sort_order']['#title'] = t('Sort order');
-    }
-
-    // Switch all exposed filters to use field_prefix display
-    foreach($form['exposed'] as $filter => $filter_array) {
-      if (!empty($form['exposed'][$filter]['#title']) && empty($form['exposed'][$filter]['#field_prefix'])) {
-        $form['exposed'][$filter]['#field_prefix'] = $form['exposed'][$filter]['#title'];
-        unset($form['exposed'][$filter]['#title']);
-      }
-    }
-
-    // Move items per page wiget to widget area
-    if (isset($form['items_per_page'])) {
-      $form['items_per_page']['#field_prefix'] = $form['items_per_page']['#title'];
-      $form['items_per_page']['#title'] = '';
-      $form['items_per_page']['#weight'] = -90;
-      $form['exposed']['items_per_page'] = $form['items_per_page'];
-      unset($form['items_per_page']);
-    }
-
-    // Update field setting options
-    if (isset($form['fields_override'])) {
-      $form['fields_override']['#title'] = t('Field Settings');
-      $form['fields_override']['#collapsible'] = FALSE;
-      foreach($form['fields_override'] as &$field) {
-        if (is_array($field)) {
-          $field['#title'] = t('Display') . ' ' . $field['#title'];
-        }
-      }
-    }
-
-    // Determine if this is a node view.
-    $node_view = FALSE;
-    if ($form_state['view']->display_handler->options['row_plugin'] == 'node' && in_array($form_state['view']->display_handler->options['style_plugin'], array('default', 'slideshow'))) {
-      $node_view = TRUE;
-    }
-
-    if ($node_view == FALSE) {
-      if (empty($conf['view_settings'])) {
-        $conf['view_settings'] = 'fields';
-      }
-
-      // Create the fieldset and the settings selection form.
-      $form['display_type'] = array(
-        '#type' => 'fieldset',
-        '#title' => t('Display Type'),
-        // Make the weight of this fieldset dependent on the general settings fieldset.
-        '#weight' => $form['exposed']['#weight'] + 1,
-      );
-
-      $form['display_type']['view_settings'] = array(
-        '#type' => 'radios',
-        // '#title' => t('Display Type'),
-        '#default_value' => $conf['view_settings'],
-        '#options' => array(
-          'fields' => t('Fields'),
-          'nodes' => t('Content'),
-        ),
-      );
-
-      // Update the field overrides to be dependent on the view settings selection.
-      $form['fields_override']['#states'] = array(
-        'visible' => array(
-          ':input[name="view_settings"]' => array('value' => 'fields'),
-        ),
-      );
-
-      // Add the style setting fieldset.
-      $form['content_settings'] = array(
-        '#type' => 'fieldset',
-        '#title' => 'Content Settings',
-      );
-
-      // Add specific style options.
-      $form['content_settings']['view_mode'] = array(
-        '#type' => 'radios',
-        '#options' => _wetkit_magic_view_mode_options(),
-        '#default_value' => $conf['view_mode'] ? $conf['view_mode'] : 'teaser',
-        '#states' => array(
-          'visible' => array(
-            ':input[name="view_settings"]' => array('value' => 'nodes'),
-          ),
-        ),
-      );  
-    } 
-
-    // Add a custom submit handler
-    $form['#submit'][] = 'wetkit_magic_views_view_mode_pane_submit';
-  }
-
-  // Override default entity view mode behavior for fieldable panel panes.
-  if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form') {
-    $view_mode = $form['view_mode'];
-    unset($form['view_mode']);
-
-    // Remove "tokens" from the list of available view modes.
-    if (!empty($view_mode['#options']['token'])) {
-      unset($view_mode['#options']['token']);
-    }
-
-    // If we're left with only one option, don't display the dropdown.
-    if (count($view_mode['#options']) < 2) {
-      $view_type = reset(array_keys($view_mode['#options']));
-      $view_mode = array(
-        '#type' => 'value',
-        '#value' => $view_type,
-      );
-    }
-
-    // Re-insert the view mode selection under the "General settings" fieldset.
-    $form['widget_settings']['view_mode'] = $view_mode;
-  }
-
-  // Make sure that all options are inside a fieldset. Currently just supporting a known list
-  // of forms, but persumably this can be generalized.
-  if (in_array($form_id, array('wetkit_search_search_box_content_type_edit_form', 'menu_block_menu_tree_content_type_edit_form', 'ctools_node_content_content_type_edit_form'))) {
-
+  /**
+   * Globally make sure that all options are inside a fieldset. Currently just supporting a known list
+   * of forms, but persumably this can be applied to all items eventually.
+   */
+  $forms_to_improve = array(
+    'wetkit_search_search_box_content_type_edit_form',
+    'menu_block_menu_tree_content_type_edit_form',
+    'ctools_node_content_content_type_edit_form',
+  );
+  if (in_array($form_id, $forms_to_improve)) {
+  
     // Grab child elements and create the fieldset.
     $children = element_children($form);
     if (count($children) > 1) {
@@ -252,7 +180,6 @@ function wetkit_magic_form_alter(&$form, $form_state, $form_id) {
         '#title' => t('General Settings'),
         '#weight' => -30,
       );
-
 
       // Move all elements which aren't fieldsets or the submit buttons into the general settings fieldset.
       foreach ($children as $child) {
@@ -265,15 +192,432 @@ function wetkit_magic_form_alter(&$form, $form_state, $form_id) {
   }
 }
 
+/** 
+ * Implementation of hook_form_FORM_ID_alter()
+ */
+function wetkit_magic_form_fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form_alter(&$form, &$form_state, $form_id) {
+
+  // Handle the view mode
+  $view_mode = $form['view_mode'];
+  unset($form['view_mode']);
+
+  // Add custom validation function
+  if ($form_state['clicked_button']['#value'] != 'Update Preview') {
+    $form['widget_settings']['reusable']['admin_title']['#element_validate'][] = 'wetkit_magic_reusable_entity_validate';
+  }
+
+  // Remove "tokens" from the list of available view modes.
+  if (!empty($view_mode['#options']['token'])) {
+    unset($view_mode['#options']['token']);
+  }
+
+  // If we're left with only one option, don't display the dropdown.
+  if (count($view_mode['#options']) < 2) {
+    $view_type = reset(array_keys($view_mode['#options']));
+    $view_mode = array(
+      '#type' => 'value',
+      '#value' => $view_type,
+    );
+  }
+
+  // Re-insert the view mode selection under the "General settings" fieldset.
+  $form['widget_settings']['view_mode'] = $view_mode;
+    
+  // Improving the general title setting
+  if (!empty($form['widget_settings']['title'])) {
+    $form['widget_settings']['title']['#size'] = '';
+  }
+  
+  // Improving the link Options
+  if (!empty($form['widget_settings']['link'])) {
+    $form['widget_settings']['link']['path']['#size'] = '';
+    $form['widget_settings']['link']['path']['#field_prefix'] =  $form['widget_settings']['link']['path']['#title'];
+    $form['widget_settings']['link']['path']['#title'] = '';
+    $form['widget_settings']['link']['path']['#description'] = t('The URL or Drupal path from which to build the link.');
+    $form['widget_settings']['link']['link']['#description'] = '';
+  }
+  
+  // Move the reusable option to the general settings
+  if (!empty($form['reusable'])) {
+    $form['reusable']['#type'] = '';
+    $form['reusable']['#title'] = '';
+    $form['reusable']['reusable']['#title'] = t('Make this reusable');
+    $form['reusable']['admin_title']['#field_prefix'] = t('Admin Title');
+    $form['reusable']['admin_title']['#title'] = '';
+    $form['reusable']['admin_title']['#size'] = '';
+    $form['reusable']['admin_title']['#description'] = '';
+    $form['widget_settings']['reusable'] = $form['reusable'];
+    unset($form['reusable']);
+  }
+}
+
+/** 
+ * Implementation of hook_form_FORM_ID_alter()
+ *
+ * Provides customizations to the views content type settings form
+ */
+function wetkit_magic_form_views_content_views_panes_content_type_edit_form_alter(&$form, &$form_state, $form_id) {
+  // Get the configuration
+  $conf = $form_state['conf'];
+  
+  // Add a widget title setting if views allows this to be customized
+  if (!empty($form['override_title'])) {
+    $form['override_title_markup']['#access'] = FALSE;
+    $form['override_title']['#access'] = FALSE;
+    $form['override_title_text']['#access'] = FALSE;
+    $form['exposed']['widget_title'] = array(
+      '#field_prefix' => t('Title'),
+      '#type' => 'textfield',
+      '#size' => '',
+      '#weight' => -100,
+      '#default_value' => (isset($conf['widget_title'])) ? $conf['widget_title'] : $form_state['view']->display_handler->options['title'],
+    );
+  }
+  
+  // Add an option to make the widget title a link if views allows this to happen
+  if (!empty($form['link_to_view']) && !empty($form['path'])) {
+    $form['link_to_view']['#title'] = t('Make title a link');
+    $form['link_to_view']['#description'] =  '';
+    $form['link_to_view']['#id'] = 'edit-link';
+    $form['exposed']['link_to_view'] = $form['link_to_view'];
+    unset($form['link_to_view']);
+  } 
+  
+  // Add an option to make the more link available if views allows this to happen
+  if (!empty($form['more_link'])) {
+    $form['more_link']['#id'] = 'more-link';
+    $form['more_link']['#description'] = '';
+    $form['exposed']['more_link'] = $form['more_link'];
+    unset($form['more_link']);
+  }
+  
+    
+  // Update the field settings for pagers
+  if (!empty($form['use_pager']) && !empty($form['pager_id'])) {
+    $form['use_pager']['#prefix'] = '<div class="form-item container-inline">';
+    $form['exposed']['use_pager'] = $form['use_pager'];
+    $form['exposed']['pager_id'] = $form['pager_id'];
+    unset($form['use_pager']);
+    unset($form['pager_id']);
+  }
+  
+  // Handle the path value that views gives us
+  if (!empty($form['path'])) {
+    $form['path']['#description'] = t('The URL path used for linking and paging purposes. Leave blank to use the current page.');
+    $form['path']['#title'] = '';
+    $form['path']['#dependency'] = array('edit-link' => array(1), 'more-link' => array(1), 'use-pager-checkbox' => array(1));
+    $form['exposed']['path'] = $form['path'];
+    unset($form['path']);
+  }
+  
+  // Adjust the items per page and offset settings
+  if (!empty($form['items_per_page']) && !empty($form['offset'])) {
+    $form['items_per_page']['#field_prefix'] = t('Items to Show');
+    $form['items_per_page']['#title'] = '';
+    $form['items_per_page']['#description'] = t('Enter 0 to display all.');
+    $form['display_settings']['items_per_page'] = $form['items_per_page'];
+    unset($form['items_per_page']);
+    $form['offset']['#field_prefix'] = t('Items to Skip');
+    $form['offset']['#title'] = '';
+    $form['offset']['#description'] = t('Enter 0 to skip none.');
+    $form['offset']['#suffix'] = '<div class="clearfix"></div>';
+    $form['display_settings']['offset'] = $form['offset'];
+    unset($form['offset']);
+  }
+  elseif (!empty($form['items_per_page']) && empty($form['offset'])) {
+    $form['items_per_page']['#field_prefix'] = t('Items to Show');
+    $form['items_per_page']['#title'] = '';
+    $form['items_per_page']['#description'] = t('Enter 0 to display all.');
+    $form['items_per_page']['#suffix'] = '<div class="clearfix"></div>';
+    $form['display_settings']['items_per_page'] = $form['items_per_page'];
+    unset($form['items_per_page']);
+  }
+  elseif (empty($form['items_per_page']) && !empty($form['offset'])) {
+    $form['offset']['#field_prefix'] = t('Items to Skip');
+    $form['offset']['#title'] = '';
+    $form['offset']['#description'] = t('Enter 0 to skip none.');
+    $form['offset']['#suffix'] = '<div class="clearfix"></div>';
+    $form['display_settings']['offset'] = $form['offset'];
+    unset($form['offset']);
+  }
+  
+  // Adjust the sort ordering and sort by options
+  if (!empty($form['exposed']['sort_order']) && !empty($form['exposed']['sort_by'])) {
+    $form['exposed']['sort_order']['#title'] = t('Sort order');
+    $form['display_settings']['sort_order'] = $form['exposed']['sort_order'];
+    unset($form['exposed']['sort_order']);
+    $form['exposed']['sort_by']['#suffix'] = '<div class="clearfix"></div>';
+    $form['display_settings']['sort_by'] = $form['exposed']['sort_by'];
+    unset($form['exposed']['sort_by']);
+  }
+  elseif (!empty($form['exposed']['sort_order']) && empty($form['exposed']['sort_by'])) {
+    $form['exposed']['sort_order']['#title'] = t('Sort order');
+    $form['exposed']['']['#suffix'] = '<div class="clearfix"></div>';
+    $form['display_settings']['sort_order'] = $form['exposed']['sort_order'];
+    unset($form['exposed']['sort_order']);
+  }
+  elseif (empty($form['exposed']['sort_order']) && !empty($form['exposed']['sort_by'])) {
+    $form['exposed']['sort_by']['#suffix'] = '<div class="clearfix"></div>';
+    $form['display_settings']['sort_by'] = $form['exposed']['sort_by'];
+    unset($form['exposed']['sort_by']);
+  }
+
+  // Adjust the field setting options
+  if (isset($form['fields_override'])) {
+    $form['fields_override']['#title'] = t('Field Settings');
+    $form['fields_override']['#collapsible'] = FALSE;
+    foreach ($form['fields_override'] as &$field) {
+      if (is_array($field)) {
+        $field['#title'] = t('Display') . ' ' . $field['#title'];
+      }
+    }
+  }
+
+  // Determine if this is a node view. If so, add magic display type changer
+  $view_handler = $form_state['view']->display_handler;
+  if (!($view_handler->options['row_plugin'] == 'node' && in_array($view_handler->options['style_plugin'], array('default')))) {
+
+    // Default to a field view
+    if (empty($conf['view_settings'])) {
+      $conf['view_settings'] = 'fields';
+    }
+
+    // Add information about the View Mode
+    $form['display_settings']['view_settings'] = array(
+      '#type' => 'radios',
+      '#prefix' => '<div class="view-settings-wrapper"><span class="field-prefix">' . t('Display Type') . '</span>',
+      '#suffix' => '</div>',
+      '#default_value' => $conf['view_settings'],
+      '#weight' => 10,
+      '#options' => array(
+        'fields' => t('Fields'),
+        'nodes' => t('Content'),
+        'table' => t('Table'),
+      ),
+    );
+
+    // Add header column options for table views.
+    $form['display_settings']['header_type'] = array(
+      '#type' => 'select',
+      '#title' => t('Column Header'),
+      '#options' => array(
+        'none' => t('None'),
+        'titles' => t('Titles'),
+      ),
+      '#default_value' => !empty($conf['header_type']) ? $conf['header_type'] : 'none',
+      '#states' => array(
+        'visible' => array(
+          ':input[name="view_settings"]' => array('value' => 'table'),
+        ),
+      ),
+      '#weight' => 11,
+    );
+
+    // Update the field overrides to be dependent on the view settings selection.
+    $form['fields_override']['#states'] = array(
+      // The inverted logic here isn't optimal, and in the future may be better achieved via OR'd conditions.
+      // @link http://drupal.org/node/735528 @endlink
+      'invisible' => array(
+        ':input[name="view_settings"]' => array('value' => 'nodes'), 
+      ),
+    );
+  }
+
+  // Add specific style options.
+  $form['content_settings']['view_mode'] = array(
+    '#type' => 'radios',
+    '#options' => wetkit_core_view_mode_options(),
+    '#default_value' => $conf['view_mode'] ? $conf['view_mode'] : 'teaser',
+    '#states' => array(
+      'visible' => array(
+        ':input[name="view_settings"]' => array('value' => 'nodes'),
+      ),
+    ),
+  );
+   
+  // Define a general settings fieldset if we have exposed values
+  if (!empty($form['exposed']) && count(element_children($form['exposed'])) > 0) {
+    $form['exposed']['#type'] = 'fieldset';
+    $form['exposed']['#title'] = t('General Settings');
+    $form['exposed']['#weight'] = -30;
+  }
+
+  // Define a context settings fieldset if we have exposed values
+  if (!empty($form['context']) && count(element_children($form['context'])) > 0) {
+    $form['context']['#type'] = 'fieldset';
+    $form['context']['#title'] = t('Context Settings');
+    $form['context']['#weight'] = -29;
+  }
+
+  // Define a content settings fieldset if we have exposed values
+  if (!empty($form['content_settings']) && count(element_children($form['content_settings'])) > 0) {
+    $form['content_settings']['#type'] = 'fieldset';
+    $form['content_settings']['#title'] = t('Content Settings');
+    $form['content_settings']['#weight'] = -27;
+  }
+  
+  // Define a display settings fieldset if we have display options
+  if (!empty($form['display_settings']) && count(element_children($form['display_settings'])) > 0) {
+    $form['display_settings']['#type'] = 'fieldset';
+    $form['display_settings']['#title'] = t('Display Settings');
+    $form['display_settings']['#weight'] = -28;
+  }
+
+  // Add a custom submit handler to our preview and submit option
+  $form['#submit'][] = 'wetkit_magic_views_content_type_modal_submit';
+  $form['buttons']['preview']['#submit'][] = 'wetkit_magic_views_content_type_modal_submit';
+}
+
+/** 
+ * Implementation of hook_form_FORM_ID_alter().
+ *
+ * Provides customization to panel pane style form
+ */
+function wetkit_magic_form_panels_edit_style_type_form_alter(&$form, &$form_state, $form_id) {
+
+  // Unset options for which we have no need
+  unset($form['style']['#options']['block']);
+  unset($form['style']['#options']['rounded_corners']);
+  unset($form['style']['#options']['naked']);
+
+  // Better explain that "No Style" means "Default Pane Style"
+  // Move the default option to the top. Also I should have learned
+  // how to manage arrays in PHP.
+  if (!empty($form['style']['#options']['default'])) {
+    $form['style']['#options']['default'] = t('Default Pane Style');
+    $default = $form['style']['#options']['default'];
+    unset($form['style']['#options']['default']);
+    $form['style']['#options'] = array_reverse($form['style']['#options']);
+    $form['style']['#options']['default'] = $default;
+    $form['style']['#options'] = array_reverse($form['style']['#options']);
+  }
+
+  // Better title for the List Style region style plugin
+  if (!empty($form['style']['#options']['list'])) {
+    $form['style']['#options']['list'] = t('List Style');
+  }
+
+  // Improve the UI around region style selections
+  if (!empty($form['style']['#options'][0])) {
+    $form['style']['#options'][0] = t('Default Region Style');
+    if (empty($form['style']['#default_value']) || $form['style']['#default_value'] == '-1') {
+      $form['style']['#default_value'] = '0';
+    }
+    unset($form['style']['#options']['default']);
+  }
+
+  // Move custom style option to bottom of list.
+  if (!empty($form['style']['style']['#options']['stylizer'])) {
+    unset($form['style']['style']['#options']['stylizer']);
+    $form['style']['style']['#options']['stylizer'] = t('Custom Style');
+  }
+
+  // Adding a fieldset around styling
+  $form['style'] = array('style' => $form['style']);
+  $form['style']['#type'] = 'fieldset';
+  $form['style']['#title'] = t('Style Settings');
+}
+
+/**
+ * Implementation of hook_form_FORM_ID_alter().
+ *
+ * Provide customizations for the ctools stylizer edit form.
+ */
+function wetkit_magic_form_ctools_stylizer_edit_style_form_default_alter(&$form, &$form_state, $form_id) {
+
+  // Customize the settings preview button.
+  $form['top box']['preview']['submit']['#attributes'] = array(
+    'class' => array('widget-preview-button', 'ctools-use-ajax', 'ctools-auto-submit-click'),
+  );
+
+  $form['top box']['preview']['#weight'] = 5;
+
+  // Create a vertical tab element.
+  $form['style_tabs'] = array('#type' => 'vertical_tabs');
+
+  // Strip out prefixes and suffixes to allow vertical tabs to format properly.
+  unset($form['font']['#prefix']);
+  unset($form['font']['#suffix']);
+  unset($form['border']['#prefix']);
+  unset($form['border']['#suffix']);
+  unset($form['padding']['#prefix']);
+  unset($form['padding']['#suffix']);
+  unset($form['top box']['color']['#prefix']);
+  unset($form['top box']['color']['#suffix']);
+
+  // Add group info to fieldsets.
+  $form['font']['#group'] = 'style_tabs';
+  $form['border']['#group'] = 'style_tabs';
+  $form['padding']['#group'] = 'style_tabs';
+  $form['top box']['color']['#group'] = 'style_tabs';
+
+  // Conditionally process header_font and header_border as they are only present on some pages.
+  if (!empty($form['header_font'])) {
+    unset($form['header_font']['#prefix']);
+    unset($form['header_font']['#suffix']);
+    $form['header_font']['#group'] = 'style_tabs';
+  }
+
+  if (!empty($form['header_border'])) {
+    unset($form['header_border']['#prefix']);
+    unset($form['header_border']['#suffix']);
+    $form['header_border']['#group'] = 'style_tabs';
+  }
+
+  // Move panel setting options into their own fieldset.
+  if (!empty($form['panels'])) {
+    $form['general_settings'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('General Settings'),
+      '#group' => 'style_tabs',
+    );
+    $form['general_settings']['panels'] = $form['panels'];
+    unset($form['panels']);
+  }
+
+  // Autosubmit the form.
+  ctools_add_js('auto-submit');
+  $form['#attributes']['class'][] = 'ctools-auto-submit-full-form';
+}
+
+/**
+ * Implementation of hook_form_FORM_ID_alter().
+ *
+ * Provide customizations for the ctools stylizer edit choose form.
+ */
+function wetkit_magic_form_ctools_stylizer_edit_style_form_choose_alter(&$form, &$form_state, $form_id) {
+
+  // Remove the rounded corners options
+  if (!empty($form['style_base']['Basic-styles']['pane_rounded_shadow'])) {
+    unset($form['style_base']['Basic-styles']['pane_rounded_shadow']);
+  }
+  if (!empty($form['style_base']['Basic-styles']['region_rounded_shadow'])) {
+    unset($form['style_base']['Basic-styles']['region_rounded_shadow']);
+  }
+}
+
+/**
+ *  Validator to ensure that reusable entites have titles.
+ */
+function wetkit_magic_reusable_entity_validate($element, &$form_state, $form) {
+  // If the reusable entity checkbox is selected.
+  if (!empty($form_state['values']['reusable'])) {
+    // Ensure a title is present.
+    if (empty($element['#value'])) {
+      form_error($element, t('If you would like this entity to be reusable, please add a title.'));
+    }
+  }
+}
+
 /**
  * Custom submit handler to save panels pane configuration for styling
  */
-function wetkit_magic_views_view_mode_pane_submit(&$form, &$form_state) {
+function wetkit_magic_views_content_type_modal_submit(&$form, &$form_state) {
   $form_state['conf']['view_mode'] = (isset($form_state['values']['view_mode'])) ? $form_state['values']['view_mode'] : NULL;
 
   // Set the $conf['widget_title'] value. We need to do this a
   // little funky since sometimes it comes inside of $form_state['values']
-  // and sometimes it doesn't. 
+  // and sometimes it doesn't.
   if (isset($form_state['values']['exposed']['widget_title'])) {
     $form_state['conf']['widget_title'] = $form_state['values']['exposed']['widget_title'];
   }
@@ -286,7 +630,7 @@ function wetkit_magic_views_view_mode_pane_submit(&$form, &$form_state) {
 
   // Set the $conf['items_per_page'] value. We need to do this a
   // little funky since sometimes it comes inside of $form_state['values']
-  // and sometimes it doesn't. 
+  // and sometimes it doesn't.
   if (isset($form_state['values']['exposed']['items_per_page'])) {
     $form_state['conf']['items_per_page'] = $form_state['values']['exposed']['items_per_page'];
   }
@@ -297,39 +641,145 @@ function wetkit_magic_views_view_mode_pane_submit(&$form, &$form_state) {
     $form_state['conf']['items_per_page'] = NULL;
   }
 
+  // Set the $conf['sort_by'] value. We need to do this a
+  // little funky since sometimes it comes inside of $form_state['values']
+  // and sometimes it doesn't.
+  if (isset($form_state['values']['display_settings']['sort_by'])) {
+    $form_state['conf']['exposed']['sort_by'] = $form_state['values']['display_settings']['sort_by'];
+  } 
+  elseif (isset($form_state['values']['sort_by'])) {
+    $form_state['conf']['exposed']['sort_by'] = $form_state['values']['sort_by'];
+  }   
+  else {
+    $form_state['conf']['exposed']['sort_by'] = NULL;
+  } 
+
+  // Set the $conf['sort_order'] value. We need to do this a
+  // little funky since sometimes it comes inside of $form_state['values']
+  // and sometimes it doesn't.
+  if (isset($form_state['values']['display_settings']['sort_order'])) {
+    $form_state['conf']['exposed']['sort_order'] = $form_state['values']['display_settings']['sort_order'];
+  } 
+  elseif (isset($form_state['values']['sort_order'])) {
+    $form_state['conf']['exposed']['sort_order'] = $form_state['values']['sort_order'];
+  }   
+  else {
+    $form_state['conf']['exposed']['sort_order'] = NULL;
+  } 
+
+  // Set the $conf['use_pager'] value. We need to do this a
+  // little funky since sometimes it comes inside of $form_state['values']
+  // and sometimes it doesn't.
+  if (isset($form_state['values']['display_settings']['use_pager'])) {
+    $form_state['conf']['use_pager'] = $form_state['values']['display_settings']['use_pager'];
+  } 
+  elseif (isset($form_state['values']['use_pager'])) {
+    $form_state['conf']['use_pager'] = $form_state['values']['use_pager'];
+  }   
+  else {
+    $form_state['conf']['use_pager'] = NULL;
+  } 
+  
+  // Set the $conf['pager_id'] value. We need to do this a
+  // little funky since sometimes it comes inside of $form_state['values']
+  // and sometimes it doesn't.
+  if (isset($form_state['values']['display_settings']['pager_id'])) {
+    $form_state['conf']['pager_id'] = $form_state['values']['display_settings']['pager_id'];
+  } 
+  elseif (isset($form_state['values']['pager_id'])) {
+    $form_state['conf']['pager_id'] = $form_state['values']['pager_id'];
+  }   
+  else {
+    $form_state['conf']['pager_id'] = NULL;
+  } 
+
+  // Set the $conf['offset'] value. We need to do this a
+  // little funky since sometimes it comes inside of $form_state['values']
+  // and sometimes it doesn't.
+  if (isset($form_state['values']['display_settings']['offset'])) {
+    $form_state['conf']['offset'] = $form_state['values']['display_settings']['offset'];
+  } 
+  elseif (isset($form_state['values']['offset'])) {
+    $form_state['conf']['offset'] = $form_state['values']['offset'];
+  }   
+  else {
+    $form_state['conf']['offset'] = NULL;
+  } 
+
+  // Set the $conf['link_to_view'] value. We need to do this a
+  // little funky since sometimes it comes inside of $form_state['values']
+  // and sometimes it doesn't.
+  if (isset($form_state['values']['exposed']['link_to_view'])) {
+    $form_state['conf']['link_to_view'] = $form_state['values']['exposed']['link_to_view'];
+  } 
+  elseif (isset($form_state['values']['link_to_view'])) {
+    $form_state['conf']['link_to_view'] = $form_state['values']['link_to_view'];
+  }   
+  else {
+    $form_state['conf']['link_to_view'] = NULL;
+  } 
+  
+  // Set the $conf['more_link'] value. We need to do this a
+  // little funky since sometimes it comes inside of $form_state['values']
+  // and sometimes it doesn't.
+  if (isset($form_state['values']['exposed']['more_link'])) {
+    $form_state['conf']['more_link'] = $form_state['values']['exposed']['more_link'];
+  } 
+  elseif (isset($form_state['values']['more_link'])) {
+    $form_state['conf']['more_link'] = $form_state['values']['more_link'];
+  }   
+  else {
+    $form_state['conf']['more_link'] = NULL;
+  } 
+
+  // Set the $conf['path'] value. We need to do this a
+  // little funky since sometimes it comes inside of $form_state['values']
+  // and sometimes it doesn't.
+  if (isset($form_state['values']['exposed']['path'])) {
+    $form_state['conf']['path'] = $form_state['values']['exposed']['path'];
+  } 
+  elseif (isset($form_state['values']['link_to_view'])) {
+    $form_state['conf']['path'] = $form_state['values']['path'];
+  }   
+  else {
+    $form_state['conf']['path'] = NULL;
+  } 
+  
   // Save the view settings field is present in the data.
   if (isset($form_state['values']['view_settings'])) {
     $form_state['conf']['view_settings'] = $form_state['values']['view_settings'];
   }
+  if (!empty($form_state['values']['header_type'])) {
+    $form_state['conf']['header_type'] = $form_state['values']['header_type'];
+  }
 }
 
 /**
- * Implementation of hook_views_pre_render()
+ * Implements hook_views_pre_render()
  */
 function wetkit_magic_views_pre_render(&$view) {
   if (isset($view->display_handler->options['pane_conf'])) {
     $conf = $view->display_handler->options['pane_conf'];
-
+  
     // Set the view title depending on where it comes. We do this a little
     // funky since sometimes it comes inside of $form_state['values'] and 
     // sometimes it doesn't.
     if (isset($conf['widget_title']) || isset($conf['exposed']['widget_title'])) {
       $view->display_handler->options['title'] = (isset($conf['exposed']['widget_title'])) ? $conf['exposed']['widget_title'] : $conf['widget_title']; 
+      $view->build_info['title'] = (isset($conf['exposed']['widget_title'])) ? $conf['exposed']['widget_title'] : $conf['widget_title']; 
     }
 
-    // Determien that this was previously a field view, which has been overridden to a node view in the pane config.
+    // Determine that this was previously a field view, which has been overridden to a node view in the pane config.
     if (!empty($conf['view_settings']) && $conf['view_settings'] == 'nodes' && empty($view->style_plugin->row_plugin->nodes)) {
-      
+
       // Reconstruct the nodes array which a node row style expects.
       if (!empty($view->result)) {
         $nids = array();
         foreach ($view->result as $result) {
           $nids[] = $result->nid;
         }
-
         $nodes = node_load_multiple($nids);
       }
-
 
       // Change the row plugin.
       if (!empty($nodes)) {
@@ -340,7 +790,26 @@ function wetkit_magic_views_pre_render(&$view) {
         $view->style_plugin->row_plugin->nodes = $nodes;
       }
     }
-
+    // Set the style plugin to a table style.
+    else if (!empty($conf['view_settings']) && $conf['view_settings'] == 'table') {
+      $row_plugin = $view->style_plugin->row_plugin;
+      $view->style_plugin = views_get_plugin('style', 'table');
+      $view->style_plugin->row_plugin = $row_plugin;
+      $view->style_plugin->view =& $view;
+      $view->style_plugin->display =& $view->display_handler->display;
+      
+      // Set or remove header labels depending on user selection.
+      if (!empty($conf['header_type']) && $conf['header_type'] == 'titles') {
+        foreach ($view->field as &$field) {
+          $field->options['label'] = $field->options['ui_name'];
+        }
+      }
+      else {
+        foreach ($view->field as &$field) {
+          $field->options['label'] = NULL;
+        }
+      }
+  }
 
     // Set the view mode
     if (isset($conf['view_mode'])) {
@@ -350,39 +819,12 @@ function wetkit_magic_views_pre_render(&$view) {
 }
 
 /**
- * Implementation of hook_module_implements_alter()
- */
-function wetkit_magic_module_implements_alter(&$implementations, $hook) {
-  if ($hook == 'form_alter') {
-    $group = $implementations['wetkit_magic'];
-    unset($implementations['wetkit_magic']);
-    $implementations['wetkit_magic'] = $group;
-  }
-}
-
-/**
- * Helpfer function to get view modes
- */
-function _wetkit_magic_view_mode_options() {
-  $entity_info = entity_get_info('node');
-  $options = array();
-  if (!empty($entity_info['view modes'])) {
-    foreach ($entity_info['view modes'] as $mode => $settings) {
-      if (!in_array($mode, array('rss', 'search_index', 'search_result', 'token'))) {
-        $options[$mode] = $settings['label'];
-      }
-    }
-  }
-  return $options;
-}
-
-/**
  * Preprocess the panels_ipe_toolbar to change text for IPE buttons
  */
 function wetkit_magic_preprocess_panels_ipe_toolbar(&$vars) {
-  foreach($vars['buttons'] as $panel_context_id => $panel_context) {
-    foreach($panel_context as $button_name => $button) {
-      switch($button_name) {
+  foreach ($vars['buttons'] as $panel_context_id => $panel_context) {
+    foreach ($panel_context as $button_name => $button) {
+      switch ($button_name) {
         case 'panels-ipe-startedit':
           $vars['buttons'][$panel_context_id][$button_name]['#title'] = 'Customize this page';
           break;
@@ -400,7 +842,7 @@ function wetkit_magic_preprocess_panels_ipe_toolbar(&$vars) {
 function wetkit_magic_preprocess_panels_add_content_modal(&$vars) {
   // Generate the pane preview
   if (!empty($vars['categories'][$vars['category']]['content'])) {
-    foreach($vars['categories'][$vars['category']]['content'] as &$plugin) {
+    foreach ($vars['categories'][$vars['category']]['content'] as &$plugin) {
       $pane = panels_new_pane($plugin['type_name'], $plugin['subtype_name'], TRUE);
       $display = $vars['renderer']->display;
       $context = $vars['renderer']->display->context;
@@ -437,12 +879,12 @@ function wetkit_magic_process_panels_add_content_modal(&$vars) {
       $vars['columns'][$which] = '';
     }
 
-    // Readd the column data with our preview functionality
+    // Read the column data with our preview functionality
     $count = 0;
     foreach ($titles as $title) {
       $which = floor($count++ / $col_size) + 1;
       $content[$title]['title'] = 'Add';
-      $vars['columns'][$which] .= '<fieldset class="widget-preview"><legend><div class="widget-preview-title">' .  theme('panels_add_content_link', array('renderer' => $vars['renderer'], 'region' => $vars['region'], 'content_type' => $content[$title])) . '</div><span class="fieldset-legend">' . $title . '</span></legend><div class="fieldset-wrapper">' . $content[$title]['preview'] . '</div></fieldset>';
+      $vars['columns'][$which] .= '<fieldset class="widget-preview"><legend><div class="widget-preview-title">' . theme('panels_add_content_link', array('renderer' => $vars['renderer'], 'region' => $vars['region'], 'content_type' => $content[$title])) . '</div><span class="fieldset-legend">' . $title . '</span></legend><div class="fieldset-wrapper">' . $content[$title]['preview'] . '</div></fieldset>';
     }
   }
 }

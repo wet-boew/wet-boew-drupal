@@ -1,0 +1,78 @@
+/** 
+ * General CSS Styling for WetKit
+ */
+.ctools-button, 
+.ctools-dropbutton {
+  background-color: #F3F3F3;
+  background-image: -moz-linear-gradient(center bottom, #e6e6e6 0%, #fefefe 100%);
+  border: 1px solid #CCCCCC;
+  border-radius: 4px 4px 4px 4px;
+  color: black;
+  padding: 0px 10px 0px 4px; 
+}
+
+.ctools-button {
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+  line-height: 1;
+}
+
+.ctools-button:hover {
+  cursor: pointer; 
+}
+
+.ctools-button .ctools-content {
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+
+.ctools-button .ctools-content ul {
+  list-style-image: none;
+  list-style-type: none; 
+  padding: 0px;
+} 
+
+.ctools-button .ctools-content ul li {
+  line-height: 1.3333; 
+}
+
+.ctools-button .ctools-link {
+  margin-left: 3px;
+  padding-left: 3px;
+  border-left: 2px solid #CCC; 
+}
+
+.ctools-dropbutton .ctools-link {
+  margin-left: 3px;
+  padding-left: 3px;
+  border-left: 1px solid #CCC; 
+}
+
+.ctools-button ul {
+  padding-left: 4px; 
+}
+
+.ctools-dropbutton ul {
+  padding-left: 4px; 
+}
+
+.ctools-button a, 
+.ctools-dropbutton a {
+  color: black;
+  padding: 0px;
+  background-image: none;
+  background-color: transparent;
+  border: 0 none; 
+}
+
+.ctools-button .ctools-link a, 
+.ctools-dropbutton .ctools-link a {
+  border-bottom: 0 solid transparent;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-style: solid;
+  border-width: 4px 4px 0;
+  font-weight: normal;
+  margin-left: 5px; 
+}

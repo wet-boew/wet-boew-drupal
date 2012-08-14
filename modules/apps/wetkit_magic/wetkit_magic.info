@@ -10,6 +10,7 @@ dependencies[] = menu
 dependencies[] = node
 dependencies[] = page_manager
 dependencies[] = panels_ipe
+dependencies[] = wetkit_core
 dependencies[] = strongarm
 apps[server][] = local
 apps[manifests][] = app/manifest.app

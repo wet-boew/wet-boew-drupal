@@ -28,9 +28,9 @@ function wetkit_install_tasks(&$install_state) {
     'type' => 'form',
   );
 
-  // Set up the Local Apps install task
-  $local_server = array(
-    'machine name' => 'local',
+  // Set up the WetKit Local Apps install task
+  $wetkit_local_server = array(
+    'machine name' => 'wetkit',
     'default apps' => array(
       'wetkit_admin',
       'wetkit_core',
@@ -60,13 +60,13 @@ function wetkit_install_tasks(&$install_state) {
       'wetkit_web_usability',
     ),
   );
-  $tasks = $tasks + apps_profile_install_tasks($install_state, $local_server);
+  $tasks = $tasks + apps_profile_install_tasks($install_state, $wetkit_local_server);
 
   // Rename one of the default apps tasks. In the case of a non-interactive
   // installation, apps_profile_install_tasks() never defines this task, so we
   // need to make sure we don't accidentally create it when it doesn't exist.
-  if (isset($tasks['apps_profile_apps_select_form_local'])) {
-    $tasks['apps_profile_apps_select_form_local']['display_name'] = t('Install apps for WetKit (local)');
+  if (isset($tasks['apps_profile_apps_select_form_wetkit'])) {
+    $tasks['apps_profile_apps_select_form_wetkit']['display_name'] = t('Install local apps for WetKit');
   }
 
   // Set up the theme selection and configuration tasks
@@ -185,7 +185,7 @@ function wetkit_batch_processing(&$install_state) {
 function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
 
   // If App Manifest Exists
-  if (isset($_SESSION['apps_manifest'])) {
+  //if (isset($_SESSION['apps_manifest'])) {
     // For some things there are no need
     $form['apps_message']['#access'] = FALSE;
     $form['apps_fieldset']['apps']['#title'] = NULL;
@@ -193,7 +193,7 @@ function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
     // Improve style of apps selection form
     if (isset($form['apps_fieldset'])) {
       $options = array();
-      $manifest = apps_manifest(apps_servers('local'));
+      $manifest = apps_manifest(apps_servers('wetkit'));
       foreach($manifest['apps'] as $name => $app) {
         if ($name != '#theme') {
           $options[$name] = '<strong>' . $app['name'] . '</strong><p><div class="admin-options"><div class="form-item">' . theme('image', array('path' => $app['logo']['path'], 'height' => '32', 'width' => '32')) . '</div>' . $app['description'] . '</div></p>';
@@ -209,7 +209,7 @@ function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
 
     // Remove the "skip this step" option since why would we want that?
     $form['actions']['skip']['#access'] = FALSE;
-  }
+  //}
 }
 
 /**
@@ -220,17 +220,17 @@ function wetkit_apps_servers_info() {
   $profile = variable_get('install_profile', 'wetkit');
   $info =  drupal_parse_info_file(drupal_get_path('profile', $profile) . '/' . $profile . '.info');
   return array(
-    'local' => array(
-      'title' => 'Local',
+    'wetkit' => array(
+      'title' => 'WetKit (Local)',
       'description' => 'Apps for the Web Experience Toolkit Drupal distro',
       'featured app' => 'wetkit_web_usability',
       'manifest' => '',
     ),
-    //'wetkit' => array(
-    //  'title' => 'wetkit',
-    //  'description' => 'Apps for the Web Experience Toolkit Drupal distro',
-    //  'manifest' => 'http://wetkitappdev.devcloud.acquia-sites.com/app/query/WetKit%20App%20Server',
-    //),
+    'wetkit_apps' => array(
+      'title' => 'WetKit (External)',
+      'description' => 'Apps for the Web Experience Toolkit Drupal distro',
+      'manifest' => 'http://wetkitappdev.devcloud.acquia-sites.com/app/query/WetKit%20App%20Server',
+    ),
   );
 }
 

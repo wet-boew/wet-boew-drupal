@@ -70,14 +70,11 @@ projects[panels][version] = 3.x-dev
 projects[panels][subdir] = contrib
 projects[panels][type] = module
 projects[panels][download][type] = git
-projects[panels][download][revision] = 33c439b
+projects[panels][download][revision] = 369c214
 projects[panels][download][branch] = 7.x-3.x
-projects[panels][patch][1690124] = http://drupal.org/files/1690124-hide-ipe-toolbal-with-open-modal_2.patch
-projects[panels][patch][1711302] = http://drupal.org/files/1711302-panels_ipe_shorten_add_language_conditional_on_1690124.patch
-projects[panels][patch][1711494] = http://drupal.org/files/1711494-double-ids.patch
+projects[panels][patch][1711302] = http://drupal.org/files/1711302-improve-ipe-icons-for-add-content.patch
 projects[panels][patch][1549660] = http://drupal.org/files/1549660-list-region-style-dont-render-empty-placeholder.patch
-projects[panels][patch][1493130] = http://drupal.org/files/1493130-1.patch
-projects[panels][patch][1549660] = http://drupal.org/files/1549660-allow-region-style-settings_panopoly_2.patch
+;projects[panels][patch][1690124] = http://drupal.org/files/1690124-hide-ipe-toolbal-with-open-modal_2.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/panels-add-hooks-to-integrate-i18n_panels-1179034-41.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/uuids-for-exported-pids-1277908-19.patch
 
@@ -293,6 +290,7 @@ projects[apps][patch][1479164] = http://drupal.org/files/1479164-apps-has-write-
 projects[apps][patch][1561652] = http://drupal.org/files/1561652-apps-allow-drush-site-install-patch-reroll-1479164.patch
 projects[apps][patch][1721538] = http://drupal.org/files/1721538-rename-app-images-not-replace.patch
 projects[apps][patch][1721548] = http://drupal.org/files/1721548-silent-success-condition-profile.patch
+projects[apps][patch][1665048] = http://drupal.org/files/reject-broken-images-1665048-2.patch
 
 projects[defaultcontent][version] = 1.0-alpha5
 projects[defaultcontent][type] = module

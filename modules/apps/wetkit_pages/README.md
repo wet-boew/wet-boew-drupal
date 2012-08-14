@@ -4,7 +4,7 @@ Provides a basic page, suitable for Panelizing
 
 Customizations
 * This App is based on and often pulls upstream upstream from Panopoly Pages @ drupal.org/project/panopoly_pages
-* The latest upstream sync has been checked against commit: cf820a1 (Not Fully Merged)
+* The latest upstream sync has been checked against commit: ce92572 (Not Fully Merged)
 * Panopoly Demo is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly Pages)

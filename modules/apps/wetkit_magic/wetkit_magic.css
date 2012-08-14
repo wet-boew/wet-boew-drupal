@@ -1,5 +1,5 @@
 /**
- * WetKit Modal Magic Styles
+ * Wetkit Modal Magic Styles
  */
 
 /**
@@ -51,14 +51,19 @@ div.ctools-ajaxing {
   background-image: url("images/status-active.gif");
   background-position: center center;
   background-repeat: no-repeat;
-  height: 16px;
+  min-height: 16px;
   opacity: .9;
   padding: 3px;
   width: 16px;
+  vertical-align: middle;
+}
+
+.ajax-progress-throbber .message {
+  display: none;
 }
 
 /**
- * Custom styling for the WetKit Theme functionality
+ * Custom styling for Changing Layout Feature
 */
 #panels-layout-category-WetKit {
   margin: 3% 6%;
@@ -88,16 +93,78 @@ div.ctools-ajaxing {
 /**
  * Custom styling for exposed views filter options
  */
-.form-item-exposed-sort-order, 
-.form-item-exposed-sort-by {
+#modal-content .form-item-offset,
+#modal-content .form-item-items-per-page,
+#modal-content .form-item-sort-order, 
+#modal-content .form-item-sort-by {
   float: left;
+  width: 175px;
 }
 
-.form-item-exposed-sort-order {
-  padding-left: 20px;
+#modal-content .form-item-offset,
+#modal-content .form-item-sort-order {
   clear: none;
 }
 
-#views-exposed-pane div.form-item {
+#modal-content .form-item-sort-order label,
+#modal-content .form-item-sort-by label {
+  float: left;
+  font-weight: normal;
+  margin-right: 5px;
+  width: auto;
+  margin-top: 3px;
+  font-size: 100%;
+}
+
+#modal-content .form-item-exposed-pager-id label {
+  font-weight: normal;
+}
+
+#modal-content #edit-context label {
+  float: left;
+  font-weight: normal;
+  width: auto;
+  margin-top: 2px;
+  margin-right: 5px;
+}
+
+#modal-content #views-exposed-pane div.form-item {
   display: inline;
+}
+
+#modal-content .form-item-view-settings {
+  display:inline;
+  margin-left: 5px;
+}
+
+/* Handle the Header Type Setting Element */
+#modal-content .form-item-header-type label {
+  display:inline;
+  clear: none;
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+#modal-content .form-item-header-type select {
+  display: inline;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+#modal-content .view-settings-wrapper .field-prefix {
+  padding-right: 5px;
+}
+
+#modal-content .view-settings-wrapper .form-radios {
+  display: inline;
+  padding-right: 5px;
+}
+
+/**
+ * CSS Styles for the Landing Page Wizard
+ */
+#ctools-stylizer-edit-style-form-choose .wizard-trail,
+#ctools-stylizer-edit-style-form-default .wizard-trail {
+  display: none;
 }

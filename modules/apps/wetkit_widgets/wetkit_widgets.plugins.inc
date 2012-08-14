@@ -255,7 +255,7 @@ function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instanc
     );
   }
 
-  if ($instance['widget']['type'] == 'wetkit_tabbed_interface_form') {
+if ($instance['widget']['type'] == 'wetkit_tabbed_interface_form') {
    
     // Make it a multipart form  
     $form['#attributes']['enctype'] = 'multipart/form-data';
@@ -294,7 +294,7 @@ function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instanc
       '#default_value' => isset($items[$delta]['description']) ? $items[$delta]['description'] : NULL,
     );
   }
-  
+
   return $element;
 }
 
@@ -376,8 +376,13 @@ function wetkit_widgets_field_prepare_view($entity_type, $entities, $field, $ins
 function theme_wetkit_spotlight_view($variables) {
   $title = $variables['items']['title'];
   $description = $variables['items']['description'];
-  $image_entity = entity_uuid_load('file', array($variables['items']['uuid']));
-  $image = file_load(array_pop($image_entity)->fid);
+  if (module_exists('uuid')) {
+    $image_entity = entity_uuid_load('file', array($variables['items']['uuid']));
+    $image = file_load(array_pop($image_entity)->fid);
+  }
+  else {
+    $image = (object) $variables['items'];
+  }
   $link = $variables['items']['link'];
   $settings = $variables['settings'];
 
@@ -401,8 +406,13 @@ function theme_wetkit_spotlight_view($variables) {
 function theme_wetkit_tab_interface_view($variables) {
   $title = $variables['items']['title'];
   $description = $variables['items']['description'];
-  $image_entity = entity_uuid_load('file', array($variables['items']['uuid']));
-  $image = file_load(array_pop($image_entity)->fid);
+  if (module_exists('uuid')) {
+    $image_entity = entity_uuid_load('file', array($variables['items']['uuid']));
+    $image = file_load(array_pop($image_entity)->fid);
+  }
+  else {
+    $image = (object) $variables['items'];
+  }
   $link = $variables['items']['link'];
   $settings = $variables['settings'];
   

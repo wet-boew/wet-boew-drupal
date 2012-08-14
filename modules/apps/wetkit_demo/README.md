@@ -4,7 +4,7 @@ Demo content and functionality to help show the power of WetKit
 
 Customizations
 * This App is based on and often pulls upstream upstream from Panopoly Demo @ drupal.org/project/panopoly_demo
-* The latest upstream sync has been checked against commit: 347b815 (Not Fully Merged)
+* The latest upstream sync has been checked against commit: eabebc1 (Not Fully Merged)
 * Panopoly Demo is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key features (Panopoly Demo)

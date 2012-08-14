@@ -2,7 +2,7 @@
 
 // Plugin definition
 $plugin = array(
-  'title' => t('Accordion style'),
+  'title' => t('Accordion Style'),
   'description' => t('Display panes as accordion.'),
   'render region' => 'wetkit_theme_wetkit_accordion_style_render_region',
   'settings form' => 'wetkit_theme_wetkit_accordion_style_settings_form',
@@ -28,22 +28,25 @@ function theme_wetkit_theme_wetkit_accordion_style_render_region($vars) {
   	$regionId = 'accordion-' . $display->css_id ;
   }
 
+  // Display the Output
   $output = '<div class="drulog-panels-accordion" id="'.$regionId.'">';
- 
-  foreach ( $panes as $paneID => $pane ) {
-  	$content = $display->content[$paneID] ;
-  	$cid = $regionId .'-' . $paneID ;
-    // Add the separator if we've already displayed a pane.
-    $output .= '<h4 class="accordion-title">' . $content->title . '</h4>' ;
-    $output .= '<div class="accordion-content '.$cid.'">' . $pane . '</div>' ;
+  foreach ($panes as $paneID => $pane) {
+    if ($paneID != 'empty_placeholder') {
+      $output .= ($display->content[$paneID]->title) ? '<h4 class="accordion-title">' . $display->content[$paneID]->title . '</h4>' : '<h4 class="accordion-title">' . t('This pane needs a title!') . '</h4>';
+      $output .= '<div class="accordion-content '. $regionId . '-' . $paneID . '">' . $pane . '</div>' ;
+    } 
+  }
+  $output .= '</div>' ;
+
+  // Handle the Empty Placeholder Panels IPE Needs
+  if (!empty($panes['empty_placeholder'])) {
+    $output .= $panes['empty_placeholder'];
   }
 
-  $output .= '</div>' ;
-  
+  // Inject the Javascript
   $settingsJs = array(
   	'accordion' => array( $regionId  => array( 'options' => array('header' => 'h4.accordion-title') ) )
   );
- 
   $settingsJs['accordion'][$regionId]['options'] += $settings;
   $settingsJs['accordion'][$regionId]['options']['active'] = (int) $settingsJs['accordion'][$regionId]['options']['active'];
   drupal_add_js($settingsJs, 'setting');

@@ -3,6 +3,32 @@
 include_once('wetkit_users.features.inc');
 
 /**
+ * Implementation of hook_apps_app_info()
+ */
+function wetkit_users_apps_app_info() {
+  return array(
+    'configure form' => 'wetkit_users_configure_form',
+  );
+}
+
+/**
+ * Configuration Form for WetKit Magic
+ */
+function wetkit_users_configure_form($form, &$form_state) {
+  $form = array();
+
+  $form['wetkit_users_login_destination'] = array(
+    '#title' => t('Login Destination'),
+    '#type' => 'textfield',
+    '#required' => TRUE,
+    '#default_value' => '<front>',
+    '#description' => t('Where do you want to redirect users when the login using the standard login link? Use <front> for the Drupal frontpage.'),
+  );
+
+  return system_settings_form($form);
+}
+
+/**
  * Implementation of hook_ctools_plugin_directory()
  */
 function wetkit_users_ctools_plugin_directory($module, $plugin) {
@@ -21,39 +47,6 @@ function wetkit_users_menu_alter(&$items) {
 }
 
 /**
- * Implementation of hook_pm_existing_pages_info()
- */
-function wetkit_users_pm_existing_pages_info() {
-  $pm_existing_pages = array();
-
-  $pm_existing_page = new stdClass();
-  $pm_existing_page->api_version = 1;
-  $pm_existing_page->name = 'user_login';
-  $pm_existing_page->label = 'User Login';
-  $pm_existing_page->context = 'entity|user|uid';
-  $pm_existing_page->paths = 'user';
-  $pm_existing_pages['user_login'] = $pm_existing_page;
-
-  $pm_existing_page = new stdClass();
-  $pm_existing_page->api_version = 1;
-  $pm_existing_page->name = 'user_register';
-  $pm_existing_page->label = 'User Register';
-  $pm_existing_page->context = 'entity|user|uid';
-  $pm_existing_page->paths = 'user/register';
-  $pm_existing_pages['user_register'] = $pm_existing_page;
-
-  $pm_existing_page = new stdClass();
-  $pm_existing_page->api_version = 1;
-  $pm_existing_page->name = 'user_password';
-  $pm_existing_page->label = 'User Password';
-  $pm_existing_page->context = 'entity|user|uid';
-  $pm_existing_page->paths = 'user/password';
-  $pm_existing_pages['user_password'] = $pm_existing_page;
-
-  return $pm_existing_pages;
-}
-
-/**
  * Implementation of hook_form_alter()
  */
 function wetkit_users_form_alter(&$form, $form_state, $form_id) {
@@ -67,6 +60,21 @@ function wetkit_users_form_alter(&$form, $form_state, $form_id) {
   if ($form_id == 'user_login') {
     $form['pass']['#description'] .= '<br>' . t('If you forgot your password, !request.', array('!request' => l('request a new password', 'user/password')));
   }
+
+  // Remove the title from the user picture field
+  if ($form_id == 'user_profile_form') {
+    if (!empty($form['field_user_picture']['und'][0]['#title'])) {
+      unset($form['field_user_picture']['und'][0]['#title']);
+    }
+  }
+}
+
+/**
+ * Implementation of hook_user_login()
+ */
+function wetkit_users_user_login(&$edit, $account) {
+  // Redirect the user to the front page since it is more fun
+  $edit['redirect'] = variable_get('wetkit_users_login_destination', '<front>');
 }
 
 /**

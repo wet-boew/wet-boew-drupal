@@ -5,5 +5,5 @@ version = 1.0-beta3
 downloadable = wetkit_pages 7.x-1.0-beta3
 author = Pantheon Systems
 author_url = http://www.getpantheon.com
-screenshots[] = wetkit_search_screen_1.png
-logo = wetkit-icon.png
+screenshots[] = wetkit_pages_screenshot.png
+logo = wetkit_pages_logo.png

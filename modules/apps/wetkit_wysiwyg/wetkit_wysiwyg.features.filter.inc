@@ -10,7 +10,7 @@
 function wetkit_wysiwyg_filter_default_formats() {
   $formats = array();
 
-  // Exported format: HTML
+  // Exported format: HTML.
   $formats['wetkit_html_text'] = array(
     'format' => 'wetkit_html_text',
     'name' => 'HTML',
@@ -201,7 +201,7 @@ function wetkit_wysiwyg_filter_default_formats() {
     ),
   );
 
-  // Exported format: WYSIWYG
+  // Exported format: WYSIWYG.
   $formats['wetkit_wysiwyg_text'] = array(
     'format' => 'wetkit_wysiwyg_text',
     'name' => 'WYSIWYG',

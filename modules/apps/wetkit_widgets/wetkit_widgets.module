@@ -7,9 +7,7 @@ include_once('wetkit_widgets.plugins.inc');
  * Implementation of hook_ctools_plugin_directory()
  */
 function wetkit_widgets_ctools_plugin_directory($module, $plugin) {
-  if ($module == 'page_manager' || $module == 'panels') {
-    return 'plugins/' . $plugin;
-  }
+  return 'plugins/' . $plugin;
 }
 
 /**
@@ -27,9 +25,30 @@ function wetkit_widgets_ctools_content_subtype_alter(&$subtype, &$plugin) {
     $subtype['admin js'] = array(drupal_get_path('module', 'menu_block') . '/menu-block.js');
   }
 
+  // Modify the general content item to appear in the generic content sidebar area
+  if ($plugin['module'] == 'views_content' && $subtype['title'] == 'Piece of Content') {
+    $subtype['category'][0] = 'Custom';
+    $subtype['top level'] = TRUE;
+    $subtype['title'] = 'Add content item';
+    $subtype['icon'] = drupal_get_path('module', 'wetkit_widgets') . '/images/icon_content_item.png';
+  }
+
+  // Modify the general content listing to appear in the generic content sidebar area
+  if ($plugin['module'] == 'views_content' && $subtype['title'] == 'List of Content') {
+    $subtype['category'][0] = 'Custom';
+    $subtype['top level'] = TRUE;
+    $subtype['title'] = 'Add content list';
+    $subtype['icon'] = drupal_get_path('module', 'wetkit_widgets') . '/images/icon_content_list.png';
+  }
+
   // Modify the plugins so we do away with this "node" and "entity" thing
   if ($subtype['category'] == 'Node' || $subtype['category'] == 'Entity' || $subtype['category'] == 'User') {
-    $subtype['category'] = 'Page Content';
+    $subtype['category'] = t('Page Content');
+  }
+
+  // Modify the plugins so we have consistent language around "form" content
+  if ($subtype['category'] == 'Form') {
+    $subtype['category'] = t('Form Content');
   }
 }
 
@@ -68,6 +87,15 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
     $form['widget_settings']['link'] = $form['link'];
     unset($form['link']);
 
+    // Set proper display mode options for existing content bundles.  
+    if (!empty($form['#entity']) && $form['#entity']->bundle == 'existing_content') {
+      $form['field_view_mode'][LANGUAGE_NONE]['#options'] = wetkit_core_view_mode_options();
+      $form['field_view_mode'][LANGUAGE_NONE]['#required'] = TRUE;
+      $view_mode =  $form['#entity']->field_view_mode[LANGUAGE_NONE][0]['value'];
+      $form['field_view_mode'][LANGUAGE_NONE]['#default_value'] = !empty($view_mode) ? $view_mode : 'full';
+    }
+
+
     // Find file / image fields and ensure they are using a FID instead of a UUID.
     foreach($form as $key => $value) {
       if (substr($key, 0, 6) == 'field_') {
@@ -84,7 +112,6 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
         }
       }
     }
-    
 
     // Improve the reusable interface
     $form['reusable']['#title'] = t('Reusable Settings');
@@ -140,7 +167,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_link.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
+      'bundle argument' => 4,
       'real path' => 'admin/structure/fieldable-panels-panes/manage/quick-links',
       'access arguments' => array('administer fieldable panels panes'),
     ),
@@ -154,7 +181,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_file.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
+      'bundle argument' => 4,
       'real path' => 'admin/structure/fieldable-panels-panes/manage/basic-file',
       'access arguments' => array('administer fieldable panels panes'),
     ),
@@ -168,7 +195,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_image.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
+      'bundle argument' => 4,
       'real path' => 'admin/structure/fieldable-panels-panes/manage/image',
       'access arguments' => array('administer fieldable panels panes'),
     ),
@@ -182,7 +209,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_text.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
+      'bundle argument' => 4,
       'real path' => 'admin/structure/fieldable-panels-panes/manage/text',
       'access arguments' => array('administer fieldable panels panes'),
     ),
@@ -196,7 +223,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_map.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
+      'bundle argument' => 4,
       'real path' => 'admin/structure/fieldable-panels-panes/manage/map',
       'access arguments' => array('administer fieldable panels panes'),
     ),
@@ -210,7 +237,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_table.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
+      'bundle argument' => 4,
       'real path' => 'admin/structure/fieldable-panels-panes/manage/table',
       'access arguments' => array('administer fieldable panels panes'),
     ),
@@ -224,7 +251,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_video.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
+      'bundle argument' => 4,
       'real path' => 'admin/structure/fieldable-panels-panes/manage/video',
       'access arguments' => array('administer fieldable panels panes'),
     ),
@@ -238,12 +265,12 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_spotlight.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
+      'bundle argument' => 4,
       'real path' => 'admin/structure/fieldable-panels-panes/manage/spotlight',
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
-
+  
   // Tabbed Interface
   $entity_info['fieldable_panels_pane']['bundles']['tabbed_interface'] = array(
     'label' => t('Add tabbed interface'),
@@ -257,6 +284,22 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
+  
+  // Existing content.
+  /* TODO - Which is better? FPP implementation of Views??
+  $entity_info['fieldable_panels_pane']['bundles']['existing_content'] = array(
+    'label' => t('Add content item'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_spotlight.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/existing-content',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  ); 
+  */
 }
 
 /**
@@ -359,3 +402,17 @@ function _wetkit_widgets_preprocess_wetkit_widgets_pager_field_item(&$vars) {
   $vars['classes_array'][] = ($vars['count'] % 2) ? 'views-row-even' : 'views-row-odd';
 }
 
+/**
+ * Implementation of hook_field_display_ENTITY_TYPE_alter().
+ *
+ * Update the display settings with the option selected on the entity view mode field.
+ */
+function wetkit_widgets_field_display_fieldable_panels_pane_alter(&$display, $context) {
+  if ($context['field']['field_name'] == 'field_existing_content') {
+    $view_mode = $context['entity']->field_view_mode[LANGUAGE_NONE][0]['value'];
+
+    if (!empty($view_mode)) {
+      $display['settings']['view_mode'] = $view_mode;
+    }
+  }
+}

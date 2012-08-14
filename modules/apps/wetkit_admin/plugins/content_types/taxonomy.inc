@@ -1,7 +1,7 @@
 <?php
 
 $plugin = array(
-  'title' => t('Categories'),
+  'title' => t('Taxonomy'),
   'description' => t('This is a standard list of categories that are available'),
   'content_types' => array('categories'),
   'category' => t('Admin'),
@@ -12,9 +12,9 @@ $plugin = array(
 /**
   * Put the output for you categories type in the blocks categories.
   */
-function wetkit_admin_categories_content_type_render($subtype, $conf, $panel_args, $context) {
+function wetkit_admin_taxonomy_content_type_render($subtype, $conf, $panel_args, $context) {
   $pane = new stdClass();
-  $pane->title = t('Categories');
+  $pane->title = t('Taxonomy');
 
   // Build configuration
   $categories = array();
