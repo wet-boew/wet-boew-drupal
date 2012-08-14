@@ -20,9 +20,9 @@
   ; stylesheets[print][] = css/print.css
 
   ; Web Usability Theme - Grids
-  stylesheets[all][] = wet-boew/grids/css/responsive-1200-min.css
-  stylesheets[all][] = wet-boew/grids/css/responsive-768-min.css
-  stylesheets[all][] = wet-boew/grids/css/responsive-min.css  
+  ;stylesheets[all][] = wet-boew/grids/css/responsive-1200-min.css
+  ;stylesheets[all][] = wet-boew/grids/css/responsive-768-min.css
+  ;stylesheets[all][] = wet-boew/grids/css/responsive-min.css  
   stylesheets[all][] = wet-boew/grids/css/util-min.css
 
   ; Web Usability Theme - JS
