@@ -42,8 +42,14 @@ function wetkit_widgets_ctools_content_subtype_alter(&$subtype, &$plugin) {
   }
 
   // Modify the plugins so we do away with this "node" and "entity" thing
-  if ($subtype['category'] == 'Node' || $subtype['category'] == 'Entity' || $subtype['category'] == 'User') {
+  if ($subtype['category'] == 'Node' || $subtype['category'] == 'Entity') {
     $subtype['category'] = t('Page Content');
+  }
+  if ($subtype['category'] == 'User') {
+    $subtype['category'] = t('User Content');
+  }
+  if ($subtype['category'] == 'Taxonomy_term' || $subtype['category'] == 'Taxonomy term') {
+    $subtype['category'] = t('Category Content');
   }
 
   // Modify the plugins so we have consistent language around "form" content

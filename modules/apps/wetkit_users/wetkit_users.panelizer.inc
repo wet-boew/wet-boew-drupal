@@ -192,6 +192,29 @@ function wetkit_users_panelizer_defaults() {
     $pane->locks = array();
     $display->content['new-4'] = $pane;
     $display->panels['contentmain'][1] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'contentmain';
+    $pane->type = 'entity_field_extra';
+    $pane->subtype = 'user:summary';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-5'] = $pane;
+    $display->panels['contentmain'][2] = 'new-5';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
@@ -230,7 +253,7 @@ function wetkit_users_panelizer_defaults() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'column1';
     $pane->type = 'entity_field';
     $pane->subtype = 'user:field_user_picture';
@@ -243,7 +266,7 @@ function wetkit_users_panelizer_defaults() {
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'image_style' => 'wetkit_image_full',
+        'image_style' => 'wetkit_image_half',
         'image_link' => 'content',
       ),
       'context' => 'panelizer',
@@ -258,10 +281,10 @@ function wetkit_users_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['column1'][0] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['column1'][0] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = 'column2';
     $pane->type = 'token';
     $pane->subtype = 'user:name';
@@ -281,10 +304,10 @@ function wetkit_users_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['column2'][0] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['column2'][0] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = 'column2';
     $pane->type = 'entity_field';
     $pane->subtype = 'user:field_user_about';
@@ -311,8 +334,8 @@ function wetkit_users_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['column2'][1] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['column2'][1] = 'new-8';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;

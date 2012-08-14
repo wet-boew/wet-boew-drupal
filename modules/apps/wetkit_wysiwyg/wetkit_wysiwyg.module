@@ -64,7 +64,7 @@ function wetkit_wysiwyg_filter_process_format($element) {
   // Set the element above the WYSIWYG textarea
   $element['format']['#weight'] = 1;
   $element['format']['#prefix'] = '<div class="format-toggle">';
-  $element['format']['#suffix'] = '</div>';
+  $element['format']['#suffix'] = '</div><div class="clearfix"></div>';
   unset($element['format']['#type']);
   $element['format']['format']['#title'] = 'Editor: ';
   

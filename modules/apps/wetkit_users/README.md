@@ -4,7 +4,7 @@ Maintains user accounts and user workflows
 
 Customizations
 * This App is based on and often pulls upstream upstream from Panopoly Users @ drupal.org/project/panopoly_users
-* The latest upstream sync has been checked against commit: d3814c4 (Verified)
+* The latest upstream sync has been checked against commit: ea91ca1 (Verified)
 * Panopoly Theme is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly Users)

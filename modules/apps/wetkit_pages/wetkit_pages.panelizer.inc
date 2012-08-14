@@ -23,7 +23,6 @@ function wetkit_pages_panelizer_defaults() {
   $panelizer->pipeline = 'ipe';
   $panelizer->contexts = array();
   $panelizer->relationships = array();
-  $panelizer->did = 1;
   $panelizer->access = '';
   $panelizer->view_mode = '';
   $panelizer->css_class = '';
@@ -182,7 +181,6 @@ function wetkit_pages_panelizer_defaults() {
   $panelizer->pipeline = 'standard';
   $panelizer->contexts = array();
   $panelizer->relationships = array();
-  $panelizer->did = 0;
   $panelizer->access = array();
   $panelizer->view_mode = 'default';
   $panelizer->css_class = 'page-default';
@@ -334,7 +332,6 @@ function wetkit_pages_panelizer_defaults() {
   $panelizer->pipeline = 'standard';
   $panelizer->contexts = array();
   $panelizer->relationships = array();
-  $panelizer->did = 1;
   $panelizer->access = array();
   $panelizer->view_mode = 'featured';
   $panelizer->css_class = '';
@@ -484,7 +481,6 @@ function wetkit_pages_panelizer_defaults() {
   $panelizer->pipeline = 'standard';
   $panelizer->contexts = array();
   $panelizer->relationships = array();
-  $panelizer->did = 0;
   $panelizer->access = array();
   $panelizer->view_mode = 'teaser';
   $panelizer->css_class = 'page-teaser';

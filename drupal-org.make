@@ -91,9 +91,7 @@ projects[panelizer][type] = module
 projects[panelizer][download][type] = git
 projects[panelizer][download][revision] = c1c00cb
 projects[panelizer][download][branch] = 7.x-3.x
-projects[panelizer][patch][1387634] = http://drupal.org/files/exporting_panelizer_defaults-1387634-9.patch
-projects[panelizer][patch][1555194] = http://drupal.org/files/1555194-panelizer-did-should-not-export.patch
-projects[panelizer][patch][1555194] = http://drupal.org/files/1555194-better-did-checking-on-subrecords.patch
+projects[panelizer][patch][1555194] = http://drupal.org/files/1387634-features-support-panelizer-unified.patch
 
 projects[password_policy][version] = 1.0-rc3
 projects[password_policy][type] = module
