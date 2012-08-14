@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * A panel plugin to provide administrative information about the site's taxonomies
+ */
+
 $plugin = array(
   'title' => t('Taxonomy'),
   'description' => t('This is a standard list of categories that are available'),

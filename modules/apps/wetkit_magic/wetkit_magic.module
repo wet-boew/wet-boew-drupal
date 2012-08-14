@@ -791,7 +791,7 @@ function wetkit_magic_views_pre_render(&$view) {
       }
     }
     // Set the style plugin to a table style.
-    else if (!empty($conf['view_settings']) && $conf['view_settings'] == 'table') {
+    elseif (!empty($conf['view_settings']) && $conf['view_settings'] == 'table') {
       $row_plugin = $view->style_plugin->row_plugin;
       $view->style_plugin = views_get_plugin('style', 'table');
       $view->style_plugin->row_plugin = $row_plugin;

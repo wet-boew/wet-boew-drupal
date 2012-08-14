@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * A panel plugin to provide administrative information about the site's content
+ */
+
 $plugin = array(
   'title' => t('Content'),
   'description' => t('This is a standard list of content that are available'),

@@ -65,8 +65,20 @@ div.ctools-ajaxing {
 /**
  * Custom styling for Changing Layout Feature
 */
+div.ctools-modal-content div.form-item-categories label {
+  float: left;
+  font-weight: normal;
+  margin-top: 2px;
+  margin-right: 5px;
+  width: auto;
+}
+
 #panels-layout-category-WetKit {
   margin: 3% 6%;
+}
+
+div.ctools-modal-content .panels-choose-layout .dependent-options {
+  padding-left: 0px;
 }
 
 #panels-layout-category-WetKit-wrapper .panels-layouts-category,

@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * @file
+ * Definition of the 'lime green background' panel style.
+ */
+
 $plugin = array(
   'title' => t('Lime Green Background'),
   'description' => t('Wraps panes in the Drupal light blue style.'),

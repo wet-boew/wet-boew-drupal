@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * A panel plugin to provide administrative information about the site's theme
+ */
+
 $plugin = array(
   'title' => t('Theme'),
   'description' => t('This is the current theme that is installed.'),

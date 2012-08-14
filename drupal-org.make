@@ -113,6 +113,14 @@ projects[token][version] = 1.1
 projects[token][type] = module
 projects[token][subdir] = contrib
 
+projects[layout][version] = 1.0-alpha2
+projects[layout][type] = module
+projects[layout][subdir] = contrib
+
+projects[gridbuilder][version] = 1.0-alpha2
+projects[gridbuilder][type] = module
+projects[gridbuilder][subdir] = contrib
+
 projects[views][version] = 3.3
 projects[views][type] = module
 projects[views][subdir] = contrib

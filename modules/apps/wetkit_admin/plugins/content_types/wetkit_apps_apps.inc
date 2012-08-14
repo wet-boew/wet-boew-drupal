@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * A panel plugin to provide administrative information about the site's foundational apps
+ */
+
 $plugin = array(
   'title' => t('WetKit Apps'),
   'description' => t('This is a list of the foundational apps for WetKit'),

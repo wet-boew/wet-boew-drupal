@@ -110,8 +110,8 @@ function wetkit_form_install_configure_form_alter(&$form, $form_state) {
   
   // Define a default email address if we can guess a valid one
   if (valid_email_address('admin@' . $_SERVER['HTTP_HOST'])) {
-    $form['site_information']['site_mail']['#default_value'] = 'admin@'. $_SERVER['HTTP_HOST'];
-    $form['admin_account']['account']['mail']['#default_value'] = 'admin@'. $_SERVER['HTTP_HOST'];
+    $form['site_information']['site_mail']['#default_value'] = 'admin@' . $_SERVER['HTTP_HOST'];
+    $form['admin_account']['account']['mail']['#default_value'] = 'admin@' . $_SERVER['HTTP_HOST'];
   }
   
   // Password Policy for Enterprise Level Seucrity
@@ -194,7 +194,7 @@ function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
     if (isset($form['apps_fieldset'])) {
       $options = array();
       $manifest = apps_manifest(apps_servers('wetkit'));
-      foreach($manifest['apps'] as $name => $app) {
+      foreach ($manifest['apps'] as $name => $app) {
         if ($name != '#theme') {
           $options[$name] = '<strong>' . $app['name'] . '</strong><p><div class="admin-options"><div class="form-item">' . theme('image', array('path' => $app['logo']['path'], 'height' => '32', 'width' => '32')) . '</div>' . $app['description'] . '</div></p>';
         }
@@ -284,7 +284,7 @@ function wetkit_theme_form($form, &$form_state) {
 
   // Create list of theme options, minus admin + testing + starter themes
   $themes = array();
-  foreach(system_rebuild_theme_data() as $theme) {
+  foreach (system_rebuild_theme_data() as $theme) {
    if (!in_array($theme->name, array('test_theme', 'update_test_basetheme', 'update_test_subtheme', 'block_test_theme', 'stark', 'seven', 'clf', 'clf_custom', 'genesis', 'genesis_subtheme', 'mobile_jquery', 'rubik', 'tao', 'zen', 'wetkit_adaptivetheme_settings'))) {
       $themes[$theme->name] = theme('image', array('path' => $theme->info['screenshot'])) . '<strong>' . $theme->info['name'] . '</strong><br><p><em>' . $theme->info['description'] . '</em></p><p class="clearfix"></p>';
     }

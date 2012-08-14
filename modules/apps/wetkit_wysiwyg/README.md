@@ -4,7 +4,7 @@ Integrates a WYSIWYG into Drupal
 
 Customizations
 * This App is based on and often pulls upstream upstream from Panopoly WYSIWYG @ drupal.org/project/panopoly_wysiwyg
-* The latest upstream sync has been checked against commit: 2a7a597 (Verified)
+* The latest upstream sync has been checked against commit: 8686504 (Verified)
 * Panopoly WYSIWYG is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly WYSIWYG)

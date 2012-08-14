@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * @file
+ * Definition of the 'light blue background' panel style.
+ */
+
 $plugin = array(
   'title' => t('Light Blue Background'),
   'description' => t('Wraps panes in the Drupal light blue style.'),

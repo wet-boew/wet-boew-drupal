@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * A panel plugin to provide administrative information about the site's menus
+ */
+
 $plugin = array(
   'title' => t('Menus'),
   'description' => t('This is a standard list of menus that are available'),
