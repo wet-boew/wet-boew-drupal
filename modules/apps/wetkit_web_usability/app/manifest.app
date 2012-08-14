@@ -6,4 +6,4 @@ downloadable = wetkit_web_usability 7.x-1.0-beta3
 author = Pantheon Systems
 author_url = http://www.getpantheon.com
 screenshots[] = wetkit_web_usability_screenshot.png
-logo = wetkit_wet_usability_logo.png
+logo = wetkit_web_usability_logo.png
