@@ -3,7 +3,7 @@ WetKit Users
 Helps you do more with users on your Panopoly site!
 
 Customizations
-* This App is based on and often pulls upstream upstream from Panopoly Users @ drupal.org/project/panopoly_users
+* This App is based on and often pulls upstream from Panopoly Users @ drupal.org/project/panopoly_users
 * The latest upstream sync has been checked against commit: 906a438 (Verified)
 * Panopoly Theme is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
