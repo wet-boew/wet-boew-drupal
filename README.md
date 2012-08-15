@@ -14,7 +14,7 @@ Should you require further documentation discussed below please proceed to our W
 
 ### Installation
 
-> 1. Install Drush 5.4 or higher (features Drush-Make) as per http://drupal.org/node/477684
+> 1. Install Drush 5.4 or higher (inlcudes Drush Make) as per http://drupal.org/node/477684
 >
 > 2. Install Git 1.7.11 or higher (Some lower versions of git do not apply patches from the make file with Drush Make):
 >
@@ -64,7 +64,7 @@ Example: drush -l http://drupal_wet:8082 updatedb
 
 ### Installation
 
-> 1. Install Drush 5.4 or higher (features Drush-Make) from http://drush.ws/drush_windows_installer
+> 1. Install Drush 5.4 or higher (includes Drush Make) from http://drush.ws/drush_windows_installer
 >
 > 2. Install msysgit 1.7.11 or higher available from http://msysgit.github.com (Some lower versions of git do not apply patches from the make file with Drush Make) and start a Git Bash terminal windows
 >
