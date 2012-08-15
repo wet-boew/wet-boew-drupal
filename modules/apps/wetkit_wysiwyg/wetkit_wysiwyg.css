@@ -1,15 +1,10 @@
 /**
- * CSS Overrides to TinyMCE Table Layout
- * to allow table layout necessary for
- * PDW plugin to work properly 
- */
-table.mceToolbar td {
- display: inline-block;
-}
-
-/**
  * TinyMCE WYSIWYG styling
  */
+
+table.mceToolbar td {
+   display: inline-block;
+}
 table.mceLayout {
   font-size: 1em;
 }
@@ -91,4 +86,22 @@ div .markItUpHeader ul .markItUpSeparator {
 
 .markItUpFooter {
   display: none;
+}
+
+/**
+ * WYSIWYG Toggle Styling
+ */
+.format-toggle label {
+  float: left;
+  margin-right: .5em;
+  margin-top: 2px;
+  font-weight: 400;
+  display: block;
+  width: auto;
+}
+
+.format-toggle {
+  float: right;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

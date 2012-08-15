@@ -8,15 +8,13 @@ include_once('wetkit_images.features.inc');
 function wetkit_images_media_wysiwyg_allowed_view_modes_alter(&$options, $context) {
 
   // Unset confusing options
-  if (($options['token'])) {
+  if (!empty($options['token'])) {
     unset($options['token']); 
   }
-
-  if (isset($options['media_link'])) {
+  if (!empty($options['media_link'])) {
     unset($options['media_link']);
   }
-
-  if (isset($options['full'])) {
+  if (!empty($options['full'])) {
     unset($options['full']); 
   }
 
