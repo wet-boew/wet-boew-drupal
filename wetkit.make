@@ -378,6 +378,10 @@ projects[i18nviews][type] = module
 ; Search ;
 ;;;;;;;;;;
 
+projects[custom_search][version] = 1.10
+projects[custom_search][type] = module
+projects[custom_search][subdir] = contrib
+
 projects[facetapi][version] = 1.1
 projects[facetapi][type] = module
 projects[facetapi][subdir] = contrib

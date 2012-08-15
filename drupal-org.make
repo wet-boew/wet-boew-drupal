@@ -378,6 +378,10 @@ projects[i18nviews][type] = module
 ; Search ;
 ;;;;;;;;;;
 
+projects[custom_search][version] = 1.10
+projects[custom_search][type] = module
+projects[custom_search][subdir] = contrib
+
 projects[facetapi][version] = 1.1
 projects[facetapi][type] = module
 projects[facetapi][subdir] = contrib
@@ -402,7 +406,7 @@ projects[metatag][type] = module
 projects[metatag][download][type] = git
 projects[metatag][download][revision] = 11012b12
 projects[metatag][download][branch] = 7.x-1.x
-projects[metatag][patch][1491616] = http://drupal.org/files/metatags-dublin_core_metatags-1491616-23.patch
+projects[metatag][patch][1491616] = http://drupal.org/files/metatag-dublin_core_metatags-1491616-28.patch
 
 projects[search404][version] = 1.1
 projects[search404][subdir] = contrib
