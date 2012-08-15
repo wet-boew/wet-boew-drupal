@@ -307,7 +307,21 @@ if ($instance['widget']['type'] == 'wetkit_tabbed_interface_form') {
  * Implements hook_field_presave()
  */
 function wetkit_widgets_field_presave($entity_type, $entity, $field, $instance, $langcode, &$items) {
-  image_field_presave($entity_type, $entity, $field, $instance, $langcode, $items);
+  // We need to set presave values if fids are not set. This shouldn't effect save operations
+  // form API validation will prevent this from ever happening unless previewing.
+  if (!empty($items)) {
+    foreach ($items as &$item) {
+      if (empty($item['fid'])) {
+        $fid = variable_get('wetkit_widgets_default_' . $entity->bundle . '_fid', NULL);
+        
+        if (!empty($fid)) {
+          $item['fid'] = $fid;
+        }
+      }
+    }
+
+    image_field_presave($entity_type, $entity, $field, $instance, $langcode, $items);
+  }
 }
 
 /**

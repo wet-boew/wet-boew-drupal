@@ -4,7 +4,7 @@ Allows the creation and reuse of fielded entities to add common types of content
 
 Important
 * This App is based on and often pulls upstream upstream from Panopoly Widgets @ drupal.org/project/panopoly_widgets
-* The latest upstream sync has been checked against commit: ce2cc17 (Verified)
+* The latest upstream sync has been checked against commit: 183c0bc (Verified)
 * Panopoly Theme is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly Widgets)

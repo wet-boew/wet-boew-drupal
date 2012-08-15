@@ -422,3 +422,99 @@ function wetkit_widgets_field_display_fieldable_panels_pane_alter(&$display, $co
     }
   }
 }
+
+/**
+ * Implements hook_field_attach_view_alter().
+ *
+ * Allow image and spotlight FPP's to use default image content for previews.
+ */
+function wetkit_widgets_field_attach_view_alter(&$output, $context) {
+  // If we're displaying an image FPP where an image has not yet been attached.
+  if ($context['entity_type'] == 'fieldable_panels_pane' && $context['entity']->bundle == 'image') {
+    if (empty($output['field_basic_image_image']['#items'][0])) {
+      $image = wetkit_widgets_image_field_preview($context, 'field_basic_image_image');
+
+      if (!empty($image)) {
+        $output['field_basic_image_image'] = $image;
+      }
+    }
+  }
+  // If we're displaying a spotlight FPP where an image has not yet been attached.
+  else if ($context['entity_type'] == 'fieldable_panels_pane' && $context['entity']->bundle == 'spotlight') {
+    if (empty($output['field_basic_spotlight_items']['#items'][0]) && (empty($context['entity']->field_basic_spotlight_items) || empty($context['entity']->field_basic_spotlight_items[LANGUAGE_NONE][0]['fid']))) {
+      $image = wetkit_widgets_image_field_preview($context, 'field_basic_spotlight_items');
+
+      if (!empty($image)) {
+        $output['field_basic_image_image'] = $image;
+      }
+    }
+  }
+  else if ($context['entity_type'] == 'fieldable_panels_pane' && $context['entity']->bundle == 'basic_file') {
+    if (empty($output['field_basic_file_file'])) {
+      $file = wetkit_widgets_file_field_preview($context, 'field_basic_file_file');
+     
+      if (!empty($file)) {
+        $output['field_basic_file_file'] = $file;
+      }
+    }
+  }
+}
+
+/**
+ * Helper function for displaying preview images when no images are attached to entities.
+ */
+function wetkit_widgets_image_field_preview($context, $field) {
+  if ($fid = variable_get('wetkit_widgets_default_' . $context['entity']->bundle . '_fid', NULL)) {
+    // Load the image.
+    $image = (array)file_load($fid);
+
+    // Figure out the path to the image based on the stream wrapper / filename.
+    $path = file_stream_wrapper_get_instance_by_uri($image['uri'])->getDirectoryPath();
+    // Grab the image info (dimensions).
+    $image_info = image_get_info($path . '/' . file_uri_target($image['uri']));
+  
+    if (!empty($context['entity']->{$field}[LANGUAGE_NONE][0]) && is_array($context['entity']->{$field}[LANGUAGE_NONE][0])) {
+      // Preserve any meta-deta which might be present.
+      $current_file = $context['entity']->{$field}[LANGUAGE_NONE][0];
+ 
+      $image['alt'] = empty($current_file['alt']) ? '' : $current_file['alt'];
+      $image['title'] = empty($current_file['title']) ? '' : $current_file['title'];
+      $image['description'] = empty($current_file['description']) ? '' : $current_file['description'];
+      $image['link'] = empty($current_file['link']) ? '' : $current_file['link'];
+    }
+    else {
+      // We don't have titles or alts.
+      $image['alt'] = '';
+      $image['title'] = '';
+      $image['description'] = '';
+      $image['link'] = '';
+    }
+
+    // Do some housekeeping so field_view_field gets what it expects.
+    $image['height'] = $image_info['height'];
+    $image['width'] = $image_info['width'];
+    $image['dimensions'] = array('height' => $image['height'], 'width' => $image['width']); 
+
+    // Fake field_view_field into thinking there is actually an image attached.
+    $context['entity']->{$field}[LANGUAGE_NONE][0] = $image;
+
+    // Render the result.
+    return field_view_field($context['entity_type'], $context['entity'], $field, $context['display']);
+  }
+}
+
+/**
+ * Helper function for displaying preview files when no file is attached to an entity.
+ */
+function wetkit_widgets_file_field_preview($context, $field) {
+  if ($fid = variable_get('wetkit_widgets_default_' . $context['entity']->bundle . '_fid', NULL)) {
+    $file = (array) file_load($fid);
+
+    $file['description'] = NULL;
+
+    $context['entity']->{$field}[LANGUAGE_NONE][0] = $file;
+
+    // Render the result.
+    return field_view_field($context['entity_type'], $context['entity'], $field, $context['display']);
+  }
+}

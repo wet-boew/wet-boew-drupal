@@ -209,6 +209,10 @@
   min-height: 75px;
   max-height: 375px;
 }
+
+#modal-content fieldset.widget-preview-single .fieldset-wrapper .panopoly-spotlight img {
+  width: 100%;
+}
   
 #modal-content fieldset legend {
   background: #dbdbdb;

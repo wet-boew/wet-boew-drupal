@@ -9,7 +9,9 @@
  * Implements hook_install().
  */
 function wetkit_widgets_install() {
-
+  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/vegetables-demo-image.png', 'vegetables-demo-image.png', 'image');
+  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/vegetables_demo_spotlight.jpeg', 'vegetables_demo_spotlight.jpeg', 'spotlight');
+  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/preview-file.txt', 'preview-file.txt', 'basic_file');
 }
 
 /**
@@ -62,7 +64,7 @@ function wetkit_widgets_field_schema($field) {
 
     return $schema;
   }
-  
+
   //Tabbed Interface Widget
   if ($field['type'] == 'wetkit_tabbed_interface') {
     $schema['columns']['title'] = array(
@@ -107,5 +109,32 @@ function wetkit_widgets_field_schema($field) {
     );
 
     return $schema;
+  }
+}
+
+/**
+ * Implementation of hook_update_N().
+ */
+function wetkit_widgets_update_7001(&$sandbox) {
+  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/vegetables-demo-image.png', 'vegetables-demo-image.png', 'image');
+  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/vegetables_demo_spotlight.jpeg', 'vegetables_demo_spotlight.jpeg', 'spotlight');
+  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/preview-file.txt', 'preview-file.txt', 'basic_file');
+}
+
+/**
+ * Helper function to save default file data.
+ */
+function wetkit_widgets_save_default_file_data($filepath, $filename, $type) {
+  $fid = variable_get('wetkit_widgets_default_' . $type . '_fid', NULL);
+  if (empty($fid)) {
+    $file = fopen($filepath, 'r');
+    $file_raw = fread($file, filesize($filepath));
+    $file_entity = file_save_data($file_raw, 'public://' . $filename);
+
+    if (!empty($file_entity->fid)) {
+      variable_set('wetkit_widgets_default_' . $type . '_fid', $file_entity->fid);
+
+      return $file_entity->fid;
+    }
   }
 }

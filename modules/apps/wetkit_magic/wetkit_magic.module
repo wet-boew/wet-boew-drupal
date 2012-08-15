@@ -82,8 +82,14 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
       $form['#validate'] = array();
 
       // Quick modification to get tablefield to render correctly
-      if ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id'])) {
+      if ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id']) && !empty($form_state['field']['field_basic_table_table'])) {
         $form_state['values']['field_basic_table_table']['und'] = $form_state['field']['field_basic_table_table']['und']['instance']['default_value'];
+      }
+
+      // Quick modification to get the spotlight to render correctly
+      if ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id']) && !empty($form_state['field']['field_basic_spotlight_items'])) {
+        $form_state['values']['field_basic_spotlight_items']['und'] = $form_state['field']['field_basic_spotlight_items']['und']['instance']['default_value'];
+        $form_state['values']['field_basic_spotlight_items']['und'][0]['fid'] = variable_get('wetkit_widgets_default_spotlight_fid', NULL);
       }
 
       // Run entity information through standard submission form
