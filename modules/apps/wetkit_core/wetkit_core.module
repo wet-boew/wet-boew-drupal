@@ -7,6 +7,29 @@ include_once('wetkit_core.features.inc');
  */
 function wetkit_core_init() {
 
+  // Override the Chaos Tools Modal Default Settings
+  $default_style = array(
+    'CToolsModal' => array(
+      'modalSize' => array(
+        'type' => 'scale',
+        'width' => '.9',
+        'height' => '.9',
+        'addWidth' => 0,
+        'addHeight' => 0,
+        'contentRight' => 25,
+        'contentBottom' => 75,
+      ),
+      'modalOptions' => array(
+        'opacity' => '.55',
+        'background-color' => '#FFF',
+      ),
+      'animationSpeed' => 'fast',
+      'modalTheme' => 'CToolsModalDialog',
+      'throbberTheme' => 'CToolsModalThrobber',
+    ),
+  );
+  drupal_add_js($default_style, 'setting');
+
   // Set the current page title in the breadcrumb
   $breadcrumb = drupal_get_breadcrumb();
   if (count($breadcrumb) && drupal_get_title()) {
@@ -20,6 +43,73 @@ function wetkit_core_init() {
   }
 }
 
+/**
+ * Implements hook_apps_servers_info()
+ */
+function wetkit_core_apps_servers_info() {
+  $info =  drupal_parse_info_file(drupal_get_path('module', 'wetkit_core') . '/wetkit_core.info');
+  return array(
+    'wetkit' => array(
+      'title' => 'WetKit (Local)',
+      'description' => 'Apps for the Web Experience Toolkit Drupal distro',
+      'featured app' => 'wetkit_web_usability',
+      'manifest' => '',
+    ),
+    'wetkit_apps' => array(
+      'title' => 'WetKit (External)',
+      'description' => 'Apps for the Web Experience Toolkit Drupal distro',
+      'manifest' => 'http://wetkitappdev.devcloud.acquia-sites.com/app/query/WetKit%20App%20Server',
+    ),
+  );
+}
+
+/**
+ * Implements hook_entity_info_alter().
+ *
+ * This hook is implemented to address an issue with core that can be 
+ * seen here - http://drupal.org/node/1400256. There is a patch that helps
+ * to resolve this issue, but it (a) has performance issues and (b) why
+ * patch/hack core when you can do crazy workarounds in contrib. 
+ */
+function wetkit_core_entity_info_alter(&$entity_info) {
+  if (variable_get('install_task', 'done') != 'done') {
+    _field_info_collate_fields();
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ *
+ * This hook is implemented to move our wetkit_core_entity_info_alter()
+ * hook implementation to the bottom of the ordering so as to run after the
+ * problematic entity_entity_info_alter() implementation. 
+ */
+function wetkit_core_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'entity_info_alter' || $hook == 'css_alter') {
+    // Move our hook implementation to the bottom.
+    $group = $implementations['wetkit_core'];
+    unset($implementations['wetkit_core']);
+    $implementations['wetkit_core'] = $group;
+  }
+}
+
+/**
+ * Implements hook_css_alter().
+ */
+function wetkit_core_css_alter(&$css) {
+  // Installs the jquery.ui themeroller theme to the theme.
+  if (isset($css['misc/ui/jquery.ui.theme.css'])) {
+    $css['misc/ui/jquery.ui.theme.css']['data'] = drupal_get_path('module', 'wetkit_core') . '/css/wetkit-jquery-ui-theme.css';
+  }
+  
+  if (isset($css['misc/ui/jquery.ui.dialog.css'])) {
+    unset($css['misc/ui/jquery.ui.dialog.css']);
+  }
+  
+  if (isset($css['misc/ui/jquery.ui.tabs.css'])) {
+    unset($css['misc/ui/jquery.ui.tabs.css']);
+  }
+}
 
 /**
  * Implements hook_date_format_types()
@@ -52,5 +142,21 @@ function wetkit_core_date_formats() {
   );
 
   return $formats;
+}
+
+/**
+ * Helper function to get view modes
+ */
+function wetkit_core_view_mode_options() {
+  $entity_info = entity_get_info('node');
+  $options = array();
+  if (!empty($entity_info['view modes'])) {
+    foreach ($entity_info['view modes'] as $mode => $settings) {
+      if (!in_array($mode, array('rss', 'search_index', 'search_result', 'token'))) {
+        $options[$mode] = $settings['label'];
+      }
+    }
+  }
+  return $options;
 }
 

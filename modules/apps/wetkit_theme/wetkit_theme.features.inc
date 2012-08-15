@@ -1,7 +1,8 @@
 <?php
+
 /**
  * @file
- * wetkit_theme.features.inc
+ * A features stub file for WetKit Theme
  */
 
 /**

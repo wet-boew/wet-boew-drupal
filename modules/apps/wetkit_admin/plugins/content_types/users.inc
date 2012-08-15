@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * A panel plugin to provide administrative information about the site's users
+ */
+
 $plugin = array(
   'title' => t('Users'),
   'description' => t('This is a standard list of users that are available'),

@@ -40,6 +40,5 @@ features[image][] = wetkit_image_half
 features[image][] = wetkit_image_quarter
 features[image][] = wetkit_image_spotlight
 features[image][] = wetkit_image_square
-features[image][] = wetkit_image_teaser
 features[image][] = wetkit_image_thumbnail
 stylesheets[all][] = wetkit_images.css

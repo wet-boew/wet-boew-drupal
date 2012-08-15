@@ -507,29 +507,6 @@ function wetkit_admin_views_default_views() {
   $handler->display->display_options['pane_category']['name'] = 'Admin';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['inherit_panels_path'] = '1';
-  $translatables['wetkit_admin_content'] = array(
-    t('Master'),
-    t('more'),
-    t('Filter'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('Empty Text'),
-    t('There is no content of that sort. '),
-    t('author'),
-    t('Title'),
-    t('Type'),
-    t('Author'),
-    t('Created'),
-    t('Published'),
-    t('Search'),
-    t('Admin Content'),
-    t('Admin'),
-  );
   $export['wetkit_admin_content'] = $view;
 
   $view = new view;
@@ -723,25 +700,6 @@ function wetkit_admin_views_default_views() {
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 'fields_override';
   $handler->display->display_options['inherit_panels_path'] = '1';
-  $translatables['wetkit_admin_media'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('Empty Text'),
-    t('There is no media of this type. '),
-    t('Uploader'),
-    t('Uploaded'),
-    t('Filename'),
-    t('Admin Media'),
-    t('Admin'),
-  );
   $export['wetkit_admin_media'] = $view;
 
   $view = new view;
@@ -1159,27 +1117,6 @@ function wetkit_admin_views_default_views() {
   $handler->display->display_options['pane_title'] = 'Admin Users';
   $handler->display->display_options['pane_category']['name'] = 'Admin';
   $handler->display->display_options['pane_category']['weight'] = '0';
-  $translatables['wetkit_admin_users'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('Empty Text'),
-    t('There are no users of this sort.'),
-    t('Name'),
-    t('E-mail'),
-    t('Last access'),
-    t('Roles'),
-    t('Active'),
-    t('Admin Users'),
-    t('Admin'),
-  );
   $export['wetkit_admin_users'] = $view;
 
   return $export;

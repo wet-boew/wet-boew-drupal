@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * A specification for the custom spotlight entity that is part of WetKit Widgets
+ */
+
+/**
  * Implements hook_field_info().
  */
 function wetkit_widgets_field_info() {
@@ -198,13 +203,13 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
 
   // Assemble the tabs header
   $header = '<ul>';
-  foreach($items as $delta => $item_data) {
+  foreach ($items as $delta => $item_data) {
     $header .= '<li>' . '<a href="#wetkit-spotlight-' . $delta . '">' . ($delta+1) . '</a></li>'; 
   }
   $header .= '</ul>';
 
   // Assemble the tabs content
-  foreach($items as $delta => $item_data) {
+  foreach ($items as $delta => $item_data) {
     if ($display['type'] == 'wetkit_spotlight_default') {
       $element[$delta]['#markup'] = ($delta == 0) ? $header . theme('wetkit_spotlight_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings)) : theme('wetkit_spotlight_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings));
     }
@@ -255,7 +260,7 @@ function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instanc
     );
   }
 
-  if ($instance['widget']['type'] == 'wetkit_tabbed_interface_form') {
+if ($instance['widget']['type'] == 'wetkit_tabbed_interface_form') {
    
     // Make it a multipart form  
     $form['#attributes']['enctype'] = 'multipart/form-data';
@@ -294,7 +299,7 @@ function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instanc
       '#default_value' => isset($items[$delta]['description']) ? $items[$delta]['description'] : NULL,
     );
   }
-  
+
   return $element;
 }
 
@@ -302,7 +307,21 @@ function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instanc
  * Implements hook_field_presave()
  */
 function wetkit_widgets_field_presave($entity_type, $entity, $field, $instance, $langcode, &$items) {
-  image_field_presave($entity_type, $entity, $field, $instance, $langcode, $items);
+  // We need to set presave values if fids are not set. This shouldn't effect save operations
+  // form API validation will prevent this from ever happening unless previewing.
+  if (!empty($items)) {
+    foreach ($items as &$item) {
+      if (empty($item['fid'])) {
+        $fid = variable_get('wetkit_widgets_default_' . $entity->bundle . '_fid', NULL);
+        
+        if (!empty($fid)) {
+          $item['fid'] = $fid;
+        }
+      }
+    }
+
+    image_field_presave($entity_type, $entity, $field, $instance, $langcode, $items);
+  }
 }
 
 /**
@@ -361,7 +380,7 @@ function wetkit_widgets_field_prepare_view($entity_type, $entities, $field, $ins
   //Add appropriate JS variables for rotation time.
   //@TODO: Allow different rotation speeds to be set for different
   //spotlights in the page.
-  if(!empty($entities[1]->field_spotlight_rotation_time)) {
+  if (!empty($entities[1]->field_spotlight_rotation_time)) {
     $rotation_time = (int) $entities[1]->field_spotlight_rotation_time['und'][0]['value'];
   }
   empty($rotation_time) ? $rotation_time = 4 : '';
@@ -376,8 +395,13 @@ function wetkit_widgets_field_prepare_view($entity_type, $entities, $field, $ins
 function theme_wetkit_spotlight_view($variables) {
   $title = $variables['items']['title'];
   $description = $variables['items']['description'];
-  $image_entity = entity_uuid_load('file', array($variables['items']['uuid']));
-  $image = file_load(array_pop($image_entity)->fid);
+  if (module_exists('uuid')) {
+    $image_entity = entity_uuid_load('file', array($variables['items']['uuid']));
+    $image = file_load(array_pop($image_entity)->fid);
+  }
+  else {
+    $image = (object) $variables['items'];
+  }
   $link = $variables['items']['link'];
   $settings = $variables['settings'];
 
@@ -401,8 +425,13 @@ function theme_wetkit_spotlight_view($variables) {
 function theme_wetkit_tab_interface_view($variables) {
   $title = $variables['items']['title'];
   $description = $variables['items']['description'];
-  $image_entity = entity_uuid_load('file', array($variables['items']['uuid']));
-  $image = file_load(array_pop($image_entity)->fid);
+  if (module_exists('uuid')) {
+    $image_entity = entity_uuid_load('file', array($variables['items']['uuid']));
+    $image = file_load(array_pop($image_entity)->fid);
+  }
+  else {
+    $image = (object) $variables['items'];
+  }
   $link = $variables['items']['link'];
   $settings = $variables['settings'];
   
