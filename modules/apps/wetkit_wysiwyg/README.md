@@ -3,8 +3,8 @@ WetKit WYSIWYG
 Integrates a WYSIWYG into Drupal
 
 Customizations
-* This App is based on and often pulls upstream upstream from Panopoly WYSIWYG @ drupal.org/project/panopoly_wysiwyg
-* The latest upstream sync has been checked against commit: b1fa1e9 (Verified)
+* This App is based on and often pulls upstream from Panopoly WYSIWYG @ drupal.org/project/panopoly_wysiwyg
+* The latest upstream sync has been checked against commit: 8b308c2 (Verified)
 * Panopoly WYSIWYG is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly WYSIWYG)

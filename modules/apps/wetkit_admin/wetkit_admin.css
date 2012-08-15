@@ -27,21 +27,6 @@
   width: 100%;
 }
 
-.format-toggle label {
-  float: left;
-  margin-right: .5em;
-  margin-top: 2px;
-  font-weight: 400;
-  display: block;
-  width: auto;
-}
-
-.format-toggle {
-  float: right;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
 /**
  * Pathauto styling
  */
@@ -81,31 +66,10 @@
   margin-top: 5px;
 }
 
-#node-edit .container-inline-date > .form-item {
-  border: 0;
-  margin: 0;
-}
-
-#node-edit .container-inline-date .date-padding {
-  float: none;
-  padding: 0;
-}
-
-#node-edit .container-inline-date .form-item-date-time, 
-#node-edit .container-inline-date .form-item-date-date {
-  padding-bottom: 1em;
-}
-
-#node-edit .form-item-date-time label, 
-#node-edit .form-item-date-date label, 
-#node-edit .form-item-name label {
-  width: 49px;
-}
 
 /**
  * Form action button styling
  */
-#modal-content .form-submit, 
 #node-edit .form-actions input {
   border: 1px solid #ccc;
   margin-bottom: .5em;
@@ -139,7 +103,6 @@
   padding: 0 13px 1px;
 }
 
-#modal-content .form-submit:hover, 
 #node-edit .form-actions input:hover {
   background: #E6E6E6;
   background-image: linear-gradient(bottom, #C5C5C5 0%, #FAFAFA 100%);
@@ -156,7 +119,6 @@
   );
 }
 
-#modal-content .form-submit:active, 
 #node-edit .form-actions input:active {
   outline: none;
   background-image: linear-gradient(bottom, #E9EAEC 0%, #FAFAFA 100%);
@@ -314,6 +276,27 @@
 /** 
  * Date/Time Styling
  */
+#node-edit .container-inline-date > .form-item {
+  border: 0;
+  margin: 0;
+}
+
+#node-edit .container-inline-date .date-padding {
+  float: none;
+  padding: 0;
+}
+
+#node-edit .container-inline-date .form-item-date-time, 
+#node-edit .container-inline-date .form-item-date-date {
+  padding-bottom: 1em;
+}
+
+#node-edit .form-item-date-time label, 
+#node-edit .form-item-date-date label, 
+#node-edit .form-item-name label {
+  width: 49px;
+}
+
 #node-edit .container-inline-date .form-item-date-date .description, 
 #node-edit .container-inline-date .form-item-date-time .description {
   display: none;
@@ -503,35 +486,6 @@ ul#media-browser-library-list {
 }
 
 /**
- * Misc
- */
-#active-vertical-tab {
-  height: 1px;
-  overflow: hidden;
-}
-
-#views-ajax-body form {
-  background-color: #FFF;
-}
-
-.contextual-links-wrapper, 
-.tabledrag-toggle-weight-wrapper {
-  display: none;
-}
-
-.view-wetkit-admin-content .views-field-field-featured-image {
-  padding: 0;
-}
-
-/**
- * Fix positioning for autocomplete items in firefox.
- *  @see http://drupal.org/node/1218684
- */
-.form-item-uid {
-  position: relative;
-}
-
-/**
  * Wizard Landing Page Styling
  */
 #wetkit_admin_landing_page_wizard .form-item-admin-title input {
@@ -558,4 +512,30 @@ ul#media-browser-library-list {
   float: left;
   margin-right: 5px;
   font-weight: normal;
+}
+
+/**
+ * Misc
+ */
+#active-vertical-tab {
+  height: 1px;
+  overflow: hidden;
+}
+
+#views-ajax-body form {
+  background-color: #FFF;
+}
+
+.contextual-links-wrapper, 
+.tabledrag-toggle-weight-wrapper {
+  display: none;
+}
+
+.view-wetkit-admin-content .views-field-field-featured-image {
+  padding: 0;
+}
+
+/* Fix positioning for autocomplete items in firefox. http://drupal.org/node/1218684 */
+.form-item-uid {
+  position: relative;
 }

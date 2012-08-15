@@ -3,8 +3,8 @@ WetKit Images
 Provides common image styles and helps make them responsive!
 
 Important
-* This App is based on and often pulls upstream upstream from Panopoly Admin @ drupal.org/project/panopoly_images
-* The latest upstream sync has been checked against commit: d570dcf (Verified)
+* This App is based on and often pulls upstream from Panopoly Admin @ drupal.org/project/panopoly_images
+* The latest upstream sync has been checked against commit: 09c5708 (Verified)
 * Panopoly Core is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly Images)

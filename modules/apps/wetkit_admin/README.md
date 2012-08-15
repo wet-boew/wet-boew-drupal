@@ -3,8 +3,8 @@ WetKit Admin
 Administrative dashboard and related editing interfaces for WetKit
 
 Important
-* This App is based on and often pulls upstream upstream from Panopoly Admin @ drupal.org/project/panopoly_admin
-* The latest upstream sync has been checked against commit: e314e6d (Verified)
+* This App is based on and often pulls upstream from Panopoly Admin @ drupal.org/project/panopoly_admin
+* The latest upstream sync has been checked against commit: 56822a8 (Verified)
 * Panopoly Admin is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly Admin)
