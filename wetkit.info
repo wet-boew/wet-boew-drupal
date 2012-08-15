@@ -122,15 +122,14 @@ dependencies[] = i18n_variable
 dependencies[] = stringoverrides
 
 ; Search
-dependencies[] = custom_search
 dependencies[] = facetapi
-dependencies[] = metatag
-dependencies[] = metatag_dc
 ;dependencies[] = search_api
 ;dependencies[] = search_api_solr
 ;dependencies[] = search_api_facetapi
 ;dependencies[] = search_api_views
 ;dependencies[] = search_api_db
+dependencies[] = metatag
+dependencies[] = metatag_dc
 dependencies[] = search404
 
 ; CSS Stylesheets

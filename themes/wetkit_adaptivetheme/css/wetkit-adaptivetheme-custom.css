@@ -24,7 +24,7 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 .search-form #edit-actions { display: inline; }
 .search-form .form-actions { display: inline; }
 
-fieldset.custom_search-popup { z-index: 99 !important; width: 198px; background-color: white; padding: 0px 10px; border: 1px solid #DDD; }
+fieldset.custom_search-popup { z-index: 99 !important; width: 199px; background-color: white; }
 fieldset.custom_search-popup a { color: black !important; }
 fieldset.custom_search-popup label { position: relative !important; }
 fieldset.custom_search-popup .form-item { text-align: left; }
