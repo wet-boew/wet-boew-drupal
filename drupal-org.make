@@ -396,9 +396,13 @@ projects[facetapi][subdir] = contrib
 ;projects[search_api_db][type] = module
 ;projects[search_api_db][subdir] = contrib
 
-projects[metatag][version] = 1.0-alpha6
+projects[metatag][version] = 1.0-alpha8
 projects[metatag][subdir] = contrib
 projects[metatag][type] = module
+projects[metatag][download][type] = git
+projects[metatag][download][revision] = 11012b12
+projects[metatag][download][branch] = 7.x-1.x
+projects[metatag][patch][1491616] = http://drupal.org/files/metatags-dublin_core_metatags-1491616-23.patch
 
 projects[search404][version] = 1.1
 projects[search404][subdir] = contrib
