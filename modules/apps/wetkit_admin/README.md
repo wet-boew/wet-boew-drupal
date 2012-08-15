@@ -17,6 +17,6 @@ Key Features (WetKit Admin)
 * Addition of CSS File: wetkit_admin_custom.css
 * Addition of Strongarm Variable: admin_menu_position_fixed
 * Addition of Translation .po files
-* Addition of Translation t() to Views
+* Addition of Translation to Views
 * Change of Namespace to WetKit
 * Local Apps Support
