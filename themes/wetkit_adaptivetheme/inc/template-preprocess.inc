@@ -169,7 +169,7 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
   }
   
   // Search
-  if (module_exists('custom_search')) {
+  if (module_exists('wetkit_search')) {
     // Custom Search
     //drupal_add_css(drupal_get_path('theme', 'wetkit_adaptivetheme') . '/css/custom_searchbar.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
     $variables['custom_search'] = drupal_get_form('custom_search_blocks_form_1');

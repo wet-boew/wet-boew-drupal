@@ -382,6 +382,10 @@ projects[facetapi][version] = 1.1
 projects[facetapi][type] = module
 projects[facetapi][subdir] = contrib
 
+projects[custom_search][version] = 1.10
+projects[custom_search][type] = module
+projects[custom_search][subdir] = contrib
+
 ;projects[search_api][version] = 1.2
 ;projects[search_api][type] = module
 ;projects[search_api][subdir] = contrib
