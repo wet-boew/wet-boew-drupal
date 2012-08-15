@@ -1,18 +1,16 @@
 WetKit Pages
 ==============
-Provides a basic page, suitable for Panelizing
+Helps create and manage pages that can be Panelized!
 
 Customizations
 * This App is based on and often pulls upstream upstream from Panopoly Pages @ drupal.org/project/panopoly_pages
-* The latest upstream sync has been checked against commit: 1201227 (Not Fully Merged)
+* The latest upstream sync has been checked against commit: 3cbcce6 (Not Fully Merged)
 * Panopoly Demo is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly Pages)
-* Creation of a "Panopoly Page" content type for basic page management
-* Default panelizer settings for "Panopoly Page" content type
-
-To Do (Panopoly Pages)
-* Generalize Fix for Menu Block Interacting with IPE
+* Creation of a "Content Page" content type for basic page management
+* Creation of a "Landing Page" workflow for landing page creation
+* Panelizer integration for all view modes of the "Content Page"
 
 Key Features (WetKit Demo)
 * Addition of Translation .po files

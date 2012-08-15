@@ -4,18 +4,13 @@ Helps with theming and provides many layouts
 
 Important
 * This App is based on and often pulls upstream upstream from Panopoly Theme @ drupal.org/project/panopoly_theme
-* The latest upstream sync has been checked against commit: 238334b (Verified)
+* The latest upstream sync has been checked against commit: f8fd00c (Verified)
 * Panopoly Theme is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly Theme)
-* 26 responsive Panel layouts to choose from
-* Implements "Featured" view mode for all content types
-* Inclusion of the Open Sans font style for @font-face integration
-* jQuery Panopoly theme
+* Includes 31 responsive Panel layouts
+* Implements "Featured" view mode available for all content types
 * Accordian Panels style plugin
-
-To Do (Panopoly Theme)
-* Review of accordian style plugin + standardization with other plugins
 
 Key Features (WetKit Demo)
 * Addition of Strongarm Variables:
