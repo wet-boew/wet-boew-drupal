@@ -1,30 +1,36 @@
 /**
- * CSS Styles for Demo Content
- */
-div .wetkit-image-half {
-  float: left;
-  margin-right: 1em;
-}
-
-div .wetkit-image-quarter {
-  float: left;
-  margin-right: .75em;
-  margin-top: .5em;
-}
-
-div.field-type-image img {
-  margin: .5em 1em .5em 0;
-}
-
-/**
  * CSS Styles for Demo Style Plugins
  */
-.pane-blue-background {
-  background-color: #00BFFF;
+.region-light-blue-background,
+.pane-light-blue-background {
+  background-color: #53b0eb;
   padding: 1em;
 }
 
-.pane-red-background {
-  background-color: #DC143C;
+.region-dark-blue-background,
+.pane-dark-blue-background {
+  background-color: #0678be;
   padding: 1em;
+}
+
+.region-dark-blue-background h2,
+.region-dark-blue-background a,
+.pane-dark-blue-background h2,
+.pane-dark-blue-background a {
+  margin-top: 0em;
+  color: #FFF;
+}
+
+.region-lime-green-background,
+.pane-lime-green-background {
+  background-color: #96bc44;
+  padding: 1em;
+}
+
+.region-lime-green-background h2,
+.region-lime-green-background a,
+.pane-lime-green-background h2,
+.pane-lime-green-background a {
+  margin-top: 0em;
+  color: #FFF;
 }

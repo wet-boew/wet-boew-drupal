@@ -1,0 +1,40 @@
+/**
+ * @file
+ * Taylor Flipped panel layout
+**/
+
+.taylor-flipped-container {
+  margin-bottom: 1em;
+}
+
+.taylor-flipped-half {
+  width: 48.936%; /* 460 / 940 = 48.936% */
+  float: left;
+}
+
+.taylor-flipped-quarter1,
+.taylor-flipped-quarter2 {
+  width: 25.532%; /* 240 / 940 = 25.532% */
+  float: left;
+}
+
+.taylor-flipped-quarter1-inner,
+.taylor-flipped-quarter2-inner {
+  margin-right: 20px;
+}
+
+  
+/* iPhone [portrait + landscape] */
+@media only screen and (max-width: 480px) {
+  .taylor-flipped-half,
+  .taylor-flipped-quarter1,
+  .taylor-flipped-quarter2 {
+    width: 100%;
+    float: none;
+  }
+  
+  .taylor-flipped-half-inner,
+  .taylor-flipped-quarter1-inner {
+    margin-right: 0;
+  }
+}

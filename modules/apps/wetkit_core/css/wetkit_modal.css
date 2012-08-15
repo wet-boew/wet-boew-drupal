@@ -1,0 +1,465 @@
+/**
+ * Modal stylings
+ */
+
+#modal-content input.form-text {
+  /* Because many input forms have a fixed width that might be wider than
+   * the IPE interface allows, we want to make sure we size them properly */
+  max-width: 98%;
+}
+
+#modal-content .form-item-exposed-widget-title input,
+#modal-content .form-item-title input {
+  font-size: 1.5em;
+}
+
+#modalContent div.ctools-modal-content {
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+  border: none;
+}
+
+#modalContent div.ctools-modal-content .modal-header {
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  background: #666;
+  background-image: linear-gradient(bottom, #333333 0%, #666666 100%);
+  background-image: -o-linear-gradient(bottom, #333333 0%, #666666 100%);
+  background-image: -moz-linear-gradient(bottom, #333333 0%, #666666 100%);
+  background-image: -webkit-linear-gradient(bottom, #333333 0%, #666666 100%);
+  background-image: -ms-linear-gradient(bottom, #333333 0%, #666666 100%);
+  background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(0, #333333),
+  color-stop(1, #666666)
+  );
+  color: #fff;
+  font: bold 16px/50px 'Open Sans', 'Lucida Sans', 'Lucida Grande', verdana sans-serif;
+  vertical-align: middle;
+  height: 50px;
+  padding: 0 14px 0 24px;
+}
+
+#modalContent div.ctools-modal-content .modal-title {
+  color: #fff;
+  font: bold 16px/50px 'Open Sans', 'Lucida Sans', 'Lucida Grande', verdana sans-serif;
+  text-shadow: none;
+  padding: 0;
+}
+
+#modalContent div.ctools-modal-content a.close {
+  display: block;
+  text-indent: -99999em;
+  overflow: hidden;
+  outline: none;
+  height: 15px;
+  width: 16px;
+  margin-top: 15px;
+  background: url(../images/close-popup.png) no-repeat left top;
+  padding: 0;
+}
+
+#modalContent div.ctools-modal-content a.close:hover {
+  background-position: left -15px;
+}
+
+#modalContent .panels-add-content-modal {
+  background: #FFF;
+  padding-top: .9em;
+}
+
+#modalContent .panels-add-content-modal a.panels-modal-add-category {
+  background: #EAEAEC;
+  background-image: linear-gradient(bottom, #DBDCDF 0%, #F6F6F7 100%);
+  background-image: -o-linear-gradient(bottom, #DBDCDF 0%, #F6F6F7 100%);
+  background-image: -moz-linear-gradient(bottom, #DBDCDF 0%, #F6F6F7 100%);
+  background-image: -webkit-linear-gradient(bottom, #DBDCDF 0%, #F6F6F7 100%);
+  background-image: -ms-linear-gradient(bottom, #DBDCDF 0%, #F6F6F7 100%);
+  background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(0, #DBDCDF),
+  color-stop(1, #F6F6F7)
+  );
+  font: bold 11px/30px 'Open Sans', 'Lucida Sans', 'Lucida Grande', verdana sans-serif;
+  color: #333;
+  text-decoration: none;
+  margin-left: 10px;
+  border-bottom: none;
+  padding: 0 12px;
+}
+
+#modalContent .panels-add-content-modal a.panels-modal-add-category:active, 
+#modalContent .panels-add-content-modal a.panels-modal-add-category.active {
+  border: 1px solid #CECECA;
+  border-right: none;
+  background: #FFF;
+  margin-right: -1px;
+}
+
+#modalContent .panels-section-column-categories .content-type-button {
+  padding: 0 0 .5em 10px;
+}
+
+#modalContent .panels-section-column-categories .content-type-button div {
+  background: #EAEAEC;
+  background-image: linear-gradient(bottom, #DBDCDF 0%, #F6F6F7 100%);
+  background-image: -o-linear-gradient(bottom, #DBDCDF 0%, #F6F6F7 100%);
+  background-image: -moz-linear-gradient(bottom, #DBDCDF 0%, #F6F6F7 100%);
+  background-image: -webkit-linear-gradient(bottom, #DBDCDF 0%, #F6F6F7 100%);
+  background-image: -ms-linear-gradient(bottom, #DBDCDF 0%, #F6F6F7 100%);
+  background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(0, #DBDCDF),
+  color-stop(1, #F6F6F7)
+  );
+  float: none;
+  left: 0;
+  top: 0;
+  width: auto;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 8px 0 25px;
+  padding: 0;
+}
+
+#modalContent .panels-section-column-categories .content-type-button div a {
+  font: bold 11px/21px "Open Sans", "Lucida Grande", Tahoma, Verdana, sans-serif;
+  text-decoration: none;
+  color: #333;
+  padding: 0 12px;
+}
+
+#modalContent .panels-section-column-categories .content-type-button div:active {
+  outline: none;
+  background-image: linear-gradient(bottom, #FFFFFF 0%, #E9EAEC 100%);
+  background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #E9EAEC 100%);
+  background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #E9EAEC 100%);
+  background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #E9EAEC 100%);
+  background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #E9EAEC 100%);
+  background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(0, #FFFFFF),
+  color-stop(1, #E9EAEC)
+  );
+}
+
+#modalContent .panels-section-column-categories .content-type-button img {
+  border: none;
+  padding-top: 2px;
+}
+
+#modalContent div.ctools-modal-content .modal-content {
+  padding-bottom: 2px;
+}
+
+#modal-content .option-text-aligner {
+  float: left;
+}
+
+/**
+ * Pane configuration preview styling
+ *
+ * Much of the fieldset-related css is ripped directly from Bartik to give
+ * IPE a more consistent look
+ * @see https://drupal.org/node/1717644
+ */
+#modal-content fieldset {
+  clear: none;
+  width: auto;
+  position: relative;
+  top: 12px; /* Offsets the negative margin of legends */
+  margin-top: 10px;
+  margin-bottom: 32px;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 0 0 10px;
+}
+
+#modal-content fieldset.widget-preview {
+  margin-top: 3em;
+  margin-bottom: 4em;
+  -webkitborder-top-right-radius: 0;
+  -moz-border-topright-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#modal-content fieldset.widget-preview-single {
+  margin-top: 0em;
+  margin-bottom: 1em;
+}
+
+#modal-content fieldset.widget-preview-single .fieldset-wrapper {
+  font-size: 100%;
+  max-width: 100%;
+  overflow-y: auto;
+  min-height: 75px;
+  max-height: 375px;
+}
+
+#modal-content fieldset.widget-preview-single .fieldset-wrapper .wetkit-spotlight img {
+  width: 100%;
+}
+  
+#modal-content fieldset legend {
+  background: #dbdbdb;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  color: #3b3b3b;
+  display: block;
+  height: 2em;
+  left: -1px; /* LTR */
+  line-height: 2;
+  padding: 1px 0 0;
+  position: absolute;
+  text-indent: 10px;
+  text-shadow: 0 1px 0 #fff;
+  top: -12px;
+  width: 100%;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+  
+#modal-content fieldset.widget-preview legend {
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+}
+  
+#modal-content .fieldset-legend {
+  font: bold 12px/1.5em 'Open Sans', 'Lucida Sans', 'Lucida Grande', verdana sans-serif;
+}
+  
+#modal-content fieldset.collapsed legend {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+#modal-content fieldset legend a {
+  color: #3b3b3b;
+}
+
+#modal-content fieldset legend a:hover,
+#modal-content fieldset legend a:focus,
+#modal-content fieldset legend a:active {
+  color: #000;
+}
+  
+#modal-content .fieldset-wrapper {
+  padding: 0 10px;
+  margin-top: 2.25em;
+}
+
+#modal-content .widget-preview .fieldset-wrapper {
+  max-width: 100%;
+  overflow-y: auto;
+  font-size: 75%;
+  max-height: 200px;
+  min-height: 200px;
+  overflow-x: hidden;
+}
+
+#modal-content .widget-preview .fieldset-wrapper table tr.even td, 
+#modal-content .widget-preview .fieldset-wrapper table tr.odd td {
+  padding: 3px 5px;
+}
+
+#modal-content .widget-preview .fieldset-wrapper h2 {
+  font-size: 150%;
+  margin-top: .25em;
+}
+
+#modal-content .widget-preview-single {
+  float: right;
+  margin-left: 1em;
+  margin-top: 0;
+  width: 48%;
+}
+
+#modal-content .form-actions {
+  float: right;
+  clear: right;
+  width: 48%;
+  margin-left: 1em;
+  text-align: right;
+}
+
+#modal-content .widget-preview-title {
+  position: absolute;
+  right: -1px;
+  top: -24px;
+  font: bold 11px/23px 'Open Sans', 'Lucida Sans', 'Lucida Grande', verdana sans-serif;
+}
+
+#modal-content .widget-preview-title .content-type-button div {
+  float: none;
+  left: 0;
+  top: 0;
+  width: 60px;
+  padding: 0;
+}
+
+#modal-content .widget-preview-title .content-type-button div a {
+  display: block;
+  font: bold 11px/23px 'Open Sans', 'Lucida Sans', 'Lucida Grande',  verdana sans-serif;
+  color: #fff;
+  text-decoration: none;
+  background: #5DE000;
+  background-image: linear-gradient(bottom, #4BA700 0%, #5DE000 100%);
+  background-image: -o-linear-gradient(bottom, #4BA700 0%, #5DE000 100%);
+  background-image: -moz-linear-gradient(bottom, #4BA700 0%, #5DE000 100%);
+  background-image: -webkit-linear-gradient(bottom, #4BA700 0%, #5DE000 100%);
+  background-image: -ms-linear-gradient(bottom, #4BA700 0%, #5DE000 100%);
+  background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(0, #4BA700),
+  color-stop(1, #5DE000)
+  );
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  padding: 0 10px;
+}
+
+#modal-content .widget-preview-title .content-type-button div a:hover {
+  background: #56CE00;
+  background-image: linear-gradient(bottom, #408E00 0%, #56CE00 100%);
+  background-image: -o-linear-gradient(bottom, #408E00 0%, #56CE00 100%);
+  background-image: -moz-linear-gradient(bottom, #408E00 0%, #56CE00 100%);
+  background-image: -webkit-linear-gradient(bottom, #408E00 0%, #56CE00 100%);
+  background-image: -ms-linear-gradient(bottom, #408E00 0%, #56CE00 100%);
+  background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(0, #408E00),
+  color-stop(1, #56CE00)
+  );
+}
+
+#modal-content .widget-preview-title .content-type-button div a:active {
+  background: #5DE000;
+  background-image: linear-gradient(bottom, #5DE000 0%, #4BA700 100%);
+  background-image: -o-linear-gradient(bottom, #5DE000 0%, #4BA700 100%);
+  background-image: -moz-linear-gradient(bottom, #5DE000 0%, #4BA700 100%);
+  background-image: -webkit-linear-gradient(bottom, #5DE000 0%, #4BA700 100%);
+  background-image: -ms-linear-gradient(bottom, #5DE000 0%, #4BA700 100%);
+  background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(0, #5DE000),
+  color-stop(1, #4BA700)
+  );
+}
+
+#modal-content .panels-section-columns,
+#modal-content .panels-categories-description {
+  overflow: visible;
+  border: 1px solid #CECECA;
+  border-right: none;
+  height: 100%;
+  margin: 0;
+  margin-top: 1px;
+  overflow-y: auto;
+}
+
+#modal-content .panels-categories-description {
+  color: #FFF;
+}
+
+/**
+ * Misc Modal Stylings
+ */
+#modal-content .form-type-textarea .form-type-select, 
+#modal-content .field-type-text-long .form-type-select {
+  float: right;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#modal-content .form-type-textarea .form-type-select label, 
+#modal-content .field-type-text-long .form-type-select label {
+  float: left;
+  margin-right: .5em;
+  margin-top: .5em;
+  font-weight: normal;
+  display: block;
+  width: auto;
+}
+
+#modal-content .view-settings-wrapper .form-radios {
+  display: inline;
+  padding-right: 5px;
+}
+
+.panels-section-column .content-type-button {
+  font-size: 1em;
+}
+
+#modal-content .widget-preview-title .content-type-button img, 
+#modal-content .panels-add-content-modal > .panels-modal-add-category {
+  display: none;
+}
+
+#modal-content #edit-widget-preview {
+  margin-top: 0;
+}
+
+#modalContent .panels-section-column-categories .content-type-button img:hover {
+  border: none;
+}
+
+#modal-content .widget-preview .fieldset-wrapper table img, 
+#modal-content .widget-preview .wetkit-image-featured {
+  width: 100%;
+}
+
+.pane-content .create-links, 
+.pane-categories .categories-links, 
+.pane-menus .menu-links, 
+.pane-users .user-links {
+  float: right;
+}
+
+#modalContent .panels-add-content-modal a.panels-modal-add-category:hover, 
+#modalContent .panels-section-column-categories .content-type-button div:hover {
+  background: #E6E6E6;
+  background-image: linear-gradient(bottom, #C5C5C5 0%, #FAFAFA 100%);
+  background-image: -o-linear-gradient(bottom, #C5C5C5 0%, #FAFAFA 100%);
+  background-image: -moz-linear-gradient(bottom, #C5C5C5 0%, #FAFAFA 100%);
+  background-image: -webkit-linear-gradient(bottom, #C5C5C5 0%, #FAFAFA 100%);
+  background-image: -ms-linear-gradient(bottom, #C5C5C5 0%, #FAFAFA 100%);
+  background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(0, #C5C5C5),
+  color-stop(1, #FAFAFA)
+  );
+}
+
+#modal-content fieldset legend {
+  margin-bottom: 0px;
+  margin-left: 0px;
+}

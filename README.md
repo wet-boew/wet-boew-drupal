@@ -20,8 +20,8 @@ Should you require further documentation discussed below please proceed to our W
 >
 > 3. Build the complete Drupal installation software profile using the following command on the Bash command prompt.
 <pre>
-Command: drush make --prepare-install --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make &lt;directory_name&gt; -v --debug
-Example: drush make --prepare-install --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make drupal_wet
+Command: drush make --prepare-install --no-gitinfofile --working-copy https://raw.github.com/wet-boew/wet-boew-drupal/master/build-wetkit.make &lt;directory_name&gt; -v --debug
+Example: drush make --prepare-install --no-gitinfofile --working-copy https://raw.github.com/wet-boew/wet-boew-drupal/master/build-wetkit.make drupal_wet
 </pre>
 >
 > 4. To quickly install using the Drush command line, change to the directory where Drupal (for example /var/www/html) was installed and enter this command.
@@ -45,7 +45,7 @@ chown -R apache:apache /sites/&lt;domain&gt;/files
 >
 > 2. To quickly update an existing site using the Drush command line, change to the directory where Drupal (for example C:/apache2/htdocs) was installed and enter this command.
 <pre>
-Command: drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make .
+Command: drush make --no-gitinfofile --working-copy https://raw.github.com/wet-boew/wet-boew-drupal/master/build-wetkit.make .
 </pre>
 > 3. Since we are just updating an site instead of using drush si we will instead just update the database to reflect any changes in the code.
 <pre>
@@ -70,8 +70,8 @@ Example: drush -l http://drupal_wet:8082 updatedb
 >
 > 3. Build the complete Drupal installation software profile using the following command on the Bash command prompt.
 <pre>
-Command: drush make --prepare-install --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make &lt;directory_name&gt; -v --debug
-Example: drush make --prepare-install --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make drupal_wet
+Command: drush make --prepare-install --no-gitinfofile --working-copy https://raw.github.com/wet-boew/wet-boew-drupal/master/build-wetkit.make &lt;directory_name&gt; -v --debug
+Example: drush make --prepare-install --no-gitinfofile --working-copy https://raw.github.com/wet-boew/wet-boew-drupal/master/build-wetkit.make drupal_wet
 </pre>
 > 4. To quickly install using the Drush command line, change to the directory where Drupal (for example C:/apache2/htdocs) was installed and enter this command.
 > Be sure to use a password that meets the password policy for WET.
@@ -93,7 +93,7 @@ chown -R apache:apache /sites/&lt;domain&gt;/files
 >
 > 2. To quickly update an existing site using the Drush command line, change to the directory where Drupal (for example C:/apache2/htdocs) was installed and enter this command.
 <pre>
-Command: drush make --no-gitinfofile --working-copy https://github.com/wet-boew/wet-boew-drupal/raw/master/distro.make .
+Command: drush make --no-gitinfofile --working-copy https://raw.github.com/wet-boew/wet-boew-drupal/master/build-wetkit.make .
 </pre>
 > 3. Since we are just updating an site instead of using drush si we will instead just update the database to reflect any changes in the code.
 <pre>

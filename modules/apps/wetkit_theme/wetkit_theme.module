@@ -19,24 +19,6 @@ function wetkit_theme_ctools_plugin_directory($module, $plugin) {
 }
 
 /**
- * Implementation of hook_css_alter().
- */
-function wetkit_theme_css_alter(&$css) {
-  // Installs the jquery.ui themeroller theme to the theme.
-  if (isset($css['misc/ui/jquery.ui.theme.css'])) {
-    $css['misc/ui/jquery.ui.theme.css']['data'] = drupal_get_path('module', 'wetkit_theme') . '/css/wetkit-jquery-ui-theme.css';
-  }
-  
-  if (isset($css['misc/ui/jquery.ui.dialog.css'])) {
-    unset($css['misc/ui/jquery.ui.dialog.css']);
-  }
-  
-  if (isset($css['misc/ui/jquery.ui.tabs.css'])) {
-    unset($css['misc/ui/jquery.ui.tabs.css']);
-  }
-}
-
-/**
  * Implementation hook_theme_registry_alter()
  */
 function wetkit_theme_theme_registry_alter(&$theme_registry) {
@@ -60,7 +42,15 @@ function _wetkit_theme_insert_after_first_element(&$a, $element) {
 * Implements hook_entity_info_alter().
 */
 function wetkit_theme_entity_info_alter(&$entity_info) {
+
+  // Add featured view mode to nodes
   $entity_info['node']['view modes']['featured'] = array(
+    'label' => t('Featured'),
+    'custom settings' => TRUE,
+  );
+
+  // Add featured view mode to users
+  $entity_info['user']['view modes']['featured'] = array(
     'label' => t('Featured'),
     'custom settings' => TRUE,
   );

@@ -6,33 +6,47 @@
 include_once('wetkit_admin.features.inc');
 
 /**
- * Implementation of hook_init().
+ * Implementation of hook_apps_app_info()
  */
-function wetkit_admin_init() {
-
-  // Override the Chaos Tools Modal Default Settings
-  $default_style = array(
-    'CToolsModal' => array(
-      'modalSize' => array(
-        'type' => 'scale',
-        'width' => '.8',
-        'height' => '.8', 
-        'addWidth' => 0,
-        'addHeight' => 0,
-        'contentRight' => 25,
-        'contentBottom' => 75,
-      ),
-      'modalOptions' => array(
-        'opacity' => '.55',
-        'background-color' => '#FFF',
-      ),
-      'animationSpeed' => 'fast',
-      'modalTheme' => 'CToolsModalDialog',
-      'throbberTheme' => 'CToolsModalThrobber',
-    ),
+function wetkit_admin_apps_app_info() {
+  return array(
+    'configure form' => 'wetkit_admin_configure_form',
   );
-  drupal_add_js($default_style, 'setting');
 }
+
+/**
+ * Configuration Form for WetKit Admin
+ */
+function wetkit_admin_configure_form($form, &$form_state) {
+  $form = array();
+
+  $form['wetkit_admin_machine_name'] = array(
+    '#title' => t('Machine Name'),
+    '#type' => 'select',
+    '#required' => TRUE,
+    '#options' => array(
+      '1' => 'Enabled',
+      '0' => 'Disabled',
+    ),
+    '#default_value' => '0',
+    '#description' => t('Do you want to provide an option to specify a machine name (provided by the Default Content module) on the content editing form?'),
+  );
+
+  $form['wetkit_admin_revision_option'] = array(
+    '#title' => t('Create revision'),
+    '#type' => 'select',
+    '#required' => TRUE,
+    '#options' => array(
+      '1' => 'Enabled',
+      '0' => 'Disabled',
+    ),
+    '#default_value' => '0',
+    '#description' => t('Do you want to provide an option to create a new revision for content on the content editing form?'),
+  );
+
+  return system_settings_form($form);
+}
+
 
 /**
  * Implementation of hook_ctools_plugin_directory()
@@ -48,29 +62,18 @@ function wetkit_admin_panels_pane_content_alter($content, $pane, $args, $context
   // Pass the title properly through to style plugins rendering regions
   // TODO - check with Earl on if this is best way to handle this data exchange
   $pane->title = (isset($content->title)) ? $content->title : NULL;
+
+  // Hide the title of the featured category pane if there isn't any content
+  // TODO - this could be extended generally to resolve other issues
+  if ($pane->subtype == 'node:field_featured_categories' && !empty($content->content['field_featured_categories']) && $content->content['field_featured_categories']['#access'] == FALSE) {
+    $content->title = '';
+  }
 }
 
 /**
  * Implementation of hook_form_alter()
  */
 function wetkit_admin_form_alter(&$form, &$form_state, $form_id) {
-
-  // General styling to the content type edit form
-  if (strpos($form_id, 'content_type_edit_form')) {
-    $form['override_title_markup']['#access'] = FALSE;
-    $form['buttons']['cancel']['#access'] = FALSE;
-  }
-
-  // Style the context information
-  // TODO - move to WetKit Magic module
-  if (!empty($form['context'])) {
-    $form['context_settings'] = array(
-      '#type' => 'fieldset',
-      '#title' => t('Context Settings'),
-    );
-    $form['context_settings']['context'] = $form['context'];
-    unset($form['context']);
-  }
 
   // Improve the title field
   if (isset($form['title']['#title'])) {
@@ -84,7 +87,8 @@ function wetkit_admin_form_alter(&$form, &$form_state, $form_id) {
     $form['path']['alias']['#title'] = '<strong>' . t('Permalink') . ':</strong> ';
     $form['path']['alias']['#title'] .= (isset($_SERVER['HTTPS'])) ? 'https://' . $_SERVER['HTTP_HOST'] . '/' : 'http://' . $_SERVER['HTTP_HOST'] . '/';
     if (isset($form['path']['pathauto'])) {
-      $form['path']['pathauto']['#default_value'] = 0;
+      // Remove the states property since we are hiding the field
+      $form['path']['alias']['#states'] = array();
       if (!$form['path']['alias']['#default_value']) {
         $form['path']['alias']['#attributes'] = array('placeholder' => '<' . t('magically generated') . '>');
       }
@@ -101,9 +105,9 @@ function wetkit_admin_form_alter(&$form, &$form_state, $form_id) {
   // Hide the machine name options
   if (isset($form['machine_name_fs'])) {
     $form['options']['machine_name_fs']['machine_name'] = $form['machine_name_fs']['machine_name'];
-    $form['options']['machine_name_fs']['machine_name']['#size'] = 27;
+    $form['options']['machine_name_fs']['machine_name']['#size'] = '';
     $form['options']['machine_name_fs']['#weight'] = 30;
-    $form['options']['machine_name_fs']['machine_name']['#title'] = 'UUID';
+    $form['options']['machine_name_fs']['#access'] = variable_get('wetkit_admin_machine_name', FALSE);
     unset($form['options']['machine_name_fs']['machine_name']['#description']);
     unset($form['machine_name_fs']);
   }
@@ -112,6 +116,25 @@ function wetkit_admin_form_alter(&$form, &$form_state, $form_id) {
   if (isset($form['options'])) {
     $form['options']['promote']['#access'] = FALSE;
     $form['options']['sticky']['#access'] = FALSE;
+  }
+
+  // Move the featured field into publishing options
+  if (!empty($form['field_featured_status'])) {
+    $form['options']['field_featured_status'] = $form['field_featured_status'];
+    unset($form['field_featured_status']);
+  }
+
+  // Remove the description from the featured image
+  if (!empty($form['field_featured_image'])) {
+    $form['field_featured_image']['und'][0]['#description'] = '';
+  }
+
+  // Consider the featured category
+  if (!empty($form['field_featured_categories']) && $form['field_featured_categories']['und']['#type'] != 'textfield') {
+    // Hide this field if there are no options
+    if (count($form['field_featured_categories']['und']['#options']) == 0 || (!empty($form['field_featured_categories']['und']['#options']['_none']) && count($form['field_featured_categories']['und']['#options']) == 1)) {
+      $form['field_featured_categories']['#access'] = FALSE;
+    }
   }
 
   // Improve authoring options
@@ -131,15 +154,124 @@ function wetkit_admin_form_alter(&$form, &$form_state, $form_id) {
     unset($form['revision_information']['#type']);
     $form['revision_information']['log']['#access'] = FALSE;
     $form['options']['revision'] = $form['revision_information']['revision'];
+    $form['options']['revision']['#access'] = variable_get('wetkit_admin_revision_option', FALSE);
     unset($form['revision_information']['revision']);
   }
 
   // Improve the menu adding experience
   if (isset($form['menu']) && isset($form['menu']['enabled'])) {
-    $form['menu']['link']['link_title']['#size'] = 35;
+    $form['menu']['link']['link_title']['#size'] = '';
     $form['menu']['link']['weight']['#access'] = FALSE;
+    $form['menu']['link']['link_title']['#title'] = 'Title';
+    $form['menu']['link']['parent']['#title'] = t('Parent');
+    // TODO - make this an optional thing in the settings
+    $form['menu']['link']['description']['#access'] = FALSE; 
     $form['#validate'][] = 'wetkit_admin_menu_validate';
   }
+
+  // Add our custom closing operation for the modal
+  if ((strpos($form['#action'], 'admin/wetkit_apps/configure') || strpos($form['#action'], 'admin/wetkit_theme/configure')) && TRUE) {
+    $form['#submit'][] = 'wetkit_admin_modal_close_submit';
+  }
+
+  // Improve the wizard for our custom adding a landing page wizard
+  if ($form_id == 'panels_landing_page_basic' && arg(0) == 'node' && arg(1) == 'add') {
+
+    // Let it be known we are doing something unique
+    $form['#id'] = 'wetkit_admin_landing_page_wizard';
+
+    // Set the title to be something consistent
+    drupal_set_title(t('Create Landing Page'));
+
+    // Remove the ctools train since we just have one step
+    $form['ctools_trail']['#access'] = FALSE;
+
+    // Improve the name of the page and remove its unnecessary description
+    $form['admin_title']['#title'] = 'Title';
+    $form['admin_title']['#size'] = 30;
+    $form['admin_title']['#attributes']['placeholder'] = 'Title of Page';
+    $form['admin_title']['#description'] = '';
+
+    // Remove the page description since its just noise
+    $form['admin_description']['#access'] = FALSE;
+
+    // Improve the path of the landing page
+    $form['path']['#title'] = t('URL');
+    $form['path']['#size'] = 50;
+    $form['path']['#attributes']['placeholder'] = '<URL of Page>';
+
+    // Do not make them choose a weight
+    $form['menu']['weight']['#access'] = FALSE;
+
+    // Force this to be the main menu
+    $form['menu_entry']['#title'] = t('Add this page to the main menu?');
+    $form['menu']['name']['#field_prefix'] = 'Menu';
+    $form['menu']['name']['#default_value'] = 'main-menu';
+    $form['menu']['name']['#type'] = 'value';
+
+    // Add information around parents
+    $parents = menu_parent_options(array('main-menu' => 'Main Menu'), 0);
+    $parents['main-menu:0'] = '<Top Level>';
+    $form['menu']['parent'] = array(
+      '#title' => t('Parent'),
+      '#type' => 'select',
+      '#options' => $parents,
+      '#dependency' => array('edit-menu-entry' => array(1)),
+    );
+
+    // Hide the menu title so it can be set to the name of the page
+    $form['menu']['title']['#type'] = 'hidden';
+
+    // Remove the layout choice. Let's just get them to the mall!
+    $form['categories']['#access'] = FALSE;
+    $form['layout']['WetKit']['boxton']['#default_value'] = TRUE;
+
+    // Set the Button and Redirect State
+    $form['buttons']['next']['#value'] = t('Create Page');
+    $form['#validate'][] = 'wetkit_admin_landing_page_wizard_validate';
+    $form['#submit'][] = 'wetkit_admin_landing_page_wizard_submit';
+  }
+}
+
+/**
+ * Custom Validate Function to Help Improve The Landing Page Options
+ */
+function wetkit_admin_landing_page_wizard_validate($form, &$form_state) {
+
+  // Set the Menu Title to be the Same as the Page Title
+  if ($form_state['values']['menu_entry'] && empty($form_state['values']['menu']['title'])) {
+    $form_state['values']['menu']['title'] = $form_state['values']['admin_title'];
+  }
+
+  // Set the Menu Parent to be The Chosen One
+  if ($form_state['values']['menu']['parent']) {
+    $form_state['wizard cache']->menu['parent'] = $form_state['values']['menu']['parent'];
+  }
+}
+
+/**
+ * Custom Submit Function to Finish Up 
+ */
+function wetkit_admin_landing_page_wizard_submit($form, &$form_state) {
+
+  // Save the Page
+  page_manager_page_wizard_finish($form_state);
+
+  // Modify the Menu
+  if ($form_state['values']['menu']['parent']) {
+    $mlid = db_select('menu_links' , 'ml')
+      ->condition('ml.link_path' , $form_state['values']['path'])
+      ->fields('ml' , array('mlid'))
+      ->execute()
+      ->fetchField();
+    $menu_link = menu_link_load($mlid);
+    $menu_link['plid'] = str_replace('main-menu:', '', $form_state['values']['menu']['parent']);
+    menu_link_save($menu_link);
+    menu_cache_clear_all();
+  }
+
+  // Redirect to the Page
+  $form_state['redirect'] = $form_state['wizard cache']->path;
 }
 
 /**
@@ -158,18 +290,32 @@ function wetkit_admin_module_implements_alter(&$implementations, $hook) {
  */
 function wetkit_admin_pathauto_submit($form, &$form_state) {
   // If the user hasn't specified a path, autogenerate
-  if (!isset($form_state['input']['path']['alias'])) {
-    $form_state['values']['path']['pathauto'] = 1;
-    $form_state['input']['path']['pathauto'] = 1;
+  if (empty($form_state['input']['path']['alias'])) {
+    $form_state['values']['path']['pathauto'] = TRUE;
+    $form_state['input']['path']['pathauto'] = TRUE;
   }
 }
 
 /**
- * Submit function for adding menu validation
+ * Validate function for adding menu validation
  */
 function wetkit_admin_menu_validate($form, &$form_state) {
   if ($form_state['input']['menu']['enabled'] && !$form_state['input']['menu']['link_title']) {
     form_set_error('link_title', t('Menu link title is required.'));
+  }
+}
+
+/**
+ * Submit function for closing the custom modal
+ */
+function wetkit_admin_modal_close_submit($form, &$form_state) {
+  if (!empty($form_state['input']['js'])) {
+    ctools_include('ajax');
+    ctools_include('modal');
+    $commands = array();
+    $commands[] = ctools_ajax_command_reload();
+    print ajax_render($commands);
+    exit;
   }
 }
 
@@ -189,6 +335,22 @@ function wetkit_admin_menu() {
     'page arguments' => array(3, 4),
     'access arguments' => array('administer themes'),
   );
+  $items['node/add/landing_page'] = array(
+    'title' => 'Landing Page',
+    'page callback' => 'page_manager_page_wizard',
+    'page arguments' => array(2),
+    'access arguments' => array('use page manager'),
+    'file' => 'includes/page-wizard.inc',
+    'file path' => drupal_get_path('module', 'ctools'),
+  );
+
+  $items['admin/site/panelizer-delete/%/%'] = array(
+    'type' => MENU_CALLBACK,
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('wetkit_admin_panelizer_delete_form', 3, 4),
+    'access arguments' => array('administer panelizer'),
+  );
+
   return $items;
 }
 
@@ -225,15 +387,91 @@ function wetkit_admin_theme_config_page($js = FALSE, $theme_key) {
   $theme_data = list_themes();
   $title = 'Configure ' . $theme_data[$theme_key]->info['name'];
   ctools_include('system.admin', 'system', '');
+  $output = drupal_get_form('system_theme_settings', $theme_key);
   if (empty($form_state['executed']) && $js) {
     ctools_include('ajax');
     ctools_include('modal');
-    $form_state = array('theme_key' => $theme_key, 'ajax' => TRUE, 'title' => $title);
-    $form = drupal_get_form('system_theme_settings', $theme_key); // This is required to 
-    print ajax_render(ctools_modal_form_wrapper('system_theme_settings', $form_state, $theme_key));
+    ctools_modal_render($title, $output);
   }
   else {
     drupal_set_title($title);
-    return drupal_get_form('system_theme_settings', $theme_key);
+    return $output;
   }
+}
+
+/**
+ * Utility function for parsing basic entity info.
+ */
+function wetkit_admin_entity_parse_info($entity, $type) {
+  $entity_info = array();
+
+  switch ($type) {
+    case 'node':
+      $entity_info['title'] = $entity->title;
+      $entity_info['type'] = 'node';
+      $entity_info['bundle_type'] = $entity->type;
+      $entity_info['id'] = $entity->nid;
+      break;
+    case 'user':
+      $entity_info['title'] = $entity->name;
+      $entity_info['type'] = 'user';
+      $entity_info['bundle_type'] = 'user';
+      $entity_info['id'] = $entity->uid;
+      break;
+    case 'taxonomy_term':
+      $entity_info['title'] = $entity->name;
+      $entity_info['type'] = 'taxonomy_term';
+      $entity_info['bundle_type'] = $entity->vocabulary_machine_name;
+      $entity_info['id'] = $entity->tid;
+      break;
+  }
+
+  return $entity_info;
+}
+
+/**
+ * Confirmation form for deleting a panelizer revision.
+ */
+function wetkit_admin_panelizer_delete_form($form, &$form_state, $entity_type, $entity_id) {
+
+  $entities = entity_load($entity_type, array($entity_id));
+
+  if (!empty($entities)) {
+    $entity = reset($entities);
+  }
+
+  $entity_info = wetkit_admin_entity_parse_info($entity, $entity_type);
+
+  $form['#redirect'] = 'admin/site';
+
+  $form['entity_type'] = array(
+    '#type' => 'value',
+    '#value' => $entity_info['type'],
+  );
+
+  $form['entity_id'] = array(
+    '#type' => 'value',
+    '#value' => $entity_info['id'],
+  );
+
+  $form['entity_title'] = array(
+    '#type' => 'value',
+    '#value' => $entity_info['title'],
+  );
+
+  return confirm_form($form, t('Are you sure you want to delete the overriden page template for %title?', array('%title' => $entity_info['title'])), 'admin/site');
+}
+
+/**
+ * Submit function for deleting a panelizer revision.
+ */
+function wetkit_admin_panelizer_delete_form_submit($form, &$form_state) {
+  $form_state['redirect'] = 'admin/site';
+
+  db_delete('panelizer_entity')
+      ->condition('entity_type', $form_state['values']['entity_type'])
+      ->condition('entity_id', $form_state['values']['entity_id'])
+      ->execute();
+
+  drupal_set_message(t('The overridden page template for %title has been deleted.', array('%title' => $form_state['values']['entity_title'])));
 }

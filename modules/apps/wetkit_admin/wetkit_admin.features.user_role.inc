@@ -16,5 +16,11 @@ function wetkit_admin_user_default_roles() {
     'weight' => '2',
   );
 
+  // Exported role: editorial user.
+  $roles['editorial user'] = array(
+    'name' => 'editorial user',
+    'weight' => '3',
+  );
+
   return $roles;
 }

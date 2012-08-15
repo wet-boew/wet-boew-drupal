@@ -19,11 +19,14 @@ projects[context][version] = 3.0-beta2
 projects[context][subdir] = contrib
 projects[context][type] = module
 
-; http://drupal.org/node/1719548
 projects[ctools][version] = 1.1
 projects[ctools][subdir] = contrib
 projects[ctools][type] = module
+projects[ctools][download][type] = git
+projects[ctools][download][revision] = 116c49e
+projects[ctools][download][branch] = 7.x-1.x
 projects[ctools][patch][1294478] = http://drupal.org/files/1294478-modal-dynamic-mode.patch
+projects[ctools][patch][1708438] = http://drupal.org/files/1708438-blur-event.patch
 
 projects[diff][version] = 2.x-dev
 projects[diff][subdir] = contrib
@@ -48,9 +51,7 @@ projects[fences][patch][1561244] = http://drupal.org/files/undefined-index-15612
 projects[fieldable_panels_panes][version] = 1.1
 projects[fieldable_panels_panes][subdir] = contrib
 projects[fieldable_panels_panes][type] = module
-projects[fieldable_panels_panes][download][type] = git
-projects[fieldable_panels_panes][download][revision] = a4ea924
-projects[fieldable_panels_panes][download][branch] = 7.x-1.x
+projects[fieldable_panels_panes][patch][1715918] = http://drupal.org/files/fieldable-panel-panes-load-vid.patch
 ;projects[fieldable_panels_panes][patch][1536944] = http://drupal.org/files/translatable-panes-1536944-6.patch
 
 projects[jquery_update][version] = 2.x-dev
@@ -65,14 +66,21 @@ projects[libraries][version] = 2.0
 projects[libraries][type] = module
 projects[libraries][subdir] = contrib
 
+projects[json2][type] = module
+projects[json2][version] = 1.0
+projects[json2][subdir] = contrib
+
 projects[panels][version] = 3.x-dev
 projects[panels][subdir] = contrib
 projects[panels][type] = module
 projects[panels][download][type] = git
-projects[panels][download][revision] = 3f50718
+projects[panels][download][revision] = 369c214
 projects[panels][download][branch] = 7.x-3.x
-projects[panels][patch][1706936] = http://drupal.org/files/panels-ipe-no-css-image.patch
-projects[panels][patch][1549660] = http://drupal.org/files/1549660-allow-region-style-settings.patch
+;projects[panels][patch][1711302] = http://drupal.org/files/1711302-improve-ipe-icons-for-add-content.patch
+projects[panels][patch][1549660] = http://drupal.org/files/1549660-list-region-style-dont-render-empty-placeholder.patch
+;projects[panels][patch][1690124] = http://drupal.org/files/1690124-hide-ipe-toolbar-with-open-modal_3_relies_1711302.patch
+projects[panels][patch][1690128] = http://drupal.org/files/1690128-add-panes-to-top-ipe.patch
+ 
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/panels-add-hooks-to-integrate-i18n_panels-1179034-41.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/uuids-for-exported-pids-1277908-19.patch
 
@@ -87,9 +95,9 @@ projects[panelizer][version] = 3.x-dev
 projects[panelizer][subdir] = contrib
 projects[panelizer][type] = module
 projects[panelizer][download][type] = git
-projects[panelizer][download][revision] = c4022c5
+projects[panelizer][download][revision] = c1c00cb
 projects[panelizer][download][branch] = 7.x-3.x
-projects[panelizer][patch][1387634] = http://drupal.org/files/exporting_panelizer_defaults-1387634-9.patch
+projects[panelizer][patch][1555194] = http://drupal.org/files/1387634-features-support-panelizer-unified.patch
 
 projects[password_policy][version] = 1.0-rc3
 projects[password_policy][type] = module
@@ -107,9 +115,17 @@ projects[rules][download][revision] = 5273ea6
 projects[rules][download][branch] = 7.x-2.x
 projects[rules][patch][1329346] = http://drupal.org/files/remove-make-file-1329346-10.patch
 
-projects[token][version] = 1.1
+projects[token][version] = 1.2
 projects[token][type] = module
 projects[token][subdir] = contrib
+
+projects[layout][version] = 1.0-alpha2
+projects[layout][type] = module
+projects[layout][subdir] = contrib
+
+projects[gridbuilder][version] = 1.0-alpha2
+projects[gridbuilder][type] = module
+projects[gridbuilder][subdir] = contrib
 
 projects[views][version] = 3.3
 projects[views][type] = module
@@ -128,7 +144,7 @@ projects[views_slideshow][subdir] = contrib
 ; Field UI and Content Types ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-projects[date][version] = 2.5
+projects[date][version] = 2.6
 projects[date][type] = module
 projects[date][subdir] = contrib
 
@@ -136,13 +152,17 @@ projects[file_entity][version] = 2.x-dev
 projects[file_entity][type] = module
 projects[file_entity][subdir] = contrib
 projects[file_entity][download][type] = git
-projects[file_entity][download][revision] = ba18f8b
+projects[file_entity][download][revision] = a8986e5
 projects[file_entity][download][branch] = 7.x-2.x
 projects[file_entity][patch][1553094] = http://drupal.org/files/Alt-and-Title-support-for-Images-1553094-62.patch
 
 projects[field_group][version] = 1.1
 projects[field_group][type] = module
 projects[field_group][subdir] = contrib
+
+projects[entityreference][version] = 1.0-rc3
+projects[entityreference][type] = module
+projects[entityreference][subdir] = contrib
 
 projects[link][version] = 1.0
 projects[link][type] = module
@@ -156,7 +176,7 @@ projects[tablefield][subdir] = contrib
 ; Menus and URLs ;
 ;;;;;;;;;;;;;;;;;;
 
-projects[pathauto][version] = 1.1
+projects[pathauto][version] = 1.2
 projects[pathauto][subdir] = contrib
 projects[pathauto][type] = module
 projects[pathauto][download][type] = git
@@ -219,7 +239,7 @@ projects[media][version] = 2.x-dev
 projects[media][type] = module
 projects[media][subdir] = contrib
 projects[media][download][type] = git
-projects[media][download][revision] = cc55948
+projects[media][download][revision] = 1a0304d
 projects[media][download][branch] = 7.x-2.x
 projects[media][patch][1307054] = http://drupal.org/files/1307054-d7-2.patch
 
@@ -278,13 +298,18 @@ projects[apps][type] = module
 projects[apps][download][type] = git
 projects[apps][download][revision] = c435c95
 projects[apps][download][branch] = 7.x-1.x
-projects[apps][patch][1479164] = http://drupal.org/files/1479164-apps-permissions-check-modules-not-conf-reroll.patch
-projects[apps][patch][1561652] = http://drupal.org/files/apps-allow-drush-site-install.patch
+projects[apps][patch][1479164] = http://drupal.org/files/1479164-apps-has-write-access-check.patch
+projects[apps][patch][1561652] = http://drupal.org/files/1561652-apps-allow-drush-site-install-patch-reroll-1479164.patch
+projects[apps][patch][1721538] = http://drupal.org/files/1721538-rename-app-images-not-replace.patch
+projects[apps][patch][1721548] = http://drupal.org/files/1721548-silent-success-condition-profile.patch
+projects[apps][patch][1665048] = http://drupal.org/files/reject-broken-images-1665048-2.patch
 
-projects[defaultcontent][version] = 1.0-alpha5
+projects[defaultcontent][version] = 1.x-dev
 projects[defaultcontent][type] = module
 projects[defaultcontent][subdir] = contrib
-projects[defaultcontent][patch][1263536] = http://drupal.org/files/base64_encode_files-1263536-1_0.patch
+projects[defaultcontent][download][type] = git
+projects[defaultcontent][download][revision] = d8806d8
+projects[defaultcontent][download][branch] = 7.x-1.x
 
 projects[entity][version] = 1.0-rc3
 projects[entity][type] = module
@@ -353,13 +378,35 @@ projects[i18nviews][type] = module
 ; Search ;
 ;;;;;;;;;;
 
-projects[facetapi][version] = 1.0
+projects[custom_search][version] = 1.10
+projects[custom_search][type] = module
+projects[custom_search][subdir] = contrib
+
+projects[facetapi][version] = 1.1
 projects[facetapi][type] = module
 projects[facetapi][subdir] = contrib
 
-projects[metatag][version] = 1.0-alpha6
+;projects[search_api][version] = 1.2
+;projects[search_api][type] = module
+;projects[search_api][subdir] = contrib
+;projects[search_api][patch][1698098] = http://drupal.org/files/search-api-disabled-index-configure-link.patch
+
+;projects[search_api_solr][version] = 1.0-rc2
+;projects[search_api_solr][type] = module
+;projects[search_api_solr][subdir] = contrib
+;projects[search_api_solr][patch][1407282] = http://drupal.org/files/1407282--variable_solr_connection_class-27.patch
+
+;projects[search_api_db][version] = 1.0-beta3
+;projects[search_api_db][type] = module
+;projects[search_api_db][subdir] = contrib
+
+projects[metatag][version] = 1.0-alpha8
 projects[metatag][subdir] = contrib
 projects[metatag][type] = module
+projects[metatag][download][type] = git
+projects[metatag][download][revision] = 11012b12
+projects[metatag][download][branch] = 7.x-1.x
+projects[metatag][patch][1491616] = http://drupal.org/files/metatag-dublin_core_metatags-1491616-28.patch
 
 projects[search404][version] = 1.1
 projects[search404][subdir] = contrib
@@ -369,10 +416,18 @@ projects[search404][type] = module
 ; LIBRARIES ;
 ;;;;;;;;;;;;;
 
+libraries[json2][download][type] = get
+libraries[json2][download][url] = https://github.com/douglascrockford/JSON-js/blob/master/json2.js
+libraries[json2][revision] = fc535e9cc8fa78bbf45a85835c830e7f799a5084
+
 libraries[markitup][download][type] = get
 libraries[markitup][download][url] = https://github.com/markitup/1.x/tarball/master
 libraries[markitup][directory_name] = markitup
 libraries[markitup][type] = library
+libraries[markitup][patch][1715642] = http://drupal.org/files/1715642-adding-html-set-markitup-editor.patch
+
+;libraries[SolrPhpClient][download][type] = get
+;libraries[SolrPhpClient][download][url] = http://solr-php-client.googlecode.com/files/SolrPhpClient.r60.2011-05-04.zip
 
 libraries[tinymce][download][type] = git
 libraries[tinymce][download][url] = https://github.com/sylus/tinymce-cirkuit.git
@@ -391,8 +446,18 @@ libraries[wet-boew][type] = library
 projects[adaptivetheme][version] = 3.0
 projects[adaptivetheme][type] = theme
 
-projects[rubik][version] = 4.0-beta8
+projects[rubik][version] = 4.x-dev
 projects[rubik][type] = theme
+projects[rubik][download][type] = git
+projects[rubik][download][revision] = e01c3d5
+projects[rubik][download][branch] = 7.x-4.x
+projects[rubik][patch][1623510] = http://drupal.org/files/1623510-6-rubik-widget-styling.patch
+;projects[rubik][patch][1635790] = http://drupal.org/files/rubik-form-file-input-styling.patch
+projects[rubik][patch][1645148] = http://drupal.org/files/rubik-ie9-box-sizing-1645148-1.patch
+projects[rubik][patch][944534] = http://drupal.org/files/rubik-table_input_fluid-944534-5.patch
+projects[rubik][patch][1445890] = http://drupal.org/files/editor-link-covered-1445890-2.patch
+projects[rubik][patch][1003820] = http://drupal.org/files/1003820-rubik-5.patch
+projects[rubik][patch][1440054] = http://drupal.org/files/patch_commit_96121294ba3b.patch
 
 projects[tao][version] = 3.0-beta4
 projects[tao][type] = theme

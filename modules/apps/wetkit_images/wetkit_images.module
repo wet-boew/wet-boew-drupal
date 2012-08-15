@@ -8,9 +8,17 @@ include_once('wetkit_images.features.inc');
 function wetkit_images_media_wysiwyg_allowed_view_modes_alter(&$options, $context) {
 
   // Unset confusing options
-  if (isset($options['token'])) { unset($options['token']); }
-  if (isset($options['media_link'])) { unset($options['media_link']); }
-  if (isset($options['full'])) { unset($options['full']); }
+  if (($options['token'])) {
+    unset($options['token']); 
+  }
+
+  if (isset($options['media_link'])) {
+    unset($options['media_link']);
+  }
+
+  if (isset($options['full'])) {
+    unset($options['full']); 
+  }
 
   // Relabel some options
   $options['media_original']['label'] = t('Full Size');
@@ -38,7 +46,7 @@ function wetkit_images_form_alter(&$form, &$form_state, $form_id) {
     );
     $image_path = $form['#media']->uri;
     $image_formats = array('wetkit_image_full', 'wetkit_image_half', 'wetkit_image_quarter');
-    foreach($image_formats as $format) {
+    foreach ($image_formats as $format) {
       $form['preload'][$format] = array(
         '#markup' => theme('image', array('path' => image_style_url($format, $image_path))),
       );

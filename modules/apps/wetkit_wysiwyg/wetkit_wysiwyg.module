@@ -63,7 +63,8 @@ function wetkit_wysiwyg_filter_process_format($element) {
 
   // Set the element above the WYSIWYG textarea
   $element['format']['#weight'] = 1;
-  unset($element['format']['format']['#options']['plain_text']);
+  $element['format']['#prefix'] = '<div class="format-toggle">';
+  $element['format']['#suffix'] = '</div><div class="clearfix"></div>';
   unset($element['format']['#type']);
   $element['format']['format']['#title'] = 'Editor: ';
   
@@ -92,7 +93,7 @@ function wetkit_wysiwyg_module_implements_alter(&$implementations, $hook) {
  */
 function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
 
-  switch($context['editor']['name']) {
+  switch ($context['editor']['name']) {
     case 'tinymce':
 
       // Define the skin to use
@@ -103,8 +104,8 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
 
       // Process a default order for the WYSIWYG
       $enabled_buttons = preg_split('/,/', $settings['theme_advanced_buttons1']);
-      $default_buttons = array('bold', 'italic', 'strikethrough', '|', 'bullist', 'numlist', 'blockquote', '|', 'justifyleft', 'justifycenter','justifyright','|','link', 'unlink', 'break', '|', 'fullscreen', 'spellchecker', 'media', 'captionfilter', 'pdw_toggle', 'PAGEBREAK', 'formatselect', '|', 'underline', '|', 'justifyfull', '|', 'forecolor', '|', 'pastetext', 'pasteword', 'removeformat', '|', 'charmap', '|', 'indent', 'outdent', '|', 'undo', 'redo'); 
-      foreach($default_buttons as $button) {
+      $default_buttons = array('bold', 'italic', 'strikethrough', '|', 'bullist', 'numlist', 'blockquote', '|', 'justifyleft', 'justifycenter', 'justifyright', '|', 'link', 'unlink', 'break', '|', 'fullscreen', 'spellchecker', 'media', 'captionfilter', 'pdw_toggle', 'PAGEBREAK', 'formatselect', '|', 'underline', '|', 'justifyfull', '|', 'forecolor', '|', 'pastetext', 'pasteword', 'removeformat', '|', 'charmap', '|', 'indent', 'outdent', '|', 'undo', 'redo'); 
+      foreach ($default_buttons as $button) {
         if (in_array($button, $enabled_buttons)) {
           unset($enabled_buttons[array_search($button, $enabled_buttons)]);
         }
@@ -129,9 +130,88 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
 
       break;
     case 'markitup':
-      // TODO - this needs to be extended to include the same buttons as part of the standard TinyMCE editor
+
+      // Load the appropriate CSS and JS
+      drupal_add_css($context['editor']['library path'] . '/markitup/sets/html/style.css'); 
+      drupal_add_js($context['editor']['library path'] . '/markitup/sets/html/set.js');
+
+      // Defin the new header buttons
+      $header_buttons = array(
+        'header-begin' => array(
+          'className' => 'markItUpSeparator',
+        ),
+        'h1' => array(
+          'name' => t('Heading 1'),
+          'className' => 'markitup-h1',
+          'key' => '1',
+          'openWith' => '<h1(!( class="[![Class]!]")!)>',
+          'closeWith' => '</h1>',
+          'placeHolder' => 'Your title here...',
+        ),
+        'h2' => array(
+          'name' => t('Heading 2'),
+          'className' => 'markitup-h2',
+          'key' => '2',
+          'openWith' => '<h2(!( class="[![Class]!]")!)>',
+          'closeWith' => '</h2>',
+          'placeHolder' => 'Your title here...',
+        ),
+        'h3' => array(
+          'name' => t('Heading 3'),
+          'className' => 'markitup-h3',
+          'key' => '3',
+          'openWith' => '<h3(!( class="[![Class]!]")!)>',
+          'closeWith' => '</h3>',
+          'placeHolder' => 'Your title here...',
+        ),
+        'h4' => array(
+          'name' => t('Heading 4'),
+          'className' => 'markitup-h4',
+          'key' => '4',
+          'openWith' => '<h4(!( class="[![Class]!]")!)>',
+          'closeWith' => '</h4>',
+          'placeHolder' => 'Your title here...',
+        ),
+        'paragraph' => array(
+          'name' => t('Paragraph'),
+          'className' => 'markitup-paragraph',
+          'key' => 'p',
+          'openWith' => '<p(!( class="[![Class]!]")!)>',
+          'closeWith' => '</p>',
+        ),
+        'header-end' => array(
+          'className' => 'markItUpSeparator',
+        ),
+      );
+
+      // Define the list styles
+      $list_styles = array(
+        'list-bullet' => array(
+          'name' => t('Unordered List'),
+          'className' => 'markitup-list-bullet',
+          'openWith' => "<ul>\n",
+          'closeWith' => '</ul>',
+        ),
+        'list-numeric' => array(
+          'name' => t('Ordered List'),
+          'className' => 'markitup-list-numeric',
+          'openWith' => "<ol>\n",
+          'closeWith' => '</ol>',
+        ),
+      );
+
+      // Add the header buttons to the end
+      foreach ($header_buttons as $tag => $details) {
+        $settings['markupSet'][$tag] = $details;
+        $context['profile']->settings['buttons']['html'][$tag] = 1;
+      }
+
+      // Add the list styles to the end
+      foreach ($list_styles as $tag => $details) {
+        $settings['markupSet'][$tag] = $details;
+        $context['profile']->settings['buttons']['html'][$tag] = 1;
+      }
       break;
   }
 }
-
 

@@ -7,9 +7,7 @@ include_once('wetkit_widgets.plugins.inc');
  * Implementation of hook_ctools_plugin_directory()
  */
 function wetkit_widgets_ctools_plugin_directory($module, $plugin) {
-  if ($module == 'page_manager' || $module == 'panels') {
-    return 'plugins/' . $plugin;
-  }
+  return 'plugins/' . $plugin;
 }
 
 /**
@@ -27,9 +25,36 @@ function wetkit_widgets_ctools_content_subtype_alter(&$subtype, &$plugin) {
     $subtype['admin js'] = array(drupal_get_path('module', 'menu_block') . '/menu-block.js');
   }
 
+  // Modify the general content item to appear in the generic content sidebar area
+  if ($plugin['module'] == 'views_content' && $subtype['title'] == 'Piece of Content') {
+    $subtype['category'][0] = 'Custom';
+    $subtype['top level'] = TRUE;
+    $subtype['title'] = 'Add content item';
+    $subtype['icon'] = drupal_get_path('module', 'wetkit_widgets') . '/images/icon_content_item.png';
+  }
+
+  // Modify the general content listing to appear in the generic content sidebar area
+  if ($plugin['module'] == 'views_content' && $subtype['title'] == 'List of Content') {
+    $subtype['category'][0] = 'Custom';
+    $subtype['top level'] = TRUE;
+    $subtype['title'] = 'Add content list';
+    $subtype['icon'] = drupal_get_path('module', 'wetkit_widgets') . '/images/icon_content_list.png';
+  }
+
   // Modify the plugins so we do away with this "node" and "entity" thing
-  if ($subtype['category'] == 'Node' || $subtype['category'] == 'Entity' || $subtype['category'] == 'User') {
-    $subtype['category'] = 'Page Content';
+  if ($subtype['category'] == 'Node' || $subtype['category'] == 'Entity') {
+    $subtype['category'] = t('Page Content');
+  }
+  if ($subtype['category'] == 'User') {
+    $subtype['category'] = t('User Content');
+  }
+  if ($subtype['category'] == 'Taxonomy_term' || $subtype['category'] == 'Taxonomy term') {
+    $subtype['category'] = t('Category Content');
+  }
+
+  // Modify the plugins so we have consistent language around "form" content
+  if ($subtype['category'] == 'Form') {
+    $subtype['category'] = t('Form Content');
   }
 }
 
@@ -68,15 +93,24 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
     $form['widget_settings']['link'] = $form['link'];
     unset($form['link']);
 
+    // Set proper display mode options for existing content bundles.  
+    if (!empty($form['#entity']) && $form['#entity']->bundle == 'existing_content') {
+      $form['field_view_mode'][LANGUAGE_NONE]['#options'] = wetkit_core_view_mode_options();
+      $form['field_view_mode'][LANGUAGE_NONE]['#required'] = TRUE;
+      $view_mode =  $form['#entity']->field_view_mode[LANGUAGE_NONE][0]['value'];
+      $form['field_view_mode'][LANGUAGE_NONE]['#default_value'] = !empty($view_mode) ? $view_mode : 'full';
+    }
+
+
     // Find file / image fields and ensure they are using a FID instead of a UUID.
-    foreach($form as $key => $value) {
+    foreach ($form as $key => $value) {
       if (substr($key, 0, 6) == 'field_') {
         if (!empty($value['und']['0']['#bundle']) && ($value['und']['0']['#bundle'] == 'image' || $value['und']['0']['#bundle'] == 'file')) {
-          foreach($value['und'] as $subkey => $subvalue) {
+          foreach ($value['und'] as $subkey => $subvalue) {
             if (is_numeric($subkey)) {
               // Change UUID to FID to resolve issue with UUID handling. This solves a bug with Fieldable Panels Panes that
               // hopefully will be resolved soon.
-              if (!empty($subvalue['#default_value']['fid']) && strlen($subvalue['#default_value']['fid']) == 36){
+              if (!empty($subvalue['#default_value']['fid']) && strlen($subvalue['#default_value']['fid']) == 36) {
                 $form[$key]['und'][$subkey]['#default_value']['fid'] = db_query('SELECT fid FROM {file_managed} WHERE uuid = :uuid', array(':uuid' => $subvalue['#default_value']['fid']))->fetchField();
               }
             }
@@ -84,7 +118,6 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
         }
       }
     }
-    
 
     // Improve the reusable interface
     $form['reusable']['#title'] = t('Reusable Settings');
@@ -115,7 +148,7 @@ function wetkit_widgets_fieldable_panel_pane_pre_render($element) {
   );
 
   // Add any remaining fields to the content settings fieldset.
-  foreach($element as $key => $value) {
+  foreach ($element as $key => $value) {
     if (substr($key, 0, 6) == 'field_') {
       $element['content_settings'][$key] = $value;
       unset($element[$key]);
@@ -140,7 +173,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_link.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
+      'bundle argument' => 4,
       'real path' => 'admin/structure/fieldable-panels-panes/manage/quick-links',
       'access arguments' => array('administer fieldable panels panes'),
     ),
@@ -154,7 +187,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_file.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
+      'bundle argument' => 4,
       'real path' => 'admin/structure/fieldable-panels-panes/manage/basic-file',
       'access arguments' => array('administer fieldable panels panes'),
     ),
@@ -168,7 +201,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_image.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
+      'bundle argument' => 4,
       'real path' => 'admin/structure/fieldable-panels-panes/manage/image',
       'access arguments' => array('administer fieldable panels panes'),
     ),
@@ -182,7 +215,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_text.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
+      'bundle argument' => 4,
       'real path' => 'admin/structure/fieldable-panels-panes/manage/text',
       'access arguments' => array('administer fieldable panels panes'),
     ),
@@ -196,7 +229,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_map.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
+      'bundle argument' => 4,
       'real path' => 'admin/structure/fieldable-panels-panes/manage/map',
       'access arguments' => array('administer fieldable panels panes'),
     ),
@@ -210,7 +243,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_table.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
+      'bundle argument' => 4,
       'real path' => 'admin/structure/fieldable-panels-panes/manage/table',
       'access arguments' => array('administer fieldable panels panes'),
     ),
@@ -224,7 +257,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_video.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
+      'bundle argument' => 4,
       'real path' => 'admin/structure/fieldable-panels-panes/manage/video',
       'access arguments' => array('administer fieldable panels panes'),
     ),
@@ -238,12 +271,12 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
     'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_spotlight.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 5,
+      'bundle argument' => 4,
       'real path' => 'admin/structure/fieldable-panels-panes/manage/spotlight',
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
-
+  
   // Tabbed Interface
   $entity_info['fieldable_panels_pane']['bundles']['tabbed_interface'] = array(
     'label' => t('Add tabbed interface'),
@@ -257,6 +290,22 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
+  
+  // Existing content.
+  /* TODO - Which is better? FPP implementation of Views??
+  $entity_info['fieldable_panels_pane']['bundles']['existing_content'] = array(
+    'label' => t('Add content item'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'wetkit_widgets') . '/images/icon_spotlight.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/existing-content',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  ); 
+  */
 }
 
 /**
@@ -359,3 +408,113 @@ function _wetkit_widgets_preprocess_wetkit_widgets_pager_field_item(&$vars) {
   $vars['classes_array'][] = ($vars['count'] % 2) ? 'views-row-even' : 'views-row-odd';
 }
 
+/**
+ * Implementation of hook_field_display_ENTITY_TYPE_alter().
+ *
+ * Update the display settings with the option selected on the entity view mode field.
+ */
+function wetkit_widgets_field_display_fieldable_panels_pane_alter(&$display, $context) {
+  if ($context['field']['field_name'] == 'field_existing_content') {
+    $view_mode = $context['entity']->field_view_mode[LANGUAGE_NONE][0]['value'];
+
+    if (!empty($view_mode)) {
+      $display['settings']['view_mode'] = $view_mode;
+    }
+  }
+}
+
+/**
+ * Implements hook_field_attach_view_alter().
+ *
+ * Allow image and spotlight FPP's to use default image content for previews.
+ */
+function wetkit_widgets_field_attach_view_alter(&$output, $context) {
+  // If we're displaying an image FPP where an image has not yet been attached.
+  if ($context['entity_type'] == 'fieldable_panels_pane' && $context['entity']->bundle == 'image') {
+    if (empty($output['field_basic_image_image']['#items'][0])) {
+      $image = wetkit_widgets_image_field_preview($context, 'field_basic_image_image');
+
+      if (!empty($image)) {
+        $output['field_basic_image_image'] = $image;
+      }
+    }
+  }
+  // If we're displaying a spotlight FPP where an image has not yet been attached.
+  else if ($context['entity_type'] == 'fieldable_panels_pane' && $context['entity']->bundle == 'spotlight') {
+    if (empty($output['field_basic_spotlight_items']['#items'][0]) && (empty($context['entity']->field_basic_spotlight_items) || empty($context['entity']->field_basic_spotlight_items[LANGUAGE_NONE][0]['fid']))) {
+      $image = wetkit_widgets_image_field_preview($context, 'field_basic_spotlight_items');
+
+      if (!empty($image)) {
+        $output['field_basic_image_image'] = $image;
+      }
+    }
+  }
+  else if ($context['entity_type'] == 'fieldable_panels_pane' && $context['entity']->bundle == 'basic_file') {
+    if (empty($output['field_basic_file_file'])) {
+      $file = wetkit_widgets_file_field_preview($context, 'field_basic_file_file');
+     
+      if (!empty($file)) {
+        $output['field_basic_file_file'] = $file;
+      }
+    }
+  }
+}
+
+/**
+ * Helper function for displaying preview images when no images are attached to entities.
+ */
+function wetkit_widgets_image_field_preview($context, $field) {
+  if ($fid = variable_get('wetkit_widgets_default_' . $context['entity']->bundle . '_fid', NULL)) {
+    // Load the image.
+    $image = (array)file_load($fid);
+
+    // Figure out the path to the image based on the stream wrapper / filename.
+    $path = file_stream_wrapper_get_instance_by_uri($image['uri'])->getDirectoryPath();
+    // Grab the image info (dimensions).
+    $image_info = image_get_info($path . '/' . file_uri_target($image['uri']));
+  
+    if (!empty($context['entity']->{$field}[LANGUAGE_NONE][0]) && is_array($context['entity']->{$field}[LANGUAGE_NONE][0])) {
+      // Preserve any meta-deta which might be present.
+      $current_file = $context['entity']->{$field}[LANGUAGE_NONE][0];
+ 
+      $image['alt'] = empty($current_file['alt']) ? '' : $current_file['alt'];
+      $image['title'] = empty($current_file['title']) ? '' : $current_file['title'];
+      $image['description'] = empty($current_file['description']) ? '' : $current_file['description'];
+      $image['link'] = empty($current_file['link']) ? '' : $current_file['link'];
+    }
+    else {
+      // We don't have titles or alts.
+      $image['alt'] = '';
+      $image['title'] = '';
+      $image['description'] = '';
+      $image['link'] = '';
+    }
+
+    // Do some housekeeping so field_view_field gets what it expects.
+    $image['height'] = $image_info['height'];
+    $image['width'] = $image_info['width'];
+    $image['dimensions'] = array('height' => $image['height'], 'width' => $image['width']); 
+
+    // Fake field_view_field into thinking there is actually an image attached.
+    $context['entity']->{$field}[LANGUAGE_NONE][0] = $image;
+
+    // Render the result.
+    return field_view_field($context['entity_type'], $context['entity'], $field, $context['display']);
+  }
+}
+
+/**
+ * Helper function for displaying preview files when no file is attached to an entity.
+ */
+function wetkit_widgets_file_field_preview($context, $field) {
+  if ($fid = variable_get('wetkit_widgets_default_' . $context['entity']->bundle . '_fid', NULL)) {
+    $file = (array) file_load($fid);
+
+    $file['description'] = NULL;
+
+    $context['entity']->{$field}[LANGUAGE_NONE][0] = $file;
+
+    // Render the result.
+    return field_view_field($context['entity_type'], $context['entity'], $field, $context['display']);
+  }
+}

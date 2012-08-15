@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * An installation file for WetKit Core
+ */
+
+/**
  * Implementation of hook_install()
  */
 function wetkit_core_install() {
