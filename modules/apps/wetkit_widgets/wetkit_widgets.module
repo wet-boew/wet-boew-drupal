@@ -348,7 +348,7 @@ function wetkit_widgets_theme($existing, $type, $theme, $path) {
     ),
     'fieldable_panels_pane' => array(
       'render element' => 'elements',
-      'template'  => 'templates/panels/wetkit-widgets-fieldable-panels-pane',
+      'template'  => 'templates/fieldable_panels_pane/wetkit-widgets-fieldable-panels-pane',
       'path' => drupal_get_path('module', 'wetkit_widgets'),
     ),
     'wetkit_spotlight_view' => array(
