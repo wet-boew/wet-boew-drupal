@@ -965,7 +965,7 @@ function wetkit_widgets_field_default_fields() {
     ),
   );
   
-  // Exported field: 'fieldable_panels_pane-spotlight-field_tabbed_interface'.
+  // Exported field: 'fieldable_panels_pane-tabbed_interface-field_tabbed_interface'.
   $fields['fieldable_panels_pane-tabbed_interface-field_tabbed_interface'] = array(
     'field_config' => array(
       'active' => '1',
@@ -997,14 +997,23 @@ function wetkit_widgets_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'tabbed_interface',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'title' => 'Tabbed Interface 1',
+          'link' => 'http://canada.gc.ca',
+          'fid' => '47',
+          'description' => 'This is where your description goes that will rendered in the body of the tabbed interface. ',
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
           'module' => 'wetkit_widgets',
-          'settings' => array(),
+          'settings' => array(
+            'image_style' => 'slider',
+          ),
           'type' => 'wetkit_tabbed_interface_default',
           'weight' => '0',
         ),
