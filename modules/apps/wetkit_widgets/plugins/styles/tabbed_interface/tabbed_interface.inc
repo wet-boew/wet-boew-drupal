@@ -36,7 +36,7 @@ function theme_wetkit_widgets_tabbed_interface_style_render_pane($vars) {
   //$display = $vars['display'];
   //$plugin = $vars['style'];
   $content = $vars['content'];
-  $content->css_class .= (isset($vars['settings']['tabbed_interface_classes'])) ? $vars['settings']['tabbed_interface_classes'] : '';
+  //$content->css_class .= (isset($vars['settings']['tabbed_interface_classes'])) ? $vars['settings']['tabbed_interface_classes'] : '';
   
   // if the style is gone or has no theme of its own, just display the output.
   //return theme('wetkit_widgets_theme_pane', array('content' => $content, 'settings' => $settings));

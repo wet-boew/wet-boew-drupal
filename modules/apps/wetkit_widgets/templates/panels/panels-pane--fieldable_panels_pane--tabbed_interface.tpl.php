@@ -41,12 +41,14 @@
     <?php endif; ?>
 
     <div class="pane-content">
-      <?php if ($content['#bundle'] == 'tabbed_interface'): ?>
-        <div class="wet-boew-tabbedinterface <?php print $classes; ?>">
+      <?php if (isset($settings['tabbed_interface_classes'])): ?>
+        <div class="wet-boew-tabbedinterface <?php print $settings['tabbed_interface_classes']; ?>">
           <?php print render($content); ?>
         </div>
       <?php else: ?>
-        <?php print render($content); ?>
+        <div class="wet-boew-tabbedinterface tabs-style-3 cycle-fast animate-fast">
+          <?php print render($content); ?>
+        </div>
       <?php endif; ?>
     </div>
 
