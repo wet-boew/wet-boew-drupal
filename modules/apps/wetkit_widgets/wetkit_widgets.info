@@ -59,6 +59,7 @@ features[views_view][] = wetkit_widgets_general_content
 files[] = wetkit_widgets.module
 scripts[] = js/wetkit_accordion.js
 scripts[] = js/wetkit_spotlight.js
+scripts[] = js/wetkit_tabbed_interface.js
 stylesheets[all][] = css/wetkit_spotlight.css
 stylesheets[all][] = css/wetkit_accordion.css
 stylesheets[all][] = css/wetkit_views_slideshow.css
