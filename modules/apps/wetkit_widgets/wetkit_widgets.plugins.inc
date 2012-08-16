@@ -6,6 +6,15 @@
  */
 
 /**
+ * Implements hook_preprocess_panels_pane().
+ */
+function wetkit_widgets_preprocess_panels_pane(&$variables) {
+  if($variables['content']['#bundle'] == 'tabbed_interface') {
+    $variables['theme_hook_suggestions'][] = 'panels_pane__fieldable_panels_pane__tabbed_interface';
+  }
+}
+
+/**
  * Implements hook_field_info().
  */
 function wetkit_widgets_field_info() {
@@ -216,6 +225,8 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
     if ($display['type'] == 'wetkit_tabbed_interface_default') {
       $element[$delta]['#markup'] = theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings));
       $element[$delta]['title'] = $item_data['title'];
+      //if panel style is applied
+      $element[$delta]['tabbed_true'] = 'true';
     }
   }
   return $element;

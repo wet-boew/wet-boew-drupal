@@ -41,7 +41,13 @@
     <?php endif; ?>
 
     <div class="pane-content">
-      <?php print render($content); ?>
+      <?php if ($content['#bundle'] == 'tabbed_interface'): ?>
+        <div class="wet-boew-tabbedinterface <?php print $classes; ?>">
+          <?php print render($content); ?>
+        </div>
+      <?php else: ?>
+        <?php print render($content); ?>
+      <?php endif; ?>
     </div>
 
     <?php if ($links): ?>

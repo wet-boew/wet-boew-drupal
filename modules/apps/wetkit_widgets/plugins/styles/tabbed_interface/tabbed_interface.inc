@@ -12,14 +12,14 @@ $plugin = array(
   'render pane' => 'wetkit_widgets_tabbed_interface_style_render_pane',
   'pane settings form' => 'wetkit_widgets_tabbed_interface_style_settings_form',
   'hook theme'	=> array(
-  'wetkit_widgets_theme_pane' => array(
-    'template' => 'tabbed_interface-pane',
-      'path' => drupal_get_path('module', 'wetkit_widgets') .'/plugins/styles/tabbed_interface',
-      'variables' => array(
-        'content' => NULL,
-        'settings' => NULL,
-      ),
-    ),
+  //'wetkit_widgets_theme_pane' => array(
+  //  'template' => 'tabbed_interface-pane',
+  //    'path' => drupal_get_path('module', 'wetkit_widgets') .'/plugins/styles/tabbed_interface',
+  //    'variables' => array(
+  //      'content' => NULL,
+  //      'settings' => NULL,
+  //    ),
+  //  ),
   ),
   'weight' => -5,
 );
@@ -30,10 +30,17 @@ $plugin = array(
  * @ingroup themeable
  */
 function theme_wetkit_widgets_tabbed_interface_style_render_pane($vars) {
-  //return render($vars['content']->content);
+
+  $pane = $vars['pane'];
   $settings = $vars['settings'];
-	$content = $vars['content'];
-  return theme('wetkit_widgets_theme_pane', array('content' => $content, 'settings' => $settings));
+  //$display = $vars['display'];
+  //$plugin = $vars['style'];
+  $content = $vars['content'];
+  $content->css_class .= (isset($vars['settings']['tabbed_interface_classes'])) ? $vars['settings']['tabbed_interface_classes'] : '';
+  
+  // if the style is gone or has no theme of its own, just display the output.
+  //return theme('wetkit_widgets_theme_pane', array('content' => $content, 'settings' => $settings));
+  return theme('panels_pane', array('content' => $content, 'settings' => $settings));
 }
 
 /**
