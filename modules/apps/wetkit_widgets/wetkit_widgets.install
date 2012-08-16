@@ -11,7 +11,7 @@
 function wetkit_widgets_install() {
   wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/vegetables-demo-image.png', 'vegetables-demo-image.png', 'image');
   wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/vegetables_demo_spotlight.jpeg', 'vegetables_demo_spotlight.jpeg', 'spotlight');
-  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/wetkit_tabbed_interface.png', 'wetkit_tabbed_interface.png', 'tabbed_interface');
+  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/wetkit_tabbed_interface.jpeg', 'wetkit_tabbed_interface.jpeg', 'tabbed_interface');
   wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/preview-file.txt', 'preview-file.txt', 'basic_file');
 }
 
@@ -119,7 +119,7 @@ function wetkit_widgets_field_schema($field) {
 function wetkit_widgets_update_7001(&$sandbox) {
   wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/vegetables-demo-image.png', 'vegetables-demo-image.png', 'image');
   wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/vegetables_demo_spotlight.jpeg', 'vegetables_demo_spotlight.jpeg', 'spotlight');
-  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/wetkit_tabbed_interface.png', 'wetkit_tabbed_interface.png', 'tabbed_interface');
+  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/wetkit_tabbed_interface.jpeg', 'wetkit_tabbed_interface.jpeg', 'tabbed_interface');
   wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/preview-file.txt', 'preview-file.txt', 'basic_file');
 }
 
