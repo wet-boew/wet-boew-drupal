@@ -92,6 +92,12 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
         $form_state['values']['field_basic_spotlight_items']['und'][0]['fid'] = variable_get('wetkit_widgets_default_spotlight_fid', NULL);
       }
 
+      // Quick modification to get the tabbed interface to render correctly
+      if ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id']) && !empty($form_state['field']['field_tabbed_interface'])) {
+        $form_state['values']['field_tabbed_interface']['und'] = $form_state['field']['field_tabbed_interface']['und']['instance']['default_value'];
+        $form_state['values']['field_tabbed_interface']['und'][0]['fid'] = variable_get('wetkit_widgets_default_tabbed_interface_fid', NULL);
+      }
+
       // Run entity information through standard submission form
       fieldable_panels_panes_entity_edit_form_submit($form, $form_state);
 
