@@ -46,7 +46,7 @@
           <?php print render($content); ?>
         </div>
       <?php else: ?>
-        <div class="wet-boew-tabbedinterface tabs-style-3 cycle-fast animate-fast">
+        <div class="wet-boew-tabbedinterface tabs-style-3 auto-play cycle-fast animate-slow">
           <?php print render($content); ?>
         </div>
       <?php endif; ?>
