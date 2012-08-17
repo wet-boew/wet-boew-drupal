@@ -55,5 +55,5 @@ function wetkit_web_usability_migrate_content_submit($form, &$form_state) {
  * Handle submission of the WetKit Web Usability configuration page.
  */
 function wetkit_web_usability_admin_settings_submit($form, &$form_state) {
- 
+  drupal_flush_all_caches();
 }
