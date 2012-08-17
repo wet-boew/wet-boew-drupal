@@ -61,4 +61,4 @@ features[variable][] = panelizer_node:wetkit_page_allowed_layouts
 features[variable][] = panelizer_node:wetkit_page_allowed_types
 features[variable][] = panelizer_node:wetkit_page_default
 features[variable][] = save_continue_wetkit_page
-files[] = wetkit_pages.module
+stylesheets[all][] = wetkit_pages.css

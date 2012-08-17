@@ -163,6 +163,7 @@
 
 #modal-content .option-text-aligner {
   float: left;
+  width: auto;
 }
 
 /**

@@ -74,13 +74,10 @@ projects[panels][version] = 3.x-dev
 projects[panels][subdir] = contrib
 projects[panels][type] = module
 projects[panels][download][type] = git
-projects[panels][download][revision] = 369c214
+projects[panels][download][revision] = 0b237c0
 projects[panels][download][branch] = 7.x-3.x
-;projects[panels][patch][1711302] = http://drupal.org/files/1711302-improve-ipe-icons-for-add-content.patch
 projects[panels][patch][1549660] = http://drupal.org/files/1549660-list-region-style-dont-render-empty-placeholder.patch
-;projects[panels][patch][1690124] = http://drupal.org/files/1690124-hide-ipe-toolbar-with-open-modal_3_relies_1711302.patch
 projects[panels][patch][1690128] = http://drupal.org/files/1690128-add-panes-to-top-ipe.patch
- 
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/panels-add-hooks-to-integrate-i18n_panels-1179034-41.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/uuids-for-exported-pids-1277908-19.patch
 
@@ -95,7 +92,7 @@ projects[panelizer][version] = 3.x-dev
 projects[panelizer][subdir] = contrib
 projects[panelizer][type] = module
 projects[panelizer][download][type] = git
-projects[panelizer][download][revision] = c1c00cb
+projects[panelizer][download][revision] = f276bfe
 projects[panelizer][download][branch] = 7.x-3.x
 projects[panelizer][patch][1555194] = http://drupal.org/files/1387634-features-support-panelizer-unified.patch
 
@@ -242,6 +239,14 @@ projects[media][download][type] = git
 projects[media][download][revision] = 1a0304d
 projects[media][download][branch] = 7.x-2.x
 projects[media][patch][1307054] = http://drupal.org/files/1307054-d7-2.patch
+
+projects[media_youtube][version] = 1.0-beta3
+projects[media_youtube][type] = module
+projects[media_youtube][subdir] = contrib
+
+projects[media_vimeo][version] = 1.0-beta5
+projects[media_vimeo][type] = module
+projects[media_vimeo][subdir] = contrib
 
 projects[module_filter][version] = 1.7
 projects[module_filter][type] = module
