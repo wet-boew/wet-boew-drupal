@@ -240,6 +240,14 @@ projects[media][download][revision] = 1a0304d
 projects[media][download][branch] = 7.x-2.x
 projects[media][patch][1307054] = http://drupal.org/files/1307054-d7-2.patch
 
+projects[media_youtube][version] = 1.0-beta3
+projects[media_youtube][type] = module
+projects[media_youtube][subdir] = contrib
+
+projects[media_vimeo][version] = 1.0-beta5
+projects[media_vimeo][type] = module
+projects[media_vimeo][subdir] = contrib
+
 projects[module_filter][version] = 1.7
 projects[module_filter][type] = module
 projects[module_filter][subdir] = contrib
