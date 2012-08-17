@@ -42,11 +42,11 @@
 
     <div class="pane-content">
       <?php if (isset($settings['tabbed_interface_classes'])): ?>
-        <div class="wet-boew-tabbedinterface <?php print $settings['tabbed_interface_classes']; ?>">
+        <div class="ipe_tabs_interface <?php print $settings['tabbed_interface_classes']; ?>">
           <?php print render($content); ?>
         </div>
       <?php else: ?>
-        <div class="wet-boew-tabbedinterface tabs-style-3 auto-play cycle-fast animate-slow">
+        <div class="ipe_tabs_interface tabs-style-3 auto-play cycle-fast animate-slow">
           <?php print render($content); ?>
         </div>
       <?php endif; ?>

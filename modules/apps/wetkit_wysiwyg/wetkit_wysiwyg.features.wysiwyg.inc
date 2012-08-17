@@ -102,7 +102,7 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
       ),
       'toolbar_loc' => 'top',
       'toolbar_align' => 'left',
-      'path_loc' => 'none',
+      'path_loc' => 'bottom',
       'resizing' => 1,
       'verify_html' => 1,
       'preformatted' => 0,

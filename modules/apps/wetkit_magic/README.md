@@ -4,7 +4,7 @@ Weaves together the chaos magic. Very cool stuff.
 
 Important
 * This App is based on and often pulls upstream from Panopoly Magic @ drupal.org/project/panopoly_magic
-* The latest upstream sync has been checked against commit: c05daa8 (Verified)
+* The latest upstream sync has been checked against commit: 1c9de84 (Verified)
 * Panopoly Magic is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly Magic)

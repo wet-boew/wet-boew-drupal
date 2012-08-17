@@ -17,3 +17,133 @@ function wetkit_pages_menu_block_tree_alter($tree, $config) {
     }
   }
 }
+
+/**
+ * Implementation of hook_menu
+ */
+function wetkit_pages_menu() {
+  $items['node/add/landing_page'] = array(
+    'title' => 'Landing Page',
+    'page callback' => 'page_manager_page_wizard',
+    'page arguments' => array(2),
+    'access arguments' => array('use page manager'),
+    'file' => 'includes/page-wizard.inc',
+    'file path' => drupal_get_path('module', 'ctools'),
+  );
+  return $items;
+}
+
+/**
+ * Implementation of hook_form_alter()
+ */
+function wetkit_pages_form_alter(&$form, &$form_state, $form_id) {
+  // Improve the wizard for our custom adding a landing page wizard
+  if ($form_id == 'panels_landing_page_basic' && arg(0) == 'node' && arg(1) == 'add') {
+
+    // Let it be known we are doing something unique
+    $form['#id'] = 'wetkit_pages_landing_page_wizard';
+
+    // Set the title to be something consistent
+    drupal_set_title(t('Create Landing Page'));
+
+    // Remove the ctools train since we just have one step
+    $form['ctools_trail']['#access'] = FALSE;
+
+    // Improve the name of the page and remove its unnecessary description
+    $form['admin_title']['#title'] = 'Title';
+    $form['admin_title']['#size'] = 30;
+    $form['admin_title']['#attributes']['placeholder'] = 'Title of Page';
+    $form['admin_title']['#description'] = '';
+
+    // Remove the page description since its just noise
+    $form['admin_description']['#access'] = FALSE;
+
+    // Improve the path of the landing page
+    $form['path']['#title'] = t('URL');
+    $form['path']['#size'] = 50;
+    $form['path']['#attributes']['placeholder'] = '<URL of Page>';
+
+    // Do not make them choose a weight
+    $form['menu']['weight']['#access'] = FALSE;
+
+    // Force this to be the main menu
+    $form['menu_entry']['#title'] = t('Add this page to the main menu?');
+    $form['menu']['name']['#field_prefix'] = 'Menu';
+    $form['menu']['name']['#default_value'] = 'main-menu';
+    $form['menu']['name']['#type'] = 'value';
+
+    // Add information around parents
+    $parents = menu_parent_options(array('main-menu' => 'Main Menu'), 0);
+    $parents['main-menu:0'] = '<Top Level>';
+    $form['menu']['parent'] = array(
+      '#title' => t('Parent'),
+      '#type' => 'select',
+      '#options' => $parents,
+      '#dependency' => array('edit-menu-entry' => array(1)),
+    );
+
+    // Hide the menu title so it can be set to the name of the page
+    $form['menu']['title']['#type'] = 'hidden';
+
+    // Remove the layout choice. Let's just get them to the mall!
+    $form['categories']['#access'] = FALSE;
+    $form['layout']['WetKit']['boxton']['#default_value'] = TRUE;
+
+    // Set the Button and Redirect State
+    $form['buttons']['next']['#value'] = t('Create Page');
+    $form['#validate'][] = 'wetkit_pages_landing_page_wizard_validate';
+    $form['#submit'][] = 'wetkit_pages_landing_page_wizard_submit';
+  }
+}
+
+/**
+ * Custom Validate Function to Help Improve The Landing Page Options
+ */
+function wetkit_pages_landing_page_wizard_validate($form, &$form_state) {
+
+  // Set the Menu Title to be the Same as the Page Title
+  if ($form_state['values']['menu_entry'] && empty($form_state['values']['menu']['title'])) {
+    $form_state['values']['menu']['title'] = $form_state['values']['admin_title'];
+  }
+
+  // Set the Menu Parent to be The Chosen One
+  if ($form_state['values']['menu']['parent']) {
+    $form_state['wizard cache']->menu['parent'] = $form_state['values']['menu']['parent'];
+  }
+}
+
+/**
+ * Custom Submit Function to Finish Up 
+ */
+function wetkit_pages_landing_page_wizard_submit($form, &$form_state) {
+
+  // Save the Page
+  page_manager_page_wizard_finish($form_state);
+
+  // Modify the Menu
+  if (!empty($form_state['values']['menu']['menu_entry'])) {
+    $mlid = db_select('menu_links' , 'ml')
+      ->condition('ml.link_path' , $form_state['values']['path'])
+      ->fields('ml' , array('mlid'))
+      ->execute()
+      ->fetchField();
+    $menu_link = menu_link_load($mlid);
+    $menu_link['plid'] = str_replace('main-menu:', '', $form_state['values']['menu']['parent']);
+    menu_link_save($menu_link);
+    menu_cache_clear_all();
+  }
+
+  // Redirect to the Page
+  $form_state['redirect'] = $form_state['wizard cache']->path;
+}
+
+/**
+ * Implementation of hook_module_implements_alter()
+ */
+function wetkit_pages_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'form_alter') {
+    $group = $implementations['wetkit_pages'];
+    unset($implementations['wetkit_pages']);
+    $implementations['wetkit_pages'] = $group;
+  }
+}
