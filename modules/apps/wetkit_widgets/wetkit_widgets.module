@@ -4,6 +4,43 @@ include_once('wetkit_widgets.features.inc');
 include_once('wetkit_widgets.plugins.inc');
 
 /**
+ * Implements hook_apps_app_info()
+ */
+function wetkit_widgets_apps_app_info() {
+  return array(
+    'configure form' => 'wetkit_widgets_configure_form',
+  );
+}
+
+/**
+ * Configuration Form for Panopoly Magic
+ */
+function wetkit_widgets_configure_form($form, &$form_state) {
+  $form = array();
+
+  $form['wetkit_widgets_spotlight_rotation_time'] = array(
+    '#title' => t('Spotlight Rotation Time'),
+    '#type' => 'textfield',   
+    '#required' => TRUE,
+    '#default_value' => variable_get('wetkit_widgets_spotlight_rotation_time', 4),
+    '#description' => t('How many seconds do you want between rotations of the spotlight widget?'),
+  );
+
+  return system_settings_form($form);
+}
+
+/**
+ * Implements hook_init()
+ */
+function wetkit_widgets_init() {
+
+  // Set the rotation time
+  $rotation_time = 1000 * variable_get('wetkit_widgets_spotlight_rotation_time', 4);
+  $js_variables = array('spotlight_settings' => array('rotation_time' => $rotation_time));
+  drupal_add_js($js_variables, 'setting');
+}
+
+/**
  * Implementation of hook_ctools_plugin_directory()
  */
 function wetkit_widgets_ctools_plugin_directory($module, $plugin) {
@@ -455,6 +492,22 @@ function wetkit_widgets_field_attach_view_alter(&$output, $context) {
      
       if (!empty($file)) {
         $output['field_basic_file_file'] = $file;
+      }
+    }
+  }
+  else if ($context['entity_type'] == 'fieldable_panels_pane' && $context['entity']->bundle == 'video') {
+    if (empty($output['field_video_video'])) {
+      if ($fid = variable_get('wetkit_widgets_default_video_fid', NULL)) {
+        $file = file_load($fid);
+
+        $context['entity']->field_video_video[LANGUAGE_NONE][0] = array(
+          'fid' => $fid,
+          'title' => NULL,
+          'data' => NULL,
+          'file' => $file,
+        );
+
+        $output['field_video_video'] = field_view_field($context['entity_type'], $context['entity'], 'field_video_video', $context['display']);
       }
     }
   }

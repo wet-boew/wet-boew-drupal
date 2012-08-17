@@ -514,6 +514,10 @@ ul#media-browser-library-list {
   font-weight: normal;
 }
 
+#wetkit_admin_landing_page_wizard .form-item-admin-title .field-suffix {
+  display: none;
+}
+
 /**
  * Misc
  */

@@ -25,7 +25,7 @@ function wetkit_magic_configure_form($form, &$form_state) {
       '1' => 'Enabled',
       '0' => 'Disabled',
     ),
-    '#default_value' => '1',
+    '#default_value' => variable_get('wetkit_magic_live_preview', FALSE) ? '1' : '0',
     '#description' => t('Do you want WetKit to provide a live preview for modal content through the in place editor?'),
   );
 
@@ -75,10 +75,9 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
     // here is to make sure we properly save a version to get a vid, but don't make it the real one.
     // NOTE - I doubt this will be very good for performance. Let's call it RC1.
     if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form' && ($form_state['clicked_button']['#value'] == 'Update Preview' || ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id'])))) {
-      // Make sure this will not be set as reusable
-      $form_state['values']['reusable'] = NULL;
-      
+
       // Do not run this through validation since it creates a wierd experience
+      // TODO - extend this to other elements that might have validation hooks on them (i.e. link fields)
       $form['#validate'] = array();
 
       // Quick modification to get tablefield to render correctly
@@ -98,16 +97,29 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
         $form_state['values']['field_tabbed_interface']['und'][0]['fid'] = variable_get('wetkit_widgets_default_tabbed_interface_fid', NULL);
       }
 
-      // Run entity information through standard submission form
-      fieldable_panels_panes_entity_edit_form_submit($form, $form_state);
-
-      // Properly adjust the VID if we are dealing with an existing object
-      if (!empty($form_state['entity']->old_vid)) {
-        db_query("UPDATE {fieldable_panels_panes} SET vid = :vid WHERE fpid = :fpid", array(':vid' => $form_state['entity']->old_vid, ':fpid' => $form_state['entity']->fpid));
+      // Determine the current VID for the element
+      if (!empty($form_state['entity']->fpid)) {
+        $current_vid = db_query("SELECT vid FROM {fieldable_panels_panes} WHERE fpid = :fpid", array(':fpid' => $form_state['entity']->fpid))->fetchField();
       }
 
-      // Then tell Fieldable Panel Panes to render the correct version
-      $pane->subtype = 'vid:' . $form_state['entity']->vid;
+      // Run entity information through standard submission form if this is a new or updated object
+      // Update the pane settngs with the VID afterwards
+      if (!$form_state['entity']->reusable || $form_state['op'] != 'add') {
+
+        // Process the entity to create a preview. Set the FPID to be the correct version. 
+        $form_state['values'] = (!empty($form_state['values'])) ? $form_state['values'] : array();
+        fieldable_panels_panes_entity_edit_form_submit($form, $form_state);
+        $preview_subtype = 'vid:' . $form_state['entity']->vid;
+        $pane->subtype = 'fpid:' . $form_state['entity']->fpid;
+      }
+      elseif (empty($form['reusable']['#markup'])){
+        $form['widget_settings']['must_place']['#markup'] = t('You must place this reusable content item first before editing it. Remember any edits you make will be global!');
+      }
+
+      // Properly adjust the VID if we are dealing with an existing object
+      if (!empty($current_vid)) {
+        db_query("UPDATE {fieldable_panels_panes} SET vid = :vid WHERE fpid = :fpid", array(':vid' => $current_vid, ':fpid' => $form_state['entity']->fpid));
+      }
     }
 
     // Make some adjustments based on the way the data is being expected
@@ -131,7 +143,7 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
 
     // Set the configuration and determine the content for the pane
     $configuration = ($form_state['rebuild'] && strpos($form_id, 'content_type_edit_form')) ? $form_state['input'] : $pane->configuration;
-    $content = ctools_content_render($pane->type, $pane->subtype, $configuration);
+    $content = (empty($preview_subtype)) ? ctools_content_render($pane->type, $pane->subtype, $configuration) : ctools_content_render($pane->type, $preview_subtype, $configuration);
 
     // Create the preview fieldset
     if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form' || $content) {
@@ -548,10 +560,18 @@ function wetkit_magic_form_panels_edit_style_type_form_alter(&$form, &$form_stat
  */
 function wetkit_magic_form_ctools_stylizer_edit_style_form_default_alter(&$form, &$form_state, $form_id) {
 
-  // Customize the settings preview button.
-  $form['top box']['preview']['submit']['#attributes'] = array(
-    'class' => array('widget-preview-button', 'ctools-use-ajax', 'ctools-auto-submit-click'),
-  );
+  // If Auto-submit is enabled.
+  if (variable_get('wetkit_magic_live_preview', FALSE)) {
+
+    // Customize the settings preview button.
+    $form['top box']['preview']['submit']['#attributes'] = array(
+      'class' => array('widget-preview-button', 'ctools-use-ajax', 'ctools-auto-submit-click'),
+    );
+
+    // Autosubmit the form.
+    ctools_add_js('auto-submit');
+    $form['#attributes']['class'][] = 'ctools-auto-submit-full-form';
+  }
 
   $form['top box']['preview']['#weight'] = 5;
 
@@ -597,10 +617,6 @@ function wetkit_magic_form_ctools_stylizer_edit_style_form_default_alter(&$form,
     $form['general_settings']['panels'] = $form['panels'];
     unset($form['panels']);
   }
-
-  // Autosubmit the form.
-  ctools_add_js('auto-submit');
-  $form['#attributes']['class'][] = 'ctools-auto-submit-full-form';
 }
 
 /**

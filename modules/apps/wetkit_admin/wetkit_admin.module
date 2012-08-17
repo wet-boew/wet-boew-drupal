@@ -258,7 +258,7 @@ function wetkit_admin_landing_page_wizard_submit($form, &$form_state) {
   page_manager_page_wizard_finish($form_state);
 
   // Modify the Menu
-  if ($form_state['values']['menu']['parent']) {
+  if (!empty($form_state['values']['menu']['menu_entry'])) {
     $mlid = db_select('menu_links' , 'ml')
       ->condition('ml.link_path' , $form_state['values']['path'])
       ->fields('ml' , array('mlid'))

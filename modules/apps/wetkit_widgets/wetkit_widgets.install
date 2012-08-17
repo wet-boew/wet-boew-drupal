@@ -2,7 +2,7 @@
 
 /**
  * @file
- * An installation file for WetKit Widgets
+ * An installation file for Panopoly Widgets
  */
 
 /**
@@ -11,8 +11,9 @@
 function wetkit_widgets_install() {
   wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/vegetables-demo-image.png', 'vegetables-demo-image.png', 'image');
   wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/vegetables_demo_spotlight.jpeg', 'vegetables_demo_spotlight.jpeg', 'spotlight');
-  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/wetkit_tabbed_interface.jpeg', 'wetkit_tabbed_interface.jpeg', 'tabbed_interface');
   wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/preview-file.txt', 'preview-file.txt', 'basic_file');
+  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/wetkit_tabbed_interface.jpeg', 'wetkit_tabbed_interface.jpeg', 'tabbed_interface');
+  wetkit_widgets_save_default_video_data();
 }
 
 /**
@@ -119,8 +120,15 @@ function wetkit_widgets_field_schema($field) {
 function wetkit_widgets_update_7001(&$sandbox) {
   wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/vegetables-demo-image.png', 'vegetables-demo-image.png', 'image');
   wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/vegetables_demo_spotlight.jpeg', 'vegetables_demo_spotlight.jpeg', 'spotlight');
-  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/wetkit_tabbed_interface.jpeg', 'wetkit_tabbed_interface.jpeg', 'tabbed_interface');
   wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/preview-file.txt', 'preview-file.txt', 'basic_file');
+  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/wetkit_tabbed_interface.jpeg', 'wetkit_tabbed_interface.jpeg', 'tabbed_interface');
+}
+
+/**
+ * Implementation of hook_update_N().
+ */
+function wetkit_widgets_update_7002(&$sandbox) {
+  wetkit_widgets_save_default_video_data();
 }
 
 /**
@@ -137,6 +145,30 @@ function wetkit_widgets_save_default_file_data($filepath, $filename, $type) {
       variable_set('wetkit_widgets_default_' . $type . '_fid', $file_entity->fid);
 
       return $file_entity->fid;
+    }
+  }
+}
+
+/**
+ * Helper function to save default video data.
+ */
+function wetkit_widgets_save_default_video_data() {
+  $fid = variable_get('wetkit_widgets_default_video_fid', NULL);
+
+  if (empty($fid)) {
+    $file = (object) array(
+      'uid' => 1,
+      'filename' => 'The Drupal Song Music Video',
+      'uri' => 'youtube://v/lZ-s3DRZJKY',
+      'filemime' => 'video/youtube',
+      'status' => 1,
+      'type' => 'video',
+    );
+
+    $file = file_save($file);
+
+    if (!empty($file->fid)) {
+      variable_set('wetkit_widgets_default_video_fid', $file->fid);
     }
   }
 }
