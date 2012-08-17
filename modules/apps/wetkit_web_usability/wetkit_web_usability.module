@@ -95,7 +95,7 @@ function wetkit_web_usability_libraries_info() {
       // 2.x: this.majorVersion="2";this.minorVersion="1.3"
       // 3.x: majorVersion:'3',minorVersion:'2.0.1'
       'pattern' => '@version\s+([0-9a-zA-Z\.-]+)@',
-      'lines' => 20,
+      'lines' => 50,
       'cols' => 100,
     ),
     'files' => array(
