@@ -239,7 +239,7 @@ function wetkit_search_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'custom_search_blocks_1_paths';
   $strongarm->value = 'search/node/[key]|Search Core
-search/apachesolr_search/[key]|Search API';
+search/site/[key]|Search API';
   $export['custom_search_blocks_1_paths'] = $strongarm;
 
   $strongarm = new stdClass();
