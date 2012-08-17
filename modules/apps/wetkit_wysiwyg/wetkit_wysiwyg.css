@@ -91,6 +91,7 @@ div .markItUpHeader ul .markItUpSeparator {
 /**
  * WYSIWYG Toggle Styling
  */
+div.ctools-modal-content .format-toggle label,
 .format-toggle label {
   float: left;
   margin-right: .5em;
@@ -100,6 +101,7 @@ div .markItUpHeader ul .markItUpSeparator {
   width: auto;
 }
 
+div.ctools-modal-content .format-toggle,
 .format-toggle {
   float: right;
   margin-top: 5px;

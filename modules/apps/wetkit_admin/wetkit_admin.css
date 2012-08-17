@@ -486,39 +486,6 @@ ul#media-browser-library-list {
 }
 
 /**
- * Wizard Landing Page Styling
- */
-#wetkit_admin_landing_page_wizard .form-item-admin-title input {
-  font-size: 2em;
-}
-
-#wetkit_admin_landing_page_wizard .form-item-admin-title label {
-  display: none;
-}
-
-#wetkit_admin_landing_page_wizard .form-item-path label {
-  display: none;
-}
-
-#wetkit_admin_landing_page_wizard .form-item-admin-title .field-prefix {
-  font-weight: bold;
-}
-
-#wetkit_admin_landing_page_wizard .panels-layouts-checkboxes {
-  display: none;
-}
-
-#wetkit_admin_landing_page_wizard .form-item-menu-parent label {
-  float: left;
-  margin-right: 5px;
-  font-weight: normal;
-}
-
-#wetkit_admin_landing_page_wizard .form-item-admin-title .field-suffix {
-  display: none;
-}
-
-/**
  * Misc
  */
 #active-vertical-tab {

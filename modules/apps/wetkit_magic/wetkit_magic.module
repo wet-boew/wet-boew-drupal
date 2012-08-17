@@ -52,7 +52,7 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
    * Add a custom preview to the content type edit form and style edit form. This is applied in all cases, except for cases where
    * we are customizing an entity (i.e. fieldable panels panes) because we cannot reliable regenerate a preview without saving.
    */
-  if (variable_get('wetkit_magic_live_preview', 1) && (strpos($form_id, '_content_type_edit_form') || $form_id == 'panels_edit_style_type_form')) {
+  if (variable_get('wetkit_magic_live_preview', 1) && (strpos($form_id, '_content_type_edit_form') || $form_id == 'panels_edit_style_type_form') || $form_id == 'panels_edit_style_settings_form') {
 
     // Start the magic
     $pane = $form_state['pane'];
@@ -67,6 +67,9 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
     elseif ($form_id == 'panels_edit_style_type_form') {
       $style = ($form_state['rebuild'] && $form_id == 'panels_edit_style_type_form') ? panels_get_style($form_state['values']['style']) : panels_get_style($form_state['style']);
     }
+    elseif ($form_id == 'panels_edit_style_settings_form') {
+      $style = ($form_state['rebuild'] && $form_id == 'panels_edit_style_settings_form') ? panels_get_style($form_state['values']['style']) : panels_get_style($form_state['style']);
+    }
     else {
       $style = NULL;
     }
@@ -79,23 +82,6 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
       // Do not run this through validation since it creates a wierd experience
       // TODO - extend this to other elements that might have validation hooks on them (i.e. link fields)
       $form['#validate'] = array();
-
-      // Quick modification to get tablefield to render correctly
-      if ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id']) && !empty($form_state['field']['field_basic_table_table'])) {
-        $form_state['values']['field_basic_table_table']['und'] = $form_state['field']['field_basic_table_table']['und']['instance']['default_value'];
-      }
-
-      // Quick modification to get the spotlight to render correctly
-      if ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id']) && !empty($form_state['field']['field_basic_spotlight_items'])) {
-        $form_state['values']['field_basic_spotlight_items']['und'] = $form_state['field']['field_basic_spotlight_items']['und']['instance']['default_value'];
-        $form_state['values']['field_basic_spotlight_items']['und'][0]['fid'] = variable_get('wetkit_widgets_default_spotlight_fid', NULL);
-      }
-
-      // Quick modification to get the tabbed interface to render correctly
-      if ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id']) && !empty($form_state['field']['field_tabbed_interface'])) {
-        $form_state['values']['field_tabbed_interface']['und'] = $form_state['field']['field_tabbed_interface']['und']['instance']['default_value'];
-        $form_state['values']['field_tabbed_interface']['und'][0]['fid'] = variable_get('wetkit_widgets_default_tabbed_interface_fid', NULL);
-      }
 
       // Determine the current VID for the element
       if (!empty($form_state['entity']->fpid)) {

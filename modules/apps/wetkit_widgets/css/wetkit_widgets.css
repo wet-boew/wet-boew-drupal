@@ -2,3 +2,9 @@
 div.pane-bundle-map {
   overflow: hidden;
 }
+
+/* File Widget */
+img.file-icon,
+div.file-widget img {
+  vertical-align: middle;
+}

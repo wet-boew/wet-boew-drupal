@@ -13,7 +13,7 @@ function wetkit_widgets_apps_app_info() {
 }
 
 /**
- * Configuration Form for Panopoly Magic
+ * Configuration Form for WetKit Magic
  */
 function wetkit_widgets_configure_form($form, &$form_state) {
   $form = array();
@@ -140,6 +140,7 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
 
 
     // Find file / image fields and ensure they are using a FID instead of a UUID.
+    // TODO - This can be removed if we are not supporting the UUID module    
     foreach ($form as $key => $value) {
       if (substr($key, 0, 6) == 'field_') {
         if (!empty($value['und']['0']['#bundle']) && ($value['und']['0']['#bundle'] == 'image' || $value['und']['0']['#bundle'] == 'file')) {
@@ -168,6 +169,66 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
     $form['reusable']['category']['#type'] = 'value';
     $form['reusable']['admin_description']['#access'] = FALSE;
   }
+
+  // Improve the usability and functionality of the table field widget
+  if (!empty($form['field_basic_table_table'])) {
+    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['import']['#access'] = FALSE; // Remove importing from CSV
+    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['#collapsible'] = FALSE;
+    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['#collapsed'] = FALSE;
+    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#field_prefix'] = $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#title'] . '? ';
+    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#title'] = '';    
+    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_rows']['#field_prefix'] = $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_rows']['#title'] . '? ';
+    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_rows']['#title'] = '';
+  }
+
+  // Make some form modifications in cases where the item is being shown for the first time
+  if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form' && ($form_state['clicked_button']['#value'] == 'Update Preview' || ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id'])))) {
+
+    // Quick modification to get tablefield to render correctly with default values
+    if ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id']) && !empty($form_state['field']['field_basic_table_table'])) {
+      $form_state['values']['field_basic_table_table']['und'] = $form_state['field']['field_basic_table_table']['und']['instance']['default_value'];
+    }
+
+    // Quick exclusion of column and row counts from being autosubmited
+    if (!empty($form['field_basic_table_table'])) {
+      $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#attributes']['class'][] = 'ctools-auto-submit-exclude';
+      $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_rows']['#attributes']['class'][] = 'ctools-auto-submit-exclude';
+    }
+
+    // Quick modification to get the spotlight to render correctly with preview content
+    if ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id']) && !empty($form_state['field']['field_basic_spotlight_items'])) {
+      $form_state['values']['field_basic_spotlight_items']['und'] = $form_state['field']['field_basic_spotlight_items']['und']['instance']['default_value'];
+      $form_state['values']['field_basic_spotlight_items']['und'][0]['fid'] = variable_get('wetkit_widgets_default_spotlight_fid', NULL);
+      $form['field_basic_spotlight_items']['und'][0]['fid']['#default_value'] = variable_get('wetkit_widgets_default_spotlight_fid', NULL);
+    }
+
+    // Quick modification to get the tabbed interface to render correctly with preview content
+    if ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id']) && !empty($form_state['field']['field_tabbed_interface'])) {
+      $form_state['values']['field_tabbed_interface']['und'] = $form_state['field']['field_tabbed_interface']['und']['instance']['default_value'];
+      $form_state['values']['field_tabbed_interface']['und'][0]['fid'] = variable_get('wetkit_widgets_default_tabbed_interface_fid', NULL);
+      $form['field_tabbed_interface']['und'][0]['fid']['#default_value'] = variable_get('wetkit_widgets_default_tabbed_interface_fid', NULL);
+    }
+
+    // Quick modification to get the image to render correctly with preview content
+    if ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id']) && !empty($form_state['field']['field_basic_image_image'])) {
+      $form_state['values']['field_basic_image_image'][LANGUAGE_NONE][0]['fid'] = variable_get('wetkit_widgets_default_image_fid', NULL);
+      $form['field_basic_image_image'][LANGUAGE_NONE][0]['#default_value']['fid'] = variable_get('wetkit_widgets_default_image_fid', NULL);
+    }
+
+    // Quick modification to get the file to render correctly with preview content
+    if ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id']) && !empty($form_state['field']['field_basic_file_file'])) {
+      $form_state['values']['field_basic_file_file'][LANGUAGE_NONE][0]['fid'] = variable_get('wetkit_widgets_default_basic_file_fid', NULL);
+      $form_state['values']['field_basic_file_file'][LANGUAGE_NONE][0]['display'] = TRUE;
+      $form['field_basic_file_file'][LANGUAGE_NONE][0]['#default_value']['fid'] = variable_get('wetkit_widgets_default_basic_file_fid', NULL);
+      $form['field_basic_file_file'][LANGUAGE_NONE][0]['#default_value']['display'] = TRUE;
+    }
+
+    // Quick modification to get the video to render correctly with preview content
+    if ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id']) && !empty($form_state['field']['field_video_video'])) {
+      $form_state['values']['field_video_video'][LANGUAGE_NONE][0]['fid'] = variable_get('wetkit_widgets_default_video_fid', NULL);
+      $form['field_video_video'][LANGUAGE_NONE][0]['#default_value']['fid'] = variable_get('wetkit_widgets_default_video_fid', NULL);
+    } 
+  }  
 }
 
 /**
@@ -457,117 +518,5 @@ function wetkit_widgets_field_display_fieldable_panels_pane_alter(&$display, $co
     if (!empty($view_mode)) {
       $display['settings']['view_mode'] = $view_mode;
     }
-  }
-}
-
-/**
- * Implements hook_field_attach_view_alter().
- *
- * Allow image and spotlight FPP's to use default image content for previews.
- */
-function wetkit_widgets_field_attach_view_alter(&$output, $context) {
-  // If we're displaying an image FPP where an image has not yet been attached.
-  if ($context['entity_type'] == 'fieldable_panels_pane' && $context['entity']->bundle == 'image') {
-    if (empty($output['field_basic_image_image']['#items'][0])) {
-      $image = wetkit_widgets_image_field_preview($context, 'field_basic_image_image');
-
-      if (!empty($image)) {
-        $output['field_basic_image_image'] = $image;
-      }
-    }
-  }
-  // If we're displaying a spotlight FPP where an image has not yet been attached.
-  else if ($context['entity_type'] == 'fieldable_panels_pane' && $context['entity']->bundle == 'spotlight') {
-    if (empty($output['field_basic_spotlight_items']['#items'][0]) && (empty($context['entity']->field_basic_spotlight_items) || empty($context['entity']->field_basic_spotlight_items[LANGUAGE_NONE][0]['fid']))) {
-      $image = wetkit_widgets_image_field_preview($context, 'field_basic_spotlight_items');
-
-      if (!empty($image)) {
-        $output['field_basic_image_image'] = $image;
-      }
-    }
-  }
-  else if ($context['entity_type'] == 'fieldable_panels_pane' && $context['entity']->bundle == 'basic_file') {
-    if (empty($output['field_basic_file_file'])) {
-      $file = wetkit_widgets_file_field_preview($context, 'field_basic_file_file');
-     
-      if (!empty($file)) {
-        $output['field_basic_file_file'] = $file;
-      }
-    }
-  }
-  else if ($context['entity_type'] == 'fieldable_panels_pane' && $context['entity']->bundle == 'video') {
-    if (empty($output['field_video_video'])) {
-      if ($fid = variable_get('wetkit_widgets_default_video_fid', NULL)) {
-        $file = file_load($fid);
-
-        $context['entity']->field_video_video[LANGUAGE_NONE][0] = array(
-          'fid' => $fid,
-          'title' => NULL,
-          'data' => NULL,
-          'file' => $file,
-        );
-
-        $output['field_video_video'] = field_view_field($context['entity_type'], $context['entity'], 'field_video_video', $context['display']);
-      }
-    }
-  }
-}
-
-/**
- * Helper function for displaying preview images when no images are attached to entities.
- */
-function wetkit_widgets_image_field_preview($context, $field) {
-  if ($fid = variable_get('wetkit_widgets_default_' . $context['entity']->bundle . '_fid', NULL)) {
-    // Load the image.
-    $image = (array)file_load($fid);
-
-    // Figure out the path to the image based on the stream wrapper / filename.
-    $path = file_stream_wrapper_get_instance_by_uri($image['uri'])->getDirectoryPath();
-    // Grab the image info (dimensions).
-    $image_info = image_get_info($path . '/' . file_uri_target($image['uri']));
-  
-    if (!empty($context['entity']->{$field}[LANGUAGE_NONE][0]) && is_array($context['entity']->{$field}[LANGUAGE_NONE][0])) {
-      // Preserve any meta-deta which might be present.
-      $current_file = $context['entity']->{$field}[LANGUAGE_NONE][0];
- 
-      $image['alt'] = empty($current_file['alt']) ? '' : $current_file['alt'];
-      $image['title'] = empty($current_file['title']) ? '' : $current_file['title'];
-      $image['description'] = empty($current_file['description']) ? '' : $current_file['description'];
-      $image['link'] = empty($current_file['link']) ? '' : $current_file['link'];
-    }
-    else {
-      // We don't have titles or alts.
-      $image['alt'] = '';
-      $image['title'] = '';
-      $image['description'] = '';
-      $image['link'] = '';
-    }
-
-    // Do some housekeeping so field_view_field gets what it expects.
-    $image['height'] = $image_info['height'];
-    $image['width'] = $image_info['width'];
-    $image['dimensions'] = array('height' => $image['height'], 'width' => $image['width']); 
-
-    // Fake field_view_field into thinking there is actually an image attached.
-    $context['entity']->{$field}[LANGUAGE_NONE][0] = $image;
-
-    // Render the result.
-    return field_view_field($context['entity_type'], $context['entity'], $field, $context['display']);
-  }
-}
-
-/**
- * Helper function for displaying preview files when no file is attached to an entity.
- */
-function wetkit_widgets_file_field_preview($context, $field) {
-  if ($fid = variable_get('wetkit_widgets_default_' . $context['entity']->bundle . '_fid', NULL)) {
-    $file = (array) file_load($fid);
-
-    $file['description'] = NULL;
-
-    $context['entity']->{$field}[LANGUAGE_NONE][0] = $file;
-
-    // Render the result.
-    return field_view_field($context['entity_type'], $context['entity'], $field, $context['display']);
   }
 }
