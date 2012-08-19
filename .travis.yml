@@ -13,7 +13,7 @@ before_script:
  #- pyrus channel-discover pear.drush.org
  #- pyrus install drush/drush
  - pear channel-discover pear.drush.org
- - pear install drush/drush-5.6.0
+ - pear install drush/drush-5.4.0
  - phpenv rehash
  - drush make build-wetkit.make ../github_wet_distro
  - cd ../github_wet_distro
