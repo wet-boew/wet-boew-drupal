@@ -16,7 +16,7 @@ Should you require further documentation discussed below please proceed to our W
 
 > 1. Install Drush 5.4 or higher (inlcudes Drush Make) as per http://drupal.org/node/477684
 >
-> 2. Install Git 1.7.11 or higher (Some lower versions of git do not apply patches from the make file with Drush Make):
+> 2. Install Git 1.7.10 or higher (Some lower versions of git do not apply patches from the make file with Drush Make):
 >
 > 3. Build the complete Drupal installation software profile using the following command on the Bash command prompt.
 <pre>
@@ -53,12 +53,15 @@ Command: drush -l http://&lt;domain&gt;:8082 updatedb
 Example: drush -l http://drupal_wet:8082 updatedb
 </pre>
 
-### Proxy Support
+### Drush Proxy Support
 
 > To get around the Proxy when using Linux or Mac OSX all you have to do is edit the following files that come native to the environment.
 
-> 1. .curlrc: To Come 
->
+> 1. .curlrc:
+<pre>
+> --proxy &lt;domain&gt;:&lt;port&gt;
+> --proxy-user &lt;username&gt;:&lt;password&gt;
+</pre>
 
 ## Windows
 
@@ -66,7 +69,7 @@ Example: drush -l http://drupal_wet:8082 updatedb
 
 > 1. Install Drush 5.4 or higher (includes Drush Make) from http://drush.ws/drush_windows_installer
 >
-> 2. Install msysgit 1.7.11 or higher available from http://msysgit.github.com (Some lower versions of git do not apply patches from the make file with Drush Make) and start a Git Bash terminal windows
+> 2. Install msysgit 1.7.10 or higher available from http://msysgit.github.com (Some lower versions of git do not apply patches from the make file with Drush Make) and start a Git Bash terminal windows
 >
 > 3. Build the complete Drupal installation software profile using the following command on the Bash command prompt.
 <pre>
@@ -101,20 +104,21 @@ Command: drush -l http://&lt;domain&gt;:8082 updatedb
 Example: drush -l http://drupal_wet:8082 updatedb
 </pre>
 
-### Proxy Support
+### Drush Proxy Support
 
 > To get around the Proxy when using Windows you will have to create an _curlrc in msysgit's home directory then edit the following files.
 
 > 1. .curlrc (msysgit home directory): 
 > In your Windows home directory, create a blank text file with the name "_curlrc" with no file extension and add two lines
+> 1. .curlrc:
 <pre>
---proxy your.proxyserver.ca:80
---proxy-user &lt;proxy account ID&gt;: &lt;proxy password&gt;
+> --proxy &lt;domain&gt;:&lt;port&gt;
+> --proxy-user &lt;username&gt;:&lt;password&gt;
 </pre>
-> Replace the proxyserver server name and port and the proxy account name and password in the example with the appropriate values.
 
-> This distribution also applies a Drupal core patch that enables Drupal's automatic update and App functionality to work.
-> To enable HTTP proxy support in Drupal itself, after building and installing Drupal, modify the following lines in your settings.php file.
+## Drupal Proxy Support
+
+> To facilitate Drupal's automatic update and App functionality you must enable HTTP proxy support in Drupal itself, after building and installing Drupal, modify the following lines in your settings.php file.
 <pre>
 $conf['proxy_server'] = 'www.proxyserver.ca';
 $conf['proxy_port'] = 80;
