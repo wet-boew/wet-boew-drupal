@@ -13,7 +13,7 @@ Should you require more information not discussed in this README file please pro
 ### Alternate Methods
 
 If you do not wish to perform a build out of Drupal yourself (instructions below) we have two options for you:
-> 1. [Virtual Machine (Vagrant Chef Provision)] (https://github.com/sylus/wet-boew-drupal-devops/blob/master/README.markdown)
+> 1. [Virtual Machine (Vagrant Chef Provision)] (https://github.com/sylus/wet-boew-drupal-devops)
 >   * a) A preconfigured lightweight, reproducible, and portable virtualized development environment
 > 2. [Drupal Pre-Built](https://github.com/sylus/wet-boew-drupal-compiled) (Currently Offline)
 >   * a) A prebuilt (post make) codebase for people who don't want to play around with Drush
