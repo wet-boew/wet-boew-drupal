@@ -50,7 +50,7 @@ Command: drush make --no-gitinfofile --working-copy https://raw.github.com/wet-b
 > 3. Since we are just updating an site instead of using drush si we will instead just update the database to reflect any changes in the code.
 <pre>
 Command: drush -l http://&lt;domain&gt;:8082 updatedb
-Example: drush -l http://drupal_wet:8082 updatedb
+Example: drush -l http://&lt;domain&gt;:8082 updatedb
 </pre>
 
 ### Drush Proxy Support
