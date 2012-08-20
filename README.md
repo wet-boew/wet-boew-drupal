@@ -8,7 +8,7 @@ The WET Distribution now uses Drush Make for rapid built out of the Drupal codeb
 
 If you do not wish to compile Drupal and its various packages we host the complete codebase at: [Drupal Pre-Built](https://github.com/sylus/wet-boew-drupal-compiled). It should be noted that this repository will only be updated on a monthly basis.
 
-Should you require further documentation discussed below please proceed to our Wiki Pages at: [Documentation](https://github.com/wet-boew/wet-boew-drupal/wiki).
+Should you require further documentation then that which is discussed below please proceed to our Wiki Pages at: [Documentation](https://github.com/wet-boew/wet-boew-drupal/wiki).
 
 ## Linux, Mac OSX, etc
 
@@ -127,6 +127,12 @@ $conf['proxy_password'] = '';
 $conf['proxy_exceptions'] = array('127.0.0.1', 'localhost');
 </pre>
 > Use appropriate settings for each line.
+
+## Virtual Machine (Vagrant Chef Provision)
+
+> Vagrant (http://vagrantup.com/) allows for you to create and configure lightweight, reproducible, and portable virtualized development environments. You can then use such commands as vagrant ssh and vagrant up etc.. (Vagrant builds itself on top of Virtual Box).
+
+> You can go to [Virtual Machine (Vagrant Chef Provision)] (https://github.com/sylus/wet-boew-drupal-devops/blob/master/README.markdown) to get instructions on how to use our preconfigured stack.
 
 ## A Note About Clean URLs
 
