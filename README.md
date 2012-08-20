@@ -6,9 +6,15 @@
 
 The WET Distribution now uses Drush Make for rapid built out of the Drupal codebase. A drush make file is similar to "ant script" which allows for us to just host the code that we are developing (Installation Profile and Custom Modules, Features, and Themes) on GitHub. Any user who has Drush installed can then query this GitHub repository at the specified make file location (steps outlined below) and can then perform a build out of both the Drupal Core package + and various Contributed Modules hosted on Drupal.org.
 
-If you do not wish to compile Drupal and its various packages we host the complete codebase at: [Drupal Pre-Built](https://github.com/sylus/wet-boew-drupal-compiled). It should be noted that this repository will only be updated on a monthly basis.
+Should you require more information not discussed in this README file please proceed to our wiki pages which offer some more information about this Drupal Distribution. The wiki pages will be constantly updated as work progresses. You can access the Wiki here: [Wiki Documentation](https://github.com/wet-boew/wet-boew-drupal/wiki)
 
-Should you require further documentation then that which is discussed below please proceed to our Wiki Pages at: [Documentation](https://github.com/wet-boew/wet-boew-drupal/wiki).
+### Alternate Methods
+
+If you do not wish to perform a build out of Drupal yourself (instructions below) we have two options for you:
+> 1. [Virtual Machine (Vagrant Chef Provision)] (https://github.com/sylus/wet-boew-drupal-devops/blob/master/README.markdown)
+>   * a) A preconfigured lightweight, reproducible, and portable virtualized development environment
+> 2. [Drupal Pre-Built](https://github.com/sylus/wet-boew-drupal-compiled) (Currently Offline)
+>   * a) A prebuilt (post make) codebase for people who don't want to play around with Drush
 
 ## Linux, Mac OSX, and Windows
 
@@ -78,16 +84,6 @@ $conf['proxy_password'] = '';
 $conf['proxy_exceptions'] = array('127.0.0.1', 'localhost');
 </pre>
 > Use appropriate settings for each line.
-
-## Wiki Pages
-
-> Should you require more information not discussed in this README file please proceed to our wiki pages which offer some more information about this Drupal Distribution. The wiki pages will be constantly updated as work progresses. You can access the Wiki here: [Wiki Documentation](https://github.com/wet-boew/wet-boew-drupal/wiki)
-
-## Virtual Machine (Vagrant Chef Provision)
-
-> Vagrant (http://vagrantup.com/) allows for you to create and configure lightweight, reproducible, and portable virtualized development environments. You can then use such commands as vagrant ssh and vagrant up etc.. (Vagrant builds itself on top of Virtual Box).
-
-> You can go to [Virtual Machine (Vagrant Chef Provision)] (https://github.com/sylus/wet-boew-drupal-devops/blob/master/README.markdown) to get instructions on how to use our preconfigured stack.
 
 ## A Note About Clean URLs
 
