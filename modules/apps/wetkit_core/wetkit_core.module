@@ -33,7 +33,7 @@ function wetkit_core_init() {
   // Set the current page title in the breadcrumb
   $breadcrumb = drupal_get_breadcrumb();
   if (count($breadcrumb) && drupal_get_title()) {
-    //$breadcrumb[] = drupal_get_title();
+    $breadcrumb[] = drupal_get_title();
 
     // If it is the homepage, remove the breadcrumb
     if (drupal_is_front_page()) {

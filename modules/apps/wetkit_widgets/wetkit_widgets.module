@@ -130,15 +130,6 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
     $form['widget_settings']['link'] = $form['link'];
     unset($form['link']);
 
-    // Set proper display mode options for existing content bundles.  
-    if (!empty($form['#entity']) && $form['#entity']->bundle == 'existing_content') {
-      $form['field_view_mode'][LANGUAGE_NONE]['#options'] = wetkit_core_view_mode_options();
-      $form['field_view_mode'][LANGUAGE_NONE]['#required'] = TRUE;
-      $view_mode =  $form['#entity']->field_view_mode[LANGUAGE_NONE][0]['value'];
-      $form['field_view_mode'][LANGUAGE_NONE]['#default_value'] = !empty($view_mode) ? $view_mode : 'full';
-    }
-
-
     // Find file / image fields and ensure they are using a FID instead of a UUID.
     // TODO - This can be removed if we are not supporting the UUID module    
     foreach ($form as $key => $value) {
