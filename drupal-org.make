@@ -70,7 +70,7 @@ projects[panels][download][type] = git
 projects[panels][download][revision] = 6662e3b
 projects[panels][download][branch] = 7.x-3.x
 projects[panels][patch][1735336] = http://drupal.org/files/1735336-repaint-draghandle-ipe-initial.patch
-projects[panels][patch][1737766] = http://drupal.org/files/1737766-remove-cache-info.patch
+;projects[panels][patch][1737766] = http://drupal.org/files/1737766-remove-cache-info.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/panels-add-hooks-to-integrate-i18n_panels-1179034-41.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/uuids-for-exported-pids-1277908-19.patch
 
