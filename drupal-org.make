@@ -45,9 +45,8 @@ projects[fences][download][revision] = d9ca337
 projects[fences][download][branch] = 7.x-1.x
 projects[fences][patch][1561244] = http://drupal.org/files/undefined-index-1561244-7.patch
 
-projects[fieldable_panels_panes][version] = 1.1
+projects[fieldable_panels_panes][version] = 1.2
 projects[fieldable_panels_panes][subdir] = contrib
-projects[fieldable_panels_panes][patch][1715918] = http://drupal.org/files/fieldable-panel-panes-load-vid.patch
 ;projects[fieldable_panels_panes][patch][1536944] = http://drupal.org/files/translatable-panes-1536944-6.patch
 
 projects[jquery_update][version] = 2.x-dev
@@ -68,10 +67,10 @@ projects[panels][version] = 3.x-dev
 projects[panels][subdir] = contrib
 projects[panels][type] = module
 projects[panels][download][type] = git
-projects[panels][download][revision] = 0b237c0
+projects[panels][download][revision] = 6662e3b
 projects[panels][download][branch] = 7.x-3.x
-projects[panels][patch][1549660] = http://drupal.org/files/1549660-list-region-style-dont-render-empty-placeholder.patch
-projects[panels][patch][1690128] = http://drupal.org/files/1690128-add-panes-to-top-ipe.patch
+projects[panels][patch][1735336] = http://drupal.org/files/1735336-repaint-draghandle-ipe-initial.patch
+projects[panels][patch][1737766] = http://drupal.org/files/1737766-remove-cache-info.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/panels-add-hooks-to-integrate-i18n_panels-1179034-41.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/uuids-for-exported-pids-1277908-19.patch
 
@@ -82,13 +81,9 @@ projects[panels_breadcrumbs][download][type] = git
 projects[panels_breadcrumbs][download][revision] = 531f589
 projects[panels_breadcrumbs][download][branch] = 7.x-2.x
 
-projects[panelizer][version] = 3.x-dev
+projects[panelizer][version] = 3.0-rc1
 projects[panelizer][subdir] = contrib
 projects[panelizer][type] = module
-projects[panelizer][download][type] = git
-projects[panelizer][download][revision] = f276bfe
-projects[panelizer][download][branch] = 7.x-3.x
-projects[panelizer][patch][1555194] = http://drupal.org/files/1387634-features-support-panelizer-unified.patch
 
 projects[password_policy][version] = 1.0-rc3
 projects[password_policy][subdir] = contrib
@@ -107,7 +102,7 @@ projects[rules][patch][1329346] = http://drupal.org/files/remove-make-file-13293
 projects[token][version] = 1.2
 projects[token][subdir] = contrib
 
-projects[layout][version] = 1.0-alpha2
+projects[layout][version] = 1.0-alpha3
 projects[layout][subdir] = contrib
 
 projects[gridbuilder][version] = 1.0-alpha2
