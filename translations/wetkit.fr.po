@@ -5,13 +5,14 @@
 # Generated from files:
 #  wetkit.info: n/a
 #  wetkit.profile: n/a
+#  themes/wetkit_adaptivetheme/custom_layouts/wetkit/wetkit.inc: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-07-08 15:49-0400\n"
-"PO-Revision-Date: 2012-07-08 15:49-0400\n"
+"POT-Creation-Date: 2012-08-22 10:00-0400\n"
+"PO-Revision-Date: 2012-08-22 10:00-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -29,51 +30,51 @@ msgstr ""
 "Profile d'installation créé au moyen de Drupal 7 pour la Boîte à "
 "outils de l’expérience Web"
 
-#: wetkit.profile:20
+#: wetkit.profile:21
 msgid "Import French Language"
 msgstr ""
 
-#: wetkit.profile:26
+#: wetkit.profile:27
 msgid "Enable apps support"
 msgstr ""
 
-#: wetkit.profile:67
-msgid "Install apps for WetKit (local)"
+#: wetkit.profile:71
+msgid "Install local apps for WetKit"
 msgstr ""
 
-#: wetkit.profile:75
+#: wetkit.profile:76
 msgid "Choose a theme"
 msgstr ""
 
-#: wetkit.profile:218;364
-msgid "Finished!"
-msgstr ""
-
-#: wetkit.profile:259
+#: wetkit.profile:247
 msgid "Enable Support for Apps"
 msgstr ""
 
-#: wetkit.profile:262
+#: wetkit.profile:250
 msgid "Apps uses the same mechanism for installing modules as the update module in core. This depends on certain php extensions to be installed on your server. Below is the documentation for the various methods of installing."
 msgstr ""
 
-#: wetkit.profile:265
+#: wetkit.profile:254
 msgid "FTP"
 msgstr "FTP"
 
-#: wetkit.profile:270
+#: wetkit.profile:260
 msgid "SSH"
 msgstr "SSH"
 
-#: wetkit.profile:291
+#: wetkit.profile:285
 msgid "Choose a theme!"
 msgstr ""
 
-#: wetkit.profile:302
+#: wetkit.profile:296
 msgid "Starting Theme"
 msgstr ""
 
-#: wetkit.profile:366
-msgid "Congratulations, you just installed the Drupal 7 Web Experience Toolkit!"
+#: themes/wetkit_adaptivetheme/custom_layouts/wetkit/wetkit.inc:30
+msgid "wetkit"
+msgstr ""
+
+#: themes/wetkit_adaptivetheme/custom_layouts/wetkit/wetkit.inc:31
+msgid "WetKit Subtheme Custom Page Layout"
 msgstr ""
 

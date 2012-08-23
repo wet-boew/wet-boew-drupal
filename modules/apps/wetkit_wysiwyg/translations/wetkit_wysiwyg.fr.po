@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-07-08 15:56-0400\n"
-"PO-Revision-Date: 2012-07-08 15:56-0400\n"
+"POT-Creation-Date: 2012-08-22 10:08-0400\n"
+"PO-Revision-Date: 2012-08-22 10:08-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -25,6 +25,34 @@ msgstr ""
 
 #: wetkit_wysiwyg.module:34
 msgid "Spell Check"
+msgstr ""
+
+#: wetkit_wysiwyg.module:144
+msgid "Heading 1"
+msgstr ""
+
+#: wetkit_wysiwyg.module:152
+msgid "Heading 2"
+msgstr ""
+
+#: wetkit_wysiwyg.module:160
+msgid "Heading 3"
+msgstr ""
+
+#: wetkit_wysiwyg.module:168
+msgid "Heading 4"
+msgstr ""
+
+#: wetkit_wysiwyg.module:176
+msgid "Paragraph"
+msgstr ""
+
+#: wetkit_wysiwyg.module:190
+msgid "Unordered List"
+msgstr ""
+
+#: wetkit_wysiwyg.module:196
+msgid "Ordered List"
 msgstr ""
 
 #: wetkit_wysiwyg.info:0

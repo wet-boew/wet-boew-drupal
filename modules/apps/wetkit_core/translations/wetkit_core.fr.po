@@ -3,6 +3,7 @@
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
+#  wetkit_core.features.field.inc: n/a
 #  wetkit_core.module: n/a
 #  wetkit_core.info: n/a
 #
@@ -10,8 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-07-08 15:52-0400\n"
-"PO-Revision-Date: 2012-07-08 15:52-0400\n"
+"POT-Creation-Date: 2012-08-22 10:04-0400\n"
+"PO-Revision-Date: 2012-08-22 10:04-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -19,11 +20,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: wetkit_core.module:29
+#: wetkit_core.features.field.inc:89
+msgid "Image"
+msgstr "Image"
+
+#: wetkit_core.features.field.inc:90
+msgid "This is the primary image to be associated with the taxonomy term"
+msgstr ""
+
+#: wetkit_core.module:119
 msgid "Time"
 msgstr "Heure"
 
-#: wetkit_core.module:30
+#: wetkit_core.module:120
 msgid "Day"
 msgstr "Jour"
 
@@ -32,7 +41,7 @@ msgid "WetKit Core"
 msgstr "Essentielle WetKit"
 
 #: wetkit_core.info:0
-msgid "The central core of the WetKit framework."
+msgid "The magical core of the WetKit framework."
 msgstr ""
 
 #: wetkit_core.info:0
