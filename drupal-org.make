@@ -134,7 +134,7 @@ projects[file_entity][subdir] = contrib
 projects[file_entity][download][type] = git
 projects[file_entity][download][revision] = a8986e5
 projects[file_entity][download][branch] = 7.x-2.x
-projects[file_entity][patch][1553094] = http://drupal.org/files/Alt-and-Title-support-for-Images-1553094-62.patch
+projects[file_entity][patch][1553094] = http://drupal.org/files/Alt-and-Title-support-for-Images-1553094-68.patch
 
 projects[field_group][version] = 1.1
 projects[field_group][subdir] = contrib
