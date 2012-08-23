@@ -3,22 +3,23 @@
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
-#  wetkit_admin.views_default.inc: n/a
 #  wetkit_admin.module: n/a
-#  plugins/content_types/apps.inc: n/a
-#  plugins/content_types/categories.inc: n/a
+#  wetkit_admin.info: n/a
 #  plugins/content_types/content.inc: n/a
 #  plugins/content_types/menus.inc: n/a
+#  plugins/content_types/pages.inc: n/a
+#  plugins/content_types/taxonomy.inc: n/a
 #  plugins/content_types/theme.inc: n/a
 #  plugins/content_types/users.inc: n/a
-#  wetkit_admin.info: n/a
+#  plugins/content_types/wetkit_apps_apps.inc: n/a
+#  plugins/content_types/wetkit_foundation_apps.inc: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-07-08 15:52-0400\n"
-"PO-Revision-Date: 2012-07-08 15:52-0400\n"
+"POT-Creation-Date: 2012-08-22 10:02-0400\n"
+"PO-Revision-Date: 2012-08-22 10:02-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -26,156 +27,48 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: wetkit_admin.views_default.inc:511;727;1163
-msgid "Master"
-msgstr "Maître"
-
-#: wetkit_admin.views_default.inc:512;728;1164
-msgid "more"
-msgstr "plus"
-
-#: wetkit_admin.views_default.inc:513
-msgid "Filter"
-msgstr "Filtrer"
-
-#: wetkit_admin.views_default.inc:514;730;1166
-msgid "Reset"
-msgstr "Réinitialiser"
-
-#: wetkit_admin.views_default.inc:515;731;1167
-msgid "Sort by"
-msgstr "Trier selon"
-
-#: wetkit_admin.views_default.inc:516;732;1168
-msgid "Asc"
-msgstr "Ascendant"
-
-#: wetkit_admin.views_default.inc:517;733;1169
-msgid "Desc"
-msgstr "Descendant"
-
-#: wetkit_admin.views_default.inc:518;734;1170
-msgid "Items per page"
+#: wetkit_admin.module:24
+msgid "Machine Name"
 msgstr ""
 
-#: wetkit_admin.views_default.inc:519;735;1171
-msgid "- All -"
+#: wetkit_admin.module:32
+msgid "Do you want to provide an option to specify a machine name (provided by the Default Content module) on the content editing form?"
 msgstr ""
 
-#: wetkit_admin.views_default.inc:520;736;1172
-msgid "Offset"
+#: wetkit_admin.module:36
+msgid "Create revision"
 msgstr ""
 
-#: wetkit_admin.views_default.inc:521;737;1173
-msgid "Empty Text"
+#: wetkit_admin.module:44
+msgid "Do you want to provide an option to create a new revision for content on the content editing form?"
 msgstr ""
 
-#: wetkit_admin.views_default.inc:522
-msgid "There is no content of that sort. "
-msgstr ""
-
-#: wetkit_admin.views_default.inc:523
-msgid "author"
-msgstr ""
-
-#: wetkit_admin.views_default.inc:524
-msgid "Title"
-msgstr "Titre"
-
-#: wetkit_admin.views_default.inc:525
-msgid "Type"
-msgstr "Type"
-
-#: wetkit_admin.views_default.inc:526 wetkit_admin.module:114
-msgid "Author"
-msgstr "Auteur"
-
-#: wetkit_admin.views_default.inc:527
-msgid "Created"
-msgstr "Créé"
-
-#: wetkit_admin.views_default.inc:528
-msgid "Published"
-msgstr "Publié"
-
-#: wetkit_admin.views_default.inc:529
-msgid "Search"
-msgstr "Recherche"
-
-#: wetkit_admin.views_default.inc:530
-msgid "Admin Content"
-msgstr ""
-
-#: wetkit_admin.views_default.inc:531;743;1181 plugins/content_types/apps.inc:7 plugins/content_types/categories.inc:7 plugins/content_types/content.inc:7 plugins/content_types/menus.inc:7 plugins/content_types/theme.inc:7 plugins/content_types/users.inc:7
-msgid "Admin"
-msgstr ""
-
-#: wetkit_admin.views_default.inc:729;1165
-msgid "Apply"
-msgstr "Appliquer"
-
-#: wetkit_admin.views_default.inc:738
-msgid "There is no media of this type. "
-msgstr ""
-
-#: wetkit_admin.views_default.inc:739
-msgid "Uploader"
-msgstr ""
-
-#: wetkit_admin.views_default.inc:740
-msgid "Uploaded"
-msgstr ""
-
-#: wetkit_admin.views_default.inc:741
-msgid "Filename"
-msgstr "Nom du fichier"
-
-#: wetkit_admin.views_default.inc:742
-msgid "Admin Media"
-msgstr ""
-
-#: wetkit_admin.views_default.inc:1174
-msgid "There are no users of this sort."
-msgstr ""
-
-#: wetkit_admin.views_default.inc:1175
-msgid "Name"
-msgstr "Nom"
-
-#: wetkit_admin.views_default.inc:1176
-msgid "E-mail"
-msgstr "Courriel"
-
-#: wetkit_admin.views_default.inc:1177
-msgid "Last access"
-msgstr "Dernier accès"
-
-#: wetkit_admin.views_default.inc:1178
-msgid "Roles"
-msgstr "Rôles"
-
-#: wetkit_admin.views_default.inc:1179
-msgid "Active"
-msgstr "Actif"
-
-#: wetkit_admin.views_default.inc:1180
-msgid "Admin Users"
-msgstr ""
-
-#: wetkit_admin.module:69
-msgid "Context Settings"
-msgstr ""
-
-#: wetkit_admin.module:84
+#: wetkit_admin.module:87
 msgid "Permalink"
 msgstr "Permalien"
 
-#: wetkit_admin.module:89
+#: wetkit_admin.module:93
 msgid "magically generated"
 msgstr ""
 
+#: wetkit_admin.module:143
+msgid "Author"
+msgstr "Auteur"
+
 #: wetkit_admin.module:166
+msgid "Parent"
+msgstr "Parent"
+
+#: wetkit_admin.module:210
 msgid "Menu link title is required."
+msgstr ""
+
+#: wetkit_admin.module:359
+msgid "Are you sure you want to delete the overriden page template for %title?"
+msgstr ""
+
+#: wetkit_admin.module:373
+msgid "The overridden page template for %title has been deleted."
 msgstr ""
 
 #: wetkit_admin.info:0
@@ -190,103 +83,151 @@ msgstr ""
 msgid "WetKit"
 msgstr ""
 
-#: plugins/content_types/apps.inc:4
-msgid "Apps"
-msgstr ""
-
-#: plugins/content_types/apps.inc:5
-msgid "This is a standard list of apps that are available"
-msgstr ""
-
-#: plugins/content_types/apps.inc:17
-msgid "Installed Apps"
-msgstr ""
-
-#: plugins/content_types/apps.inc:54 plugins/content_types/categories.inc:26 plugins/content_types/content.inc:41 plugins/content_types/menus.inc:25 plugins/content_types/theme.inc:37 plugins/content_types/users.inc:28
-msgid "Configure"
-msgstr "Configurer"
-
-#: plugins/content_types/apps.inc:60
-msgid "Details"
-msgstr "Détails"
-
-#: plugins/content_types/categories.inc:4;17
-msgid "Categories"
-msgstr "Catégories"
-
-#: plugins/content_types/categories.inc:5
-msgid "This is a standard list of categories that are available"
-msgstr ""
-
-#: plugins/content_types/categories.inc:31 plugins/content_types/content.inc:29 plugins/content_types/menus.inc:30 plugins/content_types/users.inc:35
-msgid "Add new"
-msgstr ""
-
-#: plugins/content_types/categories.inc:37
-msgid "1 term"
-msgid_plural "@count terms"
-msgstr[0] ""
-msgstr[1] ""
-
-#: plugins/content_types/content.inc:4;17
+#: plugins/content_types/content.inc:9;22
 msgid "Content"
 msgstr "Contenu"
 
-#: plugins/content_types/content.inc:5
+#: plugins/content_types/content.inc:10
 msgid "This is a standard list of content that are available"
 msgstr ""
 
-#: plugins/content_types/content.inc:35
+#: plugins/content_types/content.inc:12 plugins/content_types/menus.inc:12 plugins/content_types/pages.inc:12 plugins/content_types/taxonomy.inc:12 plugins/content_types/theme.inc:12 plugins/content_types/users.inc:12 plugins/content_types/wetkit_apps_apps.inc:12 plugins/content_types/wetkit_foundation_apps.inc:12
+msgid "Admin"
+msgstr ""
+
+#: plugins/content_types/content.inc:34 plugins/content_types/menus.inc:35 plugins/content_types/pages.inc:114;126;139 plugins/content_types/taxonomy.inc:36 plugins/content_types/users.inc:40
+msgid "Add new"
+msgstr ""
+
+#: plugins/content_types/content.inc:40
 msgid "See all"
 msgstr ""
 
-#: plugins/content_types/content.inc:49
+#: plugins/content_types/content.inc:46 plugins/content_types/menus.inc:30 plugins/content_types/pages.inc:118;130;143 plugins/content_types/taxonomy.inc:31 plugins/content_types/theme.inc:33 plugins/content_types/users.inc:33 plugins/content_types/wetkit_apps_apps.inc:59 plugins/content_types/wetkit_foundation_apps.inc:59
+msgid "Configure"
+msgstr "Configurer"
+
+#: plugins/content_types/content.inc:54
 msgid "1 item"
 msgid_plural "@count items"
 msgstr[0] "1 élement"
 msgstr[1] "@count éléments"
 
-#: plugins/content_types/menus.inc:4;17
+#: plugins/content_types/menus.inc:9;22
 msgid "Menus"
 msgstr "Menus"
 
-#: plugins/content_types/menus.inc:5
+#: plugins/content_types/menus.inc:10
 msgid "This is a standard list of menus that are available"
 msgstr ""
 
-#: plugins/content_types/menus.inc:40
+#: plugins/content_types/menus.inc:45
 msgid "1 link"
 msgid_plural "@count links"
 msgstr[0] ""
 msgstr[1] ""
 
-#: plugins/content_types/theme.inc:4
+#: plugins/content_types/pages.inc:9
+msgid "Pages"
+msgstr "Pages"
+
+#: plugins/content_types/pages.inc:10
+msgid "This is a standard list of pages that are available"
+msgstr ""
+
+#: plugins/content_types/pages.inc:93
+msgid "Revert"
+msgstr "Rétablir"
+
+#: plugins/content_types/pages.inc:105
+msgid "Edit"
+msgstr "Modifier"
+
+#: plugins/content_types/pages.inc:150
+msgid "General Pages"
+msgstr ""
+
+#: plugins/content_types/pages.inc:151
+msgid "No general pages have yet been created!"
+msgstr ""
+
+#: plugins/content_types/pages.inc:152
+msgid "Page Templates"
+msgstr ""
+
+#: plugins/content_types/pages.inc:153
+msgid "No page templates have yet been created!"
+msgstr ""
+
+#: plugins/content_types/pages.inc:154
+msgid "Overriden Page Templates"
+msgstr ""
+
+#: plugins/content_types/pages.inc:155
+msgid "No page templates have yet been overridden!"
+msgstr ""
+
+#: plugins/content_types/pages.inc:158
+msgid "Custom Layouts"
+msgstr ""
+
+#: plugins/content_types/pages.inc:159
+msgid "No custom layout options have yet been created!"
+msgstr ""
+
+#: plugins/content_types/taxonomy.inc:9;22
+msgid "Taxonomy"
+msgstr "Taxonomie"
+
+#: plugins/content_types/taxonomy.inc:10
+msgid "This is a standard list of categories that are available"
+msgstr ""
+
+#: plugins/content_types/taxonomy.inc:42
+msgid "1 term"
+msgid_plural "@count terms"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/content_types/theme.inc:9;24
 msgid "Theme"
 msgstr ""
 
-#: plugins/content_types/theme.inc:5
+#: plugins/content_types/theme.inc:10
 msgid "This is the current theme that is installed."
 msgstr ""
 
-#: plugins/content_types/theme.inc:17
-msgid "Installed Theme"
-msgstr ""
-
-#: plugins/content_types/theme.inc:43
+#: plugins/content_types/theme.inc:39
 msgid "Change theme"
 msgstr ""
 
-#: plugins/content_types/users.inc:4;17
+#: plugins/content_types/users.inc:9;22
 msgid "Users"
 msgstr "Utilisateurs"
 
-#: plugins/content_types/users.inc:5
+#: plugins/content_types/users.inc:10
 msgid "This is a standard list of users that are available"
 msgstr ""
 
-#: plugins/content_types/users.inc:41
+#: plugins/content_types/users.inc:46
 msgid "1 user"
 msgid_plural "@count users"
 msgstr[0] ""
 msgstr[1] ""
+
+#: plugins/content_types/wetkit_apps_apps.inc:9;22
+msgid "WetKit Apps"
+msgstr ""
+
+#: plugins/content_types/wetkit_apps_apps.inc:10 plugins/content_types/wetkit_foundation_apps.inc:10
+msgid "This is a list of the foundational apps for WetKit"
+msgstr ""
+
+#: plugins/content_types/wetkit_apps_apps.inc:65 plugins/content_types/wetkit_foundation_apps.inc:65
+msgid "Details"
+msgstr "Détails"
+
+#: plugins/content_types/wetkit_foundation_apps.inc:9;22
+msgid "WetKit Foundation"
+msgstr ""
 

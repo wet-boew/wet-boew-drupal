@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-07-08 15:54-0400\n"
-"PO-Revision-Date: 2012-07-08 15:54-0400\n"
+"POT-Creation-Date: 2012-08-22 10:05-0400\n"
+"PO-Revision-Date: 2012-08-22 10:05-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -19,33 +19,145 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: wetkit_magic.module:78
+#: wetkit_magic.module:21
+msgid "Live Preview"
+msgstr ""
+
+#: wetkit_magic.module:29
+msgid "Do you want WetKit to provide a live preview for modal content through the in place editor?"
+msgstr ""
+
+#: wetkit_magic.module:102
+msgid "You must place this reusable content item first before editing it. Remember any edits you make will be global!"
+msgstr ""
+
+#: wetkit_magic.module:157
 msgid "Update Preview"
 msgstr ""
 
-#: wetkit_magic.module:104
-msgid "Default Pane Style"
-msgstr ""
+#: wetkit_magic.module:174
+msgid "Save"
+msgstr "Enregistrer"
 
-#: wetkit_magic.module:109
-msgid "Style Settings"
-msgstr ""
-
-#: wetkit_magic.module:120;127
+#: wetkit_magic.module:195;461;600
 msgid "General Settings"
 msgstr ""
 
-#: wetkit_magic.module:134
+#: wetkit_magic.module:256
+msgid "The URL or Drupal path from which to build the link."
+msgstr ""
+
+#: wetkit_magic.module:264
+msgid "Make this reusable"
+msgstr ""
+
+#: wetkit_magic.module:265
+msgid "Admin Title"
+msgstr ""
+
+#: wetkit_magic.module:289
 msgid "Title"
 msgstr "Titre"
 
-#: wetkit_magic.module:152
+#: wetkit_magic.module:299
+msgid "Make title a link"
+msgstr ""
+
+#: wetkit_magic.module:326
+msgid "The URL path used for linking and paging purposes. Leave blank to use the current page."
+msgstr ""
+
+#: wetkit_magic.module:335;348
+msgid "Items to Show"
+msgstr ""
+
+#: wetkit_magic.module:337;350
+msgid "Enter 0 to display all."
+msgstr ""
+
+#: wetkit_magic.module:340;356
+msgid "Items to Skip"
+msgstr ""
+
+#: wetkit_magic.module:342;358
+msgid "Enter 0 to skip none."
+msgstr ""
+
+#: wetkit_magic.module:366;374
+msgid "Sort order"
+msgstr ""
+
+#: wetkit_magic.module:387
 msgid "Field Settings"
 msgstr ""
 
-#: wetkit_magic.module:156
+#: wetkit_magic.module:391
 msgid "Display"
 msgstr "Affichage"
+
+#: wetkit_magic.module:408
+msgid "Display Type"
+msgstr ""
+
+#: wetkit_magic.module:413
+msgid "Fields"
+msgstr ""
+
+#: wetkit_magic.module:414
+msgid "Content"
+msgstr "Contenu"
+
+#: wetkit_magic.module:415
+msgid "Table"
+msgstr "Tableau"
+
+#: wetkit_magic.module:422
+msgid "Column Header"
+msgstr ""
+
+#: wetkit_magic.module:424
+msgid "None"
+msgstr "Aucun(e)"
+
+#: wetkit_magic.module:425
+msgid "Titles"
+msgstr ""
+
+#: wetkit_magic.module:469
+msgid "Context Settings"
+msgstr ""
+
+#: wetkit_magic.module:476
+msgid "Content Settings"
+msgstr ""
+
+#: wetkit_magic.module:483
+msgid "Display Settings"
+msgstr ""
+
+#: wetkit_magic.module:508
+msgid "Default Pane Style"
+msgstr ""
+
+#: wetkit_magic.module:518
+msgid "List Style"
+msgstr ""
+
+#: wetkit_magic.module:523
+msgid "Default Region Style"
+msgstr ""
+
+#: wetkit_magic.module:533
+msgid "Custom Style"
+msgstr ""
+
+#: wetkit_magic.module:539
+msgid "Style Settings"
+msgstr ""
+
+#: wetkit_magic.module:632
+msgid "If you would like this entity to be reusable, please add a title."
+msgstr ""
 
 #: wetkit_magic.info:0
 msgid "WetKit Magic"
