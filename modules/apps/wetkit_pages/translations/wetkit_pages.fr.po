@@ -5,14 +5,15 @@
 # Generated from files:
 #  wetkit_pages.features.field.inc: n/a
 #  wetkit_pages.features.inc: n/a
+#  wetkit_pages.module: n/a
 #  wetkit_pages.info: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-07-08 15:55-0400\n"
-"PO-Revision-Date: 2012-07-08 15:55-0400\n"
+"POT-Creation-Date: 2012-08-22 10:05-0400\n"
+"PO-Revision-Date: 2012-08-22 10:05-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -20,13 +21,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: wetkit_pages.features.field.inc:419
+#: wetkit_pages.features.field.inc:583
 msgid "Body"
 msgstr "Corps"
 
-#: wetkit_pages.features.field.inc:420
-msgid "Image"
-msgstr "Image"
+#: wetkit_pages.features.field.inc:584
+msgid "Categories"
+msgstr "Catégories"
+
+#: wetkit_pages.features.field.inc:585
+msgid "Feature content"
+msgstr ""
+
+#: wetkit_pages.features.field.inc:586
+msgid "Primary Image"
+msgstr ""
 
 #: wetkit_pages.features.inc:31
 msgid "Basic Page"
@@ -46,6 +55,30 @@ msgstr ""
 
 #: wetkit_pages.features.inc:41
 msgid "An non panelized important page to display to users on your site. This is included for people who are used to using blocks and regions to manage content."
+msgstr ""
+
+#: wetkit_pages.module:47
+msgid "Create Landing Page"
+msgstr ""
+
+#: wetkit_pages.module:62
+msgid "URL"
+msgstr "URL"
+
+#: wetkit_pages.module:70
+msgid "Add this page to the main menu?"
+msgstr ""
+
+#: wetkit_pages.module:79
+msgid "Parent"
+msgstr "Parent"
+
+#: wetkit_pages.module:93
+msgid "Create Page"
+msgstr ""
+
+#: wetkit_pages.module:26
+msgid "Landing Page"
 msgstr ""
 
 #: wetkit_pages.info:0

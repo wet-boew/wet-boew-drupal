@@ -1,0 +1,266 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  wetkit_widgets.features.field.inc: n/a
+#  wetkit_widgets.plugins.inc: n/a
+#  plugins/styles/tabbed_interface/tabbed_interface.inc: n/a
+#  wetkit_widgets.module: n/a
+#  wetkit_widgets.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2012-08-22 10:07-0400\n"
+"PO-Revision-Date: 2012-08-22 10:07-0400\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: wetkit_widgets.features.field.inc:887
+msgid "Address"
+msgstr ""
+
+#: wetkit_widgets.features.field.inc:888
+msgid "Author"
+msgstr "Auteur"
+
+#: wetkit_widgets.features.field.inc:889
+msgid "Caption"
+msgstr ""
+
+#: wetkit_widgets.features.field.inc:890
+msgid "Existing Content"
+msgstr ""
+
+#: wetkit_widgets.features.field.inc:891
+msgid "File"
+msgstr "Fichier"
+
+#: wetkit_widgets.features.field.inc:892
+msgid "How long (in seconds) before the spotlight rotates to the next image."
+msgstr ""
+
+#: wetkit_widgets.features.field.inc:893
+msgid "Image"
+msgstr "Image"
+
+#: wetkit_widgets.features.field.inc:894
+msgid "Information"
+msgstr ""
+
+#: wetkit_widgets.features.field.inc:895
+msgid "Items"
+msgstr "Éléments"
+
+#: wetkit_widgets.features.field.inc:896
+msgid "Links"
+msgstr ""
+
+#: wetkit_widgets.features.field.inc:897
+msgid "Quote"
+msgstr ""
+
+#: wetkit_widgets.features.field.inc:898
+msgid "Table"
+msgstr "Tableau"
+
+#: wetkit_widgets.features.field.inc:899
+msgid "Text"
+msgstr "Texte"
+
+#: wetkit_widgets.features.field.inc:900
+msgid "The street address of the location you wish to map. This widget will contact Google and try to do its best to create a map!"
+msgstr ""
+
+#: wetkit_widgets.features.field.inc:901
+msgid "Video"
+msgstr "Vidéo"
+
+#: wetkit_widgets.features.field.inc:902
+msgid "View Mode"
+msgstr ""
+
+#: wetkit_widgets.plugins.inc:23;81;412
+msgid "Spotlight"
+msgstr ""
+
+#: wetkit_widgets.plugins.inc:24
+msgid "A wonderfully widgetsal spotlight field"
+msgstr ""
+
+#: wetkit_widgets.plugins.inc:42;89 plugins/styles/tabbed_interface/tabbed_interface.inc:10
+msgid "Tabbed Interface"
+msgstr ""
+
+#: wetkit_widgets.plugins.inc:43
+msgid "WetKit Plugin for the Web Experience Toolkit's Tabbed Interface"
+msgstr ""
+
+#: wetkit_widgets.plugins.inc:113
+msgid "Upload destination"
+msgstr "Destination pour le transfert"
+
+#: wetkit_widgets.plugins.inc:116
+msgid "Select where the final files should be stored. Private file storage has significantly more overhead than public files, but allows restricted access to files within this field."
+msgstr ""
+"Sélectionnez où les fichiers finaux doivent être stockés. Le "
+"stockage privé de fichier pose beaucoup plus de contraintes que le "
+"stockage public, mais permet un accès restreint aux fichiers pour ce "
+"champ."
+
+#: wetkit_widgets.plugins.inc:123
+msgid "Default image"
+msgstr "Image par défaut"
+
+#: wetkit_widgets.plugins.inc:125
+msgid "If no image is uploaded, this image will be shown on display."
+msgstr ""
+"Si aucune image n'est transférée, c'est cette image qui sera "
+"utilisée pour l'affichage."
+
+#: wetkit_widgets.plugins.inc:147;154
+msgid "Default"
+msgstr "Par défaut"
+
+#: wetkit_widgets.plugins.inc:173;183
+msgid "Image style"
+msgstr "Style d'image"
+
+#: wetkit_widgets.plugins.inc:200
+msgid "Image Style: @style"
+msgstr ""
+
+#: wetkit_widgets.module:22
+msgid "Spotlight Rotation Time"
+msgstr ""
+
+#: wetkit_widgets.module:26
+msgid "How many seconds do you want between rotations of the spotlight widget?"
+msgstr ""
+
+#: wetkit_widgets.module:83
+msgid "Page Content"
+msgstr ""
+
+#: wetkit_widgets.module:86
+msgid "User Content"
+msgstr ""
+
+#: wetkit_widgets.module:89
+msgid "Category Content"
+msgstr ""
+
+#: wetkit_widgets.module:94
+msgid "Form Content"
+msgstr ""
+
+#: wetkit_widgets.module:123
+msgid "General Settings"
+msgstr ""
+
+#: wetkit_widgets.module:152
+msgid "Reusable Settings"
+msgstr ""
+
+#: wetkit_widgets.module:235
+msgid "Content Settings"
+msgstr ""
+
+#: wetkit_widgets.module:259
+msgid "Add links"
+msgstr ""
+
+#: wetkit_widgets.module:260;274;288;302;316;330;344;358
+msgid "Custom"
+msgstr "Personnalisé"
+
+#: wetkit_widgets.module:273
+msgid "Add file"
+msgstr ""
+
+#: wetkit_widgets.module:287
+msgid "Add image"
+msgstr ""
+
+#: wetkit_widgets.module:301
+msgid "Add text"
+msgstr ""
+
+#: wetkit_widgets.module:315
+msgid "Add map"
+msgstr ""
+
+#: wetkit_widgets.module:329
+msgid "Add table"
+msgstr ""
+
+#: wetkit_widgets.module:343
+msgid "Add video"
+msgstr ""
+
+#: wetkit_widgets.module:357
+msgid "Add spotlight"
+msgstr ""
+
+#: wetkit_widgets.module:371
+msgid "Add tabbed interface"
+msgstr ""
+
+#: wetkit_widgets.module:372 wetkit_widgets.info:0
+msgid "WetKit"
+msgstr ""
+
+#: wetkit_widgets.module:408
+msgid "Simple counter"
+msgstr ""
+
+#: wetkit_widgets.info:0
+msgid "WetKit Widgets"
+msgstr ""
+
+#: wetkit_widgets.info:0
+msgid "Creates generic widget functionality to customize wide and far."
+msgstr ""
+
+#: plugins/styles/tabbed_interface/tabbed_interface.inc:11
+msgid "Display the pane with customized settings for the Tabbed Interface Plugin."
+msgstr ""
+
+#: plugins/styles/tabbed_interface/tabbed_interface.inc:53
+msgid "Class"
+msgstr ""
+
+#: plugins/styles/tabbed_interface/tabbed_interface.inc:55
+msgid "Empty"
+msgstr "Vide"
+
+#: plugins/styles/tabbed_interface/tabbed_interface.inc:56
+msgid "Style 1"
+msgstr ""
+
+#: plugins/styles/tabbed_interface/tabbed_interface.inc:57
+msgid "Style 2"
+msgstr ""
+
+#: plugins/styles/tabbed_interface/tabbed_interface.inc:58
+msgid "Style 3"
+msgstr ""
+
+#: plugins/styles/tabbed_interface/tabbed_interface.inc:59
+msgid "Style 4"
+msgstr ""
+
+#: plugins/styles/tabbed_interface/tabbed_interface.inc:60
+msgid "Style 5"
+msgstr ""
+
+#: plugins/styles/tabbed_interface/tabbed_interface.inc:61
+msgid "Style 7"
+msgstr ""
+

@@ -3,6 +3,7 @@
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
+#  wetkit_users.features.field.inc: n/a
 #  wetkit_users.module: n/a
 #  wetkit_users.info: n/a
 #
@@ -10,8 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-07-08 15:55-0400\n"
-"PO-Revision-Date: 2012-07-08 15:55-0400\n"
+"POT-Creation-Date: 2012-08-22 10:06-0400\n"
+"PO-Revision-Date: 2012-08-22 10:06-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -19,11 +20,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: wetkit_users.module:63
+#: wetkit_users.features.field.inc:164
+msgid "About"
+msgstr "À propos"
+
+#: wetkit_users.features.field.inc:165
+msgid "Picture"
+msgstr "Image"
+
+#: wetkit_users.module:21
+msgid "Login Destination"
+msgstr ""
+
+#: wetkit_users.module:25
+msgid "Where do you want to redirect users when the login using the standard login link? Use <front> for the Drupal frontpage."
+msgstr ""
+
+#: wetkit_users.module:56
 msgid "If you don't have an username, !create."
 msgstr ""
 
-#: wetkit_users.module:68
+#: wetkit_users.module:61
 msgid "If you forgot your password, !request."
 msgstr ""
 

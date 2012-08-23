@@ -10,26 +10,22 @@
 #  wetkit_web_usability.module: n/a
 #  wetkit_web_usability.info: n/a
 #  wetkit_box/wetkit_box.info: n/a
-#  wetkit_default_layout/wetkit_default_layout.info: n/a
 #  wetkit_metatag/wetkit_metatag.info: n/a
 #  wetkit_security/wetkit_security.info: n/a
 #  wetkit_slider/wetkit_slider.info: n/a
-#  wetkit_styles/wetkit_styles.info: n/a
 #  plugins/styles/wetkitnav/wetkitnav.inc: n/a
+#  wetkit_slider/plugins/styles/slider/slider.inc: n/a
 #  wetkit_box/plugins/wetkit_box.inc: n/a
 #  wetkit_slider/wetkit_slider.features.inc: n/a
-#  wetkit_default_layout/wetkit_default_layout.context.inc: n/a
 #  wetkit_metatag/wetkit_metatag.metatag.inc: n/a
 #  wetkit_slider/wetkit_slider.features.field.inc: n/a
-#  wetkit_styles/wetkit_styles.module: n/a
-#  wetkit_styles/skins/styles/styles.inc: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-07-08 15:55-0400\n"
-"PO-Revision-Date: 2012-07-08 15:55-0400\n"
+"POT-Creation-Date: 2012-08-22 10:07-0400\n"
+"PO-Revision-Date: 2012-08-22 10:07-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -37,20 +33,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: wetkit_web_usability.admin.inc:14
-msgid "Migrate"
-msgstr ""
-
-#: wetkit_web_usability.admin.inc:20
-msgid "Migrate Demo Content"
-msgstr ""
-
 #: wetkit_web_usability.admin.inc:25
-msgid "Enable / Disable WetKit jQuery Progressive Enhancement"
+msgid "WetKit jQuery Progressive Enhancement"
 msgstr ""
 
-#: wetkit_web_usability.admin.inc:31;33
-msgid "Web Experience Toolkit: jQuery v3.0 (In Development)"
+#: wetkit_web_usability.admin.inc:31
+msgid "Enable Web Experience Toolkit: jQuery v3.0 Development Mode"
+msgstr ""
+
+#: wetkit_web_usability.admin.inc:33
+msgid "Selecting this checkbox will enable the unminified development version of WET-BOEW JS files"
 msgstr ""
 
 #: wetkit_web_usability.features.menu_custom.inc:55
@@ -143,27 +135,27 @@ msgstr "[corps]"
 msgid "Block"
 msgstr "Bloc"
 
-#: wetkit_web_usability.module:133
+#: wetkit_web_usability.module:57
 msgid "Please proceed to the <a href=\"@settings\">WetKit Web Usability Page</a> to configure additional settings."
 msgstr ""
 
-#: wetkit_web_usability.module:134
+#: wetkit_web_usability.module:58
 msgid "Please read the online <a href=\"@documentation\">Documentation</a>"
 msgstr ""
 
-#: wetkit_web_usability.module:157
+#: wetkit_web_usability.module:145
 msgid "WetKit Web Usability"
 msgstr ""
 
-#: wetkit_web_usability.module:158
+#: wetkit_web_usability.module:146
 msgid "Manage specific features related to the Web Experience Toolkit."
 msgstr ""
 
-#: wetkit_web_usability.module:167
+#: wetkit_web_usability.module:155
 msgid "WetKit Web Usability Settings"
 msgstr ""
 
-#: wetkit_web_usability.module:168
+#: wetkit_web_usability.module:156
 msgid "Change how certain settings behave from the Web Experience Toolkit."
 msgstr ""
 
@@ -177,7 +169,7 @@ msgstr ""
 "Fonction principale: Installer les paramètres des menus, des blocs, "
 "des vues et du contenu par défaut"
 
-#: wetkit_web_usability.info:0 wetkit_box/wetkit_box.info:0 wetkit_default_layout/wetkit_default_layout.info:0 wetkit_metatag/wetkit_metatag.info:0 wetkit_security/wetkit_security.info:0 wetkit_slider/wetkit_slider.info:0 wetkit_styles/wetkit_styles.info:0
+#: wetkit_web_usability.info:0 wetkit_box/wetkit_box.info:0 wetkit_metatag/wetkit_metatag.info:0 wetkit_security/wetkit_security.info:0 wetkit_slider/wetkit_slider.info:0
 msgid "WetKit"
 msgstr ""
 
@@ -189,51 +181,51 @@ msgstr ""
 msgid "Display the pane or region with no markup, not even a title."
 msgstr ""
 
-#: plugins/styles/wetkitnav/wetkitnav.inc:71
+#: plugins/styles/wetkitnav/wetkitnav.inc:71 wetkit_slider/plugins/styles/slider/slider.inc:46
 msgid "Headings"
 msgstr ""
 
-#: plugins/styles/wetkitnav/wetkitnav.inc:73
+#: plugins/styles/wetkitnav/wetkitnav.inc:73 wetkit_slider/plugins/styles/slider/slider.inc:48
 msgid "h1"
 msgstr ""
 
-#: plugins/styles/wetkitnav/wetkitnav.inc:74
+#: plugins/styles/wetkitnav/wetkitnav.inc:74 wetkit_slider/plugins/styles/slider/slider.inc:49
 msgid "h2"
 msgstr ""
 
-#: plugins/styles/wetkitnav/wetkitnav.inc:75
+#: plugins/styles/wetkitnav/wetkitnav.inc:75 wetkit_slider/plugins/styles/slider/slider.inc:50
 msgid "h3"
 msgstr ""
 
-#: plugins/styles/wetkitnav/wetkitnav.inc:76
+#: plugins/styles/wetkitnav/wetkitnav.inc:76 wetkit_slider/plugins/styles/slider/slider.inc:51
 msgid "h4"
 msgstr ""
 
-#: plugins/styles/wetkitnav/wetkitnav.inc:77
+#: plugins/styles/wetkitnav/wetkitnav.inc:77 wetkit_slider/plugins/styles/slider/slider.inc:52
 msgid "h5"
 msgstr ""
 
-#: plugins/styles/wetkitnav/wetkitnav.inc:78
+#: plugins/styles/wetkitnav/wetkitnav.inc:78 wetkit_slider/plugins/styles/slider/slider.inc:53
 msgid "h6"
 msgstr ""
 
-#: plugins/styles/wetkitnav/wetkitnav.inc:85
+#: plugins/styles/wetkitnav/wetkitnav.inc:85 wetkit_slider/plugins/styles/slider/slider.inc:60
 msgid "Class"
 msgstr ""
 
-#: plugins/styles/wetkitnav/wetkitnav.inc:87;97
+#: plugins/styles/wetkitnav/wetkitnav.inc:87;97 wetkit_slider/plugins/styles/slider/slider.inc:62;72
 msgid "Empty"
 msgstr "Vide"
 
-#: plugins/styles/wetkitnav/wetkitnav.inc:88
+#: plugins/styles/wetkitnav/wetkitnav.inc:88 wetkit_slider/plugins/styles/slider/slider.inc:63
 msgid "span-2"
 msgstr ""
 
-#: plugins/styles/wetkitnav/wetkitnav.inc:95
+#: plugins/styles/wetkitnav/wetkitnav.inc:95 wetkit_slider/plugins/styles/slider/slider.inc:70
 msgid "ID"
 msgstr ""
 
-#: plugins/styles/wetkitnav/wetkitnav.inc:98
+#: plugins/styles/wetkitnav/wetkitnav.inc:98 wetkit_slider/plugins/styles/slider/slider.inc:73
 msgid "gcwu-connect"
 msgstr ""
 
@@ -245,7 +237,7 @@ msgstr "Boîtes WetKit"
 msgid "Core Feature: Provides plugin for multilingual boxes"
 msgstr "Fonction principale: Fournit plugin pour boîtes multilingues "
 
-#: wetkit_box/plugins/wetkit_box.inc:45 wetkit_slider/wetkit_slider.features.inc:62
+#: wetkit_box/plugins/wetkit_box.inc:45 wetkit_slider/wetkit_slider.features.inc:64
 msgid "Title"
 msgstr "Titre"
 
@@ -260,26 +252,6 @@ msgstr "Corps"
 #: wetkit_box/plugins/wetkit_box.inc:56
 msgid "The content of the block as shown to the user."
 msgstr "Le contenu du bloc vu par l'utilisateur."
-
-#: wetkit_default_layout/wetkit_default_layout.context.inc:66
-msgid "Default Layout (front) for WetKit Distro"
-msgstr ""
-
-#: wetkit_default_layout/wetkit_default_layout.context.inc:67;136
-msgid "Layout"
-msgstr ""
-
-#: wetkit_default_layout/wetkit_default_layout.context.inc:135
-msgid "Default Layout for WetKit Distro"
-msgstr ""
-
-#: wetkit_default_layout/wetkit_default_layout.info:0
-msgid "WetKit Default Layout"
-msgstr ""
-
-#: wetkit_default_layout/wetkit_default_layout.info:0
-msgid "WetKit Default Layout for WetKit Web Usability"
-msgstr ""
 
 #: wetkit_metatag/wetkit_metatag.metatag.inc:63
 msgid "WetKit Metadata"
@@ -461,17 +433,17 @@ msgstr "Photo de la case de défilement"
 msgid "Slider Title"
 msgstr "Titre de la case de défilement"
 
-#: wetkit_slider/wetkit_slider.features.inc:58
+#: wetkit_slider/wetkit_slider.features.inc:60
 msgid "Main Slider"
 msgstr "Case de défilement principale"
 
-#: wetkit_slider/wetkit_slider.features.inc:60
+#: wetkit_slider/wetkit_slider.features.inc:62
 msgid "Main Slider for the Government of Canada"
 msgstr "Case de défilement principale pour le gouvernement du Canada"
 
 #: wetkit_slider/wetkit_slider.views_default.inc:180
 msgid "Attachment"
-msgstr "Pièce jointe"
+msgstr "Fichier attaché"
 
 #: wetkit_slider/wetkit_slider.info:0
 msgid "WetKit Slider"
@@ -483,37 +455,11 @@ msgstr ""
 "Fonction supplémentaire: Installer une bannière rotative accessible "
 "dans la page d'accueil"
 
-#: wetkit_styles/wetkit_styles.module:21
-msgid "Grid and Modules CSS"
-msgstr "Grille et modules CSS"
-
-#: wetkit_styles/wetkit_styles.module:25 wetkit_styles/skins/styles/styles.inc:204
-msgid "Placement CSS"
-msgstr "Positionnement CSS"
-
-#: wetkit_styles/wetkit_styles.module:28 wetkit_styles/skins/styles/styles.inc:213
-msgid "Styling CSS"
-msgstr "Application de styles CSS"
-
-#: wetkit_styles/wetkit_styles.info:0
-msgid "WetKit Styles"
-msgstr "Styles de la BOEW"
-
-#: wetkit_styles/wetkit_styles.info:0
-msgid "Extra Feature: Installs classes related to Web Usability Theme + Skinr Settings"
+#: wetkit_slider/plugins/styles/slider/slider.inc:10
+msgid "WetKit Slider Style"
 msgstr ""
-"Fonction supplémentaire: Installer des classes associées au thème "
-"de facilité d’emploi Web Theme et aux paramètres de Skinr"
 
-#: wetkit_styles/skins/styles/styles.inc:195
-msgid "Grid and Module CSS"
-msgstr "Grille et module CSS"
-
-#: wetkit_styles/skins/styles/styles.inc:197;206;215
-msgid "Select the appropriate classes you wish to apply"
-msgstr "Sélectionnez les classes à appliquer"
-
-#: wetkit_styles/skins/styles/styles.inc:227
-msgid "@value"
+#: wetkit_slider/plugins/styles/slider/slider.inc:11
+msgid "Change the Slider Style using WetKit's Tabbed Interface"
 msgstr ""
 
