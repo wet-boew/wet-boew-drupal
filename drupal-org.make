@@ -373,8 +373,7 @@ projects[search404][subdir] = contrib
 ;;;;;;;;;;;;;
 
 libraries[json2][download][type] = file
-libraries[json2][download][url] = https://github.com/douglascrockford/JSON-js/blob/master/json2.js
-libraries[json2][revision] = fc535e9cc8fa78bbf45a85835c830e7f799a5084
+libraries[json2][download][url] = https://raw.github.com/douglascrockford/JSON-js/fc535e9cc8fa78bbf45a85835c830e7f799a5084/json2.js
 
 libraries[markitup][download][type] = file
 libraries[markitup][download][url] = https://github.com/markitup/1.x/tarball/master
