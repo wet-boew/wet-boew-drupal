@@ -57,13 +57,13 @@ function _language_switcher_wetkit() {
   $languages = language_list('enabled');
   $path = drupal_is_front_page() ? '<front>' : $_GET['q'];
 
-  //handle node translations
+  // handle node translations
   if(arg(0) == 'node' && arg(1)>0) {
     $node_path = 'node/'. arg(1);
     $language_paths = translation_path_get_translations($node_path);
   }
 
-  //handle term translations
+  // handle term translations
   if(arg(0) == 'taxonomy' && arg(1) == 'term' && arg(2)>0) {
     $term = taxonomy_get_term_by_name(arg(2));
     $language_terms = i18n_taxonomy_term_get_translation(array('tid' => arg(2)), $language->language);
@@ -75,8 +75,9 @@ function _language_switcher_wetkit() {
       if($lang->language != $language->language) {
         $modifier = $lang->native;
         //we are translating a node. Check if not neutral or missing translations.
-        if($language_paths && !empty($language_paths))
+        if($language_paths && !empty($language_paths[$lang->language])) {
           $path = $language_paths[$lang->language];
+        }
         //we are translating a term.
         if($term) {
           $path = 'taxonomy/term/'. $language_terms[$lang->language]->tid;
