@@ -9,7 +9,8 @@
  * Implements hook_preprocess_panels_pane().
  */
 function wetkit_widgets_preprocess_panels_pane(&$variables) {
-  if($variables['content']['#bundle'] == 'tabbed_interface') {
+  $bundle = isset($variables['content']['#bundle']) ? $variables['content']['#bundle'] : '';
+  if($bundle == 'tabbed_interface') {
     $variables['theme_hook_suggestions'][] = 'panels_pane__fieldable_panels_pane__tabbed_interface';
   }
 }
