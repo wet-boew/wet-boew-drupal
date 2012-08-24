@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Metatag integration for the wetkit_metatag.admin module.
+ */
 
 /**
  * Menu callback for Dublin Core configuration.
@@ -27,5 +31,5 @@ function wetkit_metatag_config() {
  */
 function wetkit_metatag_submit() {
   // Give feedback to the user to reset the cache to take effect.
-  drupal_set_message("The cache needs to be cleared for this setting to take effect.");
+  drupal_set_message(t('The cache needs to be cleared for this setting to take effect.'));
 }

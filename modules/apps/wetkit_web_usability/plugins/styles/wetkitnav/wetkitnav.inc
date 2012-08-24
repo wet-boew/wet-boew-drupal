@@ -12,18 +12,18 @@ $plugin = array(
   'render region' => 'wetkit_web_usability_wetkitnav_style_render_region',
   'render pane' => 'wetkit_web_usability_wetkitnav_style_render_pane',
   'pane settings form' => 'wetkit_web_usability_wetkitnav_style_settings_form',
-  'hook theme'	=> array(
-  'wetkit_web_usability_theme_pane' => array(
-    'template' => 'wetkitnav-pane',
-      'path' => drupal_get_path('module', 'wetkit_web_usability') .'/plugins/styles/wetkitnav',
+  'hook theme' => array(
+    'wetkit_web_usability_theme_pane' => array(
+      'template' => 'wetkitnav-pane',
+      'path' => drupal_get_path('module', 'wetkit_web_usability') . '/plugins/styles/wetkitnav',
       'variables' => array(
         'content' => NULL,
         'settings' => NULL,
       ),
     ),
-  'wetkit_web_usability_theme_region' => array(
+    'wetkit_web_usability_theme_region' => array(
     'template' => 'wetkitnav-region',
-      'path' => drupal_get_path('module', 'wetkit_web_usability') .'/plugins/styles/wetkitnav',
+      'path' => drupal_get_path('module', 'wetkit_web_usability') . '/plugins/styles/wetkitnav',
       'variables' => array(
         'content' => NULL,
       ),
@@ -45,7 +45,7 @@ function theme_wetkit_web_usability_wetkitnav_style_render_region($vars) {
   }
   if (empty($content)) {
     return;
-  }  
+  }
   return theme('wetkit_web_usability_theme_region', array('content' => $content));
 }
 
@@ -57,7 +57,7 @@ function theme_wetkit_web_usability_wetkitnav_style_render_region($vars) {
 function theme_wetkit_web_usability_wetkitnav_style_render_pane($vars) {
   //return render($vars['content']->content);
   $settings = $vars['settings'];
-	$content = $vars['content'];
+  $content = $vars['content'];
   return theme('wetkit_web_usability_theme_pane', array('content' => $content, 'settings' => $settings));
 }
 
@@ -89,7 +89,7 @@ function wetkit_web_usability_wetkitnav_style_settings_form($style_settings) {
     ),
     '#default_value' => (isset($style_settings['gcwu_classes'])) ? $style_settings['gcwu_classes'] : '',
   );
-  
+
   $form['gcwu_id'] = array(
     '#type' => 'select',
     '#title' => t('ID'),
