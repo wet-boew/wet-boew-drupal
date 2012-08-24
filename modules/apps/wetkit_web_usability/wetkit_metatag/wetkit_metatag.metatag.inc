@@ -9,7 +9,7 @@
  */
 function wetkit_metatag_metatag_config_default_alter(array &$configs) {
   global $language;
-  $prefix = _metadata_dc_prefix();
+  $prefix = _wetkit_dc_prefix();
   foreach ($configs as &$config) {
     switch ($config->instance) {
       case 'global':
@@ -66,7 +66,7 @@ function wetkit_metatag_metatag_config_default_alter(array &$configs) {
  * Dublin Core Elements taken from http://purl.org/dc/elements/1.1/.
  */
 function wetkit_metatag_metatag_info() {
-  $prefix = _metadata_dc_prefix();
+  $prefix = _wetkit_dc_prefix();
   $info['groups']['dublin-core'] = array(
     'label' => t('Dublin Core'),
     'description' => t('Dublin Core 15 basic metadata fields'),
