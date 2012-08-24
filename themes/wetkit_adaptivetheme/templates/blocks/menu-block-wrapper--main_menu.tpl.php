@@ -19,7 +19,7 @@
  */
 ?>
 <?php if ($variables['config']['delta'] == 'wetkit_menu_blocks-1'): ?>
-  <ul class="mb-menu" data-role="navbar" role="menubar">
+  <ul class="mb-menu">
   <?php print render($content); ?>
   </ul>
 <?php else: ?>
