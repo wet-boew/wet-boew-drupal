@@ -15,7 +15,7 @@ function wetkit_metatag_config() {
       'DCTERMS' => 'dcterms',
       'DC' => 'dc',
     ),
-    '#default_value' => _metadata_dc_prefix(),
+    '#default_value' => _wetkit_dc_prefix(),
   );
   $form['#submit'][] = 'wetkit_metatag_submit';
 

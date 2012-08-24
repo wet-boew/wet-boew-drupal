@@ -28,7 +28,7 @@ function wetkit_metatag_menu() {
  * Implements hook_page_build.
  */
 function wetkit_metatag_page_build(&$page) {
-  // When the HTML5 is standardize we can then update and display
+  // TODO - When the HTML5 is standardize we can then update and display
   /*
   $attributes = array(
     'rel' => 'schema.DC',
@@ -47,7 +47,7 @@ function wetkit_metatag_page_build(&$page) {
  * Implements hook_form_alter.
  */
 function wetkit_metatag_form_alter(&$form, &$form_state, $form_id) {
-   if ($form_id == 'wetkit_page_node_form' || $form_id == 'wetkit_page_other_node_form') {
+  if ($form_id == 'wetkit_page_node_form' || $form_id == 'wetkit_page_other_node_form') {
     $form['metatags_advanced'] = $form['metatags']['advanced'];
     $form['metatags_advanced']['#title'] = 'Metatags Advanced';
     $form['metatags_advanced']['#group'] = 'additional_settings';
@@ -103,7 +103,7 @@ function theme_wetkit_metatag($variables) {
 /**
  * Get the Dublin Core prefix.
  */
-function _metadata_dc_prefix() {
+function _wetkit_dc_prefix() {
   return variable_get('wetkit_metatag_prefix', 'dcterms');
 }
 
