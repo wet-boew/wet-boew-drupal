@@ -23,7 +23,7 @@
  * data is cached in the database!
  *
  * @SEE adaptivetheme/at_core/layouts/core/three_col_grail/three_col_grail.inc
- * @SEE at_subtheme.info (Custom Page Layout Plugins).
+ * @SEE at_subtheme.info
  */
 function wetkit() {
   $page_layout['wetkit'] = array(

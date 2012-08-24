@@ -12,15 +12,15 @@ function _menu_wetkit_load() {
   $source_menu_item = _add_custom_menu('http://www.canada.gc.ca/home.html', 'Canada.gc.ca', NULL, 'menu-wet-header', 0, 'en');
   $translated_menu_item = _add_custom_menu('http://www.canada.gc.ca/accueil.html', 'Canada.gc.ca', NULL, 'menu-wet-header', 0, 'fr');
   _create_translation_sets($source_menu_item, $translated_menu_item);
-  
+
   $source_menu_item = _add_custom_menu('http://www.servicecanada.gc.ca/eng/home.shtml', 'Services', NULL, 'menu-wet-header', 1, 'en');
   $translated_menu_item = _add_custom_menu('http://www.servicecanada.gc.ca/fra/accueil.shtml', 'Services', NULL, 'menu-wet-header', 1, 'fr');
   _create_translation_sets($source_menu_item, $translated_menu_item);
-  
+
   $source_menu_item = _add_custom_menu('http://www.canada.gc.ca/depts/major/depind-eng.html', 'Departments', NULL, 'menu-wet-header', 2, 'en');
   $translated_menu_item = _add_custom_menu('http://www.canada.gc.ca/depts/major/depind-fra.html', 'Ministères', NULL, 'menu-wet-header', 2, 'fr');
   _create_translation_sets($source_menu_item, $translated_menu_item);
-  
+
   /* Mega Menu Navigation */
   $source_menu_item = _add_custom_menu('<front>', 'Home', NULL, 'main-menu', 0, 'en');
   $translated_menu_item = _add_custom_menu('<front>', 'Accueil', NULL, 'main-menu', 0, 'fr');
@@ -41,7 +41,7 @@ function _menu_wetkit_load() {
   $source_menu_item = _add_custom_menu('http://www.canada.gc.ca', 'canada.gc.ca', NULL, 'main-menu', 4, 'en');
   $translated_menu_item = _add_custom_menu('http://www.canada.gc.ca', 'canada.gc.ca', NULL, 'main-menu', 4, 'fr');
   _create_translation_sets($source_menu_item, $translated_menu_item);
-  
+
   /* Terms and Transparency Navigation */
   $source_menu_item = _add_custom_menu('<front>', 'Terms and Conditions', NULL, 'menu-wet-terms', 0, 'en');
   $translated_menu_item = _add_custom_menu('<front>', 'Avis', NULL, 'menu-wet-terms', 0, 'fr');
@@ -50,7 +50,7 @@ function _menu_wetkit_load() {
   $source_menu_item = _add_custom_menu('<front>', 'Transparency', NULL, 'menu-wet-terms', 1, 'en');
   $translated_menu_item = _add_custom_menu('<front>', 'Transparence', NULL, 'menu-wet-terms', 1, 'fr');
   _create_translation_sets($source_menu_item, $translated_menu_item);
-  
+
   /* Mid Footer Navigation */
   $source_menu_item_depth = _add_custom_menu('<front>', 'About Us', NULL, 'menu-wet-mid-footer', 0, 'en');
   $translated_menu_item_depth = _add_custom_menu('<front>', 'À propos de nous', NULL, 'menu-wet-mid-footer', 0, 'fr');
@@ -134,7 +134,7 @@ function _menu_wetkit_load() {
   _create_translation_sets($source_menu_item, $translated_menu_item);
 
   //Clears all menu caches
-  menu_cache_clear_all();  
+  menu_cache_clear_all();
 }
 
 /* HELPER FUNCTIONS */
@@ -168,12 +168,12 @@ function _add_custom_menu($link, $title, $desc, $menu, $weight, $language, $mlid
 /**
  * Implements _add_custom_translation_set().
  */
-function _create_translation_sets($source_mlid, $translated_mlid){
+function _create_translation_sets($source_mlid, $translated_mlid) {
   $translation_set = i18n_translation_set_create('menu_link');
   $translation_set->reset_translations();
   $item = menu_link_load($source_mlid);
   $translation_set->add_item($item, 'en');
   $item = menu_link_load($translated_mlid);
-  $translation_set->add_item($item, 'fr');  
+  $translation_set->add_item($item, 'fr');
   $translation_set->save(TRUE);
 }

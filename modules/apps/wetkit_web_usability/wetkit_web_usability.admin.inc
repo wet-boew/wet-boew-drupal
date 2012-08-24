@@ -1,11 +1,15 @@
 <?php
+/**
+ * @file
+ * A file for the configuration interface for WetKit Web Usability
+ */
 
 /**
-* Form builder. Configure annotations.
-*
-* @ingroup forms
-* @see system_settings_form().
-*/
+ * Form builder. Configure annotations.
+ *
+ * @ingroup forms
+ * @see system_settings_form()
+ */
 function wetkit_web_usability_admin_settings() {
   drupal_add_js(drupal_get_path('module', 'system') . '/system.js');
 

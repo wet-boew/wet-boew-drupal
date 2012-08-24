@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Implementation of hook_panels_layouts
+ * Implements of hook_panels_layouts()
  */
 function wetkit_adaptivetheme_wetkit_three_25_50_25_panels_layouts() {
   $items['wetkit_three_25_50_25'] = array(

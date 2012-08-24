@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Implementation of hook_panels_layouts
+ * Implements of hook_panels_layouts()
  */
 function wetkit_adaptivetheme_wetkit_three_40_40_20_panels_layouts() {
   $items['wetkit_three_40_40_20'] = array(
@@ -25,7 +25,7 @@ function wetkit_adaptivetheme_wetkit_three_40_40_20_panels_layouts() {
     ),
     'styles' => array(
     ),
-    /**
+    /*
     'type' => 'three',
     'options' => array(
       'wetkit-three-40-40-20' => 'default',
@@ -59,8 +59,8 @@ function wetkit_adaptivetheme_wetkit_three_40_40_20_panels_layouts() {
           'fdw' => array('.wetkit-three-40-40-20 > .region' => 'float:none;display:block;width:100%;clear:both'),
         ),
       ),
-    ),  
-    **/
+    ),
+    */
   );
 
   return $items;

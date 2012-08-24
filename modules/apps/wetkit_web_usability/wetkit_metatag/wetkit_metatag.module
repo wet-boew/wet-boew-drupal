@@ -25,7 +25,7 @@ function wetkit_metatag_menu() {
 }
 
 /**
- * Implements hook_page_build.
+ * Implements hook_page_build().
  */
 function wetkit_metatag_page_build(&$page) {
   // TODO - When the HTML5 is standardize we can then update and display
@@ -44,7 +44,7 @@ function wetkit_metatag_page_build(&$page) {
 }
 
 /**
- * Implements hook_form_alter.
+ * Implements hook_form_alter().
  */
 function wetkit_metatag_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'wetkit_page_node_form' || $form_id == 'wetkit_page_other_node_form') {
@@ -53,14 +53,12 @@ function wetkit_metatag_form_alter(&$form, &$form_state, $form_id) {
     $form['metatags_advanced']['#group'] = 'additional_settings';
     $form['metatags_advanced']['##tree'] = TRUE;
     $form['metatags_advanced']['#weight'] = 11;
-    
     $form['wetkit_metadata'] = $form['metatags']['wetkit-metadata'];
     $form['wetkit_metadata']['#title'] = 'Metatags WetKit';
     $form['wetkit_metadata']['#group'] = 'additional_settings';
     $form['wetkit_metadata']['##tree'] = TRUE;
     $form['wetkit_metadata']['#weight'] = 12;
   }
-  
   unset($form['metatags']['advanced']);
   unset($form['metatags']['tokens']);
   unset($form['metatags']['wetkit-metadata']);
@@ -124,4 +122,4 @@ dc:language
 dc:relation
 dc:coverage
 dc:rights
-*/
+ */
