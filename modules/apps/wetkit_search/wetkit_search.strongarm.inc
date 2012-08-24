@@ -253,14 +253,14 @@ search/site/[key]|Search API';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'custom_search_blocks_1_paths_selector_label';
-  $strongarm->value = 'Customize your search';
+  $strongarm->value = '';
   $export['custom_search_blocks_1_paths_selector_label'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'custom_search_blocks_1_paths_selector_label_visibility';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['custom_search_blocks_1_paths_selector_label_visibility'] = $strongarm;
 
   $strongarm = new stdClass();

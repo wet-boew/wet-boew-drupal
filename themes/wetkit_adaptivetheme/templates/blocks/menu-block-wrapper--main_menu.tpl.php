@@ -18,7 +18,6 @@
  * @see template_preprocess_menu_block_wrapper()
  */
 ?>
-
 <?php if ($variables['config']['delta'] == 'wetkit_menu_blocks-1'): ?>
   <ul class="mb-menu" data-role="navbar" role="menubar">
   <?php print render($content); ?>

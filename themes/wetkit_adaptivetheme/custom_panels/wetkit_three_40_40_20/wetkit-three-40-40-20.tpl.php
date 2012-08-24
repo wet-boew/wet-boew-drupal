@@ -24,60 +24,48 @@
 $panel_prefix = isset($panel_prefix) ? $panel_prefix : '';
 $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
 ?>
-
-  <div id="wb-main" role="main">
-    <div id="wb-main-in">
-        
-        <?php print $panel_prefix; ?>
-
-        <div class="at-panel panel-display wetkit-three-40-40-20 clearfix" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
-
-        <?php if ($content['wetkit_three_40_40_20_top']): ?>
-            <div class="region region-wetkit-three-40-40-20-top region-conditional-stack">
+<div id="wb-main" role="main">
+  <div id="wb-main-in">
+    <?php print $panel_prefix; ?>
+    <div class="at-panel panel-display wetkit-three-40-40-20 clearfix" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
+      <?php if ($content['wetkit_three_40_40_20_top']): ?>
+      <div class="region region-wetkit-three-40-40-20-top region-conditional-stack">
+        <div class="region-inner clearfix">
+        <?php print $content['wetkit_three_40_40_20_top']; ?>
+        </div>
+      </div>
+      <?php endif; ?>
+      <div id="gcwu-content">
+        <div class="region region-wetkit-three-40-40-20-first span-3">
+          <div class="region-inner clearfix">
+            <?php print $content['wetkit_three_40_40_20_first']; ?>
+          </div>
+        </div>
+        <div class="region region-wetkit-three-40-40-20-second span-3">
+          <div class="region-inner clearfix">
+            <?php print $content['wetkit_three_40_40_20_second']; ?>
+          </div>
+        </div>
+      </div>
+      <aside role="complementary">
+        <div id="gcwu-aside">
+          <div class="region region-wetkit-three-40-40-20-third">
             <div class="region-inner clearfix">
-                <?php print $content['wetkit_three_40_40_20_top']; ?>
+              <?php print $content['wetkit_three_40_40_20_third']; ?>
             </div>
-            </div>
-        <?php endif; ?>
-
-        <div id="gcwu-content">  
-            <div class="region region-wetkit-three-40-40-20-first span-3">
-                <div class="region-inner clearfix">
-                <?php print $content['wetkit_three_40_40_20_first']; ?>
-                </div>
-            </div>
-            <div class="region region-wetkit-three-40-40-20-second span-3">
-                <div class="region-inner clearfix">
-                <?php print $content['wetkit_three_40_40_20_second']; ?>
-                </div>
-            </div>
+          </div>
         </div>
-
-        <aside role="complementary">
-            <div id="gcwu-aside">
-            <div class="region region-wetkit-three-40-40-20-third">
-                <div class="region-inner clearfix">
-                <?php print $content['wetkit_three_40_40_20_third']; ?>
-                </div>
-            </div>
-        </div>
-        </aside>
-
-        <div class="clear"></div>
-
-        </div>
-
-        <?php if ($content['wetkit_three_40_40_20_bottom']): ?>
-            <div class="region region-wetkit-three-40-40-20-bottom region-conditional-stack">
-            <div class="region-inner clearfix">
-                <?php print $content['wetkit_three_40_40_20_bottom']; ?>
-            </div>
-            </div>
-        <?php endif; ?>
-        </div>
-
-        <?php print $panel_suffix; ?>
-
-        <div class="clear"></div>
+      </aside>
+      <div class="clear"></div>
     </div>
-  </div> 
+    <?php if ($content['wetkit_three_40_40_20_bottom']): ?>
+    <div class="region region-wetkit-three-40-40-20-bottom region-conditional-stack">
+      <div class="region-inner clearfix">
+        <?php print $content['wetkit_three_40_40_20_bottom']; ?>
+      </div>
+    </div>
+    <?php endif; ?>
+  </div>
+  <?php print $panel_suffix; ?>
+  <div class="clear"></div>
+</div>

@@ -191,7 +191,6 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
   $goc_terms_bar_markup = theme('links__menu_goc_terms_bar', array(
     'links' => $menu,
     'attributes' => array(
-      'id' => 'menu',
       'class' => array('links', 'clearfix'),
       ),
     ));
@@ -209,7 +208,6 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
   $goc_footer_bar_markup = theme('links__menu_goc_footer_bar', array(
     'links' => $menu,
     'attributes' => array(
-      'id' => 'menu',
       'class' => array('links', 'clearfix'),
       ),
     ));

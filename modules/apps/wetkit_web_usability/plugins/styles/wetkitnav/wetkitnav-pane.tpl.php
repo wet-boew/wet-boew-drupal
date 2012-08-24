@@ -1,6 +1,5 @@
 <?php drupal_add_css(drupal_get_path('module','wetkit_web_usability') .'/plugins/styles/wetkitnav/wetkitnav.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE)); ?>
 <div class="wetkitnav-pane">
-  
   <?php if (isset($content->title)): ?>
   <?php
     $headings = (isset($settings['headings'])) ? $settings['headings'] : 'h3';
@@ -14,9 +13,7 @@
     <?php print $content->title; ?>
   </<?php print (isset($settings['headings'])) ? $settings['headings'] : 'h3'; ?>>
   <?php endif ?>
-
   <div class="pane-content">
-  <?php print render($content->content); ?>
+    <ul><?php print render($content->content); ?></ul>
   </div>
-
 </div>
