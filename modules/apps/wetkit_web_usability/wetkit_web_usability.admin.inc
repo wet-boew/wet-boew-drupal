@@ -9,17 +9,6 @@
 function wetkit_web_usability_admin_settings() {
   drupal_add_js(drupal_get_path('module', 'system') . '/system.js');
 
-  //$form['migrate_content'] = array(
-  //  '#type' => 'fieldset',
-  //  '#title' => t('Migrate'),
-  //  '#collapsible' => TRUE,
-  //  '#collapsed' => FALSE
-  //);
-  //$form['migrate_content']['migrate'] = array(
-  //  '#type' => 'submit',
-  //  '#value' => t('Migrate Demo Content'),
-  //  '#submit' => array('wetkit_web_usability_migrate_content_submit'),
-  //);
   $form['wetboew'] = array(
     '#type' => 'fieldset',
     '#title' => t('WetKit jQuery Progressive Enhancement'),

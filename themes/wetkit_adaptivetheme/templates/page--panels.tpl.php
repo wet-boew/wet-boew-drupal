@@ -120,10 +120,10 @@
                   <div id="gcwu-wmms">
                     <div id="gcwu-wmms-in">
                       <?php if ($language->language == 'en'): ?>
-                      <div id="gcwu-sig-eng" title="Symbol of the Government of Canada"><img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbol of the Government of Canada"></div>
+                      <div id="gcwu-wmms-fip" title="Symbol of the Government of Canada"><img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbol of the Government of Canada"></div>
                       <?php endif;?>
                       <?php if ($language->language == 'fr'): ?>
-                      <div id="gcwu-sig-fra" title="Symbole du gouvernement du Canada"><img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbole du gouvernement du Canada"></div>
+                      <div id="gcwu-wmms-fip" title="Symbole du gouvernement du Canada"><img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbole du gouvernement du Canada"></div>
                       <?php endif;?>
                     </div>
                   </div>
