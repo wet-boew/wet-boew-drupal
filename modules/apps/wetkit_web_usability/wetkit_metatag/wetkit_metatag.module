@@ -1,14 +1,51 @@
 <?php
+/**
+ * @file
+ * Metatag integration for the wetkit_metatag module.
+ */
 
 /**
- * Implements hook_ctools_plugin_api().
+ * Dublin Core Configuration Page.
  */
-function wetkit_metatag_ctools_plugin_api($owner, $api) {
-  if ($owner == 'metatag' && $api == 'metatag') {
-    return array('version' => 1);
-  }
+function wetkit_metatag_menu() {
+  $items = array();
+
+  // Setup a local task to configure Dublin Core.
+  $items['admin/config/search/metatags/dublin-core'] = array(
+    'title' => 'Dublin Core',
+    'type' => MENU_LOCAL_TASK,
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('wetkit_metatag_config'),
+    'access arguments' => array('administer meta tags'),
+    'weight' => 1,
+    'file' => 'wetkit_metatag.admin.inc',
+  );
+
+  return $items;
 }
 
+/**
+ * Implements hook_page_build.
+ */
+function wetkit_metatag_page_build(&$page) {
+  // When the HTML5 is standardize we can then update and display
+  /*
+  $attributes = array(
+    'rel' => 'schema.DC',
+    'href' => 'http://purl.org/dc/elements/1.1/',
+  );
+  drupal_add_html_head_link($attributes);
+  $attributes = array(
+    'rel' => 'schema.DCTERMS',
+    'href' => 'http://purl.org/dc/terms/',
+  );
+  drupal_add_html_head_link($attributes);
+  */
+}
+
+/**
+ * Implements hook_form_alter.
+ */
 function wetkit_metatag_form_alter(&$form, &$form_state, $form_id) {
    if ($form_id == 'wetkit_page_node_form' || $form_id == 'wetkit_page_other_node_form') {
     $form['metatags_advanced'] = $form['metatags']['advanced'];
@@ -30,78 +67,61 @@ function wetkit_metatag_form_alter(&$form, &$form_state, $form_id) {
 }
 
 /**
+ * Implements hook_ctools_plugin_api().
+ */
+function wetkit_metatag_ctools_plugin_api($owner, $api) {
+  if ($owner == 'metatag' && $api == 'metatag') {
+    return array('version' => 1);
+  }
+}
+
+/**
  * Implements hook_theme().
  */
 function wetkit_metatag_theme() {
   $info['wetkit_metatag'] = array(
     'render element' => 'element',
   );
-  $info['wetkit_metatag_scheme'] = array(
-    'render element' => 'element',
-  );
-  $info['wetkit_metatag_language'] = array(
-    'render element' => 'element',
-  );
-  $info['wetkit_metatag_title'] = array(
-    'render element' => 'element',
-  );
+
   return $info;
 }
 
 /**
- * Theme callback for an WetKit meta tag.
+ * Theme callback for a Dublin Core meta tag.
  */
 function theme_wetkit_metatag($variables) {
   $element = &$variables['element'];
-  element_set_attributes($element, array('#name' => 'name', '#value' => 'content'));
+  element_set_attributes($element, array(
+    '#name' => 'name',
+    '#schema' => 'title',
+    '#value' => 'content')
+  );
   unset($element['#value']);
   return theme('html_tag', $variables);
 }
 
 /**
- * Theme callback for an WetKit meta tag.
+ * Get the Dublin Core prefix.
  */
-function theme_wetkit_metatag_scheme($variables) {
-  $element = &$variables['element'];
-  element_set_attributes($element, array('#name' => 'name', '#value' => 'content'));
-  $element['#attributes']['scheme'] = 'W3CDTF';
-  unset($element['#value']);
-  return theme('html_tag', $variables);
+function _metadata_dc_prefix() {
+  return variable_get('wetkit_metatag_prefix', 'dcterms');
 }
 
-/**
- * Theme callback for an WetKit meta tag (language).
- */
-function theme_wetkit_metatag_language($variables) {
-  $element = &$variables['element'];
-  element_set_attributes($element, array('#name' => 'name', '#value' => 'content'));
-  $element['#attributes']['scheme'] = 'ISO639-2/T';
-  unset($element['#value']);
-  return theme('html_tag', $variables);
-}
-
-/**
- * Theme callback for an WetKit meta tag.
- */
-function theme_wetkit_metatag_title($variables) {
-  $element = &$variables['element'];
-  element_set_attributes($element, array('#name' => 'name', '#value' => 'content'));
-  $element['#attributes']['name'] = 'title';
-  unset($element['#value']);
-  return theme('html_tag', $variables);
-}
-
-/**
- * Get Current Language of User Interface
- */
-function wetkit_current_lang() {
-  global $language;
-  if ($language->name == 'French') {
-    $val_lang = "fra";
-  }
-  else {
-    $val_lang = "eng";
-  }
-  return $val_lang;
-}
-
+/*
+Dublin Core Basic Elements (15)
+dc:title
+dc:creator
+dc:subject
+dc:description
+dc:publisher
+dc:contributor
+dc:date
+dc:type
+dc:format
+dc:identifier
+dc:source
+dc:language
+dc:relation
+dc:coverage
+dc:rights
+*/
