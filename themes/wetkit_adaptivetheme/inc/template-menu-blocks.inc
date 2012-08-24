@@ -65,7 +65,7 @@ function wetkit_adaptivetheme_menu_link__menu_wet_mid_footer($variables) {
   
   if ($element['#original_link']['depth'] == 1) {
     $output = '<h4 class="gcwu-col-head">' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</h4>';
-    return '<section><div class="span-2">' . $output . '<ul>' . $sub_menu . '</ul>' .  "</div></section></li>\n";
+    return '<section><div class="span-2">' . $output . '<ul>' . $sub_menu . '</ul>' .  "</div></section>\n";
   }
   else {
     $output = l($element['#title'], $element['#href'], $element['#localized_options']);
