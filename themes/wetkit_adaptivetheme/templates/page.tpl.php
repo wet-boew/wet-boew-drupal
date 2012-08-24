@@ -79,24 +79,19 @@
  * @see adaptivetheme_process_page()
  */
 ?>
-
 <div id="page" class="container <?php print $classes; ?>">
-
   <!-- region: Leaderboard -->
   <?php if ($page['leaderboard']): ?>
     <?php print render($page['leaderboard']); ?>
   <?php endif; ?>
-
   <div id="wb-head">
     <div id="wb-head-in">
       <header id="header" class="clearfix" role="banner">
-
         <!-- HeaderStart -->
         <nav role="navigation">
           <div id="gcwu-gcnb">
             <h2><span><?php print t('Site menu'); ?></span></h2>
-            <div id="gcwu-gcnb-in"> 
-
+            <div id="gcwu-gcnb-in">
               <?php if ($intranet): ?>
                 <div id="gcwu-intranetnb">
                   <div id="gcwu-intranetnb-in">
@@ -106,73 +101,61 @@
               <?php else: ?>
                 <?php print $menu_gov_bar; ?>
               <?php endif; ?>
-
               <div id="gcwu-gcnb-fip">
-              <div id="gcwu-sig">
+                <div id="gcwu-sig">
                   <div id="gcwu-sig-in">
                     <?php if ($language->language == 'en'): ?>
-                    <div id="gcwu-sig-eng" title="Government of Canada">
-                      <img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/sig-eng.gif" width="214" height="20" alt="Government of Canada">
-                    </div>
+                      <div id="gcwu-sig-eng" title="Government of Canada">
+                        <img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/sig-eng.gif" width="214" height="20" alt="Government of Canada">
+                      </div>
                     <?php endif;?>
                     <?php if ($language->language == 'fr'): ?>
-                    <div id="gcwu-sig-fra" title="Gouvernement du Canada">
-                      <img src="/<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/sig-fra.gif" width="214" height="20" alt="Gouvernement du Canada">
-                    </div>
-                    <?php endif;?>  
+                      <div id="gcwu-sig-fra" title="Gouvernement du Canada">
+                        <img src="/<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/sig-fra.gif" width="214" height="20" alt="Gouvernement du Canada">
+                      </div>
+                    <?php endif;?>
                   </div>
                 </div>
-
                 <?php if ($intranet): ?>
                   <div id="gcwu-wmms">
                     <div id="gcwu-wmms-in">
                       <?php if ($language->language == 'en'): ?>
-                      <div id="gcwu-sig-eng" title="Symbol of the Government of Canada"><img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbol of the Government of Canada"></div>
+                        <div id="gcwu-sig-eng" title="Symbol of the Government of Canada"><img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbol of the Government of Canada"></div>
                       <?php endif;?>
                       <?php if ($language->language == 'fr'): ?>
-                      <div id="gcwu-sig-fra" title="Symbole du gouvernement du Canada"><img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbole du gouvernement du Canada"></div>
+                        <div id="gcwu-sig-fra" title="Symbole du gouvernement du Canada"><img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbole du gouvernement du Canada"></div>
                       <?php endif;?>
                     </div>
-                  </div>  
+                  </div>
                 <?php endif; ?>
-
               </div>
             </div>
           </div>
         </nav>
-
         <div id="gcwu-bnr" role="banner">
           <div id="gcwu-bnr-in">
-
             <?php if (!$intranet): ?>
               <div id="gcwu-wmms">
                 <div id="gcwu-wmms-in">
                   <?php if ($language->language == 'en'): ?>
-                  <div id="gcwu-wmms-fip" title="Symbol of the Government of Canada"><img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbol of the Government of Canada"></div>
+                    <div id="gcwu-wmms-fip" title="Symbol of the Government of Canada"><img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbol of the Government of Canada"></div>
                   <?php endif;?>
                   <?php if ($language->language == 'fr'): ?>
-                  <div id="gcwu-wmms-fip" title="Symbole du gouvernement du Canada"><img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbole du gouvernement du Canada"></div>
+                    <div id="gcwu-wmms-fip" title="Symbole du gouvernement du Canada"><img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbole du gouvernement du Canada"></div>
                   <?php endif;?>
                 </div>
-              </div>  
+              </div>
             <?php endif; ?>
-
             <?php if ($site_name || $site_slogan): ?>
-              <!-- start: Site name and Slogan hgroup -->
-              <hgroup id="name-and-slogan"<?php print $hgroup_attributes; ?>>
-                <div id="gcwu-title">
-                  <?php if ($site_name): ?>
-                    <p id="gcwu-title-in"<?php print $site_name_attributes; ?>>
-                      <?php print $site_name; ?>
-                    </p>
-                  <?php endif; ?>
-                  <?php if ($site_slogan): ?>
-                    <h2 id="site-slogan"<?php print $site_slogan_attributes; ?>><?php print $site_slogan; ?></h2>
-                  <?php endif; ?>
-                </div>
-              </hgroup><!-- /end #name-and-slogan -->
+              <div id="gcwu-title">
+                <?php if ($site_name): ?>
+                  <p id="gcwu-title-in"><?php print $site_name; ?></p>
+                <?php endif; ?>
+                <?php if ($site_slogan): ?>
+                  <h2 id="site-slogan"<?php print $site_slogan_attributes; ?>><?php print $site_slogan; ?></h2>
+                <?php endif; ?>
+              </div>
             <?php endif; ?>
-                 
             <section role ="search">
               <div id="gcwu-srchbx">
                 <h2><?php print t('Search'); ?></h2>
@@ -185,148 +168,113 @@
             </section>
           </div>
         </div>
-
         <?php if ($intranet): ?>
           <div id="gcwu-subsite" class="gcwu-subsite-1">
             <p><?php print l(t($wetkit_sub_site), '<front>'); ?></p>
-          </div> 
+          </div>
         <?php endif; ?>
-
         <nav role="navigation">
           <div id="gcwu-psnb">
             <h2><span><?php print t('Site menu'); ?></span></h2>
-              <div id="gcwu-psnb-in">
-                <div class="wet-boew-menubar mb-mega">
-                  <div>
-                    <!-- region: Mega Menu -->
-                    <?php if ($page['mega_menu']): ?>
-                      <?php print render($page['mega_menu']); ?>
-                    <?php endif; ?>
-                  </div>
-                </div>                        
+            <div id="gcwu-psnb-in">
+              <div class="wet-boew-menubar mb-mega">
+                <div>
+                  <!-- region: Mega Menu -->
+                  <?php if ($page['mega_menu']): ?>
+                    <?php print render($page['mega_menu']); ?>
+                  <?php endif; ?>
+                </div>
+              </div>
             </div>
           </div>
-
           <?php if ($breadcrumb): ?>
-          <div id="gcwu-bc">
-            <h2><?php print t('Breadcrumbs'); ?></h2>
-            <div id="gcwu-bc-in">
-              <?php print $breadcrumb; ?>
+            <div id="gcwu-bc">
+              <h2><?php print t('Breadcrumbs'); ?></h2>
+              <div id="gcwu-bc-in">
+                <?php print $breadcrumb; ?>
+              </div>
             </div>
-          </div>
           <?php endif; ?>
         </nav>
-
         <!-- region: Header -->
         <?php print render($page['header']); ?>
       </header>
     </div>
   </div>
-  
-  
   <div id="wb-core">
     <div id="wb-core-in" class="equalize">
       <div id="wb-main" role="main">
         <div id="wb-main-in">
-
           <div id="columns" class="clearfix">
             <div id="content-column" role="main">
               <div class="content-inner">
-
                 <!-- region: Highlighted -->
                 <?php print render($page['highlighted']); ?>
-
                 <!-- Messages and Help -->
                 <?php print $messages; ?>
                 <?php print render($page['help']); ?>
-                  
                 <<?php print $tag; ?> id="main-content">
-
                   <?php print render($title_prefix); // Does nothing by default in D7 core ?>
-
                   <?php if ($title || $primary_local_tasks || $secondary_local_tasks || $action_links = render($action_links)): ?>
                     <header id="main-content-header">
-
                       <?php if ($title): ?>
-                        <h1 id="wb-cont page-title"<?php print $attributes; ?>>
-                          <?php print $title; ?>
-                        </h1>
+                      <h1 id="wb-cont page-title"<?php print $attributes; ?>>
+                        <?php print $title; ?>
+                      </h1>
                       <?php endif; ?>
-
                       <?php if ($primary_local_tasks || $secondary_local_tasks || $action_links): ?>
                         <div id="tasks">
-
                           <?php if ($primary_local_tasks): ?>
-                            <ul class="tabs primary clearfix"><?php print render($primary_local_tasks); ?></ul>
+                          <ul class="tabs primary clearfix"><?php print render($primary_local_tasks); ?></ul>
                           <?php endif; ?>
-
                           <?php if ($secondary_local_tasks): ?>
-                            <ul class="tabs secondary clearfix"><?php print render($secondary_local_tasks); ?></ul>
+                          <ul class="tabs secondary clearfix"><?php print render($secondary_local_tasks); ?></ul>
                           <?php endif; ?>
-
                           <?php if ($action_links = render($action_links)): ?>
-                            <ul class="action-links clearfix"><?php print $action_links; ?></ul>
+                          <ul class="action-links clearfix"><?php print $action_links; ?></ul>
                           <?php endif; ?>
-
                         </div>
                       <?php endif; ?>
-
                     </header>
                   <?php endif; ?>
-
                   <!-- region: Main Content -->
                   <?php if ($content = render($page['content'])): ?>
-                    <div id="content">
-                      <?php print $content; ?>
-                    </div>
+                    <div id="content"><?php print $content; ?></div>
                   <?php endif; ?>
-
                   <!-- Feed icons (RSS, Atom icons etc -->
                   <?php print $feed_icons; ?>
-
                   <?php print render($title_suffix); // Prints page level contextual links ?>
-
                 </<?php print $tag; ?>><!-- /end #main-content -->
-
                 <!-- region: Content Aside -->
                 <?php print render($page['content_aside']); ?>
-
               </div><!-- /end .content-inner -->
             </div><!-- /end #content-column -->
-
             <!-- regions: Sidebar first and Sidebar second -->
             <?php $sidebar_first = render($page['sidebar_first']); ?>
             <?php $sidebar_second = render($page['sidebar_second']); ?>
-
           </div><!-- /end #columns -->
-
-          <div class="clear"></div>          
+          <div class="clear"></div>
         </div>
-      </div> 
-      
+      </div>
       <?php if (($sidebar_first) && !$is_front): ?>
-          <div id="wb-sec">
+        <div id="wb-sec">
           <div id="wb-sec-in" style="min-height: 680px; ">
             <nav role="navigation">
               <h2 id="wb-nav"><?php print t('Skip to side navigation'); ?></h2>
-              <div class="wb-sec-def">   
+              <div class="wb-sec-def">
                 <div id="sidebar-first" class="sidebar">
                   <?php print $sidebar_first; ?>
                 </div>  
               </div>
             </nav>
           </div>
-        </div>  
+        </div>
       <?php endif; ?>
-
     </div>
   </div>
-
-  
   <div id="wb-foot">
     <div id="wb-foot-in">
       <footer>
-
         <h2 id="wb-nav"><?php print t('Footer'); ?></h2>
         <nav role="navigation">
           <div id="gcwu-sft">
@@ -341,25 +289,21 @@
                 <?php print render($page['footer']); ?>
               <?php endif; ?>
             </div>
-
           </div>
         </nav>
-
         <?php if (!$intranet): ?>
-        <nav role="navigation">
-          <div id="gcwu-gcft">
-            <h3><?php print t('Government of Canada Footer'); ?></h3>
-            <div id="gcwu-gcft-in">
-              <div id="gcwu-gcft-fip">
+          <nav role="navigation">
+            <div id="gcwu-gcft">
+              <h3><?php print t('Government of Canada Footer'); ?></h3>
+              <div id="gcwu-gcft-in">
+                <div id="gcwu-gcft-fip">
                   <?php print $menu_gov_footer_bar; ?>        
+                </div>
               </div>
             </div>
-          </div>
-        </nav>
+          </nav>
         <?php endif; ?>
-
       </footer>
     </div>
   </div>
-
 </div>

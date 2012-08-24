@@ -24,19 +24,15 @@
 $panel_prefix = isset($panel_prefix) ? $panel_prefix : '';
 $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
 ?>
-
 <?php print $panel_prefix; ?>
-
 <div class="at-panel panel-display wetkit-three-25-50-25 clearfix" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
-
   <?php if ($content['wetkit_three_25_50_25_top']): ?>
-    <div class="region region-wetkit-three-25-50-25-top region-conditional-stack">
-      <div class="region-inner clearfix">
-        <?php print $content['wetkit_three_25_50_25_top']; ?>
-      </div>
+  <div class="region region-wetkit-three-25-50-25-top region-conditional-stack">
+    <div class="region-inner clearfix">
+      <?php print $content['wetkit_three_25_50_25_top']; ?>
     </div>
+  </div>
   <?php endif; ?>
-
   <div class="region region-wetkit-three-25-50-25-first span-2">
     <div class="region-inner clearfix">
       <?php print $content['wetkit_three_25_50_25_first']; ?>
@@ -52,14 +48,12 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
       <?php print $content['wetkit_three_25_50_25_third']; ?>
     </div>
   </div>
-    
   <?php if ($content['wetkit_three_25_50_25_bottom']): ?>
-    <div class="region region-wetkit-three-25-50-25-bottom region-conditional-stack">
-      <div class="region-inner clearfix">
-        <?php print $content['wetkit_three_25_50_25_bottom']; ?>
-      </div>
+  <div class="region region-wetkit-three-25-50-25-bottom region-conditional-stack">
+    <div class="region-inner clearfix">
+      <?php print $content['wetkit_three_25_50_25_bottom']; ?>
     </div>
+  </div>
   <?php endif; ?>
 </div>
-
 <?php print $panel_suffix; ?>
