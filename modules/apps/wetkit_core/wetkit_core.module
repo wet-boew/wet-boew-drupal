@@ -20,8 +20,8 @@ function wetkit_core_init() {
         'contentBottom' => 75,
       ),
       'modalOptions' => array(
-        'opacity' => '.55',
-        'background-color' => '#FFF',
+        'opacity' => '.65',
+        'background-color' => '#CCC',
       ),
       'animationSpeed' => 'fast',
       'modalTheme' => 'CToolsModalDialog',
