@@ -8,7 +8,7 @@
  * Implements _menu_wetkit_load().
  */
 function _menu_wetkit_load() {
-/* Header Navigation */
+  /* Header Navigation */
   $source_menu_item = _add_custom_menu('http://www.canada.gc.ca/home.html', 'Canada.gc.ca', NULL, 'menu-wet-header', 0, 'en');
   $translated_menu_item = _add_custom_menu('http://www.canada.gc.ca/accueil.html', 'Canada.gc.ca', NULL, 'menu-wet-header', 0, 'fr');
   _create_translation_sets($source_menu_item, $translated_menu_item);
@@ -171,12 +171,9 @@ function _add_custom_menu($link, $title, $desc, $menu, $weight, $language, $mlid
 function _create_translation_sets($source_mlid, $translated_mlid){
   $translation_set = i18n_translation_set_create('menu_link');
   $translation_set->reset_translations();
-  
   $item = menu_link_load($source_mlid);
   $translation_set->add_item($item, 'en');
-  
   $item = menu_link_load($translated_mlid);
   $translation_set->add_item($item, 'fr');  
-
   $translation_set->save(TRUE);
 }
