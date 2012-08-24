@@ -12,7 +12,7 @@
  * used as an alternative to directly editing or adding code to templates. Its
  * worth spending some time to learn more about these functions - they are a
  * powerful way to easily modify the output of any template variable.
- * 
+ *
  * Preprocess and Process Functions SEE: http://drupal.org/node/254940#variables-processor
  * 1. Rename each function and instance of "wetkit_adaptivetheme" to match
  *    your subthemes name, e.g. if your theme name is "footheme" then the function
@@ -21,6 +21,12 @@
  * 2. Uncomment the required function to use.
  */
 
+/**
+ * Override or insert variables into the theme links templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ */
 function wetkit_adaptivetheme_links__menu_goc_terms_bar($variables)  {
 $links = $variables['links'];
   $attributes = $variables['attributes'];
@@ -97,6 +103,12 @@ $links = $variables['links'];
   return $output;
 }
 
+/**
+ * Override or insert variables into the theme links templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ */
 function wetkit_adaptivetheme_links__menu_goc_sections($variables)  {
   $links = $variables['links'];
   $attributes = $variables['attributes'];
@@ -107,7 +119,7 @@ function wetkit_adaptivetheme_links__menu_goc_sections($variables)  {
   if (count($links) > 0) {
     $output = '';
     $output_h4 = '';
-    
+
     // Treat the heading first if it is present to prepend it to the
     // list of links.
     if (!empty($heading)) {
@@ -187,6 +199,12 @@ function wetkit_adaptivetheme_links__menu_goc_sections($variables)  {
   return $output_h4 . $output;
 }
 
+/**
+ * Override or insert variables into the theme links templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ */
 function wetkit_adaptivetheme_links__menu_goc_footer_bar($variables) {
   $links = $variables['links'];
   $attributes = $variables['attributes'];
@@ -277,6 +295,12 @@ function wetkit_adaptivetheme_links__menu_goc_footer_bar($variables) {
   return $output;
 }
 
+/**
+ * Override or insert variables into the theme links templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ */
 function wetkit_adaptivetheme_links__menu_goc_nav_bar($variables) {
   $links = $variables['links'];
   $attributes = $variables['attributes'];

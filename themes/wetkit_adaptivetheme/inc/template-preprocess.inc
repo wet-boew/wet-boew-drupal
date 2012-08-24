@@ -12,7 +12,7 @@
  * used as an alternative to directly editing or adding code to templates. Its
  * worth spending some time to learn more about these functions - they are a
  * powerful way to easily modify the output of any template variable.
- * 
+ *
  * Preprocess and Process Functions SEE: http://drupal.org/node/254940#variables-processor
  * 1. Rename each function and instance of "wetkit_adaptivetheme" to match
  *    your subthemes name, e.g. if your theme name is "footheme" then the function
@@ -49,13 +49,13 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
   global $theme_key;
 
   // Two examples of adding custom classes to the body.
-  
+
   // Add a body class for the active theme name.
   // $vars['classes_array'][] = drupal_html_class($theme_key);
 
   // Browser/platform sniff - adds body classes such as ipad, webkit, chrome etc.
   // $vars['classes_array'][] = css_browser_selector();
-  
+
   //Support for Intranet Theme
   $variables['intranet'] = '';
   $variables['wetkit_sub_site'] = t('Sub Site Name');
@@ -73,15 +73,15 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
 
   //Detect Panels Layout if Exists
   $panel_page = page_manager_get_current_page();
-  
+
   //Panels Layout
-  if($panel_page) {
+  if ($panel_page) {
     //Detect Panels Layout
     if (isset($panel_page['handler']->conf['display']->renderer_handler->plugins['layout']['theme'])) {
       $layout = $panel_page['handler']->conf['display']->renderer_handler->plugins['layout']['theme'];
     }
     //Detect Panelizer Panels Layout
-    else if  (isset($panel_page['handler']->conf['context'])) {
+    elseif  (isset($panel_page['handler']->conf['context'])) {
       $context = $panel_page['handler']->conf['context'];
       if (isset($panel_page['contexts'][$context]->data->panelizer['page_manager']->display->layout)) {
         $layout = $panel_page['contexts'][$context]->data->panelizer['page_manager']->display->layout;
@@ -90,10 +90,10 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
     //Set Body Class for Panels Layouts
     if (isset($layout)) {
       if ($layout == 'wetkit_two_33_66') {
-        $variables['wetkit_col_array'] = 'wb-body-sec';          
+        $variables['wetkit_col_array'] = 'wb-body-sec';
       }
       elseif ($layout == 'wetkit_three_40_40_20') {
-        $variables['wetkit_col_array'] = 'wb-body';          
+        $variables['wetkit_col_array'] = 'wb-body';
       }
       else {
         $variables['wetkit_col_array'] = 'wb-body';
@@ -118,7 +118,7 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
         $variables['wetkit_col_array'] = 'wb-body';
     }
   }
-    
+
   // The body tag's classes are controlled by the $classes_array variable. To
   // remove a class from $classes_array, use array_diff().
   //$variables['classes_array'] = array_diff($variables['classes_array'], array('class-to-remove'));
@@ -133,9 +133,9 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
-  
+
   $panel_page = page_manager_get_current_page();
-  if($panel_page) {
+  if ($panel_page) {
     // add a generic suggestion for all panel pages
     $suggestions[] = 'page__panels';
     // add the panel page machine name to the template suggestions
@@ -143,13 +143,13 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
     // merge the suggestions in to the existing suggestions (as more specific than the existing suggestions)
     $variables['theme_hook_suggestions'] = array_merge($variables['theme_hook_suggestions'], $suggestions);
   }
-  
+
   // I18N Check
   $is_multilingual = 0;
   if (module_exists('i18n_menu')) {
     $is_multilingual = 1;
   }
-  
+
   // Header Navigation + Language Switcher
   $menu = ($is_multilingual) ? i18n_menu_navigation_links('menu-wet-header') : menu_navigation_links('menu-wet-header');
   $goc_nav_bar_markup = theme('links__menu_goc_nav_bar', array(
@@ -167,7 +167,7 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
   else {
     $variables['menu_gov_bar'] = '<ul>' . $goc_nav_bar_markup . '</ul>';
   }
-  
+
   // Search
   if (module_exists('custom_search')) {
     // Custom Search
@@ -178,7 +178,7 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
     $variables['custom_search']['actions']['submit']['#id'] = 'gcwu-srch-submit';
     $variables['search_box'] = render($variables['custom_search']);
   }
-  
+
   // Mega Menu Region
   if (module_exists('menu_block')) {
     $config = menu_block_get_config('wetkit_menu_blocks-1');
@@ -195,14 +195,14 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
       ),
     ));
   $variables['menu_gov_terms_bar'] = $goc_terms_bar_markup;
-  
+
   // Footer Region
   if (module_exists('menu_block')) {
     $config = menu_block_get_config('wetkit_menu_blocks-2');
     $data = menu_tree_build($config);
     $variables['page']['footer'] = $data['content'];
   }
-  
+
   // Footer Navigation
   $menu = ($is_multilingual) ? i18n_menu_navigation_links('menu-wet-footer') : menu_navigation_links('menu-wet-footer');
   $goc_footer_bar_markup = theme('links__menu_goc_footer_bar', array(
@@ -212,7 +212,7 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
       ),
     ));
   $variables['menu_gov_footer_bar'] = $goc_footer_bar_markup;
-  
+
   //Support for Intranet Theme
   $variables['intranet'] = '';
   $variables['wetkit_sub_site'] = t('Sub Site Name');
@@ -238,7 +238,6 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
       'weight' => 0,
       )
     );
-    
   }
 }
 
