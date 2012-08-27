@@ -138,6 +138,7 @@ function wetkit_pages_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -381,7 +382,7 @@ function wetkit_pages_field_default_fields() {
       ),
     ),
   );
-  
+
   // Exported field: 'node-wetkit_page_other-body'.
   $fields['node-wetkit_page_other-body'] = array(
     'field_config' => array(
