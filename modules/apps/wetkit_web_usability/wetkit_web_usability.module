@@ -154,8 +154,9 @@ function wetkit_web_usability_init() {
   }
 
   //Only use WET-BOEW on Front End
+  global $theme;
   $current_path = current_path();
-  if (!path_is_admin($current_path)) {
+  if (!path_is_admin($current_path) && $theme != 'rubik') {
     //Add WET-BOEW Source Library using Libraries API
     if (($library = libraries_detect('wet-boew', NULL, 'source')) && !empty($library['variants']['source']['installed'])) {
       // Do something with the library here.
@@ -194,12 +195,12 @@ function wetkit_web_usability_libraries_info() {
     ),
     'files' => array(
       'css' => array(
-        'build/grids/css/util-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'preprocess' => FALSE, 'weight' => 5),
-        'build/grids/css/util-min.css' => array('preprocess' => FALSE, 'weight' => 5),
-        'build/js/css/pe-ap-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'preprocess' => FALSE, 'weight' => 5),
-        'build/js/css/pe-ap-min.css' => array('preprocess' => FALSE, 'weight' => 5),
-        'build/theme-gcwu-fegc/css/theme-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'preprocess' => FALSE, 'weight' => 5),
-        'build/theme-gcwu-fegc/css/theme-min.css' => array('preprocess' => FALSE, 'weight' => 5),
+        'build/grids/css/util-min.css' => array('preprocess' => FALSE, 'weight' => 5),        
+        'build/grids/css/util-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
+        'build/js/css/pe-ap-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
+        'build/theme-gcwu-fegc/css/theme-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
+        'build/js/css/pe-ap-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
+        'build/theme-gcwu-fegc/css/theme-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
       ),
       'js' => array(
         'build/theme-gcwu-fegc/js/theme-min.js' => array('scope' => 'footer', 'weight' => 5),
