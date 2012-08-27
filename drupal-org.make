@@ -60,8 +60,8 @@ projects[jquery_update][patch][1524944] = http://drupal.org/files/allow-differen
 projects[libraries][version] = 2.0
 projects[libraries][subdir] = contrib
 
-projects[json2][version] = 1.0
-projects[json2][subdir] = contrib
+;projects[json2][version] = 1.0
+;projects[json2][subdir] = contrib
 
 projects[panels][version] = 3.x-dev
 projects[panels][subdir] = contrib
@@ -372,8 +372,8 @@ projects[search404][subdir] = contrib
 ; LIBRARIES ;
 ;;;;;;;;;;;;;
 
-libraries[json2][download][type] = file
-libraries[json2][download][url] = https://raw.github.com/douglascrockford/JSON-js/fc535e9cc8fa78bbf45a85835c830e7f799a5084/json2.js
+;libraries[json2][download][type] = file
+;libraries[json2][download][url] = https://raw.github.com/douglascrockford/JSON-js/fc535e9cc8fa78bbf45a85835c830e7f799a5084/json2.js
 
 libraries[markitup][download][type] = file
 libraries[markitup][download][url] = https://github.com/markitup/1.x/tarball/master
