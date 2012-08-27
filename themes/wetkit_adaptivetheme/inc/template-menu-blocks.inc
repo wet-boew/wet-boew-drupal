@@ -28,6 +28,16 @@
  *   An array of variables to pass to the theme template.
  */
 function wetkit_adaptivetheme_menu_tree__main_menu($variables) {
+  return '<ul>' . $variables['tree'] . '</ul>';
+}
+
+/**
+ * Override or insert variables into the menu tree templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ */
+function wetkit_adaptivetheme_menu_tree__menu_block__wetkit_menu_blocks_1($variables) {
   return $variables['tree'];
 }
 
