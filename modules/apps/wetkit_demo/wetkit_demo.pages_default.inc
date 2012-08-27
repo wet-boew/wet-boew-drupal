@@ -239,7 +239,7 @@ function wetkit_demo_default_page_manager_pages() {
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['wetkit_demo_panel'] = $page;
-  
+
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
@@ -307,7 +307,7 @@ function wetkit_demo_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-6';
     $pane->panel = 'wetkit_three_40_40_20_first';
     $pane->type = 'views';
     $pane->subtype = 'headlines_front_page';
@@ -335,10 +335,10 @@ function wetkit_demo_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['wetkit_three_40_40_20_first'][0] = 'new-1';
+    $display->content['new-6'] = $pane;
+    $display->panels['wetkit_three_40_40_20_first'][0] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-7';
     $pane->panel = 'wetkit_three_40_40_20_second';
     $pane->type = 'block';
     $pane->subtype = 'boxes-videos_box';
@@ -354,10 +354,10 @@ function wetkit_demo_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['wetkit_three_40_40_20_second'][0] = 'new-2';
+    $display->content['new-7'] = $pane;
+    $display->panels['wetkit_three_40_40_20_second'][0] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-8';
     $pane->panel = 'wetkit_three_40_40_20_third';
     $pane->type = 'block';
     $pane->subtype = 'boxes-priorities_box';
@@ -373,10 +373,10 @@ function wetkit_demo_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['wetkit_three_40_40_20_third'][0] = 'new-3';
+    $display->content['new-8'] = $pane;
+    $display->panels['wetkit_three_40_40_20_third'][0] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-9';
     $pane->panel = 'wetkit_three_40_40_20_third';
     $pane->type = 'block';
     $pane->subtype = 'boxes-minister_box';
@@ -392,8 +392,24 @@ function wetkit_demo_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['wetkit_three_40_40_20_third'][1] = 'new-4';
+    $display->content['new-9'] = $pane;
+    $display->panels['wetkit_three_40_40_20_third'][1] = 'new-9';
+    $pane = new stdClass();
+    $pane->pid = 'new-10';
+    $pane->panel = 'wetkit_three_40_40_20_top';
+    $pane->type = 'page_messages';
+    $pane->subtype = 'page_messages';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-10'] = $pane;
+    $display->panels['wetkit_three_40_40_20_top'][0] = 'new-10';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

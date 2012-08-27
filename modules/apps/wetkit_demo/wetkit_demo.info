@@ -6,6 +6,7 @@ php = 5.2.4
 project = wetkit_demo
 dependencies[] = context
 dependencies[] = ctools
+dependencies[] = defaultcontent
 dependencies[] = features
 dependencies[] = locale
 dependencies[] = page_manager
