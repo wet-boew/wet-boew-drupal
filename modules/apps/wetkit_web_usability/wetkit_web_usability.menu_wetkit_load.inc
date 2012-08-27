@@ -22,24 +22,76 @@ function _menu_wetkit_load() {
   _create_translation_sets($source_menu_item, $translated_menu_item);
 
   /* Mega Menu Navigation */
-  $source_menu_item = _add_custom_menu('<front>', 'Home', NULL, 'main-menu', 0, 'en');
-  $translated_menu_item = _add_custom_menu('<front>', 'Accueil', NULL, 'main-menu', 0, 'fr');
+  $source_menu_item_depth = _add_custom_menu('<front>', 'Home', NULL, 'main-menu', 0, 'en');
+  $translated_menu_item_depth = _add_custom_menu('<front>', 'Accueil', NULL, 'main-menu', 0, 'fr');
+  _create_translation_sets($source_menu_item_depth, $translated_menu_item_depth);
+
+  $source_menu_item = _add_custom_menu('<front>', 'Front Page', NULL, 'main-menu', 0, 'en', 0, $source_menu_item_depth);
+  $translated_menu_item = _add_custom_menu('<front>', 'Première Page', NULL, 'main-menu', 0, 'fr', 0, $translated_menu_item_depth);
   _create_translation_sets($source_menu_item, $translated_menu_item);
 
-  $source_menu_item = _add_custom_menu('search404', 'Help', NULL, 'main-menu', 1, 'en');
-  $translated_menu_item = _add_custom_menu('search404', 'Aide', NULL, 'main-menu', 1, 'fr');
+  $source_menu_item_depth = _add_custom_menu('https://github.com/sylus/wet-boew-drupal', 'GitHub', NULL, 'main-menu', 1, 'en');
+  $translated_menu_item_depth = _add_custom_menu('https://github.com/sylus/wet-boew-drupal', 'GitHub', NULL, 'main-menu', 1, 'fr');
+  _create_translation_sets($source_menu_item_depth, $translated_menu_item_depth);
+
+  $source_menu_item = _add_custom_menu('https://github.com/wet-boew/wet-boew', 'WET-BOEW', NULL, 'main-menu', 0, 'en', 0, $source_menu_item_depth);
+  $translated_menu_item = _add_custom_menu('https://github.com/wet-boew/wet-boew', 'WET-BOEW', NULL, 'main-menu', 0, 'fr', 0, $translated_menu_item_depth);
   _create_translation_sets($source_menu_item, $translated_menu_item);
 
-  $source_menu_item = _add_custom_menu('contact', 'Contact Us', NULL, 'main-menu', 2, 'en');
-  $translated_menu_item =  _add_custom_menu('contact', 'Nous Contacter', NULL, 'main-menu', 2, 'fr');
+  _add_custom_menu('https://github.com/wet-boew/wet-boew', 'Main project page', NULL, 'main-menu', 0, 'en', 0, $source_menu_item);
+  _add_custom_menu('https://github.com/wet-boew/wet-boew', 'Page principale du projet', NULL, 'main-menu', 0, 'fr', 0, $translated_menu_item);
   _create_translation_sets($source_menu_item, $translated_menu_item);
 
-  $source_menu_item = _add_custom_menu('search', 'Search', NULL, 'main-menu', 3, 'en');
-  $translated_menu_item = _add_custom_menu('search', 'Recherche', NULL, 'main-menu', 3, 'fr');
+  _add_custom_menu('https://github.com/wet-boew/wet-boew/wiki', 'Wiki Page', NULL, 'main-menu', 1, 'en', 0, $source_menu_item);
+  _add_custom_menu('https://github.com/wet-boew/wet-boew/wiki', 'Page Wiki', NULL, 'main-menu', 1, 'fr', 0, $translated_menu_item);
   _create_translation_sets($source_menu_item, $translated_menu_item);
 
-  $source_menu_item = _add_custom_menu('http://www.canada.gc.ca', 'canada.gc.ca', NULL, 'main-menu', 4, 'en');
-  $translated_menu_item = _add_custom_menu('http://www.canada.gc.ca', 'canada.gc.ca', NULL, 'main-menu', 4, 'fr');
+  _add_custom_menu('https://github.com/wet-boew/wet-boew/issues', 'Issue Queue', NULL, 'main-menu', 2, 'en', 0, $source_menu_item);
+  _add_custom_menu('https://github.com/wet-boew/wet-boew/issues', 'Problème', NULL, 'main-menu', 2, 'fr', 0, $translated_menu_item);
+  _create_translation_sets($source_menu_item, $translated_menu_item);
+
+  $source_menu_item = _add_custom_menu('https://github.com/sylus/wet-boew-drupal', 'WET-BOEW-DRUPAL', NULL, 'main-menu', 1, 'en', 0, $source_menu_item_depth);
+  $translated_menu_item = _add_custom_menu('https://github.com/sylus/wet-boew-drupal', 'WET-BOEW-DRUPAL', NULL, 'main-menu', 1, 'fr', 0, $translated_menu_item_depth);
+  _create_translation_sets($source_menu_item, $translated_menu_item);
+
+  _add_custom_menu('https://github.com/sylus/wet-boew-drupal', 'Main project page', NULL, 'main-menu', 0, 'en', 0, $source_menu_item);
+  _add_custom_menu('https://github.com/sylus/wet-boew-drupal', 'Page principale du projet', NULL, 'main-menu', 0, 'fr', 0, $translated_menu_item);
+  _create_translation_sets($source_menu_item, $translated_menu_item);
+
+  _add_custom_menu('https://github.com/sylus/wet-boew-drupal/wiki', 'Wiki Page', NULL, 'main-menu', 1, 'en', 0, $source_menu_item);
+  _add_custom_menu('https://github.com/sylus/wet-boew-drupal/wiki', 'Page Wiki', NULL, 'main-menu', 1, 'fr', 0, $translated_menu_item);
+  _create_translation_sets($source_menu_item, $translated_menu_item);
+
+  _add_custom_menu('https://github.com/wet-boew/wet-boew-drupal/issues', 'Issue Queue', NULL, 'main-menu', 2, 'en', 0, $source_menu_item);
+  _add_custom_menu('https://github.com/wet-boew/wet-boew-drupal/issues', 'Problème', NULL, 'main-menu', 2, 'fr', 0, $translated_menu_item);
+  _create_translation_sets($source_menu_item, $translated_menu_item);
+
+  $source_menu_item_depth = _add_custom_menu('node/1', 'Example Pages', NULL, 'main-menu', 2, 'en');
+  $translated_menu_item_depth = _add_custom_menu('node/2', 'Pages d\'Example', NULL, 'main-menu', 2, 'fr');
+  _create_translation_sets($source_menu_item_depth, $translated_menu_item_depth);
+
+  $source_menu_item = _add_custom_menu('node/1', 'Sample Content Pages', NULL, 'main-menu', 0, 'en', 0, $source_menu_item_depth);
+  $translated_menu_item = _add_custom_menu('node/2', 'Pages de contenu exemples', NULL, 'main-menu', 0, 'fr', 0, $translated_menu_item_depth);
+  _create_translation_sets($source_menu_item, $translated_menu_item);
+
+  _add_custom_menu('node/1', 'WetKit Demo', NULL, 'main-menu', 0, 'en', 0, $source_menu_item);
+  _add_custom_menu('node/2', 'Démo Wetkit', NULL, 'main-menu', 0, 'fr', 0, $translated_menu_item);
+  _create_translation_sets($source_menu_item, $translated_menu_item);
+
+  _add_custom_menu('node/6', 'WetKit Features', NULL, 'main-menu', 1, 'en', 0, $source_menu_item);
+  _add_custom_menu('node/5', 'Features WetKit', NULL, 'main-menu', 1, 'fr', 0, $translated_menu_item);
+  _create_translation_sets($source_menu_item, $translated_menu_item);
+
+  _add_custom_menu('node/4', 'WetKit Collaboration', NULL, 'main-menu', 2, 'en', 0, $source_menu_item);
+  _add_custom_menu('node/3', 'Collaboration WetKit', NULL, 'main-menu', 2, 'fr', 0, $translated_menu_item);
+  _create_translation_sets($source_menu_item, $translated_menu_item);
+  
+  $source_menu_item_depth = _add_custom_menu('http://drupal.org', 'Drupal WCMS', NULL, 'main-menu', 3, 'en');
+  $translated_menu_item_depth = _add_custom_menu('http://drupal.org', 'WCMS Drupal', NULL, 'main-menu', 3, 'fr');
+  _create_translation_sets($source_menu_item_depth, $translated_menu_item_depth);
+
+  $source_menu_item = _add_custom_menu('http://drupal.org', 'Drupal.org', NULL, 'main-menu', 0, 'en', 0, $source_menu_item_depth);
+  $translated_menu_item = _add_custom_menu('http://drupal.org', 'Drupal.org', NULL, 'main-menu', 0, 'fr', 0, $translated_menu_item_depth);
   _create_translation_sets($source_menu_item, $translated_menu_item);
 
   /* Terms and Transparency Navigation */
