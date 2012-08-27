@@ -154,8 +154,9 @@ function wetkit_web_usability_init() {
   }
 
   //Only use WET-BOEW on Front End
+  global $theme;
   $current_path = current_path();
-  if (!path_is_admin($current_path)) {
+  if (!path_is_admin($current_path) && $theme != 'rubik') {
     //Add WET-BOEW Source Library using Libraries API
     if (($library = libraries_detect('wet-boew', NULL, 'source')) && !empty($library['variants']['source']['installed'])) {
       // Do something with the library here.
