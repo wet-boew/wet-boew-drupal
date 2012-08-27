@@ -23,13 +23,13 @@
   ;stylesheets[all][] = wet-boew/grids/css/responsive-1200-min.css
   ;stylesheets[all][] = wet-boew/grids/css/responsive-768-min.css
   ;stylesheets[all][] = wet-boew/grids/css/responsive-min.css  
-  stylesheets[all][] = wet-boew/grids/css/util-min.css
+  ;stylesheets[all][] = wet-boew/grids/css/util-min.css
 
   ; Web Usability Theme - JS
-  stylesheets[all][] = wet-boew/js/css/pe-ap-min.css
+  ;stylesheets[all][] = wet-boew/js/css/pe-ap-min.css
 
   ; Web Usability Theme - FEGC
-  stylesheets[all][] = wet-boew/theme-gcwu-fegc/css/theme-min.css
+  ;stylesheets[all][] = wet-boew/theme-gcwu-fegc/css/theme-min.css
 
   ; Web Usability Theme - Custom CSS
   stylesheets[all][] = css/wetkit-adaptivetheme-custom.css
@@ -51,9 +51,9 @@
 
   ; ie_stylesheets[screen][(lt IE 9)&(!IEMobile 7)][] = css/lt-ie9.css
 
-  ie_stylesheets[all][lte IE 8][] = wet-boew/grids/css/util-ie-min.css
-  ie_stylesheets[all][lte IE 8][] = wet-boew/js/css/pe-ap-ie-min.css
-  ie_stylesheets[all][lte IE 8][] = wet-boew/theme-gcwu-fegc/css/theme-ie-min.css
+  ;ie_stylesheets[all][lte IE 8][] = wet-boew/grids/css/util-ie-min.css
+  ;ie_stylesheets[all][lte IE 8][] = wet-boew/js/css/pe-ap-ie-min.css
+  ;ie_stylesheets[all][lte IE 8][] = wet-boew/theme-gcwu-fegc/css/theme-ie-min.css
 
   ; Unset Module CSS or other Stylesheets
   ;

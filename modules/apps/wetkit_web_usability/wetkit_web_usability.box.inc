@@ -46,10 +46,10 @@ function wetkit_web_usability_default_box() {
       'value' => '<h3>Meet the Minister</h3>
 <div class="gcwu-minister-in">
 	<div class="gcwu-minister-img">
-            <div><img alt="The Honourable minister name" height="149" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/minister.jpg" width="99" /></div>
+            <img alt="The Honourable minister name" height="149" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/minister.jpg" width="99" />
 	</div>
 	<div class="gcwu-minister-info">
-            <p>The Honourable<br />
+            <p>The&nbsp;Honourable<br />
             <strong>minister name</strong></p>
             <ul>
                 <li><a href="minister">About the minister</a></li>
@@ -65,7 +65,7 @@ function wetkit_web_usability_default_box() {
       'value' => '<h3>Rencontrez le ministre</h3>
 <div class="gcwu-minister-in">
 	<div class="gcwu-minister-img">
-            <div><img alt="Le nom de l&#39;honorable ministre" height="149" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/minister.jpg" width="99" /></div>
+            <img alt="Le nom de l&#39;honorable ministre" height="149" src="/profiles/wetkit/modules/apps/wetkit_web_usability/images/minister.jpg" width="99" />
 	</div>
 	<div class="gcwu-minister-info">
             <p>L&#39;honorable<br />
