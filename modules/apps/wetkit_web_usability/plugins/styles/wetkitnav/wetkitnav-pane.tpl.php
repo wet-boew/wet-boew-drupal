@@ -33,6 +33,6 @@
   </<?php print (isset($settings['headings'])) ? $settings['headings'] : 'h3'; ?>>
   <?php endif ?>
   <div class="pane-content">
-    <ul><?php print render($content->content); ?></ul>
+    <?php print render($content->content); ?>
   </div>
 </div>
