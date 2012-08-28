@@ -36,6 +36,7 @@ dependencies[] = boxes
 dependencies[] = context
 dependencies[] = context_ui
 dependencies[] = ctools
+dependencies[] = custom_formatters
 dependencies[] = page_manager
 dependencies[] = diff
 dependencies[] = ds
