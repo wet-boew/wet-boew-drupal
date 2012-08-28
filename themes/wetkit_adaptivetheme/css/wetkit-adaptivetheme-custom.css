@@ -38,7 +38,7 @@ ul.tabs { margin-left: 10px; margin-right: 10px; }
 div.contextual-links-wrapper { z-index: 10; }
 
 /* Intranet Overrides */
-#gcwu-bnr-in #gcwu-title { margin-top: 0px; padding-top: 7px; }
+#gcwu-bnr-in #gcwu-title { margin-top: 0px; padding-top: 7px; margin-bottom: 0px; }
 
 /* Maintenance Page */
 .maintenance-page #main-content #content { padding: 10px; }
