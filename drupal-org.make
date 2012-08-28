@@ -60,8 +60,8 @@ projects[jquery_update][patch][1524944] = http://drupal.org/files/allow-differen
 projects[libraries][version] = 2.0
 projects[libraries][subdir] = contrib
 
-projects[json2][version] = 1.0
-projects[json2][subdir] = contrib
+;projects[json2][version] = 1.0
+;projects[json2][subdir] = contrib
 
 projects[panels][version] = 3.x-dev
 projects[panels][subdir] = contrib
@@ -232,16 +232,18 @@ projects[workbench_moderation][download][branch] = 7.x-1.x
 projects[workbench_moderation][patch][1285090] = http://drupal.org/files/playnicewithpanels-1285090-7.patch
 projects[workbench_moderation][patch][1260112] = http://drupal.org/files/workbench_moderation-is_current-1260112-15.patch
 
-projects[wysiwyg][version] = 2.x-dev
 projects[wysiwyg][subdir] = contrib
 projects[wysiwyg][type] = module
-projects[wysiwyg][patch][356480] = http://drupal.org/files/lazy_wysiwyg-356480-137.patch
+projects[wysiwyg][version] = 2.x-dev 
+projects[wysiwyg][patch][1489096] = http://drupal.org/files/wysiwyg-table-format.patch
+projects[wysiwyg][patch][356480] = http://drupal.org/files/lazy_wysiwyg-356480-150.patch
 projects[wysiwyg][download][type] = git
 projects[wysiwyg][download][revision] = d17bf11
 projects[wysiwyg][download][branch] = 7.x-2.x
 
 projects[wysiwyg_filter][version] = 1.6-rc2
 projects[wysiwyg_filter][subdir] = contrib
+projects[wysiwyg_filter][type] = module
 
 projects[references_dialog][version] = 1.0-alpha4
 projects[references_dialog][subdir] = contrib
@@ -372,8 +374,8 @@ projects[search404][subdir] = contrib
 ; LIBRARIES ;
 ;;;;;;;;;;;;;
 
-libraries[json2][download][type] = file
-libraries[json2][download][url] = https://raw.github.com/douglascrockford/JSON-js/fc535e9cc8fa78bbf45a85835c830e7f799a5084/json2.js
+;libraries[json2][download][type] = file
+;libraries[json2][download][url] = https://raw.github.com/douglascrockford/JSON-js/fc535e9cc8fa78bbf45a85835c830e7f799a5084/json2.js
 
 libraries[markitup][download][type] = file
 libraries[markitup][download][url] = https://github.com/markitup/1.x/tarball/master
