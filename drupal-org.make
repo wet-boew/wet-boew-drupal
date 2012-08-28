@@ -203,8 +203,12 @@ projects[date_popup_authored][subdir] = contrib
 projects[image_resize_filter][version] = 1.13
 projects[image_resize_filter][subdir] = contrib
 
-projects[linkchecker][version] = 1.0-beta1
+projects[linkchecker][version] = 1.x-dev
+projects[linkchecker][type] = module
 projects[linkchecker][subdir] = contrib
+projects[linkchecker][download][type] = git
+projects[linkchecker][download][revision] = a920eb0
+projects[linkchecker][download][branch] = 7.x-1.x
 
 projects[media][version] = 2.x-dev
 projects[media][type] = module
