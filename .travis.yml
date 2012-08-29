@@ -19,7 +19,7 @@ before_script:
  - cd ../github_wet_distro
  - sudo chmod -R 777 sites/all/modules
  - drush si wetkit wetkit_theme_form.theme=wetkit_adaptivetheme --sites-subdir=default --db-url=mysql://root:@127.0.0.1/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name="Web Experience Toolkit" --yes
- - drush cc all --yes
+ #- drush cc all --yes
  - "export PHANTOMJS_EXECUTABLE='phantomjs --local-to-remote-url-access=yes --ignore-ssl-errors=yes'"
  - "export DISPLAY=:99.0"
  - "sh -e /etc/init.d/xvfb start"
