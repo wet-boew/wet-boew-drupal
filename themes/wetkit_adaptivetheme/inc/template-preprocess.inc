@@ -58,17 +58,16 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
 
   //Support for Intranet Theme
   $variables['intranet'] = '';
-  $variables['wetkit_sub_site'] = t('Sub Site Name');
-  if (theme_get_setting('wetkit_intranet_enable') == 1) {
+  if (at_get_setting('wetkit_intranet_enable') == 1) {
     $variables['intranet'] = 'Enabled';
     $variables['base_path'] = base_path();
     $variables['path_to_web_usability'] = drupal_get_path('theme', 'wetkit_adaptivetheme');
   }
 
   //Assign other skip link variables
-  $variables['skip_link_content_anchor'] = theme_get_setting('skip_link_content_anchor');
+  $variables['skip_link_content_anchor'] = at_get_setting('skip_link_content_anchor');
   $variables['skip_link_text'] = t('Skip to main content');
-  $variables['skip_link_nav_anchor'] = theme_get_setting('skip_link_nav_anchor');
+  $variables['skip_link_nav_anchor'] = at_get_setting('skip_link_nav_anchor');
   $variables['skip_link2_text'] = t('Skip to footer');
 
   //Detect Panels Layout if Exists
@@ -150,6 +149,9 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
     $is_multilingual = 1;
   }
 
+  //Set Sub Site Name
+  $variables['wetkit_sub_site'] = at_get_setting('wetkit_sub_site');
+  
   // Header Navigation + Language Switcher
   $menu = ($is_multilingual) ? i18n_menu_navigation_links('menu-wet-header') : menu_navigation_links('menu-wet-header');
   $goc_nav_bar_markup = theme('links__menu_goc_nav_bar', array(
@@ -215,8 +217,7 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
 
   //Support for Intranet Theme
   $variables['intranet'] = '';
-  $variables['wetkit_sub_site'] = t('Sub Site Name');
-  if (theme_get_setting('wetkit_intranet_enable') == 1) {
+  if (at_get_setting('wetkit_intranet_enable') == 1) {
     $variables['intranet'] = 'Enabled';
     drupal_add_css(
       path_to_theme() . '/wet-boew/theme-gcwu-intranet/css/theme-min-intranet.css', array(

@@ -19,8 +19,8 @@ function wetkit_language_locale_default_languages() {
     'enabled' => '1',
     'plurals' => '0',
     'formula' => '',
-    'domain' => (variable_get('radio_language_domain_en')) ? variable_get('radio_language_domain_en') : '',
-    'prefix' => 'en',
+    'domain' => '',
+    'prefix' => 'eng',
     'weight' => '0',
   );
   // Exported language: fr.
@@ -32,8 +32,8 @@ function wetkit_language_locale_default_languages() {
     'enabled' => '1',
     'plurals' => '2',
     'formula' => '($n!=1)',
-    'domain' => (variable_get('radio_language_domain_fr')) ? variable_get('radio_language_domain_fr') : '',
-    'prefix' => 'fr',
+    'domain' => '',
+    'prefix' => 'fra',
     'weight' => '0',
   );
   return $languages;

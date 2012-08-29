@@ -129,9 +129,8 @@ function wetkit_language_strongarm() {
     'plurals' => '0',
     'formula' => '',
     'domain' => '',
-    'prefix' => 'eng',
+    'prefix' => 'en',
     'weight' => '0',
-    'javascript' => '',
   );
   $export['language_default'] = $strongarm;
 
@@ -229,6 +228,39 @@ function wetkit_language_strongarm() {
     'language-default' => '-5',
   );
   $export['locale_language_providers_weight_language_content'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'variable_realm_list_language';
+  $strongarm->value = array(
+    0 => 'menu_main_links_source',
+    1 => 'menu_secondary_links_source',
+    2 => 'site_name',
+    3 => 'site_slogan',
+    4 => 'anonymous',
+    5 => 'site_frontpage',
+    6 => 'site_403',
+    7 => 'site_404',
+    8 => 'maintenance_mode_message',
+    9 => 'feed_description',
+    10 => 'date_first_day',
+    11 => 'user_default_timezone',
+    12 => 'theme_settings',
+    13 => 'theme_[theme]_settings',
+    14 => 'user_registration_help',
+    15 => 'user_picture_dimensions',
+    16 => 'user_picture_guidelines',
+    17 => 'user_mail_register_admin_created_[mail_part]',
+    18 => 'user_mail_register_no_approval_required_[mail_part]',
+    19 => 'user_mail_register_pending_approval_[mail_part]',
+    20 => 'user_mail_password_reset_[mail_part]',
+    21 => 'user_mail_status_activated_[mail_part]',
+    22 => 'user_mail_status_blocked_[mail_part]',
+    23 => 'user_mail_cancel_confirm_[mail_part]',
+    24 => 'user_mail_status_canceled_[mail_part]',
+  );
+  $export['variable_realm_list_language'] = $strongarm;
 
   return $export;
 }
