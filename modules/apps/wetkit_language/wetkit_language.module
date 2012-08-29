@@ -39,23 +39,6 @@ function wetkit_language_init() {
 function wetkit_language_language_init() {
   //Set Flag
   if (variable_get('wetkit_language_db', 1) == 1) {
-    //Take care of language + domain
-    //TODO - Find a better way of doing this
-    db_update('languages')
-      ->fields(array(
-        'prefix' => 'eng',
-        //'domain' => variable_get('radio_language_domain_en'),
-      ))
-    ->condition('language', 'en')
-    ->execute();
-    db_update('languages')
-      ->fields(array(
-        'prefix' => 'fra',
-        //'domain' => variable_get('radio_language_domain_fr'),
-      ))
-    ->condition('language', 'fr')
-    ->execute();
-    variable_set('wetkit_language_db', 0);
   }
 }
 

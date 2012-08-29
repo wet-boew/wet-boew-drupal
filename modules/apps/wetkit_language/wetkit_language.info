@@ -39,3 +39,4 @@ features[variable][] = language_negotiation_language_url
 features[variable][] = language_types
 features[variable][] = locale_language_providers_weight_language
 features[variable][] = locale_language_providers_weight_language_content
+features[variable][] = variable_realm_list_language

@@ -111,7 +111,7 @@
                     <?php endif;?>
                     <?php if ($language->language == 'fr'): ?>
                       <div id="gcwu-sig-fra" title="Gouvernement du Canada">
-                        <img src="/<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/sig-fra.gif" width="214" height="20" alt="Gouvernement du Canada">
+                        <img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/wet-boew/theme-gcwu-fegc/images/sig-fra.gif" width="214" height="20" alt="Gouvernement du Canada">
                       </div>
                     <?php endif;?>
                   </div>
@@ -170,7 +170,7 @@
         </div>
         <?php if ($intranet): ?>
           <div id="gcwu-subsite" class="gcwu-subsite-1">
-            <p><?php print l(t($wetkit_sub_site), '<front>'); ?></p>
+            <p><?php print l($wetkit_sub_site, '<front>'); ?></p>
           </div>
         <?php endif; ?>
         <nav role="navigation">
