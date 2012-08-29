@@ -12,6 +12,7 @@ before_script:
  - mysql -e 'create database wetkit_db;'
  #- pyrus channel-discover pear.drush.org
  #- pyrus install drush/drush
+ - pear upgrade
  - pear channel-discover pear.drush.org
  - pear install drush/drush-5.4.0
  - phpenv rehash
