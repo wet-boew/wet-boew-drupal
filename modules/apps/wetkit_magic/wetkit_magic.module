@@ -55,7 +55,7 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
   if (variable_get('wetkit_magic_live_preview', 1) && (strpos($form_id, '_content_type_edit_form') || $form_id == 'panels_edit_style_type_form') || $form_id == 'panels_edit_style_settings_form') {
 
     // Start the magic
-    $pane = $form_state['pane'];
+    $pane = $form_id == 'panels_edit_style_settings_form' ? $form_state['display']->content[$form_state['pid']] : $form_state['pane'];
     $display = $form_state['display'];
     ctools_include('plugins', 'panels');
     ctools_include('content');
