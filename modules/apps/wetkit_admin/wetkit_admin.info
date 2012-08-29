@@ -4,6 +4,7 @@ core = 7.x
 package = WetKit
 php = 5.2.4
 project = wetkit_admin
+dependencies[] = apps
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = page_manager
