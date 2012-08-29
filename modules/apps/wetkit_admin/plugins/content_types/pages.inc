@@ -66,7 +66,7 @@ function wetkit_admin_pages_content_type_render($subtype, $conf, $panel_args, $c
             'data' => array(
               $entity_info['bundles'][$bundle_type]['label'],
               '<em>' . $entity_info['label'] . ' template' . '</em>',
-              (pathauto_pattern_load_by_entity($entity_type, $bundle_type)) ? l('/' . pathauto_pattern_load_by_entity($entity_type, $bundle_type), 'admin/config/content/panelizer/' . $entity_type . '/' . $bundle_type . '.page_manager/content') : l('/' . $handler->plugin['entity path'], 'admin/config/content/panelizer/' . $entity_type . '/' . $bundle_type . '.page_manager/content'),
+              (module_exists('pathauto') && pathauto_pattern_load_by_entity($entity_type, $bundle_type)) ? l('/' . pathauto_pattern_load_by_entity($entity_type, $bundle_type), 'admin/config/content/panelizer/' . $entity_type . '/' . $bundle_type . '.page_manager/content') : l('/' . $handler->plugin['entity path'], 'admin/config/content/panelizer/' . $entity_type . '/' . $bundle_type . '.page_manager/content'),
             ),
           );
         }
