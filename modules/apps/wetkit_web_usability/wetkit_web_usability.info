@@ -50,3 +50,4 @@ features[variable][] = jquery_update_jquery_cdn
 features[variable][] = jquery_update_jquery_version
 features[variable][] = preprocess_css
 features[views_view][] = headlines_front_page
+stylesheets[all][] = css/wetkit_web_usability.css
