@@ -389,9 +389,9 @@ projects[search404][subdir] = contrib
 ;libraries[json2][download][type] = file
 ;libraries[json2][download][url] = https://raw.github.com/douglascrockford/JSON-js/fc535e9cc8fa78bbf45a85835c830e7f799a5084/json2.js
 
-libraries[markitup][download][type] = file
-libraries[markitup][download][url] = https://github.com/markitup/1.x/tarball/master
-libraries[markitup][patch][1715642] = http://drupal.org/files/1715642-adding-html-set-markitup-editor.patch
+;libraries[markitup][download][type] = file
+;libraries[markitup][download][url] = https://github.com/markitup/1.x/tarball/master
+;libraries[markitup][patch][1715642] = http://drupal.org/files/1715642-adding-html-set-markitup-editor.patch
 
 ;libraries[SolrPhpClient][download][type] = file
 ;libraries[SolrPhpClient][download][url] = http://solr-php-client.googlecode.com/files/SolrPhpClient.r60.2011-05-04.zip
