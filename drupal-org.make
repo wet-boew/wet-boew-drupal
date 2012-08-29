@@ -17,14 +17,14 @@ projects[browscap][subdir] = contrib
 projects[context][version] = 3.0-beta2
 projects[context][subdir] = contrib
 
-projects[ctools][version] = 1.1
+projects[ctools][version] = 1.2
 projects[ctools][subdir] = contrib
 projects[ctools][type] = module
 projects[ctools][download][type] = git
-projects[ctools][download][revision] = 116c49e
+projects[ctools][download][revision] = 10a2674
 projects[ctools][download][branch] = 7.x-1.x
-projects[ctools][patch][1294478] = http://drupal.org/files/1294478-modal-dynamic-mode.patch
-projects[ctools][patch][1708438] = http://drupal.org/files/1708438-blur-event.patch
+projects[ctools][patch][1294478] = http://drupal.org/files/dynamic-modal-1294478-34.patch
+projects[ctools][patch][1708438] = http://drupal.org/files/1708438-blur-event_0.patch
 
 projects[custom_formatters][version] = 2.2
 projects[custom_formatters][subdir] = contrib
