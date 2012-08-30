@@ -104,13 +104,8 @@ projects[password_policy][subdir] = contrib
 projects[pm_existing_pages][version] = 1.4
 projects[pm_existing_pages][subdir] = contrib
 
-projects[rules][version] = 2.1
-projects[rules][type] = module
+projects[rules][version] = 2.2
 projects[rules][subdir] = contrib
-projects[rules][download][type] = git
-projects[rules][download][revision] = 5273ea6
-projects[rules][download][branch] = 7.x-2.x
-projects[rules][patch][1329346] = http://drupal.org/files/remove-make-file-1329346-10.patch
 
 projects[token][version] = 1.2
 projects[token][subdir] = contrib
