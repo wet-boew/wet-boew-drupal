@@ -25,6 +25,8 @@ projects[ctools][download][revision] = 10a2674
 projects[ctools][download][branch] = 7.x-1.x
 projects[ctools][patch][1294478] = http://drupal.org/files/dynamic-modal-1294478-34.patch
 projects[ctools][patch][1708438] = http://drupal.org/files/1708438-blur-event_0.patch
+projects[ctools][patch][1494860] = http://drupal.org/files/ctools-dependent-js-broken-with-jquery-1.7-1494860-30.patch
+projects[ctools][patch][1739718] = http://drupal.org/files/ctools-fix-warning-message-1739718-32.patch
 
 projects[custom_formatters][version] = 2.2
 projects[custom_formatters][subdir] = contrib
