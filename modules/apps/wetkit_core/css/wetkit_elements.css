@@ -32,6 +32,7 @@ div.ctools-button .ctools-content ul {
   list-style-image: none;
   list-style-type: none; 
   padding: 0px;
+  margin: 0px;
 } 
 
 div.ctools-button .ctools-content ul li {

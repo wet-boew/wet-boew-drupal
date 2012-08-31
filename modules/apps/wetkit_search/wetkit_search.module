@@ -1,10 +1,37 @@
 <?php
 /**
  * @file
- * Code for the wetkit_search feature.
+ * Code for the Panopoly Search feature.
  */
 
-include_once('wetkit_search.features.inc');
+include_once 'wetkit_search.features.inc';
+
+/**
+ * Implementation of hook_ctools_plugin_directory()
+ */
+function wetkit_search_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+}
+
+/**
+ * Implementation of hook_form_alter()
+ */
+function wetkit_search_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'search_form' || $form_id == 'search_theme_form') {
+    $form['#submit'] = array('wetkit_search_all_form_submit');
+    if (!empty($form['basic']['keys'])) {
+      $form['basic']['keys']['#size'] = '';
+    }
+  }
+}
+
+/**
+ * Custom form submit handler to change redirect state of the form
+ */
+function wetkit_search_all_form_submit($form, &$form_state) {
+  $keys = trim($form_state['values']['keys']);
+  $form_state['redirect'] = array('search/site/' . $keys);
+}
 
 /**
  * Implementation of hook_preprocess_radio()

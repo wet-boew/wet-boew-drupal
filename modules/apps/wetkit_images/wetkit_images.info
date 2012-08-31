@@ -7,6 +7,7 @@ project = wetkit_images
 dependencies[] = file_entity
 dependencies[] = image
 dependencies[] = media
+dependencies[] = image_resize_filter
 apps[server][] = local
 apps[manifests][] = app/manifest.app
 features[ctools][] = file_entity:file_default_displays:1

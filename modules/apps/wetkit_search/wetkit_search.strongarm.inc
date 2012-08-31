@@ -238,8 +238,8 @@ function wetkit_search_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'custom_search_blocks_1_paths';
-  $strongarm->value = 'search/node/[key]|Search Core
-search/site/[key]|Search API';
+  $strongarm->value = 'search/site/[key]|Search API
+search/node/[key]|Search Core';
   $export['custom_search_blocks_1_paths'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -346,6 +346,48 @@ search/site/[key]|Search API';
   $strongarm->name = 'custom_search_delta';
   $strongarm->value = 'blocks_1_';
   $export['custom_search_delta'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'facetapi:block_cache:search_api@database_node_index';
+  $strongarm->value = -1;
+  $export['facetapi:block_cache:search_api@database_node_index'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'facetapi:block_cache:search_api@node_index';
+  $strongarm->value = -1;
+  $export['facetapi:block_cache:search_api@node_index'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'search_active_modules';
+  $strongarm->value = array(
+    'node' => 'node',
+    'user' => 0,
+  );
+  $export['search_active_modules'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'search_api_facets_search_ids';
+  $strongarm->value = array(
+    'node_index' => array(
+      'search_api_views:wetkit_search:search_solr_results' => 'search_api_views:wetkit_search:search_solr_results',
+      'search_api_views:wetkit_search:page_1' => 'search_api_views:wetkit_search:page_1',
+    ),
+    'database_node_index' => array(
+      'search_api_views:wetkit_database_search:default' => 'search_api_views:wetkit_database_search:default',
+      'search_api_views:wetkit_database_search:panel_pane_1' => 'search_api_views:wetkit_database_search:panel_pane_1',
+      'search_api_views:wetkit_database_search:search_database_results' => 'search_api_views:wetkit_database_search:search_database_results',
+      'search_api_views:wetkit_database_search:page_1' => 'search_api_views:wetkit_database_search:page_1',
+    ),
+  );
+  $export['search_api_facets_search_ids'] = $strongarm;
 
   return $export;
 }

@@ -316,9 +316,16 @@ function wetkit_admin_default_page_manager_pages() {
     'relationships' => array(),
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
+    'panels_breadcrumbs_state' => 1,
+    'panels_breadcrumbs_titles' => 'Administration
+Dashboard
+WetKit Apps',
+    'panels_breadcrumbs_paths' => 'admin
+admin/dashboard',
+    'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
-  $display->layout = 'phelan';
+  $display->layout = 'boxton';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -332,12 +339,12 @@ function wetkit_admin_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Apps';
+  $display->title = 'WetKit Apps';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'column1';
+    $pane->panel = 'contentmain';
     $pane->type = 'wetkit_apps_apps';
     $pane->subtype = 'wetkit_apps_apps';
     $pane->shown = TRUE;
@@ -352,25 +359,7 @@ function wetkit_admin_default_page_manager_pages() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['column1'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'column2';
-    $pane->type = 'wetkit_foundation_apps';
-    $pane->subtype = 'wetkit_foundation_apps';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['column2'][0] = 'new-2';
+    $display->panels['contentmain'][0] = 'new-1';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -433,9 +422,16 @@ function wetkit_admin_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'panels_breadcrumbs_state' => 1,
+    'panels_breadcrumbs_titles' => 'Administration
+Dashboard
+Admin Content',
+    'panels_breadcrumbs_paths' => 'admin
+admin/site',
+    'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
-  $display->layout = 'boxton';
+  $display->layout = 'burr_flipped';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -445,6 +441,7 @@ function wetkit_admin_default_page_manager_pages() {
       'column2' => NULL,
       'footer' => NULL,
       'contentmain' => NULL,
+      'sidebar' => NULL,
     ),
   );
   $display->cache = array();
@@ -452,7 +449,7 @@ function wetkit_admin_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-2';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'wetkit_admin_content-admin_content';
@@ -463,13 +460,51 @@ function wetkit_admin_default_page_manager_pages() {
       'widget_title' => '',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['contentmain'][0] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
+    $pane->panel = 'sidebar';
+    $pane->type = 'content';
+    $pane->subtype = 'content';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
-    $display->panels['contentmain'][0] = 'new-3';
+    $display->panels['sidebar'][0] = 'new-3';
+    $pane = new stdClass();
+    $pane->pid = 'new-4';
+    $pane->panel = 'sidebar';
+    $pane->type = 'taxonomy';
+    $pane->subtype = 'taxonomy';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['sidebar'][1] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -552,7 +587,7 @@ function wetkit_admin_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-5';
     $pane->panel = 'contentmain';
     $pane->type = 'pages';
     $pane->subtype = 'pages';
@@ -560,15 +595,17 @@ function wetkit_admin_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array();
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['contentmain'][0] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['contentmain'][0] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'sidebar';
     $pane->type = 'theme';
     $pane->subtype = 'theme';
@@ -576,51 +613,17 @@ function wetkit_admin_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array();
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['sidebar'][0] = 'new-5';
-    $pane = new stdClass();
-    $pane->pid = 'new-6';
-    $pane->panel = 'sidebar';
-    $pane->type = 'content';
-    $pane->subtype = 'content';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
     $display->content['new-6'] = $pane;
-    $display->panels['sidebar'][1] = 'new-6';
+    $display->panels['sidebar'][0] = 'new-6';
     $pane = new stdClass();
     $pane->pid = 'new-7';
-    $pane->panel = 'sidebar';
-    $pane->type = 'taxonomy';
-    $pane->subtype = 'taxonomy';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['sidebar'][2] = 'new-7';
-    $pane = new stdClass();
-    $pane->pid = 'new-8';
     $pane->panel = 'sidebar';
     $pane->type = 'menus';
     $pane->subtype = 'menus';
@@ -633,28 +636,10 @@ function wetkit_admin_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['sidebar'][3] = 'new-8';
-    $pane = new stdClass();
-    $pane->pid = 'new-9';
-    $pane->panel = 'sidebar';
-    $pane->type = 'users';
-    $pane->subtype = 'users';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 4;
-    $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['sidebar'][4] = 'new-9';
+    $display->content['new-7'] = $pane;
+    $display->panels['sidebar'][1] = 'new-7';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -736,7 +721,7 @@ function wetkit_admin_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-8';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'wetkit_admin_media-admin_media';
@@ -755,8 +740,8 @@ function wetkit_admin_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['contentmain'][0] = 'new-10';
+    $display->content['new-8'] = $pane;
+    $display->panels['contentmain'][0] = 'new-8';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -819,9 +804,16 @@ function wetkit_admin_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'panels_breadcrumbs_state' => 1,
+    'panels_breadcrumbs_titles' => 'Administration
+Dashboard
+Admin Users',
+    'panels_breadcrumbs_paths' => 'admin
+admin/site',
+    'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
-  $display->layout = 'boxton';
+  $display->layout = 'burr_flipped';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -831,6 +823,7 @@ function wetkit_admin_default_page_manager_pages() {
       'column2' => NULL,
       'footer' => NULL,
       'contentmain' => NULL,
+      'sidebar' => NULL,
     ),
   );
   $display->cache = array();
@@ -838,7 +831,7 @@ function wetkit_admin_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-9';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'wetkit_admin_users-admin_users';
@@ -849,13 +842,33 @@ function wetkit_admin_default_page_manager_pages() {
       'widget_title' => '',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['contentmain'][0] = 'new-11';
+    $display->content['new-9'] = $pane;
+    $display->panels['contentmain'][0] = 'new-9';
+    $pane = new stdClass();
+    $pane->pid = 'new-10';
+    $pane->panel = 'sidebar';
+    $pane->type = 'users';
+    $pane->subtype = 'users';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-10'] = $pane;
+    $display->panels['sidebar'][0] = 'new-10';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

@@ -4,7 +4,6 @@ core = 7.x
 package = WetKit
 php = 5.2.4
 project = wetkit_users
-dependencies[] = admin_menu
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = field_group
