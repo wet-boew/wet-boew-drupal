@@ -6,7 +6,7 @@
  */
 
 $plugin = array(
-  'title' => t('Users'),
+  'title' => t('User Roles'),
   'description' => t('This is a standard list of users that are available'),
   'content_types' => array('users'),
   'category' => t('Admin'),
@@ -19,7 +19,7 @@ $plugin = array(
   */
 function wetkit_admin_users_content_type_render($subtype, $conf, $panel_args, $context) {
   $pane = new stdClass();
-  $pane->title = t('Users');
+  $pane->title = t('User Roles');
 
   // Build the users
   $users = array();

@@ -305,29 +305,13 @@
 /**
  * Admin dashboard styling
  */
-.pane-theme .form-type-checkbox input, 
-.pane-wetkit-apps-apps .form-type-checkbox input,
-.pane-wetkit-foundation-apps .form-type-checkbox input {
-  float: left;
-  margin-top: 30px;
-}
-
 .pane-theme .admin-theme-image {
   margin-top: .3em;
-  width: 150px;
+  width: 125px;
   float: left;
 }
 
-.pane-wetkit-apps-apps .admin-apps-image,
-.pane-wetkit-foundation-apps .admin-apps-image {
-  padding-left: 1em;
-  float: left;
-  width: 7%;
-}
-
-.pane-theme .admin-theme-configure, 
-.pane-wetkit-apps-apps .admin-apps-configure,
-.pane-wetkit-foundation-apps .admin-apps-configure {
+.pane-theme .admin-theme-configure {
   float: right;
   line-height: 40px;
 }
@@ -336,36 +320,11 @@
   width: 150px;
 }
 
-.pane-wetkit-apps-apps .admin-apps-image img,
-.pane-wetkit-foundation-apps .admin-apps-image img {
-  width: 50px;
-  border: 1px solid #000;
-}
-
 .pane-theme .admin-theme-information {
   padding-left: 1em;
   padding-right: 1em;
   width: 54%;
   float: left;
-}
-
-.pane-wetkit-apps-apps .admin-apps-information,
-.pane-wetkit-foundation-apps .admin-apps-information {
-  padding-left: 1em;
-  padding-right: 1em;
-  float: left;
-  width: 52%;
-}
-
-.pane-theme .form-checkbox, 
-.pane-wetkit-apps-apps .form-checkbox,
-.pane-wetkit-foundation-apps .form-checkbox {
-  font-size: 2em;
-}
-
-.pane-wetkit-apps-apps .form-checkbox .form-item,
-.pane-wetkit-foundation-apps .form-checkbox .form-item {
-  margin-top: 0;
 }
 
 .pane-taxonomy .ctools-dropbutton,

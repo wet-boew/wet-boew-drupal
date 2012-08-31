@@ -8,7 +8,6 @@ dependencies[] = ctools
 dependencies[] = entity
 dependencies[] = entityreference
 dependencies[] = features
-dependencies[] = fences
 dependencies[] = field_sql_storage
 dependencies[] = fieldable_panels_panes
 dependencies[] = file_entity

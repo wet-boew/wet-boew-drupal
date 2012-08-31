@@ -6,7 +6,7 @@
  */
 
 $plugin = array(
-  'title' => t('Content'),
+  'title' => t('Content Types'),
   'description' => t('This is a standard list of content that are available'),
   'content_types' => array('content'),
   'category' => t('Admin'),
@@ -19,7 +19,7 @@ $plugin = array(
   */
 function wetkit_admin_content_content_type_render($subtype, $conf, $panel_args, $context) {
   $pane = new stdClass();
-  $pane->title = t('Content');
+  $pane->title = t('Content Types');
 
   // Build the content screen
   $types = node_type_get_types();
@@ -36,11 +36,6 @@ function wetkit_admin_content_content_type_render($subtype, $conf, $panel_args, 
           'query' => array(),           
         );                                      
       }
-      $create_links[] =  array(
-        'title' => t('See all'),
-        'href' => 'admin/site/content',
-        'query' => array('type' => $type),
-      );
       if (user_access('administer content types')) {
         $create_links[] =  array(
           'title' => t('Configure', array('!type' => $object->name)),

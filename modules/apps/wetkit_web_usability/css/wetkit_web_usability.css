@@ -6,3 +6,9 @@
 .form-item .form-autocomplete {
  padding: 0px 4px;
 }
+
+#gcwu-srchbx label {
+  height: auto !important;
+  width: auto !important;
+  overflow: visible !important;
+}

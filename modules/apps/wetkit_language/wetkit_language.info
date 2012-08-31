@@ -21,6 +21,7 @@ dependencies[] = i18n_taxonomy
 dependencies[] = i18n_translation
 dependencies[] = i18n_variable
 dependencies[] = locale
+dependencies[] = stringoverrides
 dependencies[] = strongarm
 dependencies[] = variable
 apps[server][] = local
