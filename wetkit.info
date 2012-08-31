@@ -1,9 +1,9 @@
 name = Web Experience Toolkit
+distribution_name = WetKit
 description = Install Profile created for the Web Experience Toolkit using Drupal 7
-version = 7.x-1.0
 core = 7.x
 
-; Core
+; Drupal Core
 dependencies[] = menu
 dependencies[] = image
 dependencies[] = list
@@ -23,121 +23,39 @@ dependencies[] = update
 dependencies[] = shortcut
 dependencies[] = toolbar
 
-; Core Disabled
+; Drupal Core Disabled
 ;dependencies[] = overlay
 ;dependencies[] = contextual
 ;dependencies[] = rdf
 ;dependencies[] = statistics
 ;dependencies[] = simpletest
 
-; Foundation
-dependencies[] = boxes
-;dependencies[] = browscap
-dependencies[] = context
-dependencies[] = context_ui
-dependencies[] = ctools
-dependencies[] = custom_formatters
-dependencies[] = page_manager
-dependencies[] = diff
-dependencies[] = ds
-dependencies[] = ds_extras
-dependencies[] = ds_forms
-dependencies[] = fences
-dependencies[] = fieldable_panels_panes
-dependencies[] = jquery_update
-dependencies[] = libraries
-;dependencies[] = json2
-dependencies[] = panels
-dependencies[] = panels_ipe
-dependencies[] = panels_breadcrumbs
-dependencies[] = panelizer
-dependencies[] = password_policy
-dependencies[] = pm_existing_pages
-dependencies[] = token
-;dependencies[] = layout
-;dependencies[] = gridbuilder
-dependencies[] = views
-dependencies[] = views_content
-dependencies[] = views_ui
+; WetKit Foundation
+dependencies[] = wetkit_core
+dependencies[] = wetkit_images
+dependencies[] = wetkit_theme
+dependencies[] = wetkit_magic
+dependencies[] = wetkit_widgets
+dependencies[] = wetkit_admin
+dependencies[] = wetkit_users
+dependencies[] = wetkit_pages
 
-; Field UI and Content Types
-dependencies[] = date
-dependencies[] = date_api
-dependencies[] = date_popup
-dependencies[] = date_views
-dependencies[] = simple_gmap
-dependencies[] = file_entity
-dependencies[] = entityreference
-dependencies[] = field_group
-dependencies[] = link
-dependencies[] = tablefield
+; WetKit Toolset
+dependencies[] = wetkit_search
+dependencies[] = wetkit_wysiwyg
 
-; Menus and URLS
-dependencies[] = pathauto
-dependencies[] = menu_block
-;dependencies[] = menu_views
-
-; User Experience
-;dependencies[] = admin
-dependencies[] = admin_menu
-dependencies[] = admin_menu_toolbar
-dependencies[] = backports
-dependencies[] = better_formats
-dependencies[] = caption_filter
-dependencies[] = date_popup_authored
-dependencies[] = image_resize_filter
-dependencies[] = linkchecker
-dependencies[] = media
-dependencies[] = media_internet
-dependencies[] = mediafield
-dependencies[] = media_youtube
-dependencies[] = media_vimeo
-dependencies[] = module_filter
-dependencies[] = workbench
-dependencies[] = workbench_moderation
-dependencies[] = wysiwyg
-dependencies[] = wysiwyg_filter
-dependencies[] = references_dialog
-dependencies[] = views_bulk_operations
-dependencies[] = views_autocomplete_filters
-
-; Apps
-dependencies[] = apps
-dependencies[] = defaultcontent
-dependencies[] = entity
-dependencies[] = features
-dependencies[] = strongarm
-dependencies[] = variable
-
-; Language
-dependencies[] = i18n
-dependencies[] = i18n_block
-dependencies[] = i18n_contact
-dependencies[] = i18n_field
-dependencies[] = i18n_menu
-dependencies[] = i18n_node
-dependencies[] = i18n_path
-dependencies[] = i18n_redirect
-dependencies[] = i18n_string
-dependencies[] = i18n_sync
-dependencies[] = i18n_taxonomy
-dependencies[] = i18n_translation
-dependencies[] = i18n_variable
-dependencies[] = stringoverrides
-
-; Search
-dependencies[] = facetapi
-;dependencies[] = search_api
-;dependencies[] = search_api_solr
-;dependencies[] = search_api_facetapi
-;dependencies[] = search_api_views
-;dependencies[] = search_api_db
-dependencies[] = metatag
-dependencies[] = search404
+; Wetkit Rest
+dependencies[] = wetkit_language
+dependencies[] = wetkit_web_usability
 
 ; CSS Stylesheets
 stylesheets[all][] = css/wetkit.css
 
-; Files
-files[] = wetkit.install
-files[] = wetkit.profile
+
+
+
+
+
+
+
+

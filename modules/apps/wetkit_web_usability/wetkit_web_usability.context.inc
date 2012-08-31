@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * wetkit_demo.context.inc
+ * wetkit_web_usability.context.inc
  */
 
 /**
  * Implements hook_context_default_contexts().
  */
-function wetkit_demo_context_default_contexts() {
+function wetkit_web_usability_context_default_contexts() {
   $export = array();
 
   $context = new stdClass();

@@ -2,16 +2,24 @@
  * Stylesheet for WetKit Profile
  */
 
-#wetkit-theme-form .form-item-theme {
+#wetkit-theme-selection-form .form-item-theme {
   clear: both;
   margin-top: .5em;
   margin-bottom: .5em;
 }
 
-#wetkit-theme-form .form-item-theme label img {
+#wetkit-theme-selection-form .form-item-theme label img {
   float: left;
   width: 100px;
   margin-right: 1em;
+}
+
+body.maintenance-page #logo {
+  background:transparent url(images/wetkit_icon.png) no-repeat top left;
+  height:0;
+  overflow:hidden;
+  padding-top: 180px; /* height of logo  */
+  width: 180px; /* width of logo  */
 }
 
 #admin-menu .dropdown li li.expandable ul {

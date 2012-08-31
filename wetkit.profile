@@ -5,16 +5,9 @@
  */
 function wetkit_install_tasks(&$install_state) {
 
-  // Start it off
-  $tasks = array();
-
-  // Attempt to increase the memory limit to 196M
-  if (ini_get('memory_limit') != '-1' && ini_get('memory_limit') <= '196M') {    
-    ini_set('memory_limit', '196M');
-  }
-
-  // Summon the power of the Apps module
+  // Require specific code required for the install profile process
   require_once(drupal_get_path('module', 'apps') . '/apps.profile.inc');
+  require_once(drupal_get_path('module', 'wetkit_theme') . '/wetkit_theme.profile.inc');
 
   // Set up a task to include secondary language (fr)
   $tasks['wetkit_batch_processing'] = array(
@@ -22,66 +15,10 @@ function wetkit_install_tasks(&$install_state) {
     'type' => 'batch',
   );
 
-  // Set up a task to verify wetkit capability to run apps
-  $tasks['wetkit_apps_check'] = array(
-    'display_name' => t('Enable apps support'),
-    'type' => 'form',
-  );
-
-  // Set up the WetKit Local Apps install task
-  $wetkit_local_server = array(
-    'machine name' => 'wetkit',
-    'default apps' => array(
-      'wetkit_admin',
-      'wetkit_core',
-      'wetkit_demo',
-      'wetkit_images',
-      'wetkit_magic',
-      'wetkit_pages',
-      'wetkit_search',
-      'wetkit_theme',
-      'wetkit_users',
-      'wetkit_widgets',
-      'wetkit_wysiwyg',
-      'wetkit_language',
-      'wetkit_web_usability',
-    ),
-    'required apps' => array(
-      'wetkit_admin',
-      'wetkit_core',
-      'wetkit_demo',
-      'wetkit_images',
-      'wetkit_magic',
-      'wetkit_pages',
-      'wetkit_search',
-      'wetkit_theme',
-      'wetkit_users',
-      'wetkit_widgets',
-      'wetkit_wysiwyg',
-      'wetkit_language',
-      'wetkit_web_usability',
-    ),
-  );
-  $tasks = $tasks + apps_profile_install_tasks($install_state, $wetkit_local_server);
-
-  // Rename one of the default apps tasks. In the case of a non-interactive
-  // installation, apps_profile_install_tasks() never defines this task, so we
-  // need to make sure we don't accidentally create it when it doesn't exist.
-  if (isset($tasks['apps_profile_apps_select_form_wetkit'])) {
-    $tasks['apps_profile_apps_select_form_wetkit']['display_name'] = t('Install local apps for WetKit');
-  }
-
-  // Set up the theme selection and configuration tasks
-  $tasks['wetkit_theme_form'] = array(
-    'display_name' => t('Choose a theme'),
-    'type' => 'form',
-  );
-
-  // Set up a finishing task to do cache clearing and various cleanup
-  $tasks['wetkit_final_setup'] = array(
-    'run' => '2',
-  );
-
+  // Assemble and return the install tasks
+  $tasks = array();
+  $tasks = $tasks + apps_profile_install_tasks($install_state, array('machine name' => 'wetkit', 'default apps' => array('wetkit_demo')));
+  $tasks = $tasks + wetkit_theme_profile_theme_selection_install_task($install_state);
   return $tasks;
 }
 
@@ -89,6 +26,12 @@ function wetkit_install_tasks(&$install_state) {
  * Implements hook_install_tasks_alter()
  */
 function wetkit_install_tasks_alter(&$tasks, $install_state) {
+
+  // Magically go one level deeper in solving years of dependency problems with install profiles
+  $tasks['install_load_profile']['function'] = 'wetkit_install_load_profile';
+
+   // Since we only offer one language, define a callback to set this
+  //$tasks['install_select_locale']['function'] = 'wetkit_install_locale_selection';
 
   //If using French Locale as default remove associated Install Task
   unset($tasks['install_import_locales']);
@@ -100,7 +43,7 @@ function wetkit_install_tasks_alter(&$tasks, $install_state) {
  */
 function wetkit_form_install_configure_form_alter(&$form, $form_state) {
   
-  // Hide some messages from various modules that are just too chatty!
+  // Hide some messages from various modules that are just too chatty.
   drupal_get_messages('status');
   drupal_get_messages('warning');
 
@@ -186,155 +129,45 @@ function wetkit_batch_processing(&$install_state) {
  */
 function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
 
-  // If App Manifest Exists
-  //if (isset($_SESSION['apps_manifest'])) {
     // For some things there are no need
     $form['apps_message']['#access'] = FALSE;
     $form['apps_fieldset']['apps']['#title'] = NULL;
 
     // Improve style of apps selection form
     if (isset($form['apps_fieldset'])) {
-      $options = array();
       $manifest = apps_manifest(apps_servers('wetkit'));
       foreach ($manifest['apps'] as $name => $app) {
-        if ($name != '#theme') {
-          $options[$name] = '<strong>' . $app['name'] . '</strong><p><div class="admin-options"><div class="form-item">' . theme('image', array('path' => $app['logo']['path'], 'height' => '32', 'width' => '32')) . '</div>' . $app['description'] . '</div></p>';
-        }
+       if ($name != '#theme') {
+         $form['apps_fieldset']['apps']['#options'][$name] = '<strong>' . $app['name'] . '</strong><p><div class="admin-options"><div class="form-item">' . theme('image', array('path' => $app['logo']['path'], 'height' => '32', 'width' => '32')) . '</div>' . $app['description'] . '</div></p>';
+       }
       }
-      ksort($options);
-      $form['apps_fieldset']['apps']['#options'] = $options;
     }
 
-    // Remove the demo content selection option since this is
-    // handled through the Panopoly demo module.
+    // Remove the demo content selection option since this is handled through the WetKit demo module.
     $form['default_content_fieldset']['#access'] = FALSE;
-
-    // Remove the "skip this step" option since why would we want that?
-    $form['actions']['skip']['#access'] = FALSE;
-  //}
 }
 
+ /**
+  * Task handler to set the language to English since that is the only one
+  * we have at the moment.
+  */
+ //function wetkit_install_locale_selection(&$install_state) {
+ //  $install_state['parameters']['locale'] = 'en';
+ //}
+ 
 /**
- * Implements hook_appstore_stores_info()
+ * Task handler to load our install profile and enhance the dependency information
  */
-function wetkit_apps_servers_info() {
+ function wetkit_install_load_profile(&$install_state) {
 
-  $profile = variable_get('install_profile', 'wetkit');
-  $info =  drupal_parse_info_file(drupal_get_path('profile', $profile) . '/' . $profile . '.info');
-  return array(
-    'wetkit' => array(
-      'title' => 'WetKit (Local)',
-      'description' => 'Apps for the Web Experience Toolkit Drupal distro',
-      'featured app' => 'wetkit_web_usability',
-      'manifest' => '',
-    ),
-    'wetkit_apps' => array(
-      'title' => 'WetKit (External)',
-      'description' => 'Apps for the Web Experience Toolkit Drupal distro',
-      'manifest' => 'http://wetkitappdev.devcloud.acquia-sites.com/app/query/WetKit%20App%20Server',
-    ),
-  );
-}
+  // Loading the install profile normally
+  install_load_profile($install_state);
 
-/**
- * Form to check to see if Apps support is possible
- */
-function wetkit_apps_check($form, &$form_state) {
-
-  $form = array();
-
-  // Set the title
-  drupal_set_title(t('Enable Support for Apps'));
-
-  $form['openingtext'] = array(
-    '#markup' => '<p>' . t('Apps uses the same mechanism for installing modules as the update module in core. This depends on certain php extensions to be installed on your server. Below is the documentation for the various methods of installing.') . '</p>',
-  );
-  
-  $form['ftp'] = array(
-    '#title' => t('FTP'),
-    '#type' => 'fieldset',
-    '#description' => 'In order to install via ftp, you must have the ftp php extension enabled. Most apache2/php installs have this by default which is by it probably shows up on most installs. <br /><br />You may run into a server that doesn\'t have ftp so then you will need to install it or use an alternative method. See <a href="http://us2.php.net/manual/en/book.ftp.php">http://us2.php.net/manual/en/book.ftp.php</a> for how to install the ftp php extension. You will also need an ftp username and password that has rights to write to your site directory on your server. Be aware that FTP is not an encrypted protocol and your credentials will be transmitted in the clear.',
-  );
-
-  $form['ssh'] = array(
-    '#title' => t('SSH'),
-    '#type' => 'fieldset',
-    '#description' => 'In order to install via ssh, you must have the ssh2 php extension installed and enabled. This does not come by default with many apache2/php installs so it commonly needs to be added. <br /><br />See <a href="http://us2.php.net/manual/en/book.ssh2.php">http://us2.php.net/manual/en/book.ssh2.php</a> for how to install the ssh2 php extension. You will also need a username and password of a user that can ssh into the server and has write permissions to your site directory on your server.',
-  );
-
-  $form['webserver'] = array(
-    '#title' => 'Webserver Direct Install',
-    '#type' => 'fieldset',
-    '#description' => 'In order to install directly to the sites/all/modules directory it needs to be writable. In order to do this go to the root of your drupal install and type <strong>sudo chmod -R 777 sites/all/modules</strong>. Be aware that there are security issues with leaving your site in this state.',
-  );
-
-  $form['continue'] = array(
-    '#type' => 'submit',
-    '#value' => 'Continue',
-  );
-
-  return $form;
-}
-                
-/**
- * Form to choose the starting theme from list of available options
- */
-function wetkit_theme_form($form, &$form_state) {
-
-  // Set the page title
-  drupal_set_title(t('Choose a theme!'));
-
-  // Create list of theme options, minus admin + testing + starter themes
-  $themes = array();
-  foreach (system_rebuild_theme_data() as $theme) {
-   if (!in_array($theme->name, array('test_theme', 'update_test_basetheme', 'update_test_subtheme', 'block_test_theme', 'stark', 'seven', 'adaptivetheme_admin', 'adaptivetheme', 'adaptivetheme_subtheme', 'mobile_jquery', 'rubik', 'tao', 'zen', 'wetkit_adaptivetheme_settings'))) {
-      $themes[$theme->name] = theme('image', array('path' => $theme->info['screenshot'])) . '<strong>' . $theme->info['name'] . '</strong><br><p><em>' . $theme->info['description'] . '</em></p><p class="clearfix"></p>';
+  // Include any dependencies that we might have missed...
+  foreach($install_state['profile_info']['dependencies'] as $module) {
+    $module_info = drupal_parse_info_file(drupal_get_path('module', $module) . '/' . $module . '.info');
+    if (!empty($module_info['dependencies'])) {
+      $install_state['profile_info']['dependencies'] = array_unique(array_merge($install_state['profile_info']['dependencies'], $module_info['dependencies']));
     }
   }
-
-  $form['theme_wrapper'] = array(
-    '#title' => t('Starting Theme'),
-    '#type' => 'fieldset',
-  );
-
-  $form['theme_wrapper']['theme'] = array(
-    '#type' => 'radios',
-    '#options' => $themes,
-    '#default_value' => 'wetkit_adaptivetheme',
-  );
-
-  
-  $form['submit'] = array(
-    '#type' => 'submit',
-    '#value' => 'Choose theme',
-  );
-
-  return $form;
-}
-
-/**
- * Form submit handler to select the theme
- */
-function wetkit_theme_form_submit($form, &$form_state) {
-
-  // Enable and set the theme of choice
-  $theme = $form_state['input']['theme'];
-  theme_enable(array($theme));
-  variable_set('theme_default', $theme);
-
-  // Flush theme caches so things are right
-  system_rebuild_theme_data();
-  drupal_theme_rebuild();
-}
-
-/**
- * Handler callback to do additional setup reqired for the site
- */
-function wetkit_final_setup(&$install_state) {
-
-  // Allow anonymous and authenticated users to see and search content
-  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content'));
-  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content'));
-  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('search content'));
-  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('search content'));
 }

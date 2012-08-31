@@ -10,6 +10,7 @@ dependencies[] = custom_search
 dependencies[] = custom_search_blocks
 dependencies[] = custom_search_i18n
 dependencies[] = features
+dependencies[] = search404
 dependencies[] = strongarm
 apps[server][] = local
 apps[manifests][] = app/manifest.app
