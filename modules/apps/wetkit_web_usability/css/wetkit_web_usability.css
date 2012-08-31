@@ -12,3 +12,7 @@
   width: auto !important;
   overflow: visible !important;
 }
+
+.krumo-footnote img {
+  width: auto;
+}
