@@ -21,8 +21,8 @@ function wetkit_core_requirements($phase) {
   // Let's require more memory and force Drupal core to accept it
   $memory_limit = ini_get('memory_limit');
   $wetkit_memory_limit = '196M';
-  $requirements['php_memory_limit'] = array(
-    'title' => $t('PHP memory limit'),
+  $requirements['wetkit_php_memory_limit'] = array(
+    'title' => $t('WetKit PHP memory limit'),
     'value' => $memory_limit == -1 ? t('-1 (Unlimited)') : $memory_limit,
   );
 
@@ -46,8 +46,8 @@ function wetkit_core_requirements($phase) {
         $description .= ' ' . $t('Contact your system administrator or hosting provider for assistance with increasing your PHP memory limit.');
       }
 
-      $requirements['php_memory_limit']['description'] = $description . ' ' . $t('See the <a href="@url">Drupal requirements</a> for more information.', array('@url' => 'http://drupal.org/requirements'));
-      $requirements['php_memory_limit']['severity'] = REQUIREMENT_WARNING;
+      $requirements['wetkit_php_memory_limit']['description'] = $description . ' ' . $t('See the <a href="@url">Drupal requirements</a> for more information.', array('@url' => 'http://drupal.org/requirements'));
+      $requirements['wetkit_php_memory_limit']['severity'] = REQUIREMENT_WARNING;
     }
   }
   return $requirements;
