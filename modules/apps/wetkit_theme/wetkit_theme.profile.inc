@@ -57,7 +57,7 @@ function wetkit_theme_selection_form_submit($form, &$form_state) {
   theme_enable(array($theme));
   variable_set('theme_default', $theme);
 
-  // Set the Bartik or Garland logo to be Panopoly's logo
+  // Set the Bartik or Garland logo to be WetKit's logo
   if ($theme == 'bartik' || $theme == 'garland' || $theme == 'responsive_bartik') {
     $theme_data = _system_rebuild_theme_data();
     $theme_data[$theme]->info['settings']['default_logo'] = 0;

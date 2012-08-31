@@ -166,6 +166,7 @@ function wetkit_web_usability_init() {
     elseif (($library = libraries_detect('wet-boew')) && !empty($library['installed'])) {
       // Do something with the library here.
       libraries_load('wet-boew');
+      drupal_add_css(drupal_get_path('module','wetkit_web_usability') .'/css/wetkit_web_usability.css', array('group' => CSS_THEME, 'every_page' => TRUE));
     }
   }
 }

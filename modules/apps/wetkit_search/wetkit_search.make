@@ -16,8 +16,13 @@ projects[search_api_solr][version] = 1.0-rc2
 projects[search_api_solr][subdir] = contrib
 projects[search_api_solr][patch][1407282] = http://drupal.org/files/1407282--variable_solr_connection_class-27.patch
 
-projects[search_api_db][version] = 1.0-beta3
+projects[search_api_db][version] = 1.x-dev
 projects[search_api_db][subdir] = contrib
+projects[search_api_db][type] = module
+projects[search_api_db][download][type] = git
+projects[search_api_db][download][revision] = a6203a3
+projects[search_api_db][download][branch] = 7.x-1.x
+projects[search_api_db][patch][1144620] = http://drupal.org/files/search_api_db_utf8-1144620-38.patch
 
 ; Solr PHP Client Library
 

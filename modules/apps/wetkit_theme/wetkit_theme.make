@@ -33,11 +33,11 @@ libraries[respondjs][download][url] = https://github.com/scottjehl/Respond/tarba
 
 ; Bundle a Few WetKit Approved Themes
 
-projects[responsive_bartik][version] = 1.x-dev
-projects[responsive_bartik][type] = theme
-projects[responsive_bartik][download][type] = git
-projects[responsive_bartik][download][revision] = 7853fee
-projects[responsive_bartik][download][branch] = 7.x-1.x
+;projects[responsive_bartik][version] = 1.x-dev
+;projects[responsive_bartik][type] = theme
+;projects[responsive_bartik][download][type] = git
+;projects[responsive_bartik][download][revision] = 7853fee
+;projects[responsive_bartik][download][branch] = 7.x-1.x
 
 ; Tailor app for WetKit
 
