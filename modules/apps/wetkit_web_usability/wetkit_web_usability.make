@@ -17,7 +17,7 @@ projects[custom_formatters][type] = module
 projects[custom_formatters][download][type] = git
 projects[custom_formatters][download][revision] = 08bcc00
 projects[custom_formatters][download][branch] = 7.x-2.x
-projects[custom_formatters][patch][] = http://drupal.org/files/no_makefile-1721294-1.patch
+projects[custom_formatters][patch][1721294] = http://drupal.org/files/no_makefile-1721294-1.patch
 
 projects[diff][version] = 2.x-dev
 projects[diff][subdir] = contrib
