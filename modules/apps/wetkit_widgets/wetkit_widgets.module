@@ -242,6 +242,10 @@ function wetkit_widgets_fieldable_panel_pane_pre_render($element) {
       $element['content_settings'][$key] = $value;
       unset($element[$key]);
     }
+    if (substr($key, 0, 8) == 'language') {
+      $element['content_settings'][$key] = $value;
+      unset($element[$key]);
+    }
   }
 
   return $element;

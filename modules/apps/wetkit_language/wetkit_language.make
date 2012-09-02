@@ -31,8 +31,9 @@ projects[title][version] = 1.x-dev
 projects[title][type] = module
 projects[title][subdir] = contrib
 projects[title][download][type] = git
-projects[title][download][revision] = adec2dc
+projects[title][download][revision] = 03fba58
 projects[title][download][branch] = 7.x-1.x
+projects[title][patch][1736476] = http://drupal.org/files/1736476-title_entity_language-1.patch
 
 projects[variable][version] = 2.1
 projects[variable][subdir] = contrib
