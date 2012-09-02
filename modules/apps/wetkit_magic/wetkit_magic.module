@@ -270,7 +270,8 @@ function wetkit_magic_form_fieldable_panels_panes_fieldable_panels_pane_content_
 
   // If we're left with only one option, don't display the dropdown.
   if (count($view_mode['#options']) < 2) {
-    $view_type = reset(array_keys($view_mode['#options']));
+    $options = array_keys($view_mode['#options']);
+    $view_type = reset($options);
     $view_mode = array(
       '#type' => 'value',
       '#value' => $view_type,
