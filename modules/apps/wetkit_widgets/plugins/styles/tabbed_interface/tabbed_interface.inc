@@ -31,16 +31,12 @@ $plugin = array(
  */
 function theme_wetkit_widgets_tabbed_interface_style_render_pane($vars) {
 
-  $pane = $vars['pane'];
-  $settings = $vars['settings'];
-  //$display = $vars['display'];
-  //$plugin = $vars['style'];
   $content = $vars['content'];
+  $pane = $vars['pane'];
+  $display = $vars['display'];
+  $settings = $vars['settings'];
   //$content->css_class .= (isset($vars['settings']['tabbed_interface_classes'])) ? $vars['settings']['tabbed_interface_classes'] : '';
-  
-  // if the style is gone or has no theme of its own, just display the output.
-  //return theme('wetkit_widgets_theme_pane', array('content' => $content, 'settings' => $settings));
-  return theme('panels_pane', array('content' => $content, 'settings' => $settings));
+  return theme('panels_pane', array('content' => $content, 'pane' => $pane, 'display' => $display, 'settings' => $settings));
 }
 
 /**

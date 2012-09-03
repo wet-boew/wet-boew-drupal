@@ -7,10 +7,11 @@ Drupal.settings.tabbed_interface_settings = Drupal.settings.tabbed_interface_set
  Drupal.behaviors.wetkitTabbed_Interface = {
    attach: function (context, settings) {
      if ($('.ipe_tabs_interface').length) {
-      $(document).on('wb-pcalldeps-loaded', function () {
-        pe.fn['tabbedinterface']._exec($('.ipe_tabs_interface'));
+      var loading_finished = 'wb-loaded';
+      $(document).on(loading_finished, function () {
+
       });
-      pe.add._load_arr(pe.add.depends(['metadata', 'easytabs', 'equalheights']), "wb-pcalldeps-loaded");
+      pe.wb_load({'dep': ['resize', 'equalheights'], 'plugins': {'tabbedinterface': $(".ipe_tabs_interface")}}, loading_finished);
      }
    }
  }
