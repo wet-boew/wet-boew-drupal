@@ -21,6 +21,7 @@ projects[wysiwyg_filter][subdir] = contrib
 libraries[tinymce][download][type] = get
 libraries[tinymce][download][url] = https://github.com/downloads/tinymce/tinymce/tinymce_3.5.2.zip
 libraries[tinymce][patch][1561882] = http://drupal.org/files/1561882-cirkuit-theme-tinymce-3.5.2.patch
+libraries[tinymce][patch][] = https://raw.github.com/gist/3613982/71c734b952f98354f7a8bd5e2cb77a8e1fbc17d6/wysiwyg_fr
 
 libraries[markitup][download][type] = get
 libraries[markitup][download][url] = https://github.com/markitup/1.x/tarball/master
