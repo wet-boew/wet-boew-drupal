@@ -121,10 +121,17 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
     // Add a widget setting
     $form['widget_settings']['#type'] = 'fieldset';
     $form['widget_settings']['#title'] = t('General Settings');
-    $form['title']['#attributes']['placeholder'] = $form['title']['#title'];
-    unset($form['title']['#title']);
-    $form['widget_settings']['title'] = $form['title'];
-    unset($form['title']);
+    if (isset($form['title'])) {
+      $form['title']['#attributes']['placeholder'] = $form['title']['#title'];
+      unset($form['title']['#title']);
+      $form['widget_settings']['title'] = $form['title'];
+      unset($form['title']);
+    }
+
+    if (isset($form['title_field'])) {
+      $form['widget_settings']['title'] = $form['title_field'];
+      unset($form['title_field']);
+   }
 
     // Move the link field into the general settings tab.
     $form['widget_settings']['link'] = $form['link'];
