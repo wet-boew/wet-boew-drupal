@@ -170,11 +170,6 @@ function wetkit_admin_form_alter(&$form, &$form_state, $form_id) {
     $form['menu']['link']['description']['#access'] = FALSE; 
     $form['#validate'][] = 'wetkit_admin_menu_validate';
   }
-
-  // Add our custom closing operation for the modal
-  if ((strpos($form['#action'], 'admin/wetkit_apps/configure') || strpos($form['#action'], 'admin/wetkit_theme/configure')) && TRUE) {
-    $form['#submit'][] = 'wetkit_admin_modal_close_submit';
-  }
 }
 
 /**
@@ -214,42 +209,31 @@ function wetkit_admin_menu_validate($form, &$form_state) {
 }
 
 /**
- * Submit function for closing the custom modal
- */
-function wetkit_admin_modal_close_submit($form, &$form_state) {
-  if (!empty($form_state['input']['js'])) {
-    ctools_include('ajax');
-    ctools_include('modal');
-    $commands = array();
-    $commands[] = ctools_ajax_command_reload();
-    print ajax_render($commands);
-    exit;
-  }
-}
-
-/**
  * Implementation of hook_menu
  */
 function wetkit_admin_menu() {
-  $items['admin/wetkit_apps/configure/%ctools_js/%/%'] = array(
-    'type' => MENU_CALLBACK,
-    'page callback' =>  'wetkit_admin_apps_app_config_page',
-    'page arguments' => array(3, 4, 5),
-    'access arguments' => array('administer apps'),
-  );
-  $items['admin/wetkit_theme/configure/%ctools_js/%/%'] = array(
-    'type' => MENU_CALLBACK,
-    'page callback' =>  'wetkit_admin_theme_config_page',
-    'page arguments' => array(3, 4),
+
+  // Implementation of admin/apperance/settings
+  /*
+  $items['admin/site/admin/appearance/settings/bartik'] = array(
+    'title' => 'Settings',
+    'description' => 'Configure default and theme specific settings.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('system_theme_settings'),
     'access arguments' => array('administer themes'),
-  );
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+    'type' => MENU_CALLBACK,
+    'modal' => TRUE,
+  ); */
+
+  // Panelizer "revert" page callback
   $items['admin/site/panelizer-delete/%/%'] = array(
     'type' => MENU_CALLBACK,
     'page callback' => 'drupal_get_form',
     'page arguments' => array('wetkit_admin_panelizer_delete_form', 3, 4),
     'access arguments' => array('administer panelizer'),
   );
-
   return $items;
 }
 
@@ -257,45 +241,19 @@ function wetkit_admin_menu() {
  * Implementation of hook_menu_alter()
  */
 function wetkit_admin_menu_alter(&$items) {
+
   // Set weight of dashboard to be good
   $items['admin/site']['weight'] = -100;
-}
 
-/**
- * Menu callback to generate the apps_app_config_page in the ctools modal
- */
-function wetkit_admin_apps_app_config_page($js = FALSE, $server_name, $app_name) {
-  ctools_include('apps.pages', 'apps', '');
-  $title = 'Configure ' . $app_name;
-  $output = drupal_render(apps_app_config_page($server_name, $app_name));
-  if ($js) {
-    ctools_include('ajax');
-    ctools_include('modal');
-    ctools_modal_render($title, $output);
-  } 
-  else {
-    drupal_set_title($title);
-    return $output;
+  // Set configuration elements of Apps to use modals
+  /*
+  apps_include('manifest');
+  $APPSERVER_BASEPATH = APPSERVER_BASEPATH;
+  foreach (apps_servers() as $server) {
+    $items["$APPSERVER_BASEPATH/{$server['name']}/app/%"]['modal'] = TRUE;
+    $items["$APPSERVER_BASEPATH/{$server['name']}/app/%details"]['modal'] = TRUE;
   }
-}
-
-/** 
- * Menu callback to geneate the theme configuration page in the ctools modal
- */
-function wetkit_admin_theme_config_page($js = FALSE, $theme_key) {
-  $theme_data = list_themes();
-  $title = 'Configure ' . $theme_data[$theme_key]->info['name'];
-  ctools_include('system.admin', 'system', '');
-  $output = drupal_get_form('system_theme_settings', $theme_key);
-  if (empty($form_state['executed']) && $js) {
-    ctools_include('ajax');
-    ctools_include('modal');
-    ctools_modal_render($title, $output);
-  }
-  else {
-    drupal_set_title($title);
-    return $output;
-  }
+  */
 }
 
 /**

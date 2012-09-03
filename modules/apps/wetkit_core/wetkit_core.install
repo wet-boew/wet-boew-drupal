@@ -24,6 +24,7 @@ function wetkit_core_requirements($phase) {
   $requirements['wetkit_php_memory_limit'] = array(
     'title' => $t('WetKit PHP memory limit'),
     'value' => $memory_limit == -1 ? t('-1 (Unlimited)') : $memory_limit,
+    'weight' => 0,
   );
 
   if ($memory_limit && $memory_limit != -1 && parse_size($memory_limit) < parse_size($wetkit_memory_limit)) {

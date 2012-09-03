@@ -10,6 +10,7 @@ dependencies[] = admin_menu_toolbar
 dependencies[] = apps
 dependencies[] = backports
 dependencies[] = ctools
+dependencies[] = ctools_automodal
 dependencies[] = date_popup_authored
 dependencies[] = features
 dependencies[] = module_filter
