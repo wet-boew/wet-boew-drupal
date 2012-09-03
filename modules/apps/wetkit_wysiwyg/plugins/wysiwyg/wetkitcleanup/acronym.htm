@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{#acronym_dlg.process_acronyms_custom}</title>
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="../../utils/form_utils.js"></script>
+	<script type="text/javascript" src="js/acronym.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/searchreplace.css" />
+</head>
+<body style="display:none;">
+<form onsubmit="acronymDialog.expandTerm();return false;" action="#">
+	<div class="panel_wrapper">
+		<table border="0" cellspacing="0" cellpadding="2">
+			<tr>
+				<td><label for="term">{#acronym_dlg.term}</label></td>
+				<td><input type="text" id="term" name="term" style="width: 200px" /></td>
+			</tr>
+			<tr>
+				<td><label for="expanded">{#acronym_dlg.expanded}</label></td>
+				<td><input type="text" id="expanded" name="expanded" style="width: 200px" /></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<table border="0" cellspacing="0" cellpadding="0" class="direction">
+						<tr>
+							<td><label>{#acronym_dlg.is_abbr}</label></td>
+							<td><input id="abbr_yes" name="abbr" class="radio" type="radio" /></td>
+							<td><label for="abbr_yes">{#acronym_dlg.abbr_yes}</label></td>
+							<td><input id="abbr_no" name="abbr" class="radio" type="radio" checked="checked" /></td>
+							<td><label for="abbr_no">{#acronym_dlg.abbr_no}</label></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="mceActionPanel">
+		<input type="button" class="button" id="replaceAllBtn" name="replaceAllBtn" value="{#acronym_dlg.expand_all}" onclick="acronymDialog.expandTerm();" />
+		<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+	</div>
+</form>
+</body>
+</html>
