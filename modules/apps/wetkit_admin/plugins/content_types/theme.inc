@@ -22,8 +22,6 @@ function wetkit_admin_theme_content_type_render($subtype, $conf, $panel_args, $c
   // Kick us off
   $pane = new stdClass();
   $pane->title = t('Theme');
-  ctools_include('modal');
-  ctools_modal_add_js();
 
   // Get the current theme and define links
   global $theme_key;
@@ -31,9 +29,7 @@ function wetkit_admin_theme_content_type_render($subtype, $conf, $panel_args, $c
   $theme_links = array();
   $theme_links[] = array(
     'title' => t('Configure'),
-    'href' => 'admin/wetkit_theme/configure/nojs/' . $theme_key . '/configure',
-    'attributes' => array('class' => 'ctools-use-modal'),
-    'query' => array(),
+    'href' => 'admin/appearance/settings/'. $theme_key,
   );
   $theme_links[] = array(
     'title' => t('Change theme'),

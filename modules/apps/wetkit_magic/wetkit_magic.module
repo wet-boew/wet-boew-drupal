@@ -256,6 +256,12 @@ function wetkit_magic_form_fieldable_panels_panes_fieldable_panels_pane_content_
 
   if (variable_get('wetkit_magic_live_preview', 1)) {
     wetkit_magic_autosubmit_configure($form);
+
+    // Special case exclusions for tablefield specific elements. 
+    if ($form_state['entity']->bundle == 'table') {
+      $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#attributes']['class'] = array('ctools-auto-submit-exclude');
+      $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_rows']['#attributes']['class'] = array('ctools-auto-submit-exclude');
+    }
   }
 
   // Add custom validation function
