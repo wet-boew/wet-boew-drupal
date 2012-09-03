@@ -10,17 +10,9 @@
       * the h1.title page element
       */
      if ($.trim($('.pane-node-title .pane-content').html()) == $.trim($('h1.title').html())) {
-       $('.pane-node-title .pane-content').html('').prepend($('h1.title'));
-     }
-
-     /**
-      * Submitted Hax for WetKit
-      *
-      * Replaces the markup of a node created pane with
-      * the submitted node value
-      */
-     if ($('.pane-node-created')) {
-       $('.pane-node-created .pane-content').html('').prepend($('.pane-node-content .submitted'));
+       $('.pane-node-title .pane-content').html('');
+       $('h1.title').hide().clone().prependTo('.pane-node-title .pane-content');
+       $('.pane-node-title h1.title').show();
      }
 
    }
@@ -69,11 +61,14 @@
         triggerDisable.call(e.target.form);
       });
 
+      // Special handling for link field widgets. This ensures content which is ahah'd in still properly autosubmits.
+      $('.field-widget-link-field input:text', context).addClass('wetkit-textfield-autosubmit').addClass('ctools-auto-submit-exclude');
+
+
       // Handle title fields.
       var timer;
       $('.wetkit-textfield-autosubmit', context).bind('keyup keydown blur', function (e) {
         var $element;
-
         $element = $('.widget-preview .pane-title', context);
 
         // Special handling for title elements.

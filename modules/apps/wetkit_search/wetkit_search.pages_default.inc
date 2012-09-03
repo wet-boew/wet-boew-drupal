@@ -78,8 +78,7 @@ function wetkit_search_default_page_manager_pages() {
       'logic' => 'and',
     ),
     'panels_breadcrumbs_state' => 1,
-    'panels_breadcrumbs_titles' => 'Search
-%keywords:html_safe',
+    'panels_breadcrumbs_titles' => 'Search',
     'panels_breadcrumbs_paths' => 'search/site',
     'panels_breadcrumbs_home' => 1,
   );
@@ -253,8 +252,7 @@ function wetkit_search_default_page_manager_pages() {
       'logic' => 'and',
     ),
     'panels_breadcrumbs_state' => 1,
-    'panels_breadcrumbs_titles' => 'Search
-%keywords:html_safe',
+    'panels_breadcrumbs_titles' => 'Search',
     'panels_breadcrumbs_paths' => 'search/site',
     'panels_breadcrumbs_home' => 1,
     'body_classes_to_remove' => '',
