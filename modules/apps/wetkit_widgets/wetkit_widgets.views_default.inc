@@ -268,6 +268,27 @@ function wetkit_widgets_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 0;
   $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
   $handler->display->display_options['allow']['fields_override'] = 'fields_override';
+  $translatables['wetkit_widgets_general_content'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Empty Text'),
+    t('There is no content to be shown. '),
+    t('author'),
+    t('Posted by'),
+    t('Post date'),
+    t('Title'),
+    t('Random'),
+    t('Content Type'),
+    t('List of Content'),
+    t('This is a customizable list of site content!'),
+    t('General'),
+    t('Piece of Content'),
+  );
   $export['wetkit_widgets_general_content'] = $view;
 
   return $export;

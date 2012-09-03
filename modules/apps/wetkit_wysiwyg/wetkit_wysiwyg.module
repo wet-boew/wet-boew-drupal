@@ -41,6 +41,20 @@ function wetkit_wysiwyg_wysiwyg_plugin($editor) {
           'url' => 'http://www.tinymce.com/wiki.php/Plugin:inlinepopups',
           'load' => TRUE,
         ),
+        'wetkitcleanup' => array(
+          'path' => drupal_get_path('module', 'wetkit_wysiwyg') . '/plugins/wysiwyg/wetkitcleanup',
+          'filename' => 'editor_plugin.js',
+          'buttons' => array(
+            'wetkitcleanup' => t('WetKit Cleanup Tools')
+          ),
+          'extended_valid_elements' => array(
+            'div[!class|!id|!style|rel],-span[!class|!lang],a[id|name|class|href|rel|title]'
+          ),
+          'extensions' => array(
+            'wetkitcleanup' => t('WetKit Cleanup Tools')
+          ),
+          'load' => TRUE,
+        ),
       );
   }
 }
@@ -93,6 +107,20 @@ function wetkit_wysiwyg_module_implements_alter(&$implementations, $hook) {
  */
 function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
 
+  // Change interface language for tinymce based on context
+  if (isset($settings['language'])) {
+    global $language;
+    if ($settings['language'] != $language->language) {
+      // Check existence of TinyMCE core language file.
+      if (file_exists($context['editor']['library path'] .'/langs/'. $language->language .'.js')) {
+        // Check existence of TinyMCE theme language file.
+        if (file_exists($context['editor']['library path'] .'/themes/'. $context['theme'] .'/langs/'. $language->language .'.js')) {
+          $settings['language'] = $language->language;
+        }
+      }
+    }
+  }
+
   switch ($context['editor']['name']) {
     case 'tinymce':
 
@@ -100,11 +128,11 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
       $settings['skin'] = 'cirkuit';
 
       // Define the spellchecking settings
-      $settings['spellchecker_languages'] = '+English=en';
+      $settings['spellchecker_languages'] = ($settings['language'] == 'fr') ? '+French=fr' : '+English=en';
 
       // Process a default order for the WYSIWYG
       $enabled_buttons = preg_split('/,/', $settings['theme_advanced_buttons1']);
-      $default_buttons = array('bold', 'italic', 'strikethrough', '|', 'bullist', 'numlist', 'blockquote', '|', 'justifyleft', 'justifycenter', 'justifyright', '|', 'link', 'unlink', 'break', '|', 'fullscreen', 'spellchecker', 'media', 'captionfilter', 'pdw_toggle', 'PAGEBREAK', 'formatselect', '|', 'underline', '|', 'justifyfull', '|', 'forecolor', '|', 'pastetext', 'pasteword', 'removeformat', '|', 'charmap', '|', 'indent', 'outdent', '|', 'undo', 'redo'); 
+      $default_buttons = array('bold', 'italic', 'strikethrough', '|', 'bullist', 'numlist', 'blockquote', '|', 'justifyleft', 'justifycenter', 'justifyright', '|', 'link', 'unlink', 'break', '|', 'fullscreen', 'spellchecker', 'media', 'captionfilter', 'pdw_toggle', 'PAGEBREAK', 'wetkitcleanup', '|', 'formatselect', '|', 'underline', '|', 'justifyfull', '|', 'forecolor', '|', 'pastetext', 'pasteword', 'removeformat', '|', 'charmap', '|', 'indent', 'outdent', '|', 'undo', 'redo'); 
       foreach ($default_buttons as $button) {
         if (in_array($button, $enabled_buttons)) {
           unset($enabled_buttons[array_search($button, $enabled_buttons)]);

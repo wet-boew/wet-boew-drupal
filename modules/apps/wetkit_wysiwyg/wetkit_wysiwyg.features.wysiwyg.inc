@@ -92,8 +92,8 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
         'spellchecker' => array(
           'spellchecker' => 1,
         ),
-        'captionfilter' => array(
-          'captionfilter' => 1,
+        'wetkitcleanup' => array(
+          'wetkitcleanup' => 1,
         ),
         'drupal' => array(
           'media' => 1,
