@@ -170,11 +170,3 @@ div.ctools-modal-content .panels-choose-layout .dependent-options {
   display: inline;
   padding-right: 5px;
 }
-
-/**
- * CSS Styles for the Landing Page Wizard
- */
-#ctools-stylizer-edit-style-form-choose .wizard-trail,
-#ctools-stylizer-edit-style-form-default .wizard-trail {
-  display: none;
-}
