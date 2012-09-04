@@ -35,15 +35,15 @@ msgstr ""
 
 #: wetkit_web_usability.admin.inc:25
 msgid "WetKit jQuery Progressive Enhancement"
-msgstr ""
+msgstr "Amélioration progressive de jQuery de BOEW"
 
 #: wetkit_web_usability.admin.inc:31
 msgid "Enable Web Experience Toolkit: jQuery v3.0 Development Mode"
-msgstr ""
+msgstr "Activer la trousse de la Boîte à outils de l'expérience Web :  jQuery v3.0  en mode développement"
 
 #: wetkit_web_usability.admin.inc:33
 msgid "Selecting this checkbox will enable the unminified development version of WET-BOEW JS files"
-msgstr ""
+msgstr "En cochant cette case, vous activez la version développement non réduite des fichiers WET-BOEW JS"
 
 #: wetkit_web_usability.features.menu_custom.inc:55
 msgid "Footer Section for Web Experience Toolkit"
@@ -55,7 +55,7 @@ msgstr "Section En-tête de la Boîte à outils de l'expérience Web"
 
 #: wetkit_web_usability.features.menu_custom.inc:57
 msgid "Mid Footer Section for Web Experience Toolkit"
-msgstr ""
+msgstr "Section Pied de page supérieur de la Boîte à outils de l'expérience Web"
 
 #: wetkit_web_usability.features.menu_custom.inc:58
 msgid "Terms Section for Web Experience Toolkit"
@@ -63,9 +63,7 @@ msgstr "Section Termes de la Boîte à outils de l'expérience Web"
 
 #: wetkit_web_usability.features.menu_custom.inc:59
 msgid "The <em>Main</em> megamenu for Web Experience Toolkit"
-msgstr ""
-"Mégamenu <em>Menu principal</em> de la Boîte à outils de "
-"l'expérience Web"
+msgstr "Mégamenu <em>Menu principal</em> de la Boîte à outils de l'expérience Web"
 
 #: wetkit_web_usability.features.menu_custom.inc:60
 msgid "WET: Footer"
@@ -81,7 +79,7 @@ msgstr "BOEW: Mégamenu"
 
 #: wetkit_web_usability.features.menu_custom.inc:63
 msgid "WET: Mid Footer"
-msgstr ""
+msgstr "BOEW : pied de page supérieur"
 
 #: wetkit_web_usability.features.menu_custom.inc:64
 msgid "WET: Terms"
@@ -121,7 +119,7 @@ msgstr "Descendant"
 
 #: wetkit_web_usability.views_default.inc:141
 msgid "No Content"
-msgstr ""
+msgstr "Pas de contenu"
 
 #: wetkit_web_usability.views_default.inc:142
 msgid "No content has yet been created for this language."
@@ -137,81 +135,79 @@ msgstr "Bloc"
 
 #: wetkit_web_usability.module:57
 msgid "Please proceed to the <a href=\"@settings\">WetKit Web Usability Page</a> to configure additional settings."
-msgstr ""
+msgstr "Veuillez aller à la page <a href=\"@settings\"> utilisation de la Boîte à outils de l'expérience Web</a> pour configurer d’autres paramètres."
 
 #: wetkit_web_usability.module:58
 msgid "Please read the online <a href=\"@documentation\">Documentation</a>"
-msgstr ""
+msgstr "Veuillez lire la documentation en ligne <a href=\"@documentation\">Documentation</a>"
 
 #: wetkit_web_usability.module:145
 msgid "WetKit Web Usability"
-msgstr ""
+msgstr "Utilisation de BOEW"
 
 #: wetkit_web_usability.module:146
 msgid "Manage specific features related to the Web Experience Toolkit."
-msgstr ""
+msgstr "Gérer les fonctions liées à la Boîte à outils de l'expérience Web."
 
 #: wetkit_web_usability.module:155
 msgid "WetKit Web Usability Settings"
-msgstr ""
+msgstr "Paramètres d’utilisation de la BOEW"
 
 #: wetkit_web_usability.module:156
 msgid "Change how certain settings behave from the Web Experience Toolkit."
-msgstr ""
+msgstr "Changer le comportement de certains paramètres de la Boîte à outils de l'expérience Web."
 
 #: wetkit_web_usability.info:0
 msgid "WetKit Web Usability Setup"
-msgstr ""
+msgstr "Configuration d’utilisation de la BOEW"
 
 #: wetkit_web_usability.info:0
 msgid "Core Feature: Installs settings for default menus, blocks, views, and content"
-msgstr ""
-"Fonction principale: Installer les paramètres des menus, des blocs, "
-"des vues et du contenu par défaut"
+msgstr "Fonction principale: Installer les paramètres des menus, des blocs, des vues et du contenu par défaut"
 
 #: wetkit_web_usability.info:0 wetkit_box/wetkit_box.info:0 wetkit_metatag/wetkit_metatag.info:0 wetkit_security/wetkit_security.info:0 wetkit_slider/wetkit_slider.info:0
 msgid "WetKit"
-msgstr ""
+msgstr "BOEW"
 
 #: plugins/styles/wetkitnav/wetkitnav.inc:10
 msgid "WetKit Nav"
-msgstr ""
+msgstr "Navigation BOEW"
 
 #: plugins/styles/wetkitnav/wetkitnav.inc:11
 msgid "Display the pane or region with no markup, not even a title."
-msgstr ""
+msgstr "Afficher le panneau ou la région sans mention, même pas un titre."
 
 #: plugins/styles/wetkitnav/wetkitnav.inc:71 wetkit_slider/plugins/styles/slider/slider.inc:46
 msgid "Headings"
-msgstr ""
+msgstr "En-têtes"
 
 #: plugins/styles/wetkitnav/wetkitnav.inc:73 wetkit_slider/plugins/styles/slider/slider.inc:48
 msgid "h1"
-msgstr ""
+msgstr "h1"
 
 #: plugins/styles/wetkitnav/wetkitnav.inc:74 wetkit_slider/plugins/styles/slider/slider.inc:49
 msgid "h2"
-msgstr ""
+msgstr "h2"
 
 #: plugins/styles/wetkitnav/wetkitnav.inc:75 wetkit_slider/plugins/styles/slider/slider.inc:50
 msgid "h3"
-msgstr ""
+msgstr "h3"
 
 #: plugins/styles/wetkitnav/wetkitnav.inc:76 wetkit_slider/plugins/styles/slider/slider.inc:51
 msgid "h4"
-msgstr ""
+msgstr "h4"
 
 #: plugins/styles/wetkitnav/wetkitnav.inc:77 wetkit_slider/plugins/styles/slider/slider.inc:52
 msgid "h5"
-msgstr ""
+msgstr "h5"
 
 #: plugins/styles/wetkitnav/wetkitnav.inc:78 wetkit_slider/plugins/styles/slider/slider.inc:53
 msgid "h6"
-msgstr ""
+msgstr "h6"
 
 #: plugins/styles/wetkitnav/wetkitnav.inc:85 wetkit_slider/plugins/styles/slider/slider.inc:60
 msgid "Class"
-msgstr ""
+msgstr "Catégorie"
 
 #: plugins/styles/wetkitnav/wetkitnav.inc:87;97 wetkit_slider/plugins/styles/slider/slider.inc:62;72
 msgid "Empty"
@@ -219,15 +215,15 @@ msgstr "Vide"
 
 #: plugins/styles/wetkitnav/wetkitnav.inc:88 wetkit_slider/plugins/styles/slider/slider.inc:63
 msgid "span-2"
-msgstr ""
+msgstr "span-2"
 
 #: plugins/styles/wetkitnav/wetkitnav.inc:95 wetkit_slider/plugins/styles/slider/slider.inc:70
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: plugins/styles/wetkitnav/wetkitnav.inc:98 wetkit_slider/plugins/styles/slider/slider.inc:73
 msgid "gcwu-connect"
-msgstr ""
+msgstr "gcwu-connect"
 
 #: wetkit_box/wetkit_box.info:0
 msgid "WetKit Boxes"
@@ -263,9 +259,7 @@ msgstr "Métadonnées de la BOEW – Titre"
 
 #: wetkit_metatag/wetkit_metatag.metatag.inc:67
 msgid "The main title of your object as it should appear within the display."
-msgstr ""
-"Titre principal de votre objet tel qu'il doit apparaître dans "
-"l'affichage."
+msgstr "Titre principal de votre objet tel qu'il doit apparaître dans l'affichage."
 
 #: wetkit_metatag/wetkit_metatag.metatag.inc:76
 msgid "The title of your object as it should appear within the display."
@@ -277,9 +271,7 @@ msgstr "Métadonnées de la BOEW – Nom de site"
 
 #: wetkit_metatag/wetkit_metatag.metatag.inc:85
 msgid "A human-readable name for your site, e.g., <em>Web Experience Toolkit</em>."
-msgstr ""
-"Nom en clair du site, p. ex. <em>Boîte à outils de l'expérience "
-"Web</em>."
+msgstr "Nom en clair du site, p. ex. <em>Boîte à outils de l'expérience Web</em>."
 
 #: wetkit_metatag/wetkit_metatag.metatag.inc:94
 msgid "WetKit Metadata URL"
@@ -287,7 +279,7 @@ msgstr "Métadonnées de la BOEW – URL"
 
 #: wetkit_metatag/wetkit_metatag.metatag.inc:95
 msgid "The canonical URL of your object that will be used as its permanent ID in the website."
-msgstr "URL canonique de l'objet: identificateur permanent dans le site Web."
+msgstr "URL canonique de l'objet identificateur permanent dans le site Web."
 
 #: wetkit_metatag/wetkit_metatag.metatag.inc:103
 msgid "WetKit Metadata Language"
@@ -415,11 +407,11 @@ msgstr ""
 
 #: wetkit_security/wetkit_security.info:0
 msgid "WetKit Security"
-msgstr ""
+msgstr "Sécurité BOEW"
 
 #: wetkit_security/wetkit_security.info:0
 msgid "WetKit Security Feature(s)"
-msgstr ""
+msgstr "Fonctions de sécurité BOEW"
 
 #: wetkit_slider/wetkit_slider.features.field.inc:247
 msgid "Slider Description"
@@ -457,9 +449,9 @@ msgstr ""
 
 #: wetkit_slider/plugins/styles/slider/slider.inc:10
 msgid "WetKit Slider Style"
-msgstr ""
+msgstr "Style de case de défilement de la BOEW"
 
 #: wetkit_slider/plugins/styles/slider/slider.inc:11
 msgid "Change the Slider Style using WetKit's Tabbed Interface"
-msgstr ""
+msgstr "Changement du style de la case de défilement au moyen de l’interface à onglets de la BOEW"
 

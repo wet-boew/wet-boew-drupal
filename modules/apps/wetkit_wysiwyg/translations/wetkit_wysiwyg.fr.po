@@ -21,49 +21,49 @@ msgstr ""
 
 #: wetkit_wysiwyg.module:26
 msgid "Kitchen Sink"
-msgstr ""
+msgstr "Évier de cuisine"
 
 #: wetkit_wysiwyg.module:34
 msgid "Spell Check"
-msgstr ""
+msgstr "Correcteur orthographique"
 
 #: wetkit_wysiwyg.module:144
 msgid "Heading 1"
-msgstr ""
+msgstr "En-tête 1"
 
 #: wetkit_wysiwyg.module:152
 msgid "Heading 2"
-msgstr ""
+msgstr "En-tête 2"
 
 #: wetkit_wysiwyg.module:160
 msgid "Heading 3"
-msgstr ""
+msgstr "En-tête 3"
 
 #: wetkit_wysiwyg.module:168
 msgid "Heading 4"
-msgstr ""
+msgstr "En-tête 4"
 
 #: wetkit_wysiwyg.module:176
 msgid "Paragraph"
-msgstr ""
+msgstr "Paragraphe"
 
 #: wetkit_wysiwyg.module:190
 msgid "Unordered List"
-msgstr ""
+msgstr "Liste non ordonnée"
 
 #: wetkit_wysiwyg.module:196
 msgid "Ordered List"
-msgstr ""
+msgstr "Liste ordonnée"
 
 #: wetkit_wysiwyg.info:0
 msgid "WetKit WYSIWYG"
-msgstr ""
+msgstr "WYSIWYG BOEW"
 
 #: wetkit_wysiwyg.info:0
 msgid "Integrates a WYSIWYG into Drupal."
-msgstr ""
+msgstr "Intégrer un WYSIWYG  à Drupal."
 
 #: wetkit_wysiwyg.info:0
 msgid "WetKit"
-msgstr ""
+msgstr "BOEW"
 

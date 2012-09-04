@@ -21,29 +21,29 @@ msgstr ""
 
 #: wetkit_images.module:22
 msgid "Full Size"
-msgstr ""
+msgstr "Pleine grandeur"
 
 #: wetkit_images.module:23
 msgid "Half Size"
-msgstr ""
+msgstr "Deux fois plus petit"
 
 #: wetkit_images.module:24
 msgid "Quarter Size"
-msgstr ""
+msgstr "Quatre fois plus petit"
 
 #: wetkit_images.module:25
 msgid "Thumbnail"
-msgstr ""
+msgstr "Vignette"
 
 #: wetkit_images.info:0
 msgid "WetKit Images"
-msgstr ""
+msgstr "Images BOEW"
 
 #: wetkit_images.info:0
 msgid "Provides scaling and cropping to images."
-msgstr ""
+msgstr "Effectue la mise à l’échelle et le recadrage des images."
 
 #: wetkit_images.info:0
 msgid "WetKit"
-msgstr ""
+msgstr "BOEW"
 

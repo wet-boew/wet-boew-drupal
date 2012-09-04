@@ -29,5 +29,5 @@ msgstr ""
 
 #: wetkit_language.info:0
 msgid "WetKit"
-msgstr ""
+msgstr "BOEW"
 
