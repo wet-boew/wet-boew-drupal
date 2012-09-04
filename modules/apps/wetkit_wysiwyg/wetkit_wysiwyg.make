@@ -18,11 +18,15 @@ projects[wysiwyg_filter][subdir] = contrib
 
 ; Include our WYSIWYG editors
 
+;libraries[tinymce][download][type] = git
+;libraries[tinymce][download][revision] = 30e5055
+;libraries[tinymce][download][url] = https://github.com/tinymce/tinymce.git
+;libraries[tinymce][patch][1561882] = http://drupal.org/files/1561882-cirkuit-theme-tinymce-3.5.2.patch
+;libraries[tinymce][patch][] = https://raw.github.com/gist/3613982/71c734b952f98354f7a8bd5e2cb77a8e1fbc17d6/wysiwyg_fr
+
 libraries[tinymce][download][type] = git
-libraries[tinymce][download][revision] = 30e5055
-libraries[tinymce][download][url] = https://github.com/tinymce/tinymce.git
-libraries[tinymce][patch][1561882] = http://drupal.org/files/1561882-cirkuit-theme-tinymce-3.5.2.patch
-libraries[tinymce][patch][] = https://raw.github.com/gist/3613982/71c734b952f98354f7a8bd5e2cb77a8e1fbc17d6/wysiwyg_fr
+libraries[tinymce][download][revision] = 006149b
+libraries[tinymce][download][url] = https://github.com/sylus/tinymce-wetkit.git
 
 libraries[markitup][download][type] = get
 libraries[markitup][download][url] = https://github.com/markitup/1.x/tarball/master
