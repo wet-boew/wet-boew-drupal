@@ -16,10 +16,10 @@ function wetkit_metatag_config() {
     '#title' => t('Dublin Core Prefix'),
     '#description' => t('Choose a prefix to be rendered on page display.'),
     '#options' => array(
-      'DCTERMS' => 'dcterms',
-      'DC' => 'dc',
+      'dcterms' => 'dcterms',
+      'dc' => 'dc',
     ),
-    '#default_value' => _wetkit_dc_prefix(),
+    '#default_value' => _wetkit_metatag_prefix(),
   );
   $form['#submit'][] = 'wetkit_metatag_submit';
 
@@ -30,6 +30,5 @@ function wetkit_metatag_config() {
  * Submit callback for Dublin Core configuration.
  */
 function wetkit_metatag_submit() {
-  // Give feedback to the user to reset the cache to take effect.
-  drupal_set_message(t('The cache needs to be cleared for this setting to take effect.'));
+  cache_clear_all('*', 'cache_metatag', TRUE);
 }
