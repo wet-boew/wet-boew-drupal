@@ -48,5 +48,19 @@ function wetkit_web_usability_user_default_permissions() {
     'module' => 'search',
   );
 
+  // Exported permission: use text format wetkit_html_text.
+  $permissions['use text format wetkit_html_text'] = array(
+    'name' => 'use text format wetkit_html_text',
+    'roles' => array(),
+    'module' => 'filter',
+  );
+
+  // Exported permission: use text format wetkit_wysiwyg_text.
+  $permissions['use text format wetkit_wysiwyg_text'] = array(
+    'name' => 'use text format wetkit_wysiwyg_text',
+    'roles' => array(),
+    'module' => 'filter',
+  );
+
   return $permissions;
 }
