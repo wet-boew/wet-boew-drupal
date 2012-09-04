@@ -25,22 +25,27 @@ function wetkit_metatag_menu() {
 }
 
 /**
- * Implements hook_page_build().
+ * Implements hook_page_build.
  */
 function wetkit_metatag_page_build(&$page) {
+  $prefix = _wetkit_metatag_prefix();
   // TODO - When the HTML5 is standardize we can then update and display
-  /*
-  $attributes = array(
-    'rel' => 'schema.DC',
-    'href' => 'http://purl.org/dc/elements/1.1/',
-  );
-  drupal_add_html_head_link($attributes);
-  $attributes = array(
-    'rel' => 'schema.DCTERMS',
-    'href' => 'http://purl.org/dc/terms/',
-  );
-  drupal_add_html_head_link($attributes);
-  */
+  switch ($prefix) {
+    case 'dc':
+      $attributes = array(
+        'rel' => 'schema:dc',
+        'href' => 'http://purl.org/dc/elements/1.1/',
+      );
+      break;
+    case 'dcterms':
+      $attributes = array(
+        'rel' => 'schema:dcterms',
+        'href' => 'http://purl.org/dc/terms/',
+      );
+      break;
+  }
+
+  //drupal_add_html_head_link($attributes);
 }
 
 /**
@@ -48,20 +53,20 @@ function wetkit_metatag_page_build(&$page) {
  */
 function wetkit_metatag_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'wetkit_page_node_form' || $form_id == 'wetkit_page_other_node_form') {
-    $form['metatags_advanced'] = $form['metatags']['advanced'];
-    $form['metatags_advanced']['#title'] = 'Metatags Advanced';
-    $form['metatags_advanced']['#group'] = 'additional_settings';
-    $form['metatags_advanced']['##tree'] = TRUE;
-    $form['metatags_advanced']['#weight'] = 11;
-    $form['wetkit_metadata'] = $form['metatags']['wetkit-metadata'];
-    $form['wetkit_metadata']['#title'] = 'Metatags WetKit';
-    $form['wetkit_metadata']['#group'] = 'additional_settings';
-    $form['wetkit_metadata']['##tree'] = TRUE;
-    $form['wetkit_metadata']['#weight'] = 12;
+    //$form['metatags_advanced']['new'] = $form['metatags']['advanced'];
+    //$form['metatags_advanced']['#title'] = 'Metatags Advanced';
+    //$form['metatags_advanced']['#group'] = 'additional_settings';
+    //$form['metatags_advanced']['##tree'] = TRUE;
+    //$form['metatags_advanced']['#weight'] = 11;
+    //$form['wetkit_metadata'] = $form['metatags']['wetkit-metadata'];
+    //$form['wetkit_metadata']['#title'] = 'Metatags WetKit';
+    //$form['wetkit_metadata']['#group'] = 'additional_settings';
+    //$form['wetkit_metadata']['##tree'] = TRUE;
+    //$form['wetkit_metadata']['#weight'] = 12;
   }
-  unset($form['metatags']['advanced']);
-  unset($form['metatags']['tokens']);
-  unset($form['metatags']['wetkit-metadata']);
+  //unset($form['metatags']['advanced']);
+  //unset($form['metatags']['tokens']);
+  //unset($form['metatags']['wetkit-metadata']);
 }
 
 /**
@@ -101,7 +106,7 @@ function theme_wetkit_metatag($variables) {
 /**
  * Get the Dublin Core prefix.
  */
-function _wetkit_dc_prefix() {
+function _wetkit_metatag_prefix() {
   return variable_get('wetkit_metatag_prefix', 'dcterms');
 }
 
@@ -122,4 +127,4 @@ dc:language
 dc:relation
 dc:coverage
 dc:rights
- */
+*/
