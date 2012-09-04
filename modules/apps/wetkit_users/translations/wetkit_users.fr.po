@@ -30,29 +30,29 @@ msgstr "Image"
 
 #: wetkit_users.module:21
 msgid "Login Destination"
-msgstr ""
+msgstr "Destination de la connexion"
 
 #: wetkit_users.module:25
 msgid "Where do you want to redirect users when the login using the standard login link? Use <front> for the Drupal frontpage."
-msgstr ""
+msgstr "Où voulez-vous diriger les utilisateurs lorsqu’ils ouvrent une session au moyen du lien de connexion standard? Utilisez <front> pour la page d’accueil Drupal."
 
 #: wetkit_users.module:56
 msgid "If you don't have an username, !create."
-msgstr ""
+msgstr "Si vous n’avez pas de code utilisateur, !create."
 
 #: wetkit_users.module:61
 msgid "If you forgot your password, !request."
-msgstr ""
+msgstr "Si vous avez oublié votre mot de passe !request."
 
 #: wetkit_users.info:0
 msgid "WetKit Users"
-msgstr ""
+msgstr "Utilisateurs de BOEW"
 
 #: wetkit_users.info:0
 msgid "Maintains user accounts and user workflows."
-msgstr ""
+msgstr "Maintenir les comptes d’utilisateur et les flux de travaux."
 
 #: wetkit_users.info:0
 msgid "WetKit"
-msgstr ""
+msgstr "BOEW"
 

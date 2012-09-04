@@ -26,7 +26,7 @@ msgstr "Image"
 
 #: wetkit_core.features.field.inc:90
 msgid "This is the primary image to be associated with the taxonomy term"
-msgstr ""
+msgstr "Ceci est l’image principale qui sera associés au terme de taxinomie"
 
 #: wetkit_core.module:119
 msgid "Time"
@@ -38,13 +38,13 @@ msgstr "Jour"
 
 #: wetkit_core.info:0
 msgid "WetKit Core"
-msgstr "Essentielle WetKit"
+msgstr "Coeur BOEW"
 
 #: wetkit_core.info:0
 msgid "The magical core of the WetKit framework."
-msgstr ""
+msgstr "Le nœud magique du cadre de la BOEW."
 
 #: wetkit_core.info:0
 msgid "WetKit"
-msgstr ""
+msgstr "BOEW"
 

@@ -19,13 +19,13 @@ msgstr ""
 
 #: wetkit_search.info:0
 msgid "WetKit Search"
-msgstr ""
+msgstr "Recherche WetKit"
 
 #: wetkit_search.info:0
 msgid "Indexes, configures and searches site content."
-msgstr ""
+msgstr "Indexe, configure le contenu du site et permet d’effectuer une recherche."
 
 #: wetkit_search.info:0
 msgid "WetKit"
-msgstr ""
+msgstr "BOEW"
 

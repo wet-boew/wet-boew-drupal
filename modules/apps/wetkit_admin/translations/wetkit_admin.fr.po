@@ -29,19 +29,19 @@ msgstr ""
 
 #: wetkit_admin.module:24
 msgid "Machine Name"
-msgstr ""
+msgstr "Nom de la machine"
 
 #: wetkit_admin.module:32
 msgid "Do you want to provide an option to specify a machine name (provided by the Default Content module) on the content editing form?"
-msgstr ""
+msgstr "Voulez-vous fournir une option pour préciser le nom de la machine (fourni par module du contenu par défaut dans le formulaire de modification de contenu?"
 
 #: wetkit_admin.module:36
 msgid "Create revision"
-msgstr ""
+msgstr "Créer une révision"
 
 #: wetkit_admin.module:44
 msgid "Do you want to provide an option to create a new revision for content on the content editing form?"
-msgstr ""
+msgstr "Voulez-vous fournir une option pour créer une nouvelle révision du contenu dans le formulaire de modification de contenu?"
 
 #: wetkit_admin.module:87
 msgid "Permalink"
@@ -49,7 +49,7 @@ msgstr "Permalien"
 
 #: wetkit_admin.module:93
 msgid "magically generated"
-msgstr ""
+msgstr "généré comme par magie"
 
 #: wetkit_admin.module:143
 msgid "Author"
@@ -61,27 +61,27 @@ msgstr "Parent"
 
 #: wetkit_admin.module:210
 msgid "Menu link title is required."
-msgstr ""
+msgstr "Le titre du lien du menu est requis."
 
 #: wetkit_admin.module:359
 msgid "Are you sure you want to delete the overriden page template for %title?"
-msgstr ""
+msgstr "Êtes-vous certain de vouloir supprimer le modèle de page annulé pour le %title?"
 
 #: wetkit_admin.module:373
 msgid "The overridden page template for %title has been deleted."
-msgstr ""
+msgstr "Le modèle de page annulé pour le %title a été supprimé."
 
 #: wetkit_admin.info:0
 msgid "WetKit Admin"
-msgstr ""
+msgstr "Administration BOEW"
 
 #: wetkit_admin.info:0
 msgid "Administrative dashboard and related editing interfaces."
-msgstr ""
+msgstr "Tableau de bord administratif et interfaces de mise en forme connexes."
 
 #: wetkit_admin.info:0
 msgid "WetKit"
-msgstr ""
+msgstr "BOEW"
 
 #: plugins/content_types/content.inc:9;22
 msgid "Content"
@@ -89,19 +89,19 @@ msgstr "Contenu"
 
 #: plugins/content_types/content.inc:10
 msgid "This is a standard list of content that are available"
-msgstr ""
+msgstr "Voici la liste standard du contenu disponible"
 
 #: plugins/content_types/content.inc:12 plugins/content_types/menus.inc:12 plugins/content_types/pages.inc:12 plugins/content_types/taxonomy.inc:12 plugins/content_types/theme.inc:12 plugins/content_types/users.inc:12 plugins/content_types/wetkit_apps_apps.inc:12 plugins/content_types/wetkit_foundation_apps.inc:12
 msgid "Admin"
-msgstr ""
+msgstr "Administration"
 
 #: plugins/content_types/content.inc:34 plugins/content_types/menus.inc:35 plugins/content_types/pages.inc:114;126;139 plugins/content_types/taxonomy.inc:36 plugins/content_types/users.inc:40
 msgid "Add new"
-msgstr ""
+msgstr "Ajouter nouveau"
 
 #: plugins/content_types/content.inc:40
 msgid "See all"
-msgstr ""
+msgstr "Tout voir"
 
 #: plugins/content_types/content.inc:46 plugins/content_types/menus.inc:30 plugins/content_types/pages.inc:118;130;143 plugins/content_types/taxonomy.inc:31 plugins/content_types/theme.inc:33 plugins/content_types/users.inc:33 plugins/content_types/wetkit_apps_apps.inc:59 plugins/content_types/wetkit_foundation_apps.inc:59
 msgid "Configure"
@@ -119,13 +119,13 @@ msgstr "Menus"
 
 #: plugins/content_types/menus.inc:10
 msgid "This is a standard list of menus that are available"
-msgstr ""
+msgstr "Voici une liste standard des menus disponibles"
 
 #: plugins/content_types/menus.inc:45
 msgid "1 link"
 msgid_plural "@count links"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 lien"
+msgstr[1] "@count liens"
 
 #: plugins/content_types/pages.inc:9
 msgid "Pages"
@@ -133,7 +133,7 @@ msgstr "Pages"
 
 #: plugins/content_types/pages.inc:10
 msgid "This is a standard list of pages that are available"
-msgstr ""
+msgstr "Voici une liste standard des pages disponibles"
 
 #: plugins/content_types/pages.inc:93
 msgid "Revert"
@@ -145,83 +145,83 @@ msgstr "Modifier"
 
 #: plugins/content_types/pages.inc:150
 msgid "General Pages"
-msgstr ""
+msgstr "Pages générales"
 
 #: plugins/content_types/pages.inc:151
 msgid "No general pages have yet been created!"
-msgstr ""
+msgstr "Aucune page générale n’a été créée!"
 
 #: plugins/content_types/pages.inc:152
 msgid "Page Templates"
-msgstr ""
+msgstr "Modèles de page"
 
 #: plugins/content_types/pages.inc:153
 msgid "No page templates have yet been created!"
-msgstr ""
+msgstr "Aucun modèle de page n’a été créé!"
 
 #: plugins/content_types/pages.inc:154
 msgid "Overriden Page Templates"
-msgstr ""
+msgstr "Modèle de page annulé"
 
 #: plugins/content_types/pages.inc:155
 msgid "No page templates have yet been overridden!"
-msgstr ""
+msgstr "Aucun modèle de page n’a été annulé!"
 
 #: plugins/content_types/pages.inc:158
 msgid "Custom Layouts"
-msgstr ""
+msgstr "Dispositions personnalisées"
 
 #: plugins/content_types/pages.inc:159
 msgid "No custom layout options have yet been created!"
-msgstr ""
+msgstr "Aucune option de disposition personnalisée n’a été créée!"
 
 #: plugins/content_types/taxonomy.inc:9;22
 msgid "Taxonomy"
 msgstr "Taxonomie"
 
 #: plugins/content_types/taxonomy.inc:10
-msgid "This is a standard list of categories that are available"
-msgstr ""
+msgid "This is a standard list of categories that are available."
+msgstr "Voici une liste standard des catégories disponibles."
 
 #: plugins/content_types/taxonomy.inc:42
 msgid "1 term"
 msgid_plural "@count terms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 terme"
+msgstr[1] "@count termes"
 
 #: plugins/content_types/theme.inc:9;24
 msgid "Theme"
-msgstr ""
+msgstr "Thème"
 
 #: plugins/content_types/theme.inc:10
 msgid "This is the current theme that is installed."
-msgstr ""
+msgstr "Voila le thème courant installé."
 
 #: plugins/content_types/theme.inc:39
 msgid "Change theme"
-msgstr ""
+msgstr "Changer le thème"
 
 #: plugins/content_types/users.inc:9;22
 msgid "Users"
 msgstr "Utilisateurs"
 
 #: plugins/content_types/users.inc:10
-msgid "This is a standard list of users that are available"
-msgstr ""
+msgid "This is a standard list of users that are available."
+msgstr "Voici une liste standard des utilisateurs disponibles."
 
 #: plugins/content_types/users.inc:46
 msgid "1 user"
 msgid_plural "@count users"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 utilisateur"
+msgstr[1] "@count utilisateurs"
 
 #: plugins/content_types/wetkit_apps_apps.inc:9;22
 msgid "WetKit Apps"
-msgstr ""
+msgstr "Applications BOEW"
 
 #: plugins/content_types/wetkit_apps_apps.inc:10 plugins/content_types/wetkit_foundation_apps.inc:10
-msgid "This is a list of the foundational apps for WetKit"
-msgstr ""
+msgid "This is a list of the foundational apps for WetKit."
+msgstr "Voici une liste des applications de base pour la BOEW."
 
 #: plugins/content_types/wetkit_apps_apps.inc:65 plugins/content_types/wetkit_foundation_apps.inc:65
 msgid "Details"
@@ -229,5 +229,5 @@ msgstr "Détails"
 
 #: plugins/content_types/wetkit_foundation_apps.inc:9;22
 msgid "WetKit Foundation"
-msgstr ""
+msgstr "Fondement de la BOEW"
 
