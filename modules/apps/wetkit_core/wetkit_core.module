@@ -43,6 +43,17 @@ function wetkit_core_init() {
   }
 }
 
+ /**
+  * Implementation of hook_preprocess_html()
+  *
+  * We are telling the site that everything is a region-content. This is important since
+  * when we disable the block module it loses this classes which some things assume for generalized
+  * CSS considerations (i.e. Bartik's spacing of ul/ol).
+  */
+function wetkit_core_preprocess_html(&$variables) {
+  $variables['classes_array'][] = 'region-content';
+}
+
 /**
  * Implements hook_apps_servers_info()
  */

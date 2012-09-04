@@ -177,24 +177,15 @@ function wetkit_search_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-4';
     $pane->panel = 'sidebar';
-    $pane->type = 'block';
-    $pane->subtype = 'facetapi-Shb0Q1vWgCArrHrjHszTyhl2jaEhIjzW';
+    $pane->type = 'facet';
+    $pane->subtype = 'facet';
     $pane->shown = TRUE;
-    $pane->access = array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'context_exists',
-          'settings' => array(
-            'exists' => '1',
-          ),
-          'context' => 'argument_string_1',
-          'not' => FALSE,
-        ),
-      ),
-    );
+    $pane->access = array();
     $pane->configuration = array(
+      'context' => array(),
       'override_title' => 1,
       'override_title_text' => 'Filter by Type',
+      'delta' => '1Cpx6naJU4Y3YvKVc0vcLK7Yo0ahaN0l',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -206,27 +197,6 @@ function wetkit_search_default_page_manager_pages() {
     $pane->locks = array();
     $display->content['new-4'] = $pane;
     $display->panels['sidebar'][0] = 'new-4';
-    $pane = new stdClass();
-    $pane->pid = 'new-5';
-    $pane->panel = 'sidebar';
-    $pane->type = 'block';
-    $pane->subtype = 'facetapi-6NILbvqD1zpW1Fd6w9agY0q6ZLORxAcU';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => 'Filter by Date',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['sidebar'][1] = 'new-5';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -273,7 +243,7 @@ function wetkit_search_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-5';
     $pane->panel = 'contentmain';
     $pane->type = 'search_current';
     $pane->subtype = 'search_current';
@@ -295,10 +265,10 @@ function wetkit_search_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['contentmain'][0] = 'new-6';
+    $display->content['new-5'] = $pane;
+    $display->panels['contentmain'][0] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-6';
     $pane->panel = 'contentmain';
     $pane->type = 'search_box';
     $pane->subtype = 'search_box';
@@ -323,10 +293,10 @@ function wetkit_search_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['contentmain'][1] = 'new-7';
+    $display->content['new-6'] = $pane;
+    $display->panels['contentmain'][1] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-7';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'wetkit_database_search-search_database_results';
@@ -361,18 +331,20 @@ function wetkit_search_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['contentmain'][2] = 'new-8';
+    $display->content['new-7'] = $pane;
+    $display->panels['contentmain'][2] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-8';
     $pane->panel = 'sidebar';
-    $pane->type = 'block';
-    $pane->subtype = 'facetapi-1Cpx6naJU4Y3YvKVc0vcLK7Yo0ahaN0l';
+    $pane->type = 'facet';
+    $pane->subtype = 'facet';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'context' => array(),
       'override_title' => 1,
       'override_title_text' => 'Filter by Type',
+      'delta' => '1Cpx6naJU4Y3YvKVc0vcLK7Yo0ahaN0l',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -382,29 +354,8 @@ function wetkit_search_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['sidebar'][0] = 'new-9';
-    $pane = new stdClass();
-    $pane->pid = 'new-10';
-    $pane->panel = 'sidebar';
-    $pane->type = 'block';
-    $pane->subtype = 'facetapi-fA1pg0Ubd1zgx1mvzHkFUGaNoMb4Gs0s';
-    $pane->shown = FALSE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => 'Filter by Date',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['sidebar'][1] = 'new-10';
+    $display->content['new-8'] = $pane;
+    $display->panels['sidebar'][0] = 'new-8';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
