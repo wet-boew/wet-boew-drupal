@@ -8,7 +8,7 @@ core = 7.x
 ;projects[admin][version] = 2.0-beta3
 ;projects[admin][subdir] = contrib
 
-projects[admin_menu][version] = 3.0-dev
+projects[admin_menu][version] = 3.x-dev
 projects[admin_menu][subdir] = contrib
 projects[admin_menu][download][type] = git
 projects[admin_menu][download][revision] = ed6295c
