@@ -1,0 +1,199 @@
+<?php
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function ctools_automodal_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'menu_alter') {
+    // Try to ensure that ctools_automodal_menu_alter() gets invoked last.
+    $group = $implementations['ctools_automodal'];
+    unset($implementations['ctools_automodal']);
+    $implementations['ctools_automodal'] = $group;
+  }
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function ctools_automodal_menu_alter(&$items) {
+  $modal_paths = array();
+
+  foreach ($items as $path => $item) {
+    if (!empty($item['modal']) && strpos($path, '%ctools_js') === FALSE) {
+      if ($item['page callback'] == 'drupal_get_form') {
+        $items["$path/%ctools_js"] = $item;
+        $items["$path/%ctools_js"]['page callback'] = 'ctools_automodal_get_form';
+        $items["$path/%ctools_js"]['page arguments'][] = substr_count($path, '/') + 1;
+        $items["$path/%ctools_js"]['type'] = MENU_CALLBACK;
+      }
+      else {
+        $items["$path/%ctools_js"] = $item + array('page arguments' => array());
+        $items["$path/%ctools_js"]['page callback'] = 'ctools_automodal_get_page';
+        array_unshift($items["$path/%ctools_js"]['page arguments'], $item['page callback']);
+        $items["$path/%ctools_js"]['page arguments'][] = substr_count($path, '/') + 1;
+        $items["$path/%ctools_js"]['type'] = MENU_CALLBACK;
+      }
+      $modal_paths[] = preg_replace('/%[^\/]+/', '*', $path);
+    }
+  }
+
+  variable_set('ctools_automodal_paths', $modal_paths);
+}
+
+/**
+ * Check if an internal Drupal path should be converted to a modal link.
+ */
+function ctools_automodal_is_path_modal($path) {
+  static $modal_paths_regex;
+
+  if (!isset($modal_paths_regex)) {
+    $modal_paths = variable_get('ctools_automodal_paths', array());
+    foreach ($modal_paths as &$modal_path) {
+      $modal_path = preg_quote($modal_path, '/');
+      $modal_path = str_replace('\*', '.*', $modal_path);
+    }
+    $modal_paths_regex = '/^(' . implode('|', $modal_paths) . ')$/';
+  }
+
+  return (bool) preg_match($modal_paths_regex, $path);
+}
+
+/**
+ * Implements hook_preprocess_link().
+ */
+function ctools_automodal_preprocess_link(&$variables) {
+  static $ctools_modal_included = FALSE;
+
+  if (ctools_automodal_is_path_modal($variables['path'])) {
+    $item = menu_get_item($variables['path']);
+
+    // Only process the modal includes once per request.
+    if (!$ctools_modal_included) {
+      ctools_include('modal');
+      ctools_modal_add_js();
+      $ctools_modal_included = TRUE;
+    }
+
+    $variables['options']['attributes']['class'][] = 'ctools-use-modal';
+
+    if (strpos($variables['path'], 'nojs') === FALSE) {
+      $variables['path'] .= '/nojs';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_menu_local_action().
+ */
+function ctools_automodal_preprocess_menu_local_action(&$variables) {
+  // Prepare the link array in the way that the hook_preprocess_link() expects.
+  $link = array(
+    'path' => &$variables['element']['#link']['href'],
+    'options' => &$variables['element']['#link']['localized_options'],
+    'text' => &$variables['element']['#link']['title'],
+  );
+  ctools_automodal_preprocess_link($link);
+}
+
+/**
+ * Dirty, dirty function to fix the 'current path' global on modal pages.
+ */
+function ctools_automodal_fix_get_q() {
+  $path = current_path();
+  // Pop off the /js or /nojs suffix to the path.
+  $path = substr($path, 0, strrpos($path, '/'));
+  // @todo Shower multiple times after modifing global variables.
+  $_GET['q'] = $path;
+}
+
+/**
+ * Display a Drupal form using CTools modal or normal page display.
+ */
+function ctools_automodal_get_form() {
+  $args = func_get_args();
+  $form_id = array_shift($args);
+  $js = $ajax = array_pop($args);
+
+  ctools_automodal_fix_get_q();
+
+  if ($ajax) {
+    ctools_include('modal');
+    ctools_include('ajax');
+
+    $form_state = array(
+      'ajax' => $ajax,
+      'build_info' => array('args' => $args),
+    );
+    $commands = ctools_modal_form_wrapper($form_id, $form_state);
+
+    if (empty($commands)) {
+      $commands[] = ctools_modal_command_loading();
+      if (!empty($_GET['destination'])) {
+        $commands[] = ctools_ajax_command_redirect($_GET['destination']);
+      }
+    }
+    print ajax_render($commands);
+    exit();
+  }
+  else {
+    array_unshift($args, $form_id);
+    return call_user_func_array('drupal_get_form', $args);
+  }
+}
+
+/**
+ * Display a normal Drupal page using CTools modal.
+ */
+function ctools_automodal_get_page() {
+  $args = func_get_args();
+  $callback = array_shift($args);
+  $ajax = array_pop($args);
+
+  ctools_automodal_fix_get_q();
+
+  if (function_exists($callback)) {
+    $output = call_user_func_array($callback, $args);
+
+    if ($ajax) {
+      ctools_include('modal');
+      ctools_include('ajax');
+      $commands = ctools_automodal_page_render($output);
+
+      if (empty($commands)) {
+        $commands[] = ctools_modal_command_loading();
+        if (!empty($_GET['destination'])) {
+          $commands[] = ctools_ajax_command_redirect($_GET['destination']);
+        }
+      }
+
+      print ajax_render($commands);
+      exit();
+    }
+    else {
+      return $output;
+    }
+  }
+  else {
+    return MENU_NOT_FOUND;
+  }
+}
+
+/**
+ * Render a page into an AJAX display.
+ */
+function ctools_automodal_page_render($output) {
+  if (is_array($output)) {
+    $output = drupal_render($output);
+  }
+
+  $title = drupal_get_title();
+
+  // If there are messages for the form, render them.
+  if ($messages = theme('status_messages')) {
+    $output = '<div class="messages">' . $messages . '</div>' . $output;
+  }
+
+  $commands = array();
+  $commands[] = ctools_modal_command_display($title, $output);
+  return $commands;
+}

@@ -1,7 +1,7 @@
 name = WetKit Demo
 description = Demo content and functionality to help show the power of WetKit
 core = 7.x
-package = WetKit
+package = WetKit Apps
 php = 5.2.4
 project = wetkit_demo
 dependencies[] = ctools

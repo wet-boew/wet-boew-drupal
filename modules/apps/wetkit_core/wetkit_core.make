@@ -55,7 +55,7 @@ projects[pm_existing_pages][subdir] = contrib
 
 ; Views Magic
 
-projects[views][version] = 3.3
+projects[views][version] = 3.5
 projects[views][subdir] = contrib
 
 projects[views_autocomplete_filters][version] = 1.0-beta1
