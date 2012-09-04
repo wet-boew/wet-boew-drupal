@@ -52,7 +52,7 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
    * Add a custom preview to the content type edit form and style edit form. This is applied in all cases, except for cases where
    * we are customizing an entity (i.e. fieldable panels panes) because we cannot reliable regenerate a preview without saving.
    */
-  if (variable_get('wetkit_magic_live_preview', 1) && (strpos($form_id, '_content_type_edit_form') || $form_id == 'panels_edit_style_type_form') || $form_id == 'panels_edit_style_settings_form') {
+  if (variable_get('wetkit_magic_live_preview', 1) && (strpos($form_id, '_content_type_edit_form') || $form_id == 'panels_edit_style_type_form') || $form_id == 'panels_edit_style_settings_form' || $form_id == 'ctools_entity_field_content_type_formatter_options') {
 
     // Start the magic
     $pane = $form_id == 'panels_edit_style_settings_form' ? $form_state['display']->content[$form_state['pid']] : $form_state['pane'];
@@ -61,7 +61,7 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
     ctools_include('content');
 
     // Determine the style
-    if (strpos($form_id, '_content_type_edit_form')) {
+    if (strpos($form_id, '_content_type_edit_form') || $form_id == 'ctools_entity_field_content_type_formatter_options') {
       $style = (isset($pane->style['style'])) ? panels_get_style($pane->style['style']) : NULL;
     }
     elseif ($form_id == 'panels_edit_style_type_form') {
@@ -128,8 +128,20 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
     }
 
     // Set the configuration and determine the content for the pane
-    $configuration = ($form_state['rebuild'] && strpos($form_id, 'content_type_edit_form')) ? $form_state['input'] : $pane->configuration;
-    $content = (empty($preview_subtype)) ? ctools_content_render($pane->type, $pane->subtype, $configuration) : ctools_content_render($pane->type, $preview_subtype, $configuration);
+    $configuration = ($form_state['rebuild'] && (strpos($form_id, 'content_type_edit_form') || $form_id == 'ctools_entity_field_content_type_formatter_options')) ? $form_state['input'] : $pane->configuration;
+    $keywords = array();
+    $args = array();
+    if (!empty($form_state['contexts'])) {
+      $context = $form_state['contexts'];
+    }
+    else if (!empty($form_state['display']->context)) {
+      $context = $form_state['display']->context;
+    }
+    else {
+      $context = array();
+    }
+    $content = (empty($preview_subtype)) ? ctools_content_render($pane->type, $pane->subtype, $configuration, $keywords, $args, $context) : ctools_content_render($pane->type, $preview_subtype, $configuration, $keywords, $args, $context);
+
 
     // Create the preview fieldset
     if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form' || $content) {
@@ -168,7 +180,7 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
    /**
    * Globally improve the buttons for the Chaos Tools Content Type Settings Forms
    */
-  if (strpos($form_id, 'content_type_edit_form')) {
+  if (strpos($form_id, 'content_type_edit_form') || $form_id == 'ctools_entity_field_content_type_formatter_options') {
     $form['buttons']['cancel']['#access'] = FALSE;
     if (!empty($form['buttons']['return'])) {
       $form['buttons']['return']['#value'] = t('Save');
@@ -184,6 +196,8 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
     'wetkit_search_search_box_content_type_edit_form',
     'menu_block_menu_tree_content_type_edit_form',
     'ctools_node_content_content_type_edit_form',
+    'ctools_entity_field_content_type_formatter_options',
+    'wetkit_search_facet_content_type_edit_form',
   );
   if (in_array($form_id, $forms_to_improve)) {
   
@@ -202,6 +216,17 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
           $form['general_settings'][$child] = $form[$child];
           unset($form[$child]);
         }
+      }
+
+      // Don't show the context when it is the only one
+      if (!empty($form['general_settings']['context']) && count($form['general_settings']['context']['#options']) == 1) { 
+        $form['general_settings']['context']['#type'] = 'value';
+        $form['general_settings']['context']['#value'] = $form['general_settings']['context']['#default_value'];
+      }
+
+      // Don't show the override title text field unless we are overriding
+      if (!empty($form['general_settings']['override_title_text'])) {
+        $form['general_settings']['override_title_text']['#dependency_type'] = 'hide';
       }
 
       // Deal with cases where there is override title markup
@@ -321,6 +346,7 @@ function wetkit_magic_form_fieldable_panels_panes_fieldable_panels_pane_content_
  * Provides customizations to the views content type settings form
  */
 function wetkit_magic_form_views_content_views_panes_content_type_edit_form_alter(&$form, &$form_state, $form_id) {
+
   // Get the configuration
   $conf = $form_state['conf'];
   
@@ -334,6 +360,11 @@ function wetkit_magic_form_views_content_views_panes_content_type_edit_form_alte
       '#type' => 'textfield',
       '#size' => '',
       '#weight' => -100,
+      '#states' => array(
+        'visible' => array(
+          ':input[name="override_title"]' => array('value' => '1'),
+        ),
+      ),
       '#default_value' => (isset($conf['widget_title'])) ? $conf['widget_title'] : $form_state['view']->display_handler->options['title'],
     );
   }
@@ -528,6 +559,35 @@ function wetkit_magic_form_views_content_views_panes_content_type_edit_form_alte
     $form['display_settings']['#weight'] = -28;
   }
 
+  // Add auto submit functionality
+  if (variable_get('wetkit_magic_live_preview', 1)) {
+    wetkit_magic_autosubmit_configure($form);
+  }
+
+  // Add a custom submit handler to our preview and submit option
+  $form['#submit'][] = 'wetkit_magic_views_content_type_modal_submit';
+  $form['buttons']['preview']['#submit'][] = 'wetkit_magic_views_content_type_modal_submit';
+}
+
+/**
+ * Implementation of hook_form_FORM_ID_alter()
+ *
+ * Provides customization to entity formatter option form
+ */
+function wetkit_magic_form_ctools_entity_field_content_type_formatter_options_alter(&$form, &$form_state, $form_id) {
+
+  // Get the configuration
+  $conf = $form_state['conf'];
+
+  // Move the title for the label and formatter to be the field prefix
+  foreach(array('label', 'formatter') as $field) {
+    if (!empty($form['general_settings'][$field])) {
+      $form['general_settings'][$field]['#field_prefix'] = $form['general_settings'][$field]['#title'];
+      $form['general_settings'][$field]['#title'] = '';
+    }
+  }
+
+  // Enable auto submit functionality
   if (variable_get('wetkit_magic_live_preview', 1)) {
     wetkit_magic_autosubmit_configure($form);
   }

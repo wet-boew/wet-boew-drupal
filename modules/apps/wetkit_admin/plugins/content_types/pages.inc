@@ -151,7 +151,7 @@ function wetkit_admin_pages_content_type_render($subtype, $conf, $panel_args, $c
   $pane->content .= (!empty($general_pages)) ? theme('table', array('header' => array(), 'rows' => $general_pages, 'attributes' => array('class' => 'panels-manage'))) : t('No general pages have yet been created!');
   $pane->content .= '<div>' . $page_templates_options . '<h2 class="page-title">' . t('Page Templates') . '</h2></div>';
   $pane->content .= (!empty($page_templates)) ? theme('table', array('header' => array(), 'rows' => $page_templates, 'attributes' => array('class' => 'panelizer-templates'))) : t('No page templates have yet been created!');
-  $pane->content .= '<h2 class="page-title">' . t('Overriden Page Templates') . '</h2>';
+  $pane->content .= '<h2 class="page-title">' . t('Overridden Page Templates') . '</h2>';
   $pane->content .= (!empty($overridden_templates)) ? theme('table', array('header' => array(), 'rows' => $overridden_templates, 'attributes' => array('class' => 'panelizer-overrides'))) : t('No page templates have yet been overridden!');
 
   if (module_exists('layout')) {

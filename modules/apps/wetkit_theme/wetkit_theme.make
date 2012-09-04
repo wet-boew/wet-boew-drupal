@@ -41,7 +41,7 @@ libraries[respondjs][download][url] = https://github.com/scottjehl/Respond/tarba
 
 ; Tailor app for WetKit
 
-projects[adaptivetheme][version] = 3.0
+projects[adaptivetheme][version] = 3.1
 
 projects[rubik][version] = 4.x-dev
 projects[rubik][type] = theme
