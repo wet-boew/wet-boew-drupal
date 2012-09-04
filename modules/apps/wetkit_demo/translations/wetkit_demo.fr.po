@@ -24,41 +24,41 @@ msgstr ""
 
 #: wetkit_demo.context.inc:75
 msgid "Layout"
-msgstr ""
+msgstr "Disposition"
 
 #: wetkit_demo.context.inc:76
 msgid "WetKit Default Layout for WetKit Web Usability"
-msgstr ""
+msgstr "Disposition par défaut de la BOEW pour son utilisation"
 
 #: wetkit_demo.info:0
 msgid "WetKit Demo"
-msgstr "Démo WetKit"
+msgstr "Démo BOEW"
 
 #: wetkit_demo.info:0
 msgid "Demo content and functionality to help show the power of WetKit"
-msgstr ""
+msgstr "Contenu et fonctionnalité du démo pour montrer la puissance de la BOEW"
 
 #: wetkit_demo.info:0
 msgid "WetKit"
-msgstr ""
+msgstr "BOEW"
 
 #: plugins/styles/dark_blue_background/dark_blue_background.inc:9
 msgid "Dark Blue Background"
-msgstr ""
+msgstr "Arrière-plan bleu foncé"
 
 #: plugins/styles/dark_blue_background/dark_blue_background.inc:10
 msgid "Wraps panes in the Drupal dark blue style."
-msgstr ""
+msgstr "Encadre les panneaux dans le style bleu foncé de Drupal."
 
 #: plugins/styles/light_blue_background/light_blue_background.inc:9
 msgid "Light Blue Background"
-msgstr ""
+msgstr "Arrière-plan bleu clair"
 
 #: plugins/styles/light_blue_background/light_blue_background.inc:10 plugins/styles/lime_green_background/lime_green_background.inc:10
 msgid "Wraps panes in the Drupal light blue style."
-msgstr ""
+msgstr "Encadre les panneaux dans le style bleu clair de Drupal."
 
 #: plugins/styles/lime_green_background/lime_green_background.inc:9
 msgid "Lime Green Background"
-msgstr ""
+msgstr "Arrière-plan vert lime"
 
