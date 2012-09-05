@@ -15,7 +15,7 @@
 }
 
 body.maintenance-page #logo {
-  background:transparent url(images/wetkit_icon.png) no-repeat top left;
+  background:transparent url(../images/wetkit_icon_install.png) no-repeat top left;
   height:0;
   overflow:hidden;
   padding-top: 180px; /* height of logo  */
@@ -24,4 +24,10 @@ body.maintenance-page #logo {
 
 #admin-menu .dropdown li li.expandable ul {
   margin: -22px 0 0 160px !important;
+}
+
+.in-maintenance input[type="image"] + label, 
+.in-maintenance input[type="checkbox"] + label, 
+.in-maintenance input[type="radio"] + label {
+ display: inline;
 }
