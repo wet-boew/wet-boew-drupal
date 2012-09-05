@@ -29,8 +29,8 @@ dependencies[] = strongarm
 dependencies[] = tablefield
 dependencies[] = text
 dependencies[] = views
-apps[server][] = local
-apps[manifests][] = app/manifest.app
+;apps[server][] = local
+;apps[manifests][] = app/manifest.app
 explanation = Field type(s) in use - see <a href="/admin/reports/fields">Field list</a>
 features[ctools][] = file_entity:file_default_displays:1
 features[ctools][] = views:views_default:3.0

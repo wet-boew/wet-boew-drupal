@@ -32,7 +32,9 @@ function wetkit_web_usability_css_alter(&$css) {
  * Implements hook_preprocess_status_messages()
  */
 function wetkit_web_usability_preprocess_status_messages(&$variables) {
+  if (!drupal_installation_attempted()) {
     $variables['theme_hook_suggestions'][] = 'wetkit_status_messages';
+  }
 }
 
 /**
@@ -52,7 +54,7 @@ function theme_wetkit_status_messages($variables) {
   );
   foreach (drupal_get_messages($display) as $type => $messages) {
     $extraclass = '';
-    $spanclass = (drupal_is_front_page()) ? 'span-8' : 'span-6';
+    $spanclass = (drupal_is_front_page()) ? 'span-8' : 'span-6';      
     switch ($type)
     {
     case 'warning':
@@ -152,7 +154,7 @@ function wetkit_web_usability_init() {
     drupal_set_message(t('Please read the online <a href="@documentation">Documentation</a>', array('@documentation' => url('https://github.com/wet-boew/wet-boew-drupal/wiki'))), 'warning');
     variable_set('wetkit_web_usability_doc', 0);
   }
-
+  
   //Only use WET-BOEW on Front End
   global $theme;
   $current_path = current_path();

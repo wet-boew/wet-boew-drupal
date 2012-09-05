@@ -43,8 +43,9 @@ dependencies[] = wetkit_pages
 ; WetKit Toolset
 dependencies[] = wetkit_search
 dependencies[] = wetkit_wysiwyg
+dependencies[] = wetkit_demo
 
-; WetKit Additional
+; WetKit Web Usability
 dependencies[] = wetkit_language
 dependencies[] = wetkit_web_usability
 

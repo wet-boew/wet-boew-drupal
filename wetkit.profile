@@ -9,16 +9,18 @@ function wetkit_install_tasks(&$install_state) {
   require_once(drupal_get_path('module', 'apps') . '/apps.profile.inc');
   require_once(drupal_get_path('module', 'wetkit_theme') . '/wetkit_theme.profile.inc');
 
+  // Assemble and return the install tasks
+  $tasks = array();
+  
+  $tasks = $tasks + apps_profile_install_tasks($install_state, array('machine name' => 'wetkit', 'default apps' => array('')));
+  $tasks = $tasks + wetkit_theme_profile_theme_selection_install_task($install_state);
+
   // Set up a task to include secondary language (fr)
   $tasks['wetkit_batch_processing'] = array(
     'display_name' => t('Import French Language'),
     'type' => 'batch',
   );
 
-  // Assemble and return the install tasks
-  $tasks = array();
-  $tasks = $tasks + apps_profile_install_tasks($install_state, array('machine name' => 'wetkit', 'default apps' => array('wetkit_demo')));
-  $tasks = $tasks + wetkit_theme_profile_theme_selection_install_task($install_state);
   return $tasks;
 }
 
@@ -26,16 +28,15 @@ function wetkit_install_tasks(&$install_state) {
  * Implements hook_install_tasks_alter()
  */
 function wetkit_install_tasks_alter(&$tasks, $install_state) {
-
+  //If using French Locale as default remove associated Install Task
+  unset($tasks['install_import_locales']);
+  unset($tasks['install_import_locales_remaining']);
+  
   // Magically go one level deeper in solving years of dependency problems with install profiles
   $tasks['install_load_profile']['function'] = 'wetkit_install_load_profile';
 
    // Since we only offer one language, define a callback to set this
   //$tasks['install_select_locale']['function'] = 'wetkit_install_locale_selection';
-
-  //If using French Locale as default remove associated Install Task
-  unset($tasks['install_import_locales']);
-  unset($tasks['install_import_locales_remaining']);
 }
 
 /**
@@ -117,7 +118,8 @@ function wetkit_batch_processing(&$install_state) {
   require_once 'includes/form.inc';
 
   //Call funtion locale_add_language in locale.inc
-  locale_add_language('fr');
+  //locale_add_language('fr');
+
   //Batch up the process + import existing po files
   $batch = locale_batch_by_language('fr');
   return $batch;
