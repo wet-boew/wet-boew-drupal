@@ -58,18 +58,14 @@ function wetkit_core_preprocess_html(&$variables) {
  * Implements hook_apps_servers_info()
  */
 function wetkit_core_apps_servers_info() {
+  //TODO: Fix Apps Servers for Drush Based Install
   $info =  drupal_parse_info_file(drupal_get_path('module', 'wetkit_core') . '/wetkit_core.info');
   return array(
     'wetkit' => array(
-      'title' => 'WetKit (Local)',
-      'description' => 'Apps for the Web Experience Toolkit Drupal distro',
-      'featured app' => 'wetkit_web_usability',
+      'title' => 'WetKit',
+      'description' => 'Apps for WetKit',
+      //'manifest' => (empty($info['version']) || $info['version'] == '7.x-1.x-dev') ? 'http://wetkitappdev.devcloud.acquia-sites.com/app/query/WetKit%20App%20Server' : 'http://wetkitappdev.devcloud.acquia-sites.com/app/query/WetKit%20App%20Server',
       'manifest' => '',
-    ),
-    'wetkit_apps' => array(
-      'title' => 'WetKit (External)',
-      'description' => 'Apps for the Web Experience Toolkit Drupal distro',
-      'manifest' => 'http://wetkitappdev.devcloud.acquia-sites.com/app/query/WetKit%20App%20Server',
     ),
   );
 }

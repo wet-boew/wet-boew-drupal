@@ -22,7 +22,7 @@ function wetkit_theme_selection_form($form, &$form_state) {
   // Create a list of theme options, minus the admin and testing themes
   $themes = array();
   foreach (system_rebuild_theme_data() as $theme) {
-    if (!in_array($theme->name, array('test_theme', 'update_test_basetheme', 'update_test_subtheme', 'block_test_theme', 'stark', 'seven'))) {
+    if (!in_array($theme->name, array('test_theme', 'update_test_basetheme', 'update_test_subtheme', 'block_test_theme', 'stark', 'seven', 'adaptivetheme_admin', 'adaptivetheme', 'adaptivetheme_subtheme', 'mobile_jquery', 'rubik', 'tao', 'zen', 'wetkit_adaptivetheme_settings'))) {
       $themes[$theme->name] = theme('image', array('path' => $theme->info['screenshot'])) . '<strong>' . $theme->info['name'] . '</strong><br><p><em>' . $theme->info['description'] . '</em></p><p class="clearfix"></p>';
     }
   }
@@ -35,7 +35,7 @@ function wetkit_theme_selection_form($form, &$form_state) {
   $form['theme_wrapper']['theme'] = array(
     '#type' => 'radios',
     '#options' => $themes,
-    '#default_value' => 'bartik',
+    '#default_value' => 'wetkit_adaptivetheme',
   );
 
   $form['submit'] = array(
