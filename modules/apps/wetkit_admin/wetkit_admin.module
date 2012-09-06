@@ -319,6 +319,9 @@ function wetkit_admin_menu_alter(&$items) {
   // Set the description of the page library
   $items['admin/wetkit/libraries/pages']['description'] = 'This is the page library for the site. See your landing pages, page templates, and overriden page templates.';
 
+  // Set the description of the layout library
+  $items['admin/wetkit/libraries/layouts']['description'] = 'This is the layout library for the site. See your preset and custom layouts.';
+
   // Set configuration elements of Apps to use modals
   /*
   apps_include('manifest');
