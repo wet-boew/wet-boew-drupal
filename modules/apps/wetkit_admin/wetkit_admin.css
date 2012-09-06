@@ -328,7 +328,7 @@
 }
 
 .pane-taxonomy .ctools-dropbutton,
-.pane-pages .ctools-dropbutton {
+#page-library .ctools-dropbutton {
   margin-top: 2px;
   float: right;
 }
