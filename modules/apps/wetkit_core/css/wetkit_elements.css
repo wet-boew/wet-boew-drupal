@@ -17,10 +17,6 @@ td div.ctools-dropbutton {
   right: 0px !important;
 }
 
-td div.ctools-content {
-  margin-right: 10px;
-}
-
 div.ctools-button {
   border-style: solid;
   border-width: 1px;
@@ -30,6 +26,10 @@ div.ctools-button {
 
 div.ctools-button:hover {
   cursor: pointer; 
+}
+
+div.ctools-dropbutton .ctools-content {
+  margin-right: 10px;
 }
 
 div.ctools-button .ctools-content {
@@ -86,4 +86,11 @@ div.ctools-dropbutton .ctools-link a {
   border-width: 4px 4px 0;
   font-weight: normal;
   margin-left: 5px; 
+}
+
+/**
+ * WetKit Apps Styling
+ */
+.app-rating {
+  display: none;
 }
