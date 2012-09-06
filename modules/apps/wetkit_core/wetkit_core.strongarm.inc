@@ -13,6 +13,13 @@ function wetkit_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'apps_allow_voting';
+  $strongarm->value = 0;
+  $export['apps_allow_voting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'ctools_content_all_views';
   $strongarm->value = 1;
   $export['ctools_content_all_views'] = $strongarm;
