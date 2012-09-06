@@ -28,7 +28,7 @@ $plugin = array(
 /**
  * Render the custom content type.
  */
-function panopoly_search_search_box_content_type_render($subtype, $conf, $panel_args, $context) {
+function wetkit_search_search_box_content_type_render($subtype, $conf, $panel_args, $context) {
   
   if (empty($context) || empty($context->data)) {
     $keys = '';
@@ -78,7 +78,7 @@ function panopoly_search_search_box_content_type_render($subtype, $conf, $panel_
 /**
  * Returns an edit form for custom type settings.
  */
-function panopoly_search_search_box_content_type_edit_form($form, &$form_state) {
+function wetkit_search_search_box_content_type_edit_form($form, &$form_state) {
   $conf = $form_state['conf'];
 
   $types = array();
@@ -142,7 +142,7 @@ function panopoly_search_search_box_content_type_edit_form($form, &$form_state) 
 /**
  * Submit handler for search form.
  */
-function panopoly_search_search_box_content_type_edit_form_submit($form, &$form_state) {
+function wetkit_search_search_box_content_type_edit_form_submit($form, &$form_state) {
   // Copy everything from our defaults.
   foreach (array_keys($form_state['plugin']['defaults']) as $key) {
     $form_state['conf'][$key] = $form_state['values'][$key];
@@ -152,7 +152,7 @@ function panopoly_search_search_box_content_type_edit_form_submit($form, &$form_
 /**
  * Returns the administrative title for a type.
  */
-function panopoly_search_search_box_content_type_admin_title($subtype, $conf, $context) {
+function wetkit_search_search_box_content_type_admin_title($subtype, $conf, $context) {
   $info = search_get_info();
   $type = isset($info[$conf['type']]['title']) ? $info[$conf['type']]['title'] : t('Missing/broken type');
   return t('@type search form', array('@type' => $type));
