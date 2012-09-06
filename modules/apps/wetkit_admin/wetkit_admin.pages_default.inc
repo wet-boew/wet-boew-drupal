@@ -261,119 +261,11 @@ function wetkit_admin_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
-  $page->name = 'wetkit_admin_apps';
+  $page->name = 'wetkit_site_dashboard';
   $page->task = 'page';
-  $page->admin_title = 'Apps Dashboard';
-  $page->admin_description = 'This is the administrative dashboard';
-  $page->path = 'admin/site/apps';
-  $page->access = array(
-    'plugins' => array(
-      1 => array(
-        'name' => 'perm',
-        'settings' => array(
-          'perm' => 'administer apps',
-        ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
-      ),
-    ),
-    'logic' => 'and',
-    'type' => 'none',
-    'settings' => NULL,
-  );
-  $page->menu = array(
-    'type' => 'tab',
-    'title' => 'Apps',
-    'name' => 'management',
-    'weight' => '-90',
-    'parent' => array(
-      'type' => 'normal',
-      'title' => 'Apps',
-      'name' => 'management',
-      'weight' => '0',
-    ),
-  );
-  $page->arguments = array();
-  $page->conf = array(
-    'admin_paths' => FALSE,
-  );
-  $page->default_handlers = array();
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
-  $handler->api_version = 1;
-  $handler->name = 'page_wetkit_admin_apps_panel_context';
-  $handler->task = 'page';
-  $handler->subtask = 'wetkit_admin_apps';
-  $handler->handler = 'panel_context';
-  $handler->weight = 0;
-  $handler->conf = array(
-    'title' => 'Apps Dashboard',
-    'no_blocks' => 0,
-    'pipeline' => 'standard',
-    'css_id' => 'apps-dashboard',
-    'css' => '',
-    'contexts' => array(),
-    'relationships' => array(),
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'panels_breadcrumbs_state' => 1,
-    'panels_breadcrumbs_titles' => 'Administration
-Dashboard
-WetKit Apps',
-    'panels_breadcrumbs_paths' => 'admin
-admin/dashboard',
-    'panels_breadcrumbs_home' => 1,
-  );
-  $display = new panels_display();
-  $display->layout = 'boxton';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'header' => NULL,
-      'column1' => NULL,
-      'column2' => NULL,
-      'footer' => NULL,
-      'contentmain' => NULL,
-      'sidebar' => NULL,
-    ),
-  );
-  $display->cache = array();
-  $display->title = 'WetKit Apps';
-  $display->content = array();
-  $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-1';
-    $pane->panel = 'contentmain';
-    $pane->type = 'wetkit_apps_apps';
-    $pane->subtype = 'wetkit_apps_apps';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['contentmain'][0] = 'new-1';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
-  $handler->conf['display'] = $display;
-  $page->default_handlers[$handler->name] = $handler;
-  $pages['wetkit_admin_apps'] = $page;
-
-  $page = new stdClass();
-  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
-  $page->api_version = 1;
-  $page->name = 'wetkit_admin_dashboard';
-  $page->task = 'page';
-  $page->admin_title = 'Admin Dashboard';
-  $page->admin_description = 'This is the administrative dashboard';
-  $page->path = 'admin/site/dashboard';
+  $page->admin_title = 'Site Dashboard';
+  $page->admin_description = 'This is the administrative site dashboard';
+  $page->path = 'admin/wetkit/dashboards/site';
   $page->access = array(
     'plugins' => array(
       1 => array(
@@ -390,8 +282,8 @@ admin/dashboard',
     'settings' => NULL,
   );
   $page->menu = array(
-    'type' => 'default tab',
-    'title' => 'Dashboard',
+    'type' => 'normal',
+    'title' => 'Site Dashboard',
     'name' => 'management',
     'weight' => '-100',
     'parent' => array(
@@ -409,22 +301,24 @@ admin/dashboard',
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_wetkit_admin_dashboard_panel_context';
+  $handler->name = 'page_wetkit_site_dashboard_panel_context';
   $handler->task = 'page';
-  $handler->subtask = 'wetkit_admin_dashboard';
+  $handler->subtask = 'wetkit_site_dashboard';
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Admin Dashboard',
+    'title' => 'Site Dashboard',
     'no_blocks' => 0,
     'pipeline' => 'standard',
-    'css_id' => 'admin-dashboard',
+    'css_id' => 'site-dashboard',
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
   );
   $display = new panels_display();
-  $display->layout = 'moscone';
+  $display->layout = 'burr';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -438,11 +332,11 @@ admin/dashboard',
     ),
   );
   $display->cache = array();
-  $display->title = 'Admin Dashboard';
+  $display->title = 'Site Dashboard';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-1';
     $pane->panel = 'contentmain';
     $pane->type = 'pages';
     $pane->subtype = 'pages';
@@ -457,10 +351,10 @@ admin/dashboard',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['contentmain'][0] = 'new-2';
+    $display->content['new-1'] = $pane;
+    $display->panels['contentmain'][0] = 'new-1';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-2';
     $pane->panel = 'sidebar';
     $pane->type = 'theme';
     $pane->subtype = 'theme';
@@ -475,10 +369,10 @@ admin/dashboard',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['sidebar'][0] = 'new-3';
+    $display->content['new-2'] = $pane;
+    $display->panels['sidebar'][0] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-3';
     $pane->panel = 'sidebar';
     $pane->type = 'menus';
     $pane->subtype = 'menus';
@@ -493,13 +387,13 @@ admin/dashboard',
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['sidebar'][1] = 'new-4';
+    $display->content['new-3'] = $pane;
+    $display->panels['sidebar'][1] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
-  $pages['wetkit_admin_dashboard'] = $page;
+  $pages['wetkit_site_dashboard'] = $page;
 
   return $pages;
 
