@@ -585,6 +585,150 @@ function wetkit_admin_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
+  $page->name = 'wetkit_admin_pane_library';
+  $page->task = 'page';
+  $page->admin_title = 'Pane Library';
+  $page->admin_description = 'This is the pane library for the site. See all of the panes you can add to your pages.';
+  $page->path = 'admin/wetkit/libraries/panes';
+  $page->access = array(
+    'plugins' => array(
+      1 => array(
+        'name' => 'perm',
+        'settings' => array(
+          'perm' => 'access administration pages',
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
+  );
+  $page->menu = array(
+    'type' => 'normal',
+    'title' => 'Pane Library',
+    'name' => 'management',
+    'weight' => '0',
+    'parent' => array(
+      'type' => 'normal',
+      'title' => 'Dashboard',
+      'name' => 'management',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_wetkit_admin_pane_library_panel_context';
+  $handler->task = 'page';
+  $handler->subtask = 'wetkit_admin_pane_library';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Pane Library',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => 'pane-library',
+    'css' => '',
+    'contexts' => array(
+      0 => array(
+        'identifier' => 'WetKit Admin',
+        'keyword' => 'wetkit_admin',
+        'name' => 'string',
+        'id' => 1,
+      ),
+    ),
+    'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+  );
+  $display = new panels_display();
+  $display->layout = 'sutro';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'header' => NULL,
+      'column1' => NULL,
+      'column2' => NULL,
+      'footer' => NULL,
+      'contentmain' => NULL,
+      'sidebar' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Pane Library';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-9';
+    $pane->panel = 'column1';
+    $pane->type = 'general_panes';
+    $pane->subtype = 'general_panes';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-9'] = $pane;
+    $display->panels['column1'][0] = 'new-9';
+    $pane = new stdClass();
+    $pane->pid = 'new-10';
+    $pane->panel = 'column2';
+    $pane->type = 'general_widgets';
+    $pane->subtype = 'general_widgets';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-10'] = $pane;
+    $display->panels['column2'][0] = 'new-10';
+    $pane = new stdClass();
+    $pane->pid = 'new-11';
+    $pane->panel = 'column2';
+    $pane->type = 'reusable_widgets';
+    $pane->subtype = 'reusable_widgets';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-11'] = $pane;
+    $display->panels['column2'][1] = 'new-11';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['wetkit_admin_pane_library'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
   $page->name = 'wetkit_site_dashboard';
   $page->task = 'page';
   $page->admin_title = 'Site Dashboard';
@@ -660,7 +804,7 @@ function wetkit_admin_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-12';
     $pane->panel = 'contentmain';
     $pane->type = 'pages';
     $pane->subtype = 'pages';
@@ -675,10 +819,10 @@ function wetkit_admin_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['contentmain'][0] = 'new-9';
+    $display->content['new-12'] = $pane;
+    $display->panels['contentmain'][0] = 'new-12';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-13';
     $pane->panel = 'sidebar';
     $pane->type = 'theme';
     $pane->subtype = 'theme';
@@ -693,10 +837,10 @@ function wetkit_admin_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['sidebar'][0] = 'new-10';
+    $display->content['new-13'] = $pane;
+    $display->panels['sidebar'][0] = 'new-13';
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-14';
     $pane->panel = 'sidebar';
     $pane->type = 'menus';
     $pane->subtype = 'menus';
@@ -711,8 +855,8 @@ function wetkit_admin_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['sidebar'][1] = 'new-11';
+    $display->content['new-14'] = $pane;
+    $display->panels['sidebar'][1] = 'new-14';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
