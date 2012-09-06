@@ -98,7 +98,7 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
         $preview_subtype = 'vid:' . $form_state['entity']->vid;
         $pane->subtype = 'fpid:' . $form_state['entity']->fpid;
       }
-      elseif (empty($form['reusable']['#markup'])){
+      elseif (empty($form['reusable']['#markup']) && !empty($form_state['values']['reusable'])) {
         $form['widget_settings']['must_place']['#markup'] = t('You must place this reusable content item first before editing it. Remember any edits you make will be global!');
       }
 
@@ -199,6 +199,7 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
     'ctools_entity_field_content_type_formatter_options',
     'wetkit_search_facet_content_type_edit_form',
   );
+
   if (in_array($form_id, $forms_to_improve)) {
   
     // Grab child elements and create the fieldset.
@@ -273,7 +274,6 @@ function wetkit_magic_autosubmit_configure(&$element) {
  * Implementation of hook_form_FORM_ID_alter()
  */
 function wetkit_magic_form_fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form_alter(&$form, &$form_state, $form_id) {
-
   // Handle the view mode
   $view_mode = $form['view_mode'];
   unset($form['view_mode']);
@@ -307,6 +307,10 @@ function wetkit_magic_form_fieldable_panels_panes_fieldable_panels_pane_content_
       '#type' => 'value',
       '#value' => $view_type,
     );
+  }
+
+  if (isset($form_state['values']['reusable']) && $form_state['values']['reusable'] === 0) {
+    $form['reusable']['warning']['#access'] = FALSE;
   }
 
   // Re-insert the view mode selection under the "General settings" fieldset.

@@ -234,6 +234,55 @@ function wetkit_admin_menu() {
     'page arguments' => array('wetkit_admin_panelizer_delete_form', 3, 4),
     'access arguments' => array('administer panelizer'),
   );
+
+  // Add an administration section for WetKit settings
+  $items['admin/config/wetkit'] = array(
+    'title' => 'WetKit Settings',
+    'description' => 'Configuration related to WetKit',
+    'position' => 'right',
+    'weight' => -50,
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('access administration pages'),
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );
+
+  // Add an administration section for WetKit app settings
+  $items['admin/config/wetkit_apps'] = array(
+    'title' => 'WetKit Apps Settings',
+    'description' => 'Configuration related to WetKit Apps',
+    'position' => 'right',
+    'weight' => -45,
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('access administration pages'),
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );
+
+  // Add settings pages for WetKit and WetKit Apps
+  foreach(module_list() as $module) {
+    $app_info = module_invoke($module, 'apps_app_info');
+    if (!empty($app_info) && !empty($app_info['configure form'])) {
+      $module_info = drupal_parse_info_file(drupal_get_path('module', $module) . '/' . $module . '.info');
+      if (!empty($module_info['package']) && $module_info['package'] == 'WetKit') {
+        $items['admin/config/wetkit/' . $module] = array(
+          'title' => $module_info['name'],
+          'description' => 'This is the configuration screen for ' . $module_info['name'],
+          'page callback' => 'drupal_get_form',
+          'page arguments' => array($app_info['configure form']),
+          'access arguments' => array('administer site configuration'),
+        );
+      } else if (!empty($module_info['package']) && $module_info['package'] == 'WetKit Apps') {
+        $items['admin/config/wetkit_apps/' . $module] = array(
+          'title' => $module_info['name'],
+          'description' => 'This is the configuration screen for ' . $module_info['name'],
+          'page callback' => 'drupal_get_form',
+          'page arguments' => array($app_info['configure form']),
+          'access arguments' => array('administer site configuration'),
+        );
+      }
+    }
+  }
   return $items;
 }
 

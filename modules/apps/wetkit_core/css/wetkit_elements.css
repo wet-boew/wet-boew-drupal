@@ -12,6 +12,15 @@ div.ctools-dropbutton-processed {
   padding: 0px 10px 0px 4px; 
 }
 
+td div.ctools-dropbutton {
+  position: relative !important;
+  right: 0px !important;
+}
+
+td div.ctools-content {
+  margin-right: 10px;
+}
+
 div.ctools-button {
   border-style: solid;
   border-width: 1px;
