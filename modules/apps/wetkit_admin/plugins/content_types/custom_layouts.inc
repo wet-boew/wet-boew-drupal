@@ -35,13 +35,13 @@ function wetkit_admin_custom_layouts_content_type_render($subtype, $conf, $panel
 
   // Create the Output
   $pane = new stdClass();
-  $pane->title = t('Custom Layouts');
+  $pane->title = t('Custom Defined Layouts');
   if (!empty($layout_options)) {
     $header = array(array('data' => '', 'style' => 'width: 30px'), t('Title'), t('Category'));
     $pane->content = theme('table', array('header' => $header, 'rows' => $layout_options, 'attributes' => array('class' => array('custom-layouts'))));
   }
   else {
-    $pane->content = t('There are no custom layouts available');
+    $pane->content = t('There are no additional custom layouts defined in your modules and themes');
   }
   return $pane;
 }
