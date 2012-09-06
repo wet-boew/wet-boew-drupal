@@ -322,6 +322,9 @@ function wetkit_admin_menu_alter(&$items) {
   // Set the description of the layout library
   $items['admin/wetkit/libraries/layouts']['description'] = 'This is the layout library for the site. See your preset and custom layouts.';
 
+  // Set the description of the pane library
+  $items['admin/wetkit/libraries/panes']['description'] = 'This is the pane library for the site. See all of the panes you can add to your pages.';
+
   // Set configuration elements of Apps to use modals
   /*
   apps_include('manifest');
