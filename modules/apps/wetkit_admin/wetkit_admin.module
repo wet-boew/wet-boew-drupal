@@ -246,9 +246,9 @@ function wetkit_admin_menu() {
   );
 
   // Add an administration section for the WetKit dashboard
-  $items['admin/wetkit/dashboards'] = array(
-    'title' => 'WetKit Dashboards',
-    'description' => 'Dashboards that power WetKit.',
+  $items['admin/wetkit/libraries'] = array(
+    'title' => 'WetKit Libraries',
+    'description' => 'Libraries of WetKit related items.',
     'position' => 'left',
     'weight' => -50,
     'page callback' => 'system_admin_menu_block_page',
@@ -315,6 +315,9 @@ function wetkit_admin_menu_alter(&$items) {
 
   // Set the description of the dashboard
   $items['admin/wetkit/dashboards/site']['description'] = 'This is the primary site dashboard to manage WetKit';
+
+  // Set the description of the page library
+  $items['admin/wetkit/libraries/pages']['description'] = 'This is the page library for the site. See your landing pages, page templates, and overriden page templates.';
 
   // Set configuration elements of Apps to use modals
   /*
