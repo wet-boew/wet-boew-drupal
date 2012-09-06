@@ -25,7 +25,7 @@ $plugin = array(
 /**
  * Render the custom content type.
  */
-function panopoly_search_search_current_content_type_render($subtype, $conf, $panel_args, $context) {
+function wetkit_search_search_current_content_type_render($subtype, $conf, $panel_args, $context) {
 
   $keys =  (empty($context) || empty($context->data)) ? '' : $context->data;
 
@@ -34,13 +34,13 @@ function panopoly_search_search_current_content_type_render($subtype, $conf, $pa
   $pane->delta   = 'form';
   $pane->title   = '';
   $searches = search_api_current_search();
-  if (isset($searches['search_api_views:panopoly_search:search_solr_results'])) {
-    $count = $searches['search_api_views:panopoly_search:search_solr_results'][1]['result count'];
+  if (isset($searches['search_api_views:wetkit_search:search_solr_results'])) {
+    $count = $searches['search_api_views:wetkit_search:search_solr_results'][1]['result count'];
     $pane->content = '<h2>' . format_plural($count, '1 item', '@count items') . ' matched <em>' . check_plain($keys) . '</em>.</h2>';
     return $pane;
   } 
-  elseif (isset($searches['search_api_views:panopoly_database_search:search_database_results'])) {
-    $count = $searches['search_api_views:panopoly_database_search:search_database_results'][1]['result count'];
+  elseif (isset($searches['search_api_views:wetkit_database_search:search_database_results'])) {
+    $count = $searches['search_api_views:wetkit_database_search:search_database_results'][1]['result count'];
     $pane->content = '<h2>' . format_plural($count, '1 item', '@count items') . ' matched <em>' . check_plain($keys) . '</em>.</h2>';
     return $pane;
   }
