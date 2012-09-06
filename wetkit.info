@@ -38,9 +38,9 @@ dependencies[] = wetkit_magic
 dependencies[] = wetkit_widgets
 dependencies[] = wetkit_admin
 dependencies[] = wetkit_users
-dependencies[] = wetkit_pages
 
 ; WetKit Toolset
+dependencies[] = wetkit_pages
 dependencies[] = wetkit_search
 dependencies[] = wetkit_wysiwyg
 dependencies[] = wetkit_demo
