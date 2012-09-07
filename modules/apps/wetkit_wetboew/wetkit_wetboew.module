@@ -1,16 +1,16 @@
 <?php
 /**
  * @file
- * Code for the wetkit_web_usability feature.
+ * Code for the wetkit_wetboew feature.
  */
 
-include_once('wetkit_web_usability.features.inc');
-include_once('wetkit_web_usability.menu_wetkit_load.inc');
+include_once('wetkit_wetboew.features.inc');
+include_once('wetkit_wetboew.menu_wetkit_load.inc');
 
 /**
  * Implements hook_css_alter().
  */
-function wetkit_web_usability_css_alter(&$css) {
+function wetkit_wetboew_css_alter(&$css) {
   // Installs the jquery.ui themeroller theme to the theme.
   if (isset($css['misc/ui/jquery.ui.theme.css']) && user_is_logged_in()) {
     $css['misc/ui/jquery.ui.theme.css']['data'] = drupal_get_path('module', 'wetkit_core') . '/css/wetkit-jquery-ui-theme.css';
@@ -31,7 +31,7 @@ function wetkit_web_usability_css_alter(&$css) {
 /**
  * Implements hook_preprocess_status_messages()
  */
-function wetkit_web_usability_preprocess_status_messages(&$variables) {
+function wetkit_wetboew_preprocess_status_messages(&$variables) {
   if (!drupal_installation_attempted()) {
     $variables['theme_hook_suggestions'][] = 'wetkit_status_messages';
   }
@@ -95,7 +95,7 @@ function theme_wetkit_status_messages($variables) {
 /**
  * Implementation of hook_theme()
  */
-function wetkit_web_usability_theme($existing, $type, $theme, $path) {
+function wetkit_wetboew_theme($existing, $type, $theme, $path) {
    return array(
      'wetkit_status_messages' => array(
        'render element' => 'element',
@@ -106,21 +106,21 @@ function wetkit_web_usability_theme($existing, $type, $theme, $path) {
 /**
  * Implements hook_install().
  */
-function wetkit_web_usability_install() {
+function wetkit_wetboew_install() {
   _menu_wetkit_load();
 }
 
 /**
  * Implements hook_uninstall().
  */
-function wetkit_web_usability_uninstall() {
+function wetkit_wetboew_uninstall() {
   variable_del('views_temp');
 }
 
 /**
  * Implements of hook_ctools_plugin_directory().
  */
-function wetkit_web_usability_ctools_plugin_directory($module, $plugin) {
+function wetkit_wetboew_ctools_plugin_directory($module, $plugin) {
   if ($module == 'page_manager' || $module == 'panels') {
     return 'plugins/' . $plugin;
   }
@@ -129,7 +129,7 @@ function wetkit_web_usability_ctools_plugin_directory($module, $plugin) {
 /**
  * Implements hook_page_alter().
  */
-function wetkit_web_usability_page_alter(&$page) {
+function wetkit_wetboew_page_alter(&$page) {
   //Hides the toolbar for administrator users if enabled
   if (module_exists('toolbar')) {
     global $user;
@@ -142,17 +142,17 @@ function wetkit_web_usability_page_alter(&$page) {
 /**
  * Implements hook_enable().
  */
-function wetkit_web_usability_init() {
+function wetkit_wetboew_init() {
   //Set Flag
-  if ((variable_get('wetkit_web_usability_load', 1) == 1)) {
+  if ((variable_get('wetkit_wetboew_load', 1) == 1)) {
     drupal_flush_all_caches();
-    variable_set('wetkit_web_usability_load', 0);
+    variable_set('wetkit_wetboew_load', 0);
   }
   //Set Documentation Text
-  if ((variable_get('wetkit_web_usability_doc', 1) == 1) && user_is_logged_in()) {
-    drupal_set_message(t('Please proceed to the <a href="@settings">WetKit Web Usability Page</a> to configure additional settings.', array('@settings' => url('admin/config/wetkit_web_usability/settings'))), 'status');
+  if ((variable_get('wetkit_wetboew_doc', 1) == 1) && user_is_logged_in()) {
+    drupal_set_message(t('Please proceed to the <a href="@settings">WetKit Web Usability Page</a> to configure additional settings.', array('@settings' => url('admin/config/wetkit_wetboew/settings'))), 'status');
     drupal_set_message(t('Please read the online <a href="@documentation">Documentation</a>', array('@documentation' => url('https://github.com/wet-boew/wet-boew-drupal/wiki'))), 'warning');
-    variable_set('wetkit_web_usability_doc', 0);
+    variable_set('wetkit_wetboew_doc', 0);
   }
   
   //Only use WET-BOEW on Front End
@@ -168,7 +168,7 @@ function wetkit_web_usability_init() {
     elseif (($library = libraries_detect('wet-boew')) && !empty($library['installed'])) {
       // Do something with the library here.
       libraries_load('wet-boew');
-      drupal_add_css(drupal_get_path('module','wetkit_web_usability') .'/css/wetkit_web_usability.css', array('group' => CSS_THEME, 'every_page' => TRUE));
+      drupal_add_css(drupal_get_path('module','wetkit_wetboew') .'/css/wetkit_wetboew.css', array('group' => CSS_THEME, 'every_page' => TRUE));
     }
   }
 }
@@ -176,7 +176,7 @@ function wetkit_web_usability_init() {
 /**
  * Implements hook_libraries_info().
  */
-function wetkit_web_usability_libraries_info() {
+function wetkit_wetboew_libraries_info() {
  // A very simple library. No changing APIs (hence, no versions), no variants.
   // Expected to be extracted into 'sites/all/libraries/wet-boew'.
   $libraries['wet-boew'] = array(
@@ -224,7 +224,7 @@ function wetkit_web_usability_libraries_info() {
             'src/js/pe-ap.js' => array('scope' => 'footer', 'weight' => 5),
           ),
         ),
-        'variant callback' => 'wetkit_web_usability_check_variant',
+        'variant callback' => 'wetkit_wetboew_check_variant',
         'variant arguments' => array(
           'variant' => 'source',
         ),
@@ -235,10 +235,10 @@ function wetkit_web_usability_libraries_info() {
 }
 
 /**
- * Implements wetkit_web_usability_check_variant().
+ * Implements wetkit_wetboew_check_variant().
  */
-function wetkit_web_usability_check_variant($libary, $variant) {
-  if ((variable_get('wetkit_web_usability_dev', 0) == 1)) {
+function wetkit_wetboew_check_variant($libary, $variant) {
+  if ((variable_get('wetkit_wetboew_dev', 0) == 1)) {
     return TRUE;
   }
   else {
@@ -249,8 +249,8 @@ function wetkit_web_usability_check_variant($libary, $variant) {
 /**
  * Implements of hook_menu().
  */
-function wetkit_web_usability_menu() {
-  $items['admin/config/wetkit_web_usability'] = array(
+function wetkit_wetboew_menu() {
+  $items['admin/config/wetkit_wetboew'] = array(
     'title' => 'WetKit Web Usability',
     'description' => 'Manage specific features related to the Web Experience Toolkit.',
     'position' => 'left',
@@ -260,14 +260,14 @@ function wetkit_web_usability_menu() {
     'file' => 'system.admin.inc',
     'file path' => drupal_get_path('module', 'system'),
   );
-  $items['admin/config/wetkit_web_usability/settings'] = array(
+  $items['admin/config/wetkit_wetboew/settings'] = array(
     'title' => 'WetKit Web Usability Settings',
     'description' => 'Change how certain settings behave from the Web Experience Toolkit.',
     'page callback' => 'drupal_get_form',
-    'page arguments' => array('wetkit_web_usability_admin_settings'),
+    'page arguments' => array('wetkit_wetboew_admin_settings'),
     'access arguments' => array('administer site configuration'),
     'type' => MENU_NORMAL_ITEM,
-    'file' => 'wetkit_web_usability.admin.inc',
+    'file' => 'wetkit_wetboew.admin.inc',
   );
   return $items;
 }
@@ -275,7 +275,7 @@ function wetkit_web_usability_menu() {
 /**
  * Implements hook_menu_block_blocks().
  */
-function wetkit_web_usability_menu_block_blocks() {
+function wetkit_wetboew_menu_block_blocks() {
   // The array key is the block delta used by menu block.
   return array(
     'wetkit_menu_blocks-1' => array(

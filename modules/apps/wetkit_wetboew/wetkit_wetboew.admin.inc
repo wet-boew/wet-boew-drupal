@@ -10,7 +10,7 @@
  * @ingroup forms
  * @see system_settings_form()
  */
-function wetkit_web_usability_admin_settings() {
+function wetkit_wetboew_admin_settings() {
   drupal_add_js(drupal_get_path('module', 'system') . '/system.js');
 
   $form['wetboew'] = array(
@@ -19,14 +19,14 @@ function wetkit_web_usability_admin_settings() {
     '#collapsible' => TRUE,
     '#collapsed' => FALSE
   );
-  $form['wetboew']['wetkit_web_usability_dev'] = array(
+  $form['wetboew']['wetkit_wetboew_dev'] = array(
     '#type' => 'checkbox',
     '#title' => t('Enable Web Experience Toolkit: jQuery v3.0 Development Mode'),
-    '#default_value' => variable_get('wetkit_web_usability_dev', 0),
+    '#default_value' => variable_get('wetkit_wetboew_dev', 0),
     '#description' => t('Selecting this checkbox will enable the unminified development version of WET-BOEW JS files'),
   );
 
-  $form['#submit'][] = 'wetkit_web_usability_admin_settings_submit';
+  $form['#submit'][] = 'wetkit_wetboew_admin_settings_submit';
   return system_settings_form($form);
 }
 
@@ -35,7 +35,7 @@ function wetkit_web_usability_admin_settings() {
  *
  * @ingroup forms
  */
-function wetkit_web_usability_migrate_content_submit($form, &$form_state) {
+function wetkit_wetboew_migrate_content_submit($form, &$form_state) {
   $migration = Migration::getInstance('XML_Default_Content');
   $result = $migration->processImport();
   $migration = Migration::getInstance('XML_Web_Usability');
@@ -47,6 +47,6 @@ function wetkit_web_usability_migrate_content_submit($form, &$form_state) {
 /**
  * Handle submission of the WetKit Web Usability configuration page.
  */
-function wetkit_web_usability_admin_settings_submit($form, &$form_state) {
+function wetkit_wetboew_admin_settings_submit($form, &$form_state) {
   drupal_flush_all_caches();
 }

@@ -3,12 +3,12 @@
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
-#  wetkit_web_usability.admin.inc: n/a
-#  wetkit_web_usability.features.menu_custom.inc: n/a
-#  wetkit_web_usability.views_default.inc: n/a
+#  wetkit_wetboew.admin.inc: n/a
+#  wetkit_wetboew.features.menu_custom.inc: n/a
+#  wetkit_wetboew.views_default.inc: n/a
 #  wetkit_slider/wetkit_slider.views_default.inc: n/a
-#  wetkit_web_usability.module: n/a
-#  wetkit_web_usability.info: n/a
+#  wetkit_wetboew.module: n/a
+#  wetkit_wetboew.info: n/a
 #  wetkit_box/wetkit_box.info: n/a
 #  wetkit_metatag/wetkit_metatag.info: n/a
 #  wetkit_security/wetkit_security.info: n/a
@@ -33,139 +33,139 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: wetkit_web_usability.admin.inc:25
+#: wetkit_wetboew.admin.inc:25
 msgid "WetKit jQuery Progressive Enhancement"
 msgstr "Amélioration progressive de jQuery de BOEW"
 
-#: wetkit_web_usability.admin.inc:31
+#: wetkit_wetboew.admin.inc:31
 msgid "Enable Web Experience Toolkit: jQuery v3.0 Development Mode"
 msgstr "Activer la trousse de la Boîte à outils de l'expérience Web :  jQuery v3.0  en mode développement"
 
-#: wetkit_web_usability.admin.inc:33
+#: wetkit_wetboew.admin.inc:33
 msgid "Selecting this checkbox will enable the unminified development version of WET-BOEW JS files"
 msgstr "En cochant cette case, vous activez la version développement non réduite des fichiers WET-BOEW JS"
 
-#: wetkit_web_usability.features.menu_custom.inc:55
+#: wetkit_wetboew.features.menu_custom.inc:55
 msgid "Footer Section for Web Experience Toolkit"
 msgstr "Section Pied de page de la Boîte à outils de l'expérience Web"
 
-#: wetkit_web_usability.features.menu_custom.inc:56
+#: wetkit_wetboew.features.menu_custom.inc:56
 msgid "Header Section for Web Experience Toolkit"
 msgstr "Section En-tête de la Boîte à outils de l'expérience Web"
 
-#: wetkit_web_usability.features.menu_custom.inc:57
+#: wetkit_wetboew.features.menu_custom.inc:57
 msgid "Mid Footer Section for Web Experience Toolkit"
 msgstr "Section Pied de page supérieur de la Boîte à outils de l'expérience Web"
 
-#: wetkit_web_usability.features.menu_custom.inc:58
+#: wetkit_wetboew.features.menu_custom.inc:58
 msgid "Terms Section for Web Experience Toolkit"
 msgstr "Section Termes de la Boîte à outils de l'expérience Web"
 
-#: wetkit_web_usability.features.menu_custom.inc:59
+#: wetkit_wetboew.features.menu_custom.inc:59
 msgid "The <em>Main</em> megamenu for Web Experience Toolkit"
 msgstr "Mégamenu <em>Menu principal</em> de la Boîte à outils de l'expérience Web"
 
-#: wetkit_web_usability.features.menu_custom.inc:60
+#: wetkit_wetboew.features.menu_custom.inc:60
 msgid "WET: Footer"
 msgstr "BOEW: Pied de page"
 
-#: wetkit_web_usability.features.menu_custom.inc:61
+#: wetkit_wetboew.features.menu_custom.inc:61
 msgid "WET: Header"
 msgstr "BOEW: En-tête"
 
-#: wetkit_web_usability.features.menu_custom.inc:62
+#: wetkit_wetboew.features.menu_custom.inc:62
 msgid "WET: Mega Menu"
 msgstr "BOEW: Mégamenu"
 
-#: wetkit_web_usability.features.menu_custom.inc:63
+#: wetkit_wetboew.features.menu_custom.inc:63
 msgid "WET: Mid Footer"
 msgstr "BOEW : pied de page supérieur"
 
-#: wetkit_web_usability.features.menu_custom.inc:64
+#: wetkit_wetboew.features.menu_custom.inc:64
 msgid "WET: Terms"
 msgstr "BOEW: Termes"
 
-#: wetkit_web_usability.views_default.inc:133 wetkit_slider/wetkit_slider.views_default.inc:172
+#: wetkit_wetboew.views_default.inc:133 wetkit_slider/wetkit_slider.views_default.inc:172
 msgid "Master"
 msgstr "Maître"
 
-#: wetkit_web_usability.views_default.inc:134
+#: wetkit_wetboew.views_default.inc:134
 msgid "Headlines"
 msgstr "Manchettes"
 
-#: wetkit_web_usability.views_default.inc:135 wetkit_slider/wetkit_slider.views_default.inc:173
+#: wetkit_wetboew.views_default.inc:135 wetkit_slider/wetkit_slider.views_default.inc:173
 msgid "more"
 msgstr "plus"
 
-#: wetkit_web_usability.views_default.inc:136 wetkit_slider/wetkit_slider.views_default.inc:174
+#: wetkit_wetboew.views_default.inc:136 wetkit_slider/wetkit_slider.views_default.inc:174
 msgid "Apply"
 msgstr "Appliquer"
 
-#: wetkit_web_usability.views_default.inc:137 wetkit_slider/wetkit_slider.views_default.inc:175
+#: wetkit_wetboew.views_default.inc:137 wetkit_slider/wetkit_slider.views_default.inc:175
 msgid "Reset"
 msgstr "Réinitialiser"
 
-#: wetkit_web_usability.views_default.inc:138 wetkit_slider/wetkit_slider.views_default.inc:176
+#: wetkit_wetboew.views_default.inc:138 wetkit_slider/wetkit_slider.views_default.inc:176
 msgid "Sort by"
 msgstr "Trier selon"
 
-#: wetkit_web_usability.views_default.inc:139 wetkit_slider/wetkit_slider.views_default.inc:177
+#: wetkit_wetboew.views_default.inc:139 wetkit_slider/wetkit_slider.views_default.inc:177
 msgid "Asc"
 msgstr "Ascendant"
 
-#: wetkit_web_usability.views_default.inc:140 wetkit_slider/wetkit_slider.views_default.inc:178
+#: wetkit_wetboew.views_default.inc:140 wetkit_slider/wetkit_slider.views_default.inc:178
 msgid "Desc"
 msgstr "Descendant"
 
-#: wetkit_web_usability.views_default.inc:141
+#: wetkit_wetboew.views_default.inc:141
 msgid "No Content"
 msgstr "Pas de contenu"
 
-#: wetkit_web_usability.views_default.inc:142
+#: wetkit_wetboew.views_default.inc:142
 msgid "No content has yet been created for this language."
 msgstr "Aucun contenu n'a encore été créé pour cette langue."
 
-#: wetkit_web_usability.views_default.inc:143
+#: wetkit_wetboew.views_default.inc:143
 msgid "[body]"
 msgstr "[corps]"
 
-#: wetkit_web_usability.views_default.inc:144 wetkit_slider/wetkit_slider.views_default.inc:179
+#: wetkit_wetboew.views_default.inc:144 wetkit_slider/wetkit_slider.views_default.inc:179
 msgid "Block"
 msgstr "Bloc"
 
-#: wetkit_web_usability.module:57
+#: wetkit_wetboew.module:57
 msgid "Please proceed to the <a href=\"@settings\">WetKit Web Usability Page</a> to configure additional settings."
 msgstr "Veuillez aller à la page <a href=\"@settings\"> utilisation de la Boîte à outils de l'expérience Web</a> pour configurer d’autres paramètres."
 
-#: wetkit_web_usability.module:58
+#: wetkit_wetboew.module:58
 msgid "Please read the online <a href=\"@documentation\">Documentation</a>"
 msgstr "Veuillez lire la documentation en ligne <a href=\"@documentation\">Documentation</a>"
 
-#: wetkit_web_usability.module:145
+#: wetkit_wetboew.module:145
 msgid "WetKit Web Usability"
 msgstr "Utilisation de BOEW"
 
-#: wetkit_web_usability.module:146
+#: wetkit_wetboew.module:146
 msgid "Manage specific features related to the Web Experience Toolkit."
 msgstr "Gérer les fonctions liées à la Boîte à outils de l'expérience Web."
 
-#: wetkit_web_usability.module:155
+#: wetkit_wetboew.module:155
 msgid "WetKit Web Usability Settings"
 msgstr "Paramètres d’utilisation de la BOEW"
 
-#: wetkit_web_usability.module:156
+#: wetkit_wetboew.module:156
 msgid "Change how certain settings behave from the Web Experience Toolkit."
 msgstr "Changer le comportement de certains paramètres de la Boîte à outils de l'expérience Web."
 
-#: wetkit_web_usability.info:0
+#: wetkit_wetboew.info:0
 msgid "WetKit Web Usability Setup"
 msgstr "Configuration d’utilisation de la BOEW"
 
-#: wetkit_web_usability.info:0
+#: wetkit_wetboew.info:0
 msgid "Core Feature: Installs settings for default menus, blocks, views, and content"
 msgstr "Fonction principale: Installer les paramètres des menus, des blocs, des vues et du contenu par défaut"
 
-#: wetkit_web_usability.info:0 wetkit_box/wetkit_box.info:0 wetkit_metatag/wetkit_metatag.info:0 wetkit_security/wetkit_security.info:0 wetkit_slider/wetkit_slider.info:0
+#: wetkit_wetboew.info:0 wetkit_box/wetkit_box.info:0 wetkit_metatag/wetkit_metatag.info:0 wetkit_security/wetkit_security.info:0 wetkit_slider/wetkit_slider.info:0
 msgid "WetKit"
 msgstr "BOEW"
 

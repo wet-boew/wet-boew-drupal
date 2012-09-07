@@ -1,10 +1,10 @@
-name = WetKit Web Usability Setup
-description = Core Feature: Installs settings for default menus, blocks, views, and content
+name = WetKit WET-BOEW
+description = Installs and configures settings related to the WET-BOEW JS Library
 core = 7.x
 package = WetKit
 php = 5.2.4
 version = 7.x-1.0
-project = wetkit_web_usability
+project = wetkit_wetboew
 dependencies[] = boxes
 dependencies[] = contact
 dependencies[] = context
