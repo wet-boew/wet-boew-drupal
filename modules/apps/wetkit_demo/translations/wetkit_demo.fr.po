@@ -3,7 +3,7 @@
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
-#  wetkit_demo.context.inc: n/a
+#  wetkit_demo.views_default.inc: n/a
 #  wetkit_demo.info: n/a
 #  plugins/styles/dark_blue_background/dark_blue_background.inc: n/a
 #  plugins/styles/light_blue_background/light_blue_background.inc: n/a
@@ -13,8 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-08-22 10:04-0400\n"
-"PO-Revision-Date: 2012-08-22 10:04-0400\n"
+"POT-Creation-Date: 2012-09-07 10:47-0400\n"
+"PO-Revision-Date: 2012-09-07 10:47-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -22,13 +22,97 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: wetkit_demo.context.inc:75
-msgid "Layout"
-msgstr "Disposition"
+#: wetkit_demo.views_default.inc:348
+msgid "Master"
+msgstr "Maître"
 
-#: wetkit_demo.context.inc:76
-msgid "WetKit Default Layout for WetKit Web Usability"
-msgstr "Disposition par défaut de la BOEW pour son utilisation"
+#: wetkit_demo.views_default.inc:349
+msgid "more"
+msgstr "plus"
+
+#: wetkit_demo.views_default.inc:350
+msgid "Apply"
+msgstr "Appliquer"
+
+#: wetkit_demo.views_default.inc:351
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#: wetkit_demo.views_default.inc:352
+msgid "Sort by"
+msgstr "Trier selon"
+
+#: wetkit_demo.views_default.inc:353
+msgid "Asc"
+msgstr "Ascendant"
+
+#: wetkit_demo.views_default.inc:354
+msgid "Desc"
+msgstr "Descendant"
+
+#: wetkit_demo.views_default.inc:355
+msgid "Empty Text"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:356
+msgid "There is no news to be shown. "
+msgstr ""
+
+#: wetkit_demo.views_default.inc:357
+msgid "author"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:358
+msgid "Posted by"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:359
+msgid "Post date"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:360
+msgid "Title"
+msgstr "Titre"
+
+#: wetkit_demo.views_default.inc:361
+msgid "Random"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:362
+msgid "List of Demo Items"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:363
+msgid "Demo Items"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:364
+msgid "This is a customizable list of demo items!"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:365
+msgid "Demo"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:366
+msgid "Individual Demo Item"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:367
+msgid "Featured Demo Item"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:368
+msgid "List of Featured Demo Items"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:369
+msgid "Featured Demo Items"
+msgstr ""
+
+#: wetkit_demo.views_default.inc:370
+msgid "This is a customizable list of demo items which are marked as featured!"
+msgstr ""
 
 #: wetkit_demo.info:0
 msgid "WetKit Demo"
@@ -36,11 +120,13 @@ msgstr "Démo BOEW"
 
 #: wetkit_demo.info:0
 msgid "Demo content and functionality to help show the power of WetKit"
-msgstr "Contenu et fonctionnalité du démo pour montrer la puissance de la BOEW"
+msgstr ""
+"Contenu et fonctionnalité du démo pour montrer la puissance de la "
+"BOEW"
 
 #: wetkit_demo.info:0
-msgid "WetKit"
-msgstr "BOEW"
+msgid "WetKit Apps"
+msgstr "Applications BOEW"
 
 #: plugins/styles/dark_blue_background/dark_blue_background.inc:9
 msgid "Dark Blue Background"

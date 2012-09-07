@@ -11,8 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-08-22 10:06-0400\n"
-"PO-Revision-Date: 2012-08-22 10:06-0400\n"
+"POT-Creation-Date: 2012-09-07 10:47-0400\n"
+"PO-Revision-Date: 2012-09-07 10:47-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +34,7 @@ msgstr "Destination de la connexion"
 
 #: wetkit_users.module:25
 msgid "Where do you want to redirect users when the login using the standard login link? Use <front> for the Drupal frontpage."
-msgstr "Où voulez-vous diriger les utilisateurs lorsqu’ils ouvrent une session au moyen du lien de connexion standard? Utilisez <front> pour la page d’accueil Drupal."
+msgstr ""
 
 #: wetkit_users.module:56
 msgid "If you don't have an username, !create."

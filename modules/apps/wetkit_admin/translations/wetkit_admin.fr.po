@@ -5,21 +5,29 @@
 # Generated from files:
 #  wetkit_admin.module: n/a
 #  wetkit_admin.info: n/a
+#  plugins/content_types/custom_layouts.inc: n/a
+#  plugins/content_types/flexible_layouts.inc: n/a
+#  plugins/content_types/general_panes.inc: n/a
+#  plugins/content_types/general_widgets.inc: n/a
+#  plugins/content_types/landing_pages.inc: n/a
+#  plugins/content_types/overridden_page_templates.inc: n/a
+#  plugins/content_types/page_templates.inc: n/a
+#  plugins/content_types/panels_layouts.inc: n/a
+#  plugins/content_types/panopoly_layouts.inc: n/a
+#  plugins/content_types/responsive_layouts.inc: n/a
+#  plugins/content_types/reusable_widgets.inc: n/a
 #  plugins/content_types/content.inc: n/a
 #  plugins/content_types/menus.inc: n/a
-#  plugins/content_types/pages.inc: n/a
 #  plugins/content_types/taxonomy.inc: n/a
 #  plugins/content_types/theme.inc: n/a
 #  plugins/content_types/users.inc: n/a
-#  plugins/content_types/wetkit_apps_apps.inc: n/a
-#  plugins/content_types/wetkit_foundation_apps.inc: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-08-22 10:02-0400\n"
-"PO-Revision-Date: 2012-08-22 10:02-0400\n"
+"POT-Creation-Date: 2012-09-07 10:47-0400\n"
+"PO-Revision-Date: 2012-09-07 10:47-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -33,7 +41,10 @@ msgstr "Nom de la machine"
 
 #: wetkit_admin.module:32
 msgid "Do you want to provide an option to specify a machine name (provided by the Default Content module) on the content editing form?"
-msgstr "Voulez-vous fournir une option pour préciser le nom de la machine (fourni par module du contenu par défaut dans le formulaire de modification de contenu?"
+msgstr ""
+"Voulez-vous fournir une option pour préciser le nom de la machine "
+"(fourni par module du contenu par défaut dans le formulaire de "
+"modification de contenu?"
 
 #: wetkit_admin.module:36
 msgid "Create revision"
@@ -41,7 +52,9 @@ msgstr "Créer une révision"
 
 #: wetkit_admin.module:44
 msgid "Do you want to provide an option to create a new revision for content on the content editing form?"
-msgstr "Voulez-vous fournir une option pour créer une nouvelle révision du contenu dans le formulaire de modification de contenu?"
+msgstr ""
+"Voulez-vous fournir une option pour créer une nouvelle révision du "
+"contenu dans le formulaire de modification de contenu?"
 
 #: wetkit_admin.module:87
 msgid "Permalink"
@@ -59,19 +72,82 @@ msgstr "Auteur"
 msgid "Parent"
 msgstr "Parent"
 
-#: wetkit_admin.module:210
+#: wetkit_admin.module:205
 msgid "Menu link title is required."
 msgstr "Le titre du lien du menu est requis."
 
-#: wetkit_admin.module:359
-msgid "Are you sure you want to delete the overriden page template for %title?"
-msgstr "Êtes-vous certain de vouloir supprimer le modèle de page annulé pour le %title?"
+#: wetkit_admin.module:399
+msgid "Are you sure you want to delete the overridden page template for %title?"
+msgstr ""
 
-#: wetkit_admin.module:373
+#: wetkit_admin.module:413
 msgid "The overridden page template for %title has been deleted."
 msgstr "Le modèle de page annulé pour le %title a été supprimé."
 
-#: wetkit_admin.info:0
+#: wetkit_admin.module:424
+msgid "One or more problems were detected with your Drupal installation. Check the <a href=\"@status\">status report</a> for more information."
+msgstr ""
+"Un ou plusieurs problèmes ont été détectés dans votre "
+"installation Drupal. Vérifiez le <a href=\"@status\">tableau de bord "
+"d'administration</a> pour plus d'information."
+
+#: wetkit_admin.module:461
+msgid "You do not have any administrative items."
+msgstr "Vous n'avez accès à aucune page d'administration."
+
+#: wetkit_admin.module:238 wetkit_admin.info:0
+msgid "WetKit"
+msgstr "BOEW"
+
+#: wetkit_admin.module:239
+msgid "Administer all things WetKit."
+msgstr ""
+
+#: wetkit_admin.module:250
+msgid "WetKit Libraries"
+msgstr ""
+
+#: wetkit_admin.module:251
+msgid "Libraries of WetKit related items."
+msgstr ""
+
+#: wetkit_admin.module:262
+msgid "WetKit Settings"
+msgstr ""
+
+#: wetkit_admin.module:263
+msgid "Configuration related to WetKit"
+msgstr ""
+
+#: wetkit_admin.module:274
+msgid "Apps Settings"
+msgstr ""
+
+#: wetkit_admin.module:275
+msgid "Configuration related to WetKit Apps"
+msgstr ""
+
+#: wetkit_admin.module:292;300
+msgid "This is the configuration screen for "
+msgstr ""
+
+#: wetkit_admin.module:317
+msgid "This is the primary site dashboard to manage WetKit"
+msgstr ""
+
+#: wetkit_admin.module:320
+msgid "This is the page library for the site. See your landing pages, page templates, and overriden page templates."
+msgstr ""
+
+#: wetkit_admin.module:323
+msgid "This is the layout library for the site. See your preset and custom layouts."
+msgstr ""
+
+#: wetkit_admin.module:326
+msgid "This is the pane library for the site. See all of the panes you can add to your pages."
+msgstr ""
+
+#: wetkit_admin.info:0 plugins/content_types/custom_layouts.inc:13 plugins/content_types/flexible_layouts.inc:13 plugins/content_types/general_panes.inc:13 plugins/content_types/general_widgets.inc:13 plugins/content_types/landing_pages.inc:13 plugins/content_types/overridden_page_templates.inc:13 plugins/content_types/page_templates.inc:13 plugins/content_types/panels_layouts.inc:13 plugins/content_types/panopoly_layouts.inc:13 plugins/content_types/responsive_layouts.inc:13 plugins/content_types/reusable_widgets.inc:13
 msgid "WetKit Admin"
 msgstr "Administration BOEW"
 
@@ -79,39 +155,103 @@ msgstr "Administration BOEW"
 msgid "Administrative dashboard and related editing interfaces."
 msgstr "Tableau de bord administratif et interfaces de mise en forme connexes."
 
-#: wetkit_admin.info:0
-msgid "WetKit"
-msgstr "BOEW"
-
 #: plugins/content_types/content.inc:9;22
-msgid "Content"
-msgstr "Contenu"
+msgid "Content Types"
+msgstr ""
 
 #: plugins/content_types/content.inc:10
 msgid "This is a standard list of content that are available"
 msgstr "Voici la liste standard du contenu disponible"
 
-#: plugins/content_types/content.inc:12 plugins/content_types/menus.inc:12 plugins/content_types/pages.inc:12 plugins/content_types/taxonomy.inc:12 plugins/content_types/theme.inc:12 plugins/content_types/users.inc:12 plugins/content_types/wetkit_apps_apps.inc:12 plugins/content_types/wetkit_foundation_apps.inc:12
+#: plugins/content_types/content.inc:12 plugins/content_types/custom_layouts.inc:12 plugins/content_types/flexible_layouts.inc:12 plugins/content_types/general_panes.inc:12 plugins/content_types/general_widgets.inc:12 plugins/content_types/landing_pages.inc:12 plugins/content_types/menus.inc:12 plugins/content_types/overridden_page_templates.inc:12 plugins/content_types/page_templates.inc:12 plugins/content_types/panels_layouts.inc:12 plugins/content_types/panopoly_layouts.inc:12 plugins/content_types/responsive_layouts.inc:12 plugins/content_types/reusable_widgets.inc:12 plugins/content_types/taxonomy.inc:12 plugins/content_types/theme.inc:12 plugins/content_types/users.inc:12
 msgid "Admin"
 msgstr "Administration"
 
-#: plugins/content_types/content.inc:34 plugins/content_types/menus.inc:35 plugins/content_types/pages.inc:114;126;139 plugins/content_types/taxonomy.inc:36 plugins/content_types/users.inc:40
+#: plugins/content_types/content.inc:34 plugins/content_types/menus.inc:35 plugins/content_types/taxonomy.inc:36 plugins/content_types/users.inc:40
 msgid "Add new"
 msgstr "Ajouter nouveau"
 
-#: plugins/content_types/content.inc:40
-msgid "See all"
-msgstr "Tout voir"
-
-#: plugins/content_types/content.inc:46 plugins/content_types/menus.inc:30 plugins/content_types/pages.inc:118;130;143 plugins/content_types/taxonomy.inc:31 plugins/content_types/theme.inc:33 plugins/content_types/users.inc:33 plugins/content_types/wetkit_apps_apps.inc:59 plugins/content_types/wetkit_foundation_apps.inc:59
+#: plugins/content_types/content.inc:41 plugins/content_types/menus.inc:30 plugins/content_types/taxonomy.inc:31 plugins/content_types/theme.inc:31 plugins/content_types/users.inc:33
 msgid "Configure"
 msgstr "Configurer"
 
-#: plugins/content_types/content.inc:54
+#: plugins/content_types/content.inc:49
 msgid "1 item"
 msgid_plural "@count items"
 msgstr[0] "1 élement"
 msgstr[1] "@count éléments"
+
+#: plugins/content_types/custom_layouts.inc:9
+msgid "Custom Layouts"
+msgstr "Dispositions personnalisées"
+
+#: plugins/content_types/custom_layouts.inc:10 plugins/content_types/panels_layouts.inc:10
+msgid "This is list of the custom layouts your modules and themes provide."
+msgstr ""
+
+#: plugins/content_types/custom_layouts.inc:38
+msgid "Custom Defined Layouts"
+msgstr ""
+
+#: plugins/content_types/custom_layouts.inc:40 plugins/content_types/flexible_layouts.inc:41 plugins/content_types/general_panes.inc:27 plugins/content_types/overridden_page_templates.inc:57 plugins/content_types/panels_layouts.inc:40 plugins/content_types/panopoly_layouts.inc:40 plugins/content_types/responsive_layouts.inc:46 plugins/content_types/reusable_widgets.inc:25
+msgid "Title"
+msgstr "Titre"
+
+#: plugins/content_types/custom_layouts.inc:40 plugins/content_types/flexible_layouts.inc:41 plugins/content_types/general_panes.inc:27 plugins/content_types/panels_layouts.inc:40 plugins/content_types/panopoly_layouts.inc:40 plugins/content_types/responsive_layouts.inc:46 plugins/content_types/reusable_widgets.inc:25
+msgid "Category"
+msgstr "Catégorie"
+
+#: plugins/content_types/custom_layouts.inc:44
+msgid "There are no additional custom layouts defined in your modules and themes"
+msgstr ""
+
+#: plugins/content_types/flexible_layouts.inc:9;39
+msgid "Flexible Layout Builder"
+msgstr ""
+
+#: plugins/content_types/flexible_layouts.inc:10
+msgid "This is list of your custom layouts from the flexible layout builder"
+msgstr ""
+
+#: plugins/content_types/flexible_layouts.inc:31 plugins/content_types/responsive_layouts.inc:32
+msgid "Edit"
+msgstr "Modifier"
+
+#: plugins/content_types/flexible_layouts.inc:45
+msgid "No flexible layout options have yet been created. !add add one now!"
+msgstr ""
+
+#: plugins/content_types/general_panes.inc:9;41
+msgid "General Panes"
+msgstr ""
+
+#: plugins/content_types/general_panes.inc:10
+msgid "This is list of the panes that are generally available on the site."
+msgstr ""
+
+#: plugins/content_types/general_widgets.inc:9;41
+msgid "General Widget Panes"
+msgstr ""
+
+#: plugins/content_types/general_widgets.inc:10
+msgid "This is list of the generical widget panes that are generally available on the site."
+msgstr ""
+
+#: plugins/content_types/general_widgets.inc:25
+msgid "Name"
+msgstr "Nom"
+
+#: plugins/content_types/landing_pages.inc:9;57
+msgid "Landing Pages"
+msgstr ""
+
+#: plugins/content_types/landing_pages.inc:10
+msgid "This is a list of the landing pages that are available"
+msgstr ""
+
+#: plugins/content_types/landing_pages.inc:62
+msgid "No general pages have yet been created!"
+msgstr "Aucune page générale n’a été créée!"
 
 #: plugins/content_types/menus.inc:9;22
 msgid "Menus"
@@ -127,61 +267,101 @@ msgid_plural "@count links"
 msgstr[0] "1 lien"
 msgstr[1] "@count liens"
 
-#: plugins/content_types/pages.inc:9
-msgid "Pages"
-msgstr "Pages"
+#: plugins/content_types/overridden_page_templates.inc:9
+msgid "Overridden Page Templatess"
+msgstr ""
 
-#: plugins/content_types/pages.inc:10
-msgid "This is a standard list of pages that are available"
-msgstr "Voici une liste standard des pages disponibles"
+#: plugins/content_types/overridden_page_templates.inc:10
+msgid "This is a list of overridden page templates"
+msgstr ""
 
-#: plugins/content_types/pages.inc:93
+#: plugins/content_types/overridden_page_templates.inc:47
 msgid "Revert"
 msgstr "Rétablir"
 
-#: plugins/content_types/pages.inc:105
-msgid "Edit"
-msgstr "Modifier"
+#: plugins/content_types/overridden_page_templates.inc:55
+msgid "Overridden Page Templates"
+msgstr ""
 
-#: plugins/content_types/pages.inc:150
-msgid "General Pages"
-msgstr "Pages générales"
+#: plugins/content_types/overridden_page_templates.inc:57
+msgid "Template"
+msgstr ""
 
-#: plugins/content_types/pages.inc:151
-msgid "No general pages have yet been created!"
-msgstr "Aucune page générale n’a été créée!"
+#: plugins/content_types/overridden_page_templates.inc:57
+msgid "Path"
+msgstr "Chemin"
 
-#: plugins/content_types/pages.inc:152
-msgid "Page Templates"
-msgstr "Modèles de page"
-
-#: plugins/content_types/pages.inc:153
-msgid "No page templates have yet been created!"
-msgstr "Aucun modèle de page n’a été créé!"
-
-#: plugins/content_types/pages.inc:154
-msgid "Overriden Page Templates"
-msgstr "Modèle de page annulé"
-
-#: plugins/content_types/pages.inc:155
+#: plugins/content_types/overridden_page_templates.inc:62
 msgid "No page templates have yet been overridden!"
 msgstr "Aucun modèle de page n’a été annulé!"
 
-#: plugins/content_types/pages.inc:158
-msgid "Custom Layouts"
-msgstr "Dispositions personnalisées"
+#: plugins/content_types/page_templates.inc:9;45
+msgid "Page Templates"
+msgstr "Modèles de page"
 
-#: plugins/content_types/pages.inc:159
-msgid "No custom layout options have yet been created!"
-msgstr "Aucune option de disposition personnalisée n’a été créée!"
+#: plugins/content_types/page_templates.inc:10
+msgid "This is a list of page templates"
+msgstr ""
+
+#: plugins/content_types/page_templates.inc:50
+msgid "No page templates have yet been created!"
+msgstr "Aucun modèle de page n’a été créé!"
+
+#: plugins/content_types/panels_layouts.inc:9;38
+msgid "Default Panels Layouts"
+msgstr ""
+
+#: plugins/content_types/panels_layouts.inc:44
+msgid "There are no Panels layouts available"
+msgstr ""
+
+#: plugins/content_types/panopoly_layouts.inc:9;38
+msgid "WetKit Layouts"
+msgstr ""
+
+#: plugins/content_types/panopoly_layouts.inc:10
+msgid "This is list of the layouts that come with WetKit"
+msgstr ""
+
+#: plugins/content_types/panopoly_layouts.inc:44
+msgid "There are no WetKit layouts available :("
+msgstr ""
+
+#: plugins/content_types/responsive_layouts.inc:9;44
+msgid "Responsive Layout Builder"
+msgstr ""
+
+#: plugins/content_types/responsive_layouts.inc:10
+msgid "This is list of your custom layouts from the responsive layout builder."
+msgstr ""
+
+#: plugins/content_types/responsive_layouts.inc:50
+msgid "No custom responsive layouts have yet been created. !add one now!"
+msgstr ""
+
+#: plugins/content_types/reusable_widgets.inc:9;47
+msgid "Reusable Widget Panes"
+msgstr ""
+
+#: plugins/content_types/reusable_widgets.inc:10
+msgid "This is list of the generical widget panes that are reusablely available on the site."
+msgstr ""
+
+#: plugins/content_types/reusable_widgets.inc:25
+msgid "Type"
+msgstr "Type"
+
+#: plugins/content_types/reusable_widgets.inc:52
+msgid "You do have not created any reusable widgets"
+msgstr ""
 
 #: plugins/content_types/taxonomy.inc:9;22
 msgid "Taxonomy"
 msgstr "Taxonomie"
 
 #: plugins/content_types/taxonomy.inc:10
-msgid "This is a standard list of categories that are available."
-msgstr "Voici une liste standard des catégories disponibles."
+msgid "This is a standard list of categories that are available"
+msgstr ""
 
 #: plugins/content_types/taxonomy.inc:42
 msgid "1 term"
@@ -197,37 +377,21 @@ msgstr "Thème"
 msgid "This is the current theme that is installed."
 msgstr "Voila le thème courant installé."
 
-#: plugins/content_types/theme.inc:39
+#: plugins/content_types/theme.inc:35
 msgid "Change theme"
 msgstr "Changer le thème"
 
 #: plugins/content_types/users.inc:9;22
-msgid "Users"
-msgstr "Utilisateurs"
+msgid "User Roles"
+msgstr ""
 
 #: plugins/content_types/users.inc:10
-msgid "This is a standard list of users that are available."
-msgstr "Voici une liste standard des utilisateurs disponibles."
+msgid "This is a standard list of users that are available"
+msgstr ""
 
 #: plugins/content_types/users.inc:46
 msgid "1 user"
 msgid_plural "@count users"
 msgstr[0] "1 utilisateur"
 msgstr[1] "@count utilisateurs"
-
-#: plugins/content_types/wetkit_apps_apps.inc:9;22
-msgid "WetKit Apps"
-msgstr "Applications BOEW"
-
-#: plugins/content_types/wetkit_apps_apps.inc:10 plugins/content_types/wetkit_foundation_apps.inc:10
-msgid "This is a list of the foundational apps for WetKit."
-msgstr "Voici une liste des applications de base pour la BOEW."
-
-#: plugins/content_types/wetkit_apps_apps.inc:65 plugins/content_types/wetkit_foundation_apps.inc:65
-msgid "Details"
-msgstr "Détails"
-
-#: plugins/content_types/wetkit_foundation_apps.inc:9;22
-msgid "WetKit Foundation"
-msgstr "Fondement de la BOEW"
 
