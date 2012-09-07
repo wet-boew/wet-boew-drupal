@@ -121,7 +121,9 @@ function wetkit_admin_form_alter(&$form, &$form_state, $form_id) {
   // Move the featured field into publishing options
   if (!empty($form['field_featured_status'])) {
     $form['options']['field_featured_status'] = $form['field_featured_status'];
-    unset($form['field_featured_status']);
+    //unset($form['field_featured_status']);
+    //TODO: Upstream this fix to Panopoly
+    $form['field_featured_status'] = array('#language' => NULL);
   }
 
   // Remove the description from the featured image
