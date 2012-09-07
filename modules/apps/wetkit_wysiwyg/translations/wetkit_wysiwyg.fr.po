@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-08-22 10:08-0400\n"
-"PO-Revision-Date: 2012-08-22 10:08-0400\n"
+"POT-Creation-Date: 2012-09-07 10:48-0400\n"
+"PO-Revision-Date: 2012-09-07 10:48-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -27,31 +27,35 @@ msgstr "Évier de cuisine"
 msgid "Spell Check"
 msgstr "Correcteur orthographique"
 
-#: wetkit_wysiwyg.module:144
+#: wetkit_wysiwyg.module:48;54
+msgid "WetKit Cleanup Tools"
+msgstr ""
+
+#: wetkit_wysiwyg.module:172
 msgid "Heading 1"
 msgstr "En-tête 1"
 
-#: wetkit_wysiwyg.module:152
+#: wetkit_wysiwyg.module:180
 msgid "Heading 2"
 msgstr "En-tête 2"
 
-#: wetkit_wysiwyg.module:160
+#: wetkit_wysiwyg.module:188
 msgid "Heading 3"
 msgstr "En-tête 3"
 
-#: wetkit_wysiwyg.module:168
+#: wetkit_wysiwyg.module:196
 msgid "Heading 4"
 msgstr "En-tête 4"
 
-#: wetkit_wysiwyg.module:176
+#: wetkit_wysiwyg.module:204
 msgid "Paragraph"
 msgstr "Paragraphe"
 
-#: wetkit_wysiwyg.module:190
+#: wetkit_wysiwyg.module:218
 msgid "Unordered List"
 msgstr "Liste non ordonnée"
 
-#: wetkit_wysiwyg.module:196
+#: wetkit_wysiwyg.module:224
 msgid "Ordered List"
 msgstr "Liste ordonnée"
 

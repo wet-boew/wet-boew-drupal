@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-08-22 10:05-0400\n"
-"PO-Revision-Date: 2012-08-22 10:05-0400\n"
+"POT-Creation-Date: 2012-09-07 10:47-0400\n"
+"PO-Revision-Date: 2012-09-07 10:47-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -43,7 +43,10 @@ msgstr "Page de base"
 
 #: wetkit_pages.features.inc:33
 msgid "An important page to display to users on your site. This is included as the preferred standard for a panels based workflow."
-msgstr "Une page importante à afficher sur votre site. Elle est considérée comme faisant partie de la norme privilégiée pour le déroulement du travail fondé sur des panneaux."
+msgstr ""
+"Une page importante à afficher sur votre site. Elle est considérée "
+"comme faisant partie de la norme privilégiée pour le déroulement du "
+"travail fondé sur des panneaux."
 
 #: wetkit_pages.features.inc:35;43
 msgid "Title"
@@ -55,25 +58,32 @@ msgstr "Page de base (sans panneau)"
 
 #: wetkit_pages.features.inc:41
 msgid "An non panelized important page to display to users on your site. This is included for people who are used to using blocks and regions to manage content."
-msgstr "Une page importante sans panneau à présenter à vos utilisateurs sur le site. Elle est destinés aux usagers qui ont l’habitude d’utiliser des blocs et des régions pour gérer le contenu."
+msgstr ""
+"Une page importante sans panneau à présenter à vos utilisateurs sur "
+"le site. Elle est destinés aux usagers qui ont l’habitude "
+"d’utiliser des blocs et des régions pour gérer le contenu."
 
-#: wetkit_pages.module:47
+#: wetkit_pages.module:27
+msgid "A primary landing page to display to users on your site."
+msgstr ""
+
+#: wetkit_pages.module:48
 msgid "Create Landing Page"
 msgstr "Créer la page de renvoi"
 
-#: wetkit_pages.module:62
+#: wetkit_pages.module:63
 msgid "URL"
 msgstr "URL"
 
-#: wetkit_pages.module:70
+#: wetkit_pages.module:71
 msgid "Add this page to the main menu?"
 msgstr "Ajouter cette page au menu principal?"
 
-#: wetkit_pages.module:79
+#: wetkit_pages.module:80
 msgid "Parent"
 msgstr "Parent"
 
-#: wetkit_pages.module:93
+#: wetkit_pages.module:95
 msgid "Create Page"
 msgstr "Créer page"
 
@@ -87,7 +97,9 @@ msgstr "Pages WetKit"
 
 #: wetkit_pages.info:0
 msgid "Provides a basic page, suitable for Panelizing."
-msgstr "Fournit une page de base, idéale pour faire travailler avec des panneaux."
+msgstr ""
+"Fournit une page de base, idéale pour faire travailler avec des "
+"panneaux."
 
 #: wetkit_pages.info:0
 msgid "WetKit"

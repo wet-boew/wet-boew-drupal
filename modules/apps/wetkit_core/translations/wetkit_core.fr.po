@@ -5,14 +5,15 @@
 # Generated from files:
 #  wetkit_core.features.field.inc: n/a
 #  wetkit_core.module: n/a
+#  wetkit_core.install: n/a
 #  wetkit_core.info: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-08-22 10:04-0400\n"
-"PO-Revision-Date: 2012-08-22 10:04-0400\n"
+"POT-Creation-Date: 2012-09-07 10:47-0400\n"
+"PO-Revision-Date: 2012-09-07 10:47-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -28,13 +29,63 @@ msgstr "Image"
 msgid "This is the primary image to be associated with the taxonomy term"
 msgstr "Ceci est l’image principale qui sera associés au terme de taxinomie"
 
-#: wetkit_core.module:119
+#: wetkit_core.module:126
 msgid "Time"
 msgstr "Heure"
 
-#: wetkit_core.module:120
+#: wetkit_core.module:127
 msgid "Day"
 msgstr "Jour"
+
+#: wetkit_core.install:26
+msgid "-1 (Unlimited)"
+msgstr "-1 (infini)"
+
+#: (duplicate) wetkit_core.install:25 
+msgid "WetKit PHP memory limit"
+msgstr ""
+
+#: (duplicate) wetkit_core.install:33 
+msgid "Consider increasing your PHP memory limit to %memory_minimum_limit to help prevent errors in the installation process."
+msgstr ""
+"Envisagez d'augmenter le plafond mémoire de PHP à "
+"%memory_minimum_limit pour éviter les erreurs durant le processus "
+"d'installation."
+
+#: (duplicate) wetkit_core.install:36 
+msgid "Consider increasing your PHP memory limit to %memory_minimum_limit to help prevent errors in the update process."
+msgstr ""
+"Envisagez d'augmenter le plafond mémoire de PHP à "
+"%memory_minimum_limit pour éviter les erreurs durant le processus "
+"d'installation."
+
+#: (duplicate) wetkit_core.install:39 
+msgid "Depending on your configuration, Drupal can run with a %memory_limit PHP memory limit. However, a %memory_minimum_limit PHP memory limit or above is recommended, especially if your site uses additional custom or contributed modules."
+msgstr ""
+"En fonction de votre configuration, Drupal peut fonctionner avec un "
+"plafond mémoire de PHP de %memory_limit. Un plafond de "
+"%memory_minimum_limit ou supérieur est néanmoins recommandé, en "
+"particulier si votre site utiliser des modules additionnels."
+
+#: (duplicate) wetkit_core.install:44 
+msgid "Increase the memory limit by editing the memory_limit parameter in the file %configuration-file and then restart your web server (or contact your system administrator or hosting provider for assistance)."
+msgstr ""
+"Augmentez le plafond mémoire de PHP en éditant le paramètre "
+"memory_limit dans le fichier de configuration %configuration-file et "
+"redémarrez votre serveur web (ou contactez votre administrateur "
+"système ou votre fournisseur d'hébergement pour cela)."
+
+#: (duplicate) wetkit_core.install:47 
+msgid "Contact your system administrator or hosting provider for assistance with increasing your PHP memory limit."
+msgstr ""
+"Contactez votre administrateur système ou votre fournisseur "
+"d'hébergement pour augmenter le plafond mémoire de PHP."
+
+#: (duplicate) wetkit_core.install:50 
+msgid "See the <a href=\"@url\">Drupal requirements</a> for more information."
+msgstr ""
+"Consultez <a href=\"@url\">les pré-requis de Drupal</a> pour plus "
+"d'informations."
 
 #: wetkit_core.info:0
 msgid "WetKit Core"
