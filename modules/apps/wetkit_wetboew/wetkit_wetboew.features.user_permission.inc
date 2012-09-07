@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * wetkit_web_usability.features.user_permission.inc
+ * wetkit_wetboew.features.user_permission.inc
  */
 
 /**
  * Implements hook_user_default_permissions().
  */
-function wetkit_web_usability_user_default_permissions() {
+function wetkit_wetboew_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: access content.

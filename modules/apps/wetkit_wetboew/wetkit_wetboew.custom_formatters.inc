@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * wetkit_web_usability.custom_formatters.inc
+ * wetkit_wetboew.custom_formatters.inc
  */
 
 /**
  * Implements hook_custom_formatters_defaults().
  */
-function wetkit_web_usability_custom_formatters_defaults() {
+function wetkit_wetboew_custom_formatters_defaults() {
   $export = array();
 
   $formatter = new stdClass();

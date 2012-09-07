@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * wetkit_web_usability.strongarm.inc
+ * wetkit_wetboew.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function wetkit_web_usability_strongarm() {
+function wetkit_wetboew_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

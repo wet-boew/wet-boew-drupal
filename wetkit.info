@@ -47,7 +47,7 @@ dependencies[] = wetkit_demo
 
 ; WetKit Web Usability
 dependencies[] = wetkit_language
-dependencies[] = wetkit_web_usability
+dependencies[] = wetkit_wetboew
 
 ; CSS Stylesheets
 stylesheets[all][] = css/wetkit.css

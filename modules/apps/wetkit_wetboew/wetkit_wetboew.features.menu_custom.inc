@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * wetkit_web_usability.features.menu_custom.inc
+ * wetkit_wetboew.features.menu_custom.inc
  */
 
 /**
  * Implements hook_menu_default_menu_custom().
  */
-function wetkit_web_usability_menu_default_menu_custom() {
+function wetkit_wetboew_menu_default_menu_custom() {
   $menus = array();
 
   // Exported menu: main-menu.

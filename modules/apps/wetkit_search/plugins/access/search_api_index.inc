@@ -34,5 +34,5 @@ function wetkit_search_search_api_index_ctools_access_check($conf, $context) {
  * Provide a summary description based upon the checked terms.
  */
 function wetkit_search_search_api_index_ctools_access_summary($conf, $context) {
-  return t('Panopoly Search index is Enabled');
+  return t('WetKit Search index is Enabled');
 }
