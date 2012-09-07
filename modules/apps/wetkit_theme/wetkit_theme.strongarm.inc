@@ -236,7 +236,7 @@ function wetkit_theme_strongarm() {
     'unset_css_profiles_wetkit_modules_apps_wetkit_magic_wetkit_magic_css' => 0,
     'unset_css_profiles_wetkit_modules_apps_wetkit_pages_wetkit_pages_css' => 0,
     'unset_css_profiles_wetkit_modules_apps_wetkit_theme_css_wetkit-featured_css' => 0,
-    'unset_css_profiles_wetkit_modules_apps_wetkit_web_usability_css_wetkit_web_usability_css' => 0,
+    'unset_css_profiles_wetkit_modules_apps_wetkit_wetboew_css_wetkit_wetboew_css' => 0,
     'unset_css_profiles_wetkit_modules_apps_wetkit_widgets_css_wetkit_spotlight_css' => 0,
     'unset_css_profiles_wetkit_modules_apps_wetkit_widgets_css_wetkit_accordion_css' => 0,
     'unset_css_profiles_wetkit_modules_apps_wetkit_widgets_css_wetkit_views_slideshow_css' => 0,

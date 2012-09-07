@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the Panopoly Search feature.
+ * Code for the WetKit Search feature.
  */
 
 include_once 'wetkit_search.features.inc';

@@ -15,7 +15,7 @@ includes[] = ../wetkit_admin/wetkit_admin.make
 includes[] = ../wetkit_wysiwyg/wetkit_wysiwyg.make
 includes[] = ../wetkit_search/wetkit_search.make
 includes[] = ../wetkit_language/wetkit_language.make
-includes[] = ../wetkit_web_usability/wetkit_web_usability.make
+includes[] = ../wetkit_wetboew/wetkit_wetboew.make
 
 ; Panels and Chaos Tools Magic
 

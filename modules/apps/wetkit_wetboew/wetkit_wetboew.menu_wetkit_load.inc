@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * wetkit_web_usability.features.menu_custom.inc
+ * wetkit_wetboew.features.menu_custom.inc
  */
 
 /**

@@ -9,21 +9,21 @@
 $plugin = array(
   'title' => t('WetKit Nav'),
   'description' => t('Display the pane or region with no markup, not even a title.'),
-  'render region' => 'wetkit_web_usability_wetkitnav_style_render_region',
-  'render pane' => 'wetkit_web_usability_wetkitnav_style_render_pane',
-  'pane settings form' => 'wetkit_web_usability_wetkitnav_style_settings_form',
+  'render region' => 'wetkit_wetboew_wetkitnav_style_render_region',
+  'render pane' => 'wetkit_wetboew_wetkitnav_style_render_pane',
+  'pane settings form' => 'wetkit_wetboew_wetkitnav_style_settings_form',
   'hook theme' => array(
-    'wetkit_web_usability_theme_pane' => array(
+    'wetkit_wetboew_theme_pane' => array(
       'template' => 'wetkitnav-pane',
-      'path' => drupal_get_path('module', 'wetkit_web_usability') . '/plugins/styles/wetkitnav',
+      'path' => drupal_get_path('module', 'wetkit_wetboew') . '/plugins/styles/wetkitnav',
       'variables' => array(
         'content' => NULL,
         'settings' => NULL,
       ),
     ),
-    'wetkit_web_usability_theme_region' => array(
+    'wetkit_wetboew_theme_region' => array(
     'template' => 'wetkitnav-region',
-      'path' => drupal_get_path('module', 'wetkit_web_usability') . '/plugins/styles/wetkitnav',
+      'path' => drupal_get_path('module', 'wetkit_wetboew') . '/plugins/styles/wetkitnav',
       'variables' => array(
         'content' => NULL,
       ),
@@ -37,7 +37,7 @@ $plugin = array(
  *
  * @ingroup themeable
  */
-function theme_wetkit_web_usability_wetkitnav_style_render_region($vars) {
+function theme_wetkit_wetboew_wetkitnav_style_render_region($vars) {
   //return implode($vars['panes']);
   $content = '';
   foreach ($vars['panes'] as $pane_id => $pane_output) {
@@ -46,7 +46,7 @@ function theme_wetkit_web_usability_wetkitnav_style_render_region($vars) {
   if (empty($content)) {
     return;
   }
-  return theme('wetkit_web_usability_theme_region', array('content' => $content));
+  return theme('wetkit_wetboew_theme_region', array('content' => $content));
 }
 
 /**
@@ -54,17 +54,17 @@ function theme_wetkit_web_usability_wetkitnav_style_render_region($vars) {
  *
  * @ingroup themeable
  */
-function theme_wetkit_web_usability_wetkitnav_style_render_pane($vars) {
+function theme_wetkit_wetboew_wetkitnav_style_render_pane($vars) {
   //return render($vars['content']->content);
   $settings = $vars['settings'];
   $content = $vars['content'];
-  return theme('wetkit_web_usability_theme_pane', array('content' => $content, 'settings' => $settings));
+  return theme('wetkit_wetboew_theme_pane', array('content' => $content, 'settings' => $settings));
 }
 
 /**
  * Settings Form.
  */
-function wetkit_web_usability_wetkitnav_style_settings_form($style_settings) {
+function wetkit_wetboew_wetkitnav_style_settings_form($style_settings) {
 
   $form['headings'] = array(
     '#type' => 'select',

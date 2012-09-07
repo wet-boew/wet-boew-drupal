@@ -184,7 +184,7 @@ function wetkit_search_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'search_api_index_node_index';
-  $view->human_name = 'Panopoly Solr Search';
+  $view->human_name = 'WetKit Solr Search';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */

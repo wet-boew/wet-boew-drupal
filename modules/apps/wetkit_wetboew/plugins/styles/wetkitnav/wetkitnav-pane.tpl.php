@@ -17,7 +17,7 @@
  *   data including the contexts and all of the other panes being displayed.
  */
 ?>
-<?php drupal_add_css(drupal_get_path('module','wetkit_web_usability') .'/plugins/styles/wetkitnav/wetkitnav.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE)); ?>
+<?php drupal_add_css(drupal_get_path('module','wetkit_wetboew') .'/plugins/styles/wetkitnav/wetkitnav.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE)); ?>
 <div class="wetkitnav-pane">
   <?php if (isset($content->title)): ?>
   <?php
