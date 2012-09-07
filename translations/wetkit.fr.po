@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-08-22 10:00-0400\n"
-"PO-Revision-Date: 2012-08-22 10:00-0400\n"
+"POT-Creation-Date: 2012-09-07 10:55-0400\n"
+"PO-Revision-Date: 2012-09-07 10:55-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -29,43 +29,7 @@ msgstr ""
 "Profile d'installation créé au moyen de Drupal 7 pour la Boîte à "
 "outils de l’expérience Web"
 
-#: wetkit.profile:21
+#: wetkit.profile:20
 msgid "Import French Language"
 msgstr "Importer langue français"
-
-#: wetkit.profile:27
-msgid "Enable apps support"
-msgstr "Activer le soutien apps"
-
-#: wetkit.profile:71
-msgid "Install local apps for WetKit"
-msgstr "Installer les applications locales pour BOEW"
-
-#: wetkit.profile:76
-msgid "Choose a theme"
-msgstr "Choisir un thème"
-
-#: wetkit.profile:247
-msgid "Enable Support for Apps"
-msgstr "Activer le soutien pour les apps"
-
-#: wetkit.profile:250
-msgid "Apps uses the same mechanism for installing modules as the update module in core. This depends on certain php extensions to be installed on your server. Below is the documentation for the various methods of installing."
-msgstr "Les applications utilisent le même mécanisme pour l’installation des modules que le module dans le cœur. Le tout dépend des extensions  php qui seront installées sur votre serveur. Voir ci-dessous la documentation pour les diverses méthodes d’installation."
-
-#: wetkit.profile:254
-msgid "FTP"
-msgstr "FTP"
-
-#: wetkit.profile:260
-msgid "SSH"
-msgstr "SSH"
-
-#: wetkit.profile:285
-msgid "Choose a theme!"
-msgstr "Choisir un thème!"
-
-#: wetkit.profile:296
-msgid "Starting Theme"
-msgstr "Thème de départ"
 

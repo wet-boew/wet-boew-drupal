@@ -3,8 +3,11 @@
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
+#  wetkit_theme.profile.inc: n/a
 #  wetkit_theme.module: n/a
 #  wetkit_theme.info: n/a
+#  plugins/access/browscap_mobile.inc: n/a
+#  plugins/access/browscap_notmobile.inc: n/a
 #  plugins/layouts/bartlett/bartlett.inc: n/a
 #  plugins/layouts/bartlett_flipped/bartlett_flipped.inc: n/a
 #  plugins/layouts/boxton/boxton.inc: n/a
@@ -43,14 +46,22 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-08-22 10:06-0400\n"
-"PO-Revision-Date: 2012-08-22 10:06-0400\n"
+"POT-Creation-Date: 2012-09-07 10:47-0400\n"
+"PO-Revision-Date: 2012-09-07 10:47-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: wetkit_theme.profile.inc:8;20
+msgid "Choose a theme"
+msgstr "Choisir un thème"
+
+#: wetkit_theme.profile.inc:31
+msgid "Starting Theme"
+msgstr "Thème de départ"
 
 #: wetkit_theme.module:48;54
 msgid "Featured"
@@ -67,6 +78,26 @@ msgstr "Aide à la création du thème et fournit plusieurs mises en page."
 #: wetkit_theme.info:0
 msgid "WetKit"
 msgstr "BOEW"
+
+#: plugins/access/browscap_mobile.inc:15
+msgid "Is Mobile Browser"
+msgstr ""
+
+#: plugins/access/browscap_mobile.inc:16
+msgid "Is this a mobile device."
+msgstr ""
+
+#: plugins/access/browscap_mobile.inc:48 plugins/access/browscap_notmobile.inc:48
+msgid "Is mobile device"
+msgstr ""
+
+#: plugins/access/browscap_notmobile.inc:15
+msgid "Is Not a Mobile Browser"
+msgstr ""
+
+#: plugins/access/browscap_notmobile.inc:16
+msgid "Is this not a mobile device."
+msgstr ""
 
 #: plugins/layouts/bartlett/bartlett.inc:4
 msgid "Bartlett"
@@ -94,7 +125,7 @@ msgstr "Contenu - colonne 2"
 
 #: plugins/layouts/bartlett_flipped/bartlett_flipped.inc:4
 msgid "Bartlett Flipped"
-msgstr "Bartlett Flipped""
+msgstr "Bartlett Flipped\""
 
 #: plugins/layouts/boxton/boxton.inc:4
 msgid "Boxton"
@@ -246,7 +277,7 @@ msgstr "Colonne quadrant 1"
 
 #: plugins/layouts/rolph/rolph.inc:12;14 plugins/layouts/taylor/taylor.inc:13 plugins/layouts/taylor_flipped/taylor_flipped.inc:12
 msgid "Quarter 2 Column"
-msgstr "Colonne quadrant 2""
+msgstr "Colonne quadrant 2\""
 
 #: plugins/layouts/sanderson/sanderson.inc:4
 msgid "Sanderson"
@@ -338,7 +369,11 @@ msgstr "Établir à hauteur automatique"
 
 #: plugins/styles/accordion/wetkit_accordion.inc:77
 msgid "If set, clears height and overflow styles after finishing animations. This enables accordions to work with dynamic content. Won't work together with autoHeight."
-msgstr "Si cette valeur est établie, la hauteur et les dépassement de style sont annulés une fois les animations terminées. Donc, les accordéons peuvent fonctionner avec du contenu dynamique. Ne fonctionne pas avec la hauteur automatique."
+msgstr ""
+"Si cette valeur est établie, la hauteur et les dépassement de style "
+"sont annulés une fois les animations terminées. Donc, les "
+"accordéons peuvent fonctionner avec du contenu dynamique. Ne "
+"fonctionne pas avec la hauteur automatique."
 
 #: plugins/styles/accordion/wetkit_accordion.inc:78
 msgid "Clear heights after animation"
@@ -346,7 +381,10 @@ msgstr "Annuler les hauteurs après l’animation"
 
 #: plugins/styles/accordion/wetkit_accordion.inc:84
 msgid "Whether all the sections can be closed at once. Allows collapsing the active section by the triggering event (click is the default)."
-msgstr "Si toutes les sections peuvent être fermées en même temps. L’événement déclencheur (un clic est la valeur par défaut) permet de rétracter la section active."
+msgstr ""
+"Si toutes les sections peuvent être fermées en même temps. "
+"L’événement déclencheur (un clic est la valeur par défaut) "
+"permet de rétracter la section active."
 
 #: plugins/styles/accordion/wetkit_accordion.inc:85
 msgid "Can close all section"
@@ -366,16 +404,18 @@ msgstr "Pointer la souris sur l'image"
 
 #: plugins/styles/accordion/wetkit_accordion.inc:97
 msgid "If set, the accordion completely fills the height of the parent element. Overrides autoheight."
-msgstr "Si cette valeur est établie, l’accordéon remplit la hauteur de l’élément parent. Remplace la hauteur automatique."
+msgstr ""
+"Si cette valeur est établie, l’accordéon remplit la hauteur de "
+"l’élément parent. Remplace la hauteur automatique."
 
 #: plugins/styles/accordion/wetkit_accordion.inc:103
-msgid "If set, looks for the anchor that matches location.href and activates it. Great for href-based state-saving. Use navigationFilter to implement your own matcher."
-msgstr "Si cette valeur est établie, rechercher l’ancre qui correspond à location.href et l’activer. Idéal pour sauvegarder un état href. Utiliser le filtre navigationFilter pour créer votre propre outil de mise en correspondance."
+msgid "If set, looks for the anchor that matches location.href and activates it. Great for href-based state-saving. Use navigationFilter to implement your own matcher.."
+msgstr ""
 
 #: templates/date_views_pager.tpl.php:46
 msgctxt "date_nav"
 msgid "Prev"
-msgstr "Préc"
+msgstr "Préc."
 
 #: templates/date_views_pager.tpl.php:51
 msgctxt "date_nav"

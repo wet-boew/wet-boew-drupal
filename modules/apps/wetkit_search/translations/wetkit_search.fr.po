@@ -2,14 +2,21 @@
 #
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
-# Generated from file: wetkit_search.info: n/a
+# Generated from files:
+#  wetkit_search.install: n/a
+#  wetkit_search.info: n/a
+#  plugins/access/search_api_index.inc: n/a
+#  plugins/access/solr.inc: n/a
+#  plugins/content_types/facet/facet.inc: n/a
+#  plugins/content_types/search_box/search_box.inc: n/a
+#  plugins/content_types/search_current/search_current.inc: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-08-22 10:06-0400\n"
-"PO-Revision-Date: 2012-08-22 10:06-0400\n"
+"POT-Creation-Date: 2012-09-07 10:47-0400\n"
+"PO-Revision-Date: 2012-09-07 10:47-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -17,15 +24,137 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
+#: wetkit_search.install:84
+msgid "WetKit has been configured to use Pantheon's Solr Service"
+msgstr ""
+
+#: wetkit_search.install:97
+msgid "WetKit's Search DB Search API index has been updated"
+msgstr ""
+
 #: wetkit_search.info:0
 msgid "WetKit Search"
 msgstr "Recherche WetKit"
 
 #: wetkit_search.info:0
-msgid "Indexes, configures and searches site content."
-msgstr "Indexe, configure le contenu du site et permet d’effectuer une recherche."
+msgid "Indexes and searches site content, Solr or otherwise."
+msgstr ""
 
 #: wetkit_search.info:0
 msgid "WetKit"
 msgstr "BOEW"
+
+#: plugins/access/search_api_index.inc:9
+msgid "Search API Index"
+msgstr ""
+
+#: plugins/access/search_api_index.inc:10
+msgid "Is the Search API index enabled?"
+msgstr ""
+
+#: plugins/access/search_api_index.inc:37
+msgid "WetKit Search index is Enabled"
+msgstr ""
+
+#: plugins/access/solr.inc:9
+msgid "Solr"
+msgstr ""
+
+#: plugins/access/solr.inc:10
+msgid "Is Apache Solr running?"
+msgstr ""
+
+#: plugins/access/solr.inc:37
+msgid "Apache Solr is running"
+msgstr ""
+
+#: plugins/content_types/facet/facet.inc:9
+msgid "Search Facets"
+msgstr ""
+
+#: plugins/content_types/facet/facet.inc:10
+msgid "The list of options available for a particular type of search facet"
+msgstr ""
+
+#: plugins/content_types/facet/facet.inc:11 plugins/content_types/search_box/search_box.inc:16 plugins/content_types/search_current/search_current.inc:12
+msgid "Keywords"
+msgstr "Mots-clés"
+
+#: plugins/content_types/facet/facet.inc:12
+msgid "Facet API"
+msgstr ""
+
+#: plugins/content_types/facet/facet.inc:39
+msgid "Facet Type"
+msgstr ""
+
+#: plugins/content_types/search_box/search_box.inc:14;98
+msgid "Search form"
+msgstr "Formulaire de recherche"
+
+#: plugins/content_types/search_box/search_box.inc:15
+msgid "A search form with options."
+msgstr ""
+
+#: plugins/content_types/search_box/search_box.inc:17 plugins/content_types/search_current/search_current.inc:13
+msgid "Search"
+msgstr "Rechercher"
+
+#: plugins/content_types/search_box/search_box.inc:91
+msgid "Search type"
+msgstr ""
+
+#: plugins/content_types/search_box/search_box.inc:100
+msgid "Simple"
+msgstr ""
+
+#: plugins/content_types/search_box/search_box.inc:101
+msgid "Advanced"
+msgstr ""
+
+#: plugins/content_types/search_box/search_box.inc:104
+msgid "The advanced form may have additional options based upon the search type. For example the advanced content (node) search form will allow searching by node type and taxonomy term."
+msgstr ""
+
+#: plugins/content_types/search_box/search_box.inc:110
+msgid "Path"
+msgstr "Chemin"
+
+#: plugins/content_types/search_box/search_box.inc:112
+msgid "Default"
+msgstr "Par défaut"
+
+#: plugins/content_types/search_box/search_box.inc:113
+msgid "Same page"
+msgstr ""
+
+#: plugins/content_types/search_box/search_box.inc:114
+msgid "Custom"
+msgstr "Personnalisé"
+
+#: plugins/content_types/search_box/search_box.inc:130
+msgid "Override default prompt"
+msgstr ""
+
+#: plugins/content_types/search_box/search_box.inc:157
+msgid "Missing/broken type"
+msgstr ""
+
+#: plugins/content_types/search_box/search_box.inc:158
+msgid "@type search form"
+msgstr ""
+
+#: plugins/content_types/search_current/search_current.inc:10
+msgid "Current search"
+msgstr ""
+
+#: plugins/content_types/search_current/search_current.inc:11
+msgid "The count of results for current search."
+msgstr ""
+
+#: plugins/content_types/search_current/search_current.inc:39;44
+msgid "1 item"
+msgid_plural "@count items"
+msgstr[0] "1 élement"
+msgstr[1] "@count éléments"
 
