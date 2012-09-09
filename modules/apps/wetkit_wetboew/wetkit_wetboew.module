@@ -164,9 +164,7 @@ function wetkit_wetboew_uninstall() {
  * Implements of hook_ctools_plugin_directory().
  */
 function wetkit_wetboew_ctools_plugin_directory($module, $plugin) {
-  if ($module == 'page_manager' || $module == 'panels') {
-    return 'plugins/' . $plugin;
-  }
+  return 'plugins/' . $plugin;
 }
 
 /**
@@ -287,32 +285,6 @@ function wetkit_wetboew_check_variant($libary, $variant) {
   else {
     return FALSE;
   }
-}
-
-/**
- * Implements of hook_menu().
- */
-function wetkit_wetboew_menu() {
-  $items['admin/config/wetkit_wetboew'] = array(
-    'title' => 'WetKit Web Usability',
-    'description' => 'Manage specific features related to the Web Experience Toolkit.',
-    'position' => 'left',
-    'weight' => -50,
-    'page callback' => 'system_admin_menu_block_page',
-    'access arguments' => array('administer site configuration'),
-    'file' => 'system.admin.inc',
-    'file path' => drupal_get_path('module', 'system'),
-  );
-  $items['admin/config/wetkit_wetboew/settings'] = array(
-    'title' => 'WetKit Web Usability Settings',
-    'description' => 'Change how certain settings behave from the Web Experience Toolkit.',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('wetkit_wetboew_admin_settings'),
-    'access arguments' => array('administer site configuration'),
-    'type' => MENU_NORMAL_ITEM,
-    'file' => 'wetkit_wetboew.admin.inc',
-  );
-  return $items;
 }
 
 /**

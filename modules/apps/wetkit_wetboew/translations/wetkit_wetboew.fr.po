@@ -11,6 +11,7 @@
 #  wetkit_box/wetkit_box.info: n/a
 #  wetkit_metatag/wetkit_metatag.info: n/a
 #  wetkit_security/wetkit_security.info: n/a
+#  plugins/content_types/archived_widget.inc: n/a
 #  plugins/styles/wetkitnav/wetkitnav.inc: n/a
 #  wetkit_box/plugins/wetkit_box.inc: n/a
 #  wetkit_metatag/wetkit_metatag.admin.inc: n/a
@@ -21,8 +22,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-09-07 10:48-0400\n"
-"PO-Revision-Date: 2012-09-07 10:48-0400\n"
+"POT-Creation-Date: 2012-09-08 14:46-0400\n"
+"PO-Revision-Date: 2012-09-08 14:46-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -158,34 +159,34 @@ msgstr "Message d'erreur"
 msgid "Warning message"
 msgstr "Message d'avertissement"
 
-#: wetkit_wetboew.module:196
+#: wetkit_wetboew.module:194
 msgid "Please proceed to the <a href=\"@settings\">WetKit Web Usability Page</a> to configure additional settings."
 msgstr ""
 "Veuillez aller à la page <a href=\"@settings\"> utilisation de la "
 "Boîte à outils de l'expérience Web</a> pour configurer d’autres "
 "paramètres."
 
-#: wetkit_wetboew.module:197
+#: wetkit_wetboew.module:195
 msgid "Please read the online <a href=\"@documentation\">Documentation</a>"
 msgstr ""
 "Veuillez lire la documentation en ligne <a "
 "href=\"@documentation\">Documentation</a>"
 
-#: wetkit_wetboew.module:297
+#: wetkit_wetboew.module:295
 msgid "WetKit Web Usability"
 msgstr "Utilisation de BOEW"
 
-#: wetkit_wetboew.module:298
+#: wetkit_wetboew.module:296
 msgid "Manage specific features related to the Web Experience Toolkit."
 msgstr ""
 "Gérer les fonctions liées à la Boîte à outils de l'expérience "
 "Web."
 
-#: wetkit_wetboew.module:307
+#: wetkit_wetboew.module:305
 msgid "WetKit Web Usability Settings"
 msgstr "Paramètres d’utilisation de la BOEW"
 
-#: wetkit_wetboew.module:308
+#: wetkit_wetboew.module:306
 msgid "Change how certain settings behave from the Web Experience Toolkit."
 msgstr ""
 "Changer le comportement de certains paramètres de la Boîte à outils "
@@ -202,6 +203,30 @@ msgstr ""
 #: wetkit_wetboew.info:0 wetkit_box/wetkit_box.info:0 wetkit_metatag/wetkit_metatag.info:0 wetkit_security/wetkit_security.info:0
 msgid "WetKit"
 msgstr "BOEW"
+
+#: plugins/content_types/archived_widget.inc:9
+msgid "Archived Widget Panes"
+msgstr ""
+
+#: plugins/content_types/archived_widget.inc:10
+msgid "This will generate an archived status message when a piece of content is flagged as archived."
+msgstr ""
+
+#: plugins/content_types/archived_widget.inc:12
+msgid "WET-BOEW"
+msgstr "WET-BOEW"
+
+#: plugins/content_types/archived_widget.inc:13
+msgid "Node"
+msgstr "Nœud"
+
+#: plugins/content_types/archived_widget.inc:30
+msgid "Archived Content"
+msgstr "Contenu archivé"
+
+#: plugins/content_types/archived_widget.inc:31
+msgid "Information identified as archived is provided for reference, research or recordkeeping purposes. It is not subject to the Government of Canada Web Standards and has not been altered or updated since it was archived. Please contact us to request a format other than those available."
+msgstr "L’information dont il est indiqué qu’elle est archivée est fournie à des fins de référence, de recherche ou de tenue de documents. Elle n’est pas assujettie aux normes Web du gouvernement du Canada et elle n’a pas été modifiée ou mise à jour depuis son archivage. Pour obtenir cette information dans un autre format, veuillez communiquer avec nous."
 
 #: plugins/styles/wetkitnav/wetkitnav.inc:10
 msgid "WetKit Nav"

@@ -23,6 +23,7 @@ features[ctools][] = panelizer:panelizer:1
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
 features[field][] = node-wetkit_page-body
+features[field][] = node-wetkit_page-field_archived_content
 features[field][] = node-wetkit_page-field_featured_categories
 features[field][] = node-wetkit_page-field_featured_image
 features[field][] = node-wetkit_page-field_featured_status
