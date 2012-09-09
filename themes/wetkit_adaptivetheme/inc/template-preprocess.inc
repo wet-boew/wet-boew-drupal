@@ -88,10 +88,10 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
     }
     //Set Body Class for Panels Layouts
     if (isset($layout)) {
-      if ($layout == 'wetkit_two_33_66') {
+      if (substr($layout, 0, 10) == 'wetkit_two') {
         $variables['wetkit_col_array'] = 'wb-body-sec';
       }
-      elseif ($layout == 'wetkit_three_40_40_20') {
+      elseif (substr($layout, 0, 12) == 'wetkit_three') {
         $variables['wetkit_col_array'] = 'wb-body';
       }
       else {
