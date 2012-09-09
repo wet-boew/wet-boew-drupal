@@ -1,9 +1,0 @@
-name = WetKit Wet Usability
-description = Integrates WetKit Web Usability into Drupal.
-machine_name = wetkit_wetboew
-version = 1.0-beta3
-downloadable = wetkit_wetboew 7.x-1.0-beta3
-author = Pantheon Systems
-author_url = http://www.getpantheon.com
-screenshots[] = wetkit_wetboew_screenshot.png
-logo = wetkit_wetboew_logo.png

@@ -1,9 +1,0 @@
-name = WetKit Demo
-description = Integrates WetKit Demo into Drupal.
-machine_name = wetkit_demo
-version = 1.0-beta3
-downloadable = wetkit_demo 7.x-1.0-beta3
-author = Pantheon Systems
-author_url = http://www.getpantheon.com
-screenshots[] = wetkit_demo_screenshot.png
-logo = wetkit_demo_logo.png

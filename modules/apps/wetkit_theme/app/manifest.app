@@ -1,9 +1,0 @@
-name = WetKit Theme
-description = Integrates WetKit Theme into Drupal.
-machine_name = wetkit_theme
-version = 1.0-beta3
-downloadable = wetkit_theme 7.x-1.0-beta3
-author = Pantheon Systems
-author_url = http://www.getpantheon.com
-screenshots[] = wetkit_theme_screenshot.png
-logo = wetkit_theme_logo.png
