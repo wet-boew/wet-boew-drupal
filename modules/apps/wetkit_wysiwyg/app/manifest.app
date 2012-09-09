@@ -1,9 +1,0 @@
-name = WetKit WYSIWYG
-description = Integrates WetKit WYSIWYG into Drupal.
-machine_name = wetkit_wysiwyg
-version = 1.0-beta3
-downloadable = wetkit_wysiwyg 7.x-1.0-beta3
-author = Pantheon Systems
-author_url = http://www.getpantheon.com
-screenshots[] = wetkit_wysiwyg_screenshot.png
-logo = wetkit_wysiwyg_logo.png

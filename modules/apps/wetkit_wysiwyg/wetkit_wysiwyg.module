@@ -112,9 +112,9 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
     global $language;
     if ($settings['language'] != $language->language) {
       // Check existence of TinyMCE core language file.
-      if (file_exists($context['editor']['library path'] .'/langs/'. $language->language .'.js')) {
+      if (file_exists($context['editor']['library path'] . '/langs/' . $language->language . '.js')) {
         // Check existence of TinyMCE theme language file.
-        if (file_exists($context['editor']['library path'] .'/themes/'. $context['theme'] .'/langs/'. $language->language .'.js')) {
+        if (file_exists($context['editor']['library path'] . '/themes/' . $context['theme'] . '/langs/' . $language->language . '.js')) {
           $settings['language'] = $language->language;
         }
       }

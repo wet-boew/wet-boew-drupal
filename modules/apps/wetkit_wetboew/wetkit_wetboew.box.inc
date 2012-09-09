@@ -128,7 +128,7 @@ function wetkit_wetboew_default_box() {
     'en-title' => 'Videos',
     'en-body' => array(
       'value' => '<div id="gcwu-bg-dark">
-	<img alt="" class="posterimg" src="/profiles/wetkit/modules/apps/wetkit_wetboew/images/video.jpg" />
+	<img alt="Video" class="posterimg" src="/profiles/wetkit/modules/apps/wetkit_wetboew/images/video.jpg" />
 	<p><strong>Web Experience Toolkit Video</strong></p>
 	<p>This section is for video related content. Often this is the best place to introduce your department or organization.</p>
 </div>
@@ -142,7 +142,7 @@ function wetkit_wetboew_default_box() {
     'fr-title' => 'Vidéos',
     'fr-body' => array(
       'value' => '<div id="gcwu-bg-dark">
-	<img alt="" class="posterimg" src="/profiles/wetkit/modules/apps/wetkit_wetboew/images/video.jpg" />
+	<img alt="Vidéo" class="posterimg" src="/profiles/wetkit/modules/apps/wetkit_wetboew/images/video.jpg" />
 	<p><strong>Exp&eacute;rience Web Toolkit Vid&eacute;o</strong></p>
 	<p>Cette section est pour le contenu vid&eacute;o li&eacute;. Souvent c&#39;est le meilleur endroit pour introduire votre minist&egrave;re ou organisme.</p>
 </div>

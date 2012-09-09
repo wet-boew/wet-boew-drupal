@@ -205,12 +205,14 @@ function wetkit_admin_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-8';
     $pane->panel = 'sidebar';
-    $pane->type = 'node_form_author';
-    $pane->subtype = 'node_form_author';
+    $pane->type = 'entity_form_field';
+    $pane->subtype = 'node:field_archived_content';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'context' => array(),
+      'label' => '',
+      'formatter' => '',
+      'context' => 'argument_node_edit_1',
       'override_title' => 0,
       'override_title_text' => '',
     );
@@ -227,6 +229,28 @@ function wetkit_admin_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-9';
     $pane->panel = 'sidebar';
+    $pane->type = 'node_form_author';
+    $pane->subtype = 'node_form_author';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 5;
+    $pane->locks = array();
+    $display->content['new-9'] = $pane;
+    $display->panels['sidebar'][5] = 'new-9';
+    $pane = new stdClass();
+    $pane->pid = 'new-10';
+    $pane->panel = 'sidebar';
     $pane->type = 'node_form_buttons';
     $pane->subtype = 'node_form_buttons';
     $pane->shown = TRUE;
@@ -242,10 +266,10 @@ function wetkit_admin_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 6;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['sidebar'][5] = 'new-9';
+    $display->content['new-10'] = $pane;
+    $display->panels['sidebar'][6] = 'new-10';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-3';
   $handler->conf['display'] = $display;

@@ -528,3 +528,16 @@
   -moz-box-shadow: 0 0 0 0 #fff;
   box-shadow: 0 0 0 0 #fff;
 }
+
+/* Rubik */
+
+#modal-content .form-item {
+  position: static;
+  border: none;
+  padding: 0px;
+}
+
+#modal-content .form-wrapper.form-actions {
+  border: none;
+  background: none;
+}

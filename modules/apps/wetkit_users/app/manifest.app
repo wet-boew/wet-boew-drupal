@@ -1,9 +1,0 @@
-name = WetKit Users
-description = Integrates WetKit Users into Drupal.
-machine_name = wetkit_users
-version = 1.0-beta3
-downloadable = wetkit_users 7.x-1.0-beta3
-author = Pantheon Systems
-author_url = http://www.getpantheon.com
-screenshots[] = wetkit_users_screenshot.png
-logo = wetkit_users_logo.png
