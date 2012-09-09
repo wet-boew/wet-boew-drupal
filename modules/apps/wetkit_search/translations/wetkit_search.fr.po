@@ -3,26 +3,107 @@
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
+#  wetkit_search.views_default.inc: n/a
+#  plugins/content_types/search_box/search_box.inc: n/a
+#  plugins/content_types/search_current/search_current.inc: n/a
 #  wetkit_search.install: n/a
 #  wetkit_search.info: n/a
 #  plugins/access/search_api_index.inc: n/a
 #  plugins/access/solr.inc: n/a
 #  plugins/content_types/facet/facet.inc: n/a
-#  plugins/content_types/search_box/search_box.inc: n/a
-#  plugins/content_types/search_current/search_current.inc: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-09-07 10:47-0400\n"
-"PO-Revision-Date: 2012-09-07 10:47-0400\n"
+"POT-Creation-Date: 2012-09-08 22:40-0400\n"
+"PO-Revision-Date: 2012-09-08 22:40-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: wetkit_search.views_default.inc:131;272
+msgid "Master"
+msgstr "Maître"
+
+#: wetkit_search.views_default.inc:132;273
+msgid "more"
+msgstr "plus"
+
+#: wetkit_search.views_default.inc:133;274
+msgid "Apply"
+msgstr "Appliquer"
+
+#: wetkit_search.views_default.inc:134;275
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#: wetkit_search.views_default.inc:135;276
+msgid "Sort by"
+msgstr "Trier selon"
+
+#: wetkit_search.views_default.inc:136;277
+msgid "Asc"
+msgstr "Ascendant"
+
+#: wetkit_search.views_default.inc:137;278
+msgid "Desc"
+msgstr "Descendant"
+
+#: wetkit_search.views_default.inc:138;279
+msgid "Items per page"
+msgstr ""
+
+#: wetkit_search.views_default.inc:139;280
+msgid "- All -"
+msgstr ""
+
+#: wetkit_search.views_default.inc:140;281
+msgid "Offset"
+msgstr ""
+
+#: wetkit_search.views_default.inc:141;282
+msgid "« first"
+msgstr "« premier"
+
+#: wetkit_search.views_default.inc:142;283
+msgid "‹ previous"
+msgstr "‹ précédent"
+
+#: wetkit_search.views_default.inc:143;284
+msgid "next ›"
+msgstr "suivant ›"
+
+#: wetkit_search.views_default.inc:144;285
+msgid "last »"
+msgstr "dernier »"
+
+#: wetkit_search.views_default.inc:145;286
+msgid "Empty Text"
+msgstr ""
+
+#: wetkit_search.views_default.inc:146;287
+msgid "Your search did not return any results."
+msgstr ""
+
+#: wetkit_search.views_default.inc:147;288
+msgid "All"
+msgstr "Tout"
+
+#: wetkit_search.views_default.inc:148
+msgid "Database Search Results"
+msgstr ""
+
+#: wetkit_search.views_default.inc:149;290 plugins/content_types/search_box/search_box.inc:17 plugins/content_types/search_current/search_current.inc:13
+msgid "Search"
+msgstr "Rechercher"
+
+#: wetkit_search.views_default.inc:289
+msgid "Solr Search Results"
+msgstr ""
 
 #: wetkit_search.install:84
 msgid "WetKit has been configured to use Pantheon's Solr Service"
@@ -95,10 +176,6 @@ msgstr "Formulaire de recherche"
 #: plugins/content_types/search_box/search_box.inc:15
 msgid "A search form with options."
 msgstr ""
-
-#: plugins/content_types/search_box/search_box.inc:17 plugins/content_types/search_current/search_current.inc:13
-msgid "Search"
-msgstr "Rechercher"
 
 #: plugins/content_types/search_box/search_box.inc:91
 msgid "Search type"
