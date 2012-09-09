@@ -8,3 +8,51 @@ img.file-icon,
 div.file-widget img {
   vertical-align: middle;
 }
+
+
+/**
+ * Responsive table layouts.
+ */
+table.mobile-table { 
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+    
+    table.tablefield {
+      display: none;
+    }
+    table.mobile-table {
+      display: block;
+    }
+
+    table {
+      margin: 50px; 
+      td, th {
+        padding: 10px;
+        text-align: left;
+      }
+    }
+
+    .mobile-table {
+      tbody tr:nth-child(odd) {
+        background: #eee;
+      }
+    }
+
+    .mobile-table tr {
+      width 50%;
+    }
+
+    .mobile-table tr.even th,
+    .mobile-table tr.even {
+      color: #000;
+      background: #fff;
+    }
+
+    .mobile-table tr.odd th,
+    .mobile-table tr.odd {
+      color: #000;
+      background: #eee;
+    }
+  }
