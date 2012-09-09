@@ -35,7 +35,9 @@ function wetkit_pages_field_default_fields() {
       ),
       'locked' => '0',
       'module' => 'text',
-      'settings' => array(),
+      'settings' => array(
+        'entity_translation_sync' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'text_with_summary',
     ),
@@ -50,7 +52,7 @@ function wetkit_pages_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '1',
+          'weight' => '2',
         ),
         'featured' => array(
           'label' => 'hidden',
@@ -92,6 +94,7 @@ function wetkit_pages_field_default_fields() {
       'required' => 1,
       'settings' => array(
         'display_summary' => 0,
+        'entity_translation_sync' => FALSE,
         'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
@@ -103,7 +106,91 @@ function wetkit_pages_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '4',
+        'weight' => '6',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-wetkit_page-field_archived_content'.
+  $fields['node-wetkit_page-field_archived_content'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_archived_content',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => '',
+          1 => '',
+        ),
+        'allowed_values_function' => '',
+        'entity_translation_sync' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'list_boolean',
+    ),
+    'field_instance' => array(
+      'bundle' => 'wetkit_page',
+      'default_value' => array(
+        0 => array(
+          'value' => 0,
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => '4',
+        ),
+        'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'fences_wrapper' => 'div',
+      'field_name' => 'field_archived_content',
+      'label' => 'Archived Content',
+      'required' => 0,
+      'settings' => array(
+        'entity_translation_sync' => FALSE,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(
+          'display_label' => 1,
+        ),
+        'type' => 'options_onoff',
+        'weight' => '5',
       ),
     ),
   );
@@ -138,6 +225,8 @@ function wetkit_pages_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -153,7 +242,7 @@ function wetkit_pages_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 3,
+          'weight' => '5',
         ),
         'featured' => array(
           'label' => 'above',
@@ -179,6 +268,7 @@ function wetkit_pages_field_default_fields() {
       'label' => 'Categories',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -186,7 +276,7 @@ function wetkit_pages_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );
@@ -216,6 +306,9 @@ function wetkit_pages_field_default_fields() {
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
+        'entity_translation_sync' => array(
+          0 => 'fid',
+        ),
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -234,7 +327,7 @@ function wetkit_pages_field_default_fields() {
             'image_style' => 'wetkit_image_half',
           ),
           'type' => 'image',
-          'weight' => '0',
+          'weight' => '1',
         ),
         'featured' => array(
           'label' => 'hidden',
@@ -280,6 +373,7 @@ function wetkit_pages_field_default_fields() {
       'settings' => array(
         'alt_field' => 1,
         'default_image' => 0,
+        'entity_translation_sync' => FALSE,
         'file_directory' => 'pages',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -296,7 +390,7 @@ function wetkit_pages_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '1',
+        'weight' => '2',
       ),
     ),
   );
@@ -323,6 +417,7 @@ function wetkit_pages_field_default_fields() {
           1 => '',
         ),
         'allowed_values_function' => '',
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'list_boolean',
@@ -342,7 +437,7 @@ function wetkit_pages_field_default_fields() {
           'module' => 'list',
           'settings' => array(),
           'type' => 'list_default',
-          'weight' => 2,
+          'weight' => '3',
         ),
         'featured' => array(
           'label' => 'above',
@@ -368,6 +463,7 @@ function wetkit_pages_field_default_fields() {
       'label' => 'Feature content',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -377,7 +473,7 @@ function wetkit_pages_field_default_fields() {
           'display_label' => 1,
         ),
         'type' => 'options_onoff',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -407,7 +503,9 @@ function wetkit_pages_field_default_fields() {
       ),
       'locked' => '0',
       'module' => 'text',
-      'settings' => array(),
+      'settings' => array(
+        'entity_translation_sync' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'text_with_summary',
     ),
@@ -458,6 +556,7 @@ function wetkit_pages_field_default_fields() {
       'required' => 1,
       'settings' => array(
         'display_summary' => 0,
+        'entity_translation_sync' => FALSE,
         'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
@@ -499,6 +598,9 @@ function wetkit_pages_field_default_fields() {
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
+        'entity_translation_sync' => array(
+          0 => 'fid',
+        ),
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -557,6 +659,7 @@ function wetkit_pages_field_default_fields() {
       'settings' => array(
         'alt_field' => 1,
         'default_image' => 0,
+        'entity_translation_sync' => FALSE,
         'file_directory' => 'pages',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -580,6 +683,7 @@ function wetkit_pages_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Archived Content');
   t('Body');
   t('Categories');
   t('Feature content');

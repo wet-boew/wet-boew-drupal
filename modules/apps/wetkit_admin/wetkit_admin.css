@@ -469,3 +469,8 @@ ul#media-browser-library-list {
 .form-item-uid {
   position: relative;
 }
+
+/* Field Archived Content */
+.form-item-field-archived-content-und {
+  margin-top: 0px;   
+}

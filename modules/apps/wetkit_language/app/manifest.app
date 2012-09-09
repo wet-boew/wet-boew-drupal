@@ -1,9 +1,0 @@
-name = WetKit Language
-description = Integrates i18n (french) language into WetKit.
-machine_name = wetkit_language
-version = 1.0-beta3
-downloadable = wetkit_language 7.x-1.0-beta3
-author = Pantheon Systems
-author_url = http://www.getpantheon.com
-screenshots[] = wetkit_language_screenshot.png
-logo = wetkit_language_logo.png

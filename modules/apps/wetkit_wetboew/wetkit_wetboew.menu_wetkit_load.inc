@@ -85,7 +85,7 @@ function _menu_wetkit_load() {
   _add_custom_menu('node/4', 'WetKit Collaboration', NULL, 'main-menu', 2, 'en', 0, $source_menu_item);
   _add_custom_menu('node/3', 'Collaboration WetKit', NULL, 'main-menu', 2, 'fr', 0, $translated_menu_item);
   _create_translation_sets($source_menu_item, $translated_menu_item);
-  
+
   $source_menu_item_depth = _add_custom_menu('http://drupal.org', 'Drupal WCMS', NULL, 'main-menu', 3, 'en');
   $translated_menu_item_depth = _add_custom_menu('http://drupal.org', 'WCMS Drupal', NULL, 'main-menu', 3, 'fr');
   _create_translation_sets($source_menu_item_depth, $translated_menu_item_depth);

@@ -1,9 +1,0 @@
-name = WetKit Widgets
-description = Integrates WetKit Widgets into Drupal.
-machine_name = wetkit_widgets
-version = 1.0-beta3
-downloadable = wetkit_widgets 7.x-1.0-beta3
-author = Pantheon Systems
-author_url = http://www.getpantheon.com
-screenshots[] = wetkit_widgets_screenshot.png
-logo = wetkit_widgets_logo.png
