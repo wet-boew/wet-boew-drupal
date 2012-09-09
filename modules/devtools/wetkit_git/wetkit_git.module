@@ -21,11 +21,21 @@ function wetkit_git_menu() {
  */
 function _git_update() {
   exec('cd profiles/wetkit; git pull');
+  
   exec('cd profiles/wetkit; git rev-parse HEAD', $x);
+  if (is_array($x)) {
+    $info_sha = substr($x[0], 0, 7);
+  }
 
-  $info = substr($x[0], 0, 7);
-  drupal_set_message('Git updated to ' . $info);
-  drupal_goto('admin/reports/status');
+  exec('cd profiles/wetkit; git remote show origin | grep Fetch', $y);
+  if (is_array($y)) {
+    $info_url = $y[0];
+  }
+  
+  if (isset($info_sha) && isset($info_url)) {
+    drupal_set_message(t('Git updated to: @info_sha from: @info_url', array('@info_sha' => $info_sha, '@info_url' => $info_url)));
+    drupal_goto('admin/reports/status');
+  }
 }
 
 /**
@@ -37,14 +47,19 @@ function wetkit_git_requirements($phase) {
 
   exec('cd profiles/wetkit; git rev-parse HEAD', $x);
   if (is_array($x)) {
-    $info = substr($x[0], 0, 7);
+    $info_sha = substr($x[0], 0, 7);
   }
 
+  exec('cd profiles/wetkit; git remote show origin | grep Fetch', $y);
+  if (is_array($y)) {
+    $info_url = $y[0];
+  }
+      
   switch ($phase) {
     case 'runtime':
       $requirements['wetkit_git'] = array(
         'title' => $t('Git Revision'),
-        'value' => $info . ' to update the current revision of Git from upstream: ' . l(t("Click Here"), 'git_update'),
+        'value' =>  t('SHA Commit: @info_sha <br /> To update the current revision of Git from upstream: <a href="@git_update">Click Here</a> <br /> @info_url', array('@info_sha' => $info_sha, '@git_update' => url('git_update'), '@info_url' => $info_url)),
         'severity' => REQUIREMENT_OK,
       );
       break;
