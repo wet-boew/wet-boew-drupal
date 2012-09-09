@@ -12,13 +12,13 @@
 function wetkit_install() {
   // Only notify on Security Issue(s)
   variable_set('update_notification_threshold', array('security'));
-  
+
   // Enable Admin Theme
   db_update('system')
     ->fields(array('status' => 1))
     ->condition('type', 'theme')
     ->condition('name', 'rubik')
     ->execute();
-  
+
   variable_set('admin_theme', 'rubik');
 }

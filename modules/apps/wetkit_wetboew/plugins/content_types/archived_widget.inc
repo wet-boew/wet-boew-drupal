@@ -35,7 +35,7 @@ function wetkit_wetboew_archived_widget_content_type_render($subtype, $conf, $pa
 
   if (isset($node->field_archived_content['und']['0']['value']) && $node->field_archived_content['und']['0']['value'] == '1' ) {
     $pane = new stdClass();
-    $pane->content = '<div id="archived" class="wet-boew-archived ' . $span_class . '" data-load="archived"><section><h2>' . $title . '</h2><p>' . $body .'</p></section></div>';
+    $pane->content = '<div id="archived" class="wet-boew-archived ' . $span_class . '" data-load="archived"><section><h2>' . $title . '</h2><p>' . $body . '</p></section></div>';
     return $pane;
   }
   else {

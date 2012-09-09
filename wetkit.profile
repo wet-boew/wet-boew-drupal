@@ -166,7 +166,7 @@ function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
   install_load_profile($install_state);
 
   // Include any dependencies that we might have missed...
-  foreach($install_state['profile_info']['dependencies'] as $module) {
+  foreach ($install_state['profile_info']['dependencies'] as $module) {
     $module_info = drupal_parse_info_file(drupal_get_path('module', $module) . '/' . $module . '.info');
     if (!empty($module_info['dependencies'])) {
       $install_state['profile_info']['dependencies'] = array_unique(array_merge($install_state['profile_info']['dependencies'], $module_info['dependencies']));
