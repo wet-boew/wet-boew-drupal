@@ -1,16 +1,17 @@
 <?php
 /**
  * @file
- * Code for the wetkit_security feature.
+ * An installation file for WetKit WET-BOEW
  */
 
 /**
- * Implements hook_install().
+ * Implementation of hook_install()
  */
-function wetkit_security_install() {
+function wetkit_wetboew_install() {
   if (module_exists('password_policy')) {
     wetkit_defaults_create_password_policy();
   }
+  _menu_wetkit_load();
 }
 
 /**
@@ -48,3 +49,11 @@ function wetkit_defaults_create_password_policy() {
     ->execute();
   }
 }
+
+/**
+ * Implements hook_uninstall().
+ */
+function wetkit_wetboew_uninstall() {
+  variable_del('views_temp');
+}
+

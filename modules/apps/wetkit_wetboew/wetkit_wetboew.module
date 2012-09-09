@@ -147,20 +147,6 @@ function wetkit_wetboew_theme($existing, $type, $theme, $path) {
 }
 
 /**
- * Implements hook_install().
- */
-function wetkit_wetboew_install() {
-  _menu_wetkit_load();
-}
-
-/**
- * Implements hook_uninstall().
- */
-function wetkit_wetboew_uninstall() {
-  variable_del('views_temp');
-}
-
-/**
  * Implements of hook_ctools_plugin_directory().
  */
 function wetkit_wetboew_ctools_plugin_directory($module, $plugin) {
