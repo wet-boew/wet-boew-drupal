@@ -16,7 +16,6 @@ dependencies[] = search
 dependencies[] = field
 dependencies[] = field_ui
 dependencies[] = file
-dependencies[] = help
 dependencies[] = block
 dependencies[] = dblog
 dependencies[] = update
@@ -24,6 +23,7 @@ dependencies[] = shortcut
 dependencies[] = toolbar
 
 ; Drupal Core Disabled
+;dependencies[] = help
 ;dependencies[] = overlay
 ;dependencies[] = contextual
 ;dependencies[] = rdf

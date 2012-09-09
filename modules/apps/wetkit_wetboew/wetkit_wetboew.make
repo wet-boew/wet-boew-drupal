@@ -5,6 +5,9 @@ core = 7.x
 
 ; Tailor app for WetKit
 
+projects[advanced_help][version] = 1.0
+projects[advanced_help][subdir] = contrib
+
 projects[boxes][version] = 1.0
 projects[boxes][subdir] = contrib
 
