@@ -16,7 +16,7 @@ projects[layout][subdir] = contrib
 projects[gridbuilder][version] = 1.0-alpha2
 projects[gridbuilder][subdir] = contrib
 
-projects[json2][version] = 1.0
+projects[json2][version] = 1.1
 projects[json2][subdir] = contrib
 
 libraries[json2][download][type] = get
