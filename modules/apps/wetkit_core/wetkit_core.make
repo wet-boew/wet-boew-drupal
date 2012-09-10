@@ -32,9 +32,11 @@ projects[ctools][patch][1774434] = http://drupal.org/files/1774434-ctools-allow-
 projects[panels][version] = 3.x-dev
 projects[panels][subdir] = contrib
 projects[panels][download][type] = git
-projects[panels][download][revision] = 6662e3b
+projects[panels][download][revision] = 7a8bd4e
 projects[panels][download][branch] = 7.x-3.x
 projects[panels][patch][1735336] = http://drupal.org/files/1735336-repaint-draghandle-ipe-initial.patch
+projects[panels][patch][1572202] = http://drupal.org/files/1572202-panels-ipe-panel-emptied-on-second-save.patch
+
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/panels-add-hooks-to-integrate-i18n_panels-1179034-41.patch
 ;projects[panels][patch][] = http://drupalcode.org/sandbox/daspeter/1444130.git/blob_plain/refs/heads/7.x-1.x:/uuids-for-exported-pids-1277908-19.patch
 
@@ -44,8 +46,12 @@ projects[panels_breadcrumbs][download][type] = git
 projects[panels_breadcrumbs][download][revision] = 531f589
 projects[panels_breadcrumbs][download][branch] = 7.x-2.x
 
-projects[panelizer][version] = 3.0-rc1
+projects[panelizer][version] = 3.x-dev
 projects[panelizer][subdir] = contrib
+projects[panelizer][download][type] = git
+projects[panelizer][download][revision] = 1238e8c
+projects[panelizer][download][branch] = 7.x-3.x
+projects[panelizer][patch][1572202] = http://drupal.org/files/1572202-panelizer-panel-emptied-on-second-save.patch
 
 projects[fieldable_panels_panes][version] = 1.2
 projects[fieldable_panels_panes][subdir] = contrib
