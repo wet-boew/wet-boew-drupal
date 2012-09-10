@@ -74,6 +74,7 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
           'link' => 1,
           'unlink' => 1,
           'formatselect' => 1,
+          'styleselect' => 1,
           'forecolor' => 1,
           'blockquote' => 1,
           'removeformat' => 1,
@@ -95,6 +96,9 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
         'wetkitcleanup' => array(
           'wetkitcleanup' => 1,
         ),
+        'template' => array(
+          'template' => 1,
+        ),
         'drupal' => array(
           'media' => 1,
           'break' => 1,
@@ -111,9 +115,19 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
       'apply_source_formatting' => 0,
       'paste_auto_cleanup_on_paste' => 1,
       'block_formats' => 'h1,h2,h3,h4,h5,h6',
-      'css_setting' => 'theme',
-      'css_path' => '',
-      'css_classes' => '',
+      'css_setting' => 'self',
+      'css_path' => 'profiles/wetkit/libraries/wet-boew/build/grids/css/util-min.css,profiles/wetkit/libraries/wet-boew/build/js/css/pe-ap-min.css,profiles/wetkit/libraries/wet-boew/build/theme-gcwu-fegc/css/theme-min.css',
+      'css_classes' => 'module=module
+module-related=module-related
+module-billboard=module-billboard
+module-event=module-event
+module-menu-section=module-menu-section
+module-table-contents=module-table-contents
+module-poster=module-poster
+module-contact=module-contact
+module-news=module-news
+module-spotlight=module-spotlight
+module-comment=module-comment',
     ),
   );
 
