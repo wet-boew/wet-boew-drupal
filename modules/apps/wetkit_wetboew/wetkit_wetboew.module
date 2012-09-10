@@ -37,6 +37,12 @@ function wetkit_wetboew_configure_form($form, &$form_state) {
     '#default_value' => variable_get('wetkit_wetboew_dev', 0),
     '#description' => t('Selecting this checkbox will enable the unminified development version of WET-BOEW JS files'),
   );
+  $form['wetkit_wetboew']['wetkit_wetboew_intranet'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable the Intranet Progressive Theme.'),
+    '#default_value' => variable_get('wetkit_wetboew_intranet', 0),
+    '#description' => t('This will modify the theme by adding custom css and logic for the Intranet Progressive Theme'),
+  );
 
   $form['#submit'][] = 'wetkit_wetboew_configure_form_submit';
 

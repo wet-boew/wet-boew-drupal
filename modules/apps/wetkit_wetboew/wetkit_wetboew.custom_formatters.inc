@@ -23,7 +23,6 @@ $settings = $variables[\'#display\'][\'settings\'];
 $output = \'\';
 
 drupal_add_css(".wet-boew-lightbox ul {margin-left:0 !important;}
-  .wet-boew-lightbox ul li {list-style-type:none;float:left;margin: 0 5px 0 0;}
   .wet-boew-lightbox ul li.box {margin-bottom: 0.4em;}
   .wet-boew-lightbox li img {margin-bottom:0;}
   .wet-boew-lightbox ul li a {text-decoration: none;}", \'inline\');
@@ -43,6 +42,9 @@ $form[\'image_style_destination\'] = array(
     \'thumbnail\' => t(\'thumbnail\'),
     \'medium\' => t(\'medium\'),
     \'large\' => t(\'large\'),
+    \'wetkit_image_quarter\' => t(\'wetkit_image_quarter\'),
+    \'wetkit_image_half\' => t(\'wetkit_image_half\'),
+    \'wetkit_image_full\' => t(\'wetkit_image_full\'),
   ),
   \'#type\' => \'select\',
   \'#key_type_toggled\' => \'1\',
@@ -57,8 +59,11 @@ $form[\'image_style_source\'] = array(
   \'#type\' => \'select\',
   \'#options\' => array(
     \'thumbnail\' => t(\'thumbnail\'),
-    \'two\' => t(\'medium\'),
+    \'medium\' => t(\'medium\'),
     \'large\' => t(\'large\'),
+    \'wetkit_image_quarter\' => t(\'wetkit_image_quarter\'),
+    \'wetkit_image_half\' => t(\'wetkit_image_half\'),
+    \'wetkit_image_full\' => t(\'wetkit_image_full\'),
   ),
   \'#default_value\' => \'thumbnail\',
 );
