@@ -23,6 +23,7 @@ $settings = $variables[\'#display\'][\'settings\'];
 $output = \'\';
 
 drupal_add_css(".wet-boew-lightbox ul {margin-left:0 !important;}
+ 	.wet-boew-lightbox ul li {list-style-type:none;}
   .wet-boew-lightbox ul li.box {margin-bottom: 0.4em;}
   .wet-boew-lightbox li img {margin-bottom:0;}
   .wet-boew-lightbox ul li a {text-decoration: none;}", \'inline\');
