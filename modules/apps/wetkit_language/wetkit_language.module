@@ -7,6 +7,15 @@
 include_once('wetkit_language.features.inc');
 
 /**
+ * Implements hook_form_alter().
+ */
+function wetkit_language_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'wetkit_page_node_form' || $form_id == 'wetkit_page_other_node_form') {
+    unset($form['translation']);
+  }
+}
+
+/**
  * Implements hook_preprocess_page().
  */
 function wetkit_language_preprocess_page(&$vars) {
