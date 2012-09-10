@@ -25,6 +25,7 @@ features[field][] = node-wetkit_page-field_archived_content
 features[field][] = node-wetkit_page-field_featured_categories
 features[field][] = node-wetkit_page-field_featured_image
 features[field][] = node-wetkit_page-field_featured_status
+features[field][] = node-wetkit_page-field_share_widget
 features[field][] = node-wetkit_page_other-body
 features[field][] = node-wetkit_page_other-field_featured_image
 features[node][] = wetkit_page

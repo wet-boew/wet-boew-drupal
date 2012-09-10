@@ -106,7 +106,7 @@ function wetkit_pages_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '6',
+        'weight' => '8',
       ),
     ),
   );
@@ -190,7 +190,7 @@ function wetkit_pages_field_default_fields() {
           'display_label' => 1,
         ),
         'type' => 'options_onoff',
-        'weight' => '5',
+        'weight' => '6',
       ),
     ),
   );
@@ -242,7 +242,7 @@ function wetkit_pages_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '5',
+          'weight' => '6',
         ),
         'featured' => array(
           'label' => 'above',
@@ -478,6 +478,91 @@ function wetkit_pages_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-wetkit_page-field_share_widget'.
+  $fields['node-wetkit_page-field_share_widget'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_share_widget',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          'del.icio.us' => 'del.icio.us',
+          'digg' => 'Digg',
+          'facebook' => 'Facebook',
+          'google' => 'Google',
+          'linkedin' => 'LinkedIn',
+          'reddit' => 'Reddit',
+          'twitter' => 'Twitter',
+          'stumbleupon' => 'Stumble Upon',
+          'yahoobuzz' => 'Yahoo Buzz',
+        ),
+        'allowed_values_function' => '',
+        'entity_translation_sync' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'list_text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'wetkit_page',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => '5',
+        ),
+        'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'fences_wrapper' => 'div',
+      'field_name' => 'field_share_widget',
+      'label' => 'Share Widget',
+      'required' => 0,
+      'settings' => array(
+        'entity_translation_sync' => FALSE,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '7',
+      ),
+    ),
+  );
+
   // Exported field: 'node-wetkit_page_other-body'.
   $fields['node-wetkit_page_other-body'] = array(
     'field_config' => array(
@@ -688,6 +773,7 @@ function wetkit_pages_field_default_fields() {
   t('Categories');
   t('Feature content');
   t('Primary Image');
+  t('Share Widget');
 
   return $fields;
 }
