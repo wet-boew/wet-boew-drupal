@@ -220,7 +220,7 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
   if (at_get_setting('wetkit_intranet_enable') == 1) {
     $variables['intranet'] = 'Enabled';
     drupal_add_css(
-      path_to_theme() . '/wet-boew/theme-gcwu-intranet/css/theme-min-intranet.css', array(
+      path_to_theme() . '/css/theme-gcwu-intranet/css/theme-min-intranet.css', array(
       'group' => CSS_THEME,
       'media' => 'screen',
       'preprocess' => TRUE,
@@ -228,7 +228,7 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
       )
     );
     drupal_add_css(
-      path_to_theme() . '/wet-boew/theme-gcwu-intranet/css/theme-ie-min-intranet.css', array(
+      path_to_theme() . '/css/theme-gcwu-intranet/css/theme-ie-min-intranet.css', array(
       'group' => CSS_THEME,
       'browsers' => array(
         'IE' => 'lte IE 7',
