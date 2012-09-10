@@ -117,7 +117,17 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
       'block_formats' => 'h1,h2,h3,h4,h5,h6',
       'css_setting' => 'self',
       'css_path' => 'profiles/wetkit/libraries/wet-boew/build/grids/css/util-min.css,profiles/wetkit/libraries/wet-boew/build/js/css/pe-ap-min.css,profiles/wetkit/libraries/wet-boew/build/theme-gcwu-fegc/css/theme-min.css',
-      'css_classes' => 'heading=header1',
+      'css_classes' => 'module=module
+module-related=module-related
+module-billboard=module-billboard
+module-event=module-event
+module-menu-section=module-menu-section
+module-table-contents=module-table-contents
+module-poster=module-poster
+module-contact=module-contact
+module-news=module-news
+module-spotlight=module-spotlight
+module-comment=module-comment',
     ),
   );
 
