@@ -7,6 +7,19 @@
 include_once('wetkit_wetboew.features.inc');
 include_once('wetkit_wetboew.menu_wetkit_load.inc');
 
+/**
+ * Implementation of hook_form_alter()
+ */
+function wetkit_wetboew_form_alter(&$form, &$form_state, $form_id) {
+  // Remove the description from the shared widget
+  if (!empty($form['field_share_widget'])) {
+    $form['options']['field_share_widget'] = $form['field_share_widget'];
+    $form['options']['field_share_widget']['#weight'] = '0'; 
+    //unset($form['field_featured_status']);
+    //TODO: Upstream this fix to Panopoly
+    $form['field_share_widget'] = array('#language' => NULL);
+  }
+}
 
 /**
  * Implements hook_apps_app_info().
