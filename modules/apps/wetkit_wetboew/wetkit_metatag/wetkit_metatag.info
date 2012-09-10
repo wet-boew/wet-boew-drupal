@@ -7,3 +7,4 @@ version = 7.x-1.0
 dependencies[] = i18n
 dependencies[] = i18n_variable
 dependencies[] = metatag
+features[features_api][] = api:1

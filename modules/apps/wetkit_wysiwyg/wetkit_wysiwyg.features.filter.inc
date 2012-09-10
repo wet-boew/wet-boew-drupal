@@ -235,9 +235,7 @@ function wetkit_wysiwyg_filter_default_formats() {
         @[style]',
           'allow_comments' => '1',
           'nofollow_policy' => 'disabled',
-          'nofollow_domains' => array(
-            0 => 'openacademy.local',
-          ),
+          'nofollow_domains' => array(),
           'style_color' => array(
             'color' => 'color',
             'background' => 0,
@@ -353,10 +351,11 @@ function wetkit_wysiwyg_filter_default_formats() {
           ),
           'rule_valid_classes' => array(
             0 => 'gc*',
-            1 => 'span-*',
-            2 => 'tabs-content-pad',
-            3 => 'wysiwyg-break',
-            4 => 'wb*',
+            2 => 'span-*',
+            4 => 'tabs-content-pad',
+            6 => 'wb*',
+            8 => 'wet-boew-*',
+            9 => 'wysiwyg-break',
           ),
           'rule_valid_ids' => array(),
           'rule_style_urls' => array(),
