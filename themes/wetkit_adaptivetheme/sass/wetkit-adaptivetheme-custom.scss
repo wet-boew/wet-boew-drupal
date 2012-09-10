@@ -1,26 +1,166 @@
 /*
-Document   : wetkit.scss
-Created on : Apr 28, 2012, 9:14:37 PM
-Author     : sylus1984
-Description:
-Purpose of the stylesheet follows.
-*/
-
-/*
-TODO customize this sample style
-Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
-*/
-
-/*
- * Custom Style Overrides
+ * Drupal Core
  */
 
-#wb-head, #wb-head-in, #gcwu-bnr, #gcwu-bnr-in  {
-  overflow: visible !important;
+.contextual-links-wrapper {
+  z-index: 10;
 }
+
+figure {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+
+.node {
+  margin-bottom: 0px;
+}
+
+.profile {
+  dl {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+ul {
+  &.tabs {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/*
+ * Drupal Contrib: Adaptive Theme
+ */
+
+#breadcrumb, .breadcrumb-wrapper {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.container {
+  max-width: none !important;
+}
+
+.field-name-field-featured-image-form .image-preview {
+  float: none;
+}
+
+#node-edit .image-widget .form-submit, #node-edit .file-widget .form-submit {
+  display: inline;
+}
+
+#node-edit .form-actions input {
+  display: inline;
+}
+
+.maintenance-page #main-content #content {
+  padding: 10px;
+}
+
+#main-content #tasks ul.tabs {
+  margin-bottom: 20px;   
+}
+
+/*
+ * Drupal Contrib: Custom Search
+ */
+
+fieldset.custom_search-popup {
+  z-index: 99 !important;
+  width: 198px;
+  background-color: white;
+  padding: 0px 10px;
+  border: 1px solid #DDD;
+  a {
+    color: black !important;
+  }
+  label {
+    position: relative !important;
+  }
+  .form-item {
+   text-align: left;
+  }
+}
+
+.search-form {
+  #edit-actions {
+    display: inline;
+  }
+  .form-actions {
+    display: inline;
+  }
+  .form-item-custom-search-blocks-form-1 {
+    display: inline;
+  }
+}
+
+/*
+ * Drupal Contrib: Panels
+ */
+
+.panels-ipe-editing #wb-sec-in { 
+  margin: 0px; 
+}
+
+.panels-ipe-placeholder h3 {
+  background: none;
+  padding: 0px;
+}
+
+.page-node-edit .pane-page-tabs #tabs {
+  margin: 20px 0px 0px 0px;
+}
+
+.page-node-edit .pane-page-tabs ul.tabs {
+  margin: 0px 0px;
+}
+
+.page-node-add label[for="edit-language"],
+.page-node-edit label[for="edit-language"] {
+  display: inline    
+}
+
+.page-node-add .node-form h3.pane-title,
+.page-node-edit .node-form h3.pane-title {
+  background: #DDD;
+  padding: 2px 4px;
+}
+
+.pane-page-tabs #tabs {
+  margin-bottom: 20px;
+}
+
+.region-wetkit-33-66-second {
+  width: 95%;
+}
+
+/*
+ * Drupal Contrib: Workbench
+ */
+
+#block-workbench-block {
+  width: 99%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+ * WET-BOEW
+ */
 
 #gcwu-bnr {
   z-index: 99 !important;
+}
+
+#gcwu-bnr-in {
+  #gcwu-title {
+    margin-top: 0px;
+    padding-top: 7px;
+    margin-bottom: 0px;
+  }
 }
 
 #gcwu-psnb {
@@ -40,176 +180,20 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
   }
 }
 
-/*
- * Custom Search Bar Overrides
- */
-
-.search-form {
-  .form-item-custom-search-blocks-form-1 {
-    display: inline;
-  }
-  #edit-actions {
-    display: inline;
-  }
-  .form-actions {
-    display: inline;
-  }
-}
-
-fieldset.custom_search-popup {
-  z-index: 99 !important;
-  width: 198px;
-  background-color: white;
-  padding: 0px 10px;
-  border: 1px solid #DDD;
-  a {
-    color: black !important;
-  }
-  label {
-    position: relative !important;
-  }
-  .form-item {
-   text-align: left;
-  }
-}
-
-/*
- * Drupal Tabs Overrides
- */
-
-ul {
-  &.tabs {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-}
-
-.profile {
-  dl {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-}
-
-/*
- * Contextual Links
- */
-
-div.contextual-links-wrapper {
-  z-index: 10;
-}
-
-/*
- * Intranet Overrides
- */
-
-#gcwu-bnr-in {
-  #gcwu-title {
-    margin-top: 0px;
-    padding-top: 7px;
-    margin-bottom: 0px;
-  }
-}
-
-/*
- * Maintenance Page
- */
-
-.maintenance-page #main-content #content {
-  padding: 10px;
-}
-
-/*
- * Adaptive Theme Overrides
- */
-
-#breadcrumb, .breadcrumb-wrapper {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-.container {
- max-width: none !important;
-}
-
-.node {
-  margin-bottom: 0px;
-}
-
-figure {
-    display: block;
-    margin: 0px;
-    padding: 0px;
-}
-
-.wb-sec-def h3, .wb-sec-def h4, .wb-sec-def .top-level {
-  font-weight: 700;
-  background: #DDD;
-  padding: 2px 4px;
-}
-
-.wb-sec-def h3, .wb-sec-def h4, .wb-sec-def .top-level {
-  font-weight: 700;
-  background: #DDD;
-  padding: 2px 4px;
-}
-
-#main-content #tasks ul.tabs {
-  margin-bottom: 20px;   
-}
-
-.panels-ipe-editing #wb-sec-in { 
-    margin: 0px; 
-}
-
-.panels-ipe-placeholder h3 {
-   background: none;
-   padding: 0px;
-}
-
-.region-wetkit-33-66-second {
-  width: 95%;
-}
-
-.pane-page-tabs #tabs {
-  margin-bottom: 20px;
-}
-
-.page-node-edit .pane-page-tabs #tabs {
-  margin: 20px 0px 0px 0px;
-}
-
-.page-node-edit .pane-page-tabs ul.tabs {
-  margin: 0px 0px;
-}
-
-.page-node-add div.vertical-tabs,
-.page-node-edit div.vertical-tabs {
- margin-top: 3em;
-}
-
-#block-workbench-block {
-  width: 99%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.page-node-add label[for="edit-language"],
-.page-node-edit label[for="edit-language"] {
-  display: inline    
-}
-
-.page-node-add .node-form h3.pane-title,
-.page-node-edit .node-form h3.pane-title {
-  background: #DDD;
-  padding: 2px 4px;
-}
-
 .gcwu-minister-in{
-  background-color: #eee;
+  background-color: #EEE;
 }
 
 .gcwu-minister p{
-  background-color: #fff;
+  background-color: #FFF;
+}
+
+#wb-head, #wb-head-in, #gcwu-bnr, #gcwu-bnr-in  {
+  overflow: visible !important;
+}
+
+.wb-sec-def h3, .wb-sec-def h4, .wb-sec-def .top-level {
+  font-weight: 700;
+  background: #DDD;
+  padding: 2px 4px;
 }
