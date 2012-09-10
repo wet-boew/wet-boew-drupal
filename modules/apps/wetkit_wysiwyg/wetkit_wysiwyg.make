@@ -16,6 +16,9 @@ projects[wysiwyg][download][branch] = 7.x-2.x
 projects[wysiwyg_filter][version] = 1.6-rc2
 projects[wysiwyg_filter][subdir] = contrib
 
+projects[wysiwyg_template][version] = 2.7
+projects[wysiwyg_template][subdir] = contrib
+
 ; Include our WYSIWYG editors
 
 ;libraries[tinymce][download][type] = git

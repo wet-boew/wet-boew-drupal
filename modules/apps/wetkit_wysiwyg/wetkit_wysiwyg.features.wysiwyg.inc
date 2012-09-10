@@ -95,6 +95,9 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
         'wetkitcleanup' => array(
           'wetkitcleanup' => 1,
         ),
+        'template' => array(
+          'template' => 1,
+        ),
         'drupal' => array(
           'media' => 1,
           'break' => 1,
