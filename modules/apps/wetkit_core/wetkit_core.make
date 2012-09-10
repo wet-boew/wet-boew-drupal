@@ -51,7 +51,7 @@ projects[panelizer][subdir] = contrib
 projects[panelizer][download][type] = git
 projects[panelizer][download][revision] = 1238e8c
 projects[panelizer][download][branch] = 7.x-3.x
-projects[panelizer][patch][1572202] = http://drupal.org/files/1572202-panelizer-panel-emptied-on-second-save.patch
+projects[panelizer][patch][1572202] = http://drupal.org/files/1572202-panelizer-panel-emptied-on-second-save_0.patch
 
 projects[fieldable_panels_panes][version] = 1.2
 projects[fieldable_panels_panes][subdir] = contrib
