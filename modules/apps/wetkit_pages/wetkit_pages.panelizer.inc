@@ -245,17 +245,33 @@ function wetkit_pages_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'image',
+      'formatter' => 'custom_formatters_wetkit_lightbox',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
         'image_style' => 'wetkit_image_half',
         'image_link' => '',
+        'image_style_destination' => 'wetkit_image_full',
+        'image_style_source' => 'wetkit_image_half',
+        'custom_class' => '',
       ),
       'context' => 'panelizer',
       'override_title' => 1,
       'override_title_text' => '',
+      'view_mode' => NULL,
+      'widget_title' => NULL,
+      'items_per_page' => NULL,
+      'exposed' => array(
+        'sort_by' => NULL,
+        'sort_order' => NULL,
+      ),
+      'use_pager' => NULL,
+      'pager_id' => NULL,
+      'offset' => NULL,
+      'link_to_view' => NULL,
+      'more_link' => NULL,
+      'path' => NULL,
     );
     $pane->cache = array();
     $pane->style = array(
