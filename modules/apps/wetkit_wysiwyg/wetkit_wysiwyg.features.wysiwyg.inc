@@ -71,7 +71,6 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
           'indent' => 1,
           'undo' => 1,
           'redo' => 1,
-          'link' => 1,
           'unlink' => 1,
           'formatselect' => 1,
           'styleselect' => 1,
@@ -86,6 +85,9 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
         'paste' => array(
           'pastetext' => 1,
           'pasteword' => 1,
+        ),
+        'linkit' => array(
+          'linkit' => 1,
         ),
         'pdw' => array(
           'pdw_toggle' => 1,
