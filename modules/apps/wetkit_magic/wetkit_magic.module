@@ -12,6 +12,17 @@ function wetkit_magic_apps_app_info() {
 }
 
 /**
+ * Implements hook_theme().
+ */
+function wetkit_magic_theme($existing, $type, $theme, $path) {
+  return array(
+    'wetkit_magic_stylizer_preview_form' => array(
+      'render element' => 'form',
+    ),
+  );
+}
+
+/**
  * Configuration Form for WetKit Magic
  */
 function wetkit_magic_configure_form($form, &$form_state) {
@@ -98,9 +109,6 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
         $preview_subtype = 'vid:' . $form_state['entity']->vid;
         $pane->subtype = 'fpid:' . $form_state['entity']->fpid;
       }
-      elseif (empty($form['reusable']['#markup']) && !empty($form_state['values']['reusable'])) {
-        $form['widget_settings']['must_place']['#markup'] = t('You must place this reusable content item first before editing it. Remember any edits you make will be global!');
-      }
 
       // Properly adjust the VID if we are dealing with an existing object
       if (!empty($current_vid)) {
@@ -157,7 +165,7 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
       $form['widget_preview']['preview'] = array(
         '#markup' => (!empty($style['render pane'])) ? theme($style['render pane'], array('content' => $content, 'pane' => $pane, 'display' => $display, 'style' => $style, 'settings' => $pane->style['settings'])) : theme('panels_pane', array('content' => $content, 'pane' => $pane, 'display' => $display)),
       );
-      
+
       // Remove the clearfix for preview floating
       if (isset($form['aligner_start'])) {
         $form['aligner_start']['#markup'] = str_replace('clearfix', '', $form['aligner_start']['#markup']);
@@ -274,11 +282,8 @@ function wetkit_magic_autosubmit_configure(&$element) {
  * Implementation of hook_form_FORM_ID_alter()
  */
 function wetkit_magic_form_fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form_alter(&$form, &$form_state, $form_id) {
-  // Handle the view mode
-  $view_mode = $form['view_mode'];
-  unset($form['view_mode']);
 
-
+  // Setup the live preview 
   if (variable_get('wetkit_magic_live_preview', 1)) {
     wetkit_magic_autosubmit_configure($form);
 
@@ -289,33 +294,22 @@ function wetkit_magic_form_fieldable_panels_panes_fieldable_panels_pane_content_
     }
   }
 
-  // Add custom validation function
+  // Add custom validation function for the reusable title
   if ($form_state['clicked_button']['#value'] != 'Update Preview') {
-    $form['widget_settings']['reusable']['admin_title']['#element_validate'][] = 'wetkit_magic_reusable_entity_validate';
+    $form['reusable']['admin_title']['#element_validate'][] = 'wetkit_magic_reusable_entity_validate';
   }
 
-  // Remove "tokens" from the list of available view modes.
-  if (!empty($view_mode['#options']['token'])) {
-    unset($view_mode['#options']['token']);
+  // Customize the view mode setting
+  if (!empty($form['view_mode'])) {
+    unset($form['view_mode']['#options']['token']);
+    if (count($form['view_mode']['#options']) < 2) {
+      $form['view_mode']['#type'] = 'value';
+      $form['view_mode']['#value'] = reset($form['view_mode']['#options']);
+    }
+    $form['widget_settings']['view_mode'] = $form['view_mode'];
+    unset($form['view_mode']);
   }
 
-  // If we're left with only one option, don't display the dropdown.
-  if (count($view_mode['#options']) < 2) {
-    $options = array_keys($view_mode['#options']);
-    $view_type = reset($options);
-    $view_mode = array(
-      '#type' => 'value',
-      '#value' => $view_type,
-    );
-  }
-
-  if (isset($form_state['values']['reusable']) && $form_state['values']['reusable'] === 0) {
-    $form['reusable']['warning']['#access'] = FALSE;
-  }
-
-  // Re-insert the view mode selection under the "General settings" fieldset.
-  $form['widget_settings']['view_mode'] = $view_mode;
-    
   // Improving the general title setting
   if (!empty($form['widget_settings']['title'])) {
     $form['widget_settings']['title']['#size'] = '';
@@ -657,9 +651,8 @@ function wetkit_magic_form_panels_edit_style_type_form_alter(&$form, &$form_stat
  * Provide customizations for the ctools stylizer edit form.
  */
 function wetkit_magic_form_ctools_stylizer_edit_style_form_default_alter(&$form, &$form_state, $form_id) {
-
   // If Auto-submit is enabled.
-  if (variable_get('wetkit_magic_live_preview', FALSE)) {
+  if (variable_get('wetkit_magic_live_preview', 1)) {
 
     // Customize the settings preview button.
     $form['top box']['preview']['submit']['#attributes'] = array(
@@ -669,51 +662,43 @@ function wetkit_magic_form_ctools_stylizer_edit_style_form_default_alter(&$form,
     // Autosubmit the form.
     ctools_add_js('auto-submit');
     $form['#attributes']['class'][] = 'ctools-auto-submit-full-form';
+    $form['top box']['preview']['#theme'] = 'wetkit_magic_stylizer_preview_form';
+
   }
 
-  $form['top box']['preview']['#weight'] = 5;
+  // Change the Weight Around
+  $form['top box']['preview']['#weight'] = -50;
+}
 
-  // Create a vertical tab element.
-  $form['style_tabs'] = array('#type' => 'vertical_tabs');
+/**
+ * Theme the stylizer preview form.
+ */
+function theme_wetkit_magic_stylizer_preview_form($vars) {
+  $form = &$vars['form'];
+  $plugin = $form['#form_state']['base_style_plugin'];
+  $settings = $form['#form_state']['settings'];
 
-  // Strip out prefixes and suffixes to allow vertical tabs to format properly.
-  unset($form['font']['#prefix']);
-  unset($form['font']['#suffix']);
-  unset($form['border']['#prefix']);
-  unset($form['border']['#suffix']);
-  unset($form['padding']['#prefix']);
-  unset($form['padding']['#suffix']);
-  unset($form['top box']['color']['#prefix']);
-  unset($form['top box']['color']['#suffix']);
-
-  // Add group info to fieldsets.
-  $form['font']['#group'] = 'style_tabs';
-  $form['border']['#group'] = 'style_tabs';
-  $form['padding']['#group'] = 'style_tabs';
-  $form['top box']['color']['#group'] = 'style_tabs';
-
-  // Conditionally process header_font and header_border as they are only present on some pages.
-  if (!empty($form['header_font'])) {
-    unset($form['header_font']['#prefix']);
-    unset($form['header_font']['#suffix']);
-    $form['header_font']['#group'] = 'style_tabs';
+  if (!empty($form['#form_state']['settings']['old_settings'])) {
+    ctools_stylizer_cleanup_style($plugin, $form['#form_state']['settings']['old_settings']);
+  }
+  $preview = '';
+  if (!empty($plugin['preview'])) {
+    $preview = $plugin['preview'];
+  }
+  else {
+    $base_types = ctools_get_style_base_types();
+ 
+    if (!empty($base_types[$plugin['module']][$plugin['type']]['preview'])) {
+      $preview = $base_types[$plugin['module']][$plugin['type']]['preview'];
+    }
   }
 
-  if (!empty($form['header_border'])) {
-    unset($form['header_border']['#prefix']);
-    unset($form['header_border']['#suffix']);
-    $form['header_border']['#group'] = 'style_tabs';
-  }
-
-  // Move panel setting options into their own fieldset.
-  if (!empty($form['panels'])) {
-    $form['general_settings'] = array(
-      '#type' => 'fieldset',
-      '#title' => t('General Settings'),
-      '#group' => 'style_tabs',
-    );
-    $form['general_settings']['panels'] = $form['panels'];
-    unset($form['panels']);
+  if (!empty($preview) && function_exists($preview)) {
+    $output = '<fieldset id="preview" class="widget-preview-single"><legend>' . t('Preview') . '</legend><div class="fieldset-wrapper">';
+    $output .= $preview($plugin, $settings);
+    $output .= drupal_render_children($form);
+    $output .= '</div></fieldset>';
+    return $output;
   }
 }
 

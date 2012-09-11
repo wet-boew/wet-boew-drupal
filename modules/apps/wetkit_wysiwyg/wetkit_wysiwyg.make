@@ -19,6 +19,11 @@ projects[wysiwyg_filter][subdir] = contrib
 projects[wysiwyg_template][version] = 2.7
 projects[wysiwyg_template][subdir] = contrib
 
+; WetKit - Contrib - LinkIt
+
+projects[linkit][version] = 2.5
+projects[linkit][subdir] = contrib
+
 ; Include our WYSIWYG editors
 
 ;libraries[tinymce][download][type] = git

@@ -4,7 +4,7 @@ Indexes and searches site content making it available to both Solr and DB search
 
 Customizations
 * This App is based on and often pulls upstream from Panopoly Search @ drupal.org/project/panopoly_search
-* The latest upstream sync has been checked against commit: e14b46f (Verified)
+* The latest upstream sync has been checked against commit: a768e70 (Verified)
 * Panopoly Search is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly Search)

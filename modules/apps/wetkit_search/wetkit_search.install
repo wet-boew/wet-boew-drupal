@@ -34,6 +34,10 @@ function wetkit_search_install() {
     // Clear Solr Search Index and Rebuild
     $solr_index->clear();
     $solr_index->rebuild();
+
+  // Allow anonymous and authenticated users to search content
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('search content'));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('search content'));
   } 
 }
 

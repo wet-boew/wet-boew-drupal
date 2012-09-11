@@ -59,11 +59,9 @@ function wetkit_core_requirements($phase) {
  */
 function wetkit_core_install() {
 
-  // Allow anonymous and authenticated users to see and search content
+  // Allow anonymous and authenticated users to see content
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content'));
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content'));
-  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('search content'));
-  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('search content'));
 
   // Add login link for users to log in
   $item = array(

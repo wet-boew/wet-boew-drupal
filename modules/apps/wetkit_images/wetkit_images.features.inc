@@ -42,7 +42,7 @@ function wetkit_images_image_default_styles() {
     ),
   );
 
-  // Exported image style: wetkit_image_featured
+  // Exported image style: wetkit_image_featured.
   $styles['wetkit_image_featured'] = array(
     'name' => 'wetkit_image_featured',
     'effects' => array(
@@ -81,7 +81,7 @@ function wetkit_images_image_default_styles() {
     ),
   );
 
-  // Exported image style: wetkit_image_full
+  // Exported image style: wetkit_image_full.
   $styles['wetkit_image_full'] = array(
     'name' => 'wetkit_image_full',
     'effects' => array(
@@ -104,7 +104,7 @@ function wetkit_images_image_default_styles() {
     ),
   );
 
-  // Exported image style: wetkit_image_half
+  // Exported image style: wetkit_image_half.
   $styles['wetkit_image_half'] = array(
     'name' => 'wetkit_image_half',
     'effects' => array(
@@ -127,7 +127,7 @@ function wetkit_images_image_default_styles() {
     ),
   );
 
-  // Exported image style: wetkit_image_quarter
+  // Exported image style: wetkit_image_quarter.
   $styles['wetkit_image_quarter'] = array(
     'name' => 'wetkit_image_quarter',
     'effects' => array(
@@ -150,7 +150,7 @@ function wetkit_images_image_default_styles() {
     ),
   );
 
-  // Exported image style: wetkit_image_spotlight
+  // Exported image style: wetkit_image_spotlight.
   $styles['wetkit_image_spotlight'] = array(
     'name' => 'wetkit_image_spotlight',
     'effects' => array(
@@ -172,7 +172,7 @@ function wetkit_images_image_default_styles() {
     ),
   );
 
-  // Exported image style: wetkit_image_square
+  // Exported image style: wetkit_image_square.
   $styles['wetkit_image_square'] = array(
     'name' => 'wetkit_image_square',
     'effects' => array(
@@ -194,7 +194,7 @@ function wetkit_images_image_default_styles() {
     ),
   );
 
-  // Exported image style: wetkit_image_thumbnail
+  // Exported image style: wetkit_image_thumbnail.
   $styles['wetkit_image_thumbnail'] = array(
     'name' => 'wetkit_image_thumbnail',
     'effects' => array(
