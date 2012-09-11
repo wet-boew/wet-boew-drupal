@@ -170,3 +170,25 @@ div.ctools-modal-content .panels-choose-layout .dependent-options {
   display: inline;
   padding-right: 5px;
 }
+
+/**
+ * Custom Stylizer CSS
+ */
+#ctools_stylizer_color_scheme_form {
+  float: none;
+}
+
+#ctools_stylizer_color_scheme_form #palette .form-item  {
+  width: auto;
+  padding: .5em .75em;
+}
+
+div.ctools-modal-content #ctools_stylizer_color_scheme_form .form-item label {
+  width: auto;
+}
+
+#ctools_stylizer_color_scheme_form #palette .form-item label {
+  float: left;
+  margin-right: 10px;
+  margin-top: .25em;
+}
