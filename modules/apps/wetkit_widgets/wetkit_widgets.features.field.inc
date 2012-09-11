@@ -613,10 +613,9 @@ function wetkit_widgets_field_default_fields() {
       'module' => 'wetkit_widgets',
       'settings' => array(
         'default_image' => 0,
-        'entity_translation_sync' => FALSE,
         'uri_scheme' => 'public',
       ),
-      'translatable' => '1',
+      'translatable' => '0',
       'type' => 'wetkit_tabbed_interface',
     ),
     'field_instance' => array(
@@ -651,7 +650,6 @@ function wetkit_widgets_field_default_fields() {
       'settings' => array(
         'alt_field' => 1,
         'default_image' => 0,
-        'entity_translation_sync' => FALSE,
         'file_directory' => 'general',
         'file_extensions' => 'jpg jpeg gif png',
         'max_filesize' => '',
