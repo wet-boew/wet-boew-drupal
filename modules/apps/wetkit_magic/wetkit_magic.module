@@ -109,9 +109,6 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
         $preview_subtype = 'vid:' . $form_state['entity']->vid;
         $pane->subtype = 'fpid:' . $form_state['entity']->fpid;
       }
-      elseif (empty($form['reusable']['#markup']) && !empty($form_state['values']['reusable'])) {
-        $form['widget_settings']['must_place']['#markup'] = t('You must place this reusable content item first before editing it. Remember any edits you make will be global!');
-      }
 
       // Properly adjust the VID if we are dealing with an existing object
       if (!empty($current_vid)) {
@@ -168,7 +165,7 @@ function wetkit_magic_form_alter(&$form, &$form_state, $form_id) {
       $form['widget_preview']['preview'] = array(
         '#markup' => (!empty($style['render pane'])) ? theme($style['render pane'], array('content' => $content, 'pane' => $pane, 'display' => $display, 'style' => $style, 'settings' => $pane->style['settings'])) : theme('panels_pane', array('content' => $content, 'pane' => $pane, 'display' => $display)),
       );
-      
+
       // Remove the clearfix for preview floating
       if (isset($form['aligner_start'])) {
         $form['aligner_start']['#markup'] = str_replace('clearfix', '', $form['aligner_start']['#markup']);
@@ -285,11 +282,12 @@ function wetkit_magic_autosubmit_configure(&$element) {
  * Implementation of hook_form_FORM_ID_alter()
  */
 function wetkit_magic_form_fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form_alter(&$form, &$form_state, $form_id) {
+
   // Handle the view mode
   $view_mode = $form['view_mode'];
   unset($form['view_mode']);
 
-
+  // Setup the live preview 
   if (variable_get('wetkit_magic_live_preview', 1)) {
     wetkit_magic_autosubmit_configure($form);
 
@@ -300,9 +298,9 @@ function wetkit_magic_form_fieldable_panels_panes_fieldable_panels_pane_content_
     }
   }
 
-  // Add custom validation function
+  // Add custom validation function for the reusable title
   if ($form_state['clicked_button']['#value'] != 'Update Preview') {
-    $form['widget_settings']['reusable']['admin_title']['#element_validate'][] = 'wetkit_magic_reusable_entity_validate';
+    $form['reusable']['admin_title']['#element_validate'][] = 'wetkit_magic_reusable_entity_validate';
   }
 
   // Remove "tokens" from the list of available view modes.
@@ -320,13 +318,6 @@ function wetkit_magic_form_fieldable_panels_panes_fieldable_panels_pane_content_
     );
   }
 
-  if (isset($form_state['values']['reusable']) && $form_state['values']['reusable'] === 0) {
-    $form['reusable']['warning']['#access'] = FALSE;
-  }
-
-  // Re-insert the view mode selection under the "General settings" fieldset.
-  $form['widget_settings']['view_mode'] = $view_mode;
-    
   // Improving the general title setting
   if (!empty($form['widget_settings']['title'])) {
     $form['widget_settings']['title']['#size'] = '';
