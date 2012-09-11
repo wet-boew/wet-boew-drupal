@@ -36,6 +36,10 @@ libraries[tinymce][download][type] = git
 libraries[tinymce][download][revision] = 006149b
 libraries[tinymce][download][url] = https://github.com/sylus/tinymce-wetkit.git
 
-libraries[markitup][download][type] = get
-libraries[markitup][download][url] = https://github.com/markitup/1.x/tarball/master
-libraries[markitup][patch][1715642] = http://drupal.org/files/1715642-adding-html-set-markitup-editor.patch
+;libraries[markitup][download][type] = get
+;libraries[markitup][download][url] = https://github.com/markitup/1.x/tarball/master
+;libraries[markitup][patch][1715642] = http://drupal.org/files/1715642-adding-html-set-markitup-editor.patch
+
+libraries[markitup][download][type] = git
+libraries[markitup][download][revision] = 4b77626
+libraries[markitup][download][url] = https://github.com/sylus/markitup-wetkit.git
