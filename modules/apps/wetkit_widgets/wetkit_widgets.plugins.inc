@@ -354,6 +354,13 @@ function wetkit_widgets_field_insert($entity_type, $entity, $field, $instance, $
  * Implements hook_field_update().
  */
 function wetkit_widgets_field_update($entity_type, $entity, $field, $instance, $langcode, &$items) {
+
+  // Load the original entity, if $entity->original is not already set.
+  // This is done as per http://drupal.org/node/985642 and can be removed when that patch is committed. 
+  if (empty($entity->original)) {
+    $entity->original = entity_load_unchanged($entity_type, $field['id']);
+  }
+
   image_field_update($entity_type, $entity, $field, $instance, $langcode, $items);
 }
 
