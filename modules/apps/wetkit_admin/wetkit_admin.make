@@ -32,5 +32,5 @@ projects[date_popup_authored][subdir] = contrib
 projects[ctools_automodal][version] = 1.1
 projects[ctools_automodal][subdir] = contrib
 
-projects[admin_views][version] = 1.0-alpha1
+projects[admin_views][version] = 1.0
 projects[admin_views][subdir] = contrib
