@@ -4,7 +4,7 @@ Helps with theming and provides many layouts
 
 Important
 * This App is based on and often pulls upstream from Panopoly Theme @ drupal.org/project/panopoly_theme
-* The latest upstream sync has been checked against commit: e41105e (Verified)
+* The latest upstream sync has been checked against commit: 7bbf515 (Verified)
 * Panopoly Theme is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly Theme)
