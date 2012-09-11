@@ -889,21 +889,16 @@ function wetkit_widgets_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Address');
-  t('Author');
   t('Caption');
-  t('Existing Content');
   t('File');
-  t('How long (in seconds) before the spotlight rotates to the next image.');
   t('Image');
   t('Information');
   t('Items');
   t('Links');
-  t('Quote');
   t('Table');
   t('Text');
   t('The street address of the location you wish to map. This widget will contact Google and try to do its best to create a map!');
   t('Video');
-  t('View Mode');
 
   return $fields;
 }
