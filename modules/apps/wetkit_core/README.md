@@ -4,7 +4,7 @@ The magical core of the WetKit framework
 
 Important
 * This App is based on and often pulls upstream from Panopoly Core @ drupal.org/project/panopoly_core
-* The latest upstream sync has been checked against commit: f34a0c2 (Verified)
+* The latest upstream sync has been checked against commit: c06a930 (Verified)
 * Panopoly Core is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly Core)
