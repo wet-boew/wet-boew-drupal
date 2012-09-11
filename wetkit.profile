@@ -5,14 +5,14 @@
  */
 function wetkit_install_tasks(&$install_state) {
 
-  // Require specific code required for the install profile process
-  require_once(drupal_get_path('module', 'apps') . '/apps.profile.inc');
-  require_once(drupal_get_path('module', 'wetkit_theme') . '/wetkit_theme.profile.inc');
-
-  // Assemble and return the install tasks
   $tasks = array();
 
+  // Add the WetKit App Server to the Installation Process
+  require_once(drupal_get_path('module', 'apps') . '/apps.profile.inc');
   $tasks = $tasks + apps_profile_install_tasks($install_state, array('machine name' => 'wetkit', 'default apps' => array('')));
+
+  // Add the WetKit theme selection to the Installation process
+  require_once(drupal_get_path('module', 'wetkit_theme') . '/wetkit_theme.profile.inc');
   $tasks = $tasks + wetkit_theme_profile_theme_selection_install_task($install_state);
 
   // Set up a task to include secondary language (fr)
@@ -32,11 +32,13 @@ function wetkit_install_tasks_alter(&$tasks, $install_state) {
   unset($tasks['install_import_locales']);
   unset($tasks['install_import_locales_remaining']);
 
-  // Magically go one level deeper in solving years of dependency problems with install profiles
-  $tasks['install_load_profile']['function'] = 'wetkit_install_load_profile';
+  // Magically go one level deeper in solving years of dependency problems
+  require_once(drupal_get_path('module', 'wetkit_core') . '/wetkit_core.profile.inc');
+  $tasks['install_load_profile']['function'] = 'wetkit_core_install_load_profile';
 
    // Since we only offer one language, define a callback to set this
-  //$tasks['install_select_locale']['function'] = 'wetkit_install_locale_selection';
+  require_once(drupal_get_path('module', 'wetkit_core') . '/wetkit_core.profile.inc');
+  //$tasks['install_select_locale']['function'] = 'wetkit_core_install_locale_selection';
 }
 
 /**
@@ -147,29 +149,4 @@ function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
 
     // Remove the demo content selection option since this is handled through the WetKit demo module.
     $form['default_content_fieldset']['#access'] = FALSE;
-}
-
- /**
-  * Task handler to set the language to English since that is the only one
-  * we have at the moment.
-  */
- //function wetkit_install_locale_selection(&$install_state) {
- //  $install_state['parameters']['locale'] = 'en';
- //}
-
-/**
- * Task handler to load our install profile and enhance the dependency information
- */
-function wetkit_install_load_profile(&$install_state) {
-
-  // Loading the install profile normally
-  install_load_profile($install_state);
-
-  // Include any dependencies that we might have missed...
-  foreach ($install_state['profile_info']['dependencies'] as $module) {
-    $module_info = drupal_parse_info_file(drupal_get_path('module', $module) . '/' . $module . '.info');
-    if (!empty($module_info['dependencies'])) {
-      $install_state['profile_info']['dependencies'] = array_unique(array_merge($install_state['profile_info']['dependencies'], $module_info['dependencies']));
-    }
-  }
 }
