@@ -16,8 +16,8 @@ function wetkit_widgets_file_default_displays() {
   $file_display->weight = 0;
   $file_display->status = TRUE;
   $file_display->settings = array(
-    'width' => '560',
-    'height' => '340',
+    'width' => 'auto',
+    'height' => 'auto',
     'autoplay' => 0,
   );
   $export['video__default__media_vimeo_video'] = $file_display;
@@ -30,8 +30,8 @@ function wetkit_widgets_file_default_displays() {
   $file_display->settings = array(
     'version' => '3',
     'theme' => 'dark',
-    'width' => '560',
-    'height' => '340',
+    'width' => 'auto',
+    'height' => 'auto',
     'fullscreen' => 1,
     'autoplay' => 0,
     'related' => 0,

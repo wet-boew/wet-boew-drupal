@@ -111,6 +111,12 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
   }
 
   if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form') {
+
+    // Add fields to the FPP object if we are adding a reusable object for the first time
+    if ($form_state['entity']->reusable && $form_state['op'] == 'add') {
+      $form = fieldable_panels_panes_entity_edit_form($form, $form_state);
+    }
+
     // Add a custom pre-render method to deal with "Content Settings" fieldset.
     $form['#pre_render'][] = 'wetkit_widgets_fieldable_panel_pane_pre_render';
     
@@ -160,12 +166,18 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
     $form['reusable']['#type'] = 'fieldset';
     $form['reusable']['#process'] = array('ctools_dependent_process');
     $form['reusable']['#id'] = 'reusable-settings';
-    if ($form['reusable']['reusable']['#default_value'] != 1) {
-      $form['reusable']['warning']['#access'] = FALSE;
-    }
     $form['reusable']['category']['#value'] = 'Reusable Content';
     $form['reusable']['category']['#type'] = 'value';
     $form['reusable']['admin_description']['#access'] = FALSE;
+
+    // Set the proper dependencies for the reusable markup
+    $form['reusable']['warning']['#dependency'] = array('edit-reusable' => array(1));
+    $form['reusable']['warning']['#prefix'] = '<div id="reusable-wrapper">';
+    $form['reusable']['warning']['#suffix'] = '</div>';
+    $form['reusable']['warning']['#type'] = 'item';
+
+    // Update the text for the reusable markup
+    $form['reusable']['warning']['#markup'] = '<div class="description">' . t('Note: This item is reusable! Any changes made will change the values everywhere this item is used.') . '</div>';
   }
 
   // Improve the usability and functionality of the table field widget

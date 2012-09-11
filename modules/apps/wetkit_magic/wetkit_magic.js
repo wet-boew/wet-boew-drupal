@@ -27,6 +27,7 @@
       function triggerSubmit (e) {
         var $this = $(this);
         if (!$this.hasClass('ctools-ajaxing')) {
+          $this.addClass('ctools-ajaxing');
           $this.find('.ctools-auto-submit-click').click();
         }
       }
