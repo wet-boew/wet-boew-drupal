@@ -6,7 +6,7 @@ parts of WetKit can leverage.
 
 Important
 * This App is based on and often pulls upstream from Panopoly Core @ drupal.org/project/panopoly_core
-* The latest upstream sync has been checked against commit: 2387d15 (Verified)
+* The latest upstream sync has been checked against commit: 5cf8301 (Verified)
 * Panopoly Core is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly Core)
@@ -17,6 +17,7 @@ Key Features (Panopoly Core)
 * Custom styling for the CTools dropbutton and jQuery UI modals
 * Provides defaults about the Panopoly App Server for use by Apps.module
 * Special handling of site breadcrumb to append current page title
+* Installation profile specific code for cleaner profiles based on Panopoly
 
 Key Features (WetKit Core)
 * Addition of Translation .po files
