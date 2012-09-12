@@ -21,7 +21,11 @@
 })(jQuery);
 
 (function ($) {
-  Drupal.behaviors.wetkitMagicAutosubmit = {
+
+  /**
+   * Improves the Auto Submit Experience for CTools Modals
+   */
+  Drupal.behaviors.panopolyMagicAutosubmit = {
     attach: function (context, settings) {
       // 'this' references the form element
       function triggerSubmit (e) {
@@ -36,7 +40,6 @@
         var $this = $(this);
         $this.find(':submit:not(.ctools-auto-submit-click)').val(Drupal.t('Updating...')).addClass('form-disabled').attr('disabled', 'disabled');
       }
-
 
       // e.keyCode: key
       var discardKeyCode = [
@@ -64,7 +67,6 @@
 
       // Special handling for link field widgets. This ensures content which is ahah'd in still properly autosubmits.
       $('.field-widget-link-field input:text', context).addClass('wetkit-textfield-autosubmit').addClass('ctools-auto-submit-exclude');
-
 
       // Handle title fields.
       var timer;

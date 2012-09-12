@@ -10,7 +10,7 @@ $plugin = array(
   'description' => t('This is a standard list of menus that are available'),
   'content_types' => array('menus'),
   'category' => t('Admin'),
-  'all contexts' => TRUE,
+  'required context' => new ctools_context_required(t('WetKit Admin'), 'string'),
   'single' => TRUE,
 );
 

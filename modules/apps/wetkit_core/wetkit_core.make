@@ -102,7 +102,7 @@ projects[libraries][subdir] = contrib
 projects[devel][version] = 1.3
 projects[devel][subdir] = contrib
 
-; Harness the Power of Features and Apps
+; Harness the Power of Features and Apps with Default Content
 
 projects[apps][version] = 1.0-beta7
 projects[apps][subdir] = contrib
@@ -112,8 +112,6 @@ projects[features][subdir] = contrib
 
 projects[strongarm][version] = 2.0
 projects[strongarm][subdir] = contrib
-
-; Allow for Default Content
 
 projects[defaultcontent][version] = 1.x-dev
 projects[defaultcontent][subdir] = contrib

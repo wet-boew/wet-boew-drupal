@@ -29,16 +29,6 @@ function wetkit_theme_theme_registry_alter(&$theme_registry) {
 }
 
 /**
- * Helper function for re-ordering arrays (needed by theme_registry_alter)
- */
-function _wetkit_theme_insert_after_first_element(&$a, $element) {
-  if (is_array($a)) {
-    $first_element = array_shift($a);
-    array_unshift($a, $first_element, $element);
-  }
-}
-
-/**
 * Implements hook_entity_info_alter().
 */
 function wetkit_theme_entity_info_alter(&$entity_info) {
