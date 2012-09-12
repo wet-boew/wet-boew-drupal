@@ -31,25 +31,57 @@ function wetkit_core_init() {
   drupal_add_js($default_style, 'setting');
 
   // Set the current page title in the breadcrumb
-  $breadcrumb = drupal_get_breadcrumb();
-  if (count($breadcrumb) && drupal_get_title()) {
-    //$breadcrumb[] = drupal_get_title();
+  if (variable_get('wetkit_core_breadcrumb_title', TRUE)) {
+    $breadcrumb = drupal_get_breadcrumb();
+    if (count($breadcrumb) && drupal_get_title()) {
+     //$breadcrumb[] = drupal_get_title();
 
-    // If it is the homepage, remove the breadcrumb
-    if (drupal_is_front_page()) {
-      $breadcrumb = array();
+      // If it is the homepage, remove the breadcrumb
+      if (drupal_is_front_page()) {
+        $breadcrumb = array();
+      }
+      drupal_set_breadcrumb($breadcrumb);
     }
-    drupal_set_breadcrumb($breadcrumb);
   }
 }
 
- /**
-  * Implementation of hook_preprocess_html()
-  *
-  * We are telling the site that everything is a region-content. This is important since
-  * when we disable the block module it loses this classes which some things assume for generalized
-  * CSS considerations (i.e. Bartik's spacing of ul/ol).
-  */
+/**
+ * Implements hook_apps_app_info()
+ */
+function wetkit_core_apps_app_info() {
+  return array(
+    'configure form' => 'wetkit_core_configure_form',
+  );
+}
+
+/**
+ * Configuration Form for WetKit Core
+ */
+function wetkit_core_configure_form($form, &$form_state) {
+  $form = array();
+
+  $form['wetkit_core_breadcrumb_title'] = array(
+    '#title' => t('Append Page Title to Site Breadcrumb'),
+    '#type' => 'select',
+    '#required' => TRUE,
+    '#options' => array(
+      '1' => 'Enabled',
+      '0' => 'Disabled',
+    ),
+    '#default_value' => variable_get('wetkit_core_breadcrumb_title', TRUE) ? '1' : '0',
+    '#description' => t('Do you want WetKit to append the page title to the site breadcrumb?'),
+  );
+
+  return system_settings_form($form);
+}
+
+/**
+ * Implementation of hook_preprocess_html()
+ *
+ * We are telling the site that everything is a region-content. This is important since
+ * when we disable the block module it loses this classes which some things assume for generalized
+ * CSS considerations (i.e. Bartik's spacing of ul/ol).
+ */
 function wetkit_core_preprocess_html(&$variables) {
   $variables['classes_array'][] = 'region-content';
 }
@@ -93,7 +125,6 @@ function wetkit_core_entity_info_alter(&$entity_info) {
  */
 function wetkit_core_module_implements_alter(&$implementations, $hook) {
   if ($hook == 'entity_info_alter' || $hook == 'css_alter') {
-    // Move our hook implementation to the bottom.
     $group = $implementations['wetkit_core'];
     unset($implementations['wetkit_core']);
     $implementations['wetkit_core'] = $group;
@@ -102,11 +133,14 @@ function wetkit_core_module_implements_alter(&$implementations, $hook) {
 
 /**
  * Implements hook_css_alter().
+ *
+ * This hook is implemented to include our special jQuery UI theme. It requires removing the default
+ * theme provided by Drupal core.
  */
 function wetkit_core_css_alter(&$css) {
   // Installs the jquery.ui themeroller theme to the theme.
   if (isset($css['misc/ui/jquery.ui.theme.css'])) {
-    $css['misc/ui/jquery.ui.theme.css']['data'] = drupal_get_path('module', 'wetkit_core') . '/css/wetkit-jquery-ui-theme.css';
+    $css['misc/ui/jquery.ui.theme.css']['data'] = drupal_get_path('module', 'wetkit_core') . '/css/panopoly-jquery-ui-theme.css';
   }
   
   if (isset($css['misc/ui/jquery.ui.dialog.css'])) {
@@ -134,14 +168,12 @@ function wetkit_core_date_format_types() {
 function wetkit_core_date_formats() {
   $formats = array();
 
-  // Time
   $formats[] = array(
     'type' => 'wetkit_time',
     'format' => 'g:ia',
     'locales' => array(),
   );
 
-  // Day
   $formats[] = array(
     'type' => 'wetkit_day',
     'format' => 'F j, Y',
@@ -166,4 +198,3 @@ function wetkit_core_view_mode_options() {
   }
   return $options;
 }
-
