@@ -99,4 +99,3 @@ features[variable][] = search_active_modules
 features[variable][] = search_api_facets_search_ids
 features[views_view][] = wetkit_database_search
 features[views_view][] = wetkit_search
-stylesheets[all][] = wetkit_search.css
