@@ -28,7 +28,7 @@ function wetkit_admin_configure_form($form, &$form_state) {
       '1' => 'Enabled',
       '0' => 'Disabled',
     ),
-    '#default_value' => '0',
+    '#default_value' => variable_get('wetkit_admin_machine_name', FALSE),
     '#description' => t('Do you want to provide an option to specify a machine name (provided by the Default Content module) on the content editing form?'),
   );
 
@@ -40,8 +40,18 @@ function wetkit_admin_configure_form($form, &$form_state) {
       '1' => 'Enabled',
       '0' => 'Disabled',
     ),
-    '#default_value' => '0',
+    '#default_value' => variable_get('wetkit_admin_revision_option', FALSE),
     '#description' => t('Do you want to provide an option to create a new revision for content on the content editing form?'),
+  );
+
+  $form['wetkit_admin_link_description'] = array(
+    '#title' => t('Menu Link Description'),
+    '#type' => 'select',
+    '#required' => TRUE,
+    '#options' => array(
+    ),
+    '#default_value' => variable_get('wetkit_admin_link_description', FALSE),
+    '#description' => t('Do you want to provide a description field for a menu item link on the node edit page?'),
   );
 
   return system_settings_form($form);
@@ -59,12 +69,11 @@ function wetkit_admin_ctools_plugin_directory($module, $plugin) {
  * Implements hook_panels_pane_content_alter().
  */
 function wetkit_admin_panels_pane_content_alter($content, $pane, $args, $context) {
+
   // Pass the title properly through to style plugins rendering regions
-  // TODO - check with Earl on if this is best way to handle this data exchange
   $pane->title = (isset($content->title)) ? $content->title : NULL;
 
   // Hide the title of the featured category pane if there isn't any content
-  // TODO - this could be extended generally to resolve other issues
   if ($pane->subtype == 'node:field_featured_categories' && !empty($content->content['field_featured_categories']) && $content->content['field_featured_categories']['#access'] == FALSE) {
     $content->title = '';
   }
@@ -87,7 +96,6 @@ function wetkit_admin_form_alter(&$form, &$form_state, $form_id) {
     $form['path']['alias']['#title'] = '<strong>' . t('Permalink') . ':</strong> ';
     $form['path']['alias']['#title'] .= (isset($_SERVER['HTTPS'])) ? 'https://' . $_SERVER['HTTP_HOST'] . '/' : 'http://' . $_SERVER['HTTP_HOST'] . '/';
     if (isset($form['path']['pathauto'])) {
-      // Remove the states property since we are hiding the field
       $form['path']['alias']['#states'] = array();
       if (!$form['path']['alias']['#default_value']) {
         $form['path']['alias']['#attributes'] = array('placeholder' => '<' . t('magically generated') . '>');
@@ -102,7 +110,7 @@ function wetkit_admin_form_alter(&$form, &$form_state, $form_id) {
     $form['body']['#attributes']['class'][] = 'clearfix';
   }
 
-  // Hide the machine name options
+  // Improve and potentially hide the machine name option from Default Content
   if (isset($form['machine_name_fs'])) {
     $form['options']['machine_name_fs']['machine_name'] = $form['machine_name_fs']['machine_name'];
     $form['options']['machine_name_fs']['machine_name']['#size'] = '';
@@ -131,9 +139,8 @@ function wetkit_admin_form_alter(&$form, &$form_state, $form_id) {
     $form['field_featured_image']['und'][0]['#description'] = '';
   }
 
-  // Consider the featured category
+  // Hide the featured category field if there are no featured category options
   if (!empty($form['field_featured_categories']) && $form['field_featured_categories']['und']['#type'] != 'textfield') {
-    // Hide this field if there are no options
     if (count($form['field_featured_categories']['und']['#options']) == 0 || (!empty($form['field_featured_categories']['und']['#options']['_none']) && count($form['field_featured_categories']['und']['#options']) == 1)) {
       $form['field_featured_categories']['#access'] = FALSE;
     }
@@ -166,8 +173,7 @@ function wetkit_admin_form_alter(&$form, &$form_state, $form_id) {
     $form['menu']['link']['weight']['#access'] = FALSE;
     $form['menu']['link']['link_title']['#title'] = 'Title';
     $form['menu']['link']['parent']['#title'] = t('Parent');
-    // TODO - make this an optional thing in the settings
-    $form['menu']['link']['description']['#access'] = FALSE; 
+    $form['menu']['link']['description']['#access'] = variable_get('wetkit_admin_link_description', FALSE); 
     $form['#validate'][] = 'wetkit_admin_menu_validate';
   }
 }
@@ -212,20 +218,6 @@ function wetkit_admin_menu_validate($form, &$form_state) {
  * Implementation of hook_menu
  */
 function wetkit_admin_menu() {
-
-  // Implementation of admin/apperance/settings
-  /*
-  $items['admin/site/admin/appearance/settings/bartik'] = array(
-    'title' => 'Settings',
-    'description' => 'Configure default and theme specific settings.',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('system_theme_settings'),
-    'access arguments' => array('administer themes'),
-    'file' => 'system.admin.inc',
-    'file path' => drupal_get_path('module', 'system'),
-    'type' => MENU_CALLBACK,
-    'modal' => TRUE,
-  ); */
 
   // Panelizer "revert" page callback
   $items['admin/site/panelizer-delete/%/%'] = array(
@@ -327,15 +319,6 @@ function wetkit_admin_menu_alter(&$items) {
   // Set the description of the pane library
   $items['admin/wetkit/libraries/panes']['description'] = 'This is the pane library for the site. See all of the panes you can add to your pages.';
 
-  // Set configuration elements of Apps to use modals
-  /*
-  apps_include('manifest');
-  $APPSERVER_BASEPATH = APPSERVER_BASEPATH;
-  foreach (apps_servers() as $server) {
-    $items["$APPSERVER_BASEPATH/{$server['name']}/app/%"]['modal'] = TRUE;
-    $items["$APPSERVER_BASEPATH/{$server['name']}/app/%details"]['modal'] = TRUE;
-  }
-  */
 }
 
 /**
@@ -405,6 +388,7 @@ function wetkit_admin_panelizer_delete_form($form, &$form_state, $entity_type, $
  * Submit function for deleting a panelizer revision.
  */
 function wetkit_admin_panelizer_delete_form_submit($form, &$form_state) {
+
   $form_state['redirect'] = 'admin/site';
 
   db_delete('panelizer_entity')
@@ -421,6 +405,7 @@ function wetkit_admin_panelizer_delete_form_submit($form, &$form_state) {
  * Adapted from system_admin_config_page()
  */
 function wetkit_admin_config_page() {
+
   // Check for status report errors.
   if (system_status(TRUE) && user_access('administer site configuration')) {
     drupal_set_message(t('One or more problems were detected with your Drupal installation. Check the <a href="@status">status report</a> for more information.', array('@status' => url('admin/reports/status'))), 'error');

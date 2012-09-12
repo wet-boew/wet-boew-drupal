@@ -1,8 +1,4 @@
 <?php
-/**
- * @file
- * Code for the WetKit Search feature.
- */
 
 include_once 'wetkit_search.features.inc';
 

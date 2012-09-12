@@ -4,14 +4,11 @@ include_once('wetkit_pages.features.inc');
 
 /**
  * Implementation of drupal_alter() to update menu block settings in 
- * case of IPE callback magic
+ * case of IPE callback magic. This will only work in limited cases
+ * but will be fixed when the page refreshes. 
  */
 function wetkit_pages_menu_block_tree_alter($tree, $config) {
   if (arg(0) == 'panels' && arg(1) == 'ajax') {
-    // Set the active trail for all main menu items. This will work
-    // for our demo, but might break with more complicated menus. 
-    // By might, of course, we mean likely will. Sigh double sigh. 
-    // It all gets fixed by refresh of the page though....
     foreach ($tree as $key => $value) {
       $tree[$key]['link']['in_active_trail'] = TRUE;
     }
