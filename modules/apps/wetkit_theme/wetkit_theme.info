@@ -13,3 +13,4 @@ features[variable][] = theme_wetkit_adaptivetheme_files_directory
 features[variable][] = theme_wetkit_adaptivetheme_settings
 stylesheets[all][] = css/wetkit-featured.css
 stylesheets[all][] = css/wetkit-accordian.css
+scripts[] = js/wetkit-accordion.js
