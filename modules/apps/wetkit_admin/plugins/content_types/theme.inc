@@ -10,7 +10,7 @@ $plugin = array(
   'description' => t('This is the current theme that is installed.'),
   'content_types' => array('theme'),
   'category' => t('Admin'),
-  'all contexts' => TRUE,
+  'required context' => new ctools_context_required(t('WetKit Admin'), 'string'),
   'single' => TRUE,
 );
 

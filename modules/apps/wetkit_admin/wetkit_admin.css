@@ -66,7 +66,6 @@
   margin-top: 5px;
 }
 
-
 /**
  * Form action button styling
  */
@@ -303,37 +302,6 @@
 }
 
 /**
- * Admin dashboard styling
- */
-.pane-theme .admin-theme-image {
-  margin-top: .3em;
-  width: 125px;
-  float: left;
-}
-
-.pane-theme .admin-theme-configure {
-  float: right;
-  line-height: 40px;
-}
-
-.pane-theme .admin-theme-image img {
-  width: 150px;
-}
-
-.pane-theme .admin-theme-information {
-  padding-left: 1em;
-  padding-right: 1em;
-  width: 54%;
-  float: left;
-}
-
-.pane-taxonomy .ctools-dropbutton,
-#page-library .ctools-dropbutton {
-  margin-top: 2px;
-  float: right;
-}
-
-/**
  * Media Styles
  */
 #media-browser-page {
@@ -448,26 +416,20 @@ ul#media-browser-library-list {
  * Misc
  */
 #active-vertical-tab {
-  height: 1px;
+  height: 1px; /* fixes a small issue with vertical tabs on the administrative pages */
   overflow: hidden;
 }
 
 #views-ajax-body form {
-  background-color: #FFF;
+  background-color: #FFF; /* makes sure that our background color is white when ajaxing in views */
 }
 
-.contextual-links-wrapper, 
 .tabledrag-toggle-weight-wrapper {
-  display: none;
+  display: none; /* removes the "show row weights" option. has accessibility considerations. */
 }
 
-.view-wetkit-admin-content .views-field-field-featured-image {
-  padding: 0;
-}
-
-/* Fix positioning for autocomplete items in firefox. http://drupal.org/node/1218684 */
 .form-item-uid {
-  position: relative;
+  position: relative; /* fixes positioning for auto complete items in firefox - http://drupal.org/node/1218684 */
 }
 
 /* Field Archived Content */
