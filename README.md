@@ -29,10 +29,13 @@ If you do not wish to perform a build out of Drupal yourself (instructions below
 > 3. Install Git 1.7.10 or higher (Some lower versions of git do not apply patches from the make file with Drush Make):
 >   * a) Linux, Mac OSX: http://code.google.com/p/git-osx-installer/
 >   * b) Windows: http://msysgit.github.com/
-> 4. Build the complete Drupal installation software profile using the following command on the Git Bash command prompt.
+> 4. Build the complete Drupal installation software profile using the following commands on the Git Bash command prompt.
 <pre>
-Command: drush make --prepare-install --no-gitinfofile --working-copy https://raw.github.com/wet-boew/wet-boew-drupal/master/build-wetkit.make &lt;directory_name&gt; -v --debug
-Example: drush make --prepare-install --no-gitinfofile --working-copy https://raw.github.com/wet-boew/wet-boew-drupal/master/build-wetkit.make drupal_wet
+git clone https://github.com/wet-boew/wet-boew-drupal.git profiles/wetkit;
+</pre>
+<pre>
+Command: drush make --prepare-install --no-gitinfofile --working-copy profiles/wetkit/build-wetkit.make &lt;directory_name&gt; -v --debug
+Example: drush make --prepare-install --no-gitinfofile --working-copy profiles/wetkit/build-wetkit.make drupal_wet --yes
 </pre>
 > 5. To quickly install using the Drush command line, change to the directory where Drupal (for example /var/www/html) was installed and enter this command.
 > Be sure to use a password that meets the password policy for WET.
