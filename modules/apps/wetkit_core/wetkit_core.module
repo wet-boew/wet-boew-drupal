@@ -140,7 +140,7 @@ function wetkit_core_module_implements_alter(&$implementations, $hook) {
 function wetkit_core_css_alter(&$css) {
   // Installs the jquery.ui themeroller theme to the theme.
   if (isset($css['misc/ui/jquery.ui.theme.css'])) {
-    $css['misc/ui/jquery.ui.theme.css']['data'] = drupal_get_path('module', 'wetkit_core') . '/css/panopoly-jquery-ui-theme.css';
+    $css['misc/ui/jquery.ui.theme.css']['data'] = drupal_get_path('module', 'wetkit_core') . '/css/wetkit-jquery-ui-theme.css';
   }
   
   if (isset($css['misc/ui/jquery.ui.dialog.css'])) {

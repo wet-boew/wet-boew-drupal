@@ -25,7 +25,7 @@
   /**
    * Improves the Auto Submit Experience for CTools Modals
    */
-  Drupal.behaviors.panopolyMagicAutosubmit = {
+  Drupal.behaviors.wetkitMagicAutosubmit = {
     attach: function (context, settings) {
       // 'this' references the form element
       function triggerSubmit (e) {
