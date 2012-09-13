@@ -3,20 +3,6 @@
 api = 2
 core = 7.x
 
-; The WetKit Foundation
-
-includes[] = ../wetkit_images/wetkit_images.make
-includes[] = ../wetkit_theme/wetkit_theme.make
-;includes[] = ../wetkit_magic/wetkit_magic.make
-includes[] = ../wetkit_widgets/wetkit_widgets.make
-includes[] = ../wetkit_admin/wetkit_admin.make
-;includes[] = ../wetkit_pages/wetkit_pages.make
-;includes[] = ../wetkit_users/wetkit_users.make
-includes[] = ../wetkit_wysiwyg/wetkit_wysiwyg.make
-includes[] = ../wetkit_search/wetkit_search.make
-includes[] = ../wetkit_language/wetkit_language.make
-includes[] = ../wetkit_wetboew/wetkit_wetboew.make
-
 ; Panels and Chaos Tools Magic
 
 projects[ctools][version] = 1.2
@@ -90,7 +76,7 @@ projects[pathauto][version] = 1.2
 projects[pathauto][subdir] = contrib
 projects[pathauto][patch][936222] = http://drupal.org/files/936222-pathauto-persist.patch
 
-projects[token][version] = 1.2
+projects[token][version] = 1.3
 projects[token][subdir] = contrib
 
 projects[entity][version] = 1.0-rc3

@@ -6,6 +6,36 @@
 include_once('wetkit_wysiwyg.features.inc');
 
 /**
+ * Implements hook_apps_app_info()
+ */
+function wetkit_wysiwyg_apps_app_info() {
+  return array(
+    'configure form' => 'wetkit_wysiwyg_configure_form',
+  );
+}
+
+/**
+ * Configuration Form for WetKit WYSIWYG
+ */
+function wetkit_wysiwyg_configure_form($form, &$form_state) {
+  $form = array();
+
+  $form['wetkit_wysiwyg_show_format_details'] = array(
+    '#title' => t('Show Text Formatter Details'),
+    '#type' => 'select',
+    '#required' => TRUE,
+    '#options' => array(
+      '1' => 'Show',
+      '0' => 'Do Not Show',
+    ),
+    '#default_value' => variable_get('wetkit_wysiwyg_show_format_details', FALSE),
+    '#description' => t('Do you want WetKit to show the help text and text format guidelines?'),
+  );
+
+  return system_settings_form($form);
+}
+
+/**
  * Implementation of hook_ctools_plugin_directory()
  */
 function wetkit_wysiwyg_ctools_plugin_directory($module, $plugin) {
@@ -82,12 +112,12 @@ function wetkit_wysiwyg_filter_process_format($element) {
   unset($element['format']['#type']);
   $element['format']['format']['#title'] = 'Editor: ';
   
-  // Remove elements from UID 1 user since better format's permissions cannot
-  global $user;
-  if ($user->uid == 1) {
+  // Do not show the guidelines and help text for text formatters
+  if (!variable_get('panopoly_wysiwyg_show_format_details', FALSE)) {
     $element['format']['help']['#access'] = FALSE;
     $element['format']['guidelines']['#access'] = FALSE;
   }
+
   return $element;
 }
 
@@ -242,4 +272,3 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
       break;
   }
 }
-
