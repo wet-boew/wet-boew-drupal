@@ -6,7 +6,7 @@ parts of WetKit can leverage.
 
 Important
 * This App is based on and often pulls upstream from Panopoly Core @ drupal.org/project/panopoly_core
-* The latest upstream sync has been checked against commit: 5cf8301 (Verified)
+* The latest upstream sync has been checked against commit: af7ce06 (Verified)
 * Panopoly Core is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly Core)

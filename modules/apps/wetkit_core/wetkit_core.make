@@ -90,7 +90,7 @@ projects[pathauto][version] = 1.2
 projects[pathauto][subdir] = contrib
 projects[pathauto][patch][936222] = http://drupal.org/files/936222-pathauto-persist.patch
 
-projects[token][version] = 1.2
+projects[token][version] = 1.3
 projects[token][subdir] = contrib
 
 projects[entity][version] = 1.0-rc3
