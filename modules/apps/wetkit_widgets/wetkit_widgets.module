@@ -38,6 +38,7 @@ function wetkit_widgets_init() {
   $rotation_time = 1000 * variable_get('wetkit_widgets_spotlight_rotation_time', 4);
   $js_variables = array('spotlight_settings' => array('rotation_time' => $rotation_time));
   drupal_add_js($js_variables, 'setting');
+
 }
     
 /**

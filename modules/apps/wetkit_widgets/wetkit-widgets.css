@@ -9,6 +9,13 @@ div.file-widget img {
   vertical-align: middle;
 }
 
+/* Video Widget */
+div.pane-bundle-video .media-youtube-preview-wrapper,
+div.pane-bundle-video .media-video-preview-wrapper,
+div.pane-bundle-video iframe {
+  height: 100%;
+}
+
 /* Table Widget */
 table.mobile-table { 
   display: none;
