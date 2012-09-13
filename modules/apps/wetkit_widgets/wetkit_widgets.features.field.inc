@@ -851,7 +851,7 @@ function wetkit_widgets_field_default_fields() {
       'entity_type' => 'fieldable_panels_pane',
       'field_name' => 'field_video_video',
       'label' => 'Video',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'description_field' => 0,
         'file_directory' => 'videos',
