@@ -34,12 +34,12 @@ function wetkit_widgets_configure_form($form, &$form_state) {
  */
 function wetkit_widgets_init() {
 
-  // Set the rotation time
+  // Include the Spotlight Rotation time setting
   $rotation_time = 1000 * variable_get('wetkit_widgets_spotlight_rotation_time', 4);
   $js_variables = array('spotlight_settings' => array('rotation_time' => $rotation_time));
   drupal_add_js($js_variables, 'setting');
 }
-
+    
 /**
  * Implementation of hook_ctools_plugin_directory()
  */
@@ -127,39 +127,14 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
     // Add a widget setting
     $form['widget_settings']['#type'] = 'fieldset';
     $form['widget_settings']['#title'] = t('General Settings');
-    if (isset($form['title'])) {
-      $form['title']['#attributes']['placeholder'] = $form['title']['#title'];
-      unset($form['title']['#title']);
-      $form['widget_settings']['title'] = $form['title'];
-      unset($form['title']);
-    }
-
-    if (isset($form['title_field'])) {
-      $form['widget_settings']['title'] = $form['title_field'];
-      unset($form['title_field']);
-   }
+    $form['title']['#attributes']['placeholder'] = $form['title']['#title'];
+    unset($form['title']['#title']);
+    $form['widget_settings']['title'] = $form['title'];
+    unset($form['title']);
 
     // Move the link field into the general settings tab.
     $form['widget_settings']['link'] = $form['link'];
     unset($form['link']);
-
-    // Find file / image fields and ensure they are using a FID instead of a UUID.
-    // TODO - This can be removed if we are not supporting the UUID module    
-    foreach ($form as $key => $value) {
-      if (substr($key, 0, 6) == 'field_') {
-        if (!empty($value['und']['0']['#bundle']) && ($value['und']['0']['#bundle'] == 'image' || $value['und']['0']['#bundle'] == 'file')) {
-          foreach ($value['und'] as $subkey => $subvalue) {
-            if (is_numeric($subkey)) {
-              // Change UUID to FID to resolve issue with UUID handling. This solves a bug with Fieldable Panels Panes that
-              // hopefully will be resolved soon.
-              if (!empty($subvalue['#default_value']['fid']) && strlen($subvalue['#default_value']['fid']) == 36) {
-                $form[$key]['und'][$subkey]['#default_value']['fid'] = db_query('SELECT fid FROM {file_managed} WHERE uuid = :uuid', array(':uuid' => $subvalue['#default_value']['fid']))->fetchField();
-              }
-            }
-          }
-        }
-      }
-    }
 
     // Improve the reusable interface
     $form['reusable']['#title'] = t('Reusable Settings');
@@ -186,7 +161,7 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
     $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['#collapsible'] = FALSE;
     $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['#collapsed'] = FALSE;
     $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#field_prefix'] = $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#title'] . '? ';
-    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#title'] = '';    
+    $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_cols']['#title'] = '';
     $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_rows']['#field_prefix'] = $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_rows']['#title'] . '? ';
     $form['field_basic_table_table'][LANGUAGE_NONE][0]['tablefield']['rebuild']['count_rows']['#title'] = '';
   }
@@ -238,11 +213,11 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
       $form_state['values']['field_video_video'][LANGUAGE_NONE][0]['fid'] = variable_get('wetkit_widgets_default_video_fid', NULL);
       $form['field_video_video'][LANGUAGE_NONE][0]['#default_value']['fid'] = variable_get('wetkit_widgets_default_video_fid', NULL);
     } 
-  }  
+  }
 }
 
 /**
- * Impliment the "Content Settings" fieldset in a pre-render. This fixes issues with image caused by initially
+ * Implement the "Content Settings" fieldset in a pre-render. This fixes issues with image caused by initially
  * doing this in a form_alter.
  *
  * @see http://drupal.org/node/1567704
@@ -269,8 +244,6 @@ function wetkit_widgets_fieldable_panel_pane_pre_render($element) {
 
   return $element;
 }
-
-
 
 /** 
  * Implementation of hook_entity_info_alter()
@@ -388,7 +361,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
-  
+
   // Tabbed Interface
   $entity_info['fieldable_panels_pane']['bundles']['tabbed_interface'] = array(
     'label' => t('Add tabbed interface'),
@@ -421,19 +394,6 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
 }
 
 /**
- * Implements hook_views_slideshow_widget_pager_info().
- * 
- * Adapted from http://drupal.org/sandbox/longwave/1340916
- */
-function wetkit_widgets_views_slideshow_widget_pager_info($view) {
-  return array(
-    'wetkit_widgets' => array(
-      'name' => t('Simple counter'),
-    ),
-  );
-}
-
-/**
  * Implementation hook_theme_registry_alter()
  */
 function wetkit_widgets_theme_registry_alter(&$theme_registry) {
@@ -448,16 +408,6 @@ function wetkit_widgets_theme_registry_alter(&$theme_registry) {
  */
 function wetkit_widgets_theme($existing, $type, $theme, $path) {
   return array(
-    'wetkit_widgets' => array(
-      'variables' => array('vss_id' => NULL, 'view' => NULL, 'settings' => array(), 'location' => NULL, 'attributes' => array()),
-      'template' => 'templates/views/views-slideshow-pager-fields',
-      'path' => drupal_get_path('module', 'wetkit_widgets'),
-    ),
-    'wetkit_widgets_pager_field_item' => array(
-      'variables' => array('vss_id' => NULL, 'item' => NULL, 'count' => NULL, 'location' => NULL),
-      'template' => 'templates/views/views-slideshow-pager-field-item',
-      'path' => drupal_get_path('module', 'wetkit_widgets'),
-    ),
     'fieldable_panels_pane' => array(
       'render element' => 'elements',
       'template'  => 'templates/fieldable_panels_pane/wetkit-widgets-fieldable-panels-pane',
@@ -478,46 +428,6 @@ function wetkit_widgets_theme($existing, $type, $theme, $path) {
       ),
     ),
   );
-}
-
-/**
- * Template preprocess function for Views Slideshow simple pager.
- */
-function template_preprocess_wetkit_widgets(&$vars) {
-  // Call the fields pager preprocess function.
-  _views_slideshow_preprocess_views_slideshow_pager_fields($vars);
-
-  // Override the (empty) rendered field items with our simple pager.
-  $vars['rendered_field_items'] = '';
-  if (!($vars['settings']['hide_on_single_slide'] && count($vars['view']->result) == 1)) {
-    foreach ($vars['view']->result as $count => $node) {
-      $item = l(($count+1), '', array('fragment' => $count));
-      $vars['rendered_field_items'] .= theme('wetkit_widgets_pager_field_item', array('vss_id' => $vars['vss_id'], 'item' => $item, 'count' => $count, 'location' => $vars['location']));
-    }
-  }
-
-  // Clone the pager fields JavaScript object and methods.
-  drupal_add_js('Drupal.viewsSlideshowSimplePager = Drupal.viewsSlideshowPagerFields || {};', 'inline');
-}
-
-/**
- * Implementation of hook_preprocess_views_slideshow_pager_field_item()
- */
-function template_preprocess_wetkit_widgets_pager_field_item(&$vars) {
-  _wetkit_widgets_preprocess_wetkit_widgets_pager_field_item($vars);
-}
-
-/**
- * Views Slideshow: pager item.
- *
- * @ingroup themeable
- */
-function _wetkit_widgets_preprocess_wetkit_widgets_pager_field_item(&$vars) {
-  $vars['classes_array'][] = 'views_slideshow_pager_field_item';
-  if (!$vars['count']) {
-    $vars['classes_array'][] = 'activeSlide';
-  }
-  $vars['classes_array'][] = ($vars['count'] % 2) ? 'views-row-even' : 'views-row-odd';
 }
 
 /**

@@ -4,7 +4,7 @@ Allows the creation and reuse of fielded entities to add common types of content
 
 Important
 * This App is based on and often pulls upstream from Panopoly Widgets @ drupal.org/project/panopoly_widgets
-* The latest upstream sync has been checked against commit: 8e04de6 (Verified)
+* The latest upstream sync has been checked against commit: a2e695b (Verified)
 * Panopoly Theme is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly Widgets)
@@ -19,6 +19,8 @@ Key Features (Panopoly Widgets)
 * Integration with Menu Block to provide a submenu
 * Provides a customizable view to add a generic list of content
 * Provides a customizable view to add a generic piece of content
+* Inclusion of default content for Panopoly Widgets
+* UX/UI Improvements for naming and positioning of Chaos Tools plugins
 
 Key Features (WetKit Widgets)
 * Addition of Field Formatter + Entity Type: Tabbed Interface
