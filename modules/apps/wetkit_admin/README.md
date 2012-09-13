@@ -5,7 +5,7 @@ enhancement modules and exposes a variety of end user settings for WetKit.
 
 Important
 * This App is based on and often pulls upstream from Panopoly Admin @ drupal.org/project/panopoly_admin
-* The latest upstream sync has been checked against commit: 959f4fe (Verified)
+* The latest upstream sync has been checked against commit: 3cd128a (Verified)
 * Panopoly Admin is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
 
 Key Features (Panopoly Admin)

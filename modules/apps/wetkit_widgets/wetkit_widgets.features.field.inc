@@ -587,7 +587,7 @@ function wetkit_widgets_field_default_fields() {
       ),
     ),
   );
-  
+
   // Exported field: 'fieldable_panels_pane-tabbed_interface-field_tabbed_interface'.
   $fields['fieldable_panels_pane-tabbed_interface-field_tabbed_interface'] = array(
     'field_config' => array(

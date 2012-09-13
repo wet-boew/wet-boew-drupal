@@ -107,20 +107,3 @@ div.ctools-modal-content .format-toggle,
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
-/**
- * WYSIWYG LinkIT
- */
- #linkit-cancel {
-  float: right;
-  margin-top: 30px;
-}
-
-#edit-linkit-insert {
-  float: left;
-  margin-top: 25px;
-}
-
-#edit-linkit-attributes legend::after {
- border: none;
-}

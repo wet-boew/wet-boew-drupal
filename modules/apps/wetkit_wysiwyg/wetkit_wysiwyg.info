@@ -30,4 +30,4 @@ features[wysiwyg][] = wetkit_html_text
 features[wysiwyg][] = wetkit_wysiwyg_text
 features[wysiwyg_template][] = onglet_coulissant_francais
 features[wysiwyg_template][] = slide_out_tab_english
-stylesheets[all][] = wetkit_wysiwyg.css
+stylesheets[all][] = wetkit-wysiwyg.css
