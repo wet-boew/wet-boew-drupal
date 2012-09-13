@@ -212,9 +212,7 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
     // Quick modification to get the video to render correctly with preview content
     if ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id']) && !empty($form_state['field']['field_video_video'])) {
       $form_state['values']['field_video_video'][LANGUAGE_NONE][0]['fid'] = variable_get('wetkit_widgets_default_video_fid', NULL);
-      $form_state['values']['field_video_video'][LANGUAGE_NONE][0]['display'] = 1;
       $form['field_video_video'][LANGUAGE_NONE][0]['#default_value']['fid'] = variable_get('wetkit_widgets_default_video_fid', NULL);
-      $form['field_video_video'][LANGUAGE_NONE][0]['#default_value']['display'] = 1;
     } 
   }
 }
