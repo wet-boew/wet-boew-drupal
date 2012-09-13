@@ -1,0 +1,109 @@
+/**
+ * TinyMCE WYSIWYG styling
+ */
+
+table.mceToolbar td {
+   display: inline-block;
+}
+table.mceLayout {
+  font-size: 1em;
+}
+
+.cirkuitSkin table.mceToolbar {
+  width: auto;
+}
+
+.o2k7Skin table.mceLayout .mceListBox {
+  padding-left: 0;
+}
+
+.o2k7Skin table.mceLayout .mceOpen {
+  height: 24px;
+}
+
+.cirkuitSkin td.mceIframeContainer {
+  border-bottom: 0;
+}
+
+.cirkuitSkin table tbody {
+  width: auto;
+}
+
+.mceStatusbar > div {
+  display: none;
+}
+
+/**
+ * Markitup! Styling
+ */
+div .markItUp {
+  width: 100%;
+}
+
+div .markItUpHeader {
+  background-color: #DFDFDF;
+  height: 28px;
+  padding-top: 1px;
+  border-top: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+}
+
+div .markItUpHeader ul {
+  margin: 0;
+  padding: 0;
+}
+
+div .markItUpHeader ul li {
+  border: 1px solid #CCC;
+  background-color: #EEE;
+  border-radius: 4px;
+  margin-left: 2px;
+  margin-top: 2px;
+}
+
+div .markItUpHeader ul a {
+  margin: 2px 4px;
+  padding: 0;
+}
+
+div .markItUpHeader ul .markItUpSeparator {
+  margin-top: 4px;
+}
+
+#markItUpEdit-body-und-0-value, 
+#markItUpEdit-body-und-1-value, 
+#markItUpEdit-body-und-2-value, 
+#markItUpEdit-body-und-3-value, 
+#markItUpEdit-body-und-4-value, 
+#markItUpEdit-body-und-5-value, 
+#markItUpEdit-body-und-6-value, 
+#markItUpEdit-body-und-7-value, 
+#markItUpEdit-body-und-8-value, 
+#markItUpEdit-body-und-9-value {
+  margin-bottom: 0;
+}
+
+.markItUpFooter {
+  display: none;
+}
+
+/**
+ * WYSIWYG Toggle Styling
+ */
+div.ctools-modal-content .format-toggle label,
+.format-toggle label {
+  float: left;
+  margin-right: .5em;
+  margin-top: 2px;
+  font-weight: 400;
+  display: block;
+  width: auto;
+}
+
+div.ctools-modal-content .format-toggle,
+.format-toggle {
+  float: right;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
