@@ -11,6 +11,14 @@ include_once('wetkit_wetboew.menu_wetkit_load.inc');
  * Implementation of hook_form_alter()
  */
 function wetkit_wetboew_form_alter(&$form, &$form_state, $form_id) {
+  // Move the featured field into publishing options
+  if (!empty($form['field_featured_status'])) {
+    $form['options']['field_featured_status'] = $form['field_featured_status'];
+    //unset($form['field_featured_status']);
+    //TODO: Upstream this fix to Panopoly
+    $form['field_featured_status'] = array('#language' => NULL);
+  }
+
   // Remove the description from the shared widget
   if (!empty($form['field_share_widget'])) {
     $form['options']['field_share_widget'] = $form['field_share_widget'];
@@ -75,7 +83,7 @@ function wetkit_wetboew_configure_form_submit($form, &$form_state) {
 function wetkit_wetboew_css_alter(&$css) {
   // Installs the jquery.ui themeroller theme to the theme.
   if (isset($css['misc/ui/jquery.ui.theme.css']) && user_is_logged_in()) {
-    $css['misc/ui/jquery.ui.theme.css']['data'] = drupal_get_path('module', 'wetkit_core') . '/css/wetkit-jquery-ui-theme.css';
+    $css['misc/ui/jquery.ui.theme.css']['data'] = drupal_get_path('module', 'panopoly_core') . '/css/panopooly-jquery-ui-theme.css';
   }
   else {
     unset($css['misc/ui/jquery.ui.theme.css']);
@@ -320,4 +328,26 @@ function wetkit_wetboew_menu_block_blocks() {
       'sort'        => 0,
     ),
   );
+}
+
+/**
+ * Implements hook_page_build().
+ *
+ * Hide the toolbar for user 1 and administrator role because uses the admin menu instead
+ */
+function wetkit_wetboew_page_build(&$page) {
+  $page['page_top']['toolbar']['#access'] = wetkit_wetboew_toolbar_access();
+}
+
+/**
+ * Implements wetkit_users_toolbar_access().
+ */
+function wetkit_wetboew_toolbar_access() {
+  global $user;
+  if (($user->uid == 1) || (in_array('administrative user', array_values($user->roles)))) {
+    return FALSE;
+  }
+  else {
+    return user_access('access toolbar');
+  }
 }

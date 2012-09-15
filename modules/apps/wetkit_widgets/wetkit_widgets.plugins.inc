@@ -2,7 +2,7 @@
 
 /**
  * @file
- * A specification for the custom spotlight entity that is part of WetKit Widgets
+ * A specification for the custom spotlight entity that is part of Panopoly Widgets
  */
 
 /**
@@ -20,25 +20,6 @@ function wetkit_widgets_preprocess_panels_pane(&$variables) {
  */
 function wetkit_widgets_field_info() {
   return array(
-    'wetkit_spotlight' => array(
-      'label' => t('Spotlight'),
-      'description' => t('A wonderfully widgetsal spotlight field'),
-      'default_widget' => 'wetkit_spotlight_form',
-      'default_formatter' => 'wetkit_spotlight_default',
-      'settings' => array(
-        'uri_scheme' => variable_get('file_default_scheme', 'public'),
-        'default_image' => 1,
-      ),
-      'instance_settings' => array(
-        'file_extensions' => 'jpg jpeg gif png',
-        'file_directory' => 'general',
-        'max_filesize' => '',
-        'alt_field' => 0,
-        'title_field' => 0,
-        'max_resolution' => '',
-        'min_resolution' => '',
-      ),
-    ),
     'wetkit_tabbed_interface' => array(
       'label' => t('Tabbed Interface'),
       'description' => t('WetKit Plugin for the Web Experience Toolkit\'s Tabbed Interface'),
@@ -78,14 +59,6 @@ function wetkit_widgets_field_is_empty($item, $field) {
  */
 function wetkit_widgets_field_widget_info() {
   return array(
-    'wetkit_spotlight_form' => array(
-      'label' => t('Spotlight'),
-      'field types' => array('wetkit_spotlight'),
-      'behaviors' => array(
-        'multiple values' => FIELD_BEHAVIOR_DEFAULT,
-        'default value' => FIELD_BEHAVIOR_DEFAULT,
-      ),
-    ),
     'wetkit_tabbed_interface_form' => array(
       'label' => t('Tabbed Interface'),
       'field types' => array('wetkit_tabbed_interface'),
@@ -144,13 +117,6 @@ function wetkit_widgets_field_instance_settings_form($field, $instance) {
  */
 function wetkit_widgets_field_formatter_info() {
   return array(
-    'wetkit_spotlight_default' => array(
-      'label' => t('Default'),
-      'field types' => array('wetkit_spotlight'),
-      'settings' => array(
-        'image_style' => 'wetkit_image_spotlight',
-      ),
-    ),
     'wetkit_tabbed_interface_default' => array(
       'label' => t('Default'),
       'field types' => array('wetkit_tabbed_interface'),
@@ -169,16 +135,6 @@ function wetkit_widgets_field_formatter_settings_form($field, $instance, $view_m
   $settings = $display['settings'];
   $element = array();
 
-  if ($display['type'] == 'wetkit_spotlight_default') {
-    $element['image_style'] = array(
-      '#title' => t('Image style'), 
-      '#type' => 'select',
-      '#options' => image_style_options(),
-      '#default_value' => $settings['image_style'],
-      '#required' => TRUE,
-    );
-  }
-
   if ($display['type'] == 'wetkit_tabbed_interface_default') {
     $element['image_style'] = array(
       '#title' => t('Image style'), 
@@ -188,6 +144,7 @@ function wetkit_widgets_field_formatter_settings_form($field, $instance, $view_m
       '#required' => TRUE,
     );
   }
+
   return $element;
 }
 
@@ -211,18 +168,8 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
   $formatter = $display['type'];
   drupal_add_library('system', 'ui.tabs');
 
-  // Assemble the tabs header
-  $header = '<ul>';
-  foreach ($items as $delta => $item_data) {
-    $header .= '<li>' . '<a href="#wetkit-spotlight-' . $delta . '">' . ($delta+1) . '</a></li>'; 
-  }
-  $header .= '</ul>';
-
   // Assemble the tabs content
   foreach ($items as $delta => $item_data) {
-    if ($display['type'] == 'wetkit_spotlight_default') {
-      $element[$delta]['#markup'] = ($delta == 0) ? $header . theme('wetkit_spotlight_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings)) : theme('wetkit_spotlight_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings));
-    }
     if ($display['type'] == 'wetkit_tabbed_interface_default') {
       $element[$delta]['#markup'] = theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings));
       $element[$delta]['title'] = $item_data['title'];
@@ -238,41 +185,7 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
  */
 function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
 
-  if ($instance['widget']['type'] == 'wetkit_spotlight_form') {
-   
-    // Make it a multipart form  
-    $form['#attributes']['enctype'] = 'multipart/form-data';
-
-    // Define the element
-    $element['title'] = array(
-      '#title' => 'Title',
-      '#type' => 'textfield',
-      '#default_value' => isset($items[$delta]['title']) ? $items[$delta]['title'] : NULL,
-    );
-
-    $element['link'] = array(
-      '#title' => 'Link',
-      '#type' => 'textfield',
-      '#default_value' => isset($items[$delta]['link']) ? $items[$delta]['link'] : NULL,
-    );
-
-    $element['fid'] = array(
-      '#title' => 'Image',
-      '#type' => 'managed_file',
-      '#upload_location' => file_field_widget_uri($field, $instance),
-      '#default_value' => isset($items[$delta]['fid']) ? $items[$delta]['fid'] : NULL,
-    );
-
-    $element['description'] = array(
-      '#title' => 'Description',
-      '#type' => 'textarea',
-      '#rows' => '2',
-      '#resizable' => FALSE,
-      '#default_value' => isset($items[$delta]['description']) ? $items[$delta]['description'] : NULL,
-    );
-  }
-
-if ($instance['widget']['type'] == 'wetkit_tabbed_interface_form') {
+  if ($instance['widget']['type'] == 'wetkit_tabbed_interface_form') {
    
     // Make it a multipart form  
     $form['#attributes']['enctype'] = 'multipart/form-data';
@@ -357,9 +270,9 @@ function wetkit_widgets_field_update($entity_type, $entity, $field, $instance, $
 
   // Load the original entity, if $entity->original is not already set.
   // This is done as per http://drupal.org/node/985642 and can be removed when that patch is committed. 
-  //if (empty($entity->original)) {
-  //  $entity->original = entity_load_unchanged($entity_type, $field['id']);
-  //}
+  if (empty($entity->original)) {
+    $entity->original = entity_load_unchanged($entity_type, $field['id']);
+  }
 
   image_field_update($entity_type, $entity, $field, $instance, $langcode, $items);
 }
@@ -395,38 +308,8 @@ function wetkit_widgets_field_prepare_view($entity_type, $entities, $field, $ins
       }
     }
   }
-
 }
 
-/**
- * Theme function for table view
- */
-function theme_wetkit_spotlight_view($variables) {
-  $title = $variables['items']['title'];
-  $description = $variables['items']['description'];
-  if (module_exists('uuid')) {
-    $image_entity = entity_uuid_load('file', array($variables['items']['uuid']));
-    $image = file_load(array_pop($image_entity)->fid);
-  }
-  else {
-    $image = (object) $variables['items'];
-  }
-  $link = $variables['items']['link'];
-  $settings = $variables['settings'];
-
-  $output = '<div id="' . 'wetkit-spotlight-' . $variables['delta'] . '" class="' . 'wetkit-spotlight' . '">';
-  $output .= theme('image_style', array('style_name' => $settings['image_style'], 'path' => $image->uri));
-  $output .= '<div class="wetkit-spotlight-wrapper">';
-  $output .= '<h3 class="wetkit-spotlight-label">' . t('Spotlight') . '</h3>';
-  $output .= '<div class="wetkit-spotlight-info">';
-  $output .= '<h2>' . l($title, $link) . '</h2>';
-  $output .= '<p>' . $description . '</p>';
-  $output .= '</div>';
-  $output .= '</div>';
-  $output .= '</div>';
-
-  return $output;
-}
 
 /**
  * Theme function for table view

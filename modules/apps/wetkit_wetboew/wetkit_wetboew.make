@@ -8,6 +8,13 @@ core = 7.x
 projects[advanced_help][version] = 1.0
 projects[advanced_help][subdir] = contrib
 
+projects[admin_menu][version] = 3.x-dev
+projects[admin_menu][subdir] = contrib
+projects[admin_menu][download][type] = git
+projects[admin_menu][download][revision] = ed6295c
+projects[admin_menu][download][branch] = 7.x-3.x
+projects[admin_menu][patch][1772766] = http://drupal.org/files/admin_menu_toolbar_ctools_automodal-1772766_01.patch
+
 projects[boxes][version] = 1.0
 projects[boxes][subdir] = contrib
 
@@ -38,6 +45,14 @@ projects[fences][download][revision] = d9ca337
 projects[fences][download][branch] = 7.x-1.x
 projects[fences][patch][1561244] = http://drupal.org/files/undefined-index-1561244-7.patch
 
+projects[jquery_update][version] = 2.x-dev
+projects[jquery_update][subdir] = contrib
+projects[jquery_update][type] = module
+projects[jquery_update][download][type] = git
+projects[jquery_update][download][revision] = 5d2a4b2
+projects[jquery_update][download][branch] = 7.x-2.x
+projects[jquery_update][patch][1524944] = http://drupal.org/files/allow-different-version-for-admin-pages-1524944-6.patch
+
 projects[linkchecker][version] = 1.x-dev
 projects[linkchecker][type] = module
 projects[linkchecker][subdir] = contrib
@@ -59,6 +74,25 @@ projects[workbench_moderation][download][revision] = 6bdb20e
 projects[workbench_moderation][download][branch] = 7.x-1.x
 projects[workbench_moderation][patch][1285090] = http://drupal.org/files/playnicewithpanels-1285090-7.patch
 projects[workbench_moderation][patch][1260112] = http://drupal.org/files/workbench_moderation-is_current-1260112-15.patch
+
+; Tailor WetKit Theme for WetKit
+
+projects[adaptivetheme][version] = 3.1
+
+projects[rubik][version] = 4.x-dev
+projects[rubik][type] = theme
+projects[rubik][download][type] = git
+projects[rubik][download][revision] = e01c3d5
+projects[rubik][download][branch] = 7.x-4.x
+projects[rubik][patch][1623510] = http://drupal.org/files/1623510-6-rubik-widget-styling.patch
+;projects[rubik][patch][1635790] = http://drupal.org/files/rubik-form-file-input-styling.patch
+projects[rubik][patch][1645148] = http://drupal.org/files/rubik-ie9-box-sizing-1645148-1.patch
+projects[rubik][patch][944534] = http://drupal.org/files/rubik-table_input_fluid-944534-5.patch
+projects[rubik][patch][1445890] = http://drupal.org/files/editor-link-covered-1445890-2.patch
+projects[rubik][patch][1003820] = http://drupal.org/files/1003820-rubik-5.patch
+projects[rubik][patch][1440054] = http://drupal.org/files/patch_commit_96121294ba3b.patch
+
+projects[tao][version] = 3.0-beta4
 
 ; MODIFICATION
 
