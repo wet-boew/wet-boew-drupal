@@ -2,18 +2,14 @@
 
 /**
  * @file
- * An installation file for WetKit Widgets
+ * An installation file for Panopoly Widgets
  */
 
 /**
  * Implements hook_install().
  */
 function wetkit_widgets_install() {
-  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/vegetables-demo-image.png', 'vegetables-demo-image.png', 'image');
-  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/vegetables_demo_spotlight.jpeg', 'vegetables_demo_spotlight.jpeg', 'spotlight');
-  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/preview-file.txt', 'preview-file.txt', 'basic_file');
-  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/wetkit_tabbed_interface.jpeg', 'wetkit_tabbed_interface.jpeg', 'tabbed_interface');  
-  wetkit_widgets_save_default_video_data();
+  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/wetkit_tabbed_interface.jpeg', 'wetkit_tabbed_interface.jpeg', 'tabbed_interface');
 }
 
 /**
@@ -27,46 +23,6 @@ function wetkit_widgets_uninstall() {
  * Implements hook_field_schema().
  */
 function wetkit_widgets_field_schema($field) {
-  //Spotlight Widget  
-  if ($field['type'] == 'wetkit_spotlight') {
-    $schema['columns']['title'] = array(
-      'type' => 'varchar',
-      'length' => '255',
-      'not null' => FALSE,
-    );
-
-    $schema['columns']['description'] = array(
-      'type' => 'text',
-      'size' => 'big',
-      'not null' => FALSE,
-    );
-
-    $schema['columns']['fid'] = array(
-      'type' => 'int', 
-      'not null' => FALSE,
-      'unsigned' => TRUE,
-    );
-
-    $schema['columns']['link'] = array(
-      'type' => 'varchar',
-      'length' => '255',
-      'not null' => FALSE,
-    );
-
-    $schema['indexes'] = array(
-      'fid' => array('fid'),
-    );
-
-    $schema['foreign keys'] = array(
-      'fid' => array(
-        'table' => 'file_managed',
-        'columns' => array('fid' => 'fid'),
-      ),
-    );
-
-    return $schema;
-  }
-
   //Tabbed Interface Widget
   if ($field['type'] == 'wetkit_tabbed_interface') {
     $schema['columns']['title'] = array(
@@ -118,11 +74,7 @@ function wetkit_widgets_field_schema($field) {
  * Implementation of hook_update_N().
  */
 function wetkit_widgets_update_7001(&$sandbox) {
-  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/vegetables-demo-image.png', 'vegetables-demo-image.png', 'image');
-  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/vegetables_demo_spotlight.jpeg', 'vegetables_demo_spotlight.jpeg', 'spotlight');
-  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/preview-file.txt', 'preview-file.txt', 'basic_file');
   wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/wetkit_tabbed_interface.jpeg', 'wetkit_tabbed_interface.jpeg', 'tabbed_interface');  
-  wetkit_widgets_save_default_video_data();
 }
 
 /**
@@ -139,40 +91,6 @@ function wetkit_widgets_save_default_file_data($filepath, $filename, $type) {
       variable_set('wetkit_widgets_default_' . $type . '_fid', $file_entity->fid);
 
       return $file_entity->fid;
-    }
-  }
-}
-
-/**
- * Helper function to save default video data.
- */
-function wetkit_widgets_save_default_video_data() {
-  $fid = variable_get('wetkit_widgets_default_video_fid', NULL);
-
-  if (empty($fid)) {
-
-    // Create the file object
-    $file = (object) array(
-      'uid' => 1,
-      'filename' => 'The Drupal Song Music Video',
-      'uri' => 'youtube://v/lZ-s3DRZJKY',
-      'filemime' => 'video/youtube',
-      'status' => 1,
-      'type' => 'video',
-      'filesize' => 0,
-      'timestamp' => REQUEST_TIME,
-    );
-
-    // Save the file object
-    module_invoke_all('file_presave', $file);
-    module_invoke_all('entity_presave', $file, 'file');
-    drupal_write_record('file_managed', $file);
-    module_invoke_all('file_insert', $file);
-    module_invoke_all('entity_insert', $file, 'file');
-
-    // Record the result
-    if (!empty($file->fid)) {
-      variable_set('wetkit_widgets_default_video_fid', $file->fid);
     }
   }
 }
