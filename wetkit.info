@@ -31,15 +31,17 @@ dependencies[] = toolbar
 ;dependencies[] = simpletest
 
 ; WetKit Foundation
-dependencies[] = wetkit_core
-dependencies[] = wetkit_images
-dependencies[] = wetkit_theme
-dependencies[] = wetkit_magic
-dependencies[] = wetkit_widgets
-dependencies[] = wetkit_admin
-dependencies[] = wetkit_users
+dependencies[] = panopoly_core
+dependencies[] = panopoly_images
+dependencies[] = panopoly_theme
+dependencies[] = panopoly_magic
+dependencies[] = panopoly_widgets
+dependencies[] = panopoly_admin
+dependencies[] = panopoly_users
 
 ; WetKit Toolset
+dependencies[] = wetkit_images
+dependencies[] = wetkit_widgets
 dependencies[] = wetkit_pages
 dependencies[] = wetkit_search
 dependencies[] = wetkit_wysiwyg
