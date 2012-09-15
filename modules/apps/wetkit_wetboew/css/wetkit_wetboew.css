@@ -16,3 +16,8 @@
 .krumo-footnote img {
   width: auto;
 }
+
+/* Field Archived Content */
+.form-item-field-archived-content-und {
+  margin-top: 0px;   
+}
