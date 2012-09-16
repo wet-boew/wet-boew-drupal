@@ -21,9 +21,9 @@ function theme_wetkit_demo_lime_green_background_render_pane($vars) {
   $pane = $vars['pane'];
   $display = $vars['display'];
   $plugin = $vars['style'];
-  
+
   $content->css_class .= ' pane-lime-green-background';
-  
+
   // if the style is gone or has no theme of its own, just display the output.
   return theme('panels_pane', array('content' => $content, 'pane' => $pane, 'display' => $display));
 }

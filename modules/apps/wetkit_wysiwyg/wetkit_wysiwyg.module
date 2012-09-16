@@ -6,7 +6,7 @@
 include_once('wetkit_wysiwyg.features.inc');
 
 /**
- * Implements hook_apps_app_info()
+ * Implements hook_apps_app_info().
  */
 function wetkit_wysiwyg_apps_app_info() {
   return array(
@@ -36,15 +36,15 @@ function wetkit_wysiwyg_configure_form($form, &$form_state) {
 }
 
 /**
- * Implementation of hook_ctools_plugin_directory()
+ * Implements hook_ctools_plugin_directory().
  */
 function wetkit_wysiwyg_ctools_plugin_directory($module, $plugin) {
   return 'plugins/' . $plugin;
 }
 
 /**
-  * Implementation of hook_wysiwyg_plugin().
-  */
+ * Implements hook_wysiwyg_plugin().
+ */
 function wetkit_wysiwyg_wysiwyg_plugin($editor) {
   switch ($editor) {
     case 'tinymce':
@@ -111,7 +111,7 @@ function wetkit_wysiwyg_filter_process_format($element) {
   $element['format']['#suffix'] = '</div><div class="clearfix"></div>';
   unset($element['format']['#type']);
   $element['format']['format']['#title'] = 'Editor: ';
-  
+
   // Do not show the guidelines and help text for text formatters
   if (!variable_get('panopoly_wysiwyg_show_format_details', FALSE)) {
     $element['format']['help']['#access'] = FALSE;
@@ -122,18 +122,18 @@ function wetkit_wysiwyg_filter_process_format($element) {
 }
 
 /**
- * Implementation of hook_module_implements_alter()
+ * Implements hook_module_implements_alter().
  */
 function wetkit_wysiwyg_module_implements_alter(&$implementations, $hook) {
   if ($hook == 'wysiwyg_editor_settings_alter') {
     $group = $implementations['wetkit_wysiwyg'];
     unset($implementations['wetkit_wysiwyg']);
     $implementations['wetkit_wysiwyg'] = $group;
-  }  
+  }
 }
 
 /**
- * Implementation of hook_wysiwyg_editor_settings_alter()
+ * Implements hook_wysiwyg_editor_settings_alter().
  */
 function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
 
@@ -162,7 +162,7 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
 
       // Process a default order for the WYSIWYG
       $enabled_buttons = preg_split('/,/', $settings['theme_advanced_buttons1']);
-      $default_buttons = array('bold', 'italic', 'strikethrough', '|', 'bullist', 'numlist', 'blockquote', '|', 'justifyleft', 'justifycenter', 'justifyright', '|', 'linkit', 'unlink', 'break', '|', 'fullscreen', 'spellchecker', 'media', 'captionfilter', 'pdw_toggle', 'PAGEBREAK', 'wetkitcleanup', '|', 'template', '|', 'formatselect', '|', 'styleselect', '|', 'underline', '|', 'justifyfull', '|', 'forecolor', '|', 'pastetext', 'pasteword', 'removeformat', '|', 'charmap', '|', 'indent', 'outdent', '|', 'undo', 'redo'); 
+      $default_buttons = array('bold', 'italic', 'strikethrough', '|', 'bullist', 'numlist', 'blockquote', '|', 'justifyleft', 'justifycenter', 'justifyright', '|', 'linkit', 'unlink', 'break', '|', 'fullscreen', 'spellchecker', 'media', 'captionfilter', 'pdw_toggle', 'PAGEBREAK', 'wetkitcleanup', '|', 'template', '|', 'formatselect', '|', 'styleselect', '|', 'underline', '|', 'justifyfull', '|', 'forecolor', '|', 'pastetext', 'pasteword', 'removeformat', '|', 'charmap', '|', 'indent', 'outdent', '|', 'undo', 'redo');
       foreach ($default_buttons as $button) {
         if (in_array($button, $enabled_buttons)) {
           unset($enabled_buttons[array_search($button, $enabled_buttons)]);
@@ -179,7 +179,7 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
       $settings['theme_advanced_buttons3'] = (count($enabled_buttons) > 0) ? implode(',', $enabled_buttons) : NULL;
 
       // Define PDW Plugin Settings
-      $settings['pdw_toggle_on'] = '1'; 
+      $settings['pdw_toggle_on'] = '1';
       $settings['pdw_toggle_toolbars'] = (count($enabled_buttons) > 0) ? '2,3' : '2';
 
       // Enable the inlinepopups and modal settings
@@ -190,7 +190,7 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
     case 'markitup':
 
       // Load the appropriate CSS and JS
-      drupal_add_css($context['editor']['library path'] . '/markitup/sets/html/style.css'); 
+      drupal_add_css($context['editor']['library path'] . '/markitup/sets/html/style.css');
       drupal_add_js($context['editor']['library path'] . '/markitup/sets/html/set.js');
 
       // Defin the new header buttons

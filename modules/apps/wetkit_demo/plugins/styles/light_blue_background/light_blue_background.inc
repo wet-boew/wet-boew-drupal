@@ -21,9 +21,9 @@ function theme_wetkit_demo_light_blue_background_render_pane($vars) {
   $pane = $vars['pane'];
   $display = $vars['display'];
   $plugin = $vars['style'];
-  
+
   $content->css_class .= ' pane-light-blue-background';
-  
+
   // if the style is gone or has no theme of its own, just display the output.
   return theme('panels_pane', array('content' => $content, 'pane' => $pane, 'display' => $display));
 }

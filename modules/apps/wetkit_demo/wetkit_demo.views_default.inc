@@ -44,7 +44,7 @@ function wetkit_demo_views_default_views() {
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['label'] = 'Empty Text';
   $handler->display->display_options['empty']['area']['empty'] = FALSE;
-  $handler->display->display_options['empty']['area']['content'] = 'There is no news to be shown. ';
+  $handler->display->display_options['empty']['area']['content'] = 'There is no news to be shown.';
   $handler->display->display_options['empty']['area']['format'] = 'plain_text';
   $handler->display->display_options['empty']['area']['tokenize'] = 0;
   /* Relationship: Content: Author */
@@ -179,7 +179,7 @@ function wetkit_demo_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['more_link'] = 0;
   $handler->display->display_options['fields']['body']['alter']['strip_tags'] = 1;
   $handler->display->display_options['fields']['body']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['preserve_tags'] = '<p> <br> <a> <strong> <em>';
+  $handler->display->display_options['fields']['body']['alter']['preserve_tags'] = '<p> <br /> <a> <strong> <em>';
   $handler->display->display_options['fields']['body']['alter']['html'] = 0;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['element_default_classes'] = 1;
@@ -353,7 +353,7 @@ function wetkit_demo_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Empty Text'),
-    t('There is no news to be shown. '),
+    t('There is no news to be shown.'),
     t('author'),
     t('Posted by'),
     t('Post date'),

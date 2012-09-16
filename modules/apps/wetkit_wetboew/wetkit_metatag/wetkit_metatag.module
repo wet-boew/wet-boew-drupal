@@ -25,7 +25,7 @@ function wetkit_metatag_menu() {
 }
 
 /**
- * Implements hook_page_build.
+ * Implements hook_page_build().
  */
 function wetkit_metatag_page_build(&$page) {
   $prefix = _wetkit_metatag_prefix();
@@ -129,4 +129,4 @@ dc:language
 dc:relation
 dc:coverage
 dc:rights
-*/
+ */
