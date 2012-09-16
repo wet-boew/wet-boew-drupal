@@ -10,7 +10,7 @@
  */
 function wetkit_widgets_preprocess_panels_pane(&$variables) {
   $bundle = isset($variables['content']['#bundle']) ? $variables['content']['#bundle'] : '';
-  if($bundle == 'tabbed_interface') {
+  if ($bundle == 'tabbed_interface') {
     $variables['theme_hook_suggestions'][] = 'panels_pane__fieldable_panels_pane__tabbed_interface';
   }
 }
@@ -45,7 +45,7 @@ function wetkit_widgets_field_info() {
 }
 
 /**
- * Implements hook_field_is_empty()
+ * Implements hook_field_is_empty().
  */
 function wetkit_widgets_field_is_empty($item, $field) {
   if (empty($item['title']) && empty($item['link']) && empty($item['description']) && empty($item['fid'])) {
@@ -71,7 +71,7 @@ function wetkit_widgets_field_widget_info() {
 }
 
 /**
- * Implements hook_field_settings_form()
+ * Implements hook_field_settings_form().
  */
 function wetkit_widgets_field_settings_form($field, $instance, $has_data) {
   $form = array();
@@ -105,7 +105,7 @@ function wetkit_widgets_field_settings_form($field, $instance, $has_data) {
 }
 
 /**
- * Implements hook_field_instance_settings_form()
+ * Implements hook_field_instance_settings_form().
  */
 function wetkit_widgets_field_instance_settings_form($field, $instance) {
   $form = image_field_instance_settings_form($field, $instance);
@@ -113,7 +113,7 @@ function wetkit_widgets_field_instance_settings_form($field, $instance) {
 }
 
 /**
- * Implementation of hook_field_formatter_info().
+ * Implements hook_field_formatter_info().
  */
 function wetkit_widgets_field_formatter_info() {
   return array(
@@ -137,7 +137,7 @@ function wetkit_widgets_field_formatter_settings_form($field, $instance, $view_m
 
   if ($display['type'] == 'wetkit_tabbed_interface_default') {
     $element['image_style'] = array(
-      '#title' => t('Image style'), 
+      '#title' => t('Image style'),
       '#type' => 'select',
       '#options' => image_style_options(),
       '#default_value' => $settings['image_style'],
@@ -154,7 +154,7 @@ function wetkit_widgets_field_formatter_settings_form($field, $instance, $view_m
 function wetkit_widgets_field_formatter_settings_summary($field, $instance, $view_mode) {
   $display = $instance['display'][$view_mode];
   $settings = $display['settings'];
-  
+
   $summary = t('Image Style: @style', array('@style' => $settings['image_style']));
   return $summary;
 }
@@ -186,8 +186,8 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
 function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
 
   if ($instance['widget']['type'] == 'wetkit_tabbed_interface_form') {
-   
-    // Make it a multipart form  
+
+    // Make it a multipart form
     $form['#attributes']['enctype'] = 'multipart/form-data';
 
     // Define the element
@@ -196,7 +196,7 @@ function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instanc
       '#type' => 'textfield',
       '#default_value' => isset($items[$delta]['title']) ? $items[$delta]['title'] : NULL,
     );
-      
+
     $element['link'] = array(
       '#title' => 'Link',
       '#type' => 'textfield',
@@ -209,7 +209,7 @@ function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instanc
       '#upload_location' => file_field_widget_uri($field, $instance),
       '#default_value' => isset($items[$delta]['fid']) ? $items[$delta]['fid'] : NULL,
     );
-    
+
     $element['alt'] = array(
       '#title' => 'Alt',
       '#type' => 'textfield',
@@ -229,7 +229,7 @@ function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instanc
 }
 
 /**
- * Implements hook_field_presave()
+ * Implements hook_field_presave().
  */
 function wetkit_widgets_field_presave($entity_type, $entity, $field, $instance, $langcode, &$items) {
   // We need to set presave values if fids are not set. This shouldn't effect save operations
@@ -238,7 +238,7 @@ function wetkit_widgets_field_presave($entity_type, $entity, $field, $instance, 
     foreach ($items as &$item) {
       if (empty($item['fid'])) {
         $fid = variable_get('wetkit_widgets_default_' . $entity->bundle . '_fid', NULL);
-        
+
         if (!empty($fid)) {
           $item['fid'] = $fid;
         }
@@ -269,7 +269,7 @@ function wetkit_widgets_field_insert($entity_type, $entity, $field, $instance, $
 function wetkit_widgets_field_update($entity_type, $entity, $field, $instance, $langcode, &$items) {
 
   // Load the original entity, if $entity->original is not already set.
-  // This is done as per http://drupal.org/node/985642 and can be removed when that patch is committed. 
+  // This is done as per http://drupal.org/node/985642 and can be removed when that patch is committed.
   if (empty($entity->original)) {
     $entity->original = entity_load_unchanged($entity_type, $field['id']);
   }
@@ -296,7 +296,7 @@ function wetkit_widgets_field_delete_revision($entity_type, $entity, $field, $in
  */
 function wetkit_widgets_field_prepare_view($entity_type, $entities, $field, $instances, $langcode, &$items) {
   // If there are no files specified at all, use the default.
-  // TODO - make sure this works 
+  // TODO - make sure this works
   foreach ($entities as $id => $entity) {
     if (empty($items[$id]) && $field['settings']['default_image']) {
       if ($file = file_load($field['settings']['default_image'])) {
@@ -326,11 +326,11 @@ function theme_wetkit_tab_interface_view($variables) {
   }
   $link = $variables['items']['link'];
   $settings = $variables['settings'];
-  
+
   $output = '<div id="' . 'tabs1_' . $variables['delta'] . '" class="' . '' . '">';
   $output .= '<section>';
   $output .= theme('image_style', array('style_name' => $settings['image_style'], 'path' => $image->uri, 'alt' => $variables['items']['alt']));
-  $output .= '<div class="tabs-content-pad">';  
+  $output .= '<div class="tabs-content-pad">';
   $output .= '<h4>' . l($title, $link) . '</h4>';
   $output .= '<p>' . $description . '</p>';
   $output .= '</div>';

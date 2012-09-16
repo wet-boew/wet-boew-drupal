@@ -38,7 +38,7 @@ function wetkit_search_search_current_content_type_render($subtype, $conf, $pane
     $count = $searches['search_api_views:wetkit_search:search_solr_results'][1]['result count'];
     $pane->content = '<h2>' . format_plural($count, '1 item', '@count items') . ' matched <em>' . check_plain($keys) . '</em>.</h2>';
     return $pane;
-  } 
+  }
   elseif (isset($searches['search_api_views:wetkit_database_search:search_database_results'])) {
     $count = $searches['search_api_views:wetkit_database_search:search_database_results'][1]['result count'];
     $pane->content = '<h2>' . format_plural($count, '1 item', '@count items') . ' matched <em>' . check_plain($keys) . '</em>.</h2>';

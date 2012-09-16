@@ -4,7 +4,7 @@ include_once('wetkit_widgets.features.inc');
 include_once('wetkit_widgets.plugins.inc');
 
 /**
- * Implements hook_apps_app_info()
+ * Implements hook_apps_app_info().
  */
 function wetkit_widgets_apps_app_info() {
   return array(
@@ -20,7 +20,7 @@ function wetkit_widgets_configure_form($form, &$form_state) {
 
   //$form['wetkit_widgets_spotlight_rotation_time'] = array(
   //  '#title' => t('Spotlight Rotation Time'),
-  //  '#type' => 'textfield',   
+  //  '#type' => 'textfield',
   //  '#required' => TRUE,
   //  '#default_value' => variable_get('wetkit_widgets_spotlight_rotation_time', 4),
   //  '#description' => t('How many seconds do you want between rotations of the spotlight widget?'),
@@ -30,7 +30,7 @@ function wetkit_widgets_configure_form($form, &$form_state) {
 }
 
 /**
- * Implements hook_init()
+ * Implements hook_init().
  */
 function wetkit_widgets_init() {
 
@@ -40,23 +40,23 @@ function wetkit_widgets_init() {
   //drupal_add_js($js_variables, 'setting');
 
 }
-    
+
 /**
- * Implementation of hook_ctools_plugin_directory()
+ * Implements hook_ctools_plugin_directory().
  */
 function wetkit_widgets_ctools_plugin_directory($module, $plugin) {
   return 'plugins/' . $plugin;
 }
 
 /**
- * Implementation of hook_ctools_content_subtype_alter()
+ * Implements hook_ctools_content_subtype_alter().
  */
 function wetkit_widgets_ctools_content_subtype_alter(&$subtype, &$plugin) {
 
 }
 
 /**
- * Implementation of hook_form_alter()
+ * Implements hook_form_alter().
  */
 function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
 
@@ -87,11 +87,11 @@ function wetkit_widgets_fieldable_panel_pane_pre_render($element) {
 
   // Add any remaining fields to the content settings fieldset.
   foreach ($element as $key => $value) {
-    if (substr($key, 0, 6) == 'field_') {
+    if (drupal_substr($key, 0, 6) == 'field_') {
       $element['content_settings'][$key] = $value;
       unset($element[$key]);
     }
-    if (substr($key, 0, 8) == 'language') {
+    if (drupal_substr($key, 0, 8) == 'language') {
       $element['content_settings'][$key] = $value;
       unset($element[$key]);
     }
@@ -100,8 +100,8 @@ function wetkit_widgets_fieldable_panel_pane_pre_render($element) {
   return $element;
 }
 
-/** 
- * Implementation of hook_entity_info_alter()
+/**
+ * Implements hook_entity_info_alter().
  */
 function wetkit_widgets_entity_info_alter(&$entity_info) {
 
@@ -152,7 +152,7 @@ function wetkit_widgets_theme($existing, $type, $theme, $path) {
 }
 
 /**
- * Implementation of hook_field_display_ENTITY_TYPE_alter().
+ * Implements hook_field_display_ENTITY_TYPE_alter().
  *
  * Update the display settings with the option selected on the entity view mode field.
  */
