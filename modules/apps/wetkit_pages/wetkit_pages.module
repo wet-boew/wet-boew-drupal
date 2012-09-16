@@ -3,9 +3,9 @@
 include_once('wetkit_pages.features.inc');
 
 /**
- * Implementation of drupal_alter() to update menu block settings in 
+ * Implementation of drupal_alter() to update menu block settings in
  * case of IPE callback magic. This will only work in limited cases
- * but will be fixed when the page refreshes. 
+ * but will be fixed when the page refreshes.
  */
 function wetkit_pages_menu_block_tree_alter($tree, $config) {
   if (arg(0) == 'panels' && arg(1) == 'ajax') {
@@ -16,7 +16,7 @@ function wetkit_pages_menu_block_tree_alter($tree, $config) {
 }
 
 /**
- * Implementation of hook_menu
+ * Implements hook_menu().
  */
 function wetkit_pages_menu() {
   $items['node/add/landing_page'] = array(
@@ -32,7 +32,7 @@ function wetkit_pages_menu() {
 }
 
 /**
- * Implementation of hook_form_alter()
+ * Implements hook_form_alter().
  */
 function wetkit_pages_form_alter(&$form, &$form_state, $form_id) {
   // Improve the wizard for our custom adding a landing page wizard
@@ -59,7 +59,7 @@ function wetkit_pages_form_alter(&$form, &$form_state, $form_id) {
     // Improve the path of the landing page
     $form['path']['#title'] = t('URL');
     $form['path']['#size'] = 50;
-    $form['path']['#attributes']['placeholder'] = '<URL of Page>';
+    $form['path']['#attributes']['placeholder'] = '<url of page>';
 
     // Do not make them choose a weight
     $form['menu']['weight']['#access'] = FALSE;
@@ -72,7 +72,7 @@ function wetkit_pages_form_alter(&$form, &$form_state, $form_id) {
 
     // Add information around parents
     $parents = menu_parent_options(array('main-menu' => 'Main Menu'), 0);
-    $parents['main-menu:0'] = '<Top Level>';
+    $parents['main-menu:0'] = '<top level>';
     $form['menu']['parent'] = array(
       '#title' => t('Parent'),
       '#type' => 'select',
@@ -112,7 +112,7 @@ function wetkit_pages_landing_page_wizard_validate($form, &$form_state) {
 }
 
 /**
- * Custom Submit Function to Finish Up 
+ * Custom Submit Function to Finish Up
  */
 function wetkit_pages_landing_page_wizard_submit($form, &$form_state) {
 
@@ -137,7 +137,7 @@ function wetkit_pages_landing_page_wizard_submit($form, &$form_state) {
 }
 
 /**
- * Implementation of hook_module_implements_alter()
+ * Implements hook_module_implements_alter().
  */
 function wetkit_pages_module_implements_alter(&$implementations, $hook) {
   if ($hook == 'form_alter') {

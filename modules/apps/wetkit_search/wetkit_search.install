@@ -6,7 +6,7 @@
  */
 
 /**
- * Implementation of hook_install()
+ * Implements hook_install().
  */
 function wetkit_search_install() {
 
@@ -38,7 +38,7 @@ function wetkit_search_install() {
   // Allow anonymous and authenticated users to search content
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('search content'));
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('search content'));
-  } 
+  }
 }
 
 /**
@@ -48,7 +48,7 @@ function wetkit_search_uninstall() {
 
 }
 
-/** 
+/**
  * WetKit Beta 4 Update: Enabling Search API DB Module
  */
 function wetkit_search_update_7001(&$sandbox) {
@@ -96,7 +96,7 @@ function wetkit_search_update_7002(&$sandbox) {
  */
 function wetkit_search_update_7003(&$sandbox) {
   $database_server = search_api_server_load('database_server');
-  $database_index = search_api_index_load('database_node_index'); 
+  $database_index = search_api_index_load('database_node_index');
   $database_server->fieldsUpdated($database_index);
   return t('WetKit\'s Search DB Search API index has been updated');
 }

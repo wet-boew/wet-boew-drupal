@@ -30,7 +30,7 @@ function wetkit_widgets_field_schema($field) {
       'length' => '255',
       'not null' => FALSE,
     );
-    
+
     $schema['columns']['link'] = array(
       'type' => 'varchar',
       'length' => '255',
@@ -44,11 +44,11 @@ function wetkit_widgets_field_schema($field) {
     );
 
     $schema['columns']['fid'] = array(
-      'type' => 'int', 
+      'type' => 'int',
       'not null' => FALSE,
       'unsigned' => TRUE,
     );
-    
+
     $schema['columns']['alt'] = array(
       'type' => 'varchar',
       'length' => '255',
@@ -71,10 +71,10 @@ function wetkit_widgets_field_schema($field) {
 }
 
 /**
- * Implementation of hook_update_N().
+ * Implements hook_update_N().
  */
 function wetkit_widgets_update_7001(&$sandbox) {
-  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/wetkit_tabbed_interface.jpeg', 'wetkit_tabbed_interface.jpeg', 'tabbed_interface');  
+  wetkit_widgets_save_default_file_data(drupal_get_path('module', 'wetkit_widgets') . '/default_content/wetkit_tabbed_interface.jpeg', 'wetkit_tabbed_interface.jpeg', 'tabbed_interface');
 }
 
 /**

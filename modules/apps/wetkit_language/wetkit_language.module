@@ -27,7 +27,7 @@ function wetkit_language_preprocess_page(&$vars) {
  * Implements hook_preprocess_panes_pane().
  */
 function wetkit_language_preprocess_panels_pane(&$vars) {
-  if ($vars['pane']->type == 'node_links') { 
+  if ($vars['pane']->type == 'node_links') {
     if (isset($vars['content']['translation'])) {
       unset($vars['content']['translation']);
     }
@@ -70,7 +70,7 @@ function _language_switcher_wetkit() {
   $term = '';
   $language_paths = '';
   $language_terms = '';
-  
+
   $languages = language_list('enabled');
   $path = drupal_is_front_page() ? '<front>' : $_GET['q'];
 
@@ -111,17 +111,17 @@ function _language_switcher_wetkit() {
  * Implements hook_preprocess_node().
  */
 function wetkit_language_preprocess_node(&$vars) {
-  
+
 }
 
 /**
-* Revert specified features.
-*
-* @TODO Check that it really is Forced features revert.  Currently an exact
-* copy of the function initially placed in feature_projects.install.
-*
-* Code mostly taken from drush.
-*/
+ * Revert specified features.
+ *
+ * @TODO Check that it really is Forced features revert.  Currently an exact
+ * copy of the function initially placed in feature_projects.install.
+ *
+ * Code mostly taken from drush.
+ */
 function wetkit_language_features_revert($modules) {
   module_load_include('inc', 'features', 'features.export');
   features_include();

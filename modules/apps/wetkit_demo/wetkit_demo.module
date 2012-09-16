@@ -7,7 +7,7 @@
 include_once 'wetkit_demo.features.inc';
 
 /**
- * Implementation of hook_menu_alter()
+ * Implements hook_menu_alter().
  */
 function wetkit_demo_menu_alter(&$items) {
   $items['node']['page callback'] = 'drupal_goto';
@@ -15,37 +15,28 @@ function wetkit_demo_menu_alter(&$items) {
 }
 
 /**
- * Implementation of hook_ctools_plugin_directory()
+ * Implements hook_ctools_plugin_directory().
  */
 function wetkit_demo_ctools_plugin_directory($module, $plugin) {
   return 'plugins/' . $plugin;
 }
 
 /**
- * Implementation of hook_install()
+ * Implements hook_install().
  */
 function wetkit_demo_install() {
-  /* Custom Demo Content Nav */
-  //$menu_depth1 = _demo_add_custom_menu('<front>', 'WetKit Demo', NULL, 'main-menu', 0, 'en');
-  //_demo_add_custom_menu('<front>', 'WET Drupal Distribution', NULL, 'main-menu', 0, 'en', 0, $menu_depth1);
-  //_demo_add_custom_menu('<front>', 'WET Collaboration', NULL, 'main-menu', 1, 'en', 0, $menu_depth1);
-  //_demo_add_custom_menu('<front>', 'WET Features', NULL, 'main-menu', 2, 'en', 0, $menu_depth1);
-  
-  //$menu_depth1 = _demo_add_custom_menu('<front>', 'Démo Wetkit', NULL, 'main-menu', 0, 'fr');
-  //_demo_add_custom_menu('<front>', 'WET Distribution Drupal', NULL, 'main-menu', 0, 'fr', 0, $menu_depth1);
-  //_demo_add_custom_menu('<front>', 'WET Collaboration', NULL, 'main-menu', 1, 'fr', 0, $menu_depth1);
-  //_demo_add_custom_menu('<front>', 'WET Traits', NULL, 'main-menu', 2, 'fr', 0, $menu_depth1);
+
 }
 
 /**
- * Implementation of hook_uninstall()
+ * Implements hook_uninstall().
  */
 function wetkit_demo_uninstall() {
   //menu_link_delete(null, '<front>');
 }
 
 /**
- * Implementation of hook_init()
+ * Implements hook_init().
  */
 function wetkit_demo_init() {
   //Set Flag
