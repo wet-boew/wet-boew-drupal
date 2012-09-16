@@ -8,35 +8,8 @@ mysql:
   username: root
   encoding: utf8
 
-before_script:
- - mysql -e 'create database wetkit_db;'
- - pear channel-discover pear.drush.org
- - pear install drush/drush-5.4.0
- - phpenv rehash
- - cd ..
- - mkdir profiles
- - mv wet-boew-drupal wetkit
- - mv wetkit profiles/
- - mkdir drupal_wet
- - mv profiles drupal_wet/
- - cd drupal_wet
- - drush make --prepare-install profiles/wetkit/build-wetkit.make --yes
- - sudo chmod -R 777 sites/all/modules
- - drush si wetkit panopoly_theme_selection_form.theme=wetkit_adaptivetheme --sites-subdir=default --db-url=mysql://root:@127.0.0.1/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name="Web Experience Toolkit" --yes
- - drush cc all --yes
- - "export PHANTOMJS_EXECUTABLE='phantomjs --local-to-remote-url-access=yes --ignore-ssl-errors=yes'"
- - "export DISPLAY=:99.0"
- - "sh -e /etc/init.d/xvfb start"
- - sleep 3 # give xvfb some time to start
- - drush runserver --server=builtin 8080 &
- - sleep 3 # give Web server some time to bind to sockets, etc
- - cd ..
- - wget http://selenium.googlecode.com/files/selenium-server-standalone-2.15.0.jar
- - git clone git://github.com/n1k0/casperjs.git
- - cd casperjs
- - git checkout tags/0.6.10
- - cd ./bin
- 
-script:
- - "DISPLAY=:99.0 ./casperjs test ../../drupal_wet/profiles/wetkit/tests/casperjs/"
- - java -jar ../../selenium-server-standalone-2.15.0.jar -htmlSuite "*firefox" "http://127.0.0.1:8080" "../../drupal_wet/profiles/wetkit/tests/selenium/WetKitTestSuite.html" "../../drupal_wet/profiles/wetkit/tests/selenium/Result.html"
+before_script: ./scripts/travis_install.sh
+
+before_script: ./scripts/travis_install.sh
+
+script: ./scripts/travis_test.sh
