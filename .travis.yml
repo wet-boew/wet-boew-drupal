@@ -10,6 +10,4 @@ mysql:
 
 before_script: ./scripts/travis_install.sh
 
-before_script: ./scripts/travis_install.sh
-
 script: ./scripts/travis_test.sh
