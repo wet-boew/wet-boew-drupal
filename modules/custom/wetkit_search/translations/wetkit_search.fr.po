@@ -16,8 +16,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-09-08 22:40-0400\n"
-"PO-Revision-Date: 2012-09-08 22:40-0400\n"
+"POT-Creation-Date: 2012-09-17 18:39-0400\n"
+"PO-Revision-Date: 2012-09-17 18:39-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -105,11 +105,11 @@ msgstr "Rechercher"
 msgid "Solr Search Results"
 msgstr ""
 
-#: wetkit_search.install:84
+#: wetkit_search.install:88
 msgid "WetKit has been configured to use Pantheon's Solr Service"
 msgstr ""
 
-#: wetkit_search.install:97
+#: wetkit_search.install:101
 msgid "WetKit's Search DB Search API index has been updated"
 msgstr ""
 

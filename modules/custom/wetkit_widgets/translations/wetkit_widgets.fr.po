@@ -3,10 +3,8 @@
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
-#  wetkit_widgets.features.field.inc: n/a
 #  wetkit_widgets.plugins.inc: n/a
 #  plugins/styles/tabbed_interface/tabbed_interface.inc: n/a
-#  wetkit_widgets.views_default.inc: n/a
 #  wetkit_widgets.module: n/a
 #  wetkit_widgets.info: n/a
 #
@@ -14,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-09-07 10:48-0400\n"
-"PO-Revision-Date: 2012-09-07 10:48-0400\n"
+"POT-Creation-Date: 2012-09-17 18:42-0400\n"
+"PO-Revision-Date: 2012-09-17 18:42-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -23,98 +21,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: wetkit_widgets.features.field.inc:891
-msgid "Address"
-msgstr "Adresse"
-
-#: wetkit_widgets.features.field.inc:892
-msgid "Author"
-msgstr "Auteur"
-
-#: wetkit_widgets.features.field.inc:893
-msgid "Caption"
-msgstr "Légende"
-
-#: wetkit_widgets.features.field.inc:894
-msgid "Existing Content"
-msgstr "Contenu existant"
-
-#: wetkit_widgets.features.field.inc:895
-msgid "File"
-msgstr "Fichier"
-
-#: wetkit_widgets.features.field.inc:896
-msgid "How long (in seconds) before the spotlight rotates to the next image."
-msgstr ""
-"Combien de temps (en secondes) avant que la rotation du projecteur à "
-"l’image suivante."
-
-#: wetkit_widgets.features.field.inc:897
-msgid "Image"
-msgstr "Image"
-
-#: wetkit_widgets.features.field.inc:898
-msgid "Information"
-msgstr "Information"
-
-#: wetkit_widgets.features.field.inc:899
-msgid "Items"
-msgstr "Eléments"
-
-#: wetkit_widgets.features.field.inc:900
-msgid "Links"
-msgstr "Liens"
-
-#: wetkit_widgets.features.field.inc:901
-msgid "Quote"
-msgstr "Citation"
-
-#: wetkit_widgets.features.field.inc:902
-msgid "Table"
-msgstr "Tableau"
-
-#: wetkit_widgets.features.field.inc:903
-msgid "Text"
-msgstr "Texte"
-
-#: wetkit_widgets.features.field.inc:904
-msgid "The street address of the location you wish to map. This widget will contact Google and try to do its best to create a map!"
-msgstr ""
-"L’adresse municipale de l’emplacement pour lequel vous souhaitez "
-"créer une carte. Ce widget entre en contact avec Google et essaie de "
-"créer une carte!"
-
-#: wetkit_widgets.features.field.inc:905
-msgid "Video"
-msgstr "Vidéo"
-
-#: wetkit_widgets.features.field.inc:906
-msgid "View Mode"
-msgstr "Mode vue"
-
-#: wetkit_widgets.plugins.inc:24;82;413
-msgid "Spotlight"
-msgstr "Projecteur"
-
-#: wetkit_widgets.plugins.inc:25
-msgid "A wonderfully widgetsal spotlight field"
-msgstr "Un merveilleux champ du widget de projecteur"
-
-#: wetkit_widgets.plugins.inc:43;90 plugins/styles/tabbed_interface/tabbed_interface.inc:10
+#: wetkit_widgets.plugins.inc:24;63 plugins/styles/tabbed_interface/tabbed_interface.inc:10
 msgid "Tabbed Interface"
 msgstr "Interface à onglets"
 
-#: wetkit_widgets.plugins.inc:44
+#: wetkit_widgets.plugins.inc:25
 msgid "WetKit Plugin for the Web Experience Toolkit's Tabbed Interface"
 msgstr ""
 "Plugiciel de la BOEW pour l’interface à onglets de la Boîte  à "
 "outils de l’expérience Web"
 
-#: wetkit_widgets.plugins.inc:114
+#: wetkit_widgets.plugins.inc:87
 msgid "Upload destination"
 msgstr "Destination pour le transfert"
 
-#: wetkit_widgets.plugins.inc:117
+#: wetkit_widgets.plugins.inc:90
 msgid "Select where the final files should be stored. Private file storage has significantly more overhead than public files, but allows restricted access to files within this field."
 msgstr ""
 "Sélectionnez où les fichiers finaux doivent être stockés. Le "
@@ -122,189 +43,39 @@ msgstr ""
 "stockage public, mais permet un accès restreint aux fichiers pour ce "
 "champ."
 
-#: wetkit_widgets.plugins.inc:124
+#: wetkit_widgets.plugins.inc:97
 msgid "Default image"
 msgstr "Image par défaut"
 
-#: wetkit_widgets.plugins.inc:126
+#: wetkit_widgets.plugins.inc:99
 msgid "If no image is uploaded, this image will be shown on display."
 msgstr ""
 "Si aucune image n'est transférée, c'est cette image qui sera "
 "utilisée pour l'affichage."
 
-#: wetkit_widgets.plugins.inc:148;155
+#: wetkit_widgets.plugins.inc:121
 msgid "Default"
 msgstr "Par défaut"
 
-#: wetkit_widgets.plugins.inc:174;184
+#: wetkit_widgets.plugins.inc:140
 msgid "Image style"
 msgstr "Style d'image"
 
-#: wetkit_widgets.plugins.inc:201
+#: wetkit_widgets.plugins.inc:158
 msgid "Image Style: @style"
 msgstr "Style d'image : @style"
 
-#: wetkit_widgets.views_default.inc:272
-msgid "Master"
-msgstr "Maître"
-
-#: wetkit_widgets.views_default.inc:273
-msgid "more"
-msgstr "plus"
-
-#: wetkit_widgets.views_default.inc:274
-msgid "Apply"
-msgstr "Appliquer"
-
-#: wetkit_widgets.views_default.inc:275
-msgid "Reset"
-msgstr "Réinitialiser"
-
-#: wetkit_widgets.views_default.inc:276
-msgid "Sort by"
-msgstr "Trier selon"
-
-#: wetkit_widgets.views_default.inc:277
-msgid "Asc"
-msgstr "Ascendant"
-
-#: wetkit_widgets.views_default.inc:278
-msgid "Desc"
-msgstr "Descendant"
-
-#: wetkit_widgets.views_default.inc:279
-msgid "Empty Text"
-msgstr ""
-
-#: wetkit_widgets.views_default.inc:280
-msgid "There is no content to be shown. "
-msgstr ""
-
-#: wetkit_widgets.views_default.inc:281
-msgid "author"
-msgstr ""
-
-#: wetkit_widgets.views_default.inc:282
-msgid "Posted by"
-msgstr ""
-
-#: wetkit_widgets.views_default.inc:283
-msgid "Post date"
-msgstr ""
-
-#: wetkit_widgets.views_default.inc:284
-msgid "Title"
-msgstr "Titre"
-
-#: wetkit_widgets.views_default.inc:285
-msgid "Random"
-msgstr ""
-
-#: wetkit_widgets.views_default.inc:286
-msgid "Content Type"
-msgstr ""
-
-#: wetkit_widgets.views_default.inc:287
-msgid "List of Content"
-msgstr ""
-
-#: wetkit_widgets.views_default.inc:288
-msgid "This is a customizable list of site content!"
-msgstr ""
-
-#: wetkit_widgets.views_default.inc:289
-msgid "General"
-msgstr "Général"
-
-#: wetkit_widgets.views_default.inc:290
-msgid "Piece of Content"
-msgstr ""
-
-#: wetkit_widgets.module:22
-msgid "Spotlight Rotation Time"
-msgstr "Temps de rotation du projecteur"
-
-#: wetkit_widgets.module:26
-msgid "How many seconds do you want between rotations of the spotlight widget?"
-msgstr ""
-"Combien de secondes souhaitez-vous instaurer entre les rotations du "
-"widget du projecteur?"
-
-#: wetkit_widgets.module:83
-msgid "Page Content"
-msgstr "Contenu de page"
-
-#: wetkit_widgets.module:86
-msgid "User Content"
-msgstr "Contenu utilisateur"
-
-#: wetkit_widgets.module:89
-msgid "Category Content"
-msgstr "Contenu de la catégorie"
-
-#: wetkit_widgets.module:94
-msgid "Form Content"
-msgstr "Contenu du formulaire"
-
-#: wetkit_widgets.module:123
-msgid "General Settings"
-msgstr "Paramètres généraux"
-
-#: wetkit_widgets.module:159
-msgid "Reusable Settings"
-msgstr "Paramètres réutilisables"
-
-#: wetkit_widgets.module:242
+#: wetkit_widgets.module:84
 msgid "Content Settings"
 msgstr "Paramètres de contenu"
 
-#: wetkit_widgets.module:270
-msgid "Add links"
-msgstr "Ajout de liens"
-
-#: wetkit_widgets.module:271;285;299;313;327;341;355;369
-msgid "Custom"
-msgstr "Personnalisé"
-
-#: wetkit_widgets.module:284
-msgid "Add file"
-msgstr "Ajout de fichier"
-
-#: wetkit_widgets.module:298
-msgid "Add image"
-msgstr "Ajout d’image"
-
-#: wetkit_widgets.module:312
-msgid "Add text"
-msgstr "Ajout de texte"
-
-#: wetkit_widgets.module:326
-msgid "Add map"
-msgstr "Ajout de carte"
-
-#: wetkit_widgets.module:340
-msgid "Add table"
-msgstr "Ajout de tableau"
-
-#: wetkit_widgets.module:354
-msgid "Add video"
-msgstr "Ajout d’une vidéo"
-
-#: wetkit_widgets.module:368
-msgid "Add spotlight"
-msgstr "Ajout d’un projecteur"
-
-#: wetkit_widgets.module:382
+#: wetkit_widgets.module:110
 msgid "Add tabbed interface"
 msgstr "Ajout d’une interface à onglets"
 
-#: wetkit_widgets.module:383 wetkit_widgets.info:0
+#: wetkit_widgets.module:111 wetkit_widgets.info:0
 msgid "WetKit"
 msgstr "BOEW"
-
-#: wetkit_widgets.module:419
-msgid "Simple counter"
-msgstr "Compteur simple"
 
 #: wetkit_widgets.info:0
 msgid "WetKit Widgets"
