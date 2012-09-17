@@ -63,18 +63,6 @@ projects[linkchecker][download][branch] = 7.x-1.x
 projects[password_policy][version] = 1.0-rc3
 projects[password_policy][subdir] = contrib
 
-projects[workbench][version] = 1.1
-projects[workbench][subdir] = contrib
-
-projects[workbench_moderation][version] = 1.x-dev
-projects[workbench_moderation][subdir] = contrib
-projects[workbench_moderation][type] = module
-projects[workbench_moderation][download][type] = git
-projects[workbench_moderation][download][revision] = 6bdb20e
-projects[workbench_moderation][download][branch] = 7.x-1.x
-projects[workbench_moderation][patch][1285090] = http://drupal.org/files/playnicewithpanels-1285090-7.patch
-projects[workbench_moderation][patch][1260112] = http://drupal.org/files/workbench_moderation-is_current-1260112-15.patch
-
 ; Tailor WetKit Theme for WetKit
 
 projects[adaptivetheme][version] = 3.1
