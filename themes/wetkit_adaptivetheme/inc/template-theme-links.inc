@@ -28,7 +28,7 @@
  *   An array of variables to pass to the theme template.
  */
 function wetkit_adaptivetheme_links__menu_goc_terms_bar($variables)  {
-$links = $variables['links'];
+  $links = $variables['links'];
   $attributes = $variables['attributes'];
   $heading = $variables['heading'];
   global $language_url;

@@ -21,7 +21,7 @@ function wetkit_pages_menu_block_tree_alter($tree, $config) {
 function wetkit_pages_menu() {
   $items['node/add/landing_page'] = array(
     'title' => 'Landing Page',
-    'description' => t('A primary landing page to display to users on your site.'),
+    'description' => 'A primary landing page to display to users on your site.',
     'page callback' => 'page_manager_page_wizard',
     'page arguments' => array(2),
     'access arguments' => array('use page manager'),
