@@ -52,8 +52,8 @@ function wetkit_wetboew_default_box() {
             <p>The&nbsp;Honourable<br />
             <strong>minister name</strong></p>
             <ul>
-                <li><a href="minister">About the minister</a></li>
-                <li><a href="minister/portfolio">His portfolio</a></li>
+                <li><a href="#">About the minister</a></li>
+                <li><a href="#">His portfolio</a></li>
             </ul>
 	</div>
 </div>
@@ -71,8 +71,8 @@ function wetkit_wetboew_default_box() {
             <p>L&#39;honorable<br />
             <strong>nom du minist&egrave;re</strong></p>
             <ul>
-                <li><a href="minister">A propos de la ministre</a></li>
-                <li><a href="minister/portfolio">Son portefeuille</a></li>
+                <li><a href="#">A propos de la ministre</a></li>
+                <li><a href="#">Son portefeuille</a></li>
             </ul>
 	</div>
 </div>
@@ -133,8 +133,8 @@ function wetkit_wetboew_default_box() {
 	<p>This section is for video related content. Often this is the best place to introduce your department or organization.</p>
 </div>
 <ul class="list-bullet-none indent-none">
-    <li><a href="multimedia/help">Multimedia Help</a></li>
-    <li><a href="transcripts">Transcripts and Alternative Formats</a></li>
+    <li><a href="#">Multimedia Help</a></li>
+    <li><a href="#">Transcripts and Alternative Formats</a></li>
 </ul>
 ',
       'format' => 'wetkit_wysiwyg_text',
@@ -147,8 +147,8 @@ function wetkit_wetboew_default_box() {
 	<p>Cette section est pour le contenu vid&eacute;o li&eacute;. Souvent c&#39;est le meilleur endroit pour introduire votre minist&egrave;re ou organisme.</p>
 </div>
 <ul class="list-bullet-none indent-none">
-    <li><a href="multimedia/help">Aide multim&eacute;dia</a></li>
-    <li><a href="transcripts">Les transcriptions et les formats de rechange</a></li>
+    <li><a href="#">Aide multim&eacute;dia</a></li>
+    <li><a href="#">Les transcriptions et les formats de rechange</a></li>
 </ul>
 ',
       'format' => 'wetkit_wysiwyg_text',
