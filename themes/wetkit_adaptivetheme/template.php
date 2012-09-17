@@ -27,3 +27,4 @@ require_once($path_to_wetkit_theme . '/inc/template-preprocess.inc');     // tem
 require_once($path_to_wetkit_theme . '/inc/template-process.inc');        // template preprocess functions
 require_once($path_to_wetkit_theme . '/inc/template-theme-links.inc');    // template theme link functions
 require_once($path_to_wetkit_theme . '/inc/template-menu-blocks.inc');    // template menu blocks functions
+require_once($path_to_wetkit_theme . '/inc/template-breadcrumb.inc');    // template menu blocks functions

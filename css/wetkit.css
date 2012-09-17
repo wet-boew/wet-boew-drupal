@@ -2,6 +2,8 @@
  * Stylesheet for WetKit Profile
  */
 
+/* Installation Screen */
+
 #wetkit-theme-selection-form .form-item-theme {
   clear: both;
   margin-top: .5em;
@@ -30,4 +32,11 @@ body.maintenance-page #logo {
 .in-maintenance input[type="checkbox"] + label, 
 .in-maintenance input[type="radio"] + label {
  display: inline;
+}
+
+/* Revision Screen */
+
+.page-node-revisions div img.panopoly-image-half  {
+  float: none;
+  width: auto;
 }
