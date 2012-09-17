@@ -34,7 +34,7 @@
  *   - breadcrumb: An array containing the breadcrumb links.
  */
 function wetkit_adaptivetheme_breadcrumb($vars) {
-     
+
   global $theme_key;
   $theme_name = $theme_key;
 

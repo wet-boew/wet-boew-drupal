@@ -60,7 +60,7 @@ function wetkit_adaptivetheme_form_system_theme_settings_alter(&$form, &$form_st
   $form['at-settings']['intranet']['wetkit_sub_site'] = array(
     '#type' => 'textfield',
     '#title' => t('Intranet web site name'),
-    '#default_value' => at_get_setting('wetkit_sub_site'),    
+    '#default_value' => at_get_setting('wetkit_sub_site'),
     '#description' => t('The display name for the Intranet web site'),
   );
   // We are editing the $form in place, so we don't need to return anything.

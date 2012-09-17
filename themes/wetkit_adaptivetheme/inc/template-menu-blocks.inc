@@ -95,7 +95,7 @@ function wetkit_adaptivetheme_menu_link__menu_block__wetkit_menu_blocks_1($varia
   }
   if ($element['#original_link']['depth'] == 1 && $element['#original_link']['has_children'] == 1) {
       $output = '<h3>' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</h3>';
-      return '<li><section>' . $output . '<div class="mb-sm">' . $sub_menu . '<div class="clear"></div></div>' . "</section></li>\n"; 
+      return '<li><section>' . $output . '<div class="mb-sm">' . $sub_menu . '<div class="clear"></div></div>' . "</section></li>\n";
   }
   elseif ($element['#original_link']['depth'] == 1 && $element['#original_link']['has_children'] == 0) {
     $output = l($element['#title'], $element['#href'], $element['#localized_options']);
