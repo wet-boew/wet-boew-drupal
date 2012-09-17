@@ -53,12 +53,6 @@ function wetkit_wetboew_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
-        'workbench-block' => array(
-          'module' => 'workbench',
-          'delta' => 'block',
-          'region' => 'content',
-          'weight' => '-9',
-        ),
         'system-main' => array(
           'module' => 'system',
           'delta' => 'main',

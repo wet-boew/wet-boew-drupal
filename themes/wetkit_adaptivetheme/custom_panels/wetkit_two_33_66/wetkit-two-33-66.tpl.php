@@ -43,17 +43,18 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
       <div class="clear"></div>
     </div>
   </div>
-  <div id="wb-sec">
-    <div id="wb-sec-in" class="equalize">
-      <nav role="navigation">
-        <div class="wb-sec-def">
-          <div class="region-wetkit-two-33-66-second">
-            <div class="region-inner clearfix">
+  <div class="region-wetkit-two-33-66-second">
+    <div class="region-inner clearfix">
+      <div id="wb-sec">
+        <div id="wb-sec-in">
+          <nav role="navigation">
+            <h2 id="wb-nav"><?php print t('Secondary Menu'); ?></h2>
+            <div class="wb-sec-def">
               <?php print $content['wetkit_two_33_66_second']; ?>
             </div>
-          </div>
+          </nav>
         </div>
-      </nav>
+      </div>
     </div>
   </div>
   <?php if ($content['wetkit_two_33_66_bottom']): ?>
