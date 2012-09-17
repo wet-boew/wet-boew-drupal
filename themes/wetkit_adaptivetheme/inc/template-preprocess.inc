@@ -88,10 +88,10 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
     }
     //Set Body Class for Panels Layouts
     if (isset($layout)) {
-      if (substr($layout, 0, 10) == 'wetkit_two') {
+      if (drupal_substr($layout, 0, 10) == 'wetkit_two') {
         $variables['wetkit_col_array'] = 'wb-body-sec';
       }
-      elseif (substr($layout, 0, 12) == 'wetkit_three') {
+      elseif (drupal_substr($layout, 0, 12) == 'wetkit_three') {
         $variables['wetkit_col_array'] = 'wb-body';
       }
       else {
@@ -151,7 +151,7 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
 
   //Set Sub Site Name
   $variables['wetkit_sub_site'] = at_get_setting('wetkit_sub_site');
-  
+
   // Header Navigation + Language Switcher
   $menu = ($is_multilingual) ? i18n_menu_navigation_links('menu-wet-header') : menu_navigation_links('menu-wet-header');
   $goc_nav_bar_markup = theme('links__menu_goc_nav_bar', array(
