@@ -188,12 +188,7 @@
             </div>
           </div>
           <?php if ($breadcrumb): ?>
-            <div id="gcwu-bc">
-              <h2><?php print t('Breadcrumbs'); ?></h2>
-              <div id="gcwu-bc-in">
-                <?php print $breadcrumb; ?>
-              </div>
-            </div>
+            <?php print $breadcrumb; ?>
           <?php endif; ?>
         </nav>
         <!-- region: Header -->
