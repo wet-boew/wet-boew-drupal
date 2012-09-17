@@ -13,8 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-09-07 10:47-0400\n"
-"PO-Revision-Date: 2012-09-07 10:47-0400\n"
+"POT-Creation-Date: 2012-09-17 18:40-0400\n"
+"PO-Revision-Date: 2012-09-17 18:40-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +55,7 @@ msgid "Empty Text"
 msgstr ""
 
 #: wetkit_demo.views_default.inc:356
-msgid "There is no news to be shown. "
+msgid "There is no news to be shown."
 msgstr ""
 
 #: wetkit_demo.views_default.inc:357
@@ -125,8 +125,8 @@ msgstr ""
 "BOEW"
 
 #: wetkit_demo.info:0
-msgid "WetKit Apps"
-msgstr "Applications BOEW"
+msgid "WetKit"
+msgstr "BOEW"
 
 #: plugins/styles/dark_blue_background/dark_blue_background.inc:9
 msgid "Dark Blue Background"

@@ -5,13 +5,14 @@
 # Generated from files:
 #  wetkit_wysiwyg.module: n/a
 #  wetkit_wysiwyg.info: n/a
+#  plugins/wysiwyg/wetkitcleanup/js/acronym.js: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-09-07 10:48-0400\n"
-"PO-Revision-Date: 2012-09-07 10:48-0400\n"
+"POT-Creation-Date: 2012-09-17 18:39-0400\n"
+"PO-Revision-Date: 2012-09-17 18:39-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -19,43 +20,51 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: wetkit_wysiwyg.module:26
+#: wetkit_wysiwyg.module:24
+msgid "Show Text Formatter Details"
+msgstr ""
+
+#: wetkit_wysiwyg.module:32
+msgid "Do you want WetKit to show the help text and text format guidelines?"
+msgstr ""
+
+#: wetkit_wysiwyg.module:56
 msgid "Kitchen Sink"
 msgstr "Évier de cuisine"
 
-#: wetkit_wysiwyg.module:34
+#: wetkit_wysiwyg.module:64
 msgid "Spell Check"
 msgstr "Correcteur orthographique"
 
-#: wetkit_wysiwyg.module:48;54
+#: wetkit_wysiwyg.module:78;84
 msgid "WetKit Cleanup Tools"
 msgstr ""
 
-#: wetkit_wysiwyg.module:172
+#: wetkit_wysiwyg.module:202
 msgid "Heading 1"
 msgstr "En-tête 1"
 
-#: wetkit_wysiwyg.module:180
+#: wetkit_wysiwyg.module:210
 msgid "Heading 2"
 msgstr "En-tête 2"
 
-#: wetkit_wysiwyg.module:188
+#: wetkit_wysiwyg.module:218
 msgid "Heading 3"
 msgstr "En-tête 3"
 
-#: wetkit_wysiwyg.module:196
+#: wetkit_wysiwyg.module:226
 msgid "Heading 4"
 msgstr "En-tête 4"
 
-#: wetkit_wysiwyg.module:204
+#: wetkit_wysiwyg.module:234
 msgid "Paragraph"
 msgstr "Paragraphe"
 
-#: wetkit_wysiwyg.module:218
+#: wetkit_wysiwyg.module:248
 msgid "Unordered List"
 msgstr "Liste non ordonnée"
 
-#: wetkit_wysiwyg.module:224
+#: wetkit_wysiwyg.module:254
 msgid "Ordered List"
 msgstr "Liste ordonnée"
 
@@ -70,4 +79,8 @@ msgstr "Intégrer un WYSIWYG  à Drupal."
 #: wetkit_wysiwyg.info:0
 msgid "WetKit"
 msgstr "BOEW"
+
+#: plugins/wysiwyg/wetkitcleanup/js/acronym.js:0
+msgid "If this doesn't run, it's probably due to a bug in IE. Try running this again."
+msgstr ""
 
