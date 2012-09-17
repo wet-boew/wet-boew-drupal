@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-09-07 10:47-0400\n"
-"PO-Revision-Date: 2012-09-07 10:47-0400\n"
+"POT-Creation-Date: 2012-09-17 18:43-0400\n"
+"PO-Revision-Date: 2012-09-17 18:43-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -21,21 +21,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: wetkit_pages.features.field.inc:583
+#: wetkit_pages.features.field.inc:749
+msgid "Archived Content"
+msgstr "Contenu archivé"
+
+#: wetkit_pages.features.field.inc:750
 msgid "Body"
 msgstr "Corps"
 
-#: wetkit_pages.features.field.inc:584
+#: wetkit_pages.features.field.inc:751
 msgid "Categories"
 msgstr "Catégories"
 
-#: wetkit_pages.features.field.inc:585
+#: wetkit_pages.features.field.inc:752
 msgid "Feature content"
 msgstr "Contenu"
 
-#: wetkit_pages.features.field.inc:586
+#: wetkit_pages.features.field.inc:753
 msgid "Primary Image"
 msgstr "Image principale"
+
+#: wetkit_pages.features.field.inc:754
+msgid "Share Widget"
+msgstr ""
 
 #: wetkit_pages.features.inc:31
 msgid "Basic Page"
@@ -63,33 +71,33 @@ msgstr ""
 "le site. Elle est destinés aux usagers qui ont l’habitude "
 "d’utiliser des blocs et des régions pour gérer le contenu."
 
-#: wetkit_pages.module:27
-msgid "A primary landing page to display to users on your site."
-msgstr ""
-
-#: wetkit_pages.module:48
+#: wetkit_pages.module:45
 msgid "Create Landing Page"
 msgstr "Créer la page de renvoi"
 
-#: wetkit_pages.module:63
+#: wetkit_pages.module:60
 msgid "URL"
 msgstr "URL"
 
-#: wetkit_pages.module:71
+#: wetkit_pages.module:68
 msgid "Add this page to the main menu?"
 msgstr "Ajouter cette page au menu principal?"
 
-#: wetkit_pages.module:80
+#: wetkit_pages.module:77
 msgid "Parent"
 msgstr "Parent"
 
-#: wetkit_pages.module:95
+#: wetkit_pages.module:92
 msgid "Create Page"
 msgstr "Créer page"
 
-#: wetkit_pages.module:26
+#: wetkit_pages.module:23
 msgid "Landing Page"
 msgstr "Page de renvoi"
+
+#: wetkit_pages.module:24
+msgid "A primary landing page to display to users on your site."
+msgstr ""
 
 #: wetkit_pages.info:0
 msgid "WetKit Pages"
