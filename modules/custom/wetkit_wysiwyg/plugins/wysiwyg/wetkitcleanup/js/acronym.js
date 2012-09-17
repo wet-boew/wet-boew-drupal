@@ -19,7 +19,7 @@ var acronymDialog = {
 		if (tinymce.isIE) {
 			ed.focus();
 			if (t.acronymRunCount == 0)
-				alert("If this doesn't run, it's probably due to a bug in IE. Try running this again.");
+				alert(Drupal.t("If this doesn't run, it's probably due to a bug in IE. Try running this again."));
 			t.acronymRunCount = 1;
 			r = ed.getDoc().selection.createRange();
 		}
