@@ -61,7 +61,7 @@ function wetkit_demo_content_defaults() {
       'und' => array(
         0 => array(
           'alt' => 'WetKit Features',
-          'title' => '',
+          'title' => 'WetKit Features',
           'width' => '700',
           'height' => '396',
           'filename' => 'wetkit_apps.png',
@@ -117,7 +117,7 @@ function wetkit_demo_content_defaults() {
       'und' => array(
         0 => array(
           'alt' => 'Features WetKit',
-          'title' => '',
+          'title' => 'Features WetKit',
           'width' => '700',
           'height' => '396',
           'filename' => 'wetkit_apps_fr.png',
@@ -177,7 +177,7 @@ function wetkit_demo_content_defaults() {
       'und' => array(
         0 => array(
           'alt' => 'WetKit Collaboration',
-          'title' => '',
+          'title' => 'WetKit Collaboration',
           'width' => '599',
           'height' => '330',
           'filename' => 'collab.jpg',
@@ -233,7 +233,7 @@ function wetkit_demo_content_defaults() {
       'und' => array(
         0 => array(
           'alt' => 'Collaboration WetKit',
-          'title' => '',
+          'title' => 'Collaboration WetKit',
           'width' => '599',
           'height' => '330',
           'filename' => 'collab_fr.jpg',
@@ -306,7 +306,7 @@ function wetkit_demo_content_defaults() {
       'und' => array(
         0 => array(
           'alt' => 'WetKit Demo',
-          'title' => '',
+          'title' => 'WetKit Demo',
           'width' => '700',
           'height' => '392',
           'filename' => 'wetkit_github.png',
@@ -362,7 +362,7 @@ function wetkit_demo_content_defaults() {
       'und' => array(
         0 => array(
           'alt' => 'WetKit Demo',
-          'title' => '',
+          'title' => 'WetKit Demo',
           'width' => '700',
           'height' => '392',
           'filename' => 'wetkit_github_fr.png',
