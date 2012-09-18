@@ -48,46 +48,6 @@ function wetkit_adaptivetheme_menu_tree__menu_block__wetkit_menu_blocks_1($varia
  *   An array of variables to pass to the theme template.
  */
 function wetkit_adaptivetheme_menu_link__menu_block__wetkit_menu_blocks_1($variables) {
-   /*
-      // LEVEL1
-      <li>
-        <section><h3><a href="http://wet-boew.github.com/wet-boew/docs/index-eng.html">WET project</a></h3>
-          <div class="mb-sm">
-            <div class="span-2">
-              <ul>
-                // LEVEL2 no further depth
-                <li><a href="https://github.com/wet-boew/wet-boew/">Main project page</a></li>
-                <li><a href="http://www.tbs.gc.ca/ws-nw/wet-boew/terms">Terms and conditions</a></li>
-                <li><a href="http://wet-boew.github.com/wet-boew/demos/index-eng.html">Working examples</a></li>
-              </ul>
-            </div>
-            <div class="clear"></div>
-          </div>
-        </section>
-      </li>
-
-      // LEVEL1
-      <li>
-        <section><h3><a href="section2/index-eng.html">Section 2</a></h3>
-          <div class="mb-sm">
-            <div class="span-2">
-              // LEVEL2 with further depth
-              <section><h4><a href="#">Section 2.1</a></h4>
-                <ul>
-                  // LEVEL3
-                  <li><a href="#">Item 2.1.1</a></li>
-                  <li><a href="#">Item 2.1.2</a></li>
-                  <li><a href="#">Item 2.1.3</a></li>
-                  <li><a href="#">Item 2.1.4</a></li>
-                  <li><a href="#">Item 2.1.5</a></li>
-                  <li><a href="#">Item 2.1.6</a></li>
-                </ul>
-              </section>
-            </div>
-          </div>
-        </section>
-      </li>
-  */
   $element = $variables['element'];
   $sub_menu = '';
   if ($element['#below']) {
@@ -95,7 +55,8 @@ function wetkit_adaptivetheme_menu_link__menu_block__wetkit_menu_blocks_1($varia
   }
   if ($element['#original_link']['depth'] == 1 && $element['#original_link']['has_children'] == 1) {
       $output = '<h3>' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</h3>';
-      return '<li><section>' . $output . '<div class="mb-sm">' . $sub_menu . '<div class="clear"></div></div>' . "</section></li>\n";
+      $mb_main_link = '<div class="mb-main-link">' . l($element['#title'] . ' - ' . t('Main Page'), $element['#href'], $element['#localized_options']) . '</div>';
+      return '<li><section>' . $output . '<div class="mb-sm">' . $sub_menu . '<div class="clear"></div>' . $mb_main_link . '</div>' . "</section></li>\n";
   }
   elseif ($element['#original_link']['depth'] == 1 && $element['#original_link']['has_children'] == 0) {
     $output = l($element['#title'], $element['#href'], $element['#localized_options']);
