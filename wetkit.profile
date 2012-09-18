@@ -15,8 +15,8 @@ function wetkit_install_tasks(&$install_state) {
   //$tasks = $tasks + apps_profile_install_tasks($install_state, array('machine name' => 'panopoly', 'default apps' => array('')));
 
   // Add the WetKit theme selection to the installation process
-  require_once(drupal_get_path('module', 'panopoly_theme') . '/panopoly_theme.profile.inc');
-  $tasks = $tasks + panopoly_theme_profile_theme_selection_install_task($install_state);
+  require_once(drupal_get_path('module', 'wetkit_wetboew') . '/wetkit_wetboew.profile.inc');
+  $tasks = $tasks + wetkit_wetboew_profile_theme_selection_install_task($install_state);
 
   // Set up a task to include secondary language (fr)
   $tasks['wetkit_batch_processing'] = array(
@@ -39,8 +39,8 @@ function wetkit_install_tasks_alter(&$tasks, $install_state) {
   require_once(drupal_get_path('module', 'panopoly_core') . '/panopoly_core.profile.inc');
   $tasks['install_load_profile']['function'] = 'panopoly_core_install_load_profile';
 
-   // Since we only offer one language, define a callback to set this
-  require_once(drupal_get_path('module', 'panopoly_core') . '/panopoly_core.profile.inc');
+  // Since we only offer one language, define a callback to set this
+  //require_once(drupal_get_path('module', 'panopoly_core') . '/panopoly_core.profile.inc');
   //$tasks['install_select_locale']['function'] = 'panopoly_core_install_locale_selection';
 }
 
