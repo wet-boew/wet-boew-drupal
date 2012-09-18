@@ -32,7 +32,7 @@ foreach (element_children($variables[\'#items\']) as $delta) {
   $item = $variables[\'#items\'][$delta];
   $source = theme(\'image_style\', array(\'style_name\' => $settings[\'image_style_source\'], \'path\' => $item[\'uri\']));
   $destination = image_style_path($settings[\'image_style_destination\'], $item[\'uri\']);
-  $output .= \'<li>\' . l($source, file_create_url($destination), array(\'html\' => TRUE, \'attributes\' => array(\'class\' => array(\'lb-item\')))) . \'</li>\';
+  $output .= \'<li>\' . l($source, file_create_url($destination), array(\'html\' => TRUE, \'attributes\' => array(\'class\' => array(\'lb-item\'), \'title\' => array($item[\'title\'])))) . \'</li>\';
 }
 $class = $settings[\'custom_class\'];
 return \'<div class="wet-boew-lightbox \' . $class . \'"><ul>\' . $output . \'</ul></div><div class="clear"></div>\';';
