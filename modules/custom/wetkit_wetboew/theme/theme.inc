@@ -10,7 +10,7 @@
  * Implements WET Messages: Alert, Attention, and General Information
  * TODO: Note, Q&A, Tools, Work in Progress, Refer, Summary, Archive
  */
-function theme_wetkit_status_messages($variables) {
+function theme_wetkit_wetboew_status_messages($variables) {
   $display = $variables['display'];
   $output = '';
 
@@ -34,10 +34,6 @@ function theme_wetkit_status_messages($variables) {
         break;
       default:
         $extraclass = '';
-    }
-    $current_path = current_path();
-    if (path_is_admin($current_path)) {
-      $extraclass = 'messages';
     }
     $output .= "<section><div class=\"$extraclass $type\">\n";
     if (!empty($status_heading[$type])) {
