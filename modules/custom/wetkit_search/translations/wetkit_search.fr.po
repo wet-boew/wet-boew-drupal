@@ -106,7 +106,7 @@ msgid "Solr Search Results"
 msgstr ""
 
 #: wetkit_search.install:88
-msgid "WetKit has been configured to use Pantheon's Solr Service"
+msgid "WetKit has been configured to use a Solr Service"
 msgstr ""
 
 #: wetkit_search.install:101
