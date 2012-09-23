@@ -15,7 +15,7 @@ function wetkit_demo_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Homepage Demo';
   $page->admin_description = 'This is a demo panel for WetKit so folks can see the magic';
-  $page->path = 'demo';
+  $page->path = 'front/demo';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
