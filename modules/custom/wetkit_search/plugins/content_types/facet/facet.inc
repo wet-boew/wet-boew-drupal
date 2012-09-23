@@ -25,9 +25,21 @@ function wetkit_search_facet_content_type_edit_form($form, &$form_state) {
   foreach (facetapi_get_searcher_info() as $searcher => $info) {
     foreach (facetapi_get_delta_map_queue($searcher, $realm_name) as $facet_name) {
       if ($facet = facetapi_facet_load($facet_name, $searcher)) {
-        $string = facetapi_build_delta($searcher, $realm_name, $facet_name);
-        $delta = array_search($string, $map);
-        $deltas[$delta] = $facet_name;
+        if ($string = facetapi_build_delta($searcher, $realm_name, $facet_name)) {
+          if ($delta = array_search($string, $map)) {
+            switch($searcher) {
+              case 'search_api@database_node_index':
+                $deltas[$delta] = 'DB: ' . $facet_name;
+                break;
+              case 'search_api@node_index':
+                $deltas[$delta] = 'Solr: ' . $facet_name;
+                break;
+              default:
+                $deltas[$delta] = 'Unknown: ' . $facet_name;
+                break;
+            }
+          }
+        }
       }
     }
   }
