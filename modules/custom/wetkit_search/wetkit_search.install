@@ -10,35 +10,9 @@
  */
 function wetkit_search_install() {
 
-  // If we are running on Pantheon enable Solr support
-  if (variable_get('pantheon_tier')) {
-
-    // Enable Pantheon's Search Module
-    module_enable(array('pantheon_apachesolr'));
-
-    // Load the Solr PHP Client Library
-    _search_api_solr_autoload('Apache_Solr_Service');
-    _search_api_solr_autoload('Apache_Solr_HttpTransport_Abstract');
-
-    // Push Pantheon's Search API Schema
-    $schema_uri = drupal_get_path('module', 'search_api_solr') . '/schema.xml';
-    pantheon_apachesolr_update_schema($schema_uri);
-
-    // Enable WetKit's Solr Server and Solr Index
-    require_once(drupal_get_path('module', 'search_api') . '/search_api.admin.inc');
-    $solr_server = search_api_server_load('solr_server');
-    $solr_server->update(array('enabled' => 1));
-    $solr_index = search_api_index_load('node_index');
-    $solr_index->update(array('enabled' => 1));
-
-    // Clear Solr Search Index and Rebuild
-    $solr_index->clear();
-    $solr_index->rebuild();
-
   // Allow anonymous and authenticated users to search content
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('search content'));
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('search content'));
-  }
 }
 
 /**
@@ -56,23 +30,23 @@ function wetkit_search_update_7001(&$sandbox) {
 }
 
 /**
- * WetKit Beta 5 Update: Using Pantheon Solr Search System
+ * WetKit Beta 5 Update: Using Wetkit Compatible Solr Search System
  */
 function wetkit_search_update_7002(&$sandbox) {
 
-  // If we are running on Pantheon...
-  if (variable_get('pantheon_tier')) {
+  // If we are running on a WetKit Platform...
+  if (variable_get('wetkit_tier')) {
 
-    // Enable Pantheon's Search Module
-    module_enable(array('pantheon_apachesolr'));
+    // Enable WetKit's Search Module
+    module_enable(array('wetkit_solr'));
 
     // Load the Solr PHP Client Library
     _search_api_solr_autoload('Apache_Solr_Service');
     _search_api_solr_autoload('Apache_Solr_HttpTransport_Abstract');
 
-    // Push Pantheon's Search API Schema
+    // Push a WetKit Compatible Search API Schema
     $schema_uri = drupal_get_path('module', 'search_api_solr') . '/schema.xml';
-    pantheon_apachesolr_update_schema($schema_uri);
+    wetkit_apachesolr_update_schema($schema_uri);
 
     // Enable WetKit's Solr Server and Solr Index
     require_once(drupal_get_path('module', 'search_api') . '/search_api.admin.inc');
@@ -85,10 +59,10 @@ function wetkit_search_update_7002(&$sandbox) {
     $solr_index->clear();
     $solr_index->reindex();
 
-    return t('WetKit has been configured to use Pantheon\'s Solr Service');
+    return t('WetKit has been configured to use a Solr Service');
   }
 
-  return ('WetKit was *not* configured to use Pantheon\'s Solr Service since you are not running on Pantheon');
+  return ('WetKit was *not* configured to use a Solr Service.');
 }
 
 /**
