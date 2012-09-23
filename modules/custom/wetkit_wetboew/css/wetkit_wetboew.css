@@ -33,3 +33,9 @@ margin: 4px 10px 0 0;
 #node-edit #edit-field-featured-image-und-0-title {
 width: 180px;
 }
+
+/* Admin Menu Override */
+
+ul li.admin-menu-search {
+  display: none;
+}

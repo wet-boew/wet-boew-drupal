@@ -68,3 +68,4 @@ features[user_permission][] = access administration menu
 features[user_permission][] = access administration pages
 features[user_permission][] = view the administration theme
 features[views_view][] = headlines_front_page
+scripts[] = wetkit-wetboew.js
