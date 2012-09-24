@@ -51,10 +51,6 @@ dependencies[] = wetkit_demo
 dependencies[] = wetkit_language
 dependencies[] = wetkit_wetboew
 
-; WetKit Testing
-files[] = wetkit.test
-files[] = tests/simpletest/WetKitWebTestCase.inc
-
 ; CSS Stylesheets
 stylesheets[all][] = css/wetkit.css
 

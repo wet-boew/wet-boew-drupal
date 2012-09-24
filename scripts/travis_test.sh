@@ -21,6 +21,3 @@ DISPLAY=:99.0 ./casperjs/bin/casperjs test drupal_wet/profiles/wetkit/tests/casp
 wget http://selenium.googlecode.com/files/selenium-server-standalone-2.15.0.jar
 java -jar selenium-server-standalone-2.15.0.jar -htmlSuite "*firefox" "http://127.0.0.1:8080" "drupal_wet/profiles/wetkit/tests/selenium/WetKitTestSuite.html" "drupal_wet/profiles/wetkit/tests/selenium/Result.html"
 
-# Run Main Test Suite(s)
-cd drupal_wet/sites/default/
-drush test-run WetKitArchivedWidgetTestCase
