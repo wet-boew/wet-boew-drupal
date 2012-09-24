@@ -33,7 +33,8 @@ function wetkit_wetboew_archived_widget_content_type_render($subtype, $conf, $pa
   $body = t('Information identified as archived is provided for reference, research or recordkeeping purposes. It is not subject to the Government of Canada Web Standards and has not been altered or updated since it was archived. Please contact us to request a format other than those available.');
   $span_class = (isset($conf['span_item'])) ? $conf['span_item'] : 'span-6';
 
-  if (isset($node->field_archived_content['und']['0']['value']) && $node->field_archived_content['und']['0']['value'] == '1' ) {
+  $field_archived = field_get_items('node', $node, 'field_archived_content');
+  if ($field_archived['0']['value'] == '1' ) {
     $pane = new stdClass();
     $pane->content = '<div id="archived" class="wet-boew-archived ' . $span_class . '" data-load="archived"><section><h2>' . $title . '</h2><p>' . $body . '</p></section></div>';
     return $pane;
