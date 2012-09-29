@@ -96,8 +96,8 @@ function wetkit_wetboew_views_default_views() {
     'wetkit_page' => 'wetkit_page',
   );
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $translatables['headlines_front_page'] = array(
     t('Master'),
@@ -111,7 +111,8 @@ function wetkit_wetboew_views_default_views() {
     t('No Content'),
     t('No content has yet been created for this language.'),
     t('[body]'),
-    t('Block'),
+    t('Content pane'),
+    t('View panes'),
   );
   $export['headlines_front_page'] = $view;
 

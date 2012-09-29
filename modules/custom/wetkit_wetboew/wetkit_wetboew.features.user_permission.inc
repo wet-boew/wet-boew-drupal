@@ -28,15 +28,6 @@ function wetkit_wetboew_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: view the administration theme.
-  $permissions['view the administration theme'] = array(
-    'name' => 'view the administration theme',
-    'roles' => array(
-      0 => 'administrative user',
-    ),
-    'module' => 'system',
-  );
-
   // Exported permission: access content.
   $permissions['access content'] = array(
     'name' => 'access content',
@@ -87,6 +78,15 @@ function wetkit_wetboew_user_default_permissions() {
     'name' => 'use text format wetkit_wysiwyg_text',
     'roles' => array(),
     'module' => 'filter',
+  );
+
+  // Exported permission: view the administration theme.
+  $permissions['view the administration theme'] = array(
+    'name' => 'view the administration theme',
+    'roles' => array(
+      0 => 'administrative user',
+    ),
+    'module' => 'system',
   );
 
   return $permissions;
