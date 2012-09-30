@@ -51,12 +51,6 @@ function wetkit_adaptivetheme_form_system_theme_settings_alter(&$form, &$form_st
     '#type'          => 'fieldset',
     '#title'         => t('Intranet Settings'),
   );
-  $form['at-settings']['intranet']['wetkit_intranet_enable'] = array(
-    '#type'          => 'checkbox',
-    '#title'         => t('Enable the Intranet Progressive Theme.'),
-    '#default_value' => at_get_setting('wetkit_intranet_enable'),
-    '#description'   => t('This will modify the theme by adding custom css and logic for the Intranet Progressive Theme'),
-  );
   $form['at-settings']['intranet']['wetkit_sub_site'] = array(
     '#type' => 'textfield',
     '#title' => t('Intranet web site name'),

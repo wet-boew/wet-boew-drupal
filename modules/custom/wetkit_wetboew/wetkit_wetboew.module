@@ -8,6 +8,62 @@ include_once('wetkit_wetboew.features.inc');
 include_once('wetkit_wetboew.menu_wetkit_load.inc');
 
 /**
+ * Implementation of hook_menu
+ */
+function wetkit_wetboew_menu() {
+
+  // Add an administration page for WetKit
+  $items['admin/wetkit'] = array(
+    'title' => 'WetKit',
+    'description' => 'Administer all things WetKit.',
+    'position' => 'right',
+    'weight' => -8,
+    'page callback' => 'wetkit_wetboew_config_page',
+    'access arguments' => array('access administration pages'),
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );
+
+  // Add an administration section for Panopoly settings
+  $items['admin/wetkit/settings'] = array(
+    'title' => 'WetKit Settings',
+    'description' => 'Configuration related to WetKit',
+    'position' => 'right',
+    'weight' => -50,
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('access administration pages'),
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );
+
+  // Add settings pages for WetKit and WetKit Apps
+  foreach(module_list() as $module) {
+    $app_info = module_invoke($module, 'apps_app_info');
+    if (!empty($app_info) && !empty($app_info['configure form'])) {
+      $module_info = drupal_parse_info_file(drupal_get_path('module', $module) . '/' . $module . '.info');
+      if (!empty($module_info['package']) && $module_info['package'] == 'WetKit') {
+        $items['admin/wetkit/settings/' . $module] = array(
+          'title' => $module_info['name'],
+          'description' => 'This is the configuration screen for ' . $module_info['name'],
+          'page callback' => 'drupal_get_form',
+          'page arguments' => array($app_info['configure form']),
+          'access arguments' => array('administer site configuration'),
+        );
+      } else if (!empty($module_info['package']) && $module_info['package'] == 'WetKit Apps') {
+        $items['admin/wetkit/app_settings/' . $module] = array(
+          'title' => $module_info['name'],
+          'description' => 'This is the configuration screen for ' . $module_info['name'],
+          'page callback' => 'drupal_get_form',
+          'page arguments' => array($app_info['configure form']),
+          'access arguments' => array('administer site configuration'),
+        );
+      }
+    }
+  }
+  return $items;
+}
+
+/**
  * Implements hook_form_alter().
  */
 function wetkit_wetboew_form_alter(&$form, &$form_state, $form_id) {
@@ -55,21 +111,20 @@ function wetkit_wetboew_configure_form($form, &$form_state) {
 
   $form['wetkit_wetboew'] = array(
     '#type' => 'fieldset',
-    '#title' => t('WetKit jQuery Progressive Enhancement'),
+    '#title' => t('WetKit Theme Selection'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE
   );
-  $form['wetkit_wetboew']['wetkit_wetboew_dev'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Enable Web Experience Toolkit: jQuery v3.0 Development Mode'),
-    '#default_value' => variable_get('wetkit_wetboew_dev', 0),
-    '#description' => t('Selecting this checkbox will enable the unminified development version of WET-BOEW JS files'),
-  );
-  $form['wetkit_wetboew']['wetkit_wetboew_intranet'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Enable the Intranet Progressive Theme.'),
-    '#default_value' => variable_get('wetkit_wetboew_intranet', 0),
-    '#description' => t('This will modify the theme by adding custom css and logic for the Intranet Progressive Theme'),
+  $form['wetkit_wetboew']['wetkit_wetboew_theme'] = array(
+    '#type' => 'select',
+    '#title' => t('Please choose the appropriate WET base theme.'),
+    '#options' => array(
+      0 => t('Internet'),
+      1 => t('Intranet'),
+      2 => t('Base Theme'),
+    ),
+    '#default_value' => variable_get('wetkit_wetboew_theme', 0),
+    '#description' => t('This will change the Drupal theme by adding custom css and logic for various WET based themes'),
   );
 
   $form['#submit'][] = 'wetkit_wetboew_configure_form_submit';
@@ -171,18 +226,23 @@ function wetkit_wetboew_init() {
   global $theme;
   $current_path = current_path();
   if (!path_is_admin($current_path) && $theme != 'rubik') {
-    //Add WET-BOEW Source Library using Libraries API
-    if (($library = libraries_detect('wet-boew', NULL, 'source')) && !empty($library['variants']['source']['installed'])) {
+    //Add WET-BOEW Intranet Library using Libraries API
+    if (($library = libraries_detect('wet-boew', NULL, 'intranet')) && !empty($library['variants']['intranet']['installed'])) {
       // Do something with the library here.
-      libraries_load('wet-boew', 'source');
+      libraries_load('wet-boew', 'intranet');
+    }
+    //Add WET-BOEW Base Theme Library using Libraries API
+    if (($library = libraries_detect('wet-boew', NULL, 'base_theme')) && !empty($library['variants']['base_theme']['installed'])) {
+      // Do something with the library here.
+      libraries_load('wet-boew', 'base_theme');
     }
     //Add WET-BOEW Default (Minified) Library using Libraries API
     elseif (($library = libraries_detect('wet-boew')) && !empty($library['installed'])) {
       // Do something with the library here.
       libraries_load('wet-boew');
-      drupal_add_css(drupal_get_path('module', 'wetkit_wetboew') . '/css/wetkit_wetboew.css', array('group' => CSS_THEME, 'every_page' => TRUE));
     }
   }
+  drupal_add_css(drupal_get_path('module', 'wetkit_wetboew') . '/css/wetkit_wetboew.css', array('group' => CSS_THEME, 'every_page' => TRUE));
 }
 
 /**
@@ -210,11 +270,11 @@ function wetkit_wetboew_libraries_info() {
     ),
     'files' => array(
       'css' => array(
-        'build/grids/css/util-min.css' => array('preprocess' => FALSE, 'weight' => 5),
         'build/grids/css/util-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
+        'build/grids/css/util-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),        
         'build/js/css/pe-ap-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
+        'build/js/css/pe-ap-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),     
         'build/theme-gcwu-fegc/css/theme-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
-        'build/js/css/pe-ap-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
         'build/theme-gcwu-fegc/css/theme-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
       ),
       'js' => array(
@@ -225,20 +285,48 @@ function wetkit_wetboew_libraries_info() {
     ),
     // Optional: Specify alternative variants of the library, if available.
     'variants' => array(
-      // All properties defined for 'source' override top-level properties.
-      'source' => array(
+      // All properties defined for 'base_theme' override top-level properties.
+      'base_theme' => array(
         'files' => array(
+          'css' => array(
+            'build/grids/css/util-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
+            'build/grids/css/util-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),        
+            'build/js/css/pe-ap-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
+            'build/js/css/pe-ap-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),     
+            'build/theme-base/css/theme-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
+            'build/theme-base/css/theme-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
+          ),
           'js' => array(
-            'src/theme-gcwu-fegc/js/theme.js' => array('scope' => 'footer', 'weight' => 5),
-            'src/js/workers/menubar.js' => array('scope' => 'footer', 'weight' => 5),
-            'src/js/workers/toolbar.js' => array('scope' => 'footer', 'weight' => 5),
-            'src/js/settings.js' => array('scope' => 'footer', 'weight' => 5),
-            'src/js/pe-ap.js' => array('scope' => 'footer', 'weight' => 5),
+            'build/theme-base/js/theme-min.js' => array('scope' => 'footer', 'weight' => 5),
+            'build/js/settings.js' => array('scope' => 'footer', 'weight' => 5),
+            'build/js/pe-ap-min.js' => array('scope' => 'footer', 'weight' => 5),
           ),
         ),
         'variant callback' => 'wetkit_wetboew_check_variant',
         'variant arguments' => array(
-          'variant' => 'source',
+          'variant' => 'base-theme',
+        ),
+      ),
+      // All properties defined for 'intranet' override top-level properties.
+      'intranet' => array(
+        'files' => array(
+          'css' => array(
+            'build/grids/css/util-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
+            'build/grids/css/util-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),        
+            'build/js/css/pe-ap-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
+            'build/js/css/pe-ap-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),     
+            'build/theme-gcwu-intranet/css/theme-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
+            'build/theme-gcwu-intranet/css/theme-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
+          ),
+          'js' => array(
+            'build/theme-gcwu-intranet/js/theme-min.js' => array('scope' => 'footer', 'weight' => 5),
+            'build/js/settings.js' => array('scope' => 'footer', 'weight' => 5),
+            'build/js/pe-ap-min.js' => array('scope' => 'footer', 'weight' => 5),
+          ),
+        ),
+        'variant callback' => 'wetkit_wetboew_check_variant',
+        'variant arguments' => array(
+          'variant' => 'intranet',
         ),
       ),
     ),
@@ -250,7 +338,10 @@ function wetkit_wetboew_libraries_info() {
  * Implements wetkit_wetboew_check_variant().
  */
 function wetkit_wetboew_check_variant($libary, $variant) {
-  if ((variable_get('wetkit_wetboew_dev', 0) == 1)) {
+  if ((variable_get('wetkit_wetboew_theme', 0) == 1) && ($variant == 'intranet')) {
+    return TRUE;
+  }
+  else if ((variable_get('wetkit_wetboew_theme', 0) == 2) && ($variant == 'base_theme')) {
     return TRUE;
   }
   else {
@@ -287,4 +378,54 @@ function wetkit_wetboew_menu_block_blocks() {
       'sort'        => 0,
     ),
   );
+}
+
+/**
+ * Menu callback: Provide the administration overview page.
+ * 
+ * Adapted from system_admin_config_page()
+ */
+function wetkit_wetboew_config_page() {
+
+  // Check for status report errors.
+  if (system_status(TRUE) && user_access('administer site configuration')) {
+    drupal_set_message(t('One or more problems were detected with your Drupal installation. Check the <a href="@status">status report</a> for more information.', array('@status' => url('admin/reports/status'))), 'error');
+  }
+  $blocks = array();
+  if ($admin = db_query("SELECT menu_name, mlid FROM {menu_links} WHERE link_path = 'admin/wetkit' AND module = 'system'")->fetchAssoc()) {
+    $result = db_query("
+      SELECT m.*, ml.*
+      FROM {menu_links} ml
+      INNER JOIN {menu_router} m ON ml.router_path = m.path
+      WHERE ml.link_path <> 'admin/help' AND menu_name = :menu_name AND ml.plid = :mlid AND hidden = 0", $admin, array('fetch' => PDO::FETCH_ASSOC));
+    foreach ($result as $item) {
+      _menu_link_translate($item);
+      if (!$item['access']) {
+        continue;
+      }
+      // The link description, either derived from 'description' in hook_menu()
+      // or customized via menu module is used as title attribute.
+      if (!empty($item['localized_options']['attributes']['title'])) {
+        $item['description'] = $item['localized_options']['attributes']['title'];
+        unset($item['localized_options']['attributes']['title']);
+      }
+      $block = $item;
+      $block['content'] = '';
+      $block['content'] .= theme('admin_block_content', array('content' => system_admin_menu_block($item)));
+      if (!empty($block['content'])) {
+        $block['show'] = TRUE;
+      }
+
+      // Prepare for sorting as in function _menu_tree_check_access().
+      // The weight is offset so it is always positive, with a uniform 5-digits.
+      $blocks[(50000 + $item['weight']) . ' ' . $item['title'] . ' ' . $item['mlid']] = $block;
+    }
+  }
+  if ($blocks) {
+    ksort($blocks);
+    return theme('admin_page', array('blocks' => $blocks));
+  }
+  else {
+    return t('You do not have any administrative items.');
+  }
 }

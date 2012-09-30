@@ -58,7 +58,7 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
 
   //Support for Intranet Theme
   $variables['intranet'] = '';
-  if (at_get_setting('wetkit_intranet_enable') == 1) {
+  if (variable_get('wetkit_wetboew_theme', 0) == 1) {
     $variables['intranet'] = 'Enabled';
     $variables['base_path'] = base_path();
     $variables['path_to_web_usability'] = drupal_get_path('theme', 'wetkit_adaptivetheme');
@@ -217,28 +217,8 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
 
   //Support for Intranet Theme
   $variables['intranet'] = '';
-  if (at_get_setting('wetkit_intranet_enable') == 1) {
+  if (variable_get('wetkit_wetboew_theme', 0) == 1) {
     $variables['intranet'] = 'Enabled';
-    drupal_add_css(
-      path_to_theme() . '/css/theme-gcwu-intranet/css/theme-min-intranet.css', array(
-      'group' => CSS_THEME,
-      'media' => 'screen',
-      'preprocess' => TRUE,
-      'weight' => 0,
-      )
-    );
-    drupal_add_css(
-      path_to_theme() . '/css/theme-gcwu-intranet/css/theme-ie-min-intranet.css', array(
-      'group' => CSS_THEME,
-      'browsers' => array(
-        'IE' => 'lte IE 7',
-        '!IE' => FALSE,
-      ),
-      'media' => 'screen',
-      'preprocess' => TRUE,
-      'weight' => 0,
-      )
-    );
   }
 }
 
