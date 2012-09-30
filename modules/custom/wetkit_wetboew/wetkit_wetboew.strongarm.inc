@@ -252,7 +252,6 @@ function wetkit_wetboew_strongarm() {
     'skip_link_text' => 'Skip to main content',
     'skip_link_nav_anchor' => 'wb-nav',
     'skip_link2_text' => 'Skip to footer',
-    'wetkit_intranet_enable' => 0,
     'wetkit_sub_site' => 'Sub Site Name',
     'at-settings__active_tab' => 'edit-bigscreen',
     'unset_css_modules_field_theme_field_css' => 0,
