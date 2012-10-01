@@ -11,6 +11,7 @@ function wetkit_adaptivetheme_wetkit_one_100_panels_layouts() {
     'icon' => 'wetkit_one_100.png',
     'theme' => 'wetkit_one_100',
     'admin css' => 'wetkit_one_100.admin.css',
+    'css' => 'wetkit_one_100.css',
     'theme arguments' => array('id', 'content'),
     'regions' => array(
       'wetkit_one_100_top'    => t('Top (conditional)'),

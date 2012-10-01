@@ -2,6 +2,9 @@
  * Drupal Core
  */
 
+.panels-ipe-editing #wb-sec-in {
+  margin-top: 0px;
+}
 .contextual-links-wrapper {
   z-index: 10;
 }
@@ -99,10 +102,6 @@ fieldset.custom_search-popup {
 /*
  * Drupal Contrib: Panels
  */
-
-.panels-ipe-editing #wb-sec-in { 
-  margin: 0px; 
-}
 
 .panels-ipe-placeholder h3 {
   background: none;

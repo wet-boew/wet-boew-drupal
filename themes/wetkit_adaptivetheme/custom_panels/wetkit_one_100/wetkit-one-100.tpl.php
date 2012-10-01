@@ -27,15 +27,16 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
 <?php print $panel_prefix; ?>
 <div class="at-panel panel-display wetkit-one-100 clearfix" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
   <?php if ($content['wetkit_one_100_top']): ?>
-  <div class="region region-wetkit-one-100-top region-conditional-stack">
+  <div class="region region-wetkit-one-100-top span-8">
     <div class="region-inner clearfix">
       <?php print $content['wetkit_one_100_top']; ?>
     </div>
   </div>
+  <div class="clear"></div>
   <?php endif; ?>
   <div id="wb-main" role="main">
     <div id="wb-main-in">
-      <div class="region-wetkit-one-100-first">
+      <div class="region region-wetkit-one-100-first">
         <div class="region-inner clearfix">
           <?php print $content['wetkit_one_100_content']; ?>
         </div>
@@ -44,11 +45,12 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
     </div>
   </div>
   <?php if ($content['wetkit_one_100_bottom']): ?>
-  <div class="region region-wetkit-one-100-bottom region-conditional-stack">
+  <div class="region region-wetkit-one-100-bottom span-8">
     <div class="region-inner clearfix">
       <?php print $content['wetkit_one_100_bottom']; ?>
     </div>
   </div>
+  <div class="clear"></div>
   <?php endif; ?>
 </div>
 <?php print $panel_suffix; ?>
