@@ -27,15 +27,16 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
 <?php print $panel_prefix; ?>
 <div class="at-panel panel-display wetkit-two-33-66 clearfix" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
   <?php if ($content['wetkit_two_33_66_top']): ?>
-  <div class="region region-wetkit-two-33-66-top region-conditional-stack">
+  <div class="region region-wetkit-two-33-66-top span-8">
     <div class="region-inner clearfix">
       <?php print $content['wetkit_two_33_66_top']; ?>
     </div>
   </div>
+  <div class="clear"></div>
   <?php endif; ?>
   <div id="wb-main" role="main">
     <div id="wb-main-in">
-      <div class="region-wetkit-two-33-66-first">
+      <div class="region region-wetkit-two-33-66-first">
         <div class="region-inner clearfix">
           <?php print $content['wetkit_two_33_66_first']; ?>
         </div>
@@ -43,10 +44,10 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
       <div class="clear"></div>
     </div>
   </div>
-  <div class="region-wetkit-two-33-66-second">
-    <div class="region-inner clearfix">
-      <div id="wb-sec">
-        <div id="wb-sec-in">
+  <div id="wb-sec">
+    <div id="wb-sec-in">
+      <div class="region region-wetkit-two-33-66-second">
+        <div class="region-inner clearfix">
           <nav role="navigation">
             <h2 id="wb-nav"><?php print t('Secondary Menu'); ?></h2>
             <div class="wb-sec-def">
@@ -58,11 +59,12 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
     </div>
   </div>
   <?php if ($content['wetkit_two_33_66_bottom']): ?>
-  <div class="region region-wetkit-two-33-66-bottom region-conditional-stack">
+  <div class="region region-wetkit-two-33-66-bottom span-8">
     <div class="region-inner clearfix">
       <?php print $content['wetkit_two_33_66_bottom']; ?>
     </div>
   </div>
+  <div class="clear"></div>
   <?php endif; ?>
 </div>
 <?php print $panel_suffix; ?>
