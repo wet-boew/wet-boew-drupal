@@ -11,6 +11,7 @@ function wetkit_adaptivetheme_wetkit_three_40_40_20_panels_layouts() {
     'icon'     => 'wetkit_three_40_40_20.png',
     'theme'    => 'wetkit_three_40_40_20',
     'admin css' => 'wetkit_three_40_40_20.admin.css',
+    'css' => 'wetkit_three_40_40_20.css',
     'theme arguments' => array('id', 'content'),
     'regions' => array(
       'wetkit_three_40_40_20_top'    => t('Top (conditional)'),
