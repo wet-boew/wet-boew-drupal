@@ -3,19 +3,17 @@ WetKit WYSIWYG
 Integrates a WYSIWYG into WetKit
 
 Customizations
-* This App is based on and often pulls upstream from Panopoly WYSIWYG @ drupal.org/project/panopoly_wysiwyg
+* This App was initially based and can sometimes pull upstream from Panopoly WYSIWYG @ drupal.org/project/panopoly_wysiwyg
 * The latest upstream sync has been checked against commit: 5bf6584 (Verified)
 * Panopoly WYSIWYG is the creation of a prolific drupaler with the handle Populist @ drupal.org/user/58600
-* Integration of Linkit module for adding WYSIWYG Links
 
-Key Features (Panopoly WYSIWYG)
+Key Features
 * The best TinyMCE WYSIWYG in Drupal
 * Addition of Kitchen Sink and Spellcheck Plugins
 * A good MarkitUp Editor for Drupal
 * Switching WYSIWYG + HTML text formats
-
-Key Features (WetKit Demo)
+* Integration of Linkit module for adding WYSIWYG Link
 * Addition of classes to wysiwyg filter
 * Addition of Translation .po files
-* Change of Namespace to WetKit
-* Local Apps Support
+* Addition of French Language Support
+* Integration of an Accessibility Checker for TinyMCE
