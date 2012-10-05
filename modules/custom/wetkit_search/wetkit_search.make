@@ -22,7 +22,7 @@ projects[search_api_db][type] = module
 projects[search_api_db][download][type] = git
 projects[search_api_db][download][revision] = a6203a3
 projects[search_api_db][download][branch] = 7.x-1.x
-projects[search_api_db][patch][1144620] = http://drupal.org/files/search_api_db_utf8-1144620-38.patch
+projects[search_api_db][patch][1144620] = http://drupal.org/files/search_api_db_utf8_1144620-42.patch
 
 ; Solr PHP Client Library
 
