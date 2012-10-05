@@ -2,7 +2,7 @@ WetKit Languages
 ===============
 Integrates multilingual support via Internationalization
 
-Key Features (WetKit Languages)
+Key Features
 * Default Internationalization Configuration
 * Language Switcher
 * Local Apps Support
