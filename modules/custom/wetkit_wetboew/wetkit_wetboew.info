@@ -28,6 +28,7 @@ dependencies[] = search
 dependencies[] = shortcut
 dependencies[] = strongarm
 dependencies[] = views
+dependencies[] = views_atom
 dependencies[] = wetkit_box
 dependencies[] = wetkit_metatag
 dependencies[] = wetkit_pages
