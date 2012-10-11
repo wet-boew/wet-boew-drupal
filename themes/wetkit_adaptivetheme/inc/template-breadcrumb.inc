@@ -75,8 +75,11 @@ function wetkit_adaptivetheme_breadcrumb($vars) {
         if ($key == 0) {
           $output .= '<li>' . $val . '</li>';
         }
+        else if (!empty($separator)) {
+          $output .= '<li>' . '<span>' . $separator . '</span>' . $val . '</li>';
+        }
         else {
-          $output .= '<li>' . $separator . '</span>' . $val . '</li>';
+          $output .= '<li>' . $val . '</li>';
         }
       }
       $output .= '</ol></div></div>';

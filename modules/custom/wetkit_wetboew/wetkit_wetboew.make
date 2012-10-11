@@ -69,7 +69,7 @@ projects[views_atom][subdir] = contrib
 projects[views_atom][download][type] = git
 projects[views_atom][download][revision] = 96e735a2
 projects[views_atom][download][branch] = 7.x-1.x
-projects[views_atom]][patch][1632362] = http://drupal.org/files/views_atom-Update_feeds_item_table_name-1632362-1.patch
+projects[views_atom][patch][1632362] = http://drupal.org/files/views_atom-Update_feeds_item_table_name-1632362-1.patch
 
 ; Tailor WetKit Theme for WetKit
 

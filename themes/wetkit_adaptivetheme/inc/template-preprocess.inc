@@ -154,20 +154,20 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
 
   // Header Navigation + Language Switcher
   $menu = ($is_multilingual) ? i18n_menu_navigation_links('menu-wet-header') : menu_navigation_links('menu-wet-header');
-  $goc_nav_bar_markup = theme('links__menu_goc_nav_bar', array(
+  $nav_bar_markup = theme('links__menu_nav_bar', array(
     'links' => $menu,
     'attributes' => array(
       'id' => 'menu',
       'class' => array('links', 'clearfix'),
       ),
     ));
-  $goc_nav_bar_markup = strip_tags($goc_nav_bar_markup, '<li><a>');
+  $nav_bar_markup = strip_tags($nav_bar_markup, '<li><a>');
   if (module_exists('wetkit_language')) {
     $language_link_markup = '<li id="gcwu-gcnb-lang">' . strip_tags($variables['menu_lang_bar'], '<a><span>') . '</li>';
-    $variables['menu_gov_bar'] = '<ul>' . $goc_nav_bar_markup . $language_link_markup . '</ul>';
+    $variables['menu_gov_bar'] = '<ul>' . $nav_bar_markup . $language_link_markup . '</ul>';
   }
   else {
-    $variables['menu_gov_bar'] = '<ul>' . $goc_nav_bar_markup . '</ul>';
+    $variables['menu_gov_bar'] = '<ul>' . $nav_bar_markup . '</ul>';
   }
 
   // Search
@@ -190,13 +190,13 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
 
   // Terms Navigation
   $menu = ($is_multilingual) ? i18n_menu_navigation_links('menu-wet-terms') : menu_navigation_links('menu-wet-terms');
-  $goc_terms_bar_markup = theme('links__menu_goc_terms_bar', array(
+  $terms_bar_markup = theme('links__menu_terms_bar', array(
     'links' => $menu,
     'attributes' => array(
       'class' => array('links', 'clearfix'),
       ),
     ));
-  $variables['menu_gov_terms_bar'] = $goc_terms_bar_markup;
+  $variables['menu_gov_terms_bar'] = $terms_bar_markup;
 
   // Footer Region
   if (module_exists('menu_block')) {
@@ -207,13 +207,13 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
 
   // Footer Navigation
   $menu = ($is_multilingual) ? i18n_menu_navigation_links('menu-wet-footer') : menu_navigation_links('menu-wet-footer');
-  $goc_footer_bar_markup = theme('links__menu_goc_footer_bar', array(
+  $footer_bar_markup = theme('links__menu_footer_bar', array(
     'links' => $menu,
     'attributes' => array(
       'class' => array('links', 'clearfix'),
       ),
     ));
-  $variables['menu_gov_footer_bar'] = $goc_footer_bar_markup;
+  $variables['menu_gov_footer_bar'] = $footer_bar_markup;
 
   //Support for Intranet Theme
   $variables['intranet'] = '';
