@@ -91,10 +91,10 @@ div .markItUpHeader ul .markItUpSeparator {
 /**
  * WYSIWYG Toggle Styling
  */
-div.ctools-modal-content .format-toggle label,
+#modalContent div.ctools-modal-content .format-toggle label,
 .format-toggle label {
   float: left;
-  margin-right: 5em;
+  margin-right: 5px;
   margin-top: 2px;
   font-weight: 400;
   display: block;
