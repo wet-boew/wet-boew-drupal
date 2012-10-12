@@ -27,7 +27,7 @@ function wetkit_search_facet_content_type_edit_form($form, &$form_state) {
       if ($facet = facetapi_facet_load($facet_name, $searcher)) {
         if ($string = facetapi_build_delta($searcher, $realm_name, $facet_name)) {
           if ($delta = array_search($string, $map)) {
-            switch($searcher) {
+            switch ($searcher) {
               case 'search_api@database_node_index':
                 $deltas[$delta] = 'DB: ' . $facet_name;
                 break;
