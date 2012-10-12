@@ -11,6 +11,7 @@ dependencies[] = media
 dependencies[] = media_internet
 dependencies[] = media_vimeo
 dependencies[] = media_youtube
+dependencies[] = panopoly_core
 dependencies[] = strongarm
 dependencies[] = wysiwyg
 dependencies[] = wysiwyg_filter
