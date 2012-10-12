@@ -53,3 +53,25 @@ function theme_wetkit_wetboew_status_messages($variables) {
   }
   return $output;
 }
+
+/**
+ * Theme function for table view
+ */
+function theme_wetkit_wetboew_tablefield_view($variables) {
+  $attributes = array(
+    'id' => 'tablefield-' . $variables['delta'],
+    'class' => array(
+      'wet-boew-zebra tablefield'
+    ),
+  );
+
+  return '<div id="tablefield-wrapper-' . $variables['delta'] . '" class="tablefield-wrapper">'
+    . theme('table',
+      array(
+        'header' => $variables['header'],
+        'rows' => $variables['rows'],
+        'attributes' => $attributes,
+      )
+    )
+    . '</div>';
+}
