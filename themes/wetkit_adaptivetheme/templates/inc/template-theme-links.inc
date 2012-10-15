@@ -34,6 +34,14 @@ function wetkit_adaptivetheme_links__menu_terms_bar($variables)  {
   global $language_url;
   $output = '';
 
+  // Custom Logic Based on Theme Selection (Internet, Intranet or Base)
+  if (variable_get('wetkit_wetboew_theme', 0) == 2) {
+    $theme_prefix = 'base';
+  }
+  else {
+    $theme_prefix = 'gcwu';
+  }
+
   if (count($links) > 0) {
     $output = '';
 
@@ -67,11 +75,11 @@ function wetkit_adaptivetheme_links__menu_terms_bar($variables)  {
       // Add first, last and active classes to the list of links to help out themers.
       if ($i == 1) {
         $class[] = 'first';
-        $class[] = 'gcwu-tc';
+        $class[] = $theme_prefix . '-tc';
       }
       if ($i == $num_links) {
         $class[] = 'last';
-        $class[] = 'gcwu-tr';
+        $class[] = $theme_prefix . '-tr';
       }
       if (isset($link['href']) && ($link['href'] == $_GET['q'] || ($link['href'] == '<front>' && drupal_is_front_page())) && (empty($link['language']) || $link['language']->language == $language_url->language)) {
         $class[] = 'active';
@@ -116,6 +124,14 @@ function wetkit_adaptivetheme_links__menu_footer_bar($variables) {
   global $language_url;
   $output = '';
 
+  // Custom Logic Based on Theme Selection (Internet, Intranet or Base)
+  if (variable_get('wetkit_wetboew_theme', 0) == 2) {
+    $theme_prefix = 'base';
+  }
+  else {
+    $theme_prefix = 'gcwu';
+  }
+
   if (count($links) > 0) {
     $output = '';
 
@@ -156,7 +172,7 @@ function wetkit_adaptivetheme_links__menu_footer_bar($variables) {
       }
       //Custom Override is here for last link
       if ($i == $num_links) {
-        $output .= '<li id="gcwu-gcft-ca"' . drupal_attributes(array('class' => $class)) . '><div>';
+        $output .= '<li id="' . $theme_prefix . '-gcft-ca"' . drupal_attributes(array('class' => $class)) . '><div>';
       }
       else {
         $output .= '<li' . drupal_attributes(array('class' => $class)) . '>';
@@ -212,6 +228,14 @@ function wetkit_adaptivetheme_links__menu_nav_bar($variables) {
   global $language_url;
   $output = '';
 
+  // Custom Logic Based on Theme Selection (Internet, Intranet or Base)
+  if (variable_get('wetkit_wetboew_theme', 0) == 2) {
+    $theme_prefix = 'base';
+  }
+  else {
+    $theme_prefix = 'gcwu';
+  }
+
   if (count($links) > 0) {
     $output = '';
 
@@ -251,7 +275,7 @@ function wetkit_adaptivetheme_links__menu_nav_bar($variables) {
       if (isset($link['href']) && ($link['href'] == $_GET['q'] || ($link['href'] == '<front>' && drupal_is_front_page())) && (empty($link['language']) || $link['language']->language == $language_url->language)) {
         $class[] = 'active';
       }
-      $output .= '<li id="gcwu-gcnb' . $i . '"' . drupal_attributes(array('class' => $class)) . '>';
+      $output .= '<li id="' . $theme_prefix . '-gcnb' . $i . '"' . drupal_attributes(array('class' => $class)) . '>';
 
       if (isset($link['href'])) {
         // Pass in $link as $options, they share the same keys.
