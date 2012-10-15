@@ -48,38 +48,26 @@ function wetkit_adaptivetheme_preprocess_maintenance_page(&$variables, $hook) {
 function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
   global $theme_key;
 
-  // Two examples of adding custom classes to the body.
-
   // Add a body class for the active theme name.
-  // $vars['classes_array'][] = drupal_html_class($theme_key);
+  $variables['classes_array'][] = drupal_html_class($theme_key);
 
   // Browser/platform sniff - adds body classes such as ipad, webkit, chrome etc.
-  // $vars['classes_array'][] = css_browser_selector();
+  $variables['classes_array'][] = css_browser_selector();
 
-  //Support for Intranet Theme
-  $variables['intranet'] = '';
-  if (variable_get('wetkit_wetboew_theme', 0) == 1) {
-    $variables['intranet'] = 'Enabled';
-    $variables['base_path'] = base_path();
-    $variables['path_to_web_usability'] = drupal_get_path('theme', 'wetkit_adaptivetheme');
-  }
-
-  //Assign other skip link variables
+  // Assign skip link variables
   $variables['skip_link_content_anchor'] = at_get_setting('skip_link_content_anchor');
   $variables['skip_link_text'] = t('Skip to main content');
   $variables['skip_link_nav_anchor'] = at_get_setting('skip_link_nav_anchor');
   $variables['skip_link2_text'] = t('Skip to footer');
 
-  //Detect Panels Layout if Exists
+  // Detect Panels Layout
   $panel_page = page_manager_get_current_page();
-
-  //Panels Layout
   if ($panel_page) {
-    //Detect Panels Layout
+    // Panels Layout
     if (isset($panel_page['handler']->conf['display']->renderer_handler->plugins['layout']['theme'])) {
       $layout = $panel_page['handler']->conf['display']->renderer_handler->plugins['layout']['theme'];
     }
-    //Detect Panelizer Panels Layout
+    // Panelizer Layout
     elseif  (isset($panel_page['handler']->conf['context'])) {
       $context = $panel_page['handler']->conf['context'];
       if (isset($panel_page['contexts'][$context]->data->panelizer['page_manager']->display->layout)) {
@@ -99,28 +87,27 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
       }
     }
   }
-  //Non Panels Layout
+  // Detect Blocks Layout
   else {
     if ($variables['is_front']) {
-        $variables['wetkit_col_array'] = 'wb-body';
+      $variables['wetkit_col_array'] = 'wb-body';
     }
     elseif (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
-        $variables['wetkit_col_array'] = 'wb-body-sec';
+      $variables['wetkit_col_array'] = 'wb-body-sec';
     }
     elseif (!empty($variables['page']['sidebar_first'])) {
-        $variables['wetkit_col_array'] = 'wb-body-sec';
+      $variables['wetkit_col_array'] = 'wb-body-sec';
     }
     elseif (!empty($variables['page']['sidebar_second'])) {
-        $variables['wetkit_col_array'] = 'wb-body-sec';
+      $variables['wetkit_col_array'] = 'wb-body-sec';
     }
     else {
-        $variables['wetkit_col_array'] = 'wb-body';
+      $variables['wetkit_col_array'] = 'wb-body';
     }
   }
 
-  // The body tag's classes are controlled by the $classes_array variable. To
-  // remove a class from $classes_array, use array_diff().
-  //$variables['classes_array'] = array_diff($variables['classes_array'], array('class-to-remove'));
+  // Remove Class(es)
+  $variables['classes_array'] = array_diff($variables['classes_array'], array('site-name-web-experience-toolkit'));
 }
 
 /**
@@ -133,23 +120,54 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
  */
 function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
 
-  $panel_page = page_manager_get_current_page();
-  if ($panel_page) {
-    // add a generic suggestion for all panel pages
-    $suggestions[] = 'page__panels';
-    // add the panel page machine name to the template suggestions
-    $suggestions[] = 'page__' . $panel_page['name'];
-    // merge the suggestions in to the existing suggestions (as more specific than the existing suggestions)
-    $variables['theme_hook_suggestions'] = array_merge($variables['theme_hook_suggestions'], $suggestions);
+  if (module_exists('page_manager')) {
+    // Page template suggestions for Panels pages
+    if($panel_page = page_manager_get_current_page()) {
+      if (variable_get('wetkit_wetboew_theme', 0) == 1) {
+        $suggestions[] = 'page__panels__intranet';
+      }
+      else if (variable_get('wetkit_wetboew_theme', 0) == 2) {
+        $suggestions[] = 'page__panels__base';
+      }
+      else {
+        $suggestions[] = 'page__panels__internet';
+      }
+      // add the panel page machine name to the template suggestions
+      $suggestions[] = 'page__' . $panel_page['name'];
+      // merge the suggestions in to the existing suggestions (as more specific than the existing suggestions)
+      $variables['theme_hook_suggestions'] = array_merge($variables['theme_hook_suggestions'], $suggestions);
+    }
+    // Page template suggestions for normal pages
+    else {
+      if (variable_get('wetkit_wetboew_theme', 0) == 1) {
+        $suggestions[] = 'page__intranet';
+      }
+      else if (variable_get('wetkit_wetboew_theme', 0) == 2) {
+        $suggestions[] = 'page__base';
+      }
+      else {
+        $suggestions[] = 'page__internet';
+      }
+      // merge the suggestions in to the existing suggestions (as more specific than the existing suggestions)
+      $variables['theme_hook_suggestions'] = array_merge($variables['theme_hook_suggestions'], $suggestions);
+    }
   }
 
-  // I18N Check
+  // Custom Logic Based on Theme Selection (Internet, Intranet or Base)
+  if (variable_get('wetkit_wetboew_theme', 0) == 2) {
+    $theme_prefix = 'base';
+  }
+  else {
+    $theme_prefix = 'gcwu';
+  }
+
+  // Internationalization Check
   $is_multilingual = 0;
   if (module_exists('i18n_menu')) {
     $is_multilingual = 1;
   }
 
-  //Set Sub Site Name
+  // Set Sub Site Name
   $variables['wetkit_sub_site'] = at_get_setting('wetkit_sub_site');
 
   // Header Navigation + Language Switcher
@@ -163,21 +181,21 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
     ));
   $nav_bar_markup = strip_tags($nav_bar_markup, '<li><a>');
   if (module_exists('wetkit_language')) {
-    $language_link_markup = '<li id="gcwu-gcnb-lang">' . strip_tags($variables['menu_lang_bar'], '<a><span>') . '</li>';
-    $variables['menu_gov_bar'] = '<ul>' . $nav_bar_markup . $language_link_markup . '</ul>';
+    $language_link_markup = '<li id="' . $theme_prefix . '-gcnb-lang">' . strip_tags($variables['menu_lang_bar'], '<a><span>') . '</li>';
+    $variables['menu_bar'] = '<ul>' . $nav_bar_markup . $language_link_markup . '</ul>';
   }
   else {
-    $variables['menu_gov_bar'] = '<ul>' . $nav_bar_markup . '</ul>';
+    $variables['menu_bar'] = '<ul>' . $nav_bar_markup . '</ul>';
   }
 
-  // Search
+  // Search Region
   if (module_exists('custom_search')) {
     // Custom Search
     //drupal_add_css(drupal_get_path('theme', 'wetkit_adaptivetheme') . '/css/custom_searchbar.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
     $variables['custom_search'] = drupal_get_form('custom_search_blocks_form_1');
     $variables['custom_search']['#id'] = 'search-form';
-    $variables['custom_search']['custom_search_blocks_form_1']['#id'] = 'gcwu-srch';
-    $variables['custom_search']['actions']['submit']['#id'] = 'gcwu-srch-submit';
+    $variables['custom_search']['custom_search_blocks_form_1']['#id'] = $theme_prefix . '-srch';
+    $variables['custom_search']['actions']['submit']['#id'] = $theme_prefix . '-srch-submit';
     $variables['search_box'] = render($variables['custom_search']);
   }
 
@@ -196,9 +214,9 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
       'class' => array('links', 'clearfix'),
       ),
     ));
-  $variables['menu_gov_terms_bar'] = $terms_bar_markup;
+  $variables['menu_terms_bar'] = $terms_bar_markup;
 
-  // Footer Region
+  // Mid Footer Region
   if (module_exists('menu_block')) {
     $config = menu_block_get_config('wetkit_menu_blocks-2');
     $data = menu_tree_build($config);
@@ -213,13 +231,7 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
       'class' => array('links', 'clearfix'),
       ),
     ));
-  $variables['menu_gov_footer_bar'] = $footer_bar_markup;
-
-  //Support for Intranet Theme
-  $variables['intranet'] = '';
-  if (variable_get('wetkit_wetboew_theme', 0) == 1) {
-    $variables['intranet'] = 'Enabled';
-  }
+  $variables['menu_footer_bar'] = $footer_bar_markup;
 }
 
 /**

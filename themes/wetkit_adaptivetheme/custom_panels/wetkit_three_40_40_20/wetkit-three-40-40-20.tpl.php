@@ -36,27 +36,21 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
       </div>
       <div class="clear"></div>
       <?php endif; ?>
-      <div id="gcwu-content">
-        <div class="region-wetkit-three-40-40-20-first span-3">
-          <div class="region-inner clearfix">
-            <?php print $content['wetkit_three_40_40_20_first']; ?>
-          </div>
-        </div>
-        <div class="region-wetkit-three-40-40-20-second span-3">
-          <div class="region-inner clearfix">
-            <?php print $content['wetkit_three_40_40_20_second']; ?>
-          </div>
+      <div class="region-wetkit-three-40-40-20-first span-3">
+        <div class="region-inner clearfix">
+          <?php print $content['wetkit_three_40_40_20_first']; ?>
         </div>
       </div>
-      <aside role="complementary">
-        <div id="gcwu-aside">
-          <div class="region-wetkit-three-40-40-20-third">
-            <div class="region-inner clearfix">
-              <?php print $content['wetkit_three_40_40_20_third']; ?>
-            </div>
-          </div>
+      <div class="region-wetkit-three-40-40-20-second span-3">
+        <div class="region-inner clearfix">
+          <?php print $content['wetkit_three_40_40_20_second']; ?>
         </div>
-      </aside>
+      </div>
+      <div id="wb-aside" class="region-wetkit-three-40-40-20-third span-2">
+        <div class="region-inner clearfix">
+          <?php print $content['wetkit_three_40_40_20_third']; ?>
+        </div>
+      </div>
       <div class="clear"></div>
     </div>
     <?php if ($content['wetkit_three_40_40_20_bottom']): ?>

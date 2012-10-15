@@ -23,8 +23,8 @@
 
 $path_to_wetkit_theme = drupal_get_path('theme', 'wetkit_adaptivetheme');
 
-require_once($path_to_wetkit_theme . '/inc/template-preprocess.inc');     // template prepreprocess functions
-require_once($path_to_wetkit_theme . '/inc/template-process.inc');        // template preprocess functions
-require_once($path_to_wetkit_theme . '/inc/template-theme-links.inc');    // template theme link functions
-require_once($path_to_wetkit_theme . '/inc/template-menu-blocks.inc');    // template menu blocks functions
-require_once($path_to_wetkit_theme . '/inc/template-breadcrumb.inc');    // template menu blocks functions
+require_once($path_to_wetkit_theme . '/templates/inc/template-preprocess.inc');    // template prepreprocess functions
+require_once($path_to_wetkit_theme . '/templates/inc/template-process.inc');       // template preprocess functions
+require_once($path_to_wetkit_theme . '/templates/inc/template-theme-links.inc');   // template theme link functions
+require_once($path_to_wetkit_theme . '/templates/inc/template-menu-blocks.inc');   // template menu blocks functions
+require_once($path_to_wetkit_theme . '/templates/inc/template-breadcrumb.inc');    // template menu blocks functions

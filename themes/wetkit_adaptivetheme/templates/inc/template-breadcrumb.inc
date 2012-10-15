@@ -37,40 +37,41 @@ function wetkit_adaptivetheme_breadcrumb($vars) {
 
   global $theme_key;
   $theme_name = $theme_key;
-
   $breadcrumb = $vars['breadcrumb'];
+  
+  // Custom Logic Based on Theme Selection (Internet, Intranet or Base)
+  if (variable_get('wetkit_wetboew_theme', 0) == 2) {
+    $theme_prefix = 'base';
+  }
+  else {
+    $theme_prefix = 'gcwu';
+  }
 
   if (at_get_setting('breadcrumb_display', $theme_name) == 1) {
-
     if (at_get_setting('breadcrumb_home', $theme_name) == 0) {
       array_shift($breadcrumb);
     }
-
     // Remove the rather pointless breadcrumbs for reset password and user
     // register pages, they link to the page you are on.
     if (arg(0) === 'user' && (arg(1) === 'password' || arg(1) === 'register')) {
       array_pop($breadcrumb);
     }
-
     if (!empty($breadcrumb)) {
-
       $separator = filter_xss_admin(at_get_setting('breadcrumb_separator', $theme_name));
-
       // Push the page title onto the end of the breadcrumb array
       if (at_get_setting('breadcrumb_title', $theme_name) == 1) {
         $breadcrumb[] = drupal_get_title();
       }
-
       $output = '';
       if (at_get_setting('breadcrumb_label', $theme_name) == 1) {
-        $output = '<div id="gcwu-bc">';
+        $output = '<div id="' . $theme_prefix . '-bc">';
         $output .= '<h2>' . t('Breadcrumb trail') . '</h2>';
       }
       else {
-        $output = '<div id="gcwu-bc">';
+        $output = '<div id="' . $theme_prefix . '-bc">';
         $output .= '<h2>' . t('Breadcrumb trail') . '</h2>';
       }
-      $output .= '<div id="gcwu-bc-in"><ol>';
+      $output .= '<div id="' . $theme_prefix . '-bc-in"><ol>';
       foreach ($breadcrumb as $key => $val) {
         if ($key == 0) {
           $output .= '<li>' . $val . '</li>';

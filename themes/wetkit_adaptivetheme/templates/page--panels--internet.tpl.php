@@ -92,60 +92,38 @@
           <div id="gcwu-gcnb">
             <h2><span><?php print t('Site menu'); ?></span></h2>
             <div id="gcwu-gcnb-in">
-              <?php if ($intranet): ?>
-                <div id="gcwu-intranetnb">
-                  <div id="gcwu-intranetnb-in">
-                    <?php print $menu_gov_bar; ?>
-                  </div>
-                </div>
-              <?php else: ?>
-                <?php print $menu_gov_bar; ?>
-              <?php endif; ?>
+              <?php print $menu_bar; ?>
               <div id="gcwu-gcnb-fip">
                 <div id="gcwu-sig">
                   <div id="gcwu-sig-in">
                     <?php if ($language->language == 'en'): ?>
                       <div id="gcwu-sig-eng" title="Government of Canada">
-                        <img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/css/theme-gcwu-fegc/images/sig-eng.gif" width="214" height="20" alt="Government of Canada">
+                        <img src="<?php print(base_path() . libraries_get_path('wet-boew'));?>/build/theme-gcwu-fegc/images/sig-eng.gif" width="214" height="20" alt="Government of Canada">
                       </div>
                     <?php endif;?>
                     <?php if ($language->language == 'fr'): ?>
                       <div id="gcwu-sig-fra" title="Gouvernement du Canada">
-                        <img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/css/theme-gcwu-fegc/images/sig-fra.gif" width="214" height="20" alt="Gouvernement du Canada">
+                        <img src="<?php print(base_path() . libraries_get_path('wet-boew'));?>/build/theme-gcwu-fegc/images/sig-fra.gif" width="214" height="20" alt="Gouvernement du Canada">
                       </div>
                     <?php endif;?>
                   </div>
                 </div>
-                <?php if ($intranet): ?>
-                  <div id="gcwu-wmms">
-                    <div id="gcwu-wmms-in">
-                      <?php if ($language->language == 'en'): ?>
-                      <div id="gcwu-wmms-fip" title="Symbol of the Government of Canada"><img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/css/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbol of the Government of Canada"></div>
-                      <?php endif;?>
-                      <?php if ($language->language == 'fr'): ?>
-                      <div id="gcwu-wmms-fip" title="Symbole du gouvernement du Canada"><img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/css/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbole du gouvernement du Canada"></div>
-                      <?php endif;?>
-                    </div>
-                  </div>
-                <?php endif; ?>
               </div>
             </div>
           </div>
         </nav>
         <div id="gcwu-bnr" role="banner">
           <div id="gcwu-bnr-in">
-            <?php if (!$intranet): ?>
-              <div id="gcwu-wmms">
-                <div id="gcwu-wmms-in">
-                  <?php if ($language->language == 'en'): ?>
-                    <div id="gcwu-wmms-fip" title="Symbol of the Government of Canada"><img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/css/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbol of the Government of Canada"></div>
-                  <?php endif;?>
-                  <?php if ($language->language == 'fr'): ?>
-                    <div id="gcwu-wmms-fip" title="Symbole du gouvernement du Canada"><img src="<?php print(base_path() . drupal_get_path('theme', 'wetkit_adaptivetheme'));?>/css/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbole du gouvernement du Canada"></div>
-                  <?php endif;?>
-                </div>
+            <div id="gcwu-wmms">
+              <div id="gcwu-wmms-in">
+                <?php if ($language->language == 'en'): ?>
+                  <div id="gcwu-wmms-fip" title="Symbol of the Government of Canada"><img src="<?php print(base_path() . libraries_get_path('wet-boew'));?>/build/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbol of the Government of Canada"></div>
+                <?php endif;?>
+                <?php if ($language->language == 'fr'): ?>
+                  <div id="gcwu-wmms-fip" title="Symbole du gouvernement du Canada"><img src="<?php print(base_path() . libraries_get_path('wet-boew'));?>/build/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbole du gouvernement du Canada"></div>
+                <?php endif;?>
               </div>
-            <?php endif; ?>
+            </div>
             <?php if ($site_name || $site_slogan): ?>
               <div id="gcwu-title">
                 <?php if ($site_name): ?>
@@ -168,11 +146,6 @@
             </section>
           </div>
         </div>
-        <?php if ($intranet): ?>
-          <div id="gcwu-subsite" class="gcwu-subsite-1">
-            <p><?php print l($wetkit_sub_site, '<front>'); ?></p>
-          </div>
-        <?php endif; ?>
         <nav role="navigation">
           <div id="gcwu-psnb">
             <h2><span><?php print t('Site menu'); ?></span></h2>
@@ -215,7 +188,7 @@
             <h3><?php print t('Site Footer'); ?></h3>
             <div id="gcwu-sft-in">
               <div id="gcwu-tctr">
-                <?php print $menu_gov_terms_bar; ?>
+                <?php print $menu_terms_bar; ?>
               </div>
               <div class="clear"></div>
               <!-- region: Footer -->
@@ -225,18 +198,16 @@
             </div>
           </div>
         </nav>
-        <?php if (!$intranet): ?>
-          <nav role="navigation">
-            <div id="gcwu-gcft">
-              <h3><?php print t('Government of Canada Footer'); ?></h3>
-              <div id="gcwu-gcft-in">
-                <div id="gcwu-gcft-fip">
-                  <?php print $menu_gov_footer_bar; ?>        
-                </div>
+        <nav role="navigation">
+          <div id="gcwu-gcft">
+            <h3><?php print t('Government of Canada Footer'); ?></h3>
+            <div id="gcwu-gcft-in">
+              <div id="gcwu-gcft-fip">
+                <?php print $menu_footer_bar; ?>        
               </div>
             </div>
-          </nav>
-        <?php endif; ?>
+          </div>
+        </nav>
       </footer>
     </div>
   </div>
