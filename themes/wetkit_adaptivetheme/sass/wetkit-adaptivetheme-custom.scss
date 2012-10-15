@@ -185,3 +185,26 @@ fieldset.custom_search-popup {
   background: #DDD;
   padding: 2px 4px;
 }
+
+#wb-aside {
+  display:inline;
+  margin-left:10px;
+  margin-right:10px;
+ ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  ul li{
+    margin:0;
+    padding:0;
+  }
+  img {
+    margin-left:0;
+    margin-right:0;	
+  }
+  .gcwu-minister-img img {
+    width:auto !important;
+    height:auto;
+  }
+}

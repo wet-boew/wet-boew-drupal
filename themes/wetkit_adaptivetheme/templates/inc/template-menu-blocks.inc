@@ -95,11 +95,20 @@ function wetkit_adaptivetheme_menu_tree__menu_wet_mid_footer($variables) {
 function wetkit_adaptivetheme_menu_link__menu_wet_mid_footer($variables) {
   $element = $variables['element'];
   $sub_menu = '';
+
+  // Custom Logic Based on Theme Selection (Internet, Intranet or Base)
+  if (variable_get('wetkit_wetboew_theme', 0) == 2) {
+    $theme_prefix = 'base';
+  }
+  else {
+    $theme_prefix = 'gcwu';
+  }
+
   if ($element['#below']) {
     $sub_menu = drupal_render($element['#below']);
   }
   if ($element['#original_link']['depth'] == 1) {
-    $output = '<h4 class="gcwu-col-head">' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</h4>';
+    $output = '<h4 class="' . $theme_prefix . '-col-head">' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</h4>';
     return '<section><div class="span-2">' . $output . '<ul>' . $sub_menu . '</ul>' . "</div></section>\n";
   }
   else {
