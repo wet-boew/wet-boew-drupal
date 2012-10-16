@@ -8,7 +8,7 @@ sh -e /etc/init.d/xvfb start
 sleep 3 # give xvfb some time to start
 drush runserver --server=builtin 8080 &
 sleep 3 # give xvfb some time to rebuild
-cd ../../..
+cd ..
 
 # Install + Run CasperJS Testing Suite
 git clone git://github.com/n1k0/casperjs.git
