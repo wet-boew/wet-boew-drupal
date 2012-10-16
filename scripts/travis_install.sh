@@ -16,9 +16,9 @@ REPO_USER=$(git config -l | grep remote.origin.url | cut -d/ -f4)
 git config -l
 git rev-parse HEAD
 git rev-parse origin
-git branch -r | cut -d' ' -f 3 | while read remote; do
-   echo ${remote} `git rev-parse ${remote}`
-done
+git rev-parse remote
+git ls-remote --heads origin
+git branch -r -v --no-abbrev
 
 # In place edit build-wetkit.make
 sed -i "s/master/${GIT_COMMIT}/g;s/wet-boew/$REPO_USER/1" ${WORKSPACE}/build-wetkit.make
