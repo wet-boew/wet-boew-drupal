@@ -15,7 +15,6 @@ GIT_COMMIT=$(git rev-parse HEAD)
 REPO_USER=$(git config -l | grep remote.origin.url | cut -d/ -f4)
 git config -l
 git rev-parse HEAD
-git log
 git rev-parse origin
 git branch -r | cut -d' ' -f 3 | while read remote; do
    echo ${remote} `git rev-parse ${remote}`
