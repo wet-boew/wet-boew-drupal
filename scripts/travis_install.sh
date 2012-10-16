@@ -13,6 +13,7 @@ phpenv rehash
 WORKSPACE=$(pwd)
 GIT_COMMIT=$(git rev-parse HEAD)
 REPO_USER=$(git config -l | grep remote.origin.url | cut -d/ -f4)
+git branch -a
 git config -l
 git rev-parse HEAD
 git rev-parse FETCH_HEAD
