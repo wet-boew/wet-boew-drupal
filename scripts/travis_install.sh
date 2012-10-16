@@ -17,11 +17,6 @@ git branch -a
 git config -l
 git rev-parse HEAD
 git rev-parse FETCH_HEAD
-git rev-parse origin
-git rev-parse remote
-git ls-remote --heads origin
-git branch -r -v --no-abbrev
-git rev-parse --remotes
 
 # In place edit build-wetkit.make
 sed -i "s/master/${GIT_COMMIT}/g;s/wet-boew/$REPO_USER/1" ${WORKSPACE}/build-wetkit.make
