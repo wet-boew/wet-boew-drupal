@@ -11,12 +11,8 @@ phpenv rehash
 
 # Set Up Vars
 WORKSPACE=$(pwd)
-GIT_COMMIT=$(git rev-parse HEAD)
+GIT_COMMIT=$(git show --pretty=%P HEAD | head -c8)
 REPO_USER=$(git config -l | grep remote.origin.url | cut -d/ -f4)
-git branch -a
-git config -l
-git rev-parse HEAD
-git rev-parse FETCH_HEAD
 
 # In place edit build-wetkit.make
 sed -i "s/master/${GIT_COMMIT}/g;s/wet-boew/$REPO_USER/1" ${WORKSPACE}/build-wetkit.make
