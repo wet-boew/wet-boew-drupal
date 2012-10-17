@@ -21,5 +21,6 @@ phpenv rehash
 
 # Drush Make
 drush make --prepare-install --no-gitinfofile --working-copy ${WORKSPACE}/build-wetkit.make drupal_wet --yes
+cd drupal_wet
 drush si wetkit wetkit_wetboew_selection_form.theme=wetkit_adaptivetheme --sites-subdir=default --db-url=mysql://root:@127.0.0.1/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name="Web Experience Toolkit" --yes
 drush cc all --yes
