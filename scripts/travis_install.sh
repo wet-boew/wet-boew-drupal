@@ -15,8 +15,10 @@ GIT_COMMIT=$(git show --pretty=%P HEAD | head -c8)
 REPO_USER=$(git config -l | grep remote.origin.url | cut -d/ -f4)
 
 # In place edit build-wetkit.make
+ls -al
 sed -i "s/master/${GIT_COMMIT}/g;s/wet-boew/$REPO_USER/1" ${WORKSPACE}/build-wetkit.make
 cat ${WORKSPACE}/build-wetkit.make
+ls -al
 sleep 3
 
 # Drush Make
