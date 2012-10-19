@@ -10,4 +10,4 @@ includes[] = drupal-org.make
 projects[wetkit][type] = profile
 projects[wetkit][download][type] = git
 projects[wetkit][download][url] = https://github.com/wet-boew/wet-boew-drupal.git
-projects[wetkit][download][revision] = master
+projects[wetkit][download][revision] = e290e531
