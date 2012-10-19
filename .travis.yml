@@ -8,7 +8,7 @@ mysql:
 before_script:
 - mysql -e 'create database wetkit_db;'
 - pear channel-discover pear.drush.org
-- pear install drush/drush-5.4.0
+- pear install drush/drush-5.7.0
 - phpenv rehash
 - sleep 5
 - drush make build-wetkit.make github_wet_distro
