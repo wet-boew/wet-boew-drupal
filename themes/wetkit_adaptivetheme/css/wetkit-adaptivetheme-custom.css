@@ -39,6 +39,8 @@ fieldset.custom_search-popup .form-item { text-align: left; }
 /* Drupal Contrib: Panels */
 .panels-ipe-placeholder h3 { background: none; padding: 0px; }
 
+.panels-ipe-newblock li { list-style: none; float: left; }
+
 .page-node-edit .pane-page-tabs #tabs { margin: 20px 0px 0px 0px; }
 
 .page-node-edit .pane-page-tabs ul.tabs { margin: 0px 0px; }
