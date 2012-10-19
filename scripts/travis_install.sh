@@ -8,6 +8,7 @@ mysql -e 'create database wetkit_db;'
 pear channel-discover pear.drush.org
 pear install drush/drush-5.4.0
 phpenv rehash
+drush make build-wetkit.make ../github_wet_distro
 
 # Set Up Vars
 #WORKSPACE=$(pwd)
@@ -20,7 +21,6 @@ phpenv rehash
 #phpenv rehash
 
 # Drush Make Build
-drush make build-wetkit.make ../github_wet_distro
 #drush make --prepare-install --no-gitinfofile --working-copy ${WORKSPACE}/build-wetkit.make drupal_wet --yes
 #cd drupal_wet
 #drush si wetkit wetkit_wetboew_selection_form.theme=wetkit_adaptivetheme --sites-subdir=default --db-url=mysql://root:@127.0.0.1/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name="Web Experience Toolkit" --yes
