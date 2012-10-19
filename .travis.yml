@@ -10,4 +10,5 @@ before_script:
 - pear channel-discover pear.drush.org
 - pear install drush/drush-5.4.0
 - phpenv rehash
-- drush make build-wetkit.make ../github_wet_distro
+- sleep 5
+- drush make build-wetkit.make github_wet_distro
