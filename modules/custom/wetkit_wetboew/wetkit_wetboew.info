@@ -27,6 +27,7 @@ dependencies[] = password_policy
 dependencies[] = search
 dependencies[] = shortcut
 dependencies[] = strongarm
+dependencies[] = transliteration
 dependencies[] = views
 dependencies[] = views_atom
 dependencies[] = wetkit_box

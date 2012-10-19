@@ -8,7 +8,7 @@ core = 7.x
 projects[facetapi][version] = 1.1
 projects[facetapi][subdir] = contrib
 
-projects[search_api][version] = 1.2
+projects[search_api][version] = 1.3
 projects[search_api][subdir] = contrib
 projects[search_api][patch][1698098] = http://drupal.org/files/search-api-disabled-index-configure-link.patch
 

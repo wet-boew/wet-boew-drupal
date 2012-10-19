@@ -1,6 +1,7 @@
 <?php
 
 include_once('wetkit_pages.features.inc');
+include_once('wetkit_pages.defaultconfig.inc');
 
 /**
  * Implementation of drupal_alter() to update menu block settings in
