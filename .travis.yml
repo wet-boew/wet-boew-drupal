@@ -8,6 +8,13 @@ mysql:
   username: root
   encoding: utf8
 
-before_script: ./scripts/travis_install.sh
+before_script:
 
-script: ./scripts/travis_test.sh
+# MySQL Create Database
+- mysql -e 'create database wetkit_db;'
+
+# Install Drush
+- pear channel-discover pear.drush.org
+- pear install drush/drush-5.4.0
+- phpenv rehash
+- drush make build-wetkit.make ../github_wet_distro
