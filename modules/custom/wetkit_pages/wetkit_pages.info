@@ -46,7 +46,4 @@ features[variable][] = node_preview_wetkit_page_other
 features[variable][] = node_submitted_wetkit_page
 features[variable][] = node_submitted_wetkit_page_other
 features[variable][] = panelizer_defaults_node_wetkit_page
-features[variable][] = panelizer_node:wetkit_page_allowed_layouts
-features[variable][] = panelizer_node:wetkit_page_allowed_types
-features[variable][] = panelizer_node:wetkit_page_default
 features[variable][] = save_continue_wetkit_page

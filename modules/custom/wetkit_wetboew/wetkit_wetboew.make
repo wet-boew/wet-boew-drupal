@@ -3,7 +3,7 @@
 api = 2
 core = 7.x
 
-; Tailor app for WetKit
+; Modules for WetKit
 
 projects[advanced_help][version] = 1.0
 projects[advanced_help][subdir] = contrib
@@ -21,6 +21,13 @@ projects[boxes][subdir] = contrib
 projects[context][version] = 3.0-beta2
 projects[context][subdir] = contrib
 
+projects[better_formats][version] = 1.x-dev
+projects[better_formats][subdir] = contrib
+projects[better_formats][type] = module
+projects[better_formats][download][type] = git
+projects[better_formats][download][revision] = 9106bcf
+projects[better_formats][download][branch] = 7.x-1.x
+
 projects[custom_formatters][version] = 2.2
 projects[custom_formatters][subdir] = contrib
 projects[custom_formatters][type] = module
@@ -36,6 +43,9 @@ projects[diff][download][type] = git
 projects[diff][download][revision] = 27c9185
 projects[diff][download][branch] = 7.x-2.x
 projects[diff][patch][1285090] = http://drupal.org/files/diff-hide-show-markup-372957-93.patch
+
+projects[ds][version] = 2.0-beta1
+projects[ds][subdir] = contrib
 
 projects[fences][version] = 1.0
 projects[fences][subdir] = contrib
@@ -60,6 +70,9 @@ projects[linkchecker][download][type] = git
 projects[linkchecker][download][revision] = a920eb0
 projects[linkchecker][download][branch] = 7.x-1.x
 
+projects[menu_views][version] = 1.3
+projects[menu_views][subdir] = contrib
+
 projects[password_policy][version] = 1.0-rc3
 projects[password_policy][subdir] = contrib
 
@@ -71,7 +84,13 @@ projects[views_atom][download][revision] = 96e735a2
 projects[views_atom][download][branch] = 7.x-1.x
 projects[views_atom][patch][1632362] = http://drupal.org/files/views_atom-Update_feeds_item_table_name-1632362-1.patch
 
-; Tailor WetKit Theme for WetKit
+projects[rules][version] = 2.2
+projects[rules][subdir] = contrib
+
+projects[transliteration][version] = 3.1
+projects[transliteration][subdir] = contrib
+
+; Themes for WetKit
 
 projects[adaptivetheme][version] = 3.1
 
@@ -90,23 +109,7 @@ projects[rubik][patch][1440054] = http://drupal.org/files/patch_commit_96121294b
 
 projects[tao][version] = 3.0-beta4
 
-; MODIFICATION
-
-projects[ds][version] = 2.0-beta1
-projects[ds][subdir] = contrib
-
-projects[rules][version] = 2.2
-projects[rules][subdir] = contrib
-
-projects[menu_views][version] = 1.3
-projects[menu_views][subdir] = contrib
-
-projects[better_formats][version] = 1.x-dev
-projects[better_formats][subdir] = contrib
-projects[better_formats][type] = module
-projects[better_formats][download][type] = git
-projects[better_formats][download][revision] = 9106bcf
-projects[better_formats][download][branch] = 7.x-1.x
+; Libraries for WetKit
 
 libraries[wet-boew][download][type] = git
 libraries[wet-boew][download][url] = https://github.com/wet-boew/wet-boew.git

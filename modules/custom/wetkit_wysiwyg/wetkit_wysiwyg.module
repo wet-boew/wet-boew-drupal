@@ -29,7 +29,7 @@ function wetkit_wysiwyg_configure_form($form, &$form_state) {
       '1' => 'Show',
       '0' => 'Do Not Show',
     ),
-    '#default_value' => variable_get('wetkit_wysiwyg_show_format_details', FALSE),
+    '#default_value' => variable_get('wetkit_wysiwyg_show_format_details', 0),
     '#description' => t('Do you want WetKit to show the help text and text format guidelines?'),
   );
 
