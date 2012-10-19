@@ -1,13 +1,14 @@
 language: php
-
 php:
   - 5.4
-
 mysql:
   database: wetkit_db
   username: root
   encoding: utf8
-
-before_script: ./scripts/travis_install.sh
-
-script: ./scripts/travis_test.sh
+before_script:
+- mysql -e 'create database wetkit_db;'
+- pear channel-discover pear.drush.org
+- pear install drush/drush-5.7.0
+- phpenv rehash
+- sleep 5
+- drush make build-wetkit.make github_wet_distro
