@@ -8,6 +8,7 @@ dependencies[] = custom_search
 dependencies[] = custom_search_blocks
 dependencies[] = custom_search_i18n
 dependencies[] = facetapi
+dependencies[] = features
 dependencies[] = page_manager
 dependencies[] = panopoly_core
 dependencies[] = search
