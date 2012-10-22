@@ -66,8 +66,8 @@ function wetkit_search_theme($existing, $type, $theme, $path) {
     );
 }
 
-/** 
- * Implementation of hook_modules_enabled()
+/**
+ * Implements hook_modules_enabled().
  */
 function wetkit_search_modules_enabled($modules) {
 

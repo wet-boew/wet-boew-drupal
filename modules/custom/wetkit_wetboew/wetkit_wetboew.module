@@ -9,7 +9,7 @@ include_once('wetkit_wetboew.menu_wetkit_load.inc');
 include_once('theme/theme.inc');
 
 /**
- * Implementation of hook_menu
+ * Implements hook_menu().
  */
 function wetkit_wetboew_menu() {
 
@@ -38,7 +38,7 @@ function wetkit_wetboew_menu() {
   );
 
   // Add settings pages for WetKit and WetKit Apps
-  foreach(module_list() as $module) {
+  foreach (module_list() as $module) {
     $app_info = module_invoke($module, 'apps_app_info');
     if (!empty($app_info) && !empty($app_info['configure form'])) {
       $module_info = drupal_parse_info_file(drupal_get_path('module', $module) . '/' . $module . '.info');
@@ -50,7 +50,8 @@ function wetkit_wetboew_menu() {
           'page arguments' => array($app_info['configure form']),
           'access arguments' => array('administer site configuration'),
         );
-      } else if (!empty($module_info['package']) && $module_info['package'] == 'WetKit Apps') {
+      }
+      elseif (!empty($module_info['package']) && $module_info['package'] == 'WetKit Apps') {
         $items['admin/wetkit/app_settings/' . $module] = array(
           'title' => $module_info['name'],
           'description' => 'This is the configuration screen for ' . $module_info['name'],
@@ -82,7 +83,7 @@ function wetkit_wetboew_form_alter(&$form, &$form_state, $form_id) {
     //TODO: Upstream this fix to Panopoly
     $form['field_archived_content'] = array('#language' => NULL);
   }
-  
+
   // Remove the description from the shared widget
   if (!empty($form['field_share_widget'])) {
     $form['options']['field_share_widget'] = $form['field_share_widget'];
@@ -204,7 +205,7 @@ function wetkit_wetboew_theme($existing, $type, $theme, $path) {
 function wetkit_wetboew_filter_xss($string, $allowed_tags = array('a', 'em', 'strong', 'cite', 'code', 'ul', 'ol', 'li', 'dl', 'dt', 'dd', 'br')) {
   return filter_xss($string, $allowed_tags);
 }
-  
+
 /**
  * Implements of hook_ctools_plugin_directory().
  */
@@ -287,9 +288,9 @@ function wetkit_wetboew_libraries_info() {
     'files' => array(
       'css' => array(
         'build/grids/css/util-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
-        'build/grids/css/util-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),        
+        'build/grids/css/util-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
         'build/js/css/pe-ap-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
-        'build/js/css/pe-ap-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),     
+        'build/js/css/pe-ap-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
         'build/theme-gcwu-fegc/css/theme-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
         'build/theme-gcwu-fegc/css/theme-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
       ),
@@ -306,9 +307,9 @@ function wetkit_wetboew_libraries_info() {
         'files' => array(
           'css' => array(
             'build/grids/css/util-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
-            'build/grids/css/util-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),        
+            'build/grids/css/util-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
             'build/js/css/pe-ap-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
-            'build/js/css/pe-ap-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),     
+            'build/js/css/pe-ap-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
             'build/theme-base/css/theme-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
             'build/theme-base/css/theme-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
           ),
@@ -328,9 +329,9 @@ function wetkit_wetboew_libraries_info() {
         'files' => array(
           'css' => array(
             'build/grids/css/util-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
-            'build/grids/css/util-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),        
+            'build/grids/css/util-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
             'build/js/css/pe-ap-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
-            'build/js/css/pe-ap-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),     
+            'build/js/css/pe-ap-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
             'build/theme-gcwu-intranet/css/theme-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
             'build/theme-gcwu-intranet/css/theme-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
           ),
@@ -357,7 +358,7 @@ function wetkit_wetboew_check_variant($libary, $variant) {
   if ((variable_get('wetkit_wetboew_theme', 0) == 1) && ($variant == 'intranet')) {
     return TRUE;
   }
-  else if ((variable_get('wetkit_wetboew_theme', 0) == 2) && ($variant == 'base_theme')) {
+  elseif ((variable_get('wetkit_wetboew_theme', 0) == 2) && ($variant == 'base_theme')) {
     return TRUE;
   }
   else {
@@ -398,7 +399,6 @@ function wetkit_wetboew_menu_block_blocks() {
 
 /**
  * Menu callback: Provide the administration overview page.
- * 
  * Adapted from system_admin_config_page()
  */
 function wetkit_wetboew_config_page() {

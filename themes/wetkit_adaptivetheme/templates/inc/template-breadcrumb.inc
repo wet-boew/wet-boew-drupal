@@ -38,7 +38,7 @@ function wetkit_adaptivetheme_breadcrumb($vars) {
   global $theme_key;
   $theme_name = $theme_key;
   $breadcrumb = $vars['breadcrumb'];
-  
+
   // Custom Logic Based on Theme Selection (Internet, Intranet or Base)
   if (variable_get('wetkit_wetboew_theme', 0) == 2) {
     $theme_prefix = 'base';
@@ -76,7 +76,7 @@ function wetkit_adaptivetheme_breadcrumb($vars) {
         if ($key == 0) {
           $output .= '<li>' . $val . '</li>';
         }
-        else if (!empty($separator)) {
+        elseif (!empty($separator)) {
           $output .= '<li>' . '<span>' . $separator . '</span>' . $val . '</li>';
         }
         else {
