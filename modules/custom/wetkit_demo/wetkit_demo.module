@@ -15,7 +15,25 @@ function wetkit_demo_menu_alter(&$items) {
 }
 
 /**
+ * Theme callback for the block configuration pages.
+ *
+ * @param $theme
+ *   The theme whose blocks are being configured. If not set, the default theme
+ *   is assumed.
+ * @return
+ *   The theme that should be used for the block configuration page, or NULL
+ *   to indicate that the default theme should be used.
+ */
+
+/**
  * Implements hook_ctools_plugin_directory().
+ *
+ * @param type $module
+ *   The module the plugin resides in for CTools
+ * @param type $plugin
+ *   The plugins name to reference for CTools
+ * @return type
+ *   The plugins autodetected by CTools
  */
 function wetkit_demo_ctools_plugin_directory($module, $plugin) {
   return 'plugins/' . $plugin;
@@ -54,32 +72,4 @@ function wetkit_demo_init() {
     }
     variable_set('wetkit_demo_load', 0);
   }
-}
-
-/* HELPER FUNCTIONS */
-
-/**
- * Implements _add_custom_menu().
- */
-function _demo_add_custom_menu($link, $title, $desc, $menu, $weight, $language, $mlid = 0, $plid = 0) {
-  $options = array();
-  if ($desc != NULL) {
-    $options += array(
-      'attributes' => array(
-        'title' => $desc,
-      ),
-    );
-  }
-  $item = array(
-    'link_path' => $link,
-    'link_title' => $title,
-    'menu_name' => $menu,
-    'weight' => $weight,
-    'language' => $language,
-    'customized' => 1,
-    'options' => $options,
-    'mlid' => $mlid,
-    'plid' => $plid,
-  );
-  return menu_link_save($item);
 }

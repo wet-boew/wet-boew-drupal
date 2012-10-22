@@ -7,6 +7,11 @@ include_once('wetkit_pages.defaultconfig.inc');
  * Implementation of drupal_alter() to update menu block settings in
  * case of IPE callback magic. This will only work in limited cases
  * but will be fixed when the page refreshes.
+ *
+ * @param boolean $tree
+ *   The menu tree using menu blocks
+ * @param type $config
+ *   The configuration for the menu tree using menu blocks
  */
 function wetkit_pages_menu_block_tree_alter($tree, $config) {
   if (arg(0) == 'panels' && arg(1) == 'ajax') {
@@ -34,6 +39,13 @@ function wetkit_pages_menu() {
 
 /**
  * Implements hook_form_alter().
+ *
+ * @param type $form
+ *   Nested array of form elements that comprise the form.
+ * @param type $form_state
+ *   A keyed array containing the current state of the form.
+ * @param type $form_id 
+ *   String representing the name of the form itself.
  */
 function wetkit_pages_form_alter(&$form, &$form_state, $form_id) {
   // Improve the wizard for our custom adding a landing page wizard
@@ -98,6 +110,11 @@ function wetkit_pages_form_alter(&$form, &$form_state, $form_id) {
 
 /**
  * Custom Validate Function to Help Improve The Landing Page Options
+ *
+ * @param type $form
+ *   Nested array of form elements that comprise the form.
+ * @param type $form_state
+ *   A keyed array containing the current state of the form.
  */
 function wetkit_pages_landing_page_wizard_validate($form, &$form_state) {
 
@@ -114,6 +131,11 @@ function wetkit_pages_landing_page_wizard_validate($form, &$form_state) {
 
 /**
  * Custom Submit Function to Finish Up
+ *
+ * @param type $form
+ *   Nested array of form elements that comprise the form.
+ * @param type $form_state
+ *   A keyed array containing the current state of the form.
  */
 function wetkit_pages_landing_page_wizard_submit($form, &$form_state) {
 
@@ -139,6 +161,11 @@ function wetkit_pages_landing_page_wizard_submit($form, &$form_state) {
 
 /**
  * Implements hook_module_implements_alter().
+ *
+ * @param type $implementations
+ *   An array keyed by the module's name. The value of each item corresponds to a $group.
+ * @param type $hook
+ *   The name of the module hook being implemented.
  */
 function wetkit_pages_module_implements_alter(&$implementations, $hook) {
   if ($hook == 'form_alter') {
