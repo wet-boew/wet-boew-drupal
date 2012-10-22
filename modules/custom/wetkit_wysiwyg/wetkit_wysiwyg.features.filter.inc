@@ -356,7 +356,6 @@ function wetkit_wysiwyg_filter_default_formats() {
             8 => 'wet-boew-*',
             10 => 'wysiwyg-break',
             12 => 'panopoly-*',
-            
           ),
           'rule_valid_ids' => array(),
           'rule_style_urls' => array(),
