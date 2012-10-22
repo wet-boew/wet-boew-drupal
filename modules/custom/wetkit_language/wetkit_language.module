@@ -8,6 +8,13 @@ include_once('wetkit_language.features.inc');
 
 /**
  * Implements hook_form_alter().
+ *
+ * @param type $form
+ *   Nested array of form elements that comprise the form.
+ * @param type $form_state
+ *   A keyed array containing the current state of the form.
+ * @param type $form_id 
+ *   String representing the name of the form itself.
  */
 function wetkit_language_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'wetkit_page_node_form' || $form_id == 'wetkit_page_other_node_form') {
@@ -17,6 +24,9 @@ function wetkit_language_form_alter(&$form, &$form_state, $form_id) {
 
 /**
  * Implements hook_preprocess_page().
+ *
+ * @param array $vars
+ *   The variables array that can be modified in place.
  */
 function wetkit_language_preprocess_page(&$vars) {
   //Language Switcher Code
@@ -25,6 +35,9 @@ function wetkit_language_preprocess_page(&$vars) {
 
 /**
  * Implements hook_preprocess_panes_pane().
+ *
+ * @param array $vars
+ *   The variables array that can be modified in place.
  */
 function wetkit_language_preprocess_panels_pane(&$vars) {
   if ($vars['pane']->type == 'node_links') {
@@ -64,6 +77,11 @@ function wetkit_language_language_init() {
 
 /**
  * Implements _language_switcher_wetkit().
+ *
+ * @global type $language
+ *   The global language identifier
+ * @return type
+ *   Returns the language switcher
  */
 function _language_switcher_wetkit() {
   global $language;
@@ -87,7 +105,7 @@ function _language_switcher_wetkit() {
   }
 
   if (count($languages[1])>1) {
-    $lang_switches = array();
+    $lang_switcher = array();
     foreach ($languages[1] as $lang) {
       if ($lang->language != $language->language) {
         $modifier = $lang->native;
@@ -100,10 +118,10 @@ function _language_switcher_wetkit() {
           $path = 'taxonomy/term/' . $language_terms[$lang->language]->tid;
         }
         $attributes = array('class' => 'link', 'lang' => $lang->language);
-        $lang_switches[] = l($modifier, $path, array('attributes' => $attributes, 'language' => $lang));
+        $lang_switcher[] = l($modifier, $path, array('attributes' => $attributes, 'language' => $lang));
       }
     }
-    return implode('<br />', $lang_switches);
+    return implode('<br />', $lang_switcher);
   }
 }
 
