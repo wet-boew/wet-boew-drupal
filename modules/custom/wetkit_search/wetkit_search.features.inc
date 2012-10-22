@@ -107,7 +107,8 @@ function wetkit_search_default_search_api_index() {
       }
     },
     "enabled" : "1",
-    "read_only" : "0"
+    "read_only" : "0",
+    "metatags" : []
   }');
   $items['node_index'] = entity_import('search_api_index', '{
     "name" : "Solr Node Index",
@@ -181,7 +182,8 @@ function wetkit_search_default_search_api_index() {
       }
     },
     "enabled" : "0",
-    "read_only" : "0"
+    "read_only" : "0",
+    "metatags" : []
   }');
   return $items;
 }
@@ -268,7 +270,8 @@ function wetkit_search_default_search_api_server() {
         }
       }
     },
-    "enabled" : "1"
+    "enabled" : "1",
+    "metatags" : []
   }');
   $items['solr_server'] = entity_import('search_api_server', '{
     "name" : "Solr Server",
@@ -285,7 +288,8 @@ function wetkit_search_default_search_api_server() {
       "retrieve_data" : 0,
       "highlight_data" : 0
     },
-    "enabled" : "0"
+    "enabled" : "0",
+    "metatags" : []
   }');
   return $items;
 }
