@@ -18,12 +18,16 @@ projects[wysiwyg_filter][subdir] = contrib
 projects[wysiwyg_template][version] = 2.7
 projects[wysiwyg_template][subdir] = contrib
 
-; WetKit - Contrib - LinkIt
+; The WYSIWYG Helpers
 
 projects[linkit][version] = 2.5
 projects[linkit][subdir] = contrib
 
-; Include our WYSIWYG editors
+projects[caption_filter][version] = 1.2
+projects[caption_filter][subdir] = contrib
+projects[caption_filter][patch][1432092] = http://drupal.org/files/caption-button-and-image-1432092-7.patch
+
+; Include our Editors
 
 ;libraries[tinymce][download][type] = git
 ;libraries[tinymce][download][revision] = 30e5055
