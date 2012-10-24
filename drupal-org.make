@@ -40,9 +40,9 @@ projects[panopoly_widgets][download][branch] = 7.x-1.x
 projects[panopoly_admin][version] = 1.x-dev
 projects[panopoly_admin][subdir] = panopoly
 projects[panopoly_admin][download][type] = git
-projects[panopoly_admin][download][revision] = 2a78b40
+projects[panopoly_admin][download][revision] = 5ff7d19
 projects[panopoly_admin][download][branch] = 7.x-1.x
-projects[panopoly_admin][patch][1784676] = http://drupal.org/files/remove_simplified_menu_admin-1784676-14.patch
+projects[panopoly_admin][patch][1784676] = http://drupal.org/files/remove-simplified-menu-1784676-15.patch
 
 projects[panopoly_users][version] = 1.x-dev
 projects[panopoly_users][subdir] = panopoly
