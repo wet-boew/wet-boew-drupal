@@ -265,19 +265,6 @@ function wetkit_wetboew_ctools_plugin_directory($module, $plugin) {
 }
 
 /**
- * Implements hook_page_alter().
- *
- * @param boolean $page
- *   Page alter array
- */
-function wetkit_wetboew_page_alter(&$page) {
-  // Hide Toolbar for those who can access the Admin Menu.
-  if (user_access('access administration menu') && !empty($page['page_top']['toolbar'])) {
-    $page['page_top']['toolbar']['#access'] = FALSE;
-  }
-}
-
-/**
  * Implements hook_enable().
  */
 function wetkit_wetboew_init() {
