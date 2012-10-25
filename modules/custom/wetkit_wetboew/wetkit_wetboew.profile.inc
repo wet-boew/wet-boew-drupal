@@ -69,6 +69,7 @@ function wetkit_wetboew_selection_form_submit($form, &$form_state) {
     variable_set('theme_' . $theme . '_settings', $theme_data[$theme]->info['settings']);
   }
 
+  module_enable(array('admin_menu', 'admin_menu_toolbar'));
   // Flush theme caches so things are right
   system_rebuild_theme_data();
   drupal_theme_rebuild();
