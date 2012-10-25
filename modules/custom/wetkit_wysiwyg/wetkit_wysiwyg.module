@@ -106,15 +106,17 @@ function wetkit_wysiwyg_element_info_alter(&$type) {
  */
 function wetkit_wysiwyg_filter_process_format($element) {
 
-  // Set the element above the WYSIWYG textarea
-  $element['format']['#weight'] = 1;
-  $element['format']['#prefix'] = '<div class="format-toggle">';
-  $element['format']['#suffix'] = '</div><div class="clearfix"></div>';
-  unset($element['format']['#type']);
-  $element['format']['format']['#title'] = 'Editor: ';
+  // Do not auto submit the form due to changes of the filter
+  $element['format']['format']['#attributes']['class'][] = 'ctools-auto-submit-exclude';
 
   // Do not show the guidelines and help text for text formatters
-  if (!variable_get('panopoly_wysiwyg_show_format_details', FALSE)) {
+  // Also format this all a bit different so that it looks right
+  if (!variable_get('wetkit_wysiwyg_show_format_details', FALSE)) {
+    $element['format']['#weight'] = 1;
+    $element['format']['#prefix'] = '<div class="format-toggle">';
+    $element['format']['#suffix'] = '</div><div class="clearfix"></div>';
+    unset($element['format']['#type']);
+    $element['format']['format']['#title'] = 'Editor: ';
     $element['format']['help']['#access'] = FALSE;
     $element['format']['guidelines']['#access'] = FALSE;
   }
