@@ -17,3 +17,4 @@ Key Features
 * Addition of Translation .po files
 * Addition of French Language Support
 * Integration of an Accessibility Checker for TinyMCE
+* Support for Caption Filter's WYSIWYG Captions

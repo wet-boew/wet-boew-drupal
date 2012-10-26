@@ -8,13 +8,6 @@ core = 7.x
 projects[advanced_help][version] = 1.0
 projects[advanced_help][subdir] = contrib
 
-projects[admin_menu][version] = 3.x-dev
-projects[admin_menu][subdir] = contrib
-projects[admin_menu][download][type] = git
-projects[admin_menu][download][revision] = ed6295c
-projects[admin_menu][download][branch] = 7.x-3.x
-projects[admin_menu][patch][1772766] = http://drupal.org/files/admin_menu_toolbar_ctools_automodal-1772766_01.patch
-
 projects[boxes][version] = 1.0
 projects[boxes][subdir] = contrib
 
@@ -54,14 +47,6 @@ projects[fences][download][type] = git
 projects[fences][download][revision] = d9ca337
 projects[fences][download][branch] = 7.x-1.x
 projects[fences][patch][1561244] = http://drupal.org/files/undefined-index-1561244-7.patch
-
-projects[jquery_update][version] = 2.x-dev
-projects[jquery_update][subdir] = contrib
-projects[jquery_update][type] = module
-projects[jquery_update][download][type] = git
-projects[jquery_update][download][revision] = 5d2a4b2
-projects[jquery_update][download][branch] = 7.x-2.x
-projects[jquery_update][patch][1524944] = http://drupal.org/files/allow-different-version-for-admin-pages-1524944-6.patch
 
 projects[linkchecker][version] = 1.x-dev
 projects[linkchecker][type] = module
