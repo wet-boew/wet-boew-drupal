@@ -10,15 +10,6 @@
 function wetkit_wetboew_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: access administration menu.
-  $permissions['access administration menu'] = array(
-    'name' => 'access administration menu',
-    'roles' => array(
-      0 => 'administrative user',
-    ),
-    'module' => 'admin_menu',
-  );
-
   // Exported permission: access administration pages.
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',

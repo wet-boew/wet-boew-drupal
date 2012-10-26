@@ -53,3 +53,12 @@ body.maintenance-page #logo {
   border: none;
   background: none;
 }
+
+/*
+ * NavBar Styles
+ */
+
+#navbar-actions li,
+#navbar-user li {
+  border: none;
+}

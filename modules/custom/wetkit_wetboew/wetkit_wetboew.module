@@ -166,7 +166,7 @@ function wetkit_wetboew_configure_form_submit($form, &$form_state) {
  */
 function wetkit_wetboew_css_alter(&$css) {
   // Installs the jquery.ui themeroller theme to the theme.
-  if (isset($css['misc/ui/jquery.ui.theme.css']) && user_is_logged_in()) {
+  if (isset($css['misc/ui/jquery.ui.theme.css']) && ((arg(0) == 'node' && arg(1) == 'edit') || (arg(0) == 'node' && arg(1) == 'add'))) {
     $css['misc/ui/jquery.ui.theme.css']['data'] = drupal_get_path('module', 'panopoly_core') . '/css/panopooly-jquery-ui-theme.css';
   }
   else {
@@ -262,19 +262,6 @@ function wetkit_wetboew_filter_xss($string, $allowed_tags = array('a', 'em', 'st
  */
 function wetkit_wetboew_ctools_plugin_directory($module, $plugin) {
   return 'plugins/' . $plugin;
-}
-
-/**
- * Implements hook_page_alter().
- *
- * @param boolean $page
- *   Page alter array
- */
-function wetkit_wetboew_page_alter(&$page) {
-  // Hide Toolbar for those who can access the Admin Menu.
-  if (user_access('access administration menu') && !empty($page['page_top']['toolbar'])) {
-    $page['page_top']['toolbar']['#access'] = FALSE;
-  }
 }
 
 /**
