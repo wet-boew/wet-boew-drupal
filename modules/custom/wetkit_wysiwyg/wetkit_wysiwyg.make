@@ -25,7 +25,7 @@ projects[linkit][subdir] = contrib
 
 projects[caption_filter][version] = 1.2
 projects[caption_filter][subdir] = contrib
-projects[caption_filter][patch][1432092] = http://drupal.org/files/caption-button-and-image-1432092-7.patch
+projects[caption_filter][patch][1432092] = http://drupal.org/files/caption-button-and-image-1432092-8_0.patch
 
 ; Include our Editors
 
