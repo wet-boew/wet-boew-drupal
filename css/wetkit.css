@@ -62,3 +62,11 @@ body.maintenance-page #logo {
 #navbar-user li {
   border: none;
 }
+
+/*
+ * IPE Styles
+ */
+ 
+.panels-ipe-newblock ul {
+  margin: 0px;
+}
