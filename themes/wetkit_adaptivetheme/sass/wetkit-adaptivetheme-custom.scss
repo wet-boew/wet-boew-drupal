@@ -2,6 +2,37 @@
  * Drupal Core
  */
 
+.page-node-add,
+.page-node-edit {
+  fieldset {
+    border: 1px solid #ccc;
+    padding: 2.5em 0 0 0; /* LTR */
+    position: relative;
+    margin: 1em 0;
+    legend { height: 0px }
+    .fieldset-legend {
+      margin-top: 0.5em;
+      padding-left: 15px; /* LTR */
+      position: absolute;
+      text-transform: uppercase;
+    }
+    .fieldset-wrapper { padding: 0 13px 13px 15px; /* LTR */ }
+    fieldset.collapsed { background-color: transparent; }
+    fieldset {
+      background-color: #fff;
+      fieldset { background-color: #f8f8f8; }
+    }
+  }
+}
+
+html.js .page-node-add,
+html.js .page-node-edit {
+  fieldset.collapsed {
+    border-width: 1px;
+    height: auto;
+  }
+}
+
 .panels-ipe-editing #wb-sec-in {
   margin-top: 0px;
 }
