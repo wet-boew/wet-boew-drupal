@@ -10,7 +10,7 @@ core = 7.x
 projects[panopoly_core][version] = 1.x-dev
 projects[panopoly_core][subdir] = panopoly
 projects[panopoly_core][download][type] = git
-projects[panopoly_core][download][revision] = fedb39c
+projects[panopoly_core][download][revision] = c6bed47
 projects[panopoly_core][download][branch] = 7.x-1.x
 
 projects[panopoly_images][version] = 1.x-dev
@@ -22,7 +22,7 @@ projects[panopoly_images][download][branch] = 7.x-1.x
 projects[panopoly_theme][version] = 1.x-dev
 projects[panopoly_theme][subdir] = panopoly
 projects[panopoly_theme][download][type] = git
-projects[panopoly_theme][download][revision] = 823af84
+projects[panopoly_theme][download][revision] = dc65ce8
 projects[panopoly_theme][download][branch] = 7.x-1.x 
 
 projects[panopoly_magic][version] = 1.x-dev
@@ -40,7 +40,7 @@ projects[panopoly_widgets][download][branch] = 7.x-1.x
 projects[panopoly_admin][version] = 1.x-dev
 projects[panopoly_admin][subdir] = panopoly
 projects[panopoly_admin][download][type] = git
-projects[panopoly_admin][download][revision] = cc0eeb5
+projects[panopoly_admin][download][revision] = 6ca4ae9
 projects[panopoly_admin][download][branch] = 7.x-1.x
 projects[panopoly_admin][patch][1784676] = http://drupal.org/files/remove-simplified-menu-1784676-17.patch
 
