@@ -18,31 +18,8 @@ function wetkit_wysiwyg_filter_default_formats() {
     'status' => '1',
     'weight' => '-9',
     'filters' => array(
-      'media_filter' => array(
-        'weight' => '-48',
-        'status' => '1',
-        'settings' => array(),
-      ),
-      'caption_filter' => array(
-        'weight' => '-47',
-        'status' => '1',
-        'settings' => array(),
-      ),
-      'image_resize_filter' => array(
-        'weight' => '-46',
-        'status' => '1',
-        'settings' => array(
-          'link' => 0,
-          'link_class' => '',
-          'link_rel' => '',
-          'image_locations' => array(
-            'local' => 'local',
-            'remote' => 'remote',
-          ),
-        ),
-      ),
       'wysiwyg' => array(
-        'weight' => '-45',
+        'weight' => '-50',
         'status' => '1',
         'settings' => array(
           'valid_elements' => 'a[!href|target<_blank|title|style],
@@ -190,18 +167,41 @@ img[!src|title|alt|style|width|height|class|hspace|vspace],
           'rule_style_urls' => array(),
         ),
       ),
+      'caption_filter' => array(
+        'weight' => '-49',
+        'status' => '1',
+        'settings' => array(),
+      ),
+      'media_filter' => array(
+        'weight' => '-48',
+        'status' => '1',
+        'settings' => array(),
+      ),
+      'image_resize_filter' => array(
+        'weight' => '-47',
+        'status' => '1',
+        'settings' => array(
+          'link' => 0,
+          'link_class' => '',
+          'link_rel' => '',
+          'image_locations' => array(
+            'local' => 'local',
+            'remote' => 'remote',
+          ),
+        ),
+      ),
       'filter_htmlcorrector' => array(
-        'weight' => '-44',
+        'weight' => '-46',
         'status' => '1',
         'settings' => array(),
       ),
       'filter_autop' => array(
-        'weight' => '-43',
+        'weight' => '-45',
         'status' => '1',
         'settings' => array(),
       ),
       'filter_url' => array(
-        'weight' => '-42',
+        'weight' => '-44',
         'status' => '1',
         'settings' => array(
           'filter_url_length' => '72',
@@ -218,31 +218,8 @@ img[!src|title|alt|style|width|height|class|hspace|vspace],
     'status' => '1',
     'weight' => '-10',
     'filters' => array(
-      'media_filter' => array(
-        'weight' => '-50',
-        'status' => '1',
-        'settings' => array(),
-      ),
-      'caption_filter' => array(
-        'weight' => '-49',
-        'status' => '1',
-        'settings' => array(),
-      ),
-      'image_resize_filter' => array(
-        'weight' => '-48',
-        'status' => '1',
-        'settings' => array(
-          'link' => 0,
-          'link_class' => '',
-          'link_rel' => '',
-          'image_locations' => array(
-            'local' => 'local',
-            'remote' => 'remote',
-          ),
-        ),
-      ),
       'wysiwyg' => array(
-        'weight' => '-47',
+        'weight' => '-50',
         'status' => '1',
         'settings' => array(
           'valid_elements' => 'a[!href|target<_blank|title|style],
@@ -384,10 +361,33 @@ img[!src|title|alt|style|width|height|class|hspace|vspace],
             24 => 'wb*',
             26 => 'span-*',
             28 => 'wet-boew-*',
-            30 => 'tabs-content-pad',            
+            30 => 'tabs-content-pad',
           ),
           'rule_valid_ids' => array(),
           'rule_style_urls' => array(),
+        ),
+      ),
+      'caption_filter' => array(
+        'weight' => '-49',
+        'status' => '1',
+        'settings' => array(),
+      ),
+      'media_filter' => array(
+        'weight' => '-48',
+        'status' => '1',
+        'settings' => array(),
+      ),
+      'image_resize_filter' => array(
+        'weight' => '-47',
+        'status' => '1',
+        'settings' => array(
+          'link' => 0,
+          'link_class' => '',
+          'link_rel' => '',
+          'image_locations' => array(
+            'local' => 'local',
+            'remote' => 'remote',
+          ),
         ),
       ),
       'filter_htmlcorrector' => array(
