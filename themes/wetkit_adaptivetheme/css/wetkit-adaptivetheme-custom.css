@@ -86,3 +86,7 @@ fieldset.custom_search-popup .form-item { text-align: left; }
 #wb-aside ul li { margin: 0; padding: 0; }
 #wb-aside img { margin-left: 0; margin-right: 0; }
 #wb-aside .gcwu-minister-img img { width: auto !important; height: auto; }
+
+/* Open Layers */
+/* Override max-width 100% for map displays */
+.gmap img, .view-gmap img, .openlayers-map img, #getlocations_map_canvas img { max-width: none; }

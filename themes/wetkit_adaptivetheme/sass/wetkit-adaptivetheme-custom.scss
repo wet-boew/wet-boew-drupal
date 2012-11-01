@@ -244,3 +244,15 @@ fieldset.custom_search-popup {
     height:auto;
   }
 }
+
+/*
+ * Open Layers
+ */
+
+/* Override max-width 100% for map displays */
+.gmap,
+.view-gmap,
+.openlayers-map,
+#getlocations_map_canvas {
+  img { max-width: none; }
+}
