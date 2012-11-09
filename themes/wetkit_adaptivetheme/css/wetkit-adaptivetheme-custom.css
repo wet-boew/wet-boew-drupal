@@ -1,4 +1,6 @@
 /* Drupal Core */
+.field-label-inline .field-label { margin: 0; }
+
 .page-node-add fieldset, .page-node-edit fieldset { border: 1px solid #ccc; padding: 2.5em 0 0 0; /* LTR */ position: relative; margin: 1em 0; }
 .page-node-add fieldset legend, .page-node-edit fieldset legend { height: 0px; }
 .page-node-add fieldset .fieldset-legend, .page-node-edit fieldset .fieldset-legend { margin-top: 0.5em; padding-left: 15px; /* LTR */ position: absolute; text-transform: uppercase; }
