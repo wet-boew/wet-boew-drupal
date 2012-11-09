@@ -82,15 +82,14 @@ projects[adaptivetheme][version] = 3.1
 projects[rubik][version] = 4.x-dev
 projects[rubik][type] = theme
 projects[rubik][download][type] = git
-projects[rubik][download][revision] = e01c3d5
+projects[rubik][download][revision] = e936b82
 projects[rubik][download][branch] = 7.x-4.x
-projects[rubik][patch][1623510] = http://drupal.org/files/1623510-6-rubik-widget-styling.patch
-;projects[rubik][patch][1635790] = http://drupal.org/files/rubik-form-file-input-styling.patch
-projects[rubik][patch][1645148] = http://drupal.org/files/rubik-ie9-box-sizing-1645148-1.patch
 projects[rubik][patch][944534] = http://drupal.org/files/rubik-table_input_fluid-944534-5.patch
 projects[rubik][patch][1445890] = http://drupal.org/files/editor-link-covered-1445890-2.patch
 projects[rubik][patch][1003820] = http://drupal.org/files/1003820-rubik-5.patch
 projects[rubik][patch][1440054] = http://drupal.org/files/patch_commit_96121294ba3b.patch
+projects[rubik][patch][1645148] = http://drupal.org/files/rubik-ie9-box-sizing-1645148-1.patch
+;projects[rubik][patch][1730844] = http://drupal.org/files/rubik-inline_field_descriptions-1730844-05.patch
 
 projects[tao][version] = 3.0-beta4
 

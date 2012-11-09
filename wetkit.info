@@ -39,7 +39,7 @@ dependencies[] = panopoly_admin
 dependencies[] = panopoly_users
 
 ; Panopoly Recommended
-dependencies[] = devel
+;dependencies[] = devel
 dependencies[] = uuid
 
 ; WetKit Toolset
