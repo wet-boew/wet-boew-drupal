@@ -60,6 +60,7 @@ features[variable][] = cache
 features[variable][] = fences_default_classes
 features[variable][] = fences_default_markup
 features[variable][] = node_admin_theme
+features[variable][] = panopoly_core_breadcrumb_title
 features[variable][] = preprocess_css
 features[variable][] = preprocess_js
 features[variable][] = theme_wetkit_adaptivetheme_files_directory

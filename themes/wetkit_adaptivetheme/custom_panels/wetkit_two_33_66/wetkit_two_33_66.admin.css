@@ -6,7 +6,7 @@
 #panels-dnd-main #wb-main {width:75%; float: right;}
 #panels-dnd-main #wb-sec-in {margin: 0px; width: 24.5%; float: left; margin-right: 0.5%; margin-bottom: 5px}
 #panels-dnd-main #wb-sec {float: none;}
-#panels-dnd-main #wb-sec h2 {overflow: visible; position: relative; height: auto !important; width: auto !important;}
+#panels-dnd-main #wb-sec h2 {overflow: visible; height: auto !important; width: auto !important;}
 #panels-dnd-main #wb-nav {display:none;}
 
 /* Two col sprite */
