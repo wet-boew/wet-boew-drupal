@@ -89,7 +89,7 @@ projects[rubik][patch][1445890] = http://drupal.org/files/editor-link-covered-14
 projects[rubik][patch][1003820] = http://drupal.org/files/1003820-rubik-5.patch
 projects[rubik][patch][1440054] = http://drupal.org/files/patch_commit_96121294ba3b.patch
 projects[rubik][patch][1645148] = http://drupal.org/files/rubik-ie9-box-sizing-1645148-1.patch
-projects[rubik][patch][1730844] = http://drupal.org/files/inline_field_descriptions-1730844-4.patch
+projects[rubik][patch][1730844] = http://drupal.org/files/rubik-inline_field_descriptions-1730844-05.patch
 
 projects[tao][version] = 3.0-beta4
 
