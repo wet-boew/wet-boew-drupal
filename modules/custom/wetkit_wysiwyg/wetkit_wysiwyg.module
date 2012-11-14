@@ -178,6 +178,9 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
       libraries_get_path('wet-boew', TRUE) . '/build/js/css/pe-ap-min.css' . ',' . 
       libraries_get_path('wet-boew', TRUE) . '/build/' . $wet_theme . '/css/theme-min.css';
 
+      // Define the schema to use
+      $settings['schema'] = 'html5';
+
       // Define the skin to use
       $settings['skin'] = 'cirkuit';
 
