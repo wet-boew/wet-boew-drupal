@@ -161,19 +161,14 @@ function wetkit_pages_panelizer_defaults() {
       'level' => '1',
       'follow' => 0,
       'depth' => 0,
-      'expanded' => 0,
+      'expanded' => 1,
       'sort' => 0,
       'override_title' => 0,
       'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => array(
-        'headings' => 'h3',
-        'gcwu_classes' => '',
-        'gcwu_id' => '',
-      ),
-      'style' => 'wetkitnav',
+      'settings' => NULL,
     );
     $pane->css = array();
     $pane->extras = array();
