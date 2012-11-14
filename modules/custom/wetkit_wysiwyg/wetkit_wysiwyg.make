@@ -37,7 +37,7 @@ projects[caption_filter][patch][1432092] = http://drupal.org/files/caption-butto
 ;libraries[tinymce][patch][] = https://raw.github.com/gist/3613982/71c734b952f98354f7a8bd5e2cb77a8e1fbc17d6/wysiwyg_fr
 
 libraries[tinymce][download][type] = git
-libraries[tinymce][download][revision] = 006149b
+libraries[tinymce][download][revision] = cecd802
 libraries[tinymce][download][url] = https://github.com/sylus/tinymce-wetkit.git
 
 ;libraries[markitup][download][type] = get
