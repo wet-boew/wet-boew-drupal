@@ -37,6 +37,57 @@ function wetkit_adaptivetheme_menu_tree__main_menu($variables) {
  * @param $variables
  *   An array of variables to pass to the theme template.
  */
+function wetkit_adaptivetheme_menu_tree__menu_block($variables) {
+  return $variables['tree'];
+}
+
+/**
+ * Override or insert variables into the menu link templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ */
+function wetkit_adaptivetheme_menu_link__menu_block($variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+  
+  if ($element['#original_link']['depth'] == 1 && $element['#original_link']['has_children'] == 1) {
+    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    if (!empty($sub_menu)) {
+      return '<section><h3' . drupal_attributes($element['#attributes']) . '>' . $output . '</h3>' . '<ul>' . $sub_menu . '</ul>' . "</section>\n";
+    }
+    else {
+      return '<section><h3' . drupal_attributes($element['#attributes']) . '>' . $output . '</h3>' . "</section>\n";
+    }
+  }
+  if ($element['#original_link']['depth'] == 1 && $element['#original_link']['has_children'] == 0) {
+    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    return '<h3>' . $output . "</h3>\n";
+  }
+  elseif ($element['#original_link']['depth'] == 2 && $element['#original_link']['has_children'] == 1) {
+    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    return '<li>' . $output . '<ul>' . $sub_menu . '</ul>' . '</li>';
+  }
+  elseif ($element['#original_link']['depth'] == 2 && $element['#original_link']['has_children'] == 0) {
+    $output = '<li>' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</li>';
+    return $output;
+  }
+  else {
+    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    return '<li>' . $output . "</li>\n";
+  }
+}
+
+/**
+ * Override or insert variables into the menu tree templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ */
 function wetkit_adaptivetheme_menu_tree__menu_block__wetkit_menu_blocks_1($variables) {
   return $variables['tree'];
 }
@@ -82,7 +133,7 @@ function wetkit_adaptivetheme_menu_link__menu_block__wetkit_menu_blocks_1($varia
  * @param $variables
  *   An array of variables to pass to the theme template.
  */
-function wetkit_adaptivetheme_menu_tree__menu_wet_mid_footer($variables) {
+function wetkit_adaptivetheme_menu_tree__menu_block__wetkit_menu_blocks_2($variables) {
   return $variables['tree'];
 }
 
@@ -92,7 +143,7 @@ function wetkit_adaptivetheme_menu_tree__menu_wet_mid_footer($variables) {
  * @param $variables
  *   An array of variables to pass to the theme template.
  */
-function wetkit_adaptivetheme_menu_link__menu_wet_mid_footer($variables) {
+function wetkit_adaptivetheme_menu_link__menu_block__wetkit_menu_blocks_2($variables) {
   $element = $variables['element'];
   $sub_menu = '';
 
