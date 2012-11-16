@@ -28,6 +28,7 @@ function wetkit_pages_panelizer_defaults() {
   $panelizer->css_class = '';
   $panelizer->title_element = 'H2';
   $panelizer->link_to_entity = TRUE;
+  $panelizer->extra = '';
   $display = new panels_display();
   $display->layout = 'wetkit_two_33_66';
   $display->layout_settings = array();
@@ -199,6 +200,7 @@ function wetkit_pages_panelizer_defaults() {
   $panelizer->css_class = 'page-default';
   $panelizer->title_element = 'H2';
   $panelizer->link_to_entity = TRUE;
+  $panelizer->extra = '';
   $display = new panels_display();
   $display->layout = 'boxton';
   $display->layout_settings = array();
@@ -427,6 +429,7 @@ function wetkit_pages_panelizer_defaults() {
   $panelizer->css_class = '';
   $panelizer->title_element = 'H2';
   $panelizer->link_to_entity = TRUE;
+  $panelizer->extra = '';
   $display = new panels_display();
   $display->layout = 'boxton';
   $display->layout_settings = array();
@@ -576,6 +579,7 @@ function wetkit_pages_panelizer_defaults() {
   $panelizer->css_class = 'page-teaser';
   $panelizer->title_element = 'H2';
   $panelizer->link_to_entity = TRUE;
+  $panelizer->extra = '';
   $display = new panels_display();
   $display->layout = 'boxton';
   $display->layout_settings = array();
