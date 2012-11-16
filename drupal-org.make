@@ -10,7 +10,7 @@ core = 7.x
 projects[panopoly_core][version] = 1.x-dev
 projects[panopoly_core][subdir] = panopoly
 projects[panopoly_core][download][type] = git
-projects[panopoly_core][download][revision] = a0f802e
+projects[panopoly_core][download][revision] = 6b3ad8c
 projects[panopoly_core][download][branch] = 7.x-1.x
 
 projects[panopoly_images][version] = 1.x-dev
@@ -34,20 +34,20 @@ projects[panopoly_magic][download][branch] = 7.x-1.x
 projects[panopoly_widgets][version] = 1.x-dev
 projects[panopoly_widgets][subdir] = panopoly
 projects[panopoly_widgets][download][type] = git
-projects[panopoly_widgets][download][revision] = e17d6ac
+projects[panopoly_widgets][download][revision] = 411609c
 projects[panopoly_widgets][download][branch] = 7.x-1.x
 
 projects[panopoly_admin][version] = 1.x-dev
 projects[panopoly_admin][subdir] = panopoly
 projects[panopoly_admin][download][type] = git
-projects[panopoly_admin][download][revision] = 904cc62
+projects[panopoly_admin][download][revision] = 9e9ac9f
 projects[panopoly_admin][download][branch] = 7.x-1.x
-projects[panopoly_admin][patch][1784676] = http://drupal.org/files/remove_simplified_admin-1784676-19.patch
+projects[panopoly_admin][patch][1784676] = http://drupal.org/files/remove_simplified_admin-1784676-20.patch
 
 projects[panopoly_users][version] = 1.x-dev
 projects[panopoly_users][subdir] = panopoly
 projects[panopoly_users][download][type] = git
-projects[panopoly_users][download][revision] = 4680937
+projects[panopoly_users][download][revision] = 2aebfcf
 projects[panopoly_users][download][branch] = 7.x-1.x
 
 ; Panopoly Recommended
