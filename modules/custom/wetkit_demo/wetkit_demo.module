@@ -39,6 +39,21 @@ function wetkit_demo_ctools_plugin_directory($module, $plugin) {
   return 'plugins/' . $plugin;
 }
 
+
+/**
+ * Implementation of hook_link_alter() 
+ * 
+ * This is a clever workaround for some notice errors that
+ * we introduced in Panopoly Admin RC3. This function can be
+ * removed with the next version of Panopoly. More information
+ * is here - http://drupal.org/node/1838084
+ */
+function wetkit_demo_menu_link_alter(&$item) {
+  if (empty($item['path'])) {
+    $item['path'] = $item['link_path'];
+  }
+}
+
 /**
  * Implements hook_install().
  */
