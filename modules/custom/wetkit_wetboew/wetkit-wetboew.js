@@ -13,7 +13,7 @@
      //  $('.pane-page-title .block-content').html('');
      //  $('h1#wb-cont').hide().clone().prependTo('.pane-page-title .block-content');
      //  $('.pane-page-title h1#wb-cont').show();
-     }
+     //}
 
    }
  }
