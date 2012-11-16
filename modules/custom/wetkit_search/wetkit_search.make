@@ -11,7 +11,7 @@ projects[facetapi][subdir] = contrib
 projects[search_api][version] = 1.3
 projects[search_api][subdir] = contrib
 projects[search_api][patch][1698098] = http://drupal.org/files/search-api-disabled-index-configure-link.patch
-projects[search_api][patch][1827272] = http://drupal.org/files/1827272-request-path.patch
+projects[search_api][patch][1827272] = http://drupal.org/files/1827272-request-path-7.patch
 
 projects[search_api_solr][version] = 1.0-rc2
 projects[search_api_solr][subdir] = contrib
@@ -23,7 +23,7 @@ projects[search_api_db][type] = module
 projects[search_api_db][download][type] = git
 projects[search_api_db][download][revision] = a6203a3
 projects[search_api_db][download][branch] = 7.x-1.x
-projects[search_api_db][patch][1144620] = http://drupal.org/files/search_api_db_utf8_1144620-42.patch
+projects[search_api_db][patch][1144620] = http://drupal.org/files/1144620--umlauts-46.patch
 
 ; Solr PHP Client Library
 

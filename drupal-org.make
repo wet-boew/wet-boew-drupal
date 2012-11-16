@@ -10,44 +10,44 @@ core = 7.x
 projects[panopoly_core][version] = 1.x-dev
 projects[panopoly_core][subdir] = panopoly
 projects[panopoly_core][download][type] = git
-projects[panopoly_core][download][revision] = a0f802e
+projects[panopoly_core][download][revision] = ca5439e
 projects[panopoly_core][download][branch] = 7.x-1.x
+projects[panopoly_core][patch][1842818] = http://drupal.org/files/update_fpp_translation-1842818-02.patch
 
 projects[panopoly_images][version] = 1.x-dev
 projects[panopoly_images][subdir] = panopoly
 projects[panopoly_images][download][type] = git
-projects[panopoly_images][download][revision] = b4ce3d3
+projects[panopoly_images][download][revision] = 36e5034
 projects[panopoly_images][download][branch] = 7.x-1.x
 
 projects[panopoly_theme][version] = 1.x-dev
 projects[panopoly_theme][subdir] = panopoly
 projects[panopoly_theme][download][type] = git
-projects[panopoly_theme][download][revision] = a27522b
+projects[panopoly_theme][download][revision] = 4f45887
 projects[panopoly_theme][download][branch] = 7.x-1.x 
 
 projects[panopoly_magic][version] = 1.x-dev
 projects[panopoly_magic][subdir] = panopoly
 projects[panopoly_magic][download][type] = git
-projects[panopoly_magic][download][revision] = 543b649
+projects[panopoly_magic][download][revision] = 27071ae
 projects[panopoly_magic][download][branch] = 7.x-1.x
 
 projects[panopoly_widgets][version] = 1.x-dev
 projects[panopoly_widgets][subdir] = panopoly
 projects[panopoly_widgets][download][type] = git
-projects[panopoly_widgets][download][revision] = e17d6ac
+projects[panopoly_widgets][download][revision] = ca7f610
 projects[panopoly_widgets][download][branch] = 7.x-1.x
 
 projects[panopoly_admin][version] = 1.x-dev
 projects[panopoly_admin][subdir] = panopoly
 projects[panopoly_admin][download][type] = git
-projects[panopoly_admin][download][revision] = 904cc62
+projects[panopoly_admin][download][revision] = 9519346
 projects[panopoly_admin][download][branch] = 7.x-1.x
-projects[panopoly_admin][patch][1784676] = http://drupal.org/files/remove_simplified_admin-1784676-19.patch
 
 projects[panopoly_users][version] = 1.x-dev
 projects[panopoly_users][subdir] = panopoly
 projects[panopoly_users][download][type] = git
-projects[panopoly_users][download][revision] = 4680937
+projects[panopoly_users][download][revision] = 4943fb1
 projects[panopoly_users][download][branch] = 7.x-1.x
 
 ; Panopoly Recommended

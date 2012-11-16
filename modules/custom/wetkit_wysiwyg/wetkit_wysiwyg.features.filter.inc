@@ -18,8 +18,21 @@ function wetkit_wysiwyg_filter_default_formats() {
     'status' => '1',
     'weight' => '-9',
     'filters' => array(
-      'wysiwyg' => array(
+      'image_resize_filter' => array(
         'weight' => '-50',
+        'status' => '1',
+        'settings' => array(
+          'link' => 0,
+          'link_class' => '',
+          'link_rel' => '',
+          'image_locations' => array(
+            'local' => 'local',
+            'remote' => 'remote',
+          ),
+        ),
+      ),
+      'wysiwyg' => array(
+        'weight' => '-49',
         'status' => '1',
         'settings' => array(
           'valid_elements' => 'a[!href|target<_blank|title|style],
@@ -169,27 +182,14 @@ img[!src|title|alt|style|width|height|class|hspace|vspace],
         ),
       ),
       'caption_filter' => array(
-        'weight' => '-49',
-        'status' => '1',
-        'settings' => array(),
-      ),
-      'media_filter' => array(
         'weight' => '-48',
         'status' => '1',
         'settings' => array(),
       ),
-      'image_resize_filter' => array(
+      'media_filter' => array(
         'weight' => '-47',
         'status' => '1',
-        'settings' => array(
-          'link' => 0,
-          'link_class' => '',
-          'link_rel' => '',
-          'image_locations' => array(
-            'local' => 'local',
-            'remote' => 'remote',
-          ),
-        ),
+        'settings' => array(),
       ),
       'filter_htmlcorrector' => array(
         'weight' => '-46',
@@ -219,8 +219,21 @@ img[!src|title|alt|style|width|height|class|hspace|vspace],
     'status' => '1',
     'weight' => '-10',
     'filters' => array(
-      'wysiwyg' => array(
+      'image_resize_filter' => array(
         'weight' => '-50',
+        'status' => '1',
+        'settings' => array(
+          'link' => 0,
+          'link_class' => '',
+          'link_rel' => '',
+          'image_locations' => array(
+            'local' => 'local',
+            'remote' => 'remote',
+          ),
+        ),
+      ),
+      'wysiwyg' => array(
+        'weight' => '-49',
         'status' => '1',
         'settings' => array(
           'valid_elements' => 'a[!href|target<_blank|title|style],
@@ -370,27 +383,14 @@ img[!src|title|alt|style|width|height|class|hspace|vspace],
         ),
       ),
       'caption_filter' => array(
-        'weight' => '-49',
-        'status' => '1',
-        'settings' => array(),
-      ),
-      'media_filter' => array(
         'weight' => '-48',
         'status' => '1',
         'settings' => array(),
       ),
-      'image_resize_filter' => array(
+      'media_filter' => array(
         'weight' => '-47',
         'status' => '1',
-        'settings' => array(
-          'link' => 0,
-          'link_class' => '',
-          'link_rel' => '',
-          'image_locations' => array(
-            'local' => 'local',
-            'remote' => 'remote',
-          ),
-        ),
+        'settings' => array(),
       ),
       'filter_htmlcorrector' => array(
         'weight' => '-46',
