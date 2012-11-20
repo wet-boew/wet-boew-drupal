@@ -21,7 +21,7 @@ function theme_wetkit_wetboew_status_messages($variables) {
   );
   foreach (drupal_get_messages($display) as $type => $messages) {
     $extraclass = '';
-    $spanclass = (drupal_is_front_page()) ? 'span-8' : 'span-6';
+    $spanclass = (drupal_is_front_page()) ? 'span-8' : 'span-8';
     switch ($type) {
       case 'warning':
         $extraclass = $spanclass . ' module-alert';
@@ -35,7 +35,7 @@ function theme_wetkit_wetboew_status_messages($variables) {
       default:
         $extraclass = '';
     }
-    $output .= "<section><div class=\"$extraclass $type\">\n";
+    $output .= "<section><div class=\"$extraclass $type margin-bottom-medium\">\n";
     if (!empty($status_heading[$type])) {
       $output .= '<h3 class="font-xlarge"><span class="color-dark">' . $status_heading[$type] . "</span></h3>\n";
     }
@@ -51,7 +51,7 @@ function theme_wetkit_wetboew_status_messages($variables) {
     }
     $output .= "</div></section><div class=\"clear\"></div>\n";
   }
-  return $output;
+  return '<div id="status-messages">' . $output . '</div>';
 }
 
 /**

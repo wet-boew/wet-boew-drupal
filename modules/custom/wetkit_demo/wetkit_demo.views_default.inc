@@ -254,6 +254,31 @@ function wetkit_demo_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
   $handler->display->display_options['allow']['fields_override'] = 'fields_override';
+  $translatables['wetkit_demo'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Empty Text'),
+    t('There is no news to be shown. '),
+    t('author'),
+    t('Posted by'),
+    t('Post date'),
+    t('Title'),
+    t('Random'),
+    t('List of Demo Items'),
+    t('Demo Items'),
+    t('This is a customizable list of demo items!'),
+    t('Demo'),
+    t('Individual Demo Item'),
+    t('Featured Demo Item'),
+    t('List of Featured Demo Items'),
+    t('Featured Demo Items'),
+    t('This is a customizable list of demo items which are marked as featured!'),
+  );
   $export['wetkit_demo'] = $view;
 
   return $export;
