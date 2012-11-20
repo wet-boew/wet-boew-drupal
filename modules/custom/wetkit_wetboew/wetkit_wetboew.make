@@ -96,7 +96,8 @@ projects[rubik][patch][1645148] = http://drupal.org/files/rubik-ie9-box-sizing-1
 
 projects[tao][version] = 3.0-beta4
 
-; Libraries for WetKit
+; Libraries for WetKit (Tagged 3.0.2)
 
 libraries[wet-boew][download][type] = git
+libraries[wet-boew][download][revision] = f8e62c0011
 libraries[wet-boew][download][url] = https://github.com/wet-boew/wet-boew.git
