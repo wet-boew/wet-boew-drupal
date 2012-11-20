@@ -172,6 +172,7 @@
   <div id="wb-core">
     <div id="wb-core-in" class="equalize">
       <<?php print $tag; ?> id="main-content">
+        <?php print $messages; ?>
         <!-- region: Main Content -->
         <?php if ($content = render($page['content'])): ?>
           <?php print $content; ?>

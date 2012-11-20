@@ -78,24 +78,6 @@ function wetkit_pages_panelizer_defaults() {
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'wetkit_two_33_66_first';
-    $pane->type = 'page_messages';
-    $pane->subtype = 'page_messages';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['wetkit_two_33_66_first'][1] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'wetkit_two_33_66_first';
     $pane->type = 'page_tabs';
     $pane->subtype = 'page_tabs';
     $pane->shown = TRUE;
@@ -115,12 +97,12 @@ function wetkit_pages_panelizer_defaults() {
       'css_class' => '',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['wetkit_two_33_66_first'][2] = 'new-3';
+    $display->content['new-2'] = $pane;
+    $display->panels['wetkit_two_33_66_first'][1] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-3';
     $pane->panel = 'wetkit_two_33_66_first';
     $pane->type = 'node_content';
     $pane->subtype = 'node_content';
@@ -136,6 +118,29 @@ function wetkit_pages_panelizer_defaults() {
       'leave_node_title' => 0,
       'build_mode' => 'full',
       'context' => array(),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-3'] = $pane;
+    $display->panels['wetkit_two_33_66_first'][2] = 'new-3';
+    $pane = new stdClass();
+    $pane->pid = 'new-4';
+    $pane->panel = 'wetkit_two_33_66_first';
+    $pane->type = 'node_updated';
+    $pane->subtype = 'node_updated';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'format' => 'short',
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(

@@ -66,6 +66,10 @@ ul {
   }
 }
 
+#status-messages {
+ margin-top: 10px;
+}
+
 /*
  * Drupal Contrib: Adaptive Theme
  */
@@ -187,6 +191,12 @@ fieldset.custom_search-popup {
     padding-top: 7px;
     margin-bottom: 0px;
   }
+}
+
+.pane-node-updated
+#gcwu-date-mod {
+  position:relative;
+  float: right;
 }
 
 #gcwu-psnb {

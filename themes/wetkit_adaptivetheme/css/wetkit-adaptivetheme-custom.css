@@ -23,6 +23,8 @@ figure { display: block; margin: 0px; padding: 0px; }
 
 ul.tabs { margin-left: 10px; margin-right: 10px; }
 
+#status-messages { margin-top: 10px; }
+
 /* Drupal Contrib: Adaptive Theme */
 #breadcrumb, .breadcrumb-wrapper { margin-left: 0px; margin-right: 0px; }
 
@@ -69,6 +71,8 @@ fieldset.custom_search-popup .form-item { text-align: left; }
 #gcwu-bnr { z-index: 99 !important; }
 
 #gcwu-bnr-in #gcwu-title { margin-top: 0px; padding-top: 7px; margin-bottom: 0px; }
+
+.pane-node-updated #gcwu-date-mod { position: relative; float: right; }
 
 #gcwu-psnb .wet-boew-megamenu { z-index: 98 !important; }
 #gcwu-psnb .mb-menu { z-index: 98 !important; }
