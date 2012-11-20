@@ -177,8 +177,8 @@ function _menu_wetkit_load() {
   $translated_menu_item = _add_custom_menu('http://www.guichetemplois.gc.ca/Intro-fra.aspx', 'Emplois', 'guichetemplois.gc.ca', 'menu-wet-footer', 3, 'fr');
   _create_translation_sets($source_menu_item, $translated_menu_item);
 
-  $source_menu_item = _add_custom_menu('http://actionplan.gc.ca/eng/index.asp', 'Economy', 'actionplan.gc.ca', 'menu-wet-footer', 4, 'en');
-  $translated_menu_item = _add_custom_menu('http://www.plandaction.gc.ca/', 'Économie', 'plandaction.gc.ca', 'menu-wet-footer', 4, 'fr');
+  $source_menu_item = _add_custom_menu('http://actionplan.gc.ca/en', 'Economy', 'actionplan.gc.ca', 'menu-wet-footer', 4, 'en');
+  $translated_menu_item = _add_custom_menu('http://www.plandaction.gc.ca/fr', 'Économie', 'plandaction.gc.ca', 'menu-wet-footer', 4, 'fr');
   _create_translation_sets($source_menu_item, $translated_menu_item);
 
   $source_menu_item = _add_custom_menu('http://www.canada.gc.ca/home.html', 'Canada.gc.ca', NULL, 'menu-wet-footer', 5, 'en');
