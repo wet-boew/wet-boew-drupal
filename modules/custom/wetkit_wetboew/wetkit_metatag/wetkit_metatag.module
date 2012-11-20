@@ -5,73 +5,6 @@
  */
 
 /**
- * Dublin Core Configuration Page.
- */
-function wetkit_metatag_menu() {
-  $items = array();
-
-  // Setup a local task to configure Dublin Core.
-  $items['admin/config/search/metatags/dublin-core'] = array(
-    'title' => 'Dublin Core',
-    'type' => MENU_LOCAL_TASK,
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('wetkit_metatag_config'),
-    'access arguments' => array('administer meta tags'),
-    'weight' => 1,
-    'file' => 'wetkit_metatag.admin.inc',
-  );
-
-  return $items;
-}
-
-/**
- * Implements hook_page_build().
- */
-function wetkit_metatag_page_build(&$page) {
-  $prefix = _wetkit_metatag_prefix();
-  // TODO - When the HTML5 is standardize we can then update and display
-  switch ($prefix) {
-    case 'dc':
-      $attributes = array(
-        'rel' => 'schema:dc',
-        'href' => 'http://purl.org/dc/elements/1.1/',
-      );
-      break;
-    case 'dcterms':
-      $attributes = array(
-        'rel' => 'schema:dcterms',
-        'href' => 'http://purl.org/dc/terms/',
-      );
-      break;
-  }
-
-  //drupal_add_html_head_link($attributes);
-}
-
-/**
- * Implements hook_form_alter().
- */
-function wetkit_metatag_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'wetkit_page_node_form' || $form_id == 'wetkit_page_other_node_form') {
-    //$form['wetkit_metadata'] = $form['metatags']['dublin-core'];
-    //$form['wetkit_metadata']['#title'] = 'Metatags Dublin Core';
-    //$form['wetkit_metadata']['#group'] = 'additional_settings';
-    //$form['wetkit_metadata']['##tree'] = TRUE;
-    //$form['wetkit_metadata']['#weight'] = 11;
-
-    //$form['metatags_advanced']['new'] = $form['metatags']['advanced'];
-    //$form['metatags_advanced']['#title'] = 'Metatags Advanced';
-    //$form['metatags_advanced']['#group'] = 'additional_settings';
-    //$form['metatags_advanced']['##tree'] = TRUE;
-    //$form['metatags_advanced']['#weight'] = 12;
-
-    unset($form['metatags']['advanced']);
-    unset($form['metatags']['dublin-core']);
-    unset($form['metatags']['tokens']);
-  }
-}
-
-/**
  * Implements hook_ctools_plugin_api().
  */
 function wetkit_metatag_ctools_plugin_api($owner, $api) {
@@ -106,27 +39,12 @@ function theme_wetkit_metatag($variables) {
 }
 
 /**
- * Get the Dublin Core prefix.
+ * Implements hook_form_alter().
  */
-function _wetkit_metatag_prefix() {
-  return variable_get('wetkit_metatag_prefix', 'dcterms');
+function wetkit_metatag_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'wetkit_page_node_form' || $form_id == 'wetkit_page_other_node_form') {
+    unset($form['metatags']['advanced']);
+    unset($form['metatags']['dublin-core']);
+    unset($form['metatags']['tokens']);
+  }
 }
-
-/*
-Dublin Core Basic Elements (15)
-dc:title
-dc:creator
-dc:subject
-dc:description
-dc:publisher
-dc:contributor
-dc:date
-dc:type
-dc:format
-dc:identifier
-dc:source
-dc:language
-dc:relation
-dc:coverage
-dc:rights
- */
