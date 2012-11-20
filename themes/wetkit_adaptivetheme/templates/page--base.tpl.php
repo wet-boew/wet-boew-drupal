@@ -159,7 +159,7 @@
                   <?php if ($title || $primary_local_tasks || $secondary_local_tasks || $action_links = render($action_links)): ?>
                     <header id="main-content-header">
                       <?php if ($title): ?>
-                      <h1 id="wb-cont page-title"<?php print $attributes; ?>>
+                      <h1 id="wb-cont"<?php print $attributes; ?>>
                         <?php print $title; ?>
                       </h1>
                       <?php endif; ?>
