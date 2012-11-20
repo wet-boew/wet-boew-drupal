@@ -297,6 +297,11 @@ function wetkit_demo_default_page_manager_pages() {
       'header' => NULL,
       'contentmain' => NULL,
       'footer' => NULL,
+      'wetkit_three_40_40_20_top' => NULL,
+      'wetkit_three_40_40_20_first' => NULL,
+      'wetkit_three_40_40_20_second' => NULL,
+      'wetkit_three_40_40_20_third' => NULL,
+      'wetkit_three_40_40_20_bottom' => NULL,
     ),
     'sidebar' => array(
       'style' => '-1',
@@ -331,7 +336,9 @@ function wetkit_demo_default_page_manager_pages() {
       'header_type' => 'none',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
@@ -350,7 +357,9 @@ function wetkit_demo_default_page_manager_pages() {
       'override_title_text' => '',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
@@ -369,7 +378,9 @@ function wetkit_demo_default_page_manager_pages() {
       'override_title_text' => '',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
@@ -388,29 +399,15 @@ function wetkit_demo_default_page_manager_pages() {
       'override_title_text' => '',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
     $display->content['new-9'] = $pane;
     $display->panels['wetkit_three_40_40_20_third'][1] = 'new-9';
-    $pane = new stdClass();
-    $pane->pid = 'new-10';
-    $pane->panel = 'wetkit_three_40_40_20_top';
-    $pane->type = 'page_messages';
-    $pane->subtype = 'page_messages';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array();
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['wetkit_three_40_40_20_top'][0] = 'new-10';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
