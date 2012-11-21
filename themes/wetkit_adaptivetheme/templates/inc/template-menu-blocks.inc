@@ -54,25 +54,34 @@ function wetkit_adaptivetheme_menu_link__menu_block($variables) {
   if ($element['#below']) {
     $sub_menu = drupal_render($element['#below']);
   }
-  
-  if ($element['#original_link']['depth'] == 1 && $element['#original_link']['has_children'] == 1) {
+
+  if ($element['#original_link']['depth'] == 1) {
     $output = l($element['#title'], $element['#href'], $element['#localized_options']);
     if (!empty($sub_menu)) {
-      return '<section><h3' . drupal_attributes($element['#attributes']) . '>' . $output . '</h3>' . '<ul>' . $sub_menu . '</ul>' . "</section>\n";
+      return '<section class="wet-menu-block"><h3 class="top-section">' . $output . '</h3>' . $sub_menu . '</section>';
     }
     else {
-      return '<section><h3' . drupal_attributes($element['#attributes']) . '>' . $output . '</h3>' . "</section>\n";
+      return '<section class="wet-menu-block"><h3 class="top-section">' . $output . '</h3>' . '</section>';
     }
-  }
-  if ($element['#original_link']['depth'] == 1 && $element['#original_link']['has_children'] == 0) {
-    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-    return '<h3>' . $output . "</h3>\n";
   }
   elseif ($element['#original_link']['depth'] == 2 && $element['#original_link']['has_children'] == 1) {
     $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    if (!empty($sub_menu)) {
+      return '<section><h4' . drupal_attributes($element['#attributes']) . '>' . $output . '</h4>' . '<ul>' . $sub_menu . '</ul>' . "</section>\n";
+    }
+    else {
+      return '<section><h4' . drupal_attributes($element['#attributes']) . '>' . $output . '</h4>' . "</section>\n";
+    }
+  }
+  if ($element['#original_link']['depth'] == 2 && $element['#original_link']['has_children'] == 0) {
+    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    return '<div class="top-level">' . $output . '</div>';
+  }
+  elseif ($element['#original_link']['depth'] == 3 && $element['#original_link']['has_children'] == 1) {
+    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
     return '<li>' . $output . '<ul>' . $sub_menu . '</ul>' . '</li>';
   }
-  elseif ($element['#original_link']['depth'] == 2 && $element['#original_link']['has_children'] == 0) {
+  elseif ($element['#original_link']['depth'] == 3 && $element['#original_link']['has_children'] == 0) {
     $output = '<li>' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</li>';
     return $output;
   }
