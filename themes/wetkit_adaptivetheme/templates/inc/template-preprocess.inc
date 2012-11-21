@@ -297,3 +297,20 @@ function wetkit_adaptivetheme_preprocess_block(&$variables, $hook) {
   //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('block__no_wrapper'));
   //}
 }
+
+/**
+ * Theme the 'placeholder' pane, which is shown on an active IPE when no panes
+ * live in that region.
+ *
+ * @param string $region_id
+ * @param string $region_title
+ */
+function wetkit_adaptivetheme_panels_ipe_placeholder_pane($vars) {
+  $region_id = $vars['region_id'];
+  $region_title = $vars['region_title'];
+
+  $output = '<div class="panels-ipe-placeholder-content">';
+  $output .= "<h4>$region_title</h4>";
+  $output .= '</div>';
+  return $output;
+}
