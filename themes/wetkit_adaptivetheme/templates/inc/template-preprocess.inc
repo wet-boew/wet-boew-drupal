@@ -48,6 +48,10 @@ function wetkit_adaptivetheme_preprocess_maintenance_page(&$variables, $hook) {
 function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
   global $theme_key;
 
+  // Modify html attributes for WET
+  $variables['html_attributes_array']['class'][] = 'no-js';
+  unset($variables['html_attributes_array']['dir']);
+  
   // Add a body class for the active theme name.
   $variables['classes_array'][] = drupal_html_class($theme_key);
 
