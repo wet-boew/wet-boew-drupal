@@ -215,7 +215,7 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
 
       // Allow extra elements for Media module
       // See - http://drupal.org/node/1835826
-      $settings['extended_valid_elements'] .= ',img[src|view_mode|format|fid]';
+      $settings['extended_valid_elements'] .= ',img[src|view_mode|format|fid|alt|title]';
 
       break;
     case 'markitup':
