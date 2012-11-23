@@ -28,10 +28,10 @@ function wetkit_metatag_metatag_config_default_alter(array &$configs) {
       case 'node':
         $config->config += array(
           'dcterms.title' => array('value' => '[node:title]'),
-          'dcterms.issued' => array('value' => '[node:created:custom:Y-m-d\TH:iP]'),
-          'dcterms.modified' => array('value' => '[node:changed:custom:Y-m-d\TH:iP]'),
+          'dcterms.issued' => array('value' => ($language->language == 'en') ? 'Date published ([node:created:custom:Y-m-d])' : 'Date de publication ([node:created:custom:Y-m-d])'),
+          'dcterms.modified' => array('value' => ($language->language == 'en') ? 'Date modified ([node:changed:custom:Y-m-d])' : 'Date de modification ([node:changed:custom:Y-m-d])'),
           'dcterms.identifier' => array('value' => '[site:url]/node/[node:nid]'),
-          'dcterms.language' => array('value' => '[node:language]'),          
+          'dcterms.language' => array('value' => ($language->language == 'en') ? 'eng' : 'fra'),
           'dcterms.creator' => array('value' => '[node:author]'),
           'dcterms.description' => array('value' => '[node:summary]'),
         );
@@ -48,7 +48,7 @@ function wetkit_metatag_metatag_config_default_alter(array &$configs) {
       case 'user':
         $config->config += array(
           'dcterms.title' => array('value' => '[user:name]'),
-          'dcterms.date' => array('value' => '[user:created:custom:Y-m-d\TH:iP]'),
+          'dcterms.date' => array('value' => '[user:created:custom:Y-m-d]'),
           'dcterms.identifier' => array('value' => '[current-page:url:absolute]'),
           'dcterms.creator' => array('value' => '[user:name]'),
         );
@@ -204,6 +204,7 @@ function wetkit_metatag_metatag_info() {
     'group' => 'dublin-core',
     'element' => array(
       '#theme' => 'wetkit_metatag',
+      '#schema' => 'ISO639-2',
     ),
   );
   $info['tags']['dcterms.relation'] = array(
