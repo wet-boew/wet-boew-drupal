@@ -15,6 +15,7 @@ function wetkit_language_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'entity_translation_entity_types';
   $strongarm->value = array(
+    'block' => 'block',
     'fieldable_panels_pane' => 'fieldable_panels_pane',
     'node' => 0,
     'file' => 0,

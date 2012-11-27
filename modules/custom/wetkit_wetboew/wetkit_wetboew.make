@@ -11,6 +11,9 @@ projects[advanced_help][subdir] = contrib
 projects[boxes][version] = 1.0
 projects[boxes][subdir] = contrib
 
+projects[bean][version] = 1.0-rc6
+projects[bean][subdir] = contrib
+
 projects[context][version] = 3.0-beta2
 projects[context][subdir] = contrib
 
