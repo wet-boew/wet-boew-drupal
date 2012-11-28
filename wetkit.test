@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * wetkit.test
+ */
 
 class WetKitArchivedWidgetTestCase extends WetKitWebTestCase {
    public static function getInfo() {
