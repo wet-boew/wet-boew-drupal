@@ -6,7 +6,7 @@
  */
 function wetkit_adaptivetheme_wetkit_three_40_40_20_panels_layouts() {
   $items['wetkit_three_40_40_20'] = array(
-    'title'    => t('WetKit Three column 40/40/20'),
+    'title'    => t('WetKit Three column 40/40/20 (Front)'),
     'category' => t('WetKit - 3 column'),
     'icon'     => 'wetkit_three_40_40_20.png',
     'theme'    => 'wetkit_three_40_40_20',

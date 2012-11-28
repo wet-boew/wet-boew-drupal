@@ -34,22 +34,35 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
   </div>
   <div class="clear"></div>
   <?php endif; ?>
-  <div class="region-wetkit-three-25-50-25-first span-2">
-    <div class="region-inner clearfix">
-      <?php print $content['wetkit_three_25_50_25_first']; ?>
+  <div id="wb-main" role="main">
+    <div id="wb-main-in">
+      <div class="region-wetkit-three-25-50-25-first span-4">
+        <div class="region-inner clearfix">
+          <?php print $content['wetkit_three_25_50_25_first']; ?>
+        </div>
+      </div>
+      <div class="region-wetkit-three-25-50-25-second span-2">
+        <div class="region-inner clearfix">
+          <?php print $content['wetkit_three_25_50_25_second']; ?>
+        </div>
+      </div>       
+      <div class="clear"></div>
     </div>
   </div>
-  <div class="region-wetkit-three-25-50-25-second span-4">
-    <div class="region-inner clearfix">
-      <?php print $content['wetkit_three_25_50_25_second']; ?>
+  <div id="wb-sec">
+    <div id="wb-sec-in">
+      <div class="region-wetkit-three-25-50-25-third span-2 row-start">
+        <div class="region-inner clearfix">
+          <nav role="navigation">
+            <h2 id="wb-nav"><?php print t('Secondary Menu'); ?></h2>
+            <div class="wb-sec-def">
+              <?php print $content['wetkit_three_25_50_25_third']; ?>
+            </div>
+          </nav>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="region-wetkit-three-25-50-25-third span-2">
-    <div class="region-inner clearfix">
-      <?php print $content['wetkit_three_25_50_25_third']; ?>
-    </div>
-  </div>
-  <div class="clear"></div>
   <?php if ($content['wetkit_three_25_50_25_bottom']): ?>
   <div class="region-wetkit-three-25-50-25-bottom span-8">
     <div class="region-inner clearfix">

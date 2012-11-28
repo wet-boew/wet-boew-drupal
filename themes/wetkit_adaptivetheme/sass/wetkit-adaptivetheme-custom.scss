@@ -151,10 +151,11 @@ fieldset.custom_search-popup {
 }
 
 div.panels-ipe-placeholder h4 {
-  font-weight: normal;
+  font-weight: 700;
   font-size: 15px;
   width: 75px; /* In order to prevent the region title from running into the button, set a width. Initital width only--this will be changed by jQuery */
   margin: 1.154em 0;
+  line-height: 150%;
 }
 
 .page-node-edit .pane-page-tabs #tabs {

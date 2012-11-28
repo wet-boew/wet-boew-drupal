@@ -1,15 +1,13 @@
 WetKit Web Usability
 ====================
-Main Driver App for most of the functionality related to WET-BOEW
+Foundational Module for most of the functionality related to the Web Experience Toolkit
 
 Key Features (WetKit Web Usability)
 * Administrative Pages
 * Basic Views
-* Default Installation of Menus for WET
+* Default Installation of Menus (Menu Blocks) for WET
 * Integration of WET-BOEW's JS
-* jQuery Update Support for various version (Admin + FrontEnd)
-* Local Apps Support
 * Menus + Menu Block Support
 * Multilingual Boxes Support (soon to be replaced by Bean)
 * Metatag Support
-* Various High Level WET-BOEW Panels Style Plugins
+* Panels Style Plugins

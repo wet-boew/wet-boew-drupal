@@ -80,7 +80,8 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
     }
     //Set Body Class for Panels Layouts
     if (isset($layout)) {
-      if (drupal_substr($layout, 0, 10) == 'wetkit_two') {
+      if ((drupal_substr($layout, 0, 10) == 'wetkit_two') ||
+          drupal_substr($layout, 0, 21) == 'wetkit_three_25_50_25') {
         $variables['wetkit_col_array'] = 'wb-body-sec';
       }
       elseif (drupal_substr($layout, 0, 12) == 'wetkit_three') {
