@@ -15,5 +15,4 @@ Drupal.settings.tabbed_interface_settings = Drupal.settings.tabbed_interface_set
      }
    }
  }
-
 })(jQuery);
