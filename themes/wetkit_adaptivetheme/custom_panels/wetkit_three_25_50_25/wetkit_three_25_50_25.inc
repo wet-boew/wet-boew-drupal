@@ -6,7 +6,7 @@
  */
 function wetkit_adaptivetheme_wetkit_three_25_50_25_panels_layouts() {
   $items['wetkit_three_25_50_25'] = array(
-    'title'    => t('WetKit Three column 25/50/25'),
+    'title'    => t('WetKit Three column 25/50/25 (Content)'),
     'category' => t('WetKit - 3 column'),
     'icon'     => 'wetkit_three_25_50_25.png',
     'theme'    => 'wetkit_three_25_50_25',
@@ -15,9 +15,9 @@ function wetkit_adaptivetheme_wetkit_three_25_50_25_panels_layouts() {
     'theme arguments' => array('id', 'content'),
     'regions' => array(
       'wetkit_three_25_50_25_top'    => t('Top (conditional)'),
-      'wetkit_three_25_50_25_first'  => t('Left'),
-      'wetkit_three_25_50_25_second' => t('Center'),
-      'wetkit_three_25_50_25_third'  => t('Right'),
+      'wetkit_three_25_50_25_first'  => t('Content 1'),
+      'wetkit_three_25_50_25_second' => t('Content 2'),
+      'wetkit_three_25_50_25_third'  => t('Sidebar'),
       'wetkit_three_25_50_25_bottom' => t('Bottom (conditional)'),
     ),
     // WetKit Core

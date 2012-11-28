@@ -1,5 +1,5 @@
 name = WetKit Widgets
-description = Creates generic widget functionality to customize wide and far.
+description = Creates generic WET widget functionality to customize.
 core = 7.x
 package = WetKit
 php = 5.2.4
@@ -31,3 +31,4 @@ features[ctools][] = file_entity:file_default_displays:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
 features[field][] = fieldable_panels_pane-tabbed_interface-field_tabbed_interface
+scripts[] = wetkit-tabbed-interface.js

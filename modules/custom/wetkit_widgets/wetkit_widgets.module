@@ -18,14 +18,6 @@ function wetkit_widgets_apps_app_info() {
 function wetkit_widgets_configure_form($form, &$form_state) {
   $form = array();
 
-  //$form['wetkit_widgets_spotlight_rotation_time'] = array(
-  //  '#title' => t('Spotlight Rotation Time'),
-  //  '#type' => 'textfield',
-  //  '#required' => TRUE,
-  //  '#default_value' => variable_get('wetkit_widgets_spotlight_rotation_time', 4),
-  //  '#description' => t('How many seconds do you want between rotations of the spotlight widget?'),
-  //);
-
   return system_settings_form($form);
 }
 
@@ -33,11 +25,6 @@ function wetkit_widgets_configure_form($form, &$form_state) {
  * Implements hook_init().
  */
 function wetkit_widgets_init() {
-
-  // Include the Spotlight Rotation time setting
-  //$rotation_time = 1000 * variable_get('wetkit_widgets_spotlight_rotation_time', 4);
-  //$js_variables = array('spotlight_settings' => array('rotation_time' => $rotation_time));
-  //drupal_add_js($js_variables, 'setting');
 
 }
 

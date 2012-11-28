@@ -40,7 +40,6 @@ features[panelizer_defaults][] = node:wetkit_page:default
 features[panelizer_defaults][] = node:wetkit_page:default:default
 features[panelizer_defaults][] = node:wetkit_page:default:featured
 features[panelizer_defaults][] = node:wetkit_page:default:teaser
-features[taxonomy][] = wetkit_categories
 features[variable][] = additional_settings__active_tab_wetkit_page
 features[variable][] = additional_settings__active_tab_wetkit_page_other
 features[variable][] = field_bundle_settings_node__wetkit_page

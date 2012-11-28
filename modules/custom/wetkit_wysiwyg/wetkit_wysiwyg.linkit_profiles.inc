@@ -19,7 +19,7 @@ function wetkit_wysiwyg_default_linkit_profiles() {
     'plugins' => array(
       'entity:taxonomy_term' => array(
         'weight' => '0',
-        'enabled' => 0,
+        'enabled' => 1,
       ),
       'entity:node' => array(
         'weight' => '0',
@@ -27,11 +27,11 @@ function wetkit_wysiwyg_default_linkit_profiles() {
       ),
       'entity:file' => array(
         'weight' => '0',
-        'enabled' => 0,
+        'enabled' => 1,
       ),
       'entity:user' => array(
         'weight' => '0',
-        'enabled' => 0,
+        'enabled' => 1,
       ),
     ),
     'entity:node' => array(
@@ -70,11 +70,11 @@ function wetkit_wysiwyg_default_linkit_profiles() {
     'attributes' => array(
       'rel' => array(
         'weight' => '0',
-        'enabled' => 0,
+        'enabled' => 1,
       ),
       'class' => array(
         'weight' => '0',
-        'enabled' => 0,
+        'enabled' => 1,
       ),
       'accesskey' => array(
         'weight' => '0',
