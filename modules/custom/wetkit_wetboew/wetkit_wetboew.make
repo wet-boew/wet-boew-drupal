@@ -11,9 +11,6 @@ projects[advanced_help][subdir] = contrib
 projects[boxes][version] = 1.0
 projects[boxes][subdir] = contrib
 
-projects[context][version] = 3.0-beta2
-projects[context][subdir] = contrib
-
 projects[better_formats][version] = 1.x-dev
 projects[better_formats][subdir] = contrib
 projects[better_formats][type] = module
