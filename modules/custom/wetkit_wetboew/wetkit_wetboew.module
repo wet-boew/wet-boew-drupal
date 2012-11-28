@@ -4,6 +4,7 @@
  * Code for the wetkit_wetboew feature.
  */
 
+include_once('wetkit_wetboew.block.inc');
 include_once('wetkit_wetboew.features.inc');
 include_once('wetkit_wetboew.menu_wetkit_load.inc');
 include_once('theme/theme.inc');

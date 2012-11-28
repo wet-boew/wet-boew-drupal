@@ -12,7 +12,7 @@ function wetkit_wetboew_taxonomy_default_vocabularies() {
     'wetkit_categories' => array(
       'name' => 'WetKit Categories',
       'machine_name' => 'wetkit_categories',
-      'description' => 'This vocabulary is used to organize the website content by section',
+      'description' => 'Default Vocabulary for the Web Experience Toolkit',
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '0',
