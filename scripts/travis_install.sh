@@ -9,6 +9,13 @@ pear channel-discover pear.drush.org
 pear install drush/drush-5.4.0
 phpenv rehash
 
+# Set Up Vars
+WORKSPACE=$(pwd)
+GIT_COMMIT=$(git show --pretty=%P HEAD | head -c8)
+REPO_USER=$(git config -l | grep remote.origin.url | cut -d/ -f4)
+sed -i "s/master/${GIT_COMMIT}/g;s/wet-boew/$REPO_USER/1" ${WORKSPACE}/build-wetkit.make
+cat ${WORKSPACE}/build-wetkit.make
+
 # Install WetKit Distro
 cd ..
 mkdir profiles
