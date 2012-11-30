@@ -9,7 +9,7 @@ pear channel-discover pear.drush.org
 pear install drush/drush-5.4.0
 phpenv rehash
 
-# Set Up Vars
+# Set Up Variables
 WORKSPACE=$(pwd)
 GIT_COMMIT=$(git show --pretty=%P HEAD | head -c8)
 REPO_USER=$(git config -l | grep remote.origin.url | cut -d/ -f4)
