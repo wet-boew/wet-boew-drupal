@@ -21,6 +21,9 @@ cat $workspace/build-wetkit.make \
 |   sed "s/wet-boew/$repo_user/1" \
 > tmp_build-wetkit.make
 
+echo $repo_user
+git config -l
+
 # Install WetKit Distro
 drush make -y tmp_build-wetkit.make
 #cd ..
