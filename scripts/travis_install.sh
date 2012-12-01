@@ -9,6 +9,9 @@ pear channel-discover pear.drush.org
 pear install drush/drush-5.4.0
 phpenv rehash
 
+GIT_COMMIT2=`git show --pretty=%P HEAD`
+echo $GIT_COMMIT2
+
 # Set Up Vars
 git checkout master
 workspace=`pwd`
@@ -16,7 +19,6 @@ build_num=`git log --oneline | wc -l | tr -d ' '`
 branch_name=`git status | head -1 | sed -e 's/# On branch \(.*\)/\1/'`
 brackets_sha=`git log | head -1 | sed -e 's/commit \([0-9a-f]*$\)/\1/'`
 repo_user=`git config -l | grep remote.origin.url | cut -d/ -f4`
-GIT_COMMIT2=`git show --pretty=%P HEAD`
 GIT_COMMIT=`git show --pretty=%P HEAD | head -c8`
 
 cat $workspace/build-wetkit.make \
@@ -27,7 +29,6 @@ cat $workspace/build-wetkit.make \
 
 mv tmp_build-wetkit.make build-wetkit.make
 echo $GIT_COMMIT
-echo $GIT_COMMIT2
 echo $brackets_sha
 echo $repo_user
 
