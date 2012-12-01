@@ -10,6 +10,7 @@ pear install drush/drush-5.4.0
 phpenv rehash
 
 # Set Up Vars
+git checkout master
 workspace=`pwd`
 build_num=`git log --oneline | wc -l | tr -d ' '`
 branch_name=`git status | head -1 | sed -e 's/# On branch \(.*\)/\1/'`
