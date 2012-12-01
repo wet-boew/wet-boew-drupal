@@ -4,3 +4,10 @@ core = 7.x
 projects[drupal][version] = 7.17
 includes[] = drupal-org-core.make
 includes[] = drupal-org.make
+
+; Add wetkit to the full Drupal distro build
+projects[wetkit][type] = profile
+projects[wetkit][download][type] = git
+projects[wetkit][download][url] = https://github.com/wet-boew/wet-boew-drupal.git
+projects[wetkit][download][branch] = master
+projects[wetkit][download][revision] = master
