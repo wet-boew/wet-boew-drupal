@@ -25,6 +25,7 @@ cat $workspace/build-wetkit.make \
 
 mv tmp_build-wetkit.make build-wetkit.make
 echo $GIT_COMMIT
+echo $brackets_sha
 echo $repo_user
 
 # Install WetKit Distro
