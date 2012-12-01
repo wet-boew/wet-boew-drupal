@@ -15,7 +15,7 @@ build_num=`git log --oneline | wc -l | tr -d ' '`
 branch_name=`git status | head -1 | sed -e 's/# On branch \(.*\)/\1/'`
 brackets_sha=`git log | head -1 | sed -e 's/commit \([0-9a-f]*$\)/\1/'`
 repo_user=`git config -l | grep remote.origin.url | cut -d/ -f4`
-GIT_COMMIT=`git show --pretty=%P HEAD | cut -f2`
+GIT_COMMIT=`git show --pretty=%P HEAD | cut -d\  -f 2`
 
 cat $workspace/build-wetkit.make \
 |   sed "s/\[branch\] = master/\[branch\] = $branch_name/" \
