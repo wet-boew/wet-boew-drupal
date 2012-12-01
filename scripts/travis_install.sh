@@ -18,14 +18,14 @@ repo_user=`git config -l | grep remote.origin.url | cut -d/ -f4`
 cat $workspace/build-wetkit.make \
 |   sed "s/\[branch\] = master/\[branch\] = $branch_name/" \
 |   sed "s/\[revision\] = master/\[revision\] = $brackets_sha/" \
-|   sed "s/wet-boew/$repo_user/1" \
-> tmp_build-wetkit.make
+|   sed "s/wet-boew/sylus/1" \
+> build-wetkit.make
 
 echo $repo_user
 git config -l
 
 # Install WetKit Distro
-drush make -y tmp_build-wetkit.make
+drush make -y build-wetkit.make
 #cd ..
 #mkdir profiles
 #mv wet-boew-drupal wetkit
