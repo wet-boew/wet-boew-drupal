@@ -22,7 +22,7 @@ cat $workspace/build-wetkit.make \
 > tmp_build-wetkit.make
 
 # Install WetKit Distro
-drush make tmp_build-wetkit.make ../github_wet_distro
+drush make tmp_build-wetkit.make
 #cd ..
 #mkdir profiles
 #mv wet-boew-drupal wetkit
