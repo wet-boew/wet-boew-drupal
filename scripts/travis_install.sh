@@ -18,15 +18,12 @@ repo_user=`git config -l | grep remote.origin.url | cut -d/ -f4`
 GIT_COMMIT=`git show --pretty=%P HEAD | cut -d\  -f 2`
 
 cat $workspace/build-wetkit.make \
+|   sed "s/\/master/$GIT_COMMIT/" \
 |   sed "s/\[branch\] = master/\[branch\] = $branch_name/" \
 |   sed "s/\[revision\] = master/\[revision\] = $GIT_COMMIT/" \
 |   sed "s/wet-boew/sylus/1" \
 > tmp_build-wetkit.make
-
 mv tmp_build-wetkit.make build-wetkit.make
-echo $GIT_COMMIT
-echo $brackets_sha
-echo $repo_user
 
 # Install WetKit Distro
 drush make -y build-wetkit.make
