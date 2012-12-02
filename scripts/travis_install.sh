@@ -21,7 +21,7 @@ cat $workspace/build-wetkit.make \
 |   sed "s/\/master/\/$GIT_COMMIT/" \
 |   sed "s/\[branch\] = master/\[branch\] = $branch_name/" \
 |   sed "s/\[revision\] = master/\[revision\] = $GIT_COMMIT/" \
-|   sed "s/wet-boew/sylus/1" \
+|   sed "s/wet-boew/$repo_user/1" \
 > tmp_build-wetkit.make
 mv tmp_build-wetkit.make build-wetkit.make
 
