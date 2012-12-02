@@ -29,17 +29,16 @@ echo $GIT_COMMIT
 echo $branch_name
 echo $repo_user
 
-
 # Install WetKit Distro
-drush make build-wetkit.make ../github_wet_distro -y
-#cd ..
+#drush make build-wetkit.make ../github_wet_distro -y
+cd ..
 #mkdir profiles
 #mv wet-boew-drupal wetkit
 #mv wetkit profiles/
 #mkdir drupal_wet
 #mv profiles drupal_wet/
 #cd drupal_wet
-#drush make --prepare-install profiles/wetkit/build-wetkit.make --yes
+drush make --prepare-install $workspace/build-wetkit.make --yes
 #sudo chmod -R 777 sites/all/modules
 #drush si wetkit wetkit_wetboew_selection_form.theme=wetkit_adaptivetheme --sites-subdir=default --db-url=mysql://root:@127.0.0.1/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name="Web Experience Toolkit" --yes
 #drush cc all --yes
