@@ -25,6 +25,11 @@ cat $workspace/build-wetkit.make \
 > tmp_build-wetkit.make
 mv tmp_build-wetkit.make build-wetkit.make
 
+echo $GIT_COMMIT
+echo $branch_name
+echo $repo_user
+
+
 # Install WetKit Distro
 drush make build-wetkit.make ../github_wet_distro -y
 #cd ..
