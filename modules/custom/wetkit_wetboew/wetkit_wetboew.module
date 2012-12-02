@@ -325,9 +325,9 @@ function wetkit_wetboew_libraries_info() {
         'dist/theme-gcwu-fegc/css/theme-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
       ),
       'js' => array(
-        'build/theme-gcwu-fegc/js/theme-min.js' => array('preprocess' => FALSE, 'scope' => 'footer', 'weight' => 5),
-        'build/js/settings.js' => array('preprocess' => FALSE, 'scope' => 'footer', 'weight' => 5),
-        'build/js/pe-ap-min.js' => array('preprocess' => FALSE, 'scope' => 'footer', 'weight' => 5),
+        'dist/theme-gcwu-fegc/js/theme-min.js' => array('preprocess' => FALSE, 'scope' => 'footer', 'weight' => 5),
+        'dist/js/settings.js' => array('preprocess' => FALSE, 'scope' => 'footer', 'weight' => 5),
+        'dist/js/pe-ap-min.js' => array('preprocess' => FALSE, 'scope' => 'footer', 'weight' => 5),
       ),
     ),
     // Optional: Specify alternative variants of the library, if available.
