@@ -91,7 +91,7 @@ function wetkit_demo_content_defaults() {
   );
 
   $content['wetkit-demo-0-fr'] = (object) array(
-    'exported_path' => 'content/wet-features',
+    'exported_path' => 'contenu/wet-features',
     'title' => 'WetKit Features',
     'status' => '1',
     'promote' => '1',
@@ -207,7 +207,7 @@ function wetkit_demo_content_defaults() {
   );
 
   $content['wetkit-demo-1-fr'] = (object) array(
-    'exported_path' => 'content/wet-collaboration',
+    'exported_path' => 'contenu/wet-collaboration',
     'title' => 'WetKit Collaboration',
     'status' => '1',
     'promote' => '1',
@@ -336,7 +336,7 @@ function wetkit_demo_content_defaults() {
   );
 
   $content['wetkit-demo-2-fr'] = (object) array(
-    'exported_path' => 'content/content-demo',
+    'exported_path' => 'contenu/content-demo',
     'title' => 'Démo Wetkit',
     'status' => '1',
     'promote' => '1',
