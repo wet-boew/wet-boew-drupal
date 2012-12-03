@@ -97,7 +97,7 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
         ),
         'captionfilter' => array(
           'captionfilter' => 1,
-        ),        
+        ),
         'wetkitcleanup' => array(
           'wetkitcleanup' => 1,
         ),
