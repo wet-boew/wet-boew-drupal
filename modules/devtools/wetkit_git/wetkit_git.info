@@ -1,6 +1,6 @@
 name = WetKit Git
 description = A custom module which will add a line to the status report screen showing the Git version and provide a link to run Git Update.
 core = 7.x
-package = WetKit Dev Tools
+package = WetKit
 php = 5.2.4
 version = 7.x-1.0
