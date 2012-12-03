@@ -283,8 +283,7 @@ function wetkit_wetboew_init() {
 
   //Only use WET-BOEW on Front End
   global $theme;
-  $current_path = current_path();
-  if (!path_is_admin($current_path) && $theme != 'rubik') {
+  if ($theme == 'wetkit_adaptivetheme') {
     //Add WET-BOEW Intranet Library using Libraries API
     if (($library = libraries_detect('wet-boew', NULL, 'intranet')) && !empty($library['variants']['intranet']['installed'])) {
       // Do something with the library here.
