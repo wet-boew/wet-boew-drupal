@@ -34,7 +34,7 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
   <?php endif; ?>
   <div id="wb-main" role="main">
     <div id="wb-main-in">
-      <div class="region-wetkit-one-100-first span-8">
+      <div class="region-wetkit-one-100-first">
           <?php print $content['wetkit_one_100_content']; ?>
       </div>
       <div class="clear"></div>
