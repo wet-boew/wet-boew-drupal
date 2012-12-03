@@ -196,11 +196,6 @@ img[!src|title|alt|style|width|height|class|hspace|vspace],
         'status' => '1',
         'settings' => array(),
       ),
-      'filter_autop' => array(
-        'weight' => '-45',
-        'status' => '0',
-        'settings' => array(),
-      ),
       'filter_url' => array(
         'weight' => '-44',
         'status' => '1',
