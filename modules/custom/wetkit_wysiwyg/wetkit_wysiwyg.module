@@ -174,12 +174,28 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
       // Set the CSS Files that absolutely need to be rendered inside the WYSIWYG
       // leaves the interface in the frontend to be used for additional styles
       $settings['content_css'] .= ',' . 
-      libraries_get_path('wet-boew', TRUE) . '/build/grids/css/util-min.css' . ',' . 
-      libraries_get_path('wet-boew', TRUE) . '/build/js/css/pe-ap-min.css' . ',' . 
-      libraries_get_path('wet-boew', TRUE) . '/build/' . $wet_theme . '/css/theme-min.css';
+      libraries_get_path('wet-boew', TRUE) . '/dist/grids/css/util-min.css' . ',' . 
+      libraries_get_path('wet-boew', TRUE) . '/dist/js/css/pe-ap-min.css' . ',' . 
+      libraries_get_path('wet-boew', TRUE) . '/dist/' . $wet_theme . '/css/theme-min.css';
 
-      // Define the schema to use
+      // Schema is HTML5 instead of default HTML4
       $settings['schema'] = 'html5';
+
+      // End container block element when pressing enter inside an empty block
+      $settings['end_container_on_empty_block'] = true;
+
+      // HTML5 formats
+      $settings['style_formats'] = array(
+        array('title' => 'p', 'block' => 'p'),
+        array('title' => 'div', 'block' => 'div'),
+        array('title' => 'pre', 'block' => 'pre'),
+        array('title' => 'section', 'block' => 'section', 'wrapper' => true, 'merge_siblings' => false),
+        array('title' => 'article', 'block' => 'article', 'wrapper' => true, 'merge_siblings' => false),
+        array('title' => 'blockquote', 'block' => 'blockquote', 'wrapper' => true),
+        array('title' => 'hgroup', 'block' => 'hgroup', 'wrapper' => true),
+        array('title' => 'aside', 'block' => 'aside', 'wrapper' => true),
+        array('title' => 'figure', 'block' => 'figure', 'wrapper' => true),
+      );
 
       // Define the skin to use
       $settings['skin'] = 'cirkuit';
