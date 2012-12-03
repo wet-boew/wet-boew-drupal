@@ -97,5 +97,5 @@ projects[tao][version] = 3.0-beta4
 
 libraries[wet-boew][download][type] = git
 libraries[wet-boew][download][branch] = gh-pages
-libraries[wet-boew][download][revision] = 8f83b32
+libraries[wet-boew][download][revision] = 467bddf
 libraries[wet-boew][download][url] = https://github.com/wet-boew/wet-boew.git
