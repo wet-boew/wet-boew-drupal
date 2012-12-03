@@ -13,39 +13,49 @@ projects[wysiwyg][download][branch] = 7.x-2.x
 projects[wysiwyg][patch][1489096] = http://drupal.org/files/wysiwyg-table-format.patch
 projects[wysiwyg][patch][1786732] = http://drupal.org/files/wysiwyg-arbitrary_image_paths_markitup-1786732-3.patch
 
-projects[wysiwyg_filter][version] = 1.6-rc2
+projects[wysiwyg_filter][version] = 1.x-dev
+projects[wysiwyg_filter][type] = module
 projects[wysiwyg_filter][subdir] = contrib
+projects[wysiwyg_filter][download][type] = git
+projects[wysiwyg_filter][download][revision] = 6cbb1f4
+projects[wysiwyg_filter][download][branch] = 7.x-1.x
+projects[wysiwyg_filter][patch][1687794] = http://drupal.org/files/wysiwyg_filter-1687794-1-skip-validation-if-filter-disabled.patch
+projects[wysiwyg_filter][patch][1543044] = http://drupal.org/files/wysiwyg_filter-missing-argument-1543044-2_1.patch
 
-projects[wysiwyg_template][version] = 2.7
+projects[wysiwyg_template][version] = 2.9
 projects[wysiwyg_template][subdir] = contrib
 
 ; The WYSIWYG Helpers
 
-projects[linkit][version] = 2.5
+projects[linkit][version] = 1.x-dev
+projects[linkit][type] = module
 projects[linkit][subdir] = contrib
+projects[linkit][download][type] = git
+projects[linkit][download][revision] = 11c50b8
+projects[linkit][download][branch] = 7.x-2.x
+projects[linkit][patch][1793896] = http://drupal.org/files/entitylanguages-1793896-1.patch
 
-projects[image_resize_filter][version] = 1.13
+projects[image_resize_filter][version] = 1.x-dev
+projects[image_resize_filter][type] = module
 projects[image_resize_filter][subdir] = contrib
+projects[image_resize_filter][download][type] = git
+projects[image_resize_filter][download][revision] = da3bbd6
+projects[image_resize_filter][download][branch] = 7.x-1.x
+projects[image_resize_filter][patch][1708366] = http://drupal.org/files/1708366-7.patch
 
-projects[caption_filter][version] = 1.2
+projects[caption_filter][version] = 1.x-dev
+projects[caption_filter][type] = module
 projects[caption_filter][subdir] = contrib
-projects[caption_filter][patch][1432092] = http://drupal.org/files/caption-button-and-image-1432092-8_0.patch
+projects[caption_filter][download][type] = git
+projects[caption_filter][download][revision] = c9794cf
+projects[caption_filter][download][branch] = 7.x-1.x
+projects[caption_filter][patch][1432092] = http://drupal.org/files/1432092-button-and-image.patch
 
 ; Include our Editors
 
-;libraries[tinymce][download][type] = git
-;libraries[tinymce][download][revision] = 30e5055
-;libraries[tinymce][download][url] = https://github.com/tinymce/tinymce.git
-;libraries[tinymce][patch][1561882] = http://drupal.org/files/1561882-cirkuit-theme-tinymce-3.5.2.patch
-;libraries[tinymce][patch][] = https://raw.github.com/gist/3613982/71c734b952f98354f7a8bd5e2cb77a8e1fbc17d6/wysiwyg_fr
-
 libraries[tinymce][download][type] = git
-libraries[tinymce][download][revision] = cecd802
+libraries[tinymce][download][revision] = ef85a05
 libraries[tinymce][download][url] = https://github.com/sylus/tinymce-wetkit.git
-
-;libraries[markitup][download][type] = get
-;libraries[markitup][download][url] = https://github.com/markitup/1.x/tarball/master
-;libraries[markitup][patch][1715642] = http://drupal.org/files/1715642-adding-html-set-markitup-editor.patch
 
 libraries[markitup][download][type] = git
 libraries[markitup][download][revision] = 4b77626

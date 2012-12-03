@@ -198,7 +198,7 @@ img[!src|title|alt|style|width|height|class|hspace|vspace],
       ),
       'filter_autop' => array(
         'weight' => '-45',
-        'status' => '1',
+        'status' => '0',
         'settings' => array(),
       ),
       'filter_url' => array(
