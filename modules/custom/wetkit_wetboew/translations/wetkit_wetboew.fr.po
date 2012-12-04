@@ -54,24 +54,24 @@ msgstr ""
 "l'expérience Web"
 
 #: wetkit_wetboew.features.menu_custom.inc:60
-msgid "WET: Footer"
-msgstr "BOEW: Pied de page"
+msgid "Footer"
+msgstr "Pied de page"
 
 #: wetkit_wetboew.features.menu_custom.inc:61
-msgid "WET: Header"
-msgstr "BOEW: En-tête"
+msgid "Header"
+msgstr "En-tête"
 
 #: wetkit_wetboew.features.menu_custom.inc:62
-msgid "WET: Mega Menu"
-msgstr "BOEW: Mégamenu"
+msgid "Mega Menu"
+msgstr "Mégamenu"
 
 #: wetkit_wetboew.features.menu_custom.inc:63
-msgid "WET: Mid Footer"
-msgstr "BOEW : pied de page supérieur"
+msgid "Mid Footer"
+msgstr "Pied de page supérieur"
 
 #: wetkit_wetboew.features.menu_custom.inc:64
-msgid "WET: Terms"
-msgstr "BOEW: Termes"
+msgid "Terms"
+msgstr "Termes"
 
 #: wetkit_wetboew.profile.inc:12;24
 msgid "Choose a theme"
