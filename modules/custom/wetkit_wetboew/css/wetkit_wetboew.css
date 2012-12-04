@@ -68,6 +68,8 @@ ul li.admin-menu-search {
     background-image:linear-gradient(#176ca7,#135888)!important;
 }
 
+.tao table th,
+.tao .item-list h3, .tao .block .block-title, .tao .fieldset-title, .tao .collapsible .fieldset-legend a,
 .tao .admin-panel h3 {
     text-shadow:white 0 1px 1px;
     background-repeat:repeat-x;
