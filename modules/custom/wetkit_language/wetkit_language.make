@@ -25,6 +25,9 @@ projects[i18n][subdir] = contrib
 projects[i18nviews][version] = 3.x-dev
 projects[i18nviews][subdir] = contrib
 
+projects[l10n_client][version] = 1.1
+projects[l10n_client][subdir] = contrib
+
 projects[stringoverrides][version] = 1.8
 projects[stringoverrides][subdir] = contrib
 

@@ -14,8 +14,8 @@ function wetkit_search_user_default_permissions() {
   $permissions['use custom search'] = array(
     'name' => 'use custom search',
     'roles' => array(
-      0 => 'anonymous user',
-      1 => 'authenticated user',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'custom_search',
   );

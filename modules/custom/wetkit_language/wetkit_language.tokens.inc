@@ -51,7 +51,7 @@ function wetkit_language_tokens($type, $tokens, array $data = array(), array $op
       switch ($name) {
         case 'bilingual_prefix':
           if ($node->language == 'fr') {
-            $value = 'contenu';              
+            $value = 'contenu';
           }
           else {
             $value = 'content';

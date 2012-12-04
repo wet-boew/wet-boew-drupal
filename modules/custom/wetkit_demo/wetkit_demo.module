@@ -41,8 +41,8 @@ function wetkit_demo_ctools_plugin_directory($module, $plugin) {
 
 
 /**
- * Implementation of hook_link_alter() 
- * 
+ * Implements hook_link_alter().
+ *
  * This is a clever workaround for some notice errors that
  * we introduced in Panopoly Admin RC3. This function can be
  * removed with the next version of Panopoly. More information

@@ -35,7 +35,9 @@ function wetkit_pages_field_default_fields() {
       ),
       'locked' => '0',
       'module' => 'text',
-      'settings' => array(),
+      'settings' => array(
+        'entity_translation_sync' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'text_with_summary',
     ),
@@ -92,6 +94,7 @@ function wetkit_pages_field_default_fields() {
       'required' => 1,
       'settings' => array(
         'display_summary' => 0,
+        'entity_translation_sync' => FALSE,
         'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
@@ -130,6 +133,7 @@ function wetkit_pages_field_default_fields() {
           1 => 'Yes',
         ),
         'allowed_values_function' => '',
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'list_boolean',
@@ -176,6 +180,7 @@ function wetkit_pages_field_default_fields() {
       'label' => 'Archived Content',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -220,6 +225,7 @@ function wetkit_pages_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
         'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
@@ -262,6 +268,7 @@ function wetkit_pages_field_default_fields() {
       'label' => 'Categories',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -299,6 +306,9 @@ function wetkit_pages_field_default_fields() {
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
+        'entity_translation_sync' => array(
+          0 => 'fid',
+        ),
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -363,6 +373,7 @@ function wetkit_pages_field_default_fields() {
       'settings' => array(
         'alt_field' => 1,
         'default_image' => 0,
+        'entity_translation_sync' => FALSE,
         'file_directory' => 'pages',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -406,6 +417,7 @@ function wetkit_pages_field_default_fields() {
           1 => 'Yes',
         ),
         'allowed_values_function' => '',
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'list_boolean',
@@ -451,6 +463,7 @@ function wetkit_pages_field_default_fields() {
       'label' => 'Feature content',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -494,6 +507,7 @@ function wetkit_pages_field_default_fields() {
           'yahoobuzz' => 'Yahoo Buzz',
         ),
         'allowed_values_function' => '',
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'list_text',
@@ -536,6 +550,7 @@ function wetkit_pages_field_default_fields() {
       'label' => 'Share Widget',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -573,7 +588,9 @@ function wetkit_pages_field_default_fields() {
       ),
       'locked' => '0',
       'module' => 'text',
-      'settings' => array(),
+      'settings' => array(
+        'entity_translation_sync' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'text_with_summary',
     ),
@@ -624,6 +641,7 @@ function wetkit_pages_field_default_fields() {
       'required' => 1,
       'settings' => array(
         'display_summary' => 0,
+        'entity_translation_sync' => FALSE,
         'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
@@ -665,6 +683,9 @@ function wetkit_pages_field_default_fields() {
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
+        'entity_translation_sync' => array(
+          0 => 'fid',
+        ),
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -723,6 +744,7 @@ function wetkit_pages_field_default_fields() {
       'settings' => array(
         'alt_field' => 1,
         'default_image' => 0,
+        'entity_translation_sync' => FALSE,
         'file_directory' => 'pages',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',

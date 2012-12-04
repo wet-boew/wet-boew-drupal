@@ -70,3 +70,9 @@ body.maintenance-page #logo {
 .panels-ipe-newblock ul {
   margin: 0px;
 }
+
+/*
+ * IPE and l10n Compatibility
+ */
+ 
+.panels-ipe #l10n-client { bottom: 55px; }

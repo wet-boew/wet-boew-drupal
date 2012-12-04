@@ -1,7 +1,7 @@
 name = WetKit MetaTags Dublin Core (HTML5)
 description = Installs and configures default wetkit metatags that can be easily extended for your site
 core = 7.x
-package = WetKit Features
+package = WetKit
 php = 5.2.4
 version = 7.x-1.0
 dependencies[] = i18n

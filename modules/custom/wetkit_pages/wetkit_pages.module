@@ -43,7 +43,7 @@ function wetkit_pages_menu() {
  *   Nested array of form elements that comprise the form.
  * @param type $form_state
  *   A keyed array containing the current state of the form.
- * @param type $form_id 
+ * @param type $form_id
  *   String representing the name of the form itself.
  */
 function wetkit_pages_form_alter(&$form, &$form_state, $form_id) {
@@ -177,7 +177,7 @@ function wetkit_pages_module_implements_alter(&$implementations, $hook) {
 /**
  * Implements hook_modules_enabled().
  *
- * This hook is implemented to assign some default permissions for panelizer's handling 
+ * This hook is implemented to assign some default permissions for panelizer's handling
  * of taxonomy terms. This has to be done in this hook to run after both features
  * and defaultconfig which power the functionality. Hopefully a more general solution
  * can be found. More information - http://drupal.org/node/1837312.
