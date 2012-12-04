@@ -94,3 +94,7 @@ ul li.admin-menu-search {
   background: none;
   padding: 10px 20px;
 }
+
+.tao .form-item .description, .description { color: #000; }
+
+.tao a { color: #145E91; }
