@@ -56,7 +56,10 @@ ul li.admin-menu-search {
     height: 35px;
 }
 
-.tao .action-links a,
+.tao .action-links a {
+  color: white;
+}
+
 .tao .primary-tabs li.active {
     text-shadow:#222 0 1px 1px;
     background: none;
