@@ -86,7 +86,7 @@ body.maintenance-page #logo {
     background-image:-webkit-linear-gradient(#176ca7,#135888)!important;
     background-image:-moz-linear-gradient(#176ca7,#135888)!important;
     background-image:-o-linear-gradient(#176ca7,#135888)!important;
-    background-image:linear-gradient(#176ca7,#135888)!important
+    background-image:linear-gradient(#176ca7,#135888)!important;
 }
 #l10n-client-form .form-submit { display: inline; }
 
@@ -97,5 +97,5 @@ body.maintenance-page #logo {
     background-image:-webkit-linear-gradient(#666,#545454)!important;
     background-image:-moz-linear-gradient(#666,#545454)!important;
     background-image:-o-linear-gradient(#666,#545454)!important;
-    background-image:linear-gradient(#666,#545454)!important
+    background-image:linear-gradient(#666,#545454)!important;
 }
