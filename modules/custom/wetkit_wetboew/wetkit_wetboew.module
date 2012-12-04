@@ -73,7 +73,7 @@ function wetkit_wetboew_menu() {
  *   Nested array of form elements that comprise the form.
  * @param type $form_state
  *   A keyed array containing the current state of the form.
- * @param type $form_id 
+ * @param type $form_id
  *   String representing the name of the form itself.
  */
 function wetkit_wetboew_form_alter(&$form, &$form_state, $form_id) {
@@ -244,7 +244,7 @@ function wetkit_wetboew_theme($existing, $type, $theme, $path) {
  *   String to be parsed.
  * @param type $allowed_tags
  *   Allowed tags to be included when parsing the string.
- * @return type 
+ * @return type
  *  Return the modified string.
  */
 function wetkit_wetboew_filter_xss($string, $allowed_tags = array('a', 'em', 'strong', 'cite', 'code', 'ul', 'ol', 'li', 'dl', 'dt', 'dd', 'br')) {
@@ -437,7 +437,7 @@ function wetkit_wetboew_menu_block_blocks() {
  * Menu callback: Provide the administration overview page.
  * Adapted from system_admin_config_page()
  *
- * @return type 
+ * @return type
  *   Returns the configure page
  */
 function wetkit_wetboew_config_page() {

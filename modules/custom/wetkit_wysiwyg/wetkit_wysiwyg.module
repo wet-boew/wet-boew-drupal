@@ -156,7 +156,7 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
 
   switch ($context['editor']['name']) {
     case 'tinymce':
-      
+
       // Intranet Theme
       $wet_theme = '';
       if ((variable_get('wetkit_wetboew_theme', 0) == 1)) {
@@ -170,31 +170,31 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
       else {
         $wet_theme = 'theme-gcwu-fegc';
       }
-      
+
       // Set the CSS Files that absolutely need to be rendered inside the WYSIWYG
       // leaves the interface in the frontend to be used for additional styles
-      $settings['content_css'] .= ',' . 
-      libraries_get_path('wet-boew', TRUE) . '/dist/grids/css/util-min.css' . ',' . 
-      libraries_get_path('wet-boew', TRUE) . '/dist/js/css/pe-ap-min.css' . ',' . 
+      $settings['content_css'] .= ',' .
+      libraries_get_path('wet-boew', TRUE) . '/dist/grids/css/util-min.css' . ',' .
+      libraries_get_path('wet-boew', TRUE) . '/dist/js/css/pe-ap-min.css' . ',' .
       libraries_get_path('wet-boew', TRUE) . '/dist/' . $wet_theme . '/css/theme-min.css';
 
       // Schema is HTML5 instead of default HTML4
       $settings['schema'] = 'html5';
 
       // End container block element when pressing enter inside an empty block
-      $settings['end_container_on_empty_block'] = true;
+      $settings['end_container_on_empty_block'] = TRUE;
 
       // HTML5 formats
       $settings['style_formats'] = array(
         array('title' => 'p', 'block' => 'p'),
         array('title' => 'div', 'block' => 'div'),
         array('title' => 'pre', 'block' => 'pre'),
-        array('title' => 'section', 'block' => 'section', 'wrapper' => true, 'merge_siblings' => false),
-        array('title' => 'article', 'block' => 'article', 'wrapper' => true, 'merge_siblings' => false),
-        array('title' => 'blockquote', 'block' => 'blockquote', 'wrapper' => true),
-        array('title' => 'hgroup', 'block' => 'hgroup', 'wrapper' => true),
-        array('title' => 'aside', 'block' => 'aside', 'wrapper' => true),
-        array('title' => 'figure', 'block' => 'figure', 'wrapper' => true),
+        array('title' => 'section', 'block' => 'section', 'wrapper' => TRUE, 'merge_siblings' => FALSE),
+        array('title' => 'article', 'block' => 'article', 'wrapper' => TRUE, 'merge_siblings' => FALSE),
+        array('title' => 'blockquote', 'block' => 'blockquote', 'wrapper' => TRUE),
+        array('title' => 'hgroup', 'block' => 'hgroup', 'wrapper' => TRUE),
+        array('title' => 'aside', 'block' => 'aside', 'wrapper' => TRUE),
+        array('title' => 'figure', 'block' => 'figure', 'wrapper' => TRUE),
       );
 
       // Define the skin to use
