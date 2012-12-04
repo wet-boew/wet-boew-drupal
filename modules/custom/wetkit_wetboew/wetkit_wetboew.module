@@ -190,10 +190,10 @@ function wetkit_wetboew_css_alter(&$css) {
  *   The variables array to be rendered or modified
  */
 function wetkit_wetboew_preprocess_status_messages(&$variables) {
-    $current_path = current_path();
-    if (!path_is_admin($current_path)) {
-      $variables['theme_hook_suggestions'][] = 'wetkit_wetboew_status_messages';
-    }
+  global $theme;
+  if ($theme == 'wetkit_adaptivetheme') {
+    $variables['theme_hook_suggestions'][] = 'wetkit_wetboew_status_messages';
+  }
 }
 
 /**
@@ -276,8 +276,8 @@ function wetkit_wetboew_init() {
   }
   //Set Documentation Text
   if ((variable_get('wetkit_wetboew_doc', 1) == 1)) {
-    drupal_set_message(t('Please proceed to the <a href="@settings">WetKit Web Usability Page</a> to configure additional settings.', array('@settings' => url('admin/config/wetkit_wetboew/settings'))), 'status');
-    drupal_set_message(t('Please read the online <a href="@documentation">Documentation</a>', array('@documentation' => url('https://github.com/wet-boew/wet-boew-drupal/wiki'))), 'warning');
+    drupal_set_message(t('Thank you for installing the WxT-Drupal Variant for the Web Experience Toolkit. You may login at the following page: <a href="@login">User Login</a>', array('@login' => url('user'))), 'status');
+    drupal_set_message(t('For more information please be sure to read the online <a href="@documentation">Documentation</a>', array('@documentation' => url('https://github.com/wet-boew/wet-boew-drupal/wiki'))), 'warning');
     variable_set('wetkit_wetboew_doc', 0);
   }
 

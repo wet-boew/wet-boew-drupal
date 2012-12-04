@@ -20,8 +20,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-12-03 22:56-0500\n"
-"PO-Revision-Date: 2012-12-03 22:56-0500\n"
+"POT-Creation-Date: 2012-12-04 00:20-0500\n"
+"PO-Revision-Date: 2012-12-04 00:20-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -162,17 +162,12 @@ msgid "This will change the Drupal theme by adding custom css and logic for vari
 msgstr ""
 
 #: wetkit_wetboew.module:279
-msgid "Please proceed to the <a href=\"@settings\">WetKit Web Usability Page</a> to configure additional settings."
+msgid "Thank you for installing the WxT-Drupal Variant for the Web Experience Toolkit. You may login at the following page: <a href=\"@login\">User Login</a>"
 msgstr ""
-"Veuillez aller à la page <a href=\"@settings\"> utilisation de la "
-"Boîte à outils de l'expérience Web</a> pour configurer d’autres "
-"paramètres."
 
 #: wetkit_wetboew.module:280
-msgid "Please read the online <a href=\"@documentation\">Documentation</a>"
+msgid "For more information please be sure to read the online <a href=\"@documentation\">Documentation</a>"
 msgstr ""
-"Veuillez lire la documentation en ligne <a "
-"href=\"@documentation\">Documentation</a>"
 
 #: wetkit_wetboew.module:447
 msgid "One or more problems were detected with your Drupal installation. Check the <a href=\"@status\">status report</a> for more information."
