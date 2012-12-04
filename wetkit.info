@@ -20,11 +20,11 @@ dependencies[] = block
 dependencies[] = dblog
 dependencies[] = update
 dependencies[] = shortcut
-dependencies[] = overlay
 
 ; Drupal Core Disabled
 ;dependencies[] = help
 ;dependencies[] = contextual
+;dependencies[] = overlay
 ;dependencies[] = rdf
 ;dependencies[] = statistics
 ;dependencies[] = simpletest
