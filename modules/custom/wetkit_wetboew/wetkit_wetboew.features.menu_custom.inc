@@ -13,7 +13,7 @@ function wetkit_wetboew_menu_default_menu_custom() {
   // Exported menu: main-menu.
   $menus['main-menu'] = array(
     'menu_name' => 'main-menu',
-    'title' => 'WET: Mega Menu',
+    'title' => 'Mega Menu',
     'description' => 'The <em>Main</em> megamenu for Web Experience Toolkit',
     'language' => 'und',
     'i18n_mode' => '5',
@@ -21,7 +21,7 @@ function wetkit_wetboew_menu_default_menu_custom() {
   // Exported menu: menu-wet-footer.
   $menus['menu-wet-footer'] = array(
     'menu_name' => 'menu-wet-footer',
-    'title' => 'WET: Footer',
+    'title' => 'Footer',
     'description' => 'Footer Section for Web Experience Toolkit',
     'language' => 'und',
     'i18n_mode' => '5',
@@ -29,7 +29,7 @@ function wetkit_wetboew_menu_default_menu_custom() {
   // Exported menu: menu-wet-header.
   $menus['menu-wet-header'] = array(
     'menu_name' => 'menu-wet-header',
-    'title' => 'WET: Header',
+    'title' => 'Header',
     'description' => 'Header Section for Web Experience Toolkit',
     'language' => 'und',
     'i18n_mode' => '5',
@@ -37,7 +37,7 @@ function wetkit_wetboew_menu_default_menu_custom() {
   // Exported menu: menu-wet-mid-footer.
   $menus['menu-wet-mid-footer'] = array(
     'menu_name' => 'menu-wet-mid-footer',
-    'title' => 'WET: Mid Footer',
+    'title' => 'Mid Footer',
     'description' => 'Mid Footer Section for Web Experience Toolkit',
     'language' => 'und',
     'i18n_mode' => '5',
@@ -45,7 +45,7 @@ function wetkit_wetboew_menu_default_menu_custom() {
   // Exported menu: menu-wet-terms.
   $menus['menu-wet-terms'] = array(
     'menu_name' => 'menu-wet-terms',
-    'title' => 'WET: Terms',
+    'title' => 'Terms',
     'description' => 'Terms Section for Web Experience Toolkit',
     'language' => 'und',
     'i18n_mode' => '5',
@@ -57,11 +57,11 @@ function wetkit_wetboew_menu_default_menu_custom() {
   t('Mid Footer Section for Web Experience Toolkit');
   t('Terms Section for Web Experience Toolkit');
   t('The <em>Main</em> megamenu for Web Experience Toolkit');
-  t('WET: Footer');
-  t('WET: Header');
-  t('WET: Mega Menu');
-  t('WET: Mid Footer');
-  t('WET: Terms');
+  t('Footer');
+  t('Header');
+  t('Mega Menu');
+  t('Mid Footer');
+  t('Terms');
 
 
   return $menus;
