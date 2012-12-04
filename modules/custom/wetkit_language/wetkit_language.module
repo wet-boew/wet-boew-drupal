@@ -13,7 +13,7 @@ include_once('wetkit_language.features.inc');
  *   Nested array of form elements that comprise the form.
  * @param type $form_state
  *   A keyed array containing the current state of the form.
- * @param type $form_id 
+ * @param type $form_id
  *   String representing the name of the form itself.
  */
 function wetkit_language_form_alter(&$form, &$form_state, $form_id) {

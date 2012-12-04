@@ -13,8 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-09-17 18:40-0400\n"
-"PO-Revision-Date: 2012-09-17 18:40-0400\n"
+"POT-Creation-Date: 2012-12-03 22:50-0500\n"
+"PO-Revision-Date: 2012-12-03 22:50-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -22,97 +22,97 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: wetkit_demo.views_default.inc:348
+#: wetkit_demo.views_default.inc:258
 msgid "Master"
 msgstr "Maître"
 
-#: wetkit_demo.views_default.inc:349
+#: wetkit_demo.views_default.inc:259
 msgid "more"
 msgstr "plus"
 
-#: wetkit_demo.views_default.inc:350
+#: wetkit_demo.views_default.inc:260
 msgid "Apply"
 msgstr "Appliquer"
 
-#: wetkit_demo.views_default.inc:351
+#: wetkit_demo.views_default.inc:261
 msgid "Reset"
 msgstr "Réinitialiser"
 
-#: wetkit_demo.views_default.inc:352
+#: wetkit_demo.views_default.inc:262
 msgid "Sort by"
 msgstr "Trier selon"
 
-#: wetkit_demo.views_default.inc:353
+#: wetkit_demo.views_default.inc:263
 msgid "Asc"
 msgstr "Ascendant"
 
-#: wetkit_demo.views_default.inc:354
+#: wetkit_demo.views_default.inc:264
 msgid "Desc"
 msgstr "Descendant"
 
-#: wetkit_demo.views_default.inc:355
+#: wetkit_demo.views_default.inc:265
 msgid "Empty Text"
-msgstr ""
+msgstr "Texte vide"
 
-#: wetkit_demo.views_default.inc:356
+#: wetkit_demo.views_default.inc:266
 msgid "There is no news to be shown."
-msgstr ""
+msgstr "Il n'y a pas de nouvelles à afficher."
 
-#: wetkit_demo.views_default.inc:357
+#: wetkit_demo.views_default.inc:267
 msgid "author"
-msgstr ""
+msgstr "auteur"
 
-#: wetkit_demo.views_default.inc:358
+#: wetkit_demo.views_default.inc:268
 msgid "Posted by"
-msgstr ""
+msgstr "Publié par"
 
-#: wetkit_demo.views_default.inc:359
+#: wetkit_demo.views_default.inc:269
 msgid "Post date"
-msgstr ""
+msgstr "Date d'ajout"
 
-#: wetkit_demo.views_default.inc:360
+#: wetkit_demo.views_default.inc:270
 msgid "Title"
 msgstr "Titre"
 
-#: wetkit_demo.views_default.inc:361
+#: wetkit_demo.views_default.inc:271
 msgid "Random"
-msgstr ""
+msgstr "Aléatoire"
 
-#: wetkit_demo.views_default.inc:362
+#: wetkit_demo.views_default.inc:272
 msgid "List of Demo Items"
-msgstr ""
+msgstr "Liste des articles démo"
 
-#: wetkit_demo.views_default.inc:363
+#: wetkit_demo.views_default.inc:273
 msgid "Demo Items"
-msgstr ""
+msgstr "Articles Demo"
 
-#: wetkit_demo.views_default.inc:364
+#: wetkit_demo.views_default.inc:274
 msgid "This is a customizable list of demo items!"
-msgstr ""
+msgstr "Il s'agit d'une liste personnalisable de les démos!"
 
-#: wetkit_demo.views_default.inc:365
+#: wetkit_demo.views_default.inc:275
 msgid "Demo"
-msgstr ""
+msgstr "Démo"
 
-#: wetkit_demo.views_default.inc:366
+#: wetkit_demo.views_default.inc:276
 msgid "Individual Demo Item"
-msgstr ""
+msgstr "Article Démo individuel"
 
-#: wetkit_demo.views_default.inc:367
+#: wetkit_demo.views_default.inc:277
 msgid "Featured Demo Item"
-msgstr ""
+msgstr "Article Démo vedette"
 
-#: wetkit_demo.views_default.inc:368
+#: wetkit_demo.views_default.inc:278
 msgid "List of Featured Demo Items"
-msgstr ""
+msgstr "Liste des articles démo en vedette"
 
-#: wetkit_demo.views_default.inc:369
+#: wetkit_demo.views_default.inc:279
 msgid "Featured Demo Items"
-msgstr ""
+msgstr "Articles en vedette Demo"
 
-#: wetkit_demo.views_default.inc:370
+#: wetkit_demo.views_default.inc:280
 msgid "This is a customizable list of demo items which are marked as featured!"
-msgstr ""
+msgstr "Il s'agit d'une liste personnalisable de les démos qui sont marquées comme vedette!"
 
 #: wetkit_demo.info:0
 msgid "WetKit Demo"

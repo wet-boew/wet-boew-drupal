@@ -62,6 +62,9 @@ dependencies[] = wetkit_demo
 dependencies[] = wetkit_language
 dependencies[] = wetkit_wetboew
 
+; WetKit Recommended - Other
+dependencies[] = l10n_client
+
 ; WetKit Testing
 files[] = wetkit.test
 files[] = tests/simpletest/WetKitWebTestCase.inc

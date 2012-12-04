@@ -108,7 +108,31 @@ function wetkit_demo_content_defaults() {
           'value' => '<p>Traduction à venir</p>',
           'summary' => '',
           'format' => 'wetkit_wysiwyg_text',
-          'safe_value' => '<p>Traduction à venir</p>',
+          'safe_value' => '<p><span>Drupal est un logiciel open sourcecode ouvert développé et maintenu par une communauté de 630.000 utilisateurs et les développeurs +. Il est distribué sous les termes de la Licence pPublique gGénérale GNU (ou «GPL»), ce qui signifie que chacun est libre de le télécharger et de le partager avec d\'autres. Ce modèle de développement ouvert signifie que les personnes travaillent en permanence pour s\'assurer</span></p>
+<p><span>Drupal est une plate-forme de pointe qui supporte les dernières technologies du Web a à offrir. Principes du projet Drupal encourager la modularité, les normes, la collaboration, la facilité d\'utilisation, et plus encore.</span></p>
+<p><span style="text-decoration:underline">Drupal offre une grande variété de fonctionnalités, y compris ce qui suit:</span></p>
+<div>
+<ul>
+<li>Organiser et rechercher des contenus web</li>
+<li>Facilité d\'utilisation et le contenu créatif</li>
+<li>Puissant Sécurité puissante et administration raffinée</li>
+<li>Permets le travail collaboratif contrôlé</li>
+<li>Personnalisable et extensible</li>
+<li>Connexion facile à d\'autres systèmes d\'information et de soutien pour la SOA et le Web sémantique</li>
+<li>Vaste cadre pour construire des applications Web</li>
+</ul>
+<p><span style="text-decoration:underline">Quelles sont les fonctionnalités spécifiques Aide GC?</span></p>
+<div>
+<ul>
+<li>Drupal a été intégré à la version 3.0 à venir WET</li>
+<li>Prise en charge complète pour les sites bilingues</li>
+<li>WCAG 2.0 Conformité</li>
+<li>Open sourceCode ouvert / pas de frais de licence</li>
+<li>Approbation du SCT WCMS Tiger Team</li>
+</ul>
+</div>
+</div>
+',
           'safe_summary' => '',
         ),
       ),
@@ -224,7 +248,11 @@ function wetkit_demo_content_defaults() {
           'value' => '<p>Traduction à venir</p>',
           'summary' => '',
           'format' => 'wetkit_wysiwyg_text',
-          'safe_value' => '<p>Traduction à venir</p>',
+          'safe_value' => '<p>Un objectif majeur de la variante WetKit Drupal est de permettre et d\'encourager la collaboration à diverses activités impliquant la boîte à outils de l\'expérience Web, et en particulier la plate-forme Drupal.</p>
+<p>Ce projet est toujours à la recherche de contributeurs dans un large éventail de domaines. Si vous êtes concepteur ou développeur, nous pourrions utiliser votre aide!</p>
+<p>Nous croyons que la véritable force derrière cette distribution devrait être de soutenir la communauté.  la soutenir. Si vous utilisez la distribution afinet de concevoir une nouvelle solution que vous pensez que celle-ci pourrait aider, s\'il vous plaît contribuer en retour!</p>
+<p>Ensemble nous pouvons faire une solution open sourcecode ouvert du gouvernement d\'entreprise qui est sûr, accessible et efficace.</p>
+',
           'safe_summary' => '',
         ),
       ),
@@ -353,7 +381,24 @@ function wetkit_demo_content_defaults() {
           'value' => '<p>Traduction à venir</p>',
           'summary' => '',
           'format' => 'wetkit_wysiwyg_text',
-          'safe_value' => '<p>Traduction à venir</p>',
+          'safe_value' => '<p><strong>Boîte à outils de l\'expérience Web (BOEW)</strong></p>
+<p>Boîte à outils de l\'expérience Web (BOEW) comporte des composantes réutilisables pour la construction et la maintenance de sites Web innovateurs qui sont accessibles, utilisables et interopérables. Ces composants réutilisables sont des logiciels code ouvert open source et gratuit pour une utilisation par les ministères et des collectivités Web externes.</p>
+<p>La boîte à outils est conforme aux nouvelles normes sur l\'accessibilité du Web et l\’Ergonomie Web; l\', elle facilitera le respect de la norme d\'interopérabilité Web à venir. WET est fortement recommandé pour une utilisation sur des sites Web du gouvernement du Canada.</p>
+<p><strong>Avantages</strong></p>
+<ul>
+<li>Fournist des composants réutilisables pour la construction et la maintenance de sites Web innovateurs.</li>
+<li>L\'accessibilité égards (WCAG 2.0 AA et WAI-ARIA), la convivialité et l\'interopérabilité.</li>
+<li>Réduction des coûts par la consolidation des outils et des solutions Web.</li>
+<li>Des logiciels open sourcecode ouvert qui est libres d\'utiliser des ministères et des collectivités Web externes.</li>
+<li>Utilise des technologies avancées pour repousser les limites de la fonctionnalité du site Web: ** HTML5, CSS3, jQuery (framework JavaScript); ** liste toujours croissante de plug-ins open sourcecode ouvert et des widgets.</li>
+<li>Prends en charge une large gamme de mises en page, dessins et modèles pour les sites Web internes et externes (y compris les applications).</li>
+</ul>
+<p><strong>Ressources clés</strong></p>
+<ul>
+<li>Termes et conditions</li>
+<li>Exemples de travail</li>
+</ul>
+',
           'safe_summary' => '',
         ),
       ),

@@ -51,7 +51,7 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
   // Modify html attributes for WET
   $variables['html_attributes_array']['class'][] = 'no-js';
   unset($variables['html_attributes_array']['dir']);
-  
+
   // Add a body class for the active theme name.
   $variables['classes_array'][] = drupal_html_class($theme_key);
 
@@ -113,10 +113,10 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
 
   // Remove Class(es)
   $variables['classes_array'] = array_diff($variables['classes_array'], array('site-name-web-experience-toolkit'));
-  
+
   // Add Viewport for WET Mobile
   $element = array(
-    '#tag' => 'meta', 
+    '#tag' => 'meta',
     '#attributes' => array(
       'name' => 'viewport',
       'content' => 'width=device-width, initial-scale=1',

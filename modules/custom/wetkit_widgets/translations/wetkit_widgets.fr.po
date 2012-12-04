@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-09-17 18:42-0400\n"
-"PO-Revision-Date: 2012-09-17 18:42-0400\n"
+"POT-Creation-Date: 2012-12-03 22:51-0500\n"
+"PO-Revision-Date: 2012-12-03 22:51-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -65,27 +65,25 @@ msgstr "Style d'image"
 msgid "Image Style: @style"
 msgstr "Style d'image : @style"
 
-#: wetkit_widgets.module:84
+#: wetkit_widgets.module:71
 msgid "Content Settings"
 msgstr "Paramètres de contenu"
 
-#: wetkit_widgets.module:110
+#: wetkit_widgets.module:97
 msgid "Add tabbed interface"
 msgstr "Ajout d’une interface à onglets"
 
-#: wetkit_widgets.module:111 wetkit_widgets.info:0
+#: wetkit_widgets.module:98 wetkit_widgets.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 
 #: wetkit_widgets.info:0
 msgid "WetKit Widgets"
 msgstr "Widgets de la BOEW"
 
 #: wetkit_widgets.info:0
-msgid "Creates generic widget functionality to customize wide and far."
-msgstr ""
-"Créer un widget générique qui peut être personnalisé pour avoir "
-"une grande portée."
+msgid "Creates generic WET widget functionality to customize."
+msgstr "Crée générique fonctionnalité widget de WET à personnaliser."
 
 #: plugins/styles/tabbed_interface/tabbed_interface.inc:11
 msgid "Display the pane with customized settings for the Tabbed Interface Plugin."
@@ -123,5 +121,5 @@ msgstr "Style 5"
 
 #: plugins/styles/tabbed_interface/tabbed_interface.inc:57
 msgid "Style 7"
-msgstr ""
+msgstr "Style 7"
 
