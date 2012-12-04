@@ -4,20 +4,20 @@
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
 #  wetkit_search.views_default.inc: n/a
+#  plugins/content_types/facet/facet.inc: n/a
 #  plugins/content_types/search_box/search_box.inc: n/a
 #  plugins/content_types/search_current/search_current.inc: n/a
 #  wetkit_search.install: n/a
 #  wetkit_search.info: n/a
 #  plugins/access/search_api_index.inc: n/a
 #  plugins/access/solr.inc: n/a
-#  plugins/content_types/facet/facet.inc: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-09-17 18:39-0400\n"
-"PO-Revision-Date: 2012-09-17 18:39-0400\n"
+"POT-Creation-Date: 2012-12-03 22:51-0500\n"
+"PO-Revision-Date: 2012-12-03 22:51-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -55,15 +55,15 @@ msgstr "Descendant"
 
 #: wetkit_search.views_default.inc:138;279
 msgid "Items per page"
-msgstr ""
+msgstr "Articles par page"
 
 #: wetkit_search.views_default.inc:139;280
 msgid "- All -"
-msgstr ""
+msgstr "- Tous -"
 
 #: wetkit_search.views_default.inc:140;281
 msgid "Offset"
-msgstr ""
+msgstr "Compenser"
 
 #: wetkit_search.views_default.inc:141;282
 msgid "« first"
@@ -83,11 +83,11 @@ msgstr "dernier »"
 
 #: wetkit_search.views_default.inc:145;286
 msgid "Empty Text"
-msgstr ""
+msgstr "Texte vide"
 
 #: wetkit_search.views_default.inc:146;287
 msgid "Your search did not return any results."
-msgstr ""
+msgstr "Votre recherche n'a donné aucun résultat."
 
 #: wetkit_search.views_default.inc:147;288
 msgid "All"
@@ -95,23 +95,23 @@ msgstr "Tout"
 
 #: wetkit_search.views_default.inc:148
 msgid "Database Search Results"
-msgstr ""
+msgstr "Résultats de la recherche database"
 
-#: wetkit_search.views_default.inc:149;290 plugins/content_types/search_box/search_box.inc:17 plugins/content_types/search_current/search_current.inc:13
+#: wetkit_search.views_default.inc:149;290 plugins/content_types/facet/facet.inc:12 plugins/content_types/search_box/search_box.inc:17 plugins/content_types/search_current/search_current.inc:13
 msgid "Search"
 msgstr "Rechercher"
 
 #: wetkit_search.views_default.inc:289
 msgid "Solr Search Results"
-msgstr ""
+msgstr "Résultats de la recherche Solr"
 
-#: wetkit_search.install:88
+#: wetkit_search.install:62
 msgid "WetKit has been configured to use a Solr Service"
-msgstr ""
+msgstr "WetKit a été configuré pour utiliser un service Solr"
 
-#: wetkit_search.install:101
+#: wetkit_search.install:75
 msgid "WetKit's Search DB Search API index has been updated"
-msgstr ""
+msgstr "WetKit de Recherche DB API de recherche d'index a été mis à jour"
 
 #: wetkit_search.info:0
 msgid "WetKit Search"
@@ -119,55 +119,51 @@ msgstr "Recherche WetKit"
 
 #: wetkit_search.info:0
 msgid "Indexes and searches site content, Solr or otherwise."
-msgstr ""
+msgstr "Les index et le contenu du site, les recherches Solr ou autrement."
 
 #: wetkit_search.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 
 #: plugins/access/search_api_index.inc:9
 msgid "Search API Index"
-msgstr ""
+msgstr "API de recherche Index"
 
 #: plugins/access/search_api_index.inc:10
 msgid "Is the Search API index enabled?"
-msgstr ""
+msgstr "Est l'indice API de recherche activé?"
 
 #: plugins/access/search_api_index.inc:37
 msgid "WetKit Search index is Enabled"
-msgstr ""
+msgstr "Index de recherche WetKit est Activé"
 
 #: plugins/access/solr.inc:9
 msgid "Solr"
-msgstr ""
+msgstr "Solr"
 
 #: plugins/access/solr.inc:10
 msgid "Is Apache Solr running?"
-msgstr ""
+msgstr "Apache Solr est en cours d'exécution?"
 
 #: plugins/access/solr.inc:37
 msgid "Apache Solr is running"
-msgstr ""
+msgstr "Apache Solr est en marche"
 
 #: plugins/content_types/facet/facet.inc:9
 msgid "Search Facets"
-msgstr ""
+msgstr "Facettes rechercher"
 
 #: plugins/content_types/facet/facet.inc:10
 msgid "The list of options available for a particular type of search facet"
-msgstr ""
+msgstr "La liste des options disponibles pour un type particulier de recherche facette"
 
 #: plugins/content_types/facet/facet.inc:11 plugins/content_types/search_box/search_box.inc:16 plugins/content_types/search_current/search_current.inc:12
 msgid "Keywords"
 msgstr "Mots-clés"
 
-#: plugins/content_types/facet/facet.inc:12
-msgid "Facet API"
-msgstr ""
-
-#: plugins/content_types/facet/facet.inc:39
+#: plugins/content_types/facet/facet.inc:51
 msgid "Facet Type"
-msgstr ""
+msgstr "Type de Facet"
 
 #: plugins/content_types/search_box/search_box.inc:14;98
 msgid "Search form"
@@ -175,23 +171,23 @@ msgstr "Formulaire de recherche"
 
 #: plugins/content_types/search_box/search_box.inc:15
 msgid "A search form with options."
-msgstr ""
+msgstr "Un formulaire de recherche avec les options."
 
 #: plugins/content_types/search_box/search_box.inc:91
 msgid "Search type"
-msgstr ""
+msgstr "Type de recherche"
 
 #: plugins/content_types/search_box/search_box.inc:100
 msgid "Simple"
-msgstr ""
+msgstr "Simple"
 
 #: plugins/content_types/search_box/search_box.inc:101
 msgid "Advanced"
-msgstr ""
+msgstr "Avancé"
 
 #: plugins/content_types/search_box/search_box.inc:104
 msgid "The advanced form may have additional options based upon the search type. For example the advanced content (node) search form will allow searching by node type and taxonomy term."
-msgstr ""
+msgstr "La forme avancée peut avoir des options supplémentaires en fonction du type de recherche. Par exemple, le formulaire de recherche avancée de contenu (noeud) vous allez pouvoir rechercher par type de nœud et terme de taxonomie."
 
 #: plugins/content_types/search_box/search_box.inc:110
 msgid "Path"
@@ -203,7 +199,7 @@ msgstr "Par défaut"
 
 #: plugins/content_types/search_box/search_box.inc:113
 msgid "Same page"
-msgstr ""
+msgstr "Même page"
 
 #: plugins/content_types/search_box/search_box.inc:114
 msgid "Custom"
@@ -211,23 +207,23 @@ msgstr "Personnalisé"
 
 #: plugins/content_types/search_box/search_box.inc:130
 msgid "Override default prompt"
-msgstr ""
+msgstr "Remplacer invite par défaut"
 
 #: plugins/content_types/search_box/search_box.inc:157
 msgid "Missing/broken type"
-msgstr ""
+msgstr "Type manquant / cassé"
 
 #: plugins/content_types/search_box/search_box.inc:158
 msgid "@type search form"
-msgstr ""
+msgstr "Un formulaire de recherche @type"
 
 #: plugins/content_types/search_current/search_current.inc:10
 msgid "Current search"
-msgstr ""
+msgstr "Recherche actuelle"
 
 #: plugins/content_types/search_current/search_current.inc:11
 msgid "The count of results for current search."
-msgstr ""
+msgstr "Le décompte des résultats de la recherche actuelle."
 
 #: plugins/content_types/search_current/search_current.inc:39;44
 msgid "1 item"

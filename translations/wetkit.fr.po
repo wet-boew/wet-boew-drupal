@@ -11,8 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-09-17 18:42-0400\n"
-"PO-Revision-Date: 2012-09-17 18:42-0400\n"
+"POT-Creation-Date: 2012-12-03 22:47-0500\n"
+"PO-Revision-Date: 2012-12-03 22:47-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -40,5 +40,5 @@ msgstr "wetkit"
 
 #: themes/wetkit_adaptivetheme/custom_layouts/wetkit/wetkit.inc:31
 msgid "WetKit Subtheme Custom Page Layout"
-msgstr ""
+msgstr "Sous-thème WetKit Mise en page personnalisée"
 
