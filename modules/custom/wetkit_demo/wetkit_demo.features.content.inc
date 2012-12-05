@@ -281,10 +281,57 @@ function wetkit_demo_content_defaults() {
     'body' => array(
       'und' => array(
         0 => array(
-          'value' => '<p><strong>Web Experience Toolkit (WET)</strong></p><p>Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities.</p><p>The toolkit complies with the new Standards on Web Accessibility and Web Usability; the toolkit will also ease compliance with the upcoming Standard Web Interoperability. WET is highly recommended for use on Government of Canada Websites.</p><p><strong>Benefits</strong></p><ul><li>Provides reusable components for building and maintaining innovative Web sites.</li><li>Respects accessibility (WCAG 2.0 AA and WAI-ARIA), usability, and interoperability.</li><li>Reduces costs by consolidating Web tools and solutions.</li><li>Open source software that is free to use by departments and external Web communities.</li><li>Uses advanced technologies to push the envelope for Web site functionality: ** HTML5, CSS3, jQuery (JavaScript framework); ** Ever-growing list of open source plugins and widgets.</li><li>Supports a wide range of layouts and designs for internal and external Web sites (including applications).</li></ul><p><strong>Key resources</strong></p><ul><li>Terms and conditions</li><li>Working examples</li></ul>',
+          'value' => '<p>Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities.</p>
+<p>The toolkit complies with the new Standards on Web Accessibility and Web Usability; the toolkit will also ease compliance with the Standard on Web Interoperability. WET is highly recommended for use on Government of Canada Websites.</p>
+<section>
+<h2>Benefits</h2>
+<ul>
+<li>Provides reusable components for building and maintaining innovative Web sites.</li>
+<li>Respects accessibility (<a href="http://www.w3.org/TR/WCAG20/">WCAG 2.0</a> AA and <a href="http://www.w3.org/TR/wai-aria/">WAI-ARIA</a>), usability, and interoperability.</li>
+<li>Reduces costs by consolidating Web tools and solutions.</li>
+<li>Open source software that is free to use by departments and external Web communities.</li>
+<li>Uses advanced technologies to push the envelope for Web site functionality:
+<ul>
+<li><a href="http://www.w3.org/TR/html5/">HTML5</a>, <a href="http://www.w3.org/Style/CSS/current-work">CSS3</a>, <a href="http://jquery.com/">jQuery</a> (JavaScript framework);</li>
+<li>Ever-growing list of open source plugins and widgets.</li>
+</ul>
+</li>
+<li>Supports a wide range of layouts and designs for internal and external Web sites (including applications).</li>
+</ul>
+</section>
+<section>
+<h2>Key resources</h2>
+<ul>
+<li><a href="demos/index-eng.html">Working examples</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki#wiki-Documentation">Documentation</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/downloads">Download</a></li>
+<li><a href="License-eng.txt">Terms and conditions</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Developing-for-WET#wiki-Contributor_guidelines">Contributor guidelines</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Roadmap">Roadmap</a></li>
+</ul>
+</section>',
           'summary' => '',
           'format' => 'wetkit_wysiwyg_text',
-          'safe_value' => ' <p><strong>Web Experience Toolkit (WET)</strong></p><p>Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities.</p><p>The toolkit complies with the new Standards on Web Accessibility and Web Usability; the toolkit will also ease compliance with the upcoming Standard Web Interoperability. WET is highly recommended for use on Government of Canada Websites.</p><p><strong>Benefits</strong></p><ul><li>Provides reusable components for building and maintaining innovative Web sites.</li><li>Respects accessibility (WCAG 2.0 AA and WAI-ARIA), usability, and interoperability.</li><li>Reduces costs by consolidating Web tools and solutions.</li><li>Open source software that is free to use by departments and external Web communities.</li><li>Uses advanced technologies to push the envelope for Web site functionality: ** HTML5, CSS3, jQuery (JavaScript framework); ** Ever-growing list of open source plugins and widgets.</li><li>Supports a wide range of layouts and designs for internal and external Web sites (including applications).</li></ul><p><strong>Key resources</strong></p><ul><li>Terms and conditions</li><li>Working examples</li></ul>',
+          'safe_value' => ' <p>Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities.</p>
+<p>The toolkit complies with the new Standards on Web Accessibility and Web Usability; the toolkit will also ease compliance with the Standard on Web Interoperability. WET is highly recommended for use on Government of Canada Websites.</p>
+<section><h2>Benefits</h2>
+<ul><li>Provides reusable components for building and maintaining innovative Web sites.</li>
+<li>Respects accessibility (<a href="http://www.w3.org/TR/WCAG20/">WCAG 2.0</a> AA and <a href="http://www.w3.org/TR/wai-aria/">WAI-ARIA</a>), usability, and interoperability.</li>
+<li>Reduces costs by consolidating Web tools and solutions.</li>
+<li>Open source software that is free to use by departments and external Web communities.</li>
+<li>Uses advanced technologies to push the envelope for Web site functionality:
+<ul><li><a href="http://www.w3.org/TR/html5/">HTML5</a>, <a href="http://www.w3.org/Style/CSS/current-work">CSS3</a>, <a href="http://jquery.com/">jQuery</a> (JavaScript framework);</li>
+<li>Ever-growing list of open source plugins and widgets.</li>
+</ul></li>
+<li>Supports a wide range of layouts and designs for internal and external Web sites (including applications).</li>
+</ul></section><section><h2>Key resources</h2>
+<ul><li><a href="demos/index-eng.html">Working examples</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki#wiki-Documentation">Documentation</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/downloads">Download</a></li>
+<li><a href="License-eng.txt">Terms and conditions</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Developing-for-WET#wiki-Contributor_guidelines">Contributor guidelines</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Roadmap">Roadmap</a></li>
+</ul></section>',
           'safe_summary' => '  ',
         ),
       ),
@@ -345,10 +392,57 @@ function wetkit_demo_content_defaults() {
     'body' => array(
       'und' => array(
         0 => array(
-          'value' => '<p><strong>Boîte à outils de l\'expérience Web (BOEW)</strong></p><p>Boîte à outils de l\'expérience Web (BOEW) comporte des composantes réutilisables pour la construction et la maintenance de sites Web innovateurs qui sont accessibles, utilisables et interopérables. Ces composants réutilisables sont des logiciels code ouvert open source et gratuit pour une utilisation par les ministères et des collectivités Web externes.</p><p>La boîte à outils est conforme aux nouvelles normes sur l\'accessibilité du Web et l’Ergonomie Web; l\', elle facilitera le respect de la norme d\'interopérabilité Web à venir. WET est fortement recommandé pour une utilisation sur des sites Web du gouvernement du Canada.</p><p><strong>Avantages</strong></p><ul><li>Fournist des composants réutilisables pour la construction et la maintenance de sites Web innovateurs.</li><li>L\'accessibilité égards (WCAG 2.0 AA et WAI-ARIA), la convivialité et l\'interopérabilité.</li><li>Réduction des coûts par la consolidation des outils et des solutions Web.</li><li>Des logiciels open sourcecode ouvert qui est libres d\'utiliser des ministères et des collectivités Web externes.</li><li>Utilise des technologies avancées pour repousser les limites de la fonctionnalité du site Web: ** HTML5, CSS3, jQuery (framework JavaScript); ** liste toujours croissante de plug-ins open sourcecode ouvert et des widgets.</li><li>Prends en charge une large gamme de mises en page, dessins et modèles pour les sites Web internes et externes (y compris les applications).</li></ul><p><strong>Ressources clés</strong></p><ul><li>Termes et conditions</li><li>Exemples de travail</li></ul>',
+          'value' => '<p>La Boîte à outils de l’expérience Web (BOEW) rassemble différents composants réutilisables et prêts-à-utiliser pour la conception et la mise à jour de sites Web innovateurs qui sont à la fois accessibles, conviviaux et interopérables. Tous ces composants réutilisables sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes.</p>
+<p>La Boîte à outils est conforme à la Norme sur l\'accessibilité des sites Web et la Norme sur la facilité des sites Web et sera conforme à la Norme sur l’interopérabilité du Web. Il est fortement recommandé d’utiliser la BOEW pour tous les sites Web du gouvernement du Canada.</p>
+<section>
+<h2>Avantages</h2>
+<ul>
+<li>Fournit des composants réutilisables pour la conception et la mise à jour de sites Web innovateurs.</li>
+<li>Respecte l\'accessibilité (<a href="http://www.w3.org/Translations/WCAG20-fr">WCAG 2.0</a> AA et <a href="http://www.w3.org/TR/wai-aria/">WAI-ARIA</a>), la facilité d’emploi et l\'interopérabilité.</li>
+<li>Réduit les coûts en consolidant les outils et les solutions axés sur le Web.</li>
+<li>Sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes.</li>
+<li>Fait appel à des technologies nouvelles et innovatrices pour rendre les sites plus innovateurs et interactifs&nbsp;:
+<ul>
+<li><a href="http://www.w3.org/TR/html5/">HTML5</a>, <a href="http://www.w3.org/Style/CSS/current-work#CSS3">CSS3</a> et <a href="http://jquery.com/">jQuery</a> (cadre JavaScript);</li>
+<li>liste croissante de plugiciels et gadgets libres.</li>
+</ul>
+</li>
+<li>Permet d’avoir accès à une grande diversité de mises en page et de conceptions pour les sites Web internes et externes (y compris les applications).</li>
+</ul>
+</section>
+<section>
+<h2>Ressources clés</h2>
+<ul>
+<li><a href="demos/index-fra.html">Exemples pratiques</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Accueil#wiki-Documentation">Documentation</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/downloads">Télécharger</a></li>
+<li><a href="Licence-fra.txt">Conditions régissant l\'utilisation</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Développer-pour-la-boew#wiki-Lignes_directrices_pour_les_contributeurs">Lignes directrices pour les contributeurs</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Feuille-de-route">Feuille de route</a></li>
+</ul>
+</section>',
           'summary' => '',
           'format' => 'wetkit_wysiwyg_text',
-          'safe_value' => ' <p><strong>Boîte à outils de l\'expérience Web (BOEW)</strong></p><p>Boîte à outils de l\'expérience Web (BOEW) comporte des composantes réutilisables pour la construction et la maintenance de sites Web innovateurs qui sont accessibles, utilisables et interopérables. Ces composants réutilisables sont des logiciels code ouvert open source et gratuit pour une utilisation par les ministères et des collectivités Web externes.</p><p>La boîte à outils est conforme aux nouvelles normes sur l\'accessibilité du Web et l’Ergonomie Web; l\', elle facilitera le respect de la norme d\'interopérabilité Web à venir. WET est fortement recommandé pour une utilisation sur des sites Web du gouvernement du Canada.</p><p><strong>Avantages</strong></p><ul><li>Fournist des composants réutilisables pour la construction et la maintenance de sites Web innovateurs.</li><li>L\'accessibilité égards (WCAG 2.0 AA et WAI-ARIA), la convivialité et l\'interopérabilité.</li><li>Réduction des coûts par la consolidation des outils et des solutions Web.</li><li>Des logiciels open sourcecode ouvert qui est libres d\'utiliser des ministères et des collectivités Web externes.</li><li>Utilise des technologies avancées pour repousser les limites de la fonctionnalité du site Web: ** HTML5, CSS3, jQuery (framework JavaScript); ** liste toujours croissante de plug-ins open sourcecode ouvert et des widgets.</li><li>Prends en charge une large gamme de mises en page, dessins et modèles pour les sites Web internes et externes (y compris les applications).</li></ul><p><strong>Ressources clés</strong></p><ul><li>Termes et conditions</li><li>Exemples de travail</li></ul>',
+          'safe_value' => ' <p>La Boîte à outils de l’expérience Web (BOEW) rassemble différents composants réutilisables et prêts-à-utiliser pour la conception et la mise à jour de sites Web innovateurs qui sont à la fois accessibles, conviviaux et interopérables. Tous ces composants réutilisables sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes.</p>
+<p>La Boîte à outils est conforme à la Norme sur l\'accessibilité des sites Web et la Norme sur la facilité des sites Web et sera conforme à la Norme sur l’interopérabilité du Web. Il est fortement recommandé d’utiliser la BOEW pour tous les sites Web du gouvernement du Canada.</p>
+<section><h2>Avantages</h2>
+<ul><li>Fournit des composants réutilisables pour la conception et la mise à jour de sites Web innovateurs.</li>
+<li>Respecte l\'accessibilité (<a href="http://www.w3.org/Translations/WCAG20-fr">WCAG 2.0</a> AA et <a href="http://www.w3.org/TR/wai-aria/">WAI-ARIA</a>), la facilité d’emploi et l\'interopérabilité.</li>
+<li>Réduit les coûts en consolidant les outils et les solutions axés sur le Web.</li>
+<li>Sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes.</li>
+<li>Fait appel à des technologies nouvelles et innovatrices pour rendre les sites plus innovateurs et interactifs :
+<ul><li><a href="http://www.w3.org/TR/html5/">HTML5</a>, <a href="http://www.w3.org/Style/CSS/current-work#CSS3">CSS3</a> et <a href="http://jquery.com/">jQuery</a> (cadre JavaScript);</li>
+<li>liste croissante de plugiciels et gadgets libres.</li>
+</ul></li>
+<li>Permet d’avoir accès à une grande diversité de mises en page et de conceptions pour les sites Web internes et externes (y compris les applications).</li>
+</ul></section><section><h2>Ressources clés</h2>
+<ul><li><a href="demos/index-fra.html">Exemples pratiques</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Accueil#wiki-Documentation">Documentation</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/downloads">Télécharger</a></li>
+<li><a href="Licence-fra.txt">Conditions régissant l\'utilisation</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Développer-pour-la-boew#wiki-Lignes_directrices_pour_les_contributeurs">Lignes directrices pour les contributeurs</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Feuille-de-route">Feuille de route</a></li>
+</ul></section>',
           'safe_summary' => '  ',
         ),
       ),

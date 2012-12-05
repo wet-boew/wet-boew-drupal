@@ -26,6 +26,9 @@ function wetkit_rubik_preprocess_html(&$vars) {
   if (_wetkit_rubik_has_tabs()) {
     $vars['classes_array'][] = 'with-local-tasks';
   }
+  if (theme_get_setting('wetkit_rubik_inline_field_descriptions')) {
+    $vars['classes_array'][] = 'rubik-inline-field-descriptions';
+  }
 }
 
 /**
