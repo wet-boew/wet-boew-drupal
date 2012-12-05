@@ -34,16 +34,6 @@ function _wetkit_wetboew_default_blocks() {
     ),
     array(
       'module' => 'system',
-      'delta' => 'navigation',
-      'theme' => $default_theme,
-      'status' => 1,
-      'weight' => 0,
-      'region' => 'sidebar_first',
-      'pages' => '',
-      'cache' => -1,
-    ),
-    array(
-      'module' => 'system',
       'delta' => 'powered-by',
       'theme' => $default_theme,
       'status' => 1,
