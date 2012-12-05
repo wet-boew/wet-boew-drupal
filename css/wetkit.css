@@ -8,6 +8,8 @@ body.maintenance-page #logo { background: transparent url(../images/wetkit_icon_
 
 #admin-menu .dropdown li li.expandable ul { margin: -22px 0 0 160px !important; }
 
+#admin-menu .shortcut-toolbar { text-shadow: #222 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #666666), color-stop(100%, #545454)) !important; background-image: -webkit-linear-gradient(#666666, #545454) !important; background-image: -moz-linear-gradient(#666666, #545454) !important; background-image: -o-linear-gradient(#666666, #545454) !important; background-image: linear-gradient(#666666, #545454) !important; }
+
 .in-maintenance input[type="image"] + label, .in-maintenance input[type="checkbox"] + label, .in-maintenance input[type="radio"] + label { display: inline; }
 
 /* Revision Screen */
