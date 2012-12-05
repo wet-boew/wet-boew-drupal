@@ -1,38 +1,33 @@
 /** Stylesheet for WetKit Profile */
 /* Installation Screen */
 #wetkit-theme-selection-form .form-item-theme { clear: both; margin-top: .5em; margin-bottom: .5em; }
-
 #wetkit-theme-selection-form .form-item-theme label img { float: left; width: 100px; margin-right: 1em; }
 
-body.maintenance-page #logo { background: transparent url(../images/wetkit_icon_install.png) no-repeat top left; height: 0; overflow: hidden; padding-top: 180px; /* height of logo  */ width: 180px; /* width of logo  */ }
+.in-maintenance input[type="image"] + label, .in-maintenance input[type="checkbox"] + label, .in-maintenance input[type="radio"] + label { display: inline; }
 
+.maintenance-page #logo { background: transparent url(../images/wetkit_icon_install.png) no-repeat top left; height: 0; overflow: hidden; padding-top: 180px; /* height of logo  */ width: 180px; /* width of logo  */ }
+
+/* Global Admin Menu Fixes */
 #admin-menu .dropdown li li.expandable ul { margin: -22px 0 0 160px !important; }
-
 #admin-menu .shortcut-toolbar { text-shadow: #222 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #666666), color-stop(100%, #545454)) !important; background-image: -webkit-linear-gradient(#666666, #545454) !important; background-image: -moz-linear-gradient(#666666, #545454) !important; background-image: -o-linear-gradient(#666666, #545454) !important; background-image: linear-gradient(#666666, #545454) !important; }
 
-.in-maintenance input[type="image"] + label, .in-maintenance input[type="checkbox"] + label, .in-maintenance input[type="radio"] + label { display: inline; }
+/* Global Navigation Bar Fixes */
+#navbar-actions li, #navbar-user li { border: none; }
 
 /* Revision Screen */
 .page-node-revisions div img.panopoly-image-half { float: none; width: auto; }
 
 /* Panels Screen */
 #modal-content .form-item { position: static; border: none; padding: 0px; }
-
-#modal-content .form-wrapper.form-actions { border: none; background: none; }
-
-/* NavBar Styles */
-#navbar-actions li, #navbar-user li { border: none; }
+#modal-content form-wrapper.form-actions { border: none; background: none; }
 
 /* IPE Styles */
 .panels-ipe-newblock ul { margin: 0px; }
 
-/* IPE and l10n Compatibility */
 .panels-ipe #l10n-client { bottom: 52px; }
 
+/* l10n Client Styles */
 #l10n-client h2 { color: white; }
-
-#l10n-client .labels .toggle { text-shadow: #222 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #176ca7), color-stop(100%, #135888)) !important; background-image: -webkit-linear-gradient(#176ca7, #135888) !important; background-image: -moz-linear-gradient(#176ca7, #135888) !important; background-image: -o-linear-gradient(#176ca7, #135888) !important; background-image: linear-gradient(#176ca7, #135888) !important; }
-
-#l10n-client-form .form-submit { display: inline; }
-
+#l10n-client #l10n-client-form .form-submit { display: inline; }
 #l10n-client .labels { text-shadow: #222 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #666666), color-stop(100%, #545454)) !important; background-image: -webkit-linear-gradient(#666666, #545454) !important; background-image: -moz-linear-gradient(#666666, #545454) !important; background-image: -o-linear-gradient(#666666, #545454) !important; background-image: linear-gradient(#666666, #545454) !important; }
+#l10n-client .labels .toggle { text-shadow: #222 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #176ca7), color-stop(100%, #135888)) !important; background-image: -webkit-linear-gradient(#176ca7, #135888) !important; background-image: -moz-linear-gradient(#176ca7, #135888) !important; background-image: -o-linear-gradient(#176ca7, #135888) !important; background-image: linear-gradient(#176ca7, #135888) !important; }
