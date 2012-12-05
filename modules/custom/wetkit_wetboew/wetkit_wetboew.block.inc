@@ -10,7 +10,7 @@
 function _wetkit_wetboew_default_blocks() {
 // Enable some standard blocks.
   $default_theme = variable_get('theme_default', 'wetkit_adaptivetheme');
-  $admin_theme = 'rubik';
+  $admin_theme = 'wetkit_rubik';
   $blocks = array(
     array(
       'module' => 'system',
@@ -29,16 +29,6 @@ function _wetkit_wetboew_default_blocks() {
       'status' => 1,
       'weight' => 10,
       'region' => 'dashboard_main',
-      'pages' => '',
-      'cache' => -1,
-    ),
-    array(
-      'module' => 'system',
-      'delta' => 'navigation',
-      'theme' => $default_theme,
-      'status' => 1,
-      'weight' => 0,
-      'region' => 'sidebar_first',
       'pages' => '',
       'cache' => -1,
     ),

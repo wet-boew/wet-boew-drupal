@@ -1,9 +1,21 @@
+/**
+ * Stylesheet for WetKit Widgets
+ */
 
 /* Drupal Specific Styling */
-.wet-boew-tabbedinterface .tabs {margin: 0px;}
-.wet-boew-tabbedinterface .tabs li.active {border-left: none;}
+.wet-boew-tabbedinterface {
+  .tabs {
+    margin: 0px;
+    li {
+      &.active {
+        border-left: none;
+      }
+    }
+  }
+}
 
-/* style 7  For use with the Multimedia Player */
+/* Style 7 For use with the Front Page */
+
 .tabs-style-7 {height:250px;overflow:hidden;position:relative;width:960px;background:#fff;}
 .tabs-style-7 .tabs{height:249px;left:0;right:inherit;top:0;overflow:hidden;position:absolute;z-index:100;width:228px;border:1px solid #ccc; border-top:none }
 .tabs-style-7 .tabs span{display:none !important; }
@@ -29,17 +41,39 @@
 .tabs-style-7 .tabs-toggle a:active,.tabs-style-7 .tabs-toggle a:focus{background-repeat:no-repeat !important;background-position:-1px 0 !important;}
 .tabs-style-7 .tabs-panel a:hover,.tabs-style-7 .tabs-panel a:focus,.tabs-style-7 .tabs-panel a:active{color: #295376 !important;}
 
-/*** 1200px ***/
+/*** Media Query at 1200px ***/
+
 @media only screen and (min-width:1200px) {
- .tabs-style-7{width:1200px;}
- .tabs-style-7 .tabs-panel,.tabs-style-7 img{width:890px;height:auto;margin-top:-10px;}
- .tabs-style-7 .tabs-content-pad{width:875px;}
- .tabs-style-7 .tabs,.tabs-style-7 .tabs li{width:308px;}
+  .tabs-style-7 {
+    width: 1200px;
+    img,
+    .tabs-panel {
+      width:890px;
+      height:auto;
+      margin-top:-10px;
+    }
+    .tabs-content-pad {width:875px;}
+    .tabs {
+      width:308px;
+      li {
+        width:308px;
+      }
+    }
+  }
 }
 
-/*** 768px ***/
+/*** Media Query at 768px ***/
+
 @media only screen and (max-width:959px) {
- .tabs-style-7{width:768px;}
- .tabs-style-7 .tabs-panel,.tabs-style-7 img{width:538px;height:auto;background:#111;}
- .tabs-style-7 .tabs-content-pad{width:523px;}
+  .tabs-style-7 {
+    width: 768px;
+    img,
+    .tabs-panel {
+      width:538px;
+      height:auto;
+      margin-top:-10px;
+      background:#111;
+    }
+    .tabs-content-pad {width:523px;}
+  }
 }
