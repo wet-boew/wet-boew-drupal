@@ -1,18 +1,36 @@
+/** Stylesheet for WetKit WET-BOEW */
+/* Global Admin Menu Fixes */
+#admin-menu .dropdown li li.expandable ul { margin: -22px 0 0 160px !important; }
+#admin-menu .shortcut-toolbar { text-shadow: #222 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #666666), color-stop(100%, #545454)) !important; background-image: -webkit-linear-gradient(#666666, #545454) !important; background-image: -moz-linear-gradient(#666666, #545454) !important; background-image: -o-linear-gradient(#666666, #545454) !important; background-image: linear-gradient(#666666, #545454) !important; }
+
+/* Global Navigation Bar Fixes */
+#navbar-actions li, #navbar-user li { border: none; }
+
+/* Revision Screen */
+.page-node-revisions div img.panopoly-image-half { float: none; width: auto; }
+
+/* Panels Screen */
+#modal-content .form-item { position: static; border: none; padding: 0px; }
+#modal-content form-wrapper.form-actions { border: none; background: none; }
+
+/* IPE Styles */
+.panels-ipe-newblock ul { margin: 0px; }
+
+.panels-ipe #l10n-client { bottom: 52px; }
+
+/* Panelizer Styles */
 #panelizer-settings-form .tabs { position: relative; right: 0px; }
 
-.form-item .form-autocomplete { padding: 0px 4px; }
+/* l10n Client Styles */
+#l10n-client h2 { color: white; }
+#l10n-client #l10n-client-form .form-submit { display: inline; }
+#l10n-client .labels { text-shadow: #222 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #666666), color-stop(100%, #545454)) !important; background-image: -webkit-linear-gradient(#666666, #545454) !important; background-image: -moz-linear-gradient(#666666, #545454) !important; background-image: -o-linear-gradient(#666666, #545454) !important; background-image: linear-gradient(#666666, #545454) !important; }
+#l10n-client .labels .toggle { text-shadow: #222 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #176ca7), color-stop(100%, #135888)) !important; background-image: -webkit-linear-gradient(#176ca7, #135888) !important; background-image: -moz-linear-gradient(#176ca7, #135888) !important; background-image: -o-linear-gradient(#176ca7, #135888) !important; background-image: linear-gradient(#176ca7, #135888) !important; }
 
-#gcwu-srchbx label { height: auto !important; width: auto !important; overflow: visible !important; }
-
-.krumo-footnote img { width: auto; }
-
-/* Field Archived Content */
-.form-item-field-archived-content-und { margin-top: 0px; }
-
-/* Field Featured Image */
-#node-edit .form-item-field-featured-image-und-0-title label { font-weight: normal; float: left; margin: 4px 10px 0 0; }
-
+/* Fields */
+#node-edit .form-item-field-archived-content-und { margin-top: 0px; }
 #node-edit #edit-field-featured-image-und-0-title { width: 180px; }
+#node-edit #edit-field-featured-image-und-0-title label { font-weight: normal; float: left; margin: 4px 10px 0 0; }
 
-/* Admin Menu Override */
-ul li.admin-menu-search { display: none; }
+/* Translation */
+.form-item .form-autocomplete { padding: 0px 4px; }
