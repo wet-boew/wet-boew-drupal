@@ -26,7 +26,7 @@ function wetkit_wetboew_selection_form($form, &$form_state) {
   // Create a list of theme options, minus the admin and testing themes
   $themes = array();
   foreach (system_rebuild_theme_data() as $theme) {
-    if (!in_array($theme->name, array('test_theme', 'update_test_basetheme', 'update_test_subtheme', 'block_test_theme', 'stark', 'seven', 'adaptivetheme_admin', 'adaptivetheme', 'adaptivetheme_subtheme', 'mobile_jquery', 'rubik', 'radix', 'tao', 'zen', 'wetkit_adaptivetheme_settings'))) {
+    if (!in_array($theme->name, array('test_theme', 'update_test_basetheme', 'update_test_subtheme', 'block_test_theme', 'stark', 'seven', 'adaptivetheme_admin', 'adaptivetheme', 'adaptivetheme_subtheme', 'mobile_jquery', 'rubik', 'radix', 'tao', 'zen', 'wetkit_adaptivetheme_settings', 'wetkit_rubik'))) {
       $themes[$theme->name] = theme('image', array('path' => $theme->info['screenshot'])) . '<strong>' . $theme->info['name'] . '</strong><br /><p><em>' . $theme->info['description'] . '</em></p><p class="clearfix"></p>';
     }
   }
