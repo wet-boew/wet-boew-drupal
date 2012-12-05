@@ -155,7 +155,7 @@ a.module-link-configure { background: url("/misc/configure.png") no-repeat scrol
 #media-browser-tabset div.form-actions a.fake-submit { margin-right: 5px; box-shadow: 0 1px 1px #DDDDDD; padding: 2px 10px 2px 25px; background: url("../../rubik/images/buttons.png") no-repeat scroll -2401px 50% white; border-color: #DDDDDD #DDDDDD #CCCCCC; border-style: solid; border-width: 1px; color: #333333; cursor: pointer; font-weight: normal; text-align: center; font-family: Verdana,Arial,sans-serif; font-size: 1em; }
 
 /* Tweak Table Styles */
-table td, table th { border: 0 none; padding: 8px 10px; vertical-align: middle; }
+table td, table th { padding: 8px 10px; vertical-align: middle; }
 
 table th { text-transform: uppercase; }
 
