@@ -281,10 +281,57 @@ function wetkit_demo_content_defaults() {
     'body' => array(
       'und' => array(
         0 => array(
-          'value' => '<p><span>Drupal is open source software maintained and developed by a community of 630,000+ users and developers. It\'s distributed under the terms of the&nbsp;</span><a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</a><span>&nbsp;(or "GPL"), which means anyone is free to download it and share it with others. This open development model means that people are constantly working to make sure </span></p><p><span>Drupal is a cutting-edge platform that supports the latest technologies that the Web has to offer. The Drupal project\'s&nbsp;</span><a href="http://drupal.org/principles">principles</a><span>&nbsp;encourage modularity, standards, collaboration, ease-of-use, and more.</span></p><p><span style="text-decoration: underline;">Drupal offers a wide variety of features including the following:</span></p><div><ul><li>Organize and find web content</li><li>Ease of use and creative content</li><li>Powerful fine-grained administration and security</li><li>Enables controlled collaboration</li><li>Customizeable and extendable</li><li>Easy connection to other IT systems and support for SOA and the Semantic Web</li><li>Extensive framework for building web applications</li></ul><p><span style="text-decoration: underline;">What Specific Features Help GoC?</span></p><div><ul><li>Drupal has been integrated with the upcoming WET 3.0</li><li>Full support for bilingual sites</li><li>WCAG 2.0 Compliance</li><li>Open source / no license costs</li><li>TBS WCMS Tiger Team Endorsement</li></ul></div></div>',
+          'value' => '<p>Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities.</p>
+<p>The toolkit complies with the new Standards on Web Accessibility and Web Usability; the toolkit will also ease compliance with the Standard on Web Interoperability. WET is highly recommended for use on Government of Canada Websites.</p>
+<section>
+<h2>Benefits</h2>
+<ul>
+<li>Provides reusable components for building and maintaining innovative Web sites.</li>
+<li>Respects accessibility (<a href="http://www.w3.org/TR/WCAG20/">WCAG 2.0</a> AA and <a href="http://www.w3.org/TR/wai-aria/">WAI-ARIA</a>), usability, and interoperability.</li>
+<li>Reduces costs by consolidating Web tools and solutions.</li>
+<li>Open source software that is free to use by departments and external Web communities.</li>
+<li>Uses advanced technologies to push the envelope for Web site functionality:
+<ul>
+<li><a href="http://www.w3.org/TR/html5/">HTML5</a>, <a href="http://www.w3.org/Style/CSS/current-work">CSS3</a>, <a href="http://jquery.com/">jQuery</a> (JavaScript framework);</li>
+<li>Ever-growing list of open source plugins and widgets.</li>
+</ul>
+</li>
+<li>Supports a wide range of layouts and designs for internal and external Web sites (including applications).</li>
+</ul>
+</section>
+<section>
+<h2>Key resources</h2>
+<ul>
+<li><a href="demos/index-eng.html">Working examples</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki#wiki-Documentation">Documentation</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/downloads">Download</a></li>
+<li><a href="License-eng.txt">Terms and conditions</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Developing-for-WET#wiki-Contributor_guidelines">Contributor guidelines</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Roadmap">Roadmap</a></li>
+</ul>
+</section>',
           'summary' => '',
           'format' => 'wetkit_wysiwyg_text',
-          'safe_value' => ' <p><span>Drupal is open source software maintained and developed by a community of 630,000+ users and developers. It\'s distributed under the terms of the </span><a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</a><span> (or "GPL"), which means anyone is free to download it and share it with others. This open development model means that people are constantly working to make sure </span></p><p><span>Drupal is a cutting-edge platform that supports the latest technologies that the Web has to offer. The Drupal project\'s </span><a href="http://drupal.org/principles">principles</a><span> encourage modularity, standards, collaboration, ease-of-use, and more.</span></p><p><span style="text-decoration:underline">Drupal offers a wide variety of features including the following:</span></p><div><ul><li>Organize and find web content</li><li>Ease of use and creative content</li><li>Powerful fine-grained administration and security</li><li>Enables controlled collaboration</li><li>Customizeable and extendable</li><li>Easy connection to other IT systems and support for SOA and the Semantic Web</li><li>Extensive framework for building web applications</li></ul><p><span style="text-decoration:underline">What Specific Features Help GoC?</span></p><div><ul><li>Drupal has been integrated with the upcoming WET 3.0</li><li>Full support for bilingual sites</li><li>WCAG 2.0 Compliance</li><li>Open source / no license costs</li><li>TBS WCMS Tiger Team Endorsement</li></ul></div></div> ',
+          'safe_value' => ' <p>Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities.</p>
+<p>The toolkit complies with the new Standards on Web Accessibility and Web Usability; the toolkit will also ease compliance with the Standard on Web Interoperability. WET is highly recommended for use on Government of Canada Websites.</p>
+<section><h2>Benefits</h2>
+<ul><li>Provides reusable components for building and maintaining innovative Web sites.</li>
+<li>Respects accessibility (<a href="http://www.w3.org/TR/WCAG20/">WCAG 2.0</a> AA and <a href="http://www.w3.org/TR/wai-aria/">WAI-ARIA</a>), usability, and interoperability.</li>
+<li>Reduces costs by consolidating Web tools and solutions.</li>
+<li>Open source software that is free to use by departments and external Web communities.</li>
+<li>Uses advanced technologies to push the envelope for Web site functionality:
+<ul><li><a href="http://www.w3.org/TR/html5/">HTML5</a>, <a href="http://www.w3.org/Style/CSS/current-work">CSS3</a>, <a href="http://jquery.com/">jQuery</a> (JavaScript framework);</li>
+<li>Ever-growing list of open source plugins and widgets.</li>
+</ul></li>
+<li>Supports a wide range of layouts and designs for internal and external Web sites (including applications).</li>
+</ul></section><section><h2>Key resources</h2>
+<ul><li><a href="demos/index-eng.html">Working examples</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki#wiki-Documentation">Documentation</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/downloads">Download</a></li>
+<li><a href="License-eng.txt">Terms and conditions</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Developing-for-WET#wiki-Contributor_guidelines">Contributor guidelines</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Roadmap">Roadmap</a></li>
+</ul></section>',
           'safe_summary' => '  ',
         ),
       ),
@@ -345,10 +392,57 @@ function wetkit_demo_content_defaults() {
     'body' => array(
       'und' => array(
         0 => array(
-          'value' => '<p>Drupal est un logiciel open sourcecode ouvert développé et maintenu par une communauté de 630.000 utilisateurs et les développeurs +. Il est distribué sous les termes de la Licence pPublique gGénérale GNU (ou «GPL»), ce qui signifie que chacun est libre de le télécharger et de le partager avec d\'autres. Ce modèle de développement ouvert signifie que les personnes travaillent en permanence pour s\'assurer</p><p>Drupal est une plate-forme de pointe qui supporte les dernières technologies du Web a à offrir. Principes du projet Drupal encourager la modularité, les normes, la collaboration, la facilité d\'utilisation, et plus encore.</p><p>Drupal offre une grande variété de fonctionnalités, y compris ce qui suit:</p><ul><li>Organiser et rechercher des contenus web</li><li>Facilité d\'utilisation et le contenu créatif</li><li>Puissant Sécurité puissante et administration raffinée</li><li>Permets le travail collaboratif contrôlé</li><li>Personnalisable et extensible</li><li>Connexion facile à d\'autres systèmes d\'information et de soutien pour la SOA et le Web sémantique</li><li>Vaste cadre pour construire des applications Web</li></ul><p>Quelles sont les fonctionnalités spécifiques Aide GC?</p><ul><li>Drupal a été intégré à la version 3.0 à venir WET</li><li>Prise en charge complète pour les sites bilingues</li><li>WCAG 2.0 Conformité</li><li>Open sourceCode ouvert / pas de frais de licence</li><li>Approbation du SCT WCMS Tiger Team</li></ul>',
+          'value' => '<p>La Boîte à outils de l’expérience Web (BOEW) rassemble différents composants réutilisables et prêts-à-utiliser pour la conception et la mise à jour de sites Web innovateurs qui sont à la fois accessibles, conviviaux et interopérables. Tous ces composants réutilisables sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes.</p>
+<p>La Boîte à outils est conforme à la Norme sur l\'accessibilité des sites Web et la Norme sur la facilité des sites Web et sera conforme à la Norme sur l’interopérabilité du Web. Il est fortement recommandé d’utiliser la BOEW pour tous les sites Web du gouvernement du Canada.</p>
+<section>
+<h2>Avantages</h2>
+<ul>
+<li>Fournit des composants réutilisables pour la conception et la mise à jour de sites Web innovateurs.</li>
+<li>Respecte l\'accessibilité (<a href="http://www.w3.org/Translations/WCAG20-fr">WCAG 2.0</a> AA et <a href="http://www.w3.org/TR/wai-aria/">WAI-ARIA</a>), la facilité d’emploi et l\'interopérabilité.</li>
+<li>Réduit les coûts en consolidant les outils et les solutions axés sur le Web.</li>
+<li>Sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes.</li>
+<li>Fait appel à des technologies nouvelles et innovatrices pour rendre les sites plus innovateurs et interactifs&nbsp;:
+<ul>
+<li><a href="http://www.w3.org/TR/html5/">HTML5</a>, <a href="http://www.w3.org/Style/CSS/current-work#CSS3">CSS3</a> et <a href="http://jquery.com/">jQuery</a> (cadre JavaScript);</li>
+<li>liste croissante de plugiciels et gadgets libres.</li>
+</ul>
+</li>
+<li>Permet d’avoir accès à une grande diversité de mises en page et de conceptions pour les sites Web internes et externes (y compris les applications).</li>
+</ul>
+</section>
+<section>
+<h2>Ressources clés</h2>
+<ul>
+<li><a href="demos/index-fra.html">Exemples pratiques</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Accueil#wiki-Documentation">Documentation</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/downloads">Télécharger</a></li>
+<li><a href="Licence-fra.txt">Conditions régissant l\'utilisation</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Développer-pour-la-boew#wiki-Lignes_directrices_pour_les_contributeurs">Lignes directrices pour les contributeurs</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Feuille-de-route">Feuille de route</a></li>
+</ul>
+</section>',
           'summary' => '',
           'format' => 'wetkit_wysiwyg_text',
-          'safe_value' => ' <p>Drupal est un logiciel open sourcecode ouvert développé et maintenu par une communauté de 630.000 utilisateurs et les développeurs +. Il est distribué sous les termes de la Licence pPublique gGénérale GNU (ou «GPL»), ce qui signifie que chacun est libre de le télécharger et de le partager avec d\'autres. Ce modèle de développement ouvert signifie que les personnes travaillent en permanence pour s\'assurer</p><p>Drupal est une plate-forme de pointe qui supporte les dernières technologies du Web a à offrir. Principes du projet Drupal encourager la modularité, les normes, la collaboration, la facilité d\'utilisation, et plus encore.</p><p>Drupal offre une grande variété de fonctionnalités, y compris ce qui suit:</p><ul><li>Organiser et rechercher des contenus web</li><li>Facilité d\'utilisation et le contenu créatif</li><li>Puissant Sécurité puissante et administration raffinée</li><li>Permets le travail collaboratif contrôlé</li><li>Personnalisable et extensible</li><li>Connexion facile à d\'autres systèmes d\'information et de soutien pour la SOA et le Web sémantique</li><li>Vaste cadre pour construire des applications Web</li></ul><p>Quelles sont les fonctionnalités spécifiques Aide GC?</p><ul><li>Drupal a été intégré à la version 3.0 à venir WET</li><li>Prise en charge complète pour les sites bilingues</li><li>WCAG 2.0 Conformité</li><li>Open sourceCode ouvert / pas de frais de licence</li><li>Approbation du SCT WCMS Tiger Team</li></ul>',
+          'safe_value' => ' <p>La Boîte à outils de l’expérience Web (BOEW) rassemble différents composants réutilisables et prêts-à-utiliser pour la conception et la mise à jour de sites Web innovateurs qui sont à la fois accessibles, conviviaux et interopérables. Tous ces composants réutilisables sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes.</p>
+<p>La Boîte à outils est conforme à la Norme sur l\'accessibilité des sites Web et la Norme sur la facilité des sites Web et sera conforme à la Norme sur l’interopérabilité du Web. Il est fortement recommandé d’utiliser la BOEW pour tous les sites Web du gouvernement du Canada.</p>
+<section><h2>Avantages</h2>
+<ul><li>Fournit des composants réutilisables pour la conception et la mise à jour de sites Web innovateurs.</li>
+<li>Respecte l\'accessibilité (<a href="http://www.w3.org/Translations/WCAG20-fr">WCAG 2.0</a> AA et <a href="http://www.w3.org/TR/wai-aria/">WAI-ARIA</a>), la facilité d’emploi et l\'interopérabilité.</li>
+<li>Réduit les coûts en consolidant les outils et les solutions axés sur le Web.</li>
+<li>Sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes.</li>
+<li>Fait appel à des technologies nouvelles et innovatrices pour rendre les sites plus innovateurs et interactifs :
+<ul><li><a href="http://www.w3.org/TR/html5/">HTML5</a>, <a href="http://www.w3.org/Style/CSS/current-work#CSS3">CSS3</a> et <a href="http://jquery.com/">jQuery</a> (cadre JavaScript);</li>
+<li>liste croissante de plugiciels et gadgets libres.</li>
+</ul></li>
+<li>Permet d’avoir accès à une grande diversité de mises en page et de conceptions pour les sites Web internes et externes (y compris les applications).</li>
+</ul></section><section><h2>Ressources clés</h2>
+<ul><li><a href="demos/index-fra.html">Exemples pratiques</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Accueil#wiki-Documentation">Documentation</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/downloads">Télécharger</a></li>
+<li><a href="Licence-fra.txt">Conditions régissant l\'utilisation</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Développer-pour-la-boew#wiki-Lignes_directrices_pour_les_contributeurs">Lignes directrices pour les contributeurs</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/wiki/Feuille-de-route">Feuille de route</a></li>
+</ul></section>',
           'safe_summary' => '  ',
         ),
       ),
