@@ -17,3 +17,4 @@ scripts[] = js/wetkit_rubik.js
 
 ; Additional theme settings
 settings[wetkit_rubik_show_user_menu] = 1
+settings[wetkit_rubik_inline_field_descriptions] = 1

@@ -180,6 +180,9 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
 
       // Schema is HTML5 instead of default HTML4
       $settings['schema'] = 'html5';
+      
+      // Preserve whitespace such as tabs and spaces
+      $settings['preformatted'] = TRUE;
 
       // End container block element when pressing enter inside an empty block
       $settings['end_container_on_empty_block'] = TRUE;
