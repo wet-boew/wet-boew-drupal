@@ -81,8 +81,8 @@ abstract class WetKitMigration extends Migration {
     $pathStats = pathinfo($row->path);
     $row->dirname = $pathStats['dirname'];
     $row->path = $pathStats['dirname'] . '/' . $pathStats['filename'];
-    //$row->sourceuri  = substr($row->path, 0, strlen($row->path) - 4);
-    $row->sourceuri = $row->path;
+    $row->sourceuri  = substr($row->path, 0, strlen($row->path) - 4);
+    //$row->sourceuri = $row->path;
 
     // Set up the TNID (the translated node id). To set the TNID, just ensure that every
     // node in the translation set uses the same node ID in the TNID field. 
