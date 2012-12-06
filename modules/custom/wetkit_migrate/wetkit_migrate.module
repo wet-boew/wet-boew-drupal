@@ -1,0 +1,38 @@
+<?php
+/**
+ * @file
+ * Code for the WetKit Layout.
+ */
+
+include_once 'wetkit_migrate.features.inc';
+
+/*
+ * You must implement hook_migrate_api(), setting the API level to 2, for
+ * your migration classes to be recognized by the Migrate module.
+ */
+function wetkit_migrate_migrate_api() {
+  $api = array(
+    'api' => 2,
+  );
+  return $api;
+}
+
+/**
+ * Implmentes hook_menu() 
+ */
+function wetkit_migrate_menu() {
+  $items = array();
+  
+  $items['admin/config/development/wetkit_migration'] = array(
+    'title' => 'WetKit Migration',
+    'description' => 'Configure database settings for the WetKit content migration.',
+    'page callback' => 'drupal_get_form',
+    'file' => 'wetkit_migrate.pages.inc',
+    'page arguments' => array('wetkit_migrate_form'),
+    'access callback' => TRUE,
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}

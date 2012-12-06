@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the WetKit Content Types feature.
+ */
+
+include_once 'wetkit_migrate_content_types.features.inc';
