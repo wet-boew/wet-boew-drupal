@@ -736,6 +736,8 @@ h1.path-admin-config-workbench span.icon {
   color: white;
 }
 
+.secondary-tabs,
+.secondary-tabs:hover,
 .tao .primary-tabs li.active {
   text-shadow:#222 0 1px 1px;
   background: none;
@@ -746,6 +748,7 @@ h1.path-admin-config-workbench span.icon {
   background-image:-o-linear-gradient(#176ca7,#135888)!important;
    background-image:linear-gradient(#176ca7,#135888)!important;
 }
+.secondary-tabs a:hover { background-color:#000; }
 
 .tao table th,
 .tao .item-list h3, .tao .block .block-title, .tao .fieldset-title, .tao .collapsible .fieldset-legend a,
@@ -776,8 +779,3 @@ h1.path-admin-config-workbench span.icon {
 .tao .form-item .description, .description { color: #000; }
 
 .tao a { color: #145E91; }
-
-/* Breadcrumb arrows */
-.tao #branding .breadcrumb-link:after { content: '>'; padding:8px 0px 0 4px; float: left; color:#fff; }
-
-.tao #branding .breadcrumb-link:last-child:after { content: none; padding:0;}
