@@ -38,7 +38,7 @@ function wetkit_pages_field_default_fields() {
       'settings' => array(
         'entity_translation_sync' => FALSE,
       ),
-      'translatable' => '0',
+      'translatable' => '1',
       'type' => 'text_with_summary',
     ),
     'field_instance' => array(
@@ -591,7 +591,7 @@ function wetkit_pages_field_default_fields() {
       'settings' => array(
         'entity_translation_sync' => FALSE,
       ),
-      'translatable' => '0',
+      'translatable' => '1',
       'type' => 'text_with_summary',
     ),
     'field_instance' => array(
