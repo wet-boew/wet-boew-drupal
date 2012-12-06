@@ -42,7 +42,7 @@ projects[panopoly_widgets][patch][1847912] = http://drupal.org/files/File_Entity
 projects[panopoly_admin][version] = 1.x-dev
 projects[panopoly_admin][subdir] = panopoly
 projects[panopoly_admin][download][type] = git
-projects[panopoly_admin][download][revision] = 9dcfa41
+projects[panopoly_admin][download][revision] = 0e4fa7a
 projects[panopoly_admin][download][branch] = 7.x-1.x
 
 projects[panopoly_users][version] = 1.x-dev
