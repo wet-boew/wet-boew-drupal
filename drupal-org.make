@@ -56,4 +56,5 @@ projects[panopoly_users][download][branch] = 7.x-1.x
 includes[] = modules/custom/wetkit_wysiwyg/wetkit_wysiwyg.make
 includes[] = modules/custom/wetkit_search/wetkit_search.make
 includes[] = modules/custom/wetkit_language/wetkit_language.make
+includes[] = modules/custom/wetkit_migrate/wetkit_migrate.make
 includes[] = modules/custom/wetkit_wetboew/wetkit_wetboew.make
