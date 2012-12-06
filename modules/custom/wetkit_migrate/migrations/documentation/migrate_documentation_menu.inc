@@ -106,6 +106,7 @@ class WetKit_Migrate_Documentation_Menu_Links extends XMLMigration {
     $this->addFieldMapping('link_title', 'link_title')
         ->xpath('link_title');
     $this->addFieldMapping('link_path', 'link_path');
+    $this->addFieldMapping('plid', 'plid');
     $this->addFieldMapping('menu_name', 'menu_name')
         ->xpath('menu_name');
     $this->addFieldMapping('external', 'external')
