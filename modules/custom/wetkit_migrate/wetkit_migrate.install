@@ -1,0 +1,38 @@
+<?php
+/**
+ * @file
+ * wetkit_migrate.install
+ */
+
+/**
+ * Implements hook_install().
+ */
+function wetkit_migrate_install() {
+
+  // Documentation
+  variable_set('wetkit_migrate_documentation_basedir',     libraries_get_path('wet-boew', FALSE));
+  variable_set('wetkit_migrate_documentation_listdir',     libraries_get_path('wet-boew', FALSE) . '/demos');
+  variable_set('wetkit_migrate_documentation_ignore_dirs', '');
+  variable_set('wetkit_migrate_documentation_files',       libraries_get_path('wet-boew', TRUE));
+
+  MigrationBase::registerMigration('WetKit_Migrate_Documentation');
+  MigrationBase::registerMigration('WetKit_Migrate_Documentation_Menu');
+  MigrationBase::registerMigration('WetKit_Migrate_Documentation_Menu_Links');
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function wetkit_migrate_disable() {
+
+  // Documentation
+  variable_delete('wetkit_migrate_documentation_basedir');
+  variable_delete('wetkit_migrate_documentation_listdir');
+  variable_delete('wetkit_migrate_documentation_ignore_dirs');
+  variable_delete('wetkit_migrate_documentation_files');
+  variable_delete('wetkit_migrate_documentation_menu_file');
+
+  MigrationBase::deregisterMigration('WetKit_Migrate_Documentation');
+  MigrationBase::deregisterMigration('WetKit_Migrate_Documentation_Menu');
+  MigrationBase::deregisterMigration('WetKit_Migrate_Documentation_Menu_Links');
+}

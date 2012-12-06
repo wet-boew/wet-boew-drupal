@@ -276,3 +276,12 @@ div.panels-ipe-placeholder h4 {
 #getlocations_map_canvas {
   img { max-width: none; }
 }
+
+
+/*
+ * Migration Helper Classes
+ */
+
+.node-type-wetkit-documentation .block-content #tabs {
+  margin-bottom: 10px;
+}

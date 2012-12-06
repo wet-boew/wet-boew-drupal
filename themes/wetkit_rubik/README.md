@@ -19,7 +19,7 @@ REQUIREMENTS
 Acknowledgements
 ----------------
 
-WetKit Rubik was based on the work by Fubik (http://drupal.org/project/fubik):
+WetKit Rubik is based on (and will probably merge back into) the amazing work done in Fubik (http://drupal.org/project/fubik):
 
   * Miguel Trindade (migueltrindade) - http://drupal.org/user/690418/ & http://www.migueltrindade.com.br
   * Alex Weber (alexweber) - http://drupal.org/user/850856 & http://www.alexweber.com.br

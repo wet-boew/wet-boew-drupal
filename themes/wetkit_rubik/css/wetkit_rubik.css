@@ -253,7 +253,7 @@ input.form-submit { background-image: url(images/buttons.png);
 
 #context-blockform .context-blockform-selector { height: 70em; }
 
-/* Fix up WetKit Rubik Theme to closely align with WET */
+/* Fix up WetKit Rubik Theme to closely align with WET Styles */
 .tao #branding { text-shadow: #222 0 1px 1px; background: none; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #176ca7), color-stop(100%, #135888)) !important; background-image: -webkit-linear-gradient(#176ca7, #135888) !important; background-image: -moz-linear-gradient(#176ca7, #135888) !important; background-image: -o-linear-gradient(#176ca7, #135888) !important; background-image: linear-gradient(#176ca7, #135888) !important; height: 35px; }
 
 .tao .action-links a { color: white; background: none; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #176ca7), color-stop(100%, #135888)) !important; background-image: -webkit-linear-gradient(#176ca7, #135888) !important; background-image: -moz-linear-gradient(#176ca7, #135888) !important; background-image: -o-linear-gradient(#176ca7, #135888) !important; background-image: linear-gradient(#176ca7, #135888) !important; padding: 0px 5px 0px 5px; }
@@ -262,11 +262,11 @@ input.form-submit { background-image: url(images/buttons.png);
 
 .tao .primary-tabs li.active { text-shadow: #222 0 1px 1px; background: none; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #176ca7), color-stop(100%, #135888)) !important; background-image: -webkit-linear-gradient(#176ca7, #135888) !important; background-image: -moz-linear-gradient(#176ca7, #135888) !important; background-image: -o-linear-gradient(#176ca7, #135888) !important; background-image: linear-gradient(#176ca7, #135888) !important; }
 
-.tao table th, .tao .item-list h3, .tao .block .block-title, .tao .fieldset-title, .tao .collapsible .fieldset-legend a, .tao .admin-panel h3 { text-shadow: white 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dcdcdc)) !important; background-image: -webkit-linear-gradient(#eeeeee, #dcdcdc) !important; background-image: -moz-linear-gradient(#eeeeee, #dcdcdc) !important; background-image: -o-linear-gradient(#eeeeee, #dcdcdc) !important; background-image: linear-gradient(#eeeeee, #dcdcdc) !important; }
+.tao table th, .tao .item-list h3, .tao .block .block-title, .tao .fieldset-title, .tao .collapsible .fieldset-legend a, .tao .admin-panel h3 { text-shadow: white 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, gainsboro)) !important; background-image: -webkit-linear-gradient(#eeeeee, gainsboro) !important; background-image: -moz-linear-gradient(#eeeeee, gainsboro) !important; background-image: -o-linear-gradient(#eeeeee, gainsboro) !important; background-image: linear-gradient(#eeeeee, #dcdcdc) !important; }
 
-.tao #branding .breadcrumb { font-size: 13px; }
+.tao #branding .breadcrumb { font-size: 13px; text-transform: none; }
 
-.tao #branding ul.links a { background: none; padding: 10px 10px; font-size: 13px; text-transform: uppercase; }
+.tao #branding ul.links a { background: none; padding: 10px 10px; font-size: 13px; }
 
 .tao #branding .breadcrumb a, .tao #branding .breadcrumb strong { background: none; padding: 10px 20px; }
 

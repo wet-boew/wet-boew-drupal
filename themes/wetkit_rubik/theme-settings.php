@@ -29,6 +29,7 @@ function wetkit_rubik_form_system_theme_settings_alter(&$form) {
     '#title' => t('Show User Menu in Top Right Corner'),
     '#default_value' => theme_get_setting('wetkit_rubik_show_user_menu'),
   );
+
   $form['wetkit_rubik']['wetkit_rubik_inline_field_descriptions'] = array(
     '#type' => 'checkbox',
     '#title' => t('Display form field descriptions inline.'),
