@@ -31,6 +31,9 @@ projects[l10n_client][subdir] = contrib
 projects[l10n_update][version] = 1.0-beta3
 projects[l10n_update][subdir] = contrib
 
+projects[potx][version] = 1.0
+projects[potx][subdir] = contrib
+
 projects[stringoverrides][version] = 1.8
 projects[stringoverrides][subdir] = contrib
 

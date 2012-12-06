@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu_handler>
+    <menu>
+        <language>
+            <section>
+                <source_id>documentation_grids_menu_1</source_id>
+                <menu_name>documentation_grids</menu_name>
+                <title>Documentation: Grids</title>
+                <description>Documentation: Grids Menu</description>
+            </section>
+        </language>
+    </menu>
+    <menu_links>
+        <english>
+            <section>
+                <source_id>documentation_grids_menu_links_eng_1</source_id>
+                <menu_name>documentation_grids</menu_name>
+                <link_title>Structure</link_title>
+                <link_path>demos/grids/grid-structure-eng</link_path>
+                <weight>1</weight>
+            </section>            
+            <section>
+                <source_id>documentation_grids_menu_links_eng_2</source_id>
+                <menu_name>documentation_grids</menu_name>
+                <link_title>CSS Grid System</link_title>
+                <link_path>demos/grids/grid-base-eng</link_path>
+                <weight>1</weight>
+                <parent>documentation_grids_menu_links_eng_1</parent>
+            </section>
+            <section>
+                <source_id>documentation_grids_menu_links_eng_3</source_id>
+                <menu_name>documentation_grids</menu_name>
+                <link_title>Basic Effects</link_title>
+                <link_path>demos/grids/grid-basic-eng</link_path>
+                <weight>2</weight>
+            </section>
+            <section>
+                <source_id>documentation_grids_menu_links_eng_4</source_id>
+                <menu_name>documentation_grids</menu_name>
+                <link_title>Text</link_title>
+                <link_path>demos/grids/grid-text-eng</link_path>
+                <weight>4</weight>
+                <parent>documentation_grids_menu_links_eng_3</parent>            
+            </section>
+        </english>
+        <french>
+            <section>
+                <source_id>documentation_grids_menu_links_fra_1</source_id>
+                <menu_name>documentation_grids</menu_name>
+                <link_title>Structure</link_title>
+                <link_path>demos/grids/grid-structure-fra</link_path>
+                <weight>1</weight>
+            </section>            
+            <section>
+                <source_id>documentation_grids_menu_links_fra_2</source_id>
+                <menu_name>documentation_grids</menu_name>
+                <link_title>Système de grille de CSS</link_title>
+                <link_path>demos/grids/grid-base-fra</link_path>
+                <weight>1</weight>
+                <parent>documentation_grids_menu_links_fra_1</parent>
+            </section>
+            <section>
+                <source_id>documentation_grids_menu_links_fra_3</source_id>
+                <menu_name>documentation_grids</menu_name>
+                <link_title>Effets de base</link_title>
+                <link_path>demos/grids/grid-basic-fra</link_path>
+                <weight>2</weight>
+            </section>
+            <section>
+                <source_id>documentation_grids_menu_links_fra_4</source_id>
+                <menu_name>documentation_grids</menu_name>
+                <link_title>Texte</link_title>
+                <link_path>demos/grids/grid-text-fra</link_path>
+                <weight>4</weight>
+                <parent>documentation_grids_menu_links_fra_3</parent>  
+            </section>
+        </french>
+    </menu_links>
+</menu_handler>
