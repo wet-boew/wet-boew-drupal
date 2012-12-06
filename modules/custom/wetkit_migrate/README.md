@@ -1,6 +1,6 @@
 WetKit Migrate
 ==============
-Shows to work with the migrate module to migrate in your sites data. Uses the HTML documents from WET as an example.
+Shows how to work with the migrate module to migrate in your sites data. Uses the HTML documents from WET as an example.
 
 Customizations
 --------------
