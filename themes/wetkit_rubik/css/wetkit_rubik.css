@@ -273,3 +273,8 @@ input.form-submit { background-image: url(images/buttons.png);
 .tao .form-item .description, .description { color: #000; }
 
 .tao a { color: #145E91; }
+
+/* Breadcrumb arrows */
+.tao #branding .breadcrumb-link:after { content: '>'; padding: 8px 0px 0 4px; float: left; color: #fff; }
+
+.tao #branding .breadcrumb-link:last-child:after { content: none; padding: 0; }
