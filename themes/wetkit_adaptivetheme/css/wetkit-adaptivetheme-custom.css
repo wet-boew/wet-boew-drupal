@@ -98,3 +98,6 @@ div.panels-ipe-placeholder h4 { font-weight: 700; font-size: 15px; width: 75px; 
 /* Open Layers */
 /* Override max-width 100% for map displays */
 .gmap img, .view-gmap img, .openlayers-map img, #getlocations_map_canvas img { max-width: none; }
+
+/* Migration Helper Classes */
+.node-type-wetkit-documentation .block-content #tabs { margin-bottom: 10px; }
