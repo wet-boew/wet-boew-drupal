@@ -72,22 +72,22 @@ projects[views_atom][patch][1632362] = http://drupal.org/files/views_atom-Update
 projects[webform][version] = 3.18
 projects[webform][subdir] = contrib
 
-projects[workbench][version] = 7.x-dev
-projects[workbench][subdir] = contrib
-projects[workbench][type] = module
-projects[workbench][download][type] = git
-projects[workbench][download][revision] = 6857511
-projects[workbench][download][branch] = 7.x-1.x
+;projects[workbench][version] = 7.x-dev
+;projects[workbench][subdir] = contrib
+;projects[workbench][type] = module
+;projects[workbench][download][type] = git
+;projects[workbench][download][revision] = 6857511
+;projects[workbench][download][branch] = 7.x-1.x
 
-projects[workbench_moderation][version] = 1.x-dev
-projects[workbench_moderation][subdir] = contrib
-projects[workbench_moderation][type] = module
-projects[workbench_moderation][download][type] = git
-projects[workbench_moderation][download][revision] = 931e01e
-projects[workbench_moderation][download][branch] = 7.x-1.x
-projects[workbench_moderation][patch][1285090] = http://drupal.org/files/playnicewithpanels-1285090-7.patch
-projects[workbench_moderation][patch][1260112] = http://drupal.org/files/workbench_moderation-is_current-1260112-15.patch
-projects[workbench_moderation][patch][1786604] = http://drupal.org/files/workbench_moderation-admin_theme_paths-1786604-2.patch
+;projects[workbench_moderation][version] = 1.x-dev
+;projects[workbench_moderation][subdir] = contrib
+;projects[workbench_moderation][type] = module
+;projects[workbench_moderation][download][type] = git
+;projects[workbench_moderation][download][revision] = 931e01e
+;projects[workbench_moderation][download][branch] = 7.x-1.x
+;projects[workbench_moderation][patch][1285090] = http://drupal.org/files/playnicewithpanels-1285090-7.patch
+;projects[workbench_moderation][patch][1260112] = http://drupal.org/files/workbench_moderation-is_current-1260112-15.patch
+;projects[workbench_moderation][patch][1786604] = http://drupal.org/files/workbench_moderation-admin_theme_paths-1786604-2.patch
 
 projects[rules][version] = 2.2
 projects[rules][subdir] = contrib

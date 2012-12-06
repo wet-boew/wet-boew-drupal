@@ -38,16 +38,18 @@ dependencies[] = panopoly_widgets
 dependencies[] = panopoly_admin
 dependencies[] = panopoly_users
 
-; Panopoly Recommended - Admin
-;dependencies[] = navbar
-dependencies[] = backports
-;dependencies[] = simplified_menu_admin
-dependencies[] = save_draft
-dependencies[] = module_filter
-dependencies[] = date_popup_authored
-
-; Panopoly Recommended - Other
+; Panopoly Recommended - Disabled
 ;dependencies[] = devel
+;dependencies[] = navbar
+;dependencies[] = simplified_menu_admin
+;dependencies[] = workbench
+;dependencies[] = workbench_moderation
+
+; Panopoly Recommended - Admin
+dependencies[] = backports
+dependencies[] = date_popup_authored
+dependencies[] = module_filter
+dependencies[] = save_draft
 dependencies[] = uuid
 
 ; WetKit Toolset
@@ -62,7 +64,7 @@ dependencies[] = wetkit_demo
 dependencies[] = wetkit_language
 dependencies[] = wetkit_wetboew
 
-; WetKit Recommended - Other
+; WetKit Recommended - Translation
 dependencies[] = l10n_client
 
 ; WetKit Testing
