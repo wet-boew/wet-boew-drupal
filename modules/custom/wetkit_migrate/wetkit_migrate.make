@@ -15,6 +15,7 @@ projects[migrate][patch][1839534] = http://drupal.org/files/migrate-undefined-in
 
 projects[migrate_extras][version] = 2.5
 projects[migrate_extras][type] = module
+projects[migrate_extras][subdir] = contrib
 
 projects[querypath][version] = 2.x-dev
 projects[querypath][type] = module
