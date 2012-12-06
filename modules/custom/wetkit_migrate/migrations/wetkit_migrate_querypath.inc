@@ -168,6 +168,9 @@ class WetKitMigrationHtmlPage {
       //'convert_to_encoding' => 'utf-8',
       'use_parser' => 'html'
     );
+    if (function_exists('querypath_include_code')) {
+      querypath_include_code();
+    }
     $this->qp = htmlqp($this->html, NULL, $qp_options);
   }
 
