@@ -24,6 +24,7 @@ projects[search_api_db][download][type] = git
 projects[search_api_db][download][revision] = a6203a3
 projects[search_api_db][download][branch] = 7.x-1.x
 projects[search_api_db][patch][1144620] = http://drupal.org/files/1144620--umlauts-46.patch
+;projects[search_api_db][patch][1649042] = https://raw.github.com/gist/4222276/b2af4621fd7621d968788b9a14186d2755a8b5a2/search_api_db_work
 
 ; Solr PHP Client Library
 

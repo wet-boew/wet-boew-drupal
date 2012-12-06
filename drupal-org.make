@@ -44,6 +44,7 @@ projects[panopoly_admin][subdir] = panopoly
 projects[panopoly_admin][download][type] = git
 projects[panopoly_admin][download][revision] = 0e4fa7a
 projects[panopoly_admin][download][branch] = 7.x-1.x
+projects[panopoly_admin][patch][1845522] = http://drupal.org/files/1845522-notices-suck.patch
 
 projects[panopoly_users][version] = 1.x-dev
 projects[panopoly_users][subdir] = panopoly
