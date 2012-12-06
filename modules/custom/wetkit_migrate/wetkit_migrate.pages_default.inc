@@ -152,12 +152,12 @@ function wetkit_migrate_default_page_manager_handlers() {
     $pane->pid = 'new-4';
     $pane->panel = 'wetkit_two_33_66_second';
     $pane->type = 'menu_tree';
-    $pane->subtype = 'documentation';
+    $pane->subtype = 'documentation_grids';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'menu_name' => 'documentation',
-      'parent_mlid' => 'documentation:0',
+      'menu_name' => 'documentation_grids',
+      'parent_mlid' => 'documentation_grids:0',
       'title_link' => 0,
       'admin_title' => '',
       'level' => '1',
