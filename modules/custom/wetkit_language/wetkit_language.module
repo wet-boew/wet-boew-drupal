@@ -117,7 +117,7 @@ function _language_switcher_wetkit() {
         if ($term) {
           $path = 'taxonomy/term/' . $language_terms[$lang->language]->tid;
         }
-        $attributes = array('class' => 'link', 'lang' => $lang->language);
+        $attributes = array('class' => array('link'), 'lang' => $lang->language);
         $lang_switcher[] = l($modifier, $path, array('attributes' => $attributes, 'language' => $lang));
       }
     }
