@@ -12,7 +12,7 @@ projects[panopoly_core][subdir] = panopoly
 projects[panopoly_core][download][type] = git
 projects[panopoly_core][download][revision] = 02baae4
 projects[panopoly_core][download][branch] = 7.x-1.x
-projects[panopoly_core][patch][1842818] = http://drupal.org/files/update_fpp_translation-1842818-07.patch
+projects[panopoly_core][patch][1842818] = http://drupal.org/files/update_fpp_translation-1842818-08.patch
 projects[panopoly_core][patch][1859874] = http://drupal.org/files/Fix_Entity_Field_Value-1859874-1.patch
 
 projects[panopoly_images][version] = 1.x-dev
