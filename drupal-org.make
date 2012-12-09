@@ -18,7 +18,7 @@ projects[panopoly_core][patch][1859874] = http://drupal.org/files/Fix_Entity_Fie
 projects[panopoly_images][version] = 1.x-dev
 projects[panopoly_images][subdir] = panopoly
 projects[panopoly_images][download][type] = git
-projects[panopoly_images][download][revision] = 36e5034
+projects[panopoly_images][download][revision] = ba8c36e
 projects[panopoly_images][download][branch] = 7.x-1.x
 
 projects[panopoly_theme][version] = 1.x-dev
@@ -36,14 +36,14 @@ projects[panopoly_magic][download][branch] = 7.x-1.x
 projects[panopoly_widgets][version] = 1.x-dev
 projects[panopoly_widgets][subdir] = panopoly
 projects[panopoly_widgets][download][type] = git
-projects[panopoly_widgets][download][revision] = ca7f610
+projects[panopoly_widgets][download][revision] = a257519
 projects[panopoly_widgets][download][branch] = 7.x-1.x
 projects[panopoly_widgets][patch][1847912] = https://raw.github.com/gist/4243024/5a946a870c2b17375ec328a79103b1741e65fb62/panopoly_widgets.patch
 
 projects[panopoly_admin][version] = 1.x-dev
 projects[panopoly_admin][subdir] = panopoly
 projects[panopoly_admin][download][type] = git
-projects[panopoly_admin][download][revision] = 0e4fa7a
+projects[panopoly_admin][download][revision] = 1ae9e87
 projects[panopoly_admin][download][branch] = 7.x-1.x
 projects[panopoly_admin][patch][1845522] = http://drupal.org/files/1845522-notices-suck.patch
 

@@ -24,6 +24,7 @@ features[features_api][] = api:1
 features[filter][] = wetkit_html_text
 features[filter][] = wetkit_wysiwyg_text
 features[linkit_profiles][] = content_editors
+features[variable][] = media__wysiwyg_allowed_types
 features[variable][] = media__wysiwyg_browser_plugins
 features[wysiwyg][] = wetkit_html_text
 features[wysiwyg][] = wetkit_wysiwyg_text
