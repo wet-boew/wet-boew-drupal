@@ -3,7 +3,6 @@ description = Creates generic WET widget functionality to customize.
 core = 7.x
 package = WetKit
 php = 5.2.4
-project = wetkit_widgets
 dependencies[] = date
 dependencies[] = date_api
 dependencies[] = date_popup
