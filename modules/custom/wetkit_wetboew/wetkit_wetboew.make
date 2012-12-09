@@ -58,7 +58,7 @@ projects[menu_views][subdir] = contrib
 projects[metatag][version] = 1.0-beta4
 projects[metatag][subdir] = contrib
 
-projects[password_policy][version] = 1.0-rc3
+projects[password_policy][version] = 1.3
 projects[password_policy][subdir] = contrib
 
 projects[views_atom][version] = 1.x-dev
