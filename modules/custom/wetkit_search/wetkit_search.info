@@ -3,7 +3,6 @@ description = Indexes and searches site content, Solr or otherwise.
 core = 7.x
 package = WetKit
 php = 5.2.4
-project = wetkit_search
 dependencies[] = ctools
 dependencies[] = custom_search
 dependencies[] = custom_search_blocks

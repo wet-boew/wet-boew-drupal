@@ -3,7 +3,6 @@ description = Integrates a WYSIWYG into Drupal.
 core = 7.x
 package = WetKit
 php = 5.2.4
-project = wetkit_wysiwyg
 dependencies[] = caption_filter
 dependencies[] = ctools
 dependencies[] = defaultconfig
