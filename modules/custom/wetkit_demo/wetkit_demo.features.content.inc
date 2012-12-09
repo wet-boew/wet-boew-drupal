@@ -34,7 +34,7 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_featured_image' => array(
-      'en' => array(
+      'und' => array(
         0 => array(
           'alt' => 'WetKit Features',
           'title' => 'WetKit Features',
@@ -59,14 +59,14 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_archived_content' => array(
-      'en' => array(
+      'und' => array(
         0 => array(
           'value' => '0',
         ),
       ),
     ),
     'field_featured_status' => array(
-      'en' => array(
+      'und' => array(
         0 => array(
           'value' => '1',
         ),
@@ -98,7 +98,7 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_featured_image' => array(
-      'fr' => array(
+      'und' => array(
         0 => array(
           'alt' => 'Features WetKit',
           'title' => 'Features WetKit',
@@ -123,14 +123,14 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_archived_content' => array(
-      'fr' => array(
+      'und' => array(
         0 => array(
           'value' => '0',
         ),
       ),
     ),
     'field_featured_status' => array(
-      'fr' => array(
+      'und' => array(
         0 => array(
           'value' => '1',
         ),
@@ -162,7 +162,7 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_featured_image' => array(
-      'en' => array(
+      'und' => array(
         0 => array(
           'alt' => 'WetKit Collaboration',
           'title' => 'WetKit Collaboration',
@@ -187,14 +187,14 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_archived_content' => array(
-      'en' => array(
+      'und' => array(
         0 => array(
           'value' => '0',
         ),
       ),
     ),
     'field_featured_status' => array(
-      'en' => array(
+      'und' => array(
         0 => array(
           'value' => '0',
         ),
@@ -226,7 +226,7 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_featured_image' => array(
-      'fr' => array(
+      'und' => array(
         0 => array(
           'alt' => 'Collaboration WetKit',
           'title' => 'Collaboration WetKit',
@@ -251,14 +251,14 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_archived_content' => array(
-      'fr' => array(
+      'und' => array(
         0 => array(
           'value' => '0',
         ),
       ),
     ),
     'field_featured_status' => array(
-      'fr' => array(
+      'und' => array(
         0 => array(
           'value' => '0',
         ),
@@ -337,7 +337,7 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_featured_image' => array(
-      'en' => array(
+      'und' => array(
         0 => array(
           'alt' => 'WetKit Demo',
           'title' => 'WetKit Demo',
@@ -362,14 +362,14 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_archived_content' => array(
-      'en' => array(
+      'und' => array(
         0 => array(
           'value' => '0',
         ),
       ),
     ),
     'field_featured_status' => array(
-      'en' => array(
+      'und' => array(
         0 => array(
           'value' => '0',
         ),
@@ -448,7 +448,7 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_featured_image' => array(
-      'fr' => array(
+      'und' => array(
         0 => array(
           'alt' => 'WetKit Demo',
           'title' => 'WetKit Demo',
@@ -473,14 +473,14 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_archived_content' => array(
-      'fr' => array(
+      'und' => array(
         0 => array(
           'value' => '0',
         ),
       ),
     ),
     'field_featured_status' => array(
-      'fr' => array(
+      'und' => array(
         0 => array(
           'value' => '0',
         ),
