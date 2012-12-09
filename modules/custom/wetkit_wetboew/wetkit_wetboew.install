@@ -8,10 +8,10 @@
  * Implements hook_install().
  */
 function wetkit_wetboew_install() {
-  if (module_exists('password_policy')) {
+  //if (module_exists('password_policy')) {
     //Set Default Password Policy
-    wetkit_defaults_create_password_policy();
-  }
+  //  wetkit_defaults_create_password_policy();
+  //}
   if (module_exists('block')) {
     //Set Default Blocks
     _wetkit_wetboew_default_blocks();

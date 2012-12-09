@@ -36,14 +36,16 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
       </div>
       <div class="clear"></div>
       <?php endif; ?>
-      <div class="region-wetkit-three-40-40-20-first span-3">
-        <div class="region-inner clearfix">
-          <?php print $content['wetkit_three_40_40_20_first']; ?>
+      <div id="gcwu-content">
+        <div class="region-wetkit-three-40-40-20-first span-3">
+          <div class="region-inner clearfix">
+            <?php print $content['wetkit_three_40_40_20_first']; ?>
+          </div>
         </div>
-      </div>
-      <div class="region-wetkit-three-40-40-20-second span-3">
-        <div class="region-inner clearfix">
-          <?php print $content['wetkit_three_40_40_20_second']; ?>
+        <div class="region-wetkit-three-40-40-20-second span-3">
+          <div class="region-inner clearfix">
+            <?php print $content['wetkit_three_40_40_20_second']; ?>
+          </div>
         </div>
       </div>
       <div id="wb-aside" class="region-wetkit-three-40-40-20-third span-2">

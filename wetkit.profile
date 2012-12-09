@@ -65,6 +65,7 @@ function wetkit_form_install_configure_form_alter(&$form, $form_state) {
     $form['admin_account']['account']['mail']['#default_value'] = 'admin@' . $_SERVER['HTTP_HOST'];
   }
 
+  /**
   // Password Policy for Enterprise Level Seucrity
   $roles = array(DRUPAL_AUTHENTICATED_RID);
   $policy = _password_policy_load_active_policy($roles);
@@ -79,6 +80,7 @@ function wetkit_form_install_configure_form_alter(&$form, $form_state) {
   // Set a custom form validate and submit handlers.
   $form['#validate'][] = 'wetkit_password_validate';
   $form['#submit'][] = 'wetkit_password_submit';
+  **/
 }
 
 /**
