@@ -42,14 +42,14 @@ dependencies[] = panopoly_users
 ;dependencies[] = devel
 ;dependencies[] = navbar
 ;dependencies[] = simplified_menu_admin
-;dependencies[] = workbench
-;dependencies[] = workbench_moderation
+dependencies[] = save_draft
 
 ; Panopoly Recommended - Admin
 dependencies[] = backports
 dependencies[] = date_popup_authored
 dependencies[] = module_filter
-dependencies[] = save_draft
+dependencies[] = workbench
+dependencies[] = workbench_moderation
 dependencies[] = uuid
 
 ; WetKit Toolset
