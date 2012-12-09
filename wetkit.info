@@ -41,8 +41,8 @@ dependencies[] = panopoly_users
 ; Panopoly Recommended - Disabled
 ;dependencies[] = devel
 ;dependencies[] = navbar
+;dependencies[] = save_draft
 ;dependencies[] = simplified_menu_admin
-dependencies[] = save_draft
 
 ; Panopoly Recommended - Admin
 dependencies[] = backports
