@@ -42,10 +42,10 @@ projects[l10n_client][subdir] = contrib
 projects[l10n_client][download][type] = git
 projects[l10n_client][download][revision] = df71809
 projects[l10n_client][download][branch] = 7.x-1.x
-projects[l10n_client][patch][1181356] = http://drupal.org/files/l10n_client-1181356-6.patch
-projects[l10n_client][patch][1026048] = http://drupal.org/files/issues/l10n_client.module_0.patch
 projects[l10n_client][patch][862590] = http://drupal.org/files/l10n_client-optimization-862590-48.patch
 projects[l10n_client][patch][1195948] = http://drupal.org/files/issues/l10_client_css-2.patch
+projects[l10n_client][patch][1181356] = http://drupal.org/files/l10n_client-1181356-6.patch
+projects[l10n_client][patch][1026048] = http://drupal.org/files/issues/l10n_client.module_0.patch
 projects[l10n_client][patch][1161204] = http://drupal.org/files/issues/css_42.patch
 
 projects[l10n_update][version] = 1.0-beta3
