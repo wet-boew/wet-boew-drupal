@@ -38,7 +38,7 @@ projects[panopoly_widgets][subdir] = panopoly
 projects[panopoly_widgets][download][type] = git
 projects[panopoly_widgets][download][revision] = ca7f610
 projects[panopoly_widgets][download][branch] = 7.x-1.x
-projects[panopoly_widgets][patch][1847912] = http://drupal.org/files/File_Entity-Alt_Title_Support-1847912.patch
+projects[panopoly_widgets][patch][1847912] = http://drupal.org/files/1847912-panopoly-widgets-update-media-file-entity-7.patch
 
 projects[panopoly_admin][version] = 1.x-dev
 projects[panopoly_admin][subdir] = panopoly
