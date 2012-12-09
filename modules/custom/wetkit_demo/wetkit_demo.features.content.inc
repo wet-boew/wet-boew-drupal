@@ -23,7 +23,7 @@ function wetkit_demo_content_defaults() {
     'translate' => '0',
     'machine_name' => 'wetkit-demo-0',
     'body' => array(
-      'und' => array(
+      'en' => array(
         0 => array(
           'value' => '<p><span>Drupal is open source software maintained and developed by a community of 630,000+ users and developers. It\'s distributed under the terms of the&nbsp;</span><a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</a><span>&nbsp;(or "GPL"), which means anyone is free to download it and share it with others. This open development model means that people are constantly working to make sure </span></p><p><span>Drupal is a cutting-edge platform that supports the latest technologies that the Web has to offer. The Drupal project\'s&nbsp;</span><a href="http://drupal.org/principles">principles</a><span>&nbsp;encourage modularity, standards, collaboration, ease-of-use, and more.</span></p><p><span style="text-decoration: underline;">Drupal offers a wide variety of features including the following:</span></p><div><ul><li>Organize and find web content</li><li>Ease of use and creative content</li><li>Powerful fine-grained administration and security</li><li>Enables controlled collaboration</li><li>Customizeable and extendable</li><li>Easy connection to other IT systems and support for SOA and the Semantic Web</li><li>Extensive framework for building web applications</li></ul><p><span style="text-decoration: underline;">What Specific Features Help GoC?</span></p><div><ul><li>Drupal has been integrated with the upcoming WET 3.0</li><li>Full support for bilingual sites</li><li>WCAG 2.0 Compliance</li><li>Open source / no license costs</li><li>TBS WCMS Tiger Team Endorsement</li></ul></div></div>',
           'summary' => '',
@@ -34,7 +34,7 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_featured_image' => array(
-      'und' => array(
+      'en' => array(
         0 => array(
           'alt' => 'WetKit Features',
           'title' => 'WetKit Features',
@@ -59,14 +59,14 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_archived_content' => array(
-      'und' => array(
+      'en' => array(
         0 => array(
           'value' => '0',
         ),
       ),
     ),
     'field_featured_status' => array(
-      'und' => array(
+      'en' => array(
         0 => array(
           'value' => '1',
         ),
@@ -87,7 +87,7 @@ function wetkit_demo_content_defaults() {
     'translate' => '0',
     'machine_name' => 'wetkit-demo-0-fr',
     'body' => array(
-      'und' => array(
+      'fr' => array(
         0 => array(
           'value' => '<p>Drupal est un logiciel open sourcecode ouvert développé et maintenu par une communauté de 630.000 utilisateurs et les développeurs +. Il est distribué sous les termes de la Licence pPublique gGénérale GNU (ou «GPL»), ce qui signifie que chacun est libre de le télécharger et de le partager avec d\'autres. Ce modèle de développement ouvert signifie que les personnes travaillent en permanence pour s\'assurer</p><p>Drupal est une plate-forme de pointe qui supporte les dernières technologies du Web a à offrir. Principes du projet Drupal encourager la modularité, les normes, la collaboration, la facilité d\'utilisation, et plus encore.</p><p>Drupal offre une grande variété de fonctionnalités, y compris ce qui suit:</p><ul><li>Organiser et rechercher des contenus web</li><li>Facilité d\'utilisation et le contenu créatif</li><li>Puissant Sécurité puissante et administration raffinée</li><li>Permets le travail collaboratif contrôlé</li><li>Personnalisable et extensible</li><li>Connexion facile à d\'autres systèmes d\'information et de soutien pour la SOA et le Web sémantique</li><li>Vaste cadre pour construire des applications Web</li></ul><p>Quelles sont les fonctionnalités spécifiques Aide GC?</p><ul><li>Drupal a été intégré à la version 3.0 à venir WET</li><li>Prise en charge complète pour les sites bilingues</li><li>WCAG 2.0 Conformité</li><li>Open sourceCode ouvert / pas de frais de licence</li><li>Approbation du SCT WCMS Tiger Team</li></ul>',
           'summary' => '',
@@ -98,7 +98,7 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_featured_image' => array(
-      'und' => array(
+      'fr' => array(
         0 => array(
           'alt' => 'Features WetKit',
           'title' => 'Features WetKit',
@@ -123,14 +123,14 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_archived_content' => array(
-      'und' => array(
+      'fr' => array(
         0 => array(
           'value' => '0',
         ),
       ),
     ),
     'field_featured_status' => array(
-      'und' => array(
+      'fr' => array(
         0 => array(
           'value' => '1',
         ),
@@ -151,7 +151,7 @@ function wetkit_demo_content_defaults() {
     'translate' => '0',
     'machine_name' => 'wetkit-demo-1',
     'body' => array(
-      'und' => array(
+      'en' => array(
         0 => array(
           'value' => '<p>A major goal of the WetKit Drupal Variant is to enable and encourage collaboration on various activities involving the Web Experience Toolkit and in particular the Drupal platform.</p><p>This project is always looking for contributors in a wide array of areas. If you are designer or developer then we could use your help!</p><p>We believe the real strength behind this distribution should be the community supporting it. If you use the distribution and devise a novel solution that you think would help, please contribute it back!</p><p>Together we can make an open source government enterprise solution that is secure, accessible, and efficient.</p>',
           'summary' => '',
@@ -162,7 +162,7 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_featured_image' => array(
-      'und' => array(
+      'en' => array(
         0 => array(
           'alt' => 'WetKit Collaboration',
           'title' => 'WetKit Collaboration',
@@ -187,14 +187,14 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_archived_content' => array(
-      'und' => array(
+      'en' => array(
         0 => array(
           'value' => '0',
         ),
       ),
     ),
     'field_featured_status' => array(
-      'und' => array(
+      'en' => array(
         0 => array(
           'value' => '0',
         ),
@@ -215,7 +215,7 @@ function wetkit_demo_content_defaults() {
     'translate' => '0',
     'machine_name' => 'wetkit-demo-1-fr',
     'body' => array(
-      'und' => array(
+      'fr' => array(
         0 => array(
           'value' => '<p>Un objectif majeur de la variante WetKit Drupal est de permettre et d\'encourager la collaboration à diverses activités impliquant la boîte à outils de l\'expérience Web, et en particulier la plate-forme Drupal.</p><p>Ce projet est toujours à la recherche de contributeurs dans un large éventail de domaines. Si vous êtes concepteur ou développeur, nous pourrions utiliser votre aide!</p><p>Nous croyons que la véritable force derrière cette distribution devrait être de soutenir la communauté. la soutenir. Si vous utilisez la distribution afinet de concevoir une nouvelle solution que vous pensez que celle-ci pourrait aider, s\'il vous plaît contribuer en retour!</p><p>Ensemble nous pouvons faire une solution open sourcecode ouvert du gouvernement d\'entreprise qui est sûr, accessible et efficace.</p>',
           'summary' => '',
@@ -226,7 +226,7 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_featured_image' => array(
-      'und' => array(
+      'fr' => array(
         0 => array(
           'alt' => 'Collaboration WetKit',
           'title' => 'Collaboration WetKit',
@@ -251,14 +251,14 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_archived_content' => array(
-      'und' => array(
+      'fr' => array(
         0 => array(
           'value' => '0',
         ),
       ),
     ),
     'field_featured_status' => array(
-      'und' => array(
+      'fr' => array(
         0 => array(
           'value' => '0',
         ),
@@ -279,7 +279,7 @@ function wetkit_demo_content_defaults() {
     'translate' => '0',
     'machine_name' => 'wetkit-demo-2',
     'body' => array(
-      'und' => array(
+      'en' => array(
         0 => array(
           'value' => '<p>Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities.</p>
 <p>The toolkit complies with the new Standards on Web Accessibility and Web Usability; the toolkit will also ease compliance with the Standard on Web Interoperability. WET is highly recommended for use on Government of Canada Websites.</p>
@@ -337,7 +337,7 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_featured_image' => array(
-      'und' => array(
+      'en' => array(
         0 => array(
           'alt' => 'WetKit Demo',
           'title' => 'WetKit Demo',
@@ -362,14 +362,14 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_archived_content' => array(
-      'und' => array(
+      'en' => array(
         0 => array(
           'value' => '0',
         ),
       ),
     ),
     'field_featured_status' => array(
-      'und' => array(
+      'en' => array(
         0 => array(
           'value' => '0',
         ),
@@ -390,7 +390,7 @@ function wetkit_demo_content_defaults() {
     'translate' => '0',
     'machine_name' => 'wetkit-demo-2-fr',
     'body' => array(
-      'und' => array(
+      'fr' => array(
         0 => array(
           'value' => '<p>La Boîte à outils de l’expérience Web (BOEW) rassemble différents composants réutilisables et prêts-à-utiliser pour la conception et la mise à jour de sites Web innovateurs qui sont à la fois accessibles, conviviaux et interopérables. Tous ces composants réutilisables sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes.</p>
 <p>La Boîte à outils est conforme à la Norme sur l\'accessibilité des sites Web et la Norme sur la facilité des sites Web et sera conforme à la Norme sur l’interopérabilité du Web. Il est fortement recommandé d’utiliser la BOEW pour tous les sites Web du gouvernement du Canada.</p>
@@ -448,7 +448,7 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_featured_image' => array(
-      'und' => array(
+      'fr' => array(
         0 => array(
           'alt' => 'WetKit Demo',
           'title' => 'WetKit Demo',
@@ -473,14 +473,14 @@ function wetkit_demo_content_defaults() {
       ),
     ),
     'field_archived_content' => array(
-      'und' => array(
+      'fr' => array(
         0 => array(
           'value' => '0',
         ),
       ),
     ),
     'field_featured_status' => array(
-      'und' => array(
+      'fr' => array(
         0 => array(
           'value' => '0',
         ),
