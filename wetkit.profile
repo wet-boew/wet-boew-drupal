@@ -7,9 +7,6 @@ function wetkit_install_tasks(&$install_state) {
 
   $tasks = array();
 
-  // Add our custom CSS file for the installation process
-  // drupal_add_css(drupal_get_path('profile', 'wetkit') . 'css/wetkit.css');
-
   // Add the WetKit app selection to the installation process
   //require_once(drupal_get_path('module', 'apps') . '/apps.profile.inc');
   //$tasks = $tasks + apps_profile_install_tasks($install_state, array('machine name' => 'panopoly', 'default apps' => array('')));
