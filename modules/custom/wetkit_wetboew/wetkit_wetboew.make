@@ -55,8 +55,13 @@ projects[linkchecker][download][branch] = 7.x-1.x
 projects[menu_views][version] = 1.3
 projects[menu_views][subdir] = contrib
 
-projects[metatag][version] = 1.0-beta4
+projects[metatag][version] = 1.x-dev
 projects[metatag][subdir] = contrib
+projects[metatag][type] = module
+projects[metatag][download][type] = git
+projects[metatag][download][revision] = 54f6f59
+projects[metatag][download][branch] = 7.x-1.x
+projects[metatag][patch][1284756] = http://drupal.org/files/1284756-15.patch
 
 projects[password_policy][version] = 1.3
 projects[password_policy][subdir] = contrib
