@@ -4,12 +4,7 @@
  * Implements hook_install_tasks().
  */
 function wetkit_install_tasks(&$install_state) {
-
   $tasks = array();
-
-  // Add the WetKit app selection to the installation process
-  //require_once(drupal_get_path('module', 'apps') . '/apps.profile.inc');
-  //$tasks = $tasks + apps_profile_install_tasks($install_state, array('machine name' => 'panopoly', 'default apps' => array('')));
 
   // Add the WetKit theme selection to the installation process
   require_once(drupal_get_path('module', 'wetkit_wetboew') . '/wetkit_wetboew.profile.inc');
@@ -35,17 +30,12 @@ function wetkit_install_tasks_alter(&$tasks, $install_state) {
   // Magically go one level deeper in solving years of dependency problems
   require_once(drupal_get_path('module', 'panopoly_core') . '/panopoly_core.profile.inc');
   $tasks['install_load_profile']['function'] = 'panopoly_core_install_load_profile';
-
-  // Since we only offer one language, define a callback to set this
-  //require_once(drupal_get_path('module', 'panopoly_core') . '/panopoly_core.profile.inc');
-  //$tasks['install_select_locale']['function'] = 'panopoly_core_install_locale_selection';
 }
 
 /**
  * Implements hook_form_FORM_ID_alter().
  */
 function wetkit_form_install_configure_form_alter(&$form, $form_state) {
-
   // Hide some messages from various modules that are just too chatty.
   drupal_get_messages('status');
   drupal_get_messages('warning');
@@ -61,30 +51,12 @@ function wetkit_form_install_configure_form_alter(&$form, $form_state) {
     $form['site_information']['site_mail']['#default_value'] = 'admin@' . $_SERVER['HTTP_HOST'];
     $form['admin_account']['account']['mail']['#default_value'] = 'admin@' . $_SERVER['HTTP_HOST'];
   }
-
-  /**
-  // Password Policy for Enterprise Level Seucrity
-  $roles = array(DRUPAL_AUTHENTICATED_RID);
-  $policy = _password_policy_load_active_policy($roles);
-  $translate = array();
-  if (!empty($policy['policy'])) {
-    // Some policy constraints are active.
-    password_policy_add_policy_js($policy, 1);
-    foreach ($policy['policy'] as $key => $value) {
-      $translate['constraint_' . $key] = _password_policy_constraint_error($key, $value);
-    }
-  }
-  // Set a custom form validate and submit handlers.
-  $form['#validate'][] = 'wetkit_password_validate';
-  $form['#submit'][] = 'wetkit_password_submit';
-  **/
 }
 
 /**
  * Password Policy save validate handler.
  */
 function wetkit_password_validate($form, &$form_state) {
-
   $values = $form_state['values'];
   $account = (object)array('uid' => 1);
   $account->roles = array(DRUPAL_AUTHENTICATED_RID => DRUPAL_AUTHENTICATED_RID);
@@ -101,7 +73,6 @@ function wetkit_password_validate($form, &$form_state) {
  * Password Policy save submit handler.
  */
 function wetkit_password_submit($form, &$form_state) {
-
   global $user;
   $values = $form_state['values'];
   $account = (object)array('uid' => 1);
@@ -115,14 +86,10 @@ function wetkit_password_submit($form, &$form_state) {
  * Batch Processing for French Language import.
  */
 function wetkit_batch_processing(&$install_state) {
-
   //Import the additonal language po file and translate the interface;
   //Require once is only added here because too early in the bootstrap
   require_once 'includes/locale.inc';
   require_once 'includes/form.inc';
-
-  //Call funtion locale_add_language in locale.inc
-  //locale_add_language('fr');
 
   //Batch up the process + import existing po files
   $batch = locale_batch_by_language('fr');
@@ -134,7 +101,6 @@ function wetkit_batch_processing(&$install_state) {
  * Implements hook_form_FORM_ID_alter().
  */
 function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
-
     // For some things there are no need
     $form['apps_message']['#access'] = FALSE;
     $form['apps_fieldset']['apps']['#title'] = NULL;
@@ -148,7 +114,6 @@ function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
         }
       }
     }
-
     // Remove the demo content selection option since this is handled through the WetKit demo module.
     $form['default_content_fieldset']['#access'] = FALSE;
 }
