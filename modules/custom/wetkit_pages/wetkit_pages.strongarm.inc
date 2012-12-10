@@ -14,14 +14,14 @@ function wetkit_pages_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_wetkit_page';
-  $strongarm->value = 'edit-i18n';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_wetkit_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_wetkit_page_other';
-  $strongarm->value = 'edit-i18n';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_wetkit_page_other'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -247,7 +247,8 @@ function wetkit_pages_strongarm() {
   $strongarm->name = 'node_options_wetkit_page';
   $strongarm->value = array(
     0 => 'promote',
-    1 => 'revision',
+    1 => 'moderation',
+    2 => 'revision',
   );
   $export['node_options_wetkit_page'] = $strongarm;
 
@@ -257,7 +258,8 @@ function wetkit_pages_strongarm() {
   $strongarm->name = 'node_options_wetkit_page_other';
   $strongarm->value = array(
     0 => 'promote',
-    1 => 'revision',
+    1 => 'moderation',
+    2 => 'revision',
   );
   $export['node_options_wetkit_page_other'] = $strongarm;
 
