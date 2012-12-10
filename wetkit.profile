@@ -4,6 +4,11 @@
  * Implements hook_install_tasks().
  */
 function wetkit_install_tasks(&$install_state) {
+  // Hide some messages from various modules that are just too chatty.
+  drupal_get_messages('status');
+  drupal_get_messages('warning');
+  drupal_get_messages('error');
+
   $tasks = array();
 
   // Add the WetKit theme selection to the installation process
@@ -23,6 +28,11 @@ function wetkit_install_tasks(&$install_state) {
  * Implements hook_install_tasks_alter().
  */
 function wetkit_install_tasks_alter(&$tasks, $install_state) {
+  // Hide some messages from various modules that are just too chatty.
+  drupal_get_messages('status');
+  drupal_get_messages('warning');
+  drupal_get_messages('error');
+
   //If using French Locale as default remove associated Install Task
   unset($tasks['install_import_locales']);
   unset($tasks['install_import_locales_remaining']);
@@ -39,6 +49,11 @@ function wetkit_form_install_configure_form_alter(&$form, $form_state) {
   // Hide some messages from various modules that are just too chatty.
   drupal_get_messages('status');
   drupal_get_messages('warning');
+  drupal_get_messages('error');
+
+  // Hide some messages from various modules that are just too chatty.
+  drupal_get_messages('status');
+  drupal_get_messages('warning');
 
   // Set reasonable defaults for site configuration form
   $form['site_information']['site_name']['#default_value'] = 'Web Experience Toolkit';
@@ -52,36 +67,6 @@ function wetkit_form_install_configure_form_alter(&$form, $form_state) {
     $form['admin_account']['account']['mail']['#default_value'] = 'admin@' . $_SERVER['HTTP_HOST'];
   }
 }
-
-/**
- * Password Policy save validate handler.
- */
-function wetkit_password_validate($form, &$form_state) {
-  $values = $form_state['values'];
-  $account = (object)array('uid' => 1);
-  $account->roles = array(DRUPAL_AUTHENTICATED_RID => DRUPAL_AUTHENTICATED_RID);
-
-  if (!empty($values['account']['pass'])) {
-    $error = _password_policy_constraint_validate($values['account']['pass'], $account);
-    if ($error) {
-      form_set_error('pass', st('Your password has not met the basic requirement(s):') . '<ul><li>' . implode('</li><li>', $error) . '</li></ul>');
-    }
-  }
-}
-
-/**
- * Password Policy save submit handler.
- */
-function wetkit_password_submit($form, &$form_state) {
-  global $user;
-  $values = $form_state['values'];
-  $account = (object)array('uid' => 1);
-  // Track the hashed password values which can then be used in the history constraint.
-  if ($account->uid && !empty($values['account']['pass'])) {
-    _password_policy_store_password($account->uid, $values['account']['pass']);
-  }
-}
-
 /**
  * Batch Processing for French Language import.
  */
@@ -101,6 +86,11 @@ function wetkit_batch_processing(&$install_state) {
  * Implements hook_form_FORM_ID_alter().
  */
 function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
+  // Hide some messages from various modules that are just too chatty.
+  drupal_get_messages('status');
+  drupal_get_messages('warning');
+  drupal_get_messages('error');
+
     // For some things there are no need
     $form['apps_message']['#access'] = FALSE;
     $form['apps_fieldset']['apps']['#title'] = NULL;
