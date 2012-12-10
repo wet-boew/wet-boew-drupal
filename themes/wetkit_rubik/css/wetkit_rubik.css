@@ -96,7 +96,7 @@ html.js #edit-view-displays-wrapper div.form-item-show-tagged-with input.form-au
 body.with-local-tasks #page-title div.contextual-links-wrapper { top: 62px; }
 
 /* Descriptions on content type alter page */
-.page-content #node-type-form div.form-item.form-item-name div.description { margin: 0 0 -50px; }
+.page-content #node-type-form div.form-item.form-item-name div.description { margin: 0px; }
 
 /* Contextual Links on Body (Views Pages) */
 .contextual-links-region { outline: none; position: static; }
@@ -264,7 +264,7 @@ input.form-submit { background-image: url(images/buttons.png);
 
 .secondary-tabs a:hover { background-color: #000; }
 
-.tao table th, .tao .item-list h3, .tao .block .block-title, .tao .fieldset-title, .tao .collapsible .fieldset-legend a, .tao .admin-panel h3 { text-shadow: white 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, gainsboro)) !important; background-image: -webkit-linear-gradient(#eeeeee, gainsboro) !important; background-image: -moz-linear-gradient(#eeeeee, gainsboro) !important; background-image: -o-linear-gradient(#eeeeee, gainsboro) !important; background-image: linear-gradient(#eeeeee, #dcdcdc) !important; }
+.tao table th, .tao .item-list h3, .tao .block .block-title, .tao .fieldset-title, .tao .collapsible .fieldset-legend a, .tao .admin-panel h3 { text-shadow: white 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dcdcdc)) !important; background-image: -webkit-linear-gradient(#eeeeee, #dcdcdc) !important; background-image: -moz-linear-gradient(#eeeeee, #dcdcdc) !important; background-image: -o-linear-gradient(#eeeeee, #dcdcdc) !important; background-image: linear-gradient(#eeeeee, #dcdcdc) !important; }
 
 .tao #branding .breadcrumb { font-size: 13px; text-transform: none; }
 
