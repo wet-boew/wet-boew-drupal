@@ -236,10 +236,14 @@ function wetkit_rubik_breadcrumb($vars) {
   $count = 0;
   foreach ($vars['breadcrumb'] as $link) {
     if ($count == $array_size - 1) {
-      $output .= "<span class='breadcrumb-link breadcrumb-depth-{$depth} last'>{$link}</span>"; 
+      if (isset($link)) {
+        $output .= "<span class='breadcrumb-link breadcrumb-depth-{$depth} last'>{$link}</span>"; 
+      }
     }
     else {
-      $output .= "<span class='breadcrumb-link breadcrumb-depth-{$depth}'>{$link}</span>"; 
+      if (isset($link)) {
+        $output .= "<span class='breadcrumb-link breadcrumb-depth-{$depth}'>{$link}</span>"; 
+      }
     }
     $depth++;
     $count++;
