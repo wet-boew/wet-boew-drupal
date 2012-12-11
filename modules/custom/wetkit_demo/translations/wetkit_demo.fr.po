@@ -5,16 +5,13 @@
 # Generated from files:
 #  wetkit_demo.views_default.inc: n/a
 #  wetkit_demo.info: n/a
-#  plugins/styles/dark_blue_background/dark_blue_background.inc: n/a
-#  plugins/styles/light_blue_background/light_blue_background.inc: n/a
-#  plugins/styles/lime_green_background/lime_green_background.inc: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-12-03 22:50-0500\n"
-"PO-Revision-Date: 2012-12-03 22:50-0500\n"
+"POT-Creation-Date: 2012-12-10 21:17-0500\n"
+"PO-Revision-Date: 2012-12-10 21:17-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -112,7 +109,9 @@ msgstr "Articles en vedette Demo"
 
 #: wetkit_demo.views_default.inc:280
 msgid "This is a customizable list of demo items which are marked as featured!"
-msgstr "Il s'agit d'une liste personnalisable de les démos qui sont marquées comme vedette!"
+msgstr ""
+"Il s'agit d'une liste personnalisable de les démos qui sont marquées "
+"comme vedette!"
 
 #: wetkit_demo.info:0
 msgid "WetKit Demo"
@@ -126,25 +125,5 @@ msgstr ""
 
 #: wetkit_demo.info:0
 msgid "WetKit"
-msgstr "BOEW"
-
-#: plugins/styles/dark_blue_background/dark_blue_background.inc:9
-msgid "Dark Blue Background"
-msgstr "Arrière-plan bleu foncé"
-
-#: plugins/styles/dark_blue_background/dark_blue_background.inc:10
-msgid "Wraps panes in the Drupal dark blue style."
-msgstr "Encadre les panneaux dans le style bleu foncé de Drupal."
-
-#: plugins/styles/light_blue_background/light_blue_background.inc:9
-msgid "Light Blue Background"
-msgstr "Arrière-plan bleu clair"
-
-#: plugins/styles/light_blue_background/light_blue_background.inc:10 plugins/styles/lime_green_background/lime_green_background.inc:10
-msgid "Wraps panes in the Drupal light blue style."
-msgstr "Encadre les panneaux dans le style bleu clair de Drupal."
-
-#: plugins/styles/lime_green_background/lime_green_background.inc:9
-msgid "Lime Green Background"
-msgstr "Arrière-plan vert lime"
+msgstr "WetKit"
 
