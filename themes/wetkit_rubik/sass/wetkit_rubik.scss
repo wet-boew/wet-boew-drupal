@@ -789,3 +789,7 @@ h1.path-admin-config-workbench span.icon {
 .tao #branding .breadcrumb-link:after { content: ' // '; padding-top:10px; float: left; color:#fff; }
 .tao #branding .breadcrumb-link:last-child:after { content: none; padding:0; }
 .tao #branding .breadcrumb-link.last { content: none; }
+
+.tao legend .fieldset-title {
+  font-weight: bold;
+}

@@ -284,3 +284,5 @@ input.form-submit { background-image: url(images/buttons.png);
 .tao #branding .breadcrumb-link:last-child:after { content: none; padding: 0; }
 
 .tao #branding .breadcrumb-link.last { content: none; }
+
+.tao legend .fieldset-title { font-weight: bold; }
