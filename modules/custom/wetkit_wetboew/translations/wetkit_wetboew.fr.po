@@ -74,11 +74,11 @@ msgstr "Termes"
 
 #: wetkit_wetboew.profile.inc:12;24
 msgid "Choose a theme"
-msgstr ""
+msgstr "Choisissez un thème"
 
 #: wetkit_wetboew.profile.inc:35
 msgid "Starting Theme"
-msgstr ""
+msgstr "À partir Thème"
 
 #: wetkit_wetboew.views_default.inc:132
 msgid "Master"
@@ -130,19 +130,19 @@ msgstr "Type"
 
 #: wetkit_wetboew.views_default.inc:144
 msgid "Content pane"
-msgstr ""
+msgstr "Pane Contenu"
 
 #: wetkit_wetboew.views_default.inc:145
 msgid "View panes"
-msgstr ""
+msgstr "Voir les panes"
 
 #: wetkit_wetboew.module:129
 msgid "WetKit Theme Selection"
-msgstr ""
+msgstr "Sélection d'un thème WetKit"
 
 #: wetkit_wetboew.module:135
-msgid "Please choose the appropriate WET base theme."
-msgstr ""
+msgid "Please choose the appropriate WET theme."
+msgstr "S'il vous plaît choisir le thème appropriée pour WET."
 
 #: wetkit_wetboew.module:137
 msgid "Internet"
@@ -158,15 +158,15 @@ msgstr "Thème de base"
 
 #: wetkit_wetboew.module:142
 msgid "This will change the Drupal theme by adding custom css and logic for various WET based themes"
-msgstr ""
+msgstr "Cela va changer le thème de Drupal en ajoutant css personnalisé et logique pour divers thèmes basés sur WET"
 
 #: wetkit_wetboew.module:297
 msgid "Thank you for installing the WxT-Drupal Variant for the Web Experience Toolkit. You may login at the following page: <a href=\"@login\">User Login</a>"
-msgstr ""
+msgstr "Merci d'avoir installé la variante WXT-Drupal pour la boîte à outils de l'expérience Web. Vous pouvez vous connecter à la page suivante: <a href=\"@login\">User Login</a>"
 
 #: wetkit_wetboew.module:298
 msgid "For more information please be sure to read the online <a href=\"@documentation\">Documentation</a>"
-msgstr ""
+msgstr "Pour plus d'informations s'il vous plaît n'oubliez pas de lire la ligne <a href=\"@documentation\">Documentation</a>"
 
 #: wetkit_wetboew.module:465
 msgid "One or more problems were detected with your Drupal installation. Check the <a href=\"@status\">status report</a> for more information."
@@ -185,19 +185,19 @@ msgstr "WetKit"
 
 #: wetkit_wetboew.module:20
 msgid "Administer all things WetKit."
-msgstr ""
+msgstr "Administrer tous WetKit choses."
 
 #: wetkit_wetboew.module:31
 msgid "WetKit Settings"
-msgstr ""
+msgstr "Réglages Wetkit"
 
 #: wetkit_wetboew.module:32
 msgid "Configuration related to WetKit"
-msgstr ""
+msgstr "Configuration liée à Wetkit"
 
 #: wetkit_wetboew.module:49;58
 msgid "This is the configuration screen for "
-msgstr ""
+msgstr "Ceci est l'écran de configuration"
 
 #: wetkit_wetboew.info:0
 msgid "WetKit WET-BOEW"
@@ -205,7 +205,7 @@ msgstr "WetKit WET-BOEW"
 
 #: wetkit_wetboew.info:0
 msgid "Installs and configures settings related to the WET-BOEW JS Library"
-msgstr ""
+msgstr "Installe et configure les paramètres liés à la Bibliothèque wet-boew JS"
 
 #: plugins/content_types/archived_widget.inc:9
 msgid "Archived Widget Pane"
@@ -213,7 +213,7 @@ msgstr "Volet Widget archivés"
 
 #: plugins/content_types/archived_widget.inc:10
 msgid "This will generate an archived status message when a piece of content is flagged as being archived."
-msgstr ""
+msgstr "Cela va générer un message d'état archivé quand un morceau de contenu est marqué comme étant archivée."
 
 #: plugins/content_types/archived_widget.inc:12
 msgid "WET-BOEW"
@@ -255,7 +255,7 @@ msgstr ""
 
 #: plugins/styles/configure_panes/configure_panes.inc:54
 msgid "Configure Pane Styles"
-msgstr ""
+msgstr "Wraps volets du panneau dans différentes Wetkit préconfigurés styles."
 
 #: plugins/styles/configure_panes/configure_panes.inc:56;69;81;94
 msgid "Default"
@@ -263,23 +263,23 @@ msgstr "Par défaut"
 
 #: plugins/styles/configure_panes/configure_panes.inc:57
 msgid "Blue Gradient"
-msgstr ""
+msgstr "Dégradé bleue"
 
 #: plugins/styles/configure_panes/configure_panes.inc:58
 msgid "Green Gradient"
-msgstr ""
+msgstr "Dégradé vert"
 
 #: plugins/styles/configure_panes/configure_panes.inc:59
 msgid "Red Gradient"
-msgstr ""
+msgstr "Dégradé rouge"
 
 #: plugins/styles/configure_panes/configure_panes.inc:60
 msgid "Tile"
-msgstr ""
+msgstr "Tile"
 
 #: plugins/styles/configure_panes/configure_panes.inc:67
 msgid "Configure Pane Backgrounds"
-msgstr ""
+msgstr "Configurer Fonds Panes"
 
 #: plugins/styles/configure_panes/configure_panes.inc:70
 msgid "Dark Blue"
@@ -415,7 +415,7 @@ msgstr "Boîtes WetKit"
 
 #: wetkit_box/wetkit_box.info:0
 msgid "Provides a plugin for multilingual boxes"
-msgstr ""
+msgstr "Fournit un plugin pour boîtes multilingues"
 
 #: wetkit_box/plugins/wetkit_box.inc:45
 msgid "Title"
