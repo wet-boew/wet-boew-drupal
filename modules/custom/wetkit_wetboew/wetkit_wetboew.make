@@ -7,6 +7,10 @@ core = 7.x
 
 projects[advanced_help][version] = 1.x-dev
 projects[advanced_help][subdir] = contrib
+projects[advanced_help][type] = module
+projects[advanced_help][download][type] = git
+projects[advanced_help][download][revision] = 26437d8
+projects[advanced_help][download][branch] = 7.x-1.x
 
 projects[boxes][version] = 1.0
 projects[boxes][subdir] = contrib
