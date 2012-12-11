@@ -9,19 +9,18 @@
 #  wetkit_wetboew.module: n/a
 #  wetkit_wetboew.info: n/a
 #  wetkit_box/wetkit_box.info: n/a
-#  wetkit_metatag/wetkit_metatag.info: n/a
 #  plugins/content_types/archived_widget.inc: n/a
+#  plugins/styles/configure_panes/configure_panes.inc: n/a
 #  plugins/styles/wetkitnav/wetkitnav.inc: n/a
 #  theme/theme.inc: n/a
 #  wetkit_box/plugins/wetkit_box.inc: n/a
-#  wetkit_metatag/wetkit_metatag.metatag.inc: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-12-04 00:20-0500\n"
-"PO-Revision-Date: 2012-12-04 00:20-0500\n"
+"POT-Creation-Date: 2012-12-10 21:17-0500\n"
+"PO-Revision-Date: 2012-12-10 21:17-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -75,11 +74,11 @@ msgstr "Termes"
 
 #: wetkit_wetboew.profile.inc:12;24
 msgid "Choose a theme"
-msgstr ""
+msgstr "Choisissez un thème"
 
 #: wetkit_wetboew.profile.inc:35
 msgid "Starting Theme"
-msgstr ""
+msgstr "À partir Thème"
 
 #: wetkit_wetboew.views_default.inc:132
 msgid "Master"
@@ -131,19 +130,19 @@ msgstr "Type"
 
 #: wetkit_wetboew.views_default.inc:144
 msgid "Content pane"
-msgstr ""
+msgstr "Pane Contenu"
 
 #: wetkit_wetboew.views_default.inc:145
 msgid "View panes"
-msgstr ""
+msgstr "Voir les panes"
 
 #: wetkit_wetboew.module:129
 msgid "WetKit Theme Selection"
-msgstr ""
+msgstr "Sélection d'un thème WetKit"
 
 #: wetkit_wetboew.module:135
-msgid "Please choose the appropriate WET base theme."
-msgstr ""
+msgid "Please choose the appropriate WET theme."
+msgstr "S'il vous plaît choisir le thème appropriée pour WET."
 
 #: wetkit_wetboew.module:137
 msgid "Internet"
@@ -159,46 +158,46 @@ msgstr "Thème de base"
 
 #: wetkit_wetboew.module:142
 msgid "This will change the Drupal theme by adding custom css and logic for various WET based themes"
-msgstr ""
+msgstr "Cela va changer le thème de Drupal en ajoutant css personnalisé et logique pour divers thèmes basés sur WET"
 
-#: wetkit_wetboew.module:279
+#: wetkit_wetboew.module:297
 msgid "Thank you for installing the WxT-Drupal Variant for the Web Experience Toolkit. You may login at the following page: <a href=\"@login\">User Login</a>"
-msgstr ""
+msgstr "Merci d'avoir installé la variante WXT-Drupal pour la boîte à outils de l'expérience Web. Vous pouvez vous connecter à la page suivante: <a href=\"@login\">User Login</a>"
 
-#: wetkit_wetboew.module:280
+#: wetkit_wetboew.module:298
 msgid "For more information please be sure to read the online <a href=\"@documentation\">Documentation</a>"
-msgstr ""
+msgstr "Pour plus d'informations s'il vous plaît n'oubliez pas de lire la ligne <a href=\"@documentation\">Documentation</a>"
 
-#: wetkit_wetboew.module:447
+#: wetkit_wetboew.module:465
 msgid "One or more problems were detected with your Drupal installation. Check the <a href=\"@status\">status report</a> for more information."
 msgstr ""
 "Un ou plusieurs problèmes ont été détectés dans votre "
 "installation Drupal. Vérifiez le <a href=\"@status\">tableau de bord "
 "d'administration</a> pour plus d'information."
 
-#: wetkit_wetboew.module:484
+#: wetkit_wetboew.module:502
 msgid "You do not have any administrative items."
 msgstr "Vous n'avez accès à aucune page d'administration."
 
-#: wetkit_wetboew.module:19 wetkit_wetboew.info:0 wetkit_box/wetkit_box.info:0 wetkit_metatag/wetkit_metatag.info:0
+#: wetkit_wetboew.module:19 wetkit_wetboew.info:0 wetkit_box/wetkit_box.info:0
 msgid "WetKit"
 msgstr "WetKit"
 
 #: wetkit_wetboew.module:20
 msgid "Administer all things WetKit."
-msgstr ""
+msgstr "Administrer tous WetKit choses."
 
 #: wetkit_wetboew.module:31
 msgid "WetKit Settings"
-msgstr ""
+msgstr "Réglages Wetkit"
 
 #: wetkit_wetboew.module:32
 msgid "Configuration related to WetKit"
-msgstr ""
+msgstr "Configuration liée à Wetkit"
 
 #: wetkit_wetboew.module:49;58
 msgid "This is the configuration screen for "
-msgstr ""
+msgstr "Ceci est l'écran de configuration"
 
 #: wetkit_wetboew.info:0
 msgid "WetKit WET-BOEW"
@@ -206,7 +205,7 @@ msgstr "WetKit WET-BOEW"
 
 #: wetkit_wetboew.info:0
 msgid "Installs and configures settings related to the WET-BOEW JS Library"
-msgstr ""
+msgstr "Installe et configure les paramètres liés à la Bibliothèque wet-boew JS"
 
 #: plugins/content_types/archived_widget.inc:9
 msgid "Archived Widget Pane"
@@ -214,7 +213,7 @@ msgstr "Volet Widget archivés"
 
 #: plugins/content_types/archived_widget.inc:10
 msgid "This will generate an archived status message when a piece of content is flagged as being archived."
-msgstr ""
+msgstr "Cela va générer un message d'état archivé quand un morceau de contenu est marqué comme étant archivée."
 
 #: plugins/content_types/archived_widget.inc:12
 msgid "WET-BOEW"
@@ -245,6 +244,102 @@ msgstr "Span class pour le message archivé"
 #: plugins/content_types/archived_widget.inc:59
 msgid "Setting for span class."
 msgstr "Réglage pour span class."
+
+#: plugins/styles/configure_panes/configure_panes.inc:9
+msgid "WetKit Configure Panes"
+msgstr ""
+
+#: plugins/styles/configure_panes/configure_panes.inc:10
+msgid "Wraps Panel Panes into different WetKit pre-configured styles."
+msgstr ""
+
+#: plugins/styles/configure_panes/configure_panes.inc:54
+msgid "Configure Pane Styles"
+msgstr "Wraps volets du panneau dans différentes Wetkit préconfigurés styles."
+
+#: plugins/styles/configure_panes/configure_panes.inc:56;69;81;94
+msgid "Default"
+msgstr "Par défaut"
+
+#: plugins/styles/configure_panes/configure_panes.inc:57
+msgid "Blue Gradient"
+msgstr "Dégradé bleue"
+
+#: plugins/styles/configure_panes/configure_panes.inc:58
+msgid "Green Gradient"
+msgstr "Dégradé vert"
+
+#: plugins/styles/configure_panes/configure_panes.inc:59
+msgid "Red Gradient"
+msgstr "Dégradé rouge"
+
+#: plugins/styles/configure_panes/configure_panes.inc:60
+msgid "Tile"
+msgstr "Tile"
+
+#: plugins/styles/configure_panes/configure_panes.inc:67
+msgid "Configure Pane Backgrounds"
+msgstr "Configurer Fonds Panes"
+
+#: plugins/styles/configure_panes/configure_panes.inc:70
+msgid "Dark Blue"
+msgstr ""
+
+#: plugins/styles/configure_panes/configure_panes.inc:71
+msgid "Dark Green"
+msgstr ""
+
+#: plugins/styles/configure_panes/configure_panes.inc:72
+msgid "No Background"
+msgstr ""
+
+#: plugins/styles/configure_panes/configure_panes.inc:79
+msgid "Configure Pane Rounded Corners"
+msgstr ""
+
+#: plugins/styles/configure_panes/configure_panes.inc:82
+msgid "Rounded Corners 2"
+msgstr ""
+
+#: plugins/styles/configure_panes/configure_panes.inc:83
+msgid "Rounded Corners 3"
+msgstr ""
+
+#: plugins/styles/configure_panes/configure_panes.inc:84
+msgid "Rounded Corners 5"
+msgstr ""
+
+#: plugins/styles/configure_panes/configure_panes.inc:85
+msgid "Rounded Corners 10"
+msgstr ""
+
+#: plugins/styles/configure_panes/configure_panes.inc:92
+msgid "Configure Pane Miscellaneous Styles"
+msgstr ""
+
+#: plugins/styles/configure_panes/configure_panes.inc:95
+msgid "Image Non Responsive"
+msgstr ""
+
+#: plugins/styles/configure_panes/configure_panes.inc:96
+msgid "Internal Notes"
+msgstr ""
+
+#: plugins/styles/configure_panes/configure_panes.inc:97
+msgid "Section Link"
+msgstr ""
+
+#: plugins/styles/configure_panes/configure_panes.inc:98
+msgid "Basic 1"
+msgstr ""
+
+#: plugins/styles/configure_panes/configure_panes.inc:99
+msgid "Basic 2"
+msgstr ""
+
+#: plugins/styles/configure_panes/configure_panes.inc:106
+msgid "Configure Pane Custom CSS"
+msgstr ""
 
 #: plugins/styles/wetkitnav/wetkitnav.inc:10
 msgid "WetKit Nav"
@@ -320,7 +415,7 @@ msgstr "Boîtes WetKit"
 
 #: wetkit_box/wetkit_box.info:0
 msgid "Provides a plugin for multilingual boxes"
-msgstr ""
+msgstr "Fournit un plugin pour boîtes multilingues"
 
 #: wetkit_box/plugins/wetkit_box.inc:45
 msgid "Title"
@@ -337,152 +432,4 @@ msgstr "Corps"
 #: wetkit_box/plugins/wetkit_box.inc:56
 msgid "The content of the block as shown to the user."
 msgstr "Le contenu du bloc vu par l'utilisateur."
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:66
-msgid "Dublin Core"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:67
-msgid "The Dublin Core Metadata Element Set, aka \"Dublin Core meta tags\", are a set of internationally standardized metadata tags used to describe content to make identification and classification of content easier; the standards are controlled by the <a href=\"http://dublincore.org/\">Dublin Core Metadata Initiative (DCMI)</a>."
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:73
-msgid "Dublin Core Title"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:74
-msgid "The name given to the resource."
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:83
-msgid "Dublin Core Creator"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:84
-msgid "An entity primarily responsible for making the resource. Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:92
-msgid "Dublin Core Subject"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:93
-msgid "The topic of the resource. Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary. To describe the spatial or temporal topic of the resource, use the Coverage element."
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:101
-msgid "Dublin Core Description"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:102
-msgid "An account of the resource. Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:110
-msgid "Dublin Core Publisher"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:111
-msgid "An entity responsible for making the resource available. Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity."
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:119
-msgid "Dublin Core Contributor"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:120
-msgid "An entity responsible for making contributions to the resource. Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity."
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:128
-msgid "Dublin Core Date"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:129;139;149
-msgid "A point or period of time associated with an event in the lifecycle of the resource. Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF]."
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:138
-msgid "Dublin Core Issued Date"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:148
-msgid "Dublin Core Modified Date"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:158
-msgid "Dublin Core Type"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:159
-msgid "The nature or genre of the resource. Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:165
-msgid "- None -"
-msgstr "- Aucun -"
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:173
-msgid "Dublin Core Format"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:174
-msgid "The file format, physical medium, or dimensions of the resource. Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME]."
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:183
-msgid "Dublin Core Identifier"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:184
-msgid "An unambiguous reference to the resource within a given context. Recommended best practice is to identify the resource by means of a string conforming to a formal identification system."
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:192
-msgid "Dublin Core Source"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:193
-msgid "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:201
-msgid "Dublin Core Language"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:202
-msgid "A language of the resource. Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646]."
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:211
-msgid "Dublin Core Relation"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:212
-msgid "A related resource. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:220
-msgid "Dublin Core Coverage"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:221
-msgid "The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant. Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges."
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:229
-msgid "Dublin Core Rights"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.metatag.inc:230
-msgid "Information about rights held in and over the resource. Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.info:0
-msgid "WetKit MetaTags Dublin Core (HTML5)"
-msgstr ""
-
-#: wetkit_metatag/wetkit_metatag.info:0
-msgid "Installs and configures default wetkit metatags that can be easily extended for your site"
-msgstr ""
 

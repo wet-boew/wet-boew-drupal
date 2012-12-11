@@ -132,7 +132,7 @@ function wetkit_wetboew_configure_form($form, &$form_state) {
   );
   $form['wetkit_wetboew']['wetkit_wetboew_theme'] = array(
     '#type' => 'select',
-    '#title' => t('Please choose the appropriate WET base theme.'),
+    '#title' => t('Please choose the appropriate WET theme.'),
     '#options' => array(
       0 => t('Internet'),
       1 => t('Intranet'),
