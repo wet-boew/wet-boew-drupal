@@ -467,6 +467,7 @@ table th {
 
 table th {
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 tr.odd {
@@ -760,6 +761,18 @@ h1.path-admin-config-workbench span.icon {
   background-image:-moz-linear-gradient(#eee,#dcdcdc)!important;
   background-image:-o-linear-gradient(#eee,#dcdcdc)!important;
   background-image:linear-gradient(#eee,#dcdcdc)!important;
+}
+
+.tao .view-filters .views-widget .form-item {
+  background-repeat:repeat-x;
+  background-image:-webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#eee),color-stop(100%,#dcdcdc))!important;
+  background-image:-webkit-linear-gradient(#eee,#dcdcdc)!important;
+  background-image:-moz-linear-gradient(#eee,#dcdcdc)!important;
+  background-image:-o-linear-gradient(#eee,#dcdcdc)!important;
+  background-image:linear-gradient(#eee,#dcdcdc)!important;
+  .description { display: none; }
+  .form-autocomplete { padding: 3px; }
+  input[name="title"] { width: 15em; }
 }
 
 .tao #branding .breadcrumb { font-size: 13px; text-transform: none; }
