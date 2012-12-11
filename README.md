@@ -23,7 +23,7 @@ If you do not wish to perform a build out of Drupal yourself (instructions below
 ### Installation
 
 > 1. Ensure you have the appropriate base requirements setup for Drupal as per the [System Requirements](https://github.com/wet-boew/wet-boew-drupal/wiki/System-Requirements) documentation.
-> 2. Install Drush 5.4 or higher (inlcudes Drush Make):
+> 2. Install Drush 5.8 or higher (inlcudes Drush Make):
 >   * a) Linux, Mac OSX: Follow instructions at http://drupal.org/node/477684
 >   * b) Windows: http://drush.ws/drush_windows_installer
 > 3. Install Git 1.7.10 or higher (Some lower versions of git do not apply patches from the make file with Drush Make):

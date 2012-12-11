@@ -6,7 +6,7 @@ mysql -e 'create database wetkit_db;'
 
 # Install Drush
 pear channel-discover pear.drush.org
-pear install drush/drush-5.4.0
+pear install drush/drush-5.8.0
 phpenv rehash
 
 # Install WetKit Distro
