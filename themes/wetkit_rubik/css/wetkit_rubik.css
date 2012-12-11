@@ -264,14 +264,25 @@ input.form-submit { background-image: url(images/buttons.png);
 
 .secondary-tabs a:hover { background-color: #000; }
 
-.tao table th, .tao .item-list h3, .tao .block .block-title, .tao .fieldset-title, .tao .collapsible .fieldset-legend a, .tao .admin-panel h3 { text-shadow: white 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dcdcdc)) !important; background-image: -webkit-linear-gradient(#eeeeee, #dcdcdc) !important; background-image: -moz-linear-gradient(#eeeeee, #dcdcdc) !important; background-image: -o-linear-gradient(#eeeeee, #dcdcdc) !important; background-image: linear-gradient(#eeeeee, #dcdcdc) !important; }
+.tao table th, .tao .item-list h3, .tao .block .block-title, .tao .fieldset-title, .tao .collapsible .fieldset-legend a, .tao .admin-panel h3 { text-shadow: white 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, gainsboro)) !important; background-image: -webkit-linear-gradient(#eeeeee, gainsboro) !important; background-image: -moz-linear-gradient(#eeeeee, gainsboro) !important; background-image: -o-linear-gradient(#eeeeee, gainsboro) !important; background-image: linear-gradient(#eeeeee, #dcdcdc) !important; }
 
 .tao #branding .breadcrumb { font-size: 13px; text-transform: none; }
 
 .tao #branding ul.links a { background: none; padding: 10px 10px; font-size: 13px; }
 
-.tao #branding .breadcrumb a, .tao #branding .breadcrumb strong { background: none; padding: 10px 20px; }
+.tao #branding .breadcrumb a, .tao #branding .breadcrumb strong { background: none; padding: 10px 10px; margin-right: 0px; }
 
 .tao .form-item .description, .description { color: #000; }
 
 .tao a { color: #145E91; }
+
+.tao .sticky-header { z-index: 999; }
+
+/* Breadcrumb arrows */
+.tao #branding .breadcrumb-link:after { content: ' // '; padding-top: 10px; float: left; color: #fff; }
+
+.tao #branding .breadcrumb-link:last-child:after { content: none; padding: 0; }
+
+.tao #branding .breadcrumb-link.last { content: none; }
+
+.tao legend .fieldset-title { font-weight: bold; }

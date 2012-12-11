@@ -209,3 +209,40 @@ function wetkit_rubik_preprocess_taxonomy_overview_terms(&$variables) {
     }
   }
 }
+
+/**
+ * Override of theme('breadcrumb').
+ */
+function wetkit_rubik_breadcrumb($vars) {
+  $output = '';
+
+  // Add current page onto the end.
+  if (!drupal_is_front_page()) {
+    $item = menu_get_item();
+    $end = end($vars['breadcrumb']);
+    if ($end && strip_tags($end) !== $item['title']) {
+      $vars['breadcrumb'][] = "<strong>". check_plain($item['title']) ."</strong>";
+    }
+  }
+
+  // Optional: Add the site name to the front of the stack.
+  if (!empty($vars['prepend'])) {
+    $site_name = empty($vars['breadcrumb']) ? "<strong>". check_plain(variable_get('site_name', '')) ."</strong>" : l(variable_get('site_name', ''), '<front>', array('purl' => array('disabled' => TRUE)));
+    array_unshift($vars['breadcrumb'], $site_name);
+  }
+
+  $depth = 0;
+  $array_size = count($vars['breadcrumb']);
+  $count = 0;
+  foreach ($vars['breadcrumb'] as $link) {
+    if ($count == $array_size - 1) {
+      $output .= "<span class='breadcrumb-link breadcrumb-depth-{$depth} last'>{$link}</span>"; 
+    }
+    else {
+      $output .= "<span class='breadcrumb-link breadcrumb-depth-{$depth}'>{$link}</span>"; 
+    }
+    $depth++;
+    $count++;
+  }
+  return $output;
+}
