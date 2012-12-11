@@ -773,9 +773,15 @@ h1.path-admin-config-workbench span.icon {
 .tao #branding .breadcrumb a, 
 .tao #branding .breadcrumb strong {
   background: none;
-  padding: 10px 20px;
+  padding: 10px 10px;
+  margin-right: 0px;
 }
 
 .tao .form-item .description, .description { color: #000; }
 
 .tao a { color: #145E91; }
+
+/* Breadcrumb arrows */
+.tao #branding .breadcrumb-link:after { content: ' // '; padding-top:10px; float: left; color:#fff; }
+.tao #branding .breadcrumb-link:last-child:after { content: none; padding:0; }
+.tao #branding .breadcrumb-link.last { content: none; }
