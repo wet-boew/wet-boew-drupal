@@ -19,15 +19,18 @@ repo_user=`git config -l | grep remote.origin.url | cut -d/ -f4`
 
 # Create the new build out file for Drush Make
 cat $workspace/build-wetkit.make \
-|   sed "s/\/master/\/$git_commit2/" \
+|   sed "s/\/master/\/$git_commit1/" \
 |   sed "s/\[branch\] = master/\[branch\] = $branch_name/" \
-|   sed "s/\[revision\] = master/\[revision\] = $git_commit2/" \
+|   sed "s/\[revision\] = master/\[revision\] = $git_commit1/" \
 |   sed "s/wet-boew/$repo_user/1" \
 > tmp_build-wetkit.make
 mv tmp_build-wetkit.make build-wetkit.make
 
 # Lets see values being switched for debugging purposes
 cat build-wetkit.make
+
+echo -e "\n"
+git branch
 echo $workspace
 echo $build_num
 echo $branch_name
