@@ -15,23 +15,11 @@ include_once('theme/theme.inc');
  */
 function wetkit_wetboew_menu() {
 
-  // Add an administration page for WetKit
-  $items['admin/wetkit'] = array(
-    'title' => 'WetKit',
-    'description' => 'Administer all things WetKit.',
-    'position' => 'right',
-    'weight' => -8,
-    'page callback' => 'wetkit_wetboew_config_page',
-    'access arguments' => array('access administration pages'),
-    'file' => 'system.admin.inc',
-    'file path' => drupal_get_path('module', 'system'),
-  );
-
-  // Add an administration section for Panopoly settings
-  $items['admin/wetkit/settings'] = array(
+  // Add an administration section for WetKit settings
+  $items['admin/panopoly/wetkit_settings'] = array(
     'title' => 'WetKit Settings',
     'description' => 'Configuration related to WetKit',
-    'position' => 'right',
+    'position' => 'left',
     'weight' => -50,
     'page callback' => 'system_admin_menu_block_page',
     'access arguments' => array('access administration pages'),
@@ -45,7 +33,7 @@ function wetkit_wetboew_menu() {
     if (!empty($app_info) && !empty($app_info['configure form'])) {
       $module_info = drupal_parse_info_file(drupal_get_path('module', $module) . '/' . $module . '.info');
       if (!empty($module_info['package']) && $module_info['package'] == 'WetKit') {
-        $items['admin/wetkit/settings/' . $module] = array(
+        $items['admin/panopoly/wetkit_settings/' . $module] = array(
           'title' => $module_info['name'],
           'description' => 'This is the configuration screen for ' . $module_info['name'],
           'page callback' => 'drupal_get_form',
@@ -54,7 +42,7 @@ function wetkit_wetboew_menu() {
         );
       }
       elseif (!empty($module_info['package']) && $module_info['package'] == 'WetKit Apps') {
-        $items['admin/wetkit/app_settings/' . $module] = array(
+        $items['admin/panopoly/wetkit_app_settings/' . $module] = array(
           'title' => $module_info['name'],
           'description' => 'This is the configuration screen for ' . $module_info['name'],
           'page callback' => 'drupal_get_form',
@@ -65,6 +53,22 @@ function wetkit_wetboew_menu() {
     }
   }
   return $items;
+}
+
+/**
+ * Implements hook_menu_alter().
+ *
+ * Remember that hook_menu_alter() only runs at menu_rebuild() time, not every
+ * time the page is built, so this typically happens only at cache clear time.
+ *
+ * @param $items
+ *   The complete list of menu router items ready to be written to the
+ *   menu_router table.
+ */
+function wetkit_wetboew_menu_alter(&$items) {
+  if (!empty($items['admin/panopoly'])) {
+    $items['admin/panopoly']['title'] = 'WetKit';
+  }
 }
 
 /**

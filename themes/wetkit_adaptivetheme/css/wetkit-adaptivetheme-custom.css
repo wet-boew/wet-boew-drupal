@@ -21,7 +21,7 @@ figure { display: block; margin: 0px; padding: 0px; }
 
 .profile dl { margin-left: 10px; margin-right: 10px; }
 
-ul.tabs { margin-left: 10px; margin-right: 10px; }
+ul.tabs { margin-left: 10px; margin-right: 10px; margin-bottom: 10px; }
 
 #status-messages { margin-top: 10px; }
 
