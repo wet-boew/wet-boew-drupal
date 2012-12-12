@@ -52,16 +52,16 @@ function wetkit_wetboew_menu_default_menu_custom() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Footer Section for Web Experience Toolkit');
-  t('Header Section for Web Experience Toolkit');
-  t('Mid Footer Section for Web Experience Toolkit');
-  t('Terms Section for Web Experience Toolkit');
-  t('The <em>Main</em> megamenu for Web Experience Toolkit');
   t('Footer');
+  t('Footer Section for Web Experience Toolkit');
   t('Header');
+  t('Header Section for Web Experience Toolkit');
   t('Mega Menu');
   t('Mid Footer');
+  t('Mid Footer Section for Web Experience Toolkit');
   t('Terms');
+  t('Terms Section for Web Experience Toolkit');
+  t('The <em>Main</em> megamenu for Web Experience Toolkit');
 
 
   return $menus;
