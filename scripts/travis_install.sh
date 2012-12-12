@@ -36,8 +36,7 @@ echo $git_commit2
 echo $repo_user
 
 # Install WetKit Distro
-cd ..
-drush make --prepare-install $workspace/build-wetkit.make --yes
+drush make --prepare-install build-wetkit.make --yes
 #cd ..
 #mkdir profiles
 #mv wet-boew-drupal wetkit
