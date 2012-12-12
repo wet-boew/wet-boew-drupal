@@ -14,7 +14,7 @@ projects[panopoly_core][download][revision] = 02baae4
 projects[panopoly_core][download][branch] = 7.x-1.x
 projects[panopoly_core][patch][1842818] = http://drupal.org/files/update_fpp_translation-1842818-08.patch
 projects[panopoly_core][patch][1859874] = http://drupal.org/files/Fix_Entity_Field_Value-1859874-1.patch
-projects[panopoly_core][patch][1859874] = http://drupal.org/files/1841222-panopoly-18n_panels.patch
+projects[panopoly_core][patch][1841222] = http://drupal.org/files/1841222-panopoly-18n_panels.patch
 
 projects[panopoly_images][version] = 1.x-dev
 projects[panopoly_images][subdir] = panopoly
@@ -39,7 +39,7 @@ projects[panopoly_widgets][subdir] = panopoly
 projects[panopoly_widgets][download][type] = git
 projects[panopoly_widgets][download][revision] = a257519
 projects[panopoly_widgets][download][branch] = 7.x-1.x
-projects[panopoly_widgets][patch][1847912] = https://raw.github.com/gist/4243024/5a946a870c2b17375ec328a79103b1741e65fb62/panopoly_widgets.patch
+projects[panopoly_widgets][patch][1847912] = http://drupal.org/files/1847912-panopoly-widgets-alt-title-support-8.patch
 
 projects[panopoly_admin][version] = 1.x-dev
 projects[panopoly_admin][subdir] = panopoly
