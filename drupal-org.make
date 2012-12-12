@@ -14,7 +14,7 @@ projects[panopoly_core][download][revision] = 02baae4
 projects[panopoly_core][download][branch] = 7.x-1.x
 projects[panopoly_core][patch][1842818] = http://drupal.org/files/update_fpp_translation-1842818-08.patch
 projects[panopoly_core][patch][1859874] = http://drupal.org/files/Fix_Entity_Field_Value-1859874-1.patch
-projects[panopoly_core][patch][1841222] = https://gist.github.com/raw/4263428/e6975650daaa34f22b8807806246b060fbba1598/panopoly-18n_panels.patch
+projects[panopoly_core][patch][1859874] = https://gist.github.com/raw/4263428/e6975650daaa34f22b8807806246b060fbba1598/panopoly-18n_panels.patch
 
 projects[panopoly_images][version] = 1.x-dev
 projects[panopoly_images][subdir] = panopoly
