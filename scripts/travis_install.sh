@@ -24,8 +24,7 @@ cat $workspace/build-wetkit.make \
 |   sed "s/\[branch\] = master/\[branch\] = $TRAVIS_BRANCH/" \
 |   sed "s/\[revision\] = master/\[revision\] = $TRAVIS_COMMIT/" \
 |   sed "s/wet-boew/$repo_user/1" \
-> tmp_build-wetkit.make
-mv tmp_build-wetkit.make build-wetkit.make
+| drush make php://stdin $workspace/build
 
 # Lets see values being switched for debugging purposes
 cat build-wetkit.make
