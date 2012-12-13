@@ -23,9 +23,9 @@ echo $git_commit2
 
 # Create the new build out file for Drush Make
 cat $workspace/build-wetkit.make \
-|   sed "s/\/master/\/$TRAVIS_COMMIT/" \
+|   sed "s/\/master/\/$git_commit2/" \
 |   sed "s/\[branch\] = master/\[branch\] = $TRAVIS_BRANCH/" \
-|   sed "s/\[revision\] = master/\[revision\] = $TRAVIS_COMMIT/" \
+|   sed "s/\[revision\] = master/\[revision\] = $git_commit2/" \
 |   sed "s/wet-boew/$repo_user/1" \
 | drush make php://stdin $workspace/build
 
