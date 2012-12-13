@@ -121,7 +121,7 @@
         </div>
         <nav role="navigation">
           <div id="base-psnb">
-            <h2><span><?php print t('Site menu'); ?></span></h2>
+            <h2><?php print t('<span>Site</span> Menu'); ?></h2>
             <div id="base-psnb-in">
               <div class="wet-boew-menubar mb-mega">
                 <div>
