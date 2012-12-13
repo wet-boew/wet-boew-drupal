@@ -17,16 +17,12 @@ git_commit1=`git log | head -1 | sed -e 's/commit \([0-9a-f]*$\)/\1/'`
 git_commit2=`git show --pretty=%P HEAD | head -1 | cut -d\  -f 2`
 repo_user=`git config -l | grep remote.origin.url | cut -d/ -f4`
 
-echo $TRAVIS_BRANCH
-echo $TRAVIS_COMMIT
-
-printenv
 
 # Create the new build out file for Drush Make
 cat $workspace/build-wetkit.make \
-|   sed "s/\/master/\/$git_commit1/" \
-|   sed "s/\[branch\] = master/\[branch\] = $branch_name/" \
-|   sed "s/\[revision\] = master/\[revision\] = $git_commit1/" \
+|   sed "s/\/master/\/$TRAVIS_COMMIT/" \
+|   sed "s/\[branch\] = master/\[branch\] = $TRAVIS_BRANCH/" \
+|   sed "s/\[revision\] = master/\[revision\] = $TRAVIS_COMMIT/" \
 |   sed "s/wet-boew/$repo_user/1" \
 > tmp_build-wetkit.make
 mv tmp_build-wetkit.make build-wetkit.make
@@ -34,8 +30,9 @@ mv tmp_build-wetkit.make build-wetkit.make
 # Lets see values being switched for debugging purposes
 cat build-wetkit.make
 
-echo -e "\n"
-git branch
+echo "\n"
+echo $TRAVIS_BRANCH
+echo $TRAVIS_COMMIT
 echo $workspace
 echo $build_num
 echo $branch_name
