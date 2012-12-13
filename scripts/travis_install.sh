@@ -18,6 +18,8 @@ git_commit2=`git show --pretty=%P HEAD | head -1 | cut -d\  -f 2`
 repo_user=`git config -l | grep remote.origin.url | cut -d/ -f4`
 
 printenv
+echo $git_commit1
+echo $git_commit2
 
 # Create the new build out file for Drush Make
 cat $workspace/build-wetkit.make \
