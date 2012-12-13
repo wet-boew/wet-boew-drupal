@@ -148,7 +148,7 @@
         </div>
         <nav role="navigation">
           <div id="gcwu-psnb">
-            <h2><span><?php print t('Site menu'); ?></span></h2>
+            <h2><?php print t('<span>Site</span> Menu'); ?></h2>
             <div id="gcwu-psnb-in">
               <div class="wet-boew-menubar mb-mega">
                 <div>

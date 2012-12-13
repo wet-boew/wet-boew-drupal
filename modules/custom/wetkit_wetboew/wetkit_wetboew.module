@@ -306,24 +306,36 @@ function wetkit_wetboew_init() {
 
   //Only use WET-BOEW on Front End
   global $theme;
+  $themekey = 'theme-gcwu-fegc';
   if ($theme == 'wetkit_adaptivetheme') {
     //Add WET-BOEW Intranet Library using Libraries API
     if (($library = libraries_detect('wet-boew', NULL, 'intranet')) && !empty($library['variants']['intranet']['installed'])) {
       // Do something with the library here.
       libraries_load('wet-boew', 'intranet');
+      $themekey = 'theme-gcwu-intranet';
     }
     //Add WET-BOEW Base Theme Library using Libraries API
     if (($library = libraries_detect('wet-boew', NULL, 'base_theme')) && !empty($library['variants']['base_theme']['installed'])) {
       // Do something with the library here.
       libraries_load('wet-boew', 'base_theme');
+      $themekey = 'theme-base';
     }
     //Add WET-BOEW Default (Minified) Library using Libraries API
     elseif (($library = libraries_detect('wet-boew')) && !empty($library['installed'])) {
       // Do something with the library here.
       libraries_load('wet-boew');
+      $themekey = 'theme-gcwu-fegc';
     }
   }
   drupal_add_css(drupal_get_path('module', 'wetkit_wetboew') . '/css/wetkit_wetboew.css', array('group' => CSS_THEME, 'every_page' => TRUE));
+
+  $element = array(
+    '#type' => 'markup',
+    '#markup' => '<link rel="stylesheet" href="' . libraries_get_path('wet-boew', TRUE) . '/dist/' . $themekey . '/css/theme-ns-min.css" />',
+    '#prefix' => "<noscript>",
+    '#suffix' => "</noscript>\n",
+  );
+  drupal_add_html_head($element, 'wetkit_wetboew_noscript');
 }
 
 /**
