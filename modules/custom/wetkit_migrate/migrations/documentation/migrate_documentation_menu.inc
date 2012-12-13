@@ -146,7 +146,7 @@ class WetKit_Migrate_Documentation_Menu_Links extends XMLMigration {
     // Set the Parent Menu
     if (isset($xmlObj->parent)) {
       $result = db_query('SELECT n.destid1
-            FROM {migrate_map_WetKit_Migrate_Documentation_menu_links} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => strip_tags($xmlObj->parent->asXML())));
+            FROM {migrate_map_wetkit_migrate_documentation_menu_links} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => strip_tags($xmlObj->parent->asXML())));
       foreach ($result as $result_row) {
         $row->plid = $result_row->destid1;
       }
@@ -157,18 +157,18 @@ class WetKit_Migrate_Documentation_Menu_Links extends XMLMigration {
     parent::postImport();
     // i18n Translation Set  
     $result = db_query('SELECT n.sourceid1, n.destid1
-      FROM {migrate_map_WetKit_Migrate_Documentation_menu_links} n');
+      FROM {migrate_map_wetkit_migrate_documentation_menu_links} n');
     foreach ($result as $record) {
       $sourceid_tmp = preg_replace('#_fra_#', '_eng_', $record->sourceid1);
       $source_mlid = 0;
       $translated_mlid = 0;
       if (preg_match('/_fra_/i', $record->sourceid1)) {
         $result = db_query('SELECT n.destid1
-          FROM {migrate_map_WetKit_Migrate_Documentation_menu_links} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => $record->sourceid1));
+          FROM {migrate_map_wetkit_migrate_documentation_menu_links} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => $record->sourceid1));
         foreach ($result as $result_row) {
           $translated_mlid = $result_row->destid1;
           $result = db_query('SELECT n.destid1
-          FROM {migrate_map_WetKit_Migrate_Documentation_menu_links} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => $sourceid_tmp));
+          FROM {migrate_map_wetkit_migrate_documentation_menu_links} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => $sourceid_tmp));
           foreach ($result as $result_row) {
             $source_mlid = $result_row->destid1;
             break;
