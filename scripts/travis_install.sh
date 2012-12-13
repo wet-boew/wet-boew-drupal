@@ -30,16 +30,6 @@ mv tmp_build-wetkit.make build-wetkit.make
 # Lets see values being switched for debugging purposes
 cat build-wetkit.make
 
-echo "\n"
-echo $TRAVIS_BRANCH
-echo $TRAVIS_COMMIT
-echo $workspace
-echo $build_num
-echo $branch_name
-echo $git_commit1
-echo $git_commit2
-echo $repo_user
-
 # Install WetKit Distro
 drush make --prepare-install build-wetkit.make --yes
 #cd ..
