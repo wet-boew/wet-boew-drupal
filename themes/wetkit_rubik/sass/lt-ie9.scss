@@ -1,0 +1,24 @@
+.tao #branding, 
+.tao .action-links a,
+.secondary-tabs,
+.secondary-tabs:hover,
+.tao .primary-tabs li.active {
+    background: #ccc url(../images/gradient-dark.png) repeat-x;
+}
+
+.tao table th,
+.tao .item-list h3, .tao .block .block-title, .tao .fieldset-title, .tao .collapsible .fieldset-legend a,
+.tao .admin-panel h3, .tao .view-filters .views-widget .form-item {
+    background: #ccc url(../images/gradient-light.png) repeat-x;
+}
+
+.tao .view-filters .views-widget{
+    .form-item-author { width: 10em; *width:auto; }
+    .form-item-title { width: 15em; *width:auto; }
+}
+
+.tao .view-filters .views-widget .form-item { 
+  input, select { min-height: 20px; }
+}
+
+

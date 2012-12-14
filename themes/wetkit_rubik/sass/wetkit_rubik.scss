@@ -708,6 +708,8 @@ h1.path-admin-config-workbench span.icon {
 /*
  * Fix up WetKit Rubik Theme to closely align with WET Styles
  */
+
+
  
 .tao #branding {
   background: none;
@@ -767,6 +769,8 @@ h1.path-admin-config-workbench span.icon {
   background-image:-moz-linear-gradient(#eee,#dcdcdc)!important;
   background-image:-o-linear-gradient(#eee,#dcdcdc)!important;
   background-image:linear-gradient(#eee,#dcdcdc)!important;
+  
+  input, select { min-height: 26px; }
   .description { display: none; }
   .form-autocomplete { padding: 3px; }
   input[name="title"] { width: 15em; }
