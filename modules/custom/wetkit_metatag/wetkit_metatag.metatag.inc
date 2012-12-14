@@ -14,7 +14,7 @@ function wetkit_metatag_metatag_config_default_alter(array &$configs) {
       case 'global':
         $config->config += array(
           'dcterms.title' => array('value' => '[current-page:title]'),
-          'dcterms.language' => array('value' => ($language->language == 'en') ? 'eng' : 'fra'),
+          'dcterms.language' => array('value' => '[current-page:language]'),
         );
         break;
 
@@ -28,10 +28,10 @@ function wetkit_metatag_metatag_config_default_alter(array &$configs) {
       case 'node':
         $config->config += array(
           'dcterms.title' => array('value' => '[node:title]'),
-          'dcterms.issued' => array('value' => ($language->language == 'en') ? 'Date published ([node:created:custom:Y-m-d])' : 'Date de publication ([node:created:custom:Y-m-d])'),
-          'dcterms.modified' => array('value' => ($language->language == 'en') ? 'Date modified ([node:changed:custom:Y-m-d])' : 'Date de modification ([node:changed:custom:Y-m-d])'),
+          'dcterms.issued' => array('value' => '[node:bilingual_date_issued]'),
+          'dcterms.modified' => array('value' => '[node:bilingual_date_published]'),
           'dcterms.identifier' => array('value' => '[site:url]/node/[node:nid]'),
-          'dcterms.language' => array('value' => ($language->language == 'en') ? 'eng' : 'fra'),
+          'dcterms.language' => array('value' => '[node:bilingual_prefix]'),
           'dcterms.creator' => array('value' => '[node:author]'),
           'dcterms.description' => array('value' => '[node:summary]'),
         );

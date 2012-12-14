@@ -334,6 +334,7 @@ function wetkit_wetboew_init() {
     '#markup' => '<link rel="stylesheet" href="' . libraries_get_path('wet-boew', TRUE) . '/dist/' . $themekey . '/css/theme-ns-min.css" />',
     '#prefix' => "<noscript>",
     '#suffix' => "</noscript>\n",
+    '#weight' => '999',
   );
   drupal_add_html_head($element, 'wetkit_wetboew_noscript');
 }
