@@ -25,6 +25,19 @@ function wetkit_metatag_theme() {
 }
 
 /**
+ * Unset metatags in the header that are no longer needed in HTML5.
+ */
+function wetkit_metatag_html_head_alter(&$head_elements) {
+  unset($head_elements['metatag_description']);
+  // Remove Shortlink
+  //foreach ($head_elements as $key => $element) {
+  //  if (isset($element['#attributes']['rel']) && $element['#attributes']['rel'] == 'shortlink') {
+  //    unset($head_elements[$key]);
+  //  }
+  //}
+}
+
+/**
  * Theme callback for a Dublin Core meta tag.
  */
 function theme_wetkit_metatag($variables) {
