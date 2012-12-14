@@ -281,7 +281,7 @@ function wetkit_language_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_pattern';
-  $strongarm->value = '[node:bilingual_prefix]/[node:title]';
+  $strongarm->value = '[node:bilingual_pathauto_prefix]/[node:title]';
   $export['pathauto_node_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

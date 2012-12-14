@@ -63,9 +63,9 @@ projects[metatag][version] = 1.x-dev
 projects[metatag][subdir] = contrib
 projects[metatag][type] = module
 projects[metatag][download][type] = git
-projects[metatag][download][revision] = 54f6f59
+projects[metatag][download][revision] = b4e4922
 projects[metatag][download][branch] = 7.x-1.x
-projects[metatag][patch][1284756] = http://drupal.org/files/1284756-15.patch
+projects[metatag][patch][1845326] = http://drupal.org/files/metatag-n1845326-31.patch
 
 projects[password_policy][version] = 1.3
 projects[password_policy][subdir] = contrib
