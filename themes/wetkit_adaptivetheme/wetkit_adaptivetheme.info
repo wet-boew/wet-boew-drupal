@@ -49,8 +49,7 @@
   ; "less than IE9" but "not IEMobile 7".
   ; Uncomment the following to use the included IE styleseet:
 
-  ; ie_stylesheets[screen][(lt IE 9)&(!IEMobile 7)][] = css/lt-ie9.css
-
+  ie_stylesheets[screen][(lt IE 9)&(!IEMobile 7)][] = css/lt-ie9.css
   ;ie_stylesheets[all][lte IE 8][] = wet-boew/grids/css/util-ie-min.css
   ;ie_stylesheets[all][lte IE 8][] = wet-boew/js/css/pe-ap-ie-min.css
   ;ie_stylesheets[all][lte IE 8][] = wet-boew/theme-gcwu-fegc/css/theme-ie-min.css
