@@ -33,7 +33,7 @@ function wetkit_metatag_metatag_config_default_alter(array &$configs) {
           'dcterms.identifier' => array('value' => '[site:url]/node/[node:nid]'),
           'dcterms.language' => array('value' => '[node:bilingual_prefix]'),
           'dcterms.creator' => array('value' => '[node:author]'),
-          'dcterms.description' => array('value' => '[node:summary]'),
+          'dcterms.description' => array('value' => '[node:improved_summary]'),
         );
         break;
 
