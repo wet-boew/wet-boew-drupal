@@ -1,3 +1,12 @@
 /* Target IE 6, 7 and 8 (less than IE9) */
 /* Assuming a mobile first approach with respond.js OFF, we must reset the font size for lt IE9 */
-html { font-size: 81.3%; }
+/*html { font-size: 81.3%;s
+}*/
+#node-edit label { min-width: 5%; vertical-align: top; margin-right: 8px; }
+#node-edit .form-item-path-alias label { margin-right: 0; }
+#node-edit .form-actions input { *padding: 0; *height: auto; }
+#node-edit .container-inline-date .form-item-date-time { width: 100%; }
+
+#gcwu-srchbx fieldset.custom_search-popup { margin-left: 12px; left: 0; margin-top: 2px; /* for ie8 compat and 7 */ *margin-top: 30px; }
+#gcwu-srchbx fieldset.custom_search-popup label { *position: absolute !important; }
+#gcwu-srchbx .form-actions { *margin-left: -20px; }
