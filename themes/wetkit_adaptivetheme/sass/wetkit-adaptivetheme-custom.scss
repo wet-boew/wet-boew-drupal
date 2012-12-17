@@ -76,6 +76,17 @@ ul {
 }
 
 /*
+ * Drupal Contrib: Workbench
+ */
+
+#block-workbench-block .workbench-info-block {
+  margin: 0px 10px 10px 10px;
+  background-color: #FFFFCE!important;
+  color: #000;
+  font-weight: 600;
+}
+
+/*
  * Drupal Contrib: Adaptive Theme
  */
 
@@ -164,7 +175,16 @@ div.panels-ipe-placeholder h4 {
 }
 
 .page-node-edit .pane-page-tabs #tabs {
-  margin: 20px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+.block-content,
+#tasks {
+  .tabs {
+    li {
+      a { top: 0px; margin-top: 0px; }
+    }
+  }
 }
 
 .page-node-edit .pane-page-tabs ul.tabs {

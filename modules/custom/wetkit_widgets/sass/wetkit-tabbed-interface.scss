@@ -3,6 +3,12 @@
  */
 
 /* Drupal Specific Styling */
+.ipe_tabs_interface {
+  img {
+    margin: 0px;
+  }
+}
+
 .wet-boew-tabbedinterface {
   .tabs {
     margin: 0px;
@@ -16,9 +22,27 @@
 
 /* Style 7 For use with the Front Page */
 
-.tabs-style-7 {height:250px;overflow:hidden;position:relative;width:960px;background:#fff;}
-.tabs-style-7 .tabs{height:249px;left:0;right:inherit;top:0;overflow:hidden;position:absolute;z-index:100;width:228px;border:1px solid #ccc; border-top:none }
-.tabs-style-7 .tabs span{display:none !important; }
+.tabs-style-7 {
+  height:250px;
+  overflow:hidden;
+  position:relative;
+  width:960px;
+  background:#fff;
+  .tabs{
+    height:249px;
+    left:0;
+    right:inherit;
+    top:0;
+    overflow:hidden;
+    position:absolute;
+    z-index:100;
+    width:228px;
+    border:1px solid #ccc; 
+    border-top:none;
+    span { display:none !important; }
+  }
+}
+
 .tabs-style-7 .tabs li{background:transparent;display:block;border:none;width:228px; }
 .tabs-style-7 .tabs li.active{margin-right:0;top:0;background:#222;}
 .tabs-style-7 .tabs li.active span{display:block!important; font-weight: normal;padding:3px;}
