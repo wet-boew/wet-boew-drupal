@@ -11,16 +11,6 @@ $plugin = array(
   'description' => t('Display the pane with customized settings for the Tabbed Interface Plugin.'),
   'render pane' => 'wetkit_widgets_tabbed_interface_style_render_pane',
   'pane settings form' => 'wetkit_widgets_tabbed_interface_style_settings_form',
-  'hook theme' => array(
-  //'wetkit_widgets_theme_pane' => array(
-  //  'template' => 'tabbed_interface-pane',
-  //    'path' => drupal_get_path('module', 'wetkit_widgets') .'/plugins/styles/tabbed_interface',
-  //    'variables' => array(
-  //      'content' => NULL,
-  //      'settings' => NULL,
-  //    ),
-  //  ),
-  ),
   'weight' => -5,
 );
 
@@ -61,4 +51,3 @@ function wetkit_widgets_tabbed_interface_style_settings_form($style_settings) {
 
   return $form;
 }
-

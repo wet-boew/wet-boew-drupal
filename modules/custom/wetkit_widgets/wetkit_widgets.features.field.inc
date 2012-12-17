@@ -42,15 +42,7 @@ function wetkit_widgets_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'tabbed_interface',
-      'default_value' => array(
-        0 => array(
-          'title' => 'Tabbed Interface 1',
-          'link' => 'http://canada.gc.ca',
-          'fid' => 0,
-          'alt' => '',
-          'description' => 'This is where your description goes that will rendered in the body of the tabbed interface. ',
-        ),
-      ),
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -58,19 +50,18 @@ function wetkit_widgets_field_default_fields() {
           'label' => 'hidden',
           'module' => 'wetkit_widgets',
           'settings' => array(
-            'image_style' => 'slider',
+            'image_style' => 'panopoly_image_spotlight',
           ),
           'type' => 'wetkit_tabbed_interface_default',
           'weight' => '0',
         ),
       ),
       'entity_type' => 'fieldable_panels_pane',
-      'fences_wrapper' => 'div',
       'field_name' => 'field_tabbed_interface',
       'label' => 'Items',
       'required' => 0,
       'settings' => array(
-        'alt_field' => 1,
+        'alt_field' => 0,
         'default_image' => 0,
         'file_directory' => 'general',
         'file_extensions' => 'jpg jpeg gif png',
