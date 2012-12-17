@@ -160,5 +160,7 @@ function wetkit_metatag_form_alter(&$form, &$form_state, $form_id) {
     unset($form['vertical_tabs_metatags_advanced']['advanced']['#type']);
     unset($form['metatags']['advanced']);
     unset($form['metatags']['dublin-core']);
+    unset($form['metatags']['abstract']);
+    unset($form['metatags']['keywords']);
   }
 }
