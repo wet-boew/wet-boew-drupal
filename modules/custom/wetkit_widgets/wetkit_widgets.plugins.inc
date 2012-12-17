@@ -2,7 +2,7 @@
 
 /**
  * @file
- * A specification for the custom spotlight entity that is part of Panopoly Widgets
+ * A specification for the custom tabbed interface entity that is part of WetKit Widgets
  */
 
 /**
@@ -27,18 +27,16 @@ function wetkit_widgets_field_info() {
       'default_formatter' => 'wetkit_tabbed_interface_default',
       'settings' => array(
         'uri_scheme' => variable_get('file_default_scheme', 'public'),
-        'default_image' => 0,
+        'default_image' => 1,
       ),
       'instance_settings' => array(
-        'alt_field' => 0,
-        'default_image' => 0,
+        'file_extensions' => 'jpg jpeg gif png',
         'file_directory' => 'general',
-        'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
+        'alt_field' => 0,
+        'title_field' => 0,
         'max_resolution' => '',
         'min_resolution' => '',
-        'title_field' => 0,
-        'user_register_form' => FALSE,
       ),
     ),
   );
@@ -121,7 +119,7 @@ function wetkit_widgets_field_formatter_info() {
       'label' => t('Default'),
       'field types' => array('wetkit_tabbed_interface'),
       'settings' => array(
-        'image_style' => 'slider',
+        'image_style' => 'panopoly_image_spotlight',
       ),
     ),
   );
@@ -137,7 +135,7 @@ function wetkit_widgets_field_formatter_settings_form($field, $instance, $view_m
 
   if ($display['type'] == 'wetkit_tabbed_interface_default') {
     $element['image_style'] = array(
-      '#title' => t('Image style'),
+      '#title' => t('Image style'), 
       '#type' => 'select',
       '#options' => image_style_options(),
       '#default_value' => $settings['image_style'],
@@ -154,7 +152,7 @@ function wetkit_widgets_field_formatter_settings_form($field, $instance, $view_m
 function wetkit_widgets_field_formatter_settings_summary($field, $instance, $view_mode) {
   $display = $instance['display'][$view_mode];
   $settings = $display['settings'];
-
+  
   $summary = t('Image Style: @style', array('@style' => $settings['image_style']));
   return $summary;
 }
@@ -170,12 +168,10 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
 
   // Assemble the tabs content
   foreach ($items as $delta => $item_data) {
-    if ($display['type'] == 'wetkit_tabbed_interface_default') {
-      $element[$delta]['#markup'] = theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings));
-      $element[$delta]['title'] = $item_data['title'];
-      //if panel style is applied
+    $element[$delta]['#markup'] = ($delta == 0) ? theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings)) : theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings));
+    $element[$delta]['title'] = ($delta == 0) ? $item_data['title'] : $item_data['title'];
+          //if panel style is applied
       $element[$delta]['tabbed_true'] = 'true';
-    }
   }
   return $element;
 }
@@ -186,8 +182,8 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
 function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
 
   if ($instance['widget']['type'] == 'wetkit_tabbed_interface_form') {
-
-    // Make it a multipart form
+   
+    // Make it a multipart form  
     $form['#attributes']['enctype'] = 'multipart/form-data';
 
     // Define the element
@@ -238,7 +234,7 @@ function wetkit_widgets_field_presave($entity_type, $entity, $field, $instance, 
     foreach ($items as &$item) {
       if (empty($item['fid'])) {
         $fid = variable_get('wetkit_widgets_default_' . $entity->bundle . '_fid', NULL);
-
+        
         if (!empty($fid)) {
           $item['fid'] = $fid;
         }
@@ -269,7 +265,7 @@ function wetkit_widgets_field_insert($entity_type, $entity, $field, $instance, $
 function wetkit_widgets_field_update($entity_type, $entity, $field, $instance, $langcode, &$items) {
 
   // Load the original entity, if $entity->original is not already set.
-  // This is done as per http://drupal.org/node/985642 and can be removed when that patch is committed.
+  // This is done as per http://drupal.org/node/985642 and can be removed when that patch is committed. 
   if (empty($entity->original)) {
     $entity->original = entity_load_unchanged($entity_type, $field['id']);
   }
@@ -296,7 +292,7 @@ function wetkit_widgets_field_delete_revision($entity_type, $entity, $field, $in
  */
 function wetkit_widgets_field_prepare_view($entity_type, $entities, $field, $instances, $langcode, &$items) {
   // If there are no files specified at all, use the default.
-  // TODO - make sure this works
+  // TODO - make sure this works 
   foreach ($entities as $id => $entity) {
     if (empty($items[$id]) && $field['settings']['default_image']) {
       if ($file = file_load($field['settings']['default_image'])) {
@@ -309,7 +305,6 @@ function wetkit_widgets_field_prepare_view($entity_type, $entities, $field, $ins
     }
   }
 }
-
 
 /**
  * Theme function for table view
@@ -327,13 +322,11 @@ function theme_wetkit_tab_interface_view($variables) {
   $link = $variables['items']['link'];
   $settings = $variables['settings'];
 
-  $output = '<div id="' . 'tabs1_' . $variables['delta'] . '" class="' . '' . '">';
+  $output = '<div id="' . 'tabs1_' . $variables['delta'] . '" class="tabs-content-pad ' . '' . '">';
   $output .= '<section>';
-  $output .= theme('image_style', array('style_name' => $settings['image_style'], 'path' => $image->uri, 'alt' => $variables['items']['alt']));
-  $output .= '<div class="tabs-content-pad">';
   $output .= '<h4>' . l($title, $link) . '</h4>';
+  $output .= theme('image_style', array('style_name' => $settings['image_style'], 'path' => $image->uri, 'alt' => $variables['items']['alt']));
   $output .= '<p>' . $description . '</p>';
-  $output .= '</div>';
   $output .= '</section>';
   $output .= '</div>';
 

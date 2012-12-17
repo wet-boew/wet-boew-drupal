@@ -243,7 +243,7 @@ msgstr "Page d'accueil"
 
 #: templates/node.tpl.php:133 templates/panes/panels-pane--node_updated--node_updated.tpl.php:47
 msgid "Date modified:"
-msgstr ""
+msgstr "Date de modification:"
 
 #: templates/page--base.tpl.php:112 templates/page--internet.tpl.php:139 templates/page--intranet.tpl.php:153 templates/page--panels--base.tpl.php:112 templates/page--panels--internet.tpl.php:139 templates/page--panels--intranet.tpl.php:143
 msgid "Search"

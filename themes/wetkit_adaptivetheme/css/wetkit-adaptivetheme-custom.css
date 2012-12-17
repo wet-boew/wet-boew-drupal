@@ -27,6 +27,9 @@ ul.tabs { margin-left: 10px; margin-right: 10px; margin-bottom: 10px; }
 
 .form-item label.option { display: inline; }
 
+/* Drupal Contrib: Workbench */
+#block-workbench-block .workbench-info-block { margin: 0px 10px 10px 10px; background-color: #FFFFCE!important; color: #000; font-weight: 600; }
+
 /* Drupal Contrib: Adaptive Theme */
 #breadcrumb, .breadcrumb-wrapper { margin-left: 0px; margin-right: 0px; }
 
@@ -59,7 +62,9 @@ fieldset.custom_search-popup .form-item { text-align: left; }
 
 div.panels-ipe-placeholder h4 { font-weight: 700; font-size: 15px; width: 75px; /* In order to prevent the region title from running into the button, set a width. Initital width only--this will be changed by jQuery */ margin: 1.154em 0; line-height: 150%; }
 
-.page-node-edit .pane-page-tabs #tabs { margin: 20px 0px 0px 0px; }
+.page-node-edit .pane-page-tabs #tabs { margin: 0px 0px 0px 0px; }
+
+.block-content .tabs li a, #tasks .tabs li a { top: 0px; margin-top: 0px; }
 
 .page-node-edit .pane-page-tabs ul.tabs { margin: 0px 0px; }
 
