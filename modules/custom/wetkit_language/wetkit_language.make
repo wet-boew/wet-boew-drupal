@@ -56,5 +56,9 @@ projects[potx][subdir] = contrib
 projects[stringoverrides][version] = 1.8
 projects[stringoverrides][subdir] = contrib
 
-projects[variable][version] = 2.1
+projects[variable][version] = 1.x-dev
+projects[variable][type] = module
 projects[variable][subdir] = contrib
+projects[variable][download][type] = git
+projects[variable][download][revision] = 651a3fb
+projects[variable][download][branch] = 7.x-1.x

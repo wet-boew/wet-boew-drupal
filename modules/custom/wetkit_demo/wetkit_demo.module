@@ -15,17 +15,6 @@ function wetkit_demo_menu_alter(&$items) {
 }
 
 /**
- * Theme callback for the block configuration pages.
- *
- * @param $theme
- *   The theme whose blocks are being configured. If not set, the default theme
- *   is assumed.
- * @return
- *   The theme that should be used for the block configuration page, or NULL
- *   to indicate that the default theme should be used.
- */
-
-/**
  * Implements hook_ctools_plugin_directory().
  *
  * @param type $module
@@ -39,7 +28,6 @@ function wetkit_demo_ctools_plugin_directory($module, $plugin) {
   return 'plugins/' . $plugin;
 }
 
-
 /**
  * Implements hook_link_alter().
  *
@@ -52,20 +40,6 @@ function wetkit_demo_menu_link_alter(&$item) {
   if (empty($item['path'])) {
     $item['path'] = $item['link_path'];
   }
-}
-
-/**
- * Implements hook_install().
- */
-function wetkit_demo_install() {
-
-}
-
-/**
- * Implements hook_uninstall().
- */
-function wetkit_demo_uninstall() {
-  //menu_link_delete(null, '<front>');
 }
 
 /**

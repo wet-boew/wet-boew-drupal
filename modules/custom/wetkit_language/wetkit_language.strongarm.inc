@@ -321,6 +321,7 @@ function wetkit_language_strongarm() {
     22 => 'user_mail_status_blocked_[mail_part]',
     23 => 'user_mail_cancel_confirm_[mail_part]',
     24 => 'user_mail_status_canceled_[mail_part]',
+    25 => 'wetkit_metatag_creator',
   );
   $export['variable_realm_list_language'] = $strongarm;
 

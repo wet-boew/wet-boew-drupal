@@ -25,6 +25,8 @@ ul.tabs { margin-left: 10px; margin-right: 10px; margin-bottom: 10px; }
 
 #status-messages { margin-top: 10px; }
 
+.form-item label.option { display: inline; }
+
 /* Drupal Contrib: Adaptive Theme */
 #breadcrumb, .breadcrumb-wrapper { margin-left: 0px; margin-right: 0px; }
 

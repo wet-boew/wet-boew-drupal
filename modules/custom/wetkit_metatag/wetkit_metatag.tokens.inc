@@ -29,10 +29,19 @@ function wetkit_metatag_token_info() {
     'name' => t('Metatag: Bilingual Date Published'),
     'description' => t('Bilingual Date Published for use with Metatags'),
   );
+  $info['tokens']['node']['improved_creator'] = array(
+    'name' => t('Metatag: Improved creator'),
+    'description' => t('Improved Creator for use with Metatags'),
+  );
   $info['tokens']['node']['improved_summary'] = array(
     'name' => t('Metatag: Improved Summary'),
     'description' => t('Improved Summary for use with Metatags'),
-  );  
+  );
+  // Site Wide tokens
+  $info['types']['site-wide']['creator'] = array(
+    'name' => t('Metatag: Bilingual Creator'),
+    'description' => t('Bilingual creator for use with Metatags'),
+  );
   return $info;
 }
 
@@ -123,7 +132,23 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           }
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
-        case 'improved_summary':
+        case 'improved_creator':
+          global $language;
+          $value = '';
+          
+          // If i18n variable exists then give it precedence
+          if (function_exists('i18n_variable_get')) {
+            $value = i18n_variable_get('wetkit_metatag_creator', $language->language);
+          }
+          
+          // If there is no i18n variable present for creator then use node author
+          if ($value == '') {
+            $value = $node->name;
+          }
+
+          $replacements[$original] = $sanitize ? filter_xss($value) : $value;
+          break;
+          case 'improved_summary':
           if ($items = field_get_items('node', $node, 'body', $language_code)) {
             $instance = field_info_instance('node', 'body', $node->type);
             $field_langcode = field_language('node', $node, 'body', $language_code);
@@ -149,6 +174,26 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
             }
             $replacements[$original] = $output;
           }
+          break;
+      }
+    }
+  }
+
+  // Site Wide tokens.
+  if ($type == 'site-wide') {
+
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'creator':
+          global $language;
+          $value = '';
+          
+          // If i18n variable exists then give it precedence
+          if (function_exists('i18n_variable_get')) {
+            $value = i18n_variable_get('wetkit_metatag_creator', $language->language);
+          }
+
+          $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
       }
     }
