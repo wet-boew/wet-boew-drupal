@@ -1,16 +1,47 @@
 <?php
 /**
  * @file
+ * Code for the WetKit MetaTags Dublin Core (HTML5) feature.
+ */
+
+include_once 'wetkit_metatag.features.inc';
+/**
+ * @file
  * Metatag integration for the wetkit_metatag module.
  */
 
 /**
- * Implements hook_ctools_plugin_api().
+ * Implements hook_apps_app_info().
  */
-function wetkit_metatag_ctools_plugin_api($owner, $api) {
-  if ($owner == 'metatag' && $api == 'metatag') {
-    return array('version' => 1);
-  }
+function wetkit_metatag_apps_app_info() {
+  return array(
+    'configure form' => 'wetkit_metatag_configure_form',
+  );
+}
+
+/**
+ * Configuration Form for WetKit Metatags
+ */
+function wetkit_metatag_configure_form($form, &$form_state) {
+  $form = array();
+  
+  $form['wetkit_metatag'] = array (
+    '#title' => 'Metatag Settings',
+    '#type'  => 'fieldset',
+    '#collapsible' => 'true',
+    '#collapsed'   => 'true',
+  );
+  
+  $form['wetkit_metatag']['wetkit_metatag_creator'] = array(
+    '#title' => t('Metatags for Creator'),
+    '#type' => t('textfield'),
+    '#maxlength' => 255,
+    '#size' => 50,
+    '#default_value' => variable_get('wetkit_metatag_creator'),
+    '#description' => t('Metatags for Creator'),
+  );
+
+  return system_settings_form($form);
 }
 
 /**
@@ -29,12 +60,6 @@ function wetkit_metatag_theme() {
  */
 function wetkit_metatag_html_head_alter(&$head_elements) {
   unset($head_elements['metatag_description']);
-  // Remove Shortlink
-  //foreach ($head_elements as $key => $element) {
-  //  if (isset($element['#attributes']['rel']) && $element['#attributes']['rel'] == 'shortlink') {
-  //    unset($head_elements[$key]);
-  //  }
-  //}
 }
 
 /**
@@ -55,9 +80,53 @@ function theme_wetkit_metatag($variables) {
  * Implements hook_form_alter().
  */
 function wetkit_metatag_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'wetkit_page_node_form' || $form_id == 'wetkit_page_other_node_form') {
+   // Only include on node add/edit forms.
+  if (!empty($form['#node_edit_form'])) {
+
+    // Create a fieldset that will be included in the vertical tab.
+    $form['vertical_tabs_wetkit'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('WetKit Dublin Core'),
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+      '#tree' => TRUE,
+      '#weight' => 99,
+      // The #group value must match the name of the vertical tabs element.
+      // In most cases, this is 'additional_settings'.
+      '#group' => 'additional_settings',
+      '#attached' => array(
+        'js' => array(
+          'vertical-tabs' => drupal_get_path('module', 'wetkit_metatag') . '/vertical_tabs_metatag.js',
+        ),
+      ),
+    );
+
+    // Create a fieldset that will be included in the vertical tab.
+    $form['vertical_tabs_metatags_advanced'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Meta tags (Advanced)'),
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+      '#tree' => TRUE,
+      '#weight' => 99,
+      // The #group value must match the name of the vertical tabs element.
+      // In most cases, this is 'additional_settings'.
+      '#group' => 'additional_settings',
+      '#attached' => array(
+        'js' => array(
+          'vertical-tabs' => drupal_get_path('module', 'wetkit_metatag') . '/vertical_tabs_metatag.js',
+        ),
+      ),
+    );
+
+    // Move custom metatags into different Vertical Tabs
+    $form['vertical_tabs_wetkit']['dublin-core'] = $form['metatags']['dublin-core'];
+    $form['vertical_tabs_metatags_advanced']['advanced'] = $form['metatags']['advanced'];
+
+    // Unset form content that is not needed
+    unset($form['vertical_tabs_wetkit']['dublin-core']['#type']);
+    unset($form['vertical_tabs_metatags_advanced']['advanced']['#type']);
     unset($form['metatags']['advanced']);
     unset($form['metatags']['dublin-core']);
-    unset($form['metatags']['tokens']);
   }
 }
