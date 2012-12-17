@@ -15,6 +15,7 @@ function wetkit_metatag_metatag_config_default_alter(array &$configs) {
         $config->config += array(
           'dcterms.title' => array('value' => '[current-page:title]'),
           'dcterms.language' => array('value' => '[current-page:language]'),
+          'dcterms.creator' => array('value' => '[site-wide:creator]'),
         );
         break;
 
@@ -32,7 +33,7 @@ function wetkit_metatag_metatag_config_default_alter(array &$configs) {
           'dcterms.modified' => array('value' => '[node:bilingual_date_published]'),
           'dcterms.identifier' => array('value' => '[site:url]/node/[node:nid]'),
           'dcterms.language' => array('value' => '[node:bilingual_prefix]'),
-          'dcterms.creator' => array('value' => '[node:author]'),
+          'dcterms.creator' => array('value' => '[node:improved_creator]'),
           'dcterms.description' => array('value' => '[node:improved_summary]'),
         );
         break;
