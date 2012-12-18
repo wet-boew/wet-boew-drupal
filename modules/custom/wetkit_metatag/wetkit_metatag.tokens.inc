@@ -16,6 +16,10 @@ function wetkit_metatag_token_info() {
     'name' => t('Metatag: Bilingual Global Prefix'),
     'description' => t('Bilingual global prefix for use with Metatags'),
   );
+  $info['tokens']['current-page']['bilingual_default_value'] = array(
+    'name' => t('Metatag: Default Metatag value'),
+    'description' => t('Bilingual default value for use with WetKit specific metatags'),
+  );
   // Node tokens
   $info['tokens']['node']['bilingual_prefix'] = array(
     'name' => t('Metatag: Bilingual Prefix'),
@@ -85,6 +89,16 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
 
     foreach ($tokens as $name => $original) {
       switch ($name) {
+        case 'bilingual_default_value':
+          global $language;
+          if ($language->language == 'fr') {
+            $value = 'null';
+          }
+          else {
+            $value = 'none';
+          }
+          $replacements[$original] = $sanitize ? filter_xss($value) : $value;
+          break;
         case 'language':
           global $language;
           if ($language->language == 'fr') {
@@ -133,17 +147,18 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
         case 'improved_creator':
-          global $language;
           $value = '';
           
           // If i18n variable exists then give it precedence
           if (function_exists('i18n_variable_get')) {
-            $value = i18n_variable_get('wetkit_metatag_creator', $language->language);
+            $value = i18n_variable_get('wetkit_metatag_creator', $node->language);
           }
-          
+
           // If there is no i18n variable present for creator then use node author
           if ($value == '') {
-            $value = $node->name;
+            if (isset($node->name)) {
+              $value = $node->name;
+            }
           }
 
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
@@ -191,6 +206,11 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           // If i18n variable exists then give it precedence
           if (function_exists('i18n_variable_get')) {
             $value = i18n_variable_get('wetkit_metatag_creator', $language->language);
+          }
+
+          // If there is no i18n variable present for creator then use node author
+          if ($value == '') {
+            $value = 'Web Experience Toolkit';
           }
 
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;

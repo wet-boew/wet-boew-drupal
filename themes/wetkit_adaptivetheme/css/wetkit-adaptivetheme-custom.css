@@ -56,6 +56,8 @@ fieldset.custom_search-popup .form-item { text-align: left; }
 .search-form .form-item-custom-search-blocks-form-1 { display: inline; }
 
 /* Drupal Contrib: Panels */
+.panel-pane .block-content .node-unpublished { margin-left: 10px; margin-right: 10px; margin-bottom: 10px; }
+
 .panels-ipe-placeholder h3 { background: none; padding: 0px; }
 
 .panels-ipe-newblock li { list-style: none; float: left; }
