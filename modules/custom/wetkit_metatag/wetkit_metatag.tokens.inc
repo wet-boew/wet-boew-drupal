@@ -147,17 +147,18 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
         case 'improved_creator':
-          global $language;
           $value = '';
           
           // If i18n variable exists then give it precedence
           if (function_exists('i18n_variable_get')) {
-            $value = i18n_variable_get('wetkit_metatag_creator', $language->language);
+            $value = i18n_variable_get('wetkit_metatag_creator', $node->language);
           }
-          
+
           // If there is no i18n variable present for creator then use node author
           if ($value == '') {
-            $value = $node->name;
+            if (isset($node->name)) {
+              $value = $node->name;
+            }
           }
 
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
@@ -205,6 +206,11 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           // If i18n variable exists then give it precedence
           if (function_exists('i18n_variable_get')) {
             $value = i18n_variable_get('wetkit_metatag_creator', $language->language);
+          }
+
+          // If there is no i18n variable present for creator then use node author
+          if ($value == '') {
+            $value = 'Web Experience Toolkit';
           }
 
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
