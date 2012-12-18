@@ -105,6 +105,25 @@ function wetkit_wetboew_form_alter(&$form, &$form_state, $form_id) {
     //TODO: Upstream this fix to Panopoly
     $form['field_share_widget'] = array('#language' => NULL);
   }
+  
+  // Create the General Settings Fieldset
+  if ($form_id == 'ctools_block_content_type_edit_form') {
+    // Create General Settings Fieldset
+    $form['general_settings'] = array(
+      '#type' => 'fieldset', 
+      '#title' => t('General Settings'), 
+      '#collapsible' => FALSE, 
+      '#collapsed' => FALSE,
+    );
+    $form['general_settings']['override_title'] = $form['override_title'];
+    $form['general_settings']['override_title_markup'] = $form['override_title_markup'];
+    $form['general_settings']['override_title_text'] = $form['override_title_text'];
+
+    // Unset some Form Variables
+    unset($form['override_title']);
+    unset($form['override_title_markup']);
+    unset($form['override_title_text']);
+  }
 }
 
 /**

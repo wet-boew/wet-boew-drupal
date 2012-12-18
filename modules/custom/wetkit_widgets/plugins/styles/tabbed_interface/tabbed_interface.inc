@@ -7,7 +7,7 @@
 
 // Plugin definition
 $plugin = array(
-  'title' => t('Tabbed Interface'),
+  'title' => t('WetKit Tabbed Interface'),
   'description' => t('Display the pane with customized settings for the Tabbed Interface Plugin.'),
   'render pane' => 'wetkit_widgets_tabbed_interface_style_render_pane',
   'pane settings form' => 'wetkit_widgets_tabbed_interface_style_settings_form',
