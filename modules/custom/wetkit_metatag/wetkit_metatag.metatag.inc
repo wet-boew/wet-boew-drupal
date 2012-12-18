@@ -16,6 +16,7 @@ function wetkit_metatag_metatag_config_default_alter(array &$configs) {
           'dcterms.title' => array('value' => '[current-page:title]'),
           'dcterms.language' => array('value' => '[current-page:language]'),
           'dcterms.creator' => array('value' => '[site-wide:creator]'),
+          'dcterms.subject' => array('value' => '[current-page:bilingual_default_value]'),
         );
         break;
 
@@ -96,6 +97,7 @@ function wetkit_metatag_metatag_info() {
     'group' => 'dublin-core',
     'element' => array(
       '#theme' => 'wetkit_metatag',
+      '#schema' => variable_get('wetkit_metatag_subject_scheme'),
     ),
   );
   $info['tags']['dcterms.description'] = array(

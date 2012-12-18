@@ -156,6 +156,12 @@ fieldset.custom_search-popup {
  * Drupal Contrib: Panels
  */
 
+.panel-pane .block-content .node-unpublished {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
 .panels-ipe-placeholder h3 {
   background: none;
   padding: 0px;
