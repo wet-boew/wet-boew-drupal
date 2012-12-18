@@ -41,6 +41,15 @@ function wetkit_metatag_configure_form($form, &$form_state) {
     '#description' => t('Metatags for Creator'),
   );
 
+  $form['wetkit_metatag']['wetkit_metatag_subject_scheme'] = array(
+    '#title' => t('Metatag Attribute for Subject (Scheme)'),
+    '#type' => t('textfield'),
+    '#maxlength' => 255,
+    '#size' => 50,
+    '#default_value' => variable_get('wetkit_metatag_subject_scheme'),
+    '#description' => t('Metatag Attribute for Subject (Scheme)'),
+  );
+
   $form['#submit'][] = 'wetkit_metatag_configure_form_submit';
 
   return system_settings_form($form);

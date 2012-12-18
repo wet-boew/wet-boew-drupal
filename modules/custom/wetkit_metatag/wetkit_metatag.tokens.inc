@@ -16,6 +16,10 @@ function wetkit_metatag_token_info() {
     'name' => t('Metatag: Bilingual Global Prefix'),
     'description' => t('Bilingual global prefix for use with Metatags'),
   );
+  $info['tokens']['current-page']['bilingual_default_value'] = array(
+    'name' => t('Metatag: Default Metatag value'),
+    'description' => t('Bilingual default value for use with WetKit specific metatags'),
+  );
   // Node tokens
   $info['tokens']['node']['bilingual_prefix'] = array(
     'name' => t('Metatag: Bilingual Prefix'),
@@ -85,6 +89,16 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
 
     foreach ($tokens as $name => $original) {
       switch ($name) {
+        case 'bilingual_default_value':
+          global $language;
+          if ($language->language == 'fr') {
+            $value = 'null';
+          }
+          else {
+            $value = 'none';
+          }
+          $replacements[$original] = $sanitize ? filter_xss($value) : $value;
+          break;
         case 'language':
           global $language;
           if ($language->language == 'fr') {
