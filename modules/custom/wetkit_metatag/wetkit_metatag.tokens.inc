@@ -121,10 +121,10 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           global $language;
           $value = '';
           if ($language->language == 'fr') {
-            $value = 'null';
+            $value = 'fra';
           }
           else {
-            $value = 'none';
+            $value = 'eng';
           }
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
