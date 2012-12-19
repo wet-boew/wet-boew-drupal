@@ -55,13 +55,16 @@ chown -R apache:apache /sites/&lt;domain&gt;/files
 
 > Drush Make can also be used to update an existing install without replacing additional files. (IMPORTANT: However Drush Make will replace all files that Drush Make knows about!)
 >
-> 1. Switch (cd) to your working Drupal Directory.
+>If you want to update to the latest development version of the Distribution:
 >
-> 2. To quickly update an existing site using the Drush command line, change to the directory where Drupal was installed and enter this command.
+1. Point to your web root
+2. Use git to update your profile checkout
+3. Use drush to rebuild the make file and update the database for any changes defined in schema.
+Therefore the following will perform an in place update and keep you up to date (WEBROOT):
 <pre>
-Command: drush make --no-gitinfofile --working-copy https://raw.github.com/wet-boew/wet-boew-drupal/master/build-wetkit.make .
+cd profiles/wetkit && git pull && cd .. && cd .. && drush make --working-copy profiles/wetkit/build-wetkit.make --yes
 </pre>
-> 3. Since we are just updating an site instead of using drush si we will instead just update the database to reflect any changes in the code.
+> 2. Since we are just updating an site instead of using drush si we will instead just update the database to reflect any changes in the code.
 <pre>
 Command: drush -l http://&lt;domain&gt;:8082 updatedb
 Example: drush -l http://&lt;domain&gt;:8082 updatedb
