@@ -59,7 +59,7 @@ chown -R apache:apache /sites/&lt;domain&gt;/files
 >
 > 2. To quickly update an existing site using the Drush command line, change to the directory where Drupal was installed and enter this command.
 <pre>
-Command: drush make --no-gitinfofile --working-copy https://raw.github.com/wet-boew/wet-boew-drupal/master/build-wetkit.make .
+cd profiles/wetkit && git pull && cd .. && cd .. && drush make --working-copy profiles/wetkit/build-wetkit.make --yes
 </pre>
 > 3. Since we are just updating an site instead of using drush si we will instead just update the database to reflect any changes in the code.
 <pre>
