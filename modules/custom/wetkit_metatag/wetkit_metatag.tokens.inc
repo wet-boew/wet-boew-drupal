@@ -11,8 +11,9 @@
  *   An associative array of available tokens and token types.
  */
 function wetkit_metatag_token_info() {
+
   // Current page tokens.
-  $info['types']['current-page']['language'] = array(
+  $info['tokens']['current-page']['language'] = array(
     'name' => t('Metatag: Bilingual Global Prefix'),
     'description' => t('Bilingual global prefix for use with Metatags'),
   );
@@ -42,7 +43,7 @@ function wetkit_metatag_token_info() {
     'description' => t('Improved Summary for use with Metatags'),
   );
   // Site Wide tokens
-  $info['types']['site-wide']['creator'] = array(
+  $info['tokens']['site-wide']['creator'] = array(
     'name' => t('Metatag: Bilingual Creator'),
     'description' => t('Bilingual creator for use with Metatags'),
   );
