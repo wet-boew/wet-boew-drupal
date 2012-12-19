@@ -38,7 +38,7 @@ projects[diff][download][revision] = 27c9185
 projects[diff][download][branch] = 7.x-2.x
 projects[diff][patch][1285090] = http://drupal.org/files/diff-hide-show-markup-372957-93.patch
 
-projects[ds][version] = 2.0-beta1
+projects[ds][version] = 2.0
 projects[ds][subdir] = contrib
 
 projects[fences][version] = 1.0

@@ -28,6 +28,7 @@ dependencies[] = title
 dependencies[] = token
 dependencies[] = variable
 dependencies[] = variable_realm
+dependencies[] = variable_store
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
 features[language][] = en
