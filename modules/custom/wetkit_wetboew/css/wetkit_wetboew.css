@@ -26,6 +26,8 @@
 
 .panels-ipe #l10n-client { bottom: 52px; }
 
+.overlay-open #l10n-client { bottom: 0px; }
+
 /* Panelizer Styles */
 #panelizer-settings-form .tabs { position: relative; right: 0px; }
 
