@@ -59,9 +59,8 @@ dependencies[] = wetkit_pages
 dependencies[] = wetkit_search
 dependencies[] = wetkit_wysiwyg
 dependencies[] = wetkit_demo
-
-; WetKit Web Usability
 dependencies[] = wetkit_language
+dependencies[] = wetkit_migrate
 dependencies[] = wetkit_wetboew
 
 ; WetKit Recommended - Translation
