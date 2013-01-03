@@ -9,6 +9,9 @@
  */
 function wetkit_migrate_install() {
 
+  // Default Content
+  MigrationBase::registerMigration('WetKit_Migrate_DefaultContent');
+
   // Documentation
   variable_set('wetkit_migrate_documentation_basedir',     libraries_get_path('wet-boew', FALSE));
   variable_set('wetkit_migrate_documentation_listdir',     libraries_get_path('wet-boew', FALSE) . '/demos');
@@ -24,6 +27,9 @@ function wetkit_migrate_install() {
  * Implements hook_uninstall().
  */
 function wetkit_migrate_disable() {
+
+  // Default Content
+  MigrationBase::deregisterMigration('WetKit_Migrate_DefaultContent');
 
   // Documentation
   variable_delete('wetkit_migrate_documentation_basedir');

@@ -20,5 +20,6 @@ files[] = wetkit_migrate.pages.inc
 files[] = migrations/wetkit_migrate_migration.inc
 files[] = migrations/wetkit_migrate_querypath.inc
 files[] = migrations/wetkit_migrate_link.inc
+files[] = migrations/default_content/migrate_default_content.inc
 files[] = migrations/documentation/migrate_documentation.inc
 files[] = migrations/documentation/migrate_documentation_menu.inc
