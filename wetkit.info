@@ -1,8 +1,7 @@
 name = Web Experience Toolkit
+distribution_name = WetKit
 description = Install Profile created for the Web Experience Toolkit using Drupal 7
 core = 7.x
-distribution_name = WetKit
-exclusive = 1
 
 ; Drupal Core
 dependencies[] = menu
@@ -60,9 +59,8 @@ dependencies[] = wetkit_pages
 dependencies[] = wetkit_search
 dependencies[] = wetkit_wysiwyg
 dependencies[] = wetkit_demo
-
-; WetKit Web Usability
 dependencies[] = wetkit_language
+dependencies[] = wetkit_migrate
 dependencies[] = wetkit_wetboew
 
 ; WetKit Recommended - Translation
