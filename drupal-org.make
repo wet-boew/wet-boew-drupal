@@ -12,10 +12,10 @@ projects[panopoly_core][subdir] = panopoly
 projects[panopoly_core][download][type] = git
 projects[panopoly_core][download][revision] = 02baae4
 projects[panopoly_core][download][branch] = 7.x-1.x
+projects[panopoly_core][patch][db7f129] = https://gist.github.com/raw/4487535/db7f1291e267f9c574d7637cc7b2c41887ae2a52/ctools_context_fix.patch
 projects[panopoly_core][patch][1842818] = http://drupal.org/files/update_fpp_translation-1842818-09.patch
-projects[panopoly_core][patch][] = https://gist.github.com/raw/4263428/e6975650daaa34f22b8807806246b060fbba1598/panopoly-18n_panels.patch
-projects[panopoly_core][patch][] = https://gist.github.com/raw/4444971/d118f90fdb352234bd94817d94c03880414b9727/panopoly-default_content.patch
-projects[panopoly_core][patch][] = https://gist.github.com/raw/4487535/db7f1291e267f9c574d7637cc7b2c41887ae2a52/ctools_context_fix.patch
+projects[panopoly_core][patch][e697565] = https://gist.github.com/raw/4263428/e6975650daaa34f22b8807806246b060fbba1598/panopoly-18n_panels.patch
+projects[panopoly_core][patch][d118f90] = https://gist.github.com/raw/4444971/d118f90fdb352234bd94817d94c03880414b9727/panopoly-default_content.patch
 
 projects[panopoly_images][version] = 1.x-dev
 projects[panopoly_images][subdir] = panopoly
