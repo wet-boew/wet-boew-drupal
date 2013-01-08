@@ -140,6 +140,11 @@ projects[tao][version] = 3.0-beta4
 
 ; Libraries for WetKit
 
+libraries[querypath][download][type] = git
+libraries[querypath][download][branch] = 3.x
+libraries[querypath][download][revision] = 2320739
+libraries[querypath][download][url] = https://github.com/technosophos/querypath.git
+
 libraries[wet-boew][download][type] = git
 libraries[wet-boew][download][branch] = gh-pages
 libraries[wet-boew][download][revision] = 62b7df3
