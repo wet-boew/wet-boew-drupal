@@ -19,6 +19,7 @@ dependencies[] = locale
 dependencies[] = menu
 dependencies[] = menu_block
 dependencies[] = password_policy
+dependencies[] = path_breadcrumbs
 dependencies[] = search
 dependencies[] = shortcut
 dependencies[] = strongarm
