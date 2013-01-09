@@ -8,4 +8,4 @@ projects[drupal][patch][728702] = "http://drupal.org/files/issues/install-redire
 projects[drupal][patch][1470656] = "http://drupal.org/files/drupal-1470656-14.patch"
 projects[drupal][patch][865536] = "http://drupal.org/files/drupal-865536-204.patch"
 projects[drupal][patch][1772316] = "http://drupal.org/files/allow_change_system-requirements-1772316-4.patch"
-projects[drupal][patch][1040790] = "http://drupal.org/files/field-info-cache-1040790-210-D7.patch"
+projects[drupal][patch][1040790] = "http://drupal.org/files/field-info-cache-1040790-240-D7.patch"
