@@ -147,5 +147,5 @@ libraries[querypath][download][url] = https://github.com/technosophos/querypath.
 
 libraries[wet-boew][download][type] = git
 libraries[wet-boew][download][branch] = gh-pages
-libraries[wet-boew][download][revision] = 62b7df3
-libraries[wet-boew][download][url] = https://github.com/sylus/wet-boew.git
+libraries[wet-boew][download][revision] = 570555b
+libraries[wet-boew][download][url] = https://github.com/wet-boew/wet-boew.git
