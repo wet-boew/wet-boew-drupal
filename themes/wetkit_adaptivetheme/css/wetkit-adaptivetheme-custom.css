@@ -110,3 +110,8 @@ div.panels-ipe-placeholder h4 { font-weight: 700; font-size: 15px; width: 75px; 
 
 /* Migration Helper Classes */
 .node-type-wetkit-documentation .block-content #tabs { margin-bottom: 10px; }
+
+#gcwu-sft li a[href^="mailto:"] {
+  background-image: none;
+  padding-left: 0px;
+}

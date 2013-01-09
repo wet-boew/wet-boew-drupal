@@ -76,6 +76,13 @@ function wetkit_wetboew_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'panopoly_admin_advanced_plugins';
+  $strongarm->value = '1';
+  $export['panopoly_admin_advanced_plugins'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'panopoly_core_breadcrumb_title';
   $strongarm->value = 0;
   $export['panopoly_core_breadcrumb_title'] = $strongarm;
@@ -93,6 +100,55 @@ function wetkit_wetboew_strongarm() {
   $strongarm->name = 'panopoly_magic_pane_add_preview';
   $strongarm->value = '0';
   $export['panopoly_magic_pane_add_preview'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'path_breadcrumbs_decode_entities';
+  $strongarm->value = 1;
+  $export['path_breadcrumbs_decode_entities'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'path_breadcrumbs_delimiter';
+  $strongarm->value = '';
+  $export['path_breadcrumbs_delimiter'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'path_breadcrumbs_hide_single_breadcrumb';
+  $strongarm->value = 0;
+  $export['path_breadcrumbs_hide_single_breadcrumb'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'path_breadcrumbs_home_link_enabled';
+  $strongarm->value = 1;
+  $export['path_breadcrumbs_home_link_enabled'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'path_breadcrumbs_home_link_title';
+  $strongarm->value = 'Home';
+  $export['path_breadcrumbs_home_link_title'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'path_breadcrumbs_internal_render';
+  $strongarm->value = 1;
+  $export['path_breadcrumbs_internal_render'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'path_breadcrumbs_rich_snippets';
+  $strongarm->value = '0';
+  $export['path_breadcrumbs_rich_snippets'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

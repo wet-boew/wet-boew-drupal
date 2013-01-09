@@ -49,6 +49,15 @@ projects[fences][download][revision] = d9ca337
 projects[fences][download][branch] = 7.x-1.x
 projects[fences][patch][1561244] = http://drupal.org/files/undefined-index-1561244-7.patch
 
+projects[hierarchical_select][version] = 3.x-dev
+projects[hierarchical_select][subdir] = contrib
+projects[hierarchical_select][type] = module
+projects[hierarchical_select][download][type] = git
+projects[hierarchical_select][download][revision] = 1da92c0
+projects[hierarchical_select][download][branch] = 7.x-3.x
+projects[hierarchical_select][patch][1457252] = http://drupal.org/files/hierarchical_select-config_not_defined_1457252-2.patch
+projects[hierarchical_select][patch][1649706] = http://drupal.org/files/hs-menu-with-taxonomy-fix.patch
+
 projects[linkchecker][version] = 1.x-dev
 projects[linkchecker][type] = module
 projects[linkchecker][subdir] = contrib
@@ -65,7 +74,14 @@ projects[metatag][type] = module
 projects[metatag][download][type] = git
 projects[metatag][download][revision] = b4e4922
 projects[metatag][download][branch] = 7.x-1.x
-projects[metatag][patch][1845326] = http://drupal.org/files/metatag-n1845326-31.patch
+projects[metatag][patch][1845326] = http://drupal.org/files/metatag-n1845326-59.patch
+
+projects[path_breadcrumbs][version] = 3.x-dev
+projects[path_breadcrumbs][subdir] = contrib
+projects[path_breadcrumbs][type] = module
+projects[path_breadcrumbs][download][type] = git
+projects[path_breadcrumbs][download][revision] = c9c570b
+projects[path_breadcrumbs][download][branch] = 7.x-3.x
 
 projects[password_policy][version] = 1.3
 projects[password_policy][subdir] = contrib
@@ -124,7 +140,12 @@ projects[tao][version] = 3.0-beta4
 
 ; Libraries for WetKit
 
+libraries[querypath][download][type] = git
+libraries[querypath][download][branch] = 3.x
+libraries[querypath][download][revision] = 2320739
+libraries[querypath][download][url] = https://github.com/technosophos/querypath.git
+
 libraries[wet-boew][download][type] = git
 libraries[wet-boew][download][branch] = gh-pages
-libraries[wet-boew][download][revision] = 62b7df3
-libraries[wet-boew][download][url] = https://github.com/sylus/wet-boew.git
+libraries[wet-boew][download][revision] = 570555b
+libraries[wet-boew][download][url] = https://github.com/wet-boew/wet-boew.git

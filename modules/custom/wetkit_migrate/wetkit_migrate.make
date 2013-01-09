@@ -17,9 +17,9 @@ projects[migrate_extras][version] = 2.5
 projects[migrate_extras][type] = module
 projects[migrate_extras][subdir] = contrib
 
-projects[querypath][version] = 2.x-dev
-projects[querypath][type] = module
-projects[querypath][subdir] = contrib
-projects[querypath][download][type] = git
-projects[querypath][download][revision] = ca5c928
-projects[querypath][download][branch] = 7.x-1.x
+;projects[querypath][version] = 2.x-dev
+;projects[querypath][type] = module
+;projects[querypath][subdir] = contrib
+;projects[querypath][download][type] = git
+;projects[querypath][download][revision] = ca5c928
+;projects[querypath][download][branch] = 7.x-1.x
