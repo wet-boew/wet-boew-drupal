@@ -11,6 +11,22 @@ include_once('views/wetkit_wetboew.admin_content_view.inc');
 include_once('theme/theme.inc');
 
 /**
+ * Implements hook_theme_registry_alter().
+ *
+ * @param $theme_registry
+ *   Drupal theme registry that could be changed.
+ */
+function wetkit_wetboew_theme_registry_alter(&$theme_registry) {
+  $internal_render = variable_get('path_breadcrumbs_internal_render', 1);
+  global $theme;
+  if ($internal_render && ($theme == 'wetkit_adaptivetheme')) {
+    $theme_registry['breadcrumb']['theme path'] = drupal_get_path('module', 'wetkit_wetboew');
+    $theme_registry['breadcrumb']['file'] = drupal_get_path('module', 'wetkit_wetboew') . '/theme/theme.inc';
+    $theme_registry['breadcrumb']['function'] = 'wetkit_wetboew_breadcrumb';
+  }
+}
+
+/**
  * Implements hook_menu().
  */
 function wetkit_wetboew_menu() {

@@ -28,9 +28,8 @@ function wetkit_wetboew_querypath_scrape_content_type_render($subtype, $conf, $p
   $markup = '';
 
   try {
-    if (function_exists('querypath_include_code')) {
-      querypath_include_code();
-    }
+    // Include Querypath
+    require_once libraries_get_path('querypath', FALSE) . '/src/qp.php';
     
     $parser = 'html';
     if ($conf['querypath_scrape_general_settings']['querypath_parser']  == 0) {

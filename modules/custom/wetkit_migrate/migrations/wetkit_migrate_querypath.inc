@@ -39,7 +39,7 @@ class WetKitMigrationHtmlPage {
   public $language = '';
 
   /**
-   * Date create timestamp for the HTML pageÃ©
+   * Date create timestamp for the HTML page
    * @var string 
    */
   public $datestamp = '';
@@ -168,9 +168,8 @@ class WetKitMigrationHtmlPage {
       //'convert_to_encoding' => 'utf-8',
       'use_parser' => 'html'
     );
-    if (function_exists('querypath_include_code')) {
-      querypath_include_code();
-    }
+    // Include Querypath
+    require_once libraries_get_path('querypath', FALSE) . '/src/qp.php';
     $this->qp = htmlqp($this->html, NULL, $qp_options);
   }
 
@@ -230,7 +229,7 @@ class WetKitMigrationHtmlPage {
   }
 
   /**
-   * Return the language of the imported pageÃ©
+   * Return the language of the imported page
    * @return string 
    */
   protected function getPageLanguage() {
