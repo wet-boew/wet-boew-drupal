@@ -152,6 +152,18 @@ function wetkit_widgets_theme($existing, $type, $theme, $path) {
       'template'  => 'templates/fieldable_panels_pane/wetkit-widgets-fieldable-panels-pane',
       'path' => drupal_get_path('module', 'wetkit_widgets'),
     ),
+    'wetkit_widgets_file_video' => array(
+      'variables' => array(
+        'files' => array(),
+        'controls' => TRUE,
+        'autoplay' => FALSE,
+        'loop' => FALSE,
+        'muted' => FALSE,
+        'width' => NULL,
+        'height' => NULL,
+      ),
+      'file' => 'wetkit_widgets.theme.inc',
+    ),
     'wetkit_tab_interface_view' => array(
       'variables' => array(
         'items' => NULL,
@@ -160,4 +172,29 @@ function wetkit_widgets_theme($existing, $type, $theme, $path) {
       ),
     ),
   );
+}
+
+/**
+ * Implements hook_file_default_types().
+ */
+
+function wetkit_widgets_file_default_types() {
+  $types = array();
+
+  // WetKit Video
+  $types['wetkit_video'] = (object) array(
+    'api_version' => 1,
+    'type' => 'wetkit_video',
+    'label' => t('WetKit Video'),
+    'description' => t('A <em>WetKit Video</em> file is a moving visual recording using the WET video player.'),
+    'mimetypes' => array(
+      'video/mp4',
+      'video/ogg',
+    ),
+    'streams' => array(
+      'public',
+    ),
+  );
+
+  return $types;
 }

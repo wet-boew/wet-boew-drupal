@@ -12,11 +12,15 @@ function wetkit_widgets_ctools_plugin_api() {
   if ($module == "file_entity" && $api == "file_default_displays") {
     return array("version" => "1");
   }
+  list($module, $api) = func_get_args();
+  if ($module == "file_entity" && $api == "file_type") {
+    return array("version" => "1");
+  }
 }
 
 /**
  * Implements hook_views_api().
  */
 function wetkit_widgets_views_api() {
-  return array("version" => "3.0");
+  return array("api" => "3.0");
 }

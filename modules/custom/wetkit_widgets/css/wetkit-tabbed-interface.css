@@ -63,3 +63,4 @@
 @media only screen and (max-width: 959px) { .tabs-style-7 { width: 768px; }
   .tabs-style-7 img, .tabs-style-7 .tabs-panel { width: 538px; height: auto; margin-top: -10px; background: #111; }
   .tabs-style-7 .tabs-content-pad { width: 523px; } }
+.progress { font-weight: normal; }
