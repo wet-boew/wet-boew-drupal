@@ -115,6 +115,22 @@ function wetkit_widgets_field_instance_settings_form($field, $instance) {
  */
 function wetkit_widgets_field_formatter_info() {
   return array(
+    'file_wetkit_video' => array(
+      'label' => t('WetKit Video'),
+      'description' => t('Render the file using an HTML5 video tag'),
+      'field types' => array('file'),
+      'settings' => array(
+        'controls' => TRUE,
+        'autoplay' => FALSE,
+        'loop' => FALSE,
+        'muted' => FALSE,
+        'size' => array(
+          'width' => NULL,
+          'height' => NULL,
+        ),
+        'multiple_file_behaviour' => 'sources',
+      ),
+    ),
     'wetkit_tabbed_interface_default' => array(
       'label' => t('Default'),
       'field types' => array('wetkit_tabbed_interface'),
@@ -142,6 +158,58 @@ function wetkit_widgets_field_formatter_settings_form($field, $instance, $view_m
       '#required' => TRUE,
     );
   }
+  else if ($display['type'] == 'file_wetkit_video') {
+    $element['controls'] = array(
+      '#title' => t('Show video controls'),
+      '#type' => 'checkbox',
+      '#default_value' => isset($settings['controls']) ? $settings['controls'] : TRUE,
+    );
+    $element['autoplay'] = array(
+      '#title' => t('Autoplay'),
+      '#type' => 'checkbox',
+      '#default_value' => isset($settings['autoplay']) ? $settings['autoplay'] : FALSE,
+    );
+    $element['loop'] = array(
+      '#title' => t('Loop'),
+      '#type' => 'checkbox',
+      '#default_value' => isset($settings['loop']) ? $settings['loop'] : FALSE,
+    );
+    $element['size'] = array(
+      '#type' => 'item',
+      '#title' => t('Size'),
+      '#field_prefix' => '<div class="container-inline">',
+      '#field_suffix' => '</div>',
+      '#description' => t('The size expressed as WIDTHxHEIGHT (e.g. 640x480). Leave blank to use the video file to determine the size of the player.'),
+    );
+    $element['size']['width'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Width'),
+      '#title_display' => 'invisible',
+      '#default_value' => isset($settings['size']['width']) ? $settings['size']['width'] : NULL,
+      '#size' => 5,
+      '#maxlength' => 5,
+      '#field_suffix' => ' x ',
+    );
+    $element['size']['height'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Height'),
+      '#title_display' => 'invisible',
+      '#default_value' => isset($settings['size']['height']) ? $settings['size']['height'] : NULL,
+      '#size' => 5,
+      '#maxlength' => 5,
+      '#field_suffix' => ' ' . t('pixels'),
+    );
+    $element['multiple_file_behaviour'] = array(
+      '#title' => t('Display of multiple files'),
+      '#type' => 'radios',
+      '#options' => array(
+        'sources' => t('Use multiple sources within a single <video> tag'),
+        'tags' => t('Use multiple <video> tags, each with a single source'),
+      ),
+      '#default_value' => isset($settings['multiple_file_behaviour']) ? $settings['multiple_file_behaviour'] : 'sources',
+    );
+
+  }
 
   return $element;
 }
@@ -152,8 +220,34 @@ function wetkit_widgets_field_formatter_settings_form($field, $instance, $view_m
 function wetkit_widgets_field_formatter_settings_summary($field, $instance, $view_mode) {
   $display = $instance['display'][$view_mode];
   $settings = $display['settings'];
+  $summary = NULL;
   
-  $summary = t('Image Style: @style', array('@style' => $settings['image_style']));
+  if ($display['type'] === 'file_wetkit_video') {
+    $summary_items = array();
+    if (isset($settings['multiple_file_behaviour'])) {
+      $summary_items[] = t('Multiple files: %multiple', array('%multiple' => $settings['multiple_file_behaviour']));
+    }
+    if (isset($settings['controls'])) {
+      $summary_items[] = t('Controls: %controls', array('%controls' => $settings['controls'] ? 'visible' : 'hidden'));
+    }
+    if (isset($settings['autoplay'])) {
+      $summary_items[] = t('Autoplay: %autoplay', array('%autoplay' => $settings['autoplay'] ? t('yes') : t('no')));
+    }
+    if (isset($settings['loop'])) {
+      $summary_items[] = t('Loop: %loop', array('%loop' => $settings['loop'] ? t('yes') : t('no')));
+    }
+    if (isset($settings['muted'])) {
+      $summary_items[] = t('Muted: %muted', array('%muted' => $settings['muted'] ? t('yes') : t('no')));
+    }
+    if ($settings['size']['width'] && $settings['size']['height']) {
+      $summary_items[] = t('Size: %width x %height', array('%width' => $settings['size']['width'], '%height' => $settings['size']['height']));
+    }
+    $summary = implode('<br />', $summary_items);
+  }
+  else {
+    $summary = t('Image Style: @style', array('@style' => $settings['image_style']));
+  }
+
   return $summary;
 }
 
@@ -164,15 +258,57 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
   $element = array();
   $settings = $display['settings'];
   $formatter = $display['type'];
-  drupal_add_library('system', 'ui.tabs');
+  
+  if ($display['type'] == 'file_wetkit_video') {
+    $multiple_file_behaviour = isset($settings['multiple_file_behaviour']) ? $settings['multiple_file_behaviour'] : 'sources';
 
-  // Assemble the tabs content
-  foreach ($items as $delta => $item_data) {
-    $element[$delta]['#markup'] = ($delta == 0) ? theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings)) : theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings));
-    $element[$delta]['title'] = ($delta == 0) ? $item_data['title'] : $item_data['title'];
-          //if panel style is applied
-      $element[$delta]['tabbed_true'] = 'true';
+    // Prevent 'empty' fields from causing a WSOD.
+    $items = array_filter($items);
+
+    // Build an array of sources for each <video> element.
+    $source_lists = array();
+    if ($multiple_file_behaviour == 'tags') {
+      foreach ($items as $delta => $item) {
+        if ($item['type'] == 'wetkit_video') {
+          $source_lists[] = array($item);
+        }
+      }
+    }
+    else {
+      foreach ($items as $delta => $item) {
+        if ($item['type'] == 'wetkit_video') {
+          $source_lists[0][] = $item;
+        }
+      }
+    }
+
+    // render each source list as an <video> element
+    foreach ($source_lists as $delta => $sources) {
+      $width = isset($settings['size']['width']) ? $settings['size']['width'] : NULL;
+      $height = isset($settings['size']['height']) ? $settings['size']['height'] : NULL;
+      $element[$delta] = array(
+        '#theme' => 'wetkit_widgets_file_video',
+        '#files' => $sources,
+        '#controls' => isset($settings['controls']) ? $settings['controls'] : TRUE,
+        '#autoplay' => isset($settings['autoplay']) ? $settings['autoplay'] : FALSE,
+        '#loop' => isset($settings['loop']) ? $settings['loop'] : FALSE,
+        '#muted' => isset($settings['muted']) ? $settings['muted'] : FALSE,
+        '#width' => ($width && $height) ? $width : NULL,
+        '#height' => ($width && $height) ? $height : NULL,
+      );
+    }
   }
+  else {
+    drupal_add_library('system', 'ui.tabs');
+    // Assemble the tabs content
+    foreach ($items as $delta => $item_data) {
+      $element[$delta]['#markup'] = ($delta == 0) ? theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings)) : theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings));
+      $element[$delta]['title'] = ($delta == 0) ? $item_data['title'] : $item_data['title'];
+            //if panel style is applied
+        $element[$delta]['tabbed_true'] = 'true';
+    }
+  }
+  
   return $element;
 }
 
