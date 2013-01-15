@@ -20,7 +20,7 @@ function wetkit_wysiwyg_filter_default_formats() {
     'filters' => array(
       'image_resize_filter' => array(
         'weight' => '-50',
-        'status' => '1',
+        'status' => '0',
         'settings' => array(
           'link' => 0,
           'link_class' => '',
@@ -385,7 +385,7 @@ wbr[class|dir<ltr?rtl|id|lang|style|title]',
     'filters' => array(
       'image_resize_filter' => array(
         'weight' => '-50',
-        'status' => '1',
+        'status' => '0',
         'settings' => array(
           'link' => 0,
           'link_class' => '',

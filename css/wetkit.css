@@ -9,3 +9,13 @@
 
 /* Global Fixes */
 .krumo-footnote img { width: auto !important; }
+
+/* Media Browser */
+body.page-media-browser { min-width: auto; }
+
+.media-list-thumbnails li a { width: 100px; height: 100px; }
+.media-list-thumbnails .media-item { height: 100px; }
+.media-list-thumbnails .media-item img { width: auto; max-width: 90px; max-height: 90px; }
+.media-list-thumbnails .media-item .label-wrapper label { white-space: normal; word-wrap: break-word; line-height: 0; }
+
+.media-display-thumbnails .media-list-thumbnails .form-type-checkbox { bottom: 25px; left: 8px; width: 10px; border: none; }
