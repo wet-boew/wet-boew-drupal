@@ -72,9 +72,9 @@ projects[metatag][version] = 1.x-dev
 projects[metatag][subdir] = contrib
 projects[metatag][type] = module
 projects[metatag][download][type] = git
-projects[metatag][download][revision] = b4e4922
+projects[metatag][download][revision] = 4153fdc
 projects[metatag][download][branch] = 7.x-1.x
-projects[metatag][patch][1845326] = http://drupal.org/files/metatag-n1845326-59.patch
+projects[metatag][patch][1845326] = http://drupal.org/files/metatag-n1845326-65.patch
 
 projects[path_breadcrumbs][version] = 3.x-dev
 projects[path_breadcrumbs][subdir] = contrib
@@ -147,5 +147,5 @@ libraries[querypath][download][url] = https://github.com/technosophos/querypath.
 
 libraries[wet-boew][download][type] = git
 libraries[wet-boew][download][branch] = gh-pages
-libraries[wet-boew][download][revision] = 570555b
+libraries[wet-boew][download][revision] = 5a690c3
 libraries[wet-boew][download][url] = https://github.com/wet-boew/wet-boew.git
