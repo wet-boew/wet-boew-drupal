@@ -62,7 +62,10 @@ class LinksParser {
 
           // <a> tags
           if ($selector == 'a') {
-            $items = $this->qp->top()->find($selector)->each(function ($index, $item) use ($base, $dirname) {
+            
+            $items = $this->qp->top()->find($selector);
+            foreach ($items->get() as $item) {
+            //$items = $this->qp->top()->find($selector)->each(function ($index, $item) use ($base, $dirname) {
               // $item is an instance of the DOMElement class
               // examine the URL
               $tag_url = $item->getAttribute('href');
@@ -71,10 +74,7 @@ class LinksParser {
               // EXTERNAL LINKS
               // external links have :// in them
               if (strpos($tag_url, "://") !== FALSE) {
-                // external links don't have wet-boew.github.com in them
-                if (strpos($tag_url, "wet-boew.github.com") === FALSE) {
                   $isExternal = TRUE;
-                }
               } 
               // mailto: links are "external"
               elseif (strpos($tag_url, "mailto:") === 0) {
@@ -102,12 +102,16 @@ class LinksParser {
                   $item->setAttribute('href', $new_href);
                 }
               }         
-            });
+            //});
+            }
           }
 
           // <img> tags
           if ($selector == 'img') {
-            $items = $this->qp->top()->find($selector)->each(function ($index, $item) use ($base, $dirname) {
+
+            $items = $this->qp->top()->find($selector);
+            foreach ($items->get() as $item) {
+            //$items = $this->qp->top()->find($selector)->each(function ($index, $item) use ($base, $dirname) {
                 $tag_url = $item->getAttribute('src');
                 $isExternal = FALSE;
 
@@ -149,7 +153,8 @@ class LinksParser {
                     }
                   }
                 }
-            });
+            //});
+            }
           }
           $new_html = $this->qp->top('body')->innerHTML();
         }
