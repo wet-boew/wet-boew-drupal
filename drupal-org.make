@@ -12,7 +12,6 @@ projects[panopoly_core][subdir] = panopoly
 projects[panopoly_core][download][type] = git
 projects[panopoly_core][download][revision] = acbb2bb
 projects[panopoly_core][download][branch] = 7.x-1.x
-projects[panopoly_core][patch][1842818] = http://drupal.org/files/update_fpp_translation-1842818-09.patch
 projects[panopoly_core][patch][e697565] = https://gist.github.com/raw/4263428/17764bdeb4428317ca7e1ae58a3d2e77defa2145/panopoly-18n_ctools-context_panels.patch
 projects[panopoly_core][patch][d118f90] = https://gist.github.com/raw/4444971/d118f90fdb352234bd94817d94c03880414b9727/panopoly-default_content.patch
 
@@ -50,7 +49,7 @@ projects[panopoly_admin][download][branch] = 7.x-1.x
 projects[panopoly_users][version] = 1.x-dev
 projects[panopoly_users][subdir] = panopoly
 projects[panopoly_users][download][type] = git
-projects[panopoly_users][download][revision] = 4943fb1
+projects[panopoly_users][download][revision] = 25642d7
 projects[panopoly_users][download][branch] = 7.x-1.x
 
 ; WetKit Foundation
