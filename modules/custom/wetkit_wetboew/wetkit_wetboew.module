@@ -20,6 +20,7 @@ function wetkit_wetboew_theme_registry_alter(&$theme_registry) {
   global $theme;
   global $base_theme_info;
   $internal_render = variable_get('path_breadcrumbs_internal_render', 1);
+  $wetkit_base_theme = FALSE;
 
   foreach ($base_theme_info as $base) {
     if (!empty($base->name)) {
@@ -29,7 +30,6 @@ function wetkit_wetboew_theme_registry_alter(&$theme_registry) {
     }
   }
 
-  $wetkit_base_theme = FALSE;
   if ($internal_render && (($theme == 'wetkit_adaptivetheme') || ($wetkit_base_theme == TRUE))) {
     $theme_registry['breadcrumb']['theme path'] = drupal_get_path('module', 'wetkit_wetboew');
     $theme_registry['breadcrumb']['file'] = drupal_get_path('module', 'wetkit_wetboew') . '/theme/theme.inc';
