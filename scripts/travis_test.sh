@@ -1,6 +1,10 @@
 #!/bin/sh
 # Travis Testing Script for CI Testing
 
+# Drush SI Drupal
+drush si wetkit wetkit_wetboew_selection_form.theme=wetkit_adaptivetheme --sites-subdir=default --db-url=mysql://root:@127.0.0.1/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name="Web Experience Toolkit" --yes
+drush cc all --yes
+
 # Run Headless Testing Server
 export PHANTOMJS_EXECUTABLE='phantomjs --local-to-remote-url-access=yes --ignore-ssl-errors=yes'
 export DISPLAY=:99.0
@@ -19,5 +23,5 @@ DISPLAY=:99.0 ./casperjs/bin/casperjs test drupal_wet/profiles/wetkit/tests/casp
 
 # Install + Run Selenium Testing Suite
 wget http://selenium.googlecode.com/files/selenium-server-standalone-2.15.0.jar
-java -jar selenium-server-standalone-2.15.0.jar -htmlSuite "*firefox" "http://127.0.0.1:8080" "drupal_wet/profiles/wetkit/tests/selenium/WetKitTestSuite.html" "drupal_wet/profiles/wetkit/tests/selenium/Result.html"
+java -jar selenium-server-standalone-2.15.0.jar -htmlSuite "*chrome" "http://127.0.0.1:8080" "drupal_wet/profiles/wetkit/tests/selenium/WetKitTestSuite.html" "drupal_wet/profiles/wetkit/tests/selenium/Result.html"
 

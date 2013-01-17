@@ -41,27 +41,7 @@ function wetkit_widgets_ctools_plugin_directory($module, $plugin) {
  * Create default values on fieldable_panels_pane fields when appropriate. 
  */
 function wetkit_widgets_field_widget_form_alter(&$element, &$form_state, $context) {
-  // Determine if we should use demo content.
-  $use_default_content = variable_get('panopoly_widgets_enable_default_content', 1);
-  if (!empty($use_default_content) && empty($element['#default_value']) && $context['instance']['entity_type'] == 'fieldable_panels_pane') {
 
-    // Do a switch on field type and set #default_values. Also (conditionally) stuff $form_state values so previews work correctly.
-    switch($context['field']['type']) {
-      case 'wetkit_tabbed_interface':
-        $element['title']['#default_value'] = 'Tabbed Interface 1';
-        $element['link']['#default_value'] = 'http://drupal.org';
-        $element['description']['#default_value'] = 'Sample description content for the WetKit Tabbed Interface fieldable panel pane.';
-        
-        if (empty($form_state['values'][$context['field']['field_name']][$context['langcode']][0])) {
-          $form_state['values'][$context['field']['field_name']][$context['langcode']][0] = array(
-            'title' => $element['title']['#default_value'],
-            'link' => $element['link']['#default_value'],
-            'description' => $element['description']['#default_value'],
-          );
-        }
-        break;
-    }
-  }
 }
 
 /**
@@ -69,17 +49,6 @@ function wetkit_widgets_field_widget_form_alter(&$element, &$form_state, $contex
  */
 function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
 
-  if (variable_get('panopoly_widgets_enable_default_content', 1)) {
-    $clicked_button = empty($form_state['clicked_button']['#value']) ? '' : $form_state['clicked_button']['#value'];
-    if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form' && ($clicked_button == 'Update Preview' || ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id'])))) {
-
-      // Quick modification to get the spotlight to render correctly with preview content
-      if ($form_state['op'] == 'add' && empty($form_state['input']['form_build_id']) && !empty($form_state['field']['field_tabbed_interface'])) {
-        $form_state['values']['field_tabbed_interface']['und'][0]['fid'] = variable_get('wetkit_widgets_default_tabbed_interface_fid', NULL);
-        $form['field_tabbed_interface']['und'][0]['fid']['#default_value'] = variable_get('wetkit_widgets_default_tabbed_interface_fid', NULL);
-      }
-    }
-  }
 }
 
 /**
