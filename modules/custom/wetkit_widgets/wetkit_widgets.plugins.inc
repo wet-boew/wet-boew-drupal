@@ -244,7 +244,7 @@ function wetkit_widgets_field_formatter_settings_summary($field, $instance, $vie
     }
     $summary = implode('<br />', $summary_items);
   }
-  else {
+  else if ($display['type'] == 'wetkit_tabbed_interface_default') {
     $summary = t('Image Style: @style', array('@style' => $settings['image_style']));
   }
 
@@ -298,7 +298,7 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
       );
     }
   }
-  else {
+  else if ($display['type'] == 'wetkit_tabbed_interface_default') {
     drupal_add_library('system', 'ui.tabs');
     // Assemble the tabs content
     foreach ($items as $delta => $item_data) {
