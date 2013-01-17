@@ -17,9 +17,20 @@ include_once('theme/theme.inc');
  *   Drupal theme registry that could be changed.
  */
 function wetkit_wetboew_theme_registry_alter(&$theme_registry) {
-  $internal_render = variable_get('path_breadcrumbs_internal_render', 1);
   global $theme;
-  if ($internal_render && ($theme == 'wetkit_adaptivetheme')) {
+  global $base_theme_info;
+  $internal_render = variable_get('path_breadcrumbs_internal_render', 1);
+
+  foreach ($base_theme_info as $base) {
+    if (!empty($base->name)) {
+      if ($base->name == 'wetkit_adaptivetheme') {
+        $wetkit_base_theme = TRUE;
+      }
+    }
+  }
+
+  $wetkit_base_theme = FALSE;
+  if ($internal_render && (($theme == 'wetkit_adaptivetheme') || ($wetkit_base_theme == TRUE))) {
     $theme_registry['breadcrumb']['theme path'] = drupal_get_path('module', 'wetkit_wetboew');
     $theme_registry['breadcrumb']['file'] = drupal_get_path('module', 'wetkit_wetboew') . '/theme/theme.inc';
     $theme_registry['breadcrumb']['function'] = 'wetkit_wetboew_breadcrumb';
@@ -341,8 +352,19 @@ function wetkit_wetboew_init() {
 
   //Only use WET-BOEW on Front End
   global $theme;
+  global $base_theme_info;
+  $wetkit_base_theme = FALSE;
   $themekey = 'theme-gcwu-fegc';
-  if ($theme == 'wetkit_adaptivetheme') {
+  
+  foreach ($base_theme_info as $base) {
+    if (!empty($base->name)) {
+      if ($base->name == 'wetkit_adaptivetheme') {
+        $wetkit_base_theme = TRUE;
+      }
+    }
+  }
+
+  if (($theme == 'wetkit_adaptivetheme')  || ($wetkit_base_theme == TRUE)) {
     //Add WET-BOEW Intranet Library using Libraries API
     if (($library = libraries_detect('wet-boew', NULL, 'intranet')) && !empty($library['variants']['intranet']['installed'])) {
       // Do something with the library here.
