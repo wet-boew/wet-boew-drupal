@@ -41,12 +41,10 @@ function wetkit_wysiwyg_default_linkit_profiles() {
     'entity:file' => array(
       'result_description' => '',
       'bundles' => array(
-        'application' => 0,
-        'audio' => 0,
         'image' => 0,
-        'text' => 0,
         'video' => 0,
-        'default' => 0,
+        'audio' => 0,
+        'document' => 0,
       ),
       'group_by_bundle' => 0,
       'show_scheme' => 0,
