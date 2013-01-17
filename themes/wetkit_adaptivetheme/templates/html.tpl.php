@@ -67,10 +67,10 @@
     <div id="wb-skip">
       <ul id="wb-tphp">
         <?php if ($skip_link_text && $skip_link_content_anchor): ?>
-          <li id="wb-skip1"><a href="#<?php print $skip_link_content_anchor; ?>" class="element-invisible element-focusable"><?php print $skip_link_text; ?></a></li>
+          <li id="wb-skip1"><a href="#<?php print $skip_link_content_anchor; ?>"><?php print $skip_link_text; ?></a></li>
         <?php endif; ?>
         <?php if ($skip_link2_text && $skip_link_nav_anchor): ?>
-          <li id="wb-skip2"><a href="#<?php print $skip_link_nav_anchor; ?>" class="element-invisible element-focusable"><?php print $skip_link2_text; ?></a></li>
+          <li id="wb-skip2"><a href="#<?php print $skip_link_nav_anchor; ?>"><?php print $skip_link2_text; ?></a></li>
         <?php endif; ?>
       </ul>
     </div>
