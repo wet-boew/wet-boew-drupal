@@ -6,7 +6,7 @@ Drupal.settings.tabbed_interface_settings = Drupal.settings.tabbed_interface_set
    */
  Drupal.behaviors.wetkitTabbed_Interface = {
    attach: function (context, settings) {
-     if ($('.ipe_tabs_interface').length) {
+     if ($('.ipe_tabs_interface .tabs').length) {
       var loading_finished = 'wb-loaded';
       $(document).on(loading_finished, function () {
 
