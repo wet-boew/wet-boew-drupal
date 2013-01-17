@@ -1,6 +1,10 @@
 #!/bin/sh
 # Travis Testing Script for CI Testing
 
+# Drush SI Drupal
+drush si wetkit wetkit_wetboew_selection_form.theme=wetkit_adaptivetheme --sites-subdir=default --db-url=mysql://root:@127.0.0.1/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name="Web Experience Toolkit" --yes
+drush cc all --yes
+
 # Run Headless Testing Server
 export PHANTOMJS_EXECUTABLE='phantomjs --local-to-remote-url-access=yes --ignore-ssl-errors=yes'
 export DISPLAY=:99.0
