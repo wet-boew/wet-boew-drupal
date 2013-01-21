@@ -31,7 +31,7 @@ libraries[SolrPhpClient][download][url] = http://solr-php-client.googlecode.com/
 
 ; Tailor app for WetKit
 
-projects[custom_search][version] = 1.10
+projects[custom_search][version] = 1.11
 projects[custom_search][subdir] = contrib
 
 projects[search404][version] = 1.1

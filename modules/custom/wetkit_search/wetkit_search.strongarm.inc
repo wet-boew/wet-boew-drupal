@@ -217,10 +217,6 @@ function wetkit_search_strongarm() {
       'sort' => '-8',
       'region' => 'block',
     ),
-    'content_types' => array(
-      'sort' => '-5',
-      'region' => 'popup',
-    ),
   );
   $export['custom_search_blocks_1_order'] = $strongarm;
 
@@ -229,7 +225,7 @@ function wetkit_search_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'custom_search_blocks_1_other';
   $strongarm->value = array(
-    'ds_search' => 0,
+    'advanced_help' => 0,
     'user' => 0,
   );
   $export['custom_search_blocks_1_other'] = $strongarm;
@@ -238,8 +234,7 @@ function wetkit_search_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'custom_search_blocks_1_paths';
-  $strongarm->value = 'search/site/[key]|Search API
-search/node/[key]|Search Core';
+  $strongarm->value = '';
   $export['custom_search_blocks_1_paths'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -274,7 +269,7 @@ search/node/[key]|Search Core';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'custom_search_blocks_1_search_box_weight';
-  $strongarm->value = '-6';
+  $strongarm->value = '-8';
   $export['custom_search_blocks_1_search_box_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -295,7 +290,7 @@ search/node/[key]|Search Core';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'custom_search_blocks_1_submit_button_weight';
-  $strongarm->value = '-8';
+  $strongarm->value = '-6';
   $export['custom_search_blocks_1_submit_button_weight'] = $strongarm;
 
   $strongarm = new stdClass();
