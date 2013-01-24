@@ -47,6 +47,12 @@ function wetkit_adaptivetheme_form_system_theme_settings_alter(&$form, &$form_st
     '#default_value' => t('Skip to footer'),
     '#description'   => t('For example: <em>Jump to navigation</em>, <em>Skip to content</em>'),
   );
+  $form['at-settings']['accessibility']['alternate_site_url'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Alternate Site URL'),
+    '#default_value' => at_get_setting('alternate_site_url'),
+    '#description'   => t('Alternate Site URL to be used with Site Name'),
+  );
   $form['at-settings']['intranet'] = array(
     '#type'          => 'fieldset',
     '#title'         => t('Intranet Settings'),

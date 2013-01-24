@@ -183,6 +183,13 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
     $is_multilingual = 1;
   }
 
+  // Assign an alternate Site URL
+  $alternate_site_url = at_get_setting('alternate_site_url');
+  if (!empty($alternate_site_url)) {
+    $variables['site_name_title'] = variable_get('site_name', 'Drupal');
+    $variables['site_name'] = l($variables['site_name_title'], $alternate_site_url, array('attributes' => array('title' => t('Home page'))));
+  }
+
   // Set Sub Site Name
   $variables['wetkit_sub_site'] = at_get_setting('wetkit_sub_site');
 
