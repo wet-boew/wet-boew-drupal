@@ -11,6 +11,23 @@ include_once('views/wetkit_wetboew.admin_content_view.inc');
 include_once('theme/theme.inc');
 
 /**
+ * Implements hook_menu_edit_item_alter().
+ */
+function wetkit_wetboew_form_menu_edit_item_alter(&$form, &$form_state) {
+  // Some menu items have a pre-defined path which cannot be modified hence no default_value
+  if (isset($form['link_path']['#default_value'])) {
+    $default_value = $form['link_path']['#default_value'];
+
+    if (preg_match('/^<nolink>\/[0-9]+$/', $default_value)) {
+      $default_value = '<nolink>';
+    }
+
+    $form['link_path']['#default_value'] = $default_value;
+    $form['link_path']['#description'] .=  ' ' . t('Enter "%nolink" to generate non-linkable item', array('%nolink' => '<nolink>'));
+  }
+}
+ 
+/**
  * Implements hook_theme_registry_alter().
  *
  * @param $theme_registry
@@ -42,6 +59,14 @@ function wetkit_wetboew_theme_registry_alter(&$theme_registry) {
  */
 function wetkit_wetboew_menu() {
 
+  // Add an dummy menu item
+  $items['<nolink>'] = array(
+    'page callback' => 'drupal_not_found',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+    
   // Add an administration section for WetKit settings
   $items['admin/panopoly/wetkit_settings'] = array(
     'title' => 'WetKit Settings',

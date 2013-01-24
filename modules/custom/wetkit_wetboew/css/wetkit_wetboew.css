@@ -24,7 +24,7 @@
 /* IPE Styles */
 .panels-ipe-newblock ul { margin: 0px; }
 
-.panels-ipe #l10n-client { bottom: 52px; }
+.panels-ipe #l10n-client { bottom: 52px; z-index: 999; }
 
 .overlay-open #l10n-client { bottom: 0px; }
 

@@ -65,6 +65,9 @@ projects[linkchecker][download][type] = git
 projects[linkchecker][download][revision] = a920eb0
 projects[linkchecker][download][branch] = 7.x-1.x
 
+projects[menu_attributes][version] = 1.0-rc2
+projects[menu_attributes][subdir] = contrib
+
 projects[menu_views][version] = 1.3
 projects[menu_views][subdir] = contrib
 
@@ -147,5 +150,5 @@ libraries[querypath][download][url] = https://github.com/technosophos/querypath.
 
 libraries[wet-boew][download][type] = git
 libraries[wet-boew][download][branch] = gh-pages
-libraries[wet-boew][download][revision] = cd2e050
+libraries[wet-boew][download][revision] = ac5c54e
 libraries[wet-boew][download][url] = https://github.com/sylus/wet-boew.git

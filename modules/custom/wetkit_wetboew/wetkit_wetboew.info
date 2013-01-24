@@ -19,6 +19,7 @@ dependencies[] = linkchecker
 dependencies[] = locale
 dependencies[] = menu
 dependencies[] = menu_block
+dependencies[] = menu_attributes
 dependencies[] = password_policy
 dependencies[] = path_breadcrumbs
 dependencies[] = path_breadcrumbs_i18n

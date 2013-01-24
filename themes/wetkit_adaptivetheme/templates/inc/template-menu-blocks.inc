@@ -110,28 +110,61 @@ function wetkit_adaptivetheme_menu_tree__menu_block__wetkit_menu_blocks_1($varia
 function wetkit_adaptivetheme_menu_link__menu_block__wetkit_menu_blocks_1($variables) {
   $element = $variables['element'];
   $sub_menu = '';
+
+  if (isset($element['#localized_options']['attributes'])) {
+    $tags = drupal_attributes($element['#localized_options']['attributes']);
+  }
+  else {
+    $tags = '';
+  }
+
   if ($element['#below']) {
     $sub_menu = drupal_render($element['#below']);
   }
   if ($element['#original_link']['depth'] == 1 && $element['#original_link']['has_children'] == 1) {
-      $output = '<h3>' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</h3>';
+      if (in_array($element['#href'], array('<nolink>'))) {
+        $output = '<h3>' . $element['#title'] . '</h3>';
+      }
+      else {
+        $output = '<h3>' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</h3>';
+      }
       $mb_main_link = '<div class="mb-main-link">' . l($element['#title'] . ' - ' . t('Main Page'), $element['#href'], $element['#localized_options']) . '</div>';
       return '<li><section>' . $output . '<div class="mb-sm">' . $sub_menu . '<div class="clear"></div>' . $mb_main_link . '</div>' . "</section></li>\n";
   }
   elseif ($element['#original_link']['depth'] == 1 && $element['#original_link']['has_children'] == 0) {
-    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    if (in_array($element['#href'], array('<nolink>'))) {
+      $output = $element['#title'];
+    }
+    else {
+      $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    }     
     return '<li><div>' . $output . "</div></li>\n";
   }
   elseif ($element['#original_link']['depth'] == 2 && $element['#original_link']['has_children'] == 1) {
-    $output = '<h4>' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</h4>';
+    if (in_array($element['#href'], array('<nolink>'))) {
+      $output = '<h4 data-role="list-divider"' . $tags . '><a href="#">' . $element['#title'] . '</a></h4>';
+    }
+    else {
+      $output = '<h4>' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</h4>';
+    }
     return '<div class="span-2"><section>' . $output . '<ul>' . $sub_menu . '</ul>' . "</section></div>\n";
   }
   elseif ($element['#original_link']['depth'] == 2 && $element['#original_link']['has_children'] == 0) {
-    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    if (in_array($element['#href'], array('<nolink>'))) {
+      $output = $element['#title'];
+    }
+    else {
+      $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    }    
     return '<div class="span-2"><ul><li>' . $output . "</li></ul></div>\n";
   }
   else {
-    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    if (in_array($element['#href'], array('<nolink>'))) {
+      $output = $element['#title'];
+    }
+    else {
+      $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    }      
     return '<li>' . $output . "</li>\n";
   }
 }
@@ -168,11 +201,21 @@ function wetkit_adaptivetheme_menu_link__menu_block__wetkit_menu_blocks_2($varia
     $sub_menu = drupal_render($element['#below']);
   }
   if ($element['#original_link']['depth'] == 1) {
-    $output = '<h4 class="' . $theme_prefix . '-col-head">' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</h4>';
+    if (in_array($element['#href'], array('<nolink>'))) {
+      $output = '<h4 class="' . $theme_prefix . '-col-head">' . $element['#title'] . '</h4>';
+    }
+    else {
+     $output = '<h4 class="' . $theme_prefix . '-col-head">' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</h4>';
+    }
     return '<section><div class="span-2">' . $output . '<ul>' . $sub_menu . '</ul>' . "</div></section>\n";
   }
   else {
-    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    if (in_array($element['#href'], array('<nolink>'))) {
+      $output = $element['#title'];
+    }
+    else {
+     $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    }
     return '<li>' . $output . $sub_menu . "</li>\n";
   }
 }

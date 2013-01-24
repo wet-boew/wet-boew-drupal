@@ -102,7 +102,7 @@
 }
 
 .panels-ipe {
-  #l10n-client { bottom: 52px; }
+  #l10n-client { bottom: 52px; z-index: 999; }
 }
 
 .overlay-open #l10n-client { bottom: 0px; }

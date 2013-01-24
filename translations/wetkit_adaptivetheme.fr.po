@@ -36,8 +36,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-12-03 22:48-0500\n"
-"PO-Revision-Date: 2012-12-03 22:48-0500\n"
+"POT-Creation-Date: 2013-01-23 17:46-0500\n"
+"PO-Revision-Date: 2013-01-23 17:46-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -79,7 +79,7 @@ msgstr ""
 
 #: theme-settings.php:47 templates/inc/template-preprocess.inc:65
 msgid "Skip to footer"
-msgstr ""
+msgstr "Aller au pied de page"
 
 #: theme-settings.php:52
 msgid "Intranet Settings"
@@ -163,7 +163,7 @@ msgstr "wetkit"
 
 #: custom_layouts/wetkit/wetkit.inc:31
 msgid "WetKit Subtheme Custom Page Layout"
-msgstr ""
+msgstr "Sous-thème WetKit Mise en page personnalisée"
 
 #: custom_panels/wetkit_one_100/wetkit_one_100.inc:9
 msgid "WetKit One column 100"
@@ -187,7 +187,7 @@ msgstr ""
 
 #: custom_panels/wetkit_three_25_50_25/wetkit-three-25-50-25.tpl.php:57 custom_panels/wetkit_two_33_66/wetkit-two-33-66.tpl.php:52
 msgid "Secondary Menu"
-msgstr ""
+msgstr "Menu secondaire"
 
 #: custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:9
 msgid "WetKit Three column 25/50/25 (Content)"
@@ -207,7 +207,7 @@ msgstr ""
 
 #: custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:20 custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc:19
 msgid "Sidebar"
-msgstr ""
+msgstr "Barre de navigation"
 
 #: custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:9
 msgid "WetKit Three column 40/40/20 (Front)"
@@ -243,23 +243,27 @@ msgstr "Page d'accueil"
 
 #: templates/node.tpl.php:133 templates/panes/panels-pane--node_updated--node_updated.tpl.php:47
 msgid "Date modified:"
-msgstr "Date de modification:"
+msgstr "Date de modification :"
 
 #: templates/page--base.tpl.php:112 templates/page--internet.tpl.php:139 templates/page--intranet.tpl.php:153 templates/page--panels--base.tpl.php:112 templates/page--panels--internet.tpl.php:139 templates/page--panels--intranet.tpl.php:143
 msgid "Search"
 msgstr "Rechercher"
 
-#: templates/page--base.tpl.php:124 templates/page--internet.tpl.php:93;151 templates/page--intranet.tpl.php:93;168 templates/page--panels--base.tpl.php:124 templates/page--panels--internet.tpl.php:93;151 templates/page--panels--intranet.tpl.php:93;158
-msgid "Site menu"
-msgstr ""
+#: templates/page--base.tpl.php:124 templates/page--internet.tpl.php:151 templates/page--intranet.tpl.php:168 templates/page--panels--base.tpl.php:124 templates/page--panels--internet.tpl.php:151 templates/page--panels--intranet.tpl.php:158
+msgid "<span>Site</span> Menu"
+msgstr "Menu du <span>Site</span>"
 
 #: templates/page--base.tpl.php:204 templates/page--internet.tpl.php:231 templates/page--intranet.tpl.php:248
 msgid "Skip to side navigation"
-msgstr ""
+msgstr "Aller à la barre de navigation"
 
 #: templates/page--base.tpl.php:222 templates/page--internet.tpl.php:249 templates/page--intranet.tpl.php:266 templates/page--panels--base.tpl.php:162 templates/page--panels--internet.tpl.php:189 templates/page--panels--intranet.tpl.php:196
 msgid "Site Footer"
-msgstr ""
+msgstr "Pied de page"
+
+#: templates/page--internet.tpl.php:93 templates/page--intranet.tpl.php:93 templates/page--panels--internet.tpl.php:93 templates/page--panels--intranet.tpl.php:93
+msgid "Site menu"
+msgstr "Menu du site"
 
 #: templates/page--internet.tpl.php:264 templates/page--panels--internet.tpl.php:204
 msgid "Government of Canada Footer"
@@ -267,11 +271,11 @@ msgstr ""
 
 #: templates/inc/template-breadcrumb.inc:68;72
 msgid "Breadcrumb trail"
-msgstr ""
+msgstr "Fil d'Ariane"
 
-#: templates/inc/template-menu-blocks.inc:118
+#: templates/inc/template-menu-blocks.inc:131
 msgid "Main Page"
-msgstr ""
+msgstr "Page principale"
 
 #: templates/misc/aggregator-feed-source.tpl.php:36
 msgid "URL:"
@@ -279,7 +283,7 @@ msgstr "URL :"
 
 #: templates/misc/aggregator-feed-source.tpl.php:38
 msgid "Updated:"
-msgstr "Mise à jour:"
+msgstr "Mis à jour :"
 
 #: templates/misc/aggregator-item.tpl.php:48
 msgid "Categories"
