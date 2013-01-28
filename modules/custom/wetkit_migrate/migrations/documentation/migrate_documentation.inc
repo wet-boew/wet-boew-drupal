@@ -8,7 +8,10 @@
  * Migration class for the WET-BOEW documentation on the Web Experience Toolkit website. 
  */
 class WetKit_Migrate_Documentation extends WetKitMigration {
-  
+
+  /**
+   * Implements the migration constructor
+   */
   public function __construct() {
     parent::__construct();
     
@@ -34,7 +37,8 @@ class WetKit_Migrate_Documentation extends WetKitMigration {
 
   /**
    * Process the file prior to the actual migration
-   * @param array $row 
+   *
+   * @param array $row
    */
   public function prepareRow($row) {
     
@@ -60,7 +64,7 @@ class WetKit_Migrate_Documentation extends WetKitMigration {
     
     // Set the vocabulary reference
     //$row->wetkit_term = 'Documentation';
-    
+
     // Process all of the internal links
     // Coder Review says to use drupal_substr but this is faster
     if (substr($row->dirname, 0, 6) == 'demos/') {
@@ -75,8 +79,9 @@ class WetKit_Migrate_Documentation extends WetKitMigration {
   
   /**
    * Call this function after the node has been created
+   *
    * @param object $node
-   * @param array $current_row 
+   * @param array $current_row
    */
   public function complete($node, $current_row) {
     parent::complete($node, $current_row);
