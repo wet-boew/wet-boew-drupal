@@ -1,14 +1,10 @@
 <?php
 /**
  * @file
- * Code for the WetKit MetaTags Dublin Core (HTML5) feature.
+ * Metatag integration for the wetkit_metatag module.
  */
 
 include_once 'wetkit_metatag.features.inc';
-/**
- * @file
- * Metatag integration for the wetkit_metatag module.
- */
 
 /**
  * Implements hook_apps_app_info().
@@ -24,14 +20,14 @@ function wetkit_metatag_apps_app_info() {
  */
 function wetkit_metatag_configure_form($form, &$form_state) {
   $form = array();
-  
-  $form['wetkit_metatag'] = array (
+
+  $form['wetkit_metatag'] = array(
     '#title' => 'Metatag Settings',
     '#type'  => 'fieldset',
     '#collapsible' => 'true',
     '#collapsed'   => 'true',
   );
-  
+
   $form['wetkit_metatag']['wetkit_metatag_creator'] = array(
     '#title' => t('Metatags for Creator'),
     '#type' => t('textfield'),
