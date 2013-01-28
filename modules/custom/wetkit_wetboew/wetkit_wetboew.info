@@ -35,7 +35,6 @@ dependencies[] = views_content
 dependencies[] = wetkit_box
 dependencies[] = wetkit_metatag
 dependencies[] = wetkit_pages
-scripts[] = wetkit-wetboew.js
 features[box][] = connected_box
 features[box][] = minister_box
 features[box][] = priorities_box

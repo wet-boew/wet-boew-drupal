@@ -26,7 +26,7 @@ function wetkit_wetboew_form_menu_edit_item_alter(&$form, &$form_state) {
     $form['link_path']['#description'] .=  ' ' . t('Enter "%nolink" to generate non-linkable item', array('%nolink' => '<nolink>'));
   }
 }
- 
+
 /**
  * Implements hook_theme_registry_alter().
  *
@@ -66,7 +66,6 @@ function wetkit_wetboew_menu() {
     'type' => MENU_CALLBACK,
   );
 
-    
   // Add an administration section for WetKit settings
   $items['admin/panopoly/wetkit_settings'] = array(
     'title' => 'WetKit Settings',
@@ -137,14 +136,12 @@ function wetkit_wetboew_form_alter(&$form, &$form_state, $form_id) {
   // Move the featured field into publishing options
   if (!empty($form['field_featured_status'])) {
     $form['options']['field_featured_status'] = $form['field_featured_status'];
-    //unset($form['field_featured_status']);
     //TODO: Upstream this fix to Panopoly
     $form['field_featured_status'] = array('#language' => NULL);
   }
 
   if (!empty($form['field_archived_content'])) {
     $form['options']['field_archived_content'] = $form['field_archived_content'];
-    //unset($form['field_archived_content']);
     //TODO: Upstream this fix to Panopoly
     $form['field_archived_content'] = array('#language' => NULL);
   }
@@ -153,18 +150,17 @@ function wetkit_wetboew_form_alter(&$form, &$form_state, $form_id) {
   if (!empty($form['field_share_widget'])) {
     $form['options']['field_share_widget'] = $form['field_share_widget'];
     $form['options']['field_share_widget']['#weight'] = '0';
-    //unset($form['field_featured_status']);
     //TODO: Upstream this fix to Panopoly
     $form['field_share_widget'] = array('#language' => NULL);
   }
-  
+
   // Create the General Settings Fieldset
   if ($form_id == 'ctools_block_content_type_edit_form') {
     // Create General Settings Fieldset
     $form['general_settings'] = array(
-      '#type' => 'fieldset', 
-      '#title' => t('General Settings'), 
-      '#collapsible' => FALSE, 
+      '#type' => 'fieldset',
+      '#title' => t('General Settings'),
+      '#collapsible' => FALSE,
       '#collapsed' => FALSE,
     );
     $form['general_settings']['override_title'] = $form['override_title'];
@@ -346,7 +342,7 @@ function wetkit_wetboew_filter_xss($string, $allowed_tags = array('a', 'em', 'st
 }
 
 /**
- * Implements of hook_ctools_plugin_directory().
+ * Implements hook_ctools_plugin_directory().
  *
  * @param type $module
  *   The system name of the module owning the plugin type.
@@ -380,7 +376,7 @@ function wetkit_wetboew_init() {
   global $base_theme_info;
   $wetkit_base_theme = FALSE;
   $themekey = 'theme-gcwu-fegc';
-  
+
   foreach ($base_theme_info as $base) {
     if (!empty($base->name)) {
       if ($base->name == 'wetkit_adaptivetheme') {
@@ -391,19 +387,22 @@ function wetkit_wetboew_init() {
 
   if (($theme == 'wetkit_adaptivetheme')  || ($wetkit_base_theme == TRUE)) {
     //Add WET-BOEW Intranet Library using Libraries API
-    if (($library = libraries_detect('wet-boew', NULL, 'intranet')) && !empty($library['variants']['intranet']['installed'])) {
+    $library = libraries_detect('wet-boew', NULL, 'intranet');
+    if ((isset($library)) && !empty($library['variants']['intranet']['installed'])) {
       // Do something with the library here.
       libraries_load('wet-boew', 'intranet');
       $themekey = 'theme-gcwu-intranet';
     }
     //Add WET-BOEW Base Theme Library using Libraries API
-    if (($library = libraries_detect('wet-boew', NULL, 'base_theme')) && !empty($library['variants']['base_theme']['installed'])) {
+    $library = libraries_detect('wet-boew', NULL, 'base_theme');
+    if ((isset($library)) && !empty($library['variants']['base_theme']['installed'])) {
       // Do something with the library here.
       libraries_load('wet-boew', 'base_theme');
       $themekey = 'theme-base';
     }
     //Add WET-BOEW Default (Minified) Library using Libraries API
-    elseif (($library = libraries_detect('wet-boew')) && !empty($library['installed'])) {
+    $library = libraries_detect('wet-boew');
+    if ((isset($library)) && !empty($library['installed'])) {
       // Do something with the library here.
       libraries_load('wet-boew');
       $themekey = 'theme-gcwu-fegc';
@@ -549,56 +548,4 @@ function wetkit_wetboew_menu_block_blocks() {
       'sort'        => 0,
     ),
   );
-}
-
-/**
- * Menu callback: Provide the administration overview page.
- * Adapted from system_admin_config_page()
- *
- * @return type
- *   Returns the configure page
- */
-function wetkit_wetboew_config_page() {
-
-  // Check for status report errors.
-  if (system_status(TRUE) && user_access('administer site configuration')) {
-    drupal_set_message(t('One or more problems were detected with your Drupal installation. Check the <a href="@status">status report</a> for more information.', array('@status' => url('admin/reports/status'))), 'error');
-  }
-  $blocks = array();
-  if ($admin = db_query("SELECT menu_name, mlid FROM {menu_links} WHERE link_path = 'admin/wetkit' AND module = 'system'")->fetchAssoc()) {
-    $result = db_query("
-      SELECT m.*, ml.*
-      FROM {menu_links} ml
-      INNER JOIN {menu_router} m ON ml.router_path = m.path
-      WHERE ml.link_path <> 'admin/help' AND menu_name = :menu_name AND ml.plid = :mlid AND hidden = 0", $admin, array('fetch' => PDO::FETCH_ASSOC));
-    foreach ($result as $item) {
-      _menu_link_translate($item);
-      if (!$item['access']) {
-        continue;
-      }
-      // The link description, either derived from 'description' in hook_menu()
-      // or customized via menu module is used as title attribute.
-      if (!empty($item['localized_options']['attributes']['title'])) {
-        $item['description'] = $item['localized_options']['attributes']['title'];
-        unset($item['localized_options']['attributes']['title']);
-      }
-      $block = $item;
-      $block['content'] = '';
-      $block['content'] .= theme('admin_block_content', array('content' => system_admin_menu_block($item)));
-      if (!empty($block['content'])) {
-        $block['show'] = TRUE;
-      }
-
-      // Prepare for sorting as in function _menu_tree_check_access().
-      // The weight is offset so it is always positive, with a uniform 5-digits.
-      $blocks[(50000 + $item['weight']) . ' ' . $item['title'] . ' ' . $item['mlid']] = $block;
-    }
-  }
-  if ($blocks) {
-    ksort($blocks);
-    return theme('admin_page', array('blocks' => $blocks));
-  }
-  else {
-    return t('You do not have any administrative items.');
-  }
 }

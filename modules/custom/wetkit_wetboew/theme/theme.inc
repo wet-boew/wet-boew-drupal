@@ -124,7 +124,6 @@ function wetkit_wetboew_breadcrumb($variables) {
       $breadcrumbs[$key] = '<' . $elem_tag . ' class="' . implode(' ', $classes) . '" ' . $elem_property . '>' . $new_breadcrumb . '</' . $elem_tag . '>';
     }
 
-    //$delimiter = variable_get('path_breadcrumbs_delimiter', '»');
     $delimiter = '';
     $output .= '<div id="gcwu-bc-in"' . $root_property . '>' . '<ol>' . implode(' ' . trim($delimiter) . ' ', $breadcrumbs) . '</ol></div></div>';
     return $output;

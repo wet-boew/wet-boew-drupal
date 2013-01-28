@@ -8,51 +8,11 @@
  * Implements hook_install().
  */
 function wetkit_wetboew_install() {
-  //if (module_exists('password_policy')) {
-    //Set Default Password Policy
-  //  wetkit_defaults_create_password_policy();
-  //}
   if (module_exists('block')) {
     //Set Default Blocks
     _wetkit_wetboew_default_blocks();
   }
   _menu_wetkit_load();
-}
-
-/**
- * Installs the default password policy for all user roles
- */
-function wetkit_defaults_create_password_policy() {
-  $policy = array(
-    'complexity' => 3,
-    'lowercase' => 1,
-    'uppercase' => 1,
-    'history' => 'all',
-    'length' => 8,
-    'username' => 1,
-  );
-  db_insert('password_policy')
-    ->fields(array(
-      'name' => 'WetKit Security Policy',
-      'enabled' => 1,
-      'policy' => serialize($policy),
-      'expiration' => 90,
-      'warning' => 10,
-      'weight' => 0,
-      )
-    )
-    ->execute();
-  // Can't be sure the user roles have installed yet, so we can't grab from the db.
-  $roles = array("2", "3");
-  foreach ($roles as $id) {
-    db_insert('password_policy_role')
-      ->fields(array(
-        'pid' => 1,
-        'rid' => $id,
-      )
-    )
-    ->execute();
-  }
 }
 
 /**
