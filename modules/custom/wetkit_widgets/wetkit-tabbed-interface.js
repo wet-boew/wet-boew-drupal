@@ -1,3 +1,8 @@
+/**
+ * @file
+ * Attaches the behaviors for the WetKit Widgets module.
+ */
+
 Drupal.settings.tabbed_interface_settings = Drupal.settings.tabbed_interface_settings || {};
 
 (function ($) {
