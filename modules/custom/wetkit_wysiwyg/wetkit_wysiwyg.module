@@ -92,7 +92,7 @@ function wetkit_wysiwyg_wysiwyg_plugin($editor) {
 
 
 /**
- * Implements of hook_element_info_alter().
+ * Implements hook_element_info_alter().
  */
 function wetkit_wysiwyg_element_info_alter(&$type) {
   // Change text format processing on elements to our version.
@@ -180,7 +180,7 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
 
       // Schema is HTML5 instead of default HTML4
       $settings['schema'] = 'html5';
-      
+
       // Preserve whitespace such as tabs and spaces
       $settings['preformatted'] = TRUE;
 
