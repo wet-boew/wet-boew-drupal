@@ -13,6 +13,16 @@ include_once('theme/theme.inc');
 /**
  * Implements hook_menu_edit_item_alter().
  */
+function wetkit_wetboew_page_alter(&$page) {
+  // Hide Toolbar for those who can access the Admin Menu.
+  if (user_access('access administration menu') && !empty($page['page_top']['toolbar'])) {
+    $page['page_top']['toolbar']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_menu_edit_item_alter().
+ */
 function wetkit_wetboew_form_menu_edit_item_alter(&$form, &$form_state) {
   // Some menu items have a pre-defined path which cannot be modified hence no default_value
   if (isset($form['link_path']['#default_value'])) {
@@ -61,6 +71,13 @@ function wetkit_wetboew_menu() {
 
   // Add an dummy menu item
   $items['<nolink>'] = array(
+    'page callback' => 'drupal_not_found',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+  // Add an dummy menu item
+  $items['<noitem>'] = array(
     'page callback' => 'drupal_not_found',
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
