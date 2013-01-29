@@ -1,4 +1,7 @@
-/* This is the hackiest part of WetKit Rubik;
+/**
+ * @file
+ *
+ * This is the hackiest part of WetKit Rubik;
  * add classes via JS to facilitate theming some links which, inexplicably
  * don't have any meaningful classes.
  */
