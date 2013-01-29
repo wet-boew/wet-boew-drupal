@@ -142,9 +142,7 @@
               <div id="gcwu-srchbx">
                 <h2><?php print t('Search'); ?></h2>
                 <?php if ($search_box): ?>
-                  <div id="gcwu-srchbx-in">
-                    <?php print $search_box; ?>
-                  </div>
+                  <?php print $search_box; ?>
                 <?php endif; ?>
               </div>
             </section>

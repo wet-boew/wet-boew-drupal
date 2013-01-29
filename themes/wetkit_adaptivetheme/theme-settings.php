@@ -10,13 +10,40 @@
  * @param $form: Nested array of form elements that comprise the form.
  * @param $form_state: A keyed array containing the current state of the form.
  */
-
 function wetkit_adaptivetheme_form_system_theme_settings_alter(&$form, &$form_state)  {
   // Your knarly custom theme settings go here...
   if (isset($form_id)) {
     return;
   }
   // Create the form using Forms API: http://api.drupal.org/api/7
+  $form['at-settings']['wetkit_overrides'] = array(
+    '#type'          => 'fieldset',
+    '#title'         => t('WetKit Overrides'),
+  );
+  $form['at-settings']['wetkit_overrides']['render_mb_main_link'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Disable rendering of the mb main link inside the mega menu'),
+    '#default_value' => at_get_setting('render_mb_main_link'),
+    '#description'   => t('Specify whether or not the mega menu should include the main link.'),
+  );
+  $form['at-settings']['wetkit_overrides']['render_nolink'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Disable rendering of menu items with <nolink> as path'),
+    '#default_value' => at_get_setting('render_nolink'),
+    '#description'   => t('Specify whether or not menu links with <nolink> as path should render an a href. (This can break certain versions of WET)'),
+  );
+  $form['at-settings']['wetkit_overrides']['alternate_site_url'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Alternate Site URL'),
+    '#default_value' => at_get_setting('alternate_site_url'),
+    '#description'   => t('Alternate Site URL to be used with Site Name'),
+  );
+  $form['at-settings']['wetkit_overrides']['wetkit_sub_site'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Intranet web site name'),
+    '#default_value' => at_get_setting('wetkit_sub_site'),
+    '#description' => t('The display name for the Intranet web site'),
+  );
   $form['at-settings']['accessibility'] = array(
     '#type'          => 'fieldset',
     '#title'         => t('Accessibility Settings'),
@@ -46,22 +73,6 @@ function wetkit_adaptivetheme_form_system_theme_settings_alter(&$form, &$form_st
     '#title'         => t('Text for the “skip link” 2'),
     '#default_value' => t('Skip to footer'),
     '#description'   => t('For example: <em>Jump to navigation</em>, <em>Skip to content</em>'),
-  );
-  $form['at-settings']['accessibility']['alternate_site_url'] = array(
-    '#type'          => 'textfield',
-    '#title'         => t('Alternate Site URL'),
-    '#default_value' => at_get_setting('alternate_site_url'),
-    '#description'   => t('Alternate Site URL to be used with Site Name'),
-  );
-  $form['at-settings']['intranet'] = array(
-    '#type'          => 'fieldset',
-    '#title'         => t('Intranet Settings'),
-  );
-  $form['at-settings']['intranet']['wetkit_sub_site'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Intranet web site name'),
-    '#default_value' => at_get_setting('wetkit_sub_site'),
-    '#description' => t('The display name for the Intranet web site'),
   );
   // We are editing the $form in place, so we don't need to return anything.
 }
