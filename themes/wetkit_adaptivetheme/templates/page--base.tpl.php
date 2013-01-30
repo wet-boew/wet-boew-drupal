@@ -201,7 +201,7 @@
         <div id="wb-sec">
           <div id="wb-sec-in" style="min-height: 680px; ">
             <nav role="navigation">
-              <h2 id="wb-nav"><?php print t('Skip to side navigation'); ?></h2>
+              <h2 id="wb-side-nav"><?php print t('Skip to side navigation'); ?></h2>
               <div class="wb-sec-def">
                 <div id="sidebar-first" class="sidebar">
                   <?php print $sidebar_first; ?>

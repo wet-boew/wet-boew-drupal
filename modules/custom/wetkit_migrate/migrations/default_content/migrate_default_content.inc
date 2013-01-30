@@ -9,6 +9,11 @@
  */
 abstract class WetKitDCMigration extends XMLMigration {
 
+  /**
+   * ProcessImport for WetKit Migration
+   *
+   * @param array $options
+   */
   public function processImport(array $options = array()) {
     parent::processImport($options = array());
     // Do not force menu rebuilding. Otherwise pathauto will try to rebuild
@@ -22,6 +27,9 @@ abstract class WetKitDCMigration extends XMLMigration {
  */
 class WetKit_Migrate_DefaultContent extends WetKitDCMigration {
 
+  /**
+   * Implements the migration constructor
+   */
   public function __construct() {
     parent::__construct(MigrateGroup::getInstance('WetKit', array('default')));
 
@@ -59,14 +67,14 @@ class WetKit_Migrate_DefaultContent extends WetKitDCMigration {
     $this->addFieldMapping('title', 'title')
         ->xpath('title');
     $this->addFieldMapping('body', 'body')
-        ->arguments(array('format' => 'wetkit_html_text'))        
+        ->arguments(array('format' => 'wetkit_html_text'))
         ->xpath('body');
     $this->addFieldMapping('uid')
         ->defaultValue(1);
     $this->addFieldMapping('status')
-        ->defaultValue(1); 
+        ->defaultValue(1);
     $this->addFieldMapping('language', 'language');
-    
+
      // Extra Fields
     $this->addFieldMapping('field_featured_image', 'images')
         ->xpath('image');
@@ -79,13 +87,21 @@ class WetKit_Migrate_DefaultContent extends WetKitDCMigration {
     $this->addUnmigratedDestinations(array('is_new', 'promote', 'revision', 'sticky', 'created', 'changed', 'revision_uid'));
   }
 
-  public function prepareRow($row) { 
+  /**
+   * Prepare and modify the source rows
+   *
+   * @param type $row
+   */
+  public function prepareRow($row) {
     // Set the Language
     $lang = (preg_match("/eng/i", $row->sourceid)) ? 'en' : 'fr';
     $row->language = $lang;
     $xmlObj = $row->xml;
   }
-  
+
+  /**
+   * Perform additional tasks after the initial import
+   */
   public function postImport() {
     parent::postImport();
     // i18n Translation Set
@@ -104,9 +120,9 @@ class WetKit_Migrate_DefaultContent extends WetKitDCMigration {
           FROM {migrate_map_wetkit_migrate_defaultcontent} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => $sourceid_tmp));
           foreach ($result as $result_row) {
             $source_nid = $result_row->destid1;
-            break;       
+            break;
           }
-          break;    
+          break;
         }
         if (($source_nid != 0) && ($translated_nid != 0)) {
           db_query('UPDATE {node} SET tnid = :tnid WHERE nid = :nid',

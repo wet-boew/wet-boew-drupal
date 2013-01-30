@@ -20,16 +20,16 @@ function wetkit_metatag_token_info() {
   $info['tokens']['current-page']['creator_default_value'] = array(
     'name' => t('Metatag: Bilingual Creator'),
     'description' => t('Bilingual creator for use with Metatags'),
-  );  
+  );
   $info['tokens']['current-page']['language_default_value'] = array(
     'name' => t('Metatag: Bilingual Global Prefix'),
     'description' => t('Bilingual global prefix for use with Metatags'),
-  );  
+  );
   // Node tokens
   $info['tokens']['node']['bilingual_prefix'] = array(
     'name' => t('Metatag: Bilingual Prefix'),
     'description' => t('Bilingual prefix for use with Metatags'),
-  );  
+  );
   $info['tokens']['node']['bilingual_date_issued'] = array(
     'name' => t('Metatag: Bilingual Date Issued'),
     'description' => t('Bilingual Date Issued for use with Metatags'),
@@ -104,7 +104,7 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
         case 'creator_default_value':
           global $language;
           $value = '';
-          
+
           // If i18n variable exists then give it precedence
           if (function_exists('i18n_variable_get')) {
             $value = i18n_variable_get('wetkit_metatag_creator', $language->language);
@@ -116,7 +116,7 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           }
 
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
-          break;          
+          break;
         case 'language_default_value':
           global $language;
           $value = '';
@@ -167,7 +167,7 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           break;
         case 'improved_creator':
           $value = '';
-          
+
           // If i18n variable exists then give it precedence
           if (function_exists('i18n_variable_get')) {
             $value = i18n_variable_get('wetkit_metatag_creator', $node->language);
@@ -183,7 +183,8 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
           case 'improved_summary':
-          if ($items = field_get_items('node', $node, 'body', $language_code)) {
+          $items = field_get_items('node', $node, 'body', $language_code);
+          if (isset($items)) {
             $instance = field_info_instance('node', 'body', $node->type);
             $field_langcode = field_language('node', $node, 'body', $language_code);
 

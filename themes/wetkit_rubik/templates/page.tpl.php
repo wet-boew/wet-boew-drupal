@@ -1,3 +1,9 @@
+<?php
+/**
+ * @file
+ * WetKit Rubik page.tpl.php implementation
+ */
+?>
 <div id='branding'><div class='limiter clearfix'>
     <?php if (isset($breadcrumb)): ?>
       <div class='breadcrumb clearfix'><?php print $breadcrumb ?></div>

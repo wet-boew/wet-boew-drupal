@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_views_default_views_alter().
+ * Implements hook_views_default_views_alter().
  */
 function wetkit_wetboew_views_default_views_alter(&$views) {
   // Alter only the 'admin_views_node' view.

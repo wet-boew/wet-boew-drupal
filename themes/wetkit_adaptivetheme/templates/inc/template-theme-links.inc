@@ -15,7 +15,7 @@
  *
  * Preprocess and Process Functions SEE: http://drupal.org/node/254940#variables-processor
  * 1. Rename each function and instance of "wetkit_adaptivetheme" to match
- *    your subthemes name, e.g. if your theme name is "footheme" then the function
+ *    your subthemes name, for example, if your theme name is "footheme" then the function
  *    name will be "footheme_preprocess_hook". Tip - you can search/replace
  *    on "wetkit_adaptivetheme".
  * 2. Uncomment the required function to use.

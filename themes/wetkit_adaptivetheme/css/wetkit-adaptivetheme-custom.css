@@ -88,6 +88,8 @@ div.panels-ipe-placeholder h4 { font-weight: 700; font-size: 15px; width: 75px; 
 #gcwu-psnb .wet-boew-megamenu { z-index: 98 !important; }
 #gcwu-psnb .mb-menu { z-index: 98 !important; }
 
+#gcwu-srchbx-in { display: inline; }
+
 #gcwu-srchbx label { height: auto !important; width: auto !important; overflow: visible !important; }
 
 #gcwu-connect .boxes-box-controls .cancel { display: none; }

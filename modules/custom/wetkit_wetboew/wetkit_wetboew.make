@@ -65,6 +65,9 @@ projects[linkchecker][download][type] = git
 projects[linkchecker][download][revision] = a920eb0
 projects[linkchecker][download][branch] = 7.x-1.x
 
+projects[menu_attributes][version] = 1.0-rc2
+projects[menu_attributes][subdir] = contrib
+
 projects[menu_views][version] = 1.3
 projects[menu_views][subdir] = contrib
 
@@ -74,7 +77,7 @@ projects[metatag][type] = module
 projects[metatag][download][type] = git
 projects[metatag][download][revision] = 4153fdc
 projects[metatag][download][branch] = 7.x-1.x
-projects[metatag][patch][1845326] = http://drupal.org/files/metatag-n1845326-65.patch
+projects[metatag][patch][1845326] = http://drupal.org/files/metatag-n1845326-75.patch
 
 projects[path_breadcrumbs][version] = 3.x-dev
 projects[path_breadcrumbs][subdir] = contrib
@@ -146,6 +149,6 @@ libraries[querypath][download][revision] = 2320739
 libraries[querypath][download][url] = https://github.com/technosophos/querypath.git
 
 libraries[wet-boew][download][type] = git
-libraries[wet-boew][download][branch] = gh-pages
-libraries[wet-boew][download][revision] = cd2e050
-libraries[wet-boew][download][url] = https://github.com/sylus/wet-boew.git
+libraries[wet-boew][download][branch] = v3.0-dist
+libraries[wet-boew][download][revision] = d33e42
+libraries[wet-boew][download][url] = https://github.com/wet-boew/wet-boew.git

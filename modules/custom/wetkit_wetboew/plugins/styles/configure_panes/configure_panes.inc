@@ -40,7 +40,7 @@ function theme_wetkit_configure_panes_render_pane($vars) {
     array_push($class_stack, $settings['configure_pane_custom_css']);
   }
   $class_stack = implode(" ", $class_stack);
-  $content->css_class .= ' '. $class_stack;
+  $content->css_class .= ' ' . $class_stack;
   return theme('panels_pane', array('content' => $content, 'pane' => $pane, 'display' => $display));
 }
 
@@ -102,11 +102,11 @@ function wetkit_configure_panes_style_settings_form($style_settings) {
   );
 
   $form['configure_pane_custom_css'] = array(
-    '#type' => 'textfield', 
-    '#title' => t('Configure Pane Custom CSS'), 
+    '#type' => 'textfield',
+    '#title' => t('Configure Pane Custom CSS'),
     '#default_value' => (isset($style_settings['configure_pane_custom_css'])) ? $style_settings['configure_pane_custom_css'] : '',
-    '#size' => 60, 
-    '#maxlength' => 128, 
+    '#size' => 60,
+    '#maxlength' => 128,
     '#required' => FALSE,
   );
 

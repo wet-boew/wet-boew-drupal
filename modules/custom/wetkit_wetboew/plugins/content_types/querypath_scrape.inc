@@ -30,13 +30,13 @@ function wetkit_wetboew_querypath_scrape_content_type_render($subtype, $conf, $p
   try {
     // Include Querypath
     require_once libraries_get_path('querypath', FALSE) . '/src/qp.php';
-    
+
     $parser = 'html';
     if ($conf['querypath_scrape_general_settings']['querypath_parser']  == 0) {
-      $parser = 'html';    
+      $parser = 'html';
     }
     else {
-      $parser = 'xml';       
+      $parser = 'xml';
     }
 
     $qp_options = array(
@@ -46,7 +46,7 @@ function wetkit_wetboew_querypath_scrape_content_type_render($subtype, $conf, $p
       'use_parser' => $parser
     );
     $qp_scrape = htmlqp($conf['querypath_scrape_general_settings']['url'], NULL, $qp_options);
-    
+
     // Remove DOM elements specified in edit form using CSS3 Selectors
     $elements_to_remove = array();
     unset($conf['querypath_scrape_remove']['querypath_remove_dom_add_button']);
@@ -75,9 +75,9 @@ function wetkit_wetboew_querypath_scrape_content_type_render($subtype, $conf, $p
     }
   }
   catch (Exception $e) {
-    drupal_set_message('Error:' . $e->getMessage(), 'status');
+    drupal_set_message(t('Error: @error', array('@error' => $e->getMessage())), 'status');
   }
-  
+
   $pane->content = filter_xss_admin($markup);
   return $pane;
 }
@@ -87,7 +87,7 @@ function wetkit_wetboew_querypath_scrape_content_type_render($subtype, $conf, $p
  */
 function wetkit_wetboew_querypath_scrape_edit_form($form, &$form_state) {
   $conf = $form_state['conf'];
-  
+
   // Form State Variables
   if (empty($form_state['num_querypath_add_dom'])) {
     $form_state['num_querypath_add_dom'] = 1;
@@ -96,15 +96,15 @@ function wetkit_wetboew_querypath_scrape_edit_form($form, &$form_state) {
   if (empty($form_state['num_querypath_remove_dom'])) {
     $form_state['num_querypath_remove_dom'] = 1;
   }
-  
+
   // Access the form hierarchically.
   $form['#tree'] = TRUE;
 
   // Create General Settings Fieldset
   $form['querypath_scrape_general_settings'] = array(
-    '#type' => 'fieldset', 
-    '#title' => t('Querypath Scrape General Settings'), 
-    '#collapsible' => FALSE, 
+    '#type' => 'fieldset',
+    '#title' => t('Querypath Scrape General Settings'),
+    '#collapsible' => FALSE,
     '#collapsed' => FALSE,
   );
   $form['querypath_scrape_general_settings']['querypath_parser'] = array(
@@ -124,12 +124,12 @@ function wetkit_wetboew_querypath_scrape_edit_form($form, &$form_state) {
     '#type' => 'textfield',
     '#title' => t('Site URL'),
     '#size' => 60,
-    '#maxlength' => 256, 
+    '#maxlength' => 256,
     '#description' => t('URL to parse using Querypath.'),
     '#default_value' => !empty($conf['querypath_scrape_general_settings']['url']) ? $conf['querypath_scrape_general_settings']['url'] : '',
     '#required' => TRUE,
   );
-  
+
   // Unset some Form Variables
   unset($form['override_title']);
   unset($form['override_title_markup']);
@@ -137,9 +137,9 @@ function wetkit_wetboew_querypath_scrape_edit_form($form, &$form_state) {
 
   // Build the number of name fieldsets indicated by $form_state['num_querypath_add_dom']
   $form['querypath_scrape_get'] = array(
-    '#type' => 'fieldset', 
-    '#title' => t('Querypath Parameters (GetHTML)'), 
-    '#collapsible' => FALSE, 
+    '#type' => 'fieldset',
+    '#title' => t('Querypath Parameters (GetHTML)'),
+    '#collapsible' => FALSE,
     '#collapsed' => FALSE,
   );
   for ($i = 1; $i <= $form_state['num_querypath_add_dom']; $i++) {
@@ -147,35 +147,35 @@ function wetkit_wetboew_querypath_scrape_edit_form($form, &$form_state) {
       '#type' => 'textfield',
       '#title' => t('Elements to Find'),
       '#size' => 60,
-      '#maxlength' => 256, 
+      '#maxlength' => 256,
       '#description' => t('Element(s) to retrieve with Querypath using CSS3 Selectors.'),
       '#default_value' => !empty($conf['querypath_scrape_get'][$i]['querypath_elements_get']) ? $conf['querypath_scrape_get'][$i]['querypath_elements_get'] : '',
       '#required' => FALSE,
     );
     // Adds "Add another Querypath" button
     $form['querypath_scrape_get']['querypath_add_dom_add_button'] = array(
-      '#type' => 'submit', 
-      '#value' => t('Add Querypath GetHTML'), 
+      '#type' => 'submit',
+      '#value' => t('Add Querypath GetHTML'),
       '#submit' => array('querypath_add_dom_save'),
       '#weight' => 998,
     );
     // Adds "Remove Querypath Parameters" button
     if ($form_state['num_querypath_add_dom'] > 1) {
       $form['querypath_scrape_get']['querypath_add_dom_remove_button'] = array(
-        '#type' => 'submit', 
-        '#value' => t('Remove Querypath GetHTML'), 
+        '#type' => 'submit',
+        '#value' => t('Remove Querypath GetHTML'),
         '#submit' => array('querypath_add_dom_delete'),
         '#limit_validation_errors' => array(),
-        '#weight' => 999,        
+        '#weight' => 999,
       );
     }
   }
 
   // Build the number of name fieldsets indicated by $form_state['num_querypath_remove_dom']
   $form['querypath_scrape_remove'] = array(
-    '#type' => 'fieldset', 
-    '#title' => t('Querypath Parameters (RemoveHTML)'), 
-    '#collapsible' => FALSE, 
+    '#type' => 'fieldset',
+    '#title' => t('Querypath Parameters (RemoveHTML)'),
+    '#collapsible' => FALSE,
     '#collapsed' => FALSE,
   );
   for ($j = 1; $j <= $form_state['num_querypath_remove_dom']; $j++) {
@@ -183,26 +183,26 @@ function wetkit_wetboew_querypath_scrape_edit_form($form, &$form_state) {
       '#type' => 'textfield',
       '#title' => t('Elements to Remove'),
       '#size' => 60,
-      '#maxlength' => 256, 
+      '#maxlength' => 256,
       '#description' => t('Element(s) to remove with Querypath using CSS3 Selectors.'),
       '#default_value' => !empty($conf['querypath_scrape_remove'][$j]['querypath_elements_remove']) ? $conf['querypath_scrape_remove'][$j]['querypath_elements_remove'] : '',
       '#required' => FALSE,
     );
     // Adds "Add another Querypath" button
     $form['querypath_scrape_remove']['querypath_remove_dom_add_button'] = array(
-      '#type' => 'submit', 
-      '#value' => t('Add Querypath RemoveHTML'), 
+      '#type' => 'submit',
+      '#value' => t('Add Querypath RemoveHTML'),
       '#submit' => array('querypath_remove_dom_save'),
       '#weight' => 998,
     );
     // Adds "Remove Querypath Parameters" button
     if ($form_state['num_querypath_remove_dom'] > 1) {
       $form['querypath_scrape_remove']['querypath_remove_dom_remove_button'] = array(
-        '#type' => 'submit', 
-        '#value' => t('Remove Querypath RemoveHTML'), 
+        '#type' => 'submit',
+        '#value' => t('Remove Querypath RemoveHTML'),
         '#submit' => array('querypath_remove_dom_delete'),
         '#limit_validation_errors' => array(),
-        '#weight' => 999,        
+        '#weight' => 999,
       );
     }
   }
@@ -267,7 +267,7 @@ function wetkit_wetboew_querypath_scrape_edit_form_submit($form, &$form_state) {
  * Custom function for retrieving HTML Dom elements
  */
 function _querypath_scrape_getDOM($qp_scrape, $elements) {
-  foreach ($elements as $element) {  
+  foreach ($elements as $element) {
     if ($qp_scrape->top()->is($element)) {
       $html = $qp_scrape->top()->find($element)->innerHTML();
       $html = trim($html);

@@ -147,7 +147,7 @@ function wetkit_search_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'custom_search_blocks_1_label';
-  $strongarm->value = 'Refine your Search';
+  $strongarm->value = 'Search website';
   $export['custom_search_blocks_1_label'] = $strongarm;
 
   $strongarm = new stdClass();
