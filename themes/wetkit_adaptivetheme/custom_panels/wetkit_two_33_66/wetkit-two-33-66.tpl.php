@@ -49,7 +49,7 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
       <div class="region-wetkit-two-33-66-second">
         <div class="region-inner clearfix">
           <nav role="navigation">
-            <h2 id="wb-nav"><?php print t('Secondary Menu'); ?></h2>
+            <h2 id="wb-side-nav"><?php print t('Secondary Menu'); ?></h2>
             <div class="wb-sec-def">
               <?php print $content['wetkit_two_33_66_second']; ?>
             </div>

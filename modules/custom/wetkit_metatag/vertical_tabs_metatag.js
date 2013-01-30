@@ -1,3 +1,8 @@
+/**
+ * @file
+ * Attaches the behaviors for the WetKit Metatags module.
+ */
+
 (function ($) {
 
 /**

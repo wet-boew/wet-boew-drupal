@@ -218,6 +218,46 @@ function _add_custom_menu($link, $title, $desc, $menu, $weight, $language, $mlid
 }
 
 /**
+ * Implements _add_custom_menu_attributes().
+ */
+function _add_custom_menu_attributes($link, $title, $desc, $rel, $class, $menu, $weight, $language, $mlid = 0, $plid = 0) {
+  $options = array();
+  if ($desc != NULL) {
+    $options += array(
+      'attributes' => array(
+        'title' => $desc,
+      ),
+    );
+  }
+  if ($rel != NULL) {
+    $options += array(
+      'attributes' => array(
+        'rel' => $rel,
+      ),
+    );
+  }
+  if ($class != NULL) {
+    $options += array(
+      'attributes' => array(
+        'class' => $class,
+      ),
+    );
+  }
+  $item = array(
+    'link_path' => $link,
+    'link_title' => $title,
+    'menu_name' => $menu,
+    'weight' => $weight,
+    'language' => $language,
+    'customized' => 1,
+    'options' => $options,
+    'mlid' => $mlid,
+    'plid' => $plid,
+  );
+  return menu_link_save($item);
+}
+
+/**
  * Implements _add_custom_translation_set().
  */
 function _create_translation_sets($source_mlid, $translated_mlid) {

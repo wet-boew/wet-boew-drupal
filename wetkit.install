@@ -27,7 +27,7 @@ function wetkit_install() {
   $policy = array();
   $policy = array(
     'complexity' => 3,
-    'delay' => 24,
+    'delay' => 0,
     'digit_placement' => 2,
     'history' => 24,
     'length' => 8,

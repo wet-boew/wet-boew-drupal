@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Code for the wetkit_box feature.
+ */
 
 /**
  * Implements hook_ctools_plugin_api().

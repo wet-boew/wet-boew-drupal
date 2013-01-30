@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Code for the wetkit_widgets module.
+ */
 
 include_once('wetkit_widgets.features.inc');
 include_once('wetkit_widgets.plugins.inc');
@@ -38,7 +42,7 @@ function wetkit_widgets_ctools_plugin_directory($module, $plugin) {
 /**
  * Implements hook_field_widget_form_alter().
  *
- * Create default values on fieldable_panels_pane fields when appropriate. 
+ * Create default values on fieldable_panels_pane fields when appropriate.
  */
 function wetkit_widgets_field_widget_form_alter(&$element, &$form_state, $context) {
 
@@ -146,7 +150,6 @@ function wetkit_widgets_theme($existing, $type, $theme, $path) {
 /**
  * Implements hook_file_default_types().
  */
-
 function wetkit_widgets_file_default_types() {
   $types = array();
 

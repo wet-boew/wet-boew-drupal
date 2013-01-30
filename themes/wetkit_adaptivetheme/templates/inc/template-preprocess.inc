@@ -15,7 +15,7 @@
  *
  * Preprocess and Process Functions SEE: http://drupal.org/node/254940#variables-processor
  * 1. Rename each function and instance of "wetkit_adaptivetheme" to match
- *    your subthemes name, e.g. if your theme name is "footheme" then the function
+ *    your subthemes name, for example, if your theme name is "footheme" then the function
  *    name will be "footheme_preprocess_hook". Tip - you can search/replace
  *    on "wetkit_adaptivetheme".
  * 2. Uncomment the required function to use.
@@ -138,7 +138,8 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
 
   if (module_exists('page_manager')) {
     // Page template suggestions for Panels pages
-    if ($panel_page = page_manager_get_current_page()) {
+    $panel_page = page_manager_get_current_page();
+    if (isset($panel_page)) {
       if (variable_get('wetkit_wetboew_theme', 0) == 1) {
         $suggestions[] = 'page__panels__intranet';
       }
@@ -183,6 +184,13 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
     $is_multilingual = 1;
   }
 
+  // Assign an alternate Site URL
+  $alternate_site_url = at_get_setting('alternate_site_url');
+  if (!empty($alternate_site_url)) {
+    $variables['site_name_title'] = variable_get('site_name', 'Drupal');
+    $variables['site_name'] = l($variables['site_name_title'], $alternate_site_url, array('attributes' => array('title' => t('Home page'))));
+  }
+
   // Set Sub Site Name
   $variables['wetkit_sub_site'] = at_get_setting('wetkit_sub_site');
 
@@ -207,12 +215,15 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
   // Search Region
   if (module_exists('custom_search')) {
     // Custom Search
-    //drupal_add_css(drupal_get_path('theme', 'wetkit_adaptivetheme') . '/css/custom_searchbar.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
     $variables['custom_search'] = drupal_get_form('custom_search_blocks_form_1');
     $variables['custom_search']['#id'] = 'search-form';
+    $variables['custom_search']['#prefix'] = '<div id="gcwu-srchbx-in">';
     $variables['custom_search']['custom_search_blocks_form_1']['#id'] = $theme_prefix . '-srch';
+    $variables['custom_search']['#suffix'] = '</div>';
     $variables['custom_search']['actions']['submit']['#id'] = $theme_prefix . '-srch-submit';
+    $variables['custom_search']['actions']['submit']['#attributes']['data-icon'] = 'search';
     $variables['search_box'] = render($variables['custom_search']);
+    $variables['search_box'] = str_replace('type="text"', 'type="search"', $variables['search_box']);
   }
 
   // Mega Menu Region
@@ -290,10 +301,7 @@ function wetkit_adaptivetheme_preprocess_comment(&$variables, $hook) {
  *   The name of the template being rendered ("region" in this case.)
  */
 function wetkit_adaptivetheme_preprocess_region(&$variables, $hook) {
-  // Don't use Zen's region--sidebar.tpl.php template for sidebars.
-  //if (strpos($variables['region'], 'sidebar_') === 0) {
-  //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('region__sidebar'));
-  //}
+
 }
 
 /**
@@ -305,13 +313,7 @@ function wetkit_adaptivetheme_preprocess_region(&$variables, $hook) {
  *   The name of the template being rendered ("block" in this case.)
  */
 function wetkit_adaptivetheme_preprocess_block(&$variables, $hook) {
-  // Add a count to all the blocks in the region.
-  // $variables['classes_array'][] = 'count-' . $variables['block_id'];
-  // By default, Zen will use the block--no-wrapper.tpl.php for the main
-  // content. This optional bit of code undoes that:
-  //if ($variables['block_html_id'] == 'block-system-main') {
-  //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('block__no_wrapper'));
-  //}
+
 }
 
 /**

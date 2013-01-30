@@ -37,9 +37,15 @@
     <?php endif; ?>
 
     <?php print render($title_prefix); ?>
+
     <?php if ($title): ?>
-      <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
+      <?php if($display->title_pane == $pane->pid) : ?>
+        <h1 id="wb-cont"><?php print $title; ?></h1>
+      <?php else : ?>
+        <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
+      <?php endif; ?>
     <?php endif; ?>
+
     <?php print render($title_suffix); ?>
 
     <?php if ($feeds): ?>

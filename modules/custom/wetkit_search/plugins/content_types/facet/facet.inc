@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Content type that displays facet information for search
@@ -16,6 +15,13 @@ $plugin = array(
   'edit form' => 'wetkit_search_facet_content_type_edit_form',
 );
 
+/**
+ * Facets edit form for WetKit Search
+ *
+ * @param type $form
+ * @param type $form_state
+ * @return string
+ */
 function wetkit_search_facet_content_type_edit_form($form, &$form_state) {
 
   // Determine what deltas Facet API Supports
@@ -24,9 +30,12 @@ function wetkit_search_facet_content_type_edit_form($form, &$form_state) {
   $realm_name = 'block';
   foreach (facetapi_get_searcher_info() as $searcher => $info) {
     foreach (facetapi_get_delta_map_queue($searcher, $realm_name) as $facet_name) {
-      if ($facet = facetapi_facet_load($facet_name, $searcher)) {
-        if ($string = facetapi_build_delta($searcher, $realm_name, $facet_name)) {
-          if ($delta = array_search($string, $map)) {
+      $facet = facetapi_facet_load($facet_name, $searcher);
+      if (isset($facet)) {
+        $string = facetapi_build_delta($searcher, $realm_name, $facet_name);
+        if (isset($string)) {
+          $delta = array_search($string, $map);
+          if (isset($delta)) {
             switch ($searcher) {
               case 'search_api@database_node_index':
                 $deltas[$delta] = 'DB: ' . $facet_name;
@@ -55,10 +64,25 @@ function wetkit_search_facet_content_type_edit_form($form, &$form_state) {
   return $form;
 }
 
+/**
+ * Facets edit form submit for WetKit Search
+ *
+ * @param type $form
+ * @param array $form_state
+ */
 function wetkit_search_facet_content_type_edit_form_submit($form, &$form_state) {
   $form_state['conf']['delta'] = $form_state['values']['delta'];
 }
 
+/**
+ * Facets edit form render for WetKit Search
+ *
+ * @param type $subtype
+ * @param type $conf
+ * @param type $args
+ * @param type $context
+ * @return stdClass
+ */
 function wetkit_search_facet_content_type_render($subtype, $conf, $args, $context) {
 
   // Assemble some important information

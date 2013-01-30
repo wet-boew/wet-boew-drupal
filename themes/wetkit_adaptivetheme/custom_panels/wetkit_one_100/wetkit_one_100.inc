@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Implements of hook_panels_layouts()
+ * Implements hook_panels_layouts().
  */
 function wetkit_adaptivetheme_wetkit_one_100_panels_layouts() {
   $items['wetkit_one_100'] = array(

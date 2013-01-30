@@ -22,7 +22,7 @@
   ; Web Usability Theme - Grids
   ;stylesheets[all][] = wet-boew/grids/css/responsive-1200-min.css
   ;stylesheets[all][] = wet-boew/grids/css/responsive-768-min.css
-  ;stylesheets[all][] = wet-boew/grids/css/responsive-min.css  
+  ;stylesheets[all][] = wet-boew/grids/css/responsive-min.css
   ;stylesheets[all][] = wet-boew/grids/css/util-min.css
 
   ; Web Usability Theme - JS
@@ -141,7 +141,10 @@
   ; Web Usability
   settings[skip_link_content_anchor] = wb-cont
   settings[skip_link_nav_anchor]     = wb-nav
+  settings[render_mb_main_link]      = 0
+  settings[render_nolink]            = 0
   settings[wetkit_sub_site]          = 0
+  settings[alternate_site_url]       = ''
 
   ; Layout settings - Standard layout
   settings[bigscreen_layout]         = 'three_col_grail'

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * A specification for the custom tabbed interface entity that is part of WetKit Widgets
@@ -151,14 +150,14 @@ function wetkit_widgets_field_formatter_settings_form($field, $instance, $view_m
 
   if ($display['type'] == 'wetkit_tabbed_interface_default') {
     $element['image_style'] = array(
-      '#title' => t('Image style'), 
+      '#title' => t('Image style'),
       '#type' => 'select',
       '#options' => image_style_options(),
       '#default_value' => $settings['image_style'],
       '#required' => TRUE,
     );
   }
-  else if ($display['type'] == 'file_wetkit_video') {
+  elseif ($display['type'] == 'file_wetkit_video') {
     $element['controls'] = array(
       '#title' => t('Show video controls'),
       '#type' => 'checkbox',
@@ -179,7 +178,7 @@ function wetkit_widgets_field_formatter_settings_form($field, $instance, $view_m
       '#title' => t('Size'),
       '#field_prefix' => '<div class="container-inline">',
       '#field_suffix' => '</div>',
-      '#description' => t('The size expressed as WIDTHxHEIGHT (e.g. 640x480). Leave blank to use the video file to determine the size of the player.'),
+      '#description' => t('The size expressed as WIDTHxHEIGHT (for example, 640x480). Leave blank to use the video file to determine the size of the player.'),
     );
     $element['size']['width'] = array(
       '#type' => 'textfield',
@@ -221,7 +220,7 @@ function wetkit_widgets_field_formatter_settings_summary($field, $instance, $vie
   $display = $instance['display'][$view_mode];
   $settings = $display['settings'];
   $summary = NULL;
-  
+
   if ($display['type'] === 'file_wetkit_video') {
     $summary_items = array();
     if (isset($settings['multiple_file_behaviour'])) {
@@ -244,7 +243,7 @@ function wetkit_widgets_field_formatter_settings_summary($field, $instance, $vie
     }
     $summary = implode('<br />', $summary_items);
   }
-  else if ($display['type'] == 'wetkit_tabbed_interface_default') {
+  elseif ($display['type'] == 'wetkit_tabbed_interface_default') {
     $summary = t('Image Style: @style', array('@style' => $settings['image_style']));
   }
 
@@ -258,7 +257,7 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
   $element = array();
   $settings = $display['settings'];
   $formatter = $display['type'];
-  
+
   if ($display['type'] == 'file_wetkit_video') {
     $multiple_file_behaviour = isset($settings['multiple_file_behaviour']) ? $settings['multiple_file_behaviour'] : 'sources';
 
@@ -298,7 +297,7 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
       );
     }
   }
-  else if ($display['type'] == 'wetkit_tabbed_interface_default') {
+  elseif ($display['type'] == 'wetkit_tabbed_interface_default') {
     drupal_add_library('system', 'ui.tabs');
     // Assemble the tabs content
     foreach ($items as $delta => $item_data) {
@@ -308,7 +307,7 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
         $element[$delta]['tabbed_true'] = 'true';
     }
   }
-  
+
   return $element;
 }
 
@@ -318,8 +317,8 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
 function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
 
   if ($instance['widget']['type'] == 'wetkit_tabbed_interface_form') {
-   
-    // Make it a multipart form  
+
+    // Make it a multipart form
     $form['#attributes']['enctype'] = 'multipart/form-data';
 
     // Define the element
@@ -370,7 +369,7 @@ function wetkit_widgets_field_presave($entity_type, $entity, $field, $instance, 
     foreach ($items as &$item) {
       if (empty($item['fid'])) {
         $fid = variable_get('wetkit_widgets_default_' . $entity->bundle . '_fid', NULL);
-        
+
         if (!empty($fid)) {
           $item['fid'] = $fid;
         }
@@ -401,7 +400,7 @@ function wetkit_widgets_field_insert($entity_type, $entity, $field, $instance, $
 function wetkit_widgets_field_update($entity_type, $entity, $field, $instance, $langcode, &$items) {
 
   // Load the original entity, if $entity->original is not already set.
-  // This is done as per http://drupal.org/node/985642 and can be removed when that patch is committed. 
+  // This is done as per http://drupal.org/node/985642 and can be removed when that patch is committed.
   if (empty($entity->original)) {
     $entity->original = entity_load_unchanged($entity_type, $field['id']);
   }
@@ -428,10 +427,11 @@ function wetkit_widgets_field_delete_revision($entity_type, $entity, $field, $in
  */
 function wetkit_widgets_field_prepare_view($entity_type, $entities, $field, $instances, $langcode, &$items) {
   // If there are no files specified at all, use the default.
-  // TODO - make sure this works 
+  // TODO - make sure this works
   foreach ($entities as $id => $entity) {
     if (empty($items[$id]) && $field['settings']['default_image']) {
-      if ($file = file_load($field['settings']['default_image'])) {
+      $file = file_load($field['settings']['default_image']);
+      if (isset($file)) {
         $items[$id][0] = (array) $file + array(
           'is_default' => TRUE,
           'alt' => '',
