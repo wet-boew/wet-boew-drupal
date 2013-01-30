@@ -150,5 +150,5 @@ libraries[querypath][download][url] = https://github.com/technosophos/querypath.
 
 libraries[wet-boew][download][type] = git
 libraries[wet-boew][download][branch] = v3.0-dist
-libraries[wet-boew][download][revision] = d33e42e
-libraries[wet-boew][download][url] = https://github.com/sylus/wet-boew.git
+libraries[wet-boew][download][revision] = d33e42
+libraries[wet-boew][download][url] = https://github.com/wet-boew/wet-boew.git
