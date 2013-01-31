@@ -1,9 +1,9 @@
-; WetKit Web Usability Makefile
+; WetKit WETBOEW Makefile
 
 api = 2
 core = 7.x
 
-; Modules for WetKit
+; Modules for WetKit WETBOEW
 
 projects[advanced_help][version] = 1.x-dev
 projects[advanced_help][subdir] = contrib
@@ -70,14 +70,6 @@ projects[menu_attributes][subdir] = contrib
 
 projects[menu_views][version] = 1.3
 projects[menu_views][subdir] = contrib
-
-projects[metatag][version] = 1.x-dev
-projects[metatag][subdir] = contrib
-projects[metatag][type] = module
-projects[metatag][download][type] = git
-projects[metatag][download][revision] = 4153fdc
-projects[metatag][download][branch] = 7.x-1.x
-projects[metatag][patch][1845326] = http://drupal.org/files/metatag-n1845326-75.patch
 
 projects[path_breadcrumbs][version] = 3.x-dev
 projects[path_breadcrumbs][subdir] = contrib
