@@ -183,7 +183,12 @@ function theme_wetkit_wetboew_status_messages($variables) {
     }
     $output .= "</div></section><div class=\"clear\"></div>\n";
   }
-  return '<div id="status-messages">' . $output . '</div>';
+  if (!empty($output)) {
+    return '<div id="status-messages">' . $output . '</div>';
+  }
+  else {
+    return;
+  }
 }
 
 /**
