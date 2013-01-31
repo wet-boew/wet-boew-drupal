@@ -139,7 +139,7 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
   if (module_exists('page_manager')) {
     // Page template suggestions for Panels pages
     $panel_page = page_manager_get_current_page();
-    if (isset($panel_page)) {
+    if (!empty($panel_page)) {
       if (variable_get('wetkit_wetboew_theme', 0) == 1) {
         $suggestions[] = 'page__panels__intranet';
       }
