@@ -25,6 +25,23 @@ function wetkit_metatag_token_info() {
     'name' => t('Metatag: Bilingual Global Prefix'),
     'description' => t('Bilingual global prefix for use with Metatags'),
   );
+  // Panels tokens
+  $info['types']['panels'] = array(
+    'name' => t('Panels'),
+    'description' => t('Tokens related to panels.'),
+  );
+  $info['tokens']['panels']['bilingual_date_issued'] = array(
+    'name' => t('Metatag: Panels Bilingual Date Issued'),
+    'description' => t('Bilingual Date Issued for use with Panels Metatags'),
+  );
+  $info['tokens']['panels']['bilingual_date_published'] = array(
+    'name' => t('Metatag: Panels Bilingual Date Published'),
+    'description' => t('Bilingual Date Published for use with Panels Metatags'),
+  );
+  $info['tokens']['panels']['improved_creator'] = array(
+    'name' => t('Metatag: Panels Improved creator'),
+    'description' => t('Improved Creator for use with Panels Metatags'),
+  );
   // Node tokens
   $info['tokens']['node']['bilingual_prefix'] = array(
     'name' => t('Metatag: Bilingual Prefix'),
@@ -126,6 +143,59 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           else {
             $value = 'eng';
           }
+          $replacements[$original] = $sanitize ? filter_xss($value) : $value;
+          break;
+      }
+    }
+  }
+
+  // Panels tokens.
+  if ($type == 'panels') {
+
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'bilingual_prefix':
+          global $language;
+          if ($language->language == 'fr') {
+            $value = 'fra';
+          }
+          else {
+            $value = 'eng';
+          }
+          $replacements[$original] = $sanitize ? filter_xss($value) : $value;
+          break;
+        case 'bilingual_date_issued':
+          global $language;
+          if ($language->language == 'fr') {
+            $value = 'Date de modification ' . format_date(time(), 'custom', '(Y-m-d)');
+          }
+          else {
+            $value = 'Date Issued ' . format_date(time(), 'custom', '(Y-m-d)');
+          }
+          $replacements[$original] = $sanitize ? filter_xss($value) : $value;
+          break;
+        case 'bilingual_date_published':
+          global $language;
+          if ($language->language == 'fr') {
+            $value = 'Date de publication ' . format_date(time(), 'custom', '(Y-m-d)');
+          }
+          else {
+            $value = 'Date published ' . format_date(time(), 'custom', '(Y-m-d)');
+          }
+          $replacements[$original] = $sanitize ? filter_xss($value) : $value;
+          break;
+        case 'improved_creator':
+          global $language;
+          $value = '';
+
+          // If i18n variable exists then give it precedence
+          if (function_exists('i18n_variable_get')) {
+            $value = i18n_variable_get('wetkit_metatag_creator', $language->language);
+          }
+          else {
+            $value = '';
+          }
+
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
       }
