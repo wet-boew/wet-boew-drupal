@@ -79,7 +79,11 @@ msgstr "Texte pour le “skip link” 2"
 
 #: theme-settings.php:47 templates/inc/template-preprocess.inc:65
 msgid "Skip to footer"
+<<<<<<< HEAD
 msgstr "Aller au pied de page"
+=======
+msgstr "Passer au pied de page"
+>>>>>>> 788689e6fb40e46161530966987384eb5448d70f
 
 #: theme-settings.php:52
 msgid "Intranet Settings"
@@ -135,7 +139,7 @@ msgstr "Entête"
 
 #: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
 msgid "Mega Menu"
-msgstr "Menu Mega"
+msgstr "Menu mega"
 
 #: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
 msgid "Help"
@@ -207,7 +211,11 @@ msgstr "Contenu 2"
 
 #: custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:20 custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc:19
 msgid "Sidebar"
+<<<<<<< HEAD
 msgstr "Barre de navigation"
+=======
+msgstr "Barre latérale"
+>>>>>>> 788689e6fb40e46161530966987384eb5448d70f
 
 #: custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:9
 msgid "WetKit Three column 40/40/20 (Front)"
@@ -249,6 +257,7 @@ msgstr "Date de modification :"
 msgid "Search"
 msgstr "Rechercher"
 
+<<<<<<< HEAD
 #: templates/page--base.tpl.php:124 templates/page--internet.tpl.php:151 templates/page--intranet.tpl.php:168 templates/page--panels--base.tpl.php:124 templates/page--panels--internet.tpl.php:151 templates/page--panels--intranet.tpl.php:158
 msgid "<span>Site</span> Menu"
 msgstr "Menu du <span>Site</span>"
@@ -264,6 +273,19 @@ msgstr "Pied de page"
 #: templates/page--internet.tpl.php:93 templates/page--intranet.tpl.php:93 templates/page--panels--internet.tpl.php:93 templates/page--panels--intranet.tpl.php:93
 msgid "Site menu"
 msgstr "Menu du site"
+=======
+#: templates/page--base.tpl.php:124 templates/page--internet.tpl.php:93;151 templates/page--intranet.tpl.php:93;168 templates/page--panels--base.tpl.php:124 templates/page--panels--internet.tpl.php:93;151 templates/page--panels--intranet.tpl.php:93;158
+msgid "Site menu"
+msgstr "Menu du site"
+
+#: templates/page--base.tpl.php:204 templates/page--internet.tpl.php:231 templates/page--intranet.tpl.php:248
+msgid "Skip to side navigation"
+msgstr "Passer à la navigation secondaire"
+
+#: templates/page--base.tpl.php:222 templates/page--internet.tpl.php:249 templates/page--intranet.tpl.php:266 templates/page--panels--base.tpl.php:162 templates/page--panels--internet.tpl.php:189 templates/page--panels--intranet.tpl.php:196
+msgid "Site Footer"
+msgstr "Pied de page du site"
+>>>>>>> 788689e6fb40e46161530966987384eb5448d70f
 
 #: templates/page--internet.tpl.php:264 templates/page--panels--internet.tpl.php:204
 msgid "Government of Canada Footer"
@@ -283,7 +305,11 @@ msgstr "URL :"
 
 #: templates/misc/aggregator-feed-source.tpl.php:38
 msgid "Updated:"
+<<<<<<< HEAD
 msgstr "Mis à jour :"
+=======
+msgstr "Mise à jour :"
+>>>>>>> 788689e6fb40e46161530966987384eb5448d70f
 
 #: templates/misc/aggregator-item.tpl.php:48
 msgid "Categories"
