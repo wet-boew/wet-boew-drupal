@@ -59,5 +59,6 @@ includes[] = modules/custom/wetkit_wysiwyg/wetkit_wysiwyg.make
 includes[] = modules/custom/wetkit_search/wetkit_search.make
 includes[] = modules/custom/wetkit_language/wetkit_language.make
 includes[] = modules/custom/wetkit_migrate/wetkit_migrate.make
+includes[] = modules/custom/wetkit_bean/wetkit_bean.make
 includes[] = modules/custom/wetkit_metatag/wetkit_metatag.make
 includes[] = modules/custom/wetkit_wetboew/wetkit_wetboew.make
