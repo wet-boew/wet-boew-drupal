@@ -36,13 +36,25 @@ function wetkit_adaptivetheme_form_system_theme_settings_alter(&$form, &$form_st
     '#type'          => 'textfield',
     '#title'         => t('Alternate Site URL'),
     '#default_value' => at_get_setting('alternate_site_url'),
-    '#description'   => t('Alternate Site URL to be used with Site Name'),
+    '#description'   => t('Alternate Site URL to be used with Site Name.'),
   );
   $form['at-settings']['wetkit_overrides']['wetkit_sub_site'] = array(
     '#type' => 'textfield',
     '#title' => t('Intranet web site name'),
     '#default_value' => at_get_setting('wetkit_sub_site'),
     '#description' => t('The display name for the Intranet web site'),
+  );
+  $form['at-settings']['wetkit_overrides']['search_indexing_start'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Start Indexing tag for search'),
+    '#default_value' => at_get_setting('search_indexing_start'),
+    '#description' => t('Custom Markup to wrap around content to assist in indexing.'),
+  );
+  $form['at-settings']['wetkit_overrides']['search_indexing_stop'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Stop Indexing tag for search'),
+    '#default_value' => at_get_setting('search_indexing_stop'),
+    '#description' => t('Custom Markup to wrap around content to assist in indexing.'),
   );
   $form['at-settings']['accessibility'] = array(
     '#type'          => 'fieldset',

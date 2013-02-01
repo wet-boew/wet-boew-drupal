@@ -1,0 +1,93 @@
+<?php
+/**
+ * @file
+ * Code for the WetKit Bean feature.
+ */
+
+include_once 'wetkit_bean.features.inc';
+
+/**
+ * Implements hook_init().
+ */
+function wetkit_bean_init() {
+  //Set Flag
+  //if ((variable_get('wetkit_bean_load', 1) == 1)) {
+    //_wetkit_bean_load();
+    //variable_set('wetkit_bean_load', 0);
+  //}
+}
+
+/**
+* Implements _wetkit_bean_load().
+*/
+function _wetkit_bean_load() {
+
+  // Set the default translation mapping
+  $translation = array(
+    'translate' => 0,
+    'status' => 1,
+    'language' => 'fr',
+    'source' => 'en',
+  );
+
+  $bean = bean_create(array('type' => 'wetkit_bean'));
+  $bean->label = 'Administrate: Minister Bean';
+  $bean->title = 'Minister';
+  $bean->view_mode = 'default';
+  $bean->delta = 'wetkit_minister_bean';
+  $bean->title_field = array(
+    'en' => array(array(
+      'value' => 'Minister',
+    )),
+  );
+  $bean->field_bean_wetkit_body = array(
+    'en' => array(array(
+      'value' => '<div class="gcwu-minister"><h3>Meet the Minister</h3>
+<div class="gcwu-minister-in">
+	<div class="gcwu-minister-img">
+    <img alt="The Honourable minister name" height="149" src="/profiles/wetkit/modules/custom/wetkit_wetboew/images/minister.jpg" width="99" />
+	</div>
+	<div class="gcwu-minister-info">
+    <p>The&nbsp;Honourable<br />
+    <strong>minister name</strong></p>
+    <ul>
+      <li><a href="#">About the minister</a></li>
+      <li><a href="#">His portfolio</a></li>
+    </ul>
+	</div>
+</div></div>',
+      'format' => 'wetkit_wysiwyg_text',
+    )),
+  );
+  $bean->save();
+
+  $bean_translated = entity_translation_get_handler('bean', $bean);
+  $values = array(
+    'title_field' => array(
+      'fr' => array(array(
+        'value' => 'Ministéré',
+      )), 
+    ),
+    'field_bean_wetkit_body' => array(
+      'fr' => array(array(
+        'value' => '<div class="gcwu-minister"><h3>Rencontrez le ministre</h3>
+<div class="gcwu-minister-in">
+	<div class="gcwu-minister-img">
+    <img alt="Le nom de l&#39;honorable ministre" height="149" src="/profiles/wetkit/modules/custom/wetkit_wetboew/images/minister.jpg" width="99" />
+	</div>
+	<div class="gcwu-minister-info">
+    <p>L&#39;honorable<br />
+    <strong>nom du minist&egrave;re</strong></p>
+    <ul>
+      <li><a href="#">A propos de la ministre</a></li>
+      <li><a href="#">Son portefeuille</a></li>
+    </ul>
+	</div>
+</div></div>',
+        'format' => 'wetkit_wysiwyg_text',
+      )),  
+    ),
+  );
+  $bean_translated->setTranslation($translation, $values);
+  bean_save($bean);
+}

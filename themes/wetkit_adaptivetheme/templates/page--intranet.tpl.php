@@ -196,6 +196,9 @@
                 <!-- Messages and Help -->
                 <?php print $messages; ?>
                 <?php print render($page['help']); ?>
+                <?php if (isset($search_indexing_start)): ?>
+                  <?php print $search_indexing_start; ?>
+                <?php endif; ?>                
                 <<?php print $tag; ?> id="main-content">
                   <?php print render($title_prefix); // Does nothing by default in D7 core ?>
                   <?php if ($title || $primary_local_tasks || $secondary_local_tasks || $action_links = render($action_links)): ?>
@@ -228,6 +231,9 @@
                   <?php print $feed_icons; ?>
                   <?php print render($title_suffix); // Prints page level contextual links ?>
                 </<?php print $tag; ?>>
+                <?php if (isset($search_indexing_stop)): ?>
+                  <?php print $search_indexing_stop; ?>
+                <?php endif; ?>
                 <!-- region: Content Aside -->
                 <?php print render($page['content_aside']); ?>
               </div>

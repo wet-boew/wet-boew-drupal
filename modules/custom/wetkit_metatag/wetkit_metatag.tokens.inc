@@ -167,20 +167,20 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
         case 'bilingual_date_issued':
           global $language;
           if ($language->language == 'fr') {
-            $value = 'Date de modification ' . format_date(time(), 'custom', '(Y-m-d)');
+            $value = format_date(time(), 'custom', 'Y-m-d');
           }
           else {
-            $value = 'Date Issued ' . format_date(time(), 'custom', '(Y-m-d)');
+            $value = format_date(time(), 'custom', 'Y-m-d');
           }
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
         case 'bilingual_date_published':
           global $language;
           if ($language->language == 'fr') {
-            $value = 'Date de publication ' . format_date(time(), 'custom', '(Y-m-d)');
+            $value = format_date(time(), 'custom', 'Y-m-d');
           }
           else {
-            $value = 'Date published ' . format_date(time(), 'custom', '(Y-m-d)');
+            $value = format_date(time(), 'custom', 'Y-m-d');
           }
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
@@ -219,19 +219,19 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           break;
         case 'bilingual_date_issued':
           if ($node->language == 'fr') {
-            $value = 'Date de modification ' . format_date($node->created, 'custom', '(Y-m-d)');
+            $value = format_date($node->created, 'custom', 'Y-m-d');
           }
           else {
-            $value = 'Date Issued ' . format_date($node->created, 'custom', '(Y-m-d)');
+            $value = format_date($node->created, 'custom', 'Y-m-d');
           }
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
         case 'bilingual_date_published':
           if ($node->language == 'fr') {
-            $value = 'Date de publication ' . format_date($node->changed, 'custom', '(Y-m-d)');
+            $value = format_date($node->changed, 'custom', 'Y-m-d');
           }
           else {
-            $value = 'Date published ' . format_date($node->changed, 'custom', '(Y-m-d)');
+            $value = format_date($node->changed, 'custom', 'Y-m-d');
           }
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
