@@ -262,6 +262,8 @@ input.form-submit { background-image: url(images/buttons.png);
 
 .secondary-tabs, .secondary-tabs:hover, .tao .primary-tabs li.active { background: none; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #176ca7), color-stop(100%, #135888)) !important; background-image: -webkit-linear-gradient(#176ca7, #135888) !important; background-image: -moz-linear-gradient(#176ca7, #135888) !important; background-image: -o-linear-gradient(#176ca7, #135888) !important; background-image: linear-gradient(#176ca7, #135888) !important; }
 
+.secondary-tabs li.active a { background-color: #000; border-radius: 4px; }
+
 .secondary-tabs a:hover { background-color: #000; }
 
 .tao table th, .tao .item-list h3, .tao .block .block-title, .tao .fieldset-title, .tao .collapsible .fieldset-legend a, .tao .admin-panel h3 { background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, gainsboro)) !important; background-image: -webkit-linear-gradient(#eeeeee, gainsboro) !important; background-image: -moz-linear-gradient(#eeeeee, gainsboro) !important; background-image: -o-linear-gradient(#eeeeee, gainsboro) !important; background-image: linear-gradient(#eeeeee, #dcdcdc) !important; }
