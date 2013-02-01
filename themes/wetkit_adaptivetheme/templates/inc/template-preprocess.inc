@@ -191,6 +191,14 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
     $variables['site_name'] = l($variables['site_name_title'], $alternate_site_url, array('attributes' => array('title' => t('Home page'))));
   }
 
+  // Assign the search indexing settings
+  $search_indexing_start = at_get_setting('search_indexing_start');
+  $search_indexing_stop = at_get_setting('search_indexing_stop');
+  if ((!empty($search_indexing_start) && !empty($search_indexing_stop))) {
+    $variables['search_indexing_start'] = $search_indexing_start;
+    $variables['search_indexing_stop'] = $search_indexing_stop;
+  }
+
   // Set Sub Site Name
   $variables['wetkit_sub_site'] = at_get_setting('wetkit_sub_site');
 

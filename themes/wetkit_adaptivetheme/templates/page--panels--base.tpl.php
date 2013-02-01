@@ -144,6 +144,9 @@
   </div>
   <div id="wb-core">
     <div id="wb-core-in" class="equalize">
+      <?php if (isset($search_indexing_start)): ?>
+        <?php print $search_indexing_start; ?>
+      <?php endif; ?>
       <<?php print $tag; ?> id="main-content">
         <?php print $messages; ?>
         <!-- region: Main Content -->
@@ -151,6 +154,9 @@
           <?php print $content; ?>
         <?php endif; ?>
       </<?php print $tag; ?>>
+      <?php if (isset($search_indexing_stop)): ?>
+        <?php print $search_indexing_stop; ?>
+      <?php endif; ?>
     </div>
   </div>
   <div id="wb-foot">
