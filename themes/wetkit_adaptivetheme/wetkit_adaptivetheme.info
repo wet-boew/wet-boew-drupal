@@ -145,6 +145,8 @@
   settings[render_nolink]            = 0
   settings[wetkit_sub_site]          = 0
   settings[alternate_site_url]       = ''
+  settings[search_indexing_start]    = ''
+  settings[search_indexing_stop]     = ''
 
   ; Layout settings - Standard layout
   settings[bigscreen_layout]         = 'three_col_grail'
