@@ -51,15 +51,15 @@ msgstr "Paramètres d'accessibilité"
 
 #: theme-settings.php:26
 msgid "Anchor ID for the “skip link” 1"
-msgstr ""
+msgstr "ID de l'ancre pour le “skip link” 1"
 
 #: theme-settings.php:29;42
 msgid "Specify the HTML ID of the element that the accessible-but-hidden “skip link” should link to. (<a href=\"!link\">Read more about skip links</a>.)"
-msgstr ""
+msgstr "Specifie le ID HTML de l'element que le “skip link” accessible-mais-caché devrait lié vers. (<a href=\"!link\">En savoir plus sur les skip links</a>.)"
 
 #: theme-settings.php:33
 msgid "Text for the “skip link” 1"
-msgstr ""
+msgstr "Texte pour le “skip link” 1"
 
 #: theme-settings.php:34 templates/inc/template-preprocess.inc:63
 msgid "Skip to main content"
@@ -67,15 +67,15 @@ msgstr "Aller au contenu principal"
 
 #: theme-settings.php:35;48
 msgid "For example: <em>Jump to navigation</em>, <em>Skip to content</em>"
-msgstr ""
+msgstr "Par exemple : <em>Aller à la navigation</em>, <em>Aller au contenu</em>"
 
 #: theme-settings.php:39
 msgid "Anchor ID for the “skip link” 2"
-msgstr ""
+msgstr "ID de l'ancre pour le “skip link” 2"
 
 #: theme-settings.php:46
 msgid "Text for the “skip link” 2"
-msgstr ""
+msgstr "Texte pour le “skip link” 2"
 
 #: theme-settings.php:47 templates/inc/template-preprocess.inc:65
 msgid "Skip to footer"
@@ -83,23 +83,23 @@ msgstr "Aller au pied de page"
 
 #: theme-settings.php:52
 msgid "Intranet Settings"
-msgstr ""
+msgstr "Paramêtres Intranet"
 
 #: theme-settings.php:56
 msgid "Intranet web site name"
-msgstr ""
+msgstr "Nom du site web Intranet"
 
 #: theme-settings.php:58
 msgid "The display name for the Intranet web site"
-msgstr ""
+msgstr "Le nom d'affichage pour le site web Intranet"
 
 #: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
 msgid "WetKit Adaptive Theme"
-msgstr ""
+msgstr "Thème WetKit Adaptive"
 
 #: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
 msgid "The Web Experience Toolkit Web Usability Theme ported to the Drupal's Adaptive Theme (3.x)."
-msgstr ""
+msgstr "Le thème de la Boîte à outils de l’expérience Web (BOEW) intégré au thème Adaptive Theme (3.x) de Drupal."
 
 #: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
 msgid "Sidebar first"
@@ -167,15 +167,15 @@ msgstr "Sous-thème WetKit Mise en page personnalisée"
 
 #: custom_panels/wetkit_one_100/wetkit_one_100.inc:9
 msgid "WetKit One column 100"
-msgstr ""
+msgstr "WetKit Une colonne 100"
 
 #: custom_panels/wetkit_one_100/wetkit_one_100.inc:10
 msgid "WetKit - 1 column"
-msgstr ""
+msgstr "WetKit - 1 colonne"
 
 #: custom_panels/wetkit_one_100/wetkit_one_100.inc:17 custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:17 custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:17 custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc:17
 msgid "Top (conditional)"
-msgstr ""
+msgstr "Haut (conditionnel)"
 
 #: custom_panels/wetkit_one_100/wetkit_one_100.inc:18 custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc:18
 msgid "Content"
@@ -183,7 +183,7 @@ msgstr "Contenu"
 
 #: custom_panels/wetkit_one_100/wetkit_one_100.inc:19 custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:21 custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:21 custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc:20
 msgid "Bottom (conditional)"
-msgstr ""
+msgstr "Bas (conditionnel)"
 
 #: custom_panels/wetkit_three_25_50_25/wetkit-three-25-50-25.tpl.php:57 custom_panels/wetkit_two_33_66/wetkit-two-33-66.tpl.php:52
 msgid "Secondary Menu"
@@ -191,19 +191,19 @@ msgstr "Menu secondaire"
 
 #: custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:9
 msgid "WetKit Three column 25/50/25 (Content)"
-msgstr ""
+msgstr "WetKit Trois colonnes 25/50/25 (Contenu)"
 
 #: custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:10 custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:10
 msgid "WetKit - 3 column"
-msgstr ""
+msgstr "WetKit - 3 colonnes"
 
 #: custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:18
 msgid "Content 1"
-msgstr ""
+msgstr "Contenu 1"
 
 #: custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:19
 msgid "Content 2"
-msgstr ""
+msgstr "Contenu 2"
 
 #: custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:20 custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc:19
 msgid "Sidebar"
@@ -211,7 +211,7 @@ msgstr "Barre de navigation"
 
 #: custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:9
 msgid "WetKit Three column 40/40/20 (Front)"
-msgstr ""
+msgstr "WetKit Trois colonnes 40/40/20 (Accueil)"
 
 #: custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:18
 msgid "Left"
@@ -227,11 +227,11 @@ msgstr "Droit"
 
 #: custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc:9
 msgid "WetKit Two column 33/66"
-msgstr ""
+msgstr "WetKit deux colonnes 33/66"
 
 #: custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc:10
 msgid "WetKit - 2 column"
-msgstr ""
+msgstr "WetKit - 2 colonnes"
 
 #: templates/maintenance-page.tpl.php:36
 msgid "Home"
@@ -267,7 +267,7 @@ msgstr "Menu du site"
 
 #: templates/page--internet.tpl.php:264 templates/page--panels--internet.tpl.php:204
 msgid "Government of Canada Footer"
-msgstr ""
+msgstr "Pied de page du Gouvernment du Canada"
 
 #: templates/inc/template-breadcrumb.inc:68;72
 msgid "Breadcrumb trail"
