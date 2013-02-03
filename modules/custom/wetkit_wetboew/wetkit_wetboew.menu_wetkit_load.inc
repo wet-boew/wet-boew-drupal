@@ -26,8 +26,12 @@ function _menu_wetkit_load() {
   $translated_menu_item_depth = _add_custom_menu('<front>', 'Accueil', NULL, 'main-menu', 0, 'fr');
   _create_translation_sets($source_menu_item_depth, $translated_menu_item_depth);
 
-  $source_menu_item = _add_custom_menu('<front>', 'Front Page', NULL, 'main-menu', 0, 'en', 0, $source_menu_item_depth);
-  $translated_menu_item = _add_custom_menu('<front>', 'Première Page', NULL, 'main-menu', 0, 'fr', 0, $translated_menu_item_depth);
+  $source_menu_item = _add_custom_menu('<noitem>', 'Placeholder', NULL, 'main-menu', 0, 'en', 0, $source_menu_item_depth);
+  $translated_menu_item = _add_custom_menu('<noitem>', 'Espace réservé', NULL, 'main-menu', 0, 'fr', 0, $translated_menu_item_depth);
+  _create_translation_sets($source_menu_item, $translated_menu_item);
+
+  $source_menu_item = _add_custom_menu('<front>', 'Front Page', NULL, 'main-menu', 0, 'en', 0, $source_menu_item);
+  $translated_menu_item = _add_custom_menu('<front>', 'Première Page', NULL, 'main-menu', 0, 'fr', 0, $translated_menu_item);
   _create_translation_sets($source_menu_item, $translated_menu_item);
 
   $source_menu_item_depth = _add_custom_menu('https://github.com/wet-boew/wet-boew-drupal', 'GitHub', NULL, 'main-menu', 1, 'en');
@@ -90,8 +94,12 @@ function _menu_wetkit_load() {
   $translated_menu_item_depth = _add_custom_menu('http://drupal.org', 'WCMS Drupal', NULL, 'main-menu', 3, 'fr');
   _create_translation_sets($source_menu_item_depth, $translated_menu_item_depth);
 
-  $source_menu_item = _add_custom_menu('http://drupal.org', 'Drupal.org', NULL, 'main-menu', 0, 'en', 0, $source_menu_item_depth);
-  $translated_menu_item = _add_custom_menu('http://drupal.org', 'Drupal.org', NULL, 'main-menu', 0, 'fr', 0, $translated_menu_item_depth);
+  $source_menu_item = _add_custom_menu('<noitem>', 'Placeholder', NULL, 'main-menu', 0, 'en', 0, $source_menu_item_depth);
+  $translated_menu_item = _add_custom_menu('<noitem>', 'Espace réservé', NULL, 'main-menu', 0, 'fr', 0, $translated_menu_item_depth);
+  _create_translation_sets($source_menu_item, $translated_menu_item);
+
+  $source_menu_item = _add_custom_menu('http://drupal.org', 'Drupal.org', NULL, 'main-menu', 0, 'en', 0, $source_menu_item);
+  $translated_menu_item = _add_custom_menu('http://drupal.org', 'Drupal.org', NULL, 'main-menu', 0, 'fr', 0, $translated_menu_item);
   _create_translation_sets($source_menu_item, $translated_menu_item);
 
   /* Terms and Transparency Navigation */

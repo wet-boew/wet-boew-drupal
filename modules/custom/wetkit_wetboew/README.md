@@ -8,6 +8,5 @@ Key Features (WetKit Web Usability)
 * Default Installation of Menus (Menu Blocks) for WET
 * Integration of WET-BOEW's JS
 * Menus + Menu Block Support
-* Multilingual Boxes Support (soon to be replaced by Bean)
 * Metatag Support
 * Panels Style Plugins
