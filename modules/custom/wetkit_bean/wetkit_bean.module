@@ -205,3 +205,39 @@ function wetkit_bean_theme_registry_alter(&$theme_registry) {
   _theme_process_registry($theme_registry_copy, 'phptemplate', 'theme_engine', 'pow', $mod_path);
   $theme_registry += array_diff_key($theme_registry_copy, $theme_registry);
 }
+
+/**
+ * Implements hook_form_alter().
+ *
+ * @param type $form
+ *   Nested array of form elements that comprise the form.
+ * @param type $form_state
+ *   A keyed array containing the current state of the form.
+ * @param type $form_id
+ *   String representing the name of the form itself.
+ */
+function wetkit_bean_form_alter(&$form, &$form_state, $form_id) {
+
+  // Create the General Settings Fieldset
+  if ($form_id == 'bean_panels_bean_panels_content_type_edit_form') {
+    // Create General Settings Fieldset
+    $form['general_settings'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('General Settings'),
+      '#collapsible' => FALSE,
+      '#collapsed' => FALSE,
+    );
+    $form['general_settings']['override_title_markup'] = $form['override_title_markup'];
+    $form['general_settings']['override_title'] = $form['override_title'];
+    $form['general_settings']['override_title_text'] = $form['override_title_text'];
+    $form['general_settings']['view_mode'] = $form['view_mode'];
+    $form['general_settings']['bean_delta'] = $form['bean_delta'];
+
+    // Unset some Form Variables
+    unset($form['override_title_markup']);
+    unset($form['override_title']);
+    unset($form['override_title_text']);
+    unset($form['view_mode']);
+    unset($form['bean_delta']);
+  }
+}
