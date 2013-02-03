@@ -77,6 +77,11 @@ div.panels-ipe-placeholder h4 { font-weight: 700; font-size: 15px; width: 75px; 
 .region-wetkit-33-66-second { width: 95%; }
 
 /* WET-BOEW */
+#wb-aside #gcwu-priorities h2 { color: #333; font-weight: 400; border: 0; margin-bottom: 5px; font-size: 1.6em; }
+
+#wb-main-in #gcwu-connect { margin-left: 0px; }
+#wb-main-in #gcwu-connect h2 { font-weight: 400; font-size: 1.6em; margin-top: 6px; }
+
 .wb-sec-def .panel-pane .wet-menu-block { margin-bottom: 10px; }
 
 #gcwu-bnr { z-index: 99 !important; }
@@ -113,7 +118,4 @@ div.panels-ipe-placeholder h4 { font-weight: 700; font-size: 15px; width: 75px; 
 /* Migration Helper Classes */
 .node-type-wetkit-documentation .block-content #tabs { margin-bottom: 10px; }
 
-#gcwu-sft li a[href^="mailto:"] {
-  background-image: none;
-  padding-left: 0px;
-}
+#gcwu-sft li a[href^="mailto:"] { background-image: none; padding-left: 0px; }
