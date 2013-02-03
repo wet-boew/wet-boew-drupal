@@ -12,9 +12,6 @@ projects[advanced_help][download][type] = git
 projects[advanced_help][download][revision] = 26437d8
 projects[advanced_help][download][branch] = 7.x-1.x
 
-projects[boxes][version] = 1.0
-projects[boxes][subdir] = contrib
-
 projects[better_formats][version] = 1.x-dev
 projects[better_formats][subdir] = contrib
 projects[better_formats][type] = module
