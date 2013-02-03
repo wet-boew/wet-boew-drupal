@@ -144,6 +144,10 @@ function _wetkit_bean_load() {
     );
     wetkit_bean_save_bean('wetkit_bean', 'Stay Connected', 'Provides "Stay Connected" bean for the front page.', '', $fields_en, $fields_fr);
 
+   $file_path = drupal_get_path('module', 'wetkit_demo') . '/video/demo.mp4';
+   $file = file_save_data(file_get_contents($file_path), file_default_scheme().'://video/'.basename($file_path));
+   $file_path = file_create_url($file->uri);
+
     // Videos Bean
     $fields_en = array(
       'title_field' => array(
@@ -154,8 +158,13 @@ function _wetkit_bean_load() {
       'field_bean_wetkit_body' => array(
         '0' => array(
           'value' => '<div id="gcwu-video"><div id="gcwu-bg-dark">
-	<img alt="Video" class="posterimg" src="/profiles/wetkit/modules/custom/wetkit_wetboew/images/video.jpg" />
-	<p><strong>Web Experience Toolkit Video</strong></p>
+<div class="wet-boew-multimedia span-3 media-element file-default" data-file_info="%7B%22fid%22:%22' . $file->fid . '%22,%22view_mode%22:%22default%22,%22type%22:%22media%22%7D">
+  <video poster="/profiles/wetkit/modules/custom/wetkit_demo/video/thumbnail.png" height="270" width="480">
+    <source src="' . $file_path . '" type="video/mp4">
+    <track data-type="text/html" kind="captions" src="/profiles/wetkit/modules/custom/wetkit_demo/video/mediaplayer-transcript_captions-eng.html"></track>
+  </video>
+</div>
+	<strong>Web Experience Toolkit Video</strong>
 	<p>This section is for video related content. Often this is the best place to introduce your department or organization.</p>
 </div>
 <ul class="list-bullet-none indent-none">
@@ -175,8 +184,13 @@ function _wetkit_bean_load() {
       'field_bean_wetkit_body' => array(
         '0' => array(
           'value' => '<div id="gcwu-video"><div id="gcwu-bg-dark">
-	<img alt="Vidéo" class="posterimg" src="/profiles/wetkit/modules/custom/wetkit_wetboew/images/video.jpg" />
-	<p><strong>Exp&eacute;rience Web Toolkit Vid&eacute;o</strong></p>
+<div class="wet-boew-multimedia span-3 media-element file-default" data-file_info="%7B%22fid%22:%22' . $file->fid . '%22,%22view_mode%22:%22default%22,%22type%22:%22media%22%7D">
+  <video poster="/profiles/wetkit/modules/custom/wetkit_demo/video/thumbnail.png" height="270" width="480">
+    <source src="' . $file_path . '" type="video/mp4">
+    <track data-type="text/html" kind="captions" src="/profiles/wetkit/modules/custom/wetkit_demo/video/mediaplayer-transcript_captions-fra.html"></track>
+  </video>
+</div>
+	<strong>Exp&eacute;rience Web Toolkit Vid&eacute;o</strong>
 	<p>Cette section est pour le contenu vid&eacute;o li&eacute;. Souvent c&#39;est le meilleur endroit pour introduire votre minist&egrave;re ou organisme.</p>
 </div>
 <ul class="list-bullet-none indent-none">
