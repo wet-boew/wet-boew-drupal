@@ -4,6 +4,7 @@
  * Code for the WetKit Bean feature.
  */
 
+include_once('wetkit_bean.default_content.inc');
 include_once 'wetkit_bean.features.inc';
 
 /**
@@ -11,16 +12,129 @@ include_once 'wetkit_bean.features.inc';
  */
 function wetkit_bean_init() {
   //Set Flag
-  //if ((variable_get('wetkit_bean_load', 1) == 1)) {
-    //_wetkit_bean_load();
-    //variable_set('wetkit_bean_load', 0);
-  //}
+  if ((variable_get('wetkit_bean_load', 1) == 1)) {
+    $entity_translation_entity_types = array(
+      'fieldable_panels_pane' => 'fieldable_panels_pane',
+      'bean' => 'bean',
+      'node' => 0,
+      'file' => 0,
+      'taxonomy_term' => 0,
+      'user' => 0,
+    );
+    variable_set('entity_translation_entity_types', $entity_translation_entity_types);
+
+    entity_info_cache_clear();
+    _wetkit_bean_load();
+    variable_set('wetkit_bean_load', 0);
+  }
+}
+
+
+/**
+ * Implements hook_apps_app_info().
+ */
+function wetkit_bean_apps_app_info() {
+  return array(
+    'configure form' => 'wetkit_bean_configure_form',
+  );
 }
 
 /**
-* Implements _wetkit_bean_load().
-*/
-function _wetkit_bean_load() {
+ * Configuration Form for WetKit WYSIWYG
+ */
+function wetkit_bean_configure_form($form, &$form_state) {
+  $form = array();
+
+  $form['wetkit_bean'] = array(
+    '#title' => 'Override Settings',
+    '#type'  => 'fieldset',
+    '#collapsible' => 'true',
+    '#collapsed'   => 'true',
+  );
+
+  $form['wetkit_bean']['rebuild_menu_description'] = array(
+    '#markup' => '<p>' . t('Rebuild the beans on the site using preconfigured settings:') . '</p>',
+  );
+
+  $form['wetkit_bean']['rebuild_menu'] = array(
+    '#type' => 'submit',
+    '#value' => t('Rebuild Default Bean(s)'),
+    '#weight' => 19,
+  );
+
+  $form['#submit'][] = 'wetkit_bean_configure_form_submit';
+
+  return system_settings_form($form);
+}
+
+/**
+ * Handle submission of the WetKit Metatag configuration page.
+ *
+ * @param type $form
+ *   Nested array of form elements that comprise the form.
+ * @param type $form_state
+ *   A keyed array containing the current state of the form.
+ */
+function wetkit_bean_configure_form_submit($form, &$form_state) {
+  if ($form_state['values']['op'] == t('Rebuild Default Bean(s)')) {
+    $bean = bean_delta_load('Minister');
+    if (empty($bean)) {
+      drupal_set_message(t('There is no bean found with delta @delta.', array('@delta' => 'Minister')));
+      return;
+    }
+    bean_delete($bean);
+
+    $bean = bean_delta_load('Priorities');
+    if (empty($bean)) {
+      drupal_set_message(t('There is no bean found with delta @delta.', array('@delta' => 'Priorities')));
+      return;
+    }
+    bean_delete($bean);
+    
+    $bean = bean_delta_load('Stay-Connected');
+    if (empty($bean)) {
+      drupal_set_message(t('There is no bean found with delta @delta.', array('@delta' => 'Stay-Connected')));
+      return;
+    }
+    bean_delete($bean);
+    
+    $bean = bean_delta_load('Videos');
+    if (empty($bean)) {
+      drupal_set_message(t('There is no bean found with delta @delta.', array('@delta' => 'Videos')));
+      return;
+    }
+    bean_delete($bean);
+
+    // Clear the bean cache so an anonymous user sees that the bean was deleted.
+    bean_reset();
+
+    // Recreate the default beans
+    _wetkit_bean_load();
+  }
+}
+
+/**
+ * Helper to manufacture a new Bean of a given type.
+ *
+ * @param string $bean_type
+ *   The type of bean to create
+ * @param string $label
+ *   Admin label for the bean
+ * @param string $description
+ *   (optional) Admin description for the bean
+ * @param string $title
+ *   (optional) Block title for the bean
+ * @param array $fields
+ *   (optional) An array of fields to assign. This should resemble the ACTUAL
+ *   field array, as it is literally transposed onto the bean, with the
+ *   exception that the language key should be omitted.
+ * @param string $view_mode
+ *   (optional) The view mode. Defaults to 'default'.
+ */
+function wetkit_bean_save_bean($bean_type, $label, $description = '', $title = '', $fields_en = array(), $fields_fr = array(), $view_mode = 'default') {
+
+  $bean = wetkit_bean_create_bean($bean_type, $label, $description, $title, $fields_en, $view_mode);
+  $bean->save();
 
   // Set the default translation mapping
   $translation = array(
@@ -29,65 +143,101 @@ function _wetkit_bean_load() {
     'language' => 'fr',
     'source' => 'en',
   );
-
-  $bean = bean_create(array('type' => 'wetkit_bean'));
-  $bean->label = 'Administrate: Minister Bean';
-  $bean->title = 'Minister';
-  $bean->view_mode = 'default';
-  $bean->delta = 'wetkit_minister_bean';
-  $bean->title_field = array(
-    'en' => array(array(
-      'value' => 'Minister',
-    )),
-  );
-  $bean->field_bean_wetkit_body = array(
-    'en' => array(array(
-      'value' => '<div class="gcwu-minister"><h3>Meet the Minister</h3>
-<div class="gcwu-minister-in">
-	<div class="gcwu-minister-img">
-    <img alt="The Honourable minister name" height="149" src="/profiles/wetkit/modules/custom/wetkit_wetboew/images/minister.jpg" width="99" />
-	</div>
-	<div class="gcwu-minister-info">
-    <p>The&nbsp;Honourable<br />
-    <strong>minister name</strong></p>
-    <ul>
-      <li><a href="#">About the minister</a></li>
-      <li><a href="#">His portfolio</a></li>
-    </ul>
-	</div>
-</div></div>',
-      'format' => 'wetkit_wysiwyg_text',
-    )),
-  );
-  $bean->save();
-
+  $fields_translated = array();
+  foreach ($fields_fr as $field_key => $field_value) {
+    $fields_translated[$field_key] = array();
+    $fields_translated[$field_key]['fr'] = $field_value;
+  }
   $bean_translated = entity_translation_get_handler('bean', $bean);
-  $values = array(
-    'title_field' => array(
-      'fr' => array(array(
-        'value' => 'Ministéré',
-      )), 
-    ),
-    'field_bean_wetkit_body' => array(
-      'fr' => array(array(
-        'value' => '<div class="gcwu-minister"><h3>Rencontrez le ministre</h3>
-<div class="gcwu-minister-in">
-	<div class="gcwu-minister-img">
-    <img alt="Le nom de l&#39;honorable ministre" height="149" src="/profiles/wetkit/modules/custom/wetkit_wetboew/images/minister.jpg" width="99" />
-	</div>
-	<div class="gcwu-minister-info">
-    <p>L&#39;honorable<br />
-    <strong>nom du minist&egrave;re</strong></p>
-    <ul>
-      <li><a href="#">A propos de la ministre</a></li>
-      <li><a href="#">Son portefeuille</a></li>
-    </ul>
-	</div>
-</div></div>',
-        'format' => 'wetkit_wysiwyg_text',
-      )),  
-    ),
-  );
-  $bean_translated->setTranslation($translation, $values);
+  $bean_translated->setTranslation($translation, $fields_translated);
   bean_save($bean);
+
+  drupal_set_message('Created a new bean "' . $label . '" of type <em>' . $bean_type . '</em>');
+}
+
+/**
+ * Create a bean from configuration.
+ *
+ * Normally, you can use wetkit_bean_save_bean(), however this is useful if
+ * you need to manipulate the bean before saving.
+ *
+ * @param string $bean_type
+ *   The type of bean to create
+ * @param string $label
+ *   Admin label for the bean
+ * @param string $description
+ *   (optional) Admin description for the bean
+ * @param string $title
+ *   (optional) Block title for the bean
+ * @param array $fields
+ *   (optional) An array of fields to assign. This should resemble the ACTUAL
+ *   field array, as it is literally transposed onto the bean, with the
+ *   exception that the language key should be omitted.
+ * @param string $view_mode
+ *   (optional) The view mode. Defaults to 'default'.
+ *
+ * @return Bean
+ *   a Bean entity
+ */
+function wetkit_bean_create_bean($bean_type, $label, $description = '', $title = '', $fields = array(), $view_mode = 'default') {
+  $config = array(
+    'label' => $label,
+    'description' => $description,
+    'title' => $title,
+    'type' => $bean_type,
+    'view_mode' => $view_mode,
+    'is_new' => TRUE,
+  );
+  foreach ($fields as $field_key => $field_value) {
+    $config[$field_key] = array();
+    $config[$field_key]['en'] = $field_value;
+  }
+  $bean = bean_create($config);
+  return $bean;
+}
+
+/**
+ * Implementation hook_theme_registry_alter()
+ */
+function wetkit_bean_theme_registry_alter(&$theme_registry) {
+  $mod_path = drupal_get_path('module', 'wetkit_bean') . '/theme';
+  $theme_registry_copy = $theme_registry;
+  _theme_process_registry($theme_registry_copy, 'phptemplate', 'theme_engine', 'pow', $mod_path);
+  $theme_registry += array_diff_key($theme_registry_copy, $theme_registry);
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * @param type $form
+ *   Nested array of form elements that comprise the form.
+ * @param type $form_state
+ *   A keyed array containing the current state of the form.
+ * @param type $form_id
+ *   String representing the name of the form itself.
+ */
+function wetkit_bean_form_alter(&$form, &$form_state, $form_id) {
+
+  // Create the General Settings Fieldset
+  if ($form_id == 'bean_panels_bean_panels_content_type_edit_form') {
+    // Create General Settings Fieldset
+    $form['general_settings'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('General Settings'),
+      '#collapsible' => FALSE,
+      '#collapsed' => FALSE,
+    );
+    $form['general_settings']['override_title_markup'] = $form['override_title_markup'];
+    $form['general_settings']['override_title'] = $form['override_title'];
+    $form['general_settings']['override_title_text'] = $form['override_title_text'];
+    $form['general_settings']['view_mode'] = $form['view_mode'];
+    $form['general_settings']['bean_delta'] = $form['bean_delta'];
+
+    // Unset some Form Variables
+    unset($form['override_title_markup']);
+    unset($form['override_title']);
+    unset($form['override_title_text']);
+    unset($form['view_mode']);
+    unset($form['bean_delta']);
+  }
 }

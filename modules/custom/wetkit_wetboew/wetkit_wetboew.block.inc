@@ -8,7 +8,7 @@
  * Implements _wetkit_wetboew_default_blocks().
  */
 function _wetkit_wetboew_default_blocks() {
-// Enable some standard blocks.
+  // Enable some standard blocks.
   $default_theme = variable_get('theme_default', 'wetkit_adaptivetheme');
   $admin_theme = 'wetkit_rubik';
   $blocks = array(

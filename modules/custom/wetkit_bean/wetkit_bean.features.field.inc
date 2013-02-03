@@ -116,8 +116,13 @@ function wetkit_bean_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'settings' => array(),
-          'type' => 'hidden',
+          'module' => 'title',
+          'settings' => array(
+            'title_class' => '',
+            'title_link' => '',
+            'title_style' => 'h2',
+          ),
+          'type' => 'title_linked',
           'weight' => '0',
         ),
       ),

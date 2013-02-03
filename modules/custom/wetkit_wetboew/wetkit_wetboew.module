@@ -373,7 +373,7 @@ function wetkit_wetboew_ctools_plugin_directory($module, $plugin) {
 }
 
 /**
- * Implements hook_enable().
+ * Implements hook_init().
  */
 function wetkit_wetboew_init() {
   //Set Flag
