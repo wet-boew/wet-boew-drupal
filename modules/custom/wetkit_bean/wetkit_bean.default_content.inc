@@ -146,7 +146,7 @@ function _wetkit_bean_load() {
 
    $file_path = drupal_get_path('module', 'wetkit_demo') . '/video/demo.mp4';
    $file = file_save_data(file_get_contents($file_path), file_default_scheme() . '://video/' . basename($file_path));
-   $file_path = file_create_url(file_build_uri($file->uri));
+   $file_path = file_create_url($file->uri);
 
     // Videos Bean
     $fields_en = array(
