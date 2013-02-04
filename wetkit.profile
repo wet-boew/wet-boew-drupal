@@ -20,6 +20,7 @@ function wetkit_install_tasks(&$install_state) {
   drupal_get_messages('error');
 
   $tasks = array();
+  $current_task = variable_get('install_task', 'done');
 
   // Add the WetKit theme selection to the installation process
   require_once(drupal_get_path('module', 'wetkit_wetboew') . '/wetkit_wetboew.profile.inc');
@@ -27,8 +28,15 @@ function wetkit_install_tasks(&$install_state) {
 
   // Set up a task to include secondary language (fr)
   $tasks['wetkit_batch_processing'] = array(
-    'display_name' => t('Import French Language'),
+    'display_name' => st('Import French Language'),
     'type' => 'batch',
+  );
+
+  $tasks['wetkit_import_content'] = array(
+    'display_name' => st('Import content'),
+    'type' => 'batch',
+    // Show this task only after the WetKit steps have bene reached.
+    'display' => strpos($current_task, 'wetkit_') !== FALSE,
   );
 
   return $tasks;
@@ -157,6 +165,29 @@ function wetkit_batch_processing(&$install_state) {
   $batch = locale_batch_by_language('fr');
   return $batch;
 
+}
+
+/**
+ * Task callback: return a batch API array with the products to be imported.
+ */
+function wetkit_import_content() {
+  // Fixes problems when the CSV files used for importing have been created
+  // on a Mac, by forcing PHP to detect the appropriate line endings.
+  ini_set("auto_detect_line_endings", TRUE);
+
+  // Run default_content migration.
+  $operations[] = array('_wetkit_import', array('WetKit_Migrate_DefaultContent', t('Importing content.')));
+
+  // Run bean import.
+  $operations[] = array('_wetkit_bean_import', array(t('Importing Bean content.')));
+
+  $batch = array(
+    'title' => t('Importing content'),
+    'operations' => $operations,
+    'file' => drupal_get_path('profile', 'wetkit') . '/wetkit.install_callbacks.inc',
+  );
+
+  return $batch;
 }
 
 /**
