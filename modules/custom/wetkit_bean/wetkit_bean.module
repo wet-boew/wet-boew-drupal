@@ -11,8 +11,10 @@ include_once 'wetkit_bean.features.inc';
  * Implements hook_init().
  */
 function wetkit_bean_init() {
+  global $theme;
+
   //Set Flag
-  if ((variable_get('wetkit_bean_load', 1) == 1)) {
+  if (((variable_get('wetkit_bean_load', 1) == 1) && ($theme == 'wetkit_adaptivetheme'))) {
     $entity_translation_entity_types = array(
       'fieldable_panels_pane' => 'fieldable_panels_pane',
       'bean' => 'bean',
@@ -22,13 +24,11 @@ function wetkit_bean_init() {
       'user' => 0,
     );
     variable_set('entity_translation_entity_types', $entity_translation_entity_types);
-
     entity_info_cache_clear();
     _wetkit_bean_load();
     variable_set('wetkit_bean_load', 0);
   }
 }
-
 
 /**
  * Implements hook_apps_app_info().
