@@ -44,10 +44,5 @@ function wetkit_migrate_menu() {
  * Implements hook_init(). 
  */
 function wetkit_migrate_init() {
-  //Set Flag
-  if ((variable_get('wetkit_migrate_load', 1) == 1)) {
-    $migration = Migration::getInstance('WetKit_Migrate_DefaultContent');
-    $result = $migration->processImport();
-    variable_set('wetkit_migrate_load', 0);
-  }
+
 }
