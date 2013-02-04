@@ -214,7 +214,13 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
   $nav_bar_markup = strip_tags($nav_bar_markup, '<li><a>');
   if (module_exists('wetkit_language')) {
     $language_link_markup = '<li id="' . $theme_prefix . '-gcnb-lang">' . strip_tags($variables['menu_lang_bar'], '<a><span>') . '</li>';
-    $variables['menu_bar'] = '<ul>' . $nav_bar_markup . $language_link_markup . '</ul>';
+    if (module_exists('edit')) {
+      $quick_edit = edit_trigger_link();
+      $variables['menu_bar'] = '<ul>' . $nav_bar_markup . $language_link_markup . '<li>' . drupal_render($quick_edit) . '</li>' . '</ul>';
+    }
+    else {
+      $variables['menu_bar'] = '<ul>' . $nav_bar_markup . $language_link_markup . '</ul>';
+    }
   }
   else {
     $variables['menu_bar'] = '<ul>' . $nav_bar_markup . '</ul>';
