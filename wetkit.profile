@@ -1,9 +1,19 @@
 <?php
+/**
+ * @file
+ * Code for the wetkit.profile file.
+ */
 
 /**
  * Implements hook_install_tasks().
  */
 function wetkit_install_tasks(&$install_state) {
+  // Increase maximum function nesting level to prevent install errors.
+  $max_nesting_level = ini_get('xdebug.max_nesting_level');
+  if ($max_nesting_level > 0 && $max_nesting_level <= '200') {
+    ini_set('xdebug.max_nesting_level', 200);
+  }
+
   // Hide some messages from various modules that are just too chatty.
   drupal_get_messages('status');
   drupal_get_messages('warning');
@@ -28,10 +38,26 @@ function wetkit_install_tasks(&$install_state) {
  * Implements hook_install_tasks_alter().
  */
 function wetkit_install_tasks_alter(&$tasks, $install_state) {
+  $tasks['install_select_profile']['display'] = FALSE;
+  $tasks['install_select_locale']['display'] = FALSE;
+
   // Hide some messages from various modules that are just too chatty.
   drupal_get_messages('status');
   drupal_get_messages('warning');
   drupal_get_messages('error');
+
+  // The "Welcome" screen needs to come after the first two steps
+  // (profile and language selection), despite the fact that they are disabled.
+  $new_task['install_welcome'] = array(
+    'display' => TRUE,
+    'display_name' => st('Welcome'),
+    'type' => 'form',
+    'run' => isset($install_state['parameters']['welcome']) ? INSTALL_TASK_SKIP : INSTALL_TASK_RUN_IF_REACHED,
+  );
+  $old_tasks = $tasks;
+  $tasks = array_slice($old_tasks, 0, 2) + $new_task + array_slice($old_tasks, 2);
+
+  _wetkit_set_theme('wetkit_shiny');
 
   //If using French Locale as default remove associated Install Task
   unset($tasks['install_import_locales']);
@@ -40,6 +66,56 @@ function wetkit_install_tasks_alter(&$tasks, $install_state) {
   // Magically go one level deeper in solving years of dependency problems
   require_once(drupal_get_path('module', 'panopoly_core') . '/panopoly_core.profile.inc');
   $tasks['install_load_profile']['function'] = 'panopoly_core_install_load_profile';
+}
+
+/**
+ * Force-set a theme at any point during the execution of the request.
+ *
+ * Drupal doesn't give us the option to set the theme during the installation
+ * process and forces enable the maintenance theme too early in the request
+ * for us to modify it in a clean way.
+ */
+function _wetkit_set_theme($target_theme) {
+  if ($GLOBALS['theme'] != $target_theme) {
+    unset($GLOBALS['theme']);
+
+    drupal_static_reset();
+    $GLOBALS['conf']['maintenance_theme'] = $target_theme;
+    _drupal_maintenance_theme();
+  }
+}
+
+/**
+ * Task callback: shows the welcome screen.
+ */
+function install_welcome($form, &$form_state, &$install_state) {
+  drupal_set_title(st('Welcome'));
+
+  $message = st('Thank you for choosing the Web Experience Toolkit Drupal Distribution!') . '<br />';
+  $message .= '<p>' . st('This distribution installs Drupal with
+    preconfigured features that will help you meet Enterprise Standards.') . '</p>';
+  $message .= '<p>' . st('Please note that this is a community-supported work in progress,
+    so be sure to join us over on ' . l('github.com/wet-boew/wet-boew-drupal', 'http://github.com/wet-boew/wet-boew-drupal') .
+    ' and help us improve this product.') . '</p>';
+
+  $form = array();
+  $form['welcome_message'] = array(
+    '#markup' => $message,
+  );
+  $form['actions'] = array(
+    '#type' => 'actions',
+  );
+  $form['actions']['submit'] = array(
+    '#type' => 'submit',
+    '#value' => st("Let's Get Started!"),
+    '#weight' => 10,
+  );
+  return $form;
+}
+
+function install_welcome_submit($form, &$form_state) {
+  global $install_state;
+  $install_state['parameters']['welcome'] = 'done';
 }
 
 /**
@@ -67,6 +143,7 @@ function wetkit_form_install_configure_form_alter(&$form, $form_state) {
     $form['admin_account']['account']['mail']['#default_value'] = 'admin@' . $_SERVER['HTTP_HOST'];
   }
 }
+
 /**
  * Batch Processing for French Language import.
  */

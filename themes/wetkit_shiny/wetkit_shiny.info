@@ -1,0 +1,17 @@
+name = WetKit Shiny
+description = A simple theme to be used exclusively with the installer. Do not enable as your admin theme.
+core = 7.x
+stylesheets[screen][] = css/reset.css
+stylesheets[screen][] = css/style.css
+; Contrib Module Admin Styles
+stylesheets[screen][] = css/contrib.css
+; Install Pages
+stylesheets[all][] = css/shiny.css
+
+settings[shortcut_module_link] = 1
+regions[content] = Content
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[sidebar_first] = First sidebar
+regions_hidden[] = sidebar_first

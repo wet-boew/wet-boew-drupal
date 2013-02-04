@@ -128,6 +128,13 @@ projects[rubik][patch][1003820] = http://drupal.org/files/1003820-rubik-5.patch
 projects[rubik][patch][1440054] = http://drupal.org/files/patch_commit_96121294ba3b.patch
 projects[rubik][patch][1645148] = http://drupal.org/files/rubik-ie9-box-sizing-1645148-1.patch
 
+projects[tao][version] = 3.x-dev
+projects[tao][type] = theme
+projects[tao][download][type] = git
+projects[tao][download][revision] = f06452b
+projects[tao][download][branch] = 7.x-3.x
+projects[tao][patch][1016844] = http://drupal.org/files/tao_taxonomy_manager-1016844-12.patch
+
 projects[tao][version] = 3.0-beta4
 
 ; Libraries for WetKit
