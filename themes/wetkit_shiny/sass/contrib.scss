@@ -1,0 +1,27 @@
+/***
+ * The .seven.css file is intended to contain styles that override declarations
+ * in the Seven admin theme.
+ */
+
+/* @group Content */
+
+/* Import Base Styles and Functions */
+@import "_base.scss";
+
+.form-item,
+.form-item .form-item {
+  margin-bottom: 10px;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.form-actions {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.form-item .form-item {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.form-radios > .form-item {
+  margin-top: 3px;
+}

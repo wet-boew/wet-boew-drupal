@@ -1,0 +1,76 @@
+$normal: "Open Sans", Arial, sans-serif;
+$serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+
+@mixin gradient-vertical($from, $to) {
+  background: $to;
+  background: -moz-linear-gradient(top,  $from 0%, $to 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from), color-stop(100%,$to));
+  background: -webkit-linear-gradient(top, $from 0%,$to 100%);
+  background: -o-linear-gradient(top, $from 0%,$to 100%);
+  background: -ms-linear-gradient(top, $from 0%,$to 100%);
+  background: linear-gradient(to bottom, $from 0%,$to 100%);
+}
+
+@mixin button($border, $highlight) {
+  border: 1px solid $border;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0 1px 2px #ccc, inset 0 1px 1px $highlight;
+  -webkit-box-shadow: 0 1px 2px #ccc, inset 0 1px 1px $highlight;
+  box-shadow: 0 1px 2px #ccc, inset 0 1px 1px $highlight;
+  font: normal 500 16px/16px "Open Sans", Arial, sans-serif;
+  margin-left: 1px;
+  margin-top: 1px;
+  padding: 6px 30px;
+  text-decoration: none;
+
+  &:focus {
+    color: #fff;
+  }
+}
+
+@mixin grey-button {
+  @include gradient-vertical(#fefefe,#e0e0e0);
+  @include button(#ccc, #fff);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: #eeeeee;
+    color: #5A5A5A;
+    text-shadow: 0 -1px 1px #fff;
+  }
+
+}
+
+@mixin blue-button {
+  @include gradient-vertical(#36A2F6,#2F88CD);
+  @include button(#2F88CD, #7bb8ef);
+  color: #fff;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: #359ff2;
+    box-shadow: 0 1px 2px #cccccc, inset 0 1px 1px #7bb8ef;
+    color: #fff;
+    text-shadow: 0 -1px 1px #2F88CD;
+  }
+}
+
+@mixin box-shadow($horizontal,$vertical,$width,$color) {
+  -moz-box-shadow: $horizontal $vertical $width $color;
+  -webkit-box-shadow: $horizontal $vertical $width $color;
+  box-shadow: $horizontal $vertical $width $color;
+}
+
+@mixin round-corners($topleft,$topright,$bottomright,$bottomleft) {
+  -moz-border-radius: $topleft $topright $bottomright $bottomleft;
+  -webkit-border-radius: $topleft $topright $bottomright $bottomleft;
+  border-radius: $topleft $topright $bottomright $bottomleft;
+}
+
+@function calc-em($target-px, $context) {
+  @return ($target-px / $context) * 1em;
+}

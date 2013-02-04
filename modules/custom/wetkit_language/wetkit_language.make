@@ -18,6 +18,7 @@ projects[title][subdir] = contrib
 projects[title][download][type] = git
 projects[title][download][revision] = 7fc9dbe
 projects[title][download][branch] = 7.x-1.x
+projects[title][patch][1907078] = http://drupal.org/files/undefined_index_field_name-1907078-2.patch
 
 projects[i18n][version] = 1.7
 projects[i18n][subdir] = contrib
