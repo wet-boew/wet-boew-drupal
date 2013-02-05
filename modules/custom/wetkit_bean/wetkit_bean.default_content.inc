@@ -160,7 +160,7 @@ function _wetkit_bean_load() {
           'value' => '<div id="gcwu-video"><div id="gcwu-bg-dark">
 <div class="wet-boew-multimedia span-3 media-element file-default" data-file_info="%7B%22fid%22:%22' . $file->fid . '%22,%22view_mode%22:%22default%22,%22type%22:%22media%22%7D">
   <video poster="/profiles/wetkit/modules/custom/wetkit_demo/video/thumbnail.png" height="270" width="480">
-    <source src="' . $file_path . '" type="video/mp4">
+    <source src="' . '/' . conf_path() . '/files/' . basename($file_path) . '" type="video/mp4">
     <track data-type="text/html" kind="captions" src="/profiles/wetkit/modules/custom/wetkit_demo/video/mediaplayer-transcript_captions-eng.html"></track>
   </video>
 </div>
@@ -186,7 +186,7 @@ function _wetkit_bean_load() {
           'value' => '<div id="gcwu-video"><div id="gcwu-bg-dark">
 <div class="wet-boew-multimedia span-3 media-element file-default" data-file_info="%7B%22fid%22:%22' . $file->fid . '%22,%22view_mode%22:%22default%22,%22type%22:%22media%22%7D">
   <video poster="/profiles/wetkit/modules/custom/wetkit_demo/video/thumbnail.png" height="270" width="480">
-    <source src="' . $file_path . '" type="video/mp4">
+    <source src="' . '/' . conf_path() . '/files/' . basename($file_path) . '" type="video/mp4">
     <track data-type="text/html" kind="captions" src="/profiles/wetkit/modules/custom/wetkit_demo/video/mediaplayer-transcript_captions-fra.html"></track>
   </video>
 </div>
