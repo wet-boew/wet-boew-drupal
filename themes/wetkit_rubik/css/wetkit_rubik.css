@@ -287,7 +287,7 @@ input.form-submit { background-image: url(images/buttons.png);
 .tao .sticky-header { z-index: 999; }
 
 /* Breadcrumb arrows */
-.tao #branding span:after { content: ' // '; padding-top: 10px; float: left; color: #fff; }
+.tao #branding span.delimiter:after { content: ' // '; padding-top: 10px; float: left; color: #fff; }
 
 .tao #branding span:last-child:after { content: none; padding: 0; }
 

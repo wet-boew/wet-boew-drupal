@@ -118,7 +118,6 @@ function wetkit_bean_configure_form_submit($form, &$form_state) {
 function wetkit_bean_save_bean($bean_type, $label, $description = '', $title = '', $fields_en = array(), $fields_fr = array(), $view_mode = 'default') {
 
   $bean = wetkit_bean_create_bean($bean_type, $label, $description, $title, $fields_en, $view_mode);
-  $bean->save();
 
   // Set the default translation mapping
   $translation = array(

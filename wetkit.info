@@ -63,6 +63,7 @@ dependencies[] = wetkit_demo
 dependencies[] = wetkit_language
 dependencies[] = wetkit_migrate
 dependencies[] = wetkit_bean
+dependencies[] = wetkit_metatag
 dependencies[] = wetkit_wetboew
 
 ; WetKit Recommended - Translation
