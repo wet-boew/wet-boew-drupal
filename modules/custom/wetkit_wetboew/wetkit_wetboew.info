@@ -31,7 +31,6 @@ dependencies[] = transliteration
 dependencies[] = views
 dependencies[] = views_atom
 dependencies[] = views_content
-dependencies[] = wetkit_metatag
 dependencies[] = wetkit_pages
 features[ctools][] = custom_formatters:custom_formatters:2
 features[ctools][] = path_breadcrumbs:path_breadcrumbs:1

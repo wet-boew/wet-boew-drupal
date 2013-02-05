@@ -8,6 +8,7 @@ dependencies[] = ctools
 dependencies[] = i18n
 dependencies[] = i18n_variable
 dependencies[] = metatag
+dependencies[] = metatag_panels
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
