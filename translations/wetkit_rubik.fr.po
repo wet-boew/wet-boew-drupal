@@ -43,15 +43,15 @@ msgstr "Afficher champ de formulaire descriptions en ligne."
 
 #: theme-settings.php:36
 msgid "By default, each field's description is displayed in a pop-up, which is only visible when hovering over that field. Select this option to make all field descriptions visible at all times."
-msgstr ""
+msgstr "Par défaut, la description individuelle des champs est affichée dans un pop-up, visible seulement lorsque l'usager survol ce champ. Selectionnez cette option afin d'afficher les descriptions en tout temps."
 
 #: wetkit_rubik.info:0
 msgid "WetKit Rubik"
-msgstr "WetKit Rubik"
+msgstr "BOEW Rubik"
 
 #: wetkit_rubik.info:0
 msgid "WetKit Rubik is a Rubik based sub-theme with a few enhancements and accessibility improvements."
-msgstr ""
+msgstr "BOEW Rubik est un sous-thème basé sur Rubik incluant des améliorations d'accessbilité."
 
 #: wetkit_rubik.info:0
 msgid "Content"
@@ -83,5 +83,5 @@ msgstr "Pied de page"
 
 #: templates/page.tpl.php:61
 msgid "Feeds"
-msgstr ""
+msgstr "Fils de nouvelles"
 

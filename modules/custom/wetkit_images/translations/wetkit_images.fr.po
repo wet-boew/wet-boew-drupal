@@ -27,5 +27,5 @@ msgstr "Effectue la mise à l’échelle et le recadrage des images."
 
 #: wetkit_images.info:0
 msgid "WetKit"
-msgstr "WetKit"
+msgstr "BOEW"
 

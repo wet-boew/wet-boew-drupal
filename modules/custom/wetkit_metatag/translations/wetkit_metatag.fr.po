@@ -289,7 +289,7 @@ msgstr ""
 
 #: wetkit_metatag.info:0
 msgid "WetKit"
-msgstr "WetKit"
+msgstr "BOEW"
 
 #: vertical_tabs_metatag.js:0;0
 msgid "Using default"

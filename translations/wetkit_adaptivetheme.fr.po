@@ -47,31 +47,31 @@ msgstr ""
 
 #: theme-settings.php:21
 msgid "WetKit Overrides"
-msgstr ""
+msgstr "Prépondérances de BOEW"
 
 #: theme-settings.php:25
 msgid "Disable rendering of the mb main link inside the mega menu"
-msgstr ""
+msgstr "Désactiver l'affichage du lien <em>mb main</em> dans le menu méga"
 
 #: theme-settings.php:27
 msgid "Specify whether or not the mega menu should include the main link."
-msgstr ""
+msgstr "Spécifie si le menu méga doit inclure le lien principal"
 
 #: theme-settings.php:31
 msgid "Disable rendering of menu items with <nolink> as path"
-msgstr ""
+msgstr "Désactiver l'affichage d'items de menu <nolink> comme chemin"
 
 #: theme-settings.php:33
 msgid "Specify whether or not menu links with <nolink> as path should render an a href. (This can break certain versions of WET)"
-msgstr ""
+msgstr "Spéficie si les liens de menu ayant <nolink> comme chemin doivrent s'afficher comme un href (Cela brise certaines versions de WET)"
 
 #: theme-settings.php:37
 msgid "Alternate Site URL"
-msgstr ""
+msgstr "URL alternative du site"
 
 #: theme-settings.php:39
 msgid "Alternate Site URL to be used with Site Name."
-msgstr ""
+msgstr "URL alternative du site à être utilisée avec le nom du site"
 
 #: theme-settings.php:43
 msgid "Intranet web site name"
@@ -83,15 +83,15 @@ msgstr "Le nom d'affichage pour le site web Intranet"
 
 #: theme-settings.php:49
 msgid "Start Indexing tag for search"
-msgstr ""
+msgstr "Élément <em>Début d'indexation</em> pour la recherche"
 
 #: theme-settings.php:51;57
 msgid "Custom Markup to wrap around content to assist in indexing."
-msgstr ""
+msgstr "Balisage personallisé englobant le contenu pour faciliter l'indexation"
 
 #: theme-settings.php:55
 msgid "Stop Indexing tag for search"
-msgstr ""
+msgstr "Élément <em>Fin d'indexation</em> pour la recherche"
 
 #: theme-settings.php:61
 msgid "Accessibility Settings"
@@ -140,9 +140,7 @@ msgstr "Thème WetKit Adaptive"
 
 #: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
 msgid "The Web Experience Toolkit Web Usability Theme ported to the Drupal's Adaptive Theme (3.x)."
-msgstr ""
-"Le thème de la Boîte à outils de l’expérience Web (BOEW) "
-"intégré au thème Adaptive Theme (3.x) de Drupal."
+msgstr "Le thème de la Boîte à outils de l’expérience Web (BOEW) intégré au thème Adaptive Theme (3.x) de Drupal."
 
 #: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
 msgid "Sidebar first"
@@ -202,19 +200,19 @@ msgstr ""
 
 #: custom_layouts/wetkit/wetkit.inc:30
 msgid "wetkit"
-msgstr "wetkit"
+msgstr "BOEW"
 
 #: custom_layouts/wetkit/wetkit.inc:31
 msgid "WetKit Subtheme Custom Page Layout"
-msgstr "Sous-thème WetKit Mise en page personnalisée"
+msgstr "Sous-thème BOEW Mise en page personnalisée"
 
 #: custom_panels/wetkit_one_100/wetkit_one_100.inc:9
 msgid "WetKit One column 100"
-msgstr "WetKit Une colonne 100"
+msgstr "BOEW Une colonne 100"
 
 #: custom_panels/wetkit_one_100/wetkit_one_100.inc:10
 msgid "WetKit - 1 column"
-msgstr "WetKit - 1 colonne"
+msgstr "BOEW - 1 colonne"
 
 #: custom_panels/wetkit_one_100/wetkit_one_100.inc:17 custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:17 custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:17 custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc:17
 msgid "Top (conditional)"
@@ -234,11 +232,11 @@ msgstr "Menu secondaire"
 
 #: custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:9
 msgid "WetKit Three column 25/50/25 (Content)"
-msgstr "WetKit Trois colonnes 25/50/25 (Contenu)"
+msgstr "BOEW Trois colonnes 25/50/25 (Contenu)"
 
 #: custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:10 custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:10
 msgid "WetKit - 3 column"
-msgstr "WetKit - 3 colonnes"
+msgstr "BOEW - 3 colonnes"
 
 #: custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:18
 msgid "Content 1"
@@ -254,7 +252,7 @@ msgstr "Barre de navigation"
 
 #: custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:9
 msgid "WetKit Three column 40/40/20 (Front)"
-msgstr "WetKit Trois colonnes 40/40/20 (Accueil)"
+msgstr "BOEW Trois colonnes 40/40/20 (Accueil)"
 
 #: custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:18
 msgid "Left"
@@ -270,11 +268,11 @@ msgstr "Droit"
 
 #: custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc:9
 msgid "WetKit Two column 33/66"
-msgstr "WetKit deux colonnes 33/66"
+msgstr "BOEW deux colonnes 33/66"
 
 #: custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc:10
 msgid "WetKit - 2 column"
-msgstr "WetKit - 2 colonnes"
+msgstr "BOEW - 2 colonnes"
 
 #: templates/maintenance-page.tpl.php:36
 msgid "Home"
