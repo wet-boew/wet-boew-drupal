@@ -24,15 +24,15 @@ msgstr ""
 
 #: wetkit_widgets.features.field.inc:273
 msgid "Caption"
-msgstr ""
+msgstr "Légende"
 
 #: wetkit_widgets.features.field.inc:274
 msgid "Items"
-msgstr "Éléments"
+msgstr "Éléments"
 
 #: wetkit_widgets.features.field.inc:275
 msgid "Poster"
-msgstr ""
+msgstr "Affiche"
 
 #: wetkit_widgets.plugins.inc:23;60
 msgid "Tabbed Interface"
@@ -62,17 +62,15 @@ msgstr "Image par défaut"
 
 #: wetkit_widgets.plugins.inc:96
 msgid "If no image is uploaded, this image will be shown on display."
-msgstr ""
-"Si aucune image n'est transférée, c'est cette image qui sera "
-"utilisée pour l'affichage."
+msgstr "Si aucune image n'est transférée, c'est cette image qui sera utilisée pour l'affichage."
 
 #: wetkit_widgets.plugins.inc:118 wetkit_widgets.module:160
 msgid "WetKit Video"
-msgstr ""
+msgstr "Vidéo wetkit"
 
 #: wetkit_widgets.plugins.inc:119
 msgid "Render the file using an HTML5 video tag"
-msgstr ""
+msgstr "Affiche le fichier en utilisant un élément video HTML5"
 
 #: wetkit_widgets.plugins.inc:134
 msgid "Default"
@@ -84,15 +82,15 @@ msgstr "Style d'image"
 
 #: wetkit_widgets.plugins.inc:162
 msgid "Show video controls"
-msgstr ""
+msgstr "Afficher les contrôles video"
 
 #: wetkit_widgets.plugins.inc:167
 msgid "Autoplay"
-msgstr ""
+msgstr "Lecture automatique"
 
 #: wetkit_widgets.plugins.inc:172
 msgid "Loop"
-msgstr ""
+msgstr "Boucle"
 
 #: wetkit_widgets.plugins.inc:178
 msgid "Size"
@@ -100,7 +98,7 @@ msgstr "Taille"
 
 #: wetkit_widgets.plugins.inc:181
 msgid "The size expressed as WIDTHxHEIGHT (for example, 640x480). Leave blank to use the video file to determine the size of the player."
-msgstr ""
+msgstr "La taille exprimée par LargeurxHauteur (par exemple, 640x480). Laissez vide pour laisser le fichier vidéo déterminer la taille du lecteur."
 
 #: wetkit_widgets.plugins.inc:185
 msgid "Width"
@@ -116,27 +114,27 @@ msgstr "pixels"
 
 #: wetkit_widgets.plugins.inc:202
 msgid "Display of multiple files"
-msgstr ""
+msgstr "Affichage de fichiers multiple"
 
 #: wetkit_widgets.plugins.inc:205
 msgid "Use multiple sources within a single <video> tag"
-msgstr ""
+msgstr "Utilise plusieures sources à l'intérieur d'un seul élément <video>"
 
 #: wetkit_widgets.plugins.inc:206
 msgid "Use multiple <video> tags, each with a single source"
-msgstr ""
+msgstr "Utilise plusieurs éléments <video>, chacun ayant qu'une seule source"
 
 #: wetkit_widgets.plugins.inc:227
 msgid "Multiple files: %multiple"
-msgstr ""
+msgstr "Plusieur fichiers: %multiple"
 
 #: wetkit_widgets.plugins.inc:230
 msgid "Controls: %controls"
-msgstr ""
+msgstr "Contrôles: %controls"
 
 #: wetkit_widgets.plugins.inc:233
 msgid "Autoplay: %autoplay"
-msgstr ""
+msgstr "Lecture automatique: %autoplay"
 
 #: wetkit_widgets.plugins.inc:233;236;239
 msgid "yes"
@@ -148,15 +146,15 @@ msgstr "non"
 
 #: wetkit_widgets.plugins.inc:236
 msgid "Loop: %loop"
-msgstr ""
+msgstr "Boucle: %loop"
 
 #: wetkit_widgets.plugins.inc:239
 msgid "Muted: %muted"
-msgstr ""
+msgstr "Sourdine: %muted"
 
 #: wetkit_widgets.plugins.inc:242
 msgid "Size: %width x %height"
-msgstr ""
+msgstr "Taille: %width x %height"
 
 #: wetkit_widgets.plugins.inc:247
 msgid "Image Style: @style"
@@ -176,7 +174,7 @@ msgstr "WetKit"
 
 #: wetkit_widgets.module:161
 msgid "A <em>WetKit Video</em> file is a moving visual recording using the WET video player."
-msgstr ""
+msgstr "Un fichier <em>Vidéo WetKit</em> est un enregistrement visuel animé utilisant le lecteur video BOEW."
 
 #: wetkit_widgets.info:0
 msgid "WetKit Widgets"
@@ -184,17 +182,15 @@ msgstr "Widgets de la BOEW"
 
 #: wetkit_widgets.info:0
 msgid "Creates generic WET widget functionality to customize."
-msgstr "Crée générique fonctionnalité widget de WET à personnaliser."
+msgstr "Crée une fonctionnalité générique personalisable du gadget BOEW."
 
 #: plugins/styles/tabbed_interface/tabbed_interface.inc:10
 msgid "WetKit Tabbed Interface"
-msgstr ""
+msgstr "Interface à onglet Wetkit"
 
 #: plugins/styles/tabbed_interface/tabbed_interface.inc:11
 msgid "Display the pane with customized settings for the Tabbed Interface Plugin."
-msgstr ""
-"Afficher le panneau avec les paramètres personnalisés pour le "
-"plugiciel de l’interface à onglets."
+msgstr "Afficher le panneau avec les paramètres personnalisés pour le plugiciel de l’interface à onglets."
 
 #: plugins/styles/tabbed_interface/tabbed_interface.inc:39
 msgid "Class"
