@@ -10,48 +10,46 @@ translations[] = fr
 projects[panopoly_core][version] = 1.x-dev
 projects[panopoly_core][subdir] = panopoly
 projects[panopoly_core][download][type] = git
-projects[panopoly_core][download][revision] = acbb2bb
+projects[panopoly_core][download][revision] = 3bcd157
 projects[panopoly_core][download][branch] = 7.x-1.x
-projects[panopoly_core][patch][5df8adf] = https://gist.github.com/raw/4719843/5df8adfd5da41600fdb7361fe58779edf5b6b2da/panopoly_core_field_info.patch
-projects[panopoly_core][patch][e697565] = https://gist.github.com/raw/4263428/17764bdeb4428317ca7e1ae58a3d2e77defa2145/panopoly-18n_ctools-context_panels.patch
-projects[panopoly_core][patch][d118f90] = https://gist.github.com/raw/4444971/d118f90fdb352234bd94817d94c03880414b9727/panopoly-default_content.patch
+projects[panopoly_core][patch][41220bd] = https://gist.github.com/raw/4724569/41220bd5f180ccfe0f61087ba08ce4db3fada6d5/panopoly_core_06022012.patch
+projects[panopoly_core][patch][4559587] = https://gist.github.com/raw/4724524/45595878e00c9d0c4a03ec9de8330684000d3447/panopoly_core_06022012.patch
 
 projects[panopoly_images][version] = 1.x-dev
 projects[panopoly_images][subdir] = panopoly
 projects[panopoly_images][download][type] = git
-projects[panopoly_images][download][revision] = ba8c36e
+projects[panopoly_images][download][revision] = 98eb0f5
 projects[panopoly_images][download][branch] = 7.x-1.x
 
 projects[panopoly_theme][version] = 1.x-dev
 projects[panopoly_theme][subdir] = panopoly
 projects[panopoly_theme][download][type] = git
-projects[panopoly_theme][download][revision] = 4f45887
+projects[panopoly_theme][download][revision] = 372aeb0
 projects[panopoly_theme][download][branch] = 7.x-1.x 
 
 projects[panopoly_magic][version] = 1.x-dev
 projects[panopoly_magic][subdir] = panopoly
 projects[panopoly_magic][download][type] = git
-projects[panopoly_magic][download][revision] = 9590324
+projects[panopoly_magic][download][revision] = 64d984e
 projects[panopoly_magic][download][branch] = 7.x-1.x
 
 projects[panopoly_widgets][version] = 1.x-dev
 projects[panopoly_widgets][subdir] = panopoly
 projects[panopoly_widgets][download][type] = git
-projects[panopoly_widgets][download][revision] = 06359b8
+projects[panopoly_widgets][download][revision] = 2a98c9e 
 projects[panopoly_widgets][download][branch] = 7.x-1.x
-projects[panopoly_widgets][patch][1847912] = https://gist.github.com/raw/4497146/c3bf7c4b75b1e858bc027b3bd307dc76480b53ef/file_entity_html5.patch
+projects[panopoly_widgets][patch][1847912] = https://gist.github.com/raw/4724398/a3ff32aabbac1c19ca390474595d9938f23bad70/panopoly_widgets_06022012.patch
 
 projects[panopoly_admin][version] = 1.x-dev
 projects[panopoly_admin][subdir] = panopoly
 projects[panopoly_admin][download][type] = git
-projects[panopoly_admin][download][revision] = 58ad88b
+projects[panopoly_admin][download][revision] = 165fafb
 projects[panopoly_admin][download][branch] = 7.x-1.x
-projects[panopoly_admin][patch][4553027] = https://gist.github.com/raw/4553027/2293e1ed9e9cea8c121258d3811875ffa6ba8dd3/panopoly_admin-rid.patch
 
 projects[panopoly_users][version] = 1.x-dev
 projects[panopoly_users][subdir] = panopoly
 projects[panopoly_users][download][type] = git
-projects[panopoly_users][download][revision] = 25642d7
+projects[panopoly_users][download][revision] = cb4ca09
 projects[panopoly_users][download][branch] = 7.x-1.x
 
 ; WetKit Foundation
