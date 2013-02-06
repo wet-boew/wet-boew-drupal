@@ -1,19 +1,21 @@
 <img src="http://github.com/wet-boew/wet-boew-drupal/raw/master/images/wetkit_large_logged_2.png">
 
-# Drupal 7 Web Experience Toolkit Distribution
+# Web Experience Toolkit Drupal Distribution
 
 [![Build Status](https://secure.travis-ci.org/wet-boew/wet-boew-drupal.png?branch=master)](http://travis-ci.org/wet-boew/wet-boew-drupal)
 
-The WET Distribution now uses Drush Make for rapid built out of the Drupal codebase. A drush make file is similar to "ant script" which allows for us to just host the code that we are developing (Installation Profile and Custom Modules, Features, and Themes) on GitHub. Any user who has Drush installed can then query this GitHub repository at the specified make file location (steps outlined below) and can then perform a build out of both the Drupal Core package + and various Contributed Modules hosted on Drupal.org.
+>* **WxT-Drupal 7.x-1.0-rc1 will be released on February 7, 2013 (7.x-1.0-rc1 release notes)**
+>
+>The WxT-Drupal distribution is a web content management system which assists in building and maintaining innovative Web sites that are accessible, usable, and interoperable. This distribution is open source software and free for use by departments and external Web communities. This distribution relies and integrates extensively on the [WET-BOEW jQuery Framework](http://github.com/wet-boew/wet-boew) to leverage much of the rendering and overall markup. AdaptiveTheme is used as the base theme for its exceptional HTML5 support and exhaustive accessibility testing. Where possible WxT-Drupal will also leverage work from the [Panopoly](http://drupal.org/project/panopoly) and [Spark](http://drupal.org/project/spark) Distributions due to the amazing UX features being designed.
+>
+>Development has been tailored for organizations that need to comply with standards for accessibility and bilingualism or that simply need a distribution that allows them to get up and running quickly using a carefully curated selection of modules that can support common enterprise business requirements. Specific information about how to install or update the distribution can be found here: [Download, Installation, and Update](https://github.com/wet-boew/wet-boew-drupal/wiki/Download%2C-Installation%2C-and-Update)
 
-Should you require more information not discussed in this README file please proceed to our wiki pages which offer some more information about this Drupal Distribution. The wiki pages will be constantly updated as work progresses. 
-
-> You can access the Wiki here: [Wiki Documentation](https://github.com/wet-boew/wet-boew-drupal/wiki)
+>Should you require more information not discussed in this README file please proceed to our wiki pages which offer some more information about this Drupal Distribution. The wiki pages will be constantly updated as work progresses. You can access the Wiki here: [Wiki Documentation](https://github.com/wet-boew/wet-boew-drupal/wiki)
 
 ### Alternate Methods
 
 If you do not wish to perform a build out of Drupal yourself (instructions below) we have two options for you:
-> 1. [Virtual Machine (Vagrant Chef Provision)] (https://github.com/sylus/wet-boew-drupal-devops)
+> 1. [Virtual Machine (Vagrant Chef Provision)] (https://github.com/wet-boew/wet-boew-drupal-vagrant) (Currently Offline)
 >   * a) A preconfigured lightweight, reproducible, and portable virtualized development environment
 > 2. [Drupal Pre-Built](https://github.com/sylus/wet-boew-drupal-compiled) (Currently Offline)
 >   * a) A prebuilt (post make) codebase for people who don't want to play around with Drush
@@ -21,6 +23,8 @@ If you do not wish to perform a build out of Drupal yourself (instructions below
 ## Linux, Mac OSX, and Windows
 
 ### Installation
+
+> The WET Distribution now uses Drush Make for rapid built out of the Drupal codebase. A drush make file is similar to "ant script" which allows for us to just host the code that we are developing (Installation Profile and Custom Modules, Features, and Themes) on GitHub. Any user who has Drush installed can then can then perform a build out of both the Drupal Core package + and various contributed modules hosted on Drupal.org.
 
 > 1. Ensure you have the appropriate base requirements setup for Drupal as per the [System Requirements](https://github.com/wet-boew/wet-boew-drupal/wiki/System-Requirements) documentation.
 > 2. Install Drush 5.8 or higher (inlcudes Drush Make):
@@ -69,38 +73,3 @@ cd profiles/wetkit && git pull && cd .. && cd .. && drush make --working-copy pr
 Command: drush -l http://&lt;domain&gt;:8082 updatedb
 Example: drush -l http://&lt;domain&gt;:8082 updatedb
 </pre>
-
-### Drush Proxy Support
-
-> 1. To get around the Proxy all you have to do is edit/create the following files that come native to the environment.
->   * a) Linux, Mac OSX: .curlrc
-<pre>
-> --proxy &lt;domain&gt;:&lt;port&gt;
-> --proxy-user &lt;username&gt;:&lt;password&gt;
-</pre>
->   * b) Windows: _curlrc
-<pre>
-> --proxy &lt;domain&gt;:&lt;port&gt;
-> --proxy-user &lt;username&gt;:&lt;password&gt;
-</pre>
-
-### Drupal Proxy Support
-
-> To facilitate Drupal's automatic update and App functionality you must enable HTTP proxy support in Drupal itself, after building and installing Drupal, modify the following lines in your settings.php file.
-<pre>
-$conf['proxy_server'] = 'www.proxyserver.ca';
-$conf['proxy_port'] = 80;
-$conf['proxy_username'] = '';
-$conf['proxy_password'] = '';
-$conf['proxy_exceptions'] = array('127.0.0.1', 'localhost');
-</pre>
-
-## A Note About Clean URLs
-
-> Note that the drush installation process will enable "clean" URLs. In other words, your site will generate URLs that look like this: http://mysite.com/page rather than this: http://example.com/?q=page. However, if mod_rewrite has not been enabled for your Apache server, clean URLs will not work correctly. You can disable clean URLs for your site on this page: http://example.com//?q=admin/config/search/clean-urls. For more information, see the Clean URLs page in the Drupal documentation: http://drupal.org/getting-started/clean-urls.
-
-> The user login page is at http://example.com/?q=user or http://example.com/user (with clean URLs). You will need to input the user name and password that you provided in the installation procedure above.
-
-## Acknowledgments
-
-> This distribution borrows a substantial amount from the Panopoly Project on drupal.org due to its amazing UX features and overall architecture. If you do not need a multilingual and/or government branded site with WET integration you are encouraged to take a look at: [Panopoly](http://drupal.org/project/panopoly).
