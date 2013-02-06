@@ -12,6 +12,7 @@ projects[panopoly_core][subdir] = panopoly
 projects[panopoly_core][download][type] = git
 projects[panopoly_core][download][revision] = acbb2bb
 projects[panopoly_core][download][branch] = 7.x-1.x
+projects[panopoly_core][patch][5df8adf] = https://gist.github.com/raw/4719843/5df8adfd5da41600fdb7361fe58779edf5b6b2da/panopoly_core_field_info.patch
 projects[panopoly_core][patch][e697565] = https://gist.github.com/raw/4263428/17764bdeb4428317ca7e1ae58a3d2e77defa2145/panopoly-18n_ctools-context_panels.patch
 projects[panopoly_core][patch][d118f90] = https://gist.github.com/raw/4444971/d118f90fdb352234bd94817d94c03880414b9727/panopoly-default_content.patch
 

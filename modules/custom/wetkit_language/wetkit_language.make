@@ -9,7 +9,7 @@ projects[entity_translation][version] = 1.x-dev
 projects[entity_translation][type] = module
 projects[entity_translation][subdir] = contrib
 projects[entity_translation][download][type] = git
-projects[entity_translation][download][revision] = 533c473
+projects[entity_translation][download][revision] = 8a78bf9
 projects[entity_translation][download][branch] = 7.x-1.x
 
 projects[title][version] = 1.x-dev
