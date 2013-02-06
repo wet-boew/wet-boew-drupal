@@ -6,21 +6,21 @@
 #  wetkit_wetboew.features.menu_custom.inc: n/a
 #  wetkit_wetboew.profile.inc: n/a
 #  wetkit_wetboew.views_default.inc: n/a
+#  views/wetkit_wetboew.admin_content_view.inc: n/a
 #  wetkit_wetboew.module: n/a
 #  wetkit_wetboew.info: n/a
-#  wetkit_box/wetkit_box.info: n/a
 #  plugins/content_types/archived_widget.inc: n/a
+#  plugins/content_types/date_modified.inc: n/a
+#  plugins/content_types/querypath_scrape.inc: n/a
 #  plugins/styles/configure_panes/configure_panes.inc: n/a
-#  plugins/styles/wetkitnav/wetkitnav.inc: n/a
 #  theme/theme.inc: n/a
-#  wetkit_box/plugins/wetkit_box.inc: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-12-10 21:17-0500\n"
-"PO-Revision-Date: 2012-12-10 21:17-0500\n"
+"POT-Creation-Date: 2013-02-06 00:26-0500\n"
+"PO-Revision-Date: 2013-02-06 00:26-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -29,54 +29,54 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: wetkit_wetboew.features.menu_custom.inc:55
+msgid "Footer"
+msgstr "Pied de page"
+
+#: wetkit_wetboew.features.menu_custom.inc:56
 msgid "Footer Section for Web Experience Toolkit"
 msgstr "Section Pied de page de la Boîte à outils de l'expérience Web"
 
-#: wetkit_wetboew.features.menu_custom.inc:56
+#: wetkit_wetboew.features.menu_custom.inc:57
+msgid "Header"
+msgstr "En-tête"
+
+#: wetkit_wetboew.features.menu_custom.inc:58
 msgid "Header Section for Web Experience Toolkit"
 msgstr "Section En-tête de la Boîte à outils de l'expérience Web"
 
-#: wetkit_wetboew.features.menu_custom.inc:57
+#: wetkit_wetboew.features.menu_custom.inc:59
+msgid "Mega Menu"
+msgstr "Mégamenu"
+
+#: wetkit_wetboew.features.menu_custom.inc:60
+msgid "Mid Footer"
+msgstr "Pied de page supérieur"
+
+#: wetkit_wetboew.features.menu_custom.inc:61
 msgid "Mid Footer Section for Web Experience Toolkit"
 msgstr ""
 "Section Pied de page supérieur de la Boîte à outils de "
 "l'expérience Web"
 
-#: wetkit_wetboew.features.menu_custom.inc:58
+#: wetkit_wetboew.features.menu_custom.inc:62
+msgid "Terms"
+msgstr "Termes"
+
+#: wetkit_wetboew.features.menu_custom.inc:63
 msgid "Terms Section for Web Experience Toolkit"
 msgstr "Section Termes de la Boîte à outils de l'expérience Web"
 
-#: wetkit_wetboew.features.menu_custom.inc:59
+#: wetkit_wetboew.features.menu_custom.inc:64
 msgid "The <em>Main</em> megamenu for Web Experience Toolkit"
 msgstr ""
 "Mégamenu <em>Menu principal</em> de la Boîte à outils de "
 "l'expérience Web"
 
-#: wetkit_wetboew.features.menu_custom.inc:60
-msgid "Footer"
-msgstr "Pied de page"
-
-#: wetkit_wetboew.features.menu_custom.inc:61
-msgid "Header"
-msgstr "En-tête"
-
-#: wetkit_wetboew.features.menu_custom.inc:62
-msgid "Mega Menu"
-msgstr "Mégamenu"
-
-#: wetkit_wetboew.features.menu_custom.inc:63
-msgid "Mid Footer"
-msgstr "Pied de page supérieur"
-
-#: wetkit_wetboew.features.menu_custom.inc:64
-msgid "Terms"
-msgstr "Termes"
-
 #: wetkit_wetboew.profile.inc:12;24
 msgid "Choose a theme"
 msgstr "Choisissez un thème"
 
-#: wetkit_wetboew.profile.inc:35
+#: wetkit_wetboew.profile.inc:52
 msgid "Starting Theme"
 msgstr "À partir Thème"
 
@@ -88,27 +88,27 @@ msgstr "Maître"
 msgid "Headlines"
 msgstr "Manchettes"
 
-#: wetkit_wetboew.views_default.inc:134
+#: wetkit_wetboew.views_default.inc:134 views/wetkit_wetboew.admin_content_view.inc:392
 msgid "more"
 msgstr "plus"
 
-#: wetkit_wetboew.views_default.inc:135
+#: wetkit_wetboew.views_default.inc:135 views/wetkit_wetboew.admin_content_view.inc:393
 msgid "Apply"
 msgstr "Appliquer"
 
-#: wetkit_wetboew.views_default.inc:136
+#: wetkit_wetboew.views_default.inc:136 views/wetkit_wetboew.admin_content_view.inc:394
 msgid "Reset"
 msgstr "Réinitialiser"
 
-#: wetkit_wetboew.views_default.inc:137
+#: wetkit_wetboew.views_default.inc:137 views/wetkit_wetboew.admin_content_view.inc:395
 msgid "Sort by"
 msgstr "Trier selon"
 
-#: wetkit_wetboew.views_default.inc:138
+#: wetkit_wetboew.views_default.inc:138 views/wetkit_wetboew.admin_content_view.inc:396
 msgid "Asc"
 msgstr "Ascendant"
 
-#: wetkit_wetboew.views_default.inc:139
+#: wetkit_wetboew.views_default.inc:139 views/wetkit_wetboew.admin_content_view.inc:397
 msgid "Desc"
 msgstr "Descendant"
 
@@ -124,7 +124,7 @@ msgstr "Aucun contenu n'a encore été créé pour cette langue."
 msgid "[body]"
 msgstr "[corps]"
 
-#: wetkit_wetboew.views_default.inc:143
+#: wetkit_wetboew.views_default.inc:143 views/wetkit_wetboew.admin_content_view.inc:409
 msgid "Type"
 msgstr "Type"
 
@@ -136,68 +136,68 @@ msgstr "Pane Contenu"
 msgid "View panes"
 msgstr "Voir les panes"
 
-#: wetkit_wetboew.module:129
+#: wetkit_wetboew.module:36
+msgid "Enter \"%nolink\" to generate non-linkable item"
+msgstr ""
+
+#: wetkit_wetboew.module:179
+msgid "General Settings"
+msgstr ""
+
+#: wetkit_wetboew.module:218
 msgid "WetKit Theme Selection"
 msgstr "Sélection d'un thème WetKit"
 
-#: wetkit_wetboew.module:135
+#: wetkit_wetboew.module:224
 msgid "Please choose the appropriate WET theme."
 msgstr "S'il vous plaît choisir le thème appropriée pour WET."
 
-#: wetkit_wetboew.module:137
+#: wetkit_wetboew.module:226
 msgid "Internet"
 msgstr "Internet"
 
-#: wetkit_wetboew.module:138
+#: wetkit_wetboew.module:227
 msgid "Intranet"
 msgstr "Intranet"
 
-#: wetkit_wetboew.module:139
+#: wetkit_wetboew.module:228
 msgid "Base Theme"
 msgstr "Thème de base"
 
-#: wetkit_wetboew.module:142
+#: wetkit_wetboew.module:231
 msgid "This will change the Drupal theme by adding custom css and logic for various WET based themes"
-msgstr "Cela va changer le thème de Drupal en ajoutant css personnalisé et logique pour divers thèmes basés sur WET"
-
-#: wetkit_wetboew.module:297
-msgid "Thank you for installing the WxT-Drupal Variant for the Web Experience Toolkit. You may login at the following page: <a href=\"@login\">User Login</a>"
-msgstr "Merci d'avoir installé la variante WXT-Drupal pour la boîte à outils de l'expérience Web. Vous pouvez vous connecter à la page suivante: <a href=\"@login\">User Login</a>"
-
-#: wetkit_wetboew.module:298
-msgid "For more information please be sure to read the online <a href=\"@documentation\">Documentation</a>"
-msgstr "Pour plus d'informations s'il vous plaît n'oubliez pas de lire la ligne <a href=\"@documentation\">Documentation</a>"
-
-#: wetkit_wetboew.module:465
-msgid "One or more problems were detected with your Drupal installation. Check the <a href=\"@status\">status report</a> for more information."
 msgstr ""
-"Un ou plusieurs problèmes ont été détectés dans votre "
-"installation Drupal. Vérifiez le <a href=\"@status\">tableau de bord "
-"d'administration</a> pour plus d'information."
+"Cela va changer le thème de Drupal en ajoutant css personnalisé et "
+"logique pour divers thèmes basés sur WET"
 
-#: wetkit_wetboew.module:502
-msgid "You do not have any administrative items."
-msgstr "Vous n'avez accès à aucune page d'administration."
+#: wetkit_wetboew.module:386
+msgid "Thank you for installing the WxT-Drupal Variant for the Web Experience Toolkit. You may login at the following page: <a href=\"@login\">User Login</a>"
+msgstr ""
+"Merci d'avoir installé la variante WXT-Drupal pour la boîte à "
+"outils de l'expérience Web. Vous pouvez vous connecter à la page "
+"suivante: <a href=\"@login\">User Login</a>"
 
-#: wetkit_wetboew.module:19 wetkit_wetboew.info:0 wetkit_box/wetkit_box.info:0
-msgid "WetKit"
-msgstr "WetKit"
+#: wetkit_wetboew.module:387
+msgid "For more information please be sure to read the online <a href=\"@documentation\">Documentation</a>"
+msgstr ""
+"Pour plus d'informations s'il vous plaît n'oubliez pas de lire la "
+"ligne <a href=\"@documentation\">Documentation</a>"
 
-#: wetkit_wetboew.module:20
-msgid "Administer all things WetKit."
-msgstr "Administrer tous WetKit choses."
-
-#: wetkit_wetboew.module:31
+#: wetkit_wetboew.module:88
 msgid "WetKit Settings"
 msgstr "Réglages Wetkit"
 
-#: wetkit_wetboew.module:32
+#: wetkit_wetboew.module:89
 msgid "Configuration related to WetKit"
 msgstr "Configuration liée à Wetkit"
 
-#: wetkit_wetboew.module:49;58
+#: wetkit_wetboew.module:106;115
 msgid "This is the configuration screen for "
 msgstr "Ceci est l'écran de configuration"
+
+#: wetkit_wetboew.module:138 wetkit_wetboew.info:0
+msgid "WetKit"
+msgstr "WetKit"
 
 #: wetkit_wetboew.info:0
 msgid "WetKit WET-BOEW"
@@ -205,7 +205,9 @@ msgstr "WetKit WET-BOEW"
 
 #: wetkit_wetboew.info:0
 msgid "Installs and configures settings related to the WET-BOEW JS Library"
-msgstr "Installe et configure les paramètres liés à la Bibliothèque wet-boew JS"
+msgstr ""
+"Installe et configure les paramètres liés à la Bibliothèque "
+"wet-boew JS"
 
 #: plugins/content_types/archived_widget.inc:9
 msgid "Archived Widget Pane"
@@ -213,9 +215,11 @@ msgstr "Volet Widget archivés"
 
 #: plugins/content_types/archived_widget.inc:10
 msgid "This will generate an archived status message when a piece of content is flagged as being archived."
-msgstr "Cela va générer un message d'état archivé quand un morceau de contenu est marqué comme étant archivée."
+msgstr ""
+"Cela va générer un message d'état archivé quand un morceau de "
+"contenu est marqué comme étant archivée."
 
-#: plugins/content_types/archived_widget.inc:12
+#: plugins/content_types/archived_widget.inc:12 plugins/content_types/date_modified.inc:17 plugins/content_types/querypath_scrape.inc:17
 msgid "WET-BOEW"
 msgstr "WET-BOEW"
 
@@ -245,6 +249,98 @@ msgstr "Span class pour le message archivé"
 msgid "Setting for span class."
 msgstr "Réglage pour span class."
 
+#: plugins/content_types/date_modified.inc:14
+msgid "Date Modified"
+msgstr ""
+
+#: plugins/content_types/date_modified.inc:15
+msgid "This pane will leverage custom tokens to print out a Date Modified string."
+msgstr ""
+
+#: plugins/content_types/date_modified.inc:30
+msgid "Date modified:"
+msgstr "Date de modification :"
+
+#: plugins/content_types/querypath_scrape.inc:14
+msgid "Querypath Scrape"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:15
+msgid "This pane will leverage Querypath to parse data from a remote source using CSS3 Selectors."
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:78
+msgid "Error: @error"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:106
+msgid "Querypath Scrape General Settings"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:112
+msgid "Select Parser for QueryPath"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:114
+msgid "HTML"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:115
+msgid "XML"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:118
+msgid "Select the type of parser (XML or HTML) that Queryparth will be using."
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:125
+msgid "Site URL"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:128
+msgid "URL to parse using Querypath."
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:141
+msgid "Querypath Parameters (GetHTML)"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:148
+msgid "Elements to Find"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:151
+msgid "Element(s) to retrieve with Querypath using CSS3 Selectors."
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:158
+msgid "Add Querypath GetHTML"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:166
+msgid "Remove Querypath GetHTML"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:177
+msgid "Querypath Parameters (RemoveHTML)"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:184
+msgid "Elements to Remove"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:187
+msgid "Element(s) to remove with Querypath using CSS3 Selectors."
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:194
+msgid "Add Querypath RemoveHTML"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:202
+msgid "Remove Querypath RemoveHTML"
+msgstr ""
+
 #: plugins/styles/configure_panes/configure_panes.inc:9
 msgid "WetKit Configure Panes"
 msgstr ""
@@ -255,7 +351,9 @@ msgstr ""
 
 #: plugins/styles/configure_panes/configure_panes.inc:54
 msgid "Configure Pane Styles"
-msgstr "Wraps volets du panneau dans différentes Wetkit préconfigurés styles."
+msgstr ""
+"Wraps volets du panneau dans différentes Wetkit préconfigurés "
+"styles."
 
 #: plugins/styles/configure_panes/configure_panes.inc:56;69;81;94
 msgid "Default"
@@ -341,95 +439,95 @@ msgstr ""
 msgid "Configure Pane Custom CSS"
 msgstr ""
 
-#: plugins/styles/wetkitnav/wetkitnav.inc:10
-msgid "WetKit Nav"
-msgstr "Navigation BOEW"
+#: theme/theme.inc:21
+msgid "Breadcrumb Trail"
+msgstr ""
 
-#: plugins/styles/wetkitnav/wetkitnav.inc:11
-msgid "Display the pane or region with no markup, not even a title."
-msgstr "Afficher le panneau ou la région sans mention, même pas un titre."
-
-#: plugins/styles/wetkitnav/wetkitnav.inc:71
-msgid "Headings"
-msgstr "En-têtes"
-
-#: plugins/styles/wetkitnav/wetkitnav.inc:73
-msgid "h1"
-msgstr "h1"
-
-#: plugins/styles/wetkitnav/wetkitnav.inc:74
-msgid "h2"
-msgstr "h2"
-
-#: plugins/styles/wetkitnav/wetkitnav.inc:75
-msgid "h3"
-msgstr "h3"
-
-#: plugins/styles/wetkitnav/wetkitnav.inc:76
-msgid "h4"
-msgstr "h4"
-
-#: plugins/styles/wetkitnav/wetkitnav.inc:77
-msgid "h5"
-msgstr "h5"
-
-#: plugins/styles/wetkitnav/wetkitnav.inc:78
-msgid "h6"
-msgstr "h6"
-
-#: plugins/styles/wetkitnav/wetkitnav.inc:85
-msgid "Class"
-msgstr "Catégorie"
-
-#: plugins/styles/wetkitnav/wetkitnav.inc:87;97
-msgid "Empty"
-msgstr "Vide"
-
-#: plugins/styles/wetkitnav/wetkitnav.inc:88
-msgid "span-2"
-msgstr "span-2"
-
-#: plugins/styles/wetkitnav/wetkitnav.inc:95
-msgid "ID"
-msgstr "ID"
-
-#: plugins/styles/wetkitnav/wetkitnav.inc:98
-msgid "gcwu-connect"
-msgstr "gcwu-connect"
-
-#: theme/theme.inc:18
+#: theme/theme.inc:147
 msgid "Status message"
 msgstr "Message d'état"
 
-#: theme/theme.inc:19
+#: theme/theme.inc:148
 msgid "Error message"
 msgstr "Message d'erreur"
 
-#: theme/theme.inc:20
+#: theme/theme.inc:149
 msgid "Warning message"
 msgstr "Message d'avertissement"
 
-#: wetkit_box/wetkit_box.info:0
-msgid "WetKit Boxes"
-msgstr "Boîtes WetKit"
+#: views/wetkit_wetboew.admin_content_view.inc:390
+msgid "Defaults"
+msgstr ""
 
-#: wetkit_box/wetkit_box.info:0
-msgid "Provides a plugin for multilingual boxes"
-msgstr "Fournit un plugin pour boîtes multilingues"
+#: views/wetkit_wetboew.admin_content_view.inc:391
+msgid "Content"
+msgstr "Contenu"
 
-#: wetkit_box/plugins/wetkit_box.inc:45
+#: views/wetkit_wetboew.admin_content_view.inc:398
+msgid "Items per page"
+msgstr "Articles par page"
+
+#: views/wetkit_wetboew.admin_content_view.inc:399
+msgid "- All -"
+msgstr "- Tous -"
+
+#: views/wetkit_wetboew.admin_content_view.inc:400
+msgid "Offset"
+msgstr "Décalage"
+
+#: views/wetkit_wetboew.admin_content_view.inc:401
+msgid "« first"
+msgstr "« premier"
+
+#: views/wetkit_wetboew.admin_content_view.inc:402
+msgid "‹ previous"
+msgstr "‹ précédent"
+
+#: views/wetkit_wetboew.admin_content_view.inc:403
+msgid "next ›"
+msgstr "suivant ›"
+
+#: views/wetkit_wetboew.admin_content_view.inc:404
+msgid "last »"
+msgstr "dernier »"
+
+#: views/wetkit_wetboew.admin_content_view.inc:405
+msgid "No content available."
+msgstr "Aucun contenu disponible."
+
+#: views/wetkit_wetboew.admin_content_view.inc:406
+msgid "author"
+msgstr "auteur"
+
+#: views/wetkit_wetboew.admin_content_view.inc:407
+msgid "term"
+msgstr ""
+
+#: views/wetkit_wetboew.admin_content_view.inc:408
 msgid "Title"
 msgstr "Titre"
 
-#: wetkit_box/plugins/wetkit_box.inc:47
-msgid "The title of the box as shown to the user."
-msgstr "Le titre de la boîte comme indiqué à l'utilisateur."
+#: views/wetkit_wetboew.admin_content_view.inc:410
+msgid "Author"
+msgstr "Auteur"
 
-#: wetkit_box/plugins/wetkit_box.inc:52
-msgid "Body"
-msgstr "Corps"
+#: views/wetkit_wetboew.admin_content_view.inc:411
+msgid "Published"
+msgstr "Publié"
 
-#: wetkit_box/plugins/wetkit_box.inc:56
-msgid "The content of the block as shown to the user."
-msgstr "Le contenu du bloc vu par l'utilisateur."
+#: views/wetkit_wetboew.admin_content_view.inc:412
+msgid "Language"
+msgstr "Langue"
+
+#: views/wetkit_wetboew.admin_content_view.inc:413
+msgid "Updated"
+msgstr "Mis à jour"
+
+#: views/wetkit_wetboew.admin_content_view.inc:414
+msgid "Vocabulary"
+msgstr "Vocabulaire"
+
+#: views/wetkit_wetboew.admin_content_view.inc:415
+msgid "System"
+msgstr "Système"
 

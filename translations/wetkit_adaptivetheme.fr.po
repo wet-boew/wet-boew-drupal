@@ -36,8 +36,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-01-23 17:46-0500\n"
-"PO-Revision-Date: 2013-01-23 17:46-0500\n"
+"POT-Creation-Date: 2013-02-06 00:37-0500\n"
+"PO-Revision-Date: 2013-02-06 00:37-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -45,53 +45,94 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: theme-settings.php:22
-msgid "Accessibility Settings"
-msgstr "Paramètres d'accessibilité"
+#: theme-settings.php:21
+msgid "WetKit Overrides"
+msgstr ""
 
-#: theme-settings.php:26
-msgid "Anchor ID for the “skip link” 1"
-msgstr "ID de l'ancre pour le “skip link” 1"
+#: theme-settings.php:25
+msgid "Disable rendering of the mb main link inside the mega menu"
+msgstr ""
 
-#: theme-settings.php:29;42
-msgid "Specify the HTML ID of the element that the accessible-but-hidden “skip link” should link to. (<a href=\"!link\">Read more about skip links</a>.)"
-msgstr "Specifie le ID HTML de l'element que le “skip link” accessible-mais-caché devrait lié vers. (<a href=\"!link\">En savoir plus sur les skip links</a>.)"
+#: theme-settings.php:27
+msgid "Specify whether or not the mega menu should include the main link."
+msgstr ""
+
+#: theme-settings.php:31
+msgid "Disable rendering of menu items with <nolink> as path"
+msgstr ""
 
 #: theme-settings.php:33
-msgid "Text for the “skip link” 1"
-msgstr "Texte pour le “skip link” 1"
+msgid "Specify whether or not menu links with <nolink> as path should render an a href. (This can break certain versions of WET)"
+msgstr ""
 
-#: theme-settings.php:34 templates/inc/template-preprocess.inc:63
-msgid "Skip to main content"
-msgstr "Aller au contenu principal"
-
-#: theme-settings.php:35;48
-msgid "For example: <em>Jump to navigation</em>, <em>Skip to content</em>"
-msgstr "Par exemple : <em>Aller à la navigation</em>, <em>Aller au contenu</em>"
+#: theme-settings.php:37
+msgid "Alternate Site URL"
+msgstr ""
 
 #: theme-settings.php:39
-msgid "Anchor ID for the “skip link” 2"
-msgstr "ID de l'ancre pour le “skip link” 2"
+msgid "Alternate Site URL to be used with Site Name."
+msgstr ""
 
-#: theme-settings.php:46
-msgid "Text for the “skip link” 2"
-msgstr "Texte pour le “skip link” 2"
-
-#: theme-settings.php:47 templates/inc/template-preprocess.inc:65
-msgid "Skip to footer"
-msgstr "Aller au pied de page"
-
-#: theme-settings.php:52
-msgid "Intranet Settings"
-msgstr "Paramêtres Intranet"
-
-#: theme-settings.php:56
+#: theme-settings.php:43
 msgid "Intranet web site name"
 msgstr "Nom du site web Intranet"
 
-#: theme-settings.php:58
+#: theme-settings.php:45
 msgid "The display name for the Intranet web site"
 msgstr "Le nom d'affichage pour le site web Intranet"
+
+#: theme-settings.php:49
+msgid "Start Indexing tag for search"
+msgstr ""
+
+#: theme-settings.php:51;57
+msgid "Custom Markup to wrap around content to assist in indexing."
+msgstr ""
+
+#: theme-settings.php:55
+msgid "Stop Indexing tag for search"
+msgstr ""
+
+#: theme-settings.php:61
+msgid "Accessibility Settings"
+msgstr "Paramètres d'accessibilité"
+
+#: theme-settings.php:65
+msgid "Anchor ID for the “skip link” 1"
+msgstr "ID de l'ancre pour le “skip link” 1"
+
+#: theme-settings.php:68;81
+msgid "Specify the HTML ID of the element that the accessible-but-hidden “skip link” should link to. (<a href=\"!link\">Read more about skip links</a>.)"
+msgstr ""
+"Specifie le ID HTML de l'element que le “skip link” "
+"accessible-mais-caché devrait lié vers. (<a href=\"!link\">En savoir "
+"plus sur les skip links</a>.)"
+
+#: theme-settings.php:72
+msgid "Text for the “skip link” 1"
+msgstr "Texte pour le “skip link” 1"
+
+#: theme-settings.php:73 templates/inc/template-preprocess.inc:63
+msgid "Skip to main content"
+msgstr "Aller au contenu principal"
+
+#: theme-settings.php:74;87
+msgid "For example: <em>Jump to navigation</em>, <em>Skip to content</em>"
+msgstr ""
+"Par exemple : <em>Aller à la navigation</em>, <em>Aller au "
+"contenu</em>"
+
+#: theme-settings.php:78
+msgid "Anchor ID for the “skip link” 2"
+msgstr "ID de l'ancre pour le “skip link” 2"
+
+#: theme-settings.php:85
+msgid "Text for the “skip link” 2"
+msgstr "Texte pour le “skip link” 2"
+
+#: theme-settings.php:86 templates/inc/template-preprocess.inc:65
+msgid "Skip to footer"
+msgstr "Aller au pied de page"
 
 #: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
 msgid "WetKit Adaptive Theme"
@@ -99,7 +140,9 @@ msgstr "Thème WetKit Adaptive"
 
 #: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
 msgid "The Web Experience Toolkit Web Usability Theme ported to the Drupal's Adaptive Theme (3.x)."
-msgstr "Le thème de la Boîte à outils de l’expérience Web (BOEW) intégré au thème Adaptive Theme (3.x) de Drupal."
+msgstr ""
+"Le thème de la Boîte à outils de l’expérience Web (BOEW) "
+"intégré au thème Adaptive Theme (3.x) de Drupal."
 
 #: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
 msgid "Sidebar first"
@@ -121,7 +164,7 @@ msgstr "Mis en évidence"
 msgid "Aside"
 msgstr "de Côté"
 
-#: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0 templates/page--base.tpl.php:219 templates/page--internet.tpl.php:246 templates/page--intranet.tpl.php:263 templates/page--panels--base.tpl.php:159 templates/page--panels--internet.tpl.php:186 templates/page--panels--intranet.tpl.php:193
+#: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0 templates/page--base.tpl.php:225 templates/page--internet.tpl.php:250 templates/page--intranet.tpl.php:267 templates/page--panels--base.tpl.php:165 templates/page--panels--internet.tpl.php:190 templates/page--panels--intranet.tpl.php:197
 msgid "Footer"
 msgstr "Pied de page"
 
@@ -131,11 +174,11 @@ msgstr "Leaderboard"
 
 #: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
 msgid "Header"
-msgstr "Entête"
+msgstr "En-tête"
 
 #: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
 msgid "Mega Menu"
-msgstr "Menu Mega"
+msgstr "Mégamenu"
 
 #: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
 msgid "Help"
@@ -237,7 +280,7 @@ msgstr "WetKit - 2 colonnes"
 msgid "Home"
 msgstr "Accueil"
 
-#: templates/maintenance-page.tpl.php:41
+#: templates/maintenance-page.tpl.php:41 templates/inc/template-preprocess.inc:191
 msgid "Home page"
 msgstr "Page d'accueil"
 
@@ -249,15 +292,15 @@ msgstr "Date de modification :"
 msgid "Search"
 msgstr "Rechercher"
 
-#: templates/page--base.tpl.php:124 templates/page--internet.tpl.php:151 templates/page--intranet.tpl.php:168 templates/page--panels--base.tpl.php:124 templates/page--panels--internet.tpl.php:151 templates/page--panels--intranet.tpl.php:158
+#: templates/page--base.tpl.php:124 templates/page--internet.tpl.php:149 templates/page--intranet.tpl.php:166 templates/page--panels--base.tpl.php:124 templates/page--panels--internet.tpl.php:149 templates/page--panels--intranet.tpl.php:156
 msgid "<span>Site</span> Menu"
 msgstr "Menu du <span>Site</span>"
 
-#: templates/page--base.tpl.php:204 templates/page--internet.tpl.php:231 templates/page--intranet.tpl.php:248
+#: templates/page--base.tpl.php:210 templates/page--internet.tpl.php:235 templates/page--intranet.tpl.php:252
 msgid "Skip to side navigation"
 msgstr "Aller à la barre de navigation"
 
-#: templates/page--base.tpl.php:222 templates/page--internet.tpl.php:249 templates/page--intranet.tpl.php:266 templates/page--panels--base.tpl.php:162 templates/page--panels--internet.tpl.php:189 templates/page--panels--intranet.tpl.php:196
+#: templates/page--base.tpl.php:228 templates/page--internet.tpl.php:253 templates/page--intranet.tpl.php:270 templates/page--panels--base.tpl.php:168 templates/page--panels--internet.tpl.php:193 templates/page--panels--intranet.tpl.php:200
 msgid "Site Footer"
 msgstr "Pied de page"
 
@@ -265,7 +308,7 @@ msgstr "Pied de page"
 msgid "Site menu"
 msgstr "Menu du site"
 
-#: templates/page--internet.tpl.php:264 templates/page--panels--internet.tpl.php:204
+#: templates/page--internet.tpl.php:268 templates/page--panels--internet.tpl.php:208
 msgid "Government of Canada Footer"
 msgstr "Pied de page du Gouvernment du Canada"
 
@@ -273,7 +316,7 @@ msgstr "Pied de page du Gouvernment du Canada"
 msgid "Breadcrumb trail"
 msgstr "Fil d'Ariane"
 
-#: templates/inc/template-menu-blocks.inc:131
+#: templates/inc/template-menu-blocks.inc:133
 msgid "Main Page"
 msgstr "Page principale"
 

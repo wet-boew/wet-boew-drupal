@@ -3,6 +3,7 @@
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
+#  wetkit.install_callbacks.inc: n/a
 #  wetkit.info: n/a
 #  wetkit.profile: n/a
 #  themes/wetkit_adaptivetheme/custom_layouts/wetkit/wetkit.inc: n/a
@@ -11,14 +12,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-12-03 22:47-0500\n"
-"PO-Revision-Date: 2012-12-03 22:47-0500\n"
+"POT-Creation-Date: 2013-02-06 00:29-0500\n"
+"PO-Revision-Date: 2013-02-06 00:29-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: wetkit.install_callbacks.inc:14;25
+msgid "@operation"
+msgstr "@opération"
 
 #: wetkit.info:0
 msgid "Web Experience Toolkit"
@@ -30,9 +35,17 @@ msgstr ""
 "Profile d'installation créé au moyen de Drupal 7 pour la Boîte à "
 "outils de l’expérience Web"
 
-#: wetkit.profile:23
-msgid "Import French Language"
-msgstr "Importer langue français"
+#: wetkit.profile:179
+msgid "Importing content."
+msgstr "Importation de contenu."
+
+#: wetkit.profile:182
+msgid "Importing Bean content."
+msgstr "Importation de contenu Bean."
+
+#: wetkit.profile:185
+msgid "Importing content"
+msgstr "Importing content"
 
 #: themes/wetkit_adaptivetheme/custom_layouts/wetkit/wetkit.inc:30
 msgid "wetkit"
