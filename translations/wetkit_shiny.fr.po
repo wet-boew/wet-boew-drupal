@@ -23,7 +23,7 @@ msgstr "WetKit Shiny"
 
 #: wetkit_shiny.info:0
 msgid "A simple theme to be used exclusively with the installer. Do not enable as your admin theme."
-msgstr "Un thème simple pour être utilisé exclusivement avec l'installateur. Ne pas permettre que le thème de votre admin."
+msgstr "Un thème simple pour être utilisé exclusivement par l'installateur. Ne pas utiliser comme thème administrateur."
 
 #: wetkit_shiny.info:0
 msgid "Content"

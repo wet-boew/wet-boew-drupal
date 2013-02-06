@@ -26,13 +26,11 @@ msgstr "Voir les détails du formateur de texte"
 
 #: wetkit_wysiwyg.module:33
 msgid "Do you want WetKit to show the help text and text format guidelines?"
-msgstr ""
-"Voulez-vous WetKit pour afficher le texte d'aide et des directives de "
-"format de texte?"
+msgstr "Voulez-vous que WetKit affiche le texte d'aide et le guide de formatage de texte?"
 
 #: wetkit_wysiwyg.module:57
 msgid "Kitchen Sink"
-msgstr "Évier de cuisine"
+msgstr "Tout le reste"
 
 #: wetkit_wysiwyg.module:65
 msgid "Spell Check"
@@ -86,5 +84,5 @@ msgstr "WetKit"
 msgid "If this doesn't run, it's probably due to a bug in IE. Try running this again."
 msgstr ""
 "Si cela ne fonctionne pas, c'est probablement dû à un bug dans IE. "
-"Essayez de lancer ce nouveau."
+"Essayez à nouveau."
 

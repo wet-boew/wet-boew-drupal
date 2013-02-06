@@ -22,7 +22,7 @@ msgstr ""
 
 #: wetkit_bean.features.field.inc:155
 msgid "The Title of the block."
-msgstr ""
+msgstr "Le titre du block."
 
 #: wetkit_bean.features.field.inc:156
 msgid "Title"
@@ -34,27 +34,27 @@ msgstr ""
 
 #: wetkit_bean.module:40
 msgid "Rebuild the beans on the site using preconfigured settings:"
-msgstr ""
+msgstr "Recréer les beans du site en utilisant les paramètres préconfigurés"
 
 #: wetkit_bean.module:45;63
 msgid "Rebuild Default Bean(s)"
-msgstr ""
+msgstr "Recréer les beans par defaut"
 
 #: wetkit_bean.module:66;73;80;87
 msgid "There is no bean found with delta @delta."
-msgstr ""
+msgstr "Il n'y a pas de bean trouvé avec le delta @delta."
 
 #: wetkit_bean.module:209
 msgid "General Settings"
-msgstr ""
+msgstr "Paramètre généraux"
 
 #: wetkit_bean.info:0
 msgid "WetKit Bean"
-msgstr ""
+msgstr "Bean Wetkit"
 
 #: wetkit_bean.info:0
 msgid "Default bean implementation for use with WetKit"
-msgstr ""
+msgstr "Implémentation par défaut de bean pour l'utilisation avec Wetkit"
 
 #: wetkit_bean.info:0
 msgid "WetKit"

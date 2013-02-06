@@ -21,11 +21,11 @@ msgstr ""
 
 #: wetkit_language.tokens.inc:16
 msgid "Pathauto: Bilingual Content Prefix"
-msgstr ""
+msgstr "Pathauto: Préfix de contenu bilingue"
 
 #: wetkit_language.tokens.inc:17
 msgid "Bilingual Pathauto prefix for use with Pathauto"
-msgstr ""
+msgstr "Préfix Pathauto bilingue pour l'utilisation avec Pathauto"
 
 #: wetkit_language.info:0
 msgid "WetKit Multilingualism"
@@ -39,5 +39,5 @@ msgstr ""
 
 #: wetkit_language.info:0
 msgid "WetKit"
-msgstr "WetKit"
+msgstr "BOEW"
 

@@ -35,7 +35,7 @@ msgstr "Catégories"
 
 #: wetkit_pages.features.field.inc:774
 msgid "Feature content"
-msgstr "Contenu"
+msgstr "Contenu en vedette"
 
 #: wetkit_pages.features.field.inc:775
 msgid "Primary Image"
@@ -43,7 +43,7 @@ msgstr "Image principale"
 
 #: wetkit_pages.features.field.inc:776
 msgid "Share Widget"
-msgstr ""
+msgstr "Gadget de partage"
 
 #: wetkit_pages.features.inc:31
 msgid "Basic Page"
@@ -111,5 +111,5 @@ msgstr ""
 
 #: wetkit_pages.info:0
 msgid "WetKit"
-msgstr "WetKit"
+msgstr "BOEW"
 
