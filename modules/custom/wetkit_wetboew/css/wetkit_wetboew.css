@@ -38,6 +38,9 @@
 #l10n-client .labels .toggle { text-shadow: #222 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #176ca7), color-stop(100%, #135888)) !important; background-image: -webkit-linear-gradient(#176ca7, #135888) !important; background-image: -moz-linear-gradient(#176ca7, #135888) !important; background-image: -o-linear-gradient(#176ca7, #135888) !important; background-image: linear-gradient(#176ca7, #135888) !important; }
 
 /* Fields */
+#edit-menu-options-attributes-rel, #edit-menu-options-attributes-class { width: 75%; }
+
+#node-edit .form-item-field-featured-image-und-0-title label { font-weight: normal; float: left; margin: 4px 10px 0 0; }
 #node-edit .form-item-field-archived-content-und { margin-top: 0px; }
 #node-edit #edit-field-featured-image-und-0-title { width: 180px; }
 #node-edit #edit-field-featured-image-und-0-title label { font-weight: normal; float: left; margin: 4px 10px 0 0; }
