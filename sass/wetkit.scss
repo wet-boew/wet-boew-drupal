@@ -25,15 +25,18 @@
   }
 }
 
-.maintenance-page {
-  #logo {
-    background:transparent url(../images/wetkit_icon_install.png) no-repeat top left;
-    height:0;
-    overflow:hidden;
-    padding-top: 180px; /* height of logo  */
-    width: 180px; /* width of logo  */
+.in-maintenance {
+  #edit-theme {
+    img{
+      display: block;
+      width: 275px;
+    }
+  }
+  .messages {
+    padding: 10px 10px 10px 10px;
   }
 }
+
 
 /* Global Fixes */
 
