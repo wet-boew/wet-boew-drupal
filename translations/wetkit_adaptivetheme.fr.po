@@ -2,42 +2,14 @@
 #
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
-# Generated from files:
-#  theme-settings.php: n/a
-#  templates/inc/template-preprocess.inc: n/a
-#  wetkit_adaptivetheme.info: n/a
-#  generated_files/wetkit_adaptivetheme_settings.info: n/a
-#  templates/page--base.tpl.php: n/a
-#  templates/page--internet.tpl.php: n/a
-#  templates/page--intranet.tpl.php: n/a
-#  templates/page--panels--base.tpl.php: n/a
-#  templates/page--panels--internet.tpl.php: n/a
-#  templates/page--panels--intranet.tpl.php: n/a
-#  custom_layouts/naked/naked.inc: n/a
-#  custom_layouts/wetkit/wetkit.inc: n/a
-#  custom_panels/wetkit_one_100/wetkit_one_100.inc: n/a
-#  custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc: n/a
-#  custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc: n/a
-#  custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc: n/a
-#  custom_panels/wetkit_three_25_50_25/wetkit-three-25-50-25.tpl.php: n/a
-#  custom_panels/wetkit_two_33_66/wetkit-two-33-66.tpl.php: n/a
-#  templates/maintenance-page.tpl.php: n/a
-#  templates/node.tpl.php: n/a
-#  templates/panes/panels-pane--node_updated--node_updated.tpl.php: n/a
-#  templates/inc/template-breadcrumb.inc: n/a
-#  templates/inc/template-menu-blocks.inc: n/a
-#  templates/misc/aggregator-feed-source.tpl.php: n/a
-#  templates/misc/aggregator-item.tpl.php: n/a
-#  templates/misc/aggregator-summary-items.tpl.php: n/a
-#  templates/misc/book-navigation.tpl.php: n/a
-#  templates/misc/comment-wrapper.tpl.php: n/a
+# Generated from file: wetkit_adaptivetheme.info: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-01-23 17:46-0500\n"
-"PO-Revision-Date: 2013-01-23 17:46-0500\n"
+"POT-Creation-Date: 2013-02-06 00:28-0500\n"
+"PO-Revision-Date: 2013-02-06 00:28-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -45,283 +17,61 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: theme-settings.php:22
-msgid "Accessibility Settings"
-msgstr "Paramètres d'accessibilité"
-
-#: theme-settings.php:26
-msgid "Anchor ID for the “skip link” 1"
-msgstr "ID de l'ancre pour le “skip link” 1"
-
-#: theme-settings.php:29;42
-msgid "Specify the HTML ID of the element that the accessible-but-hidden “skip link” should link to. (<a href=\"!link\">Read more about skip links</a>.)"
-msgstr "Specifie le ID HTML de l'element que le “skip link” accessible-mais-caché devrait lié vers. (<a href=\"!link\">En savoir plus sur les skip links</a>.)"
-
-#: theme-settings.php:33
-msgid "Text for the “skip link” 1"
-msgstr "Texte pour le “skip link” 1"
-
-#: theme-settings.php:34 templates/inc/template-preprocess.inc:63
-msgid "Skip to main content"
-msgstr "Aller au contenu principal"
-
-#: theme-settings.php:35;48
-msgid "For example: <em>Jump to navigation</em>, <em>Skip to content</em>"
-msgstr "Par exemple : <em>Aller à la navigation</em>, <em>Aller au contenu</em>"
-
-#: theme-settings.php:39
-msgid "Anchor ID for the “skip link” 2"
-msgstr "ID de l'ancre pour le “skip link” 2"
-
-#: theme-settings.php:46
-msgid "Text for the “skip link” 2"
-msgstr "Texte pour le “skip link” 2"
-
-#: theme-settings.php:47 templates/inc/template-preprocess.inc:65
-msgid "Skip to footer"
-msgstr "Aller au pied de page"
-
-#: theme-settings.php:52
-msgid "Intranet Settings"
-msgstr "Paramêtres Intranet"
-
-#: theme-settings.php:56
-msgid "Intranet web site name"
-msgstr "Nom du site web Intranet"
-
-#: theme-settings.php:58
-msgid "The display name for the Intranet web site"
-msgstr "Le nom d'affichage pour le site web Intranet"
-
-#: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
+#: wetkit_adaptivetheme.info:0
 msgid "WetKit Adaptive Theme"
 msgstr "Thème WetKit Adaptive"
 
-#: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
+#: wetkit_adaptivetheme.info:0
 msgid "The Web Experience Toolkit Web Usability Theme ported to the Drupal's Adaptive Theme (3.x)."
-msgstr "Le thème de la Boîte à outils de l’expérience Web (BOEW) intégré au thème Adaptive Theme (3.x) de Drupal."
+msgstr ""
+"Le thème de la Boîte à outils de l’expérience Web (BOEW) "
+"intégré au thème Adaptive Theme (3.x) de Drupal."
 
-#: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
+#: wetkit_adaptivetheme.info:0
 msgid "Sidebar first"
 msgstr "Première barre latérale"
 
-#: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
+#: wetkit_adaptivetheme.info:0
 msgid "Sidebar second"
 msgstr "Seconde barre latérale"
 
-#: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
+#: wetkit_adaptivetheme.info:0
 msgid "Main Content"
 msgstr "Contenu Principal"
 
-#: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
+#: wetkit_adaptivetheme.info:0
 msgid "Highlighted"
 msgstr "Mis en évidence"
 
-#: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
+#: wetkit_adaptivetheme.info:0
 msgid "Aside"
 msgstr "de Côté"
 
-#: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0 templates/page--base.tpl.php:219 templates/page--internet.tpl.php:246 templates/page--intranet.tpl.php:263 templates/page--panels--base.tpl.php:159 templates/page--panels--internet.tpl.php:186 templates/page--panels--intranet.tpl.php:193
+#: wetkit_adaptivetheme.info:0
 msgid "Footer"
 msgstr "Pied de page"
 
-#: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
+#: wetkit_adaptivetheme.info:0
 msgid "Leaderboard"
 msgstr "Leaderboard"
 
-#: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
+#: wetkit_adaptivetheme.info:0
 msgid "Header"
-msgstr "Entête"
+msgstr "En-tête"
 
-#: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
+#: wetkit_adaptivetheme.info:0
 msgid "Mega Menu"
-msgstr "Menu Mega"
+msgstr "Mégamenu"
 
-#: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
+#: wetkit_adaptivetheme.info:0
 msgid "Help"
 msgstr "Aide"
 
-#: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
+#: wetkit_adaptivetheme.info:0
 msgid "Page top"
 msgstr "Haut de page"
 
-#: wetkit_adaptivetheme.info:0 generated_files/wetkit_adaptivetheme_settings.info:0
+#: wetkit_adaptivetheme.info:0
 msgid "Page bottom"
 msgstr "Bas de page"
-
-#: custom_layouts/naked/naked.inc:30
-msgid "Naked"
-msgstr "Vide"
-
-#: custom_layouts/naked/naked.inc:31
-msgid "AT Subtheme Custom Page Layout"
-msgstr ""
-
-#: custom_layouts/wetkit/wetkit.inc:30
-msgid "wetkit"
-msgstr "wetkit"
-
-#: custom_layouts/wetkit/wetkit.inc:31
-msgid "WetKit Subtheme Custom Page Layout"
-msgstr "Sous-thème WetKit Mise en page personnalisée"
-
-#: custom_panels/wetkit_one_100/wetkit_one_100.inc:9
-msgid "WetKit One column 100"
-msgstr "WetKit Une colonne 100"
-
-#: custom_panels/wetkit_one_100/wetkit_one_100.inc:10
-msgid "WetKit - 1 column"
-msgstr "WetKit - 1 colonne"
-
-#: custom_panels/wetkit_one_100/wetkit_one_100.inc:17 custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:17 custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:17 custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc:17
-msgid "Top (conditional)"
-msgstr "Haut (conditionnel)"
-
-#: custom_panels/wetkit_one_100/wetkit_one_100.inc:18 custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc:18
-msgid "Content"
-msgstr "Contenu"
-
-#: custom_panels/wetkit_one_100/wetkit_one_100.inc:19 custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:21 custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:21 custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc:20
-msgid "Bottom (conditional)"
-msgstr "Bas (conditionnel)"
-
-#: custom_panels/wetkit_three_25_50_25/wetkit-three-25-50-25.tpl.php:57 custom_panels/wetkit_two_33_66/wetkit-two-33-66.tpl.php:52
-msgid "Secondary Menu"
-msgstr "Menu secondaire"
-
-#: custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:9
-msgid "WetKit Three column 25/50/25 (Content)"
-msgstr "WetKit Trois colonnes 25/50/25 (Contenu)"
-
-#: custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:10 custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:10
-msgid "WetKit - 3 column"
-msgstr "WetKit - 3 colonnes"
-
-#: custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:18
-msgid "Content 1"
-msgstr "Contenu 1"
-
-#: custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:19
-msgid "Content 2"
-msgstr "Contenu 2"
-
-#: custom_panels/wetkit_three_25_50_25/wetkit_three_25_50_25.inc:20 custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc:19
-msgid "Sidebar"
-msgstr "Barre de navigation"
-
-#: custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:9
-msgid "WetKit Three column 40/40/20 (Front)"
-msgstr "WetKit Trois colonnes 40/40/20 (Accueil)"
-
-#: custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:18
-msgid "Left"
-msgstr "Gauche"
-
-#: custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:19
-msgid "Center"
-msgstr "Centre"
-
-#: custom_panels/wetkit_three_40_40_20/wetkit_three_40_40_20.inc:20
-msgid "Right"
-msgstr "Droit"
-
-#: custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc:9
-msgid "WetKit Two column 33/66"
-msgstr "WetKit deux colonnes 33/66"
-
-#: custom_panels/wetkit_two_33_66/wetkit_two_33_66.inc:10
-msgid "WetKit - 2 column"
-msgstr "WetKit - 2 colonnes"
-
-#: templates/maintenance-page.tpl.php:36
-msgid "Home"
-msgstr "Accueil"
-
-#: templates/maintenance-page.tpl.php:41
-msgid "Home page"
-msgstr "Page d'accueil"
-
-#: templates/node.tpl.php:133 templates/panes/panels-pane--node_updated--node_updated.tpl.php:47
-msgid "Date modified:"
-msgstr "Date de modification :"
-
-#: templates/page--base.tpl.php:112 templates/page--internet.tpl.php:139 templates/page--intranet.tpl.php:153 templates/page--panels--base.tpl.php:112 templates/page--panels--internet.tpl.php:139 templates/page--panels--intranet.tpl.php:143
-msgid "Search"
-msgstr "Rechercher"
-
-#: templates/page--base.tpl.php:124 templates/page--internet.tpl.php:151 templates/page--intranet.tpl.php:168 templates/page--panels--base.tpl.php:124 templates/page--panels--internet.tpl.php:151 templates/page--panels--intranet.tpl.php:158
-msgid "<span>Site</span> Menu"
-msgstr "Menu du <span>Site</span>"
-
-#: templates/page--base.tpl.php:204 templates/page--internet.tpl.php:231 templates/page--intranet.tpl.php:248
-msgid "Skip to side navigation"
-msgstr "Aller à la barre de navigation"
-
-#: templates/page--base.tpl.php:222 templates/page--internet.tpl.php:249 templates/page--intranet.tpl.php:266 templates/page--panels--base.tpl.php:162 templates/page--panels--internet.tpl.php:189 templates/page--panels--intranet.tpl.php:196
-msgid "Site Footer"
-msgstr "Pied de page"
-
-#: templates/page--internet.tpl.php:93 templates/page--intranet.tpl.php:93 templates/page--panels--internet.tpl.php:93 templates/page--panels--intranet.tpl.php:93
-msgid "Site menu"
-msgstr "Menu du site"
-
-#: templates/page--internet.tpl.php:264 templates/page--panels--internet.tpl.php:204
-msgid "Government of Canada Footer"
-msgstr "Pied de page du Gouvernment du Canada"
-
-#: templates/inc/template-breadcrumb.inc:68;72
-msgid "Breadcrumb trail"
-msgstr "Fil d'Ariane"
-
-#: templates/inc/template-menu-blocks.inc:131
-msgid "Main Page"
-msgstr "Page principale"
-
-#: templates/misc/aggregator-feed-source.tpl.php:36
-msgid "URL:"
-msgstr "URL :"
-
-#: templates/misc/aggregator-feed-source.tpl.php:38
-msgid "Updated:"
-msgstr "Mis à jour :"
-
-#: templates/misc/aggregator-item.tpl.php:48
-msgid "Categories"
-msgstr "Catégories"
-
-#: templates/misc/aggregator-summary-items.tpl.php:27
-msgid "More"
-msgstr "Plus"
-
-#: templates/misc/book-navigation.tpl.php:44
-msgid "Go to previous page"
-msgstr "Aller à la page précédente"
-
-#: templates/misc/book-navigation.tpl.php:44
-msgid "‹ "
-msgstr "‹ "
-
-#: templates/misc/book-navigation.tpl.php:48
-msgid "Go to parent page"
-msgstr "Aller à la page parente"
-
-#: templates/misc/book-navigation.tpl.php:48
-msgid "up"
-msgstr "haut"
-
-#: templates/misc/book-navigation.tpl.php:52
-msgid "Go to next page"
-msgstr "Aller à la page suivante"
-
-#: templates/misc/book-navigation.tpl.php:52
-msgid " ›"
-msgstr " ›"
-
-#: templates/misc/comment-wrapper.tpl.php:45
-msgid "Comments"
-msgstr "Commentaires"
-
-#: templates/misc/comment-wrapper.tpl.php:52
-msgid "Add new comment"
-msgstr "Ajouter un commentaire"
 

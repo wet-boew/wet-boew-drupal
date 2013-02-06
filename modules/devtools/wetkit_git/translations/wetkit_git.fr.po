@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-12-03 22:51-0500\n"
-"PO-Revision-Date: 2012-12-03 22:51-0500\n"
+"POT-Creation-Date: 2013-02-06 00:28-0500\n"
+"PO-Revision-Date: 2013-02-06 00:28-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -21,23 +21,23 @@ msgstr ""
 
 #: wetkit_git.module:37
 msgid "Git updated to: @info_sha from: @info_url"
-msgstr "Git mis à jour: @info_sha à partir de: @info_url"
+msgstr ""
 
 #: wetkit_git.module:65
 msgid "SHA Commit: @info_sha <br /> To update the current revision of Git from upstream: <a href=\"@git_update\">Click Here</a> <br /> @info_url"
-msgstr "SHA Commit: @info_sha <br /> Pour mettre à jour la version actuelle du Git de l'amont: <a href=\"@git_update\">Cliquez ici</a> <br /> @info_url"
+msgstr ""
 
 #: (duplicate) wetkit_git.module:64 
 msgid "Git Revision"
-msgstr "Git Révision"
+msgstr ""
 
 #: wetkit_git.info:0
 msgid "WetKit Git"
-msgstr "WetKit Git"
+msgstr ""
 
 #: wetkit_git.info:0
 msgid "A custom module which will add a line to the status report screen showing the Git version and provide a link to run Git Update."
-msgstr "Un module personnalisé qui va ajouter une ligne à l'écran de rapport d'état indiquant la version de Git et de fournir un lien pour lancer Mise à jour Git."
+msgstr ""
 
 #: wetkit_git.info:0
 msgid "WetKit"
