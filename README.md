@@ -1,4 +1,4 @@
-<img src="http://github.com/wet-boew/wet-boew-drupal/raw/master/images/wetkit_large_logged_2.png">
+<img src="http://dl.dropbox.com/u/38413195/wetkit_default.png">
 
 # Web Experience Toolkit Drupal Distribution
 
