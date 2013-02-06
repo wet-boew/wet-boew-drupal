@@ -25,6 +25,19 @@
   }
 }
 
+.in-maintenance {
+  #edit-theme {
+    img{
+      display: block;
+      width: 275px;
+    }
+  }
+  .messages {
+    padding: 10px 10px 10px 10px;
+  }
+}
+
+
 /* Global Fixes */
 
 .krumo-footnote {

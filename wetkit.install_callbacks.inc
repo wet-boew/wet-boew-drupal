@@ -34,4 +34,8 @@ function _wetkit_bean_import($operation, &$context) {
   variable_set('entity_translation_entity_types', $entity_translation_entity_types);
   entity_info_cache_clear();
   _wetkit_bean_load();
+  
+  // Fix Panels Edit Page on Browser Install
+  variable_set('page_manager_node_edit_disabled', 0);
+  menu_rebuild();
 }
