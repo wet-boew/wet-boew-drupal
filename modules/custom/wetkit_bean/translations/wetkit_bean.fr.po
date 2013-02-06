@@ -1,0 +1,62 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  wetkit_bean.features.field.inc: n/a
+#  wetkit_bean.module: n/a
+#  wetkit_bean.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-02-06 00:24-0500\n"
+"PO-Revision-Date: 2013-02-06 00:24-0500\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: wetkit_bean.features.field.inc:155
+msgid "The Title of the block."
+msgstr ""
+
+#: wetkit_bean.features.field.inc:156
+msgid "Title"
+msgstr "Titre"
+
+#: wetkit_bean.features.field.inc:157
+msgid "bean_wetkit_body"
+msgstr ""
+
+#: wetkit_bean.module:40
+msgid "Rebuild the beans on the site using preconfigured settings:"
+msgstr ""
+
+#: wetkit_bean.module:45;63
+msgid "Rebuild Default Bean(s)"
+msgstr ""
+
+#: wetkit_bean.module:66;73;80;87
+msgid "There is no bean found with delta @delta."
+msgstr ""
+
+#: wetkit_bean.module:209
+msgid "General Settings"
+msgstr ""
+
+#: wetkit_bean.info:0
+msgid "WetKit Bean"
+msgstr ""
+
+#: wetkit_bean.info:0
+msgid "Default bean implementation for use with WetKit"
+msgstr ""
+
+#: wetkit_bean.info:0
+msgid "WetKit"
+msgstr "WetKit"
+

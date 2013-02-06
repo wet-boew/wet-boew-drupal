@@ -11,8 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-12-03 22:51-0500\n"
-"PO-Revision-Date: 2012-12-03 22:51-0500\n"
+"POT-Creation-Date: 2013-02-06 00:26-0500\n"
+"PO-Revision-Date: 2013-02-06 00:26-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,9 @@ msgstr "Voir les détails du formateur de texte"
 
 #: wetkit_wysiwyg.module:33
 msgid "Do you want WetKit to show the help text and text format guidelines?"
-msgstr "Voulez-vous WetKit pour afficher le texte d'aide et des directives de format de texte?"
+msgstr ""
+"Voulez-vous WetKit pour afficher le texte d'aide et des directives de "
+"format de texte?"
 
 #: wetkit_wysiwyg.module:57
 msgid "Kitchen Sink"
@@ -40,31 +42,31 @@ msgstr "Correcteur orthographique"
 msgid "WetKit Cleanup Tools"
 msgstr "Wetkit Outils de Nettoyage"
 
-#: wetkit_wysiwyg.module:249
+#: wetkit_wysiwyg.module:252
 msgid "Heading 1"
 msgstr "En-tête 1"
 
-#: wetkit_wysiwyg.module:257
+#: wetkit_wysiwyg.module:260
 msgid "Heading 2"
 msgstr "En-tête 2"
 
-#: wetkit_wysiwyg.module:265
+#: wetkit_wysiwyg.module:268
 msgid "Heading 3"
 msgstr "En-tête 3"
 
-#: wetkit_wysiwyg.module:273
+#: wetkit_wysiwyg.module:276
 msgid "Heading 4"
 msgstr "En-tête 4"
 
-#: wetkit_wysiwyg.module:281
+#: wetkit_wysiwyg.module:284
 msgid "Paragraph"
 msgstr "Paragraphe"
 
-#: wetkit_wysiwyg.module:295
+#: wetkit_wysiwyg.module:298
 msgid "Unordered List"
 msgstr "Liste non ordonnée"
 
-#: wetkit_wysiwyg.module:301
+#: wetkit_wysiwyg.module:304
 msgid "Ordered List"
 msgstr "Liste ordonnée"
 
@@ -82,5 +84,7 @@ msgstr "WetKit"
 
 #: plugins/wysiwyg/wetkitcleanup/js/acronym.js:0
 msgid "If this doesn't run, it's probably due to a bug in IE. Try running this again."
-msgstr "Si cela ne fonctionne pas, c'est probablement dû à un bug dans IE. Essayez de lancer ce nouveau."
+msgstr ""
+"Si cela ne fonctionne pas, c'est probablement dû à un bug dans IE. "
+"Essayez de lancer ce nouveau."
 

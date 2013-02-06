@@ -1,0 +1,87 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  template.php: n/a
+#  theme-settings.php: n/a
+#  wetkit_rubik.info: n/a
+#  templates/page.tpl.php: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-02-06 00:28-0500\n"
+"PO-Revision-Date: 2013-02-06 00:28-0500\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: template.php:80
+msgid "(active tab)"
+msgstr "(onglet actif)"
+
+#: template.php:88
+msgid "!local-task-title!active"
+msgstr "!local-task-title!active"
+
+#: template.php:121
+msgid "More help topics"
+msgstr "Plus de sujets d'aide"
+
+#: theme-settings.php:29
+msgid "Show User Menu in Top Right Corner"
+msgstr "Afficher le menu utilisateur en haut à droite"
+
+#: theme-settings.php:35
+msgid "Display form field descriptions inline."
+msgstr "Afficher champ de formulaire descriptions en ligne."
+
+#: theme-settings.php:36
+msgid "By default, each field's description is displayed in a pop-up, which is only visible when hovering over that field. Select this option to make all field descriptions visible at all times."
+msgstr ""
+
+#: wetkit_rubik.info:0
+msgid "WetKit Rubik"
+msgstr "WetKit Rubik"
+
+#: wetkit_rubik.info:0
+msgid "WetKit Rubik is a Rubik based sub-theme with a few enhancements and accessibility improvements."
+msgstr ""
+
+#: wetkit_rubik.info:0
+msgid "Content"
+msgstr "Contenu"
+
+#: wetkit_rubik.info:0
+msgid "Help"
+msgstr "Aide"
+
+#: wetkit_rubik.info:0
+msgid "Page top"
+msgstr "Haut de page"
+
+#: wetkit_rubik.info:0
+msgid "Page bottom"
+msgstr "Bas de page"
+
+#: wetkit_rubik.info:0
+msgid "Sidebar first"
+msgstr "Première barre latérale"
+
+#: wetkit_rubik.info:0
+msgid "Sidebar second"
+msgstr "Seconde barre latérale"
+
+#: wetkit_rubik.info:0
+msgid "Footer"
+msgstr "Pied de page"
+
+#: templates/page.tpl.php:61
+msgid "Feeds"
+msgstr ""
+

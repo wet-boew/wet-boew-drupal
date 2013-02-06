@@ -16,8 +16,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-12-03 22:51-0500\n"
-"PO-Revision-Date: 2012-12-03 22:51-0500\n"
+"POT-Creation-Date: 2013-02-06 00:26-0500\n"
+"PO-Revision-Date: 2013-02-06 00:26-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -63,7 +63,7 @@ msgstr "- Tous -"
 
 #: wetkit_search.views_default.inc:140;281
 msgid "Offset"
-msgstr "Compenser"
+msgstr "Décalage"
 
 #: wetkit_search.views_default.inc:141;282
 msgid "« first"
@@ -97,7 +97,7 @@ msgstr "Tout"
 msgid "Database Search Results"
 msgstr "Résultats de la recherche database"
 
-#: wetkit_search.views_default.inc:149;290 plugins/content_types/facet/facet.inc:12 plugins/content_types/search_box/search_box.inc:17 plugins/content_types/search_current/search_current.inc:13
+#: wetkit_search.views_default.inc:149;290 plugins/content_types/facet/facet.inc:11 plugins/content_types/search_box/search_box.inc:17 plugins/content_types/search_current/search_current.inc:13
 msgid "Search"
 msgstr "Rechercher"
 
@@ -149,19 +149,21 @@ msgstr "Apache Solr est en cours d'exécution?"
 msgid "Apache Solr is running"
 msgstr "Apache Solr est en marche"
 
-#: plugins/content_types/facet/facet.inc:9
+#: plugins/content_types/facet/facet.inc:8
 msgid "Search Facets"
 msgstr "Facettes rechercher"
 
-#: plugins/content_types/facet/facet.inc:10
+#: plugins/content_types/facet/facet.inc:9
 msgid "The list of options available for a particular type of search facet"
-msgstr "La liste des options disponibles pour un type particulier de recherche facette"
+msgstr ""
+"La liste des options disponibles pour un type particulier de recherche "
+"facette"
 
-#: plugins/content_types/facet/facet.inc:11 plugins/content_types/search_box/search_box.inc:16 plugins/content_types/search_current/search_current.inc:12
+#: plugins/content_types/facet/facet.inc:10 plugins/content_types/search_box/search_box.inc:16 plugins/content_types/search_current/search_current.inc:12
 msgid "Keywords"
 msgstr "Mots-clés"
 
-#: plugins/content_types/facet/facet.inc:51
+#: plugins/content_types/facet/facet.inc:60
 msgid "Facet Type"
 msgstr "Type de Facet"
 
@@ -187,7 +189,11 @@ msgstr "Avancé"
 
 #: plugins/content_types/search_box/search_box.inc:104
 msgid "The advanced form may have additional options based upon the search type. For example the advanced content (node) search form will allow searching by node type and taxonomy term."
-msgstr "La forme avancée peut avoir des options supplémentaires en fonction du type de recherche. Par exemple, le formulaire de recherche avancée de contenu (noeud) vous allez pouvoir rechercher par type de nœud et terme de taxonomie."
+msgstr ""
+"La forme avancée peut avoir des options supplémentaires en fonction "
+"du type de recherche. Par exemple, le formulaire de recherche avancée "
+"de contenu (noeud) vous allez pouvoir rechercher par type de nœud et "
+"terme de taxonomie."
 
 #: plugins/content_types/search_box/search_box.inc:110
 msgid "Path"

@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-12-03 22:50-0500\n"
-"PO-Revision-Date: 2012-12-03 22:50-0500\n"
+"POT-Creation-Date: 2013-02-06 00:26-0500\n"
+"PO-Revision-Date: 2013-02-06 00:26-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -71,31 +71,31 @@ msgstr ""
 "le site. Elle est destinés aux usagers qui ont l’habitude "
 "d’utiliser des blocs et des régions pour gérer le contenu."
 
-#: wetkit_pages.module:57
+#: wetkit_pages.module:61
 msgid "Create Landing Page"
 msgstr "Créer la page de renvoi"
 
-#: wetkit_pages.module:72
+#: wetkit_pages.module:76
 msgid "URL"
 msgstr "URL"
 
-#: wetkit_pages.module:80
+#: wetkit_pages.module:84
 msgid "Add this page to the main menu?"
 msgstr "Ajouter cette page au menu principal?"
 
-#: wetkit_pages.module:89
+#: wetkit_pages.module:93
 msgid "Parent"
 msgstr "Parent"
 
-#: wetkit_pages.module:104
+#: wetkit_pages.module:108
 msgid "Create Page"
 msgstr "Créer page"
 
-#: wetkit_pages.module:28
+#: wetkit_pages.module:32
 msgid "Landing Page"
 msgstr "Page de renvoi"
 
-#: wetkit_pages.module:29
+#: wetkit_pages.module:33
 msgid "A primary landing page to display to users on your site."
 msgstr ""
 
@@ -111,5 +111,5 @@ msgstr ""
 
 #: wetkit_pages.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 
