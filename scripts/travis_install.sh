@@ -12,4 +12,6 @@ phpenv rehash
 # Install WetKit Distribution
 workspace=`pwd`
 git_commit=`git show --pretty=%P HEAD | head -1 | cut -d\  -f 2`
-cat $workspace/build-wetkit.make | sed "s/master/$git_commit/g" | sudo drush make --prepare-install php://stdin $workspace/build
+# cat $workspace/build-wetkit.make | sed "s/master/$git_commit/g" | sudo drush make --prepare-install php://stdin $workspace/build
+cat $workspace/build-wetkit.make | sed "s/master/$git_commit/g" > build-wetkit.make
+drush make --prepare-install build-wetkit.make $workspace/build
