@@ -6,6 +6,8 @@
 
 >* **WxT-Drupal 7.x-1.0-rc1 will be released on February 7, 2013 (7.x-1.0-rc1 release notes)**
 >
+>Responsiveness: [http://responsinator.com/?url=sandbox.openplus.ca](http://responsinator.com/?url=sandbox.openplus.ca)
+>
 >The WxT-Drupal distribution is a web content management system which assists in building and maintaining innovative Web sites that are accessible, usable, and interoperable. This distribution is open source software and free for use by departments and external Web communities. This distribution relies and integrates extensively on the [WET-BOEW jQuery Framework](http://github.com/wet-boew/wet-boew) to leverage much of the rendering and overall markup. AdaptiveTheme is used as the base theme for its exceptional HTML5 support and exhaustive accessibility testing. Where possible WxT-Drupal will also leverage work from the [Panopoly](http://drupal.org/project/panopoly) and [Spark](http://drupal.org/project/spark) Distributions due to the amazing UX features being designed.
 >
 >Development has been tailored for organizations that need to comply with standards for accessibility and bilingualism or that simply need a distribution that allows them to get up and running quickly using a carefully curated selection of modules that can support common enterprise business requirements. Specific information about how to install or update the distribution can be found here: [Download, Installation, and Update](https://github.com/wet-boew/wet-boew-drupal/wiki/Download%2C-Installation%2C-and-Update)
