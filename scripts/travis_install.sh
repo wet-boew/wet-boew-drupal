@@ -1,6 +1,14 @@
 #!/bin/sh
 # Travis Install Script for CI Testing
 
+# MySQL Create Database
+mysql -e 'create database wetkit_db;'
+
+# Install Drush
+pear channel-discover pear.drush.org
+pear install drush/drush-5.8.0
+phpenv rehash
+
 # Set Up Vars
 workspace=`pwd`
 build_num=`git log --oneline | wc -l | tr -d ' '`
@@ -16,15 +24,7 @@ echo $repo_user
 echo $workspace
 echo $build_num
 
-cat ${WORKSPACE}/profile/build-wetkit.make | sed 's/master/${GIT_COMMIT}/g' | drush make php://stdin ${WORKSPACE}/build
-
-# MySQL Create Database
-mysql -e 'create database wetkit_db;'
-
-# Install Drush
-pear channel-discover pear.drush.org
-pear install drush/drush-5.8.0
-phpenv rehash
+cat ${workspace}/profile/build-wetkit.make | sed 's/master/${git_commit1}/g' | drush make php://stdin ${workspace}/build
 
 # Install WetKit Distro
 cd ..
