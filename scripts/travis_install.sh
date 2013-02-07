@@ -15,12 +15,12 @@ git_commit=`git show --pretty=%P HEAD | head -1 | cut -d\  -f 2`
 cat $workspace/build-wetkit.make | sed "s/master/$git_commit/g" | sudo drush make --prepare-install php://stdin $workspace/build
 
 # Install WetKit Distro
-cd ..
-mkdir profiles
-mv wet-boew-drupal wetkit
-mv wetkit profiles/
-mkdir drupal_wet
-mv profiles drupal_wet/
-cd drupal_wet
-drush make --prepare-install profiles/wetkit/build-wetkit.make --yes
-sudo chmod -R 777 sites/all/modules
+#cd ..
+#mkdir profiles
+#mv wet-boew-drupal wetkit
+#mv wetkit profiles/
+#mkdir drupal_wet
+#mv profiles drupal_wet/
+#cd drupal_wet
+#drush make --prepare-install profiles/wetkit/build-wetkit.make --yes
+#sudo chmod -R 777 sites/all/modules
