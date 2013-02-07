@@ -24,7 +24,7 @@ echo $repo_user
 echo $workspace
 echo $build_num
 
-cat ${workspace}/profile/build-wetkit.make | sed 's/master/${git_commit1}/g' | drush make php://stdin ${workspace}/build
+cat ${workspace}/build-wetkit.make | sed 's/master/${git_commit2}/g' | drush make php://stdin ${workspace}/build
 
 # Install WetKit Distro
 cd ..
