@@ -11,25 +11,8 @@ phpenv rehash
 
 # Set Up Vars
 workspace=`pwd`
-build_num=`git log --oneline | wc -l | tr -d ' '`
-branch_name=`git status | head -1 | sed -e 's/# On branch \(.*\)/\1/'`
-git_commit1=`git log | head -1 | sed -e 's/commit \([0-9a-f]*$\)/\1/'`
-git_commit2=`git show --pretty=%P HEAD | head -1 | cut -d\  -f 2`
-repo_user=`git config -l | grep remote.origin.url | cut -d/ -f4`
-GIT_COMMIT=$(git rev-parse HEAD)
-WORKSPACE=$(pwd)
-
-printenv
-echo $git_commit1
-echo $git_commit2
-echo $repo_user
-echo $workspace
-echo $build_num
-echo $GIT_COMMIT
-
-cat $workspace/build-wetkit.make | sed "s/master/$git_commit2/g" > tt.txt
-cat tt.txt
-cat $workspace/build-wetkit.make | sed "s/master/$git_commit2/g" | drush make php://stdin $workspace/build
+git_commit=`git show --pretty=%P HEAD | head -1 | cut -d\  -f 2`
+cat $workspace/build-wetkit.make | sed "s/master/$git_commit/g" | drush make php://stdin $workspace
 
 # Install WetKit Distro
 cd ..
