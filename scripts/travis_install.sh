@@ -10,12 +10,14 @@ pear install drush/drush-5.8.0
 phpenv rehash
 
 # Set Up Vars
-workspace=`pwd`
+
 build_num=`git log --oneline | wc -l | tr -d ' '`
 branch_name=`git status | head -1 | sed -e 's/# On branch \(.*\)/\1/'`
 git_commit1=`git log | head -1 | sed -e 's/commit \([0-9a-f]*$\)/\1/'`
 git_commit2=`git show --pretty=%P HEAD | head -1 | cut -d\  -f 2`
 repo_user=`git config -l | grep remote.origin.url | cut -d/ -f4`
+GIT_COMMIT=$(git rev-parse HEAD)
+WORKSPACE=$(pwd)
 
 printenv
 echo $git_commit1
@@ -24,7 +26,7 @@ echo $repo_user
 echo $workspace
 echo $build_num
 
-cat ${workspace}/build-wetkit.make | sed 's/master/${git_commit2}/g' | drush make php://stdin ${workspace}/build
+cat ${WORKSPACE}/build-wetkit.make | sed 's/master/${GIT_COMMIT}/g' | drush make php://stdin ${WORKSPACE}/build
 
 # Install WetKit Distro
 cd ..
