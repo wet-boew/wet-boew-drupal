@@ -27,6 +27,8 @@ echo $workspace
 echo $build_num
 echo $GIT_COMMIT
 
+cat $workspace/build-wetkit.make | sed "s/\/master/\/$git_commit2/g" > tt.txt
+cat tt.txt
 cat $workspace/build-wetkit.make | sed "s/\/master/\/$git_commit2/g" | drush make php://stdin $workspace/build
 
 # Install WetKit Distro
