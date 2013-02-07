@@ -1,4 +1,4 @@
-# Contributor guidelines - Web Experience Toolkit (WET)
+# Contributor guidelines - Web Experience Toolkit (WET)s
 
 * [Developing for WET](https://github.com/wet-boew/wet-boew/wiki/Developing-for-WET)
   * [Contributor guidelines](https://github.com/wet-boew/wet-boew/wiki/Developing-for-WET#wiki-Contributor_guidelines)
