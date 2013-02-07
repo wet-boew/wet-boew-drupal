@@ -13,4 +13,4 @@ phpenv rehash
 sudo chmod -R 777 /home/travis/.drush/
 workspace=`pwd`
 git_commit=`git show --pretty=%P HEAD | head -1 | cut -d\  -f 1`
-cat $workspace/build-wetkit.make | sed "s/master/$git_commit/g" | drush make --prepare-install php://stdin $workspace/build
+cat $workspace/build-wetkit.make | sed "s/master/$git_commit/g" > $workspace/build-wetkit.make.tmp | mv $workspace/build-wetkit.make.tmp $workspace/build-wetkit.make | drush make --prepare-install $workspace/build-wetkit.make $workspace/build
