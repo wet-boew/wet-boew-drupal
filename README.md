@@ -3,6 +3,7 @@
 # Web Experience Toolkit Drupal Distribution
 
 [![Build Status](https://secure.travis-ci.org/wet-boew/wet-boew-drupal.png?branch=master)](http://travis-ci.org/wet-boew/wet-boew-drupal)
+[![Selenium Test Status](https://saucelabs.com/buildstatus/sylus)](https://saucelabs.com/u/sylus)
 
 >* **WxT-Drupal 7.x-1.0-rc1 will be released on February 7, 2013 (7.x-1.0-rc1 release notes)**
 >
