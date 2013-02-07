@@ -9,7 +9,7 @@ pear channel-discover pear.drush.org
 pear install drush/drush-5.8.0
 phpenv rehash
 
-# Set Up Vars
+# Set Up Variables
 workspace=`pwd`
 git_commit=`git show --pretty=%P HEAD | head -1 | cut -d\  -f 2`
 cat $workspace/build-wetkit.make | sed "s/master/$git_commit/g" | drush make php://stdin $workspace/build
