@@ -3,8 +3,11 @@
 # Web Experience Toolkit Drupal Distribution
 
 [![Build Status](https://secure.travis-ci.org/wet-boew/wet-boew-drupal.png?branch=master)](http://travis-ci.org/wet-boew/wet-boew-drupal)
+[![Selenium Test Status](https://saucelabs.com/buildstatus/sylus)](https://saucelabs.com/u/sylus)
 
 >* **WxT-Drupal 7.x-1.0-rc1 will be released on February 7, 2013 (7.x-1.0-rc1 release notes)**
+>
+>Responsiveness: [http://responsinator.com/?url=sandbox.openplus.ca](http://responsinator.com/?url=sandbox.openplus.ca)
 >
 >The WxT-Drupal distribution is a web content management system which assists in building and maintaining innovative Web sites that are accessible, usable, and interoperable. This distribution is open source software and free for use by departments and external Web communities. This distribution relies and integrates extensively on the [WET-BOEW jQuery Framework](http://github.com/wet-boew/wet-boew) to leverage much of the rendering and overall markup. AdaptiveTheme is used as the base theme for its exceptional HTML5 support and exhaustive accessibility testing. Where possible WxT-Drupal will also leverage work from the [Panopoly](http://drupal.org/project/panopoly) and [Spark](http://drupal.org/project/spark) Distributions due to the amazing UX features being designed.
 >
