@@ -3,7 +3,6 @@ core = 7.x
 
 projects[drupal][version] = 7.19
 includes[] = drupal-org-core.make
-includes[] = drupal-org.make
 	
 ; Drupal.org Packaging Standard
 projects[wetkit][type] = profile
