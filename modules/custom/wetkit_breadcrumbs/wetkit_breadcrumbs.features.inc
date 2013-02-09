@@ -1,16 +1,16 @@
 <?php
 /**
  * @file
- * wetkit_wetboew.features.inc
+ * wetkit_breadcrumbs.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function wetkit_wetboew_ctools_plugin_api() {
+function wetkit_breadcrumbs_ctools_plugin_api() {
   list($module, $api) = func_get_args();
-  if ($module == "custom_formatters" && $api == "custom_formatters") {
-    return array("version" => "2");
+  if ($module == "path_breadcrumbs" && $api == "path_breadcrumbs") {
+    return array("version" => "1");
   }
   list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
@@ -21,6 +21,6 @@ function wetkit_wetboew_ctools_plugin_api() {
 /**
  * Implements hook_views_api().
  */
-function wetkit_wetboew_views_api() {
+function wetkit_breadcrumbs_views_api() {
   return array("api" => "3.0");
 }

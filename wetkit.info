@@ -65,6 +65,7 @@ dependencies[] = wetkit_migrate
 dependencies[] = wetkit_bean
 dependencies[] = wetkit_metatag
 dependencies[] = wetkit_wetboew
+dependencies[] = wetkit_breadcrumbs
 
 ; WetKit Recommended - Translation
 dependencies[] = l10n_client
