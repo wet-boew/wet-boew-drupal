@@ -1,4 +1,4 @@
-<img src="http://dl.dropbox.com/u/38413195/banner.jpeg" title="By Y Anderson (Own work) [CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0">
+<img alt="Banner" src="http://dl.dropbox.com/u/38413195/banner.jpeg" title="By Y Anderson (Own work) [CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0">
 
 # Web Experience Toolkit Drupal Distribution
 
