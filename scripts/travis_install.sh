@@ -11,5 +11,4 @@ phpenv rehash
 
 # Install WetKit Distribution
 workspace=`pwd`
-git_commit=`git show --pretty=%P HEAD | head -1 | cut -d\  -f 2`
-cat $workspace/build-wetkit.make | sed "s/master/$TRAVIS_COMMIT/g" | drush make --prepare-install php://stdin $workspace/build
+cat $workspace/build-wetkit.make | sed "s/master/$TRAVIS_COMMIT/g" | sed "s/wet-boew\/wet-boew-drupal/$TRAVIS_REPO_SLUG/g" | drush make --prepare-install php://stdin $workspace/build
