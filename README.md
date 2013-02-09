@@ -1,4 +1,4 @@
-<img src="http://dl.dropbox.com/u/38413195/wetkit_default.png">
+<img src="http://dl.dropbox.com/u/38413195/banner.jpeg">
 
 # Web Experience Toolkit Drupal Distribution
 
