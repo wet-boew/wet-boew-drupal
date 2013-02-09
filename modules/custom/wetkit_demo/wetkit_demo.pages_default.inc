@@ -295,7 +295,7 @@ function wetkit_demo_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'wetkit_three_40_40_20';
+  $display->layout = 'sutherland';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -303,11 +303,11 @@ function wetkit_demo_default_page_manager_pages() {
       'header' => NULL,
       'contentmain' => NULL,
       'footer' => NULL,
-      'wetkit_three_40_40_20_top' => NULL,
-      'wetkit_three_40_40_20_first' => NULL,
-      'wetkit_three_40_40_20_second' => NULL,
-      'wetkit_three_40_40_20_third' => NULL,
-      'wetkit_three_40_40_20_bottom' => NULL,
+      'sutherland_top' => NULL,
+      'sutherland_first' => NULL,
+      'sutherland_second' => NULL,
+      'sutherland_third' => NULL,
+      'sutherland_bottom' => NULL,
     ),
     'sidebar' => array(
       'style' => '-1',
@@ -320,7 +320,7 @@ function wetkit_demo_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-85afc336-dbbd-afd4-ede7-f67373b29d27';
-    $pane->panel = 'wetkit_three_40_40_20_bottom';
+    $pane->panel = 'sutherland_bottom';
     $pane->type = 'bean_panels';
     $pane->subtype = 'bean_panels';
     $pane->shown = TRUE;
@@ -339,10 +339,10 @@ function wetkit_demo_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '85afc336-dbbd-afd4-ede7-f67373b29d27';
     $display->content['new-85afc336-dbbd-afd4-ede7-f67373b29d27'] = $pane;
-    $display->panels['wetkit_three_40_40_20_bottom'][0] = 'new-85afc336-dbbd-afd4-ede7-f67373b29d27';
+    $display->panels['sutherland_bottom'][0] = 'new-85afc336-dbbd-afd4-ede7-f67373b29d27';
     $pane = new stdClass();
     $pane->pid = 'new-673f621a-6667-3cc4-e51d-31865bc28dd5';
-    $pane->panel = 'wetkit_three_40_40_20_first';
+    $pane->panel = 'sutherland_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'headlines_front_page-panel_pane_1';
     $pane->shown = TRUE;
@@ -374,10 +374,10 @@ function wetkit_demo_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '673f621a-6667-3cc4-e51d-31865bc28dd5';
     $display->content['new-673f621a-6667-3cc4-e51d-31865bc28dd5'] = $pane;
-    $display->panels['wetkit_three_40_40_20_first'][0] = 'new-673f621a-6667-3cc4-e51d-31865bc28dd5';
+    $display->panels['sutherland_first'][0] = 'new-673f621a-6667-3cc4-e51d-31865bc28dd5';
     $pane = new stdClass();
     $pane->pid = 'new-474044a4-2130-9eb4-c907-f79e446e618c';
-    $pane->panel = 'wetkit_three_40_40_20_second';
+    $pane->panel = 'sutherland_second';
     $pane->type = 'bean_panels';
     $pane->subtype = 'bean_panels';
     $pane->shown = TRUE;
@@ -396,10 +396,10 @@ function wetkit_demo_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '474044a4-2130-9eb4-c907-f79e446e618c';
     $display->content['new-474044a4-2130-9eb4-c907-f79e446e618c'] = $pane;
-    $display->panels['wetkit_three_40_40_20_second'][0] = 'new-474044a4-2130-9eb4-c907-f79e446e618c';
+    $display->panels['sutherland_second'][0] = 'new-474044a4-2130-9eb4-c907-f79e446e618c';
     $pane = new stdClass();
     $pane->pid = 'new-15d9a383-0e26-b004-e9c0-6e8beda5102c';
-    $pane->panel = 'wetkit_three_40_40_20_third';
+    $pane->panel = 'sutherland_third';
     $pane->type = 'bean_panels';
     $pane->subtype = 'bean_panels';
     $pane->shown = TRUE;
@@ -418,10 +418,10 @@ function wetkit_demo_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '15d9a383-0e26-b004-e9c0-6e8beda5102c';
     $display->content['new-15d9a383-0e26-b004-e9c0-6e8beda5102c'] = $pane;
-    $display->panels['wetkit_three_40_40_20_third'][0] = 'new-15d9a383-0e26-b004-e9c0-6e8beda5102c';
+    $display->panels['sutherland_third'][0] = 'new-15d9a383-0e26-b004-e9c0-6e8beda5102c';
     $pane = new stdClass();
     $pane->pid = 'new-29dbf717-51a1-1494-7952-bf6cf1ba67a9';
-    $pane->panel = 'wetkit_three_40_40_20_third';
+    $pane->panel = 'sutherland_third';
     $pane->type = 'bean_panels';
     $pane->subtype = 'bean_panels';
     $pane->shown = TRUE;
@@ -440,7 +440,7 @@ function wetkit_demo_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '29dbf717-51a1-1494-7952-bf6cf1ba67a9';
     $display->content['new-29dbf717-51a1-1494-7952-bf6cf1ba67a9'] = $pane;
-    $display->panels['wetkit_three_40_40_20_third'][1] = 'new-29dbf717-51a1-1494-7952-bf6cf1ba67a9';
+    $display->panels['sutherland_third'][1] = 'new-29dbf717-51a1-1494-7952-bf6cf1ba67a9';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
