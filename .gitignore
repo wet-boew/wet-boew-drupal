@@ -1,28 +1,17 @@
 # Ignore Development Files
 .DS_Store
+compass_app_log.txt
+.sass-cache/
 
 # Ignore Contributed Modules
-/modules/contrib/*
-/modules/experimental/*
+/modules/contrib/
+/modules/panopoly/
 
 # Ignore Contributed Libraries
-/libraries/*
+/libraries/
 
 # Ignore Contributed Themes
-/themes/adaptivetheme
-/themes/genesis
-/themes/mobile_jquery
-/themes/rubik
-/themes/tao
-/themes/zen
-
-# SCSS + Compass Development Files
-/themes/web_usability_zen/.sass-cache/
-/themes/wetkit_adaptivetheme/.sass-cache/
-compass_app_log.txt
-/modules/custom/wetkit_wetboew/.sass-cache/
-/modules/custom/wetkit_demo/.sass-cache/
-/modules/custom/wetkit_widgets/.sass-cache/
-/modules/custom/wetkit_wysiwyg/.sass-cache/
-/.sass-cache/
-/themes/wetkit_rubik/.sass-cache/
+/themes/adaptivetheme/
+/themes/responsive_bartik/
+/themes/rubik/
+/themes/tao/
