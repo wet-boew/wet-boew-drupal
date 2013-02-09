@@ -1,6 +1,6 @@
 WetKit Metatags
 ===============
-HTML5 Metatag Support for WetKit
+HTML5 Metatag Support for the WxT-Drupal distro
 
 Key Features (WetKit Metatags)
 

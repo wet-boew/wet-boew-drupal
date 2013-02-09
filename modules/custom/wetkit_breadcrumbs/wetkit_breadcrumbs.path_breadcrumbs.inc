@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * wetkit_wetboew.path_breadcrumbs.inc
+ * wetkit_breadcrumbs.path_breadcrumbs.inc
  */
 
 /**
  * Implements hook_path_breadcrumbs_settings_info().
  */
-function wetkit_wetboew_path_breadcrumbs_settings_info() {
+function wetkit_breadcrumbs_path_breadcrumbs_settings_info() {
   $export = array();
 
   $path_breadcrumb = new stdClass();
@@ -86,7 +86,7 @@ function wetkit_wetboew_path_breadcrumbs_settings_info() {
 
   $path_breadcrumb = new stdClass();
   $path_breadcrumb->api_version = 1;
-  $path_breadcrumb->machine_name = 'wetkit_node_view_clone';
+  $path_breadcrumb->machine_name = 'wetkit_node_edit_view';
   $path_breadcrumb->name = 'WetKit Node Edit View';
   $path_breadcrumb->path = 'node/%node/edit';
   $path_breadcrumb->data = array(
@@ -113,7 +113,7 @@ function wetkit_wetboew_path_breadcrumbs_settings_info() {
     ),
   );
   $path_breadcrumb->weight = 0;
-  $export['wetkit_node_view_clone'] = $path_breadcrumb;
+  $export['wetkit_node_edit_view'] = $path_breadcrumb;
 
   $path_breadcrumb = new stdClass();
   $path_breadcrumb->api_version = 1;

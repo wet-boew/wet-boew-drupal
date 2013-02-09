@@ -1,6 +1,6 @@
 WetKit Images
 ===============
-Provides common image styles and helps make them responsive!
+Provides common image styles and helps make them responsive for the WxT-Drupal distro
 
 Customizations
 * This App extends Panopoly Images @ drupal.org/project/panopoly_images

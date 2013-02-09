@@ -1,6 +1,6 @@
 WetKit Demo
 =============
-Demo content and functionality to help show the power of WetKit
+Demo content and functionality to help show the power of the WxT-Drupal distro
 
 Customizations
 * This App was initially based and can sometimes pull upstream from Panopoly Demo @ drupal.org/project/panopoly_demo

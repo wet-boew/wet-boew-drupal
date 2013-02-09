@@ -1,6 +1,6 @@
 WetKit Languages
 ===============
-Integrates multilingual support via Internationalization
+Integrates multilingual support via Internationalization for the WxT-Drupal distro
 
 Key Features
 * Default Internationalization Configuration

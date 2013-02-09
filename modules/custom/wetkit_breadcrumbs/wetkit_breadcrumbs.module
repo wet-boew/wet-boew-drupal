@@ -1,0 +1,72 @@
+<?php
+/**
+ * @file
+ * Code for the wetkit_breadcrumbs feature.
+ */
+
+include_once('wetkit_breadcrumbs.features.inc');
+include_once('theme/theme.inc');
+
+/**
+ * Implements hook_theme_registry_alter().
+ *
+ * @param $theme_registry
+ *   Drupal theme registry that could be changed.
+ */
+function wetkit_breadcrumbs_theme_registry_alter(&$theme_registry) {
+  global $theme;
+  global $base_theme_info;
+  $internal_render = variable_get('path_breadcrumbs_internal_render', 1);
+  $wetkit_base_theme = FALSE;
+
+  foreach ($base_theme_info as $base) {
+    if (!empty($base->name)) {
+      if ($base->name == 'wetkit_adaptivetheme') {
+        $wetkit_base_theme = TRUE;
+      }
+    }
+  }
+
+  if ($internal_render && (($theme == 'wetkit_adaptivetheme') || ($wetkit_base_theme == TRUE))) {
+    $theme_registry['breadcrumb']['theme path'] = drupal_get_path('module', 'wetkit_breadcrumbs');
+    $theme_registry['breadcrumb']['file'] = drupal_get_path('module', 'wetkit_breadcrumbs') . '/theme/theme.inc';
+    $theme_registry['breadcrumb']['function'] = 'wetkit_breadcrumbs_breadcrumb';
+  }
+}
+
+/**
+ * Implements hook_apps_app_info().
+ */
+function wetkit_breadcrumbs_apps_app_info() {
+  return array(
+    'configure form' => 'wetkit_breadcrumbs_configure_form',
+  );
+}
+
+/**
+ * Configuration Form for WetKit Magic
+ *
+ * @param type $form
+ *   Nested array of form elements that comprise the form.
+ * @param type $form_state
+ *   A keyed array containing the current state of the form.
+ */
+function wetkit_breadcrumbs_configure_form($form, &$form_state) {
+  drupal_add_js(drupal_get_path('module', 'system') . '/system.js');
+
+  $form = array();
+
+  return system_settings_form($form);
+}
+
+/**
+ * Handle submission of the WetKit Web Usability configuration page.
+ *
+ * @param type $form
+ *   Nested array of form elements that comprise the form.
+ * @param type $form_state
+ *   A keyed array containing the current state of the form.
+ */
+function wetkit_breadcrumbs_configure_form_submit($form, &$form_state) {
+
+}
