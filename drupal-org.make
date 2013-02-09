@@ -62,4 +62,4 @@ includes[] = modules/custom/wetkit_migrate/wetkit_migrate.make
 includes[] = modules/custom/wetkit_bean/wetkit_bean.make
 includes[] = modules/custom/wetkit_metatag/wetkit_metatag.make
 includes[] = modules/custom/wetkit_wetboew/wetkit_wetboew.make
-includes[] = modules/custom/wetkit_wetboew/wetkit_breadcrumbs.make
+includes[] = modules/custom/wetkit_breadcrumbs/wetkit_breadcrumbs.make
