@@ -1,6 +1,6 @@
 WetKit WYSIWYG
 ================
-Integrates a WYSIWYG into WetKit
+Integrates a WYSIWYG into the WxT-Drupal distro
 
 Key Features
 * Built off of TinyMCE 3.5.8

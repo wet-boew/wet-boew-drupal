@@ -68,13 +68,6 @@ projects[menu_attributes][subdir] = contrib
 projects[menu_views][version] = 1.3
 projects[menu_views][subdir] = contrib
 
-projects[path_breadcrumbs][version] = 3.x-dev
-projects[path_breadcrumbs][subdir] = contrib
-projects[path_breadcrumbs][type] = module
-projects[path_breadcrumbs][download][type] = git
-projects[path_breadcrumbs][download][revision] = cc7acd1
-projects[path_breadcrumbs][download][branch] = 7.x-3.x
-
 projects[password_policy][version] = 1.3
 projects[password_policy][subdir] = contrib
 

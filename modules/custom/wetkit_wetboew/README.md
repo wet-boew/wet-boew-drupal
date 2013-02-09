@@ -1,6 +1,6 @@
 WetKit Web Usability
 ====================
-Foundational Module for most of the functionality related to the Web Experience Toolkit
+Foundational Module for most of the functionality related to the WxT-Drupal distro
 
 Key Features (WetKit Web Usability)
 * Administrative Pages

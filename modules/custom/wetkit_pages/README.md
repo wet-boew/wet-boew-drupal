@@ -1,6 +1,6 @@
 WetKit Pages
 ==============
-Helps create and manage pages that can be Panelized!
+Helps create and manage pages that can be Panelized for the WxT-Drupal distro
 
 Customizations
 * This App was initially based and can sometimes pull upstream from Panopoly Pages @ drupal.org/project/panopoly_pages

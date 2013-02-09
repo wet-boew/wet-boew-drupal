@@ -38,33 +38,6 @@ function wetkit_wetboew_form_menu_edit_item_alter(&$form, &$form_state) {
 }
 
 /**
- * Implements hook_theme_registry_alter().
- *
- * @param $theme_registry
- *   Drupal theme registry that could be changed.
- */
-function wetkit_wetboew_theme_registry_alter(&$theme_registry) {
-  global $theme;
-  global $base_theme_info;
-  $internal_render = variable_get('path_breadcrumbs_internal_render', 1);
-  $wetkit_base_theme = FALSE;
-
-  foreach ($base_theme_info as $base) {
-    if (!empty($base->name)) {
-      if ($base->name == 'wetkit_adaptivetheme') {
-        $wetkit_base_theme = TRUE;
-      }
-    }
-  }
-
-  if ($internal_render && (($theme == 'wetkit_adaptivetheme') || ($wetkit_base_theme == TRUE))) {
-    $theme_registry['breadcrumb']['theme path'] = drupal_get_path('module', 'wetkit_wetboew');
-    $theme_registry['breadcrumb']['file'] = drupal_get_path('module', 'wetkit_wetboew') . '/theme/theme.inc';
-    $theme_registry['breadcrumb']['function'] = 'wetkit_wetboew_breadcrumb';
-  }
-}
-
-/**
  * Implements hook_menu().
  */
 function wetkit_wetboew_menu() {
