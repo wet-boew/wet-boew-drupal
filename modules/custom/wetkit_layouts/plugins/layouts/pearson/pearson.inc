@@ -7,7 +7,7 @@
 function wetkit_layouts_pearson_panels_layouts() {
   $items['pearson'] = array(
     'title' => t('Pearson'),
-    'category' => t('WetKit'),
+    'category' => t('WetKit Layouts'),
     'icon' => 'pearson.png',
     'theme' => 'pearson',
     'admin css' => 'pearson.admin.css',
