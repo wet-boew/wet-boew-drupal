@@ -1,0 +1,131 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  wetkit_layouts.info: n/a
+#  plugins/layouts/dallaire/dallaire.inc: n/a
+#  plugins/layouts/laurier/laurier.inc: n/a
+#  plugins/layouts/payette/payette.inc: n/a
+#  plugins/layouts/pearson/pearson.inc: n/a
+#  plugins/layouts/sutherland/sutherland.inc: n/a
+#  plugins/layouts/dallaire/dallaire.tpl.php: n/a
+#  plugins/layouts/pearson/pearson.tpl.php: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-02-09 20:33-0500\n"
+"PO-Revision-Date: 2013-02-09 20:33-0500\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: wetkit_layouts.info:0
+msgid "WetKit Panel Layouts"
+msgstr ""
+
+#: wetkit_layouts.info:0
+msgid "Provides custom panel layouts for the WxT-Drupal distro"
+msgstr ""
+
+#: wetkit_layouts.info:0 plugins/layouts/dallaire/dallaire.inc:10 plugins/layouts/laurier/laurier.inc:10 plugins/layouts/payette/payette.inc:10 plugins/layouts/pearson/pearson.inc:10 plugins/layouts/sutherland/sutherland.inc:10
+msgid "WetKit"
+msgstr "BOEW"
+
+#: plugins/layouts/dallaire/dallaire.tpl.php:57 plugins/layouts/pearson/pearson.tpl.php:52
+msgid "Secondary Menu"
+msgstr "Menu secondaire"
+
+#: plugins/layouts/dallaire/dallaire.inc:9
+msgid "Dallaire"
+msgstr ""
+
+#: plugins/layouts/dallaire/dallaire.inc:17 plugins/layouts/laurier/laurier.inc:17 plugins/layouts/pearson/pearson.inc:17 plugins/layouts/sutherland/sutherland.inc:17
+msgid "Top (conditional)"
+msgstr "Haut (conditionnel)"
+
+#: plugins/layouts/dallaire/dallaire.inc:18
+msgid "Content 1"
+msgstr "Contenu 1"
+
+#: plugins/layouts/dallaire/dallaire.inc:19
+msgid "Content 2"
+msgstr "Contenu 2"
+
+#: plugins/layouts/dallaire/dallaire.inc:20 plugins/layouts/pearson/pearson.inc:19
+msgid "Sidebar"
+msgstr "Barre de navigation"
+
+#: plugins/layouts/dallaire/dallaire.inc:21 plugins/layouts/laurier/laurier.inc:19 plugins/layouts/pearson/pearson.inc:20 plugins/layouts/sutherland/sutherland.inc:21
+msgid "Bottom (conditional)"
+msgstr "Bas (conditionnel)"
+
+#: plugins/layouts/laurier/laurier.inc:9
+msgid "Laurier"
+msgstr ""
+
+#: plugins/layouts/laurier/laurier.inc:18 plugins/layouts/pearson/pearson.inc:18
+msgid "Content"
+msgstr "Contenu"
+
+#: plugins/layouts/payette/payette.inc:9
+msgid "Payette"
+msgstr ""
+
+#: plugins/layouts/payette/payette.inc:17
+msgid "Top Left"
+msgstr ""
+
+#: plugins/layouts/payette/payette.inc:18
+msgid "Top Right"
+msgstr ""
+
+#: plugins/layouts/payette/payette.inc:19
+msgid "Mid Left"
+msgstr ""
+
+#: plugins/layouts/payette/payette.inc:20
+msgid "Mid Center"
+msgstr ""
+
+#: plugins/layouts/payette/payette.inc:21
+msgid "Mid Right"
+msgstr ""
+
+#: plugins/layouts/payette/payette.inc:22
+msgid "Bottom Left"
+msgstr ""
+
+#: plugins/layouts/payette/payette.inc:23
+msgid "Bottom Center"
+msgstr ""
+
+#: plugins/layouts/payette/payette.inc:24
+msgid "Bottom Right"
+msgstr ""
+
+#: plugins/layouts/pearson/pearson.inc:9
+msgid "Pearson"
+msgstr ""
+
+#: plugins/layouts/sutherland/sutherland.inc:9
+msgid "Sutherland"
+msgstr ""
+
+#: plugins/layouts/sutherland/sutherland.inc:18
+msgid "Left"
+msgstr "Gauche"
+
+#: plugins/layouts/sutherland/sutherland.inc:19
+msgid "Center"
+msgstr "Centre"
+
+#: plugins/layouts/sutherland/sutherland.inc:20
+msgid "Right"
+msgstr "Droit"
+

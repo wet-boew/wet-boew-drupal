@@ -11,8 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-06 00:26-0500\n"
-"PO-Revision-Date: 2013-02-06 00:26-0500\n"
+"POT-Creation-Date: 2013-02-09 20:37-0500\n"
+"PO-Revision-Date: 2013-02-09 20:37-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,9 @@ msgstr "Voir les détails du formateur de texte"
 
 #: wetkit_wysiwyg.module:33
 msgid "Do you want WetKit to show the help text and text format guidelines?"
-msgstr "Voulez-vous que WetKit affiche le texte d'aide et le guide de formatage de texte?"
+msgstr ""
+"Voulez-vous que WetKit affiche le texte d'aide et le guide de "
+"formatage de texte?"
 
 #: wetkit_wysiwyg.module:57
 msgid "Kitchen Sink"
@@ -78,7 +80,7 @@ msgstr "Intégrer un WYSIWYG  à Drupal."
 
 #: wetkit_wysiwyg.info:0
 msgid "WetKit"
-msgstr "WetKit"
+msgstr "BOEW"
 
 #: plugins/wysiwyg/wetkitcleanup/js/acronym.js:0
 msgid "If this doesn't run, it's probably due to a bug in IE. Try running this again."

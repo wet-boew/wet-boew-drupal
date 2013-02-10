@@ -57,6 +57,7 @@ dependencies[] = uuid
 dependencies[] = wetkit_images
 dependencies[] = wetkit_widgets
 dependencies[] = wetkit_pages
+dependencies[] = wetkit_layouts
 dependencies[] = wetkit_search
 dependencies[] = wetkit_wysiwyg
 dependencies[] = wetkit_demo

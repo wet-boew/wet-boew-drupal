@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-06 00:28-0500\n"
-"PO-Revision-Date: 2013-02-06 00:28-0500\n"
+"POT-Creation-Date: 2013-02-09 20:38-0500\n"
+"PO-Revision-Date: 2013-02-09 20:38-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -41,5 +41,5 @@ msgstr ""
 
 #: wetkit_git.info:0
 msgid "WetKit"
-msgstr "WetKit"
+msgstr "BOEW"
 

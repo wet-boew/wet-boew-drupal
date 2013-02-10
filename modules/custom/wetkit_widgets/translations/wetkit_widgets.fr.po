@@ -13,8 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-06 00:26-0500\n"
-"PO-Revision-Date: 2013-02-06 00:26-0500\n"
+"POT-Creation-Date: 2013-02-09 20:37-0500\n"
+"PO-Revision-Date: 2013-02-09 20:37-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr "Légende"
 
 #: wetkit_widgets.features.field.inc:274
 msgid "Items"
-msgstr "Éléments"
+msgstr "Éléments"
 
 #: wetkit_widgets.features.field.inc:275
 msgid "Poster"
@@ -62,7 +62,9 @@ msgstr "Image par défaut"
 
 #: wetkit_widgets.plugins.inc:96
 msgid "If no image is uploaded, this image will be shown on display."
-msgstr "Si aucune image n'est transférée, c'est cette image qui sera utilisée pour l'affichage."
+msgstr ""
+"Si aucune image n'est transférée, c'est cette image qui sera "
+"utilisée pour l'affichage."
 
 #: wetkit_widgets.plugins.inc:118 wetkit_widgets.module:160
 msgid "WetKit Video"
@@ -98,7 +100,10 @@ msgstr "Taille"
 
 #: wetkit_widgets.plugins.inc:181
 msgid "The size expressed as WIDTHxHEIGHT (for example, 640x480). Leave blank to use the video file to determine the size of the player."
-msgstr "La taille exprimée par LargeurxHauteur (par exemple, 640x480). Laissez vide pour laisser le fichier vidéo déterminer la taille du lecteur."
+msgstr ""
+"La taille exprimée par LargeurxHauteur (par exemple, 640x480). "
+"Laissez vide pour laisser le fichier vidéo déterminer la taille du "
+"lecteur."
 
 #: wetkit_widgets.plugins.inc:185
 msgid "Width"
@@ -118,11 +123,11 @@ msgstr "Affichage de fichiers multiple"
 
 #: wetkit_widgets.plugins.inc:205
 msgid "Use multiple sources within a single <video> tag"
-msgstr "Utilise plusieures sources à l'intérieur d'un seul élément <video>"
+msgstr ""
 
 #: wetkit_widgets.plugins.inc:206
 msgid "Use multiple <video> tags, each with a single source"
-msgstr "Utilise plusieurs éléments <video>, chacun ayant qu'une seule source"
+msgstr ""
 
 #: wetkit_widgets.plugins.inc:227
 msgid "Multiple files: %multiple"
@@ -170,11 +175,13 @@ msgstr "Ajout d’une interface à onglets"
 
 #: wetkit_widgets.module:95 wetkit_widgets.info:0
 msgid "WetKit"
-msgstr "WetKit"
+msgstr "BOEW"
 
 #: wetkit_widgets.module:161
 msgid "A <em>WetKit Video</em> file is a moving visual recording using the WET video player."
-msgstr "Un fichier <em>Vidéo WetKit</em> est un enregistrement visuel animé utilisant le lecteur video BOEW."
+msgstr ""
+"Un fichier <em>Vidéo WetKit</em> est un enregistrement visuel animé "
+"utilisant le lecteur video BOEW."
 
 #: wetkit_widgets.info:0
 msgid "WetKit Widgets"
@@ -190,7 +197,9 @@ msgstr "Interface à onglet Wetkit"
 
 #: plugins/styles/tabbed_interface/tabbed_interface.inc:11
 msgid "Display the pane with customized settings for the Tabbed Interface Plugin."
-msgstr "Afficher le panneau avec les paramètres personnalisés pour le plugiciel de l’interface à onglets."
+msgstr ""
+"Afficher le panneau avec les paramètres personnalisés pour le "
+"plugiciel de l’interface à onglets."
 
 #: plugins/styles/tabbed_interface/tabbed_interface.inc:39
 msgid "Class"
