@@ -2,13 +2,10 @@ WetKit Metatags
 ===============
 HTML5 Metatag Support for the WxT-Drupal distro
 
-Key Features (WetKit Metatags)
+Key Features
 
-The following metatags have been implemented according to WET standards
-* dcterms.title
-* dcterms.issued
-* dcterms.modified
-* dcterms.identifier
-* dcterms.language
-* dcterms.creator
-* dcterms.description
+Key Features
+* Implements standard metatags according to WET specifications
+* Custom bilingual tokens
+* Custom bilingual variables
+* Translation Support

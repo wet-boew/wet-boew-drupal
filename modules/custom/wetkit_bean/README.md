@@ -1,9 +1,11 @@
 WetKit Bean
-===============
+===========
 Replaces Blocks in Drupal with a more usable and fieldable block system using Bean for the WxT-Drupal distro
 
-Key Features (WetKit Metatags)
+Key Features
 
 * Implements a wetkit_bean default type
-* Populates the default front page screen
+* Integrates Entity Translation with Bean
+* Migrates some default beans for use as default content
 * Uses Beans Panels for integration with Panels + Panels IPE
+* Translation Support
