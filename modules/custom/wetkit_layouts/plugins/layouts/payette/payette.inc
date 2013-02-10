@@ -7,7 +7,7 @@
 function wetkit_layouts_payette_panels_layouts() {
   $items['payette'] = array(
     'title'    => t('Payette'),
-    'category' => t('WetKit'),
+    'category' => t('WetKit Layouts'),
     'icon'     => 'payette.png',
     'theme'    => 'payette',
     'admin css' => 'payette.admin.css',

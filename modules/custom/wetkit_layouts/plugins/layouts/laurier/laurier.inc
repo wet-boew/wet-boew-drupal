@@ -7,7 +7,7 @@
 function wetkit_layouts_laurier_panels_layouts() {
   $items['laurier'] = array(
     'title' => t('Laurier'),
-    'category' => t('WetKit'),
+    'category' => t('WetKit Layouts'),
     'icon' => 'laurier.png',
     'theme' => 'laurier',
     'admin css' => 'laurier.admin.css',
