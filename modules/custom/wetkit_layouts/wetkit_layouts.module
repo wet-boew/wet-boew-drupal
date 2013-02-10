@@ -79,7 +79,7 @@ function wetkit_layouts_preprocess_html(&$variables) {
     }
     //Set Body ID for Panels Layouts
     $variables['wetkit_col_array'] = 'wb-body';
-    if (isset($bodyid)) {
+    if (!empty($bodyid)) {
       $variables['wetkit_col_array'] = $bodyid;
     }
   }
