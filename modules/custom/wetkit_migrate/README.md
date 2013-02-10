@@ -11,3 +11,4 @@ Customizations
 * Migration can be easily extended for a variety of Source Destinations (SQL, CSV, XML, JSON, etc)
 * Default Panel Layout based on migration
 * Example of how to leverage QueryPath to extract from sources using CSS3 Selectors
+* Translation Support
