@@ -1,0 +1,33 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  wetkit_breadcrumbs.info: n/a
+#  theme/theme.inc: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-02-09 20:35-0500\n"
+"PO-Revision-Date: 2013-02-09 20:35-0500\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: wetkit_breadcrumbs.info:0;0
+msgid "WetKit Breadcrumbs"
+msgstr ""
+
+#: wetkit_breadcrumbs.info:0
+msgid "Installs and configures breadcrumbs for the Web Experience Toolkit"
+msgstr ""
+
+#: theme/theme.inc:21
+msgid "Breadcrumb Trail"
+msgstr "Fil d'Ariane"
+

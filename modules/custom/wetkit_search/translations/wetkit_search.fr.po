@@ -16,8 +16,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-06 00:26-0500\n"
-"PO-Revision-Date: 2013-02-06 00:26-0500\n"
+"POT-Creation-Date: 2013-02-09 20:37-0500\n"
+"PO-Revision-Date: 2013-02-09 20:37-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -190,10 +190,10 @@ msgstr "Avancé"
 #: plugins/content_types/search_box/search_box.inc:104
 msgid "The advanced form may have additional options based upon the search type. For example the advanced content (node) search form will allow searching by node type and taxonomy term."
 msgstr ""
-"Le formulaire avancé peut avoir des options supplémentaires en fonction "
-"du type de recherche. Par exemple, le formulaire de recherche avancée "
-"de contenu (noeud) vous allez pouvoir rechercher par type de nœud et "
-"terme de taxonomie."
+"Le formulaire avancé peut avoir des options supplémentaires en "
+"fonction du type de recherche. Par exemple, le formulaire de recherche "
+"avancée de contenu (noeud) vous allez pouvoir rechercher par type de "
+"nœud et terme de taxonomie."
 
 #: plugins/content_types/search_box/search_box.inc:110
 msgid "Path"
@@ -232,8 +232,12 @@ msgid "The count of results for current search."
 msgstr "Le nombre de résultats de la recherche actuelle."
 
 #: plugins/content_types/search_current/search_current.inc:39;44
+msgid "!count matched !keys"
+msgstr ""
+
+#: plugins/content_types/search_current/search_current.inc:39;44
 msgid "1 item"
 msgid_plural "@count items"
-msgstr[0] "1 élement"
+msgstr[0] "@count élement"
 msgstr[1] "@count éléments"
 
