@@ -11,8 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-06 00:24-0500\n"
-"PO-Revision-Date: 2013-02-06 00:24-0500\n"
+"POT-Creation-Date: 2013-02-09 20:34-0500\n"
+"PO-Revision-Date: 2013-02-09 20:34-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +34,9 @@ msgstr ""
 
 #: wetkit_bean.module:40
 msgid "Rebuild the beans on the site using preconfigured settings:"
-msgstr "Recréer les beans du site en utilisant les paramètres préconfigurés"
+msgstr ""
+"Recréer les beans du site en utilisant les paramètres "
+"préconfigurés"
 
 #: wetkit_bean.module:45;63
 msgid "Rebuild Default Bean(s)"
@@ -46,7 +48,7 @@ msgstr "Il n'y a pas de bean trouvé avec le delta @delta."
 
 #: wetkit_bean.module:209
 msgid "General Settings"
-msgstr "Paramètre généraux"
+msgstr "Paramètres généraux"
 
 #: wetkit_bean.info:0
 msgid "WetKit Bean"
@@ -58,5 +60,5 @@ msgstr "Implémentation par défaut de bean pour l'utilisation avec Wetkit"
 
 #: wetkit_bean.info:0
 msgid "WetKit"
-msgstr "WetKit"
+msgstr "BOEW"
 

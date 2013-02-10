@@ -1,0 +1,471 @@
+@charset "utf-8";
+/*!
+ *
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * wet-boew.github.com/wet-boew/License-eng.txt / wet-boew.github.com/wet-boew/Licence-fra.txt
+ *
+ * Version: @wet-boew-build.version@
+ *
+ */
+/* Desktop view */
+.page-admin-structure #panels-dnd-main { overflow-x: scroll; }
+
+@media screen and (min-width: 768px) and (min-device-width: 768px) { /* -----Build Include Section Start----- */
+  /* Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.com/wet-boew/License-eng.txt / wet-boew.github.com/wet-boew/Licence-fra.txt */
+  h1, h2, h3, h4, h5, h6, p, blockquote, table, form, img, pre, details { margin-left: 10px; margin-right: 10px; }
+  .span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12 { position: relative; float: left; min-height: 1px; margin-left: 10px; margin-right: 10px; }
+  .border-top, .border-right, .border-bottom, .border-left { position: relative; float: left; min-height: 1px; }
+  #wb-main-in .span-1, #wb-main-in .span-2, #wb-main-in .span-3, #wb-main-in .span-4, #wb-main-in .span-5, #wb-main-in .span-6, #wb-main-in .span-7, #wb-main-in .span-8, #wb-main-in .span-9, #wb-main-in .span-10, #wb-main-in .span-11, #wb-main-in .span-12 { margin-bottom: 20px; }
+  .row-start { margin-left: 0 !important; }
+  .row-end { margin-right: 0  !important; }
+  .clear, .clear-left, .clear-right { display: block; height: 0; margin: 0; overflow: hidden; visibility: hidden; width: 0; }
+  .clear { clear: both; }
+  .clear-left { clear: left; }
+  .clear-right { clear: right; }
+  .span-1 .span-1, .span-2 .span-2, .span-3 .span-3, .span-4 .span-4, .span-5 .span-5, .span-6 .span-6, .span-7 .span-7, .span-8 .span-8, .span-9 .span-9, .span-10 .span-10, .span-11 .span-11, .span-12 .span-12 { margin-left: 0 !important; margin-right: 0 !important; }
+  .image-actual, #gcwu-aside .gcwu-minister-img img { width: auto !important; height: auto; }
+  .span-1 img, .span-2 img, .span-3 img, .span-4 img, .span-5 img, .span-6 img, .span-7 img, .span-8 img, .span-9 img, .span-10 img, .span-11 img, .span-12 img, #gcwu-aside img { width: 100%; height: auto; -ms-interpolation-mode: bicubic; }
+  .equalize { margin-bottom: 0 !important; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-1 { width: 40px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-3 { width: 160px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-5 { width: 280px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-7 { width: 400px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-9 { width: 520px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-11 { width: 640px; }
+  .grid-12 .span-1 { width: 60px; }
+  .grid-12 .span-2 { width: 140px; }
+  .grid-12 .span-4 { width: 300px; }
+  .grid-12 .span-5 { width: 380px; }
+  .grid-12 .span-7 { width: 540px; }
+  .grid-12 .span-8 { width: 620px; }
+  .grid-12 .span-10 { width: 780px; }
+  .grid-12 .span-11 { width: 860px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-2, .span-1 { width: 100px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-4, .grid-12 .span-3, .span-2 { width: 220px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-6, .span-3 { width: 340px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-8, .grid-12 .span-6, .span-4 { width: 460px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-10, .span-5 { width: 580px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-12, .grid-12 .span-9, .span-6 { width: 700px; }
+  .span-7 { width: 820px; }
+  .grid-12 .span-12, .span-8 { width: 940px; }
+  /* Right to left (RTL) CSS */
+  [dir="rtl"] .span-1, [dir="rtl"] .span-2, [dir="rtl"] .span-3, [dir="rtl"] .span-4, [dir="rtl"] .span-5, [dir="rtl"] .span-6, [dir="rtl"] .span-7, [dir="rtl"] .span-8, [dir="rtl"] .span-9, [dir="rtl"] .span-10, [dir="rtl"] .span-11, [dir="rtl"] .span-12 { float: right; }
+  [dir="rtl"] .border-top, [dir="rtl"] .border-right, [dir="rtl"] .border-bottom, [dir="rtl"] .border-left { float: right; }
+  [dir="rtl"] .row-start { margin-left: 10px !important; margin-right: 0 !important; }
+  [dir="rtl"] .row-end { margin-right: 10px !important; margin-left: 0  !important; }
+  /* Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.com/wet-boew/License-eng.txt / wet-boew.github.com/wet-boew/Licence-fra.txt */
+  body { min-width: 960px; }
+  #wb-head, #wb-core, #wb-foot, #wb-head-in, #gcwu-gcnb, #gcwu-bnr, #gcwu-psnb, #gcwu-bc, #wb-foot-in, #gcwu-gcft, #gcwu-sft { width: 100%; }
+  #wb-core-in, #gcwu-gcnb-in, #gcwu-bnr-in, #gcwu-psnb-in, #gcwu-bc-in, #gcwu-gcft-in, #gcwu-sft-in { margin: auto; }
+  #gcwu-title-in { width: 360px; }
+  #wb-body-sec-sup #wb-main { width: 480px; right: 240px; }
+  #wb-sec { width: 240px; }
+  #wb-sup { width: 240px; left: 480px; }
+  #gcwu-gcft li { margin: 12px 0 13px 44px; }
+  #gcwu-gcft li:first-child { margin-left: 10px; }
+  li#gcwu-gcft-ca { margin-left: 0 !important; }
+  li#gcwu-gcft-ca a { padding-left: 44px; }
+  #wb-core-in, #gcwu-gcnb-in, #gcwu-bnr-in, #gcwu-psnb-in, #gcwu-bc-in, #gcwu-gcft-in, #gcwu-sft-in, #gcwu-psnb .mb-menu, #wb-body #wb-main { width: 960px; }
+  [id|="wb-body-sec"] [id|="wb-main"], #wb-body #gcwu-content { width: 720px; }
+  #wb-body-sec-sup #wb-main-in, #wb-body-sec #gcwu-content { width: 480px; }
+  #gcwu-aside, #gcwu-priorities { width: 220px; }
+  /* Right to left (RTL) CSS */
+  [dir="rtl"] #wb-body-sec-sup #wb-main { right: auto; left: 240px; }
+  [dir="rtl"] #wb-sup { left: auto; right: 480px; }
+  #panels-dnd-main #wb-main { width: 720px; }
+  /* -----Build Include Section End----- */ }
+@media screen and (min-width: 768px) and (max-width: 959px) and (min-device-width: 768px) { /* -----Build Include Section Start----- */
+  /* Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.com/wet-boew/License-eng.txt / wet-boew.github.com/wet-boew/Licence-fra.txt */
+  /* Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.com/wet-boew/License-eng.txt / wet-boew.github.com/wet-boew/Licence-fra.txt */
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-1 { width: 18px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-1 { margin-left: 48px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-2 { width: 56px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-2 { margin-left: 86px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-3 { width: 94px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-3 { margin-left: 124px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-4 { width: 132px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-4 { margin-left: 162px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-5 { width: 170px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-5 { margin-left: 200px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-6 { width: 208px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-6 { margin-left: 238px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-7 { width: 246px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-7 { margin-left: 276px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-8 { width: 284px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-8 { margin-left: 314px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-9 { width: 322px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-9 { margin-left: 352px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-10 { width: 360px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-10 { margin-left: 390px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-11 { width: 398px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-11 { margin-left: 428px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-12 { width: 436px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-12 { margin-left: 466px; }
+  .grid-12 .span-1 { width: 34px; }
+  .grid-12 .offset-1 { margin-left: 64px; }
+  .grid-12 .span-2 { width: 88px; }
+  .grid-12 .offset-2 { margin-left: 118px; }
+  .grid-12 .span-3 { width: 142px; }
+  .grid-12 .offset-3 { margin-left: 172px; }
+  .grid-12 .span-4 { width: 196px; }
+  .grid-12 .offset-4 { margin-left: 226px; }
+  .grid-12 .span-5 { width: 250px; }
+  .grid-12 .offset-5 { margin-left: 280px; }
+  .grid-12 .span-6 { width: 304px; }
+  .grid-12 .offset-6 { margin-left: 334px; }
+  .grid-12 .span-7 { width: 358px; }
+  .grid-12 .offset-7 { margin-left: 388px; }
+  .grid-12 .span-8 { width: 412px; }
+  .grid-12 .offset-8 { margin-left: 442px; }
+  .grid-12 .span-9 { width: 466px; }
+  .grid-12 .offset-9 { margin-left: 496px; }
+  .grid-12 .span-10 { width: 520px; }
+  .grid-12 .offset-10 { margin-left: 550px; }
+  .grid-12 .span-11 { width: 574px; }
+  .grid-12 .offset-11 { margin-left: 604px; }
+  .grid-12 .span-12 { width: 628px; }
+  .grid-12 .offset-12 { margin-left: 658px; }
+  .span-1 { width: 66px; }
+  .offset-1 { margin-left: 96px; }
+  .span-2 { width: 152px; }
+  .offset-2 { margin-left: 182px; }
+  .span-3 { width: 238px; }
+  .offset-3 { margin-left: 268px; }
+  .span-4 { width: 324px; }
+  .offset-4 { margin-left: 354px; }
+  .span-5 { width: 410px; }
+  .offset-5 { margin-left: 440px; }
+  .span-6 { width: 496px; }
+  .offset-6 { margin-left: 526px; }
+  .span-7 { width: 582px; }
+  .offset-7 { margin-left: 612px; }
+  .span-8 { width: 668px; }
+  .offset-8 { margin-left: 698px; }
+  .span-1 { width: 66px; }
+  .offset-1 { margin-left: 96px; }
+  .span-2 { width: 152px; }
+  .offset-2 { margin-left: 182px; }
+  .span-3 { width: 238px; }
+  .offset-3 { margin-left: 268px; }
+  .span-4 { width: 324px; }
+  .offset-4 { margin-left: 354px; }
+  .span-5 { width: 410px; }
+  .offset-5 { margin-left: 440px; }
+  .span-6 { width: 496px; }
+  .offset-6 { margin-left: 526px; }
+  .span-7 { width: 582px; }
+  .offset-7 { margin-left: 612px; }
+  .span-8 { width: 668px; }
+  .offset-8 { margin-left: 698px; }
+  .span-1 { width: 66px; }
+  .offset-1 { margin-left: 96px; }
+  .span-2 { width: 152px; }
+  .offset-2 { margin-left: 182px; }
+  .span-3 { width: 238px; }
+  .offset-3 { margin-left: 268px; }
+  .span-4 { width: 324px; }
+  .offset-4 { margin-left: 354px; }
+  .span-5 { width: 410px; }
+  .offset-5 { margin-left: 440px; }
+  .span-6 { width: 496px; }
+  .offset-6 { margin-left: 526px; }
+  .span-7 { width: 582px; }
+  .offset-7 { margin-left: 612px; }
+  .span-8 { width: 668px; }
+  .offset-8 { margin-left: 698px; }
+  .span-1 { width: 66px; }
+  .offset-1 { margin-left: 96px; }
+  .span-2 { width: 152px; }
+  .offset-2 { margin-left: 182px; }
+  .span-3 { width: 238px; }
+  .offset-3 { margin-left: 268px; }
+  .span-4 { width: 324px; }
+  .offset-4 { margin-left: 354px; }
+  .span-5 { width: 410px; }
+  .offset-5 { margin-left: 440px; }
+  .span-6 { width: 496px; }
+  .offset-6 { margin-left: 526px; }
+  .span-7 { width: 582px; }
+  .offset-7 { margin-left: 612px; }
+  .span-8 { width: 668px; }
+  .offset-8 { margin-left: 698px; }
+  .span-1 { width: 66px; }
+  .offset-1 { margin-left: 96px; }
+  .span-2 { width: 152px; }
+  .offset-2 { margin-left: 182px; }
+  .span-3 { width: 238px; }
+  .offset-3 { margin-left: 268px; }
+  .span-4 { width: 324px; }
+  .offset-4 { margin-left: 354px; }
+  .span-5 { width: 410px; }
+  .offset-5 { margin-left: 440px; }
+  .span-6 { width: 496px; }
+  .offset-6 { margin-left: 526px; }
+  .span-7 { width: 582px; }
+  .offset-7 { margin-left: 612px; }
+  .span-8 { width: 668px; }
+  .offset-8 { margin-left: 698px; }
+  .span-1 { width: 66px; }
+  .offset-1 { margin-left: 96px; }
+  .span-2 { width: 152px; }
+  .offset-2 { margin-left: 182px; }
+  .span-3 { width: 238px; }
+  .offset-3 { margin-left: 268px; }
+  .span-4 { width: 324px; }
+  .offset-4 { margin-left: 354px; }
+  .span-5 { width: 410px; }
+  .offset-5 { margin-left: 440px; }
+  .span-6 { width: 496px; }
+  .offset-6 { margin-left: 526px; }
+  .span-7 { width: 582px; }
+  .offset-7 { margin-left: 612px; }
+  .span-8 { width: 668px; }
+  .offset-8 { margin-left: 698px; }
+  .span-1 { width: 66px; }
+  .offset-1 { margin-left: 96px; }
+  .span-2 { width: 152px; }
+  .offset-2 { margin-left: 182px; }
+  .span-3 { width: 238px; }
+  .offset-3 { margin-left: 268px; }
+  .span-4 { width: 324px; }
+  .offset-4 { margin-left: 354px; }
+  .span-5 { width: 410px; }
+  .offset-5 { margin-left: 440px; }
+  .span-6 { width: 496px; }
+  .offset-6 { margin-left: 526px; }
+  .span-7 { width: 582px; }
+  .offset-7 { margin-left: 612px; }
+  .span-8 { width: 668px; }
+  .offset-8 { margin-left: 698px; }
+  .span-1 { width: 66px; }
+  .offset-1 { margin-left: 96px; }
+  .span-2 { width: 152px; }
+  .offset-2 { margin-left: 182px; }
+  .span-3 { width: 238px; }
+  .offset-3 { margin-left: 268px; }
+  .span-4 { width: 324px; }
+  .offset-4 { margin-left: 354px; }
+  .span-5 { width: 410px; }
+  .offset-5 { margin-left: 440px; }
+  .span-6 { width: 496px; }
+  .offset-6 { margin-left: 526px; }
+  .span-7 { width: 582px; }
+  .offset-7 { margin-left: 612px; }
+  .span-8 { width: 668px; }
+  .offset-8 { margin-left: 698px; }
+  /* Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.com/wet-boew/License-eng.txt / wet-boew.github.com/wet-boew/Licence-fra.txt */
+  body { min-width: 960px; }
+  #wb-head, #wb-core, #wb-foot, #wb-head-in, #gcwu-gcnb, #gcwu-bnr, #gcwu-psnb, #gcwu-bc, #wb-foot-in, #gcwu-gcft, #gcwu-sft { width: 100%; }
+  #wb-core-in, #gcwu-gcnb-in, #gcwu-bnr-in, #gcwu-psnb-in, #gcwu-bc-in, #gcwu-gcft-in, #gcwu-sft-in { margin: auto; }
+  #gcwu-title-in { width: 360px; }
+  #wb-body-sec-sup #wb-main { width: 480px; right: 240px; }
+  #wb-sec { width: 240px; }
+  #wb-sup { width: 240px; left: 480px; }
+  #gcwu-gcft li { margin: 12px 0 13px 44px; }
+  #gcwu-gcft li:first-child { margin-left: 10px; }
+  li#gcwu-gcft-ca { margin-left: 0 !important; }
+  li#gcwu-gcft-ca a { padding-left: 44px; }
+  #wb-core-in, #gcwu-gcnb-in, #gcwu-bnr-in, #gcwu-psnb-in, #gcwu-bc-in, #gcwu-gcft-in, #gcwu-sft-in, #gcwu-psnb .mb-menu, #wb-body #wb-main { width: 960px; }
+  [id|="wb-body-sec"] [id|="wb-main"], #wb-body #gcwu-content { width: 720px; }
+  #wb-body-sec-sup #wb-main-in, #wb-body-sec #gcwu-content { width: 480px; }
+  #gcwu-aside, #gcwu-priorities { width: 220px; }
+  #panels-dnd-main #wb-main { width: 568px; }
+  /* -----Build Include Section End----- */ }
+@media screen and (min-width: 1200px) and (min-device-width: 768px) { /* -----Build Include Section Start----- */
+  /* Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.com/wet-boew/License-eng.txt / wet-boew.github.com/wet-boew/Licence-fra.txt */
+  /* Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.com/wet-boew/License-eng.txt / wet-boew.github.com/wet-boew/Licence-fra.txt */
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-1 { width: 50px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-1 { margin-left: 80px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-2 { width: 120px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-2 { margin-left: 150px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-3 { width: 190px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-3 { margin-left: 220px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-4 { width: 260px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-4 { margin-left: 290px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-5 { width: 330px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-5 { margin-left: 360px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-6 { width: 400px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-6 { margin-left: 430px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-7 { width: 470px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-7 { margin-left: 500px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-8 { width: 540px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-8 { margin-left: 570px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-9 { width: 610px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-9 { margin-left: 640px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-10 { width: 680px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-10 { margin-left: 710px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-11 { width: 750px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-11 { margin-left: 780px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .span-12 { width: 820px; }
+  [id|="wb-body-sec"] #wb-core .grid-12 .offset-12 { margin-left: 850px; }
+  .grid-12 .span-1 { width: 80px; }
+  .grid-12 .offset-1 { margin-left: 110px; }
+  .grid-12 .span-2 { width: 180px; }
+  .grid-12 .offset-2 { margin-left: 210px; }
+  .grid-12 .span-3 { width: 280px; }
+  .grid-12 .offset-3 { margin-left: 310px; }
+  .grid-12 .span-4 { width: 380px; }
+  .grid-12 .offset-4 { margin-left: 410px; }
+  .grid-12 .span-5 { width: 480px; }
+  .grid-12 .offset-5 { margin-left: 510px; }
+  .grid-12 .span-6 { width: 580px; }
+  .grid-12 .offset-6 { margin-left: 610px; }
+  .grid-12 .span-7 { width: 680px; }
+  .grid-12 .offset-7 { margin-left: 710px; }
+  .grid-12 .span-8 { width: 780px; }
+  .grid-12 .offset-8 { margin-left: 810px; }
+  .grid-12 .span-9 { width: 880px; }
+  .grid-12 .offset-9 { margin-left: 910px; }
+  .grid-12 .span-10 { width: 980px; }
+  .grid-12 .offset-10 { margin-left: 1010px; }
+  .grid-12 .span-11 { width: 1080px; }
+  .grid-12 .offset-11 { margin-left: 1110px; }
+  .grid-12 .span-12 { width: 1180px; }
+  .grid-12 .offset-12 { margin-left: 1210px; }
+  .span-1 { width: 130px; }
+  .offset-1 { margin-left: 160px; }
+  .span-2 { width: 280px; }
+  .offset-2 { margin-left: 310px; }
+  .span-3 { width: 430px; }
+  .offset-3 { margin-left: 460px; }
+  .span-4 { width: 580px; }
+  .offset-4 { margin-left: 610px; }
+  .span-5 { width: 730px; }
+  .offset-5 { margin-left: 760px; }
+  .span-6 { width: 880px; }
+  .offset-6 { margin-left: 910px; }
+  .span-7 { width: 1030px; }
+  .offset-7 { margin-left: 1060px; }
+  .span-8 { width: 1180px; }
+  .offset-8 { margin-left: 1210px; }
+  .span-1 { width: 130px; }
+  .offset-1 { margin-left: 160px; }
+  .span-2 { width: 280px; }
+  .offset-2 { margin-left: 310px; }
+  .span-3 { width: 430px; }
+  .offset-3 { margin-left: 460px; }
+  .span-4 { width: 580px; }
+  .offset-4 { margin-left: 610px; }
+  .span-5 { width: 730px; }
+  .offset-5 { margin-left: 760px; }
+  .span-6 { width: 880px; }
+  .offset-6 { margin-left: 910px; }
+  .span-7 { width: 1030px; }
+  .offset-7 { margin-left: 1060px; }
+  .span-8 { width: 1180px; }
+  .offset-8 { margin-left: 1210px; }
+  .span-1 { width: 130px; }
+  .offset-1 { margin-left: 160px; }
+  .span-2 { width: 280px; }
+  .offset-2 { margin-left: 310px; }
+  .span-3 { width: 430px; }
+  .offset-3 { margin-left: 460px; }
+  .span-4 { width: 580px; }
+  .offset-4 { margin-left: 610px; }
+  .span-5 { width: 730px; }
+  .offset-5 { margin-left: 760px; }
+  .span-6 { width: 880px; }
+  .offset-6 { margin-left: 910px; }
+  .span-7 { width: 1030px; }
+  .offset-7 { margin-left: 1060px; }
+  .span-8 { width: 1180px; }
+  .offset-8 { margin-left: 1210px; }
+  .span-1 { width: 130px; }
+  .offset-1 { margin-left: 160px; }
+  .span-2 { width: 280px; }
+  .offset-2 { margin-left: 310px; }
+  .span-3 { width: 430px; }
+  .offset-3 { margin-left: 460px; }
+  .span-4 { width: 580px; }
+  .offset-4 { margin-left: 610px; }
+  .span-5 { width: 730px; }
+  .offset-5 { margin-left: 760px; }
+  .span-6 { width: 880px; }
+  .offset-6 { margin-left: 910px; }
+  .span-7 { width: 1030px; }
+  .offset-7 { margin-left: 1060px; }
+  .span-8 { width: 1180px; }
+  .offset-8 { margin-left: 1210px; }
+  .span-1 { width: 130px; }
+  .offset-1 { margin-left: 160px; }
+  .span-2 { width: 280px; }
+  .offset-2 { margin-left: 310px; }
+  .span-3 { width: 430px; }
+  .offset-3 { margin-left: 460px; }
+  .span-4 { width: 580px; }
+  .offset-4 { margin-left: 610px; }
+  .span-5 { width: 730px; }
+  .offset-5 { margin-left: 760px; }
+  .span-6 { width: 880px; }
+  .offset-6 { margin-left: 910px; }
+  .span-7 { width: 1030px; }
+  .offset-7 { margin-left: 1060px; }
+  .span-8 { width: 1180px; }
+  .offset-8 { margin-left: 1210px; }
+  .span-1 { width: 130px; }
+  .offset-1 { margin-left: 160px; }
+  .span-2 { width: 280px; }
+  .offset-2 { margin-left: 310px; }
+  .span-3 { width: 430px; }
+  .offset-3 { margin-left: 460px; }
+  .span-4 { width: 580px; }
+  .offset-4 { margin-left: 610px; }
+  .span-5 { width: 730px; }
+  .offset-5 { margin-left: 760px; }
+  .span-6 { width: 880px; }
+  .offset-6 { margin-left: 910px; }
+  .span-7 { width: 1030px; }
+  .offset-7 { margin-left: 1060px; }
+  .span-8 { width: 1180px; }
+  .offset-8 { margin-left: 1210px; }
+  .span-1 { width: 130px; }
+  .offset-1 { margin-left: 160px; }
+  .span-2 { width: 280px; }
+  .offset-2 { margin-left: 310px; }
+  .span-3 { width: 430px; }
+  .offset-3 { margin-left: 460px; }
+  .span-4 { width: 580px; }
+  .offset-4 { margin-left: 610px; }
+  .span-5 { width: 730px; }
+  .offset-5 { margin-left: 760px; }
+  .span-6 { width: 880px; }
+  .offset-6 { margin-left: 910px; }
+  .span-7 { width: 1030px; }
+  .offset-7 { margin-left: 1060px; }
+  .span-8 { width: 1180px; }
+  .offset-8 { margin-left: 1210px; }
+  .span-1 { width: 130px; }
+  .offset-1 { margin-left: 160px; }
+  .span-2 { width: 280px; }
+  .offset-2 { margin-left: 310px; }
+  .span-3 { width: 430px; }
+  .offset-3 { margin-left: 460px; }
+  .span-4 { width: 580px; }
+  .offset-4 { margin-left: 610px; }
+  .span-5 { width: 730px; }
+  .offset-5 { margin-left: 760px; }
+  .span-6 { width: 880px; }
+  .offset-6 { margin-left: 910px; }
+  .span-7 { width: 1030px; }
+  .offset-7 { margin-left: 1060px; }
+  .span-8 { width: 1180px; }
+  .offset-8 { margin-left: 1210px; }
+  /* Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.com/wet-boew/License-eng.txt / wet-boew.github.com/wet-boew/Licence-fra.txt */
+  body { min-width: 1200px; }
+  #gcwu-title-in { width: 500px; }
+  #wb-body-sec-sup #wb-main { width: 600px; left: 300px; }
+  #wb-body-sec-sup #wb-main-in { width: 600px; }
+  #wb-sec { width: 300px; }
+  #wb-sup { width: 300px; left: 600px; }
+  #gcwu-gcft li { margin: 12px 0 13px 88px; }
+  #gcwu-gcft li:first-child { margin-left: 10px; }
+  li#gcwu-gcft-ca { margin-left: 0 !important; }
+  #wb-core-in, #gcwu-gcnb-in, #gcwu-bnr-in, #gcwu-psnb-in, #gcwu-bc-in, #gcwu-gcft-in, #gcwu-sft-in, #gcwu-psnb .mb-menu, #wb-body #wb-main { width: 1200px; }
+  #wb-body #gcwu-content, [id|="wb-body-sec"] [id|="wb-main"] { width: 900px; }
+  #wb-body-sec #gcwu-content { width: 580px; }
+  #gcwu-aside, #gcwu-priorities { width: 280px; }
+  /* Right to left (RTL) CSS */
+  [dir="rtl"] #wb-body-sec-sup #wb-main { left: auto; right: 300px; }
+  [dir="rtl"] #wb-sup { left: auto; right: 600px; }
+  #panels-dnd-main #wb-main { width: 900px; }
+  /* -----Build Include Section End----- */ }

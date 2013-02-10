@@ -18,8 +18,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-06 00:24-0500\n"
-"PO-Revision-Date: 2013-02-06 00:24-0500\n"
+"POT-Creation-Date: 2013-02-09 20:34-0500\n"
+"PO-Revision-Date: 2013-02-09 20:34-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -77,7 +77,7 @@ msgstr ""
 
 #: wetkit_migrate.info:0 wetkit_migrate_content_types/wetkit_migrate_content_types.info:0
 msgid "WetKit"
-msgstr "WetKit"
+msgstr "BOEW"
 
 #: migrations/wetkit_migrate_migration.inc:23;24;25;26
 msgid "Web Developer"

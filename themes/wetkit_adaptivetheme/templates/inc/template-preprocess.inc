@@ -64,55 +64,7 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
   $variables['skip_link_nav_anchor'] = at_get_setting('skip_link_nav_anchor');
   $variables['skip_link2_text'] = t('Skip to footer');
 
-  // Detect Panels Layout
-  $panel_page = page_manager_get_current_page();
-  if ($panel_page) {
-    // Panels Layout
-    if (isset($panel_page['handler']->conf['display']->renderer_handler->plugins['layout']['theme'])) {
-      $layout = $panel_page['handler']->conf['display']->renderer_handler->plugins['layout']['theme'];
-    }
-    // Panelizer Layout
-    elseif  (isset($panel_page['handler']->conf['context'])) {
-      $context = $panel_page['handler']->conf['context'];
-      if (isset($panel_page['contexts'][$context]->data->panelizer['page_manager']->display->layout)) {
-        $layout = $panel_page['contexts'][$context]->data->panelizer['page_manager']->display->layout;
-      }
-    }
-    //Set Body Class for Panels Layouts
-    $variables['wetkit_col_array'] = 'wb-body';
-    if (isset($layout)) {
-      if ((drupal_substr($layout, 0, 10) == 'wetkit_two') ||
-          drupal_substr($layout, 0, 21) == 'wetkit_three_25_50_25') {
-        $variables['wetkit_col_array'] = 'wb-body-sec';
-      }
-      elseif (drupal_substr($layout, 0, 12) == 'wetkit_three') {
-        $variables['wetkit_col_array'] = 'wb-body';
-      }
-      else {
-        $variables['wetkit_col_array'] = 'wb-body';
-      }
-    }
-  }
-  // Detect Blocks Layout
-  else {
-    if ($variables['is_front']) {
-      $variables['wetkit_col_array'] = 'wb-body';
-    }
-    elseif (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
-      $variables['wetkit_col_array'] = 'wb-body-sec';
-    }
-    elseif (!empty($variables['page']['sidebar_first'])) {
-      $variables['wetkit_col_array'] = 'wb-body-sec';
-    }
-    elseif (!empty($variables['page']['sidebar_second'])) {
-      $variables['wetkit_col_array'] = 'wb-body-sec';
-    }
-    else {
-      $variables['wetkit_col_array'] = 'wb-body';
-    }
-  }
-
-  // Remove Class(es)
+  // Remove Classes
   $variables['classes_array'] = array_diff($variables['classes_array'], array('site-name-web-experience-toolkit'));
 
   // Add Viewport for WET Mobile
