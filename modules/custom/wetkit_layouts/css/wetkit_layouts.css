@@ -2,6 +2,10 @@
  * Custom styling for Changing Layout Feature
 */
 
+div.layout-icon .caption {
+  padding-left: 10px;
+}
+
 div.form-item-categories {
   display: none;
 }
