@@ -52,6 +52,12 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
   $variables['html_attributes_array']['class'][] = 'no-js';
   unset($variables['html_attributes_array']['dir']);
 
+  // Add the default body id needed for WET
+  // This will be dynamically replaced by the wetkit_layouts module
+  if (empty($variables['wetkit_col_array'])) {
+    $variables['wetkit_col_array'] = 'wb-body';
+  }
+  
   // Add a body class for the active theme name.
   $variables['classes_array'][] = drupal_html_class($theme_key);
 
