@@ -6,7 +6,7 @@
  */
 function wetkit_layouts_sutherland_panels_layouts() {
   $items['sutherland'] = array(
-    'title'    => t('Sutherland'),
+    'title'    => t('Sutherland (Front Page)'),
     'category' => t('WetKit Layouts'),
     'icon'     => 'sutherland.png',
     'theme'    => 'sutherland',
