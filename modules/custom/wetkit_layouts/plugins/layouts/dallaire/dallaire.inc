@@ -6,7 +6,7 @@
  */
 function wetkit_layouts_dallaire_panels_layouts() {
   $items['dallaire'] = array(
-    'title'    => t('Dallaire'),
+    'title'    => t('Dallaire (Left Sidebar)'),
     'category' => t('WetKit Layouts'),
     'icon'     => 'dallaire.png',
     'theme'    => 'dallaire',
