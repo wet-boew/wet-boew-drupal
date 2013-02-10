@@ -47,9 +47,9 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
         </div>
       </div>       
       <div class="clear"></div>
-      <div class="region-penfield-second span-6">
+      <div class="region-penfield-content-footer span-6">
         <div class="region-inner clearfix">
-          <?php print $content['penfield_second']; ?>
+          <?php print $content['penfield_content_footer']; ?>
         </div>
       </div>
       <div class="clear"></div>

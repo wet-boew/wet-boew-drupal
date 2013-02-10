@@ -14,8 +14,7 @@
 /* -----Build Include Section Start----- */
 @import 'responsive';
 @import 'default-responsive';
-  //#panels-dnd-main #wb-main { width: 960px;}
-  #panels-dnd-main #wb-main { width: 720px;}
+#panels-dnd-main #wb-main { width: 720px;}
 /* -----Build Include Section End----- */
 }
 
@@ -23,8 +22,7 @@
 /* -----Build Include Section Start----- */
 @import 'responsive-768';
 @import 'default-responsive-768';
-  //#panels-dnd-main #wb-main { width: 768px;}
-  #panels-dnd-main #wb-main { width: 568px;}
+#panels-dnd-main #wb-main { width: 568px;}
 /* -----Build Include Section End----- */
 }
 
@@ -32,7 +30,6 @@
 /* -----Build Include Section Start----- */
 @import 'responsive-1200';
 @import 'default-responsive-1200';
-  //#panels-dnd-main #wb-main { width: 1200px;}
-  #panels-dnd-main #wb-main { width: 900px;}
+#panels-dnd-main #wb-main { width: 900px;}
 /* -----Build Include Section End----- */
 }
