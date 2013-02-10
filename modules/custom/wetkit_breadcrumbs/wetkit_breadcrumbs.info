@@ -1,7 +1,7 @@
 name = WetKit Breadcrumbs
 description = Installs and configures breadcrumbs for the Web Experience Toolkit
 core = 7.x
-package = WetKit Breadcrumbs
+package = WetKit
 php = 5.2.4
 version = 7.x-1.0
 dependencies[] = ctools
