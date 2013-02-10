@@ -4,20 +4,24 @@
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
 #  wetkit_layouts.info: n/a
+#  plugins/layouts/dallaire/dallaire.tpl.php: n/a
+#  plugins/layouts/pearson/pearson.tpl.php: n/a
+#  plugins/layouts/penfield/penfield.tpl.php: n/a
 #  plugins/layouts/dallaire/dallaire.inc: n/a
 #  plugins/layouts/laurier/laurier.inc: n/a
 #  plugins/layouts/payette/payette.inc: n/a
 #  plugins/layouts/pearson/pearson.inc: n/a
+#  plugins/layouts/penfield/penfield.inc: n/a
+#  plugins/layouts/secord/secord.inc: n/a
 #  plugins/layouts/sutherland/sutherland.inc: n/a
-#  plugins/layouts/dallaire/dallaire.tpl.php: n/a
-#  plugins/layouts/pearson/pearson.tpl.php: n/a
+#  plugins/layouts/vanier/vanier.inc: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-09 20:33-0500\n"
-"PO-Revision-Date: 2013-02-09 20:33-0500\n"
+"POT-Creation-Date: 2013-02-10 02:52-0500\n"
+"PO-Revision-Date: 2013-02-10 02:52-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -33,35 +37,39 @@ msgstr ""
 msgid "Provides custom panel layouts for the WxT-Drupal distro"
 msgstr ""
 
-#: wetkit_layouts.info:0 plugins/layouts/dallaire/dallaire.inc:10 plugins/layouts/laurier/laurier.inc:10 plugins/layouts/payette/payette.inc:10 plugins/layouts/pearson/pearson.inc:10 plugins/layouts/sutherland/sutherland.inc:10
+#: wetkit_layouts.info:0
 msgid "WetKit"
 msgstr "BOEW"
 
-#: plugins/layouts/dallaire/dallaire.tpl.php:57 plugins/layouts/pearson/pearson.tpl.php:52
+#: plugins/layouts/dallaire/dallaire.tpl.php:57 plugins/layouts/pearson/pearson.tpl.php:52 plugins/layouts/penfield/penfield.tpl.php:63
 msgid "Secondary Menu"
 msgstr "Menu secondaire"
 
 #: plugins/layouts/dallaire/dallaire.inc:9
-msgid "Dallaire"
+msgid "Dallaire (Left Sidebar)"
 msgstr ""
 
-#: plugins/layouts/dallaire/dallaire.inc:17 plugins/layouts/laurier/laurier.inc:17 plugins/layouts/pearson/pearson.inc:17 plugins/layouts/sutherland/sutherland.inc:17
+#: plugins/layouts/dallaire/dallaire.inc:10 plugins/layouts/laurier/laurier.inc:10 plugins/layouts/payette/payette.inc:10 plugins/layouts/pearson/pearson.inc:10 plugins/layouts/penfield/penfield.inc:10 plugins/layouts/secord/secord.inc:10 plugins/layouts/sutherland/sutherland.inc:10 plugins/layouts/vanier/vanier.inc:10
+msgid "WetKit Layouts"
+msgstr ""
+
+#: plugins/layouts/dallaire/dallaire.inc:17 plugins/layouts/laurier/laurier.inc:17 plugins/layouts/pearson/pearson.inc:17 plugins/layouts/penfield/penfield.inc:17 plugins/layouts/sutherland/sutherland.inc:17 plugins/layouts/vanier/vanier.inc:17
 msgid "Top (conditional)"
 msgstr "Haut (conditionnel)"
 
-#: plugins/layouts/dallaire/dallaire.inc:18
+#: plugins/layouts/dallaire/dallaire.inc:18 plugins/layouts/penfield/penfield.inc:18
 msgid "Content 1"
 msgstr "Contenu 1"
 
-#: plugins/layouts/dallaire/dallaire.inc:19
+#: plugins/layouts/dallaire/dallaire.inc:19 plugins/layouts/penfield/penfield.inc:19
 msgid "Content 2"
 msgstr "Contenu 2"
 
-#: plugins/layouts/dallaire/dallaire.inc:20 plugins/layouts/pearson/pearson.inc:19
+#: plugins/layouts/dallaire/dallaire.inc:20 plugins/layouts/pearson/pearson.inc:19 plugins/layouts/penfield/penfield.inc:21
 msgid "Sidebar"
 msgstr "Barre de navigation"
 
-#: plugins/layouts/dallaire/dallaire.inc:21 plugins/layouts/laurier/laurier.inc:19 plugins/layouts/pearson/pearson.inc:20 plugins/layouts/sutherland/sutherland.inc:21
+#: plugins/layouts/dallaire/dallaire.inc:21 plugins/layouts/laurier/laurier.inc:19 plugins/layouts/pearson/pearson.inc:20 plugins/layouts/penfield/penfield.inc:22 plugins/layouts/sutherland/sutherland.inc:21 plugins/layouts/vanier/vanier.inc:23
 msgid "Bottom (conditional)"
 msgstr "Bas (conditionnel)"
 
@@ -77,44 +85,56 @@ msgstr "Contenu"
 msgid "Payette"
 msgstr ""
 
-#: plugins/layouts/payette/payette.inc:17
+#: plugins/layouts/payette/payette.inc:17 plugins/layouts/secord/secord.inc:17
 msgid "Top Left"
 msgstr ""
 
-#: plugins/layouts/payette/payette.inc:18
+#: plugins/layouts/payette/payette.inc:18 plugins/layouts/secord/secord.inc:18;19
 msgid "Top Right"
 msgstr ""
 
-#: plugins/layouts/payette/payette.inc:19
+#: plugins/layouts/payette/payette.inc:19 plugins/layouts/secord/secord.inc:20
 msgid "Mid Left"
 msgstr ""
 
-#: plugins/layouts/payette/payette.inc:20
+#: plugins/layouts/payette/payette.inc:20 plugins/layouts/secord/secord.inc:21
 msgid "Mid Center"
 msgstr ""
 
-#: plugins/layouts/payette/payette.inc:21
+#: plugins/layouts/payette/payette.inc:21 plugins/layouts/secord/secord.inc:22
 msgid "Mid Right"
 msgstr ""
 
-#: plugins/layouts/payette/payette.inc:22
+#: plugins/layouts/payette/payette.inc:22 plugins/layouts/secord/secord.inc:23
 msgid "Bottom Left"
 msgstr ""
 
-#: plugins/layouts/payette/payette.inc:23
+#: plugins/layouts/payette/payette.inc:23 plugins/layouts/secord/secord.inc:24
 msgid "Bottom Center"
 msgstr ""
 
-#: plugins/layouts/payette/payette.inc:24
+#: plugins/layouts/payette/payette.inc:24 plugins/layouts/secord/secord.inc:25
 msgid "Bottom Right"
 msgstr ""
 
 #: plugins/layouts/pearson/pearson.inc:9
-msgid "Pearson"
+msgid "Pearson (Left Sidebar)"
+msgstr ""
+
+#: plugins/layouts/penfield/penfield.inc:9
+msgid "Penfield (Left Sidebar)"
+msgstr ""
+
+#: plugins/layouts/penfield/penfield.inc:20
+msgid "Content Footer"
+msgstr ""
+
+#: plugins/layouts/secord/secord.inc:9
+msgid "Secord"
 msgstr ""
 
 #: plugins/layouts/sutherland/sutherland.inc:9
-msgid "Sutherland"
+msgid "Sutherland (Front Page)"
 msgstr ""
 
 #: plugins/layouts/sutherland/sutherland.inc:18
@@ -128,4 +148,28 @@ msgstr "Centre"
 #: plugins/layouts/sutherland/sutherland.inc:20
 msgid "Right"
 msgstr "Droit"
+
+#: plugins/layouts/vanier/vanier.inc:9
+msgid "Vanier"
+msgstr ""
+
+#: plugins/layouts/vanier/vanier.inc:18
+msgid "Content Banner"
+msgstr ""
+
+#: plugins/layouts/vanier/vanier.inc:19
+msgid "Content Listings"
+msgstr ""
+
+#: plugins/layouts/vanier/vanier.inc:20
+msgid "Spotlight 1"
+msgstr ""
+
+#: plugins/layouts/vanier/vanier.inc:21
+msgid "Spotlight 2"
+msgstr ""
+
+#: plugins/layouts/vanier/vanier.inc:22
+msgid "Spotlight 3"
+msgstr ""
 
