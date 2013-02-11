@@ -46,7 +46,7 @@
           <?php print render($content); ?>
         </div>
       <?php else: ?>
-        <div class="ipe_tabs_interface tabs-style-3 auto-play cycle-fast animate-slow">
+        <div class="ipe_tabs_interface tabs-style-3 auto-play cycle-slow animate-slow">
           <?php print render($content); ?>
         </div>
       <?php endif; ?>

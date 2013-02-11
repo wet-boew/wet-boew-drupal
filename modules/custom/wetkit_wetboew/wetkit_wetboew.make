@@ -77,18 +77,17 @@ projects[workbench][version] = 7.x-dev
 projects[workbench][subdir] = contrib
 projects[workbench][type] = module
 projects[workbench][download][type] = git
-projects[workbench][download][revision] = 6857511
+projects[workbench][download][revision] = 16a8fff
 projects[workbench][download][branch] = 7.x-1.x
 
 projects[workbench_moderation][version] = 1.x-dev
 projects[workbench_moderation][subdir] = contrib
 projects[workbench_moderation][type] = module
 projects[workbench_moderation][download][type] = git
-projects[workbench_moderation][download][revision] = 931e01e
+projects[workbench_moderation][download][revision] = d196989
 projects[workbench_moderation][download][branch] = 7.x-1.x
-projects[workbench_moderation][patch][1285090] = http://drupal.org/files/playnicewithpanels-1285090-7.patch
-projects[workbench_moderation][patch][1260112] = http://drupal.org/files/workbench_moderation-is_current-1260112-15.patch
-projects[workbench_moderation][patch][1786604] = http://drupal.org/files/workbench_moderation-admin_theme_paths-1786604-2.patch
+projects[workbench_moderation][patch][1285090] = http://drupal.org/files/playnicewithpanels-1285090-12.patch
+projects[workbench_moderation][patch][1260112] = http://drupal.org/files/workbench_moderation-is_current-1260112-28.patch
 
 projects[rules][version] = 2.2
 projects[rules][subdir] = contrib

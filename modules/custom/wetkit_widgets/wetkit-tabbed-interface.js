@@ -16,7 +16,7 @@ Drupal.settings.tabbed_interface_settings = Drupal.settings.tabbed_interface_set
       $(document).on(loading_finished, function () {
 
       });
-      pe.wb_load({'dep': ['resize', 'equalheights'], 'plugins': {'tabbedinterface': $(".ipe_tabs_interface", context)}}, loading_finished);
+      pe.wb_load({'plugins': {'tabbedinterface': $(".ipe_tabs_interface", context)}}, loading_finished);
      }
    }
  }
