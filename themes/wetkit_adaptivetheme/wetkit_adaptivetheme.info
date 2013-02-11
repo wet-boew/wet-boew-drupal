@@ -442,9 +442,4 @@
   ; Custom CSS
   settings[custom_css] = ''
 
-; Information added by drupal.org packaging script on 2012-07-31
-version = "7.x-3.0"
-core = "7.x"
-project = "adaptivetheme"
-datestamp = "1343717778"
 

@@ -3,7 +3,6 @@ description = Migrates various content into Drupal such as the WET-BOEW Document
 core = 7.x
 package = WetKit
 php = 5.3.0
-version = 7.x-1.0
 dependencies[] = ctools
 dependencies[] = migrate
 dependencies[] = migrate_ui

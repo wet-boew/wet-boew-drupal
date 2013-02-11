@@ -3,7 +3,6 @@ description = Installs and configures default wetkit metatags that can be easily
 core = 7.x
 package = WetKit
 php = 5.2.4
-version = 7.x-1.0
 dependencies[] = ctools
 dependencies[] = i18n
 dependencies[] = i18n_variable
