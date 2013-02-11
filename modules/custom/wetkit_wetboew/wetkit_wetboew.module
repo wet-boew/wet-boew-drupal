@@ -110,6 +110,9 @@ function wetkit_wetboew_menu_alter(&$items) {
   if (!empty($items['admin/panopoly'])) {
     $items['admin/panopoly']['title'] = 'WetKit';
   }
+  if (!empty($items['admin/workbench'])) {
+    $items['admin/workbench']['title'] = 'Workbench';
+  }
 }
 
 /**
