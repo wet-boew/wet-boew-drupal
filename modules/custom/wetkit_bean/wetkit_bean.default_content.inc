@@ -5,12 +5,12 @@
  */
 
 /**
-* Implements _wetkit_bean_load().
-*/
+ * Implements _wetkit_bean_load().
+ */
 function _wetkit_bean_load() {
   // If functionality available. Create some beans.
   if (function_exists('wetkit_bean_save_bean')) {
-    
+
     // Minister Bean
     $fields_en = array(
       'title_field' => array(
@@ -117,8 +117,8 @@ function _wetkit_bean_load() {
       'field_bean_wetkit_body' => array(
         '0' => array(
           'value' => '<div id="gcwu-connect" class="span-6"><h2>Stay Connected</h2><ul>
-  <li><a href="http://twitter.com/#!/"><img alt="Twitter" class="image-actual" src="/profiles/wetkit/modules/custom/wetkit_wetboew/images/sl_twitter.png" /></a></li> 
-  <li><a href="http://www.youtube.com/"> <img alt="YouTube" class="image-actual" src="/profiles/wetkit/modules/custom/wetkit_wetboew/images/sl_youtube.png" /></a></li> 
+  <li><a href="http://twitter.com/#!/"><img alt="Twitter" class="image-actual" src="/profiles/wetkit/modules/custom/wetkit_wetboew/images/sl_twitter.png" /></a></li>
+  <li><a href="http://www.youtube.com/"> <img alt="YouTube" class="image-actual" src="/profiles/wetkit/modules/custom/wetkit_wetboew/images/sl_youtube.png" /></a></li>
   <li><a href="/rss.xml"> <img alt="RSS" class="image-actual" src="/profiles/wetkit/modules/custom/wetkit_wetboew/images/sl_rss.png" /></a></li>
 </ul></div>',
           'format' => 'wetkit_wysiwyg_text',
@@ -144,9 +144,9 @@ function _wetkit_bean_load() {
     );
     wetkit_bean_save_bean('wetkit_bean', 'Stay Connected', 'Provides "Stay Connected" bean for the front page.', '', $fields_en, $fields_fr);
 
-   $file_path = drupal_get_path('module', 'wetkit_demo') . '/video/demo.mp4';
-   $file = file_save_data(file_get_contents($file_path), file_default_scheme() . '://' . basename($file_path));
-   $file_path = file_create_url($file->uri);
+    $file_path = drupal_get_path('module', 'wetkit_demo') . '/video/demo.mp4';
+    $file = file_save_data(file_get_contents($file_path), file_default_scheme() . '://' . basename($file_path));
+    $file_path = file_create_url($file->uri);
 
     // Videos Bean
     $fields_en = array(

@@ -74,14 +74,14 @@ function wetkit_bean_configure_form_submit($form, &$form_state) {
       return;
     }
     bean_delete($bean);
-    
+
     $bean = bean_delta_load('Stay-Connected');
     if (empty($bean)) {
       drupal_set_message(t('There is no bean found with delta @delta.', array('@delta' => 'Stay-Connected')));
       return;
     }
     bean_delete($bean);
-    
+
     $bean = bean_delta_load('Videos');
     if (empty($bean)) {
       drupal_set_message(t('There is no bean found with delta @delta.', array('@delta' => 'Videos')));
@@ -135,7 +135,7 @@ function wetkit_bean_save_bean($bean_type, $label, $description = '', $title = '
   $bean_translated->setTranslation($translation, $fields_translated);
   bean_save($bean);
 
-  drupal_set_message('Created a new bean "' . $label . '" of type <em>' . $bean_type . '</em>');
+  drupal_set_message(t('Created a new bean "@label" of type <em>@bean_type</em>', array('@label' => $label, '@bean_type' => $bean_type)));
 }
 
 /**
