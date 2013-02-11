@@ -114,6 +114,48 @@ function wetkit_wetboew_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_admin_path_node';
+  $strongarm->value = 0;
+  $export['diff_admin_path_node'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_context_lines_leading';
+  $strongarm->value = 2;
+  $export['diff_context_lines_leading'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_context_lines_trailing';
+  $strongarm->value = 2;
+  $export['diff_context_lines_trailing'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_radio_behavior';
+  $strongarm->value = 'simple';
+  $export['diff_radio_behavior'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_diff_inline_node_bundles';
+  $strongarm->value = array();
+  $export['diff_show_diff_inline_node_bundles'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_header_node';
+  $strongarm->value = 1;
+  $export['diff_show_header_node'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'fences_default_classes';
   $strongarm->value = 0;
   $export['fences_default_classes'] = $strongarm;
