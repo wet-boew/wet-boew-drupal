@@ -66,7 +66,7 @@
         <content>
             <source_id>default_content_fra_2</source_id>
             <title>WetKit Coopération</title>
-            <body><![CDATA[<p>Un objectif majeur de la variante WetKit Drupal est de permettre et d\'encourager la collaboration à diverses activités impliquant la boîte à outils de l\'expérience Web, et en particulier la plate-forme Drupal.</p><p>Ce projet est toujours à la recherche de contributeurs dans un large éventail de domaines. Si vous êtes concepteur ou développeur, nous pourrions utiliser votre aide!</p><p>Nous croyons que la véritable force derrière cette distribution devrait être de soutenir la communauté. la soutenir. Si vous utilisez la distribution afinet de concevoir une nouvelle solution que vous pensez que celle-ci pourrait aider, s\'il vous plaît contribuer en retour!</p><p>Ensemble nous pouvons faire une solution open sourcecode ouvert du gouvernement d\'entreprise qui est sûr, accessible et efficace.</p>]]></body>
+            <body><![CDATA[<p>Un objectif majeur de la variante WetKit Drupal est de permettre et d'encourager la collaboration à diverses activités impliquant la boîte à outils de l'expérience Web, et en particulier la plate-forme Drupal.</p><p>Ce projet est toujours à la recherche de contributeurs dans un large éventail de domaines. Si vous êtes concepteur ou développeur, nous pourrions utiliser votre aide!</p><p>Nous croyons que la véritable force derrière cette distribution devrait être de soutenir la communauté. la soutenir. Si vous utilisez la distribution afinet de concevoir une nouvelle solution que vous pensez que celle-ci pourrait aider, s'il vous plaît contribuer en retour!</p><p>Ensemble nous pouvons faire une solution open sourcecode ouvert du gouvernement d'entreprise qui est sûr, accessible et efficace.</p>]]></body>
             <image>wetkit_collab.png</image>
             <image_alt>WetKit Coopération</image_alt>
             <path>contenu/wetkit-collaboration</path>
@@ -75,12 +75,12 @@
             <source_id>default_content_fra_3</source_id>
             <title>Wetkit Démo</title>
             <body><![CDATA[<p>La Boîte à outils de l’expérience Web (BOEW) rassemble différents composants réutilisables et prêts-à-utiliser pour la conception et la mise à jour de sites Web innovateurs qui sont à la fois accessibles, conviviaux et interopérables. Tous ces composants réutilisables sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes.</p>
-<p>La Boîte à outils est conforme à la Norme sur l\'accessibilité des sites Web et la Norme sur la facilité des sites Web et sera conforme à la Norme sur l’interopérabilité du Web. Il est fortement recommandé d’utiliser la BOEW pour tous les sites Web du gouvernement du Canada.</p>
+<p>La Boîte à outils est conforme à la Norme sur l'accessibilité des sites Web et la Norme sur la facilité des sites Web et sera conforme à la Norme sur l’interopérabilité du Web. Il est fortement recommandé d’utiliser la BOEW pour tous les sites Web du gouvernement du Canada.</p>
 <section>
 <h2>Avantages</h2>
 <ul>
 <li>Fournit des composants réutilisables pour la conception et la mise à jour de sites Web innovateurs.</li>
-<li>Respecte l\'accessibilité (<a href="http://www.w3.org/Translations/WCAG20-fr">WCAG 2.0</a> AA et <a href="http://www.w3.org/TR/wai-aria/">WAI-ARIA</a>), la facilité d’emploi et l\'interopérabilité.</li>
+<li>Respecte l'accessibilité (<a href="http://www.w3.org/Translations/WCAG20-fr">WCAG 2.0</a> AA et <a href="http://www.w3.org/TR/wai-aria/">WAI-ARIA</a>), la facilité d’emploi et l'interopérabilité.</li>
 <li>Réduit les coûts en consolidant les outils et les solutions axés sur le Web.</li>
 <li>Sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes.</li>
 <li>Fait appel à des technologies nouvelles et innovatrices pour rendre les sites plus innovateurs et interactifs&nbsp;:
@@ -98,7 +98,7 @@
 <li><a href="demos/index-fra.html">Exemples pratiques</a></li>
 <li><a href="https://github.com/wet-boew/wet-boew/wiki/Accueil#wiki-Documentation">Documentation</a></li>
 <li><a href="https://github.com/wet-boew/wet-boew/downloads">Télécharger</a></li>
-<li><a href="Licence-fra.txt">Conditions régissant l\'utilisation</a></li>
+<li><a href="Licence-fra.txt">Conditions régissant l'utilisation</a></li>
 <li><a href="https://github.com/wet-boew/wet-boew/wiki/Développer-pour-la-boew#wiki-Lignes_directrices_pour_les_contributeurs">Lignes directrices pour les contributeurs</a></li>
 <li><a href="https://github.com/wet-boew/wet-boew/wiki/Feuille-de-route">Feuille de route</a></li>
 </ul>
