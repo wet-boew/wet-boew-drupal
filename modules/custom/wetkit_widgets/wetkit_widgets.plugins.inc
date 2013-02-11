@@ -130,6 +130,22 @@ function wetkit_widgets_field_formatter_info() {
         'multiple_file_behaviour' => 'sources',
       ),
     ),
+    'wetkit_widgets_lightbox' => array(
+      'label' => t('WetKit Lightbox'),
+      'field types' => array('image'),
+      'settings' => array(
+        'image_style_destination' => 'large',
+        'image_style_source' => 'thumbnail',
+        'custom_class' => '',
+      ),
+    ),
+    'wetkit_widgets_share' => array(
+      'label' => t('WetKit Share Widget'),
+      'field types' => array('list_text'),
+      'settings' => array(
+        'custom_class' => '',
+      ),
+    ),
     'wetkit_tabbed_interface_default' => array(
       'label' => t('Default'),
       'field types' => array('wetkit_tabbed_interface'),
@@ -140,6 +156,64 @@ function wetkit_widgets_field_formatter_info() {
   );
 }
 
+
+/**
+ * Implements hook_field_formatter_settings_summary().
+ */
+function wetkit_widgets_field_formatter_settings_summary($field, $instance, $view_mode) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+  $summary = NULL;
+
+  if ($display['type'] == 'wetkit_widgets_lightbox') {
+    // Destination image style.
+    $value = empty($settings['image_style_destination']) ? '<em>' . t('Empty') . '</em>' : $settings['image_style_destination'];
+    $value = is_array($value) ? implode(', ', array_filter($value)) : $value;
+    $summary .= "Destination image style: {$value}<br />";
+    // Source image style.
+    $value = empty($settings['image_style_source']) ? '<em>' . t('Empty') . '</em>' : $settings['image_style_source'];
+    $value = is_array($value) ? implode(', ', array_filter($value)) : $value;
+    $summary .= "Source image style: {$value}<br />";
+    // Custom Class.
+    $value = empty($settings['custom_class']) ? '<em>' . t('Empty') . '</em>' : $settings['custom_class'];
+    $value = is_array($value) ? implode(', ', array_filter($value)) : $value;
+    $summary .= "Custom Class: {$value}<br />";
+  }
+  elseif ($display['type'] == 'wetkit_widgets_share') {
+    // Custom Class.
+    $value = empty($settings['custom_class']) ? '<em>' . t('Empty') . '</em>' : $settings['custom_class'];
+    $value = is_array($value) ? implode(', ', array_filter($value)) : $value;
+    $summary .= "Custom Class: {$value}<br />";
+  }
+  elseif ($display['type'] === 'file_wetkit_video') {
+    $summary_items = array();
+    if (isset($settings['multiple_file_behaviour'])) {
+      $summary_items[] = t('Multiple files: %multiple', array('%multiple' => $settings['multiple_file_behaviour']));
+    }
+    if (isset($settings['controls'])) {
+      $summary_items[] = t('Controls: %controls', array('%controls' => $settings['controls'] ? 'visible' : 'hidden'));
+    }
+    if (isset($settings['autoplay'])) {
+      $summary_items[] = t('Autoplay: %autoplay', array('%autoplay' => $settings['autoplay'] ? t('yes') : t('no')));
+    }
+    if (isset($settings['loop'])) {
+      $summary_items[] = t('Loop: %loop', array('%loop' => $settings['loop'] ? t('yes') : t('no')));
+    }
+    if (isset($settings['muted'])) {
+      $summary_items[] = t('Muted: %muted', array('%muted' => $settings['muted'] ? t('yes') : t('no')));
+    }
+    if ($settings['size']['width'] && $settings['size']['height']) {
+      $summary_items[] = t('Size: %width x %height', array('%width' => $settings['size']['width'], '%height' => $settings['size']['height']));
+    }
+    $summary = implode('<br />', $summary_items);
+  }
+  elseif ($display['type'] == 'wetkit_tabbed_interface_default') {
+    $summary = t('Image Style: @style', array('@style' => $settings['image_style']));
+  }
+
+  return $summary;
+}
+
 /**
  * Implements hook_field_formatter_settings_form().
  */
@@ -148,7 +222,61 @@ function wetkit_widgets_field_formatter_settings_form($field, $instance, $view_m
   $settings = $display['settings'];
   $element = array();
 
-  if ($display['type'] == 'wetkit_tabbed_interface_default') {
+  if ($display['type'] == 'wetkit_widgets_lightbox') {
+    $element['image_style_destination'] = array(
+      '#weight' => '1',
+      '#default_value' => $settings['image_style_destination'],
+      '#multiple_toggle' => '1',
+      '#key_type_toggled' => '1',
+      '#options' => array(
+        'thumbnail' => t('thumbnail'),
+        'medium' => t('medium'),
+        'large' => t('large'),
+        'panopoly_image_quarter' => t('panopoly_image_quarter'),
+        'panopoly_image_half' => t('panopoly_image_half'),
+        'panopoly_image_full' => t('panopoly_image_full'),
+      ),
+      '#type' => 'select',
+      '#title' => t('Destination image style'),
+    );
+    $element['image_style_source'] = array(
+      '#options' => array(
+        'thumbnail' => t('thumbnail'),
+        'medium' => t('medium'),
+        'large' => t('large'),
+        'panopoly_image_quarter' => t('panopoly_image_quarter'),
+        'panopoly_image_half' => t('panopoly_image_half'),
+        'panopoly_image_full' => t('panopoly_image_full'),
+      ),
+      '#default_value' => $settings['image_style_source'],
+      '#type' => 'select',
+      '#weight' => '1',
+      '#multiple_toggle' => '1',
+      '#title' => t('Source image style'),
+      '#key_type_toggled' => '1',
+    );
+    $element['custom_class'] = array(
+      '#title' => t('Custom Class'),
+      '#default_value' => $settings['custom_class'],
+      '#required' => '0',
+      '#type' => 'textfield',
+      '#description' => t('Should you wish to define a custom class for this element such as a span please declare it here.'),
+      '#weight' => '2',
+      '#size' => '20',
+    );
+  }
+  elseif ($display['type'] == 'wetkit_widgets_share') {
+    $element['custom_class'] = array(
+      '#required' => '0',
+      '#default_value' => $settings['custom_class'],
+      '#weight' => '0',
+      '#description' => t('Should you wish to define a custom class for this element such as a span please declare it here.'),
+      '#title' => t('Custom Class'),
+      '#type' => 'textfield',
+      '#size' => '20',
+    );
+  }
+  elseif ($display['type'] == 'wetkit_tabbed_interface_default') {
     $element['image_style'] = array(
       '#title' => t('Image style'),
       '#type' => 'select',
@@ -214,43 +342,6 @@ function wetkit_widgets_field_formatter_settings_form($field, $instance, $view_m
 }
 
 /**
- * Implements hook_field_formatter_settings_summary().
- */
-function wetkit_widgets_field_formatter_settings_summary($field, $instance, $view_mode) {
-  $display = $instance['display'][$view_mode];
-  $settings = $display['settings'];
-  $summary = NULL;
-
-  if ($display['type'] === 'file_wetkit_video') {
-    $summary_items = array();
-    if (isset($settings['multiple_file_behaviour'])) {
-      $summary_items[] = t('Multiple files: %multiple', array('%multiple' => $settings['multiple_file_behaviour']));
-    }
-    if (isset($settings['controls'])) {
-      $summary_items[] = t('Controls: %controls', array('%controls' => $settings['controls'] ? 'visible' : 'hidden'));
-    }
-    if (isset($settings['autoplay'])) {
-      $summary_items[] = t('Autoplay: %autoplay', array('%autoplay' => $settings['autoplay'] ? t('yes') : t('no')));
-    }
-    if (isset($settings['loop'])) {
-      $summary_items[] = t('Loop: %loop', array('%loop' => $settings['loop'] ? t('yes') : t('no')));
-    }
-    if (isset($settings['muted'])) {
-      $summary_items[] = t('Muted: %muted', array('%muted' => $settings['muted'] ? t('yes') : t('no')));
-    }
-    if ($settings['size']['width'] && $settings['size']['height']) {
-      $summary_items[] = t('Size: %width x %height', array('%width' => $settings['size']['width'], '%height' => $settings['size']['height']));
-    }
-    $summary = implode('<br />', $summary_items);
-  }
-  elseif ($display['type'] == 'wetkit_tabbed_interface_default') {
-    $summary = t('Image Style: @style', array('@style' => $settings['image_style']));
-  }
-
-  return $summary;
-}
-
-/**
  * Implements hook_field_formatter_view().
  */
 function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
@@ -258,7 +349,43 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
   $settings = $display['settings'];
   $formatter = $display['type'];
 
-  if ($display['type'] == 'file_wetkit_video') {
+  if ($display['type'] == 'wetkit_widgets_lightbox') {
+    // Build variables array for formatter.
+    $variables = array(
+      '#obj_type' => $entity_type,
+      '#object' => $entity,
+      '#field' => $field,
+      '#instance' => $instance,
+      '#langcode' => $langcode,
+      '#items' => $items,
+      '#display' => $display,
+    );
+
+    if (function_exists($function = "{$display['module']}_field_formatter_{$display['type']}")) {
+      $element[0] = array(
+        '#markup' => $function($variables),
+      );
+    }
+  }
+  elseif ($display['type'] == 'wetkit_widgets_share') {
+    // Build variables array for formatter.
+    $variables = array(
+      '#obj_type' => $entity_type,
+      '#object' => $entity,
+      '#field' => $field,
+      '#instance' => $instance,
+      '#langcode' => $langcode,
+      '#items' => $items,
+      '#display' => $display,
+    );
+
+    if (function_exists($function = "{$display['module']}_field_formatter_{$display['type']}")) {
+      $element[0] = array(
+        '#markup' => $function($variables),
+      );
+    }
+  }
+  elseif ($display['type'] == 'file_wetkit_video') {
     $multiple_file_behaviour = isset($settings['multiple_file_behaviour']) ? $settings['multiple_file_behaviour'] : 'sources';
 
     // Prevent 'empty' fields from causing a WSOD.
@@ -303,8 +430,8 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
     foreach ($items as $delta => $item_data) {
       $element[$delta]['#markup'] = ($delta == 0) ? theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings)) : theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings));
       $element[$delta]['title'] = ($delta == 0) ? $item_data['title'] : $item_data['title'];
-            //if panel style is applied
-        $element[$delta]['tabbed_true'] = 'true';
+      //if panel style is applied
+      $element[$delta]['tabbed_true'] = 'true';
     }
   }
 
@@ -320,33 +447,28 @@ function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instanc
 
     // Make it a multipart form
     $form['#attributes']['enctype'] = 'multipart/form-data';
-
     // Define the element
     $element['title'] = array(
       '#title' => 'Title',
       '#type' => 'textfield',
       '#default_value' => isset($items[$delta]['title']) ? $items[$delta]['title'] : NULL,
     );
-
     $element['link'] = array(
       '#title' => 'Link',
       '#type' => 'textfield',
       '#default_value' => isset($items[$delta]['link']) ? $items[$delta]['link'] : NULL,
     );
-
     $element['fid'] = array(
       '#title' => 'Image',
       '#type' => 'managed_file',
       '#upload_location' => file_field_widget_uri($field, $instance),
       '#default_value' => isset($items[$delta]['fid']) ? $items[$delta]['fid'] : NULL,
     );
-
     $element['alt'] = array(
       '#title' => 'Alt',
       '#type' => 'textfield',
       '#default_value' => isset($items[$delta]['alt']) ? $items[$delta]['alt'] : NULL,
     );
-
     $element['description'] = array(
       '#title' => 'Description',
       '#type' => 'textarea',
@@ -467,4 +589,47 @@ function theme_wetkit_tab_interface_view($variables) {
   $output .= '</div>';
 
   return $output;
+}
+
+/**
+ * Field Formatter; WetKit Lightbox.
+ */
+function wetkit_widgets_field_formatter_wetkit_widgets_lightbox($variables) {
+  // Formatter settings.
+  $settings = $variables['#display']['settings'];
+  $output = '';
+  
+  drupal_add_css(".wet-boew-lightbox ul {margin-left:0 !important;}
+    .wet-boew-lightbox img.wetkit-image-half { margin-top: 0px; }
+   	.wet-boew-lightbox ul li {list-style-type:none;}
+    .wet-boew-lightbox ul li.box {margin-bottom: 0.4em;}
+    .wet-boew-lightbox li img {margin-bottom:0;}
+    .wet-boew-lightbox ul li a {text-decoration: none;}", 'inline');
+  foreach (element_children($variables['#items']) as $delta) {
+    $item = $variables['#items'][$delta];
+    $title = $item['title'];
+    $alt = $item['alt'];
+    $source = theme('image_style', array('alt' => $alt, 'style_name' => $settings['image_style_source'], 'path' => $item['uri']));
+    $destination = image_style_path($settings['image_style_destination'], $item['uri']);
+    $output .= '<li>' . l($source, file_create_url($destination), array('html' => TRUE, 'attributes' => array('class' => array('lb-item'), 'title' => $title))) . '</li>';
+  }
+  $class = $settings['custom_class'];
+  return '<div class="wet-boew-lightbox ' . $class . '"><ul>' . $output . '</ul></div><div class="clear"></div>';
+}
+
+/**
+ * Field Formatter; WetKit Share Widget.
+ */
+function wetkit_widgets_field_formatter_wetkit_widgets_share($variables) {
+  // Formatter settings.
+  $settings = $variables['#display']['settings'];
+  $sites = '';
+  foreach ($variables['#items'] as $item) {
+    $sites[] = "'" . $item['value'] . "'";
+  }
+  $class = $settings['custom_class'];
+  if (!empty($sites)) {
+    $sites = implode(",", $sites);
+  }
+  return '<div class="wet-boew-share ' .  $class . '" data-wet-boew="{sites:[' . $sites . ']}"></div><div class="clear"></div>';
 }
