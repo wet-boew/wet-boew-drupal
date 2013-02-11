@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-06 00:29-0500\n"
-"PO-Revision-Date: 2013-02-06 00:29-0500\n"
+"POT-Creation-Date: 2013-02-11 02:06-0500\n"
+"PO-Revision-Date: 2013-02-11 02:06-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,9 @@ msgstr "Trousse de la Boîte à outils de l’expérience Web"
 
 #: wetkit.info:0
 msgid "Install Profile created for the Web Experience Toolkit using Drupal 7"
-msgstr "Profile d'installation créé au moyen de Drupal 7 pour la Boîte à outils de l’expérience Web"
+msgstr ""
+"Profile d'installation créé au moyen de Drupal 7 pour la Boîte à "
+"outils de l’expérience Web"
 
 #: wetkit.profile:179
 msgid "Importing content."
