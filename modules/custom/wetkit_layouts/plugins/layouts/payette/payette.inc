@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Implements of hook_panels_layouts()
+ * Implements hook_panels_layouts().
  */
 function wetkit_layouts_payette_panels_layouts() {
   $items['payette'] = array(
