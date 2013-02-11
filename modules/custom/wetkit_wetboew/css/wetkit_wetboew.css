@@ -17,7 +17,7 @@
 #modal-content .form-submit { float: left; }
 #modal-content .form-actions { width: auto; }
 #modal-content form-wrapper.form-actions { border: none; background: none; }
-#modal-content fieldset legend { background: none; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, gainsboro)) !important; background-image: -webkit-linear-gradient(#eeeeee, gainsboro) !important; background-image: -moz-linear-gradient(#eeeeee, gainsboro) !important; background-image: -o-linear-gradient(#eeeeee, gainsboro) !important; background-image: linear-gradient(#eeeeee, #dcdcdc) !important; }
+#modal-content fieldset legend { background: none; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dcdcdc)) !important; background-image: -webkit-linear-gradient(#eeeeee, #dcdcdc) !important; background-image: -moz-linear-gradient(#eeeeee, #dcdcdc) !important; background-image: -o-linear-gradient(#eeeeee, #dcdcdc) !important; background-image: linear-gradient(#eeeeee, #dcdcdc) !important; }
 #modal-content fieldset legend span { color: #145E91; }
 #modal-content fieldset legend .fieldset-legend { margin-left: 10px; }
 
@@ -47,3 +47,6 @@
 
 /* Translation */
 .form-item .form-autocomplete { padding: 0px 4px; }
+
+/* Media Screen */
+#media-browser-page .media-item { width: auto; }
