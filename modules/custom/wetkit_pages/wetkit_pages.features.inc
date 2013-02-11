@@ -36,9 +36,9 @@ function wetkit_pages_node_info() {
       'help' => '',
     ),
     'wetkit_page_other' => array(
-      'name' => t('Basic Page (Non Panelized)'),
+      'name' => t('Basic Page (Deprecated)'),
       'base' => 'node_content',
-      'description' => t('An non panelized important page to display to users on your site. This is included for people who are used to using blocks and regions to manage content.'),
+      'description' => t('An deprecated important page to display to users on your site. This is included for people who are used to using blocks and regions to manage content.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
