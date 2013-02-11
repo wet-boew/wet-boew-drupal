@@ -598,7 +598,7 @@ function wetkit_widgets_field_formatter_wetkit_widgets_lightbox($variables) {
   // Formatter settings.
   $settings = $variables['#display']['settings'];
   $output = '';
-  
+
   drupal_add_css(".wet-boew-lightbox ul {margin-left:0 !important;}
     .wet-boew-lightbox img.wetkit-image-half { margin-top: 0px; }
    	.wet-boew-lightbox ul li {list-style-type:none;}
@@ -631,5 +631,5 @@ function wetkit_widgets_field_formatter_wetkit_widgets_share($variables) {
   if (!empty($sites)) {
     $sites = implode(",", $sites);
   }
-  return '<div class="wet-boew-share ' .  $class . '" data-wet-boew="{sites:[' . $sites . ']}"></div><div class="clear"></div>';
+  return '<div class="wet-boew-share ' . $class . '" data-wet-boew="{sites:[' . $sites . ']}"></div><div class="clear"></div>';
 }
