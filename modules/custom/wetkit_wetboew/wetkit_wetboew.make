@@ -19,21 +19,12 @@ projects[better_formats][download][type] = git
 projects[better_formats][download][revision] = 9106bcf
 projects[better_formats][download][branch] = 7.x-1.x
 
-projects[custom_formatters][version] = 2.2
-projects[custom_formatters][subdir] = contrib
-projects[custom_formatters][type] = module
-projects[custom_formatters][download][type] = git
-projects[custom_formatters][download][revision] = 08bcc00
-projects[custom_formatters][download][branch] = 7.x-2.x
-projects[custom_formatters][patch][1721294] = http://drupal.org/files/no_makefile-1721294-1.patch
-
-projects[diff][version] = 2.x-dev
+projects[diff][version] = 3.x-dev
 projects[diff][subdir] = contrib
 projects[diff][type] = module
 projects[diff][download][type] = git
-projects[diff][download][revision] = 27c9185
-projects[diff][download][branch] = 7.x-2.x
-projects[diff][patch][1285090] = http://drupal.org/files/diff-hide-show-markup-372957-93.patch
+projects[diff][download][revision] = adb4304
+projects[diff][download][branch] = 7.x-3.x
 
 projects[ds][version] = 2.0
 projects[ds][subdir] = contrib

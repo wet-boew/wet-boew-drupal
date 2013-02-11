@@ -61,13 +61,13 @@ msgid "Title"
 msgstr "Titre"
 
 #: wetkit_pages.features.inc:39
-msgid "Basic Page (Non Panelized)"
-msgstr "Page de base (sans panneau)"
+msgid "Basic Page (Deprecated)"
+msgstr "Page de base (Obsolète)"
 
 #: wetkit_pages.features.inc:41
-msgid "An non panelized important page to display to users on your site. This is included for people who are used to using blocks and regions to manage content."
+msgid "An deprecated important page to display to users on your site. This is included for people who are used to using blocks and regions to manage content."
 msgstr ""
-"Une page importante sans panneau à présenter à vos utilisateurs sur "
+"Une page importante obsolète à présenter à vos utilisateurs sur "
 "le site. Elle est destinés aux usagers qui ont l’habitude "
 "d’utiliser des blocs et des régions pour gérer le contenu."
 

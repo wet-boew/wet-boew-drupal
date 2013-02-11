@@ -27,6 +27,13 @@ ul.tabs { margin-left: 10px; margin-right: 10px; margin-bottom: 10px; }
 
 .form-item label.option { display: inline; }
 
+/* Drupal Contrib: Diff */
+.page-node-revisions #block-system-main .diff-section-title, .page-node-moderation #block-system-main .diff-section-title { margin: 0px 10px; font-size: 12px; padding: 5px; background-color: #eee; border: 1px solid #d4d4d4; }
+.page-node-revisions #block-system-main table.diff, .page-node-moderation #block-system-main table.diff { width: auto; table-layout: auto; }
+.page-node-revisions #block-system-main table.diff-revisions, .page-node-moderation #block-system-main table.diff-revisions { margin: 0px; }
+.page-node-revisions #block-system-main table.diff-revisions .error, .page-node-moderation #block-system-main table.diff-revisions .error { color: #000; }
+.page-node-revisions #block-system-main table.diff-revisions .diff-revision td.revision-current, .page-node-moderation #block-system-main table.diff-revisions .diff-revision td.revision-current { background: #aaffaa; }
+
 /* Drupal Contrib: Workbench */
 #block-workbench-block .workbench-info-block { margin: 0px 10px 10px 10px; background-color: #FFFFCE!important; color: #000; font-weight: 600; }
 
