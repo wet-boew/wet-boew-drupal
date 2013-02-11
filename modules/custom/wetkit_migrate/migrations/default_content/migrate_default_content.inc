@@ -73,6 +73,8 @@ class WetKit_Migrate_DefaultContent extends WetKitDCMigration {
         ->defaultValue(1);
     $this->addFieldMapping('status')
         ->defaultValue(1);
+    $this->addFieldMapping('path', 'path')
+        ->xpath('path');
     $this->addFieldMapping('language', 'language');
 
      // Extra Fields
