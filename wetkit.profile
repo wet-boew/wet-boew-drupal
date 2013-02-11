@@ -22,11 +22,11 @@ function wetkit_install_tasks(&$install_state) {
   $tasks = array();
   $current_task = variable_get('install_task', 'done');
 
-  // Add the WetKit theme selection to the installation process
+  // Add the WetKit theme selection to the installation process.
   require_once(drupal_get_path('module', 'wetkit_wetboew') . '/wetkit_wetboew.profile.inc');
   $tasks = $tasks + wetkit_wetboew_profile_theme_selection_install_task($install_state);
 
-  // Set up a task to include secondary language (fr)
+  // Set up a task to include secondary language (fr).
   $tasks['wetkit_batch_processing'] = array(
     'display_name' => st('Import French Language'),
     'type' => 'batch',
@@ -67,7 +67,7 @@ function wetkit_install_tasks_alter(&$tasks, $install_state) {
 
   _wetkit_set_theme('wetkit_shiny');
 
-  //If using French Locale as default remove associated Install Task
+  //If using French Locale as default remove associated Install Task.
   unset($tasks['install_import_locales']);
   unset($tasks['install_import_locales_remaining']);
 

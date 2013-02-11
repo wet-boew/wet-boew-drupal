@@ -10,20 +10,7 @@
  * Perform actions to set up the site for this profile.
  */
 function wetkit_install() {
-  /**
-   * Default configuration for contrib modules.
-   *
-   * Here we do any database related configuration for included modules. These
-   * points of configuration includes both custom db queries and
-   * variable_set(). The only variable's that should be done in here are ones
-   * that require an array of data to be set. Variables that have a single entry (not an
-   * array) should be set in guardr.info under the settings section.
-   *
-   */
-
-  /**
-   * Set password_policy module defaults.
-   */
+  // Set password_policy module defaults.
   $policy = array();
   $policy = array(
     'complexity' => 3,
@@ -45,7 +32,7 @@ function wetkit_install() {
     'created' => REQUEST_TIME,
   ))
   ->execute();
-  //Enable authenticated role the above for the default password policy.
+  // Enable authenticated role the above for the default password policy.
   db_insert('password_policy_role')
     ->fields(array(
       'pid' => $pid,
@@ -53,14 +40,10 @@ function wetkit_install() {
   ))
    ->execute();
 
-  /**
-   * Only notify on Security Issue(s)
-   */
+  // Only notify on Security Issue(s).
   variable_set('update_notification_threshold', array('security'));
 
-  /**
-   * Set Admin Theme
-   */
+  // Set Admin Theme
   db_update('system')
     ->fields(array('status' => 1))
     ->condition('type', 'theme')
