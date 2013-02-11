@@ -229,7 +229,7 @@ function wetkit_pages_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'custom_formatters_wetkit_share_widget',
+      'formatter' => 'wetkit_widgets_share',
       'delta_limit' => '0',
       'delta_offset' => '0',
       'delta_reversed' => 0,
@@ -290,7 +290,7 @@ function wetkit_pages_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'custom_formatters_wetkit_lightbox',
+      'formatter' => 'wetkit_widgets_lightbox',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,

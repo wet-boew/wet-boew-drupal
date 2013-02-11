@@ -76,6 +76,36 @@ ul {
 }
 
 /*
+ * Drupal Contrib: Diff
+ */
+
+.page-node-revisions,
+.page-node-moderation {
+  #block-system-main {
+    .diff-section-title {
+      margin: 0px 10px; 
+      font-size: 12px; 
+      padding: 5px; 
+      background-color: #eee;
+      border: 1px solid #d4d4d4;
+    }
+    table { 
+      &.diff {
+        width: auto;
+        table-layout: auto; 
+      }
+      &.diff-revisions {
+        margin: 0px;
+        .error {color: #000;}
+        .diff-revision {
+          td.revision-current {background: #aaffaa;}
+        }
+      }      
+    }
+  }
+}
+
+/*
  * Drupal Contrib: Workbench
  */
 
