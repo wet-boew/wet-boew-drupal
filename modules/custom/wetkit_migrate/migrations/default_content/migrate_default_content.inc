@@ -78,6 +78,8 @@ class WetKit_Migrate_DefaultContent extends WetKitDCMigration {
      // Extra Fields
     $this->addFieldMapping('field_featured_image', 'images')
         ->xpath('image');
+    $this->addFieldMapping('field_featured_image:alt', 'image_alt')
+        ->xpath('image_alt');
     $this->addFieldMapping('field_featured_image:file_replace')
       ->defaultValue(FILE_EXISTS_REPLACE);
     $this->addFieldMapping('field_featured_image:source_dir')
