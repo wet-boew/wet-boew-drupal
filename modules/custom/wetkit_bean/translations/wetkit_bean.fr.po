@@ -11,8 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-09 20:34-0500\n"
-"PO-Revision-Date: 2013-02-09 20:34-0500\n"
+"POT-Creation-Date: 2013-02-11 02:18-0500\n"
+"PO-Revision-Date: 2013-02-11 02:18-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -45,6 +45,10 @@ msgstr "Recréer les beans par defaut"
 #: wetkit_bean.module:66;73;80;87
 msgid "There is no bean found with delta @delta."
 msgstr "Il n'y a pas de bean trouvé avec le delta @delta."
+
+#: wetkit_bean.module:138
+msgid "Created a new bean \"@label\" of type <em>@bean_type</em>"
+msgstr ""
 
 #: wetkit_bean.module:209
 msgid "General Settings"
