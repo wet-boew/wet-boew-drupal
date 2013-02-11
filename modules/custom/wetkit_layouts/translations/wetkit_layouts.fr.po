@@ -3,11 +3,11 @@
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
+#  wetkit_layouts.module: n/a
 #  wetkit_layouts.info: n/a
-#  plugins/layouts/dallaire/dallaire.tpl.php: n/a
-#  plugins/layouts/pearson/pearson.tpl.php: n/a
-#  plugins/layouts/penfield/penfield.tpl.php: n/a
+#  plugins/layouts/berton/berton.inc: n/a
 #  plugins/layouts/dallaire/dallaire.inc: n/a
+#  plugins/layouts/doohan/doohan.inc: n/a
 #  plugins/layouts/laurier/laurier.inc: n/a
 #  plugins/layouts/payette/payette.inc: n/a
 #  plugins/layouts/pearson/pearson.inc: n/a
@@ -15,19 +15,27 @@
 #  plugins/layouts/secord/secord.inc: n/a
 #  plugins/layouts/sutherland/sutherland.inc: n/a
 #  plugins/layouts/vanier/vanier.inc: n/a
+#  plugins/layouts/dallaire/dallaire.tpl.php: n/a
+#  plugins/layouts/doohan/doohan.tpl.php: n/a
+#  plugins/layouts/pearson/pearson.tpl.php: n/a
+#  plugins/layouts/penfield/penfield.tpl.php: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-10 02:52-0500\n"
-"PO-Revision-Date: 2013-02-10 02:52-0500\n"
+"POT-Creation-Date: 2013-02-11 02:04-0500\n"
+"PO-Revision-Date: 2013-02-11 02:04-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: wetkit_layouts.module:37
+msgid "<strong>Important:</strong> You will need to manually refresh the page after you change the layout for it to take affect."
+msgstr ""
 
 #: wetkit_layouts.info:0
 msgid "WetKit Panel Layouts"
@@ -41,7 +49,55 @@ msgstr ""
 msgid "WetKit"
 msgstr "BOEW"
 
-#: plugins/layouts/dallaire/dallaire.tpl.php:57 plugins/layouts/pearson/pearson.tpl.php:52 plugins/layouts/penfield/penfield.tpl.php:63
+#: plugins/layouts/berton/berton.inc:9
+msgid "Berton"
+msgstr ""
+
+#: plugins/layouts/berton/berton.inc:10 plugins/layouts/dallaire/dallaire.inc:10 plugins/layouts/doohan/doohan.inc:10 plugins/layouts/laurier/laurier.inc:10 plugins/layouts/payette/payette.inc:10 plugins/layouts/pearson/pearson.inc:10 plugins/layouts/penfield/penfield.inc:10 plugins/layouts/secord/secord.inc:10 plugins/layouts/sutherland/sutherland.inc:10 plugins/layouts/vanier/vanier.inc:10
+msgid "WetKit Layouts"
+msgstr ""
+
+#: plugins/layouts/berton/berton.inc:17 plugins/layouts/dallaire/dallaire.inc:17 plugins/layouts/doohan/doohan.inc:17 plugins/layouts/laurier/laurier.inc:17 plugins/layouts/pearson/pearson.inc:17 plugins/layouts/penfield/penfield.inc:17 plugins/layouts/sutherland/sutherland.inc:17 plugins/layouts/vanier/vanier.inc:17
+msgid "Top (conditional)"
+msgstr "Haut (conditionnel)"
+
+#: plugins/layouts/berton/berton.inc:18
+msgid "Highlight 1"
+msgstr ""
+
+#: plugins/layouts/berton/berton.inc:19
+msgid "Highlight 2"
+msgstr ""
+
+#: plugins/layouts/berton/berton.inc:20
+msgid "Highlight 3"
+msgstr ""
+
+#: plugins/layouts/berton/berton.inc:21 plugins/layouts/vanier/vanier.inc:18
+msgid "Content Banner"
+msgstr ""
+
+#: plugins/layouts/berton/berton.inc:22 plugins/layouts/vanier/vanier.inc:19
+msgid "Content Listings"
+msgstr ""
+
+#: plugins/layouts/berton/berton.inc:23 plugins/layouts/vanier/vanier.inc:20
+msgid "Spotlight 1"
+msgstr ""
+
+#: plugins/layouts/berton/berton.inc:24 plugins/layouts/vanier/vanier.inc:21
+msgid "Spotlight 2"
+msgstr ""
+
+#: plugins/layouts/berton/berton.inc:25 plugins/layouts/vanier/vanier.inc:22
+msgid "Spotlight 3"
+msgstr ""
+
+#: plugins/layouts/berton/berton.inc:26 plugins/layouts/dallaire/dallaire.inc:21 plugins/layouts/doohan/doohan.inc:23 plugins/layouts/laurier/laurier.inc:19 plugins/layouts/pearson/pearson.inc:20 plugins/layouts/penfield/penfield.inc:22 plugins/layouts/sutherland/sutherland.inc:21 plugins/layouts/vanier/vanier.inc:23
+msgid "Bottom (conditional)"
+msgstr "Bas (conditionnel)"
+
+#: plugins/layouts/dallaire/dallaire.tpl.php:57 plugins/layouts/doohan/doohan.tpl.php:69 plugins/layouts/pearson/pearson.tpl.php:52 plugins/layouts/penfield/penfield.tpl.php:63
 msgid "Secondary Menu"
 msgstr "Menu secondaire"
 
@@ -49,29 +105,29 @@ msgstr "Menu secondaire"
 msgid "Dallaire (Left Sidebar)"
 msgstr ""
 
-#: plugins/layouts/dallaire/dallaire.inc:10 plugins/layouts/laurier/laurier.inc:10 plugins/layouts/payette/payette.inc:10 plugins/layouts/pearson/pearson.inc:10 plugins/layouts/penfield/penfield.inc:10 plugins/layouts/secord/secord.inc:10 plugins/layouts/sutherland/sutherland.inc:10 plugins/layouts/vanier/vanier.inc:10
-msgid "WetKit Layouts"
-msgstr ""
-
-#: plugins/layouts/dallaire/dallaire.inc:17 plugins/layouts/laurier/laurier.inc:17 plugins/layouts/pearson/pearson.inc:17 plugins/layouts/penfield/penfield.inc:17 plugins/layouts/sutherland/sutherland.inc:17 plugins/layouts/vanier/vanier.inc:17
-msgid "Top (conditional)"
-msgstr "Haut (conditionnel)"
-
-#: plugins/layouts/dallaire/dallaire.inc:18 plugins/layouts/penfield/penfield.inc:18
+#: plugins/layouts/dallaire/dallaire.inc:18 plugins/layouts/doohan/doohan.inc:18 plugins/layouts/penfield/penfield.inc:18
 msgid "Content 1"
 msgstr "Contenu 1"
 
-#: plugins/layouts/dallaire/dallaire.inc:19 plugins/layouts/penfield/penfield.inc:19
+#: plugins/layouts/dallaire/dallaire.inc:19 plugins/layouts/doohan/doohan.inc:19 plugins/layouts/penfield/penfield.inc:19
 msgid "Content 2"
 msgstr "Contenu 2"
 
-#: plugins/layouts/dallaire/dallaire.inc:20 plugins/layouts/pearson/pearson.inc:19 plugins/layouts/penfield/penfield.inc:21
+#: plugins/layouts/dallaire/dallaire.inc:20 plugins/layouts/doohan/doohan.inc:22 plugins/layouts/pearson/pearson.inc:19 plugins/layouts/penfield/penfield.inc:21
 msgid "Sidebar"
 msgstr "Barre de navigation"
 
-#: plugins/layouts/dallaire/dallaire.inc:21 plugins/layouts/laurier/laurier.inc:19 plugins/layouts/pearson/pearson.inc:20 plugins/layouts/penfield/penfield.inc:22 plugins/layouts/sutherland/sutherland.inc:21 plugins/layouts/vanier/vanier.inc:23
-msgid "Bottom (conditional)"
-msgstr "Bas (conditionnel)"
+#: plugins/layouts/doohan/doohan.inc:9
+msgid "Doohan (Left Sidebar)"
+msgstr ""
+
+#: plugins/layouts/doohan/doohan.inc:20
+msgid "Content 3"
+msgstr ""
+
+#: plugins/layouts/doohan/doohan.inc:21 plugins/layouts/penfield/penfield.inc:20
+msgid "Content Footer"
+msgstr ""
 
 #: plugins/layouts/laurier/laurier.inc:9
 msgid "Laurier"
@@ -125,10 +181,6 @@ msgstr ""
 msgid "Penfield (Left Sidebar)"
 msgstr ""
 
-#: plugins/layouts/penfield/penfield.inc:20
-msgid "Content Footer"
-msgstr ""
-
 #: plugins/layouts/secord/secord.inc:9
 msgid "Secord"
 msgstr ""
@@ -151,25 +203,5 @@ msgstr "Droit"
 
 #: plugins/layouts/vanier/vanier.inc:9
 msgid "Vanier"
-msgstr ""
-
-#: plugins/layouts/vanier/vanier.inc:18
-msgid "Content Banner"
-msgstr ""
-
-#: plugins/layouts/vanier/vanier.inc:19
-msgid "Content Listings"
-msgstr ""
-
-#: plugins/layouts/vanier/vanier.inc:20
-msgid "Spotlight 1"
-msgstr ""
-
-#: plugins/layouts/vanier/vanier.inc:21
-msgid "Spotlight 2"
-msgstr ""
-
-#: plugins/layouts/vanier/vanier.inc:22
-msgid "Spotlight 3"
 msgstr ""
 
