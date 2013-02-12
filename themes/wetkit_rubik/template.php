@@ -10,7 +10,13 @@
  */
 function wetkit_rubik_preprocess_html(&$vars) {
 
-  drupal_add_css(drupal_get_path('theme', 'wetkit_rubik') . '/css/lt-ie9.css', array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_THEME, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 9999));
+  drupal_add_css(drupal_get_path('theme', 'wetkit_rubik') . '/css/lt-ie9.css', array(
+    'browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE),
+    'group' => CSS_THEME,
+    'every_page' => TRUE,
+    'preprocess' => FALSE,
+    'weight' => 9999,
+  ));
   $vars['classes_array'][] = 'wetkit_rubik';
   if (isset($vars['page']['sidebar_first'])) {
     $vars['classes_array'][] = 'wetkit-rubik-sidebar-first';
@@ -129,7 +135,7 @@ function wetkit_rubik_preprocess_help(&$vars) {
 }
 
 /**
- * Helper function used to pass a value from preprocess_page() 
+ * Helper function used to pass a value from preprocess_page()
  * to preprocess_html().
  */
 function _wetkit_rubik_has_tabs($val = NULL) {

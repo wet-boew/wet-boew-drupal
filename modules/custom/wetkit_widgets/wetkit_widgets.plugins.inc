@@ -429,7 +429,15 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
     drupal_add_library('system', 'ui.tabs');
     // Assemble the tabs content.
     foreach ($items as $delta => $item_data) {
-      $element[$delta]['#markup'] = ($delta == 0) ? theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings)) : theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings));
+      $element[$delta]['#markup'] = ($delta == 0) ? theme('wetkit_tab_interface_view', array(
+        'items' => $item_data,
+        'delta' => $delta,
+        'settings' => $settings,
+      )) : theme('wetkit_tab_interface_view', array(
+        'items' => $item_data,
+        'delta' => $delta,
+        'settings' => $settings,
+      ));
       $element[$delta]['title'] = ($delta == 0) ? $item_data['title'] : $item_data['title'];
       // If panel style is applied.
       $element[$delta]['tabbed_true'] = 'true';
@@ -525,7 +533,8 @@ function wetkit_widgets_field_insert($entity_type, $entity, $field, $instance, $
 function wetkit_widgets_field_update($entity_type, $entity, $field, $instance, $langcode, &$items) {
 
   // Load the original entity, if $entity->original is not already set.
-  // This is done as per http://drupal.org/node/985642 and can be removed when that patch is committed.
+  // This is done as per http://drupal.org/node/985642 and can be removed when
+  // that patch is committed.
   if (empty($entity->original)) {
     $entity->original = entity_load_unchanged($entity_type, $field['id']);
   }
@@ -586,7 +595,11 @@ function theme_wetkit_tab_interface_view($variables) {
   $output = '<div id="' . 'tabs1_' . $variables['delta'] . '" class="tabs-content-pad ' . '' . '">';
   $output .= '<section>';
   $output .= '<h4>' . l($title, $link) . '</h4>';
-  $output .= theme('image_style', array('style_name' => $settings['image_style'], 'path' => $image->uri, 'alt' => $variables['items']['alt']));
+  $output .= theme('image_style', array(
+    'style_name' => $settings['image_style'],
+    'path' => $image->uri,
+    'alt' => $variables['items']['alt'],
+  ));
   $output .= '<p>' . $description . '</p>';
   $output .= '</section>';
   $output .= '</div>';
@@ -612,9 +625,19 @@ function wetkit_widgets_field_formatter_wetkit_widgets_lightbox($variables) {
     $item = $variables['#items'][$delta];
     $title = $item['title'];
     $alt = $item['alt'];
-    $source = theme('image_style', array('alt' => $alt, 'style_name' => $settings['image_style_source'], 'path' => $item['uri']));
+    $source = theme('image_style', array(
+      'alt' => $alt,
+      'style_name' => $settings['image_style_source'],
+      'path' => $item['uri'],
+    ));
     $destination = image_style_path($settings['image_style_destination'], $item['uri']);
-    $output .= '<li>' . l($source, file_create_url($destination), array('html' => TRUE, 'attributes' => array('class' => array('lb-item'), 'title' => $title))) . '</li>';
+    $output .= '<li>' . l($source, file_create_url($destination), array(
+      'html' => TRUE,
+      'attributes' => array(
+        'class' => array('lb-item'),
+        'title' => $title,
+       ),
+      )) . '</li>';
   }
   $class = $settings['custom_class'];
   return '<div class="wet-boew-lightbox ' . $class . '"><ul>' . $output . '</ul></div><div class="clear"></div>';

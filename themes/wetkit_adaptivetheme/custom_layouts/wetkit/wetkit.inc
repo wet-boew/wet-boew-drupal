@@ -25,6 +25,10 @@
  * @SEE adaptivetheme/at_core/layouts/core/three_col_grail/three_col_grail.inc
  * @SEE at_subtheme.info
  */
+
+/**
+ * Layout Plugin.
+ */
 function wetkit() {
   $page_layout['wetkit'] = array(
     'title' => t('wetkit'),

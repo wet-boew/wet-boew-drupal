@@ -26,7 +26,12 @@ function theme_wetkit_widgets_tabbed_interface_style_render_pane($vars) {
   $display = $vars['display'];
   $settings = $vars['settings'];
 
-  return theme('panels_pane', array('content' => $content, 'pane' => $pane, 'display' => $display, 'settings' => $settings));
+  return theme('panels_pane', array(
+    'content' => $content,
+    'pane' => $pane,
+    'display' => $display,
+    'settings' => $settings,
+  ));
 }
 
 /**

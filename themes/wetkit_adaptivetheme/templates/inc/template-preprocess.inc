@@ -62,7 +62,7 @@ function wetkit_adaptivetheme_preprocess_html(&$variables, $hook) {
   // Add a body class for the active theme name.
   $variables['classes_array'][] = drupal_html_class($theme_key);
 
-  // Browser/platform sniff - adds body classes such as ipad, webkit, chrome 
+  // Browser/platform sniff - adds body classes such as ipad, webkit, chrome
   // etc.
   $variables['classes_array'][] = css_browser_selector();
 
@@ -247,7 +247,7 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
  */
 function wetkit_adaptivetheme_preprocess_node(&$variables, $hook) {
   // Optionally, run node-type-specific preprocess functions, like
-  // wetkit_adaptivetheme_preprocess_node_page() or 
+  // wetkit_adaptivetheme_preprocess_node_page() or
   // wetkit_adaptivetheme_preprocess_node_story().
   $function = __FUNCTION__ . '_' . $variables['node']->type;
   if (function_exists($function)) {

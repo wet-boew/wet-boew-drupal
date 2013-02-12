@@ -49,7 +49,11 @@ function wetkit_search_preprocess_radio(&$variables) {
 function theme_radio__wetkitlayout($variables) {
   $element = $variables['element'];
   $element['#attributes']['type'] = 'radio';
-  element_set_attributes($element, array('id', 'name', '#return_value' => 'value'));
+  element_set_attributes($element, array(
+    'id',
+    'name',
+    '#return_value' => 'value',
+  ));
 
   if (isset($element['#return_value']) && $element['#value'] !== FALSE && $element['#value'] == $element['#return_value']) {
     $element['#attributes']['checked'] = 'checked';
