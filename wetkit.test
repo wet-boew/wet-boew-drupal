@@ -8,7 +8,7 @@
  * This Test class will test various functionality related to WxT-Drupal
  */
 class WetKitArchivedWidgetTestCase extends WetKitWebTestCase {
-  
+
   /**
    * Get information metadata.
    */

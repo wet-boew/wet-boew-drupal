@@ -74,7 +74,7 @@ class WetKitWebTestCase extends DrupalWebTestCase {
    * @param array roles
    *   An array of role names.
    */
-  function grantRoles($user, array $roles) {
+  function grantRoles($user, $roles) {
     $roles_by_id = user_roles();
     foreach ($roles as $role) {
       $role_id = array_search($role, $roles_by_id);

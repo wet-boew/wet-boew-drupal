@@ -157,7 +157,6 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
 
   switch ($context['editor']['name']) {
     case 'tinymce':
-
       // Intranet Theme.
       $wet_theme = '';
       if ((variable_get('wetkit_wetboew_theme', 0) == 1)) {
@@ -236,8 +235,8 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
       // Allow extra elements for Media module
       // See - http://drupal.org/node/1835826
       $settings['extended_valid_elements'] .= ',img[src|title|alt|style|width|height|class|hspace|vspace|view_mode|format|fid]';
-
       break;
+
     case 'markitup':
       // Load the appropriate CSS and JS.
       drupal_add_css($context['editor']['library path'] . '/markitup/sets/html/style.css');

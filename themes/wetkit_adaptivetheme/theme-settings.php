@@ -6,14 +6,14 @@
  */
 
 /**
- * Implementation of hook_form_system_theme_settings_alter().
+ * Implements hook_form_system_theme_settings_alter().
  *
  * To use replace "wetkit_adaptivetheme" with your themeName and uncomment by
  * deleting the comment line to enable.
  *
- * @param $form 
+ * @param array $form
  *   Nested array of form elements that comprise the form.
- * @param $form_state
+ * @param array $form_state
  *   A keyed array containing the current state of the form.
  */
 function wetkit_adaptivetheme_form_system_theme_settings_alter(&$form, &$form_state) {

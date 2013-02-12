@@ -9,6 +9,7 @@
  *
  * @param array $variables
  *   Contains array with breadcrumbs.
+ *
  * @return bool|string
  *   Rendered breadcrumbs or FALSE for no breadcrumbs.
  */

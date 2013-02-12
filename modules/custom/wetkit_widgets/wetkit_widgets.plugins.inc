@@ -486,8 +486,10 @@ function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instanc
  * Implements hook_field_presave().
  */
 function wetkit_widgets_field_presave($entity_type, $entity, $field, $instance, $langcode, &$items) {
-  // We need to set presave values if fids are not set. This shouldn't effect save operations
-  // form API validation will prevent this from ever happening unless previewing.
+  // We need to set presave values if fids are not set. This shouldn't effect
+  // save operations.
+  // form API validation will prevent this from ever happening unless
+  // previewing.
   if (!empty($items)) {
     foreach ($items as &$item) {
       if (empty($item['fid'])) {
