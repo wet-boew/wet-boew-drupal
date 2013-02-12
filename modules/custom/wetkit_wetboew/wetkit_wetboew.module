@@ -236,7 +236,13 @@ function wetkit_wetboew_configure_form_submit($form, &$form_state) {
 
   // Don't clear cache_form - in-progress form submissions may break.
   // Ordered so clearing the page cache will always be the last action.
-  $core = array('cache', 'cache_path', 'cache_filter', 'cache_bootstrap', 'cache_page');
+  $core = array(
+    'cache',
+    'cache_path',
+    'cache_filter',
+    'cache_bootstrap',
+    'cache_page',
+  );
   $cache_tables = array_merge(module_invoke_all('flush_caches'), $core);
   foreach ($cache_tables as $table) {
     cache_clear_all('*', $table, TRUE);
@@ -333,7 +339,19 @@ function wetkit_wetboew_theme($existing, $type, $theme, $path) {
  * @return type
  *   Return the modified string.
  */
-function wetkit_wetboew_filter_xss($string, $allowed_tags = array('a', 'em', 'strong', 'cite', 'code', 'ul', 'ol', 'li', 'dl', 'dt', 'dd', 'br')) {
+function wetkit_wetboew_filter_xss($string, $allowed_tags = array(
+  'a',
+  'em',
+  'strong',
+  'cite',
+  'code',
+  'ul',
+  'ol',
+  'li',
+  'dl',
+  'dt',
+  'dd',
+  'br')) {
   return filter_xss($string, $allowed_tags);
 }
 
@@ -405,7 +423,10 @@ function wetkit_wetboew_init() {
       $themekey = 'theme-gcwu-fegc';
     }
   }
-  drupal_add_css(drupal_get_path('module', 'wetkit_wetboew') . '/css/wetkit_wetboew.css', array('group' => CSS_THEME, 'every_page' => TRUE));
+  drupal_add_css(drupal_get_path('module', 'wetkit_wetboew') . '/css/wetkit_wetboew.css', array(
+    'group' => CSS_THEME, 
+    'every_page' => TRUE,
+  ));
 
   $element = array(
     '#type' => 'markup',
@@ -430,17 +451,77 @@ function wetkit_wetboew_libraries_info() {
     'version' => '3.0',
     'files' => array(
       'css' => array(
-        'dist/grids/css/util-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
-        'dist/grids/css/util-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
-        'dist/js/css/pe-ap-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
-        'dist/js/css/pe-ap-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
-        'dist/theme-gcwu-fegc/css/theme-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
-        'dist/theme-gcwu-fegc/css/theme-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
+        'dist/grids/css/util-ie-min.css' => array(
+          'browsers' => array(
+            'IE' => 'lte IE 8',
+            '!IE' => FALSE,
+          ),
+          'group' => CSS_DEFAULT,
+          'every_page' => TRUE,
+          'preprocess' => FALSE,
+          'weight' => 5,
+        ),
+        'dist/grids/css/util-min.css' => array(
+          'browsers' => array(
+            'IE' => 'gt IE 8',
+            '!IE' => TRUE
+          ),
+          'preprocess' => FALSE,
+          'weight' => 5,
+        ),
+        'dist/js/css/pe-ap-ie-min.css' => array(
+          'browsers' => array(
+            'IE' => 'lte IE 8',
+            '!IE' => FALSE,
+          ),
+          'group' => CSS_DEFAULT,
+          'every_page' => TRUE,
+          'preprocess' => FALSE,
+          'weight' => 5,
+        ),
+        'dist/js/css/pe-ap-min.css' => array(
+          'browsers' => array(
+            'IE' => 'gt IE 8',
+            '!IE' => TRUE,
+          ),
+          'preprocess' => FALSE,
+          'weight' => 5,
+        ),
+        'dist/theme-gcwu-fegc/css/theme-ie-min.css' => array(
+          'browsers' => array(
+            'IE' => 'lte IE 8',
+            '!IE' => FALSE,
+          ),
+          'group' => CSS_DEFAULT,
+          'every_page' => TRUE,
+          'preprocess' => FALSE,
+          'weight' => 5,
+        ),
+        'dist/theme-gcwu-fegc/css/theme-min.css' => array(
+          'browsers' => array(
+            'IE' => 'gt IE 8',
+            '!IE' => TRUE,
+          ),
+          'preprocess' => FALSE,
+          'weight' => 5,
+        ),
       ),
       'js' => array(
-        'dist/theme-gcwu-fegc/js/theme-min.js' => array('preprocess' => FALSE, 'scope' => 'footer', 'weight' => 5),
-        'dist/js/settings.js' => array('preprocess' => FALSE, 'scope' => 'footer', 'weight' => 5),
-        'dist/js/pe-ap-min.js' => array('preprocess' => FALSE, 'scope' => 'footer', 'weight' => 5),
+        'dist/theme-gcwu-fegc/js/theme-min.js' => array(
+          'preprocess' => FALSE,
+          'scope' => 'footer',
+          'weight' => 5,
+        ),
+        'dist/js/settings.js' => array(
+          'preprocess' => FALSE,
+          'scope' => 'footer',
+          'weight' => 5,
+        ),
+        'dist/js/pe-ap-min.js' => array(
+          'preprocess' => FALSE,
+          'scope' => 'footer',
+          'weight' => 5,
+        ),
       ),
     ),
     // Optional: Specify alternative variants of the library, if available.
@@ -449,17 +530,77 @@ function wetkit_wetboew_libraries_info() {
       'base_theme' => array(
         'files' => array(
           'css' => array(
-            'dist/grids/css/util-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
-            'dist/grids/css/util-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
-            'dist/js/css/pe-ap-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
-            'dist/js/css/pe-ap-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
-            'dist/theme-base/css/theme-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
-            'dist/theme-base/css/theme-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
+            'dist/grids/css/util-ie-min.css' => array(
+              'browsers' => array(
+                'IE' => 'lte IE 8',
+                '!IE' => FALSE,
+              ),
+              'group' => CSS_DEFAULT,
+              'every_page' => TRUE,
+              'preprocess' => FALSE,
+              'weight' => 5,
+            ),
+            'dist/grids/css/util-min.css' => array(
+              'browsers' => array(
+                'IE' => 'gt IE 8',
+                '!IE' => TRUE,
+              ),
+              'preprocess' => FALSE,
+              'weight' => 5,
+            ),
+            'dist/js/css/pe-ap-ie-min.css' => array(
+              'browsers' => array(
+                'IE' => 'lte IE 8',
+                '!IE' => FALSE,
+              ),
+              'group' => CSS_DEFAULT,
+              'every_page' => TRUE,
+              'preprocess' => FALSE,
+              'weight' => 5,
+            ),
+            'dist/js/css/pe-ap-min.css' => array(
+              'browsers' => array(
+                'IE' => 'gt IE 8',
+                '!IE' => TRUE,
+              ),
+              'preprocess' => FALSE,
+              'weight' => 5,
+            ),
+            'dist/theme-base/css/theme-ie-min.css' => array(
+              'browsers' => array(
+                'IE' => 'lte IE 8',
+                '!IE' => FALSE,
+              ),
+              'group' => CSS_DEFAULT,
+              'every_page' => TRUE,
+              'preprocess' => FALSE,
+              'weight' => 5,
+            ),
+            'dist/theme-base/css/theme-min.css' => array(
+              'browsers' => array(
+                'IE' => 'gt IE 8',
+                '!IE' => TRUE,
+              ),
+              'preprocess' => FALSE,
+              'weight' => 5,
+            ),
           ),
           'js' => array(
-            'dist/theme-base/js/theme-min.js' => array('preprocess' => FALSE, 'scope' => 'footer', 'weight' => 5),
-            'dist/js/settings.js' => array('preprocess' => FALSE, 'scope' => 'footer', 'weight' => 5),
-            'dist/js/pe-ap-min.js' => array('preprocess' => FALSE, 'scope' => 'footer', 'weight' => 5),
+            'dist/theme-base/js/theme-min.js' => array(
+              'preprocess' => FALSE,
+              'scope' => 'footer',
+              'weight' => 5,
+            ),
+            'dist/js/settings.js' => array(
+              'preprocess' => FALSE,
+              'scope' => 'footer',
+              'weight' => 5,
+            ),
+            'dist/js/pe-ap-min.js' => array(
+              'preprocess' => FALSE,
+              'scope' => 'footer',
+              'weight' => 5,
+            ),
           ),
         ),
         'variant callback' => 'wetkit_wetboew_check_variant',
@@ -471,17 +612,77 @@ function wetkit_wetboew_libraries_info() {
       'intranet' => array(
         'files' => array(
           'css' => array(
-            'dist/grids/css/util-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
-            'dist/grids/css/util-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
-            'dist/js/css/pe-ap-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
-            'dist/js/css/pe-ap-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
-            'dist/theme-gcwu-intranet/css/theme-ie-min.css' => array('browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'group' => CSS_DEFAULT, 'every_page' => TRUE, 'preprocess' => FALSE, 'weight' => 5),
-            'dist/theme-gcwu-intranet/css/theme-min.css' => array('browsers' => array('IE' => 'gt IE 8', '!IE' => TRUE), 'preprocess' => FALSE, 'weight' => 5),
+            'dist/grids/css/util-ie-min.css' => array(
+              'browsers' => array(
+                'IE' => 'lte IE 8',
+                '!IE' => FALSE,
+              ),
+              'group' => CSS_DEFAULT,
+              'every_page' => TRUE,
+              'preprocess' => FALSE,
+              'weight' => 5,
+            ),
+            'dist/grids/css/util-min.css' => array(
+              'browsers' => array(
+                'IE' => 'gt IE 8',
+                '!IE' => TRUE,
+              ),
+              'preprocess' => FALSE,
+              'weight' => 5,
+            ),
+            'dist/js/css/pe-ap-ie-min.css' => array(
+              'browsers' => array(
+                'IE' => 'lte IE 8',
+                '!IE' => FALSE,
+              ),
+              'group' => CSS_DEFAULT,
+              'every_page' => TRUE,
+              'preprocess' => FALSE,
+              'weight' => 5,
+            ),
+            'dist/js/css/pe-ap-min.css' => array(
+              'browsers' => array(
+                'IE' => 'gt IE 8',
+                '!IE' => TRUE,
+              ),
+              'preprocess' => FALSE,
+              'weight' => 5,
+             ),
+            'dist/theme-gcwu-intranet/css/theme-ie-min.css' => array(
+              'browsers' => array(
+                'IE' => 'lte IE 8',
+                '!IE' => FALSE,
+              ),
+              'group' => CSS_DEFAULT,
+              'every_page' => TRUE,
+              'preprocess' => FALSE,
+              'weight' => 5,
+            ),
+            'dist/theme-gcwu-intranet/css/theme-min.css' => array(
+              'browsers' => array(
+                'IE' => 'gt IE 8',
+                '!IE' => TRUE,
+              ),
+              'preprocess' => FALSE,
+              'weight' => 5,
+            ),
           ),
           'js' => array(
-            'dist/theme-gcwu-intranet/js/theme-min.js' => array('preprocess' => FALSE, 'scope' => 'footer', 'weight' => 5),
-            'dist/js/settings.js' => array('preprocess' => FALSE, 'scope' => 'footer', 'weight' => 5),
-            'dist/js/pe-ap-min.js' => array('preprocess' => FALSE, 'scope' => 'footer', 'weight' => 5),
+            'dist/theme-gcwu-intranet/js/theme-min.js' => array(
+              'preprocess' => FALSE,
+              'scope' => 'footer',
+              'weight' => 5,
+            ),
+            'dist/js/settings.js' => array(
+              'preprocess' => FALSE,
+              'scope' => 'footer',
+              'weight' => 5,
+            ),
+            'dist/js/pe-ap-min.js' => array(
+              'preprocess' => FALSE,
+              'scope' => 'footer',
+              'weight' => 5,
+            ),
           ),
         ),
         'variant callback' => 'wetkit_wetboew_check_variant',
