@@ -1,7 +1,8 @@
 <?php
 /**
  * @file
- * A specification for the custom tabbed interface entity that is part of WetKit Widgets
+ * A specification for the custom tabbed interface entity that is part of 
+ * WetKit Widgets.
  */
 
 /**
@@ -21,7 +22,7 @@ function wetkit_widgets_field_info() {
   return array(
     'wetkit_tabbed_interface' => array(
       'label' => t('Tabbed Interface'),
-      'description' => t('WetKit Plugin for the Web Experience Toolkit\'s Tabbed Interface'),
+      'description' => t("WetKit Plugin for the Web Experience Toolkit's Tabbed Interface"),
       'default_widget' => 'wetkit_tabbed_interface_form',
       'default_formatter' => 'wetkit_tabbed_interface_default',
       'settings' => array(
@@ -408,7 +409,7 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
       }
     }
 
-    // render each source list as an <video> element
+    // Render each source list as an <video> element.
     foreach ($source_lists as $delta => $sources) {
       $width = isset($settings['size']['width']) ? $settings['size']['width'] : NULL;
       $height = isset($settings['size']['height']) ? $settings['size']['height'] : NULL;
@@ -426,11 +427,11 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
   }
   elseif ($display['type'] == 'wetkit_tabbed_interface_default') {
     drupal_add_library('system', 'ui.tabs');
-    // Assemble the tabs content
+    // Assemble the tabs content.
     foreach ($items as $delta => $item_data) {
       $element[$delta]['#markup'] = ($delta == 0) ? theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings)) : theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings));
       $element[$delta]['title'] = ($delta == 0) ? $item_data['title'] : $item_data['title'];
-      //if panel style is applied
+      // If panel style is applied.
       $element[$delta]['tabbed_true'] = 'true';
     }
   }
@@ -445,9 +446,9 @@ function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instanc
 
   if ($instance['widget']['type'] == 'wetkit_tabbed_interface_form') {
 
-    // Make it a multipart form
+    // Make it a multipart form.
     $form['#attributes']['enctype'] = 'multipart/form-data';
-    // Define the element
+    // Define the element.
     $element['title'] = array(
       '#title' => 'Title',
       '#type' => 'textfield',

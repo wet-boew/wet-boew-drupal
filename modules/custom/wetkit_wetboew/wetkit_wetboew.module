@@ -4,11 +4,11 @@
  * Code for the wetkit_wetboew feature.
  */
 
-include_once('wetkit_wetboew.block.inc');
-include_once('wetkit_wetboew.features.inc');
-include_once('wetkit_wetboew.menu_wetkit_load.inc');
-include_once('views/wetkit_wetboew.admin_content_view.inc');
-include_once('theme/theme.inc');
+include_once 'wetkit_wetboew.block.inc';
+include_once 'wetkit_wetboew.features.inc';
+include_once 'wetkit_wetboew.menu_wetkit_load.inc';
+include_once 'views/wetkit_wetboew.admin_content_view.inc';
+include_once 'theme/theme.inc';
 
 /**
  * Implements hook_menu_edit_item_alter().
@@ -24,7 +24,8 @@ function wetkit_wetboew_page_alter(&$page) {
  * Implements hook_menu_edit_item_alter().
  */
 function wetkit_wetboew_form_menu_edit_item_alter(&$form, &$form_state) {
-  // Some menu items have a pre-defined path which cannot be modified hence no default_value
+  // Some menu items have a pre-defined path which cannot be modified hence no 
+  // default_value.
   if (isset($form['link_path']['#default_value'])) {
     $default_value = $form['link_path']['#default_value'];
 
@@ -33,7 +34,7 @@ function wetkit_wetboew_form_menu_edit_item_alter(&$form, &$form_state) {
     }
 
     $form['link_path']['#default_value'] = $default_value;
-    $form['link_path']['#description'] .=  ' ' . t('Enter "%nolink" to generate non-linkable item', array('%nolink' => '<nolink>'));
+    $form['link_path']['#description'] .= ' ' . t('Enter "%nolink" to generate non-linkable item', array('%nolink' => '<nolink>'));
   }
 }
 
@@ -42,21 +43,21 @@ function wetkit_wetboew_form_menu_edit_item_alter(&$form, &$form_state) {
  */
 function wetkit_wetboew_menu() {
 
-  // Add an dummy menu item
+  // Add an dummy menu item.
   $items['<nolink>'] = array(
     'page callback' => 'drupal_not_found',
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
   );
 
-  // Add an dummy menu item
+  // Add an dummy menu item.
   $items['<noitem>'] = array(
     'page callback' => 'drupal_not_found',
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
   );
 
-  // Add an administration section for WetKit settings
+  // Add an administration section for WetKit settings.
   $items['admin/panopoly/wetkit_settings'] = array(
     'title' => 'WetKit Settings',
     'description' => 'Configuration related to WetKit',
@@ -68,7 +69,7 @@ function wetkit_wetboew_menu() {
     'file path' => drupal_get_path('module', 'system'),
   );
 
-  // Add settings pages for WetKit and WetKit Apps
+  // Add settings pages for WetKit and WetKit Apps.
   foreach (module_list() as $module) {
     $app_info = module_invoke($module, 'apps_app_info');
     if (!empty($app_info) && !empty($app_info['configure form'])) {
@@ -102,7 +103,7 @@ function wetkit_wetboew_menu() {
  * Remember that hook_menu_alter() only runs at menu_rebuild() time, not every
  * time the page is built, so this typically happens only at cache clear time.
  *
- * @param $items
+ * @param array $items
  *   The complete list of menu router items ready to be written to the
  *   menu_router table.
  */
@@ -126,30 +127,30 @@ function wetkit_wetboew_menu_alter(&$items) {
  *   String representing the name of the form itself.
  */
 function wetkit_wetboew_form_alter(&$form, &$form_state, $form_id) {
-  // Move the featured field into publishing options
+  // Move the featured field into publishing options.
   if (!empty($form['field_featured_status'])) {
     $form['options']['field_featured_status'] = $form['field_featured_status'];
-    //TODO: Upstream this fix to Panopoly
+    // TODO: Upstream this fix to Panopoly.
     $form['field_featured_status'] = array('#language' => NULL);
   }
 
   if (!empty($form['field_archived_content'])) {
     $form['options']['field_archived_content'] = $form['field_archived_content'];
-    //TODO: Upstream this fix to Panopoly
+    // TODO: Upstream this fix to Panopoly.
     $form['field_archived_content'] = array('#language' => NULL);
   }
 
-  // Remove the description from the shared widget
+  // Remove the description from the shared widget.
   if (!empty($form['field_share_widget'])) {
     $form['options']['field_share_widget'] = $form['field_share_widget'];
     $form['options']['field_share_widget']['#weight'] = '0';
-    //TODO: Upstream this fix to Panopoly
+    // TODO: Upstream this fix to Panopoly.
     $form['field_share_widget'] = array('#language' => NULL);
   }
 
-  // Create the General Settings Fieldset
+  // Create the General Settings Fieldset.
   if ($form_id == 'ctools_block_content_type_edit_form') {
-    // Create General Settings Fieldset
+    // Create General Settings Fieldset.
     $form['general_settings'] = array(
       '#type' => 'fieldset',
       '#title' => t('General Settings'),
@@ -160,7 +161,7 @@ function wetkit_wetboew_form_alter(&$form, &$form_state, $form_id) {
     $form['general_settings']['override_title_markup'] = $form['override_title_markup'];
     $form['general_settings']['override_title_text'] = $form['override_title_text'];
 
-    // Unset some Form Variables
+    // Unset some Form Variables.
     unset($form['override_title']);
     unset($form['override_title_markup']);
     unset($form['override_title_text']);
@@ -193,7 +194,7 @@ function wetkit_wetboew_configure_form($form, &$form_state) {
     '#type' => 'fieldset',
     '#title' => t('WetKit Theme Selection'),
     '#collapsible' => TRUE,
-    '#collapsed' => FALSE
+    '#collapsed' => FALSE,
   );
   $form['wetkit_wetboew']['wetkit_wetboew_theme'] = array(
     '#type' => 'select',
@@ -293,7 +294,7 @@ function wetkit_wetboew_preprocess_tablefield_view(&$variables) {
  * Implements hook_theme().
  *
  * @param type $existing
- *    An array of existing implementations that may be used to override.
+ *   An array of existing implementations that may be used to override.
  * @param type $type
  *   Whether a theme, module, etc. is being processed.
  * @param type $theme

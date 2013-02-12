@@ -2,6 +2,10 @@
 
 /**
  * @file
+ * Implements core hooks for agov_layouts.
+ */
+
+/**
  * Implements hook_panels_layouts().
  */
 function wetkit_layouts_payette_panels_layouts() {

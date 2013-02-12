@@ -36,10 +36,11 @@ class WetKitWebTestCase extends DrupalWebTestCase {
    * This is a hack to be able to call any method within the test case class.
    * This might seems like something horrible, but it actually let's us separate
    * functionality in a a sane way.
-   * @param $method
+   *
+   * @param string $method
    *   The method to call
-   * ...
-   * the arguments to provide.
+   * @param array $args
+   *   The arguments to provide.
    */
   public function callTestCaseFunction($method, $args) {
     return call_user_func_array(array($this, $method), $args);
@@ -67,8 +68,11 @@ class WetKitWebTestCase extends DrupalWebTestCase {
 
   /**
    * Grant a series of roles to particular user.
-   * @param stdClass $user a user object
-   * @param array roles an array of role names.
+   *
+   * @param stdClass $user 
+   *   A user object.
+   * @param array roles 
+   *   An array of role names.
    */
   function grantRoles($user, array $roles) {
     $roles_by_id = user_roles();
@@ -91,9 +95,13 @@ class WetKitWebTestCase extends DrupalWebTestCase {
   /**
    * Assert that a a particular format exists
    * in a select element of input formats.
-   * @param $field a form field.
-   * @param $format a format to check for.
-   * @param $message the message to display.
+   *
+   * @param array $field 
+   *   A form field.
+   * @param string $format
+   *   A format to check for.
+   * @param string $message
+   *   The message to display.
    */
   function assertFormat($field, $format, $message = NULL) {
     if (empty($message)) {
@@ -105,9 +113,13 @@ class WetKitWebTestCase extends DrupalWebTestCase {
   /**
    * Assert that a a particular format isn't available
    * in a select element of input formats.
-   * @param $field a form field.
-   * @param $format a format to check for.
-   * @param $message the message to display.
+   *
+   * @param array $field 
+   *   A form field.
+   * @param string $format 
+   *   A format to check for.
+   * @param string $message 
+   *   The message to display.
    */
 
   function assertNoFormat($field, $format, $message = NULL) {

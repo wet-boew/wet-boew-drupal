@@ -28,11 +28,11 @@ function wetkit_wetboew_querypath_scrape_content_type_render($subtype, $conf, $p
   $markup = '';
 
   try {
-    // Include Querypath
+    // Include Querypath.
     require_once libraries_get_path('querypath', FALSE) . '/src/qp.php';
 
     $parser = 'html';
-    if ($conf['querypath_scrape_general_settings']['querypath_parser']  == 0) {
+    if ($conf['querypath_scrape_general_settings']['querypath_parser'] == 0) {
       $parser = 'html';
     }
     else {
@@ -43,11 +43,11 @@ function wetkit_wetboew_querypath_scrape_content_type_render($subtype, $conf, $p
       'strip_low_ascii' => FALSE,
       'convert_from_encoding' => 'auto',
       'convert_to_encoding' => 'utf-8',
-      'use_parser' => $parser
+      'use_parser' => $parser,
     );
     $qp_scrape = htmlqp($conf['querypath_scrape_general_settings']['url'], NULL, $qp_options);
 
-    // Remove DOM elements specified in edit form using CSS3 Selectors
+    // Remove DOM elements specified in edit form using CSS3 Selectors.
     $elements_to_remove = array();
     unset($conf['querypath_scrape_remove']['querypath_remove_dom_add_button']);
     unset($conf['querypath_scrape_remove']['querypath_remove_dom_remove_button']);
@@ -60,7 +60,7 @@ function wetkit_wetboew_querypath_scrape_content_type_render($subtype, $conf, $p
       _querypath_scrape_removeDOM($qp_scrape, $elements_to_remove);
     }
 
-    // Retrieve DOM elements specified in edit form using CSS3 Selectors
+    // Retrieve DOM elements specified in edit form using CSS3 Selectors.
     $elements_to_add = array();
     unset($conf['querypath_scrape_get']['querypath_add_dom_add_button']);
     unset($conf['querypath_scrape_get']['querypath_add_dom_remove_button']);
@@ -88,7 +88,7 @@ function wetkit_wetboew_querypath_scrape_content_type_render($subtype, $conf, $p
 function wetkit_wetboew_querypath_scrape_edit_form($form, &$form_state) {
   $conf = $form_state['conf'];
 
-  // Form State Variables
+  // Form State Variables.
   if (empty($form_state['num_querypath_add_dom'])) {
     $form_state['num_querypath_add_dom'] = 1;
   }
@@ -100,7 +100,7 @@ function wetkit_wetboew_querypath_scrape_edit_form($form, &$form_state) {
   // Access the form hierarchically.
   $form['#tree'] = TRUE;
 
-  // Create General Settings Fieldset
+  // Create General Settings Fieldset.
   $form['querypath_scrape_general_settings'] = array(
     '#type' => 'fieldset',
     '#title' => t('Querypath Scrape General Settings'),
@@ -112,7 +112,7 @@ function wetkit_wetboew_querypath_scrape_edit_form($form, &$form_state) {
     '#title' => t('Select Parser for QueryPath'),
     '#options' => array(
       0 => t('HTML'),
-      1 => t('XML')
+      1 => t('XML'),
     ),
     '#default_value' => !empty($conf['querypath_scrape_general_settings']['querypath_parser']) ? $conf['querypath_scrape_general_settings']['querypath_parser'] : 0,
     '#description' => t('Select the type of parser (XML or HTML) that Queryparth will be using.'),
@@ -130,12 +130,12 @@ function wetkit_wetboew_querypath_scrape_edit_form($form, &$form_state) {
     '#required' => TRUE,
   );
 
-  // Unset some Form Variables
+  // Unset some Form Variables.
   unset($form['override_title']);
   unset($form['override_title_markup']);
   unset($form['override_title_text']);
 
-  // Build the number of name fieldsets indicated by $form_state['num_querypath_add_dom']
+  // Build the fieldsets indicated by $form_state['num_querypath_add_dom'].
   $form['querypath_scrape_get'] = array(
     '#type' => 'fieldset',
     '#title' => t('Querypath Parameters (GetHTML)'),
@@ -152,14 +152,14 @@ function wetkit_wetboew_querypath_scrape_edit_form($form, &$form_state) {
       '#default_value' => !empty($conf['querypath_scrape_get'][$i]['querypath_elements_get']) ? $conf['querypath_scrape_get'][$i]['querypath_elements_get'] : '',
       '#required' => FALSE,
     );
-    // Adds "Add another Querypath" button
+    // Adds "Add another Querypath" button.
     $form['querypath_scrape_get']['querypath_add_dom_add_button'] = array(
       '#type' => 'submit',
       '#value' => t('Add Querypath GetHTML'),
       '#submit' => array('querypath_add_dom_save'),
       '#weight' => 998,
     );
-    // Adds "Remove Querypath Parameters" button
+    // Adds "Remove Querypath Parameters" button.
     if ($form_state['num_querypath_add_dom'] > 1) {
       $form['querypath_scrape_get']['querypath_add_dom_remove_button'] = array(
         '#type' => 'submit',
@@ -171,7 +171,7 @@ function wetkit_wetboew_querypath_scrape_edit_form($form, &$form_state) {
     }
   }
 
-  // Build the number of name fieldsets indicated by $form_state['num_querypath_remove_dom']
+  // Build the fieldsets indicated by $form_state['num_querypath_remove_dom'].
   $form['querypath_scrape_remove'] = array(
     '#type' => 'fieldset',
     '#title' => t('Querypath Parameters (RemoveHTML)'),
@@ -188,14 +188,14 @@ function wetkit_wetboew_querypath_scrape_edit_form($form, &$form_state) {
       '#default_value' => !empty($conf['querypath_scrape_remove'][$j]['querypath_elements_remove']) ? $conf['querypath_scrape_remove'][$j]['querypath_elements_remove'] : '',
       '#required' => FALSE,
     );
-    // Adds "Add another Querypath" button
+    // Adds "Add another Querypath" button.
     $form['querypath_scrape_remove']['querypath_remove_dom_add_button'] = array(
       '#type' => 'submit',
       '#value' => t('Add Querypath RemoveHTML'),
       '#submit' => array('querypath_remove_dom_save'),
       '#weight' => 998,
     );
-    // Adds "Remove Querypath Parameters" button
+    // Adds "Remove Querypath Parameters" button.
     if ($form_state['num_querypath_remove_dom'] > 1) {
       $form['querypath_scrape_remove']['querypath_remove_dom_remove_button'] = array(
         '#type' => 'submit',
@@ -211,17 +211,18 @@ function wetkit_wetboew_querypath_scrape_edit_form($form, &$form_state) {
 }
 
 /**
- * Submit handler for "Add another Querypath" button on querypath_add_parameters().
+ * Submit handler for "Add Querypath" button on querypath_add_parameters().
  */
 function querypath_add_dom_save($form, &$form_state) {
-  // Everything in $form_state is persistent, so we'll just use
+  // Everything in $form_state is persistent.
   $tmp_val = $form_state['num_querypath_add_dom']++;
   // Setting $form_state['rebuild'] = TRUE causes the form to be rebuilt again.
   $form_state['rebuild'] = TRUE;
 }
 
 /**
- * Submit handler for "Remove Querypath Parameters" button on querypath_remove_parameters().
+ * Submit handler for "Remove Querypath Parameters" button on 
+ * querypath_remove_parameters().
  */
 function querypath_add_dom_delete($form, &$form_state) {
   if ($form_state['num_querypath_add_dom'] > 1) {
@@ -232,17 +233,18 @@ function querypath_add_dom_delete($form, &$form_state) {
 }
 
 /**
- * Submit handler for "Add another Querypath" button on querypath_add_parameters().
+ * Submit handler for "Add Querypath" button on querypath_add_parameters().
  */
 function querypath_remove_dom_save($form, &$form_state) {
-  // Everything in $form_state is persistent, so we'll just use
+  // Everything in $form_state is persistent.
   $tmp_val = $form_state['num_querypath_remove_dom']++;
   // Setting $form_state['rebuild'] = TRUE causes the form to be rebuilt again.
   $form_state['rebuild'] = TRUE;
 }
 
 /**
- * Submit handler for "Remove Querypath Parameters" button on querypath_remove_parameters().
+ * Submit handler for "Remove Querypath Parameters" button on 
+ * querypath_remove_parameters().
  */
 function querypath_remove_dom_delete($form, &$form_state) {
   if ($form_state['num_querypath_remove_dom'] > 1) {

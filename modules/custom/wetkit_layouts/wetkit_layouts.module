@@ -31,7 +31,7 @@ function wetkit_layouts_init() {
  * Implements hook_form_alter().
  */
 function wetkit_layouts_form_alter(&$form, &$form_state, $form_id) {
-  // Modify the Panels Change Layout Screen
+  // Modify the Panels Change Layout Screen.
   if ($form_id == 'panels_change_layout') {
     $form['submit']['#submit'][] = '_wetkit_layouts_refresh_page';
     $form['display']['#prefix'] = '<div class="span-8">' . t('<strong>Important:</strong> You will need to manually refresh the page after you change the layout for it to take affect.') . '</div><div class="clear"></div>';
@@ -52,22 +52,22 @@ function _wetkit_layouts_refresh_page($form, $form_state) {
  */
 function wetkit_layouts_preprocess_html(&$variables) {
 
-  // Detect Panels Layout
+  // Detect Panels Layout.
   $panel_page = page_manager_get_current_page();
   if ($panel_page) {
-    // Panels Layout
+    // Panels Layout.
     $bodyid = '';
     if (isset($panel_page['handler']->conf['display']->renderer_handler->plugins['layout']['bodyid'])) {
       $bodyid = $panel_page['handler']->conf['display']->renderer_handler->plugins['layout']['bodyid'];
     }
-    // Panelizer Layout
-    elseif  (isset($panel_page['handler']->conf['context'])) {
+    // Panelizer Layout.
+    elseif (isset($panel_page['handler']->conf['context'])) {
       $context = $panel_page['handler']->conf['context'];
       if (isset($panel_page['contexts'][$context]->data->panelizer['page_manager']->display->renderer_handler->plugins['layout']['bodyid'])) {
         $bodyid = $panel_page['contexts'][$context]->data->panelizer['page_manager']->display->renderer_handler->plugins['layout']['bodyid'];
       }
     }
-    //Set Body ID for Panels Layouts
+    //Set Body ID for Panels Layouts.
     $variables['wetkit_col_array'] = 'wb-body';
     if (!empty($bodyid)) {
       $variables['wetkit_col_array'] = $bodyid;

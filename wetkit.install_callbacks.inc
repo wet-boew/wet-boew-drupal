@@ -35,7 +35,7 @@ function _wetkit_bean_import($operation, &$context) {
   entity_info_cache_clear();
   _wetkit_bean_load();
 
-  // Fix Panels Edit Page on Browser Install
+  // Fix Panels Edit Page on Browser Install.
   variable_set('page_manager_node_edit_disabled', 0);
   menu_rebuild();
 }

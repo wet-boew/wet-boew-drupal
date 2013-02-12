@@ -11,7 +11,7 @@
  *   An associative array of available tokens and token types.
  */
 function wetkit_language_token_info() {
-  // Node tokens
+  // Node tokens.
   $info['tokens']['node']['bilingual_pathauto_prefix'] = array(
     'name' => t('Pathauto: Bilingual Content Prefix'),
     'description' => t('Bilingual Pathauto prefix for use with Pathauto'),

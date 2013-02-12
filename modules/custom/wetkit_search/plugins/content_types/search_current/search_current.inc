@@ -27,7 +27,7 @@ $plugin = array(
  */
 function wetkit_search_search_current_content_type_render($subtype, $conf, $panel_args, $context) {
 
-  $keys =  (empty($context) || empty($context->data)) ? '' : $context->data;
+  $keys = (empty($context) || empty($context->data)) ? '' : $context->data;
 
   $pane = new stdClass();
   $pane->module  = 'search';

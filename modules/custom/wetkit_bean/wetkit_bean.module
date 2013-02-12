@@ -220,7 +220,7 @@ function wetkit_bean_form_alter(&$form, &$form_state, $form_id) {
     $form['general_settings']['view_mode'] = $form['view_mode'];
     $form['general_settings']['bean_delta'] = $form['bean_delta'];
 
-    // Unset some Form Variables
+    // Unset some Form Variables.
     unset($form['override_title_markup']);
     unset($form['override_title']);
     unset($form['override_title_text']);

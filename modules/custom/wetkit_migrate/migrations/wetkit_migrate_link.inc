@@ -53,14 +53,14 @@ class LinksParser {
       $this->missingLinks = 0;
       $this->missingFiles = 0;
       if (!empty($this->data)) {
-        // check all the attributes
+        // Check all the attributes.
         foreach (LinksParser::$keyAttributes as $entry) {
           $selector = $entry["tag"];
           
           $base = $this->basePath;
           $dirname = $this->dirnamePath;
 
-          // <a> tags
+          // Select <a> tags.
           if ($selector == 'a') {
             
             $items = $this->qp->top()->find($selector);
@@ -84,20 +84,20 @@ class LinksParser {
               elseif (strpos($tag_url, "javascript:") === 0) {
                 $isExternal = TRUE;
               }
-              // otherwise, assume they are internal
+              // Otherwise, assume they are internal.
               else {
                 $isExternal =  FALSE;
               }
 
-              // INTERNAL LINKS
+              // Internal Links.
               if (!$isExternal) {
-                // strip the .htm or .html from the path and reset the attribute
+                // Strip the .htm(l) from the path and reset the attribute.
                 $new_href = preg_replace('/\.html$/', '', $tag_url);
                 $new_href = preg_replace('/\.html(#[a-zA-Z0-1_-]*)$/', '\\1', $new_href);
                 $new_href = preg_replace('/.htm$/', '', $new_href);
                 $new_href = preg_replace('/\.htm(#[a-zA-Z0-1_-]*)$/', '\\1', $new_href);
 
-                // set the attribute
+                // Set the attribute.
                 if (!empty($new_href)) {
                   $item->setAttribute('href', $new_href);
                 }
@@ -106,7 +106,7 @@ class LinksParser {
             }
           }
 
-          // <img> tags
+          // Select <img> tags.
           if ($selector == 'img') {
 
             $items = $this->qp->top()->find($selector);
@@ -119,13 +119,13 @@ class LinksParser {
                 if (strpos($tag_url, "://") !== FALSE) {
                   $isExternal = TRUE;
                 } 
-                // otherwise, assume they are internal
+                // Otherwise, assume they are internal.
                 else {
                   $isExternal =  FALSE;
                 }
 
                 if (!$isExternal) {
-                  // Check if base path exists; if not assign it
+                  // Check if base path exists; if not assign it.
                   $base_path_exist = drupal_substr($base, strrpos($base, '/'));
                   $base_path_stripped = drupal_substr($base, 0, strrpos($base, '/'));
                   $base_path_exist = drupal_substr($base_path_exist, 1);
@@ -133,21 +133,21 @@ class LinksParser {
                     $item->setAttribute('src', $base_path_stripped . $tag_url);
                   }
                   else {
-                    // If tag_url begins with a '/' remove it
+                    // If tag_url begins with a '/' remove it.
                     if (substr($tag_url, 0, 1) == '/') {
                       $tag_url = substr($tag_url, 1);
                     }
-                    // If tag_url begins with a '../' remove it
+                    // If tag_url begins with a '../' remove it.
                     if (substr($tag_url, 0, 3) == '../') {
                       $tag_url = substr($tag_url, 3);
                     }
 
-                    // Append a relevant directory
+                    // Append a relevant directory.
                     if (substr($tag_url, 0, 6) == 'images') {
                       $tag_url = $dirname . '/' . $tag_url;
                     }
 
-                    // Return the tag url
+                    // Return the tag url.
                     if (!empty($tag_url)) {
                       $item->setAttribute('src', $base . '/' . $tag_url);
                     }

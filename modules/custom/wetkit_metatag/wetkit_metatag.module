@@ -156,11 +156,11 @@ function wetkit_metatag_form_alter(&$form, &$form_state, $form_id) {
       ),
     );
 
-    // Move custom metatags into different Vertical Tabs
+    // Move custom metatags into different Vertical Tabs.
     $form['vertical_tabs_wetkit']['dublin-core'] = $form['metatags']['dublin-core'];
     $form['vertical_tabs_metatags_advanced']['advanced'] = $form['metatags']['advanced'];
 
-    // Unset form content that is not needed
+    // Unset form content that is not needed.
     unset($form['vertical_tabs_wetkit']['dublin-core']['#type']);
     unset($form['vertical_tabs_metatags_advanced']['advanced']['#type']);
     unset($form['metatags']['advanced']);

@@ -5,14 +5,14 @@
  */
 
 /**
- * Migration class for the Documentation (Menus) for the Web Experience Toolkit 
+ * Migration class for the Documentation (Menus) for the Web Experience Toolkit.
  */
 class WetKit_Migrate_Documentation_Menu extends XMLMigration {
 
   public function __construct() {
     parent::__construct(MigrateGroup::getInstance('WetKit', array('default')));
 
-    $this->description = t('Migrate the WET-BOEW documentation menu\'s from the Web Experience Toolkit');
+    $this->description = t("Migrate the WET-BOEW documentation menu's from the Web Experience Toolkit");
     $this->dependencies = array('WetKit_Migrate_Documentation');
 
     $this->map = new MigrateSQLMap($this->machineName,
@@ -21,7 +21,7 @@ class WetKit_Migrate_Documentation_Menu extends XMLMigration {
           'type' => 'varchar',
           'length' => 255,
           'not null' => TRUE,
-        )
+        ),
       ),
       MigrateDestinationMenu::getKeySchema()
     );
@@ -54,14 +54,14 @@ class WetKit_Migrate_Documentation_Menu extends XMLMigration {
 }
 
 /**
- * Migration class for the Documentation (Menu Links) for the Web Experience Toolkit  
+ * Migration class for the Docs (Menu Links) for the Web Experience Toolkit.
  */
 class WetKit_Migrate_Documentation_Menu_Links extends XMLMigration {
 
   public function __construct() {
     parent::__construct(MigrateGroup::getInstance('WetKit', array('default')));
 
-    $this->description = t('Migrate the WET-BOEW documentation menu\'s from the Web Experience Toolkit');
+    $this->description = t("Migrate the WET-BOEW documentation menu's from the Web Experience Toolkit");
     $this->dependencies = array('WetKit_Migrate_Documentation_Menu');
 
     $this->map = new MigrateSQLMap($this->machineName,
@@ -70,7 +70,7 @@ class WetKit_Migrate_Documentation_Menu_Links extends XMLMigration {
           'type' => 'varchar',
           'length' => 255,
           'not null' => TRUE,
-        )
+        ),
       ),
       MigrateDestinationMenuLinks::getKeySchema()
     );
@@ -82,7 +82,7 @@ class WetKit_Migrate_Documentation_Menu_Links extends XMLMigration {
       'link_path' => t('The Drupal path or external path this link points to.'),
       'router_path' => t('For links corresponding to a Drupal path (external = 0), this connects the link to a {menu_router}.path for joins.'),
       'link_title' => t('The text displayed for the link, which may be modified by a title callback stored in {menu_router}.'),
-      'options' => t('A serialized array of options to be passed to the url() or l() function, such as a query string or HTML attributes.'), 
+      'options' => t('A serialized array of options to be passed to the url() or l() function, such as a query string or HTML attributes.'),
       'module' => t('The name of the module that generated this link.'),
       'external' => t('A flag to indicate if the link points to a full URL starting with a protocol, like http:// (1 = external, 0 = internal).'),
       'has_children' => t('Flag indicating whether any links have this link as a parent (1 = children exist, 0 = no children).'),
@@ -118,23 +118,23 @@ class WetKit_Migrate_Documentation_Menu_Links extends XMLMigration {
         ->defaultValue(1);
   }
 
-  public function prepareRow($row) { 
-    // Set the Language
+  public function prepareRow($row) {
+    // Set the Language.
     $lang = (preg_match("/eng/i", $row->sourceid)) ? 'en' : 'fr';
     $row->language = $lang;
     $xmlObj = $row->xml;
-    
-    // Set the Path
+
+    // Set the Path.
     if (!isset($xmlObj->external)) {
-      $link_path =  strip_tags($xmlObj->link_path->asXML());
+      $link_path = strip_tags($xmlObj->link_path->asXML());
       $row->link_path = drupal_lookup_path('source', $link_path, $lang);
     }
     else {
-      $row->link_path =  strip_tags($xmlObj->link_path->asXML());
+      $row->link_path = strip_tags($xmlObj->link_path->asXML());
       $row->external = 1;
     }
-    
-    // Set the Options
+
+    // Set the Options.
     $options = array();
     $options += array(
       'attributes' => array(
@@ -142,8 +142,8 @@ class WetKit_Migrate_Documentation_Menu_Links extends XMLMigration {
       ),
     );
     $row->options = $options;
-    
-    // Set the Parent Menu
+
+    // Set the Parent Menu.
     if (isset($xmlObj->parent)) {
       $result = db_query('SELECT n.destid1
             FROM {migrate_map_wetkit_migrate_documentation_menu_links} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => strip_tags($xmlObj->parent->asXML())));
@@ -155,7 +155,7 @@ class WetKit_Migrate_Documentation_Menu_Links extends XMLMigration {
 
   public function postImport() {
     parent::postImport();
-    // i18n Translation Set  
+    // Internationalization Translation Set.
     $result = db_query('SELECT n.sourceid1, n.destid1
       FROM {migrate_map_wetkit_migrate_documentation_menu_links} n');
     foreach ($result as $record) {

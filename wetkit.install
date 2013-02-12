@@ -43,7 +43,7 @@ function wetkit_install() {
   // Only notify on Security Issue(s).
   variable_set('update_notification_threshold', array('security'));
 
-  // Set Admin Theme
+  // Set Admin Theme.
   db_update('system')
     ->fields(array('status' => 1))
     ->condition('type', 'theme')

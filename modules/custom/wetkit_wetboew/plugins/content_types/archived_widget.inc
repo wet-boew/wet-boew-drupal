@@ -2,7 +2,8 @@
 
 /**
  * @file
- * A panel plugin to provide administrative information about the site's general widget panes
+ * A panel plugin to provide administrative information about the site's 
+ * general widget panes.
  */
 
 $plugin = array(
@@ -17,16 +18,16 @@ $plugin = array(
 );
 
 /**
-  * Custom Pane for Archived Messages.
-  */
+ * Custom Pane for Archived Messages.
+ */
 function wetkit_wetboew_archived_widget_content_type_render($subtype, $conf, $panel_args, $context) {
 
-  // First check that we have a proper context
+  // First check that we have a proper context.
   if (!empty($context) && empty($context->data)) {
     return;
   }
 
-  // Get the Node and confirm whether it is flagged as archive
+  // Get the Node and confirm whether it is flagged as archive.
   $node = isset($context->data) ? clone($context->data) : NULL;
 
   $title = t('Archived Content');
@@ -34,7 +35,7 @@ function wetkit_wetboew_archived_widget_content_type_render($subtype, $conf, $pa
   $span_class = (isset($conf['span_item'])) ? $conf['span_item'] : 'span-6';
 
   $field_archived = field_get_items('node', $node, 'field_archived_content');
-  if ($field_archived['0']['value'] == '1' ) {
+  if ($field_archived['0']['value'] == '1') {
     $pane = new stdClass();
     $pane->content = '<div id="archived" class="wet-boew-archived ' . $span_class . '" data-load="archived"><section><h2>' . $title . '</h2><p>' . $body . '</p></section></div>';
     return $pane;

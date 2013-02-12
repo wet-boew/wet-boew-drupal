@@ -5,12 +5,12 @@
  */
 
 /**
- * WetKit Migrate Administration Form Settings. 
+ * WetKit Migrate Administration Form Settings.
  * The form fields are defined in this function.
  */
 function wetkit_migrate_form() {
 
-  // Documentation
+  // Documentation.
 
   $form['documentation'] = array(
     '#title' => 'Documentation',
@@ -18,7 +18,7 @@ function wetkit_migrate_form() {
     '#collapsible' => 'true',
     '#collapsed'   => 'true',
   );
-  
+
   $form['documentation']['wetkit_migrate_documentation_basedir'] = array(
     '#title' => t('Documentation migration base directory'),
     '#type' => t('textfield'),
@@ -27,7 +27,7 @@ function wetkit_migrate_form() {
     '#default_value' => variable_get('wetkit_migrate_documentation_basedir'),
     '#description' => t('Enter the base directory for the Documentation content'),
   );
-  
+
   $form['documentation']['wetkit_migrate_documentation_listdir'] = array(
     '#title' => t('Documentation migration source files directory'),
     '#type' => t('textfield'),
@@ -36,7 +36,7 @@ function wetkit_migrate_form() {
     '#default_value' => variable_get('wetkit_migrate_documentation_listdir'),
     '#description' => t('Enter the source files directory for the Documentation content'),
   );
-  
+
   $form['documentation']['wetkit_migrate_documentation_ignore_dirs'] = array(
     '#title' => t('Documentation migration folders to ignore'),
     '#type' => t('textfield'),

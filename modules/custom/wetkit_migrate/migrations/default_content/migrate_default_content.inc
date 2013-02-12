@@ -5,7 +5,7 @@
  */
 
 /**
- * Abstract Migration class for the Default Content for the Web Experience Toolkit
+ * Abstract Migration class for Default Content for the Web Experience Toolkit.
  */
 abstract class WetKitDCMigration extends XMLMigration {
 
@@ -13,6 +13,7 @@ abstract class WetKitDCMigration extends XMLMigration {
    * ProcessImport for WetKit Migration
    *
    * @param array $options
+   *   Process the import array.
    */
   public function processImport(array $options = array()) {
     parent::processImport($options = array());
@@ -35,14 +36,14 @@ class WetKit_Migrate_DefaultContent extends WetKitDCMigration {
 
     $this->description = t('Migrate the WET-BOEW default content into the Web Experience Toolkit');
 
-    // Create a map object for tracking the relationships between source rows
+    // Create a map object for tracking the relationships between source rows.
     $this->map = new MigrateSQLMap($this->machineName,
       array(
         'sourceid' => array(
           'type' => 'varchar',
           'length' => 255,
           'not null' => TRUE,
-        )
+        ),
       ),
       MigrateDestinationMenu::getKeySchema()
     );
@@ -63,7 +64,7 @@ class WetKit_Migrate_DefaultContent extends WetKitDCMigration {
     $this->source = new MigrateSourceMultiItems($items_class, $fields);
     $this->destination = new MigrateDestinationNode('wetkit_page');
 
-    // Main Fields
+    // Main Fields.
     $this->addFieldMapping('title', 'title')
         ->xpath('title');
     $this->addFieldMapping('body', 'body')
@@ -77,7 +78,7 @@ class WetKit_Migrate_DefaultContent extends WetKitDCMigration {
         ->xpath('path');
     $this->addFieldMapping('language', 'language');
 
-     // Extra Fields
+     // Extra Fields.
     $this->addFieldMapping('field_featured_image', 'images')
         ->xpath('image');
     $this->addFieldMapping('field_featured_image:alt', 'image_alt')
@@ -95,20 +96,21 @@ class WetKit_Migrate_DefaultContent extends WetKitDCMigration {
    * Prepare and modify the source rows
    *
    * @param type $row
+   *   Row to import for the migration.
    */
   public function prepareRow($row) {
-    // Set the Language
+    // Set the Language.
     $lang = (preg_match("/eng/i", $row->sourceid)) ? 'en' : 'fr';
     $row->language = $lang;
     $xmlObj = $row->xml;
   }
 
   /**
-   * Perform additional tasks after the initial import
+   * Perform additional tasks after the initial import.
    */
   public function postImport() {
     parent::postImport();
-    // i18n Translation Set
+    // i18n Translation Set.
     $result = db_query('SELECT n.sourceid1, n.destid1
       FROM {migrate_map_wetkit_migrate_defaultcontent} n');
     foreach ($result as $record) {

@@ -193,7 +193,7 @@ function _menu_wetkit_load() {
   $translated_menu_item = _add_custom_menu('http://www.canada.gc.ca/accueil.html', 'Canada.gc.ca', NULL, 'menu-wet-footer', 5, 'fr');
   _create_translation_sets($source_menu_item, $translated_menu_item);
 
-  //Clears all menu caches
+  // Clears all menu caches.
   menu_cache_clear_all();
 }
 

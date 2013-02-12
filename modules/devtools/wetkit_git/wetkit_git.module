@@ -8,7 +8,7 @@
  * Implements hook_menu().
  */
 function wetkit_git_menu() {
-  $items['git_update'] =  array(
+  $items['git_update'] = array(
     'page callback' => '_wetkit_git_update',
     'access arguments' => array('administer site configuration'),
     'type' => MENU_CALLBACK,
@@ -22,12 +22,12 @@ function wetkit_git_menu() {
 function _wetkit_git_update() {
   exec('cd profiles/wetkit; git pull');
 
-  // Get the current revision
+  // Get the current revision.
   exec('cd profiles/wetkit; git rev-parse HEAD', $x);
   if (is_array($x)) {
     $info_sha = drupal_substr($x[0], 0, 7);
   }
-  // Get information about the remote origin
+  // Get information about the remote origin.
   exec('cd profiles/wetkit; git remote show origin | grep Fetch', $y);
   if (is_array($y)) {
     $info_url = $y[0];
@@ -46,13 +46,13 @@ function wetkit_git_requirements($phase) {
   $requirements = array();
   $t = get_t();
 
-  // Get the current revision
+  // Get the current revision.
   exec('cd profiles/wetkit; git rev-parse HEAD', $x);
   if (is_array($x)) {
     $info_sha = drupal_substr($x[0], 0, 7);
   }
 
-  // Get information about the remote origin
+  // Get information about the remote origin.
   exec('cd profiles/wetkit; git remote show origin | grep Fetch', $y);
   if (is_array($y)) {
     $info_url = $y[0];

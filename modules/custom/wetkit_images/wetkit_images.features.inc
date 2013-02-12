@@ -20,7 +20,7 @@ function wetkit_images_ctools_plugin_api() {
 function wetkit_images_image_default_styles() {
   $styles = array();
 
-  // Exported image style: slider
+  // Exported image style: slider.
   $styles['slider'] = array(
     'name' => 'slider',
     'effects' => array(
