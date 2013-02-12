@@ -1,14 +1,17 @@
 <?php
+
 /**
  * @file
  * wetkit_migrate_querypath.inc
  */
 
 /**
- * This class is used to encapsulate a static HTML page that will be migrated into the Drupal 7 WCMS.
- * Any HTML pre-processing or parsing logic that is common to all migrated content can be placed into this class.
+ * This class is used to encapsulate a static HTML page that will be migrated 
+ * into the Drupal 7 WCMS.
+ * Any HTML pre-processing or parsing logic that is common to all migrated 
+ * content can be placed into this class.
  */
-class WetKitMigrationHtmlPage {
+class WetKitMigrationhtmlpage {
 
   protected $html;
   protected $qp;
@@ -45,7 +48,7 @@ class WetKitMigrationHtmlPage {
   public $datestamp = '';
 
   /**
-   * Constructor method that loads the page into QueryPath and then sets the 
+   * Constructor method that loads the page into QueryPath and then sets the
    * object's properties based on the parsed values in the page.
    *
    * @param array $data
@@ -65,8 +68,7 @@ class WetKitMigrationHtmlPage {
       $this->fixEncoding();
 
       // If dealing with a HTML fragment we need to wrap it in html > body
-      //$this->wrapHTML();
-
+      // For instance: $this->wrapHTML().
       // Parse the HTML using QueryPath.
       $this->initQP();
 
@@ -134,10 +136,11 @@ class WetKitMigrationHtmlPage {
    * correctly detected, and for the parsers and tidiers.
    */
   protected function fixHTML($html_document) {
-    // Need to clean up badly formated DOCTYPE headers. Many files have the format:
-    //   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    // Need to clean up badly formated DOCTYPE headers. Many files have the
+    // format:
+    // <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     //
-    //  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    // "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
     //
     // It should be all on one line for QueryPath to work properly.
     $html_document = preg_replace('#XHTML 1.0 Strict//EN"(\s+)"http://www.w3.org/#',
@@ -222,6 +225,12 @@ class WetKitMigrationHtmlPage {
     return $title;
   }
 
+  /**
+   * Return various metatags of the imported page
+   *
+   * @return string
+   *   Return the specified metatag of the current page.
+   */
   protected function getMetaTag($element) {
     $content = $this->qp->top()->find('meta[name="' . $element . '"]')->attr('content');
     return trim($content);
@@ -236,14 +245,14 @@ class WetKitMigrationHtmlPage {
   protected function getPageLanguage() {
     // First try to obtain the language from the HTML tag.
     $language = $this->qp->top('html')->attr('lang');
-    $isEnglish = strncasecmp($language, 'en', 2);
-    $isFrench = strncasecmp($language, 'fr', 2);
-    if ($isEnglish != 0 && $isFrench != 0) {
+    $isenglish = strncasecmp($language, 'en', 2);
+    $isfrench = strncasecmp($language, 'fr', 2);
+    if ($isenglish != 0 && $isfrench != 0) {
 
       // No language yet, so try to parse the path name instead.
-      $pathStats = pathinfo($this->filename); 
-      $filename_len = strlen($pathStats['filename']);
-      $filecode = substr($pathStats['filename'], $filename_len - 3, 3);
+      $pathstats = pathinfo($this->filename);
+      $filename_len = strlen($pathstats['filename']);
+      $filecode = substr($pathstats['filename'], $filename_len - 3, 3);
       if (strcasecmp('eng', $filecode) == 0) {
         $language = 'en';
       }

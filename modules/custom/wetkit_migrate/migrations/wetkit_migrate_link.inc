@@ -13,8 +13,8 @@ class LinksParser {
   private $data = "";
   private $missingLinks = 0;
   private $missingFiles = 0;
-  private $basePath = "";
-  private $dirnamePath = "";
+  private $basepath = "";
+  private $dirnamepath = "";
   private $changes = FALSE;
 
   /**
@@ -33,16 +33,18 @@ class LinksParser {
 
   /**
    * Construct an object
-   * @param string $data The HTML data to process - this is NOT the complete 
-   * HTML page - just a fragment.
-   *    like <body...</body>
-   * @param string $basePath The base URL that will be prepended to the local 
+   *
+   * @param string $data 
+   *   The HTML data to process - this is NOT the complete 
+   *   HTML page - just a fragment. For instance: <body...</body>
+   * @param string $basepath 
+   *   The base URL that will be prepended to the local
    * relative paths.
    */
-  public function __construct($data, $basePath, $dirnamePath = NULL) {
+  public function __construct($data, $basepath, $dirnamepath = NULL) {
     $this->data = $data;
-    $this->basePath = $this->encodeURL($basePath);
-    $this->dirnamePath = $dirnamePath;
+    $this->basepath = $this->encodeURL($basepath);
+    $this->dirnamepath = $dirnamepath;
     $this->wrapHTML();
     $this->initQP();
   }
@@ -59,40 +61,37 @@ class LinksParser {
       foreach (LinksParser::$keyAttributes as $entry) {
         $selector = $entry["tag"];
 
-        $base = $this->basePath;
-        $dirname = $this->dirnamePath;
+        $base = $this->basepath;
+        $dirname = $this->dirnamepath;
 
         // Select <a> tags.
         if ($selector == 'a') {
 
           $items = $this->qp->top()->find($selector);
           foreach ($items->get() as $item) {
-          //$items = $this->qp->top()->find($selector)->each(function ($index, $item) use ($base, $dirname) {
             // $item is an instance of the DOMElement class
-            // examine the URL
             $tag_url = $item->getAttribute('href');
-            $isExternal = FALSE;
+            $isexternal = FALSE;
 
-            // EXTERNAL LINKS
-            // external links have :// in them
+            // External links have :// in them.
             if (strpos($tag_url, "://") !== FALSE) {
-                $isExternal = TRUE;
+                $isexternal = TRUE;
             } 
-            // mailto: links are "external"
+            // Mailto: links are "external".
             elseif (strpos($tag_url, "mailto:") === 0) {
-              $isExternal = TRUE;
+              $isexternal = TRUE;
             }
-            // javascript: links are "external"
+            // Javascript: links are "external".
             elseif (strpos($tag_url, "javascript:") === 0) {
-              $isExternal = TRUE;
+              $isexternal = TRUE;
             }
             // Otherwise, assume they are internal.
             else {
-              $isExternal =  FALSE;
+              $isexternal =  FALSE;
             }
 
             // Internal Links.
-            if (!$isExternal) {
+            if (!$isexternal) {
               // Strip the .htm(l) from the path and reset the attribute.
               $new_href = preg_replace('/\.html$/', '', $tag_url);
               $new_href = preg_replace('/\.html(#[a-zA-Z0-1_-]*)$/', '\\1', $new_href);
@@ -104,7 +103,6 @@ class LinksParser {
                 $item->setAttribute('href', $new_href);
               }
             }         
-          //});
           }
         }
 
@@ -113,49 +111,47 @@ class LinksParser {
 
           $items = $this->qp->top()->find($selector);
           foreach ($items->get() as $item) {
-          //$items = $this->qp->top()->find($selector)->each(function ($index, $item) use ($base, $dirname) {
-              $tag_url = $item->getAttribute('src');
-              $isExternal = FALSE;
+            $tag_url = $item->getAttribute('src');
+            $isexternal = FALSE;
 
-              // external links start with ://
-              if (strpos($tag_url, "://") !== FALSE) {
-                $isExternal = TRUE;
-              } 
-              // Otherwise, assume they are internal.
+            // external links start with ://
+            if (strpos($tag_url, "://") !== FALSE) {
+              $isexternal = TRUE;
+            } 
+            // Otherwise, assume they are internal.
+            else {
+              $isexternal =  FALSE;
+            }
+
+            if (!$isexternal) {
+              // Check if base path exists; if not assign it.
+              $base_path_exist = drupal_substr($base, strrpos($base, '/'));
+              $base_path_stripped = drupal_substr($base, 0, strrpos($base, '/'));
+              $base_path_exist = drupal_substr($base_path_exist, 1);
+              if (preg_match("/{$base_path_exist}/i", $tag_url)) {
+                $item->setAttribute('src', $base_path_stripped . $tag_url);
+              }
               else {
-                $isExternal =  FALSE;
-              }
-
-              if (!$isExternal) {
-                // Check if base path exists; if not assign it.
-                $base_path_exist = drupal_substr($base, strrpos($base, '/'));
-                $base_path_stripped = drupal_substr($base, 0, strrpos($base, '/'));
-                $base_path_exist = drupal_substr($base_path_exist, 1);
-                if (preg_match("/{$base_path_exist}/i", $tag_url)) {
-                  $item->setAttribute('src', $base_path_stripped . $tag_url);
+                // If tag_url begins with a '/' remove it.
+                if (substr($tag_url, 0, 1) == '/') {
+                  $tag_url = substr($tag_url, 1);
                 }
-                else {
-                  // If tag_url begins with a '/' remove it.
-                  if (substr($tag_url, 0, 1) == '/') {
-                    $tag_url = substr($tag_url, 1);
-                  }
-                  // If tag_url begins with a '../' remove it.
-                  if (substr($tag_url, 0, 3) == '../') {
-                    $tag_url = substr($tag_url, 3);
-                  }
+                // If tag_url begins with a '../' remove it.
+                if (substr($tag_url, 0, 3) == '../') {
+                  $tag_url = substr($tag_url, 3);
+                }
 
-                  // Append a relevant directory.
-                  if (substr($tag_url, 0, 6) == 'images') {
-                    $tag_url = $dirname . '/' . $tag_url;
-                  }
+                // Append a relevant directory.
+                if (substr($tag_url, 0, 6) == 'images') {
+                  $tag_url = $dirname . '/' . $tag_url;
+                }
 
-                  // Return the tag url.
-                  if (!empty($tag_url)) {
-                    $item->setAttribute('src', $base . '/' . $tag_url);
-                  }
+                // Return the tag url.
+                if (!empty($tag_url)) {
+                  $item->setAttribute('src', $base . '/' . $tag_url);
                 }
               }
-          //});
+            }
           }
         }
         $new_html = $this->qp->top('body')->innerHTML();
@@ -185,7 +181,7 @@ class LinksParser {
       'ignore_parser_warnings' => TRUE,
       'convert_to_encoding' => 'UTF-8',
       'convert_from_encoding' => 'auto',
-      'use_parser' => 'html'
+      'use_parser' => 'html',
     );
     $this->qp = htmlqp($this->data, NULL, $qp_options);
   }
@@ -194,7 +190,7 @@ class LinksParser {
    * Encode the URL.
    */
   private function encodeURL($url) {
-    $oldURL = $url;
+    $oldurl = $url;
     if (strpos($url, '%') !== FALSE) {
       $url = urldecode($url);
     }
@@ -214,7 +210,7 @@ class LinksParser {
     if (!empty($test['scheme'])) {
       $url = $test['scheme'] . '://' . $url;
     }
-    if (drupal_substr($url, 0, 1) == '/' && (drupal_substr($oldURL, 0, 1) != '/')) {
+    if (drupal_substr($url, 0, 1) == '/' && (drupal_substr($oldurl, 0, 1) != '/')) {
       $url = drupal_substr($url, 1);
     }
     if (!empty($test['query'])) {
@@ -245,8 +241,12 @@ class LinksParser {
 
   /**
    * Attempts to fix any broken URLs so that they will process properly
-   * @param string $url Original URL
-   * @return string Fixed URL
+   *
+   * @param string $url 
+   *   Original URL
+   *
+   * @return string 
+   *   Fixed URL
    */
   private function fixURL($url) {
     $url = trim($url);
@@ -254,7 +254,7 @@ class LinksParser {
       "\t", "\r", "\n",
       '&#9;', '&#10;', '&#13;',
     ), '', $url);
-    // check for email addresses without a mailto:
+    // Check for email addresses without a mailto.
     if (strpos($url, "@") !== FALSE && strpos($url, "mailto:") === FALSE) {
       return "mailto:" . trim($url);
     }
@@ -263,23 +263,26 @@ class LinksParser {
 
   /**
    * Checks to see if a URL is external or not
-   * @param string $url The URL to check
-   * @return boolean True if it is external, otherwise false
+   * @param string $url 
+   *   The URL to check
+   *
+   * @return boolean
+   *   True if it is external, otherwise false
    */
-  private function isExternal($url) {
-    // external links start with :// and don't have .uottawa.ca in them
+  private function isexternal($url) {
+    // External links start with :// and don't have .uottawa.ca in them.
     if (strpos($url, "://") !== FALSE) {
       return TRUE;
     }
-    // mailto: links are "external"
+    // Mailto: links are "external".
     if (strpos($url, "mailto:") === 0) {
       return TRUE;
     }
-    // javascript: links are "external"
+    // Javascript: links are "external".
     if (strpos($url, "javascript:") === 0) {
       return TRUE;
     }
-    // otherwise, assume they are internal
+    // Otherwise, assume they are internal.
     return FALSE;
   }
 }

@@ -26,7 +26,7 @@ abstract class WetKitDCMigration extends XMLMigration {
 /**
  * Migration class for the Default Content for the Web Experience Toolkit
  */
-class WetKit_Migrate_DefaultContent extends WetKitDCMigration {
+class WetKitMigrateDefaultContent extends WetKitDCMigration {
 
   /**
    * Implements the migration constructor
@@ -89,7 +89,15 @@ class WetKit_Migrate_DefaultContent extends WetKitDCMigration {
       ->defaultValue(drupal_get_path('module', 'wetkit_migrate') . '/migrations/default_content/images');
 
     // Unmapped destination fields.
-    $this->addUnmigratedDestinations(array('is_new', 'promote', 'revision', 'sticky', 'created', 'changed', 'revision_uid'));
+    $this->addUnmigratedDestinations(array(
+      'is_new',
+      'promote',
+      'revision',
+      'sticky',
+      'created',
+      'changed',
+      'revision_uid',
+    ));
   }
 
   /**
@@ -102,7 +110,7 @@ class WetKit_Migrate_DefaultContent extends WetKitDCMigration {
     // Set the Language.
     $lang = (preg_match("/eng/i", $row->sourceid)) ? 'en' : 'fr';
     $row->language = $lang;
-    $xmlObj = $row->xml;
+    $xmlobject = $row->xml;
   }
 
   /**
@@ -112,18 +120,18 @@ class WetKit_Migrate_DefaultContent extends WetKitDCMigration {
     parent::postImport();
     // i18n Translation Set.
     $result = db_query('SELECT n.sourceid1, n.destid1
-      FROM {migrate_map_wetkit_migrate_defaultcontent} n');
+      FROM {migrate_map_WetKitMigrateDefaultContent} n');
     foreach ($result as $record) {
       $sourceid_tmp = preg_replace('#_fra_#', '_eng_', $record->sourceid1);
       if (preg_match('/_fra_/i', $record->sourceid1)) {
         $source_nid = 0;
         $translated_nid = 0;
         $result = db_query('SELECT n.destid1
-          FROM {migrate_map_wetkit_migrate_defaultcontent} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => $record->sourceid1));
+          FROM {migrate_map_WetKitMigrateDefaultContent} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => $record->sourceid1));
         foreach ($result as $result_row) {
           $translated_nid = $result_row->destid1;
           $result = db_query('SELECT n.destid1
-          FROM {migrate_map_wetkit_migrate_defaultcontent} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => $sourceid_tmp));
+          FROM {migrate_map_WetKitMigrateDefaultContent} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => $sourceid_tmp));
           foreach ($result as $result_row) {
             $source_nid = $result_row->destid1;
             break;

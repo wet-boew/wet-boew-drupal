@@ -180,7 +180,7 @@ function wetkit_import_content() {
 
   // Run default_content migration.
   $operations[] = array('_wetkit_import', array(
-    'WetKit_Migrate_DefaultContent',
+    'WetKitMigrateDefaultContent',
     t('Importing content.'),
     ));
 

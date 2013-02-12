@@ -10,17 +10,17 @@
 function wetkit_migrate_install() {
 
   // Default Content.
-  MigrationBase::registerMigration('WetKit_Migrate_DefaultContent');
+  MigrationBase::registerMigration('WetKitMigrateDefaultContent');
 
   // Documentation.
-  variable_set('wetkit_migrate_documentation_basedir', libraries_get_path('wet-boew', FALSE));
-  variable_set('wetkit_migrate_documentation_listdir', libraries_get_path('wet-boew', FALSE) . '/demos');
-  variable_set('wetkit_migrate_documentation_ignore_dirs', '');
-  variable_set('wetkit_migrate_documentation_files', libraries_get_path('wet-boew', TRUE) . '/demos');
+  variable_set('WetKitMigrateDocumentation_basedir', libraries_get_path('wet-boew', FALSE));
+  variable_set('WetKitMigrateDocumentation_listdir', libraries_get_path('wet-boew', FALSE) . '/demos');
+  variable_set('WetKitMigrateDocumentation_ignore_dirs', '');
+  variable_set('WetKitMigrateDocumentation_files', libraries_get_path('wet-boew', TRUE) . '/demos');
 
-  MigrationBase::registerMigration('WetKit_Migrate_Documentation');
-  MigrationBase::registerMigration('WetKit_Migrate_Documentation_Menu');
-  MigrationBase::registerMigration('WetKit_Migrate_Documentation_Menu_Links');
+  MigrationBase::registerMigration('WetKitMigrateDocumentation');
+  MigrationBase::registerMigration('WetKitMigrateDocumentationMenu');
+  MigrationBase::registerMigration('WetKitMigrateDocumentationMenuLinks');
 }
 
 /**
@@ -29,16 +29,16 @@ function wetkit_migrate_install() {
 function wetkit_migrate_disable() {
 
   // Default Content.
-  MigrationBase::deregisterMigration('WetKit_Migrate_DefaultContent');
+  MigrationBase::deregisterMigration('WetKitMigrateDefaultContent');
 
   // Documentation.
-  variable_delete('wetkit_migrate_documentation_basedir');
-  variable_delete('wetkit_migrate_documentation_listdir');
-  variable_delete('wetkit_migrate_documentation_ignore_dirs');
-  variable_delete('wetkit_migrate_documentation_files');
-  variable_delete('wetkit_migrate_documentation_menu_file');
+  variable_delete('WetKitMigrateDocumentation_basedir');
+  variable_delete('WetKitMigrateDocumentation_listdir');
+  variable_delete('WetKitMigrateDocumentation_ignore_dirs');
+  variable_delete('WetKitMigrateDocumentation_files');
+  variable_delete('WetKitMigrateDocumentationMenu_file');
 
-  MigrationBase::deregisterMigration('WetKit_Migrate_Documentation');
-  MigrationBase::deregisterMigration('WetKit_Migrate_Documentation_Menu');
-  MigrationBase::deregisterMigration('WetKit_Migrate_Documentation_Menu_Links');
+  MigrationBase::deregisterMigration('WetKitMigrateDocumentation');
+  MigrationBase::deregisterMigration('WetKitMigrateDocumentationMenu');
+  MigrationBase::deregisterMigration('WetKitMigrateDocumentationMenuLinks');
 }

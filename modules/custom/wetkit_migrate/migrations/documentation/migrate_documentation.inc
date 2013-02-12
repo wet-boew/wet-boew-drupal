@@ -7,7 +7,7 @@
 /**
  * Migration class for the WET-BOEW docs on the Web Experience Toolkit website.
  */
-class WetKit_Migrate_Documentation extends WetKitMigration {
+class WetKitMigrateDocumentation extends WetKitMigration {
 
   /**
    * Implements the migration constructor
@@ -19,11 +19,11 @@ class WetKit_Migrate_Documentation extends WetKitMigration {
     $this->description = t('Migrate the WET-BOEW documentation from the Web Experience Toolkit');
 
     // Array of directory paths that will be scanned for files.
-    $list_dirs = array(variable_get('wetkit_migrate_documentation_listdir'));
+    $list_dirs = array(variable_get('WetKitMigrateDocumentation_listdir'));
 
     // The base dir is the part of the path that will be excluded when making
     // an ID for each file.
-    $base_dir = variable_get('wetkit_migrate_documentation_basedir');
+    $base_dir = variable_get('WetKitMigrateDocumentation_basedir');
 
     // Passed on and used to filter for certain types of files. Use a regular
     // expression.
@@ -46,7 +46,7 @@ class WetKit_Migrate_Documentation extends WetKitMigration {
   public function prepareRow($row) {
 
     // Check to see if this an SSI file - it so, do not migrate.
-    if (parent::isIgnored('wetkit_migrate_documentation_ignore_dirs', $row->sourceid)) {
+    if (parent::isIgnored('WetKitMigrateDocumentation_ignore_dirs', $row->sourceid)) {
       return FALSE;
     }
 
@@ -71,7 +71,7 @@ class WetKit_Migrate_Documentation extends WetKitMigration {
       $dirname = substr($row->dirname, 6);
     }
 
-    $link_parser = new LinksParser($row->body, variable_get('wetkit_migrate_documentation_files'), $dirname);
+    $link_parser = new LinksParser($row->body, variable_get('WetKitMigrateDocumentation_files'), $dirname);
 
     // Paste the new body text.
     $row->body = $link_parser->process();
