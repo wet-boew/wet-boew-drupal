@@ -35,7 +35,7 @@ function _wetkit_git_update() {
 
   if (isset($info_sha) && isset($info_url)) {
     drupal_set_message(t('Git updated to: @info_sha from: @info_url', array(
-      '@info_sha' => $info_sha, 
+      '@info_sha' => $info_sha,
       '@info_url' => $info_url,
     )));
     drupal_goto('admin/reports/status');

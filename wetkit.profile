@@ -182,7 +182,7 @@ function wetkit_import_content() {
   $operations[] = array('_wetkit_import', array(
     'WetKit_Migrate_DefaultContent',
     t('Importing content.'),
-  ));
+    ));
 
   // Run bean import.
   $operations[] = array('_wetkit_bean_import', array(t('Importing Bean content.')));
@@ -216,7 +216,7 @@ function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
       if ($name != '#theme') {
         $form['apps_fieldset']['apps']['#options'][$name] = '<strong>' . $app['name'] . '</strong><p><div class="admin-options"><div class="form-item">' . theme('image', array(
           'path' => $app['logo']['path'],
-          'height' => '32', 'width' => '32'
+          'height' => '32', 'width' => '32',
         )) . '</div>' . $app['description'] . '</div></p>';
       }
     }

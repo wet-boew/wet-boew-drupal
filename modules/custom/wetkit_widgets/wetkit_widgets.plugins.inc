@@ -636,8 +636,8 @@ function wetkit_widgets_field_formatter_wetkit_widgets_lightbox($variables) {
       'attributes' => array(
         'class' => array('lb-item'),
         'title' => $title,
-       ),
-      )) . '</li>';
+      ),
+    )) . '</li>';
   }
   $class = $settings['custom_class'];
   return '<div class="wet-boew-lightbox ' . $class . '"><ul>' . $output . '</ul></div><div class="clear"></div>';

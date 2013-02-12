@@ -46,7 +46,7 @@ function wetkit_shiny_preprocess_html(&$vars) {
     'group' => CSS_THEME,
     'browsers' => array('IE' => 'lte IE 6', '!IE' => FALSE),
     'weight' => 999,
-    'preprocess' => FALSE
+    'preprocess' => FALSE,
   ));
 }
 
