@@ -269,8 +269,8 @@ class WetKitMigrationhtmlpage {
   /**
    * Get the created date from the HTML's meta data tag.
    *
-   * @return date type
-   *   Return the created date of the format Y-m-d.
+   * @return string
+   *   Return the created date Y-m-d.
    */
   protected function getDate() {
     $date = $this->qp->find('meta[name="date"]')->attr('content');

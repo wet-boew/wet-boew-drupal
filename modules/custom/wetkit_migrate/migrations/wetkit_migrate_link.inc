@@ -10,18 +10,18 @@
  */
 class LinksParser {
 
-  private $data = "";
-  private $missingLinks = 0;
-  private $missingFiles = 0;
-  private $basepath = "";
-  private $dirnamepath = "";
-  private $changes = FALSE;
+  protected $data = "";
+  protected $missingLinks = 0;
+  protected $missingFiles = 0;
+  protected $basepath = "";
+  protected $dirnamepath = "";
+  protected $changes = FALSE;
 
   /**
    * A list of attributes we want to search for URLs
    * @var type
    */
-  private static $keyAttributes = array(
+  protected static $keyAttributes = array(
     array("tag" => "a", "attribute" => "href"),
     array("tag" => "img", "attribute" => "src"),
    // array("tag" => "link", "attribute" => "href"),
@@ -189,7 +189,7 @@ class LinksParser {
   /**
    * Encode the URL.
    */
-  private function encodeURL($url) {
+  protected function encodeURL($url) {
     $oldurl = $url;
     if (strpos($url, '%') !== FALSE) {
       $url = urldecode($url);
@@ -248,7 +248,7 @@ class LinksParser {
    * @return string
    *   Fixed URL
    */
-  private function fixURL($url) {
+  protected function fixURL($url) {
     $url = trim($url);
     $url = str_replace(array(
       "\t", "\r", "\n",
@@ -270,7 +270,7 @@ class LinksParser {
    * @return boolean
    *   True if it is external, otherwise false
    */
-  private function isexternal($url) {
+  protected function isexternal($url) {
     // External links start with :// and don't have .uottawa.ca in them.
     if (strpos($url, "://") !== FALSE) {
       return TRUE;
