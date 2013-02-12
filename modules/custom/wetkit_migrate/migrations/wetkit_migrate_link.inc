@@ -34,10 +34,10 @@ class LinksParser {
   /**
    * Construct an object
    *
-   * @param string $data 
-   *   The HTML data to process - this is NOT the complete 
+   * @param string $data
+   *   The HTML data to process - this is NOT the complete
    *   HTML page - just a fragment. For instance: <body...</body>
-   * @param string $basepath 
+   * @param string $basepath
    *   The base URL that will be prepended to the local
    * relative paths.
    */
@@ -69,14 +69,14 @@ class LinksParser {
 
           $items = $this->qp->top()->find($selector);
           foreach ($items->get() as $item) {
-            // $item is an instance of the DOMElement class
+            // $item is an instance of the DOMElement class.
             $tag_url = $item->getAttribute('href');
             $isexternal = FALSE;
 
             // External links have :// in them.
             if (strpos($tag_url, "://") !== FALSE) {
                 $isexternal = TRUE;
-            } 
+            }
             // Mailto: links are "external".
             elseif (strpos($tag_url, "mailto:") === 0) {
               $isexternal = TRUE;
@@ -87,7 +87,7 @@ class LinksParser {
             }
             // Otherwise, assume they are internal.
             else {
-              $isexternal =  FALSE;
+              $isexternal = FALSE;
             }
 
             // Internal Links.
@@ -102,7 +102,7 @@ class LinksParser {
               if (!empty($new_href)) {
                 $item->setAttribute('href', $new_href);
               }
-            }         
+            }
           }
         }
 
@@ -114,13 +114,13 @@ class LinksParser {
             $tag_url = $item->getAttribute('src');
             $isexternal = FALSE;
 
-            // external links start with ://
+            // External links start with ://
             if (strpos($tag_url, "://") !== FALSE) {
               $isexternal = TRUE;
-            } 
+            }
             // Otherwise, assume they are internal.
             else {
-              $isexternal =  FALSE;
+              $isexternal = FALSE;
             }
 
             if (!$isexternal) {
@@ -242,10 +242,10 @@ class LinksParser {
   /**
    * Attempts to fix any broken URLs so that they will process properly
    *
-   * @param string $url 
+   * @param string $url
    *   Original URL
    *
-   * @return string 
+   * @return string
    *   Fixed URL
    */
   private function fixURL($url) {
@@ -263,7 +263,8 @@ class LinksParser {
 
   /**
    * Checks to see if a URL is external or not
-   * @param string $url 
+   *
+   * @param string $url
    *   The URL to check
    *
    * @return boolean

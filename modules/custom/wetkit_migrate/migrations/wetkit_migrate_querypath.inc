@@ -6,9 +6,9 @@
  */
 
 /**
- * This class is used to encapsulate a static HTML page that will be migrated 
+ * This class is used to encapsulate a static HTML page that will be migrated
  * into the Drupal 7 WCMS.
- * Any HTML pre-processing or parsing logic that is common to all migrated 
+ * Any HTML pre-processing or parsing logic that is common to all migrated
  * content can be placed into this class.
  */
 class WetKitMigrationhtmlpage {
@@ -84,7 +84,7 @@ class WetKitMigrationhtmlpage {
     }
   }
 
-  /*
+  /**
    * Return the HTML
    */
   public function getHTML($element) {
@@ -95,7 +95,7 @@ class WetKitMigrationhtmlpage {
     }
   }
 
-  /*
+  /**
    * Return the HTML
    */
   public function elementExists($element) {

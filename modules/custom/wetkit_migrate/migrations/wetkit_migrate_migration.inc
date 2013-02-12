@@ -76,7 +76,7 @@ abstract class WetKitMigration extends Migration {
     // The page promotion to front page flag.
     // 1 for promoted, 0 for not promoted.
     $row->promotion = 0;
-    
+
     // Set the datestamp the value from the meta tag.
     $row->datestamp = $htmlpage->datestamp;
 
