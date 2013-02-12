@@ -228,5 +228,3 @@ Or, you could get radical and file a support issue, even post a patch (which
 makes me very happy):
 
   http://drupal.org/project/issues/adaptivetheme
-
-

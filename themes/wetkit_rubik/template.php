@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Template.php file for wetkit_rubik.
+ */
+
+/**
  * Preprocessor for theme('page').
  */
 function wetkit_rubik_preprocess_html(&$vars) {
@@ -57,14 +62,14 @@ function wetkit_rubik_preprocess_page(&$vars) {
 
   // Add body class when we have local tasks.
   // Since we don't have access to body classes here
-  //  set a flag for preprocess_html().
+  // set a flag for preprocess_html().
   if (!empty($vars['primary_local_tasks'])) {
     _wetkit_rubik_has_tabs(TRUE);
   }
 
   // Set a page icon for dashboard links.
   if (empty($vars['page_icon_class'])) {
-    $vars['page_icon_class'] = ($item = menu_get_item()) ? implode(' ' , _wetkit_rubik_icon_classes($item['href'])) : '';
+    $vars['page_icon_class'] = ($item = menu_get_item()) ? implode(' ', _wetkit_rubik_icon_classes($item['href'])) : '';
   }
 }
 
@@ -124,12 +129,13 @@ function wetkit_rubik_preprocess_help(&$vars) {
 }
 
 /**
- * Helper function used to pass a value from preprocess_page() to preprocess_html().
+ * Helper function used to pass a value from preprocess_page() 
+ * to preprocess_html().
  */
 function _wetkit_rubik_has_tabs($val = NULL) {
   $vars = &drupal_static(__FUNCTION__, array());
 
-  // If a new value has been passed
+  // If a new value has been passed.
   if ($val) {
     $vars = $val;
   }
@@ -164,7 +170,7 @@ function _wetkit_rubik_icon_classes($path) {
  * @see theme_taxonomy_overview_vocabularies()
  */
 function wetkit_rubik_preprocess_taxonomy_overview_vocabularies(&$variables) {
-  $form =& $variables['form'];
+  $form = &$variables['form'];
 
   foreach (element_children($form) as $key) {
     if (isset($form[$key]['name'])) {
@@ -196,7 +202,7 @@ function wetkit_rubik_preprocess_taxonomy_overview_vocabularies(&$variables) {
  * @see theme_taxonomy_overview_terms()
  */
 function wetkit_rubik_preprocess_taxonomy_overview_terms(&$variables) {
-  $form =& $variables['form'];
+  $form = &$variables['form'];
 
   foreach (element_children($form) as $key) {
     if (isset($form[$key]['#term'])) {

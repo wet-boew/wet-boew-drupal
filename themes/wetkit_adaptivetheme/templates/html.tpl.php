@@ -5,8 +5,10 @@
  * Drupal page.
  *
  * Adaptivetheme Variables:
- * - $html_attributes: structure attributes, includes the lang and dir attributes
- *   by default, use $vars['html_attributes_array'] to add attributes in preprcess
+ * - $html_attributes: structure attributes, includes the lang and dir 
+ *   attributes
+ *   by default, use $vars['html_attributes_array'] to add attributes in 
+ *   preprocess
  * - $polyfills: prints IE conditional polyfill scripts enabled via theme
  *   settings.
  * - $skip_link_target: prints an ID for the skip navigation target, set in
@@ -18,7 +20,8 @@
  * - $css: An array of CSS files for the current page.
  * - $language: (object) The language the site is being displayed in.
  *   $language->language contains its textual representation.
- *   $language->dir contains the language direction. It will either be 'ltr' or 'rtl'.
+ *   $language->dir contains the language direction. It will either be 'ltr' or 
+ *   'rtl'.
  * - $rdf_namespaces: All the RDF namespace prefixes used in the HTML document.
  * - $grddl_profile: A GRDDL profile allowing agents to extract the RDF data.
  * - $head_title: A modified version of the page title, for use in the TITLE

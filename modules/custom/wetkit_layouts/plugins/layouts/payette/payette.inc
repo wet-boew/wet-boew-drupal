@@ -29,10 +29,8 @@ function wetkit_layouts_payette_panels_layouts() {
     ),
     'bodyid' => 'wb-body',
     'type' => 'three',
-    'options' => array(
-    ),
-    'styles' => array(
-    ),
+    'options' => array(),
+    'styles' => array(),
   );
 
   return $items;

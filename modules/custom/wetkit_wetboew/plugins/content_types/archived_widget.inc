@@ -2,7 +2,7 @@
 
 /**
  * @file
- * A panel plugin to provide administrative information about the site's 
+ * A panel plugin to provide administrative information about the site's
  * general widget panes.
  */
 

@@ -8,17 +8,17 @@
  * This Migration class will transfer content of an HTML page into Drupal
  */
 abstract class WetKitMigration extends Migration {
-  
+
   /**
    * Default class constructor
    */
   public function __construct() {
-    // Always call the parent constructor first for basic setup
+    // Always call the parent constructor first for basic setup.
     parent::__construct();
 
     // With migrate_ui enabled, migration pages will indicate people involved in
-    // the particular migration, with their role and contact info. We default the
-    // list in the shared class; it can be overridden for specific migrations.
+    // the particular migration, with their role and contact info. We default 
+    // the list in shared class; it can be overridden for specific migrations.
     $this->team = array(
       new MigrateTeamMember('Robert Turnbull', 'robert.turnbull@uottawa.ca', t('Web Developer')),
       new MigrateTeamMember('Gordon Guest', 'gordon.guest@statcan.gc.ca', t('Web Developer')),
@@ -28,55 +28,59 @@ abstract class WetKitMigration extends Migration {
   }
 
   /**
-   * By default populate the data source row with fields parsed from the HTML file that is being importedé
+   * By default populate the data source row with fields parsed from the HTML 
+   * file that is being imported.
+   *
    * @param type $row 
+   *   The prepared row that will be modified.
    */
   public function prepareRow($row) {
-    
+
     // Set to admin for now.
     $row->uid = 1;
-    
-    // Create a WetKit HTML Migration Page object. This object takes care of parsing the raw html content.
+
+    // Create a WetKit HTML Migration Page object. This object takes care of 
+    // parsing the raw html content.
     if (isset($this->elements_to_remove)) {
       $htmlPage = new WetKitMigrationHtmlPage($row, $this->elements_to_remove);
     }
     else {
       $htmlPage = new WetKitMigrationHtmlPage($row);
     }
-    
-    // Set some source fields
+
+    // Set some source fields.
     $row->body = $htmlPage->body;
     
-    // if the body is empty, don't import this row
+    // if the body is empty, don't import this row.
     if (strlen(trim($row->body)) == 0) {
       return FALSE;
     }
     
     $row->title = $htmlPage->title;
 
-    // if the title is empty, don't import this row
+    // if the title is empty, don't import this row.
     if (strlen(trim($row->title)) == 0) {
       return FALSE;
     }
 
-    // Set the boolean for whether single or multiple columns
+    // Set the boolean for whether single or multiple columns.
     $row->columns = $htmlPage->columns;
-    
+
     // Set the language of the content
     $row->language = $htmlPage->language;
-    
+
     // Set the status of the content to published.
     // The node status is 1 for published and 0 for unpublished.
     $row->status = 1;
-    
+
     // The page promotion to front page flag.
     // 1 for promoted, 0 for not promoted.
     $row->promotion = 0;
     
-    // Set the datestamp the value from the meta tag
+    // Set the datestamp the value from the meta tag.
     $row->datestamp = $htmlPage->datestamp;
     
-    // set up the path - use the file path, but strip away the .htm or .html
+    // set up the path - use the file path, but strip away the .htm or .html.
     $row->path = trim($row->sourceid, '\\/');
     $pathStats = pathinfo($row->path);
     $row->dirname = $pathStats['dirname'];
@@ -95,7 +99,8 @@ abstract class WetKitMigration extends Migration {
       $row->tnid = $result_row->entity_id;
       break;
     }
-    // If the TNID was set, it is also necessary to update the TNID field in the matching node.
+    // If the TNID was set, it is also necessary to update the TNID field in the 
+    // matching node.
     if ($row->tnid != 0) {
       db_query('UPDATE {node} SET tnid = :tnid WHERE nid = :nid',
           array(':tnid' => $row->tnid, ':nid' => $row->tnid));
@@ -106,9 +111,14 @@ abstract class WetKitMigration extends Migration {
 
   /**
    * Perform a common initialization of the migration process
-   * @param array $list_dirs This is an array containg a list of directories to be scanned
-   * @param type $base_dir  The base dir is the part of the path that will be excluded when making an ID for each file.
-   * @param type $file_mask Passed on and used to filter for certain types of files. Use a regular expression
+   * @param array $list_dirs 
+   *   This is an array containg a list of directories to be scanned
+   * @param type $base_dir  
+   *   The base dir is the part of the path that will be excluded when making an 
+   *   ID for each file.
+   * @param type $file_mask 
+   *   Passed on and used to filter for certain types of files. Use a regular 
+   *   expression.
    */
   public function initCommon($list_dirs, $base_dir, $file_mask) {
 
@@ -139,12 +149,12 @@ abstract class WetKitMigration extends Migration {
       'columns' => t('Whether the column should be set as either single or multiple'),
     );
 
-    // Create a file source
+    // Create a file source.
     $list_files = new MigrateListFiles($list_dirs, $base_dir, $file_mask);   
     $item_file = new MigrateItemFile($base_dir);
     $this->source = new MigrateSourceList($list_files, $item_file, $fields);
 
-    // Set the destination
+    // Set the destination.
     $this->destination = new MigrateDestinationNode('wetkit_documentation');
   }
   
@@ -153,7 +163,7 @@ abstract class WetKitMigration extends Migration {
    */
   public function mapCommonFields() {
     
-    // Map the fields from the source to the new node
+    // Map the fields from the source to the new node.
     $this->addFieldMapping('uid', 'uid');
     $this->addFieldMapping('title', 'title');
     $this->addFieldMapping('body', 'body')
@@ -168,7 +178,7 @@ abstract class WetKitMigration extends Migration {
     $this->addFieldMapping('changed', 'datestamp');
     $this->addFieldMapping('comment')->defaultValue(FALSE);
     
-    // Indicate which fields are explictly ignored
+    // Indicate which fields are explictly ignored.
     $this->addUnmigratedDestinations(array(
       'sticky',
       'revision',
@@ -186,8 +196,11 @@ abstract class WetKitMigration extends Migration {
   }
   
   /**
-   * Check to see if a migrated file is in a folder that is supposed to be ignored.
-   * @param string $var_name Drupal Variable name that contains the colon-separated list of directories to ignore.
+   * Check to see if a migrated file is in a folder that is to be ignored.
+   * @param string $var_name 
+   *   Drupal Variable name that contains the colon-separated list of \
+   *   directories to ignore.
+   *
    * @return boolean 
    */
   public function isIgnored($var_name, $file_path) {
@@ -200,15 +213,20 @@ abstract class WetKitMigration extends Migration {
       if (strcasecmp($ssi_dir, $path_info['dirname']) == 0) {
         $isSsi = TRUE;
       }
-    }    
+    }
     return $isSsi;
   }
 
   /**
    * This function is called after the migrated content node has been created.
+   *
    * @param type $node
+   *   The node object.
    * @param type $current_row 
+   *   The current row of the migration.
    */
-  public function complete($node, $current_row) { }
+  public function complete($node, $current_row) { 
+
+  }
 
 }

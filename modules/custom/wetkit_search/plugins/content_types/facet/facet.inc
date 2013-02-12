@@ -22,6 +22,7 @@ $plugin = array(
  *   The facets form for WetKit Search.
  * @param type $form_state
  *   The facets form state for WetKit Search.
+ *
  * @return string
  *   The returned string for the facets related to WetKit Search.
  */
@@ -93,12 +94,13 @@ function wetkit_search_facet_content_type_edit_form_submit($form, &$form_state) 
  *   The arguments array passed to CTools.
  * @param type $context
  *   The CTools context that helpers to render the content.
+ *
  * @return stdClass
  *   The returned CTools plugin class.
  */
 function wetkit_search_facet_content_type_render($subtype, $conf, $args, $context) {
 
-  // Assemble some important information
+  // Assemble some important information.
   $builds = &drupal_static(__FUNCTION__, array());
   $parsed = &drupal_static('facetapi_parsed_deltas', array());
   $delta = $conf['delta'];

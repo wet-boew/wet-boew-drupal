@@ -12,7 +12,7 @@
  *   An associative array containing:
  *   - file: Associative array of file data, which must include "uri".
  *   - controls: Boolean indicating whether or not controls should be displayed.
- *   - autoplay: Boolean indicating whether or not the video should start 
+ *   - autoplay: Boolean indicating whether or not the video should start
  *   playing automatically.
  *   - loop: Boolean indicating whether or not the video should loop.
  *   - muted: Boolean indicating whether or not the sound should be muted.

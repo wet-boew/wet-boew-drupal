@@ -56,7 +56,7 @@ class WetKitWebTestCase extends DrupalWebTestCase {
 
     $edit = array(
       'name' => $user->name,
-      'pass' => $user->pass_raw
+      'pass' => $user->pass_raw,
     );
     $this->drupalPost('user', $edit, t('Log in'));
     // The user should be redirected to it's profile page.
@@ -69,9 +69,9 @@ class WetKitWebTestCase extends DrupalWebTestCase {
   /**
    * Grant a series of roles to particular user.
    *
-   * @param stdClass $user 
+   * @param stdClass $user
    *   A user object.
-   * @param array roles 
+   * @param array roles
    *   An array of role names.
    */
   function grantRoles($user, array $roles) {
@@ -96,7 +96,7 @@ class WetKitWebTestCase extends DrupalWebTestCase {
    * Assert that a a particular format exists
    * in a select element of input formats.
    *
-   * @param array $field 
+   * @param array $field
    *   A form field.
    * @param string $format
    *   A format to check for.
@@ -114,14 +114,13 @@ class WetKitWebTestCase extends DrupalWebTestCase {
    * Assert that a a particular format isn't available
    * in a select element of input formats.
    *
-   * @param array $field 
+   * @param array $field
    *   A form field.
-   * @param string $format 
+   * @param string $format
    *   A format to check for.
-   * @param string $message 
+   * @param string $message
    *   The message to display.
    */
-
   function assertNoFormat($field, $format, $message = NULL) {
     if (empty($message)) {
       $message = "The format $format doesn't exist.";
@@ -162,10 +161,16 @@ class WetKitWebTestCase extends DrupalWebTestCase {
  */
 abstract class TestHelper {
   protected $testCase;
+  /**
+   * The default constructor for the test case.
+   */
   function __construct($test_case) {
     $this->testCase = $test_case;
   }
 
+  /**
+   * Custom callTestCaseFunction.
+   */
   function __call($name, $arguments) {
     return $this->testCase->callTestCaseFunction($name, $arguments);
   }

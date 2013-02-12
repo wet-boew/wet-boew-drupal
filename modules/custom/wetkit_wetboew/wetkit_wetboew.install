@@ -12,7 +12,7 @@ function wetkit_wetboew_install() {
     // Set Default Blocks.
     _wetkit_wetboew_default_blocks();
   }
-  _menu_wetkit_load();
+  _wetkit_wetboew_menu_load();
 }
 
 /**

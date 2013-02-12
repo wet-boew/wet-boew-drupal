@@ -84,6 +84,7 @@ function wetkit_metatag_token_info() {
  * @param array $options
  *   An associative array of options for token replacement; see token_replace()
  *   for possible values.
+ *
  * @return array
  *   An associative array of replacement values, keyed by the raw [type:token]
  *   strings from the original text.
@@ -253,7 +254,7 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
             $value = i18n_variable_get('wetkit_metatag_creator', $node->language);
           }
 
-          // If there is no i18n variable present for creator then node author
+          // If there is no i18n variable present for creator then node author.
           if ($value == '') {
             if (isset($node->name)) {
               $value = $node->name;
@@ -263,7 +264,7 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
 
-          case 'improved_summary':
+        case 'improved_summary':
           $items = field_get_items('node', $node, 'body', $language_code);
           if (isset($items)) {
             $instance = field_info_instance('node', 'body', $node->type);
@@ -279,8 +280,8 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
               // A summary was requested.
               if ($name == 'improved_summary') {
                 $pos = strpos($output, ".");
-                // Cap off at 150 characters
-                if ($pos >= 250 ) {
+                // Cap off at 150 characters.
+                if ($pos >= 250) {
                   $pos = 250;
                 }
                 $trim_length = $pos;

@@ -18,4 +18,3 @@ function wetkit_language_variable_realm_default_variables() {
 
   return $realm_variables;
 }
-

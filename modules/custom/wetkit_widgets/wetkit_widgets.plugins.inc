@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * A specification for the custom tabbed interface entity that is part of 
+ * A specification for the custom tabbed interface entity that is part of
  * WetKit Widgets.
  */
 
@@ -550,7 +550,7 @@ function wetkit_widgets_field_delete_revision($entity_type, $entity, $field, $in
  */
 function wetkit_widgets_field_prepare_view($entity_type, $entities, $field, $instances, $langcode, &$items) {
   // If there are no files specified at all, use the default.
-  // TODO - make sure this works
+  // TODO - make sure this works.
   foreach ($entities as $id => $entity) {
     if (empty($items[$id]) && $field['settings']['default_image']) {
       $file = file_load($field['settings']['default_image']);

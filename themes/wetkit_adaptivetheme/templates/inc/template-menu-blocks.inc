@@ -8,23 +8,24 @@
  * such preprocess, process, alters, and theme function overrides.
  *
  * Preprocess and process functions are used to modify or create variables for
- * templates and theme functions. They are a common theming tool in Drupal, often
- * used as an alternative to directly editing or adding code to templates. Its
- * worth spending some time to learn more about these functions - they are a
+ * templates and theme functions. They are a common theming tool in Drupal, 
+ * often used as an alternative to directly editing or adding code to templates. 
+ * Its worth spending some time to learn more about these functions - they are a
  * powerful way to easily modify the output of any template variable.
  *
- * Preprocess and Process Functions SEE: http://drupal.org/node/254940#variables-processor
+ * Preprocess and Process Functions SEE: 
+ * http://drupal.org/node/254940#variables-processor
  * 1. Rename each function and instance of "wetkit_adaptivetheme" to match
- *    your subthemes name, for example, if your theme name is "footheme" then the function
- *    name will be "footheme_preprocess_hook". Tip - you can search/replace
- *    on "wetkit_adaptivetheme".
+ *    your subthemes name, for example, if your theme name is "footheme" then 
+ *    the function name will be "footheme_preprocess_hook". Tip - you can 
+ *    search/replace on "wetkit_adaptivetheme".
  * 2. Uncomment the required function to use.
  */
 
 /**
  * Override or insert variables into the menu tree templates.
  *
- * @param $variables
+ * @param array $variables
  *   An array of variables to pass to the theme template.
  */
 function wetkit_adaptivetheme_menu_tree__main_menu($variables) {
@@ -34,7 +35,7 @@ function wetkit_adaptivetheme_menu_tree__main_menu($variables) {
 /**
  * Override or insert variables into the menu tree templates.
  *
- * @param $variables
+ * @param array $variables
  *   An array of variables to pass to the theme template.
  */
 function wetkit_adaptivetheme_menu_tree__menu_block($variables) {
@@ -44,7 +45,7 @@ function wetkit_adaptivetheme_menu_tree__menu_block($variables) {
 /**
  * Override or insert variables into the menu link templates.
  *
- * @param $variables
+ * @param array $variables
  *   An array of variables to pass to the theme template.
  */
 function wetkit_adaptivetheme_menu_link__menu_block($variables) {
@@ -79,7 +80,7 @@ function wetkit_adaptivetheme_menu_link__menu_block($variables) {
   }
   elseif ($element['#original_link']['depth'] == 3 && $element['#original_link']['has_children'] == 1) {
     $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-    return '<li>' . $output . '<ul>' . $sub_menu . '</ul>' . '</li>';
+    return '<li>' . $output . '<ul>' . $sub_menu . '</ul></li>';
   }
   elseif ($element['#original_link']['depth'] == 3 && $element['#original_link']['has_children'] == 0) {
     $output = '<li>' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</li>';
@@ -94,7 +95,7 @@ function wetkit_adaptivetheme_menu_link__menu_block($variables) {
 /**
  * Override or insert variables into the menu tree templates.
  *
- * @param $variables
+ * @param array $variables
  *   An array of variables to pass to the theme template.
  */
 function wetkit_adaptivetheme_menu_tree__menu_block__wetkit_menu_blocks_1($variables) {
@@ -104,7 +105,7 @@ function wetkit_adaptivetheme_menu_tree__menu_block__wetkit_menu_blocks_1($varia
 /**
  * Override or insert variables into the menu link templates.
  *
- * @param $variables
+ * @param array $variables
  *   An array of variables to pass to the theme template.
  */
 function wetkit_adaptivetheme_menu_link__menu_block__wetkit_menu_blocks_1($variables) {
@@ -122,20 +123,20 @@ function wetkit_adaptivetheme_menu_link__menu_block__wetkit_menu_blocks_1($varia
     $sub_menu = drupal_render($element['#below']);
   }
   if ($element['#original_link']['depth'] == 1 && $element['#original_link']['has_children'] == 1) {
-      if (in_array($element['#href'], array('<nolink>'))) {
-        $output = '<h3>' . $element['#title'] . '</h3>';
-      }
-      else {
-        $output = '<h3>' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</h3>';
-      }
+    if (in_array($element['#href'], array('<nolink>'))) {
+      $output = '<h3>' . $element['#title'] . '</h3>';
+    }
+    else {
+      $output = '<h3>' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</h3>';
+    }
 
-      if (!at_get_setting('render_mb_main_link')) {
-        $mb_main_link = '<div class="mb-main-link">' . l($element['#title'] . ' - ' . t('Main Page'), $element['#href'], $element['#localized_options']) . '</div>';
-        return '<li><section>' . $output . '<div class="mb-sm">' . $sub_menu . '<div class="clear"></div>' . $mb_main_link . '</div>' . "</section></li>\n";
-      }
-      else {
-        return '<li><section>' . $output . '<div class="mb-sm">' . $sub_menu . '<div class="clear"></div></div>' . "</section></li>\n";
-      }
+    if (!at_get_setting('render_mb_main_link')) {
+      $mb_main_link = '<div class="mb-main-link">' . l($element['#title'] . ' - ' . t('Main Page'), $element['#href'], $element['#localized_options']) . '</div>';
+      return '<li><section>' . $output . '<div class="mb-sm">' . $sub_menu . '<div class="clear"></div>' . $mb_main_link . '</div>' . "</section></li>\n";
+    }
+    else {
+      return '<li><section>' . $output . '<div class="mb-sm">' . $sub_menu . '<div class="clear"></div></div>' . "</section></li>\n";
+    }
   }
   elseif ($element['#original_link']['depth'] == 1 && $element['#original_link']['has_children'] == 0) {
     if (in_array($element['#href'], array('<nolink>'))) {
@@ -187,7 +188,7 @@ function wetkit_adaptivetheme_menu_link__menu_block__wetkit_menu_blocks_1($varia
 /**
  * Override or insert variables into the menu tree templates.
  *
- * @param $variables
+ * @param array $variables
  *   An array of variables to pass to the theme template.
  */
 function wetkit_adaptivetheme_menu_tree__menu_block__wetkit_menu_blocks_2($variables) {
@@ -197,7 +198,7 @@ function wetkit_adaptivetheme_menu_tree__menu_block__wetkit_menu_blocks_2($varia
 /**
  * Override or insert variables into the menu link templates.
  *
- * @param $variables
+ * @param array $variables
  *   An array of variables to pass to the theme template.
  */
 function wetkit_adaptivetheme_menu_link__menu_block__wetkit_menu_blocks_2($variables) {

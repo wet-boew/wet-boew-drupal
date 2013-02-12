@@ -11,7 +11,6 @@
 function wetkit_migrate_form() {
 
   // Documentation.
-
   $form['documentation'] = array(
     '#title' => 'Documentation',
     '#type'  => 'fieldset',

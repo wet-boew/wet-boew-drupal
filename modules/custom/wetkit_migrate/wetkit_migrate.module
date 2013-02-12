@@ -43,7 +43,7 @@ function wetkit_migrate_menu() {
 }
 
 /**
- * Implements hook_init(). 
+ * Implements hook_init().
  */
 function wetkit_migrate_init() {
 

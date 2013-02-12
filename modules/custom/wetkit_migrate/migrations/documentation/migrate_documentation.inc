@@ -21,12 +21,12 @@ class WetKit_Migrate_Documentation extends WetKitMigration {
     // Array of directory paths that will be scanned for files.
     $list_dirs = array(variable_get('wetkit_migrate_documentation_listdir'));
 
-    // The base dir is the part of the path that will be excluded when making 
+    // The base dir is the part of the path that will be excluded when making
     // an ID for each file.
     $base_dir = variable_get('wetkit_migrate_documentation_basedir');
 
-    // Passed on and used to filter for certain types of files. Use a regular 
-    // expression
+    // Passed on and used to filter for certain types of files. Use a regular
+    // expression.
     $file_mask = '/(.*\.htm$|.*\.html$)/i';
 
     parent::initCommon($list_dirs, $base_dir, $file_mask);
@@ -59,22 +59,22 @@ class WetKit_Migrate_Documentation extends WetKitMigration {
     );
 
     $rc = parent::prepareRow($row);
-    
+
     // If the parent preparation failed, then abort this row.
     if ($rc == FALSE) {
       return $rc;
     }
 
     // Process all of the internal links
-    // Coder Review says to use drupal_substr but this is faster
+    // Coder Review says to use drupal_substr but this is faster.
     if (substr($row->dirname, 0, 6) == 'demos/') {
       $dirname = substr($row->dirname, 6);
     }
 
     $link_parser = new LinksParser($row->body, variable_get('wetkit_migrate_documentation_files'), $dirname);
-    
+
     // Paste the new body text.
-    $row->body = $link_parser->process();    
+    $row->body = $link_parser->process();
   }
 
   /**

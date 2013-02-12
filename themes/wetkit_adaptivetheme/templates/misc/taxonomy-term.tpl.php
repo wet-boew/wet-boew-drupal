@@ -19,9 +19,9 @@
  * - $term_name: Name of the current term.
  * - $classes: String of classes that can be used to style contextually through
  *   CSS. It can be manipulated through the variable $classes_array from
- *   preprocess functions. The default values can be one or more of the following:
+ *   preprocess functions. The default values one or more of the following:
  *   - taxonomy-term: The current template type, i.e., "theming hook".
- *   - vocabulary-[vocabulary-name]: The vocabulary to which the term belongs to.
+ *   - vocabulary-[vocabulary-name]: The vocabulary which the term belongs to.
  *     For example, if the term is a "Tag" it would result in "vocabulary-tag".
  *
  * Other variables:

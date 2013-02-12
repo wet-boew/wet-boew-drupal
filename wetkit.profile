@@ -72,7 +72,7 @@ function wetkit_install_tasks_alter(&$tasks, $install_state) {
   unset($tasks['install_import_locales_remaining']);
 
   // Magically go one level deeper in solving years of dependency problems.
-  require_once(drupal_get_path('module', 'panopoly_core') . '/panopoly_core.profile.inc');
+  require_once drupal_get_path('module', 'panopoly_core') . '/panopoly_core.profile.inc';
   $tasks['install_load_profile']['function'] = 'panopoly_core_install_load_profile';
 }
 
@@ -103,7 +103,7 @@ function wetkit_install_welcome($form, &$form_state, &$install_state) {
   $message .= '<p>' . st('This distribution installs Drupal with
     preconfigured features that will help you meet Enterprise Standards.') . '</p>';
   $message .= '<p>' . st('Please note that this is a community-supported work in progress,
-    so be sure to join us over on ' . l('github.com/wet-boew/wet-boew-drupal', 'http://github.com/wet-boew/wet-boew-drupal') .
+    so be sure to join us over on ' . l(t('github.com/wet-boew/wet-boew-drupal'), 'http://github.com/wet-boew/wet-boew-drupal') .
     ' and help us improve this product.') . '</p>';
 
   $form = array();
@@ -121,6 +121,9 @@ function wetkit_install_welcome($form, &$form_state, &$install_state) {
   return $form;
 }
 
+/**
+ * Task callback: Welcome screen submit.
+ */
 function wetkit_install_welcome_submit($form, &$form_state) {
   global $install_state;
   $install_state['parameters']['welcome'] = 'done';
@@ -212,7 +215,7 @@ function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
       }
     }
   }
-  // Remove the demo content selection option since this is handled through the 
+  // Remove the demo content selection option since this is handled through the
   // WetKit demo module.
   $form['default_content_fieldset']['#access'] = FALSE;
 }

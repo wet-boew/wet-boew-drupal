@@ -80,7 +80,7 @@ function wetkit_wysiwyg_wysiwyg_plugin($editor) {
             'wetkitcleanup' => t('WetKit Cleanup Tools'),
           ),
           'extended_valid_elements' => array(
-            'div[!class|!id|!style|rel],-span[!class|!lang],a[id|name|class|href|rel|title]'
+            'div[!class|!id|!style|rel],-span[!class|!lang],a[id|name|class|href|rel|title]',
           ),
           'extensions' => array(
             'wetkitcleanup' => t('WetKit Cleanup Tools'),
@@ -239,7 +239,6 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
 
       break;
     case 'markitup':
-
       // Load the appropriate CSS and JS.
       drupal_add_css($context['editor']['library path'] . '/markitup/sets/html/style.css');
       drupal_add_js($context['editor']['library path'] . '/markitup/sets/html/set.js');

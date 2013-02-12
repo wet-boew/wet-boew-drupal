@@ -30,7 +30,7 @@ function wetkit_language_form_alter(&$form, &$form_state, $form_id) {
  */
 function wetkit_language_preprocess_page(&$vars) {
   // Language Switcher Code.
-  $vars['menu_lang_bar'] = _language_switcher_wetkit();
+  $vars['menu_lang_bar'] = _wetkit_language_lang_switcher();
 }
 
 /**
@@ -52,7 +52,7 @@ function wetkit_language_preprocess_panels_pane(&$vars) {
  */
 function wetkit_language_preprocess_maintenance_page(&$vars) {
   // Language Switcher Code.
-  $vars['menu_lang_bar'] = _language_switcher_wetkit();
+  $vars['menu_lang_bar'] = _wetkit_language_lang_switcher();
 }
 
 /**
@@ -72,14 +72,14 @@ function wetkit_language_language_init() {
 }
 
 /**
- * Implements _language_switcher_wetkit().
+ * Implements _wetkit_language_lang_switcher().
  *
  * @global type $language
  *   The global language identifier
  * @return type
  *   Returns the language switcher
  */
-function _language_switcher_wetkit() {
+function _wetkit_language_lang_switcher() {
   global $language;
   $term = '';
   $language_paths = '';

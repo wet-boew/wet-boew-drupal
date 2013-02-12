@@ -8,6 +8,10 @@
  * This Test class will test various functionality related to WxT-Drupal
  */
 class WetKitArchivedWidgetTestCase extends WetKitWebTestCase {
+  
+  /**
+   * Get information metadata.
+   */
   public static function getInfo() {
     return array(
       'name' => 'Archived widget pane',
@@ -16,6 +20,9 @@ class WetKitArchivedWidgetTestCase extends WetKitWebTestCase {
     );
   }
 
+  /**
+   * SetUp dependencies.
+   */
   function setUp() {
     parent::setUp(
       'page_manager',

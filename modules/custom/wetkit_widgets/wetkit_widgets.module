@@ -56,8 +56,8 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
 }
 
 /**
- * Implement the "Content Settings" fieldset in a pre-render. This fixes issues with image caused by initially
- * doing this in a form_alter.
+ * Implement the "Content Settings" fieldset in a pre-render. This fixes issues
+ * with image caused by initially doing this in a form_alter.
  *
  * @see http://drupal.org/node/1567704
  */
@@ -105,7 +105,7 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
 }
 
 /**
- * Implements hook_theme_registry_alter()
+ * Implements hook_theme_registry_alter().
  */
 function wetkit_widgets_theme_registry_alter(&$theme_registry) {
   $mod_path = drupal_get_path('module', 'wetkit_widgets') . '/templates';
