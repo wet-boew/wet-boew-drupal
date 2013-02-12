@@ -7,7 +7,7 @@
 /**
  * Override default theme_breadcrumb().
  *
- * @param $variables
+ * @param array $variables
  *   Contains array with breadcrumbs.
  * @return bool|string
  *   Rendered breadcrumbs or FALSE for no breadcrumbs.
@@ -68,7 +68,7 @@ function wetkit_breadcrumbs_breadcrumb($variables) {
         $classes[] = 'last';
       }
 
-      // For rich snippets support all links should be processed in the same way,
+      // For rich snippets support all links should be processed in the same way
       // even if they are provided not by Path Breadcrumbs module. So I have to
       // parse html code and create links again with new properties.
       preg_match('/href="([^"]+?)"/', $breadcrumb, $matches);

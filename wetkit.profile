@@ -56,7 +56,7 @@ function wetkit_install_tasks_alter(&$tasks, $install_state) {
 
   // The "Welcome" screen needs to come after the first two steps
   // (profile and language selection), despite the fact that they are disabled.
-  $new_task['install_welcome'] = array(
+  $new_task['wetkit_install_welcome'] = array(
     'display' => TRUE,
     'display_name' => st('Welcome'),
     'type' => 'form',
@@ -96,7 +96,7 @@ function _wetkit_set_theme($target_theme) {
 /**
  * Task callback: shows the welcome screen.
  */
-function install_welcome($form, &$form_state, &$install_state) {
+function wetkit_install_welcome($form, &$form_state, &$install_state) {
   drupal_set_title(st('Welcome'));
 
   $message = st('Thank you for choosing the Web Experience Toolkit Drupal Distribution!') . '<br />';
@@ -121,7 +121,7 @@ function install_welcome($form, &$form_state, &$install_state) {
   return $form;
 }
 
-function install_welcome_submit($form, &$form_state) {
+function wetkit_install_welcome_submit($form, &$form_state) {
   global $install_state;
   $install_state['parameters']['welcome'] = 'done';
 }

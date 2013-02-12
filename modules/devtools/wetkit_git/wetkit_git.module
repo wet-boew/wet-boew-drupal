@@ -9,7 +9,7 @@
  */
 function wetkit_git_menu() {
   $items['git_update'] =  array(
-    'page callback' => '_git_update',
+    'page callback' => '_wetkit_git_update',
     'access arguments' => array('administer site configuration'),
     'type' => MENU_CALLBACK,
   );
@@ -17,9 +17,9 @@ function wetkit_git_menu() {
 }
 
 /**
- * Implements _git_update().
+ * Implements _wetkit_git_update().
  */
-function _git_update() {
+function _wetkit_git_update() {
   exec('cd profiles/wetkit; git pull');
 
   // Get the current revision
