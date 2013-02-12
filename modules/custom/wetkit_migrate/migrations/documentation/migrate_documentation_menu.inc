@@ -169,18 +169,18 @@ class WetKitMigrateDocumentationMenuLinks extends XMLMigration {
     parent::postImport();
     // Internationalization Translation Set.
     $result = db_query('SELECT n.sourceid1, n.destid1
-      FROM {migrate_map_WetKitMigrateDocumentationMenuLinks} n');
+      FROM {migrate_map_wetkitmigratedocumentationmenulinks} n');
     foreach ($result as $record) {
       $sourceid_tmp = preg_replace('#_fra_#', '_eng_', $record->sourceid1);
       $source_mlid = 0;
       $translated_mlid = 0;
       if (preg_match('/_fra_/i', $record->sourceid1)) {
         $result = db_query('SELECT n.destid1
-          FROM {migrate_map_WetKitMigrateDocumentationMenuLinks} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => $record->sourceid1));
+          FROM {migrate_map_wetkitmigratedocumentationmenulinks} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => $record->sourceid1));
         foreach ($result as $result_row) {
           $translated_mlid = $result_row->destid1;
           $result = db_query('SELECT n.destid1
-          FROM {migrate_map_WetKitMigrateDocumentationMenuLinks} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => $sourceid_tmp));
+          FROM {migrate_map_wetkitmigratedocumentationmenulinks} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => $sourceid_tmp));
           foreach ($result as $result_row) {
             $source_mlid = $result_row->destid1;
             break;
