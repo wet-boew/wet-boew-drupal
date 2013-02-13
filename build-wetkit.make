@@ -7,5 +7,5 @@ includes[] = drupal-org-core.make
 ; Drupal.org packaging standards
 projects[wetkit][type] = profile
 projects[wetkit][download][type] = git
-projects[wetkit][download][url] = https://github.com/sylus/wet-boew-drupal.git
-projects[wetkit][download][revision] = 74136766d3d4242cfe2441cc6f91408209aaebf9
+projects[wetkit][download][url] = https://github.com/wet-boew/wet-boew-drupal.git
+projects[wetkit][download][revision] = master
