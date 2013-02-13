@@ -340,17 +340,17 @@ function wetkit_wetboew_theme($existing, $type, $theme, $path) {
  *   Return the modified string.
  */
 function wetkit_wetboew_filter_xss($string, $allowed_tags = array(
-'a',
-'em',
-'strong',
-'cite',
-'code',
-'ul',
-'ol',
-'li',
-'dl',
-'dt',
-'dd',
+  'a',
+  'em',
+  'strong',
+  'cite',
+  'code',
+  'ul',
+  'ol',
+  'li',
+  'dl',
+  'dt',
+  'dd',
 'br')) {
   return filter_xss($string, $allowed_tags);
 }
