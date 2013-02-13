@@ -9,10 +9,10 @@
  */
 function wetkit_wetboew_install() {
   if (module_exists('block')) {
-    //Set Default Blocks
+    // Set Default Blocks.
     _wetkit_wetboew_default_blocks();
   }
-  _menu_wetkit_load();
+  _wetkit_wetboew_menu_load();
 }
 
 /**
@@ -21,4 +21,3 @@ function wetkit_wetboew_install() {
 function wetkit_wetboew_uninstall() {
   variable_del('views_temp');
 }
-

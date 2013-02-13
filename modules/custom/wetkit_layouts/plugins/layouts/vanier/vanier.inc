@@ -2,6 +2,10 @@
 
 /**
  * @file
+ * Implements core hooks for agov_layouts.
+ */
+
+/**
  * Implements hook_panels_layouts().
  */
 function wetkit_layouts_vanier_panels_layouts() {
@@ -24,10 +28,8 @@ function wetkit_layouts_vanier_panels_layouts() {
     ),
     'bodyid' => 'wb-body',
     'type' => 'one',
-    'options' => array(
-    ),
-    'styles' => array(
-    ),
+    'options' => array(),
+    'styles' => array(),
   );
 
   return $items;

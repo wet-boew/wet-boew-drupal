@@ -2,8 +2,8 @@
 /**
  * This is a copy of cores field.tpl.php modified to support HTML5. The main
  * difference to Drupal core is that field labels are treated like headings. In
- * the context of HTML5 we need to account for sectioning, so this template, like
- * is counterpart adaptivetheme_field() conditionally supplies the top level
+ * the context of HTML5 we need to account for sectioning, so this template like
+ * its counterpart adaptivetheme_field() conditionally supplies the top level
  * element as either <section> (field label is showing) or <div> (field label
  * is hidden). "Hidden labels" is a misnomer and implies they are output and
  * hidden via CSS - not so, if a label is hidden it does not print.

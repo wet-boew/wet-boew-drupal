@@ -11,7 +11,7 @@ function _wetkit_bean_load() {
   // If functionality available. Create some beans.
   if (function_exists('wetkit_bean_save_bean')) {
 
-    // Minister Bean
+    // Minister Bean.
     $fields_en = array(
       'title_field' => array(
         '0' => array(
@@ -66,7 +66,7 @@ function _wetkit_bean_load() {
     );
     wetkit_bean_save_bean('wetkit_bean', 'Minister', 'Provides "Minister" bean for the front page.', 'Minister', $fields_en, $fields_fr);
 
-    // Priorities Bean
+    // Priorities Bean.
     $fields_en = array(
       'title_field' => array(
         '0' => array(
@@ -107,7 +107,7 @@ function _wetkit_bean_load() {
     );
     wetkit_bean_save_bean('wetkit_bean', 'Priorities', 'Provides "Priorities" bean for the front page.', 'Priorities', $fields_en, $fields_fr);
 
-    // Stay Connected Bean
+    // Stay Connected Bean.
     $fields_en = array(
       'title_field' => array(
         '0' => array(
@@ -148,7 +148,7 @@ function _wetkit_bean_load() {
     $file = file_save_data(file_get_contents($file_path), file_default_scheme() . '://' . basename($file_path));
     $file_path = file_create_url($file->uri);
 
-    // Videos Bean
+    // Videos Bean.
     $fields_en = array(
       'title_field' => array(
         '0' => array(

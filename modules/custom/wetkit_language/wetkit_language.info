@@ -3,7 +3,6 @@ description = Core Feature: Installs a multilingual site for relying on i18n mod
 core = 7.x
 package = WetKit
 php = 5.2.4
-version = 7.x-1.0
 dependencies[] = ctools
 dependencies[] = entity_translation
 dependencies[] = features

@@ -6,10 +6,6 @@ div.layout-icon .caption {
   padding-left: 10px;
 }
 
-div.form-item-categories {
-  display: none;
-}
-
 div.ctools-modal-content div.form-item-categories label {
   float: left;
   font-weight: normal;

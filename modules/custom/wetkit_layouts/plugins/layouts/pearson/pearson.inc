@@ -2,6 +2,10 @@
 
 /**
  * @file
+ * Implements core hooks for agov_layouts.
+ */
+
+/**
  * Implements hook_panels_layouts().
  */
 function wetkit_layouts_pearson_panels_layouts() {
@@ -21,10 +25,8 @@ function wetkit_layouts_pearson_panels_layouts() {
     ),
     'bodyid' => 'wb-body-sec',
     'type' => 'two',
-    'options' => array(
-    ),
-    'styles' => array(
-    ),
+    'options' => array(),
+    'styles' => array(),
   );
 
   return $items;

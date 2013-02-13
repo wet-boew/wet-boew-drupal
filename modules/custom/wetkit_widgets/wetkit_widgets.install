@@ -23,7 +23,7 @@ function wetkit_widgets_uninstall() {
  * Implements hook_field_schema().
  */
 function wetkit_widgets_field_schema($field) {
-  //Tabbed Interface Widget
+  // Tabbed Interface Widget.
   if ($field['type'] == 'wetkit_tabbed_interface') {
     $schema['columns']['title'] = array(
       'type' => 'varchar',
@@ -74,5 +74,5 @@ function wetkit_widgets_field_schema($field) {
  * Implements hook_update_N().
  */
 function wetkit_widgets_update_7001(&$sandbox) {
-  // This section has been removed
+  // This section has been removed.
 }
