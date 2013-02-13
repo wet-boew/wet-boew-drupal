@@ -3,23 +3,28 @@
  * @file
  * Adativetheme implementation to display a block.
  *
- * The block template in Adaptivetheme is a little different to most other themes.
+ * The block template in Adaptivetheme is a little different to most other
+ * themes.
  * Instead of hard coding its markup Adaptivetheme generates most of it in
- * adaptivetheme_process_block(), conditionally printing outer and inner wrappers.
+ * adaptivetheme_process_block(), conditionally printing outer and inner
+ * wrappers.
  *
  * This allows the core theme to have just one template instead of five.
  *
- * You can override this in your sub-theme with a normal block suggestion and use
- * a standard block template if you prefer, or use your own themeName_process_block()
- * function to control the markup. For example a typical navigation tempate might look
- * like this:
+ * You can override this in your sub-theme with a normal block suggestion and
+ * use a standard block template if you prefer, or use your own
+ * themeName_process_block() function to control the markup. For example a
+ * typical navigation tempate might look like this:
  *
  * @code
- * <nav id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+ * <nav id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"
+ * <?php print $attributes; ?>>
  *   <div class="block-inner clearfix">
  *     <?php print render($title_prefix); ?>
  *     <?php if ($block->subject): ?>
- *       <h2<?php print $title_attributes; ?>><?php print $block->subject; ?></h2>
+ *       <h2<?php print $title_attributes; ?>>
+ *         <?php print $block->subject; ?>
+ *       </h2>
  *     <?php endif; ?>
  *     <?php print render($title_suffix); ?>
  *     <div<?php print $content_attributes; ?>>

@@ -25,7 +25,7 @@ function wetkit_metatag_token_info() {
     'name' => t('Metatag: Bilingual Global Prefix'),
     'description' => t('Bilingual global prefix for use with Metatags'),
   );
-  // Panels tokens
+  // Panels tokens.
   $info['types']['panels'] = array(
     'name' => t('Panels'),
     'description' => t('Tokens related to panels.'),
@@ -42,7 +42,7 @@ function wetkit_metatag_token_info() {
     'name' => t('Metatag: Panels Improved creator'),
     'description' => t('Improved Creator for use with Panels Metatags'),
   );
-  // Node tokens
+  // Node tokens.
   $info['tokens']['node']['bilingual_prefix'] = array(
     'name' => t('Metatag: Bilingual Prefix'),
     'description' => t('Bilingual prefix for use with Metatags'),
@@ -78,12 +78,13 @@ function wetkit_metatag_token_info() {
  *   An array of tokens to be replaced. The keys are the machine-readable token
  *   names, and the values are the raw [type:token] strings that appeared in the
  *   original text.
- * @param array $data (optional)
+ * @param array $data
  *   An associative array of data objects to be used when generating replacement
  *   values, as supplied in the $data parameter to token_replace().
- * @param array $options (optional)
+ * @param array $options
  *   An associative array of options for token replacement; see token_replace()
  *   for possible values.
+ *
  * @return array
  *   An associative array of replacement values, keyed by the raw [type:token]
  *   strings from the original text.
@@ -118,22 +119,24 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           }
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
+
         case 'creator_default_value':
           global $language;
           $value = '';
 
-          // If i18n variable exists then give it precedence
+          // If i18n variable exists then give it precedence.
           if (function_exists('i18n_variable_get')) {
             $value = i18n_variable_get('wetkit_metatag_creator', $language->language);
           }
 
-          // If there is no i18n variable present for creator then use node author
+          // If there is no i18n variable present for creator then node author.
           if ($value == '') {
             $value = 'Web Experience Toolkit';
           }
 
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
+
         case 'language_default_value':
           global $language;
           $value = '';
@@ -145,6 +148,7 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           }
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
+
       }
     }
   }
@@ -164,6 +168,7 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           }
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
+
         case 'bilingual_date_issued':
           global $language;
           if ($language->language == 'fr') {
@@ -174,6 +179,7 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           }
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
+
         case 'bilingual_date_published':
           global $language;
           if ($language->language == 'fr') {
@@ -184,11 +190,12 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           }
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
+
         case 'improved_creator':
           global $language;
           $value = '';
 
-          // If i18n variable exists then give it precedence
+          // If i18n variable exists then give it precedence.
           if (function_exists('i18n_variable_get')) {
             $value = i18n_variable_get('wetkit_metatag_creator', $language->language);
           }
@@ -198,6 +205,7 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
 
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
+
       }
     }
   }
@@ -217,6 +225,7 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           }
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
+
         case 'bilingual_date_issued':
           if ($node->language == 'fr') {
             $value = format_date($node->created, 'custom', 'Y-m-d');
@@ -226,6 +235,7 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           }
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
+
         case 'bilingual_date_published':
           if ($node->language == 'fr') {
             $value = format_date($node->changed, 'custom', 'Y-m-d');
@@ -235,15 +245,16 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
           }
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
+
         case 'improved_creator':
           $value = '';
 
-          // If i18n variable exists then give it precedence
+          // If i18n variable exists then give it precedence.
           if (function_exists('i18n_variable_get')) {
             $value = i18n_variable_get('wetkit_metatag_creator', $node->language);
           }
 
-          // If there is no i18n variable present for creator then use node author
+          // If there is no i18n variable present for creator then node author.
           if ($value == '') {
             if (isset($node->name)) {
               $value = $node->name;
@@ -252,7 +263,8 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
 
           $replacements[$original] = $sanitize ? filter_xss($value) : $value;
           break;
-          case 'improved_summary':
+
+        case 'improved_summary':
           $items = field_get_items('node', $node, 'body', $language_code);
           if (isset($items)) {
             $instance = field_info_instance('node', 'body', $node->type);
@@ -268,8 +280,8 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
               // A summary was requested.
               if ($name == 'improved_summary') {
                 $pos = strpos($output, ".");
-                // Cap off at 150 characters
-                if ($pos >= 250 ) {
+                // Cap off at 150 characters.
+                if ($pos >= 250) {
                   $pos = 250;
                 }
                 $trim_length = $pos;
@@ -280,6 +292,7 @@ function wetkit_metatag_tokens($type, $tokens, array $data = array(), array $opt
             $replacements[$original] = $output;
           }
           break;
+
       }
     }
   }

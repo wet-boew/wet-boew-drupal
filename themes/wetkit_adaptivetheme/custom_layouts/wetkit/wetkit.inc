@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Implimentation of an Adaptivetheme Page Layout plugin
+ * Implementation of an Adaptivetheme Page Layout plugin
  *
  * This is an example of a Page Layout plugin for Adaptivetheme. If enabled this
  * will be picked up by the Plugin system and added as a page layout option for
@@ -24,6 +24,10 @@
  *
  * @SEE adaptivetheme/at_core/layouts/core/three_col_grail/three_col_grail.inc
  * @SEE at_subtheme.info
+ */
+
+/**
+ * Layout Plugin.
  */
 function wetkit() {
   $page_layout['wetkit'] = array(
@@ -55,9 +59,12 @@ function wetkit() {
  * depending on the complexity and nature of your layout. Its worth taking some
  * time to review AT Cores Page layouts for examples.
  *
- * @param $sidebar_first, an arbitary numeric value.
- * @param $sidebar_second, an arbitary numeric value.
- * @param $sidebar_unit, a value unit, one of px, em or %.
+ * @param int $sidebar_first
+ *   An arbitary numeric value.
+ * @param int $sidebar_second
+ *   An arbitary numeric value.
+ * @param int $sidebar_unit
+ *   A value unit, one of px, em or %.
  */
 function wetkit_layout($sidebar_first, $sidebar_second, $sidebar_unit) {
   $styles = <<<EOF

@@ -74,7 +74,13 @@ function wetkit_metatag_configure_form_submit($form, &$form_state) {
 
   // Don't clear cache_form - in-progress form submissions may break.
   // Ordered so clearing the page cache will always be the last action.
-  $core = array('cache', 'cache_path', 'cache_filter', 'cache_bootstrap', 'cache_page');
+  $core = array(
+    'cache',
+    'cache_path',
+    'cache_filter',
+    'cache_bootstrap',
+    'cache_page',
+  );
   $cache_tables = array_merge(module_invoke_all('flush_caches'), $core);
   foreach ($cache_tables as $table) {
     cache_clear_all('*', $table, TRUE);
@@ -156,11 +162,11 @@ function wetkit_metatag_form_alter(&$form, &$form_state, $form_id) {
       ),
     );
 
-    // Move custom metatags into different Vertical Tabs
+    // Move custom metatags into different Vertical Tabs.
     $form['vertical_tabs_wetkit']['dublin-core'] = $form['metatags']['dublin-core'];
     $form['vertical_tabs_metatags_advanced']['advanced'] = $form['metatags']['advanced'];
 
-    // Unset form content that is not needed
+    // Unset form content that is not needed.
     unset($form['vertical_tabs_wetkit']['dublin-core']['#type']);
     unset($form['vertical_tabs_metatags_advanced']['advanced']['#type']);
     unset($form['metatags']['advanced']);

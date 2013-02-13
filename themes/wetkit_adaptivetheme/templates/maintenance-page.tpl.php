@@ -4,7 +4,7 @@
  * Adaptivetheme implementation to display a single Drupal page while offline.
  *
  * Not all variables are mirrored from html.tpl.php and page.tpl.php, only those
- * required to deliver a valid html page with branding and site offline messages.
+ * required to deliver valid html page with branding and site offline messages.
  * $polyfills is included to support HTML5 in IE8 and below.
  *
  * Adaptivetheme variables:

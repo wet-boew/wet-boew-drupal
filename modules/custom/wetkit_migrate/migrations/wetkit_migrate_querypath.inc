@@ -1,14 +1,17 @@
 <?php
+
 /**
  * @file
  * wetkit_migrate_querypath.inc
  */
 
 /**
- * This class is used to encapsulate a static HTML page that will be migrated into the Drupal 7 WCMS.
- * Any HTML pre-processing or parsing logic that is common to all migrated content can be placed into this class.
+ * This class is used to encapsulate a static HTML page that will be migrated
+ * into the Drupal 7 WCMS.
+ * Any HTML pre-processing or parsing logic that is common to all migrated
+ * content can be placed into this class.
  */
-class WetKitMigrationHtmlPage {
+class WetKitMigrationhtmlpage {
 
   protected $html;
   protected $qp;
@@ -16,7 +19,7 @@ class WetKitMigrationHtmlPage {
 
   /**
    * Parsed contents of the page's body tag
-   * @var string 
+   * @var string
    */
   public $body = '';
 
@@ -28,44 +31,45 @@ class WetKitMigrationHtmlPage {
 
   /**
    * Single or Multiple Column present in the HTML page
-   * @var bool Will be 0 or 1 
+   * @var bool Will be 0 or 1
    */
   public $columns = 0;
-  
+
   /**
    * Language of the HTML page
-   * @var string Will be either 'en' or 'fr' 
+   * @var string Will be either 'en' or 'fr'
    */
   public $language = '';
 
   /**
    * Date create timestamp for the HTML page
-   * @var string 
+   * @var string
    */
   public $datestamp = '';
 
   /**
-   * Constructor method that loads the page into QueryPath and then sets the object's properties based on teh 
-   * parsed values in the page.
-   * @param type $data 
+   * Constructor method that loads the page into QueryPath and then sets the
+   * object's properties based on the parsed values in the page.
+   *
+   * @param array $data
+   *   Return the parsed content derived by querypath.
    */
   public function __construct($data = NULL, $elements_to_remove = NULL) {
     if (($data != NULL) && (isset($data->filedata))) {
       $this->filename = $data->sourceid;
 
-      // Fix the HTML so that libXML can work with the document
+      // Fix the HTML so that libXML can work with the document.
       $this->html = $this->fixHTML($data->filedata);
 
-      // Clean up carriage returns
+      // Clean up carriage returns.
       $this->charTransform();
 
       // Double check the encoding. Probably this is not necessary, but...
       $this->fixEncoding();
 
       // If dealing with a HTML fragment we need to wrap it in html > body
-      //$this->wrapHTML();
-
-      // Parse the HTML using QueryPath   
+      // For instance: $this->wrapHTML().
+      // Parse the HTML using QueryPath.
       $this->initQP();
 
       if (isset($elements_to_remove['removeDOMElements'])) {
@@ -80,7 +84,7 @@ class WetKitMigrationHtmlPage {
     }
   }
 
-  /*
+  /**
    * Return the HTML
    */
   public function getHTML($element) {
@@ -91,7 +95,7 @@ class WetKitMigrationHtmlPage {
     }
   }
 
-  /*
+  /**
    * Return the HTML
    */
   public function elementExists($element) {
@@ -112,7 +116,7 @@ class WetKitMigrationHtmlPage {
     // http://technosophos.com/content/querypath-whats-13-end-every-line
     $this->html = str_replace(chr(13), '', $this->html);
   }
-  
+
   /**
    * Deal with encodings.
    */
@@ -126,22 +130,23 @@ class WetKitMigrationHtmlPage {
       $this->html = mb_convert_encoding($this->html, 'UTF-8', 'ISO-8859-1, WINDOWS-1252');
     }
   }
-  
+
   /**
    * Fix an HTML document in the correct head/meta tags so that UTF-8 is
    * correctly detected, and for the parsers and tidiers.
    */
   protected function fixHTML($html_document) {
-    // Need to clean up badly formated DOCTYPE headers. Many files have the format:
-    //   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    // Need to clean up badly formated DOCTYPE headers. Many files have the
+    // format:
+    // <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     //
-    //  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-    // 
+    // "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    //
     // It should be all on one line for QueryPath to work properly.
-    $html_document = preg_replace('#XHTML 1.0 Strict//EN"(\s+)"http://www.w3.org/#', 
+    $html_document = preg_replace('#XHTML 1.0 Strict//EN"(\s+)"http://www.w3.org/#',
         'XHTML 1.0 Strict//EN" "http://www.w3.org/', $html_document);
 
-    // Assign a UTF-8 Meta Charset for libXML
+    // Assign a UTF-8 Meta Charset for libXML.
     return $this->html = preg_replace('#charset=iso-8859-1#', 'charset=utf-8', $html_document);
   }
 
@@ -157,7 +162,7 @@ class WetKitMigrationHtmlPage {
     $html .= '</html>';
     return $html;
   }
-  
+
   /**
    * Create the QueryPath object.
    */
@@ -165,10 +170,10 @@ class WetKitMigrationHtmlPage {
     $qp_options = array(
       'strip_low_ascii' => FALSE,
       'convert_from_encoding' => 'auto',
-      //'convert_to_encoding' => 'utf-8',
-      'use_parser' => 'html'
+      'use_parser' => 'html',
     );
-    // Include Querypath
+
+    // Include Querypath.
     require_once libraries_get_path('querypath', FALSE) . '/src/qp.php';
     $this->qp = htmlqp($this->html, NULL, $qp_options);
   }
@@ -177,33 +182,28 @@ class WetKitMigrationHtmlPage {
    * Remove the comments from the HTML.
    */
   protected function stripCommonTags() {
-    // remove all comment tags
+    // Remove all comment tags.
     foreach ($this->qp->top()->xpath('//comment()')->get() as $comment) {
       $comment->parentNode->removeChild($comment);
     }
 
-    // remove all meta tags
-    //foreach ($this->qp->top()->xpath('//meta')->get() as $metatag) {
-    //  $metatag->parentNode->removeChild($metatag);
-    //}
-
-    // remove all script tags from the body
+    // Remove all script tags from the body.
     foreach ($this->qp->top()->xpath('//script')->get() as $metatag) {
       $metatag->parentNode->removeChild($metatag);
     }
 
-    // remove all link tags from the body
+    // Remove all link tags from the body.
     foreach ($this->qp->top()->xpath('//link')->get() as $metatag) {
       $metatag->parentNode->removeChild($metatag);
     }
 
-    // remove the ubiquitous breadcrumb block
+    // Remove the ubiquitous breadcrumb block.
     if ($this->qp->top('body')->is('p.breadcrumb')) {
       $this->qp->top('body')->find('p.breadcrumb')
         ->remove();
     }
 
-    // remove the top level H1 as it just duplicates the title
+    // Remove the top level H1 as it just duplicates the title.
     if ($this->qp->top('body')->is('h1')) {
       $this->qp->top('body')->find('h1')
         ->remove();
@@ -212,7 +212,9 @@ class WetKitMigrationHtmlPage {
 
   /**
    * Get the contents of the title tag from the imported page
-   * @return type 
+   *
+   * @return string
+   *   Return the title of the imported page.
    */
   protected function getTitle() {
     $title = $this->qp->top('title')->innerHTML();
@@ -223,32 +225,40 @@ class WetKitMigrationHtmlPage {
     return $title;
   }
 
+  /**
+   * Return various metatags of the imported page
+   *
+   * @return string
+   *   Return the specified metatag of the current page.
+   */
   protected function getMetaTag($element) {
     $content = $this->qp->top()->find('meta[name="' . $element . '"]')->attr('content');
-    return trim($content); 
+    return trim($content);
   }
 
   /**
    * Return the language of the imported page
-   * @return string 
+   *
+   * @return string
+   *   Return the language of the current page.
    */
   protected function getPageLanguage() {
-    // First try to obtain the language from the HTML tag
+    // First try to obtain the language from the HTML tag.
     $language = $this->qp->top('html')->attr('lang');
-    $isEnglish = strncasecmp($language, 'en', 2);
-    $isFrench = strncasecmp($language, 'fr', 2);
-    if ($isEnglish != 0 && $isFrench != 0) {
+    $isenglish = strncasecmp($language, 'en', 2);
+    $isfrench = strncasecmp($language, 'fr', 2);
+    if ($isenglish != 0 && $isfrench != 0) {
 
-      // No language yet, so try to parse the path name instead
-      $pathStats = pathinfo($this->filename); 
-      $filename_len = strlen($pathStats['filename']);
-      $filecode = substr($pathStats['filename'], $filename_len - 3, 3);
+      // No language yet, so try to parse the path name instead.
+      $pathstats = pathinfo($this->filename);
+      $filename_len = strlen($pathstats['filename']);
+      $filecode = substr($pathstats['filename'], $filename_len - 3, 3);
       if (strcasecmp('eng', $filecode) == 0) {
         $language = 'en';
-      } 
+      }
       elseif (strcasecmp('fra', $filecode) == 0) {
         $language = 'fr';
-      } 
+      }
       else {
         $language = LANGUAGE_NONE;
       }
@@ -258,13 +268,15 @@ class WetKitMigrationHtmlPage {
 
   /**
    * Get the created date from the HTML's meta data tag.
-   * @return type 
+   *
+   * @return string
+   *   Return the created date Y-m-d.
    */
   protected function getDate() {
     $date = $this->qp->find('meta[name="date"]')->attr('content');
-    if ((strlen($date) != 10) or ($date == "YYYY-MM-DD") or ($date == "AAAA-MM-JJ") ) {
+    if ((strlen($date) != 10) or ($date == "YYYY-MM-DD") or ($date == "AAAA-MM-JJ")) {
       $date = $this->qp->find('meta[name="dcterms.modified"]')->attr('content');
-      if ((strlen($date) != 10) or ($date == "YYYY-MM-DD") or ($date == "AAAA-MM-JJ") ) {
+      if ((strlen($date) != 10) or ($date == "YYYY-MM-DD") or ($date == "AAAA-MM-JJ")) {
         $date = date('Y-m-d');
       }
     }
@@ -273,8 +285,9 @@ class WetKitMigrationHtmlPage {
 
   /**
    * Remove specific DOM Elements.
-   * @param $elements
-   *  The elements to remove from the DOM
+   *
+   * @param array $elements
+   *   The elements to remove from the DOM.
    */
   protected function removeDOMElements($elements) {
     foreach ($elements as $element) {

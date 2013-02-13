@@ -10,7 +10,7 @@
  */
 function wetkit_search_install() {
 
-  // Allow anonymous and authenticated users to search content
+  // Allow anonymous and authenticated users to search content.
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('search content'));
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('search content'));
 }
@@ -37,25 +37,25 @@ function wetkit_search_update_7002(&$sandbox) {
   // If we are running on a WetKit Platform...
   if (variable_get('wetkit_tier')) {
 
-    // Enable WetKit's Search Module
+    // Enable WetKit's Search Module.
     module_enable(array('wetkit_solr'));
 
-    // Load the Solr PHP Client Library
+    // Load the Solr PHP Client Library.
     _search_api_solr_autoload('Apache_Solr_Service');
     _search_api_solr_autoload('Apache_Solr_HttpTransport_Abstract');
 
-    // Push a WetKit Compatible Search API Schema
+    // Push a WetKit Compatible Search API Schema.
     $schema_uri = drupal_get_path('module', 'search_api_solr') . '/schema.xml';
     wetkit_apachesolr_update_schema($schema_uri);
 
-    // Enable WetKit's Solr Server and Solr Index
-    require_once(drupal_get_path('module', 'search_api') . '/search_api.admin.inc');
+    // Enable WetKit's Solr Server and Solr Index.
+    require_once drupal_get_path('module', 'search_api') . '/search_api.admin.inc';
     $solr_server = search_api_server_load('solr_server');
     $solr_server->update(array('enabled' => 1));
     $solr_index = search_api_index_load('node_index');
     $solr_index->update(array('enabled' => 1));
 
-    // Clear Solr Search Index and Rebuild
+    // Clear Solr Search Index and Rebuild.
     $solr_index->clear();
     $solr_index->reindex();
 
@@ -72,5 +72,5 @@ function wetkit_search_update_7003(&$sandbox) {
   $database_server = search_api_server_load('database_server');
   $database_index = search_api_index_load('database_node_index');
   $database_server->fieldsUpdated($database_index);
-  return t('WetKit\'s Search DB Search API index has been updated');
+  return t("WetKit's Search DB Search API index has been updated");
 }
