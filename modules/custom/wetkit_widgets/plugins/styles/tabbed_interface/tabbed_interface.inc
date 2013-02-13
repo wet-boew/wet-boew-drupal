@@ -5,7 +5,7 @@
  * Definition of the 'naked' panel style.
  */
 
-// Plugin definition
+// Plugin definition.
 $plugin = array(
   'title' => t('WetKit Tabbed Interface'),
   'description' => t('Display the pane with customized settings for the Tabbed Interface Plugin.'),
@@ -25,8 +25,13 @@ function theme_wetkit_widgets_tabbed_interface_style_render_pane($vars) {
   $pane = $vars['pane'];
   $display = $vars['display'];
   $settings = $vars['settings'];
-  //$content->css_class .= (isset($vars['settings']['tabbed_interface_classes'])) ? $vars['settings']['tabbed_interface_classes'] : '';
-  return theme('panels_pane', array('content' => $content, 'pane' => $pane, 'display' => $display, 'settings' => $settings));
+
+  return theme('panels_pane', array(
+    'content' => $content,
+    'pane' => $pane,
+    'display' => $display,
+    'settings' => $settings,
+  ));
 }
 
 /**

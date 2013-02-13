@@ -62,6 +62,3 @@ to delete all the generated CSS files.
 - Regenerate all the CSS files by running: compass compile
 
 And don't forget to turn on Drupal's CSS aggregation. :-)
-
-
-

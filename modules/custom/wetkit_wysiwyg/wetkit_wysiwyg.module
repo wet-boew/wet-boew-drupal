@@ -1,10 +1,11 @@
 <?php
 /**
  * @file
+ * wetkit_wysiwyg.module
  */
 
-include_once('wetkit_wysiwyg.features.inc');
-include_once('wetkit_wysiwyg.features.wysiwyg.inc');
+include_once 'wetkit_wysiwyg.features.inc';
+include_once 'wetkit_wysiwyg.features.wysiwyg.inc';
 
 /**
  * Implements hook_apps_app_info().
@@ -50,19 +51,10 @@ function wetkit_wysiwyg_wysiwyg_plugin($editor) {
   switch ($editor) {
     case 'tinymce':
       return array(
-        'pdw' => array(
-          'path' => drupal_get_path('module', 'wetkit_wysiwyg') . '/plugins/wysiwyg/pdw',
-          'filename' => 'editor_plugin.js',
-          'buttons' => array(
-            'pdw_toggle' => t('Kitchen Sink')
-          ),
-          'url' => 'http://www.neele.name/pdw_toggle_toolbars/',
-          'load' => TRUE,
-        ),
         'spellchecker' => array(
           'internal' => TRUE,
           'buttons' => array(
-            'spellchecker' => t('Spell Check')
+            'spellchecker' => t('Spell Check'),
           ),
           'url' => 'http://wiki.moxiecode.com/index.php/TinyMCE:Plugins/spellchecker',
           'load' => TRUE,
@@ -76,13 +68,13 @@ function wetkit_wysiwyg_wysiwyg_plugin($editor) {
           'path' => drupal_get_path('module', 'wetkit_wysiwyg') . '/plugins/wysiwyg/wetkitcleanup',
           'filename' => 'editor_plugin.js',
           'buttons' => array(
-            'wetkitcleanup' => t('WetKit Cleanup Tools')
+            'wetkitcleanup' => t('WetKit Cleanup Tools'),
           ),
           'extended_valid_elements' => array(
-            'div[!class|!id|!style|rel],-span[!class|!lang],a[id|name|class|href|rel|title]'
+            'div[!class|!id|!style|rel],-span[!class|!lang],a[id|name|class|href|rel|title]',
           ),
           'extensions' => array(
-            'wetkitcleanup' => t('WetKit Cleanup Tools')
+            'wetkitcleanup' => t('WetKit Cleanup Tools'),
           ),
           'load' => TRUE,
         ),
@@ -106,11 +98,11 @@ function wetkit_wysiwyg_element_info_alter(&$type) {
  */
 function wetkit_wysiwyg_filter_process_format($element) {
 
-  // Do not auto submit the form due to changes of the filter
+  // Do not auto submit the form due to changes of the filter.
   $element['format']['format']['#attributes']['class'][] = 'ctools-auto-submit-exclude';
 
-  // Do not show the guidelines and help text for text formatters
-  // Also format this all a bit different so that it looks right
+  // Do not show the guidelines and help text for text formatters.
+  // Also format this all a bit different so that it looks right.
   if (!variable_get('wetkit_wysiwyg_show_format_details', FALSE)) {
     $element['format']['#weight'] = 1;
     $element['format']['#prefix'] = '<div class="format-toggle">';
@@ -140,7 +132,7 @@ function wetkit_wysiwyg_module_implements_alter(&$implementations, $hook) {
  */
 function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
 
-  // Change interface language for tinymce based on context
+  // Change interface language for tinymce based on context.
   if (isset($settings['language'])) {
     global $language;
     if ($settings['language'] != $language->language) {
@@ -156,59 +148,118 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
 
   switch ($context['editor']['name']) {
     case 'tinymce':
-
-      // Intranet Theme
+      // Intranet Theme.
       $wet_theme = '';
       if ((variable_get('wetkit_wetboew_theme', 0) == 1)) {
         $wet_theme = 'theme-base';
       }
-      // Base Theme
+      // Base Theme.
       elseif ((variable_get('wetkit_wetboew_theme', 0) == 2)) {
         $wet_theme = 'theme-gcwu-intranet';
       }
-      // Internet Theme
+      // Internet Theme.
       else {
         $wet_theme = 'theme-gcwu-fegc';
       }
 
-      // Set the CSS Files that absolutely need to be rendered inside the WYSIWYG
-      // leaves the interface in the frontend to be used for additional styles
+      // Set CSS Files that absolutely need to be rendered inside the WYSIWYG
+      // leaves the interface in the frontend to be used for additional styles.
       $settings['content_css'] .= ',' .
       libraries_get_path('wet-boew', TRUE) . '/dist/grids/css/util-min.css' . ',' .
       libraries_get_path('wet-boew', TRUE) . '/dist/js/css/pe-ap-min.css' . ',' .
       libraries_get_path('wet-boew', TRUE) . '/dist/' . $wet_theme . '/css/theme-min.css';
 
-      // Schema is HTML5 instead of default HTML4
+      // Schema is HTML5 instead of default HTML4.
       $settings['schema'] = 'html5';
 
-      // Preserve whitespace such as tabs and spaces
+      // Preserve whitespace such as tabs and spaces.
       $settings['preformatted'] = TRUE;
 
-      // End container block element when pressing enter inside an empty block
+      // End container block element when pressing enter inside an empty block.
       $settings['end_container_on_empty_block'] = TRUE;
 
-      // HTML5 formats
+      // HTML5 formats.
       $settings['style_formats'] = array(
         array('title' => 'p', 'block' => 'p'),
         array('title' => 'div', 'block' => 'div'),
         array('title' => 'pre', 'block' => 'pre'),
-        array('title' => 'section', 'block' => 'section', 'wrapper' => TRUE, 'merge_siblings' => FALSE),
-        array('title' => 'article', 'block' => 'article', 'wrapper' => TRUE, 'merge_siblings' => FALSE),
-        array('title' => 'blockquote', 'block' => 'blockquote', 'wrapper' => TRUE),
+        array(
+          'title' => 'section',
+          'block' => 'section',
+          'wrapper' => TRUE,
+          'merge_siblings' => FALSE,
+        ),
+        array(
+          'title' => 'article',
+          'block' => 'article',
+          'wrapper' => TRUE,
+          'merge_siblings' => FALSE,
+        ),
+        array(
+          'title' => 'blockquote',
+          'block' => 'blockquote',
+          'wrapper' => TRUE,
+        ),
         array('title' => 'hgroup', 'block' => 'hgroup', 'wrapper' => TRUE),
         array('title' => 'aside', 'block' => 'aside', 'wrapper' => TRUE),
         array('title' => 'figure', 'block' => 'figure', 'wrapper' => TRUE),
       );
 
-      // Define the skin to use
+      // Define the skin to use.
       $settings['skin'] = 'cirkuit';
 
-      // Define the spellchecking settings
+      // Define the spellchecking settings.
       $settings['spellchecker_languages'] = ($settings['language'] == 'fr') ? '+French=fr' : '+English=en';
 
-      // Process a default order for the WYSIWYG
+      // Process a default order for the WYSIWYG.
       $enabled_buttons = preg_split('/,/', $settings['theme_advanced_buttons1']);
-      $default_buttons = array('bold', 'italic', 'underline', 'strikethrough', '|', 'bullist', 'numlist', 'blockquote', '|', 'justifyleft', 'justifycenter', 'justifyright', '|', 'indent', 'outdent', '|', 'linkit', 'unlink', '|', 'fullscreen', 'spellchecker', 'media', 'captionfilter', 'pdw_toggle', 'PAGEBREAK', 'wetkitcleanup', '|', 'template', '|', 'formatselect', '|', 'styleselect', '|', 'justifyfull', '|', 'forecolor', '|', 'pastetext', 'pasteword', 'removeformat', 'break', '|', 'charmap', '|', 'undo', 'redo');
+      $default_buttons = array(
+        'bold',
+        'italic',
+        'underline',
+        'strikethrough',
+        '|',
+        'bullist',
+        'numlist',
+        'blockquote',
+        '|',
+        'justifyleft',
+        'justifycenter',
+        'justifyright',
+        '|',
+        'indent',
+        'outdent',
+        '|',
+        'linkit',
+        'unlink',
+        '|',
+        'fullscreen',
+        'spellchecker',
+        'media',
+        'captionfilter',
+        'PAGEBREAK',
+        'wetkitcleanup',
+        '|',
+        'template',
+        '|',
+        'formatselect',
+        '|',
+        'styleselect',
+        '|',
+        'justifyfull',
+        '|',
+        'forecolor',
+        '|',
+        'pastetext',
+        'pasteword',
+        'removeformat',
+        'break',
+        '|',
+        'charmap',
+        '|',
+        'undo',
+        'redo',
+      );
       foreach ($default_buttons as $button) {
         if (in_array($button, $enabled_buttons)) {
           unset($enabled_buttons[array_search($button, $enabled_buttons)]);
@@ -218,32 +269,27 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
         }
       }
 
-      // Define the final button row settings
+      // Define the final button row settings.
       $default_buttons_list = preg_split('/,PAGEBREAK,/', implode(',', $default_buttons));
       $settings['theme_advanced_buttons1'] = $default_buttons_list[0];
       $settings['theme_advanced_buttons2'] = $default_buttons_list[1];
       $settings['theme_advanced_buttons3'] = (count($enabled_buttons) > 0) ? implode(',', $enabled_buttons) : NULL;
 
-      // Define PDW Plugin Settings
-      $settings['pdw_toggle_on'] = '1';
-      $settings['pdw_toggle_toolbars'] = (count($enabled_buttons) > 0) ? '2,3' : '2';
-
-      // Enable the inlinepopups and modal settings
+      // Enable the inlinepopups and modal settings.
       $settings['plugins'] .= ',inlinepopups';
       $settings['dialog_type'] = 'modal';
 
       // Allow extra elements for Media module
       // See - http://drupal.org/node/1835826
       $settings['extended_valid_elements'] .= ',img[src|title|alt|style|width|height|class|hspace|vspace|view_mode|format|fid]';
-
       break;
-    case 'markitup':
 
-      // Load the appropriate CSS and JS
+    case 'markitup':
+      // Load the appropriate CSS and JS.
       drupal_add_css($context['editor']['library path'] . '/markitup/sets/html/style.css');
       drupal_add_js($context['editor']['library path'] . '/markitup/sets/html/set.js');
 
-      // Defin the new header buttons
+      // Defin the new header buttons.
       $header_buttons = array(
         'header-begin' => array(
           'className' => 'markItUpSeparator',
@@ -292,7 +338,7 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
         ),
       );
 
-      // Define the list styles
+      // Define the list styles.
       $list_styles = array(
         'list-bullet' => array(
           'name' => t('Unordered List'),
@@ -308,13 +354,13 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
         ),
       );
 
-      // Add the header buttons to the end
+      // Add the header buttons to the end.
       foreach ($header_buttons as $tag => $details) {
         $settings['markupSet'][$tag] = $details;
         $context['profile']->settings['buttons']['html'][$tag] = 1;
       }
 
-      // Add the list styles to the end
+      // Add the list styles to the end.
       foreach ($list_styles as $tag => $details) {
         $settings['markupSet'][$tag] = $details;
         $context['profile']->settings['buttons']['html'][$tag] = 1;

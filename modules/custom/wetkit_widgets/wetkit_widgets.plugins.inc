@@ -1,7 +1,8 @@
 <?php
 /**
  * @file
- * A specification for the custom tabbed interface entity that is part of WetKit Widgets
+ * A specification for the custom tabbed interface entity that is part of
+ * WetKit Widgets.
  */
 
 /**
@@ -21,7 +22,7 @@ function wetkit_widgets_field_info() {
   return array(
     'wetkit_tabbed_interface' => array(
       'label' => t('Tabbed Interface'),
-      'description' => t('WetKit Plugin for the Web Experience Toolkit\'s Tabbed Interface'),
+      'description' => t("WetKit Plugin for the Web Experience Toolkit's Tabbed Interface"),
       'default_widget' => 'wetkit_tabbed_interface_form',
       'default_formatter' => 'wetkit_tabbed_interface_default',
       'settings' => array(
@@ -408,7 +409,7 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
       }
     }
 
-    // render each source list as an <video> element
+    // Render each source list as an <video> element.
     foreach ($source_lists as $delta => $sources) {
       $width = isset($settings['size']['width']) ? $settings['size']['width'] : NULL;
       $height = isset($settings['size']['height']) ? $settings['size']['height'] : NULL;
@@ -426,11 +427,19 @@ function wetkit_widgets_field_formatter_view($entity_type, $entity, $field, $ins
   }
   elseif ($display['type'] == 'wetkit_tabbed_interface_default') {
     drupal_add_library('system', 'ui.tabs');
-    // Assemble the tabs content
+    // Assemble the tabs content.
     foreach ($items as $delta => $item_data) {
-      $element[$delta]['#markup'] = ($delta == 0) ? theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings)) : theme('wetkit_tab_interface_view', array('items' => $item_data, 'delta' => $delta, 'settings' => $settings));
+      $element[$delta]['#markup'] = ($delta == 0) ? theme('wetkit_tab_interface_view', array(
+        'items' => $item_data,
+        'delta' => $delta,
+        'settings' => $settings,
+      )) : theme('wetkit_tab_interface_view', array(
+        'items' => $item_data,
+        'delta' => $delta,
+        'settings' => $settings,
+      ));
       $element[$delta]['title'] = ($delta == 0) ? $item_data['title'] : $item_data['title'];
-      //if panel style is applied
+      // If panel style is applied.
       $element[$delta]['tabbed_true'] = 'true';
     }
   }
@@ -445,9 +454,9 @@ function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instanc
 
   if ($instance['widget']['type'] == 'wetkit_tabbed_interface_form') {
 
-    // Make it a multipart form
+    // Make it a multipart form.
     $form['#attributes']['enctype'] = 'multipart/form-data';
-    // Define the element
+    // Define the element.
     $element['title'] = array(
       '#title' => 'Title',
       '#type' => 'textfield',
@@ -485,8 +494,10 @@ function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instanc
  * Implements hook_field_presave().
  */
 function wetkit_widgets_field_presave($entity_type, $entity, $field, $instance, $langcode, &$items) {
-  // We need to set presave values if fids are not set. This shouldn't effect save operations
-  // form API validation will prevent this from ever happening unless previewing.
+  // We need to set presave values if fids are not set. This shouldn't effect
+  // save operations.
+  // form API validation will prevent this from ever happening unless
+  // previewing.
   if (!empty($items)) {
     foreach ($items as &$item) {
       if (empty($item['fid'])) {
@@ -522,7 +533,8 @@ function wetkit_widgets_field_insert($entity_type, $entity, $field, $instance, $
 function wetkit_widgets_field_update($entity_type, $entity, $field, $instance, $langcode, &$items) {
 
   // Load the original entity, if $entity->original is not already set.
-  // This is done as per http://drupal.org/node/985642 and can be removed when that patch is committed.
+  // This is done as per http://drupal.org/node/985642 and can be removed when
+  // that patch is committed.
   if (empty($entity->original)) {
     $entity->original = entity_load_unchanged($entity_type, $field['id']);
   }
@@ -549,7 +561,7 @@ function wetkit_widgets_field_delete_revision($entity_type, $entity, $field, $in
  */
 function wetkit_widgets_field_prepare_view($entity_type, $entities, $field, $instances, $langcode, &$items) {
   // If there are no files specified at all, use the default.
-  // TODO - make sure this works
+  // TODO - make sure this works.
   foreach ($entities as $id => $entity) {
     if (empty($items[$id]) && $field['settings']['default_image']) {
       $file = file_load($field['settings']['default_image']);
@@ -583,7 +595,11 @@ function theme_wetkit_tab_interface_view($variables) {
   $output = '<div id="' . 'tabs1_' . $variables['delta'] . '" class="tabs-content-pad ' . '' . '">';
   $output .= '<section>';
   $output .= '<h4>' . l($title, $link) . '</h4>';
-  $output .= theme('image_style', array('style_name' => $settings['image_style'], 'path' => $image->uri, 'alt' => $variables['items']['alt']));
+  $output .= theme('image_style', array(
+    'style_name' => $settings['image_style'],
+    'path' => $image->uri,
+    'alt' => $variables['items']['alt'],
+  ));
   $output .= '<p>' . $description . '</p>';
   $output .= '</section>';
   $output .= '</div>';
@@ -609,9 +625,19 @@ function wetkit_widgets_field_formatter_wetkit_widgets_lightbox($variables) {
     $item = $variables['#items'][$delta];
     $title = $item['title'];
     $alt = $item['alt'];
-    $source = theme('image_style', array('alt' => $alt, 'style_name' => $settings['image_style_source'], 'path' => $item['uri']));
+    $source = theme('image_style', array(
+      'alt' => $alt,
+      'style_name' => $settings['image_style_source'],
+      'path' => $item['uri'],
+    ));
     $destination = image_style_path($settings['image_style_destination'], $item['uri']);
-    $output .= '<li>' . l($source, file_create_url($destination), array('html' => TRUE, 'attributes' => array('class' => array('lb-item'), 'title' => $title))) . '</li>';
+    $output .= '<li>' . l($source, file_create_url($destination), array(
+      'html' => TRUE,
+      'attributes' => array(
+        'class' => array('lb-item'),
+        'title' => $title,
+      ),
+    )) . '</li>';
   }
   $class = $settings['custom_class'];
   return '<div class="wet-boew-lightbox ' . $class . '"><ul>' . $output . '</ul></div><div class="clear"></div>';

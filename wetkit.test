@@ -4,15 +4,25 @@
  * wetkit.test
  */
 
+/**
+ * This Test class will test various functionality related to WxT-Drupal
+ */
 class WetKitArchivedWidgetTestCase extends WetKitWebTestCase {
-   public static function getInfo() {
+
+  /**
+   * Get information metadata.
+   */
+  public static function getInfo() {
     return array(
       'name' => 'Archived widget pane',
       'description' => 'Archived widget pane.',
-      'group' => 'WetKit'
+      'group' => 'WetKit',
     );
   }
 
+  /**
+   * SetUp dependencies.
+   */
   function setUp() {
     parent::setUp(
       'page_manager',

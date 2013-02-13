@@ -89,9 +89,6 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
         'linkit' => array(
           'linkit' => 1,
         ),
-        'pdw' => array(
-          'pdw_toggle' => 1,
-        ),
         'spellchecker' => array(
           'spellchecker' => 1,
         ),

@@ -4,8 +4,8 @@
  * Code for the wetkit_widgets module.
  */
 
-include_once('wetkit_widgets.features.inc');
-include_once('wetkit_widgets.plugins.inc');
+include_once 'wetkit_widgets.features.inc';
+include_once 'wetkit_widgets.plugins.inc';
 
 /**
  * Implements hook_apps_app_info().
@@ -56,8 +56,8 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
 }
 
 /**
- * Implement the "Content Settings" fieldset in a pre-render. This fixes issues with image caused by initially
- * doing this in a form_alter.
+ * Implement the "Content Settings" fieldset in a pre-render. This fixes issues
+ * with image caused by initially doing this in a form_alter.
  *
  * @see http://drupal.org/node/1567704
  */
@@ -89,7 +89,7 @@ function wetkit_widgets_fieldable_panel_pane_pre_render($element) {
  */
 function wetkit_widgets_entity_info_alter(&$entity_info) {
 
-  // Tabbed Interface
+  // Tabbed Interface.
   $entity_info['fieldable_panels_pane']['bundles']['tabbed_interface'] = array(
     'label' => t('Add tabbed interface'),
     'pane category' => t('WetKit'),
@@ -102,11 +102,10 @@ function wetkit_widgets_entity_info_alter(&$entity_info) {
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
-
 }
 
 /**
- * Implementation hook_theme_registry_alter()
+ * Implements hook_theme_registry_alter().
  */
 function wetkit_widgets_theme_registry_alter(&$theme_registry) {
   $mod_path = drupal_get_path('module', 'wetkit_widgets') . '/templates';
@@ -153,7 +152,7 @@ function wetkit_widgets_theme($existing, $type, $theme, $path) {
 function wetkit_widgets_file_default_types() {
   $types = array();
 
-  // WetKit Video
+  // WetKit Video.
   $types['wetkit_video'] = (object) array(
     'api_version' => 1,
     'type' => 'wetkit_video',

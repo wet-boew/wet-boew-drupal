@@ -26,15 +26,19 @@ function theme_wetkit_wetboew_status_messages($variables) {
       case 'completed':
         $extraclass = $spanclass . ' module-attention';
         break;
+
       case 'warning':
         $extraclass = $spanclass . ' module-alert';
         break;
+
       case 'error':
         $extraclass = $spanclass . ' module-attention';
         break;
+
       case 'status':
         $extraclass = $spanclass . ' module-info';
         break;
+
       default:
         $extraclass = '';
     }
@@ -69,7 +73,7 @@ function theme_wetkit_wetboew_tablefield_view($variables) {
   $attributes = array(
     'id' => 'tablefield-' . $variables['delta'],
     'class' => array(
-      'wet-boew-zebra tablefield'
+      'wet-boew-zebra tablefield',
     ),
   );
 
