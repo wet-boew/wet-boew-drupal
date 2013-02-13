@@ -8,26 +8,27 @@
  * such preprocess, process, alters, and theme function overrides.
  *
  * Preprocess and process functions are used to modify or create variables for
- * templates and theme functions. They are a common theming tool in Drupal, often
- * used as an alternative to directly editing or adding code to templates. Its
- * worth spending some time to learn more about these functions - they are a
+ * templates and theme functions. They are a common theming tool in Drupal,
+ * often used as an alternative to directly editing or adding code to templates.
+ * Its worth spending some time to learn more about these functions - they are a
  * powerful way to easily modify the output of any template variable.
  *
- * Preprocess and Process Functions SEE: http://drupal.org/node/254940#variables-processor
+ * Preprocess and Process Functions SEE:
+ * http://drupal.org/node/254940#variables-processor
  * 1. Rename each function and instance of "wetkit_adaptivetheme" to match
- *    your subthemes name, for example, if your theme name is "footheme" then the function
- *    name will be "footheme_preprocess_hook". Tip - you can search/replace
- *    on "wetkit_adaptivetheme".
+ *    your subthemes name, for example, if your theme name is "footheme" then
+ *    the function name will be "footheme_preprocess_hook". Tip - you can
+ *    search/replace on "wetkit_adaptivetheme".
  * 2. Uncomment the required function to use.
  */
 
 /**
  * Override or insert variables into the theme links templates.
  *
- * @param $variables
+ * @param array $variables
  *   An array of variables to pass to the theme template.
  */
-function wetkit_adaptivetheme_links__menu_terms_bar($variables)  {
+function wetkit_adaptivetheme_links__menu_terms_bar($variables) {
   $links = $variables['links'];
   $attributes = $variables['attributes'];
   $heading = $variables['heading'];
@@ -53,7 +54,7 @@ function wetkit_adaptivetheme_links__menu_terms_bar($variables)  {
         // is a string.
         $heading = array(
           'text' => $heading,
-          // Set the default level of the heading
+          // Set the default level of the heading.
           'level' => 'h2',
         );
       }
@@ -72,7 +73,8 @@ function wetkit_adaptivetheme_links__menu_terms_bar($variables)  {
     foreach ($links as $key => $link) {
       $class = array($key);
 
-      // Add first, last and active classes to the list of links to help out themers.
+      // Add first, last and active classes to the list of links to help out
+      // themers.
       if ($i == 1) {
         $class[] = 'first';
         $class[] = $theme_prefix . '-tc';
@@ -90,7 +92,8 @@ function wetkit_adaptivetheme_links__menu_terms_bar($variables)  {
         $output .= l($link['title'], $link['href'], $link);
       }
       elseif (!empty($link['title'])) {
-        // Some links are actually not links, but we wrap these in <span> for adding title and class attributes.
+        // Some links are actually not links, but we wrap these in <span> for
+        // adding title and class attributes.
         if (empty($link['html'])) {
           $link['title'] = check_plain($link['title']);
         }
@@ -114,7 +117,7 @@ function wetkit_adaptivetheme_links__menu_terms_bar($variables)  {
 /**
  * Override or insert variables into the theme links templates.
  *
- * @param $variables
+ * @param array $variables
  *   An array of variables to pass to the theme template.
  */
 function wetkit_adaptivetheme_links__menu_footer_bar($variables) {
@@ -160,7 +163,8 @@ function wetkit_adaptivetheme_links__menu_footer_bar($variables) {
 
     foreach ($links as $key => $link) {
       $class = array($key);
-      // Add first, last and active classes to the list of links to help out themers.
+      // Add first, last and active classes to the list of links to help out
+      // themers.
       if ($i == 1) {
         $class[] = 'first';
       }
@@ -170,7 +174,7 @@ function wetkit_adaptivetheme_links__menu_footer_bar($variables) {
       if (isset($link['href']) && ($link['href'] == $_GET['q'] || ($link['href'] == '<front>' && drupal_is_front_page())) && (empty($link['language']) || $link['language']->language == $language_url->language)) {
         $class[] = 'active';
       }
-      //Custom Override is here for last link
+      // Custom Override is here for last link.
       if ($i == $num_links) {
         $output .= '<li id="' . $theme_prefix . '-gcft-ca"' . drupal_attributes(array('class' => $class)) . '><div>';
       }
@@ -179,8 +183,8 @@ function wetkit_adaptivetheme_links__menu_footer_bar($variables) {
       }
       if (isset($link['href'])) {
         // Pass in $link as $options, they share the same keys.
-        //Custom Override is here
-        if ( isset($link['attributes']['title']) )  {
+        // Custom Override is here.
+        if (isset($link['attributes']['title'])) {
           $link['html'] = TRUE;
           $link['attributes']['rel'] = 'external';
           $output .= l('<span>' . $link['title'] . '</span>' . '<br />' . $link['attributes']['title'], $link['href'], $link);
@@ -190,7 +194,8 @@ function wetkit_adaptivetheme_links__menu_footer_bar($variables) {
         }
       }
       elseif (!empty($link['title'])) {
-        // Some links are actually not links, but we wrap these in <span> for adding title and class attributes.
+        // Some links are actually not links, but we wrap these in <span> for
+        // adding title and class attributes.
         if (empty($link['html'])) {
           $link['title'] = check_plain($link['title']);
         }
@@ -218,7 +223,7 @@ function wetkit_adaptivetheme_links__menu_footer_bar($variables) {
 /**
  * Override or insert variables into the theme links templates.
  *
- * @param $variables
+ * @param array $variables
  *   An array of variables to pass to the theme template.
  */
 function wetkit_adaptivetheme_links__menu_nav_bar($variables) {
@@ -265,7 +270,8 @@ function wetkit_adaptivetheme_links__menu_nav_bar($variables) {
     foreach ($links as $key => $link) {
       $class = array($key);
 
-      // Add first, last and active classes to the list of links to help out themers.
+      // Add first, last and active classes to the list of links to help out
+      // themers.
       if ($i == 1) {
         $class[] = 'first';
       }
@@ -282,7 +288,8 @@ function wetkit_adaptivetheme_links__menu_nav_bar($variables) {
         $output .= l($link['title'], $link['href'], $link);
       }
       elseif (!empty($link['title'])) {
-        // Some links are actually not links, but we wrap these in <span> for adding title and class attributes.
+        // Some links are actually not links, but we wrap these in <span> for
+        // adding title and class attributes.
         if (empty($link['html'])) {
           $link['title'] = check_plain($link['title']);
         }

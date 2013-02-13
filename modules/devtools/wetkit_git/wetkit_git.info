@@ -3,4 +3,3 @@ description = A custom module which will add a line to the status report screen 
 core = 7.x
 package = WetKit
 php = 5.2.4
-version = 7.x-1.0

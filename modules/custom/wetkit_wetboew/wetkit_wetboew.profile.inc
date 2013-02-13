@@ -20,10 +20,10 @@ function wetkit_wetboew_profile_theme_selection_install_task(&$install_task) {
  */
 function wetkit_wetboew_selection_form($form, &$form_state) {
 
-  // Set the page title
+  // Set the page title.
   drupal_set_title(t('Choose a theme'));
 
-  // Create a list of theme options, minus the admin and testing themes
+  // Create a list of theme options, minus the admin and testing themes.
   $themes = array();
   foreach (system_rebuild_theme_data() as $theme) {
     if (!in_array($theme->name, array(
@@ -73,12 +73,12 @@ function wetkit_wetboew_selection_form($form, &$form_state) {
 function wetkit_wetboew_selection_form_submit($form, &$form_state) {
 
   // Enable and set the theme of choice
-  //$theme = $form_state['input']['theme'];
+  // $theme = $form_state['input']['theme'];
   $theme = 'wetkit_adaptivetheme';
   theme_enable(array($theme));
   variable_set('theme_default', $theme);
 
-  // Set the Bartik or Garland logo to be WetKit's logo
+  // Set the Bartik or Garland logo to be WetKit's logo.
   if ($theme == 'bartik' || $theme == 'garland' || $theme == 'responsive_bartik') {
     $theme_data = _system_rebuild_theme_data();
     $theme_data[$theme]->info['settings']['default_logo'] = 0;
@@ -87,7 +87,7 @@ function wetkit_wetboew_selection_form_submit($form, &$form_state) {
   }
 
   module_enable(array('admin_menu', 'admin_menu_toolbar'));
-  // Flush theme caches so things are right
+  // Flush theme caches so things are right.
   system_rebuild_theme_data();
   drupal_theme_rebuild();
 }

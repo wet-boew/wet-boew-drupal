@@ -11,7 +11,7 @@
  *   An associative array of available tokens and token types.
  */
 function wetkit_language_token_info() {
-  // Node tokens
+  // Node tokens.
   $info['tokens']['node']['bilingual_pathauto_prefix'] = array(
     'name' => t('Pathauto: Bilingual Content Prefix'),
     'description' => t('Bilingual Pathauto prefix for use with Pathauto'),
@@ -30,12 +30,13 @@ function wetkit_language_token_info() {
  *   An array of tokens to be replaced. The keys are the machine-readable token
  *   names, and the values are the raw [type:token] strings that appeared in the
  *   original text.
- * @param array $data (optional)
+ * @param array $data
  *   An associative array of data objects to be used when generating replacement
  *   values, as supplied in the $data parameter to token_replace().
- * @param array $options (optional)
+ * @param array $options
  *   An associative array of options for token replacement; see token_replace()
  *   for possible values.
+ *
  * @return array
  *   An associative array of replacement values, keyed by the raw [type:token]
  *   strings from the original text.

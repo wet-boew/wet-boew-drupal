@@ -16,13 +16,6 @@ function wetkit_demo_menu_alter(&$items) {
 
 /**
  * Implements hook_ctools_plugin_directory().
- *
- * @param type $module
- *   The module the plugin resides in for CTools
- * @param type $plugin
- *   The plugins name to reference for CTools
- * @return type
- *   The plugins autodetected by CTools
  */
 function wetkit_demo_ctools_plugin_directory($module, $plugin) {
   return 'plugins/' . $plugin;

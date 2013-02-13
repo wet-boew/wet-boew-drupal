@@ -103,7 +103,16 @@ function _wetkit_wetboew_default_blocks() {
       'cache' => -1,
     ),
   );
-  $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache'));
+  $query = db_insert('block')->fields(array(
+    'module',
+    'delta',
+    'theme',
+    'status',
+    'weight',
+    'region',
+    'pages',
+    'cache',
+  ));
   foreach ($blocks as $block) {
     $query->values($block);
   }

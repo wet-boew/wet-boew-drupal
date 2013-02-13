@@ -48,13 +48,16 @@ function wetkit_search_search_box_content_type_render($subtype, $conf, $panel_ar
     case 'default':
       $path = 'search/' . $conf['type'];
       break;
+
     case 'same':
       $path = $_GET['q'];
       $path = str_replace($keys, '', $path);
       break;
+
     case 'custom':
       $path = $conf['path'];
       break;
+
   }
 
   $prompt = $conf['override_prompt'] ? $conf['prompt'] : NULL;

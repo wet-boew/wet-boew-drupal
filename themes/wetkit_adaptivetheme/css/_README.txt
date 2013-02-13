@@ -24,7 +24,7 @@ devices using media queries.
 
 Its important to note that you do not have to follow a mobile first approach.
 Adaptivetheme can support Desktop first approach as well, which means you will
-progressively add styles to override things for mobile, rather than progressively
+progressively add styles to override things for mobile rather than progressively
 adding style for larger devices.
 
 You can do both in Adaptivetheme - it's merely a matter of where you place
@@ -228,5 +228,3 @@ Or, you could get radical and file a support issue, even post a patch (which
 makes me very happy):
 
   http://drupal.org/project/issues/adaptivetheme
-
-

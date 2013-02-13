@@ -4,7 +4,7 @@
  * Code for the WetKit Bean feature.
  */
 
-include_once('wetkit_bean.default_content.inc');
+include_once 'wetkit_bean.default_content.inc';
 include_once 'wetkit_bean.features.inc';
 
 /**
@@ -24,7 +24,7 @@ function wetkit_bean_apps_app_info() {
 }
 
 /**
- * Configuration Form for WetKit WYSIWYG
+ * Configuration Form for WetKit WYSIWYG.
  */
 function wetkit_bean_configure_form($form, &$form_state) {
   $form = array();
@@ -54,9 +54,9 @@ function wetkit_bean_configure_form($form, &$form_state) {
 /**
  * Handle submission of the WetKit Metatag configuration page.
  *
- * @param type $form
+ * @param array $form
  *   Nested array of form elements that comprise the form.
- * @param type $form_state
+ * @param array $form_state
  *   A keyed array containing the current state of the form.
  */
 function wetkit_bean_configure_form_submit($form, &$form_state) {
@@ -92,7 +92,7 @@ function wetkit_bean_configure_form_submit($form, &$form_state) {
     // Clear the bean cache so an anonymous user sees that the bean was deleted.
     bean_reset();
 
-    // Recreate the default beans
+    // Recreate the default beans.
     _wetkit_bean_load();
   }
 }
@@ -108,7 +108,11 @@ function wetkit_bean_configure_form_submit($form, &$form_state) {
  *   (optional) Admin description for the bean
  * @param string $title
  *   (optional) Block title for the bean
- * @param array $fields
+ * @param array $fields_en
+ *   (optional) An array of fields to assign. This should resemble the ACTUAL
+ *   field array, as it is literally transposed onto the bean, with the
+ *   exception that the language key should be omitted.
+ * @param array $fields_fr
  *   (optional) An array of fields to assign. This should resemble the ACTUAL
  *   field array, as it is literally transposed onto the bean, with the
  *   exception that the language key should be omitted.
@@ -119,7 +123,7 @@ function wetkit_bean_save_bean($bean_type, $label, $description = '', $title = '
 
   $bean = wetkit_bean_create_bean($bean_type, $label, $description, $title, $fields_en, $view_mode);
 
-  // Set the default translation mapping
+  // Set the default translation mapping.
   $translation = array(
     'translate' => 0,
     'status' => 1,
@@ -180,7 +184,7 @@ function wetkit_bean_create_bean($bean_type, $label, $description = '', $title =
 }
 
 /**
- * Implementation hook_theme_registry_alter()
+ * Implements hook_theme_registry_alter().
  */
 function wetkit_bean_theme_registry_alter(&$theme_registry) {
   $mod_path = drupal_get_path('module', 'wetkit_bean') . '/theme';
@@ -192,18 +196,18 @@ function wetkit_bean_theme_registry_alter(&$theme_registry) {
 /**
  * Implements hook_form_alter().
  *
- * @param type $form
+ * @param array $form
  *   Nested array of form elements that comprise the form.
- * @param type $form_state
+ * @param array $form_state
  *   A keyed array containing the current state of the form.
- * @param type $form_id
+ * @param array $form_id
  *   String representing the name of the form itself.
  */
 function wetkit_bean_form_alter(&$form, &$form_state, $form_id) {
 
-  // Create the General Settings Fieldset
+  // Create the General Settings Fieldset.
   if ($form_id == 'bean_panels_bean_panels_content_type_edit_form') {
-    // Create General Settings Fieldset
+    // Create General Settings Fieldset.
     $form['general_settings'] = array(
       '#type' => 'fieldset',
       '#title' => t('General Settings'),
@@ -216,7 +220,7 @@ function wetkit_bean_form_alter(&$form, &$form_state, $form_id) {
     $form['general_settings']['view_mode'] = $form['view_mode'];
     $form['general_settings']['bean_delta'] = $form['bean_delta'];
 
-    // Unset some Form Variables
+    // Unset some Form Variables.
     unset($form['override_title_markup']);
     unset($form['override_title']);
     unset($form['override_title_text']);

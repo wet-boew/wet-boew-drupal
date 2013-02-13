@@ -19,12 +19,16 @@ $plugin = array(
  * Facets edit form for WetKit Search
  *
  * @param type $form
+ *   The facets form for WetKit Search.
  * @param type $form_state
+ *   The facets form state for WetKit Search.
+ *
  * @return string
+ *   The returned string for the facets related to WetKit Search.
  */
 function wetkit_search_facet_content_type_edit_form($form, &$form_state) {
 
-  // Determine what deltas Facet API Supports
+  // Determine what deltas Facet API Supports.
   $map = facetapi_get_delta_map();
   $deltas = array();
   $realm_name = 'block';
@@ -40,12 +44,15 @@ function wetkit_search_facet_content_type_edit_form($form, &$form_state) {
               case 'search_api@database_node_index':
                 $deltas[$delta] = 'DB: ' . $facet_name;
                 break;
+
               case 'search_api@node_index':
                 $deltas[$delta] = 'Solr: ' . $facet_name;
                 break;
+
               default:
                 $deltas[$delta] = 'Unknown: ' . $facet_name;
                 break;
+
             }
           }
         }
@@ -53,7 +60,7 @@ function wetkit_search_facet_content_type_edit_form($form, &$form_state) {
     }
   }
 
-  // Build the configuration form
+  // Build the configuration form.
   $conf = $form_state['conf'];
   $form['delta'] = array(
     '#type' => 'select',
@@ -68,7 +75,9 @@ function wetkit_search_facet_content_type_edit_form($form, &$form_state) {
  * Facets edit form submit for WetKit Search
  *
  * @param type $form
- * @param array $form_state
+ *   The facets form for WetKit Search.
+ * @param type $form_state
+ *   The facets form state for WetKit Search.
  */
 function wetkit_search_facet_content_type_edit_form_submit($form, &$form_state) {
   $form_state['conf']['delta'] = $form_state['values']['delta'];
@@ -78,18 +87,24 @@ function wetkit_search_facet_content_type_edit_form_submit($form, &$form_state) 
  * Facets edit form render for WetKit Search
  *
  * @param type $subtype
+ *   The subtype passed to CTools.
  * @param type $conf
+ *   The configuration that is passed to CTools.
  * @param type $args
+ *   The arguments array passed to CTools.
  * @param type $context
+ *   The CTools context that helpers to render the content.
+ *
  * @return stdClass
+ *   The returned CTools plugin class.
  */
 function wetkit_search_facet_content_type_render($subtype, $conf, $args, $context) {
 
-  // Assemble some important information
+  // Assemble some important information.
   $builds = &drupal_static(__FUNCTION__, array());
   $parsed = &drupal_static('facetapi_parsed_deltas', array());
   $delta = $conf['delta'];
-  facetapi_check_block_visibility($delta); /* this is needed to call to build the parsed information */
+  facetapi_check_block_visibility($delta);
   list($searcher, $realm_name, $facet_name) = $parsed[$delta];
 
   // Builds and caches the entire realm per searcher / realm combination.
@@ -98,7 +113,7 @@ function wetkit_search_facet_content_type_render($subtype, $conf, $args, $contex
     $builds[$group] = facetapi_build_realm($searcher, $realm_name);
   }
 
-  // Returns the individual pane
+  // Returns the individual pane.
   if (isset($builds[$group][$facet_name])) {
     $variables = array('title' => $builds[$group][$facet_name]['#title'], 'facet' => $builds[$group][$facet_name]);
     $pane = new stdClass();

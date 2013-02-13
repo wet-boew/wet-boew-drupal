@@ -26,7 +26,7 @@ function wetkit_search_search_api_index_ctools_access_settings($form, &$form_sta
  * Check to see if the Search API server and index are enabled
  */
 function wetkit_search_search_api_index_ctools_access_check($conf, $context) {
-  $solr_index= search_api_index_load('node_index');
+  $solr_index = search_api_index_load('node_index');
   return $solr_index->enabled;
 }
 
