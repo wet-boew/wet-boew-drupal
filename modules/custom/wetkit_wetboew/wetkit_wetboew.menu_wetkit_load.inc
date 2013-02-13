@@ -70,24 +70,24 @@ function _wetkit_wetboew_menu_load() {
   _wetkit_wetboew_custom_menu('https://github.com/wet-boew/wet-boew-drupal/issues', 'Problème', NULL, 'main-menu', 2, 'fr', 0, $translated_menu_item);
   _wetkit_wetboew_translation_sets($source_menu_item, $translated_menu_item);
 
-  $source_menu_item_depth = _wetkit_wetboew_custom_menu('node/1', 'Example Pages', NULL, 'main-menu', 2, 'en');
-  $translated_menu_item_depth = _wetkit_wetboew_custom_menu('node/2', 'Pages d\'Example', NULL, 'main-menu', 2, 'fr');
+  $source_menu_item_depth = _wetkit_wetboew_custom_menu('node/3', 'Example Pages', NULL, 'main-menu', 2, 'en');
+  $translated_menu_item_depth = _wetkit_wetboew_custom_menu('node/6', 'Pages d\'Example', NULL, 'main-menu', 2, 'fr');
   _wetkit_wetboew_translation_sets($source_menu_item_depth, $translated_menu_item_depth);
 
-  $source_menu_item = _wetkit_wetboew_custom_menu('node/1', 'Sample Content Pages', NULL, 'main-menu', 0, 'en', 0, $source_menu_item_depth);
-  $translated_menu_item = _wetkit_wetboew_custom_menu('node/2', 'Pages de contenu exemples', NULL, 'main-menu', 0, 'fr', 0, $translated_menu_item_depth);
+  $source_menu_item = _wetkit_wetboew_custom_menu('node/3', 'Sample Content Pages', NULL, 'main-menu', 0, 'en', 0, $source_menu_item_depth);
+  $translated_menu_item = _wetkit_wetboew_custom_menu('node/6', 'Pages de contenu exemples', NULL, 'main-menu', 0, 'fr', 0, $translated_menu_item_depth);
   _wetkit_wetboew_translation_sets($source_menu_item, $translated_menu_item);
 
-  _wetkit_wetboew_custom_menu('node/1', 'WetKit Demo', NULL, 'main-menu', 0, 'en', 0, $source_menu_item);
-  _wetkit_wetboew_custom_menu('node/2', 'Démo Wetkit', NULL, 'main-menu', 0, 'fr', 0, $translated_menu_item);
+  _wetkit_wetboew_custom_menu('node/3', 'WetKit Demo', NULL, 'main-menu', 0, 'en', 0, $source_menu_item);
+  _wetkit_wetboew_custom_menu('node/6', 'Démo Wetkit', NULL, 'main-menu', 0, 'fr', 0, $translated_menu_item);
   _wetkit_wetboew_translation_sets($source_menu_item, $translated_menu_item);
 
-  _wetkit_wetboew_custom_menu('node/6', 'WetKit Features', NULL, 'main-menu', 1, 'en', 0, $source_menu_item);
-  _wetkit_wetboew_custom_menu('node/5', 'Features WetKit', NULL, 'main-menu', 1, 'fr', 0, $translated_menu_item);
+  _wetkit_wetboew_custom_menu('node/1', 'WetKit Features', NULL, 'main-menu', 1, 'en', 0, $source_menu_item);
+  _wetkit_wetboew_custom_menu('node/4', 'Features WetKit', NULL, 'main-menu', 1, 'fr', 0, $translated_menu_item);
   _wetkit_wetboew_translation_sets($source_menu_item, $translated_menu_item);
 
-  _wetkit_wetboew_custom_menu('node/4', 'WetKit Collaboration', NULL, 'main-menu', 2, 'en', 0, $source_menu_item);
-  _wetkit_wetboew_custom_menu('node/3', 'Collaboration WetKit', NULL, 'main-menu', 2, 'fr', 0, $translated_menu_item);
+  _wetkit_wetboew_custom_menu('node/2', 'WetKit Collaboration', NULL, 'main-menu', 2, 'en', 0, $source_menu_item);
+  _wetkit_wetboew_custom_menu('node/5', 'Collaboration WetKit', NULL, 'main-menu', 2, 'fr', 0, $translated_menu_item);
   _wetkit_wetboew_translation_sets($source_menu_item, $translated_menu_item);
 
   $source_menu_item_depth = _wetkit_wetboew_custom_menu('http://drupal.org', 'Drupal WCMS', NULL, 'main-menu', 3, 'en');
