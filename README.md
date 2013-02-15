@@ -5,8 +5,7 @@
 [![Build Status](https://secure.travis-ci.org/wet-boew/wet-boew-drupal.png?branch=master)](http://travis-ci.org/wet-boew/wet-boew-drupal)
 [![Selenium Test Status](https://saucelabs.com/buildstatus/sylus)](https://saucelabs.com/u/sylus)
 
->* **WxT-Drupal 7.x-1.0-rc1-hotfix1 was released on February 12, 2013 [(7.x-1.0-rc1-hotfix1 release notes)](https://github.com/wet-boew/wet-boew-drupal/wiki/v7.x-1.0-rc1-hotfix1-release-notes)**
->* **WxT-Drupal 7.x-1.0-rc1 was released on February 11, 2013 [(7.x-1.0-rc1 release notes)](https://github.com/wet-boew/wet-boew-drupal/wiki/v7.x-1.0-rc1-release-notes)**
+>* **WxT-Drupal 7.x-1.0-rc1 will be released on February 11, 2013 [(7.x-1.0-rc1 release notes)](https://github.com/wet-boew/wet-boew-drupal/wiki/v7.x-1.0-rc1-release-notes)**
 >
 >Responsiveness: [http://responsinator.com/?url=sandbox.openplus.ca](http://responsinator.com/?url=sandbox.openplus.ca)
 >
@@ -19,10 +18,10 @@
 ### Alternate Methods
 
 If you do not wish to perform a build out of Drupal yourself (instructions below) we have two options for you:
-> 1. [Virtual Machine (Vagrant Chef Provision)] (https://github.com/wet-boew/ariadne-wet-boew-drupal) (Advanced Users)
+> 1. [Virtual Machine (Vagrant Chef Provision)] (https://github.com/wet-boew/wet-boew-drupal-vagrant) (Currently Offline)
 >   * a) A preconfigured lightweight, reproducible, and portable virtualized development environment
-> 2. [Drupal Pre-Built](https://github.com/sylus/wet-boew-drupal-compiled) (Waiting on D.O Approval)
->   * a) A prebuilt (post make build) codebase for people who don't want to play around with Drush
+> 2. [Drupal Pre-Built](https://github.com/sylus/wet-boew-drupal-compiled) (Currently Offline)
+>   * a) A prebuilt (post make) codebase for people who don't want to play around with Drush
 
 ## Linux, Mac OSX, and Windows
 
@@ -39,12 +38,11 @@ If you do not wish to perform a build out of Drupal yourself (instructions below
 >   * b) Windows: http://msysgit.github.com/
 > 4. Clone this repository into a tmp directory using the following commands on the Git Bash command prompt.
 <pre>
-git clone https://github.com/wet-boew/wet-boew-drupal.git $tmpdir/wet-boew-drupal;
+git clone https://github.com/wet-boew/wet-boew-drupal.git &lt;Temporary Directory Path&gt;/wet-boew-drupal;
 </pre>
 > 4. Build the complete Drupal installation software profile in your Web Server DOCROOT using the following commands on the Git Bash command prompt.
 <pre>
-Command: drush make --prepare-install --no-gitinfofile --working-copy $tmpdir/wet-boew-drupal/build-wetkit.make $DOCROOT -v --debug
-Example: drush make --prepare-install --no-gitinfofile --working-copy $tmpdir/wet-boew-drupal/build-wetkit.make /var/www/html --yes
+Command: drush make --prepare-install --no-gitinfofile --working-copy &lt;Temporary Directory Path&gt;/wet-boew-drupal/build-wetkit.make &lt;Web Server Directory Path&gt; --yes (can append -v for verbose output)
 </pre>
 > 5. To quickly install using the Drush command line, change to the directory where Drupal (for example /var/www/html) was installed and enter this command.
 > Be sure to use a password that meets the password policy for WET.
