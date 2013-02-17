@@ -102,7 +102,7 @@ function wetkit_pages_form_alter(&$form, &$form_state, $form_id) {
     // Remove the layout choice. Let's just get them to the mall!
     $form['categories']['#access'] = FALSE;
     $form['layout']['#prefix'] = '<div class="panels-choose-layout panels-layouts-checkboxes clearfix" style="display: none">';
-    $form['layout']['WetKit']['boxton']['#default_value'] = TRUE;
+    $form['layout']['WetKit-Layouts']['sutherland']['#default_value'] = TRUE;
 
     // Set the Button and Redirect State.
     $form['buttons']['next']['#value'] = t('Create Page');
@@ -160,6 +160,9 @@ function wetkit_pages_landing_page_wizard_submit($form, &$form_state) {
 
   // Redirect to the Page.
   $form_state['redirect'] = $form_state['wizard cache']->path;
+
+  // Show a message informing the user about the new layout.
+  drupal_set_message(t('A new panels page using the @layout_name default layout has been created', array('@layout_name' => 'Sutherland')));
 }
 
 /**

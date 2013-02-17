@@ -78,6 +78,7 @@
     border: none;
     background: none;
   }
+  .widget-preview .fieldset-wrapper table img {width: auto;}
   fieldset {
     legend {
       background: none;
@@ -88,7 +89,6 @@
       background-image:-o-linear-gradient(#eee,#dcdcdc)!important;
       background-image:linear-gradient(#eee,#dcdcdc)!important;
       span { color: #145E91;}
-      .fieldset-legend { margin-left: 10px; }
     }
   }
 }
@@ -98,6 +98,10 @@
 .panels-ipe-newblock {
   ul {
     margin: 0px;
+  }
+  li {
+    padding: 0;
+    float: left;
   }
 }
 
