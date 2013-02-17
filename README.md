@@ -20,7 +20,7 @@
 ### Alternate Methods
 
 If you do not wish to perform a build out of Drupal yourself (instructions below) we have two options for you:
-> 1. [Virtual Machine (Vagrant Chef Provision)] (https://github.com/wet-boew/wet-boew-drupal-vagrant) (Currently Offline)
+> 1. [Virtual Machine (Vagrant Chef Provision)] (https://github.com/wet-boew/ariadne-wet-boew-drupal)
 >   * a) A preconfigured lightweight, reproducible, and portable virtualized development environment
 > 2. [Drupal Pre-Built](https://github.com/sylus/wet-boew-drupal-compiled) (Currently Offline)
 >   * a) A prebuilt (post make) codebase for people who don't want to play around with Drush
