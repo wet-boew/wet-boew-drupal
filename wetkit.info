@@ -16,7 +16,6 @@ dependencies[] = taxonomy
 dependencies[] = search
 dependencies[] = field
 dependencies[] = field_ui
-dependencies[] = contextual
 dependencies[] = file
 dependencies[] = block
 dependencies[] = dblog
@@ -26,6 +25,7 @@ dependencies[] = shortcut
 ; Drupal Core Disabled
 ;dependencies[] = help
 ;dependencies[] = overlay
+;dependencies[] = contextual
 ;dependencies[] = rdf
 ;dependencies[] = statistics
 ;dependencies[] = simpletest
