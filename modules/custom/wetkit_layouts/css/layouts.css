@@ -12,7 +12,7 @@
 
 @media screen and (min-width: 768px) and (min-device-width: 768px) { /* -----Build Include Section Start----- */
   /* Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.com/wet-boew/License-eng.txt / wet-boew.github.com/wet-boew/Licence-fra.txt */
-  h1, h2, h3, h4, h5, h6, p, blockquote, table, form, img, pre, details { margin-left: 10px; margin-right: 10px; }
+  h1, h2, h3, h4, h5, h6, p, blockquote, form, img, pre, details { margin-left: 10px; margin-right: 10px; }
   .span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12 { position: relative; float: left; min-height: 1px; margin-left: 10px; margin-right: 10px; }
   .border-top, .border-right, .border-bottom, .border-left { position: relative; float: left; min-height: 1px; }
   #wb-main-in .span-1, #wb-main-in .span-2, #wb-main-in .span-3, #wb-main-in .span-4, #wb-main-in .span-5, #wb-main-in .span-6, #wb-main-in .span-7, #wb-main-in .span-8, #wb-main-in .span-9, #wb-main-in .span-10, #wb-main-in .span-11, #wb-main-in .span-12 { margin-bottom: 20px; }
