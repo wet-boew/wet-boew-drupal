@@ -54,3 +54,31 @@ div.modal-content-preview-button {
 #panels-layout-category-WetKit-Layouts-wrapper .current-layout {
   background-color: #ffffc9;
 }
+
+body #panels-dnd-main div.panel-region {
+  border: 1px dashed #000;
+  background: #e8e8e8;
+}
+
+.page-admin-dashboard h1 {
+  margin-left: 0px;
+}
+
+.page-admin-dashboard .panel-pane h2.pane-title {
+  margin-top: 15px;
+  margin-left: 0px;
+  font-size: 14px;
+}
+
+.page-admin-dashboard-files .view-filters form {
+  margin-left: 0px;
+}
+
+#panels-dnd-main .panel-region h2 {
+  border-bottom: none;
+}
+
+#panels-dnd-main .panel-pane-is-title {
+  border: 1px solid #000;
+}
+

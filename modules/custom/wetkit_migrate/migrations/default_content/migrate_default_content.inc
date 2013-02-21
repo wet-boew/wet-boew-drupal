@@ -68,7 +68,7 @@ class WetKitMigrateDefaultContent extends WetKitDCMigration {
     $this->addFieldMapping('title', 'title')
         ->xpath('title');
     $this->addFieldMapping('body', 'body')
-        ->arguments(array('format' => 'wetkit_html_text'))
+        ->arguments(array('format' => 'wetkit_wysiwyg_text'))
         ->xpath('body');
     $this->addFieldMapping('uid')
         ->defaultValue(1);

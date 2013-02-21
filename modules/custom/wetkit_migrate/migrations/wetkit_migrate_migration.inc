@@ -168,7 +168,7 @@ abstract class WetKitMigration extends Migration {
     $this->addFieldMapping('uid', 'uid');
     $this->addFieldMapping('title', 'title');
     $this->addFieldMapping('body', 'body')
-      ->arguments(array('format' => 'wetkit_html_text'));
+      ->arguments(array('format' => 'wetkit_wysiwyg_text'));
     $this->addFieldMapping('field_uri', 'sourceuri');
     $this->addFieldMapping('language', 'language');
     $this->addFieldMapping('path', 'path');
