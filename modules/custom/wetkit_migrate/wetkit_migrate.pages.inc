@@ -15,7 +15,7 @@ function wetkit_migrate_form() {
     '#title' => 'Documentation',
     '#type'  => 'fieldset',
     '#collapsible' => 'true',
-    '#collapsed'   => 'true',
+    '#collapsed'   => 'false',
   );
 
   $form['documentation']['WetKitMigrateDocumentation_basedir'] = array(

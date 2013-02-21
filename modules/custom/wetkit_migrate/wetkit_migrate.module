@@ -28,7 +28,7 @@ function wetkit_migrate_migrate_api() {
 function wetkit_migrate_menu() {
   $items = array();
 
-  $items['admin/config/development/wetkit_migration'] = array(
+  $items['admin/panopoly/wetkit_settings/wetkit_migration'] = array(
     'title' => 'WetKit Migration',
     'description' => 'Configure database settings for the WetKit content migration.',
     'page callback' => 'drupal_get_form',

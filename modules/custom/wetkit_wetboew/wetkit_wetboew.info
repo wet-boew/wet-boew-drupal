@@ -21,6 +21,7 @@ dependencies[] = search
 dependencies[] = shortcut
 dependencies[] = strongarm
 dependencies[] = taxonomy
+dependencies[] = total_control
 dependencies[] = transliteration
 dependencies[] = views
 dependencies[] = views_atom
