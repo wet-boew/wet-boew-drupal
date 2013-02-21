@@ -8,6 +8,14 @@
  *
  */
 
+@import "compass/css3/inline-block";
+@import 'includes/_button.scss';
+@import 'includes/_color.scss';
+@import 'includes/_mixins.scss';
+
+@include colors;
+@include buttons;
+
 /* Desktop view */
 .page-admin-structure #panels-dnd-main {overflow-x:scroll;}
 @media screen and (min-width: 768px) and (min-device-width: 768px) {

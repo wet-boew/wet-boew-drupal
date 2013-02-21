@@ -62,6 +62,9 @@ projects[menu_views][subdir] = contrib
 projects[password_policy][version] = 1.3
 projects[password_policy][subdir] = contrib
 
+projects[total_control][version] = 2.4
+projects[total_control][subdir] = contrib
+
 projects[views_atom][version] = 1.x-dev
 projects[views_atom][type] = module
 projects[views_atom][subdir] = contrib

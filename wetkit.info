@@ -24,8 +24,8 @@ dependencies[] = shortcut
 
 ; Drupal Core Disabled
 ;dependencies[] = help
-;dependencies[] = contextual
 ;dependencies[] = overlay
+;dependencies[] = contextual
 ;dependencies[] = rdf
 ;dependencies[] = statistics
 ;dependencies[] = simpletest
