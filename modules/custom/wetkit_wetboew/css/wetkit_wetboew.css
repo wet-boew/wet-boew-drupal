@@ -10,6 +10,8 @@
 .page-node-revisions div img.panopoly-image-half { float: none; width: auto; }
 
 /* Panels Screen */
+.panel-portlet .grab-title { background: none; color: white; text-shadow: none; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #176ca7), color-stop(100%, #135888)) !important; background-image: -webkit-linear-gradient(#176ca7, #135888) !important; background-image: -moz-linear-gradient(#176ca7, #135888) !important; background-image: -o-linear-gradient(#176ca7, #135888) !important; background-image: linear-gradient(#176ca7, #135888) !important; }
+
 .ctools-modal-content .modal-header { background: none; color: white; text-shadow: none; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #176ca7), color-stop(100%, #135888)) !important; background-image: -webkit-linear-gradient(#176ca7, #135888) !important; background-image: -moz-linear-gradient(#176ca7, #135888) !important; background-image: -o-linear-gradient(#176ca7, #135888) !important; background-image: linear-gradient(#176ca7, #135888) !important; }
 
 #modal-content #status-messages { margin: 0px; }
@@ -17,12 +19,13 @@
 #modal-content .form-submit { float: left; }
 #modal-content .form-actions { width: auto; }
 #modal-content form-wrapper.form-actions { border: none; background: none; }
-#modal-content fieldset legend { background: none; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dcdcdc)) !important; background-image: -webkit-linear-gradient(#eeeeee, #dcdcdc) !important; background-image: -moz-linear-gradient(#eeeeee, #dcdcdc) !important; background-image: -o-linear-gradient(#eeeeee, #dcdcdc) !important; background-image: linear-gradient(#eeeeee, #dcdcdc) !important; }
+#modal-content .widget-preview .fieldset-wrapper table img { width: auto; }
+#modal-content fieldset legend { background: none; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, gainsboro)) !important; background-image: -webkit-linear-gradient(#eeeeee, gainsboro) !important; background-image: -moz-linear-gradient(#eeeeee, gainsboro) !important; background-image: -o-linear-gradient(#eeeeee, gainsboro) !important; background-image: linear-gradient(#eeeeee, #dcdcdc) !important; }
 #modal-content fieldset legend span { color: #145E91; }
-#modal-content fieldset legend .fieldset-legend { margin-left: 10px; }
 
 /* IPE Styles */
 .panels-ipe-newblock ul { margin: 0px; }
+.panels-ipe-newblock li { padding: 0; float: left; }
 
 .panels-ipe #l10n-client { bottom: 52px; z-index: 999; }
 

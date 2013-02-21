@@ -5,6 +5,8 @@
 [![Build Status](https://secure.travis-ci.org/wet-boew/wet-boew-drupal.png?branch=master)](http://travis-ci.org/wet-boew/wet-boew-drupal)
 [![Selenium Test Status](https://saucelabs.com/buildstatus/sylus)](https://saucelabs.com/u/sylus)
 
+
+>* **WxT-Drupal 7.x-1.0-rc1-hotfix1 will be released on February 12, 2013 [(7.x-1.0-rc1-hotfix1 release notes)](https://github.com/wet-boew/wet-boew-drupal/wiki/v7.x-1.0-rc1-hotfix1-release-notes)**
 >* **WxT-Drupal 7.x-1.0-rc1 will be released on February 11, 2013 [(7.x-1.0-rc1 release notes)](https://github.com/wet-boew/wet-boew-drupal/wiki/v7.x-1.0-rc1-release-notes)**
 >
 >Responsiveness: [http://responsinator.com/?url=sandbox.openplus.ca](http://responsinator.com/?url=sandbox.openplus.ca)
@@ -18,7 +20,7 @@
 ### Alternate Methods
 
 If you do not wish to perform a build out of Drupal yourself (instructions below) we have two options for you:
-> 1. [Virtual Machine (Vagrant Chef Provision)] (https://github.com/wet-boew/wet-boew-drupal-vagrant) (Currently Offline)
+> 1. [Virtual Machine (Vagrant Chef Provision)] (https://github.com/wet-boew/ariadne-wet-boew-drupal)
 >   * a) A preconfigured lightweight, reproducible, and portable virtualized development environment
 > 2. [Drupal Pre-Built](https://github.com/sylus/wet-boew-drupal-compiled) (Currently Offline)
 >   * a) A prebuilt (post make) codebase for people who don't want to play around with Drush

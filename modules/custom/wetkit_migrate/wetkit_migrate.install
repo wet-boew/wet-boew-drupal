@@ -14,7 +14,7 @@ function wetkit_migrate_install() {
 
   // Documentation.
   variable_set('WetKitMigrateDocumentation_basedir', libraries_get_path('wet-boew', FALSE));
-  variable_set('WetKitMigrateDocumentation_listdir', libraries_get_path('wet-boew', FALSE) . '/demos');
+  variable_set('WetKitMigrateDocumentation_listdir', libraries_get_path('wet-boew', FALSE) . '/demos/grids');
   variable_set('WetKitMigrateDocumentation_ignore_dirs', '');
   variable_set('WetKitMigrateDocumentation_files', libraries_get_path('wet-boew', TRUE) . '/demos');
 

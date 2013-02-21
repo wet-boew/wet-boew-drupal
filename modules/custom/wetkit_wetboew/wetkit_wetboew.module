@@ -166,6 +166,85 @@ function wetkit_wetboew_form_alter(&$form, &$form_state, $form_id) {
     unset($form['override_title_markup']);
     unset($form['override_title_text']);
   }
+
+  // Check if Total Control module exists.
+  if (module_exists('total_control')) {
+    
+    // Peform logic on generic total control types.
+    $total_control_types = array(
+      'total_control_create_content_type_edit_form',
+      'total_control_panel_pages_content_type_edit_form',
+      'total_control_node_types_content_type_edit_form',
+      'total_control_overview_content_content_type_edit_form',
+    );
+    if (in_array($form_id, $total_control_types)) {
+      // Create General Settings Fieldset.
+      $form['general_settings'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('General Settings'),
+        '#collapsible' => FALSE,
+        '#collapsed' => FALSE,
+      );
+      $form['general_settings']['override_title'] = $form['override_title'];
+      $form['general_settings']['override_title_markup'] = $form['override_title_markup'];
+      $form['general_settings']['override_title_text'] = $form['override_title_text'];
+      $form['general_settings']['types'] = $form['types'];
+
+      // Unset some Form Variables.
+      unset($form['override_title']);
+      unset($form['override_title_markup']);
+      unset($form['override_title_text']);
+      unset($form['types']);
+    }
+
+    // Peform logic on generic total control menus.
+    $total_control_menus = array(
+      'total_control_menus_content_type_edit_form',
+    );
+    if (in_array($form_id, $total_control_menus)) {
+      // Create General Settings Fieldset.
+      $form['general_settings'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('General Settings'),
+        '#collapsible' => FALSE,
+        '#collapsed' => FALSE,
+      );
+      $form['general_settings']['override_title'] = $form['override_title'];
+      $form['general_settings']['override_title_markup'] = $form['override_title_markup'];
+      $form['general_settings']['override_title_text'] = $form['override_title_text'];
+      $form['general_settings']['menus'] = $form['menus'];
+
+      // Unset some Form Variables.
+      unset($form['override_title']);
+      unset($form['override_title_markup']);
+      unset($form['override_title_text']);
+      unset($form['menus']);
+    }
+
+    // Peform logic on generic total control taxonomy.
+    $total_control_taxonomy = array(
+      'total_control_taxonomy_content_type_edit_form',
+    );
+    if (in_array($form_id, $total_control_taxonomy)) {
+      // Create General Settings Fieldset.
+      $form['general_settings'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('General Settings'),
+        '#collapsible' => FALSE,
+        '#collapsed' => FALSE,
+      );
+      $form['general_settings']['override_title'] = $form['override_title'];
+      $form['general_settings']['override_title_markup'] = $form['override_title_markup'];
+      $form['general_settings']['override_title_text'] = $form['override_title_text'];
+      $form['general_settings']['vids'] = $form['vids'];
+
+      // Unset some Form Variables.
+      unset($form['override_title']);
+      unset($form['override_title_markup']);
+      unset($form['override_title_text']);
+      unset($form['vids']);
+    }
+  }
 }
 
 /**
@@ -313,6 +392,10 @@ function wetkit_wetboew_preprocess_tablefield_view(&$variables) {
  */
 function wetkit_wetboew_theme($existing, $type, $theme, $path) {
   return array(
+    'wetkit_wetboew_admin_table' => array(
+      'render element' => 'element',
+      'file' => 'theme/theme.inc',
+    ),
     'wetkit_wetboew_status_messages' => array(
       'render element' => 'element',
       'file' => 'theme/theme.inc',
@@ -747,4 +830,13 @@ function wetkit_wetboew_menu_block_blocks() {
       'sort'        => 0,
     ),
   );
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function wetkit_wetboew_theme_registry_alter(&$theme_registry) {
+  $theme_registry['total_control_admin_table']['theme path'] = drupal_get_path('module', 'wetkit_wetboew');
+  $theme_registry['total_control_admin_table']['file'] = drupal_get_path('module', 'wetkit_wetboew') . '/theme/theme.inc';
+  $theme_registry['total_control_admin_table']['function'] = 'theme_wetkit_wetboew_admin_table';
 }
