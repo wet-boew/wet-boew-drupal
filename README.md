@@ -6,7 +6,7 @@
 [![Selenium Test Status](https://saucelabs.com/buildstatus/sylus)](https://saucelabs.com/u/sylus)
 
 
->* **WxT-Drupal 7.x-1.0-rc1-hotfix1 will be released on February 12, 2013 [(7.x-1.0-rc1-hotfix1 release notes)](https://github.com/wet-boew/wet-boew-drupal/wiki/v7.x-1.0-rc1-hotfix1-release-notes)**
+>* **WxT-Drupal 7.x-1.0-rc1-hotfix1 was released on February 12, 2013 [(7.x-1.0-rc1-hotfix1 release notes)](https://github.com/wet-boew/wet-boew-drupal/wiki/v7.x-1.0-rc1-hotfix1-release-notes)**
 >* **WxT-Drupal 7.x-1.0-rc1 will be released on February 11, 2013 [(7.x-1.0-rc1 release notes)](https://github.com/wet-boew/wet-boew-drupal/wiki/v7.x-1.0-rc1-release-notes)**
 >
 >Responsiveness: [http://responsinator.com/?url=sandbox.openplus.ca](http://responsinator.com/?url=sandbox.openplus.ca)
