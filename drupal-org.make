@@ -11,7 +11,7 @@ projects[panopoly_core][download][type] = git
 projects[panopoly_core][download][revision] = 3bcd157
 projects[panopoly_core][download][branch] = 7.x-1.x
 projects[panopoly_core][patch][41220bd] = https://gist.github.com/raw/4724569/41220bd5f180ccfe0f61087ba08ce4db3fada6d5/panopoly_core_06022012.patch
-projects[panopoly_core][patch][4559587] = https://gist.github.com/raw/4724524/45595878e00c9d0c4a03ec9de8330684000d3447/panopoly_core_06022012.patch
+projects[panopoly_core][patch][33c89f8] = https://gist.github.com/raw/5050169/33c89f8e559255456224c0cdc546bd39eb75e878/panopoly_core_02222013.patch
 
 projects[panopoly_images][version] = 1.x-dev
 projects[panopoly_images][subdir] = panopoly
