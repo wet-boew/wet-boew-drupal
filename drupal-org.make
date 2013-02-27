@@ -1,6 +1,6 @@
 api = 2
 core = 7.x
-projects[drupal][version] = 7.19
+projects[drupal][version] = 7.20
 translations[] = fr
 
 ; Panopoly Foundation
