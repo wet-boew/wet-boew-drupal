@@ -1,7 +1,7 @@
 api = 2
 core = 7.x
 
-projects[drupal][version] = 7.19
+projects[drupal][version] = 7.20
 includes[] = drupal-org-core.make
 	
 ; Drupal.org packaging standards
