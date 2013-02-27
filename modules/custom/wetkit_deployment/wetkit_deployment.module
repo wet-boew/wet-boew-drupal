@@ -1,0 +1,66 @@
+<?php
+/**
+ * @file
+ * Code for the WetKit Deployment Deployment feature.
+ */
+
+include_once 'wetkit_deployment.features.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ *
+ * @param string $module
+ *   The system name of the module owning the plugin type.
+ * @param string $plugin
+ *   The name of the plugin type for which a base directory is being requested.
+ *
+ * @return type
+ *   The path where CTools' plugin system should search for plugin files.
+ */
+function wetkit_deployment_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+}
+
+/**
+ * Implements hook_deploy_processors().
+ */
+function wetkit_deployment_deploy_processors() {
+  $path = drupal_get_path('module', 'wetkit_deployment') . '/plugins/deployment';
+  return array(
+    'WetKitDeployProcessorBatch' => array(
+      'name' => 'WetKit Batch API',
+      'description' => 'All entities are processed with the Batch API. Works best when deployments are done through the UI.',
+      'handler' => array(
+        'class' => 'WetKitDeployProcessorBatch',
+        'file' => 'WetKitDeployProcessorBatch.inc',
+        'path' => $path,
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_entity_dependencies().
+ *
+ * @param string $entity
+ *   The entity name.
+ * @param string $entity_type
+ *   The type of the entity.
+ *
+ * @return type
+ *   The dependencies which should be added to the deployment.
+ */
+function wetkit_deployment_entity_dependencies($entity, $entity_type) {
+  if ($entity_type == 'node') {
+    $dependencies = array();
+    $body = field_get_items('node', $entity, 'body');
+    if ($body) {
+      preg_match(MEDIA_TOKEN_REGEX, $body[0]['value'], $matches);
+      $tag = $matches[0];
+      $tag = str_replace(array('[[', ']]'), '', $tag);
+      $tag_info = drupal_json_decode($tag);
+      $dependencies[] = array('type' => 'file', 'id' => $tag_info['fid']);
+    }
+    return $dependencies;
+  }
+}
