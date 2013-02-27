@@ -36,7 +36,7 @@ projects[panopoly_widgets][subdir] = panopoly
 projects[panopoly_widgets][download][type] = git
 projects[panopoly_widgets][download][revision] = 2a98c9e 
 projects[panopoly_widgets][download][branch] = 7.x-1.x
-projects[panopoly_widgets][patch][1847912] = https://gist.github.com/raw/4724398/a3ff32aabbac1c19ca390474595d9938f23bad70/panopoly_widgets_06022012.patch
+projects[panopoly_widgets][patch][77721a4] = https://gist.github.com/raw/5050012/77721a4f6a64c49ea469d2690f565b78e7d86724/panopoly_widgets_06222012.patch
 
 projects[panopoly_admin][version] = 1.x-dev
 projects[panopoly_admin][subdir] = panopoly
