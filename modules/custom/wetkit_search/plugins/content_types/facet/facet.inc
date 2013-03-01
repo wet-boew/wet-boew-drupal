@@ -16,11 +16,11 @@ $plugin = array(
 );
 
 /**
- * Facets edit form for WetKit Search
+ * Facets edit form for WetKit Search.
  *
- * @param type $form
+ * @param array $form
  *   The facets form for WetKit Search.
- * @param type $form_state
+ * @param array $form_state
  *   The facets form state for WetKit Search.
  *
  * @return string
@@ -72,11 +72,11 @@ function wetkit_search_facet_content_type_edit_form($form, &$form_state) {
 }
 
 /**
- * Facets edit form submit for WetKit Search
+ * Facets edit form submit for WetKit Search.
  *
- * @param type $form
+ * @param array $form
  *   The facets form for WetKit Search.
- * @param type $form_state
+ * @param array $form_state
  *   The facets form state for WetKit Search.
  */
 function wetkit_search_facet_content_type_edit_form_submit($form, &$form_state) {
@@ -84,15 +84,15 @@ function wetkit_search_facet_content_type_edit_form_submit($form, &$form_state) 
 }
 
 /**
- * Facets edit form render for WetKit Search
+ * Facets edit form render for WetKit Search.
  *
- * @param type $subtype
+ * @param array $subtype
  *   The subtype passed to CTools.
- * @param type $conf
+ * @param array $conf
  *   The configuration that is passed to CTools.
- * @param type $args
+ * @param array $args
  *   The arguments array passed to CTools.
- * @param type $context
+ * @param array $context
  *   The CTools context that helpers to render the content.
  *
  * @return stdClass

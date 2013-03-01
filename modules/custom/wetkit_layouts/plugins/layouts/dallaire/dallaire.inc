@@ -34,7 +34,7 @@ function wetkit_layouts_dallaire_panels_layouts() {
 }
 
 /**
- * Preprocess variables for dallaire.tpl.php
+ * Preprocess variables for dallaire.tpl.php.
  */
 function template_preprocess_dallaire(&$vars) {
   $vars['panel_prefix'] = '';

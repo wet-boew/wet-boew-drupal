@@ -200,13 +200,6 @@ function wetkit_bean_theme_registry_alter(&$theme_registry) {
 
 /**
  * Implements hook_form_alter().
- *
- * @param array $form
- *   Nested array of form elements that comprise the form.
- * @param array $form_state
- *   A keyed array containing the current state of the form.
- * @param array $form_id
- *   String representing the name of the form itself.
  */
 function wetkit_bean_form_alter(&$form, &$form_state, $form_id) {
 

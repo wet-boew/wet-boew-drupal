@@ -38,7 +38,7 @@ function wetkit_layouts_secord_panels_layouts() {
 }
 
 /**
- * Preprocess variables for secord.tpl.php
+ * Preprocess variables for secord.tpl.php.
  */
 function template_preprocess_secord(&$vars) {
   $vars['panel_prefix'] = '';

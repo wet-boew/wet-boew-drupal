@@ -35,7 +35,7 @@ function wetkit_layouts_penfield_panels_layouts() {
 }
 
 /**
- * Preprocess variables for penfield.tpl.php
+ * Preprocess variables for penfield.tpl.php.
  */
 function template_preprocess_penfield(&$vars) {
   $vars['panel_prefix'] = '';

@@ -16,7 +16,7 @@ function wetkit_metatag_apps_app_info() {
 }
 
 /**
- * Configuration Form for WetKit Metatags
+ * Configuration Form for WetKit Metatags.
  */
 function wetkit_metatag_configure_form($form, &$form_state) {
   $form = array();
@@ -54,9 +54,9 @@ function wetkit_metatag_configure_form($form, &$form_state) {
 /**
  * Handle submission of the WetKit Metatag configuration page.
  *
- * @param type $form
+ * @param array $form
  *   Nested array of form elements that comprise the form.
- * @param type $form_state
+ * @param array $form_state
  *   A keyed array containing the current state of the form.
  */
 function wetkit_metatag_configure_form_submit($form, &$form_state) {
@@ -123,7 +123,7 @@ function theme_wetkit_metatag($variables) {
  * Implements hook_form_alter().
  */
 function wetkit_metatag_form_alter(&$form, &$form_state, $form_id) {
-   // Only include on node add/edit forms.
+  // Only include on node add/edit forms.
   if (!empty($form['#node_edit_form'])) {
 
     // Create a fieldset that will be included in the vertical tab.

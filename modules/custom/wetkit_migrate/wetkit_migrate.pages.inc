@@ -6,7 +6,6 @@
 
 /**
  * WetKit Migrate Administration Form Settings.
- * The form fields are defined in this function.
  */
 function wetkit_migrate_form() {
 

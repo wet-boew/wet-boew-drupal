@@ -5,7 +5,7 @@
  */
 
 /**
- * Add an install task to allow selection of the theme
+ * Add an install task to allow selection of the theme.
  */
 function wetkit_wetboew_profile_theme_selection_install_task(&$install_task) {
   $tasks['wetkit_wetboew_selection_form'] = array(
@@ -16,7 +16,7 @@ function wetkit_wetboew_profile_theme_selection_install_task(&$install_task) {
 }
 
 /**
- * Form to choose the starting theme from list of available options
+ * Form to choose the starting theme from list of available options.
  */
 function wetkit_wetboew_selection_form($form, &$form_state) {
 
@@ -68,7 +68,7 @@ function wetkit_wetboew_selection_form($form, &$form_state) {
 }
 
 /**
- * Form submit handler to select the theme
+ * Form submit handler to select the theme.
  */
 function wetkit_wetboew_selection_form_submit($form, &$form_state) {
 

@@ -7,13 +7,11 @@
 include_once 'wetkit_pages.features.inc';
 
 /**
- * Implementation of drupal_alter() to update menu block settings in
- * case of IPE callback magic. This will only work in limited cases
- * but will be fixed when the page refreshes.
+ * Update menu block settings in case of IPE callback magic.
  *
- * @param boolean $tree
+ * @param bool $tree
  *   The menu tree using menu blocks
- * @param type $config
+ * @param array $config
  *   The configuration for the menu tree using menu blocks
  */
 function wetkit_pages_menu_block_tree_alter($tree, $config) {
@@ -42,13 +40,6 @@ function wetkit_pages_menu() {
 
 /**
  * Implements hook_form_alter().
- *
- * @param type $form
- *   Nested array of form elements that comprise the form.
- * @param type $form_state
- *   A keyed array containing the current state of the form.
- * @param type $form_id
- *   String representing the name of the form itself.
  */
 function wetkit_pages_form_alter(&$form, &$form_state, $form_id) {
   // Improve the wizard for our custom adding a landing page wizard.
@@ -112,11 +103,11 @@ function wetkit_pages_form_alter(&$form, &$form_state, $form_id) {
 }
 
 /**
- * Custom Validate Function to Help Improve The Landing Page Options
+ * Custom Validate Function to Help Improve The Landing Page Options.
  *
- * @param type $form
+ * @param array $form
  *   Nested array of form elements that comprise the form.
- * @param type $form_state
+ * @param array $form_state
  *   A keyed array containing the current state of the form.
  */
 function wetkit_pages_landing_page_wizard_validate($form, &$form_state) {
@@ -133,11 +124,11 @@ function wetkit_pages_landing_page_wizard_validate($form, &$form_state) {
 }
 
 /**
- * Custom Submit Function to Finish Up
+ * Custom Submit Function to Finish Up.
  *
- * @param type $form
+ * @param array $form
  *   Nested array of form elements that comprise the form.
- * @param type $form_state
+ * @param array $form_state
  *   A keyed array containing the current state of the form.
  */
 function wetkit_pages_landing_page_wizard_submit($form, &$form_state) {
@@ -167,11 +158,6 @@ function wetkit_pages_landing_page_wizard_submit($form, &$form_state) {
 
 /**
  * Implements hook_module_implements_alter().
- *
- * @param type $implementations
- *   An array keyed by module's name. Value of each item relates to a $group.
- * @param type $hook
- *   The name of the module hook being implemented.
  */
 function wetkit_pages_module_implements_alter(&$implementations, $hook) {
   if ($hook == 'form_alter' || $hook == 'modules_enabled') {

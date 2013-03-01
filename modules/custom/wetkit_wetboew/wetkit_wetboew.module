@@ -99,13 +99,6 @@ function wetkit_wetboew_menu() {
 
 /**
  * Implements hook_menu_alter().
- *
- * Remember that hook_menu_alter() only runs at menu_rebuild() time, not every
- * time the page is built, so this typically happens only at cache clear time.
- *
- * @param array $items
- *   The complete list of menu router items ready to be written to the
- *   menu_router table.
  */
 function wetkit_wetboew_menu_alter(&$items) {
   if (!empty($items['admin/panopoly'])) {
@@ -118,13 +111,6 @@ function wetkit_wetboew_menu_alter(&$items) {
 
 /**
  * Implements hook_form_alter().
- *
- * @param type $form
- *   Nested array of form elements that comprise the form.
- * @param type $form_state
- *   A keyed array containing the current state of the form.
- * @param type $form_id
- *   String representing the name of the form itself.
  */
 function wetkit_wetboew_form_alter(&$form, &$form_state, $form_id) {
   // Move the featured field into publishing options.
@@ -169,7 +155,7 @@ function wetkit_wetboew_form_alter(&$form, &$form_state, $form_id) {
 
   // Check if Total Control module exists.
   if (module_exists('total_control')) {
-    
+
     // Peform logic on generic total control types.
     $total_control_types = array(
       'total_control_create_content_type_edit_form',
@@ -257,11 +243,11 @@ function wetkit_wetboew_apps_app_info() {
 }
 
 /**
- * Configuration Form for WetKit Magic
+ * Configuration Form for WetKit Magic.
  *
- * @param type $form
+ * @param array $form
  *   Nested array of form elements that comprise the form.
- * @param type $form_state
+ * @param array $form_state
  *   A keyed array containing the current state of the form.
  */
 function wetkit_wetboew_configure_form($form, &$form_state) {
@@ -295,9 +281,9 @@ function wetkit_wetboew_configure_form($form, &$form_state) {
 /**
  * Handle submission of the WetKit Web Usability configuration page.
  *
- * @param type $form
+ * @param array $form
  *   Nested array of form elements that comprise the form.
- * @param type $form_state
+ * @param array $form_state
  *   A keyed array containing the current state of the form.
  */
 function wetkit_wetboew_configure_form_submit($form, &$form_state) {
@@ -330,9 +316,6 @@ function wetkit_wetboew_configure_form_submit($form, &$form_state) {
 
 /**
  * Implements hook_css_alter().
- *
- * @param string $css
- *   The CSS Files to alter and be added or replaced
  */
 function wetkit_wetboew_css_alter(&$css) {
   // Installs the jquery.ui themeroller theme to the theme.
@@ -377,18 +360,6 @@ function wetkit_wetboew_preprocess_tablefield_view(&$variables) {
 
 /**
  * Implements hook_theme().
- *
- * @param type $existing
- *   An array of existing implementations that may be used to override.
- * @param type $type
- *   Whether a theme, module, etc. is being processed.
- * @param type $theme
- *   The actual name of theme, module, etc. that is being being processed.
- * @param type $path
- *   The directory path of the theme or module, so doesn't need to be looked up.
- *
- * @return type
- *   An associative array of theme hook information.
  */
 function wetkit_wetboew_theme($existing, $type, $theme, $path) {
   return array(
@@ -414,12 +385,12 @@ function wetkit_wetboew_theme($existing, $type, $theme, $path) {
 /**
  * Wrapper function around filter_xss() with some additions.
  *
- * @param type $string
+ * @param array $string
  *   String to be parsed.
- * @param type $allowed_tags
+ * @param array $allowed_tags
  *   Allowed tags to be included when parsing the string.
  *
- * @return type
+ * @return array
  *   Return the modified string.
  */
 function wetkit_wetboew_filter_xss($string, $allowed_tags = array(
@@ -440,14 +411,6 @@ function wetkit_wetboew_filter_xss($string, $allowed_tags = array(
 
 /**
  * Implements hook_ctools_plugin_directory().
- *
- * @param string $module
- *   The system name of the module owning the plugin type.
- * @param string $plugin
- *   The name of the plugin type for which a base directory is being requested.
- *
- * @return type
- *   The path where CTools' plugin system should search for plugin files.
  */
 function wetkit_wetboew_ctools_plugin_directory($module, $plugin) {
   return 'plugins/' . $plugin;
@@ -786,7 +749,7 @@ function wetkit_wetboew_libraries_info() {
  * @param string $variant
  *   The name of the variant for the specified library
  *
- * @return boolean
+ * @return bool
  *   Whether or not the variant can be manipulated
  */
 function wetkit_wetboew_check_variant($libary, $variant) {

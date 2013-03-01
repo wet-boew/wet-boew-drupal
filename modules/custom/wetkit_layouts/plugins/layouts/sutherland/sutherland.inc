@@ -34,7 +34,7 @@ function wetkit_layouts_sutherland_panels_layouts() {
 }
 
 /**
- * Preprocess variables for sutherland.tpl.php
+ * Preprocess variables for sutherland.tpl.php.
  */
 function template_preprocess_sutherland(&$vars) {
   $vars['panel_prefix'] = '';

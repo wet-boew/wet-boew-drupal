@@ -23,7 +23,7 @@ class WetKitArchivedWidgetTestCase extends WetKitWebTestCase {
   /**
    * SetUp dependencies.
    */
-  function setUp() {
+  public function setUp() {
     parent::setUp(
       'page_manager',
       'panels'
@@ -34,7 +34,7 @@ class WetKitArchivedWidgetTestCase extends WetKitWebTestCase {
   /**
    * Test that the translation status pane works as expected.
    */
-  function testArchivedWidgetPane() {
+  public function testArchivedWidgetPane() {
     // Check that the plugin exists.
     ctools_include('plugins');
     $plugin = ctools_get_plugins('ctools', 'content_types', 'archived_widget');

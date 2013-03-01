@@ -17,7 +17,7 @@ function wetkit_wysiwyg_apps_app_info() {
 }
 
 /**
- * Configuration Form for WetKit WYSIWYG
+ * Configuration Form for WetKit WYSIWYG.
  */
 function wetkit_wysiwyg_configure_form($form, &$form_state) {
   $form = array();
@@ -94,7 +94,7 @@ function wetkit_wysiwyg_element_info_alter(&$type) {
 }
 
 /**
- * Callback for processing the text_format element
+ * Callback for processing the text_format element.
  */
 function wetkit_wysiwyg_filter_process_format($element) {
 
