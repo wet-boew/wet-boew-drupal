@@ -577,7 +577,7 @@ function wetkit_widgets_field_prepare_view($entity_type, $entities, $field, $ins
 }
 
 /**
- * Theme function for table view
+ * Theme function for table view.
  */
 function theme_wetkit_tab_interface_view($variables) {
   $title = $variables['items']['title'];

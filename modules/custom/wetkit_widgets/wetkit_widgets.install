@@ -6,20 +6,6 @@
  */
 
 /**
- * Implements hook_install().
- */
-function wetkit_widgets_install() {
-
-}
-
-/**
- * Implements hook_uninstall().
- */
-function wetkit_widgets_uninstall() {
-
-}
-
-/**
  * Implements hook_field_schema().
  */
 function wetkit_widgets_field_schema($field) {

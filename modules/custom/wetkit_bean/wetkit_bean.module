@@ -21,13 +21,6 @@ function wetkit_bean_preprocess_entity(&$variables) {
 }
 
 /**
- * Implements hook_init().
- */
-function wetkit_bean_init() {
-
-}
-
-/**
  * Implements hook_apps_app_info().
  */
 function wetkit_bean_apps_app_info() {
@@ -46,11 +39,10 @@ function wetkit_bean_configure_form($form, &$form_state) {
     '#title' => 'Override Settings',
     '#type'  => 'fieldset',
     '#collapsible' => 'true',
-    '#collapsed'   => 'true',
   );
 
   $form['wetkit_bean']['rebuild_menu_description'] = array(
-    '#markup' => '<p>' . t('Rebuild the beans on the site using preconfigured settings:') . '</p>',
+    '#markup' => '<p>' . t('Rebuild the beans on the site using demo content.') . '</p>',
   );
 
   $form['wetkit_bean']['rebuild_menu'] = array(
@@ -208,13 +200,6 @@ function wetkit_bean_theme_registry_alter(&$theme_registry) {
 
 /**
  * Implements hook_form_alter().
- *
- * @param array $form
- *   Nested array of form elements that comprise the form.
- * @param array $form_state
- *   A keyed array containing the current state of the form.
- * @param array $form_id
- *   String representing the name of the form itself.
  */
 function wetkit_bean_form_alter(&$form, &$form_state, $form_id) {
 

@@ -17,12 +17,19 @@ function wetkit_wysiwyg_apps_app_info() {
 }
 
 /**
- * Configuration Form for WetKit WYSIWYG
+ * Configuration Form for WetKit WYSIWYG.
  */
 function wetkit_wysiwyg_configure_form($form, &$form_state) {
   $form = array();
 
-  $form['wetkit_wysiwyg_show_format_details'] = array(
+    // Documentation.
+  $form['wetkit_wysiwyg'] = array(
+    '#title' => 'WYSIWYG Settings',
+    '#type'  => 'fieldset',
+    '#collapsible' => 'true',
+  );
+
+  $form['wetkit_wysiwyg']['wetkit_wysiwyg_show_format_details'] = array(
     '#title' => t('Show Text Formatter Details'),
     '#type' => 'select',
     '#required' => TRUE,
@@ -94,7 +101,7 @@ function wetkit_wysiwyg_element_info_alter(&$type) {
 }
 
 /**
- * Callback for processing the text_format element
+ * Callback for processing the text_format element.
  */
 function wetkit_wysiwyg_filter_process_format($element) {
 

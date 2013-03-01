@@ -87,28 +87,15 @@ function wetkit_deployment_default_page_manager_pages() {
     $display->content['new-f7bbbe56-5885-1d84-3922-8679d1363fae'] = $pane;
     $display->panels['contentmain'][0] = 'new-f7bbbe56-5885-1d84-3922-8679d1363fae';
     $pane = new stdClass();
-    $pane->pid = 'new-d1a413aa-e0e1-c2b4-81c6-2672856b66dc';
+    $pane->pid = 'new-b147ce67-10f1-6b84-8131-ae1b5ce05e56';
     $pane->panel = 'contentmain';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'deployment_administration_nodes-panel_pane_1';
+    $pane->type = 'block';
+    $pane->subtype = 'quicktabs-deployment_quicktabs';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'teaser',
-      'widget_title' => NULL,
-      'items_per_page' => NULL,
-      'exposed' => array(
-        'sort_by' => NULL,
-        'sort_order' => NULL,
-      ),
-      'use_pager' => NULL,
-      'pager_id' => NULL,
-      'offset' => NULL,
-      'link_to_view' => NULL,
-      'more_link' => NULL,
-      'path' => NULL,
-      'view_settings' => 'fields',
-      'header_type' => 'none',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -118,9 +105,9 @@ function wetkit_deployment_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = 'd1a413aa-e0e1-c2b4-81c6-2672856b66dc';
-    $display->content['new-d1a413aa-e0e1-c2b4-81c6-2672856b66dc'] = $pane;
-    $display->panels['contentmain'][1] = 'new-d1a413aa-e0e1-c2b4-81c6-2672856b66dc';
+    $pane->uuid = 'b147ce67-10f1-6b84-8131-ae1b5ce05e56';
+    $display->content['new-b147ce67-10f1-6b84-8131-ae1b5ce05e56'] = $pane;
+    $display->panels['contentmain'][1] = 'new-b147ce67-10f1-6b84-8131-ae1b5ce05e56';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

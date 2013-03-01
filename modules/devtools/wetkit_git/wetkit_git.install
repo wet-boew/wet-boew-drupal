@@ -1,0 +1,40 @@
+<?php
+/**
+ * @file
+ * Git integration for the wetkit_git module.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function wetkit_git_requirements($phase) {
+  $requirements = array();
+  $t = get_t();
+
+  // Get the current revision.
+  exec('cd profiles/wetkit; git rev-parse HEAD', $x);
+  if (is_array($x)) {
+    $info_sha = drupal_substr($x[0], 0, 7);
+  }
+
+  // Get information about the remote origin.
+  exec('cd profiles/wetkit; git remote show origin | grep Fetch', $y);
+  if (is_array($y)) {
+    $info_url = $y[0];
+  }
+
+  switch ($phase) {
+    case 'runtime':
+      $requirements['wetkit_git'] = array(
+        'title' => $t('Git Revision'),
+        'value' => t('SHA Commit: @info_sha <br /> To update the current revision of Git from upstream: <a href="@git_update">Click Here</a> <br /> @info_url', array(
+          '@info_sha' => $info_sha,
+          '@git_update' => url('git_update'),
+          '@info_url' => $info_url,
+        )),
+        'severity' => REQUIREMENT_OK,
+      );
+      break;
+  }
+  return $requirements;
+}

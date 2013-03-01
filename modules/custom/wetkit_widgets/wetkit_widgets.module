@@ -17,7 +17,7 @@ function wetkit_widgets_apps_app_info() {
 }
 
 /**
- * Configuration Form for WetKit Magic
+ * Configuration Form for WetKit Magic.
  */
 function wetkit_widgets_configure_form($form, &$form_state) {
   $form = array();
@@ -56,8 +56,7 @@ function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
 }
 
 /**
- * Implement the "Content Settings" fieldset in a pre-render. This fixes issues
- * with image caused by initially doing this in a form_alter.
+ * Implement the "Content Settings" fieldset in a pre-render.
  *
  * @see http://drupal.org/node/1567704
  */

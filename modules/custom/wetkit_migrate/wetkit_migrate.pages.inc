@@ -6,16 +6,14 @@
 
 /**
  * WetKit Migrate Administration Form Settings.
- * The form fields are defined in this function.
  */
 function wetkit_migrate_form() {
 
   // Documentation.
   $form['documentation'] = array(
-    '#title' => 'Documentation',
+    '#title' => 'Migration Settings',
     '#type'  => 'fieldset',
     '#collapsible' => 'true',
-    '#collapsed'   => 'false',
   );
 
   $form['documentation']['WetKitMigrateDocumentation_basedir'] = array(

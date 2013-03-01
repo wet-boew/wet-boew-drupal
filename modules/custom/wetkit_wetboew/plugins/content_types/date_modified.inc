@@ -36,11 +36,10 @@ function wetkit_wetboew_date_modified_content_type_render($subtype, $conf, $pane
 }
 
 /**
- * 'Edit' callback edit form for the content type.
+ * Edit callback edit form for the content type.
  */
 function wetkit_wetboew_date_modified_edit_form($form, &$form_state) {
   $conf = $form_state['conf'];
-
 
   return $form;
 }

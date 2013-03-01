@@ -47,8 +47,7 @@ function wetkit_wetboew_archived_widget_content_type_render($subtype, $conf, $pa
 }
 
 /**
- * 'Edit' callback edit form for the content type.
- *
+ * Edit callback edit form for the content type.
  */
 function wetkit_wetboew_archived_widget_edit_form($form, &$form_state) {
   $conf = $form_state['conf'];
@@ -66,8 +65,7 @@ function wetkit_wetboew_archived_widget_edit_form($form, &$form_state) {
 }
 
 /**
- * 'Edit' callback submit form for the content type.
- *
+ * Edit callback submit form for the content type.
  */
 function wetkit_wetboew_archived_widget_edit_form_submit($form, &$form_state) {
   foreach (element_children($form) as $key) {

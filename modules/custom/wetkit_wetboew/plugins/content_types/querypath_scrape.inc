@@ -83,7 +83,7 @@ function wetkit_wetboew_querypath_scrape_content_type_render($subtype, $conf, $p
 }
 
 /**
- * 'Edit' callback edit form for the content type.
+ * Edit callback edit form for the content type.
  */
 function wetkit_wetboew_querypath_scrape_edit_form($form, &$form_state) {
   $conf = $form_state['conf'];
@@ -221,8 +221,7 @@ function wetkit_wetboew_qp_add_save($form, &$form_state) {
 }
 
 /**
- * Submit handler for "Remove Querypath Parameters" button on
- * querypath_remove_parameters().
+ * Submit handler for "Remove Querypath Parameters" button.
  */
 function wetkit_wetboew_qp_add_delete($form, &$form_state) {
   if ($form_state['num_querypath_add_dom'] > 1) {
@@ -243,8 +242,7 @@ function wetkit_wetboew_qp_rm_save($form, &$form_state) {
 }
 
 /**
- * Submit handler for "Remove Querypath Parameters" button on
- * querypath_remove_parameters().
+ * Submit handler for "Remove Querypath Parameters" button.
  */
 function wetkit_wetboew_qp_rm_delete($form, &$form_state) {
   if ($form_state['num_querypath_remove_dom'] > 1) {
@@ -255,7 +253,7 @@ function wetkit_wetboew_qp_rm_delete($form, &$form_state) {
 }
 
 /**
- * 'Edit' callback submit form for the content type.
+ * Edit callback submit form for the content type.
  */
 function wetkit_wetboew_querypath_scrape_edit_form_submit($form, &$form_state) {
   foreach (element_children($form) as $key) {
@@ -266,7 +264,7 @@ function wetkit_wetboew_querypath_scrape_edit_form_submit($form, &$form_state) {
 }
 
 /**
- * Custom function for retrieving HTML Dom elements
+ * Custom function for retrieving HTML Dom elements.
  */
 function _wetkit_wetboew_qp_scrape_getDOM($qp_scrape, $elements) {
   foreach ($elements as $element) {
@@ -279,7 +277,7 @@ function _wetkit_wetboew_qp_scrape_getDOM($qp_scrape, $elements) {
 }
 
 /**
- * Custom function for removing HTML DOM elements
+ * Custom function for removing HTML DOM elements.
  */
 function _wetkit_wetboew_qp_scrape_removeDOM($qp_scrape, $elements) {
   foreach ($elements as $element) {

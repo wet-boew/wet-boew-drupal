@@ -1,6 +1,6 @@
 WetKit Images
 ===============
-Provides common image styles and helps make them responsive for the WxT-Drupal distro
+Provides common image styles and image related functionality.
 
 Key Features
 * Custom Image Styles for WetKit

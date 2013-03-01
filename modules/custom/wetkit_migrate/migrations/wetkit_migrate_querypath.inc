@@ -211,7 +211,7 @@ class WetKitMigrationhtmlpage {
   }
 
   /**
-   * Get the contents of the title tag from the imported page
+   * Get the contents of the title tag from the imported page.
    *
    * @return string
    *   Return the title of the imported page.
@@ -226,7 +226,7 @@ class WetKitMigrationhtmlpage {
   }
 
   /**
-   * Return various metatags of the imported page
+   * Return various metatags of the imported page.
    *
    * @return string
    *   Return the specified metatag of the current page.
@@ -237,7 +237,7 @@ class WetKitMigrationhtmlpage {
   }
 
   /**
-   * Return the language of the imported page
+   * Return the language of the imported page.
    *
    * @return string
    *   Return the language of the current page.

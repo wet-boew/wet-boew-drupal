@@ -5,7 +5,7 @@
  */
 
 /**
- * Custom Template
+ * Custom Template.
  *
  * Implements WET Messages: Alert, Attention, and General Information
  * TODO: Note, Q&A, Tools, Work in Progress, Refer, Summary, Archive
@@ -67,7 +67,7 @@ function theme_wetkit_wetboew_status_messages($variables) {
 }
 
 /**
- * Theme function for table view
+ * Theme function for table view.
  */
 function theme_wetkit_wetboew_tablefield_view($variables) {
   $attributes = array(
@@ -88,7 +88,7 @@ function theme_wetkit_wetboew_tablefield_view($variables) {
     . '</div>';
 }
 
-/*
+/**
  * Theme function for site overview.
  */
 function theme_wetkit_wetboew_overview($variables) {
@@ -105,7 +105,7 @@ function theme_wetkit_wetboew_overview($variables) {
   return $output;
 }
 
-/*
+/**
  * Theme function for content overview.
  */
 function theme_wetkit_wetboew_overview_content($variables) {
@@ -118,7 +118,7 @@ function theme_wetkit_wetboew_overview_content($variables) {
   return $output;
 }
 
-/*
+/**
  * Theme function for user overview.
  */
 function theme_wetkit_wetboew_overview_user($variables) {
@@ -131,7 +131,7 @@ function theme_wetkit_wetboew_overview_user($variables) {
   return $output;
 }
 
-/*
+/**
  * Theme function for create content pane.
  */
 function theme_wetkit_wetboew_create($variables) {
@@ -144,7 +144,7 @@ function theme_wetkit_wetboew_create($variables) {
   return $output;
 }
 
-/*
+/**
  * Theme function for panel pages.
  */
 function theme_wetkit_wetboew_admin_table($variables) {
@@ -156,7 +156,15 @@ function theme_wetkit_wetboew_admin_table($variables) {
   $link = str_replace('<a href=', '<a class="button button-accent" href=', $link);
 
   $output  = '<div class="total-control-panel-panes">';
-  $output .= theme('table', array('header' => $header, 'rows' => $rows, 'attributes' => array('class' => array('panels-manage'))));
+  $output .= theme('table', array(
+    'header' => $header,
+    'rows' => $rows,
+    'attributes' => array(
+      'class' => array(
+        'panels-manage',
+        ),
+      ),
+    ));
   $output .= '  <div class="admin-page">' . $link . '</div>';
   $output .= '</div>';
 
