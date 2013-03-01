@@ -16,21 +16,21 @@ function wetkit_search_install() {
 }
 
 /**
- * Implemenetation of hook_uninstall()
+ * Implemenetation of hook_uninstall().
  */
 function wetkit_search_uninstall() {
 
 }
 
 /**
- * WetKit Beta 4 Update: Enabling Search API DB Module
+ * WetKit Beta 4 Update: Enabling Search API DB Module.
  */
 function wetkit_search_update_7001(&$sandbox) {
   module_enable(array('search_api_db'));
 }
 
 /**
- * WetKit Beta 5 Update: Using Wetkit Compatible Solr Search System
+ * WetKit Beta 5 Update: Using Wetkit Compatible Solr Search System.
  */
 function wetkit_search_update_7002(&$sandbox) {
 
@@ -66,7 +66,7 @@ function wetkit_search_update_7002(&$sandbox) {
 }
 
 /**
- * WetKit Beta 5 Update: Updating Search API DB Search System
+ * WetKit Beta 5 Update: Updating Search API DB Search System.
  */
 function wetkit_search_update_7003(&$sandbox) {
   $database_server = search_api_server_load('database_server');

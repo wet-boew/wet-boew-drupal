@@ -13,19 +13,6 @@ function wetkit_language_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'entity_translation_entity_types';
-  $strongarm->value = array(
-    'fieldable_panels_pane' => 'fieldable_panels_pane',
-    'node' => 0,
-    'file' => 0,
-    'taxonomy_term' => 0,
-    'user' => 0,
-  );
-  $export['entity_translation_entity_types'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'entity_translation_shared_labels';
   $strongarm->value = 1;
   $export['entity_translation_shared_labels'] = $strongarm;

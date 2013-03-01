@@ -1,6 +1,6 @@
 WetKit Bean
 ===========
-Replaces Blocks in Drupal with a more usable and fieldable block system using Bean for the WxT-Drupal distro
+Replaces Blocks in Drupal with a more usable and fieldable block system.
 
 Key Features
 

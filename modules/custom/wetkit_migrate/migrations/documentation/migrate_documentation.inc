@@ -10,7 +10,7 @@
 class WetKitMigrateDocumentation extends WetKitMigration {
 
   /**
-   * Implements the migration constructor
+   * Implements the migration constructor.
    */
   public function __construct() {
     parent::__construct();
@@ -38,7 +38,7 @@ class WetKitMigrateDocumentation extends WetKitMigration {
   }
 
   /**
-   * Process the file prior to the actual migration
+   * Process the file prior to the actual migration.
    *
    * @param array $row
    *   Row to import for the migration.
@@ -78,7 +78,7 @@ class WetKitMigrateDocumentation extends WetKitMigration {
   }
 
   /**
-   * Call this function after the node has been created
+   * Call this function after the node has been created.
    *
    * @param object $node
    *   The node the migration is based on.

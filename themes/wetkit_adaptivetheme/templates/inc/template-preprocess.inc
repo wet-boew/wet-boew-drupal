@@ -294,8 +294,7 @@ function wetkit_adaptivetheme_preprocess_block(&$variables, $hook) {
 }
 
 /**
- * Theme the 'placeholder' pane, which is shown on an active IPE when no panes
- * live in that region.
+ * Theme the 'placeholder' pane, which is shown on an active IPE.
  *
  * @param array $vars
  *   The array used to modify the panels ipe placeholder pane.

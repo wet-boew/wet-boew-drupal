@@ -10,7 +10,7 @@
 abstract class WetKitMigration extends Migration {
 
   /**
-   * Default class constructor
+   * Default class constructor.
    */
   public function __construct() {
     // Always call the parent constructor first for basic setup.
@@ -28,10 +28,9 @@ abstract class WetKitMigration extends Migration {
   }
 
   /**
-   * By default populate the data source row with fields parsed from the HTML
-   * file that is being imported.
+   * By default populate the data source row with fields parsed from the HTML.
    *
-   * @param type $row
+   * @param array $row
    *   The prepared row that will be modified.
    */
   public function prepareRow($row) {
@@ -110,14 +109,14 @@ abstract class WetKitMigration extends Migration {
   }
 
   /**
-   * Perform a common initialization of the migration process
+   * Perform a common initialization of the migration process.
    *
    * @param array $list_dirs
    *   This is an array containg a list of directories to be scanned
-   * @param type $base_dir
+   * @param array $base_dir
    *   The base dir is the part of the path that will be excluded when making an
    *   ID for each file.
-   * @param type $file_mask
+   * @param array $file_mask
    *   Passed on and used to filter for certain types of files. Use a regular
    *   expression.
    */
@@ -160,7 +159,7 @@ abstract class WetKitMigration extends Migration {
   }
 
   /**
-   * Perform a generic mapping of migration source to destination fields
+   * Perform a generic mapping of migration source to destination fields.
    */
   public function mapCommonFields() {
 
@@ -203,7 +202,7 @@ abstract class WetKitMigration extends Migration {
    *   Drupal Variable name that contains the colon-separated list of \
    *   directories to ignore.
    *
-   * @return boolean
+   * @return bool
    *   Return whether a file or folder should be ignored.
    */
   public function isIgnored($var_name, $file_path) {
@@ -223,9 +222,9 @@ abstract class WetKitMigration extends Migration {
   /**
    * This function is called after the migrated content node has been created.
    *
-   * @param type $node
+   * @param array $node
    *   The node object.
-   * @param type $current_row
+   * @param array $current_row
    *   The current row of the migration.
    */
   public function complete($node, $current_row) {

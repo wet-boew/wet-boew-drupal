@@ -1,8 +1,6 @@
 WetKit Metatags
 ===============
-HTML5 Metatag Support for the WxT-Drupal distro
-
-Key Features
+Support for metatags that can assist in SEO for the website.
 
 Key Features
 * Implements standard metatags according to WET specifications

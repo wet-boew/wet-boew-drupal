@@ -56,10 +56,12 @@ function wetkit_deployment_entity_dependencies($entity, $entity_type) {
     $body = field_get_items('node', $entity, 'body');
     if ($body) {
       preg_match(MEDIA_TOKEN_REGEX, $body[0]['value'], $matches);
-      $tag = $matches[0];
-      $tag = str_replace(array('[[', ']]'), '', $tag);
-      $tag_info = drupal_json_decode($tag);
-      $dependencies[] = array('type' => 'file', 'id' => $tag_info['fid']);
+      if (isset($matches[0])) {
+        $tag = $matches[0];
+        $tag = str_replace(array('[[', ']]'), '', $tag);
+        $tag_info = drupal_json_decode($tag);
+        $dependencies[] = array('type' => 'file', 'id' => $tag_info['fid']);
+      }
     }
     return $dependencies;
   }
