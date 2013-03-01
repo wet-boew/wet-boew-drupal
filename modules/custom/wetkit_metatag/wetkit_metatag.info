@@ -1,4 +1,4 @@
-name = WetKit MetaTags
+name = WetKit Metatags
 description = Installs and configures default metatags that help to extend the SEO of the site.
 core = 7.x
 package = WetKit

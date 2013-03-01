@@ -25,7 +25,6 @@ function wetkit_metatag_configure_form($form, &$form_state) {
     '#title' => 'Metatag Settings',
     '#type'  => 'fieldset',
     '#collapsible' => 'true',
-    '#collapsed'   => 'true',
   );
 
   $form['wetkit_metatag']['wetkit_metatag_creator'] = array(
