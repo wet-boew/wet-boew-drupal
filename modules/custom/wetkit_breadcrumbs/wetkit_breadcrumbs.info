@@ -10,7 +10,6 @@ dependencies[] = path_breadcrumbs
 dependencies[] = path_breadcrumbs_i18n
 dependencies[] = path_breadcrumbs_ui
 dependencies[] = strongarm
-dependencies[] = wetkit_wetboew
 features[ctools][] = path_breadcrumbs:path_breadcrumbs:1
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1

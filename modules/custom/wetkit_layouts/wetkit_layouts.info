@@ -1,5 +1,5 @@
 name = WetKit Panel Layouts
-description = Provides custom panel layouts for the WxT-Drupal distro
+description = Provides custom and responsive panel layouts.
 core = 7.x
 package = WetKit
 php = 5.2.4

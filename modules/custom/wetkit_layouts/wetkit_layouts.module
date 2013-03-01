@@ -24,7 +24,7 @@ function wetkit_layouts_init() {
     if (strstr($url['path'], "/admin/structure/pages")) {
       drupal_add_css(drupal_get_path('module', 'wetkit_layouts') . '/css/layouts.css', array('group' => CSS_THEME, 'every_page' => TRUE));
     }
-    elseif (strstr($url['path'], "/admin/dashboard")) {
+    if (strstr($url['path'], "/admin/dashboard")) {
       drupal_add_css(drupal_get_path('module', 'wetkit_layouts') . '/css/layouts.css', array('group' => CSS_THEME, 'every_page' => TRUE));
     }
   }
@@ -54,7 +54,6 @@ function _wetkit_layouts_refresh_page($form, $form_state) {
  * Remove default sidebar related body classes and provide own css classes
  */
 function wetkit_layouts_preprocess_html(&$variables) {
-
   // Detect Panels Layout.
   $panel_page = page_manager_get_current_page();
   if ($panel_page) {

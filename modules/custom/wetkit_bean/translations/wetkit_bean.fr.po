@@ -31,10 +31,10 @@ msgid "bean_wetkit_body"
 msgstr ""
 
 #: wetkit_bean.module:40
-msgid "Rebuild the beans on the site using preconfigured settings:"
+msgid "Rebuild the beans on the site using demo content."
 msgstr ""
 "Recréer les beans du site en utilisant les paramètres "
-"préconfigurés"
+"préconfigurés."
 
 #: wetkit_bean.module:45;63
 msgid "Rebuild Default Bean(s)"

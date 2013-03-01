@@ -56,22 +56,6 @@ function wetkit_language_preprocess_maintenance_page(&$vars) {
 }
 
 /**
- * Implements hook_init().
- */
-function wetkit_language_init() {
-
-}
-
-/**
- * Implements hook_language_init().
- */
-function wetkit_language_language_init() {
-  // Set Flag.
-  if (variable_get('wetkit_language_db', 1) == 1) {
-  }
-}
-
-/**
  * Implements _wetkit_language_lang_switcher().
  *
  * @global type $language
@@ -119,11 +103,4 @@ function _wetkit_language_lang_switcher() {
     }
     return implode('<br />', $lang_switcher);
   }
-}
-
-/**
- * Implements hook_preprocess_node().
- */
-function wetkit_language_preprocess_node(&$vars) {
-
 }

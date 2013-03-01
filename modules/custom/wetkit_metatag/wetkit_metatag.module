@@ -139,7 +139,7 @@ function wetkit_metatag_form_alter(&$form, &$form_state, $form_id) {
       '#group' => 'additional_settings',
       '#attached' => array(
         'js' => array(
-          'vertical-tabs' => drupal_get_path('module', 'wetkit_metatag') . '/vertical_tabs_metatag.js',
+          'vertical-tabs' => drupal_get_path('module', 'wetkit_metatag') . '/js/vertical_tabs_metatag.js',
         ),
       ),
     );
@@ -157,7 +157,7 @@ function wetkit_metatag_form_alter(&$form, &$form_state, $form_id) {
       '#group' => 'additional_settings',
       '#attached' => array(
         'js' => array(
-          'vertical-tabs' => drupal_get_path('module', 'wetkit_metatag') . '/vertical_tabs_metatag.js',
+          'vertical-tabs' => drupal_get_path('module', 'wetkit_metatag') . '/js/vertical_tabs_metatag.js',
         ),
       ),
     );

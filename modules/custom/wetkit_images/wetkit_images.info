@@ -1,5 +1,5 @@
 name = WetKit Images
-description = Provides scaling and cropping to images.
+description = Provides scaling and cropping to images and other functionality.
 core = 7.x
 package = WetKit
 php = 5.2.4

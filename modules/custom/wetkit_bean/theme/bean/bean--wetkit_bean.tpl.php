@@ -29,6 +29,7 @@
 ?>
 <section>
   <?php
+    unset($content['title_field']);
     print render($content);
   ?>
 </section>
