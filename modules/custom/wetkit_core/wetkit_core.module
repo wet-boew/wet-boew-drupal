@@ -30,7 +30,7 @@ function wetkit_core_init() {
     drupal_set_message(t('For more information please be sure to read the online <a href="@documentation">Documentation</a>', array('@documentation' => url('https://github.com/wet-boew/wet-boew-drupal/wiki'))), 'warning');
     variable_set('wetkit_core_doc', 0);
   }
-  // Solve some of the display inconsistencies between WET and Drupal
+  // Solve some of the display inconsistencies between WET and Drupal.
   drupal_add_css(drupal_get_path('module', 'wetkit_core') . '/css/wetkit_core.css', array(
     'group' => CSS_THEME,
     'every_page' => TRUE,

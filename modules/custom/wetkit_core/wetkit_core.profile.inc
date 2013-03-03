@@ -72,7 +72,7 @@ function wetkit_core_selection_form($form, &$form_state) {
  */
 function wetkit_core_selection_form_submit($form, &$form_state) {
 
-  // Enable and set the theme of choice
+  // Enable and set the theme of choice.
   $theme = 'wetkit_adaptivetheme';
   theme_enable(array($theme));
   variable_set('theme_default', $theme);
@@ -85,8 +85,8 @@ function wetkit_core_selection_form_submit($form, &$form_state) {
     variable_set('theme_' . $theme . '_settings', $theme_data[$theme]->info['settings']);
   }
 
-  // Hack to fix a dependency issue with admin menu
-  // TODO: Fix dependency chain issue
+  // Hack to fix a dependency issue with admin menu.
+  // TODO: Fix dependency chain issue.
   module_enable(array('admin_menu', 'admin_menu_toolbar'));
 
   // Flush theme caches so things are right.

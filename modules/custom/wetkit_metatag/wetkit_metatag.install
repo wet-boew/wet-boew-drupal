@@ -8,7 +8,7 @@
  * Implements hook_uninstall().
  */
 function wetkit_metatag_uninstall() {
-  // Get global variable array
+  // Get global variable array.
   global $conf;
   foreach (array_keys($conf) as $key) {
     // Find variables that have the module prefix.
