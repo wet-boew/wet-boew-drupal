@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * An installation file for WetKit WET-BOEW
+ * An installation file for WetKit WET-BOEW.
  */
 
 include_once 'wetkit_wetboew.menus.inc';
@@ -17,10 +17,10 @@ function wetkit_wetboew_install() {
  * Implements hook_uninstall().
  */
 function wetkit_wetboew_uninstall() {
-  // Get global variable array
+  // Get global variable array.
   global $conf;
   foreach (array_keys($conf) as $key) {
-    // Find variables that have the module prefix
+    // Find variables that have the module prefix.
     if (strpos($key, 'wetkit_wetboew_') === 0) {
       variable_del($key);
     }
