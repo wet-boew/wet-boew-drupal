@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * wetkit_wetboew.block.inc
+ * wetkit_core.block.inc
  */
 
 /**
- * Implements _wetkit_wetboew_default_blocks().
+ * Implements _wetkit_core_default_blocks().
  */
-function _wetkit_wetboew_default_blocks() {
+function _wetkit_core_default_blocks() {
   // Enable some standard blocks.
   $default_theme = variable_get('theme_default', 'wetkit_adaptivetheme');
   $admin_theme = 'wetkit_rubik';

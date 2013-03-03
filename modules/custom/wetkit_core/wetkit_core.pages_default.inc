@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * wetkit_wetboew.pages_default.inc
+ * wetkit_core.pages_default.inc
  */
 
 /**
  * Implements hook_default_page_manager_pages().
  */
-function wetkit_wetboew_default_page_manager_pages() {
+function wetkit_core_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
