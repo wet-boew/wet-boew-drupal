@@ -11,13 +11,13 @@ include_once 'wetkit_bean.features.inc';
  * Implements hook_preprocess_hook().
  */
 function wetkit_bean_preprocess_entity(&$variables) {
- $entity_type = $variables['entity_type'];
- if ($entity_type == 'bean') {
-   $id = entity_id($variables['entity_type'], $variables['bean']);
-   if ($id) {
-     $variables['theme_hook_suggestions'][] = $variables['entity_type'] . '__' . preg_replace('/[^a-z0-9]/', '_', strtolower($id));
-   }
- }
+  $entity_type = $variables['entity_type'];
+  if ($entity_type == 'bean') {
+    $id = entity_id($variables['entity_type'], $variables['bean']);
+    if ($id) {
+      $variables['theme_hook_suggestions'][] = $variables['entity_type'] . '__' . preg_replace('/[^a-z0-9]/', '_', strtolower($id));
+    }
+  }
 }
 
 /**

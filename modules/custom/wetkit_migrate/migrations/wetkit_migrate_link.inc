@@ -156,8 +156,7 @@ class LinksParser {
   }
 
   /**
-   * Wrap an HTML fragment in the correct head/meta tags so that UTF-8 is
-   * correctly detected, and for the QueryPath parser and tidiers.
+   * Wrap an HTML fragment in the correct head/meta tags to detect UTF-8.
    */
   protected function wrapHTML() {
     // We add surrounding <html> and <head> tags.

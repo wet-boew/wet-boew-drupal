@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * wetkit_wetboew.admin_content_view.inc
+ * wetkit_core.admin_content_view.inc
  */
 
 /**
  * Implements hook_views_default_views_alter().
  */
-function wetkit_wetboew_views_default_views_alter(&$views) {
+function wetkit_core_views_default_views_alter(&$views) {
   // Alter only the 'admin_views_node' view.
   if (array_key_exists('admin_views_node', $views)) {
     $view = new view();

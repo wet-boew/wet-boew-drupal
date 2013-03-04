@@ -7,6 +7,7 @@ dependencies[] = ctools
 dependencies[] = defaultconfig
 dependencies[] = entity_translation
 dependencies[] = features
+dependencies[] = l10n_client
 dependencies[] = i18n
 dependencies[] = i18n_block
 dependencies[] = i18n_contact
