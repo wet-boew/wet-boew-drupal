@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * theme.inc
+ * wetkit_wetboew.theme.inc
  */
 
 /**
@@ -162,9 +162,9 @@ function theme_wetkit_wetboew_admin_table($variables) {
     'attributes' => array(
       'class' => array(
         'panels-manage',
-        ),
       ),
-    ));
+    ),
+  ));
   $output .= '  <div class="admin-page">' . $link . '</div>';
   $output .= '</div>';
 

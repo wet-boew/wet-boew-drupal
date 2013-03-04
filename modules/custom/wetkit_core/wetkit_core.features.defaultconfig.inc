@@ -1,15 +1,15 @@
 <?php
 /**
  * @file
- * wetkit_wetboew.features.defaultconfig.inc
+ * wetkit_core.features.defaultconfig.inc
  */
 
 /**
  * Implements hook_defaultconfig_features().
  */
-function wetkit_wetboew_defaultconfig_features() {
+function wetkit_core_defaultconfig_features() {
   return array(
-    'wetkit_wetboew' => array(
+    'wetkit_core' => array(
       'user_default_permissions' => 'user_default_permissions',
     ),
   );
@@ -18,7 +18,7 @@ function wetkit_wetboew_defaultconfig_features() {
 /**
  * Implements hook_defaultconfig_user_default_permissions().
  */
-function wetkit_wetboew_defaultconfig_user_default_permissions() {
+function wetkit_core_defaultconfig_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: access site-wide contact form.

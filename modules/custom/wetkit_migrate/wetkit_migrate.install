@@ -26,19 +26,25 @@ function wetkit_migrate_install() {
 /**
  * Implements hook_uninstall().
  */
-function wetkit_migrate_disable() {
-
-  // Default Content.
-  MigrationBase::deregisterMigration('WetKitMigrateDefaultContent');
-
-  // Documentation.
+function wetkit_migrate_uninstall() {
+  // Delete migration variables.
   variable_delete('WetKitMigrateDocumentation_basedir');
   variable_delete('WetKitMigrateDocumentation_listdir');
   variable_delete('WetKitMigrateDocumentation_ignore_dirs');
   variable_delete('WetKitMigrateDocumentation_files');
   variable_delete('WetKitMigrateDocumentationMenu_file');
 
+  MigrationBase::deregisterMigration('WetKitMigrateDefaultContent');
   MigrationBase::deregisterMigration('WetKitMigrateDocumentation');
   MigrationBase::deregisterMigration('WetKitMigrateDocumentationMenu');
   MigrationBase::deregisterMigration('WetKitMigrateDocumentationMenuLinks');
+
+  // Get global variable array.
+  global $conf;
+  foreach (array_keys($conf) as $key) {
+    // Find variables that have the module prefix.
+    if (strpos($key, 'wetkit_migrate_') === 0) {
+      variable_del($key);
+    }
+  }
 }

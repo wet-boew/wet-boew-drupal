@@ -306,7 +306,7 @@ function wetkit_pages_panelizer_defaults() {
       'formatter_settings' => array(
         'image_style' => 'panopoly_image_half',
         'image_link' => '',
-        'image_style_destination' => 'panopoly_image_full',
+        'image_style_destination' => 'panopoly_image_half',
         'image_style_source' => 'panopoly_image_half',
         'custom_class' => '',
       ),

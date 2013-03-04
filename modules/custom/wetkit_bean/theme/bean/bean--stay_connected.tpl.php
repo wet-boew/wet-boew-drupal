@@ -31,7 +31,7 @@
 
   <div class="content"<?php print $content_attributes; ?>>
     <?php
-      unset($content['title_field']);    
+      unset($content['title_field']);
       print render($content);
     ?>
   </div>

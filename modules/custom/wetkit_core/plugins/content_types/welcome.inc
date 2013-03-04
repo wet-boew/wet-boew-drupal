@@ -19,14 +19,14 @@ $plugin = array(
 /**
  * Admin title callback for the content type.
  */
-function wetkit_wetboew_welcome_content_type_admin_title($subtype = NULL, $conf = NULL, $context = NULL) {
+function wetkit_core_welcome_content_type_admin_title($subtype = NULL, $conf = NULL, $context = NULL) {
   return t('Welcome');
 }
 
 /**
  * Admin info callback for the content type.
  */
-function wetkit_wetboew_welcome_content_type_admin_info($subtype = NULL, $conf = NULL, $context = NULL) {
+function wetkit_core_welcome_content_type_admin_info($subtype = NULL, $conf = NULL, $context = NULL) {
   $block = new stdClass();
   $block->title = t('Intro to WetKit Dashboard');
 
@@ -36,7 +36,7 @@ function wetkit_wetboew_welcome_content_type_admin_info($subtype = NULL, $conf =
 /**
  * Run-time rendering of the body of the block.
  */
-function wetkit_wetboew_welcome_content_type_render($subtype, $conf, $panel_args, &$context) {
+function wetkit_core_welcome_content_type_render($subtype, $conf, $panel_args, &$context) {
   // Build the content.
   $content = '<div class="wetkit-site-overview">';
   $content .= '  <p>' . t('Welcome to your administrative dashboard.  !panel
@@ -49,7 +49,7 @@ function wetkit_wetboew_welcome_content_type_render($subtype, $conf, $panel_args
   $content .= '</div>';
 
   $block = new stdClass();
-  $block->module = t('wetkit_wetboew');
+  $block->module = t('wetkit_core');
   $block->title = t('WetKit Dashboards');
   $block->content = $content;
 

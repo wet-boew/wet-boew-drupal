@@ -1,14 +1,14 @@
 <?php
 /**
  * @file
- * wetkit_wetboew.profile.inc
+ * wetkit_core.profile.inc
  */
 
 /**
  * Add an install task to allow selection of the theme.
  */
-function wetkit_wetboew_profile_theme_selection_install_task(&$install_task) {
-  $tasks['wetkit_wetboew_selection_form'] = array(
+function wetkit_core_profile_theme_selection_install_task(&$install_task) {
+  $tasks['wetkit_core_selection_form'] = array(
     'display_name' => t('Choose a theme'),
     'type' => 'form',
   );
@@ -18,7 +18,7 @@ function wetkit_wetboew_profile_theme_selection_install_task(&$install_task) {
 /**
  * Form to choose the starting theme from list of available options.
  */
-function wetkit_wetboew_selection_form($form, &$form_state) {
+function wetkit_core_selection_form($form, &$form_state) {
 
   // Set the page title.
   drupal_set_title(t('Choose a theme'));
@@ -70,10 +70,9 @@ function wetkit_wetboew_selection_form($form, &$form_state) {
 /**
  * Form submit handler to select the theme.
  */
-function wetkit_wetboew_selection_form_submit($form, &$form_state) {
+function wetkit_core_selection_form_submit($form, &$form_state) {
 
-  // Enable and set the theme of choice
-  // $theme = $form_state['input']['theme'];
+  // Enable and set the theme of choice.
   $theme = 'wetkit_adaptivetheme';
   theme_enable(array($theme));
   variable_set('theme_default', $theme);
@@ -86,7 +85,10 @@ function wetkit_wetboew_selection_form_submit($form, &$form_state) {
     variable_set('theme_' . $theme . '_settings', $theme_data[$theme]->info['settings']);
   }
 
+  // Hack to fix a dependency issue with admin menu.
+  // TODO: Fix dependency chain issue.
   module_enable(array('admin_menu', 'admin_menu_toolbar'));
+
   // Flush theme caches so things are right.
   system_rebuild_theme_data();
   drupal_theme_rebuild();

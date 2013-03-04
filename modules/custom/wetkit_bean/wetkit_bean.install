@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * An installation file for WetKit Bean.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function wetkit_bean_uninstall() {
+  // Get global variable array.
+  global $conf;
+  foreach (array_keys($conf) as $key) {
+    // Find variables that have the module prefix.
+    if (strpos($key, 'wetkit_bean_') === 0) {
+      variable_del($key);
+    }
+  }
+}

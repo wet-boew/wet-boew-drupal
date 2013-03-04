@@ -1,17 +1,15 @@
 <?php
 /**
  * @file
- * An installation file for WetKit WET-BOEW
+ * An installation file for WetKit WET-BOEW.
  */
+
+include_once 'wetkit_wetboew.menus.inc';
 
 /**
  * Implements hook_install().
  */
 function wetkit_wetboew_install() {
-  if (module_exists('block')) {
-    // Set Default Blocks.
-    _wetkit_wetboew_default_blocks();
-  }
   _wetkit_wetboew_menu_load();
 }
 
@@ -19,5 +17,12 @@ function wetkit_wetboew_install() {
  * Implements hook_uninstall().
  */
 function wetkit_wetboew_uninstall() {
-  variable_del('views_temp');
+  // Get global variable array.
+  global $conf;
+  foreach (array_keys($conf) as $key) {
+    // Find variables that have the module prefix.
+    if (strpos($key, 'wetkit_wetboew_') === 0) {
+      variable_del($key);
+    }
+  }
 }

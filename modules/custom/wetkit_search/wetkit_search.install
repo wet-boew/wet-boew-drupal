@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Installation file for WetKit Search
+ * Installation file for WetKit Search.
  */
 
 /**
@@ -19,7 +19,14 @@ function wetkit_search_install() {
  * Implemenetation of hook_uninstall().
  */
 function wetkit_search_uninstall() {
-
+  // Get global variable array.
+  global $conf;
+  foreach (array_keys($conf) as $key) {
+    // Find variables that have the module prefix.
+    if (strpos($key, 'wetkit_search_') === 0) {
+      variable_del($key);
+    }
+  }
 }
 
 /**
