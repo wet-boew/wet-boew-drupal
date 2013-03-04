@@ -61,13 +61,13 @@ chown -R apache:apache /sites/&lt;domain&gt;/files
 > **NOTE:** When using Mac OSX all the commands can be done directly in Terminal.  When using Windows, two different command prompts are used (Not to be confused with the Windows Command Prompt.  Step 4 is run in Git Bash Command Prompt and step 5 is run in the Drush command prompt).
 
 ### Update
-> Drush Make can also be used to update an existing install without replacing additional files. (IMPORTANT: However Drush Make will replace all files that Drush Make knows about!)
+> Drush Make can also be used to update an existing install (IMPORTANT: Please use caution and understand how this process works before attempting!)
 >
->If you want to update to the latest development version of the Distribution:
+>If you want to update to the latest stable version of the Distribution:
 >
-1. Perform a fresh build following installation instructions above
-2. Move your sites directory from WEBROOT into the new build folder
+1. Perform a fresh build following installation instructions above (point at a specific tag sha)
+2. Move your sites directory (where your custom modules/themes should be) from WEBROOT into the new build folder
 3. Replace your WEBROOT with the contents of the new build folder
 4. Run drush updatedb
 5. Run drush cc all
-
+6. Your new site should be good to go!
