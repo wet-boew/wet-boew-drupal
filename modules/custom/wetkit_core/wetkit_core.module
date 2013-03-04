@@ -134,6 +134,10 @@ function wetkit_core_menu_alter(&$items) {
   if (!empty($items['admin/workbench'])) {
     $items['admin/workbench']['title'] = 'Workbench';
   }
+  if (!empty($items['admin/advanced_help'])) {
+    $items['admin/dashboard/advanced_help'] = $items['admin/advanced_help'];
+    unset($items['admin/advanced_help']);
+  }
 }
 
 /**
