@@ -133,7 +133,6 @@ function wetkit_wetboew_configure_form($form, &$form_state) {
     '#type' => 'fieldset',
     '#title' => t('WetKit Theme Selection'),
     '#collapsible' => TRUE,
-    '#collapsed' => FALSE,
   );
   $form['wetkit_wetboew']['wetkit_wetboew_theme'] = array(
     '#type' => 'select',
