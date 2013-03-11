@@ -9,6 +9,7 @@ dependencies[] = libraries
 dependencies[] = menu
 dependencies[] = menu_attributes
 dependencies[] = menu_block
+dependencies[] = wetkit_core
 features[features_api][] = api:1
 features[menu_custom][] = main-menu
 features[menu_custom][] = menu-wet-footer
