@@ -1,6 +1,6 @@
 WetKit Breadcrumbs
 ==================
-Breadcrumb functionality to extend the functionality of the WxT-Drupal distro
+Extends Drupal to support contextual breadcrumb functionality.
 
 Key Features
 

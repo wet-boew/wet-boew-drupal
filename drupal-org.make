@@ -1,6 +1,6 @@
 api = 2
 core = 7.x
-projects[drupal][version] = 7.19
+projects[drupal][version] = 7.20
 translations[] = fr
 
 ; Panopoly Foundation
@@ -11,7 +11,7 @@ projects[panopoly_core][download][type] = git
 projects[panopoly_core][download][revision] = 3bcd157
 projects[panopoly_core][download][branch] = 7.x-1.x
 projects[panopoly_core][patch][41220bd] = https://gist.github.com/raw/4724569/41220bd5f180ccfe0f61087ba08ce4db3fada6d5/panopoly_core_06022012.patch
-projects[panopoly_core][patch][4559587] = https://gist.github.com/raw/4724524/45595878e00c9d0c4a03ec9de8330684000d3447/panopoly_core_06022012.patch
+projects[panopoly_core][patch][db3f615] = https://gist.github.com/raw/5054301/db3f61504581c50edfbe5315c33064d445fe3e2b/panopoly_core_02232013.patch
 
 projects[panopoly_images][version] = 1.x-dev
 projects[panopoly_images][subdir] = panopoly
@@ -36,7 +36,7 @@ projects[panopoly_widgets][subdir] = panopoly
 projects[panopoly_widgets][download][type] = git
 projects[panopoly_widgets][download][revision] = 2a98c9e 
 projects[panopoly_widgets][download][branch] = 7.x-1.x
-projects[panopoly_widgets][patch][1847912] = https://gist.github.com/raw/4724398/a3ff32aabbac1c19ca390474595d9938f23bad70/panopoly_widgets_06022012.patch
+projects[panopoly_widgets][patch][66eefd5] = https://gist.github.com/raw/5050012/66eefd5dbd379122006b96c3a7c19549b6cffb6a/panopoly_widgets_02222013.patch
 
 projects[panopoly_admin][version] = 1.x-dev
 projects[panopoly_admin][subdir] = panopoly
@@ -60,5 +60,6 @@ includes[] = modules/custom/wetkit_language/wetkit_language.make
 includes[] = modules/custom/wetkit_migrate/wetkit_migrate.make
 includes[] = modules/custom/wetkit_bean/wetkit_bean.make
 includes[] = modules/custom/wetkit_metatag/wetkit_metatag.make
+includes[] = modules/custom/wetkit_core/wetkit_core.make
 includes[] = modules/custom/wetkit_wetboew/wetkit_wetboew.make
 includes[] = modules/custom/wetkit_breadcrumbs/wetkit_breadcrumbs.make

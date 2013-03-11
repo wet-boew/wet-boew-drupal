@@ -23,8 +23,8 @@ function wetkit_install_tasks(&$install_state) {
   $current_task = variable_get('install_task', 'done');
 
   // Add the WetKit theme selection to the installation process.
-  require_once drupal_get_path('module', 'wetkit_wetboew') . '/wetkit_wetboew.profile.inc';
-  $tasks = $tasks + wetkit_wetboew_profile_theme_selection_install_task($install_state);
+  require_once drupal_get_path('module', 'wetkit_core') . '/wetkit_core.profile.inc';
+  $tasks = $tasks + wetkit_core_profile_theme_selection_install_task($install_state);
 
   // Set up a task to include secondary language (fr).
   $tasks['wetkit_batch_processing'] = array(

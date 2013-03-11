@@ -8,10 +8,16 @@ include_once 'wetkit_bean.default_content.inc';
 include_once 'wetkit_bean.features.inc';
 
 /**
- * Implements hook_init().
+ * Implements hook_preprocess_hook().
  */
-function wetkit_bean_init() {
-
+function wetkit_bean_preprocess_entity(&$variables) {
+  $entity_type = $variables['entity_type'];
+  if ($entity_type == 'bean') {
+    $id = entity_id($variables['entity_type'], $variables['bean']);
+    if ($id) {
+      $variables['theme_hook_suggestions'][] = $variables['entity_type'] . '__' . preg_replace('/[^a-z0-9]/', '_', strtolower($id));
+    }
+  }
 }
 
 /**
@@ -33,11 +39,10 @@ function wetkit_bean_configure_form($form, &$form_state) {
     '#title' => 'Override Settings',
     '#type'  => 'fieldset',
     '#collapsible' => 'true',
-    '#collapsed'   => 'true',
   );
 
   $form['wetkit_bean']['rebuild_menu_description'] = array(
-    '#markup' => '<p>' . t('Rebuild the beans on the site using preconfigured settings:') . '</p>',
+    '#markup' => '<p>' . t('Rebuild the beans on the site using demo content.') . '</p>',
   );
 
   $form['wetkit_bean']['rebuild_menu'] = array(
@@ -61,33 +66,11 @@ function wetkit_bean_configure_form($form, &$form_state) {
  */
 function wetkit_bean_configure_form_submit($form, &$form_state) {
   if ($form_state['values']['op'] == t('Rebuild Default Bean(s)')) {
-    $bean = bean_delta_load('Minister');
-    if (empty($bean)) {
-      drupal_set_message(t('There is no bean found with delta @delta.', array('@delta' => 'Minister')));
-      return;
-    }
-    bean_delete($bean);
-
-    $bean = bean_delta_load('Priorities');
-    if (empty($bean)) {
-      drupal_set_message(t('There is no bean found with delta @delta.', array('@delta' => 'Priorities')));
-      return;
-    }
-    bean_delete($bean);
-
-    $bean = bean_delta_load('Stay-Connected');
-    if (empty($bean)) {
-      drupal_set_message(t('There is no bean found with delta @delta.', array('@delta' => 'Stay-Connected')));
-      return;
-    }
-    bean_delete($bean);
-
-    $bean = bean_delta_load('Videos');
-    if (empty($bean)) {
-      drupal_set_message(t('There is no bean found with delta @delta.', array('@delta' => 'Videos')));
-      return;
-    }
-    bean_delete($bean);
+    // Delete Beans if exist.
+    wetkit_bean_delete_bean('Minister');
+    wetkit_bean_delete_bean('Priorities');
+    wetkit_bean_delete_bean('Stay-Connected');
+    wetkit_bean_delete_bean('Videos');
 
     // Clear the bean cache so an anonymous user sees that the bean was deleted.
     bean_reset();
@@ -184,6 +167,21 @@ function wetkit_bean_create_bean($bean_type, $label, $description = '', $title =
 }
 
 /**
+ * Delete a bean from configuration.
+ *
+ * @param string $bean_name
+ *   The type of bean to delete
+ */
+function wetkit_bean_delete_bean($bean_name) {
+  $bean = bean_delta_load($bean_name);
+  if (empty($bean)) {
+    drupal_set_message(t('There is no bean found with delta @delta.', array('@delta' => $bean_name)));
+    return;
+  }
+  bean_delete($bean);
+}
+
+/**
  * Implements hook_theme_registry_alter().
  */
 function wetkit_bean_theme_registry_alter(&$theme_registry) {
@@ -195,13 +193,6 @@ function wetkit_bean_theme_registry_alter(&$theme_registry) {
 
 /**
  * Implements hook_form_alter().
- *
- * @param array $form
- *   Nested array of form elements that comprise the form.
- * @param array $form_state
- *   A keyed array containing the current state of the form.
- * @param array $form_id
- *   String representing the name of the form itself.
  */
 function wetkit_bean_form_alter(&$form, &$form_state, $form_id) {
 

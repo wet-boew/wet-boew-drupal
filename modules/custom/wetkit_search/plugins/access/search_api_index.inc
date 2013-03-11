@@ -15,7 +15,7 @@ $plugin = array(
 );
 
 /**
- * Settings form for the "Search API Index Enabled" settings form
+ * Settings form for the "Search API Index Enabled" settings form.
  */
 function wetkit_search_search_api_index_ctools_access_settings($form, &$form_state, $conf) {
   // No additional configuration necessary.
@@ -23,7 +23,7 @@ function wetkit_search_search_api_index_ctools_access_settings($form, &$form_sta
 }
 
 /**
- * Check to see if the Search API server and index are enabled
+ * Check to see if the Search API server and index are enabled.
  */
 function wetkit_search_search_api_index_ctools_access_check($conf, $context) {
   $solr_index = search_api_index_load('node_index');

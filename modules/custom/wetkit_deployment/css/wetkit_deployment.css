@@ -1,0 +1,11 @@
+/** Stylesheet for WetKit WET-BOEW */
+
+.boxton-content .deploy-panel {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#quicktabs-deployment_quicktabs .item-list {
+  border: none;
+  margin: 20px 0px 0px 0px;
+}

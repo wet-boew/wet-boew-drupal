@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * An installation file for WetKit Images.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function wetkit_images_uninstall() {
+  // Get global variable array.
+  global $conf;
+  foreach (array_keys($conf) as $key) {
+    // Find variables that have the module prefix.
+    if (strpos($key, 'wetkit_images_') === 0) {
+      variable_del($key);
+    }
+  }
+}

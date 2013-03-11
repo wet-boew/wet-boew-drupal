@@ -11,8 +11,7 @@ class WetKitWebTestCase extends DrupalWebTestCase {
   protected $testFiles = array();
 
   /**
-   * This setUp properly works without warnings when using another installation
-   * profile than testing.
+   * This setUp properly works without warnings.
    */
   protected function setUp() {
     $profile = drupal_get_profile();
@@ -27,15 +26,13 @@ class WetKitWebTestCase extends DrupalWebTestCase {
   /**
    * Clear the test files array between tests.
    */
-  function tearDown() {
+  protected function tearDown() {
     $this->testFiles = array();
     parent::tearDown();
   }
 
   /**
    * This is a hack to be able to call any method within the test case class.
-   * This might seems like something horrible, but it actually let's us separate
-   * functionality in a a sane way.
    *
    * @param string $method
    *   The method to call
@@ -49,7 +46,7 @@ class WetKitWebTestCase extends DrupalWebTestCase {
   /**
    * A sane version of DrupalWebTestCase::drupalLogin().
    */
-  function drupalLogin(stdClass $user) {
+  public function drupalLogin(stdClass $user) {
     if ($this->loggedInUser) {
       $this->drupalLogout();
     }
@@ -74,7 +71,7 @@ class WetKitWebTestCase extends DrupalWebTestCase {
    * @param array $roles
    *   An array of role names.
    */
-  function grantRoles($user, array $roles) {
+  public function grantRoles($user, array $roles) {
     $roles_by_id = user_roles();
     foreach ($roles as $role) {
       $role_id = array_search($role, $roles_by_id);
@@ -103,7 +100,7 @@ class WetKitWebTestCase extends DrupalWebTestCase {
    * @param string $message
    *   The message to display.
    */
-  function assertFormat($field, $format, $message = NULL) {
+  protected function assertFormat($field, $format, $message = NULL) {
     if (empty($message)) {
       $message = "The format $format exists.";
     }
@@ -121,7 +118,7 @@ class WetKitWebTestCase extends DrupalWebTestCase {
    * @param string $message
    *   The message to display.
    */
-  function assertNoFormat($field, $format, $message = NULL) {
+  protected function assertNoFormat($field, $format, $message = NULL) {
     if (empty($message)) {
       $message = "The format $format doesn't exist.";
     }
@@ -164,14 +161,14 @@ abstract class TestHelper {
   /**
    * The default constructor for the test case.
    */
-  function __construct($test_case) {
+  protected function __construct($test_case) {
     $this->testCase = $test_case;
   }
 
   /**
    * Custom callTestCaseFunction.
    */
-  function __call($name, $arguments) {
+  protected function __call($name, $arguments) {
     return $this->testCase->callTestCaseFunction($name, $arguments);
   }
 }

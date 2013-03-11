@@ -1,0 +1,23 @@
+<?php
+/**
+ * @file
+ * Code for the wetkit_deployment_service feature.
+ */
+
+include_once 'wetkit_deployment_service.features.inc';
+
+/**
+ * Implements hook_services_resources_alter().
+ */
+function wetkit_deployment_service_services_resources_alter(&$resources, &$endpoint) {
+  $resources['file']['operations']['delete']['access callback'] = '_wetkit_deployment_service_access_file';
+  $resources['file']['operations']['retrieve']['access callback'] = '_wetkit_deployment_service_access_file';
+  $resources['file']['operations']['update']['access callback'] = '_wetkit_deployment_service_access_file';
+}
+
+/**
+ * Custom Access File Callback.
+ */
+function _wetkit_deployment_service_access_file() {
+  return TRUE;
+}

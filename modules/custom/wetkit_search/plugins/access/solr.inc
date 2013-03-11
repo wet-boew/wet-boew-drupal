@@ -15,7 +15,7 @@ $plugin = array(
 );
 
 /**
- * Settings form for the 'by parent term' access plugin
+ * Settings form for the 'by parent term' access plugin.
  */
 function wetkit_search_solr_ctools_access_settings($form, &$form_state, $conf) {
   // No additional configuration necessary.

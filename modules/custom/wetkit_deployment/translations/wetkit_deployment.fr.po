@@ -1,0 +1,166 @@
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  wetkit_deployment.views_default.inc: n/a
+#  wetkit_deployment.info: n/a
+#  plugins/content_types/deployment.inc: n/a
+#  wetkit_deployment_service/wetkit_deployment_service.info: n/a
+#  plugins/deployment/WetKitDeployProcessorBatch.inc: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-02-27 12:22-0500\n"
+"PO-Revision-Date: 2013-02-27 12:22-0500\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: wetkit_deployment.views_default.inc:415
+msgid "Defaults"
+msgstr "Défauts"
+
+#: wetkit_deployment.views_default.inc:416
+msgid "Deployment Content"
+msgstr ""
+
+#: wetkit_deployment.views_default.inc:417
+msgid "more"
+msgstr "plus"
+
+#: wetkit_deployment.views_default.inc:418
+msgid "Apply"
+msgstr "Appliquer"
+
+#: wetkit_deployment.views_default.inc:419
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#: wetkit_deployment.views_default.inc:420
+msgid "Sort by"
+msgstr "Trier selon"
+
+#: wetkit_deployment.views_default.inc:421
+msgid "Asc"
+msgstr "Ascendant"
+
+#: wetkit_deployment.views_default.inc:422
+msgid "Desc"
+msgstr "Descendant"
+
+#: wetkit_deployment.views_default.inc:423
+msgid "Items per page"
+msgstr "Articles par page"
+
+#: wetkit_deployment.views_default.inc:424
+msgid "- All -"
+msgstr "- Tous -"
+
+#: wetkit_deployment.views_default.inc:425
+msgid "Offset"
+msgstr "Décalage"
+
+#: wetkit_deployment.views_default.inc:426
+msgid "« first"
+msgstr "« premier"
+
+#: wetkit_deployment.views_default.inc:427
+msgid "‹ previous"
+msgstr "‹ précédent"
+
+#: wetkit_deployment.views_default.inc:428
+msgid "next ›"
+msgstr "suivant ›"
+
+#: wetkit_deployment.views_default.inc:429
+msgid "last »"
+msgstr "dernier »"
+
+#: wetkit_deployment.views_default.inc:430
+msgid "No content available."
+msgstr "Aucun contenu disponible."
+
+#: wetkit_deployment.views_default.inc:431
+msgid "author"
+msgstr "auteur"
+
+#: wetkit_deployment.views_default.inc:432
+msgid "term"
+msgstr "terme"
+
+#: wetkit_deployment.views_default.inc:433
+msgid "Title"
+msgstr "Titre"
+
+#: wetkit_deployment.views_default.inc:434
+msgid "Type"
+msgstr "Type"
+
+#: wetkit_deployment.views_default.inc:435
+msgid "Author"
+msgstr "Auteur"
+
+#: wetkit_deployment.views_default.inc:436
+msgid "Published"
+msgstr "Publié"
+
+#: wetkit_deployment.views_default.inc:437
+msgid "Language"
+msgstr "Langue"
+
+#: wetkit_deployment.views_default.inc:438
+msgid "Updated"
+msgstr "Mis à jour"
+
+#: wetkit_deployment.views_default.inc:439
+msgid "Vocabulary"
+msgstr "Vocabulaire"
+
+#: wetkit_deployment.views_default.inc:440
+msgid "Content pane"
+msgstr "Volet de contenu"
+
+#: wetkit_deployment.views_default.inc:441
+msgid "View panes"
+msgstr "Voir les volets"
+
+#: wetkit_deployment.info:0 plugins/content_types/deployment.inc:17;33;91
+msgid "WetKit Deployment"
+msgstr ""
+
+#: wetkit_deployment.info:0
+msgid "Deployment for WetKit Deployment assisting in a content staging to production workflow."
+msgstr ""
+
+#: wetkit_deployment.info:0 wetkit_deployment_service/wetkit_deployment_service.info:0
+msgid "WetKit"
+msgstr "BOEW"
+
+#: plugins/content_types/deployment.inc:14;25
+msgid "Deployment"
+msgstr ""
+
+#: plugins/content_types/deployment.inc:18
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#: plugins/content_types/deployment.inc:90
+msgid "wetkit_deployment"
+msgstr ""
+
+#: plugins/deployment/WetKitDeployProcessorBatch.inc:57
+msgid "Deploying %plan"
+msgstr ""
+
+#: wetkit_deployment_service/wetkit_deployment_service.info:0
+msgid "WetKit Deployment Service"
+msgstr ""
+
+#: wetkit_deployment_service/wetkit_deployment_service.info:0
+msgid "Service for WetKit Deployment assisting in a content staging to production workflow."
+msgstr ""
+

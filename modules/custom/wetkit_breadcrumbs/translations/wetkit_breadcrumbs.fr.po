@@ -1,15 +1,16 @@
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
+#  wetkit_breadcrumbs.module: n/a
 #  wetkit_breadcrumbs.info: n/a
-#  theme/theme.inc: n/a
+#  theme/wetkit_breadcrumbs.theme.inc: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-09 20:35-0500\n"
-"PO-Revision-Date: 2013-02-09 20:35-0500\n"
+"POT-Creation-Date: 2013-02-28 18:37-0500\n"
+"PO-Revision-Date: 2013-02-28 18:37-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -17,15 +18,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: wetkit_breadcrumbs.info:0;0
+#: wetkit_breadcrumbs.module:64
+msgid "Prepend breadcrumbs with a home link by default"
+msgstr "Chapelure placez un lien d'accueil par défaut"
+
+#: wetkit_breadcrumbs.module:66
+msgid "This value does not changes current breadcrumbs navigation. It is just set default value for new path breadcrumbs."
+msgstr "Cette valeur ne change en cours de navigation chapelure. Il est juste placé la valeur par défaut de la chapelure nouvelle voie."
+
+#: wetkit_breadcrumbs.module:71
+msgid "Home link title"
+msgstr "Le titre du lien Accueil"
+
+#: wetkit_breadcrumbs.module:73
+msgid "Title of the link that points to the front page."
+msgstr "Titre du lien qui pointe vers la page d'accueil."
+
+#: wetkit_breadcrumbs.info:0
 msgid "WetKit Breadcrumbs"
-msgstr ""
+msgstr "Chapelure Wetkit"
 
 #: wetkit_breadcrumbs.info:0
 msgid "Installs and configures breadcrumbs for the Web Experience Toolkit"
-msgstr ""
+msgstr "Installe et configure la chapelure pour la boîte à outils de l'expérience Web"
 
-#: theme/theme.inc:21
+#: wetkit_breadcrumbs.info:0
+msgid "WetKit"
+msgstr "BOEW"
+
+#: theme/wetkit_breadcrumbs.theme.inc:22
 msgid "Breadcrumb Trail"
 msgstr "Fil d'Ariane"
 

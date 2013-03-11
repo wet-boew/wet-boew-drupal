@@ -1,0 +1,431 @@
+<?php
+/**
+ * @file
+ * Code for the WetKit Deployment Deployment feature.
+ */
+
+include_once 'wetkit_deployment.features.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function wetkit_deployment_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+}
+
+/**
+ * Implements hook_deploy_processors().
+ */
+function wetkit_deployment_deploy_processors() {
+  $path = drupal_get_path('module', 'wetkit_deployment') . '/plugins/deployment';
+  return array(
+    'WetKitDeployProcessorBatch' => array(
+      'name' => 'WetKit Batch API',
+      'description' => 'All entities are processed with the Batch API. Works best when deployments are done through the UI.',
+      'handler' => array(
+        'class' => 'WetKitDeployProcessorBatch',
+        'file' => 'WetKitDeployProcessorBatch.inc',
+        'path' => $path,
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_entity_dependencies().
+ */
+function wetkit_deployment_entity_dependencies($entity, $entity_type) {
+  if ($entity_type == 'node') {
+    $dependencies = array();
+    $body = field_get_items('node', $entity, 'body');
+    if ($body) {
+      preg_match(MEDIA_TOKEN_REGEX, $body[0]['value'], $matches);
+      if (isset($matches[0])) {
+        $tag = $matches[0];
+        $tag = str_replace(array('[[', ']]'), '', $tag);
+        $tag_info = drupal_json_decode($tag);
+        $dependencies[] = array('type' => 'file', 'id' => $tag_info['fid']);
+      }
+    }
+    return $dependencies;
+  }
+}
+
+/**
+ * Implements hook_quicktabs_tabstyles().
+ */
+function wetkit_deployment_quicktabs_tabstyles() {
+  $path = drupal_get_path('module', 'wetkit_deployment');
+  return array(
+    $path . '/plugins/quicktabs_styles/wetkit_tabs/wetkit_tabs.css' => t('WetKit Tabs'),
+  );
+}
+
+/**
+ * @defgroup deploy_actions Deploy core actions
+ * @{
+ */
+
+/**
+ * Implements hook_action_info().
+ */
+function wetkit_deployment_action_info() {
+  $actions = array();
+  $actions['wetkit_deployment_action_add_bean_to_managed_plan'] = array(
+    'type' => 'bean',
+    'label' => t('Add bean to managed deployment plan'),
+    'configurable' => TRUE,
+  );
+  $actions['wetkit_deployment_action_delete_bean_from_managed_plan'] = array(
+    'type' => 'bean',
+    'label' => t('Delete bean from managed deployment plan'),
+    'configurable' => TRUE,
+  );
+  $actions['wetkit_deployment_action_add_file_to_managed_plan'] = array(
+    'type' => 'file',
+    'label' => t('Add file to managed deployment plan'),
+    'configurable' => TRUE,
+  );
+  $actions['wetkit_deployment_action_delete_file_from_managed_plan'] = array(
+    'type' => 'file',
+    'label' => t('Delete file from managed deployment plan'),
+    'configurable' => TRUE,
+  );
+  $actions['wetkit_deployment_action_add_term_to_managed_plan'] = array(
+    'type' => 'taxonomy_term',
+    'label' => t('Add term to managed deployment plan'),
+    'configurable' => TRUE,
+  );
+  $actions['wetkit_deployment_action_delete_term_from_managed_plan'] = array(
+    'type' => 'taxonomy_term',
+    'label' => t('Delete term from managed deployment plan'),
+    'configurable' => TRUE,
+  );
+  $actions['wetkit_deployment_action_add_user_to_managed_plan'] = array(
+    'type' => 'user',
+    'label' => t('Add user to managed deployment plan'),
+    'configurable' => TRUE,
+  );
+  $actions['wetkit_deployment_action_delete_user_from_managed_plan'] = array(
+    'type' => 'user',
+    'label' => t('Delete user from managed deployment plan'),
+    'configurable' => TRUE,
+  );
+  return $actions;
+}
+
+/**
+ * Form constructor for the configuration of deploy_action_add_to_managed_plan.
+ *
+ * @see deploy_action_info()
+ * @see deploy_action_add_to_managed_plan_submit()
+ */
+function wetkit_deployment_action_add_bean_to_managed_plan_form($context) {
+  $options = deploy_manager_plan_get_options();
+
+  $form['plan'] = array(
+    '#title' => t('The plan to add the entity to.'),
+    '#type' => 'select',
+    '#options' => $options,
+    '#default_value' => key($options),
+  );
+
+  return $form;
+}
+
+/**
+ * Form submission handler for deploy_action_add_to_managed_plan_form().
+ */
+function wetkit_deployment_action_add_bean_to_managed_plan_submit($form, $form_state) {
+  return array('plan' => $form_state['values']['plan']);
+}
+
+/**
+ * Form constructor for the configuration of deploy_action_add_to_managed_plan.
+ *
+ * @see deploy_action_info()
+ * @see deploy_action_add_to_managed_plan_submit()
+ */
+function wetkit_deployment_action_add_file_to_managed_plan_form($context) {
+  $options = deploy_manager_plan_get_options();
+
+  $form['plan'] = array(
+    '#title' => t('The plan to add the entity to.'),
+    '#type' => 'select',
+    '#options' => $options,
+    '#default_value' => key($options),
+  );
+
+  return $form;
+}
+
+/**
+ * Form submission handler for deploy_action_add_to_managed_plan_form().
+ */
+function wetkit_deployment_action_add_file_to_managed_plan_submit($form, $form_state) {
+  return array('plan' => $form_state['values']['plan']);
+}
+
+/**
+ * Form constructor for the configuration of deploy_action_add_to_managed_plan.
+ *
+ * @see deploy_action_info()
+ * @see deploy_action_add_to_managed_plan_submit()
+ */
+function wetkit_deployment_action_add_term_to_managed_plan_form($context) {
+  $options = deploy_manager_plan_get_options();
+
+  $form['plan'] = array(
+    '#title' => t('The plan to add the entity to.'),
+    '#type' => 'select',
+    '#options' => $options,
+    '#default_value' => key($options),
+  );
+
+  return $form;
+}
+
+/**
+ * Form submission handler for deploy_action_add_to_managed_plan_form().
+ */
+function wetkit_deployment_action_add_term_to_managed_plan_submit($form, $form_state) {
+  return array('plan' => $form_state['values']['plan']);
+}
+
+/**
+ * Form constructor for the configuration of deploy_action_add_to_managed_plan.
+ *
+ * @see deploy_action_info()
+ * @see deploy_action_add_to_managed_plan_submit()
+ */
+function wetkit_deployment_action_add_user_to_managed_plan_form($context) {
+  $options = deploy_manager_plan_get_options();
+
+  $form['plan'] = array(
+    '#title' => t('The plan to add the entity to.'),
+    '#type' => 'select',
+    '#options' => $options,
+    '#default_value' => key($options),
+  );
+
+  return $form;
+}
+
+/**
+ * Form submission handler for deploy_action_add_to_managed_plan_form().
+ */
+function wetkit_deployment_action_add_user_to_managed_plan_submit($form, $form_state) {
+  return array('plan' => $form_state['values']['plan']);
+}
+
+/**
+ * Form constructor for the config of deploy_action_delete_from_managed_plan.
+ *
+ * @see deploy_action_info()
+ * @see deploy_action_delete_from_managed_plan_submit()
+ */
+function wetkit_deployment_action_delete_bean_from_managed_plan_form($context) {
+  $options = deploy_manager_plan_get_options();
+
+  $form['plan'] = array(
+    '#title' => t('The plan to remove the entity from.'),
+    '#type' => 'select',
+    '#options' => $options,
+    '#default_value' => key($options),
+  );
+
+  return $form;
+}
+
+/**
+ * Form submission handler for deploy_action_delete_from_managed_plan_form().
+ */
+function wetkit_deployment_action_delete_bean_from_managed_plan_submit($form, $form_state) {
+  return array('plan' => $form_state['values']['plan']);
+}
+
+/**
+ * Form constructor for the config of deploy_action_delete_from_managed_plan.
+ *
+ * @see deploy_action_info()
+ * @see deploy_action_delete_from_managed_plan_submit()
+ */
+function wetkit_deployment_action_delete_file_from_managed_plan_form($context) {
+  $options = deploy_manager_plan_get_options();
+
+  $form['plan'] = array(
+    '#title' => t('The plan to remove the entity from.'),
+    '#type' => 'select',
+    '#options' => $options,
+    '#default_value' => key($options),
+  );
+
+  return $form;
+}
+
+/**
+ * Form submission handler for deploy_action_delete_from_managed_plan_form().
+ */
+function wetkit_deployment_action_delete_file_from_managed_plan_submit($form, $form_state) {
+  return array('plan' => $form_state['values']['plan']);
+}
+
+/**
+ * Form constructor for the config of deploy_action_delete_from_managed_plan.
+ *
+ * @see deploy_action_info()
+ * @see deploy_action_delete_from_managed_plan_submit()
+ */
+function wetkit_deployment_action_delete_term_from_managed_plan_form($context) {
+  $options = deploy_manager_plan_get_options();
+
+  $form['plan'] = array(
+    '#title' => t('The plan to remove the entity from.'),
+    '#type' => 'select',
+    '#options' > $options,
+    '#default_value' => key($options),
+  );
+
+  return $form;
+}
+
+/**
+ * Form submission handler for deploy_action_delete_from_managed_plan_form().
+ */
+function wetkit_deployment_action_delete_term_from_managed_plan_submit($form, $form_state) {
+  return array('plan' => $form_state['values']['plan']);
+}
+
+/**
+ * Form constructor for the config of deploy_action_delete_from_managed_plan.
+ *
+ * @see deploy_action_info()
+ * @see deploy_action_delete_from_managed_plan_submit()
+ */
+function wetkit_deployment_action_delete_user_from_managed_plan_form($context) {
+  $options = deploy_manager_plan_get_options();
+
+  $form['plan'] = array(
+    '#title' => t('The plan to remove the entity from.'),
+    '#type' => 'select',
+    '#options' => $options,
+    '#default_value' => key($options),
+  );
+
+  return $form;
+}
+
+/**
+ * Form submission handler for deploy_action_delete_from_managed_plan_form().
+ */
+function wetkit_deployment_action_delete_user_from_managed_plan_submit($form, $form_state) {
+  return array('plan' => $form_state['values']['plan']);
+}
+
+/**
+ * Add a bean to a deployment plan.
+ */
+function wetkit_deployment_action_add_bean_to_managed_plan($bean, $context = array()) {
+  if (!deploy_plan_load($context['plan'])) {
+    watchdog('action', 'Cannot add to non-managed plan %name', array('%name' => $context['plan']), WATCHDOG_ERROR);
+    return;
+  }
+  deploy_manager_add_to_plan($context['plan'], 'bean', $bean);
+
+  watchdog('action', 'Added node !bid to deployment plan @plan.', array('!bid' => $bean->bid, '@plan' => $context['plan']), WATCHDOG_NOTICE);
+}
+
+/**
+ * Delete a file from a deployment plan.
+ */
+function wetkit_deployment_action_delete_bean_from_managed_plan($bean, $context = array()) {
+  if (!deploy_plan_load($context['plan'])) {
+    watchdog('action', 'Cannot delete from non-managed plan %name', array('%name' => $context['plan']), WATCHDOG_ERROR);
+    return;
+  }
+  deploy_manager_delete_from_plan($context['plan'], 'bean', $bean);
+
+  watchdog('action', 'Deleted node !bid from deployment plan @plan.', array('!bid' => $bean->bid, '@plan' => $context['plan']), WATCHDOG_NOTICE);
+}
+
+/**
+ * Add a file to a deployment plan.
+ */
+function wetkit_deployment_action_add_file_to_managed_plan($file, $context = array()) {
+  if (!deploy_plan_load($context['plan'])) {
+    watchdog('action', 'Cannot add to non-managed plan %name', array('%name' => $context['plan']), WATCHDOG_ERROR);
+    return;
+  }
+  deploy_manager_add_to_plan($context['plan'], 'file', $file);
+
+  watchdog('action', 'Added node !fid to deployment plan @plan.', array('!fid' => $file->fid, '@plan' => $context['plan']), WATCHDOG_NOTICE);
+}
+
+/**
+ * Delete a file from a deployment plan.
+ */
+function wetkit_deployment_action_delete_file_from_managed_plan($file, $context = array()) {
+  if (!deploy_plan_load($context['plan'])) {
+    watchdog('action', 'Cannot delete from non-managed plan %name', array('%name' => $context['plan']), WATCHDOG_ERROR);
+    return;
+  }
+  deploy_manager_delete_from_plan($context['plan'], 'file', $file);
+
+  watchdog('action', 'Deleted node !fid from deployment plan @plan.', array('!fid' => $file->fid, '@plan' => $context['plan']), WATCHDOG_NOTICE);
+}
+
+/**
+ * Add a term to a deployment plan.
+ */
+function wetkit_deployment_action_add_term_to_managed_plan($term, $context = array()) {
+  if (!deploy_plan_load($context['plan'])) {
+    watchdog('action', 'Cannot add to non-managed plan %name', array('%name' => $context['plan']), WATCHDOG_ERROR);
+    return;
+  }
+  deploy_manager_add_to_plan($context['plan'], 'taxonomy_term', $term);
+
+  watchdog('action', 'Added node !tid to deployment plan @plan.', array('!tid' => $term->tid, '@plan' => $context['plan']), WATCHDOG_NOTICE);
+}
+
+/**
+ * Delete a term from a deployment plan.
+ */
+function wetkit_deployment_action_delete_term_from_managed_plan($term, $context = array()) {
+  if (!deploy_plan_load($context['plan'])) {
+    watchdog('action', 'Cannot delete from non-managed plan %name', array('%name' => $context['plan']), WATCHDOG_ERROR);
+    return;
+  }
+  deploy_manager_delete_from_plan($context['plan'], 'taxonomy_term', $term);
+
+  watchdog('action', 'Deleted node !tid from deployment plan @plan.', array('!tid' => $term->tid, '@plan' => $context['plan']), WATCHDOG_NOTICE);
+}
+
+/**
+ * Add a term to a deployment plan.
+ */
+function wetkit_deployment_action_add_user_to_managed_plan($user, $context = array()) {
+  if (!deploy_plan_load($context['plan'])) {
+    watchdog('action', 'Cannot add to non-managed plan %name', array('%name' => $context['plan']), WATCHDOG_ERROR);
+    return;
+  }
+  deploy_manager_add_to_plan($context['plan'], 'user', $user);
+
+  watchdog('action', 'Added node !uid to deployment plan @plan.', array('!uid' => $user->uid, '@plan' => $context['plan']), WATCHDOG_NOTICE);
+}
+
+/**
+ * Delete a term from a deployment plan.
+ */
+function wetkit_deployment_action_delete_user_from_managed_plan($user, $context = array()) {
+  if (!deploy_plan_load($context['plan'])) {
+    watchdog('action', 'Cannot delete from non-managed plan %name', array('%name' => $context['plan']), WATCHDOG_ERROR);
+    return;
+  }
+  deploy_manager_delete_from_plan($context['plan'], 'user', $user);
+
+  watchdog('action', 'Deleted node !uid from deployment plan @plan.', array('!uid' => $user->uid, '@plan' => $context['plan']), WATCHDOG_NOTICE);
+}
+
+/**
+ * @} End of "Deploy actions"
+ */

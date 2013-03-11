@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Implements core hooks for agov_layouts.
+ * Implements core hooks for wetkit_layouts.
  */
 
 /**
@@ -32,7 +32,7 @@ function wetkit_layouts_laurier_panels_layouts() {
 }
 
 /**
- * Preprocess variables for laurier.tpl.php
+ * Preprocess variables for laurier.tpl.php.
  */
 function template_preprocess_laurier(&$vars) {
   $vars['panel_prefix'] = '';

@@ -2,21 +2,21 @@
 
 /**
  * @file
- * An installation file for Panopoly Widgets
+ * An installation file for Panopoly Widgets.
  */
-
-/**
- * Implements hook_install().
- */
-function wetkit_widgets_install() {
-
-}
 
 /**
  * Implements hook_uninstall().
  */
 function wetkit_widgets_uninstall() {
-
+  // Get global variable array.
+  global $conf;
+  foreach (array_keys($conf) as $key) {
+    // Find variables that have the module prefix.
+    if (strpos($key, 'wetkit_widgets_') === 0) {
+      variable_del($key);
+    }
+  }
 }
 
 /**

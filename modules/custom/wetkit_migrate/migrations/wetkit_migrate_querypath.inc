@@ -48,8 +48,7 @@ class WetKitMigrationhtmlpage {
   public $datestamp = '';
 
   /**
-   * Constructor method that loads the page into QueryPath and then sets the
-   * object's properties based on the parsed values in the page.
+   * Constructor method that loads the page into QueryPath.
    *
    * @param array $data
    *   Return the parsed content derived by querypath.
@@ -85,7 +84,7 @@ class WetKitMigrationhtmlpage {
   }
 
   /**
-   * Return the HTML
+   * Return the HTML.
    */
   public function getHTML($element) {
     if ($this->qp->top()->is($element)) {
@@ -96,7 +95,7 @@ class WetKitMigrationhtmlpage {
   }
 
   /**
-   * Return the HTML
+   * Return the HTML.
    */
   public function elementExists($element) {
     if ($this->qp->top()->is($element)) {
@@ -132,8 +131,7 @@ class WetKitMigrationhtmlpage {
   }
 
   /**
-   * Fix an HTML document in the correct head/meta tags so that UTF-8 is
-   * correctly detected, and for the parsers and tidiers.
+   * Fix an HTML document in the correct head/meta tags to detect UTF-8.
    */
   protected function fixHTML($html_document) {
     // Need to clean up badly formated DOCTYPE headers. Many files have the
@@ -151,8 +149,7 @@ class WetKitMigrationhtmlpage {
   }
 
   /**
-   * Wrap an HTML fragment in the correct head/meta tags so that UTF-8 is
-   * correctly detected, and for the parsers and tidiers.
+   * Wrap an HTML fragment in the correct head/meta tags to detect UTF-8.
    */
   protected function wrapHTML($html_fragment) {
     // We add surrounding <html> and <head> tags.
@@ -211,7 +208,7 @@ class WetKitMigrationhtmlpage {
   }
 
   /**
-   * Get the contents of the title tag from the imported page
+   * Get the contents of the title tag from the imported page.
    *
    * @return string
    *   Return the title of the imported page.
@@ -226,7 +223,7 @@ class WetKitMigrationhtmlpage {
   }
 
   /**
-   * Return various metatags of the imported page
+   * Return various metatags of the imported page.
    *
    * @return string
    *   Return the specified metatag of the current page.
@@ -237,7 +234,7 @@ class WetKitMigrationhtmlpage {
   }
 
   /**
-   * Return the language of the imported page
+   * Return the language of the imported page.
    *
    * @return string
    *   Return the language of the current page.

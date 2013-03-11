@@ -52,3 +52,13 @@ function wetkit_install() {
 
   variable_set('admin_theme', 'wetkit_rubik');
 }
+
+/**
+ * Implements hook_update().
+ *
+ * Perform actions to update the site for this profile.
+ */
+function wetkit_update_7101(&$sandbox) {
+  // Addition of new core module to simplify WetKit WETBOEW
+  module_enable(array('wetkit_core'));
+}
