@@ -50,60 +50,70 @@ function wetkit_adaptivetheme_menu_tree__menu_block($variables) {
  */
 function wetkit_adaptivetheme_menu_link__menu_block($variables) {
   $element = $variables['element'];
-  $sub_menu = '';
+  $depth = $element['#original_link']['depth'];
+  $has_children = $element['#original_link']['has_children'];
+  $has_nolink = (in_array($element['#href'], array('<nolink>')) ? $element['#title'] : l($element['#title'], $element['#href'], $element['#localized_options']));
 
   // Recursion.
+  $sub_menu = '';
   if ($element['#below']) {
     $sub_menu = drupal_render($element['#below']);
   }
 
   // Depth 1.
-  if ($element['#original_link']['depth'] == 1) {
-    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  if ($depth == 1) {
     if (!empty($sub_menu)) {
-      return '<section class="wet-menu-block"><h3 class="top-section">' . $output . '</h3>' . $sub_menu . '</section>';
+      return '<section class="wet-menu-block"><h3 class="top-section">' . $has_nolink . '</h3>' . $sub_menu . '</section>';
     }
     else {
-      return '<section class="wet-menu-block"><h3 class="top-section">' . $output . '</h3>' . '</section>';
+      return '<section class="wet-menu-block"><h3 class="top-section">' . $has_nolink . '</h3>' . '</section>';
     }
   }
 
-  // Depth 2 with children.
-  elseif ($element['#original_link']['depth'] == 2 && $element['#original_link']['has_children'] == 1) {
-    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-    //if (!empty($sub_menu) && in_array($element['#href'], array('<noitem>'))) {
-    //  return '<div>' . '<ul>' . $sub_menu . '</ul>' . "</div>\n";
-    //}
-    if (!empty($sub_menu)) {
-      return '<section><h4' . drupal_attributes($element['#attributes']) . '>' . $output . '</h4>' . '<ul>' . $sub_menu . '</ul>' . "</section>\n";
+  // Depth 2.
+  elseif ($depth == 2) {
+    // Has children menu items.
+    if ($has_children == 1) {
+      if (!empty($sub_menu)) {
+        if (in_array($element['#href'], array('<separator>'))) {
+          $sub_menu = (preg_match('<h4>', $element['#below']['#children']) ? '<section>' . $sub_menu . '</section>' : '<div><ul>' . $sub_menu . '</ul></div>');
+          return $sub_menu;
+        }
+        else {
+          return '<section><h4' . drupal_attributes($element['#attributes']) . '>' . $has_nolink . '</h4>' . '<ul>' . $sub_menu . '</ul>' . '</section>';
+        }
+      }
+      else {
+        return '<section><h4' . drupal_attributes($element['#attributes']) . '>' . $has_nolink . '</h4>' . '</section>';
+      }
     }
+    // No children menu items.
     else {
-      return '<section><h4' . drupal_attributes($element['#attributes']) . '>' . $output . '</h4>' . "</section>\n";
+      return '<div>' . $has_nolink . '</div>';
     }
   }
 
-  // Depth 2 no children.
-  elseif ($element['#original_link']['depth'] == 2 && $element['#original_link']['has_children'] == 0) {
-    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-    return '<div class="top-level">' . $output . '</div>';
-  }
-
-  // Depth 3 with children.
-  elseif ($element['#original_link']['depth'] == 3 && $element['#original_link']['has_children'] == 1) {
-    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-    return '<li>' . $output . '<ul>' . $sub_menu . '</ul></li>';
-  }
-
-  // Depth 3 no children.
-  elseif ($element['#original_link']['depth'] == 3 && $element['#original_link']['has_children'] == 0) {
-    $output = '<li>' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</li>';
-    return $output;
-  }
+  // Depth 3.
+  elseif ($depth == 3) {
+    // Has children menu items.
+    if ($has_children == 1) {
+      if (in_array($element['#href'], array('<group>'))) {
+        // TODO: Fix Hack workaround.
+        return '<ul>' . preg_replace('/<li>/', '<li class="top-level">', $sub_menu) . '</ul>';
+      }
+      else {
+        return '<h4>' . $has_nolink . '</h4><ul>' . $sub_menu . '</ul>';
+      }
+    }
+    // No children menu items.
+    else {
+      return '<li>' . $has_nolink . '</li>';
+    }
+ }
 
   // Default Depth.
   else {
-    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-    return '<li>' . $output . "</li>\n";
+    return '<li>' . $has_nolink . "</li>\n";
   }
 }
 
@@ -125,112 +135,75 @@ function wetkit_adaptivetheme_menu_tree__menu_block__wetkit_menu_blocks_1($varia
  */
 function wetkit_adaptivetheme_menu_link__menu_block__wetkit_menu_blocks_1($variables) {
   $element = $variables['element'];
-  $sub_menu = '';
-  static $tmp = '';
-
-  // Logic for some mandatory menu attributes.
-  if (isset($element['#localized_options']['attributes'])) {
-    $tags = drupal_attributes($element['#localized_options']['attributes']);
-  }
-  else {
-    $tags = '';
-  }
-
-  // Prepare the mega menu items that can't be handled through recursion.
-  if ($element['#original_link']['depth'] == 1 && $element['#original_link']['has_children'] == 1) {
-    $menu_items = array_intersect_key($element['#below'], array_flip(element_children($element['#below'])));
-    foreach ($menu_items as $index => $value) {
-      if ($value['#original_link']['has_children'] == 0) {
-        $tmp .= '<li class="top-level">' . l($value['#title'], $value['#href'], $value['#localized_options']) . '</li>';
-        unset($element['#below'][$index]);
-      }
-    }
-    if (!empty($tmp)) {
-      $tmp = '<ul>' . $tmp . '</ul>';
-    }
-  }
+  $depth = $element['#original_link']['depth'];
+  $has_children = $element['#original_link']['has_children'];
+  $has_nolink = (in_array($element['#href'], array('<nolink>')) ? $element['#title'] : l($element['#title'], $element['#href'], $element['#localized_options']));
+  $mb_mainlink = '<div class="mb-main-link">' . l($element['#title'] . ' - ' . t('Main Page'), $element['#href'], $element['#localized_options']) . '</div>';
 
   // Recursion.
+  $sub_menu = '';
   if ($element['#below']) {
     $sub_menu = drupal_render($element['#below']);
   }
 
-  // Depth 1 with children.
-  if ($element['#original_link']['depth'] == 1 && $element['#original_link']['has_children'] == 1) {
-    if (in_array($element['#href'], array('<nolink>'))) {
-      $output = '<h3>' . $element['#title'] . '</h3>';
-    }
-    else {
-      $output = '<h3>' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</h3>';
-    }
-    if (!at_get_setting('render_mb_main_link')) {
-      $mb_main_link = '<div class="mb-main-link">' . l($element['#title'] . ' - ' . t('Main Page'), $element['#href'], $element['#localized_options']) . '</div>';
-      return '<li><section>' . $output . '<div class="mb-sm">' . $sub_menu . '<div class="clear"></div>' . $mb_main_link . '</div>' . "</section></li>\n";
-    }
-    else {
-      return '<li><section>' . $output . '<div class="mb-sm">' . $sub_menu . '<div class="clear"></div></div>' . "</section></li>\n";
-    }
-  }
-  
-  // Depth 1 no children.
-  elseif ($element['#original_link']['depth'] == 1 && $element['#original_link']['has_children'] == 0) {
-    if (in_array($element['#href'], array('<nolink>'))) {
-      $output = $element['#title'];
-    }
-    else {
-      $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-    }
-    return '<li><div>' . $output . "</div></li>\n";
-  }
-
-  // Depth 2 with children.
-  elseif ($element['#original_link']['depth'] == 2 && $element['#original_link']['has_children'] == 1) {
-    if (in_array($element['#href'], array('<nolink>'))) {
-      if (!at_get_setting('render_nolink')) {
-        $output = '<h4 data-role="list-divider"' . $tags . '><a href="#">' . $element['#title'] . '</a></h4>';
+  // Depth 1.
+  if ($depth == 1) {
+    // Has children menu items.
+    if ($has_children == 1) {
+      if (!at_get_setting('render_mb_main_link')) {
+        return '<li><section><h3>' . $has_nolink . '</h3><div class="mb-sm">' . $sub_menu . '<div class="clear"></div>' . $mb_mainlink . '</div></section></li>';
       }
       else {
-        $output = '<h4 data-role="list-divider"' . $tags . '>' . $element['#title'] . '</h4>';
+        return '<li><section><h3>' . $has_nolink . '</h3><div class="mb-sm">' . $sub_menu . '<div class="clear"></div>' . '</div></section></li>';
       }
-      return '<div class="span-2"><section>' . $output . '<ul>' . $sub_menu . '</ul>' . "</section></div>\n";
     }
-    elseif (in_array($element['#href'], array('<noitem>'))) {
-      return '<div class="span-2"><ul>' . $sub_menu . "</ul></div>\n";
-    }
+    // No children menu items.
     else {
-      $output = '<h4>' . l($element['#title'], $element['#href'], $element['#localized_options']) . '</h4>';
-      $output = '<div class="span-2">' . $tmp . '<section>' . $output . '<ul>' . $sub_menu . '</ul>' . "</section></div>\n";
-      $tmp = '';
-      return $output;
+      return '<li><div>' . $has_nolink . '</div></li>';
     }
   }
 
-  // Depth 2 no children.
-  elseif ($element['#original_link']['depth'] == 2 && $element['#original_link']['has_children'] == 0) {
-    if (in_array($element['#href'], array('<nolink>'))) {
-      $output = $element['#title'];
+  // Depth 2.
+  // Support for special menu item <separator>.
+  elseif ($depth == 2) {
+    // Has children menu items.
+    if ($has_children == 1) {
+      if (in_array($element['#href'], array('<separator>'))) {
+        // TODO: Fix Hack workaround.
+        $sub_menu = (preg_match('<h4>', $element['#below']['#children']) ? $sub_menu : '<ul>' . $sub_menu . '</ul>');
+        return '<div class="span-2">' . $sub_menu . '</div>';
+      }
+      else {
+        return '<section><h4>' . $has_nolink . '</h4><ul>' . $sub_menu . '</ul></section>';
+      }
     }
+    // No children menu items.
     else {
-      $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+      return  '<li>' . $has_nolink . '</li>';
     }
-    return '<li class="top-level">' . $output . "</li>\n";
   }
 
-  // Depth 3 with children.
-  elseif ($element['#original_link']['depth'] == 3 && $element['#original_link']['has_children'] == 1) {
-    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-    return '<li>' . $output . '<ul>' . $sub_menu . "</ul></li>\n";
+  // Depth 3.
+  elseif ($depth == 3) {
+    // Has children menu items.
+    if ($has_children == 1) {
+      if (in_array($element['#href'], array('<group>'))) {
+        // TODO: Fix Hack workaround.
+        return '<ul>' . preg_replace('/<li>/', '<li class="top-level">', $sub_menu) . '</ul>';
+      }
+      else {
+        return '<section><h4>' . $has_nolink . '</h4><ul>' . $sub_menu . '</ul></section>';
+      }
+    }
+    // No children menu items
+    else {
+      return '<li>' . $has_nolink . '</li>';
+    }
   }
 
   // Default Depth.
   else {
-    if (in_array($element['#href'], array('<nolink>'))) {
-      $output = $element['#title'];
-    }
-    else {
-      $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-    }
-    return '<li>' . $output . "</li>\n";
+    return  '<li>' . $has_nolink . '</li>';
   }
 }
 
