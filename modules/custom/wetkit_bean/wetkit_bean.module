@@ -66,33 +66,11 @@ function wetkit_bean_configure_form($form, &$form_state) {
  */
 function wetkit_bean_configure_form_submit($form, &$form_state) {
   if ($form_state['values']['op'] == t('Rebuild Default Bean(s)')) {
-    $bean = bean_delta_load('Minister');
-    if (empty($bean)) {
-      drupal_set_message(t('There is no bean found with delta @delta.', array('@delta' => 'Minister')));
-      return;
-    }
-    bean_delete($bean);
-
-    $bean = bean_delta_load('Priorities');
-    if (empty($bean)) {
-      drupal_set_message(t('There is no bean found with delta @delta.', array('@delta' => 'Priorities')));
-      return;
-    }
-    bean_delete($bean);
-
-    $bean = bean_delta_load('Stay-Connected');
-    if (empty($bean)) {
-      drupal_set_message(t('There is no bean found with delta @delta.', array('@delta' => 'Stay-Connected')));
-      return;
-    }
-    bean_delete($bean);
-
-    $bean = bean_delta_load('Videos');
-    if (empty($bean)) {
-      drupal_set_message(t('There is no bean found with delta @delta.', array('@delta' => 'Videos')));
-      return;
-    }
-    bean_delete($bean);
+    // Delete Beans if exist.
+    wetkit_bean_delete_bean('Minister');
+    wetkit_bean_delete_bean('Priorities');
+    wetkit_bean_delete_bean('Stay-Connected');
+    wetkit_bean_delete_bean('Videos');
 
     // Clear the bean cache so an anonymous user sees that the bean was deleted.
     bean_reset();
@@ -186,6 +164,21 @@ function wetkit_bean_create_bean($bean_type, $label, $description = '', $title =
   }
   $bean = bean_create($config);
   return $bean;
+}
+
+/**
+ * Delete a bean from configuration.
+ *
+ * @param string $bean_name
+ *   The type of bean to delete
+ */
+function wetkit_bean_delete_bean($bean_name) {
+  $bean = bean_delta_load($bean_name);
+  if (empty($bean)) {
+    drupal_set_message(t('There is no bean found with delta @delta.', array('@delta' => $bean_name)));
+    return;
+  }
+  bean_delete($bean);
 }
 
 /**
