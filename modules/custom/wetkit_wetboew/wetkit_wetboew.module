@@ -6,6 +6,7 @@
 
 include_once 'libraries/wetkit_wetboew.libraries.inc';
 include_once 'theme/wetkit_wetboew.theme.inc';
+include_once 'wetkit_wetboew.menus.inc';
 
 /**
  * Implements hook_init().
@@ -134,6 +135,7 @@ function wetkit_wetboew_configure_form($form, &$form_state) {
     '#title' => t('WetKit Theme Selection'),
     '#collapsible' => TRUE,
   );
+
   $form['wetkit_wetboew']['wetkit_wetboew_theme'] = array(
     '#type' => 'select',
     '#title' => t('Please choose the appropriate WET theme.'),
@@ -146,9 +148,37 @@ function wetkit_wetboew_configure_form($form, &$form_state) {
     '#description' => t('This will change the Drupal theme by adding custom css and logic for various WET based themes'),
   );
 
+  $form['wetkit_wetboew']['wetkit_wetboew_menus_description'] = array(
+    '#markup' => '<p>' . t('Rebuild the Menus on the site using demo content.') . '</p>',
+  );
+
+  $form['wetkit_wetboew']['wetkit_wetboew_menus'] = array(
+    '#type' => 'submit',
+    '#value' => t('Rebuild Default Menu(s)'),
+    '#weight' => 19,
+    '#submit' => array('wetkit_wetboew_menus_submit'),
+  );
+
   $form['#submit'][] = 'wetkit_wetboew_configure_form_submit';
 
   return system_settings_form($form);
+}
+
+/**
+ * Handle submission of the WetKit Web Usability configuration page.
+ *
+ * @param array $form
+ *   Nested array of form elements that comprise the form.
+ * @param array $form_state
+ *   A keyed array containing the current state of the form.
+ */
+function wetkit_wetboew_menus_submit($form, &$form_state) {
+  if ($form_state['values']['op'] == t('Rebuild Default Menu(s)')) {
+    if (module_exists('wetkit_wetboew')) {
+      menu_delete_links('main-menu');
+      _wetkit_wetboew_menu_megamenu_load();
+    }
+  }
 }
 
 /**
@@ -204,7 +234,13 @@ function wetkit_wetboew_theme_registry_alter(&$theme_registry) {
 function wetkit_wetboew_css_alter(&$css) {
   // Installs the jquery.ui themeroller theme to the theme.
   if (isset($css['misc/ui/jquery.ui.theme.css']) && (user_is_logged_in())) {
-    $css['misc/ui/jquery.ui.theme.css']['data'] = drupal_get_path('module', 'panopoly_core') . '/css/panopooly-jquery-ui-theme.css';
+    $url = parse_url(request_uri());
+    if (strstr($url['path'], "/media/browser")) {
+      $css['misc/ui/jquery.ui.theme.css']['data'] = drupal_get_path('module', 'panopoly_core') . '/css/panopooly-jquery-ui-theme.css';
+    }
+    else {
+      $css['misc/ui/jquery.ui.theme.css']['data'] = drupal_get_path('module', 'panopoly_core') . '/css/panopooly-jquery-ui-theme.css';
+    }
   }
   else {
     unset($css['misc/ui/jquery.ui.theme.css']);
