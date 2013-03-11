@@ -69,7 +69,6 @@ function wetkit_core_form_menu_edit_item_alter(&$form, &$form_state) {
  * Implements hook_menu().
  */
 function wetkit_core_menu() {
-
   // Add an dummy menu item.
   $items['<nolink>'] = array(
     'page callback' => 'drupal_not_found',
@@ -78,7 +77,14 @@ function wetkit_core_menu() {
   );
 
   // Add an dummy menu item.
-  $items['<noitem>'] = array(
+  $items['<separator>'] = array(
+    'page callback' => 'drupal_not_found',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+  // Add an dummy menu item.
+  $items['<group>'] = array(
     'page callback' => 'drupal_not_found',
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
