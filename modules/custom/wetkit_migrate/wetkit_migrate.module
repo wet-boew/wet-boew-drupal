@@ -8,9 +8,6 @@ include_once 'wetkit_migrate.features.inc';
 
 /**
  * Implements hook_migrate_api().
- *
- * @return int
- *   Return the api version for migrate.
  */
 function wetkit_migrate_migrate_api() {
   $api = array(
@@ -21,9 +18,6 @@ function wetkit_migrate_migrate_api() {
 
 /**
  * Implements hook_migrate_menu().
- *
- * @return string
- *   Return the menu configuration.
  */
 function wetkit_migrate_menu() {
   $items = array();

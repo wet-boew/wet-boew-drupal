@@ -12,16 +12,25 @@ class WetKitDeployProcessorBatch extends DeployProcessorMemory {
    */
   public $operations = array();
 
+  /**
+   * Implements the processOperations logic.
+   */
   protected function processOperations(Array $operations = array()) {
     if (!empty($operations)) {
       foreach ($this->aggregator as $entity) {
         foreach ($operations as $operation) {
-          $this->operations[] = array($operation['callback'], array($this->aggregator->plan->name, $entity));
+          $this->operations[] = array($operation['callback'], array(
+            $this->aggregator->plan->name,
+            $entity,
+          ));
         }
       }
     }
   }
 
+  /**
+   * Implements the deploy logic.
+   */
   public function deploy($deployment_key, DeployEndpoint $endpoint, $lock_name = NULL) {
     deploy_log($deployment_key, DEPLOY_STATUS_PROCESSING);
     foreach ($this->aggregator as $entity) {
@@ -37,6 +46,9 @@ class WetKitDeployProcessorBatch extends DeployProcessorMemory {
     }
   }
 
+  /**
+   * Implements the publish logic.
+   */
   public function publish($deployment_key, DeployEndpoint $endpoint, $lock_name = NULL) {
     foreach ($this->aggregator as $entity) {
       $entity_info = entity_get_info($entity->__metadata['type']);
@@ -51,6 +63,9 @@ class WetKitDeployProcessorBatch extends DeployProcessorMemory {
     }
   }
 
+  /**
+   * Implements the postProcess logic.
+   */
   public function postProcess(Array $operations = array()) {
     $this->processOperations($operations);
     $batch = array(

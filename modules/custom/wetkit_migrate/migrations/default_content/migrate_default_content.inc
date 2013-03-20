@@ -10,7 +10,7 @@
 abstract class WetKitDCMigration extends XMLMigration {
 
   /**
-   * ProcessImport for WetKit Migration
+   * ProcessImport for WetKit Migration.
    *
    * @param array $options
    *   Process the import array.
@@ -29,7 +29,7 @@ abstract class WetKitDCMigration extends XMLMigration {
 class WetKitMigrateDefaultContent extends WetKitDCMigration {
 
   /**
-   * Implements the migration constructor
+   * Implements the migration constructor.
    */
   public function __construct() {
     parent::__construct(MigrateGroup::getInstance('WetKit', array('default')));
@@ -58,9 +58,9 @@ class WetKitMigrateDefaultContent extends WetKitDCMigration {
     $xml_folder = DRUPAL_ROOT . '/' . drupal_get_path('module', 'wetkit_migrate') . '/migrations/default_content';
     $items_url = $xml_folder . '/migrate_default_content.xml';
     $item_xpath = '/default_content/*/content';
-    $item_ID_xpath = 'source_id';
+    $item_id_xpath = 'source_id';
 
-    $items_class = new MigrateItemsXML($items_url, $item_xpath, $item_ID_xpath);
+    $items_class = new MigrateItemsXML($items_url, $item_xpath, $item_id_xpath);
     $this->source = new MigrateSourceMultiItems($items_class, $fields);
     $this->destination = new MigrateDestinationNode('wetkit_page');
 
@@ -78,7 +78,7 @@ class WetKitMigrateDefaultContent extends WetKitDCMigration {
         ->xpath('path');
     $this->addFieldMapping('language', 'language');
 
-     // Extra Fields.
+    // Extra Fields.
     $this->addFieldMapping('field_featured_image', 'images')
         ->xpath('image');
     $this->addFieldMapping('field_featured_image:alt', 'image_alt')
@@ -101,9 +101,9 @@ class WetKitMigrateDefaultContent extends WetKitDCMigration {
   }
 
   /**
-   * Prepare and modify the source rows
+   * Prepare and modify the source rows.
    *
-   * @param type $row
+   * @param array $row
    *   Row to import for the migration.
    */
   public function prepareRow($row) {

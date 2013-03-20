@@ -49,7 +49,7 @@ function wetkit_rubik_preprocess_page(&$vars) {
   // indeed Rubik. Subthemes must reimplement this call.
   global $theme;
 
-  // Custom Logic Based on Theme Selection (Internet, Intranet or Base)
+  // Custom Logic Based on Theme Selection (Internet, Intranet or Base).
   if (variable_get('wetkit_wetboew_theme', 0) == 2) {
     $theme_prefix = 'base';
   }
@@ -135,7 +135,7 @@ function wetkit_rubik_preprocess_help(&$vars) {
 }
 
 /**
- * Helper function used to pass a value from preprocess_page()
+ * Helper function used to pass a value from preprocess_page().
  * to preprocess_html().
  */
 function _wetkit_rubik_has_tabs($val = NULL) {
@@ -151,8 +151,7 @@ function _wetkit_rubik_has_tabs($val = NULL) {
 
 /**
  * Generate an icon class from a path.
- * Modified version of _rubik_icon_classes() that allows icon classes for
- * paths with "dashboard" prefixes.
+ * Modified version of _rubik_icon_classes().
  */
 function _wetkit_rubik_icon_classes($path) {
   $classes = array();
@@ -173,7 +172,7 @@ function _wetkit_rubik_icon_classes($path) {
  * Preprocess function.
  * Adds classes for icons in Taxonomy vocabulary overview page.
  *
- * @see theme_taxonomy_overview_vocabularies()
+ * @see theme_taxonomy_overview_vocabularies().
  */
 function wetkit_rubik_preprocess_taxonomy_overview_vocabularies(&$variables) {
   $form = &$variables['form'];
@@ -205,7 +204,7 @@ function wetkit_rubik_preprocess_taxonomy_overview_vocabularies(&$variables) {
  * Preprocess function.
  * Adds classes for icons in Taxonomy term overview page.
  *
- * @see theme_taxonomy_overview_terms()
+ * @see theme_taxonomy_overview_terms().
  */
 function wetkit_rubik_preprocess_taxonomy_overview_terms(&$variables) {
   $form = &$variables['form'];

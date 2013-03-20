@@ -19,4 +19,5 @@ features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
 features[page_manager_pages][] = wetkit_demo_panel
 features[page_manager_pages][] = wetkit_demo_panel_front
+features[variable][] = site_frontpage
 features[views_view][] = wetkit_demo

@@ -23,7 +23,6 @@ dependencies[] = simple_gmap
 dependencies[] = tablefield
 dependencies[] = views_autocomplete_filters
 dependencies[] = views_content
-dependencies[] = wetkit_widgets
 scripts[] = wetkit-tabbed-interface.js
 stylesheets[all][] = css/wetkit-tabbed-interface.css
 explanation = Field type(s) in use - see <a href="/eng/admin/reports/fields">Field list</a>

@@ -1,6 +1,6 @@
 WetKit Demo
 ===========
-Demo content and functionality to help show the power of the WxT-Drupal distro
+Demo content and page manager functionality.
 
 Key features
 * Demonstration homepage

@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Implements core hooks for agov_layouts.
+ * Implements core hooks for wetkit_layouts.
  */
 
 /**
@@ -36,7 +36,7 @@ function wetkit_layouts_vanier_panels_layouts() {
 }
 
 /**
- * Preprocess variables for vanier.tpl.php
+ * Preprocess variables for vanier.tpl.php.
  */
 function template_preprocess_vanier(&$vars) {
   $vars['panel_prefix'] = '';

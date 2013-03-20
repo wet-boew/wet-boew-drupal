@@ -63,6 +63,5 @@ function wetkit_wetboew_menu_default_menu_custom() {
   t('Terms Section for Web Experience Toolkit');
   t('The <em>Main</em> megamenu for Web Experience Toolkit');
 
-
   return $menus;
 }

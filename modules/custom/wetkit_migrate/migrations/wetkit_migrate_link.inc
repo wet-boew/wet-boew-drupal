@@ -24,15 +24,10 @@ class LinksParser {
   protected static $keyAttributes = array(
     array("tag" => "a", "attribute" => "href"),
     array("tag" => "img", "attribute" => "src"),
-   // array("tag" => "link", "attribute" => "href"),
-   // array("tag" => "embed", "attribute" => "src"),
-   // array("tag" => "object", "attribute" => "data"),
-   // array("tag" => "script", "attribute" => "src"),
-   // array("tag" => "object param[name='movie']", "attribute" => "value")
   );
 
   /**
-   * Construct an object
+   * Construct an object.
    *
    * @param string $data
    *   The HTML data to process - this is NOT the complete
@@ -50,7 +45,7 @@ class LinksParser {
   }
 
   /**
-   * Processes the information looking for relevant links (does replace)
+   * Processes the information looking for relevant links (does replace).
    */
   public function process() {
     $new_html = $this->data;
@@ -75,7 +70,7 @@ class LinksParser {
 
             // External links have :// in them.
             if (strpos($tag_url, "://") !== FALSE) {
-                $isexternal = TRUE;
+              $isexternal = TRUE;
             }
             // Mailto: links are "external".
             elseif (strpos($tag_url, "mailto:") === 0) {
@@ -161,8 +156,7 @@ class LinksParser {
   }
 
   /**
-   * Wrap an HTML fragment in the correct head/meta tags so that UTF-8 is
-   * correctly detected, and for the QueryPath parser and tidiers.
+   * Wrap an HTML fragment in the correct head/meta tags to detect UTF-8.
    */
   protected function wrapHTML() {
     // We add surrounding <html> and <head> tags.
@@ -240,7 +234,7 @@ class LinksParser {
   }
 
   /**
-   * Attempts to fix any broken URLs so that they will process properly
+   * Attempts to fix any broken URLs so that they will process properly.
    *
    * @param string $url
    *   Original URL
@@ -262,12 +256,12 @@ class LinksParser {
   }
 
   /**
-   * Checks to see if a URL is external or not
+   * Checks to see if a URL is external or not.
    *
    * @param string $url
    *   The URL to check
    *
-   * @return boolean
+   * @return bool
    *   True if it is external, otherwise false
    */
   protected function isexternal($url) {

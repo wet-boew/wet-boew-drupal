@@ -8,13 +8,6 @@ include_once 'wetkit_language.features.inc';
 
 /**
  * Implements hook_form_alter().
- *
- * @param type $form
- *   Nested array of form elements that comprise the form.
- * @param type $form_state
- *   A keyed array containing the current state of the form.
- * @param type $form_id
- *   String representing the name of the form itself.
  */
 function wetkit_language_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'wetkit_page_node_form' || $form_id == 'wetkit_page_other_node_form') {
@@ -24,9 +17,6 @@ function wetkit_language_form_alter(&$form, &$form_state, $form_id) {
 
 /**
  * Implements hook_preprocess_page().
- *
- * @param array $vars
- *   The variables array that can be modified in place.
  */
 function wetkit_language_preprocess_page(&$vars) {
   // Language Switcher Code.
@@ -35,9 +25,6 @@ function wetkit_language_preprocess_page(&$vars) {
 
 /**
  * Implements hook_preprocess_panes_pane().
- *
- * @param array $vars
- *   The variables array that can be modified in place.
  */
 function wetkit_language_preprocess_panels_pane(&$vars) {
   if ($vars['pane']->type == 'node_links') {
@@ -56,28 +43,7 @@ function wetkit_language_preprocess_maintenance_page(&$vars) {
 }
 
 /**
- * Implements hook_init().
- */
-function wetkit_language_init() {
-
-}
-
-/**
- * Implements hook_language_init().
- */
-function wetkit_language_language_init() {
-  // Set Flag.
-  if (variable_get('wetkit_language_db', 1) == 1) {
-  }
-}
-
-/**
  * Implements _wetkit_language_lang_switcher().
- *
- * @global type $language
- *   The global language identifier
- * @return type
- *   Returns the language switcher
  */
 function _wetkit_language_lang_switcher() {
   global $language;
@@ -119,11 +85,4 @@ function _wetkit_language_lang_switcher() {
     }
     return implode('<br />', $lang_switcher);
   }
-}
-
-/**
- * Implements hook_preprocess_node().
- */
-function wetkit_language_preprocess_node(&$vars) {
-
 }

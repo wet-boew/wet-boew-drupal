@@ -63,6 +63,8 @@ fieldset.custom_search-popup .form-item { text-align: left; }
 .search-form .form-item-custom-search-blocks-form-1 { display: inline; }
 
 /* Drupal Contrib: Panels */
+#panels-ipe-control-container a { color: white; }
+
 .panel-pane .block-content .node-unpublished { margin-left: 10px; margin-right: 10px; margin-bottom: 10px; }
 
 .panels-ipe-placeholder h3 { background: none; padding: 0px; }
@@ -84,6 +86,36 @@ div.panels-ipe-placeholder h4 { font-weight: 700; font-size: 15px; width: 75px; 
 .region-wetkit-33-66-second { width: 95%; }
 
 /* WET-BOEW */
+section#main-content { display: block !important; }
+
+#gcwu-connect h2 { border: none; margin-bottom: 5px; color: #333; float: left; margin-top: 2px; margin-right: 10px; }
+
+#gcwu-connect ul { list-style-type: none; }
+
+#gcwu-connect li { display: -moz-inline-stack; display: inline-block; vertical-align: middle; }
+
+#gcwu-connect a { background: none; padding-right: 0; text-decoration: none; }
+
+.gcwu-minister-in { min-height: 149px; }
+
+.gcwu-minister { margin-top: 10px; }
+
+.gcwu-minister img { padding-right: 5px; float: left; margin: 0; }
+
+.gcwu-minister p { margin: 0; padding: 10px 5px 10px 0; }
+
+.gcwu-minister p strong { font-weight: 700; color: #001D45; }
+
+.gcwu-minister ul { list-style-type: none; padding-top: 17px; margin: 0; }
+
+.gcwu-minister ul:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+.gcwu-minister li { padding-bottom: 8px; }
+
+.gcwu-minister li a:hover, .gcwu-minister li a:focus, .gcwu-minister li a:active { text-decoration: none; }
+
+div#gcwu-headlines ul, div#gcwu-headlines ul li { list-style: none!important; margin: 0!important; }
+
 #wb-aside #gcwu-priorities h2 { color: #333; font-weight: 400; border: 0; margin-bottom: 5px; font-size: 1.6em; }
 
 #wb-main-in #gcwu-connect { margin-left: 0px; }

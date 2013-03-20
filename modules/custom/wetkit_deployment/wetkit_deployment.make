@@ -24,3 +24,10 @@ projects[entity_dependency][patch][1545278] = http://drupal.org/files/entity-dep
 projects[entity_dependency][patch][1772372] = http://drupal.org/files/documentation-1772372.patch
 projects[entity_dependency][patch][1590280] = http://drupal.org/files/entity_dependency_comment_typos-1590280-1.patch
 projects[entity_dependency][patch][1589794] = http://drupal.org/files/entity_dependency_iterator_documentation-1589794-1.patch
+
+projects[quicktabs][version] = 3.x-dev
+projects[quicktabs][subdir] = contrib
+projects[quicktabs][type] = module
+projects[quicktabs][download][type] = git
+projects[quicktabs][download][revision] = 68f7603
+projects[quicktabs][download][branch] = 7.x-3.x

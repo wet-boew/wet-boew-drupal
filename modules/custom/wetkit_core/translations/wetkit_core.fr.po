@@ -1,0 +1,341 @@
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  wetkit_core.profile.inc: n/a
+#  wetkit_core.views_default.inc: n/a
+#  views/wetkit_core.admin_content_view.inc: n/a
+#  wetkit_core.module: n/a
+#  wetkit_core.info: n/a
+#  plugins/content_types/querypath_scrape.inc: n/a
+#  plugins/content_types/welcome.inc: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-03-03 16:06-0500\n"
+"PO-Revision-Date: 2013-03-03 16:06-0500\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: wetkit_core.profile.inc:12;24
+msgid "Choose a theme"
+msgstr "Choisissez un thème"
+
+#: wetkit_core.profile.inc:52
+msgid "Starting Theme"
+msgstr "Ouverture du thème"
+
+#: wetkit_core.views_default.inc:132
+msgid "Master"
+msgstr "Maître"
+
+#: wetkit_core.views_default.inc:133
+msgid "Headlines"
+msgstr "Manchettes"
+
+#: wetkit_core.views_default.inc:134 views/wetkit_core.admin_content_view.inc:392
+msgid "more"
+msgstr "plus"
+
+#: wetkit_core.views_default.inc:135 views/wetkit_core.admin_content_view.inc:393
+msgid "Apply"
+msgstr "Appliquer"
+
+#: wetkit_core.views_default.inc:136 views/wetkit_core.admin_content_view.inc:394
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#: wetkit_core.views_default.inc:137 views/wetkit_core.admin_content_view.inc:395
+msgid "Sort by"
+msgstr "Trier selon"
+
+#: wetkit_core.views_default.inc:138 views/wetkit_core.admin_content_view.inc:396
+msgid "Asc"
+msgstr "Ascendant"
+
+#: wetkit_core.views_default.inc:139 views/wetkit_core.admin_content_view.inc:397
+msgid "Desc"
+msgstr "Descendant"
+
+#: wetkit_core.views_default.inc:140
+msgid "No Content"
+msgstr "Pas de contenu"
+
+#: wetkit_core.views_default.inc:141
+msgid "No content has yet been created for this language."
+msgstr "Aucun contenu n'a encore été créé pour cette langue."
+
+#: wetkit_core.views_default.inc:142
+msgid "[body]"
+msgstr "[corps]"
+
+#: wetkit_core.views_default.inc:143 views/wetkit_core.admin_content_view.inc:409
+msgid "Type"
+msgstr "Type"
+
+#: wetkit_core.views_default.inc:144
+msgid "Content pane"
+msgstr "Volet de contenu"
+
+#: wetkit_core.views_default.inc:145
+msgid "View panes"
+msgstr "Voir les volets"
+
+#: wetkit_core.module:29
+msgid "Thank you for installing the WxT-Drupal Variant for the Web Experience Toolkit. You may login at the following page: <a href=\"@login\">User Login</a>"
+msgstr ""
+"Merci d'avoir installé la variante WXT-Drupal pour la boîte à "
+"outils de l'expérience Web. Vous pouvez vous connecter à la page "
+"suivante: <a href=\"@login\">User Login</a>"
+
+#: wetkit_core.module:30
+msgid "For more information please be sure to read the online <a href=\"@documentation\">Documentation</a>"
+msgstr ""
+"Pour plus d'informations s'il vous plaît n'oubliez pas de lire la <a "
+"href=\"@documentation\">Documentation en ligne</a>"
+
+#: wetkit_core.module:64
+msgid "Enter \"%nolink\" to generate non-linkable item"
+msgstr "Écrire \"%nolink\" pour générer un item non lié"
+
+#: wetkit_core.module:169;197;221;245
+msgid "General Settings"
+msgstr "Paramètres généraux"
+
+#: wetkit_core.module:287
+msgid "WetKit Core Settings"
+msgstr ""
+
+#: wetkit_core.module:89
+msgid "WetKit Settings"
+msgstr "Paramètres BOEW"
+
+#: wetkit_core.module:90
+msgid "Configuration related to WetKit"
+msgstr "Configuration liée à BOEW"
+
+#: wetkit_core.module:107;116
+msgid "This is the configuration screen for "
+msgstr "Ceci est l'écran de configuration pour "
+
+#: wetkit_core.module:132 wetkit_core.info:0
+msgid "WetKit"
+msgstr "BOEW"
+
+#: wetkit_core.module:135
+msgid "Workbench"
+msgstr ""
+
+#: wetkit_core.info:0
+msgid "WetKit Core"
+msgstr ""
+
+#: wetkit_core.info:0
+msgid "Installs and configures the core modules and settings needed for the WetKit Installation Profile."
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:14
+msgid "Querypath Scrape"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:15
+msgid "This pane will leverage Querypath to parse data from a remote source using CSS3 Selectors."
+msgstr ""
+"Ce volet tire parti de Querypath pour analyser les données provenant "
+"d'une source externe utilisant les selecteurs CSS3"
+
+#: plugins/content_types/querypath_scrape.inc:17
+msgid "WET-BOEW"
+msgstr "WET-BOEW"
+
+#: plugins/content_types/querypath_scrape.inc:78
+msgid "Error: @error"
+msgstr "Erreur : @error"
+
+#: plugins/content_types/querypath_scrape.inc:106
+msgid "Querypath Scrape General Settings"
+msgstr "Paramètre généraux Querypath Scrape"
+
+#: plugins/content_types/querypath_scrape.inc:112
+msgid "Select Parser for QueryPath"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:114
+msgid "HTML"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:115
+msgid "XML"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:118
+msgid "Select the type of parser (XML or HTML) that Queryparth will be using."
+msgstr ""
+"Selectionner le type d'analyseur (XML ou HTML) que Querypath "
+"utilisera."
+
+#: plugins/content_types/querypath_scrape.inc:125
+msgid "Site URL"
+msgstr "URL du site"
+
+#: plugins/content_types/querypath_scrape.inc:128
+msgid "URL to parse using Querypath."
+msgstr "URL à analyser par Querypath."
+
+#: plugins/content_types/querypath_scrape.inc:141
+msgid "Querypath Parameters (GetHTML)"
+msgstr ""
+
+#: plugins/content_types/querypath_scrape.inc:148
+msgid "Elements to Find"
+msgstr "Elements à chercher"
+
+#: plugins/content_types/querypath_scrape.inc:151
+msgid "Element(s) to retrieve with Querypath using CSS3 Selectors."
+msgstr ""
+"Element(s) à recupérer avec Querypath en utilisant les selecteurs "
+"CSS3."
+
+#: plugins/content_types/querypath_scrape.inc:158
+msgid "Add Querypath GetHTML"
+msgstr "Ajouter Querypath GetHTML"
+
+#: plugins/content_types/querypath_scrape.inc:166
+msgid "Remove Querypath GetHTML"
+msgstr "Enlever Querypath GetHTML"
+
+#: plugins/content_types/querypath_scrape.inc:177
+msgid "Querypath Parameters (RemoveHTML)"
+msgstr "Paramètres Querypath (RemoveHTML)"
+
+#: plugins/content_types/querypath_scrape.inc:184
+msgid "Elements to Remove"
+msgstr "Éléments à enlever"
+
+#: plugins/content_types/querypath_scrape.inc:187
+msgid "Element(s) to remove with Querypath using CSS3 Selectors."
+msgstr ""
+"Élément(s) à enlever avec Querypath en utilisant les selecteurs "
+"CSS3."
+
+#: plugins/content_types/querypath_scrape.inc:194
+msgid "Add Querypath RemoveHTML"
+msgstr "Ajouter Querypath RemoveHTML"
+
+#: plugins/content_types/querypath_scrape.inc:202
+msgid "Remove Querypath RemoveHTML"
+msgstr "Enlever Querypath RemoveHTML"
+
+#: plugins/content_types/welcome.inc:12;23
+msgid "Welcome"
+msgstr "Bienvenue"
+
+#: plugins/content_types/welcome.inc:15;31
+msgid "Intro to WetKit Dashboard"
+msgstr ""
+
+#: plugins/content_types/welcome.inc:16
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#: plugins/content_types/welcome.inc:42
+msgid "Welcome to your administrative dashboard.  !panel\n    to add more content panes here, and/or configure those provided by default.\n    Please note that Views content panes can be created for you automatically \n    according to your preferences by changing the !settings settings.  Please\n    tailor this dashboard the faciliatate your administrative needs."
+msgstr ""
+
+#: plugins/content_types/welcome.inc:47
+msgid "Edit this panel"
+msgstr ""
+
+#: plugins/content_types/welcome.inc:48
+msgid "Total Control"
+msgstr ""
+
+#: plugins/content_types/welcome.inc:52
+msgid "wetkit_core"
+msgstr ""
+
+#: plugins/content_types/welcome.inc:53
+msgid "WetKit Dashboards"
+msgstr ""
+
+#: views/wetkit_core.admin_content_view.inc:390
+msgid "Defaults"
+msgstr "Défauts"
+
+#: views/wetkit_core.admin_content_view.inc:391
+msgid "Content"
+msgstr "Contenu"
+
+#: views/wetkit_core.admin_content_view.inc:398
+msgid "Items per page"
+msgstr "Articles par page"
+
+#: views/wetkit_core.admin_content_view.inc:399
+msgid "- All -"
+msgstr "- Tous -"
+
+#: views/wetkit_core.admin_content_view.inc:400
+msgid "Offset"
+msgstr "Décalage"
+
+#: views/wetkit_core.admin_content_view.inc:401
+msgid "« first"
+msgstr "« premier"
+
+#: views/wetkit_core.admin_content_view.inc:402
+msgid "‹ previous"
+msgstr "‹ précédent"
+
+#: views/wetkit_core.admin_content_view.inc:403
+msgid "next ›"
+msgstr "suivant ›"
+
+#: views/wetkit_core.admin_content_view.inc:404
+msgid "last »"
+msgstr "dernier »"
+
+#: views/wetkit_core.admin_content_view.inc:405
+msgid "No content available."
+msgstr "Aucun contenu disponible."
+
+#: views/wetkit_core.admin_content_view.inc:406
+msgid "author"
+msgstr "auteur"
+
+#: views/wetkit_core.admin_content_view.inc:407
+msgid "term"
+msgstr "terme"
+
+#: views/wetkit_core.admin_content_view.inc:408
+msgid "Title"
+msgstr "Titre"
+
+#: views/wetkit_core.admin_content_view.inc:410
+msgid "Author"
+msgstr "Auteur"
+
+#: views/wetkit_core.admin_content_view.inc:411
+msgid "Published"
+msgstr "Publié"
+
+#: views/wetkit_core.admin_content_view.inc:412
+msgid "Language"
+msgstr "Langue"
+
+#: views/wetkit_core.admin_content_view.inc:413
+msgid "Updated"
+msgstr "Mis à jour"
+
+#: views/wetkit_core.admin_content_view.inc:414
+msgid "Vocabulary"
+msgstr "Vocabulaire"
+
+#: views/wetkit_core.admin_content_view.inc:415
+msgid "System"
+msgstr "Système"
+
