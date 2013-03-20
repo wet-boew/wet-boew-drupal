@@ -8,6 +8,17 @@ include_once 'wetkit_breadcrumbs.features.inc';
 include_once 'theme/wetkit_breadcrumbs.theme.inc';
 
 /**
+ * Implements hook_menu_breadcrumb_alter().
+ */
+function wetkit_breadcrumbs_menu_breadcrumb_alter(&$active_trail, $item) {
+  foreach ($active_trail as $key=>$bcrumb) {
+    if ($bcrumb['href'] == '<group>' || $bcrumb['href'] == '<separator>') {
+      unset($active_trail[$key]);
+    }
+  }
+}
+
+/**
  * Implements hook_theme_registry_alter().
  */
 function wetkit_breadcrumbs_theme_registry_alter(&$theme_registry) {
