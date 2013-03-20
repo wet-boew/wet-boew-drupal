@@ -40,7 +40,7 @@ function wetkit_adaptivetheme_breadcrumb($vars) {
   $theme_name = $theme_key;
   $breadcrumb = $vars['breadcrumb'];
 
-  // Custom Logic Based on Theme Selection (Internet, Intranet or Base)
+  // Custom Logic Based on Theme Selection (Internet, Intranet or Base).
   if (variable_get('wetkit_wetboew_theme', 0) == 2) {
     $theme_prefix = 'base';
   }

@@ -111,7 +111,7 @@ function _wetkit_bean_load() {
     $fields_en = array(
       'title_field' => array(
         '0' => array(
-          'value' => '',
+          'value' => 'Stay Connected',
         ),
       ),
       'field_bean_wetkit_body' => array(
@@ -128,7 +128,7 @@ function _wetkit_bean_load() {
     $fields_fr = array(
       'title_field' => array(
         '0' => array(
-          'value' => '',
+          'value' => 'Restez branchés',
         ),
       ),
       'field_bean_wetkit_body' => array(

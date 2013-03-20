@@ -39,9 +39,9 @@ class WetKitMigrateDocumentationMenu extends XMLMigration {
     $xml_folder = DRUPAL_ROOT . '/' . drupal_get_path('module', 'wetkit_migrate') . '/migrations/documentation/';
     $items_url = $xml_folder . variable_get('WetKitMigrateDocumentationMenu_file', 'migrate_menu.xml');
     $item_xpath = '/menu_handler/menu/*/section';
-    $item_ID_xpath = 'source_id';
+    $item_id_xpath = 'source_id';
 
-    $items_class = new MigrateItemsXML($items_url, $item_xpath, $item_ID_xpath);
+    $items_class = new MigrateItemsXML($items_url, $item_xpath, $item_id_xpath);
     $this->source = new MigrateSourceMultiItems($items_class, $fields);
     $this->destination = new MigrateDestinationMenu();
 
@@ -102,9 +102,9 @@ class WetKitMigrateDocumentationMenuLinks extends XMLMigration {
     $xml_folder = DRUPAL_ROOT . '/' . drupal_get_path('module', 'wetkit_migrate') . '/migrations/documentation/';
     $items_url = $xml_folder . variable_get('WetKitMigrateDocumentationMenu_file', 'migrate_menu.xml');
     $item_xpath = '/menu_handler/menu_links/*/section';
-    $item_ID_xpath = 'source_id';
+    $item_id_xpath = 'source_id';
 
-    $items_class = new MigrateItemsXML($items_url, $item_xpath, $item_ID_xpath);
+    $items_class = new MigrateItemsXML($items_url, $item_xpath, $item_id_xpath);
     $this->source = new MigrateSourceMultiItems($items_class, $fields);
     $this->destination = new MigrateDestinationMenuLinks();
 

@@ -7,9 +7,6 @@
 
 /**
  * Implements hook_form_system_theme_settings_alter().
- *
- * @param array $form
- *   Nested array of form elements that comprise the form.
  */
 function wetkit_rubik_form_system_theme_settings_alter(&$form) {
   // Work-around for a core bug affecting admin themes. See issue #943212.

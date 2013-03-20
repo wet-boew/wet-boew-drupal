@@ -11,7 +11,7 @@ projects[panopoly_core][download][type] = git
 projects[panopoly_core][download][revision] = 3bcd157
 projects[panopoly_core][download][branch] = 7.x-1.x
 projects[panopoly_core][patch][41220bd] = https://gist.github.com/raw/4724569/41220bd5f180ccfe0f61087ba08ce4db3fada6d5/panopoly_core_06022012.patch
-projects[panopoly_core][patch][33c89f8] = https://gist.github.com/raw/5050169/33c89f8e559255456224c0cdc546bd39eb75e878/panopoly_core_02222013.patch
+projects[panopoly_core][patch][db3f615] = https://gist.github.com/raw/5054301/db3f61504581c50edfbe5315c33064d445fe3e2b/panopoly_core_02232013.patch
 
 projects[panopoly_images][version] = 1.x-dev
 projects[panopoly_images][subdir] = panopoly
@@ -60,5 +60,6 @@ includes[] = modules/custom/wetkit_language/wetkit_language.make
 includes[] = modules/custom/wetkit_migrate/wetkit_migrate.make
 includes[] = modules/custom/wetkit_bean/wetkit_bean.make
 includes[] = modules/custom/wetkit_metatag/wetkit_metatag.make
+includes[] = modules/custom/wetkit_core/wetkit_core.make
 includes[] = modules/custom/wetkit_wetboew/wetkit_wetboew.make
 includes[] = modules/custom/wetkit_breadcrumbs/wetkit_breadcrumbs.make

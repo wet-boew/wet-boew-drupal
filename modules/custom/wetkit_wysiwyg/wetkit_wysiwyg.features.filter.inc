@@ -18,19 +18,6 @@ function wetkit_wysiwyg_filter_default_formats() {
     'status' => '1',
     'weight' => '-9',
     'filters' => array(
-      'image_resize_filter' => array(
-        'weight' => '-50',
-        'status' => '0',
-        'settings' => array(
-          'link' => 0,
-          'link_class' => '',
-          'link_rel' => '',
-          'image_locations' => array(
-            'local' => 'local',
-            'remote' => 'remote',
-          ),
-        ),
-      ),
       'wysiwyg' => array(
         'weight' => '-49',
         'status' => '1',
@@ -383,19 +370,6 @@ wbr[class|dir<ltr?rtl|id|lang|style|title]',
     'status' => '1',
     'weight' => '-10',
     'filters' => array(
-      'image_resize_filter' => array(
-        'weight' => '-50',
-        'status' => '0',
-        'settings' => array(
-          'link' => 0,
-          'link_class' => '',
-          'link_rel' => '',
-          'image_locations' => array(
-            'local' => 'local',
-            'remote' => 'remote',
-          ),
-        ),
-      ),
       'wysiwyg' => array(
         'weight' => '-49',
         'status' => '1',

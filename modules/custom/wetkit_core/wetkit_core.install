@@ -1,0 +1,32 @@
+<?php
+/**
+ * @file
+ * An installation file for WetKit Core
+ */
+
+include_once 'wetkit_core.block.inc';
+
+/**
+ * Implements hook_install().
+ */
+function wetkit_core_install() {
+  if (module_exists('block')) {
+    // Set Default Blocks.
+    // TODO: Convert these blocks to beans.
+    _wetkit_core_default_blocks();
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function wetkit_core_uninstall() {
+  // Get global variable array.
+  global $conf;
+  foreach (array_keys($conf) as $key) {
+    // Find variables that have the module prefix.
+    if (strpos($key, 'wetkit_core_') === 0) {
+      variable_del($key);
+    }
+  }
+}

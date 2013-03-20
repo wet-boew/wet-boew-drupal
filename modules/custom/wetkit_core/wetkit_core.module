@@ -1,0 +1,344 @@
+<?php
+/**
+ * @file
+ * Code for the wetkit_core feature.
+ */
+
+include_once 'wetkit_core.block.inc';
+include_once 'wetkit_core.features.inc';
+include_once 'views/wetkit_core.admin_content_view.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function wetkit_core_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+}
+
+/**
+ * Implements hook_init().
+ */
+function wetkit_core_init() {
+  // Set Flag.
+  if ((variable_get('wetkit_core_load', 1) == 1)) {
+    drupal_flush_all_caches();
+    variable_set('wetkit_core_load', 0);
+  }
+  // Set Documentation Text.
+  if ((variable_get('wetkit_core_doc', 1) == 1)) {
+    drupal_set_message(t('Thank you for installing the WxT-Drupal Variant for the Web Experience Toolkit. You may login at the following page: <a href="@login">User Login</a>', array('@login' => url('user'))), 'status');
+    drupal_set_message(t('For more information please be sure to read the online <a href="@documentation">Documentation</a>', array('@documentation' => url('https://github.com/wet-boew/wet-boew-drupal/wiki'))), 'warning');
+    variable_set('wetkit_core_doc', 0);
+  }
+  // Solve some of the display inconsistencies between WET and Drupal.
+  drupal_add_css(drupal_get_path('module', 'wetkit_core') . '/css/wetkit_core.css', array(
+    'group' => CSS_THEME,
+    'every_page' => TRUE,
+  ));
+}
+
+/**
+ * Implements hook_menu_edit_item_alter().
+ */
+function wetkit_core_page_alter(&$page) {
+  // Hide Toolbar for those who can access the Admin Menu.
+  if (user_access('access administration menu') && !empty($page['page_top']['toolbar'])) {
+    $page['page_top']['toolbar']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_menu_edit_item_alter().
+ */
+function wetkit_core_form_menu_edit_item_alter(&$form, &$form_state) {
+  // Some menu items have a pre-defined path which cannot be modified hence no
+  // default_value.
+  if (isset($form['link_path']['#default_value'])) {
+    $default_value = $form['link_path']['#default_value'];
+
+    if (preg_match('/^<nolink>\/[0-9]+$/', $default_value)) {
+      $default_value = '<nolink>';
+    }
+
+    $form['link_path']['#default_value'] = $default_value;
+    $form['link_path']['#description'] .= ' ' . t('Enter "%nolink" to generate non-linkable item', array('%nolink' => '<nolink>'));
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function wetkit_core_menu() {
+  // Add an dummy menu item.
+  $items['<nolink>'] = array(
+    'page callback' => 'drupal_not_found',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+  // Add an dummy menu item.
+  $items['<separator>'] = array(
+    'page callback' => 'drupal_not_found',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+  // Add an dummy menu item.
+  $items['<group>'] = array(
+    'page callback' => 'drupal_not_found',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+  // Add an administration section for WetKit settings.
+  $items['admin/panopoly/wetkit_settings'] = array(
+    'title' => 'WetKit Settings',
+    'description' => 'Configuration related to WetKit',
+    'position' => 'left',
+    'weight' => -50,
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('access administration pages'),
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );
+
+  // Add settings pages for WetKit and WetKit Apps.
+  foreach (module_list() as $module) {
+    $app_info = module_invoke($module, 'apps_app_info');
+    if (!empty($app_info) && !empty($app_info['configure form'])) {
+      $module_info = drupal_parse_info_file(drupal_get_path('module', $module) . '/' . $module . '.info');
+      if (!empty($module_info['package']) && $module_info['package'] == 'WetKit') {
+        $items['admin/panopoly/wetkit_settings/' . $module] = array(
+          'title' => $module_info['name'],
+          'description' => 'This is the configuration screen for ' . $module_info['name'],
+          'page callback' => 'drupal_get_form',
+          'page arguments' => array($app_info['configure form']),
+          'access arguments' => array('administer site configuration'),
+        );
+      }
+      elseif (!empty($module_info['package']) && $module_info['package'] == 'WetKit Apps') {
+        $items['admin/panopoly/wetkit_app_settings/' . $module] = array(
+          'title' => $module_info['name'],
+          'description' => 'This is the configuration screen for ' . $module_info['name'],
+          'page callback' => 'drupal_get_form',
+          'page arguments' => array($app_info['configure form']),
+          'access arguments' => array('administer site configuration'),
+        );
+      }
+    }
+  }
+  return $items;
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function wetkit_core_menu_alter(&$items) {
+  if (!empty($items['admin/panopoly'])) {
+    $items['admin/panopoly']['title'] = 'WetKit';
+  }
+  if (!empty($items['admin/workbench'])) {
+    $items['admin/workbench']['title'] = 'Workbench';
+  }
+  if (!empty($items['admin/advanced_help'])) {
+    $items['admin/dashboard/advanced_help'] = $items['admin/advanced_help'];
+    unset($items['admin/advanced_help']);
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function wetkit_core_form_alter(&$form, &$form_state, $form_id) {
+  // Move the featured field into publishing options.
+  if (!empty($form['field_featured_status'])) {
+    $form['options']['field_featured_status'] = $form['field_featured_status'];
+    // TODO: Upstream this fix to Panopoly.
+    $form['field_featured_status'] = array('#language' => NULL);
+  }
+
+  if (!empty($form['field_archived_content'])) {
+    $form['options']['field_archived_content'] = $form['field_archived_content'];
+    // TODO: Upstream this fix to Panopoly.
+    $form['field_archived_content'] = array('#language' => NULL);
+  }
+
+  // Remove the description from the shared widget.
+  if (!empty($form['field_share_widget'])) {
+    $form['options']['field_share_widget'] = $form['field_share_widget'];
+    $form['options']['field_share_widget']['#weight'] = '0';
+    // TODO: Upstream this fix to Panopoly.
+    $form['field_share_widget'] = array('#language' => NULL);
+  }
+
+  // Create the General Settings Fieldset.
+  if ($form_id == 'ctools_block_content_type_edit_form') {
+    // Create General Settings Fieldset.
+    $form['general_settings'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('General Settings'),
+      '#collapsible' => FALSE,
+      '#collapsed' => FALSE,
+    );
+    $form['general_settings']['override_title'] = $form['override_title'];
+    $form['general_settings']['override_title_markup'] = $form['override_title_markup'];
+    $form['general_settings']['override_title_text'] = $form['override_title_text'];
+
+    // Unset some Form Variables.
+    unset($form['override_title']);
+    unset($form['override_title_markup']);
+    unset($form['override_title_text']);
+  }
+
+  // Check if Total Control module exists.
+  if (module_exists('total_control')) {
+
+    // Peform logic on generic total control types.
+    $total_control_types = array(
+      'total_control_create_content_type_edit_form',
+      'total_control_panel_pages_content_type_edit_form',
+      'total_control_node_types_content_type_edit_form',
+      'total_control_overview_content_content_type_edit_form',
+    );
+    if (in_array($form_id, $total_control_types)) {
+      // Create General Settings Fieldset.
+      $form['general_settings'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('General Settings'),
+        '#collapsible' => FALSE,
+        '#collapsed' => FALSE,
+      );
+      $form['general_settings']['override_title'] = $form['override_title'];
+      $form['general_settings']['override_title_markup'] = $form['override_title_markup'];
+      $form['general_settings']['override_title_text'] = $form['override_title_text'];
+      $form['general_settings']['types'] = $form['types'];
+
+      // Unset some Form Variables.
+      unset($form['override_title']);
+      unset($form['override_title_markup']);
+      unset($form['override_title_text']);
+      unset($form['types']);
+    }
+
+    // Peform logic on generic total control menus.
+    $total_control_menus = array(
+      'total_control_menus_content_type_edit_form',
+    );
+    if (in_array($form_id, $total_control_menus)) {
+      // Create General Settings Fieldset.
+      $form['general_settings'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('General Settings'),
+        '#collapsible' => FALSE,
+        '#collapsed' => FALSE,
+      );
+      $form['general_settings']['override_title'] = $form['override_title'];
+      $form['general_settings']['override_title_markup'] = $form['override_title_markup'];
+      $form['general_settings']['override_title_text'] = $form['override_title_text'];
+      $form['general_settings']['menus'] = $form['menus'];
+
+      // Unset some Form Variables.
+      unset($form['override_title']);
+      unset($form['override_title_markup']);
+      unset($form['override_title_text']);
+      unset($form['menus']);
+    }
+
+    // Peform logic on generic total control taxonomy.
+    $total_control_taxonomy = array(
+      'total_control_taxonomy_content_type_edit_form',
+    );
+    if (in_array($form_id, $total_control_taxonomy)) {
+      // Create General Settings Fieldset.
+      $form['general_settings'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('General Settings'),
+        '#collapsible' => FALSE,
+        '#collapsed' => FALSE,
+      );
+      $form['general_settings']['override_title'] = $form['override_title'];
+      $form['general_settings']['override_title_markup'] = $form['override_title_markup'];
+      $form['general_settings']['override_title_text'] = $form['override_title_text'];
+      $form['general_settings']['vids'] = $form['vids'];
+
+      // Unset some Form Variables.
+      unset($form['override_title']);
+      unset($form['override_title_markup']);
+      unset($form['override_title_text']);
+      unset($form['vids']);
+    }
+  }
+}
+
+/**
+ * Implements hook_apps_app_info().
+ */
+function wetkit_core_apps_app_info() {
+  return array(
+    'configure form' => 'wetkit_core_configure_form',
+  );
+}
+
+/**
+ * Configuration Form for WetKit Magic.
+ *
+ * @param array $form
+ *   Nested array of form elements that comprise the form.
+ * @param array $form_state
+ *   A keyed array containing the current state of the form.
+ */
+function wetkit_core_configure_form($form, &$form_state) {
+  drupal_add_js(drupal_get_path('module', 'system') . '/system.js');
+
+  $form = array();
+
+  $form['wetkit_core'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('WetKit Core Settings'),
+    '#collapsible' => TRUE,
+  );
+
+  $form['#submit'][] = 'wetkit_core_configure_form_submit';
+
+  return system_settings_form($form);
+}
+
+/**
+ * Handle submission of the WetKit Web Usability configuration page.
+ *
+ * @param array $form
+ *   Nested array of form elements that comprise the form.
+ * @param array $form_state
+ *   A keyed array containing the current state of the form.
+ */
+function wetkit_core_configure_form_submit($form, &$form_state) {
+  // Change query-strings on css/js files to enforce reload for all users.
+  _drupal_flush_css_js();
+}
+
+/**
+ * Wrapper function around filter_xss() with some additions.
+ *
+ * @param array $string
+ *   String to be parsed.
+ * @param array $allowed_tags
+ *   Allowed tags to be included when parsing the string.
+ *
+ * @return array
+ *   Return the modified string.
+ */
+function wetkit_core_filter_xss($string, $allowed_tags = array(
+  'a',
+  'em',
+  'strong',
+  'cite',
+  'code',
+  'ul',
+  'ol',
+  'li',
+  'dl',
+  'dt',
+  'dd',
+'br')) {
+  return filter_xss($string, $allowed_tags);
+}

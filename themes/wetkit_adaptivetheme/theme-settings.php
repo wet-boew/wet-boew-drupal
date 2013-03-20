@@ -12,9 +12,9 @@
  * deleting the comment line to enable.
  *
  * @param array $form
- *   Nested array of form elements that comprise the form.
+ *   Nested array of form elements that help to comprise the form.
  * @param array $form_state
- *   A keyed array containing the current state of the form.
+ *   A keyed array containing the current state of the rendered form.
  */
 function wetkit_adaptivetheme_form_system_theme_settings_alter(&$form, &$form_state) {
   // Your knarly custom theme settings go here...

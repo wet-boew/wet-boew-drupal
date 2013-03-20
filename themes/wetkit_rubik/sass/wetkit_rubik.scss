@@ -753,7 +753,7 @@ h1.path-admin-config-workbench span.icon {
 .secondary-tabs a:hover { background-color:#000; }
 
 .tao table th,
-.tao .item-list h3, .tao .block .block-title, .tao .fieldset-title, .tao .collapsible .fieldset-legend a,
+.tao .item-list h3, .tao .block .block-title, .tao a.fieldset-title, .tao .collapsible .fieldset-legend a,
 .tao .admin-panel h3 {
   background-repeat:repeat-x;
   background-image:-webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#eee),color-stop(100%,#dcdcdc))!important;
@@ -761,6 +761,10 @@ h1.path-admin-config-workbench span.icon {
   background-image:-moz-linear-gradient(#eee,#dcdcdc)!important;
   background-image:-o-linear-gradient(#eee,#dcdcdc)!important;
   background-image:linear-gradient(#eee,#dcdcdc)!important;
+}
+
+.tao .fieldset-title .summary {
+
 }
 
 .tao .view-filters .views-widget .form-item {

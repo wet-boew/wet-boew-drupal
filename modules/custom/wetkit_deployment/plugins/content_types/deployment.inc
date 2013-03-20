@@ -3,10 +3,9 @@
 /**
  * @file
  *
- * "Welcome" panel content type. Displays a summary of content statistics 
+ * Welcome panel content type. Displays a summary of content statistics 
  * including: number pieces of each type of content, number of comments, 
  * number of blocked comments (spam) and configuration links.
- *
  */
 
 $plugin = array(
@@ -19,14 +18,14 @@ $plugin = array(
 );
 
 /**
- * 'Admin title' callback for the content type.
+ * Admin title callback for the content type.
  */
 function wetkit_deployment_deployment_content_type_admin_title($subtype = NULL, $conf = NULL, $context = NULL) {
   return t('Deployment');
 }
 
 /**
- * 'Admin info' callback for the content type.
+ * Admin info callback for the content type.
  */
 function wetkit_deployment_deployment_content_type_admin_info($subtype = NULL, $conf = NULL, $context = NULL) {
   $block = new stdClass();

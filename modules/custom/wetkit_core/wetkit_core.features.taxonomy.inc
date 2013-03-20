@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * wetkit_wetboew.features.taxonomy.inc
+ * wetkit_core.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function wetkit_wetboew_taxonomy_default_vocabularies() {
+function wetkit_core_taxonomy_default_vocabularies() {
   return array(
     'wetkit_categories' => array(
       'name' => 'WetKit Categories',

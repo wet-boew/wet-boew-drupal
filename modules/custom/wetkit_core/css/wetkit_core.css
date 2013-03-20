@@ -1,0 +1,55 @@
+/** Stylesheet for WetKit WET-BOEW */
+/* Global Admin Menu Fixes */
+#admin-menu .dropdown li li.expandable ul { margin: -22px 0 0 160px !important; }
+#admin-menu .shortcut-toolbar { text-shadow: #222 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #666666), color-stop(100%, #545454)) !important; background-image: -webkit-linear-gradient(#666666, #545454) !important; background-image: -moz-linear-gradient(#666666, #545454) !important; background-image: -o-linear-gradient(#666666, #545454) !important; background-image: linear-gradient(#666666, #545454) !important; }
+
+/* Global Navigation Bar Fixes */
+#navbar-actions li, #navbar-user li { border: none; }
+
+/* Revision Screen */
+.page-node-revisions div img.panopoly-image-half { float: none; width: auto; }
+
+/* Panels Screen */
+.panel-portlet .grab-title { background: none; color: white; text-shadow: none; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #176ca7), color-stop(100%, #135888)) !important; background-image: -webkit-linear-gradient(#176ca7, #135888) !important; background-image: -moz-linear-gradient(#176ca7, #135888) !important; background-image: -o-linear-gradient(#176ca7, #135888) !important; background-image: linear-gradient(#176ca7, #135888) !important; }
+
+.ctools-modal-content .modal-header { background: none; color: white; text-shadow: none; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #176ca7), color-stop(100%, #135888)) !important; background-image: -webkit-linear-gradient(#176ca7, #135888) !important; background-image: -moz-linear-gradient(#176ca7, #135888) !important; background-image: -o-linear-gradient(#176ca7, #135888) !important; background-image: linear-gradient(#176ca7, #135888) !important; }
+
+#modal-content #status-messages { margin: 0px; }
+#modal-content .form-item { position: static; border: none; padding: 0px; }
+#modal-content .form-submit { float: left; }
+#modal-content .form-actions { width: auto; }
+#modal-content form-wrapper.form-actions { border: none; background: none; }
+#modal-content .widget-preview .fieldset-wrapper table img { width: auto; }
+#modal-content fieldset legend { background: none; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, gainsboro)) !important; background-image: -webkit-linear-gradient(#eeeeee, gainsboro) !important; background-image: -moz-linear-gradient(#eeeeee, gainsboro) !important; background-image: -o-linear-gradient(#eeeeee, gainsboro) !important; background-image: linear-gradient(#eeeeee, #dcdcdc) !important; }
+#modal-content fieldset legend span { color: #145E91; }
+
+/* IPE Styles */
+.panels-ipe-newblock ul { margin: 0px; }
+.panels-ipe-newblock li { padding: 0; float: left; }
+
+.panels-ipe #l10n-client { bottom: 52px; z-index: 999; }
+
+.overlay-open #l10n-client { bottom: 0px; }
+
+/* Panelizer Styles */
+#panelizer-settings-form .tabs { position: relative; right: 0px; }
+
+/* l10n Client Styles */
+#l10n-client h2 { color: white; }
+#l10n-client #l10n-client-form .form-submit { display: inline; }
+#l10n-client .labels { text-shadow: #222 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #666666), color-stop(100%, #545454)) !important; background-image: -webkit-linear-gradient(#666666, #545454) !important; background-image: -moz-linear-gradient(#666666, #545454) !important; background-image: -o-linear-gradient(#666666, #545454) !important; background-image: linear-gradient(#666666, #545454) !important; }
+#l10n-client .labels .toggle { text-shadow: #222 0 1px 1px; background-repeat: repeat-x; background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #176ca7), color-stop(100%, #135888)) !important; background-image: -webkit-linear-gradient(#176ca7, #135888) !important; background-image: -moz-linear-gradient(#176ca7, #135888) !important; background-image: -o-linear-gradient(#176ca7, #135888) !important; background-image: linear-gradient(#176ca7, #135888) !important; }
+
+/* Fields */
+#edit-menu-options-attributes-rel, #edit-menu-options-attributes-class { width: 75%; }
+
+#node-edit .form-item-field-featured-image-und-0-title label { font-weight: normal; float: left; margin: 4px 10px 0 0; }
+#node-edit .form-item-field-archived-content-und { margin-top: 0px; }
+#node-edit #edit-field-featured-image-und-0-title { width: 180px; }
+#node-edit #edit-field-featured-image-und-0-title label { font-weight: normal; float: left; margin: 4px 10px 0 0; }
+
+/* Translation */
+.form-item .form-autocomplete { padding: 0px 4px; }
+
+/* Media Screen */
+#media-browser-page .media-item { width: auto; }

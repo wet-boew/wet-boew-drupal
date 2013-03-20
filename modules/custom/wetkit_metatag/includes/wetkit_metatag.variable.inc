@@ -5,7 +5,7 @@
  */
 
 /**
- * WetKit Metatags module variables
+ * WetKit Metatags module variables.
  */
 function wetkit_metatag_variable_info($options) {
 
@@ -21,7 +21,7 @@ function wetkit_metatag_variable_info($options) {
 }
 
 /**
- * WetKit module variable groups
+ * WetKit module variable groups.
  */
 function wetkit_metatag_variable_group_info() {
   $groups['wetkit_metatags_settings'] = array(

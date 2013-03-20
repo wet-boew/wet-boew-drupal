@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Implements core hooks for agov_layouts.
+ * Implements core hooks for wetkit_layouts.
  */
 
 /**
@@ -37,7 +37,7 @@ function wetkit_layouts_payette_panels_layouts() {
 }
 
 /**
- * Preprocess variables for payette.tpl.php
+ * Preprocess variables for payette.tpl.php.
  */
 function template_preprocess_payette(&$vars) {
   $vars['panel_prefix'] = '';

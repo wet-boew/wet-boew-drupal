@@ -11,7 +11,6 @@
  *   An associative array of available tokens and token types.
  */
 function wetkit_metatag_token_info() {
-
   // Current page tokens.
   $info['tokens']['current-page']['bilingual_default_value'] = array(
     'name' => t('Metatag: Default Metatag value'),

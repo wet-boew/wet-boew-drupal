@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * wetkit_wetboew.views_default.inc
+ * wetkit_core.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function wetkit_wetboew_views_default_views() {
+function wetkit_core_views_default_views() {
   $export = array();
 
   $view = new view();
