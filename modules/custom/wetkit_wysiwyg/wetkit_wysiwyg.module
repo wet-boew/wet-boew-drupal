@@ -155,18 +155,22 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
 
   switch ($context['editor']['name']) {
     case 'tinymce':
-      // Intranet Theme.
+      // Internet Theme.
       $wet_theme = '';
       if ((variable_get('wetkit_wetboew_theme', 0) == 1)) {
-        $wet_theme = 'theme-base';
+        $wet_theme = 'theme-gcwu-fegc';
       }
-      // Base Theme.
+      // Intranet Theme.
       elseif ((variable_get('wetkit_wetboew_theme', 0) == 2)) {
         $wet_theme = 'theme-gcwu-intranet';
       }
-      // Internet Theme.
+      // Base Theme.
+      elseif ((variable_get('wetkit_wetboew_theme', 0) == 3)) {
+        $wet_theme = 'theme-base';
+      }
+      // WET Theme.
       else {
-        $wet_theme = 'theme-gcwu-fegc';
+        $wet_theme = 'theme-wet-boew';
       }
 
       // Set CSS Files that absolutely need to be rendered inside the WYSIWYG

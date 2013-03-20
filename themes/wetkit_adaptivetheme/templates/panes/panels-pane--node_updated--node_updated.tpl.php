@@ -43,7 +43,7 @@
     <?php print render($title_suffix); ?>
 
     <div<?php print $content_attributes; ?>>
-      <dl id="gcwu-date-mod" role="contentinfo">
+      <dl id="<?php print $date_mod; ?>" role="contentinfo">
         <dt><?php print t('Date modified:'); ?></dt>
         <dd><span><time><?php print render($content); ?></time></span></dd>
       </dl>
