@@ -228,11 +228,17 @@ function wetkit_adaptivetheme_menu_link__menu_block__wetkit_menu_blocks_2($varia
   $sub_menu = '';
 
   // Custom Logic Based on Theme Selection (Internet, Intranet or Base)
-  if (variable_get('wetkit_wetboew_theme', 0) == 2) {
+  if (variable_get('wetkit_wetboew_theme', 0) == 1) {
+    $theme_prefix = 'gcwu';
+  }
+  elseif (variable_get('wetkit_wetboew_theme', 0) == 2) {
+    $theme_prefix = 'gcwu';
+  }
+  elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
     $theme_prefix = 'base';
   }
   else {
-    $theme_prefix = 'gcwu';
+    $theme_prefix = 'wet';
   }
 
   if ($element['#below']) {

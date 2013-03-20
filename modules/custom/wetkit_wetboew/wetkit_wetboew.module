@@ -27,26 +27,30 @@ function wetkit_wetboew_init() {
   }
 
   if (($theme == 'wetkit_adaptivetheme')  || ($wetkit_base_theme == TRUE)) {
-    // Add WET-BOEW Intranet Library using Libraries API.
+    // Internet Theme.
+    $library = libraries_detect('wet-boew', NULL, 'internet');
+    if ((isset($library)) && !empty($library['variants']['internet']['installed'])) {
+      libraries_load('wet-boew', 'internet');
+      $themekey = 'theme-gcwu-fegc';
+    }
+    // Intranet Theme.
     $library = libraries_detect('wet-boew', NULL, 'intranet');
     if ((isset($library)) && !empty($library['variants']['intranet']['installed'])) {
       // Do something with the library here.
       libraries_load('wet-boew', 'intranet');
       $themekey = 'theme-gcwu-intranet';
     }
-    // Add WET-BOEW Base Theme Library using Libraries API.
-    $library = libraries_detect('wet-boew', NULL, 'base_theme');
-    if ((isset($library)) && !empty($library['variants']['base_theme']['installed'])) {
-      // Do something with the library here.
-      libraries_load('wet-boew', 'base_theme');
+    // Base Theme.
+    $library = libraries_detect('wet-boew', NULL, 'base');
+    if ((isset($library)) && !empty($library['variants']['base']['installed'])) {
+      libraries_load('wet-boew', 'base');
       $themekey = 'theme-base';
     }
-    // Add WET-BOEW Default (Minified) Library using Libraries API.
+    // WET Theme.
     $library = libraries_detect('wet-boew');
     if ((isset($library)) && !empty($library['installed'])) {
-      // Do something with the library here.
       libraries_load('wet-boew');
-      $themekey = 'theme-gcwu-fegc';
+      $themekey = 'theme-wet-boew';
     }
   }
 
@@ -140,9 +144,10 @@ function wetkit_wetboew_configure_form($form, &$form_state) {
     '#type' => 'select',
     '#title' => t('Please choose the appropriate WET theme.'),
     '#options' => array(
-      0 => t('Internet'),
-      1 => t('Intranet'),
-      2 => t('Base Theme'),
+      0 => t('WET Theme'),
+      1 => t('Internet'),
+      2 => t('Intranet'),
+      3 => t('Base Theme'),
     ),
     '#default_value' => variable_get('wetkit_wetboew_theme', 0),
     '#description' => t('This will change the Drupal theme by adding custom css and logic for various WET based themes'),
