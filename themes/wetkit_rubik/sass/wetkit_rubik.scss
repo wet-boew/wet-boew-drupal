@@ -4,6 +4,25 @@ body {
   min-width: 1000px;
 }
 
+.page-node-panelizer {
+  #block-system-main {
+    form {
+      .tabs { 
+        position: relative;
+        .tabs {
+          display: block;
+          position: relative;
+          li {
+            float: left;
+            margin-right: 5px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
 /* Sidebars
 -----------------------------------------------------------------------------*/
 #main-content {
