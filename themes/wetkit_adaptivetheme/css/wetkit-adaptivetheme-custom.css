@@ -63,7 +63,11 @@ fieldset.custom_search-popup .form-item { text-align: left; }
 .search-form .form-item-custom-search-blocks-form-1 { display: inline; }
 
 /* Drupal Contrib: Panels */
-#panels-ipe-control-container a { color: white; }
+.panels-ipe-editing .region-pearson-first { margin-right: 10px; }
+
+.panels-ipe-editing .region-pearson-second { margin-right: 10px; }
+
+#panels-ipe-control-container input, #panels-ipe-control-container a { color: white; }
 
 .panel-pane .block-content .node-unpublished { margin-left: 10px; margin-right: 10px; margin-bottom: 10px; }
 

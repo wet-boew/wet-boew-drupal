@@ -2,6 +2,10 @@
 -----------------------------------------------------------------------------*/
 body { min-width: 1000px; }
 
+.page-node-panelizer #block-system-main form .tabs { position: relative; }
+.page-node-panelizer #block-system-main form .tabs .tabs { display: block; position: relative; }
+.page-node-panelizer #block-system-main form .tabs .tabs li { float: left; margin-right: 5px; margin-bottom: 5px; }
+
 /* Sidebars
 -----------------------------------------------------------------------------*/
 #main-content { width: 96%; position: relative; float: left; margin: 0 2%; }
