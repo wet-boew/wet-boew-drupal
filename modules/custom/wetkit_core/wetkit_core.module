@@ -16,6 +16,63 @@ function wetkit_core_ctools_plugin_directory($module, $plugin) {
 }
 
 /**
+ * Implements hook_theme()
+ */
+function wetkit_core_theme() {
+  return array(
+    'wetkit_core_collapsible' => array(
+      'variables' => array('handle' => NULL, 'content' => NULL, 'collapsed' => FALSE),
+      'file' => 'plugins/styles/collapsible.inc',
+    )
+  );
+}
+
+
+/**
+ * Implements hook_panels_pane_content_alter().
+ *
+ * Hold the title of the pane for later use (i.e. show it as the tab's title),
+ * and remove it form the pane itself.
+ */
+function wetkit_core_pane_content_alter(&$content, $pane, $args, $context, $renderer, $display) {
+  // Get the regions that should be themed as tabs.
+  foreach ($display->panel_settings as $key => $values) {
+    if ($key == 'style_settings') {
+      continue;
+    }
+    if (!empty($values['style']) && $values['style'] == 'tabs' && $pane->panel == $key && !empty($content->title)) {
+      // Capture the title.
+      wetkit_core_pane_titles($display->did, $pane->pid, $content->title);
+      // Remove it form the pane.
+      $content->title = '';
+    }
+  }
+
+}
+
+/**
+ * Get or set pane title.
+ *
+ * @param $did
+ *   Panels display ID.
+ * @param $pid
+ *   Panels pane ID.
+ * @param $title
+ *   Optional; Panles pane title to set, or if empty then the function will
+ *   return the captured title based on the display ID and pane ID properties.
+ *
+ * @return
+ *   Unsanitized pane title, or NULL if doesn't exist.
+ */
+function wetkit_core_pane_titles($did = NULL, $pid = NULL, $title = NULL) {
+  $cache = &drupal_static(__FUNCTION__, array());
+  if (!isset($title)) {
+    return isset($cache[$did][$pid]) ? $cache[$did][$pid] : NULL;
+  }
+  $cache[$did][$pid] = $title;
+}
+
+/**
  * Implements hook_init().
  */
 function wetkit_core_init() {
