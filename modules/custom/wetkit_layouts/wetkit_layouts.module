@@ -27,7 +27,7 @@ function wetkit_layouts_init() {
     if (strstr($url['path'], "/admin/dashboard")) {
       drupal_add_css(drupal_get_path('module', 'wetkit_layouts') . '/css/layouts.css', array('group' => CSS_THEME, 'every_page' => TRUE));
     }
-    if (strstr($url['path'], "/content/panelizer")) {
+    if (strstr($url['path'], "/panelizer")) {
       drupal_add_css(drupal_get_path('module', 'wetkit_layouts') . '/css/layouts.css', array('group' => CSS_THEME, 'every_page' => TRUE));
     }
   }
