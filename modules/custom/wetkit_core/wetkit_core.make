@@ -50,7 +50,7 @@ projects[linkchecker][version] = 1.x-dev
 projects[linkchecker][type] = module
 projects[linkchecker][subdir] = contrib
 projects[linkchecker][download][type] = git
-projects[linkchecker][download][revision] = a920eb0
+projects[linkchecker][download][revision] = 5edcb1c
 projects[linkchecker][download][branch] = 7.x-1.x
 
 projects[menu_attributes][version] = 1.0-rc2
