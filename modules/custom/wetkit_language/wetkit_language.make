@@ -21,7 +21,7 @@ projects[title][download][revision] = 7fc9dbe
 projects[title][download][branch] = 7.x-1.x
 projects[title][patch][1907078] = http://drupal.org/files/undefined_index_field_name-1907078-2.patch
 
-projects[i18n][version] = 1.7
+projects[i18n][version] = 1.8
 projects[i18n][subdir] = contrib
 
 projects[i18n_panels][type] = module
@@ -43,7 +43,7 @@ projects[l10n_client][version] = 1.1
 projects[l10n_client][type] = module
 projects[l10n_client][subdir] = contrib
 projects[l10n_client][download][type] = git
-projects[l10n_client][download][revision] = df71809
+projects[l10n_client][download][revision] = bbcc1fa
 projects[l10n_client][download][branch] = 7.x-1.x
 projects[l10n_client][patch][862590] = http://drupal.org/files/l10n_client-optimization-862590-48.patch
 projects[l10n_client][patch][1026048] = http://drupal.org/files/issues/l10n_client.module_0.patch
@@ -62,5 +62,5 @@ projects[variable][version] = 2.x-dev
 projects[variable][type] = module
 projects[variable][subdir] = contrib
 projects[variable][download][type] = git
-projects[variable][download][revision] = 651a3fb
+projects[variable][download][revision] = b188010
 projects[variable][download][branch] = 7.x-2.x

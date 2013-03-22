@@ -16,7 +16,7 @@ projects[better_formats][version] = 1.x-dev
 projects[better_formats][subdir] = contrib
 projects[better_formats][type] = module
 projects[better_formats][download][type] = git
-projects[better_formats][download][revision] = 9106bcf
+projects[better_formats][download][revision] = 3b4a8c9
 projects[better_formats][download][branch] = 7.x-1.x
 
 projects[diff][version] = 3.x-dev
@@ -26,16 +26,15 @@ projects[diff][download][type] = git
 projects[diff][download][revision] = adb4304
 projects[diff][download][branch] = 7.x-3.x
 
-projects[ds][version] = 2.0
+projects[ds][version] = 2.2
 projects[ds][subdir] = contrib
 
-projects[fences][version] = 1.0
+projects[fences][version] = 1.x-dev
 projects[fences][subdir] = contrib
 projects[fences][type] = module
 projects[fences][download][type] = git
-projects[fences][download][revision] = d9ca337
+projects[fences][download][revision] = 67206b5
 projects[fences][download][branch] = 7.x-1.x
-projects[fences][patch][1561244] = http://drupal.org/files/undefined-index-1561244-7.patch
 
 projects[hierarchical_select][version] = 3.x-dev
 projects[hierarchical_select][subdir] = contrib
