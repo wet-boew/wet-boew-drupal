@@ -5,8 +5,12 @@ core = 7.x
 
 ; Search API and Facet API Modules
 
-projects[facetapi][version] = 1.2
+projects[facetapi][version] = 1.x-dev
 projects[facetapi][subdir] = contrib
+projects[facetapi][type] = module
+projects[facetapi][download][type] = git
+projects[facetapi][download][revision] = 31513fe
+projects[facetapi][download][branch] = 7.x-1.x
 
 projects[search_api][version] = 1.4
 projects[search_api][subdir] = contrib
@@ -34,5 +38,5 @@ libraries[SolrPhpClient][download][url] = http://solr-php-client.googlecode.com/
 projects[custom_search][version] = 1.11
 projects[custom_search][subdir] = contrib
 
-projects[search404][version] = 1.1
+projects[search404][version] = 1.2
 projects[search404][subdir] = contrib
