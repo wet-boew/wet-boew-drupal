@@ -15,7 +15,7 @@ class WetKitWebTestCase extends DrupalWebTestCase {
    */
   protected function setUp() {
     $profile = drupal_get_profile();
-    // Use the NodeStream profile if that's what's used currently.
+    // Use the WetKit profile if that's what's used currently.
     if ($profile == 'wetkit') {
       $this->profile = 'wetkit';
     }
@@ -56,7 +56,7 @@ class WetKitWebTestCase extends DrupalWebTestCase {
       'pass' => $user->pass_raw,
     );
     $this->drupalPost('user', $edit, t('Log in'));
-    // The user should be redirected to it's profile page.
+    // The user should be redirected to its profile page.
     $pass = $this->assertTrue($this->getUrl(), 'user/' . $user->uid, t('User %name successfully logged in.', array('%name' => $user->name)), t('User login'));
     if ($pass) {
       $this->loggedInUser = $user;
