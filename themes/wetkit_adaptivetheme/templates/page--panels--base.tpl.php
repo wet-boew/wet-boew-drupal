@@ -95,8 +95,14 @@
             </div>
           </div>
         </section>
-        <div id="base-bnr" role="banner">
+      <div id="base-bnr" role="banner">
           <div id="base-bnr-in">
+            <?php if ($site_logo || $site_name || $site_slogan): ?>
+             <?php if ($site_logo): ?>
+              <div id="logo">
+               <?php print $site_logo; ?>
+              </div>
+             <?php endif; ?>
             <?php if ($site_name || $site_slogan): ?>
               <div id="base-title">
                 <?php if ($site_name): ?>
