@@ -1,13 +1,13 @@
 /* Drupal Core */
 .field-label-inline .field-label { margin: 0; }
 
-.page-node-add fieldset, .page-node-edit fieldset { border: 1px solid #ccc; padding: 2.5em 0 0 0; /* LTR */ position: relative; margin: 1em 0; }
-.page-node-add fieldset legend, .page-node-edit fieldset legend { height: 0px; }
-.page-node-add fieldset .fieldset-legend, .page-node-edit fieldset .fieldset-legend { margin-top: 0.5em; padding-left: 15px; /* LTR */ position: absolute; text-transform: uppercase; }
-.page-node-add fieldset .fieldset-wrapper, .page-node-edit fieldset .fieldset-wrapper { padding: 0 13px 13px 15px; /* LTR */ }
-.page-node-add fieldset fieldset.collapsed, .page-node-edit fieldset fieldset.collapsed { background-color: transparent; }
-.page-node-add fieldset fieldset, .page-node-edit fieldset fieldset { background-color: #fff; }
-.page-node-add fieldset fieldset fieldset, .page-node-edit fieldset fieldset fieldset { background-color: #f8f8f8; }
+#wb-main-in fieldset { border: 1px solid #ccc; padding: 2em 0 0 0; /* LTR */ position: relative; margin: 1em 0; }
+#wb-main-in fieldset.collapsed { background-color: transparent; border-width: 1px !important; }
+#wb-main-in fieldset .fieldset-legend { margin-top: 0.5em; padding-left: 15px; /* LTR */ position: absolute; text-transform: uppercase; }
+#wb-main-in fieldset .fieldset-wrapper { padding: 0 13px 13px 15px; /* LTR */ }
+#wb-main-in fieldset legend { height: 0px; }
+#wb-main-in fieldset fieldset { background-color: #fff; }
+#wb-main-in fieldset fieldset fieldset { background-color: #f8f8f8; }
 
 html.js .page-node-add fieldset.collapsed, html.js .page-node-edit fieldset.collapsed { border-width: 1px; height: auto; }
 

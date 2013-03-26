@@ -10,6 +10,7 @@ projects[panopoly_core][subdir] = panopoly
 projects[panopoly_core][download][type] = git
 projects[panopoly_core][download][revision] = 3bcd157
 projects[panopoly_core][download][branch] = 7.x-1.x
+projects[panopoly_core][patch][1953428] = http://drupal.org/files/hook_requirements-1953428-01.patch
 projects[panopoly_core][patch][41220bd] = https://gist.github.com/raw/4724569/41220bd5f180ccfe0f61087ba08ce4db3fada6d5/panopoly_core_06022012.patch
 projects[panopoly_core][patch][db3f615] = https://gist.github.com/raw/5054301/db3f61504581c50edfbe5315c33064d445fe3e2b/panopoly_core_02232013.patch
 
