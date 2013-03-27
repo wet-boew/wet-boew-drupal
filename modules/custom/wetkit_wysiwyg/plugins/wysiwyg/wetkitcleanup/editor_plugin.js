@@ -475,8 +475,8 @@
 				var cellIDNum = 1;
 				if (!tableElm.id) {
 					// loop until we don't find a match
-					for (tid = 1000;d.getElementById('tbl'+tid);tid++) {}
-					tblId = 'tbl'+tid;
+					for (tid = 1000;d.getElementById('table-'+tid);tid++) {}
+					tblId = 'table-'+tid;
 					tableElm.id = tblId;
 				}
 				var tblId = tableElm.id;
@@ -487,19 +487,9 @@
 				for (var y = 0; y<grid.length;y++) {
 					for (var x = 0; x<grid[y].length;x++) {
 						// grid object contains: part,real,elm,rowspan,colspan
-						if (!grid[y][x].elm.innerHTML.test(emptyCellMatch)) {
+						if (!emptyCellMatch.test(grid[y][x].elm.innerHTML)) {
 							if (grid[y][x].real && grid[y][x].elm.tagName.toLowerCase() == 'th') {
-								var headers = [];
-								for (var hr=0;hr<hrdInfo.length;hr++) {
-									if (hrdInfo[hr] && hrdInfo[hr][x] && hrdInfo[hr][x].id && headers.indexOf(hrdInfo[hr][x].id) == -1 && (hrdInfo[hr][x].scope == 'col' || hrdInfo[hr][x].scope == 'colgroup'))
-										headers[headers.length] = hrdInfo[hr][x].id;
-								}
-								for (var hc=0;hrdInfo[y] && hc<hrdInfo[y].length;hc++) {
-									if (hrdInfo[y][hc] && hrdInfo[y][hc].id && headers.indexOf(hrdInfo[y][hc].id) == -1 && (hrdInfo[y][hc].scope == 'row' || hrdInfo[y][hc].scope == 'rowgroup'))
-										headers[headers.length] = hrdInfo[y][hc].id;
-								}
-								ed.dom.setAttrib(grid[y][x].elm, "headers", headers.join(' '));
-								grid[y][x].elm.id = tblId + '-tc' + cellIDNum;
+								grid[y][x].elm.id = tblId + '-r' + (y+1) + '-c' + (x+1);
 								if (!hrdInfo[y])
 									hrdInfo[y] = [];
 								for (var cc=x;cc<x+grid[y][x].colspan;cc++) {
@@ -507,15 +497,25 @@
 										if (!hrdInfo[rc])
 											hrdInfo[rc] = [];
 										if (!hrdInfo[rc][cc])
-											hrdInfo[rc][cc] = {id:grid[y][x].elm.id, scope: ed.dom.getAttrib(grid[y][x].elm, "scope")};
+											hrdInfo[rc][cc] = {id:grid[y][x].elm.id, section:ed.dom.getParent(grid[y][x].elm,'thead,tfoot,tbody').nodeName.toLowerCase(), scope: ed.dom.getAttrib(grid[y][x].elm, "scope")};
 									}
 								}
+								ed.dom.setAttrib(grid[y][x].elm, 'headers',null);
 								cellIDNum++;
 							} else if (grid[y][x].real) {
 								var headers = [];
+								var colgroupHeader = null;
 								for (var hr=0;hr<hrdInfo.length;hr++) {
-									if (hrdInfo[hr] && hrdInfo[hr][x] && hrdInfo[hr][x].id && headers.indexOf(hrdInfo[hr][x].id) == -1 && (hrdInfo[hr][x].scope == 'col' || hrdInfo[hr][x].scope == 'colgroup'))
-										headers[headers.length] = hrdInfo[hr][x].id;
+									if (hrdInfo[hr] && hrdInfo[hr][x] && hrdInfo[hr][x].id && headers.indexOf(hrdInfo[hr][x].id) == -1 && (hrdInfo[hr][x].scope == 'col' || hrdInfo[hr][x].scope == 'colgroup')) {
+										if (hrdInfo[hr][x].scope == 'colgroup' && hrdInfo[hr][x].section == 'tbody') {
+											colgroupHeader = hrdInfo[hr][x].id;
+										} else {
+											headers[headers.length] = hrdInfo[hr][x].id;
+										}
+									}
+								}
+								if (colgroupHeader != null) {
+									headers[headers.length] = colgroupHeader;
 								}
 								for (var hc=0;hrdInfo[y] && hc<hrdInfo[y].length;hc++) {
 									if (hrdInfo[y][hc] && hrdInfo[y][hc].id && headers.indexOf(hrdInfo[y][hc].id) == -1 && (hrdInfo[y][hc].scope == 'row' || hrdInfo[y][hc].scope == 'rowgroup'))
