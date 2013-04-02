@@ -90,6 +90,8 @@ projects[workbench_moderation][download][revision] = d196989
 projects[workbench_moderation][download][branch] = 7.x-1.x
 projects[workbench_moderation][patch][1285090] = http://drupal.org/files/playnicewithpanels-1285090-12.patch
 projects[workbench_moderation][patch][1260112] = http://drupal.org/files/workbench_moderation-is_current-1260112-28.patch
+projects[workbench_moderation][patch][1875700] = http://drupal.org/files/workbench_moderation-allow-unpublish-live-revision-1875700_0.patch
+projects[workbench_moderation][patch][1919706] = http://drupal.org/files/1919706-1-no-node.patch
 
 projects[rules][version] = 2.2
 projects[rules][subdir] = contrib
