@@ -66,6 +66,7 @@ dependencies[] = wetkit_migrate
 dependencies[] = wetkit_bean
 dependencies[] = wetkit_metatag
 dependencies[] = wetkit_core
+dependencies[] = wetkit_menu
 dependencies[] = wetkit_wetboew
 dependencies[] = wetkit_breadcrumbs
 

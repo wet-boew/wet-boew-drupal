@@ -184,6 +184,18 @@ function wetkit_import_content() {
     t('Importing content.'),
     ));
 
+  // Run Mega Menu migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateMegaMenu',
+    t('Importing content.'),
+    ));
+
+  // Run Mega Menu Links migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateMegaMenuLinks',
+    t('Importing content.'),
+    ));
+
   // Run bean import.
   $operations[] = array('_wetkit_bean_import', array(t('Importing Bean content.')));
 

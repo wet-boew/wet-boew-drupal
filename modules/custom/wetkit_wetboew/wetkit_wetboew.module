@@ -296,34 +296,3 @@ function wetkit_wetboew_preprocess_status_messages(&$variables) {
 function wetkit_wetboew_preprocess_tablefield_view(&$variables) {
   $variables['theme_hook_suggestions'][] = 'wetkit_wetboew_tablefield_view';
 }
-
-/**
- * Implements hook_menu_block_blocks().
- */
-function wetkit_wetboew_menu_block_blocks() {
-  // The array key is the block delta used by menu block.
-  return array(
-    'wetkit_menu_blocks-1' => array(
-      'menu_name'   => 'main-menu',
-      'parent_mlid' => 0,
-      'title_link'  => 0,
-      'admin_title' => 'Mega Menu',
-      'level'       => 1,
-      'follow'      => 0,
-      'depth'       => 0,
-      'expanded'    => 1,
-      'sort'        => 0,
-    ),
-    'wetkit_menu_blocks-2' => array(
-      'menu_name'   => 'menu-wet-mid-footer',
-      'parent_mlid' => 0,
-      'title_link'  => 0,
-      'admin_title' => 'Footer Block',
-      'level'       => 1,
-      'follow'      => 0,
-      'depth'       => 0,
-      'expanded'    => 1,
-      'sort'        => 0,
-    ),
-  );
-}
