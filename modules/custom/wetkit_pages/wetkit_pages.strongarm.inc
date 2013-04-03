@@ -14,7 +14,7 @@ function wetkit_pages_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_wetkit_page';
-  $strongarm->value = 'edit-workflow';
+  $strongarm->value = 'edit-menu';
   $export['additional_settings__active_tab_wetkit_page'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -214,7 +214,7 @@ function wetkit_pages_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_wetkit_page';
   $strongarm->value = array(
-    0 => 'main-menu',
+    0 => 'wetkit-menu-minipanel',
   );
   $export['menu_options_wetkit_page'] = $strongarm;
 
@@ -231,7 +231,7 @@ function wetkit_pages_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_wetkit_page';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'wetkit-menu-minipanel:0';
   $export['menu_parent_wetkit_page'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -311,6 +311,11 @@ function wetkit_pages_strongarm() {
       'teaser' => array(
         'status' => 1,
         'default' => 1,
+        'choice' => 0,
+      ),
+      'search_result' => array(
+        'status' => 0,
+        'default' => 0,
         'choice' => 0,
       ),
       'featured' => array(
