@@ -17,19 +17,35 @@ function wetkit_deployment_ctools_plugin_directory($module, $plugin) {
 }
 
 /**
+ * Implements hook_entity_uuid_load().
+ */
+function wetkit_deployment_entity_uuid_load(&$entities, $entity_type) {
+  if ($entity_type == 'node') {
+
+  }
+}
+
+/**
  * Implements hook_menu().
  */
 function wetkit_deployment_menu() {
   // Deployment menu link.
   $items['admin/dashboard/deployment/deploy'] = array(
     'type' => MENU_LOCAL_TASK,
-    'title' => 'Menu Example',
+    'title' => 'Deploy for WetKit',
     'description' => 'Simplest possible menu type, and the parent menu entry for others',
-    'page callback' => '_wetkit_deployment_basic_instructions',
+    'page callback' => '_wetkit_deployment_deploy',
     'page arguments' => array('context' => 'wetkit_deployment'),
     'access callback' => TRUE,
     'menu_name' => 'navigation',
     'expanded' => TRUE,
+  );
+  $items['wetkit_deployment_ajax/%ctools_js/%'] = array(
+      'type' => MENU_NORMAL_ITEM,
+      'title' => 'Modal dialog for deployed content',
+      'page arguments' => array(1, 2),
+      'page callback' => '_wetkit_deployment_modal',
+      'access callback' => TRUE,
   );
   return $items;
 }
@@ -40,12 +56,50 @@ function wetkit_deployment_menu() {
  * @param $content
  *   Some content passed in.
  */
-function _wetkit_deployment_basic_instructions($context = NULL) {
+function _wetkit_deployment_deploy($context = NULL) {
+  global $user;
   $deploy = deploy_plan_load($context);
-  if ($deploy) {
-    $deploy->deploy();
+  if ($user->uid == $deploy->deploy_by_user) {
+    if ($deploy) {
+      $deploy->deploy();
+    }
+    drupal_goto('admin/dashboard/deployment');
   }
-  drupal_goto('admin/dashboard/deployment');
+}
+
+/**
+ * Implements hook_ajax_render_alter().
+ */
+function wetkit_deployment_ajax_render_alter(&$commands) {
+  //unset($commands[1]);
+}
+/**
+ * A modal static page callback.
+ * @param $js
+ *   boolean CTools determination whether the user's browser is javascript enabled. 
+ * @param $nid
+ *   string The node ID of passed as an argument from the hook_menu() path
+ * @return
+ *   string The contents of the node, that will fill the modal window.
+ */
+function _wetkit_deployment_modal($js = NULL, $nid = NULL) {
+  if ($nid == NULL) {
+    // You can customize the string below, or use a drupal_goto() to
+    // send the user to a custom error page.
+    return 'No node id was sent. Error.';
+  }
+  if ($js) {
+    // Required includes for ctools to work:
+    ctools_include('ajax');
+    ctools_include('modal');
+  }
+  // Load the node obkect
+  $node = node_load($nid);
+  // Drupal 7 requires a render of the node object in order to obtain a string.
+  // Note that I am able to customize the fields by using the "Teaser" display mode 
+  // under admin/structure/types.
+  //$contents = render(node_view($node, 'teaser', NULL));
+  return ctools_modal_render($node->title, '<p>Sample Body Content</p>');
 }
 
 /**
@@ -64,7 +118,7 @@ function wetkit_deployment_theme() {
     ),
   );
 }
-  
+
 /**
  * Allow modules to modify an entity before it gets deployed.
  *
@@ -76,9 +130,7 @@ function wetkit_deployment_theme() {
  */
 function wetkit_deployment_deploy_entity_alter(&$entity, $entity_type) {
   if ($entity_type = 'node') {
-    //if (isset($entity->panelizer)) {
-    //  unset($entity->panelizer);
-    //}
+
   }
 }
 
@@ -122,52 +174,49 @@ function wetkit_deployment_deploy_processors() {
  * Implements hook_cron_queue_info().
  */
 function wetkit_deployment_cron_queue_info() {
-  return array(
-    'wetkit_deploy' => array(
+  $queues = array();
+  if (variable_get('wetkit_deployment_enable_cron', TRUE)) {
+    $queues['wetkit_deploy'] = array(
       'worker callback' => 'wetkit_deployment_worker_deploy',
-      'time' => 60,
-    ),
-    'wetkit_publish' => array(
+      'time' => 180,
+    );
+    $queues['wetkit_publish'] = array(
       'worker callback' => 'wetkit_deployment_worker_publish',
-      'time' => 60,
-    ),
-  );
+      'time' => 180,
+    );
+    variable_set('wetkit_deployment_enable_cron', FALSE);
+  }
+  return $queues;
 }
 
 /**
  * Processes a single queued item for deployment.
  */
 function wetkit_deployment_worker_deploy($entity, &$context = NULL) {
-  global $user;
-  //if ($entity->__metadata['current_user'] == $user->uid) {
-    $endpoint = deploy_endpoint_load($entity->__metadata['endpoint_name']);
-    $plan = deploy_plan_load($entity->__metadata['plan_name']);
+  $endpoint = deploy_endpoint_load($entity->__metadata['endpoint_name']);
+  $plan = deploy_plan_load($entity->__metadata['plan_name']);
 
-    if ($plan && $endpoint) {
-      $entities = array(array('type' => $entity->__metadata['type'], 'id' => $entity->__metadata['id']));
-      $iterator = deploy_iterator($entities);
-      $endpoint->deploy($entity->__metadata['deployment_key'], $iterator, $entity->__metadata['lock_name']);
-    }
-  //}
+  if ($plan && $endpoint) {
+    $entities = array(array('type' => $entity->__metadata['type'], 'id' => $entity->__metadata['id']));
+    $iterator = deploy_iterator($entities);
+    $endpoint->deploy($entity->__metadata['deployment_key'], $iterator, $entity->__metadata['lock_name']);
+  }
 }
 
 /**
  * Processes a single queued item for publishing.
  */
 function wetkit_deployment_worker_publish($entity, &$context = NULL) {
-  global $user;
-  //if (($entity->__metadata['current_user'] == $user->uid) && user_access('administer deployments')) {
-    $endpoint = deploy_endpoint_load($entity->__metadata['endpoint_name']);
-    $plan = deploy_plan_load($entity->__metadata['plan_name']);
+  $endpoint = deploy_endpoint_load($entity->__metadata['endpoint_name']);
+  $plan = deploy_plan_load($entity->__metadata['plan_name']);
 
-    if ($plan && $endpoint) {
-      $entities = array(array('type' => $entity->__metadata['type'], 'id' => $entity->__metadata['id']));
-      $iterator = deploy_iterator($entities);
-      $endpoint->publish($entity->__metadata['deployment_key'], $iterator, $entity->__metadata['lock_name']);
+  if ($plan && $endpoint) {
+    $entities = array(array('type' => $entity->__metadata['type'], 'id' => $entity->__metadata['id']));
+    $iterator = deploy_iterator($entities);
+    $endpoint->publish($entity->__metadata['deployment_key'], $iterator, $entity->__metadata['lock_name']);
 
-      $context['results'][$entity->__metadata['endpoint_name']] = $entity->__metadata['plan_name'];
-    }
-  //}
+    $context['results'][$entity->__metadata['endpoint_name']] = $entity->__metadata['plan_name'];
+  }
 }
 
 /**
@@ -237,52 +286,52 @@ function wetkit_deployment_action_info() {
   $actions = array();
   $actions['wetkit_deployment_action_add_content_to_managed_plan'] = array(
     'type' => 'node',
-    'label' => t('Add content to managed deployment plan'),
+    'label' => t('Add content to staging area'),
     'configurable' => FALSE,
   );
   $actions['wetkit_deployment_action_delete_content_from_managed_plan'] = array(
     'type' => 'node',
-    'label' => t('Delete content from managed deployment plan'),
+    'label' => t('Delete content from staging area'),
     'configurable' => FALSE,
   );
   $actions['wetkit_deployment_action_add_bean_to_managed_plan'] = array(
     'type' => 'bean',
-    'label' => t('Add bean to managed deployment plan'),
+    'label' => t('Add bean to staging area'),
     'configurable' => FALSE,
   );
   $actions['wetkit_deployment_action_delete_bean_from_managed_plan'] = array(
     'type' => 'bean',
-    'label' => t('Delete bean from managed deployment plan'),
+    'label' => t('Delete bean from staging area'),
     'configurable' => FALSE,
   );
   $actions['wetkit_deployment_action_add_file_to_managed_plan'] = array(
     'type' => 'file',
-    'label' => t('Add file to managed deployment plan'),
+    'label' => t('Add file to staging area'),
     'configurable' => FALSE,
   );
   $actions['wetkit_deployment_action_delete_file_from_managed_plan'] = array(
     'type' => 'file',
-    'label' => t('Delete file from managed deployment plan'),
+    'label' => t('Delete file from staging area'),
     'configurable' => FALSE,
   );
   $actions['wetkit_deployment_action_add_term_to_managed_plan'] = array(
     'type' => 'taxonomy_term',
-    'label' => t('Add term to managed deployment plan'),
+    'label' => t('Add term to staging area'),
     'configurable' => FALSE,
   );
   $actions['wetkit_deployment_action_delete_term_from_managed_plan'] = array(
     'type' => 'taxonomy_term',
-    'label' => t('Delete term from managed deployment plan'),
+    'label' => t('Delete term from staging area'),
     'configurable' => FALSE,
   );
   $actions['wetkit_deployment_action_add_user_to_managed_plan'] = array(
     'type' => 'user',
-    'label' => t('Add user to managed deployment plan'),
+    'label' => t('Add user to staging area'),
     'configurable' => FALSE,
   );
   $actions['wetkit_deployment_action_delete_user_from_managed_plan'] = array(
     'type' => 'user',
-    'label' => t('Delete user from managed deployment plan'),
+    'label' => t('Delete user from staging area'),
     'configurable' => FALSE,
   );
   return $actions;

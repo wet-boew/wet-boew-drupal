@@ -1,26 +1,6 @@
 <?php
 
 /**
- * Theme callback for a plan's content.
- */
-function theme_wetkit_deploy_ui_overview_plan_content($variables) {
-  $info = $variables['info'];
-  $header = array(t('Title'), t('Type'));
-  $rows = array();
-
-  foreach ($info as $values) {
-    $rows[] = array($values['title'], $values['type']);
-  }
-  if (empty($rows)) {
-    $rows = array(array(array(
-      'colspan' => 2,
-      'data' => t('Currently no content in this plan.'),
-    )));
-  }
-  return theme('table', array('header' => $header, 'rows' => $rows));
-}
-
-/**
  * Theme callback for the overview page.
  */
 function theme_wetkit_deploy_ui_overview($variables) {
@@ -55,7 +35,7 @@ function theme_wetkit_deploy_ui_overview($variables) {
       $output .= '</div>';
       if (!$block['fetch_only']) {
         $actions = array(array(
-          'title' => t('Add to Queue'),
+          'title' => t('Add to Deployment'),
           'href' => 'admin/dashboard/deployment/deploy',
           'query' => array(
             'cancel_path' => $_GET['q'],
@@ -78,34 +58,82 @@ function theme_wetkit_deploy_ui_overview($variables) {
 }
 
 /**
+ * Theme callback for a plan's content.
+ */
+function theme_wetkit_deploy_ui_overview_plan_content($variables) {
+  $info = $variables['info'];
+  $header = array(t('Title'), t('Type'));
+  $rows = array();
+
+  foreach ($info as $values) {
+    $rows[] = array($values['title'], $values['type']);
+  }
+  if (empty($rows)) {
+    $rows = array(array(array(
+      'colspan' => 2,
+      'data' => t('Currently no entities in this staging area.'),
+    )));
+  }
+  return theme('table', array('header' => $header, 'rows' => $rows));
+}
+
+/**
  * Themes the queue display.
  *
  * @param $variables
  */
 function theme_wetkit_deployment_items($variables) {
+  // Include the CTools tools that we need.
+  ctools_include('ajax');
+  ctools_include('modal');
+
+  // Add CTools' javascript to the page.
+  ctools_modal_add_js();
+
+  /*
+  // Create our own javascript that will be used to theme a modal.
+  $sample_style = array(
+    'ctools-sample-style' => array(
+      'modalSize' => array(
+        'type' => 'fixed',
+        'width' => 500,
+        'height' => 300,
+        'addWidth' => 20,
+        'addHeight' => 15,
+      ),
+      'modalOptions' => array(
+        'opacity' => .5,
+        'background-color' => '#000',
+      ),
+      'animation' => 'fadeIn',
+      'modalTheme' => 'CToolsWetKitModal',
+      'throbber' => theme('image', array('path' => ctools_image_path('ajax-loader.gif', 'ctools_ajax_sample'), 'alt' => t('Loading...'), 'title' => t('Loading'))),
+    ),
+  );
+  drupal_add_js($sample_style, 'setting');
+  ctools_add_js('wetkit-deployment-ajax', 'wetkit_deployment');
+  */
+
   $items = $variables['items'];
+  $header = array(t('ID'), t('Title'), t('Type'), t('Timestamp'), t('UUID'), t('Content'));
   $rows = array();
+
   foreach ($items as &$item) {
     $data = unserialize($item['data']);
-    if ($item['expire'] > 0) {
-      $item['expire'] = t("Claimed: expires %expire", array('%expire' => date('r', $item['expire'])));
-    }
-    else {
-      $item['expire'] = t('Unclaimed');
-    }
-    $item['created'] = date('r', $item['created']);
-    $user = user_load($data->__metadata['current_user']);
-    $item['content'] = $user->name;
-    //$item['title'] = $data->title;
-    unset($item['data']);
-    $rows[] = $item;
+    $rows[] = array(
+      $item['item_id'],
+      isset($data->title) ? $data->title : $data->name,
+      $data->__metadata['type'],
+      date("Y-m-d H:i:s", $item['created']),
+      $data->uuid,
+      ctools_modal_text_button(t('Show Content'), 'wetkit_deployment_ajax/nojs/1', t('Show Content'),  'ajax-processed'),
+    );
   }
-  if (!empty($rows)) {
-    $header = array(t('Item ID'), t('Claimed/Expiration'), t('Created'), t('Deployed By'));
-    $output = theme('table', array('header' => $header, 'rows' => $rows));
-    return $output;
+  if (empty($rows)) {
+    $rows = array(array(array(
+      'colspan' => 6,
+      'data' => t('Currently no entities in the queue.'),
+    )));
   }
-  else {
-    return t('There are no items in the queue.');
-  }
+  return theme('table', array('header' => $header, 'rows' => $rows));
 }

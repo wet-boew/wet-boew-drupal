@@ -43,7 +43,7 @@ function wetkit_deployment_default_page_manager_pages() {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'WetKit Deployment',
+    'title' => 'Deployment Staging Area',
     'no_blocks' => 0,
     'pipeline' => 'ipe',
     'body_classes_to_remove' => '',
@@ -60,10 +60,13 @@ function wetkit_deployment_default_page_manager_pages() {
     'style_settings' => array(
       'default' => NULL,
       'contentmain' => NULL,
+      'header' => NULL,
+      'sidebar' => NULL,
+      'footer' => NULL,
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = 'Deployment';
   $display->uuid = '1dd0ab5c-44b0-4db4-257a-8e42c5430520';
   $display->content = array();
   $display->panels = array();
@@ -74,7 +77,10 @@ function wetkit_deployment_default_page_manager_pages() {
     $pane->subtype = 'queue';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -115,7 +121,10 @@ function wetkit_deployment_default_page_manager_pages() {
     $pane->subtype = 'deployment';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,

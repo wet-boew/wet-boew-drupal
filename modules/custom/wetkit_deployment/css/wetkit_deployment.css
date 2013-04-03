@@ -4,10 +4,31 @@
   padding: 10px 10px 10px 40px;
 }
 
+.pane-queue .form-item-queue-name {
+  margin-bottom: 20px !important;
+}
+
+.pane-content [for="edit-queue-name"] {
+ float:left;
+ margin-right: 10px;
+ text-transform: none;
+ font-size: 12px;
+ font-weight: normal;
+}
+.queue-title {
+ margin-bottom: 20px;
+}
+
+.queue-items {
+ color: red;
+}
 .pane-deployment .pane-content .left {
   width: 100%;
 }
 
+.pane-deployment .deploy-panel {
+  border: 1px solid #ccc;
+}
 .pane-deployment .deploy-panel .description {
   margin: 0px 10px;
 }
@@ -30,7 +51,9 @@
 }
 
 .pane-deployment .deploy-panel h3 {
-  padding: 10px;
+margin: 0px;
+padding: 0px 0px 0px 10px;
+font-size: 11px;
 }
 
 .pane-deployment .deploy-panel table {

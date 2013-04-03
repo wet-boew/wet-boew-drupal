@@ -12,12 +12,9 @@ class WetKitDeployProcessorQueue extends DeployProcessorMemory {
       // We don't want entities that has a cause, i.e. not dependencies, because
       // those'll be taken care of when the service iterates over the queue.
       if (empty($entity->__metadata['cause'])) {
-        global $user;
-
         $entity_info = entity_get_info($entity->__metadata['type']);
         $id_key = $entity_info['entity keys']['id'];
 
-        $entity->__metadata['current_user'] = $user->uid;
         $entity->__metadata['id'] = $entity->{$id_key};
         $entity->__metadata['deployment_key'] = $deployment_key;
         $entity->__metadata['plan_name'] = $this->aggregator->plan->name;
@@ -34,12 +31,9 @@ class WetKitDeployProcessorQueue extends DeployProcessorMemory {
       // We don't want entities that has a cause, i.e. not dependencies, because
       // those'll be taken care of when the service iterates over the queue.
       if (empty($entity->__metadata['cause'])) {
-        global $user;
-
         $entity_info = entity_get_info($entity->__metadata['type']);
         $id_key = $entity_info['entity keys']['id'];
 
-        $entity->__metadata['current_user'] = $user->uid;
         $entity->__metadata['id'] = $entity->{$id_key};
         $entity->__metadata['deployment_key'] = $deployment_key;
         $entity->__metadata['plan_name'] = $this->aggregator->plan->name;

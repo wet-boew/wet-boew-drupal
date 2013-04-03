@@ -44,6 +44,7 @@ projects[hierarchical_select][download][revision] = 1da92c0
 projects[hierarchical_select][download][branch] = 7.x-3.x
 projects[hierarchical_select][patch][1457252] = http://drupal.org/files/hierarchical_select-config_not_defined_1457252-2.patch
 projects[hierarchical_select][patch][1649706] = http://drupal.org/files/hs-menu-with-taxonomy-fix.patch
+projects[hierarchical_select][patch][1315192] = http://drupal.org/files/1315192-fix-syntax-error-8.patch
 
 projects[linkchecker][version] = 1.x-dev
 projects[linkchecker][type] = module
@@ -93,7 +94,7 @@ projects[workbench_moderation][patch][1260112] = http://drupal.org/files/workben
 projects[workbench_moderation][patch][1875700] = http://drupal.org/files/workbench_moderation-allow-unpublish-live-revision-1875700_0.patch
 projects[workbench_moderation][patch][1919706] = http://drupal.org/files/1919706-1-no-node.patch
 
-projects[rules][version] = 2.2
+projects[rules][version] = 2.3
 projects[rules][subdir] = contrib
 
 projects[transliteration][version] = 3.1
