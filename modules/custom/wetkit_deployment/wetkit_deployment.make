@@ -29,5 +29,5 @@ projects[quicktabs][version] = 3.x-dev
 projects[quicktabs][subdir] = contrib
 projects[quicktabs][type] = module
 projects[quicktabs][download][type] = git
-projects[quicktabs][download][revision] = 68f7603
+projects[quicktabs][download][revision] = 89f7fd0
 projects[quicktabs][download][branch] = 7.x-3.x
