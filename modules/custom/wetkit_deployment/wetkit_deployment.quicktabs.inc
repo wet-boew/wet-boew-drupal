@@ -14,6 +14,7 @@ function wetkit_deployment_quicktabs_default_quicktabs() {
   $quicktabs->disabled = FALSE; /* Edit this to true to make a default quicktabs disabled initially */
   $quicktabs->api_version = 1;
   $quicktabs->machine_name = 'deployment_quicktabs';
+  $quicktabs->ajax = 0;
   $quicktabs->hide_empty_tabs = TRUE;
   $quicktabs->default_tab = 0;
   $quicktabs->title = 'Deployment Sections';
@@ -60,11 +61,8 @@ function wetkit_deployment_quicktabs_default_quicktabs() {
     ),
   );
   $quicktabs->renderer = 'quicktabs';
-  $quicktabs->options = array(
-    'ajax' => '0',
-    'style' => 'WetKit Tabs',
-    'history' => 0,
-  );
+  $quicktabs->style = 'WetKit Tabs';
+  $quicktabs->options = array();
 
   // Translatables
   // Included for use with string extractors like potx.
