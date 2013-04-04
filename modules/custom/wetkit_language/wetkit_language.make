@@ -21,7 +21,7 @@ projects[title][download][revision] = 7fc9dbe
 projects[title][download][branch] = 7.x-1.x
 projects[title][patch][1907078] = http://drupal.org/files/undefined_index_field_name-1907078-2.patch
 
-projects[i18n][version] = 1.7
+projects[i18n][version] = 1.8
 projects[i18n][subdir] = contrib
 
 projects[i18n_panels][type] = module
@@ -62,5 +62,5 @@ projects[variable][version] = 2.x-dev
 projects[variable][type] = module
 projects[variable][subdir] = contrib
 projects[variable][download][type] = git
-projects[variable][download][revision] = 651a3fb
+projects[variable][download][revision] = b188010
 projects[variable][download][branch] = 7.x-2.x
