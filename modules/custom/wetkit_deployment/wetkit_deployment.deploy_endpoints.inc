@@ -24,7 +24,7 @@ function wetkit_deployment_deploy_endpoints_default() {
   );
   $endpoint->service_plugin = 'DeployServiceRestJSON';
   $endpoint->service_config = array(
-    'url' => 'http://wxt-drupal-deploy1:8082/deploy-api',
+    'url' => 'http://wxt-drupal-deploy:8082/deploy-api',
   );
   $export['wetkit_prod_server'] = $endpoint;
 
