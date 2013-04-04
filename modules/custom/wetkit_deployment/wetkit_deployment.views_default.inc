@@ -657,7 +657,7 @@ function wetkit_deployment_views_default_views() {
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
-    'action::deploy_action_add_to_managed_plan' => array(
+    'action::wetkit_deployment_action_add_content_to_managed_plan' => array(
       'selected' => 1,
       'postpone_processing' => 0,
       'skip_confirmation' => 1,
@@ -671,7 +671,7 @@ function wetkit_deployment_views_default_views() {
       'override_label' => 1,
       'label' => 'Change author',
     ),
-    'action::deploy_action_delete_from_managed_plan' => array(
+    'action::wetkit_deployment_action_delete_content_from_managed_plan' => array(
       'selected' => 1,
       'postpone_processing' => 0,
       'skip_confirmation' => 1,
