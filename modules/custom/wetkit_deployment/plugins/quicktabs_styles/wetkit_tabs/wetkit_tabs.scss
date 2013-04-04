@@ -64,7 +64,6 @@ $black: #333333;
 
   .quicktabs-tabpage {
     border: 1px solid $gray_darkest;
-    background-color: $gray;
     @include border-radius(0 3px 3px 3px);
     padding: 10px
   }
