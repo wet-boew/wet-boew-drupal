@@ -1,0 +1,150 @@
+<?php
+/**
+ * @file
+ * Installation and update scripts for WetKit Menu.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function wetkit_menu_install() {
+  // Check the requirements.
+  $requirements = wetkit_menu_requirements('runtime');
+  // See if an error was returned.
+  if (!empty($requirements['wetkit_menu']['severity']) && $requirements['wetkit_menu']['severity'] == REQUIREMENT_ERROR) {
+    drupal_set_message($requirements['wetkit_menu']['description'], 'warning');
+  }
+
+  // Migration Instantiate.
+  MigrationBase::registerMigration('WetKitMigrateMegaMenu');
+  MigrationBase::registerMigration('WetKitMigrateMegaMenuLinks');
+
+  // Allow each menu to be menu_minipanel-ized, with some exceptions.
+  _wetkit_menu_enable_menus();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function wetkit_menu_uninstall() {
+  // Migration Destruction.
+  MigrationBase::deregisterMigration('WetKitMigrateMegaMenu');
+  MigrationBase::deregisterMigration('WetKitMigrateMegaMenuLinks');
+
+  // Delete variables.
+  variable_del('wetkit_menu_hover');
+  variable_del('wetkit_menu_default_callbacks');
+  variable_del('wetkit_menu_exclude_paths');
+  foreach (menu_get_names() as $menu) {
+    variable_del('wetkit_menu_' . $menu . '_enabled');
+  }
+
+  // Remove menu item settings.
+  $results = db_query("SELECT menu_name, mlid, options FROM {menu_links} WHERE options LIKE ('%wetkit_menu%')");
+  foreach ($results as $menu) {
+    // The menu item's options are serialized.
+    $options = unserialize($menu->options);
+    unset($options['minipanel']);
+    unset($options['wetkit_menu_hover']);
+    // Update the menu item record.
+    db_update('menu_links')
+      ->fields(array(
+        'options' => serialize($options),
+      ))
+      ->condition('menu_name', $menu->menu_name)
+      ->condition('mlid', $menu->mlid)
+      ->execute();
+  }
+}
+
+/**
+ * Implements hook_requirements().
+ */
+function wetkit_menu_requirements($phase) {
+  $t = get_t();
+  $requirements = array();
+  if ($phase == 'runtime') {
+    $wetkit_path = FALSE;
+    $filename = 'pe-ap-min.js';
+    $module_path = drupal_get_path('module', 'wetkit_menu');
+
+    // An array of possible paths, in descending order of preference.
+    $possible_paths = array(
+      'profiles/wetkit/libraries/wet-boew/dist/js',
+      $module_path . 'sites/all/libraries/wet-boew',
+      $module_path,
+    );
+
+    // Proper Libraries API support.
+    if (function_exists('libraries_get_path')) {
+      $lib_path = libraries_get_path('wet-boew') . '/dist/js';
+      if (!empty($lib_path) && !in_array($lib_path, $possible_paths)) {
+        array_unshift($possible_paths, $lib_path);
+      }
+    }
+
+    // Check each of the paths.
+    foreach ($possible_paths as $path) {
+      // If the file exists, this is the one we'll use.
+      if (file_exists($path . '/' . $filename)) {
+        $wetkit_path = $path . '/' . $filename;
+        continue;
+      }
+    }
+
+    // If the file was not found, leave a message for the user.
+    if (empty($wetkit_path)) {
+      $requirements['wetkit_menu'] = array(
+        'description' => $t('The module is enabled but the WET library has not been downloaded. This module will not work without qTip! Please see README.txt in the wetkit_menu directory for instructions on how to download WET, or use <a href="http://drupal.org/project/drush">Drush</a> to download it via the following command:<br /><pre>drush download-qtip</pre>'),
+        'severity' => REQUIREMENT_ERROR,
+        'title' => $t('WetKit Menus'),
+        'value' => $t('WET library not found'),
+      );
+    }
+
+    // Seeing as we're running this check at all, lets update the stored path.
+    else {
+      $requirements['wetkit_menu'] = array(
+        'severity' => REQUIREMENT_OK,
+        'title' => $t('WetKit Menus'),
+        'value' => $t('WET library in use: <em>!path</em>.', array('!path' => $wetkit_path)),
+      );
+      $cid = 'wetkit_menu_wet_path';
+      cache_set($cid, $wetkit_path);
+    }
+  }
+  return $requirements;
+}
+
+/**
+ * Allow each menu to be menu_minipanel-ized, with some exceptions.
+ */
+function _wetkit_menu_enable_menus() {
+  // Ignore the Navigation, Admin Menu and Devel menus, those have to be
+  // manually enabled.
+  $ignore_menus = array('navigation', 'admin_menu', 'devel');
+  foreach ($ignore_menus as $menu) {
+    variable_set('wetkit_menu_' . $menu . '_enabled', FALSE);
+  }
+
+  // Enable all of the custom menus that isn't already disabled. Only work with
+  // the custom menus, don't look at the shortcut sets.
+  $result = db_query("SELECT menu_name FROM {menu_custom} ORDER BY title", array(), array('fetch' => PDO::FETCH_ASSOC));
+  foreach ($result as $menu) {
+    if (!in_array($menu['menu_name'], $ignore_menus)) {
+      variable_set('wetkit_menu_' . $menu['menu_name'] . '_enabled', TRUE);
+    }
+  }
+}
+
+/**
+ * Implementations of hook_update_N().
+ */
+
+/**
+ * Disable the menu for the Admin Menu and Devel modules.
+ */
+function wetkit_menu_update_7101() {
+  variable_set('wetkit_menu_admin_menu_enabled', FALSE);
+  variable_set('wetkit_menu_devel_enabled', FALSE);
+}
