@@ -138,10 +138,6 @@ function wetkit_form_install_configure_form_alter(&$form, $form_state) {
   drupal_get_messages('warning');
   drupal_get_messages('error');
 
-  // Hide some messages from various modules that are just too chatty.
-  drupal_get_messages('status');
-  drupal_get_messages('warning');
-
   // Set reasonable defaults for site configuration form.
   $form['site_information']['site_name']['#default_value'] = 'Web Experience Toolkit';
   $form['admin_account']['account']['name']['#default_value'] = 'admin';
@@ -181,6 +177,18 @@ function wetkit_import_content() {
   // Run default_content migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateDefaultContent',
+    t('Importing content.'),
+    ));
+
+  // Run Mega Menu migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateMegaMenu',
+    t('Importing content.'),
+    ));
+
+  // Run Mega Menu Links migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateMegaMenuLinks',
     t('Importing content.'),
     ));
 

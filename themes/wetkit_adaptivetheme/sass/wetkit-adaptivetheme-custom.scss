@@ -4,14 +4,16 @@
 
 .field-label-inline .field-label { margin: 0; }
 
-.page-node-add,
-.page-node-edit {
+#wb-main-in {
   fieldset {
     border: 1px solid #ccc;
-    padding: 2.5em 0 0 0; /* LTR */
+    padding: 2em 0 0 0; /* LTR */
     position: relative;
     margin: 1em 0;
-    legend { height: 0px }
+    &.collapsed { 
+      background-color: transparent; 
+      border-width: 1px !important;
+    }
     .fieldset-legend {
       margin-top: 0.5em;
       padding-left: 15px; /* LTR */
@@ -19,7 +21,7 @@
       text-transform: uppercase;
     }
     .fieldset-wrapper { padding: 0 13px 13px 15px; /* LTR */ }
-    fieldset.collapsed { background-color: transparent; }
+    legend { height: 0px }
     fieldset {
       background-color: #fff;
       fieldset { background-color: #f8f8f8; }
