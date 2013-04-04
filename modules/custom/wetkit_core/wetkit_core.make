@@ -16,7 +16,7 @@ projects[better_formats][version] = 1.x-dev
 projects[better_formats][subdir] = contrib
 projects[better_formats][type] = module
 projects[better_formats][download][type] = git
-projects[better_formats][download][revision] = 9106bcf
+projects[better_formats][download][revision] = 3b4a8c9
 projects[better_formats][download][branch] = 7.x-1.x
 
 projects[diff][version] = 3.x-dev
@@ -26,16 +26,15 @@ projects[diff][download][type] = git
 projects[diff][download][revision] = adb4304
 projects[diff][download][branch] = 7.x-3.x
 
-projects[ds][version] = 2.0
+projects[ds][version] = 2.2
 projects[ds][subdir] = contrib
 
-projects[fences][version] = 1.0
+projects[fences][version] = 1.x-dev
 projects[fences][subdir] = contrib
 projects[fences][type] = module
 projects[fences][download][type] = git
-projects[fences][download][revision] = d9ca337
+projects[fences][download][revision] = 67206b5
 projects[fences][download][branch] = 7.x-1.x
-projects[fences][patch][1561244] = http://drupal.org/files/undefined-index-1561244-7.patch
 
 projects[hierarchical_select][version] = 3.x-dev
 projects[hierarchical_select][subdir] = contrib
@@ -45,12 +44,13 @@ projects[hierarchical_select][download][revision] = 1da92c0
 projects[hierarchical_select][download][branch] = 7.x-3.x
 projects[hierarchical_select][patch][1457252] = http://drupal.org/files/hierarchical_select-config_not_defined_1457252-2.patch
 projects[hierarchical_select][patch][1649706] = http://drupal.org/files/hs-menu-with-taxonomy-fix.patch
+projects[hierarchical_select][patch][1315192] = http://drupal.org/files/1315192-fix-syntax-error-8.patch
 
 projects[linkchecker][version] = 1.x-dev
 projects[linkchecker][type] = module
 projects[linkchecker][subdir] = contrib
 projects[linkchecker][download][type] = git
-projects[linkchecker][download][revision] = a920eb0
+projects[linkchecker][download][revision] = 5edcb1c
 projects[linkchecker][download][branch] = 7.x-1.x
 
 projects[menu_attributes][version] = 1.0-rc2
@@ -91,8 +91,10 @@ projects[workbench_moderation][download][revision] = d196989
 projects[workbench_moderation][download][branch] = 7.x-1.x
 projects[workbench_moderation][patch][1285090] = http://drupal.org/files/playnicewithpanels-1285090-12.patch
 projects[workbench_moderation][patch][1260112] = http://drupal.org/files/workbench_moderation-is_current-1260112-28.patch
+projects[workbench_moderation][patch][1875700] = http://drupal.org/files/workbench_moderation-allow-unpublish-live-revision-1875700_0.patch
+projects[workbench_moderation][patch][1919706] = http://drupal.org/files/1919706-1-no-node.patch
 
-projects[rules][version] = 2.2
+projects[rules][version] = 2.3
 projects[rules][subdir] = contrib
 
 projects[transliteration][version] = 3.1

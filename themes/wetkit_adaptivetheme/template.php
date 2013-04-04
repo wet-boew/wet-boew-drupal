@@ -27,5 +27,4 @@ $path_to_wetkit_theme = drupal_get_path('theme', 'wetkit_adaptivetheme');
 require_once $path_to_wetkit_theme . '/templates/inc/template-preprocess.inc';
 require_once $path_to_wetkit_theme . '/templates/inc/template-process.inc';
 require_once $path_to_wetkit_theme . '/templates/inc/template-theme-links.inc';
-require_once $path_to_wetkit_theme . '/templates/inc/template-menu-blocks.inc';
 require_once $path_to_wetkit_theme . '/templates/inc/template-breadcrumb.inc';

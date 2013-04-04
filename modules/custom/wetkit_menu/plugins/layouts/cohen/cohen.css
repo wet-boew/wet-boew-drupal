@@ -1,0 +1,10 @@
+/* Desktop view */
+@media screen and (min-width: 768px) and (min-device-width: 768px) {
+  #panels-dnd-main .panel-display {width: 960px;}
+}
+@media screen and (min-width: 768px) and (max-width: 959px) and (min-device-width: 768px) {
+  #panels-dnd-main .panel-display {width: 768px;}
+}
+@media screen and (min-width: 1200px) and (min-device-width: 768px) {
+  #panels-dnd-main .panel-display {width: 1200px;}
+}

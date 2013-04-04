@@ -1,11 +1,102 @@
 /** Stylesheet for WetKit WET-BOEW */
 
-.boxton-content .deploy-panel {
-  margin-left: 10px;
-  margin-top: 10px;
+.pane-deployment .deploy-panel .messages {
+  padding: 10px 10px 10px 40px;
+}
+
+.pane-queue .form-item-queue-name {
+  margin-bottom: 20px !important;
+}
+
+.pane-content [for="edit-queue-name"] {
+ float:left;
+ margin-right: 10px;
+ text-transform: none;
+ font-size: 12px;
+ font-weight: normal;
+}
+.queue-title {
+ margin-bottom: 20px;
+}
+
+.queue-items {
+ color: red;
+}
+.pane-deployment .pane-content .left {
+  width: 100%;
+}
+
+.pane-deployment .deploy-panel {
+  border: 1px solid #ccc;
+}
+.pane-deployment .deploy-panel .description {
+  margin: 0px 10px;
+}
+
+.pane-queue #wetkit-deployment-add-remove-form {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.pane-queue input.form-submit {
+  margin: 10px 10px 10px 0px;
+}
+
+.pane-deployment .deploy-panel .action-links a {
+  padding: 5px 10px;
+}
+
+.page-admin-dashboard-deployment .panels-ipe-placeholder h3 {
+  width: 150px;
+}
+
+.pane-deployment .deploy-panel h3 {
+margin: 0px;
+padding: 0px 0px 0px 10px;
+font-size: 11px;
+}
+
+.pane-deployment .deploy-panel table {
+  margin: 0px;
+}
+
+.pane-deployment .deploy-panel .admin .left {
+  width: 100%;
+}
+
+.fieldset-content #queue-table {
+  display: block;
+  margin-bottom: 15px;
 }
 
 #quicktabs-deployment_quicktabs .item-list {
   border: none;
   margin: 20px 0px 0px 0px;
+}
+
+.form-item-string-to-add, div.form-item-claim-time { 
+  display: inline;
+}
+
+.page-wetkit-queue fieldset {
+  padding: 10px;
+  margin: 0 0 10px;
+  border: 1.5px solid #ccc;
+  vertical-align: middle;
+}
+
+.page-wetkit-queue #edit-claim-fieldset .form-submit {
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.page-wetkit-queue fieldset legend:after {
+  border-top: none;
+  height: 0px;
+}
+
+#wetkit-queue-add-remove-form #edit-run-cron {
+  float: left;
+  margin-right: 10px;
 }
