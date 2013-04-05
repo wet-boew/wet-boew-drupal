@@ -53,12 +53,12 @@ projects[panopoly_users][download][branch] = 7.x-1.x
 
 ; WetKit Foundation
 
-includes[] = http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_wysiwyg/wetkit_wysiwyg.make
-includes[] = http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_search/wetkit_search.make
-includes[] = http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_language/wetkit_language.make
-includes[] = http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_migrate/wetkit_migrate.make
-includes[] = http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_bean/wetkit_bean.make
-includes[] = http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_metatag/wetkit_metatag.make
-includes[] = http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_core/wetkit_core.make
-includes[] = http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_wetboew/wetkit_wetboew.make
-includes[] = http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_breadcrumbs/wetkit_breadcrumbs.make
+includes[] = "http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_wysiwyg/wetkit_wysiwyg.make"
+includes[] = "http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_search/wetkit_search.make"
+includes[] = "http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_language/wetkit_language.make"
+includes[] = "http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_migrate/wetkit_migrate.make"
+includes[] = "http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_bean/wetkit_bean.make"
+includes[] = "http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_metatag/wetkit_metatag.make"
+includes[] = "http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_core/wetkit_core.make"
+includes[] = "http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_wetboew/wetkit_wetboew.make"
+includes[] = "http://drupalcode.org/project/wet.git/blob/refs/heads/7.x-1.x:/modules/custom/wetkit_breadcrumbs/wetkit_breadcrumbs.make"
