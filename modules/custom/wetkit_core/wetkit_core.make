@@ -93,6 +93,7 @@ projects[workbench_moderation][patch][1285090] = http://drupal.org/files/playnic
 projects[workbench_moderation][patch][1260112] = http://drupal.org/files/workbench_moderation-is_current-1260112-28.patch
 projects[workbench_moderation][patch][1875700] = http://drupal.org/files/workbench_moderation-allow-unpublish-live-revision-1875700_0.patch
 projects[workbench_moderation][patch][1919706] = http://drupal.org/files/1919706-1-no-node.patch
+projects[workbench_moderation][patch][1919706] = http://drupal.org/files/workbench_moderation-revision-moderation-edit-link-1785798-14.patch
 
 projects[rules][version] = 2.3
 projects[rules][subdir] = contrib
