@@ -37,12 +37,8 @@ function wetkit_deployment_add_remove_form($form, &$form_state) {
     '#type' => 'submit',
     '#value' => t('Deploy all items'),
     '#submit' => array('wetkit_deployment_add_remove_form_run_cron'),
+    '#attributes' => array('class' => array('button-confirm')),
   );
-  //$form['status_fieldset']['run_cron_item'] = array(
-  //  '#type' => 'submit',
-  //  '#value' => t('Deploy next item'),
-  //  '#submit' => array('wetkit_deployment_add_remove_form_run_cron_item'),
-  //);
   $form['status_fieldset']['delete_queue'] = array(
     '#type' => 'submit',
     '#value' => t('Delete all items'),
