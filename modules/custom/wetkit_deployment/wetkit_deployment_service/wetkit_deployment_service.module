@@ -48,9 +48,6 @@ function wetkit_deployment_service_entity_uuid_presave(&$entity, $entity_type) {
     unset($entity->workbench_moderation_export);
 
     list($id, $vid) = entity_extract_ids($entity_type, $entity);
-
-    watchdog('Devel: Deployment service load', 'Output of %entity.', array('%entity' => print_r($entity, TRUE)), WATCHDOG_NOTICE);
-    watchdog('Devel: Deployment service load', 'Output of %id and $vid.', array('%id' => $id, '%vid' => $vid), WATCHDOG_NOTICE);
   }
 }
 
