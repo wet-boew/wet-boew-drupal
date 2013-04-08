@@ -20,8 +20,44 @@ function wetkit_deployment_ctools_plugin_directory($module, $plugin) {
  * Implements hook_entity_uuid_load().
  */
 function wetkit_deployment_entity_uuid_load(&$entities, $entity_type) {
-  if ($entity_type == 'node') {
+  // Prepare any entities that leverage panelizer.
+  foreach ($entities as $entity) {
+    // Panelizer support.
+    if (isset($entity->panelizer)) {
+      $panelizer = $entity->panelizer;
+      unset($entity->panelizer);
 
+      $panelizer = (array)$panelizer;
+      $panelizer['entity_type'] = $entity_type;
+      $panelizer['display_is_modified'] = TRUE;
+      $panelizer = (object)$panelizer;
+
+      // No need to save revisions: panelizer code is stored directly
+      // in its entity. NULL values also should be removed.
+      if (isset($panelizer->revision_id) || @is_null($panelizer->revision_id)) {
+        unset($panelizer->revision_id);
+      }
+      if (isset($panelizer->entity_id) || @is_null($panelizer->entity_id)) {
+        unset($panelizer->entity_id);
+      }
+      if (isset($panelizer->did) || @is_null($panelizer->did)) {
+        unset($panelizer->did);
+      }
+      // Data should be serialized since it becomes an array in export code, but
+      // Panelizer and Ctools modules expect for a stdClass and there's no good
+      // way to restore nested structure to the original form.
+      $entity->panelizer_export = serialize($panelizer);
+    }
+    // Workbench Moderation support.
+    if (isset($entity->workbench_moderation)) {
+      $workbench_moderation_export = $entity->workbench_moderation;
+      unset($entity->workbench_moderation);
+
+      // Data should be serialized since it becomes an array in export code, but
+      // Workbench Moderation expects for a stdClass and there's no good
+      // way to restore nested structure to the original form.
+      $entity->workbench_moderation_export = serialize($workbench_moderation_export);
+    }
   }
 }
 
