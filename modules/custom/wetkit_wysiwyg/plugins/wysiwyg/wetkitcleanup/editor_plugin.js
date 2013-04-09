@@ -73,6 +73,10 @@
 					sub.add({title : ed.getLang('wetkitcleanup.set_language_en'), onclick : function () {t._setLanguage('en')}}).setDisabled(0);
 					sub.add({title : ed.getLang('wetkitcleanup.set_language_fr'), onclick : function () {t._setLanguage('fr')}}).setDisabled(0);
 
+					sub = m.addMenu({title : ed.getLang('wetkitcleanup.extract_column'), onclick : function () {return false;}}); 
+					sub.add({title : ed.getLang('wetkitcleanup.extract_column_1'), onclick : function () {t._extractTableColum(1)}}).setDisabled(0);
+					sub.add({title : ed.getLang('wetkitcleanup.extract_column_2'), onclick : function () {t._extractTableColum(2)}}).setDisabled(0);
+
 					//m.add({title : 'Quick Fix All', onclick : function () {t._QuickFixAll()}}).setDisabled(0);
                                         m.add({title : ed.getLang('wetkitcleanup.quick_fix_all'), onclick : function () {t._QuickFixAll()}}).setDisabled(0);
 					sub = m.addMenu({title : ed.getLang('wetkitcleanup.other_cleanup'), onclick : function () {return false;}}); 
@@ -292,6 +296,30 @@
 				startY += rows.length;
 			});
 			return grid;
+		},
+
+		_extractTableColumn : function(colNumber) {
+			var t = this, ed = t.editor, nl, i, d = ed.getDoc(), b = ed.getBody();
+			colNumber = colNumber - 1; // convert to zero-based for arrays
+			var emptyCellMatch = new RegExp("^(?:<[^>]*>|&nbsp;|\\s)*$");
+			var tables = ed.dom.select('body > table, body > div > table');
+			for (var tbl=0; tbl<tables.length; tbl++) {
+				var contentBuffer = '';
+				var rows = ed.dom.select('tbody > tr, thead > tr',tables[tbl]);
+				for (var trw=0; trw<rows.length; trw++) {
+					var tcells = ed.dom.select('th, td',rows[trw]);
+					if (tcells.length < colNumber+1) {
+						alert(ed.getLang('wetkitcleanup.not_exists_chosen_column'));
+						return;
+					}
+					if (ed.dom.select('p, div, ul, ol',tcells[colNumber]).length > 0) {
+						contentBuffer += tcells[colNumber].innerHTML;
+					} else {
+						contentBuffer += '<p>' + tcells[colNumber].innerHTML + '</p>';
+					}
+				}
+				ed.dom.setOuterHTML(tables[tbl],contentBuffer);
+			}
 		},
 
 		_addTableHeaders : function(useThead) {
