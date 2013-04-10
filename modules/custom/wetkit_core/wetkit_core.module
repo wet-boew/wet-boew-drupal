@@ -34,7 +34,7 @@ function wetkit_core_theme() {
  * Hold the title of the pane for later use (i.e. show it as the tab's title),
  * and remove it form the pane itself.
  */
-function wetkit_core_pane_content_alter(&$content, $pane, $args, $context, $renderer, $display) {
+function wetkit_core_panels_pane_content_alter(&$content, $pane, $args, $context, $renderer, $display) {
   // Get the regions that should be themed as tabs.
   foreach ($display->panel_settings as $key => $values) {
     if ($key == 'style_settings') {
