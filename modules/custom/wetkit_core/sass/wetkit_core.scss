@@ -200,3 +200,11 @@
 #media-browser-page .media-item {
   width: auto;
 }
+
+/* CTools Collapsible Container */
+
+.ctools-collapsible-container {
+  h2 { background: #1d5ea6; padding: 10px; color: #fff !important; font-size: 14px; font-weight: normal;}
+  .ctools-toggle-collapsed, .ctools-toggle { margin-top: 10px;  }
+  .page-node-edit fieldset { margin-top: 0; }
+}
