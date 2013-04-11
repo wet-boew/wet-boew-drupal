@@ -13,11 +13,11 @@ function wetkit_core_taxonomy_default_vocabularies() {
       'name' => 'WetKit Categories',
       'machine_name' => 'wetkit_categories',
       'description' => 'Default Vocabulary for the Web Experience Toolkit',
-      'hierarchy' => '0',
+      'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => 0,
       'language' => 'und',
-      'i18n_mode' => '1',
+      'i18n_mode' => 1,
     ),
   );
 }
