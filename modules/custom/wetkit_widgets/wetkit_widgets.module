@@ -26,13 +26,6 @@ function wetkit_widgets_configure_form($form, &$form_state) {
 }
 
 /**
- * Implements hook_init().
- */
-function wetkit_widgets_init() {
-
-}
-
-/**
  * Implements hook_ctools_plugin_directory().
  */
 function wetkit_widgets_ctools_plugin_directory($module, $plugin) {

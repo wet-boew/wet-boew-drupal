@@ -73,9 +73,9 @@ function wetkit_core_pane_titles($did = NULL, $pid = NULL, $title = NULL) {
 }
 
 /**
- * Implements hook_init().
+ * Implements hook_page_build().
  */
-function wetkit_core_init() {
+function wetkit_core_page_build() {
   // Set Flag.
   if ((variable_get('wetkit_core_load', 1) == 1)) {
     drupal_flush_all_caches();
