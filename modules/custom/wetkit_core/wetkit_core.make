@@ -26,9 +26,6 @@ projects[diff][download][type] = git
 projects[diff][download][revision] = adb4304
 projects[diff][download][branch] = 7.x-3.x
 
-projects[ds][version] = 2.2
-projects[ds][subdir] = contrib
-
 projects[fences][version] = 1.x-dev
 projects[fences][subdir] = contrib
 projects[fences][type] = module

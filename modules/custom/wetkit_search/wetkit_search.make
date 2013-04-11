@@ -9,7 +9,7 @@ projects[facetapi][version] = 1.x-dev
 projects[facetapi][subdir] = contrib
 projects[facetapi][type] = module
 projects[facetapi][download][type] = git
-projects[facetapi][download][revision] = 31513fe
+projects[facetapi][download][revision] = ed38b53
 projects[facetapi][download][branch] = 7.x-1.x
 
 projects[search_api][version] = 1.4

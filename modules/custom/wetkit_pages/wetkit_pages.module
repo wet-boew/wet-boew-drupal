@@ -118,7 +118,7 @@ function wetkit_pages_landing_page_wizard_validate($form, &$form_state) {
   }
 
   // Set the Menu Parent to be The Chosen One.
-  if ($form_state['values']['menu']['parent']) {
+  if (!empty($form_state['values']['menu']['menu_entry']) && !empty($form_state['values']['menu']['parent'])) {
     $form_state['wizard cache']->menu['parent'] = $form_state['values']['menu']['parent'];
   }
 }

@@ -8,44 +8,43 @@ translations[] = fr
 projects[panopoly_core][version] = 1.x-dev
 projects[panopoly_core][subdir] = panopoly
 projects[panopoly_core][download][type] = git
-projects[panopoly_core][download][revision] = 3bcd157
+projects[panopoly_core][download][revision] = 192ed62
 projects[panopoly_core][download][branch] = 7.x-1.x
-projects[panopoly_core][patch][1953428] = http://drupal.org/files/hook_requirements-1953428-01.patch
-projects[panopoly_core][patch][41220bd] = https://gist.github.com/raw/4724569/41220bd5f180ccfe0f61087ba08ce4db3fada6d5/panopoly_core_06022012.patch
-projects[panopoly_core][patch][1962746] = http://drupal.org/files/panopoly_core-update_modules-1962746-03.patch
+projects[panopoly_core][patch][1967250] = http://drupal.org/files/field_info_collate_fields-1967250-02.patch
+projects[panopoly_core][patch][1967238] = http://drupal.org/files/panopoly_core_make-1967238-01.patch
 
 projects[panopoly_images][version] = 1.x-dev
 projects[panopoly_images][subdir] = panopoly
 projects[panopoly_images][download][type] = git
-projects[panopoly_images][download][revision] = 98eb0f5
+projects[panopoly_images][download][revision] = b57b48f
 projects[panopoly_images][download][branch] = 7.x-1.x
 
 projects[panopoly_theme][version] = 1.x-dev
 projects[panopoly_theme][subdir] = panopoly
 projects[panopoly_theme][download][type] = git
-projects[panopoly_theme][download][revision] = 372aeb0
-projects[panopoly_theme][download][branch] = 7.x-1.x 
+projects[panopoly_theme][download][revision] = b8d3809
+projects[panopoly_theme][download][branch] = 7.x-1.x
+projects[panopoly_theme][patch][1967234] = http://drupal.org/files/panopoly_theme_make-1967234-01.patch
 
 projects[panopoly_magic][version] = 1.x-dev
 projects[panopoly_magic][subdir] = panopoly
 projects[panopoly_magic][download][type] = git
-projects[panopoly_magic][download][revision] = 64d984e
+projects[panopoly_magic][download][revision] = 3a1f8f9
 projects[panopoly_magic][download][branch] = 7.x-1.x
 
 projects[panopoly_widgets][version] = 1.x-dev
 projects[panopoly_widgets][subdir] = panopoly
 projects[panopoly_widgets][download][type] = git
-projects[panopoly_widgets][download][revision] = 2a98c9e 
+projects[panopoly_widgets][download][revision] = 0dafe32
 projects[panopoly_widgets][download][branch] = 7.x-1.x
-projects[panopoly_widgets][patch][3b2fac8] = https://gist.github.com/raw/5295734/3b2fac8de5e556977e2e6825cc22f99e31fe8075/panopoly_widgets_04012013.patch
+projects[panopoly_widgets][patch][1967230] = http://drupal.org/files/panopoly_widgets_make-1967230-01.patch
 
 projects[panopoly_admin][version] = 1.x-dev
 projects[panopoly_admin][subdir] = panopoly
 projects[panopoly_admin][download][type] = git
-projects[panopoly_admin][download][revision] = 165fafb
+projects[panopoly_admin][download][revision] = 4d9d071
 projects[panopoly_admin][download][branch] = 7.x-1.x
-projects[panopoly_admin][patch][2293e1e] = https://gist.github.com/raw/4724882/2293e1ed9e9cea8c121258d3811875ffa6ba8dd3/panopoly_admin_06022012.patch
-projects[panopoly_admin][patch][f0bf24a] = https://gist.github.com/raw/4751883/f0bf24aa1c612706e7b0164921c9cc6f204d5636/panopoly_admin-admin_menu_update.patch
+projects[panopoly_admin][patch][1967216] = http://drupal.org/files/panopoly_admin_make-1967216-01.patch
 
 projects[panopoly_users][version] = 1.x-dev
 projects[panopoly_users][subdir] = panopoly

@@ -35,10 +35,3 @@ function wetkit_migrate_menu() {
 
   return $items;
 }
-
-/**
- * Implements hook_init().
- */
-function wetkit_migrate_init() {
-
-}

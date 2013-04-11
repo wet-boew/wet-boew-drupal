@@ -9,9 +9,9 @@ include_once 'theme/wetkit_wetboew.theme.inc';
 include_once 'wetkit_wetboew.menus.inc';
 
 /**
- * Implements hook_init().
+ * Implements hook_page_build().
  */
-function wetkit_wetboew_init() {
+function wetkit_wetboew_page_build() {
   // Only use WET-BOEW on Front End.
   global $theme;
   global $base_theme_info;
