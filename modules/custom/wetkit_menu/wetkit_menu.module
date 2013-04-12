@@ -60,6 +60,16 @@ function wetkit_menu_theme($existing, $type, $theme, $path) {
       'path' => drupal_get_path('module', 'wetkit_menu') . '/templates/panes',
       'template' => 'wetkit_menu_minipanel',
     ),
+    'wetkit_menu_panels_pane_nav' => array(
+      'render element' => 'element',
+      'path' => drupal_get_path('module', 'wetkit_menu') . '/templates/panes',
+      'template' => 'wetkit_menu_minipanel_nav',
+    ),
+    'wetkit_menu_panels_pane_sidebar' => array(
+      'render element' => 'element',
+      'path' => drupal_get_path('module', 'wetkit_menu') . '/templates/panes',
+      'template' => 'wetkit_menu_minipanel_sidebar',
+    ),
   );
 }
 

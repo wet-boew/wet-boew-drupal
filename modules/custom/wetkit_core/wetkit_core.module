@@ -134,14 +134,7 @@ function wetkit_core_menu() {
   );
 
   // Add an dummy menu item.
-  $items['<separator>'] = array(
-    'page callback' => 'drupal_not_found',
-    'access callback' => TRUE,
-    'type' => MENU_CALLBACK,
-  );
-
-  // Add an dummy menu item.
-  $items['<group>'] = array(
+  $items['<minipanel>'] = array(
     'page callback' => 'drupal_not_found',
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,

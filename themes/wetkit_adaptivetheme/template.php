@@ -28,3 +28,4 @@ require_once $path_to_wetkit_theme . '/templates/inc/template-preprocess.inc';
 require_once $path_to_wetkit_theme . '/templates/inc/template-process.inc';
 require_once $path_to_wetkit_theme . '/templates/inc/template-theme-links.inc';
 require_once $path_to_wetkit_theme . '/templates/inc/template-breadcrumb.inc';
+require_once $path_to_wetkit_theme . '/templates/inc/template-stickynote.inc';
