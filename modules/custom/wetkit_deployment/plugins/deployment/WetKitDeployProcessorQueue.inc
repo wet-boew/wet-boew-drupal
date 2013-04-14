@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * WetKitDeployProcessorQueue.inc
+ */
 
 /**
  * Processor class using the Batch API

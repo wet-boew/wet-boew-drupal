@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Process theme data.

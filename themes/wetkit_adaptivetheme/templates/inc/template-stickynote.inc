@@ -1,15 +1,14 @@
 <?php
+/**
+ * @file
+ * Theme settings for template-stickynote.
+ */
 
 /**
- * Get notes for referring_url/current url and
- * return as list including edit/delete etc...
+ * Get notes for referring_url/current url return as list.
  *
- * @param $variables -> contains:
- *             $variables['referring_url'] = url for notes
- *             $variables['notes'] = an array of all notes for referring url
- *             $variables['can_edit'] = a flag with permission to edit
- *             $variables['can_delete'] = a flag with permission to delete *
- * @TODO: Customize include better themeing for listing.
+ * @param array $variables
+ *   Variables including referring_url, notes, can_edit, can_delete for theming.
  */
 function wetkit_adaptivetheme_stickynote_list($variables) {
   $output = '';
@@ -20,8 +19,8 @@ function wetkit_adaptivetheme_stickynote_list($variables) {
   $list['attributes'] = array();
   $list['items'] = array();
   if (isset($variables['notes'])) {
-    foreach($variables['notes'] as $key=>$note) {
-      $item = '<span class="note-' . $key. '">';
+    foreach ($variables['notes'] as $key => $note) {
+      $item = '<span class="note-' . $key . '">';
       $item .= $note['data']['created']['data'] . ': ';
       $item .= $note['data']['note']['data'];
       if ($variables['can_edit']) {
@@ -29,8 +28,6 @@ function wetkit_adaptivetheme_stickynote_list($variables) {
       }
       if ($variables['can_delete']) {
         $token = drupal_get_token($key);
-       // $str = str_replace('delete_confirm', 'delete&token=' . $token, $note['data']['delete']['data']);
-       // $item .= '<span class="sticknote-delete">' . $str . '</span>';
         $item .= $note['data']['delete']['data'];
       }
       $item .= '</span>';
@@ -38,19 +35,18 @@ function wetkit_adaptivetheme_stickynote_list($variables) {
     }
   }
   $output = theme_item_list($list);
-
   return $output;
 }
 
 /**
- * Return confirmation links for deletion
+ * Return confirmation links for deletion.
  *
- * @param $stickynote
+ * @param array $stickynote
+ *   Sticky note tokens and configuration form. 
  */
 function wetkit_adaptivetheme_stickynote_confirm($variables) {
   $stickynote = $variables['stickynote'];
   $token = drupal_get_token($stickynote->snid);
-  
   $output .= '<span id="confirm-delete-' . $stickynote->snid . '" style="text-align: left;">';
   $output .= 'Are you sure?&nbsp;';
   $output .= l(t('Delete'), 'stickynote/' . $stickynote->snid . '/delete', array(
@@ -61,8 +57,6 @@ function wetkit_adaptivetheme_stickynote_confirm($variables) {
   $output .= l(t('Cancel'), 'stickynote/' . $stickynote->snid . '/cancel', array(
     'attributes' => array('class' => array('use-ajax'))));
   $output .= '</span>';
-  
 
   return $output;
 }
-

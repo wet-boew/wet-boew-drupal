@@ -5,6 +5,8 @@
  */
 
 /**
+ * Theme form for deployment aggregation.
+ *
  * Provides an interface to add items to the queue, to retrieve (claim)
  * an item from the head of the queue, and to claim and delete. Also
  * allows the user to run cron manually, so that claimed items can be
@@ -57,7 +59,7 @@ function wetkit_deployment_add_remove_form($form, &$form_state) {
  * Submit function for "Claim and delete" button.
  */
 function wetkit_deployment_add_remove_form_delete($form, &$form_state) {
-  // Deploy
+  // Deploy.
   $queue = DrupalQueue::get('wetkit_deploy');
   $queue->createQueue();
   $count = $queue->numberOfItems();
@@ -70,7 +72,7 @@ function wetkit_deployment_add_remove_form_delete($form, &$form_state) {
     $count = $queue->numberOfItems();
     drupal_set_message(t('There were no items in the queue available to delete. There are currently @count items in the queue.', array('@count' => $count)));
   }
-  // Publish
+  // Publish.
   $queue = DrupalQueue::get('wetkit_publish');
   $queue->createQueue();
   $count = $queue->numberOfItems();
@@ -95,11 +97,11 @@ function wetkit_deployment_add_remove_form_delete($form, &$form_state) {
 function wetkit_deployment_add_remove_form_run_cron($form, &$form_state) {
   variable_set('wetkit_deployment_enable_cron', TRUE);
   drupal_cron_run();
-  // Deploy
+  // Deploy.
   $queue = DrupalQueue::get('wetkit_deploy');
   $queue->createQueue();
   $count = $queue->numberOfItems();
-  // Publish
+  // Publish.
   $queue = DrupalQueue::get('wetkit_publish');
   $queue->createQueue();
   $count = $queue->numberOfItems();
@@ -111,10 +113,10 @@ function wetkit_deployment_add_remove_form_run_cron($form, &$form_state) {
  * Submit handler for clearing/deleting the queue.
  */
 function wetkit_deployment_add_remove_form_clear_queue($form, &$form_state) {
-  // Deploy
+  // Deploy.
   $queue = DrupalQueue::get('wetkit_deploy');
   $queue->deleteQueue();
-  // Publish
+  // Publish.
   $queue = DrupalQueue::get('wetkit_publish');
   $queue->deleteQueue();
   drupal_set_message(t('Deleted the deployment queue and all items in it'));
@@ -127,7 +129,7 @@ function wetkit_deployment_add_remove_form_clear_queue($form, &$form_state) {
  * so that the user interface can give a good idea of what's going on in the
  * queue.
  *
- * @param $queue_name
+ * @param string $queue_name
  *   The name of the queue from which to fetch items.
  */
 function wetkit_deployment_retrieve_queue($queue_name) {

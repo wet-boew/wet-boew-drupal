@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * WetKitDeployAggregatorManaged.inc
+ */
 
 /**
  * Managed deployment aggregator.

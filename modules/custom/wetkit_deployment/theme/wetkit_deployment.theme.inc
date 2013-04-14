@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * wetkit_deployment.theme.inc
+ */
 
 /**
  * Theme callback for the overview page.
@@ -39,7 +43,7 @@ function theme_wetkit_deploy_ui_overview($variables) {
           'href' => 'admin/dashboard/deployment/deploy',
           'query' => array(
             'cancel_path' => $_GET['q'],
-          )
+          ),
         ));
         $output .= theme('links', array('links' => $actions, 'attributes' => array('class' => 'action-links')));
       }
@@ -79,8 +83,6 @@ function theme_wetkit_deploy_ui_overview_plan_content($variables) {
 
 /**
  * Themes the queue display.
- *
- * @param $variables
  */
 function theme_wetkit_deployment_items($variables) {
   // Include the CTools tools that we need.

@@ -1,6 +1,7 @@
 <?php
 /**
- * WetKit Menu administration include file for configuration
+ * @file
+ * WetKit Menu administration include file for configuration.
  */
 
 /**
@@ -27,13 +28,13 @@ function wetkit_menu_menu_toggle($menu) {
 }
 
 /**
- * Page callback for admin/settings/wetkit_menu
+ * Page callback for admin/settings/wetkit_menu.
  */
 function wetkit_menu_admin() {
   $form = array();
 
   // Show the current status of the WET library.
-  include_once('includes/install.inc');
+  include_once 'includes/install.inc';
   module_load_include('install', 'wetkit_menu');
   $status = wetkit_menu_requirements('runtime');
   $form['status'] = array(
@@ -62,10 +63,12 @@ function wetkit_menu_admin() {
     $rows[] = $row;
   }
   $form['menus'] = array(
-    '#markup' => theme('table', array('caption' => t('Menu selection'), 'header' => $header, 'rows' => $rows)),
+    '#markup' => theme('table', array(
+      'caption' => t('Menu selection'),
+      'header' => $header,
+      'rows' => $rows,
+    )),
   );
-
-  // Additional global settings.
 
   // Control which pages are excluded from having megamenus.
   $form['wetkit_menu_exclude_paths'] = array(

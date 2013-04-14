@@ -108,8 +108,7 @@ class WetKitWebTestCase extends DrupalWebTestCase {
   }
 
   /**
-   * Assert that a a particular format isn't available
-   * in a select element of input formats.
+   * Assert that a a particular format isn't available.
    *
    * @param array $field
    *   A form field.

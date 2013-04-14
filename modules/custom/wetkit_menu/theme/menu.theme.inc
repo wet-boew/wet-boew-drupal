@@ -65,12 +65,12 @@ function wetkit_menu_menu_link_menu_block_megamenu($variables) {
     }
     // No children menu items.
     else {
-      return  $has_nolink;
+      return $has_nolink;
     }
   }
   // Default Depth.
   else {
-    return  '<li>' . $has_nolink . '</li>';
+    return '<li>' . $has_nolink . '</li>';
   }
 }
 
@@ -96,9 +96,9 @@ function wetkit_menu_menu_link_menu_block_minipanel($variables) {
   if ($depth == 1) {
     if ($has_children == 1) {
       if (isset($element['#below']['#children'])) {
-	    $sub_menu = (preg_match('<h4>', $element['#below']['#children']) ? '<section><ul>' . $sub_menu . '</ul></section>' : '<div><ul>' . $sub_menu . '</ul></div>');
-	  }
-	  else {    
+	      $sub_menu = (preg_match('<h4>', $element['#below']['#children']) ? '<section><ul>' . $sub_menu . '</ul></section>' : '<div><ul>' . $sub_menu . '</ul></div>');
+	    }
+	    else {    
         $sub_menu = '<div><ul>' . $sub_menu . '</ul></div>';
       }
       return '<section><h3 class="top-section">' . $has_nolink . '</h3>' . $sub_menu . '</section>';
@@ -114,7 +114,7 @@ function wetkit_menu_menu_link_menu_block_minipanel($variables) {
     }
     else {
       $element['#attributes']['class'][] = '';
-      return  '<li' . drupal_attributes($element['#attributes']) . '>' . $has_nolink . '</li>';
+      return '<li' . drupal_attributes($element['#attributes']) . '>' . $has_nolink . '</li>';
     }
   }
   // Depth 3.
@@ -123,7 +123,7 @@ function wetkit_menu_menu_link_menu_block_minipanel($variables) {
       return '<li>' . $has_nolink . '</li><ul>' . $sub_menu . '</ul>';
     }
     else {
-      return  '<li' . drupal_attributes($element['#attributes']) . '>' . $has_nolink . '</li>';
+      return '<li' . drupal_attributes($element['#attributes']) . '>' . $has_nolink . '</li>';
     }
   }
   // Depth 4+.
@@ -132,7 +132,7 @@ function wetkit_menu_menu_link_menu_block_minipanel($variables) {
       return '<ul><li>' . $has_nolink . '<ul>' . $sub_menu . '</ul></li></ul>';
     }
     else {
-      return  '<li' . drupal_attributes($element['#attributes']) . '>' . $has_nolink . '</li>';
+      return '<li' . drupal_attributes($element['#attributes']) . '>' . $has_nolink . '</li>';
     }
   }
 }
@@ -172,12 +172,12 @@ function wetkit_menu_menu_link_menu_block_sidebar($variables) {
     }
     else {
       $element['#attributes']['class'][] = 'top-level';
-      return  '<li' . drupal_attributes($element['#attributes']) . '>' . $has_nolink . '</li>';
+      return '<li' . drupal_attributes($element['#attributes']) . '>' . $has_nolink . '</li>';
     }
   }
   // Depth 3+.
   else {
-    return  '<li' . drupal_attributes($element['#attributes']) . '>' . $has_nolink . '</li>';
+    return '<li' . drupal_attributes($element['#attributes']) . '>' . $has_nolink . '</li>';
   }
 }
 
@@ -210,7 +210,7 @@ function wetkit_menu_menu_link_menu_block_minipanel_focus($variables) {
   }
   // Depth 3+.
   else {
-    return  '<li' . drupal_attributes($element['#attributes']) . '>' . $has_nolink . '</li>';
+    return '<li' . drupal_attributes($element['#attributes']) . '>' . $has_nolink . '</li>';
   }
 }
 
@@ -224,7 +224,7 @@ function wetkit_menu_menu_link_menu_block_footer($variables) {
   $element = $variables['element'];
   $sub_menu = '';
 
-  // Custom Logic Based on Theme Selection (Internet, Intranet or Base)
+  // Custom Logic Based on Theme Selection (Internet, Intranet or Base).
   if (variable_get('wetkit_wetboew_theme', 0) == 2) {
     $theme_prefix = 'base';
   }
