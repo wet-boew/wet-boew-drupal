@@ -90,8 +90,7 @@ class WetKitWebTestCase extends DrupalWebTestCase {
   }
 
   /**
-   * Assert that a a particular format exists
-   * in a select element of input formats.
+   * Assert that a format exists in a select element of input formats.
    *
    * @param array $field
    *   A form field.

@@ -57,15 +57,15 @@ function wetkit_core_panels_pane_content_alter(&$content, $pane, $args, $context
 /**
  * Get or set pane title.
  *
- * @param integer $did
+ * @param int $did
  *   Panels display ID.
- * @param integer $pid
+ * @param int $pid
  *   Panels pane ID.
  * @param string $title
  *   Optional; Panels pane title to set, or if empty then the function will
  *   return the captured title based on the display ID and pane ID properties.
  *
- * @return boolean
+ * @return bool
  *   Unsanitized pane title, or NULL if doesn't exist.
  */
 function wetkit_core_pane_titles($did = NULL, $pid = NULL, $title = NULL) {

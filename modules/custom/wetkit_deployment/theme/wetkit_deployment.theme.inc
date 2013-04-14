@@ -38,13 +38,14 @@ function theme_wetkit_deploy_ui_overview($variables) {
       $output .= $block['plan_description'];
       $output .= '</div>';
       if (!$block['fetch_only']) {
-        $actions = array(array(
-          'title' => t('Add to Deployment'),
-          'href' => 'admin/dashboard/deployment/deploy',
-          'query' => array(
-            'cancel_path' => $_GET['q'],
-          ),
-        ));
+        $actions = array(
+          array(
+            'title' => t('Add to Deployment'),
+            'href' => 'admin/dashboard/deployment/deploy',
+            'query' => array(
+              'cancel_path' => $_GET['q'],
+            ),
+          ));
         $output .= theme('links', array('links' => $actions, 'attributes' => array('class' => 'action-links')));
       }
       else {
@@ -92,7 +93,6 @@ function theme_wetkit_deployment_items($variables) {
   // Add CTools' javascript to the page.
   ctools_modal_add_js();
 
-  /*
   // Create our own javascript that will be used to theme a modal.
   $sample_style = array(
     'ctools-sample-style' => array(
@@ -112,12 +112,18 @@ function theme_wetkit_deployment_items($variables) {
       'throbber' => theme('image', array('path' => ctools_image_path('ajax-loader.gif', 'ctools_ajax_sample'), 'alt' => t('Loading...'), 'title' => t('Loading'))),
     ),
   );
-  drupal_add_js($sample_style, 'setting');
-  ctools_add_js('wetkit-deployment-ajax', 'wetkit_deployment');
-  */
+  // drupal_add_js($sample_style, 'setting');
+  // ctools_add_js('wetkit-deployment-ajax', 'wetkit_deployment');
 
   $items = $variables['items'];
-  $header = array(t('ID'), t('Title'), t('Type'), t('Timestamp'), t('UUID'), t('Content'));
+  $header = array(
+    t('ID'),
+    t('Title'),
+    t('Type'),
+    t('Timestamp'),
+    t('UUID'),
+    t('Content'),
+  );
   $rows = array();
 
   foreach ($items as &$item) {
@@ -128,7 +134,7 @@ function theme_wetkit_deployment_items($variables) {
       $data->__metadata['type'],
       date("Y-m-d H:i:s", $item['created']),
       $data->uuid,
-      ctools_modal_text_button(t('Show Content'), 'wetkit_deployment_ajax/nojs/1', t('Show Content'),  'ajax-processed'),
+      ctools_modal_text_button(t('Show Content'), 'wetkit_deployment_ajax/nojs/1', t('Show Content'), 'ajax-processed'),
     );
   }
   if (empty($rows)) {

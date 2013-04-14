@@ -41,7 +41,7 @@ function wetkit_adaptivetheme_stickynote_list($variables) {
 /**
  * Return confirmation links for deletion.
  *
- * @param array $stickynote
+ * @param array $variables
  *   Sticky note tokens and configuration form. 
  */
 function wetkit_adaptivetheme_stickynote_confirm($variables) {

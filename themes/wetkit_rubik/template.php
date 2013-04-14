@@ -135,7 +135,7 @@ function wetkit_rubik_preprocess_help(&$vars) {
 }
 
 /**
- * Helper function used to pass a value from preprocess_page() to preprocess_html().
+ * Helper func to pass a value from preprocess_page() to preprocess_html().
  */
 function _wetkit_rubik_has_tabs($val = NULL) {
   $vars = &drupal_static(__FUNCTION__, array());
@@ -165,8 +165,9 @@ function _wetkit_rubik_icon_classes($path) {
   }
   return array();
 }
+
 /**
- * Preprocess function which adds classes for icons in Taxonomy vocabulary overview page.
+ * Preprocess function to add classes for icons in Taxonomy vocab page.
  *
  * @see theme_taxonomy_overview_vocabularies()
  */
@@ -197,7 +198,7 @@ function wetkit_rubik_preprocess_taxonomy_overview_vocabularies(&$variables) {
 }
 
 /**
- * Preprocess function which adds classes for icons in Taxonomy term overview page.
+ * Preprocess function to add classes for icons in Taxonomy overview page.
  *
  * @see theme_taxonomy_overview_terms()
  */

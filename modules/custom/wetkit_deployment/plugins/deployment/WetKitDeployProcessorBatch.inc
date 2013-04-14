@@ -23,9 +23,11 @@ class WetKitDeployProcessorBatch extends DeployProcessorMemory {
     if (!empty($operations)) {
       foreach ($this->aggregator as $entity) {
         foreach ($operations as $operation) {
-          $this->operations[] = array($operation['callback'], array(
-            $this->aggregator->plan->name,
-            $entity,
+          $this->operations[] = array(
+            $operation['callback'],
+            array(
+              $this->aggregator->plan->name,
+              $entity,
           ));
         }
       }

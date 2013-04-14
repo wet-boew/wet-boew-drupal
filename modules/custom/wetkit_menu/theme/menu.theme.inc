@@ -96,9 +96,9 @@ function wetkit_menu_menu_link_menu_block_minipanel($variables) {
   if ($depth == 1) {
     if ($has_children == 1) {
       if (isset($element['#below']['#children'])) {
-	      $sub_menu = (preg_match('<h4>', $element['#below']['#children']) ? '<section><ul>' . $sub_menu . '</ul></section>' : '<div><ul>' . $sub_menu . '</ul></div>');
-	    }
-	    else {    
+        $sub_menu = (preg_match('<h4>', $element['#below']['#children']) ? '<section><ul>' . $sub_menu . '</ul></section>' : '<div><ul>' . $sub_menu . '</ul></div>');
+      }
+      else {
         $sub_menu = '<div><ul>' . $sub_menu . '</ul></div>';
       }
       return '<section><h3 class="top-section">' . $has_nolink . '</h3>' . $sub_menu . '</section>';

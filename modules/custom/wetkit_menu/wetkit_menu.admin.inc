@@ -59,7 +59,8 @@ function wetkit_menu_admin() {
     else {
       $label = 'No';
     }
-    $row[] = array('data' => l(t($label), 'admin/config/user-interface/wetkit_menu/toggle/' . $menu['menu_name'], array('attributes' => array('title' => t('Toggle this menu')))));
+    $row[] = array(
+      'data' => l(t($label), 'admin/config/user-interface/wetkit_menu/toggle/' . $menu['menu_name'], array('attributes' => array('title' => t('Toggle this menu')))));
     $rows[] = $row;
   }
   $form['menus'] = array(
@@ -75,7 +76,11 @@ function wetkit_menu_admin() {
     '#type' => 'textarea',
     '#title' => t('Don\'t show WetKit Menu on specific pages'),
     '#default_value' => variable_get('wetkit_menu_exclude_paths', "admin\nadmin/*"),
-    '#description' => t("Specify pages by using their paths. Enter one path per line. The '*' character is a wildcard. Example paths are %blog for the blog page and %blog-wildcard for every personal blog. %front is the front page.", array('%blog' => 'blog', '%blog-wildcard' => 'blog/*', '%front' => '<front>')),
+    '#description' => t("Specify pages by using their paths. Enter one path per line. The '*' character is a wildcard. Example paths are %blog for the blog page and %blog-wildcard for every personal blog. %front is the front page.", array(
+      '%blog' => 'blog',
+      '%blog-wildcard' => 'blog/*',
+      '%front' => '<front>',
+    )),
   );
 
   return system_settings_form($form);

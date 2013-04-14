@@ -18,6 +18,9 @@ class WetKitDeployAggregatorManaged extends DeployAggregatorBase {
    */
   public $plan;
 
+  /**
+   * Constructor.
+   */
   public function __construct(DeployPlan $plan = NULL, Array $config = array()) {
     global $user;
     $this->config += array(
@@ -38,6 +41,9 @@ class WetKitDeployAggregatorManaged extends DeployAggregatorBase {
     return deploy_manager_get_entities($this->plan->name);
   }
 
+  /**
+   * Configuration for aggregation.
+   */
   public function configForm(&$form_state) {
     $form = array();
     $form['delete_post_deploy'] = array(

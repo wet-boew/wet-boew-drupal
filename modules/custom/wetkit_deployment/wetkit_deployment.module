@@ -113,10 +113,11 @@ function wetkit_deployment_ajax_render_alter(&$commands) {
 /**
  * A modal static page callback.
  *
- * @param boolean $js
+ * @param bool $js
  *   Determine whether the user's browser is javascript enabled. 
- * @param integer $nid
+ * @param int $nid
  *   The node ID of passed as an argument from the hook_menu() path
+ *
  * @return string
  *   The contents of the node, that will fill the modal window.
  */

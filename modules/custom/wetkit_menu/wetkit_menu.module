@@ -9,8 +9,6 @@ require_once 'theme/menu.theme.inc';
 
 /*
  * Implements hook_migrate_api().
- *
- * You must implement hook_migrate_api(), setting the API level to 2.
  */
 function wetkit_menu_migrate_api() {
   $api = array(
@@ -405,9 +403,9 @@ function wetkit_menu__preprocess_link($link) {
 /**
  * Stores the generated output of all rendered minipanels.
  *
- * Will later be used by @wetkit_menu_preprocess_page to display the generated output.
+ * Will later be used by @wetkit_menu_preprocess_page to display the output.
  *
- * @param integer $mlid
+ * @param int $mlid
  *   The menu item id that needs the minipanel rendered.
  * @param string $minipanel_name
  *   The name of the minipanel to render.
