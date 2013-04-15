@@ -26,11 +26,11 @@ function wetkit_language_defaultconfig_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'entity_translation_entity_types';
   $strongarm->value = array(
-    'fieldable_panels_pane' => 'fieldable_panels_pane',
+    'taxonomy_term' => 'taxonomy_term',
     'bean' => 'bean',
+    'fieldable_panels_pane' => 'fieldable_panels_pane',
     'node' => 0,
     'file' => 0,
-    'taxonomy_term' => 0,
     'user' => 0,
   );
   $export['entity_translation_entity_types'] = $strongarm;

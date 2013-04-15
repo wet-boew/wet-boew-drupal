@@ -8,4 +8,3 @@ Key Features
 * Menus + Menu Block Support
 * CTools custom plugins
 * Panels Style Plugins
-* Translation Support

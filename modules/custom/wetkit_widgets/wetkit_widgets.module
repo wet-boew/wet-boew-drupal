@@ -17,12 +17,35 @@ function wetkit_widgets_apps_app_info() {
 }
 
 /**
- * Configuration Form for WetKit Magic.
+ * Configuration Form for WetKit Widgets.
  */
 function wetkit_widgets_configure_form($form, &$form_state) {
+  drupal_add_js(drupal_get_path('module', 'system') . '/system.js');
   $form = array();
+  $form['wetkit_widgets'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('WetKit Widgets Settings'),
+    '#collapsible' => TRUE,
+  );
+  $form['wetkit_widgets']['future_options'] = array(
+    '#markup' => '<p>' . t('Future options will appear here to configure WetKit Widgets.') . '</p>',
+  );
+  $form['#submit'][] = 'wetkit_widgets_configure_form_submit';
 
   return system_settings_form($form);
+}
+
+/**
+ * Handle submission of the WetKit Widgets configuration page.
+ *
+ * @param array $form
+ *   Nested array of form elements that comprise the form.
+ * @param array $form_state
+ *   A keyed array containing the current state of the form.
+ */
+function wetkit_widgets_configure_form_submit($form, &$form_state) {
+  // Change query-strings on css/js files to enforce reload for all users.
+  _drupal_flush_css_js();
 }
 
 /**
@@ -30,22 +53,6 @@ function wetkit_widgets_configure_form($form, &$form_state) {
  */
 function wetkit_widgets_ctools_plugin_directory($module, $plugin) {
   return 'plugins/' . $plugin;
-}
-
-/**
- * Implements hook_field_widget_form_alter().
- *
- * Create default values on fieldable_panels_pane fields when appropriate.
- */
-function wetkit_widgets_field_widget_form_alter(&$element, &$form_state, $context) {
-
-}
-
-/**
- * Implements hook_form_alter().
- */
-function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
-
 }
 
 /**

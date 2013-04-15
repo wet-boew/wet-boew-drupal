@@ -21,14 +21,12 @@ function wetkit_wysiwyg_apps_app_info() {
  */
 function wetkit_wysiwyg_configure_form($form, &$form_state) {
   $form = array();
-
   // Documentation.
   $form['wetkit_wysiwyg'] = array(
     '#title' => 'WYSIWYG Settings',
     '#type'  => 'fieldset',
     '#collapsible' => 'true',
   );
-
   $form['wetkit_wysiwyg']['wetkit_wysiwyg_show_format_details'] = array(
     '#title' => t('Show Text Formatter Details'),
     '#type' => 'select',
