@@ -6,4 +6,3 @@ Key Features
 * Implements standard metatags according to WET specifications
 * Custom bilingual tokens
 * Custom bilingual variables
-* Translation Support

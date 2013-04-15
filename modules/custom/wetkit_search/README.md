@@ -9,4 +9,3 @@ Key Features
 * Panelizer search pages for DB and Solr results
 * Addition and Integration of Custom Search
 * Addition and Integration of Search404
-* Translation Support

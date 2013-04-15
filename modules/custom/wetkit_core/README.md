@@ -8,4 +8,3 @@ Key Features
 * Metatag Support
 * CTools custom plugins
 * Panels Style Plugins
-* Translation Support

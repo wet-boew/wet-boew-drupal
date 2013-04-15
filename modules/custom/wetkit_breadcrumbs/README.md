@@ -9,4 +9,3 @@ Key Features
 * Node Edit View Breadcrumbs
 * User View Breadcrumbs
 * Integrates Drupal's Breadcrumb system with WET
-* Translation Support
