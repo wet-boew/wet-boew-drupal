@@ -94,7 +94,7 @@ msgstr ""
 
 #: wetkit_migrate.info:0 wetkit_migrate_content_types/wetkit_migrate_content_types.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 
 #: migrations/wetkit_migrate_migration.inc:23;24;25;26
 msgid "Web Developer"

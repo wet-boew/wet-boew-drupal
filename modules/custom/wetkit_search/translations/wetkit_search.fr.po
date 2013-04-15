@@ -123,7 +123,7 @@ msgstr "Index et recherche dans le contenu du site, Solr ou autre."
 
 #: wetkit_search.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 
 #: plugins/access/search_api_index.inc:9
 msgid "Search API Index"

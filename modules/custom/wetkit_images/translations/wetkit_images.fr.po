@@ -27,5 +27,5 @@ msgstr ""
 
 #: wetkit_images.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 

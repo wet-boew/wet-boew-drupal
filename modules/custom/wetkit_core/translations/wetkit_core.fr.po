@@ -129,7 +129,7 @@ msgstr "Ceci est l'écran de configuration pour "
 
 #: wetkit_core.module:192 wetkit_core.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 
 #: wetkit_core.module:195
 msgid "Workbench"

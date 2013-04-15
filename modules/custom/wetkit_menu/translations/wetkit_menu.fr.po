@@ -145,7 +145,7 @@ msgstr ""
 
 #: wetkit_menu.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 
 #: import/migrate_wetkit_menu.inc:17
 msgid "Migrate the WetKit MegaMenu"

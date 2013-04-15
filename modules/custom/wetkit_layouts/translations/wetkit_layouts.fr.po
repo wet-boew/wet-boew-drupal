@@ -48,7 +48,7 @@ msgstr ""
 
 #: wetkit_layouts.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 
 #: plugins/layouts/berton/berton.inc:13
 msgid "Berton"

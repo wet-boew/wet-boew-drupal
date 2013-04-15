@@ -104,5 +104,5 @@ msgstr ""
 
 #: wetkit_pages.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 

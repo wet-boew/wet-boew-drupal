@@ -50,7 +50,7 @@ msgstr ""
 
 #: wetkit_breadcrumbs.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 
 #: theme/wetkit_breadcrumbs.theme.inc:22
 msgid "Breadcrumb Trail"

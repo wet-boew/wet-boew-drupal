@@ -289,7 +289,7 @@ msgstr ""
 
 #: wetkit_metatag.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 
 #: includes/wetkit_metatag.variable.inc:14
 msgid "WetKit Metag: Creator"

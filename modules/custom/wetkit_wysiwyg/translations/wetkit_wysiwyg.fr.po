@@ -76,7 +76,7 @@ msgstr "Intégrer un WYSIWYG  à Drupal."
 
 #: wetkit_wysiwyg.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 
 #: plugins/wysiwyg/wetkitcleanup/js/acronym.js:0
 msgid "If this doesn't run, it's probably due to a bug in IE. Try running this again."

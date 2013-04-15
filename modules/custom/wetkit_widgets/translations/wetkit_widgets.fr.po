@@ -227,7 +227,7 @@ msgstr "Ajout d’une interface à onglets"
 
 #: wetkit_widgets.module:87 wetkit_widgets.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 
 #: wetkit_widgets.module:152
 msgid "A <em>WetKit Video</em> file is a moving visual recording using the WET video player."

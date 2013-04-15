@@ -64,5 +64,5 @@ msgstr "Implémentation par défaut de bean pour l'utilisation avec Wetkit"
 
 #: wetkit_bean.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 

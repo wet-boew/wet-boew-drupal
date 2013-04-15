@@ -118,7 +118,7 @@ msgstr ""
 
 #: wetkit_wetboew.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 
 #: plugins/content_types/archived_widget.inc:10
 msgid "Archived Widget Pane"

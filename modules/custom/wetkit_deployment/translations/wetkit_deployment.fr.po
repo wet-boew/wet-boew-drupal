@@ -427,7 +427,7 @@ msgstr ""
 
 #: wetkit_deployment.info:0 wetkit_deployment_service/wetkit_deployment_service.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 
 #: plugins/content_types/deployment.inc:14;26;34;95
 msgid "Deployment Staging Area"
