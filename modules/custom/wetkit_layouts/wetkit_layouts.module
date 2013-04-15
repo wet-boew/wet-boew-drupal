@@ -1,8 +1,7 @@
 <?php
-
 /**
  * @file
- * Implements core hooks for wetlit_layouts.
+ * wetkit_layouts.module
  */
 
 /**
@@ -15,10 +14,12 @@ function wetkit_layouts_ctools_plugin_directory($module, $plugin) {
 }
 
 /**
- * Implements hook_init().
+ * Implements hook_page_build().
  */
-function wetkit_layouts_init() {
+function wetkit_layouts_page_build() {
   global $theme;
+  // Add a subset of the Web Experience Toolkit grid system to backend theme.
+  // This will primarily assist the Panels Layouts screens.
   if ($theme == 'wetkit_rubik') {
     $url = parse_url(request_uri());
     if (strstr($url['path'], "/admin/structure/pages")) {
@@ -45,15 +46,6 @@ function wetkit_layouts_form_alter(&$form, &$form_state, $form_id) {
     $form['submit']['#submit'][] = '_wetkit_layouts_refresh_page';
     $form['display']['#prefix'] = '<div class="span-8">' . t('<strong>Important:</strong> You will need to manually refresh the page after you change the layout for it to take affect.') . '</div><div class="clear"></div>';
   }
-}
-
-/**
- * Implements _wetkit_layouts_refresh_page().
- *
- * TODO: Implement logic to force an auto refresh
- */
-function _wetkit_layouts_refresh_page($form, $form_state) {
-
 }
 
 /**

@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the wetkit_breadcrumbs feature.
+ * wetkit_breadcrumbs.module
  */
 
 include_once 'wetkit_breadcrumbs.features.inc';
@@ -11,7 +11,7 @@ include_once 'theme/wetkit_breadcrumbs.theme.inc';
  * Implements hook_menu_breadcrumb_alter().
  */
 function wetkit_breadcrumbs_menu_breadcrumb_alter(&$active_trail, $item) {
-  foreach ($active_trail as $key=>$bcrumb) {
+  foreach ($active_trail as $key => $bcrumb) {
     if ($bcrumb['href'] == '<group>' || $bcrumb['href'] == '<separator>') {
       unset($active_trail[$key]);
     }
@@ -52,7 +52,7 @@ function wetkit_breadcrumbs_apps_app_info() {
 }
 
 /**
- * Configuration Form for WetKit Magic.
+ * Configuration Form for WetKit Breadcrumbs.
  *
  * @param array $form
  *   Nested array of form elements that comprise the form.
@@ -61,22 +61,18 @@ function wetkit_breadcrumbs_apps_app_info() {
  */
 function wetkit_breadcrumbs_configure_form($form, &$form_state) {
   drupal_add_js(drupal_get_path('module', 'system') . '/system.js');
-
   $form = array();
-
   $form['wetkit_breadcrumbs'] = array(
     '#title' => 'Breadcrumb Settings',
     '#type'  => 'fieldset',
     '#collapsible' => 'true',
   );
-
   $form['wetkit_breadcrumbs']['path_breadcrumbs_home_link_enabled'] = array(
     '#type' => 'checkbox',
     '#title' => t('Prepend breadcrumbs with a home link by default'),
     '#default_value' => variable_get('path_breadcrumbs_home_link_enabled', 1),
     '#description' => t('This value does not changes current breadcrumbs navigation. It is just set default value for new path breadcrumbs.'),
   );
-
   $form['wetkit_breadcrumbs']['path_breadcrumbs_home_link_title'] = array(
     '#type' => 'textfield',
     '#title' => t('Home link title'),
@@ -84,7 +80,6 @@ function wetkit_breadcrumbs_configure_form($form, &$form_state) {
     '#description' => t('Title of the link that points to the front page.'),
     '#size' => 30,
   );
-
   $form['#submit'][] = 'wetkit_breadcrumbs_configure_form_submit';
 
   return system_settings_form($form);

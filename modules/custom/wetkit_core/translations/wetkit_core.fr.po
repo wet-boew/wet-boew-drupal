@@ -1,3 +1,5 @@
+# $Id$
+#
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
@@ -8,13 +10,15 @@
 #  wetkit_core.info: n/a
 #  plugins/content_types/querypath_scrape.inc: n/a
 #  plugins/content_types/welcome.inc: n/a
+#  plugins/styles/collapsible.inc: n/a
+#  plugins/styles/tabs.inc: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-03-03 16:06-0500\n"
-"PO-Revision-Date: 2013-03-03 16:06-0500\n"
+"POT-Creation-Date: 2013-04-14 20:19-0400\n"
+"PO-Revision-Date: 2013-04-14 20:19-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -86,48 +90,48 @@ msgstr "Volet de contenu"
 msgid "View panes"
 msgstr "Voir les volets"
 
-#: wetkit_core.module:29
+#: wetkit_core.module:90
 msgid "Thank you for installing the WxT-Drupal Variant for the Web Experience Toolkit. You may login at the following page: <a href=\"@login\">User Login</a>"
 msgstr ""
 "Merci d'avoir installé la variante WXT-Drupal pour la boîte à "
 "outils de l'expérience Web. Vous pouvez vous connecter à la page "
 "suivante: <a href=\"@login\">User Login</a>"
 
-#: wetkit_core.module:30
+#: wetkit_core.module:91
 msgid "For more information please be sure to read the online <a href=\"@documentation\">Documentation</a>"
 msgstr ""
 "Pour plus d'informations s'il vous plaît n'oubliez pas de lire la <a "
 "href=\"@documentation\">Documentation en ligne</a>"
 
-#: wetkit_core.module:64
+#: wetkit_core.module:125
 msgid "Enter \"%nolink\" to generate non-linkable item"
 msgstr "Écrire \"%nolink\" pour générer un item non lié"
 
-#: wetkit_core.module:169;197;221;245
+#: wetkit_core.module:248;276;300;324
 msgid "General Settings"
 msgstr "Paramètres généraux"
 
-#: wetkit_core.module:287
+#: wetkit_core.module:366
 msgid "WetKit Core Settings"
 msgstr ""
 
-#: wetkit_core.module:89
+#: wetkit_core.module:149
 msgid "WetKit Settings"
 msgstr "Paramètres BOEW"
 
-#: wetkit_core.module:90
+#: wetkit_core.module:150
 msgid "Configuration related to WetKit"
 msgstr "Configuration liée à BOEW"
 
-#: wetkit_core.module:107;116
+#: wetkit_core.module:167;176
 msgid "This is the configuration screen for "
 msgstr "Ceci est l'écran de configuration pour "
 
-#: wetkit_core.module:132 wetkit_core.info:0
+#: wetkit_core.module:192 wetkit_core.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 
-#: wetkit_core.module:135
+#: wetkit_core.module:195
 msgid "Workbench"
 msgstr ""
 
@@ -139,128 +143,156 @@ msgstr ""
 msgid "Installs and configures the core modules and settings needed for the WetKit Installation Profile."
 msgstr ""
 
-#: plugins/content_types/querypath_scrape.inc:14
+#: plugins/content_types/querypath_scrape.inc:13
 msgid "Querypath Scrape"
 msgstr ""
 
-#: plugins/content_types/querypath_scrape.inc:15
+#: plugins/content_types/querypath_scrape.inc:14
 msgid "This pane will leverage Querypath to parse data from a remote source using CSS3 Selectors."
 msgstr ""
 "Ce volet tire parti de Querypath pour analyser les données provenant "
 "d'une source externe utilisant les selecteurs CSS3"
 
-#: plugins/content_types/querypath_scrape.inc:17
+#: plugins/content_types/querypath_scrape.inc:16 plugins/content_types/welcome.inc:15
 msgid "WET-BOEW"
 msgstr "WET-BOEW"
 
-#: plugins/content_types/querypath_scrape.inc:78
+#: plugins/content_types/querypath_scrape.inc:77
 msgid "Error: @error"
 msgstr "Erreur : @error"
 
-#: plugins/content_types/querypath_scrape.inc:106
+#: plugins/content_types/querypath_scrape.inc:105
 msgid "Querypath Scrape General Settings"
 msgstr "Paramètre généraux Querypath Scrape"
 
-#: plugins/content_types/querypath_scrape.inc:112
+#: plugins/content_types/querypath_scrape.inc:111
 msgid "Select Parser for QueryPath"
 msgstr ""
 
-#: plugins/content_types/querypath_scrape.inc:114
+#: plugins/content_types/querypath_scrape.inc:113
 msgid "HTML"
 msgstr ""
 
-#: plugins/content_types/querypath_scrape.inc:115
+#: plugins/content_types/querypath_scrape.inc:114
 msgid "XML"
 msgstr ""
 
-#: plugins/content_types/querypath_scrape.inc:118
+#: plugins/content_types/querypath_scrape.inc:117
 msgid "Select the type of parser (XML or HTML) that Queryparth will be using."
 msgstr ""
 "Selectionner le type d'analyseur (XML ou HTML) que Querypath "
 "utilisera."
 
-#: plugins/content_types/querypath_scrape.inc:125
+#: plugins/content_types/querypath_scrape.inc:124
 msgid "Site URL"
 msgstr "URL du site"
 
-#: plugins/content_types/querypath_scrape.inc:128
+#: plugins/content_types/querypath_scrape.inc:127
 msgid "URL to parse using Querypath."
 msgstr "URL à analyser par Querypath."
 
-#: plugins/content_types/querypath_scrape.inc:141
+#: plugins/content_types/querypath_scrape.inc:140
 msgid "Querypath Parameters (GetHTML)"
 msgstr ""
 
-#: plugins/content_types/querypath_scrape.inc:148
+#: plugins/content_types/querypath_scrape.inc:147
 msgid "Elements to Find"
 msgstr "Elements à chercher"
 
-#: plugins/content_types/querypath_scrape.inc:151
+#: plugins/content_types/querypath_scrape.inc:150
 msgid "Element(s) to retrieve with Querypath using CSS3 Selectors."
 msgstr ""
 "Element(s) à recupérer avec Querypath en utilisant les selecteurs "
 "CSS3."
 
-#: plugins/content_types/querypath_scrape.inc:158
+#: plugins/content_types/querypath_scrape.inc:157
 msgid "Add Querypath GetHTML"
 msgstr "Ajouter Querypath GetHTML"
 
-#: plugins/content_types/querypath_scrape.inc:166
+#: plugins/content_types/querypath_scrape.inc:165
 msgid "Remove Querypath GetHTML"
 msgstr "Enlever Querypath GetHTML"
 
-#: plugins/content_types/querypath_scrape.inc:177
+#: plugins/content_types/querypath_scrape.inc:176
 msgid "Querypath Parameters (RemoveHTML)"
 msgstr "Paramètres Querypath (RemoveHTML)"
 
-#: plugins/content_types/querypath_scrape.inc:184
+#: plugins/content_types/querypath_scrape.inc:183
 msgid "Elements to Remove"
 msgstr "Éléments à enlever"
 
-#: plugins/content_types/querypath_scrape.inc:187
+#: plugins/content_types/querypath_scrape.inc:186
 msgid "Element(s) to remove with Querypath using CSS3 Selectors."
 msgstr ""
 "Élément(s) à enlever avec Querypath en utilisant les selecteurs "
 "CSS3."
 
-#: plugins/content_types/querypath_scrape.inc:194
+#: plugins/content_types/querypath_scrape.inc:193
 msgid "Add Querypath RemoveHTML"
 msgstr "Ajouter Querypath RemoveHTML"
 
-#: plugins/content_types/querypath_scrape.inc:202
+#: plugins/content_types/querypath_scrape.inc:201
 msgid "Remove Querypath RemoveHTML"
 msgstr "Enlever Querypath RemoveHTML"
 
-#: plugins/content_types/welcome.inc:12;23
+#: plugins/content_types/welcome.inc:11;22
 msgid "Welcome"
 msgstr "Bienvenue"
 
-#: plugins/content_types/welcome.inc:15;31
+#: plugins/content_types/welcome.inc:14;30
 msgid "Intro to WetKit Dashboard"
 msgstr ""
 
-#: plugins/content_types/welcome.inc:16
-msgid "Dashboard"
-msgstr "Tableau de bord"
-
-#: plugins/content_types/welcome.inc:42
+#: plugins/content_types/welcome.inc:41
 msgid "Welcome to your administrative dashboard.  !panel\n    to add more content panes here, and/or configure those provided by default.\n    Please note that Views content panes can be created for you automatically \n    according to your preferences by changing the !settings settings.  Please\n    tailor this dashboard the faciliatate your administrative needs."
 msgstr ""
 
-#: plugins/content_types/welcome.inc:47
+#: plugins/content_types/welcome.inc:46
 msgid "Edit this panel"
 msgstr ""
 
-#: plugins/content_types/welcome.inc:48
+#: plugins/content_types/welcome.inc:47
 msgid "Total Control"
 msgstr ""
 
-#: plugins/content_types/welcome.inc:52
+#: plugins/content_types/welcome.inc:51
 msgid "wetkit_core"
 msgstr ""
 
-#: plugins/content_types/welcome.inc:53
+#: plugins/content_types/welcome.inc:52
 msgid "WetKit Dashboards"
+msgstr ""
+
+#: plugins/styles/collapsible.inc:9
+msgid "WetKit Collapsible"
+msgstr ""
+
+#: plugins/styles/collapsible.inc:10
+msgid "Allows the panel pane to be collapsed."
+msgstr ""
+
+#: plugins/styles/collapsible.inc:24 views/wetkit_core.admin_content_view.inc:408
+msgid "Title"
+msgstr "Titre"
+
+#: plugins/styles/collapsible.inc:25
+msgid "Title used as clickable text to open / close collapsed region."
+msgstr ""
+
+#: plugins/styles/collapsible.inc:31;44
+msgid "Collapsed by default"
+msgstr ""
+
+#: plugins/styles/tabs.inc:9
+msgid "WetKit Tabs"
+msgstr ""
+
+#: plugins/styles/tabs.inc:10
+msgid "Show panel panes in a region as tabs."
+msgstr ""
+
+#: plugins/styles/tabs.inc:53
+msgid "Tab @delta"
 msgstr ""
 
 #: views/wetkit_core.admin_content_view.inc:390
@@ -310,10 +342,6 @@ msgstr "auteur"
 #: views/wetkit_core.admin_content_view.inc:407
 msgid "term"
 msgstr "terme"
-
-#: views/wetkit_core.admin_content_view.inc:408
-msgid "Title"
-msgstr "Titre"
 
 #: views/wetkit_core.admin_content_view.inc:410
 msgid "Author"

@@ -36,17 +36,23 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
   <?php endif; ?>
   <div id="wb-main" role="main">
     <div id="wb-main-in">
+      <?php if ($content['dallaire_second']): ?>
       <div class="region-dallaire-first span-4">
+      <?php else: ?>
+      <div class="region-dallaire-first span-6">
+      <?php endif; ?>
         <div class="region-inner clearfix">
           <?php print $content['dallaire_first']; ?>
         </div>
       </div>
+      <?php if ($content['dallaire_second']): ?>
       <div class="region-dallaire-second span-2">
         <div class="region-inner clearfix">
           <?php print $content['dallaire_second']; ?>
         </div>
       </div>       
       <div class="clear"></div>
+      <?php endif; ?>
     </div>
   </div>
   <div id="wb-sec">

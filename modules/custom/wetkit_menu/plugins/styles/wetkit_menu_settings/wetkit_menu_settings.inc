@@ -1,8 +1,7 @@
 <?php
-
 /**
  * @file
- * Definition of the 'WetKit Group Menu Items' panel styles.
+ * wetkit_menu_settings.inc
  */
 
 $plugin = array(
@@ -38,7 +37,7 @@ function theme_wetkit_menu_wetkit_menu_settings_render_pane($vars) {
   // Wrap the menu items with markup.
   if (isset($settings['wetkit_menu_settings_wrap_menu_items']) && ($settings['wetkit_menu_settings_wrap_menu_items'] == 1)) {
     $content->content['#content']['#prefix'] = '<ul>';
-    $content->content['#content']['#suffix'] = '</ul>';    
+    $content->content['#content']['#suffix'] = '</ul>';
   }
 
   // Wrap the panel pane with markup.
@@ -61,7 +60,7 @@ function theme_wetkit_menu_wetkit_menu_settings_render_pane($vars) {
       'content' => $content,
       'pane' => $pane,
       'display' => $display,
-    ));  
+    ));
   }
 }
 
@@ -70,7 +69,7 @@ function theme_wetkit_menu_wetkit_menu_settings_render_pane($vars) {
  */
 function wetkit_menu_wetkit_menu_settings_style_settings_form($style_settings) {
 
- $form['wetkit_menu_settings_strip_sub_items'] = array(
+  $form['wetkit_menu_settings_strip_sub_items'] = array(
     '#type' => 'select',
     '#title' => t('Strip all of the sub menu items?'),
     '#options' => array(
@@ -79,7 +78,7 @@ function wetkit_menu_wetkit_menu_settings_style_settings_form($style_settings) {
     ),
     '#default_value' => (isset($style_settings['wetkit_menu_settings_strip_sub_items'])) ? $style_settings['wetkit_menu_settings_strip_sub_items'] : '',
   );
- $form['wetkit_menu_settings_wrap_pane'] = array(
+  $form['wetkit_menu_settings_wrap_pane'] = array(
     '#type' => 'select',
     '#title' => t('Wrap Pane in the following tags?'),
     '#options' => array(
@@ -89,7 +88,7 @@ function wetkit_menu_wetkit_menu_settings_style_settings_form($style_settings) {
     ),
     '#default_value' => (isset($style_settings['wetkit_menu_settings_wrap_pane'])) ? $style_settings['wetkit_menu_settings_wrap_pane'] : '',
   );
- $form['wetkit_menu_settings_wrap_menu_items'] = array(
+  $form['wetkit_menu_settings_wrap_menu_items'] = array(
     '#type' => 'select',
     '#title' => t('Wrap menu links in the following tags?'),
     '#options' => array(

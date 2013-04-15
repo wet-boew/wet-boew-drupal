@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * wetkit_migrate_querypath.inc

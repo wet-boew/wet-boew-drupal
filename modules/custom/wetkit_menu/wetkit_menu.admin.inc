@@ -1,6 +1,7 @@
 <?php
 /**
- * WetKit Menu administration include file for configuration
+ * @file
+ * WetKit Menu administration include file for configuration.
  */
 
 /**
@@ -27,13 +28,13 @@ function wetkit_menu_menu_toggle($menu) {
 }
 
 /**
- * Page callback for admin/settings/wetkit_menu
+ * Page callback for admin/settings/wetkit_menu.
  */
 function wetkit_menu_admin() {
   $form = array();
 
   // Show the current status of the WET library.
-  include_once('includes/install.inc');
+  include_once 'includes/install.inc';
   module_load_include('install', 'wetkit_menu');
   $status = wetkit_menu_requirements('runtime');
   $form['status'] = array(
@@ -58,21 +59,28 @@ function wetkit_menu_admin() {
     else {
       $label = 'No';
     }
-    $row[] = array('data' => l(t($label), 'admin/config/user-interface/wetkit_menu/toggle/' . $menu['menu_name'], array('attributes' => array('title' => t('Toggle this menu')))));
+    $row[] = array(
+      'data' => l(t($label), 'admin/config/user-interface/wetkit_menu/toggle/' . $menu['menu_name'], array('attributes' => array('title' => t('Toggle this menu')))));
     $rows[] = $row;
   }
   $form['menus'] = array(
-    '#markup' => theme('table', array('caption' => t('Menu selection'), 'header' => $header, 'rows' => $rows)),
+    '#markup' => theme('table', array(
+      'caption' => t('Menu selection'),
+      'header' => $header,
+      'rows' => $rows,
+    )),
   );
-
-  // Additional global settings.
 
   // Control which pages are excluded from having megamenus.
   $form['wetkit_menu_exclude_paths'] = array(
     '#type' => 'textarea',
     '#title' => t('Don\'t show WetKit Menu on specific pages'),
     '#default_value' => variable_get('wetkit_menu_exclude_paths', "admin\nadmin/*"),
-    '#description' => t("Specify pages by using their paths. Enter one path per line. The '*' character is a wildcard. Example paths are %blog for the blog page and %blog-wildcard for every personal blog. %front is the front page.", array('%blog' => 'blog', '%blog-wildcard' => 'blog/*', '%front' => '<front>')),
+    '#description' => t("Specify pages by using their paths. Enter one path per line. The '*' character is a wildcard. Example paths are %blog for the blog page and %blog-wildcard for every personal blog. %front is the front page.", array(
+      '%blog' => 'blog',
+      '%blog-wildcard' => 'blog/*',
+      '%front' => '<front>',
+    )),
   );
 
   return system_settings_form($form);
