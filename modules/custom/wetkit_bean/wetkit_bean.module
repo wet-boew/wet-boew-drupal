@@ -76,7 +76,7 @@ function wetkit_bean_configure_form_submit($form, &$form_state) {
 }
 
 /**
- * Helper to manufacture a new Bean of a given type.
+ * Helper function to manufacture a new Bean of a given type.
  *
  * @param string $bean_type
  *   The type of bean to create

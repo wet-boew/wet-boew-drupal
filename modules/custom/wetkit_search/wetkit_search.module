@@ -41,7 +41,7 @@ function wetkit_search_modules_enabled($modules) {
   // If we are running on a WetKit Compatible Server enable Solr support.
   if (in_array('wetkit_search', $modules) && variable_get('wetkit_tier') && module_enable(array('wetkit_solr'))) {
 
-    // Supress the message from enabling Panopoly Apachesolr since we are
+    // Supress the message from enabling Apachesolr since we are
     // configuring it automatically.
     drupal_get_messages('status');
 
@@ -53,7 +53,7 @@ function wetkit_search_modules_enabled($modules) {
     $schema_uri = drupal_get_path('module', 'search_api_solr') . '/schema.xml';
     wetkit_apachesolr_update_schema($schema_uri);
 
-    // Enable Panopoly's Solr Server and Solr Index.
+    // Enable WetKit's Solr Server and Solr Index.
     require_once drupal_get_path('module', 'search_api') . '/search_api.admin.inc';
     $solr_server = search_api_server_load('solr_server');
     $solr_server->update(array('enabled' => 1));

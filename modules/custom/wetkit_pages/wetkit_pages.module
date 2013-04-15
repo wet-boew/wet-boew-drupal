@@ -186,23 +186,24 @@ function wetkit_pages_modules_enabled($modules) {
     drupal_static_reset();
 
     // Define some permissions for the editor role.
-    $editor = user_role_load_by_name('editor');
-    user_role_grant_permissions($editor->rid, array('administer panelizer node wetkit_page breadcrumbs'));
-    user_role_grant_permissions($editor->rid, array('administer panelizer node wetkit_page content'));
-    user_role_grant_permissions($editor->rid, array('administer panelizer node wetkit_page context'));
-    user_role_grant_permissions($editor->rid, array('administer panelizer node wetkit_page defaults'));
-    user_role_grant_permissions($editor->rid, array('administer panelizer node wetkit_page layout'));
-    user_role_grant_permissions($editor->rid, array('administer panelizer node wetkit_page overview'));
-    user_role_grant_permissions($editor->rid, array('administer panelizer node wetkit_page settings'));
-
+    if ($editor = user_role_load_by_name('editor')) {
+      user_role_grant_permissions($editor->rid, array('administer panelizer node wetkit_page breadcrumbs'));
+      user_role_grant_permissions($editor->rid, array('administer panelizer node wetkit_page content'));
+      user_role_grant_permissions($editor->rid, array('administer panelizer node wetkit_page context'));
+      user_role_grant_permissions($editor->rid, array('administer panelizer node wetkit_page defaults'));
+      user_role_grant_permissions($editor->rid, array('administer panelizer node wetkit_page layout'));
+      user_role_grant_permissions($editor->rid, array('administer panelizer node wetkit_page overview'));
+      user_role_grant_permissions($editor->rid, array('administer panelizer node wetkit_page settings'));
+    }
     // Define some permissions for the admin role.
-    $administrator = user_role_load_by_name('administrator');
-    user_role_grant_permissions($administrator->rid, array('administer panelizer node wetkit_page breadcrumbs'));
-    user_role_grant_permissions($administrator->rid, array('administer panelizer node wetkit_page content'));
-    user_role_grant_permissions($administrator->rid, array('administer panelizer node wetkit_page context'));
-    user_role_grant_permissions($administrator->rid, array('administer panelizer node wetkit_page defaults'));
-    user_role_grant_permissions($administrator->rid, array('administer panelizer node wetkit_page layout'));
-    user_role_grant_permissions($administrator->rid, array('administer panelizer node wetkit_page overview'));
-    user_role_grant_permissions($administrator->rid, array('administer panelizer node wetkit_page settings'));
+    if ($administrator = user_role_load_by_name('administrator')) {
+      user_role_grant_permissions($administrator->rid, array('administer panelizer node wetkit_page breadcrumbs'));
+      user_role_grant_permissions($administrator->rid, array('administer panelizer node wetkit_page content'));
+      user_role_grant_permissions($administrator->rid, array('administer panelizer node wetkit_page context'));
+      user_role_grant_permissions($administrator->rid, array('administer panelizer node wetkit_page defaults'));
+      user_role_grant_permissions($administrator->rid, array('administer panelizer node wetkit_page layout'));
+      user_role_grant_permissions($administrator->rid, array('administer panelizer node wetkit_page overview'));
+      user_role_grant_permissions($administrator->rid, array('administer panelizer node wetkit_page settings'));
+    }
   }
 }
