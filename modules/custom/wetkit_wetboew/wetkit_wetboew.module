@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the wetkit_wetboew feature.
+ * wetkit_wetboew.module
  */
 
 include_once 'libraries/wetkit_wetboew.libraries.inc';
@@ -285,7 +285,19 @@ function wetkit_wetboew_theme($existing, $type, $theme, $path) {
  */
 function wetkit_wetboew_preprocess_status_messages(&$variables) {
   global $theme;
-  if ($theme == 'wetkit_adaptivetheme') {
+  global $base_theme_info;
+  $wetkit_base_theme = FALSE;
+  $themekey = 'theme-gcwu-fegc';
+
+  foreach ($base_theme_info as $base) {
+    if (!empty($base->name)) {
+      if ($base->name == 'wetkit_adaptivetheme') {
+        $wetkit_base_theme = TRUE;
+      }
+    }
+  }
+
+  if (($theme == 'wetkit_adaptivetheme')  || ($wetkit_base_theme == TRUE)) {
     $variables['theme_hook_suggestions'][] = 'wetkit_wetboew_status_messages';
   }
 }
@@ -294,5 +306,20 @@ function wetkit_wetboew_preprocess_status_messages(&$variables) {
  * Implements hook_preprocess_tablefield_view().
  */
 function wetkit_wetboew_preprocess_tablefield_view(&$variables) {
-  $variables['theme_hook_suggestions'][] = 'wetkit_wetboew_tablefield_view';
+  global $theme;
+  global $base_theme_info;
+  $wetkit_base_theme = FALSE;
+  $themekey = 'theme-gcwu-fegc';
+
+  foreach ($base_theme_info as $base) {
+    if (!empty($base->name)) {
+      if ($base->name == 'wetkit_adaptivetheme') {
+        $wetkit_base_theme = TRUE;
+      }
+    }
+  }
+
+  if (($theme == 'wetkit_adaptivetheme')  || ($wetkit_base_theme == TRUE)) {
+    $variables['theme_hook_suggestions'][] = 'wetkit_wetboew_tablefield_view';
+  }
 }

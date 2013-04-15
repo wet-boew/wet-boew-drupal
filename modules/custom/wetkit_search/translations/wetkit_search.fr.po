@@ -1,3 +1,5 @@
+# $Id$
+#
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
@@ -14,8 +16,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-09 20:37-0500\n"
-"PO-Revision-Date: 2013-02-09 20:37-0500\n"
+"POT-Creation-Date: 2013-04-14 20:23-0400\n"
+"PO-Revision-Date: 2013-04-14 20:23-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -103,11 +105,11 @@ msgstr "Rechercher"
 msgid "Solr Search Results"
 msgstr "Résultats de la recherche Solr"
 
-#: wetkit_search.install:62
+#: wetkit_search.install:68
 msgid "WetKit has been configured to use a Solr Service"
 msgstr "WetKit a été configuré pour utiliser un service Solr"
 
-#: wetkit_search.install:75
+#: wetkit_search.install:81
 msgid "WetKit's Search DB Search API index has been updated"
 msgstr "WetKit de Recherche DB API de recherche d'index a été mis à jour"
 
@@ -121,7 +123,7 @@ msgstr "Index et recherche dans le contenu du site, Solr ou autre."
 
 #: wetkit_search.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 
 #: plugins/access/search_api_index.inc:9
 msgid "Search API Index"
@@ -161,11 +163,11 @@ msgstr ""
 msgid "Keywords"
 msgstr "Mots-clés"
 
-#: plugins/content_types/facet/facet.inc:60
+#: plugins/content_types/facet/facet.inc:67
 msgid "Facet Type"
 msgstr "Type de Facet"
 
-#: plugins/content_types/search_box/search_box.inc:14;98
+#: plugins/content_types/search_box/search_box.inc:14;101
 msgid "Search form"
 msgstr "Formulaire de recherche"
 
@@ -173,19 +175,19 @@ msgstr "Formulaire de recherche"
 msgid "A search form with options."
 msgstr "Un formulaire de recherche avec les options."
 
-#: plugins/content_types/search_box/search_box.inc:91
+#: plugins/content_types/search_box/search_box.inc:94
 msgid "Search type"
 msgstr "Type de recherche"
 
-#: plugins/content_types/search_box/search_box.inc:100
+#: plugins/content_types/search_box/search_box.inc:103
 msgid "Simple"
 msgstr "Simple"
 
-#: plugins/content_types/search_box/search_box.inc:101
+#: plugins/content_types/search_box/search_box.inc:104
 msgid "Advanced"
 msgstr "Avancé"
 
-#: plugins/content_types/search_box/search_box.inc:104
+#: plugins/content_types/search_box/search_box.inc:107
 msgid "The advanced form may have additional options based upon the search type. For example the advanced content (node) search form will allow searching by node type and taxonomy term."
 msgstr ""
 "Le formulaire avancé peut avoir des options supplémentaires en "
@@ -193,31 +195,31 @@ msgstr ""
 "avancée de contenu (noeud) vous allez pouvoir rechercher par type de "
 "nœud et terme de taxonomie."
 
-#: plugins/content_types/search_box/search_box.inc:110
+#: plugins/content_types/search_box/search_box.inc:113
 msgid "Path"
 msgstr "Chemin"
 
-#: plugins/content_types/search_box/search_box.inc:112
+#: plugins/content_types/search_box/search_box.inc:115
 msgid "Default"
 msgstr "Par défaut"
 
-#: plugins/content_types/search_box/search_box.inc:113
+#: plugins/content_types/search_box/search_box.inc:116
 msgid "Same page"
 msgstr "Même page"
 
-#: plugins/content_types/search_box/search_box.inc:114
+#: plugins/content_types/search_box/search_box.inc:117
 msgid "Custom"
 msgstr "Personnalisé"
 
-#: plugins/content_types/search_box/search_box.inc:130
+#: plugins/content_types/search_box/search_box.inc:133
 msgid "Override default prompt"
 msgstr "Remplacer invite par défaut"
 
-#: plugins/content_types/search_box/search_box.inc:157
+#: plugins/content_types/search_box/search_box.inc:160
 msgid "Missing/broken type"
 msgstr "Type manquant / cassé"
 
-#: plugins/content_types/search_box/search_box.inc:158
+#: plugins/content_types/search_box/search_box.inc:161
 msgid "@type search form"
 msgstr "Formulaire de recherche @type"
 
@@ -229,11 +231,11 @@ msgstr "Recherche actuelle"
 msgid "The count of results for current search."
 msgstr "Le nombre de résultats de la recherche actuelle."
 
-#: plugins/content_types/search_current/search_current.inc:39;44
+#: plugins/content_types/search_current/search_current.inc:39;47
 msgid "!count matched !keys"
 msgstr ""
 
-#: plugins/content_types/search_current/search_current.inc:39;44
+#: plugins/content_types/search_current/search_current.inc:40;48
 msgid "1 item"
 msgid_plural "@count items"
 msgstr[0] "@count élement"

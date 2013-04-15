@@ -47,14 +47,11 @@ projects[linkchecker][version] = 1.x-dev
 projects[linkchecker][type] = module
 projects[linkchecker][subdir] = contrib
 projects[linkchecker][download][type] = git
-projects[linkchecker][download][revision] = 5edcb1c
+projects[linkchecker][download][revision] = 0e7fc34
 projects[linkchecker][download][branch] = 7.x-1.x
 
 projects[menu_attributes][version] = 1.0-rc2
 projects[menu_attributes][subdir] = contrib
-
-projects[menu_views][version] = 1.3
-projects[menu_views][subdir] = contrib
 
 projects[password_policy][version] = 1.3
 projects[password_policy][subdir] = contrib
@@ -121,11 +118,9 @@ projects[tao][download][revision] = f06452b
 projects[tao][download][branch] = 7.x-3.x
 projects[tao][patch][1016844] = http://drupal.org/files/tao_taxonomy_manager-1016844-12.patch
 
-projects[tao][version] = 3.0-beta4
-
 ; Libraries for WetKit
 
 libraries[querypath][download][type] = git
 libraries[querypath][download][branch] = 3.x
-libraries[querypath][download][revision] = 2320739
+libraries[querypath][download][revision] = eeb67cc
 libraries[querypath][download][url] = https://github.com/technosophos/querypath.git

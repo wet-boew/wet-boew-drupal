@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the wetkit_pages module.
+ * wetkit_pages.module
  */
 
 include_once 'wetkit_pages.features.inc';

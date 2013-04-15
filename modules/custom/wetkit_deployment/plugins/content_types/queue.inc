@@ -1,11 +1,7 @@
 <?php
-
 /**
  * @file
- *
- * Welcome panel content type. Displays a summary of content statistics 
- * including: number pieces of each type of content, number of comments, 
- * number of blocked comments (spam) and configuration links.
+ * queue.inc
  */
 
 /**

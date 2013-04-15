@@ -1,3 +1,5 @@
+# $Id$
+#
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
@@ -9,8 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-09 20:37-0500\n"
-"PO-Revision-Date: 2013-02-09 20:37-0500\n"
+"POT-Creation-Date: 2013-04-14 20:23-0400\n"
+"PO-Revision-Date: 2013-04-14 20:23-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -18,53 +20,49 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: wetkit_wysiwyg.module:25
+#: wetkit_wysiwyg.module:33
 msgid "Show Text Formatter Details"
 msgstr "Voir les détails du formateur de texte"
 
-#: wetkit_wysiwyg.module:33
+#: wetkit_wysiwyg.module:41
 msgid "Do you want WetKit to show the help text and text format guidelines?"
 msgstr ""
 "Voulez-vous que WetKit affiche le texte d'aide et le guide de "
 "formatage de texte?"
 
-#: wetkit_wysiwyg.module:57
-msgid "Kitchen Sink"
-msgstr "Tout le reste"
-
-#: wetkit_wysiwyg.module:65
+#: wetkit_wysiwyg.module:64
 msgid "Spell Check"
 msgstr "Correcteur orthographique"
 
-#: wetkit_wysiwyg.module:79;85
+#: wetkit_wysiwyg.module:78;84
 msgid "WetKit Cleanup Tools"
 msgstr "Wetkit Outils de Nettoyage"
 
-#: wetkit_wysiwyg.module:252
+#: wetkit_wysiwyg.module:305
 msgid "Heading 1"
 msgstr "En-tête 1"
 
-#: wetkit_wysiwyg.module:260
+#: wetkit_wysiwyg.module:313
 msgid "Heading 2"
 msgstr "En-tête 2"
 
-#: wetkit_wysiwyg.module:268
+#: wetkit_wysiwyg.module:321
 msgid "Heading 3"
 msgstr "En-tête 3"
 
-#: wetkit_wysiwyg.module:276
+#: wetkit_wysiwyg.module:329
 msgid "Heading 4"
 msgstr "En-tête 4"
 
-#: wetkit_wysiwyg.module:284
+#: wetkit_wysiwyg.module:337
 msgid "Paragraph"
 msgstr "Paragraphe"
 
-#: wetkit_wysiwyg.module:298
+#: wetkit_wysiwyg.module:351
 msgid "Unordered List"
 msgstr "Liste non ordonnée"
 
-#: wetkit_wysiwyg.module:304
+#: wetkit_wysiwyg.module:357
 msgid "Ordered List"
 msgstr "Liste ordonnée"
 
@@ -78,7 +76,7 @@ msgstr "Intégrer un WYSIWYG  à Drupal."
 
 #: wetkit_wysiwyg.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 
 #: plugins/wysiwyg/wetkitcleanup/js/acronym.js:0
 msgid "If this doesn't run, it's probably due to a bug in IE. Try running this again."

@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the WetKit Deployment Deployment feature.
+ * wetkit_deployment.module
  */
 
 include_once 'wetkit_deployment.features.inc';
@@ -27,10 +27,10 @@ function wetkit_deployment_entity_uuid_load(&$entities, $entity_type) {
       $panelizer = $entity->panelizer;
       unset($entity->panelizer);
 
-      $panelizer = (array)$panelizer;
+      $panelizer = (array) $panelizer;
       $panelizer['entity_type'] = $entity_type;
       $panelizer['display_is_modified'] = TRUE;
-      $panelizer = (object)$panelizer;
+      $panelizer = (object) $panelizer;
 
       // No need to save revisions: panelizer code is stored directly
       // in its entity. NULL values also should be removed.
@@ -77,11 +77,11 @@ function wetkit_deployment_menu() {
     'expanded' => TRUE,
   );
   $items['wetkit_deployment_ajax/%ctools_js/%'] = array(
-      'type' => MENU_NORMAL_ITEM,
-      'title' => 'Modal dialog for deployed content',
-      'page arguments' => array(1, 2),
-      'page callback' => '_wetkit_deployment_modal',
-      'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+    'title' => 'Modal dialog for deployed content',
+    'page arguments' => array(1, 2),
+    'page callback' => '_wetkit_deployment_modal',
+    'access callback' => TRUE,
   );
   return $items;
 }
@@ -89,7 +89,7 @@ function wetkit_deployment_menu() {
 /**
  * Page callback for the simplest introduction menu entry.
  *
- * @param $content
+ * @param object $context
  *   Some content passed in.
  */
 function _wetkit_deployment_deploy($context = NULL) {
@@ -107,16 +107,19 @@ function _wetkit_deployment_deploy($context = NULL) {
  * Implements hook_ajax_render_alter().
  */
 function wetkit_deployment_ajax_render_alter(&$commands) {
-  //unset($commands[1]);
+  // unset($commands[1]);
 }
+
 /**
  * A modal static page callback.
- * @param $js
- *   boolean CTools determination whether the user's browser is javascript enabled. 
- * @param $nid
- *   string The node ID of passed as an argument from the hook_menu() path
- * @return
- *   string The contents of the node, that will fill the modal window.
+ *
+ * @param bool $js
+ *   Determine whether the user's browser is javascript enabled. 
+ * @param int $nid
+ *   The node ID of passed as an argument from the hook_menu() path
+ *
+ * @return string
+ *   The contents of the node, that will fill the modal window.
  */
 function _wetkit_deployment_modal($js = NULL, $nid = NULL) {
   if ($nid == NULL) {
@@ -129,12 +132,9 @@ function _wetkit_deployment_modal($js = NULL, $nid = NULL) {
     ctools_include('ajax');
     ctools_include('modal');
   }
-  // Load the node obkect
+  // Load the node object.
   $node = node_load($nid);
-  // Drupal 7 requires a render of the node object in order to obtain a string.
-  // Note that I am able to customize the fields by using the "Teaser" display mode 
-  // under admin/structure/types.
-  //$contents = render(node_view($node, 'teaser', NULL));
+
   return ctools_modal_render($node->title, '<p>Sample Body Content</p>');
 }
 
@@ -158,10 +158,9 @@ function wetkit_deployment_theme() {
 /**
  * Allow modules to modify an entity before it gets deployed.
  *
- * @param $entity
+ * @param object $entity
  *   The entity being deployed.
- *
- * @param $entity_type
+ * @param object $entity_type
  *   The entity type; e.g. 'node' or 'user'.
  */
 function wetkit_deployment_deploy_entity_alter(&$entity, $entity_type) {

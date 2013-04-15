@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the WetKit Demo feature.
+ * wetkit_demo.module
  */
 
 include_once 'wetkit_demo.features.inc';
@@ -23,13 +23,9 @@ function wetkit_demo_ctools_plugin_directory($module, $plugin) {
 
 /**
  * Implements hook_link_alter().
- *
- * This is a clever workaround for some notice errors that
- * we introduced in Panopoly Admin RC3. This function can be
- * removed with the next version of Panopoly. More information
- * is here - http://drupal.org/node/1838084
  */
 function wetkit_demo_menu_link_alter(&$item) {
+  // This is a clever workaround for some notice errors related to PathAuto.
   if (empty($item['path'])) {
     $item['path'] = $item['link_path'];
   }
