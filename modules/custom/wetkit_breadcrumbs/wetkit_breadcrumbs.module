@@ -52,7 +52,7 @@ function wetkit_breadcrumbs_apps_app_info() {
 }
 
 /**
- * Configuration Form for WetKit Magic.
+ * Configuration Form for WetKit Breadcrumbs.
  *
  * @param array $form
  *   Nested array of form elements that comprise the form.

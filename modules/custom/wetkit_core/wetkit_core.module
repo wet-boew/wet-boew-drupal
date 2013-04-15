@@ -348,7 +348,7 @@ function wetkit_core_apps_app_info() {
 }
 
 /**
- * Configuration Form for WetKit Magic.
+ * Configuration Form for WetKit Core.
  *
  * @param array $form
  *   Nested array of form elements that comprise the form.

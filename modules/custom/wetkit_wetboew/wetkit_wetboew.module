@@ -117,7 +117,7 @@ function wetkit_wetboew_apps_app_info() {
 }
 
 /**
- * Configuration Form for WetKit Magic.
+ * Configuration Form for WetKit WET-BOEW.
  *
  * @param array $form
  *   Nested array of form elements that comprise the form.

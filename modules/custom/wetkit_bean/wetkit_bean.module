@@ -30,7 +30,7 @@ function wetkit_bean_apps_app_info() {
 }
 
 /**
- * Configuration Form for WetKit WYSIWYG.
+ * Configuration Form for WetKit Bean.
  */
 function wetkit_bean_configure_form($form, &$form_state) {
   $form = array();
