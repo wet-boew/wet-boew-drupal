@@ -1,12 +1,10 @@
 <?php
-
-
 /**
  * @file
  * Definition of the 'Tabs' panel style.
  */
 
-// Plugin definition
+// Plugin definition.
 $plugin = array(
   'title' => t('WetKit Tabs'),
   'description' => t('Show panel panes in a region as tabs.'),
@@ -53,7 +51,7 @@ function theme_wetkit_core_tabs_style_render_region($vars) {
     if (!empty($panes[$pane_id])) {
       $title = wetkit_core_pane_titles($display->did, $pane_id);
       $title = $title ? $title : t('Tab @delta', array('@delta' => $delta));
-      $items[] = '<a href="#'. $tab_id . '-' . $delta .'">' . $title . '</a>';
+      $items[] = '<a href="#' . $tab_id . '-' . $delta . '">' . $title . '</a>';
       ++$delta;
     }
   }

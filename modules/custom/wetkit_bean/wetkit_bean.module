@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the WetKit Bean feature.
+ * wetkit_bean.module
  */
 
 include_once 'wetkit_bean.default_content.inc';
@@ -30,29 +30,24 @@ function wetkit_bean_apps_app_info() {
 }
 
 /**
- * Configuration Form for WetKit WYSIWYG.
+ * Configuration Form for WetKit Bean.
  */
 function wetkit_bean_configure_form($form, &$form_state) {
   $form = array();
-
   $form['wetkit_bean'] = array(
     '#title' => 'Override Settings',
     '#type'  => 'fieldset',
     '#collapsible' => 'true',
   );
-
   $form['wetkit_bean']['rebuild_menu_description'] = array(
     '#markup' => '<p>' . t('Rebuild the beans on the site using demo content.') . '</p>',
   );
-
   $form['wetkit_bean']['rebuild_menu'] = array(
     '#type' => 'submit',
     '#value' => t('Rebuild Default Bean(s)'),
     '#weight' => 19,
   );
-
   $form['#submit'][] = 'wetkit_bean_configure_form_submit';
-
   return system_settings_form($form);
 }
 
@@ -66,7 +61,7 @@ function wetkit_bean_configure_form($form, &$form_state) {
  */
 function wetkit_bean_configure_form_submit($form, &$form_state) {
   if ($form_state['values']['op'] == t('Rebuild Default Bean(s)')) {
-    // Delete Beans if exist.
+    // Delete Beans if they exist already in the system.
     wetkit_bean_delete_bean('Minister');
     wetkit_bean_delete_bean('Priorities');
     wetkit_bean_delete_bean('Stay-Connected');
@@ -81,7 +76,7 @@ function wetkit_bean_configure_form_submit($form, &$form_state) {
 }
 
 /**
- * Helper to manufacture a new Bean of a given type.
+ * Helper function to manufacture a new Bean of a given type.
  *
  * @param string $bean_type
  *   The type of bean to create
@@ -198,7 +193,6 @@ function wetkit_bean_form_alter(&$form, &$form_state, $form_id) {
 
   // Create the General Settings Fieldset.
   if ($form_id == 'bean_panels_bean_panels_content_type_edit_form') {
-    // Create General Settings Fieldset.
     $form['general_settings'] = array(
       '#type' => 'fieldset',
       '#title' => t('General Settings'),

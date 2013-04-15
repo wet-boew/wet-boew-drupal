@@ -1,3 +1,5 @@
+# $Id$
+#
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from file: wetkit_images.info: n/a
@@ -6,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-09 20:34-0500\n"
-"PO-Revision-Date: 2013-02-09 20:34-0500\n"
+"POT-Creation-Date: 2013-04-14 20:19-0400\n"
+"PO-Revision-Date: 2013-04-14 20:19-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -20,10 +22,10 @@ msgid "WetKit Images"
 msgstr "Images BOEW"
 
 #: wetkit_images.info:0
-msgid "Provides scaling and cropping to images."
-msgstr "Effectue la mise à l’échelle et le recadrage des images."
+msgid "Provides scaling and cropping to images and other functionality."
+msgstr ""
 
 #: wetkit_images.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 

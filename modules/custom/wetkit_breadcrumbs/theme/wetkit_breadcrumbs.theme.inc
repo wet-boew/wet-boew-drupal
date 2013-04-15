@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * theme.inc
+ * wetkit_breadcrumbs.theme.inc
  */
 
 /**
