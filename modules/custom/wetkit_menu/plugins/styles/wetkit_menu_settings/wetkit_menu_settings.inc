@@ -1,8 +1,7 @@
 <?php
-
 /**
  * @file
- * Definition of the 'WetKit Group Menu Items' panel styles.
+ * wetkit_menu_settings.inc
  */
 
 $plugin = array(

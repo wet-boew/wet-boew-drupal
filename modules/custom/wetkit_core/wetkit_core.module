@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the wetkit_core feature.
+ * wetkit_core.module
  */
 
 include_once 'wetkit_core.block.inc';
@@ -47,7 +47,7 @@ function wetkit_core_panels_pane_content_alter(&$content, $pane, $args, $context
     if (!empty($values['style']) && $values['style'] == 'tabs' && $pane->panel == $key && !empty($content->title)) {
       // Capture the title.
       wetkit_core_pane_titles($display->did, $pane->pid, $content->title);
-      // Remove it form the pane.
+      // Remove the title from the pane.
       $content->title = '';
     }
   }
@@ -85,7 +85,7 @@ function wetkit_core_page_build() {
     drupal_flush_all_caches();
     variable_set('wetkit_core_load', 0);
   }
-  // Set Documentation Text.
+  // Some Default messages to let the user know where to begin.
   if ((variable_get('wetkit_core_doc', 1) == 1)) {
     drupal_set_message(t('Thank you for installing the WxT-Drupal Variant for the Web Experience Toolkit. You may login at the following page: <a href="@login">User Login</a>', array('@login' => url('user'))), 'status');
     drupal_set_message(t('For more information please be sure to read the online <a href="@documentation">Documentation</a>', array('@documentation' => url('https://github.com/wet-boew/wet-boew-drupal/wiki'))), 'warning');
@@ -102,7 +102,7 @@ function wetkit_core_page_build() {
  * Implements hook_menu_edit_item_alter().
  */
 function wetkit_core_page_alter(&$page) {
-  // Hide Toolbar for those who can access the Admin Menu.
+  // Hide Toolbar for those who have permissions to access the Admin Menu.
   if (user_access('access administration menu') && !empty($page['page_top']['toolbar'])) {
     $page['page_top']['toolbar']['#access'] = FALSE;
   }
@@ -130,14 +130,14 @@ function wetkit_core_form_menu_edit_item_alter(&$form, &$form_state) {
  * Implements hook_menu().
  */
 function wetkit_core_menu() {
-  // Add an dummy menu item.
+  // Add an menu item that will render without an a href.
   $items['<nolink>'] = array(
     'page callback' => 'drupal_not_found',
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
   );
 
-  // Add an dummy menu item.
+  // Add an menu item that can be used with mini panels.
   $items['<minipanel>'] = array(
     'page callback' => 'drupal_not_found',
     'access callback' => TRUE,

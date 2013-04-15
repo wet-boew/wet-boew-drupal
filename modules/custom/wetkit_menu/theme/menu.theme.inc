@@ -1,8 +1,7 @@
 <?php
-
 /**
  * @file
- * Menu Block support for Web Experience Toolkit.
+ * menu.theme.inc
  */
 
 /**

@@ -1,6 +1,4 @@
 <?php
-
-
 /**
  * @file
  * Definition of the collapsible panel style.

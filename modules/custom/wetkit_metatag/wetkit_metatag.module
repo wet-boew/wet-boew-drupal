@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Metatag integration for the wetkit_metatag module.
+ * wetkit_metatag.module
  */
 
 include_once 'wetkit_metatag.features.inc';

@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the wetkit_breadcrumbs feature.
+ * wetkit_breadcrumbs.module
  */
 
 include_once 'wetkit_breadcrumbs.features.inc';

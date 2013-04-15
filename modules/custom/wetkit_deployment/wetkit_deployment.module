@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the WetKit Deployment Deployment feature.
+ * wetkit_deployment.module
  */
 
 include_once 'wetkit_deployment.features.inc';

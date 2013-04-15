@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the WetKit Menu feature.
+ * wetkit_menu.module
  */
 
 include_once 'wetkit_menu.features.inc';
