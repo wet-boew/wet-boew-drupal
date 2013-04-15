@@ -5,8 +5,8 @@ core = 7.x
 
 ; The WYSIWYG Module Family
 
+projects[wysiwyg][version] = 2.x-dev
 projects[wysiwyg][subdir] = contrib
-projects[wysiwyg][version] = 2.2
 projects[wysiwyg][download][type] = git
 projects[wysiwyg][download][revision] = fd4f652
 projects[wysiwyg][download][branch] = 7.x-2.x
