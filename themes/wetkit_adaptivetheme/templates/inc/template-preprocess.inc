@@ -150,6 +150,8 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
   }
   else {
     $theme_prefix = 'wet';
+    $variables['site_name_frontpage'] = '/' . variable_get('site_frontpage', 'node');
+    $variables['site_name'] = $variables['site_name_title'];
   }
 
   // Custom Logic Based on Theme Selection.

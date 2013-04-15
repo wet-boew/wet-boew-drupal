@@ -102,12 +102,16 @@
                   <div id="gcwu-sig-in">
                     <?php if ($language->language == 'en'): ?>
                       <div id="gcwu-sig-eng" title="Government of Canada">
-                        <img src="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-fegc/images/sig-eng.gif" width="214" height="20" alt="Government of Canada">
+                        <object data="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-intranet/images/sig-blk-eng.svg" role="img" tabindex="-1" aria-label="Government of Canada" type="image/svg+xml">
+                          <img src="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-intranet/images/sig-eng.png" alt="Government of Canada" />
+                        </object>
                       </div>
                     <?php endif;?>
                     <?php if ($language->language == 'fr'): ?>
                       <div id="gcwu-sig-fra" title="Gouvernement du Canada">
-                        <img src="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-fegc/images/sig-fra.gif" width="214" height="20" alt="Gouvernement du Canada">
+                        <object data="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-intranet/images/sig-blk-fra.svg" role="img" tabindex="-1" aria-label="Gouvernement du Canada" type="image/svg+xml">
+                          <img src="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-intranet/images/sig-fra.png" alt="Gouvernement du Canada" />
+                        </object>
                       </div>
                     <?php endif;?>
                   </div>
@@ -115,10 +119,14 @@
                 <div id="gcwu-wmms">
                   <div id="gcwu-wmms-in">
                     <?php if ($language->language == 'en'): ?>
-                    <div id="gcwu-wmms-fip" title="Symbol of the Government of Canada"><img src="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbol of the Government of Canada"></div>
+                      <object data="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-intranet/images/wmms-intra.svg" role="img" tabindex="-1" aria-label="Symbol of the Government of Canada" type="image/svg+xml">
+                        <img src="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-intranet/images/wmms.png" alt="Symbol of the Government of Canada" />
+                      </object>
                     <?php endif;?>
                     <?php if ($language->language == 'fr'): ?>
-                    <div id="gcwu-wmms-fip" title="Symbole du gouvernement du Canada"><img src="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbole du gouvernement du Canada"></div>
+                      <object data="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-intranet/images/wmms-intra.svg" role="img" tabindex="-1" aria-label="Symbole du gouvernement du Canada" type="image/svg+xml">
+                        <img src="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-intranet/images/wmms.png" alt="Symbole du gouvernement du Canada" />
+                      </object>
                     <?php endif;?>
                   </div>
                 </div>
