@@ -31,7 +31,6 @@ function wetkit_core_theme() {
   );
 }
 
-
 /**
  * Implements hook_panels_pane_content_alter().
  *
@@ -358,15 +357,12 @@ function wetkit_core_apps_app_info() {
  */
 function wetkit_core_configure_form($form, &$form_state) {
   drupal_add_js(drupal_get_path('module', 'system') . '/system.js');
-
   $form = array();
-
   $form['wetkit_core'] = array(
     '#type' => 'fieldset',
     '#title' => t('WetKit Core Settings'),
     '#collapsible' => TRUE,
   );
-
   $form['#submit'][] = 'wetkit_core_configure_form_submit';
 
   return system_settings_form($form);

@@ -33,22 +33,6 @@ function wetkit_widgets_ctools_plugin_directory($module, $plugin) {
 }
 
 /**
- * Implements hook_field_widget_form_alter().
- *
- * Create default values on fieldable_panels_pane fields when appropriate.
- */
-function wetkit_widgets_field_widget_form_alter(&$element, &$form_state, $context) {
-
-}
-
-/**
- * Implements hook_form_alter().
- */
-function wetkit_widgets_form_alter(&$form, &$form_state, $form_id) {
-
-}
-
-/**
  * Implement the "Content Settings" fieldset in a pre-render.
  *
  * @see http://drupal.org/node/1567704
