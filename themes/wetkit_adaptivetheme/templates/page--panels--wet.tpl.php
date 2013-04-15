@@ -101,7 +101,14 @@
             <?php if ($site_name || $site_slogan): ?>
               <div id="wet-title">
                 <?php if ($site_name): ?>
-                  <p id="wet-title-in"><?php print $site_name; ?></p>
+                  <p id="wet-title-in">
+                    <a href="<?php print $site_name_frontpage; ?>">
+                      <object data="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-wet-boew/images/logo.svg" role="img" tabindex="-1" type="image/svg+xml">
+                        <img src="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-wet-boew/images/logo.png" alt="" />
+                      </object>
+                      <span><?php print $site_name; ?></span>
+                    </a>
+                  </p>
                 <?php endif; ?>
                 <?php if ($site_slogan): ?>
                   <h2 id="site-slogan"<?php print $site_slogan_attributes; ?>><?php print $site_slogan; ?></h2>
