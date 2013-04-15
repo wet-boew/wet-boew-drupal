@@ -1,3 +1,5 @@
+# $Id$
+#
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
@@ -10,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-06 00:28-0500\n"
-"PO-Revision-Date: 2013-02-06 00:28-0500\n"
+"POT-Creation-Date: 2013-04-14 20:25-0400\n"
+"PO-Revision-Date: 2013-04-14 20:25-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -19,29 +21,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: template.php:80
+#: template.php:91
 msgid "(active tab)"
 msgstr "(onglet actif)"
 
-#: template.php:88
+#: template.php:99
 msgid "!local-task-title!active"
 msgstr "!local-task-title!active"
 
-#: template.php:121
+#: template.php:132
 msgid "More help topics"
 msgstr "Plus de sujets d'aide"
 
-#: theme-settings.php:29
+#: theme-settings.php:25
 msgid "Show User Menu in Top Right Corner"
 msgstr "Afficher le menu utilisateur en haut à droite"
 
-#: theme-settings.php:35
+#: theme-settings.php:31
 msgid "Display form field descriptions inline."
 msgstr "Afficher champ de formulaire descriptions en ligne."
 
-#: theme-settings.php:36
+#: theme-settings.php:32
 msgid "By default, each field's description is displayed in a pop-up, which is only visible when hovering over that field. Select this option to make all field descriptions visible at all times."
-msgstr "Par défaut, la description individuelle des champs est affichée dans un pop-up, visible seulement lorsque l'usager survol ce champ. Selectionnez cette option afin d'afficher les descriptions en tout temps."
+msgstr ""
+"Par défaut, la description individuelle des champs est affichée dans "
+"un pop-up, visible seulement lorsque l'usager survol ce champ. "
+"Selectionnez cette option afin d'afficher les descriptions en tout "
+"temps."
 
 #: wetkit_rubik.info:0
 msgid "WetKit Rubik"
@@ -49,7 +55,9 @@ msgstr "BOEW Rubik"
 
 #: wetkit_rubik.info:0
 msgid "WetKit Rubik is a Rubik based sub-theme with a few enhancements and accessibility improvements."
-msgstr "BOEW Rubik est un sous-thème basé sur Rubik incluant des améliorations d'accessbilité."
+msgstr ""
+"BOEW Rubik est un sous-thème basé sur Rubik incluant des "
+"améliorations d'accessbilité."
 
 #: wetkit_rubik.info:0
 msgid "Content"
@@ -79,7 +87,7 @@ msgstr "Seconde barre latérale"
 msgid "Footer"
 msgstr "Pied de page"
 
-#: templates/page.tpl.php:61
+#: templates/page.tpl.php:67
 msgid "Feeds"
 msgstr "Fils de nouvelles"
 

@@ -1,3 +1,5 @@
+# $Id$
+#
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
@@ -13,8 +15,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-03-03 16:06-0500\n"
-"PO-Revision-Date: 2013-03-03 16:06-0500\n"
+"POT-Creation-Date: 2013-04-14 20:23-0400\n"
+"PO-Revision-Date: 2013-04-14 20:23-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -66,33 +68,41 @@ msgstr ""
 "Mégamenu <em>principal</em> de la Boîte à outils de l'expérience "
 "Web"
 
-#: wetkit_wetboew.module:134
+#: wetkit_wetboew.module:135
 msgid "WetKit Theme Selection"
 msgstr "Sélection d'un thème BOEW"
 
-#: wetkit_wetboew.module:140
+#: wetkit_wetboew.module:141
 msgid "Please choose the appropriate WET theme."
 msgstr "S'il vous plaît choisir le thème appropriée pour WET."
 
-#: wetkit_wetboew.module:142
+#: wetkit_wetboew.module:143
 msgid "Internet"
 msgstr "Internet"
 
-#: wetkit_wetboew.module:143
+#: wetkit_wetboew.module:144
 msgid "Intranet"
 msgstr "Intranet"
 
-#: wetkit_wetboew.module:144
+#: wetkit_wetboew.module:145
 msgid "Base Theme"
 msgstr "Thème de base"
 
-#: wetkit_wetboew.module:147
+#: wetkit_wetboew.module:148
 msgid "This will change the Drupal theme by adding custom css and logic for various WET based themes"
 msgstr ""
 "Cela va changer le thème de Drupal en ajoutant css personnalisé et "
 "logique pour divers thèmes basés sur WET"
 
-#: wetkit_wetboew.module:81;90
+#: wetkit_wetboew.module:152
+msgid "Rebuild the Menus on the site using demo content."
+msgstr ""
+
+#: wetkit_wetboew.module:157;176
+msgid "Rebuild Default Menu(s)"
+msgstr ""
+
+#: wetkit_wetboew.module:82;91
 msgid "This is the configuration screen for "
 msgstr "Ceci est l'écran de configuration pour "
 
