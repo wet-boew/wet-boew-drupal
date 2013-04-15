@@ -31,7 +31,6 @@ function wetkit_core_theme() {
   );
 }
 
-
 /**
  * Implements hook_panels_pane_content_alter().
  *
@@ -349,7 +348,7 @@ function wetkit_core_apps_app_info() {
 }
 
 /**
- * Configuration Form for WetKit Magic.
+ * Configuration Form for WetKit Core.
  *
  * @param array $form
  *   Nested array of form elements that comprise the form.
@@ -358,22 +357,22 @@ function wetkit_core_apps_app_info() {
  */
 function wetkit_core_configure_form($form, &$form_state) {
   drupal_add_js(drupal_get_path('module', 'system') . '/system.js');
-
   $form = array();
-
   $form['wetkit_core'] = array(
     '#type' => 'fieldset',
     '#title' => t('WetKit Core Settings'),
     '#collapsible' => TRUE,
   );
-
+  $form['wetkit_core']['future_options'] = array(
+    '#markup' => '<p>' . t('Future options will appear here to configure WetKit Core.') . '</p>',
+  );
   $form['#submit'][] = 'wetkit_core_configure_form_submit';
 
   return system_settings_form($form);
 }
 
 /**
- * Handle submission of the WetKit Web Usability configuration page.
+ * Handle submission of the WetKit Core configuration page.
  *
  * @param array $form
  *   Nested array of form elements that comprise the form.

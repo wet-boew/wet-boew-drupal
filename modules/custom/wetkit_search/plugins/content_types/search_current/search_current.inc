@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Definition of the 'curent search' panel content type
@@ -26,7 +25,6 @@ $plugin = array(
  * Render the custom content type.
  */
 function wetkit_search_search_current_content_type_render($subtype, $conf, $panel_args, $context) {
-
   $keys = (empty($context) || empty($context->data)) ? '' : $context->data;
 
   $pane = new stdClass();

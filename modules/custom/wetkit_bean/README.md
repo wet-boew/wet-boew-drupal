@@ -8,4 +8,3 @@ Key Features
 * Integrates Entity Translation with Bean
 * Migrates some default beans for use as default content
 * Uses Beans Panels for integration with Panels + Panels IPE
-* Translation Support

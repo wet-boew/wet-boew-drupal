@@ -11,7 +11,7 @@ projects[panopoly_core][download][type] = git
 projects[panopoly_core][download][revision] = 192ed62
 projects[panopoly_core][download][branch] = 7.x-1.x
 projects[panopoly_core][patch][1967250] = http://drupal.org/files/field_info_collate_fields-1967250-02.patch
-projects[panopoly_core][patch][1967238] = http://drupal.org/files/panopoly_core_make-1967238-01.patch
+projects[panopoly_core][patch][1967238] = http://drupal.org/files/panopoly_core_make-1967238-02.patch
 
 projects[panopoly_images][version] = 1.x-dev
 projects[panopoly_images][subdir] = panopoly

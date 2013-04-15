@@ -107,7 +107,6 @@ function wetkit_wetboew_ctools_plugin_directory($module, $plugin) {
   return 'plugins/' . $plugin;
 }
 
-
 /**
  * Implements hook_apps_app_info().
  */
@@ -118,7 +117,7 @@ function wetkit_wetboew_apps_app_info() {
 }
 
 /**
- * Configuration Form for WetKit Magic.
+ * Configuration Form for WetKit WET-BOEW.
  *
  * @param array $form
  *   Nested array of form elements that comprise the form.
@@ -127,15 +126,12 @@ function wetkit_wetboew_apps_app_info() {
  */
 function wetkit_wetboew_configure_form($form, &$form_state) {
   drupal_add_js(drupal_get_path('module', 'system') . '/system.js');
-
   $form = array();
-
   $form['wetkit_wetboew'] = array(
     '#type' => 'fieldset',
     '#title' => t('WetKit Theme Selection'),
     '#collapsible' => TRUE,
   );
-
   $form['wetkit_wetboew']['wetkit_wetboew_theme'] = array(
     '#type' => 'select',
     '#title' => t('Please choose the appropriate WET theme.'),
@@ -147,18 +143,15 @@ function wetkit_wetboew_configure_form($form, &$form_state) {
     '#default_value' => variable_get('wetkit_wetboew_theme', 0),
     '#description' => t('This will change the Drupal theme by adding custom css and logic for various WET based themes'),
   );
-
   $form['wetkit_wetboew']['wetkit_wetboew_menus_description'] = array(
     '#markup' => '<p>' . t('Rebuild the Menus on the site using demo content.') . '</p>',
   );
-
   $form['wetkit_wetboew']['wetkit_wetboew_menus'] = array(
     '#type' => 'submit',
     '#value' => t('Rebuild Default Menu(s)'),
     '#weight' => 19,
     '#submit' => array('wetkit_wetboew_menus_submit'),
   );
-
   $form['#submit'][] = 'wetkit_wetboew_configure_form_submit';
 
   return system_settings_form($form);

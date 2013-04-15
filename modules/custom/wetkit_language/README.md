@@ -7,4 +7,3 @@ Key Features
 * Integration with Entity Translation
 * Custom bilingual tokens
 * Language Switcher
-* Translation Support
