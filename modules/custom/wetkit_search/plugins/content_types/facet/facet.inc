@@ -27,7 +27,6 @@ $plugin = array(
  *   The returned string for the facets related to WetKit Search.
  */
 function wetkit_search_facet_content_type_edit_form($form, &$form_state) {
-
   // Determine what deltas Facet API Supports.
   $map = facetapi_get_delta_map();
   $deltas = array();

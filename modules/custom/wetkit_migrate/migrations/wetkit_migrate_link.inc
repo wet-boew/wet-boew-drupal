@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * migrate_wetkit_links.inc

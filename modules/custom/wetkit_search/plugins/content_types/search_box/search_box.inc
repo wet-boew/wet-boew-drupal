@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Definition of the 'search form' panel content type
@@ -29,7 +28,6 @@ $plugin = array(
  * Render the custom content type.
  */
 function wetkit_search_search_box_content_type_render($subtype, $conf, $panel_args, $context) {
-
   if (empty($context) || empty($context->data)) {
     $keys = '';
   }

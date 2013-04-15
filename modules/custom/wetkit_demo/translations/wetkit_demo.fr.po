@@ -1,3 +1,5 @@
+# $Id$
+#
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
@@ -8,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-09 20:34-0500\n"
-"PO-Revision-Date: 2013-02-09 20:34-0500\n"
+"POT-Creation-Date: 2013-04-14 20:19-0400\n"
+"PO-Revision-Date: 2013-04-14 20:19-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -123,5 +125,5 @@ msgstr ""
 
 #: wetkit_demo.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 

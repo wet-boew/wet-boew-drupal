@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the WetKit Layout.
+ * wetkit_migrate.module
  */
 
 include_once 'wetkit_migrate.features.inc';
@@ -34,11 +34,4 @@ function wetkit_migrate_menu() {
   );
 
   return $items;
-}
-
-/**
- * Implements hook_init().
- */
-function wetkit_migrate_init() {
-
 }

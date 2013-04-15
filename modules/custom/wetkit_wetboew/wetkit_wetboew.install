@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * An installation file for WetKit WET-BOEW.
+ * wetkit_wetboew.install
  */
 
 include_once 'wetkit_wetboew.menus.inc';
