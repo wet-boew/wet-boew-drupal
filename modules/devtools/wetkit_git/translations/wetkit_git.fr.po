@@ -1,15 +1,18 @@
+# $Id$
+#
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
 #  wetkit_git.module: n/a
+#  wetkit_git.install: n/a
 #  wetkit_git.info: n/a
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-09 20:38-0500\n"
-"PO-Revision-Date: 2013-02-09 20:38-0500\n"
+"POT-Creation-Date: 2013-04-14 20:23-0400\n"
+"PO-Revision-Date: 2013-04-14 20:23-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -21,12 +24,12 @@ msgstr ""
 msgid "Git updated to: @info_sha from: @info_url"
 msgstr ""
 
-#: wetkit_git.module:65
-msgid "SHA Commit: @info_sha <br /> To update the current revision of Git from upstream: <a href=\"@git_update\">Click Here</a> <br /> @info_url"
+#: (duplicate) wetkit_git.install:29 
+msgid "Git Revision"
 msgstr ""
 
-#: (duplicate) wetkit_git.module:64 
-msgid "Git Revision"
+#: (duplicate) wetkit_git.install:30 
+msgid "SHA Commit: @info_sha <br /> To update the current revision of Git from upstream: <a href=\"@git_update\">Click Here</a> <br /> @info_url"
 msgstr ""
 
 #: wetkit_git.info:0

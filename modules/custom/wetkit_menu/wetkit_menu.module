@@ -1,15 +1,14 @@
 <?php
 /**
  * @file
- * Code for the WetKit Menu feature.
+ * wetkit_menu.module
  */
 
 include_once 'wetkit_menu.features.inc';
 require_once 'theme/menu.theme.inc';
 
 /*
- * You must implement hook_migrate_api(), setting the API level to 2, for
- * your migration classes to be recognized by the Migrate module.
+ * Implements hook_migrate_api().
  */
 function wetkit_menu_migrate_api() {
   $api = array(
@@ -60,6 +59,16 @@ function wetkit_menu_theme($existing, $type, $theme, $path) {
       'path' => drupal_get_path('module', 'wetkit_menu') . '/templates/panes',
       'template' => 'wetkit_menu_minipanel',
     ),
+    'wetkit_menu_panels_pane_nav' => array(
+      'render element' => 'element',
+      'path' => drupal_get_path('module', 'wetkit_menu') . '/templates/panes',
+      'template' => 'wetkit_menu_minipanel_nav',
+    ),
+    'wetkit_menu_panels_pane_sidebar' => array(
+      'render element' => 'element',
+      'path' => drupal_get_path('module', 'wetkit_menu') . '/templates/panes',
+      'template' => 'wetkit_menu_minipanel_sidebar',
+    ),
   );
 }
 
@@ -75,7 +84,7 @@ function wetkit_menu_theme_registry_alter(&$theme_registry) {
     $theme_registry['menu_link__menu_block']['render element'] = 'element';
     $theme_registry['menu_link__menu_block']['theme path'] = drupal_get_path('module', 'wetkit_menu');
     $theme_registry['menu_link__menu_block']['file'] = drupal_get_path('module', 'wetkit_menu') . '/theme/menu.theme.inc';
-    $theme_registry['menu_link__menu_block']['function'] = 'wetkit_menu_menu_link_menu_block';
+    $theme_registry['menu_link__menu_block']['function'] = 'wetkit_menu_menu_link_menu_block_sidebar';
     $theme_registry['menu_link__menu_block']['type'] = 'theme_engine';
 
     $theme_registry['menu_link__menu_block__wetkit_menu_blocks_1']['base hook'] = 'menu_link';
@@ -125,8 +134,8 @@ function wetkit_menu_theme_registry_alter(&$theme_registry) {
 /**
  * Check different paths to find the WET JS file's path.
  *
- * @return The path to the required WET main file relative to base_path() if
- *   found, FALSE if the file is not found.
+ * @return path
+ *   The path to the required WET main file relative to base_path().
  */
 function wetkit_menu_get_wet_path() {
   static $wetkit_path = FALSE;
@@ -178,7 +187,7 @@ function wetkit_menu_get_wet_path() {
         cache_set($cid, $wetkit_path);
       }
       else {
-        watchdog('wetkit_menu', t('WetKit Menu module is enabled, but the WET library has not been downloaded. This module will not work without WET! Please see README.txt for instructions on how to download WET.'));
+        watchdog('wetkit_menu', 'WetKit Menu module is enabled, but the WET library has not been downloaded. This module will not work without WET! Please see README.txt for instructions on how to download WET.');
       }
     }
   }
@@ -193,7 +202,7 @@ function wetkit_menu_get_wet_path() {
 function wetkit_menu_help($path, $arg) {
   switch ($path) {
     case 'admin/config/user-interface/wetkit_menu':
-      return '<p>'. t('The WetKit Menu module integrates the very popular WET tooltip library into Drupal. Visit the <a href="!reference_url">WET reference</a> to learn about the various configuration options.', array('!reference_url' => 'https://github.com/wet-boew/wet-boew-drupal.git')) .'</p>';
+      return '<p>' . t('The WetKit Menu module integrates the very popular WET tooltip library into Drupal. Visit the <a href="!reference_url">WET reference</a> to learn about the various configuration options.', array('!reference_url' => 'https://github.com/wet-boew/wet-boew-drupal.git')) . '</p>';
   }
 }
 
@@ -206,7 +215,7 @@ function wetkit_menu_menu() {
     'title' => 'WetKit Menu',
     'description' => 'Configure defaults for the WetKit Menu module.',
     'page callback' => 'drupal_get_form',
-    'page arguments' =>  array('wetkit_menu_admin'),
+    'page arguments' => array('wetkit_menu_admin'),
     'access arguments' => array('administer site configuration'),
     'file' => 'wetkit_menu.admin.inc',
   );
@@ -214,7 +223,7 @@ function wetkit_menu_menu() {
     'title' => 'Toggle menu',
     'description' => '',
     'page callback' => 'wetkit_menu_menu_toggle',
-    'page arguments' =>  array(5),
+    'page arguments' => array(5),
     'access arguments' => array('administer site configuration'),
     'file' => 'wetkit_menu.admin.inc',
     'type' => MENU_CALLBACK,
@@ -254,7 +263,7 @@ function wetkit_menu_form_menu_edit_item_alter(&$form, $form_state, $form_id) {
       $form['options']['#weight'] = '50';
       unset($form['options']['#value']['attributes']);
 
-      // Create options for select box
+      // Create options for select box.
       $options = array('' => '- None -');
       foreach ($panel_minis as $panel_mini) {
         // If the admin title is empty, use the minipanel name.
@@ -307,7 +316,7 @@ function wetkit_menu_menu_edit_item_submit($form, &$form_state) {
 }
 
 /**
- * Implementation of hook_form_FORM_ID_alter().
+ * Implements hook_form_FORM_ID_alter().
  */
 function wetkit_menu_form_menu_edit_menu_alter(&$form, &$form_state) {
   // Control whether the menu is enabled.
@@ -339,7 +348,8 @@ function wetkit_menu_form_menu_edit_menu_submit($form, &$form_state) {
 }
 
 /**
- * Ensure that we capture any mini panel menus. This is run on every page load.
+ * Ensure that we capture any mini panel menus and runs on every page load.
+ *
  * See @wetkit_menu_page_alter().
  */
 function wetkit_menu_prepare_links($links) {
@@ -358,6 +368,7 @@ function wetkit_menu_prepare_links($links) {
 
 /**
  * Menu callback for theme_link.
+ *
  * See @wetkit_menu_theme_registry_alter.
  */
 function wetkit_menu__preprocess_link($link) {
@@ -371,7 +382,6 @@ function wetkit_menu__preprocess_link($link) {
       $link['options']['attributes']['class'] = array();
     }
 
-    //$mlid = $link['options']['wetkit_menu_hover']['mlid'];
     $mlid = $link['options']['minipanel'];
     $minipanel_name = $link['options']['minipanel'];
     $minipanel = wetkit_menu_panels($mlid, $minipanel_name);
@@ -391,11 +401,14 @@ function wetkit_menu__preprocess_link($link) {
 }
 
 /**
- * Stores the generated output of all rendered minipanels. Will later be used
- * by @wetkit_menu_preprocess_page to display the generated output.
+ * Stores the generated output of all rendered minipanels.
  *
- * @param Int $mlid - the menu item id that needs the minipanel rendered.
- * @param String $minipanel_name - the name of the minipanel to render.
+ * Will later be used by @wetkit_menu_preprocess_page to display the output.
+ *
+ * @param int $mlid
+ *   The menu item id that needs the minipanel rendered.
+ * @param string $minipanel_name
+ *   The name of the minipanel to render.
  */
 function wetkit_menu_panels($mlid = NULL, $minipanel_name = NULL) {
   static $panels = array();
@@ -417,31 +430,34 @@ function wetkit_menu_panels($mlid = NULL, $minipanel_name = NULL) {
 }
 
 /**
- * When a minipanel menu item is detected by our theme interception functions
- * this function is used to add the appropriate configuration javascript
+ * When a minipanel menu item is detected by our theme interception functions.
+ *
+ * This function is used to add the appropriate configuration javascript
  * and minipanel output.
  *
  * The javascript is added to the closure by drupal when hook_footer is called.
  * The minipanel output is added to closure. See @wetkit_menu_footer
  *
- * @param $minipanel_name The name of the minipanel that is to show
- * @param $menu_config The configuration array for WET, as configued in menu item edit
+ * @param string $minipanel_name 
+ *   The name of the minipanel that is to show
+ * @param array $menu_config 
+ *   The configuration array for WET, as configued in menu item edit
  */
 function _wetkit_menu_include($minipanel_name, $menu_config) {
   // Early betas did not have this value and the menu settings need to be
   // re-saved in order to be compatible.
   if (!isset($menu_config['mlid'])) {
-    // Leave a warning message for the 
+    // Leave a warning message for the user.
     static $logged_warning = FALSE;
     if (!$logged_warning) {
-      watchdog('WetKit Menu', t('Recent changes to the WetKit Menu module require that any menus with attached MiniPanels have their configuration re-saved.'), array(), WATCHDOG_WARNING, l('Menu configuration', 'admin/structure/menu'));
+      watchdog('WetKit Menu', 'Recent changes to the WetKit Menu module require that any menus with attached MiniPanels have their configuration re-saved.', array(), WATCHDOG_WARNING, l(t('Menu configuration'), 'admin/structure/menu'));
       $logged_warning = TRUE;
     }
     return;
   }
 
   $mlid = $menu_config['mlid'];
-  
+
   // The same panel/mlid may be added multiple times, if the same menu is added
   // to a page more than once, i.e. the primary links, plus primary links also
   // added as a block.
@@ -458,8 +474,7 @@ function _wetkit_menu_include($minipanel_name, $menu_config) {
 }
 
 /**
- * Seperated out as it may be called independantly by our function
- * that intercepts theme_links
+ * Seperated out as it may be called independently.
  */
 function _wetkit_menu_link_class_name($minipanel_name) {
   return 'menu-minipanel menu-minipanel-' . $minipanel_name;
@@ -473,7 +488,6 @@ function _wetkit_menu_link_class_name($minipanel_name) {
  * 2. Build the output.
  * This probably means the module could be refactored.
  */
-
 function wetkit_menu_page_alter(&$page) {
   // Optionally ignore certain pages.
   if (wetkit_menu_excluded_path()) {
@@ -593,5 +607,3 @@ function wetkit_menu_menu_block_blocks() {
     ),
   );
 }
-
-    

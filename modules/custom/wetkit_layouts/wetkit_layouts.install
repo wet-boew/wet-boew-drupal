@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * An installation file for WetKit Layouts.
+ * wetkit_layouts.install
  */
 
 /**

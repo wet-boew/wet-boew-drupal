@@ -12,6 +12,7 @@ projects[wysiwyg][download][revision] = 41693f1
 projects[wysiwyg][download][branch] = 7.x-2.x
 projects[wysiwyg][patch][1489096] = http://drupal.org/files/wysiwyg-table-format.patch
 projects[wysiwyg][patch][1786732] = http://drupal.org/files/wysiwyg-arbitrary_image_paths_markitup-1786732-3.patch
+projects[wysiwyg][patch][1802394] = http://drupal.org/files/wysiwyg-1802394-4.patch
 
 projects[wysiwyg_filter][version] = 1.x-dev
 projects[wysiwyg_filter][type] = module

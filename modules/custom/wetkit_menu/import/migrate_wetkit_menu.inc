@@ -1,10 +1,17 @@
 <?php
+/**
+ * @file
+ * migrate_wetkit_menu.inc
+ */
 
 /**
  * Migration class for the WetKit. 
  */
 class WetKitMigrateMegaMenu extends XMLMigration {
 
+  /**
+   * Constructor.
+   */
   public function __construct() {
     parent::__construct();
     $this->description = t('Migrate the WetKit MegaMenu');
@@ -15,7 +22,7 @@ class WetKitMigrateMegaMenu extends XMLMigration {
           'type' => 'varchar',
           'length' => 255,
           'not null' => TRUE,
-        )
+        ),
       ),
       MigrateDestinationMenu::getKeySchema()
     );
@@ -30,9 +37,9 @@ class WetKitMigrateMegaMenu extends XMLMigration {
     $xml_folder = DRUPAL_ROOT . '/' . drupal_get_path('module', 'wetkit_menu') . '/import/';
     $items_url = $xml_folder . 'migrate_menu.xml';
     $item_xpath = '/menu_handler/menu/*/section';
-    $item_ID_xpath = 'source_id';
+    $item_id_xpath = 'source_id';
 
-    $items_class = new MigrateItemsXML($items_url, $item_xpath, $item_ID_xpath);
+    $items_class = new MigrateItemsXML($items_url, $item_xpath, $item_id_xpath);
     $this->source = new MigrateSourceMultiItems($items_class, $fields);
     $this->destination = new MigrateDestinationMenu();
 
@@ -52,6 +59,9 @@ class WetKitMigrateMegaMenu extends XMLMigration {
  */
 class WetKitMigrateMegaMenuLinks extends XMLMigration {
 
+  /**
+   * Constructor.
+   */
   public function __construct() {
     parent::__construct();
 
@@ -64,7 +74,7 @@ class WetKitMigrateMegaMenuLinks extends XMLMigration {
           'type' => 'varchar',
           'length' => 255,
           'not null' => TRUE,
-        )
+        ),
       ),
       MigrateDestinationMenuLinks::getKeySchema()
     );
@@ -76,7 +86,7 @@ class WetKitMigrateMegaMenuLinks extends XMLMigration {
       'link_path' => t('The Drupal path or external path this link points to.'),
       'router_path' => t('For links corresponding to a Drupal path (external = 0), this connects the link to a {menu_router}.path for joins.'),
       'link_title' => t('The text displayed for the link, which may be modified by a title callback stored in {menu_router}.'),
-      'options' => t('A serialized array of options to be passed to the url() or l() function, such as a query string or HTML attributes.'), 
+      'options' => t('A serialized array of options to be passed to the url() or l() function, such as a query string or HTML attributes.'),
       'module' => t('The name of the module that generated this link.'),
       'external' => t('A flag to indicate if the link points to a full URL starting with a protocol, like http:// (1 = external, 0 = internal).'),
       'has_children' => t('Flag indicating whether any links have this link as a parent (1 = children exist, 0 = no children).'),
@@ -90,9 +100,9 @@ class WetKitMigrateMegaMenuLinks extends XMLMigration {
     $xml_folder = DRUPAL_ROOT . '/' . drupal_get_path('module', 'wetkit_menu') . '/import/';
     $items_url = $xml_folder . 'migrate_menu.xml';
     $item_xpath = '/menu_handler/menu_links/*/section';
-    $item_ID_xpath = 'source_id';
+    $item_id_xpath = 'source_id';
 
-    $items_class = new MigrateItemsXML($items_url, $item_xpath, $item_ID_xpath);
+    $items_class = new MigrateItemsXML($items_url, $item_xpath, $item_id_xpath);
     $this->source = new MigrateSourceMultiItems($items_class, $fields);
     $this->destination = new MigrateDestinationMenuLinks();
 
@@ -113,15 +123,18 @@ class WetKitMigrateMegaMenuLinks extends XMLMigration {
     $this->addFieldMapping('plid', 'plid');
   }
 
-  public function prepareRow($row) { 
-    // Set the Language
+  /**
+   * PrepareRow for the migration.
+   */
+  public function prepareRow($row) {
+    // Set the Language.
     $lang = (preg_match("/eng/i", $row->sourceid)) ? 'en' : 'fr';
     $row->language = $lang;
-    $xmlObj = $row->xml;
-    
-    // Set the Path
-    if (!isset($xmlObj->external)) {
-      $link_path =  strip_tags($xmlObj->link_path->asXML());
+    $xmlobj = $row->xml;
+
+    // Set the Path.
+    if (!isset($xmlobj->external)) {
+      $link_path = strip_tags($xmlobj->link_path->asXML());
       if ($link_path == 'group') {
         $row->link_path = '<group>';
       }
@@ -148,16 +161,16 @@ class WetKitMigrateMegaMenuLinks extends XMLMigration {
       }
     }
     else {
-      $row->link_path =  strip_tags($xmlObj->link_path->asXML());
+      $row->link_path = strip_tags($xmlobj->link_path->asXML());
       $row->external = 1;
     }
 
-    // mlid
-    if (isset($xmlObj->mlid)) {
+    // The mlid to parse.
+    if (isset($xmlobj->mlid)) {
       $row->mlid = '2000';
     }
 
-    // Set the Options
+    // Set the Options.
     $options = array();
     $options += array(
       'attributes' => array(
@@ -165,29 +178,32 @@ class WetKitMigrateMegaMenuLinks extends XMLMigration {
       ),
     );
 
-    // MiniPanel
-    if (isset($xmlObj->minipanel)) {
+    // MiniPanel.
+    if (isset($xmlobj->minipanel)) {
       $options += array(
-        'minipanel' => strip_tags($xmlObj->minipanel->asXML()),
+        'minipanel' => strip_tags($xmlobj->minipanel->asXML()),
       );
     }
 
     $row->options = $options;
-    
-    // Set the Parent Menu
-    if (isset($xmlObj->parent)) {
+
+    // Set the Parent Menu.
+    if (isset($xmlobj->parent)) {
       $result = db_query('SELECT n.destid1
-            FROM {migrate_map_wetkitmigratemegamenulinks} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => strip_tags($xmlObj->parent->asXML())));
+            FROM {migrate_map_wetkitmigratemegamenulinks} n WHERE n.sourceid1 = :sourceid', array(':sourceid' => strip_tags($xmlobj->parent->asXML())));
       foreach ($result as $result_row) {
         $row->plid = $result_row->destid1;
       }
     }
   }
 
+  /**
+   * Post Import for the migration.
+   */
   public function postImport() {
     parent::postImport();
-    
-    // i18n Translation Set  
+
+    // i18n Translation Set.
     $result = db_query('SELECT n.sourceid1, n.destid1
       FROM {migrate_map_wetkitmigratemegamenulinks} n');
     foreach ($result as $record) {
