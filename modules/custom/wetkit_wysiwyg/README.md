@@ -11,8 +11,6 @@ Key Features
 * HTML5 integration with WYSIWYG Filter
 * Integration of Linkit module for adding WYSIWYG Link
 * Addition of classes to wysiwyg filter
-* Addition of Translation .po files
 * Addition of French Language Support in the WYSIWYG
 * Integration of an Accessibility Checker for TinyMCE
 * Support for Caption Filter's WYSIWYG Captions
-* Translation Support

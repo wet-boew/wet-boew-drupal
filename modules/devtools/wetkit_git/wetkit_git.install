@@ -27,7 +27,7 @@ function wetkit_git_requirements($phase) {
     case 'runtime':
       $requirements['wetkit_git'] = array(
         'title' => $t('Git Revision'),
-        'value' => t('SHA Commit: @info_sha <br /> To update the current revision of Git from upstream: <a href="@git_update">Click Here</a> <br /> @info_url', array(
+        'value' => $t('SHA Commit: @info_sha <br /> To update the current revision of Git from upstream: <a href="@git_update">Click Here</a> <br /> @info_url', array(
           '@info_sha' => $info_sha,
           '@git_update' => url('git_update'),
           '@info_url' => $info_url,

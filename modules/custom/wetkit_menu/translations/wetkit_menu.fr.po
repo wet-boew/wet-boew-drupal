@@ -1,0 +1,309 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  wetkit_menu.admin.inc: n/a
+#  wetkit_menu.features.menu_custom.inc: n/a
+#  wetkit_menu.module: n/a
+#  wetkit_menu.info: n/a
+#  plugins/layouts/cohen/cohen.inc: n/a
+#  wetkit_menu.install: n/a
+#  import/migrate_wetkit_menu.inc: n/a
+#  plugins/styles/wetkit_menu_settings/wetkit_menu_settings.inc: n/a
+#  theme/menu.theme.inc: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-04-14 20:20-0400\n"
+"PO-Revision-Date: 2013-04-14 20:20-0400\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: wetkit_menu.admin.inc:24
+msgid "Menu :menu has been toggled."
+msgstr ""
+
+#: wetkit_menu.admin.inc:42
+msgid "WET Library Status"
+msgstr ""
+
+#: wetkit_menu.admin.inc:51
+msgid "Title"
+msgstr "Titre"
+
+#: wetkit_menu.admin.inc:51
+msgid "Can be used?"
+msgstr ""
+
+#: wetkit_menu.admin.inc:55
+msgid "Edit this menu"
+msgstr ""
+
+#: wetkit_menu.admin.inc:63
+msgid "Toggle this menu"
+msgstr ""
+
+#: wetkit_menu.admin.inc:68
+msgid "Menu selection"
+msgstr ""
+
+#: wetkit_menu.admin.inc:77
+msgid "Don't show WetKit Menu on specific pages"
+msgstr ""
+
+#: wetkit_menu.admin.inc:79
+msgid "Specify pages by using their paths. Enter one path per line. The '*' character is a wildcard. Example paths are %blog for the blog page and %blog-wildcard for every personal blog. %front is the front page."
+msgstr ""
+"Spécifier les pages en utilisant leurs chemins. Saisir un chemin par "
+"ligne. Le caractère «*» est un caractère de remplacement (aussi "
+"appelé joker ou wildcard). Exemples de chemins : %blog pour la page "
+"du blog et %blog-wildcard pour tous les blogs personnels. %front "
+"représente la page d’accueil."
+
+#: wetkit_menu.features.menu_custom.inc:23
+msgid "Minipanel: WetKit"
+msgstr ""
+
+#: wetkit_menu.module:205
+msgid "The WetKit Menu module integrates the very popular WET tooltip library into Drupal. Visit the <a href=\"!reference_url\">WET reference</a> to learn about the various configuration options."
+msgstr ""
+
+#: wetkit_menu.module:249
+msgid "No Mini Panels are available, some need to be added via the <a href=\"!link\" title=\"Mini Panels administrator\">Mini Panels admin</a> for the WetKit Menu module to work."
+msgstr ""
+
+#: wetkit_menu.module:283
+msgid "Menu minipanel"
+msgstr ""
+
+#: wetkit_menu.module:284
+msgid "Choose the minipanel to display."
+msgstr ""
+
+#: wetkit_menu.module:326
+msgid "Allow to be used with WetKit Menu"
+msgstr ""
+
+#: wetkit_menu.module:328
+msgid "When this is enabled the WetKit Menu options will be available when editing individual menu items. Disabling this for menus that don't need it will give a small performance gain."
+msgstr ""
+
+#: wetkit_menu.module:453
+msgid "Menu configuration"
+msgstr ""
+
+#: wetkit_menu.module:190
+msgid "wetkit_menu"
+msgstr ""
+
+#: wetkit_menu.module:190
+msgid "WetKit Menu module is enabled, but the WET library has not been downloaded. This module will not work without WET! Please see README.txt for instructions on how to download WET."
+msgstr ""
+
+#: wetkit_menu.module:453;215 wetkit_menu.info:0 plugins/layouts/cohen/cohen.inc:14
+msgid "WetKit Menu"
+msgstr ""
+
+#: wetkit_menu.module:453
+msgid "Recent changes to the WetKit Menu module require that any menus with attached MiniPanels have their configuration re-saved."
+msgstr ""
+
+#: wetkit_menu.module:216
+msgid "Configure defaults for the WetKit Menu module."
+msgstr ""
+
+#: wetkit_menu.module:223
+msgid "Toggle menu"
+msgstr ""
+
+#: (duplicate) wetkit_menu.install:98 
+msgid "The module is enabled but the WET library has not been downloaded. This module will not work without qTip! Please see README.txt in the wetkit_menu directory for instructions on how to download WET, or use <a href=\"http://drupal.org/project/drush\">Drush</a> to download it via the following command:<br /><pre>drush download-qtip</pre>"
+msgstr ""
+
+#: (duplicate) wetkit_menu.install:100 ;109 
+msgid "WetKit Menus"
+msgstr ""
+
+#: (duplicate) wetkit_menu.install:101 
+msgid "WET library not found"
+msgstr ""
+
+#: (duplicate) wetkit_menu.install:110 
+msgid "WET library in use: <em>!path</em>."
+msgstr ""
+
+#: wetkit_menu.info:0
+msgid "Specify a mini panel to appear when a user hovers over a menu item."
+msgstr ""
+
+#: wetkit_menu.info:0
+msgid "WetKit"
+msgstr "WetKit"
+
+#: import/migrate_wetkit_menu.inc:17
+msgid "Migrate the WetKit MegaMenu"
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:31
+msgid "The Menu Name"
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:32
+msgid "The human-readable name of the menu."
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:33
+msgid "A description of the menu"
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:34
+msgid "The i18n mode of the menu"
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:68
+msgid "Migrate the WetKit Menu Links"
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:83
+msgid "The menu name. All links with the same menu name (such as 'navigation') are part of the same menu."
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:84
+msgid "The menu link ID (mlid) is the integer primary key."
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:85
+msgid "The parent link ID (plid) is the mlid of the link above in the hierarchy, or zero if the link is at the top level in its menu."
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:86
+msgid "The Drupal path or external path this link points to."
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:87
+msgid "For links corresponding to a Drupal path (external = 0), this connects the link to a {menu_router}.path for joins."
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:88
+msgid "The text displayed for the link, which may be modified by a title callback stored in {menu_router}."
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:89
+msgid "A serialized array of options to be passed to the url() or l() function, such as a query string or HTML attributes."
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:90
+msgid "The name of the module that generated this link."
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:91
+msgid "A flag to indicate if the link points to a full URL starting with a protocol, like http:// (1 = external, 0 = internal)."
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:92
+msgid "Flag indicating whether any links have this link as a parent (1 = children exist, 0 = no children)."
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:93
+msgid "Flag for whether this link should be rendered as expanded in menus - expanded links always have their child links displayed, instead of only when the link is in the active trail (1 = expanded, 0 = not expanded)"
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:94
+msgid "Link weight among links in the same menu at the same depth."
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:95
+msgid "The depth relative to the top level. A link with plid == 0 will have depth == 1."
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:96
+msgid "A flag to indicate that the user has manually created or edited the link (1 = customized, 0 = not customized)."
+msgstr ""
+
+#: import/migrate_wetkit_menu.inc:97
+msgid "The language of the menu"
+msgstr ""
+
+#: plugins/layouts/cohen/cohen.inc:13
+msgid "Cohen"
+msgstr ""
+
+#: plugins/layouts/cohen/cohen.inc:21
+msgid "Top"
+msgstr "Haut"
+
+#: plugins/layouts/cohen/cohen.inc:22
+msgid "Left"
+msgstr "Gauche"
+
+#: plugins/layouts/cohen/cohen.inc:23
+msgid "Middle Left"
+msgstr ""
+
+#: plugins/layouts/cohen/cohen.inc:24
+msgid "Middle Right"
+msgstr ""
+
+#: plugins/layouts/cohen/cohen.inc:25
+msgid "Right"
+msgstr "Droit"
+
+#: plugins/styles/wetkit_menu_settings/wetkit_menu_settings.inc:8
+msgid "WetKit Group Menu Items"
+msgstr ""
+
+#: plugins/styles/wetkit_menu_settings/wetkit_menu_settings.inc:9
+msgid "Provide support for grouping top level menu items without children."
+msgstr ""
+
+#: plugins/styles/wetkit_menu_settings/wetkit_menu_settings.inc:74
+msgid "Strip all of the sub menu items?"
+msgstr ""
+
+#: plugins/styles/wetkit_menu_settings/wetkit_menu_settings.inc:76
+msgid "No"
+msgstr "Non"
+
+#: plugins/styles/wetkit_menu_settings/wetkit_menu_settings.inc:77
+msgid "Yes"
+msgstr "Oui"
+
+#: plugins/styles/wetkit_menu_settings/wetkit_menu_settings.inc:83
+msgid "Wrap Pane in the following tags?"
+msgstr ""
+
+#: plugins/styles/wetkit_menu_settings/wetkit_menu_settings.inc:85;95
+msgid "- None -"
+msgstr "- Aucun -"
+
+#: plugins/styles/wetkit_menu_settings/wetkit_menu_settings.inc:86
+msgid "<section>"
+msgstr ""
+
+#: plugins/styles/wetkit_menu_settings/wetkit_menu_settings.inc:87
+msgid "<div>"
+msgstr ""
+
+#: plugins/styles/wetkit_menu_settings/wetkit_menu_settings.inc:93
+msgid "Wrap menu links in the following tags?"
+msgstr ""
+
+#: plugins/styles/wetkit_menu_settings/wetkit_menu_settings.inc:96
+msgid "<ul>"
+msgstr ""
+
+#: plugins/styles/wetkit_menu_settings/wetkit_menu_settings.inc:102
+msgid "Custom CSS to be applied to each menu item."
+msgstr ""
+
+#: theme/menu.theme.inc:35
+msgid "Main Page"
+msgstr "Page principale"
+

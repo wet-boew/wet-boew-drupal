@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the wetkit_language feature.
+ * wetkit_language.module
  */
 
 include_once 'wetkit_language.features.inc';
@@ -19,7 +19,7 @@ function wetkit_language_form_alter(&$form, &$form_state, $form_id) {
  * Implements hook_preprocess_page().
  */
 function wetkit_language_preprocess_page(&$vars) {
-  // Language Switcher Code.
+  // Set the language switcher using our helper function.
   $vars['menu_lang_bar'] = _wetkit_language_lang_switcher();
 }
 
@@ -27,6 +27,7 @@ function wetkit_language_preprocess_page(&$vars) {
  * Implements hook_preprocess_panes_pane().
  */
 function wetkit_language_preprocess_panels_pane(&$vars) {
+  // Unset the language links from node display.
   if ($vars['pane']->type == 'node_links') {
     if (isset($vars['content']['translation'])) {
       unset($vars['content']['translation']);
@@ -38,7 +39,7 @@ function wetkit_language_preprocess_panels_pane(&$vars) {
  * Implements hook_preprocess_page().
  */
 function wetkit_language_preprocess_maintenance_page(&$vars) {
-  // Language Switcher Code.
+  // Set the language switcher using our helper function.
   $vars['menu_lang_bar'] = _wetkit_language_lang_switcher();
 }
 
@@ -66,6 +67,7 @@ function _wetkit_language_lang_switcher() {
     $language_terms = i18n_taxonomy_term_get_translation(array('tid' => arg(2)), $language->language);
   }
 
+  // Handle all languages.
   if (count($languages[1]) > 1) {
     $lang_switcher = array();
     foreach ($languages[1] as $lang) {

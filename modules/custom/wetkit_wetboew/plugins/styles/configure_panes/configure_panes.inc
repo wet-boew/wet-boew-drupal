@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Definition of the 'Configure Panes' panel styles.

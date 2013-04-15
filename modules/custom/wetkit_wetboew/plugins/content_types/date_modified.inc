@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Plugin to handle the 'querypath_scrape' content type which allows the

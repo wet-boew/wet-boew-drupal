@@ -7,5 +7,5 @@ core = 7.x
 
 libraries[wet-boew][download][type] = git
 libraries[wet-boew][download][branch] = v3.0-dist
-libraries[wet-boew][download][revision] = 2cb0883
-libraries[wet-boew][download][url] = https://github.com/wet-boew/wet-boew.git
+libraries[wet-boew][download][revision] = 1e6cec3
+libraries[wet-boew][download][url] = https://github.com/wet-boew/wet-boew-dist.git

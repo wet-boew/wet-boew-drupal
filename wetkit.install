@@ -32,7 +32,7 @@ function wetkit_install() {
     'created' => REQUEST_TIME,
   ))
   ->execute();
-  // Enable authenticated role the above for the default password policy.
+  // Enable an authenticated role the above for the default password policy.
   db_insert('password_policy_role')
     ->fields(array(
       'pid' => $pid,
@@ -43,7 +43,7 @@ function wetkit_install() {
   // Only notify on Security Issue(s).
   variable_set('update_notification_threshold', array('security'));
 
-  // Set Admin Theme.
+  // Set the Admin Theme.
   db_update('system')
     ->fields(array('status' => 1))
     ->condition('type', 'theme')
@@ -56,9 +56,9 @@ function wetkit_install() {
 /**
  * Implements hook_update().
  *
- * Perform actions to update the site for this profile.
+ * Perform actions to update the site for this installation profile.
  */
 function wetkit_update_7101(&$sandbox) {
-  // Addition of new core module to simplify WetKit WETBOEW
+  // Addition of new core module for better encapsulation.
   module_enable(array('wetkit_core'));
 }

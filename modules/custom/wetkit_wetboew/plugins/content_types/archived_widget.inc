@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * A panel plugin to provide administrative information about the site's

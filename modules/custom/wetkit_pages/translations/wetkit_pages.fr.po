@@ -1,7 +1,9 @@
+# $Id$
+#
 # French translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
-#  wetkit_pages.features.field.inc: n/a
+#  wetkit_pages.features.field_instance.inc: n/a
 #  wetkit_pages.features.inc: n/a
 #  wetkit_pages.module: n/a
 #  wetkit_pages.info: n/a
@@ -10,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-02-09 20:37-0500\n"
-"PO-Revision-Date: 2013-02-09 20:37-0500\n"
+"POT-Creation-Date: 2013-04-14 20:22-0400\n"
+"PO-Revision-Date: 2013-04-14 20:22-0400\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -19,27 +21,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: wetkit_pages.features.field.inc:771
+#: wetkit_pages.features.field_instance.inc:380
 msgid "Archived Content"
 msgstr "Contenu archivé"
 
-#: wetkit_pages.features.field.inc:772
+#: wetkit_pages.features.field_instance.inc:381
 msgid "Body"
 msgstr "Corps"
 
-#: wetkit_pages.features.field.inc:773
+#: wetkit_pages.features.field_instance.inc:382
 msgid "Categories"
 msgstr "Catégories"
 
-#: wetkit_pages.features.field.inc:774
+#: wetkit_pages.features.field_instance.inc:383
 msgid "Feature content"
 msgstr "Contenu en vedette"
 
-#: wetkit_pages.features.field.inc:775
+#: wetkit_pages.features.field_instance.inc:384
 msgid "Primary Image"
 msgstr "Image principale"
 
-#: wetkit_pages.features.field.inc:776
+#: wetkit_pages.features.field_instance.inc:385
 msgid "Share Widget"
 msgstr "Gadget de partage"
 
@@ -54,46 +56,39 @@ msgstr ""
 "comme faisant partie de la norme privilégiée pour le déroulement du "
 "travail fondé sur des panneaux."
 
-#: wetkit_pages.features.inc:35;43
+#: wetkit_pages.features.inc:35
 msgid "Title"
 msgstr "Titre"
 
-#: wetkit_pages.features.inc:39
-msgid "Basic Page (Deprecated)"
-msgstr "Page de base (Obsolète)"
-
-#: wetkit_pages.features.inc:41
-msgid "An deprecated important page to display to users on your site. This is included for people who are used to using blocks and regions to manage content."
-msgstr ""
-"Une page importante obsolète à présenter à vos utilisateurs sur "
-"le site. Elle est destinés aux usagers qui ont l’habitude "
-"d’utiliser des blocs et des régions pour gérer le contenu."
-
-#: wetkit_pages.module:61
+#: wetkit_pages.module:52
 msgid "Create Landing Page"
 msgstr "Créer la page de renvoi"
 
-#: wetkit_pages.module:76
+#: wetkit_pages.module:67
 msgid "URL"
 msgstr "URL"
 
-#: wetkit_pages.module:84
+#: wetkit_pages.module:75
 msgid "Add this page to the main menu?"
 msgstr "Ajouter cette page au menu principal?"
 
-#: wetkit_pages.module:93
+#: wetkit_pages.module:84
 msgid "Parent"
 msgstr "Parent"
 
-#: wetkit_pages.module:108
+#: wetkit_pages.module:99
 msgid "Create Page"
 msgstr "Créer page"
 
-#: wetkit_pages.module:32
+#: wetkit_pages.module:156
+msgid "A new panels page using the @layout_name default layout has been created"
+msgstr ""
+
+#: wetkit_pages.module:30
 msgid "Landing Page"
 msgstr "Page de renvoi"
 
-#: wetkit_pages.module:33
+#: wetkit_pages.module:31
 msgid "A primary landing page to display to users on your site."
 msgstr ""
 
@@ -109,5 +104,5 @@ msgstr ""
 
 #: wetkit_pages.info:0
 msgid "WetKit"
-msgstr "BOEW"
+msgstr "WetKit"
 

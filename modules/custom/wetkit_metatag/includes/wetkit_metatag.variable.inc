@@ -1,11 +1,11 @@
 <?php
 /**
  * @file
- * Variable API module. Definition for WetKit core variables
+ * wetkit_metatag.variable.inc
  */
 
 /**
- * WetKit Metatags module variables.
+ * Implements hook_variable_info().
  */
 function wetkit_metatag_variable_info($options) {
 
@@ -21,7 +21,7 @@ function wetkit_metatag_variable_info($options) {
 }
 
 /**
- * WetKit module variable groups.
+ * Implements hook_variable_group_info().
  */
 function wetkit_metatag_variable_group_info() {
   $groups['wetkit_metatags_settings'] = array(

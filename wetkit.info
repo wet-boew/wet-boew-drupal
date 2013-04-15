@@ -54,6 +54,7 @@ dependencies[] = workbench_moderation
 dependencies[] = uuid
 
 ; WetKit Toolset
+dependencies[] = wetkit_core
 dependencies[] = wetkit_images
 dependencies[] = wetkit_widgets
 dependencies[] = wetkit_pages
@@ -65,7 +66,6 @@ dependencies[] = wetkit_language
 dependencies[] = wetkit_migrate
 dependencies[] = wetkit_bean
 dependencies[] = wetkit_metatag
-dependencies[] = wetkit_core
 dependencies[] = wetkit_menu
 dependencies[] = wetkit_wetboew
 dependencies[] = wetkit_breadcrumbs
