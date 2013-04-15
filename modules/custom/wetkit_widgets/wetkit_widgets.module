@@ -20,7 +20,17 @@ function wetkit_widgets_apps_app_info() {
  * Configuration Form for WetKit Magic.
  */
 function wetkit_widgets_configure_form($form, &$form_state) {
+  drupal_add_js(drupal_get_path('module', 'system') . '/system.js');
   $form = array();
+  $form['wetkit_widgets'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('WetKit Widgets Settings'),
+    '#collapsible' => TRUE,
+  );
+  $form['wetkit_widgets']['future_options'] = array(
+    '#markup' => '<p>' . t('Future options will appear here to configure WetKit Widgets.') . '</p>',
+  );
+  $form['#submit'][] = 'wetkit_widgets_configure_form_submit';
 
   return system_settings_form($form);
 }

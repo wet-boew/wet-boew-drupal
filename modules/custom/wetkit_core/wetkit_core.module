@@ -363,13 +363,16 @@ function wetkit_core_configure_form($form, &$form_state) {
     '#title' => t('WetKit Core Settings'),
     '#collapsible' => TRUE,
   );
+  $form['wetkit_core']['future_options'] = array(
+    '#markup' => '<p>' . t('Future options will appear here to configure WetKit Core.') . '</p>',
+  );
   $form['#submit'][] = 'wetkit_core_configure_form_submit';
 
   return system_settings_form($form);
 }
 
 /**
- * Handle submission of the WetKit Web Usability configuration page.
+ * Handle submission of the WetKit Core configuration page.
  *
  * @param array $form
  *   Nested array of form elements that comprise the form.

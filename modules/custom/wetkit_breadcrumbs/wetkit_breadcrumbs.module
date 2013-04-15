@@ -81,6 +81,7 @@ function wetkit_breadcrumbs_configure_form($form, &$form_state) {
     '#size' => 30,
   );
   $form['#submit'][] = 'wetkit_breadcrumbs_configure_form_submit';
+
   return system_settings_form($form);
 }
 
