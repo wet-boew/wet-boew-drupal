@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the wetkit_core feature.
+ * wetkit_core.module
  */
 
 include_once 'wetkit_core.block.inc';
@@ -16,14 +16,18 @@ function wetkit_core_ctools_plugin_directory($module, $plugin) {
 }
 
 /**
- * Implements hook_theme()
+ * Implements hook_theme().
  */
 function wetkit_core_theme() {
   return array(
     'wetkit_core_collapsible' => array(
-      'variables' => array('handle' => NULL, 'content' => NULL, 'collapsed' => FALSE),
+      'variables' => array(
+        'handle' => NULL,
+        'content' => NULL,
+        'collapsed' => FALSE,
+      ),
       'file' => 'plugins/styles/collapsible.inc',
-    )
+    ),
   );
 }
 
@@ -43,7 +47,7 @@ function wetkit_core_panels_pane_content_alter(&$content, $pane, $args, $context
     if (!empty($values['style']) && $values['style'] == 'tabs' && $pane->panel == $key && !empty($content->title)) {
       // Capture the title.
       wetkit_core_pane_titles($display->did, $pane->pid, $content->title);
-      // Remove it form the pane.
+      // Remove the title from the pane.
       $content->title = '';
     }
   }
@@ -53,15 +57,15 @@ function wetkit_core_panels_pane_content_alter(&$content, $pane, $args, $context
 /**
  * Get or set pane title.
  *
- * @param $did
+ * @param int $did
  *   Panels display ID.
- * @param $pid
+ * @param int $pid
  *   Panels pane ID.
- * @param $title
- *   Optional; Panles pane title to set, or if empty then the function will
+ * @param string $title
+ *   Optional; Panels pane title to set, or if empty then the function will
  *   return the captured title based on the display ID and pane ID properties.
  *
- * @return
+ * @return bool
  *   Unsanitized pane title, or NULL if doesn't exist.
  */
 function wetkit_core_pane_titles($did = NULL, $pid = NULL, $title = NULL) {
@@ -81,7 +85,7 @@ function wetkit_core_page_build() {
     drupal_flush_all_caches();
     variable_set('wetkit_core_load', 0);
   }
-  // Set Documentation Text.
+  // Some Default messages to let the user know where to begin.
   if ((variable_get('wetkit_core_doc', 1) == 1)) {
     drupal_set_message(t('Thank you for installing the WxT-Drupal Variant for the Web Experience Toolkit. You may login at the following page: <a href="@login">User Login</a>', array('@login' => url('user'))), 'status');
     drupal_set_message(t('For more information please be sure to read the online <a href="@documentation">Documentation</a>', array('@documentation' => url('https://github.com/wet-boew/wet-boew-drupal/wiki'))), 'warning');
@@ -98,7 +102,7 @@ function wetkit_core_page_build() {
  * Implements hook_menu_edit_item_alter().
  */
 function wetkit_core_page_alter(&$page) {
-  // Hide Toolbar for those who can access the Admin Menu.
+  // Hide Toolbar for those who have permissions to access the Admin Menu.
   if (user_access('access administration menu') && !empty($page['page_top']['toolbar'])) {
     $page['page_top']['toolbar']['#access'] = FALSE;
   }
@@ -126,22 +130,15 @@ function wetkit_core_form_menu_edit_item_alter(&$form, &$form_state) {
  * Implements hook_menu().
  */
 function wetkit_core_menu() {
-  // Add an dummy menu item.
+  // Add an menu item that will render without an a href.
   $items['<nolink>'] = array(
     'page callback' => 'drupal_not_found',
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
   );
 
-  // Add an dummy menu item.
-  $items['<separator>'] = array(
-    'page callback' => 'drupal_not_found',
-    'access callback' => TRUE,
-    'type' => MENU_CALLBACK,
-  );
-
-  // Add an dummy menu item.
-  $items['<group>'] = array(
+  // Add an menu item that can be used with mini panels.
+  $items['<minipanel>'] = array(
     'page callback' => 'drupal_not_found',
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
@@ -228,8 +225,7 @@ function wetkit_core_form_alter(&$form, &$form_state, $form_id) {
     $form['field_share_widget'] = array('#language' => NULL);
   }
 
-
-  // Simplify the menu block edit form
+  // Simplify the menu block edit form.
   if ($form_id == 'menu_block_menu_tree_content_type_edit_form') {
     $form['admin_title']['#access'] = TRUE;
     $form['depth']['#access'] = TRUE;

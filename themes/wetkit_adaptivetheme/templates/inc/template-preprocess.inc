@@ -203,7 +203,7 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
   }
 
   // Mega Menu Region.
-  if (module_exists('menu_block')) {
+  if (module_exists('menu_block') && empty($variables['page']['mega_menu'])) {
     $config = menu_block_get_config('wetkit_menu_blocks-1');
     $data = menu_tree_build($config);
     $variables['page']['mega_menu'] = $data['content'];

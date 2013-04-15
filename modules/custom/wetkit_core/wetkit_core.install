@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * An installation file for WetKit Core
+ * wetkit_core.install
  */
 
 include_once 'wetkit_core.block.inc';

@@ -1,8 +1,7 @@
 <?php
-
 /**
  * @file
- * Implements core hooks for wetlit_layouts.
+ * wetkit_layouts.module
  */
 
 /**

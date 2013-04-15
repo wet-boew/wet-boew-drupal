@@ -22,7 +22,7 @@ function wetkit_wysiwyg_apps_app_info() {
 function wetkit_wysiwyg_configure_form($form, &$form_state) {
   $form = array();
 
-    // Documentation.
+  // Documentation.
   $form['wetkit_wysiwyg'] = array(
     '#title' => 'WYSIWYG Settings',
     '#type'  => 'fieldset',

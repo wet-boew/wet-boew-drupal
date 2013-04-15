@@ -23,3 +23,4 @@ WetKit Rubik is based on (and will probably merge back into) the amazing work do
 
   * Miguel Trindade (migueltrindade) - http://drupal.org/user/690418/ & http://www.migueltrindade.com.br
   * Alex Weber (alexweber) - http://drupal.org/user/850856 & http://www.alexweber.com.br
+  
