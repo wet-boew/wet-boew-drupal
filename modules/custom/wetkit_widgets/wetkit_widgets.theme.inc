@@ -1,8 +1,7 @@
 <?php
-
 /**
  * @file
- * Theme callbacks for the file entity module.
+ * wetkit_widgets.theme.inc
  */
 
 /**

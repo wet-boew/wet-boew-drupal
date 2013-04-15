@@ -26,9 +26,6 @@ projects[diff][download][type] = git
 projects[diff][download][revision] = adb4304
 projects[diff][download][branch] = 7.x-3.x
 
-projects[ds][version] = 2.2
-projects[ds][subdir] = contrib
-
 projects[fences][version] = 1.x-dev
 projects[fences][subdir] = contrib
 projects[fences][type] = module
@@ -50,14 +47,11 @@ projects[linkchecker][version] = 1.x-dev
 projects[linkchecker][type] = module
 projects[linkchecker][subdir] = contrib
 projects[linkchecker][download][type] = git
-projects[linkchecker][download][revision] = 5edcb1c
+projects[linkchecker][download][revision] = 0e7fc34
 projects[linkchecker][download][branch] = 7.x-1.x
 
 projects[menu_attributes][version] = 1.0-rc2
 projects[menu_attributes][subdir] = contrib
-
-projects[menu_views][version] = 1.3
-projects[menu_views][subdir] = contrib
 
 projects[password_policy][version] = 1.3
 projects[password_policy][subdir] = contrib
@@ -93,6 +87,9 @@ projects[workbench_moderation][patch][1285090] = http://drupal.org/files/playnic
 projects[workbench_moderation][patch][1260112] = http://drupal.org/files/workbench_moderation-is_current-1260112-28.patch
 projects[workbench_moderation][patch][1875700] = http://drupal.org/files/workbench_moderation-allow-unpublish-live-revision-1875700_0.patch
 projects[workbench_moderation][patch][1919706] = http://drupal.org/files/1919706-1-no-node.patch
+projects[workbench_moderation][patch][1919706] = http://drupal.org/files/workbench_moderation-revision-moderation-edit-link-1785798-14.patch
+projects[workbench_moderation][patch][1946392] = http://drupal.org/files/et_language-1946392-1.patch
+projects[workbench_moderation][patch][1969226] = http://drupal.org/files/workbench-pathauto-1969226-1.patch
 
 projects[rules][version] = 2.3
 projects[rules][subdir] = contrib
@@ -123,11 +120,9 @@ projects[tao][download][revision] = f06452b
 projects[tao][download][branch] = 7.x-3.x
 projects[tao][patch][1016844] = http://drupal.org/files/tao_taxonomy_manager-1016844-12.patch
 
-projects[tao][version] = 3.0-beta4
-
 ; Libraries for WetKit
 
 libraries[querypath][download][type] = git
 libraries[querypath][download][branch] = 3.x
-libraries[querypath][download][revision] = 2320739
+libraries[querypath][download][revision] = eeb67cc
 libraries[querypath][download][url] = https://github.com/technosophos/querypath.git

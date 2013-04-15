@@ -7,45 +7,48 @@
 include_once 'wetkit_deployment_service.features.inc';
 
 /**
- * Implements hook_entity_uuid_load().
- */
-function wetkit_deployment_service_entity_uuid_load(&$entities, $entity_type) {
-  //if ($entity_type == 'bean') {
-  //  entity_property_id_to_uuid($entities, 'bean', 'bid');
-  //}
-  watchdog('Devel: WETKIT DEPLOYMENT load', 'Output of %live.', array('%live' => print_r($entity_type, TRUE)), WATCHDOG_NOTICE);
-}
-
-/**
  * Implements hook_entity_uuid_presave().
  */
 function wetkit_deployment_service_entity_uuid_presave(&$entity, $entity_type) {
-  if ($entity_type == 'node') {
-    //entity_property_uuid_to_id($entity, 'node', 'vuuid');
-    watchdog('Devel: WETKIT DEPLOYMENT presave', 'Output of %live.', array('%live' => print_r($entity, TRUE)), WATCHDOG_NOTICE);
-    foreach ($entity->panelizer as $key => $value) {
-      $entity->panelizer[$key] = (object) $value;
-    }
-    foreach ($entity->workbench_moderation as $key => $value) {
-      $entity->workbench_moderation[$key] = (object) $value;
-    }
-  }
-  if ($entity_type == 'user') {
-    foreach ($entity->panelizer as $key => $value) {
-      $entity->panelizer[$key] = (object) $value;
-    }
-    watchdog('Devel: WETKIT DEPLOYMENT user presave', 'Output of %live.', array('%live' => print_r($entity, TRUE)), WATCHDOG_NOTICE);
-  }
-}
+  // Prepare any entities that leverage panelizer.
+  if (!empty($entity->panelizer_export)) {
+    $entity->panelizer = unserialize($entity->panelizer_export);
+    unset($entity->panelizer_export);
 
-/**
- * Implements hook_entity_uuid_presave().
- */
-function wetkit_deployment_service_entity_uuid_save(&$entity, $entity_type) {
-  //if ($entity_type == 'bean') {
-  //  entity_property_uuid_to_id($entity, 'bean', 'bid');
-  //}
-  watchdog('Devel: WETIT DEPLOYMENT save', 'Output of %live.', array('%live' => print_r($entity_type, TRUE)), WATCHDOG_NOTICE);
+    list($id, $vid) = entity_extract_ids($entity_type, $entity);
+
+    $query = db_select('panelizer_entity', 'p');
+    $query
+      ->condition('p.entity_type', $entity_type, '=')
+      ->condition('p.entity_id', $id, '=');
+    if ($vid) {
+      $query->condition('p.revision_id', $vid, '=');
+    }
+    $result = $query
+      ->fields('p', array('name'))
+      ->execute()
+      ->fetchField();
+
+    // If the panelizer exists it should be updated.
+    if ($result !== FALSE) {
+      // Set parent entity's ids. UUID doesn't create new revision on rebuild,
+      // so these should be current ones.
+      $entity->panelizer->entity_id = $id;
+      $entity->panelizer->revision_id = $vid;
+    }
+    $entity->panelizer->did = 0;
+
+    // Only last display is stored.
+    $entity->panelizer->display_is_modified = FALSE;
+  }
+
+  // Prepare any entities that leverage panelizer.
+  if (!empty($entity->workbench_moderation_export)) {
+    $entity->workbench_moderation = unserialize($entity->workbench_moderation_export);
+    unset($entity->workbench_moderation_export);
+
+    list($id, $vid) = entity_extract_ids($entity_type, $entity);
+  }
 }
 
 /**

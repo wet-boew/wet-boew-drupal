@@ -1,10 +1,17 @@
 <?php
+/**
+ * @file
+ * WetKitDeployProcessorQueue.inc
+ */
 
 /**
  * Processor class using the Batch API
  */
 class WetKitDeployProcessorQueue extends DeployProcessorMemory {
 
+  /**
+   * Deploy to the endpoint.
+   */
   public function deploy($deployment_key, DeployEndpoint $endpoint, $lock_name = NULL) {
     deploy_log($deployment_key, DEPLOY_STATUS_PROCESSING);
     $queue = DrupalQueue::get('wetkit_deploy');
@@ -25,6 +32,9 @@ class WetKitDeployProcessorQueue extends DeployProcessorMemory {
     }
   }
 
+  /**
+   * Publish to the endpoint.
+   */
   public function publish($deployment_key, DeployEndpoint $endpoint, $lock_name = NULL) {
     $queue = DrupalQueue::get('wetkit_publish');
     foreach ($this->aggregator as $entity) {

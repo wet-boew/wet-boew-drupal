@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Welcome panel content type. Displays a summary of content statistics 
@@ -13,7 +12,7 @@ $plugin = array(
   'no title override' => TRUE,
   'icon' => 'cog.png',
   'description' => t('Intro to WetKit Dashboard'),
-  'category' => t('Dashboard'),
+  'category' => t('WET-BOEW'),
 );
 
 /**
