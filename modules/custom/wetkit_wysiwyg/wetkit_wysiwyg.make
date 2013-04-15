@@ -54,7 +54,7 @@ projects[caption_filter][patch][1432092] = http://drupal.org/files/1432092-butto
 ; Include our Editors
 
 libraries[ckeditor][download][type] = git
-libraries[ckeditor][download][revision] = 94162e0
+libraries[ckeditor][download][revision] = a9514c2
 libraries[ckeditor][download][url] = https://github.com/ckeditor/ckeditor-releases.git
 
 libraries[tinymce][download][type] = git
