@@ -24,7 +24,7 @@ dependencies[] = tablefield
 dependencies[] = views_autocomplete_filters
 dependencies[] = views_content
 dependencies[] = wetkit_core
-scripts[] = wetkit-tabbed-interface.js
+scripts[] = js/wetkit-tabbed-interface.js
 stylesheets[all][] = css/wetkit-tabbed-interface.css
 explanation = Field type(s) in use - see <a href="/eng/admin/reports/fields">Field list</a>
 features[ctools][] = file_entity:file_default_displays:1
