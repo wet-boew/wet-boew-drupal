@@ -95,7 +95,6 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
           'Maximize' => 1,
           'SpellChecker' => 1,
           'Scayt' => 1,
-          'Templates' => 1,
         ),
         'linkit' => array(
           'linkit' => 1,
