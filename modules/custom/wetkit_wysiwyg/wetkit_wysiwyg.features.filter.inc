@@ -719,7 +719,7 @@ wbr[class|dir<ltr?rtl|id|lang|style|title]',
     'format' => 'wetkit_wysiwyg_text',
     'name' => 'WYSIWYG TINYMCE',
     'cache' => 1,
-    'status' => 1,
+    'status' => 0,
     'weight' => -10,
     'filters' => array(
       'wysiwyg' => array(
