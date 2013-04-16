@@ -362,10 +362,10 @@ wbr[class|dir<ltr?rtl|id|lang|style|title]',
     ),
   );
 
-  // Exported format: WYSIWYG.
-  $formats['wetkit_wysiwyg_text'] = array(
-    'format' => 'wetkit_wysiwyg_text',
-    'name' => 'WYSIWYG',
+  // Exported format: WYSIWYG CKEDITOR.
+  $formats['wetkit_wysiwyg_ckeditor_text'] = array(
+    'format' => 'wetkit_wysiwyg_ckeditor_text',
+    'name' => 'WYSIWYG CKEDITOR',
     'cache' => 1,
     'status' => 1,
     'weight' => -10,
@@ -714,10 +714,10 @@ wbr[class|dir<ltr?rtl|id|lang|style|title]',
     ),
   );
 
-// Exported format: INLINE WYSIWYG.
-  $formats['wetkit_inline_wysiwyg_text'] = array(
-    'format' => 'wetkit_inline_wysiwyg_text',
-    'name' => 'INLINE WYSIWYG',
+  // Exported format: WYSIWYG.
+  $formats['wetkit_wysiwyg_text'] = array(
+    'format' => 'wetkit_wysiwyg_text',
+    'name' => 'WYSIWYG',
     'cache' => 1,
     'status' => 1,
     'weight' => -10,
