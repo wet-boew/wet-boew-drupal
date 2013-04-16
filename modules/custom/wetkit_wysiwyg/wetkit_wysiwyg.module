@@ -213,7 +213,7 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
       $settings['startupOutlineBlocks'] = FALSE;
 
       // Enable SCAYT by default.
-      $settings['scayt_autoStartup'] = TRUE;
+      $settings['scayt_autoStartup'] = FALSE;
       $settings['scayt_maxSuggestions'] = 5;
       $settings['scayt_moreSuggestions'] = 'on';
       $settings['scayt_sLang'] = ($settings['language'] == 'fr') ? 'fr_CA' : 'en_CA';
