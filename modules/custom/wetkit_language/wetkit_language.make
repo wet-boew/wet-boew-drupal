@@ -39,15 +39,12 @@ projects[i18nviews][download][revision] = 26bd52c
 projects[i18nviews][download][branch] = 7.x-3.x
 projects[i18nviews][patch][1788832] = http://drupal.org/files/fixed-1788832-1.patch
 
-projects[l10n_client][version] = 1.1
+projects[l10n_client][version] = 1.x-dev
 projects[l10n_client][type] = module
 projects[l10n_client][subdir] = contrib
 projects[l10n_client][download][type] = git
-projects[l10n_client][download][revision] = df71809
+projects[l10n_client][download][revision] = 99dcad7
 projects[l10n_client][download][branch] = 7.x-1.x
-projects[l10n_client][patch][862590] = http://drupal.org/files/l10n_client-optimization-862590-48.patch
-projects[l10n_client][patch][1026048] = http://drupal.org/files/issues/l10n_client.module_0.patch
-projects[l10n_client][patch][1161204] = http://drupal.org/files/issues/css_42.patch
 
 projects[l10n_update][version] = 1.0-beta3
 projects[l10n_update][subdir] = contrib
