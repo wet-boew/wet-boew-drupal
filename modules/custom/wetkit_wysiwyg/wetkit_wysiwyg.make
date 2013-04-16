@@ -5,14 +5,13 @@ core = 7.x
 
 ; The WYSIWYG Module Family
 
+projects[wysiwyg][version] = 2.x-dev
 projects[wysiwyg][subdir] = contrib
-projects[wysiwyg][version] = 2.2
 projects[wysiwyg][download][type] = git
-projects[wysiwyg][download][revision] = 41693f1
+projects[wysiwyg][download][revision] = fd4f652
 projects[wysiwyg][download][branch] = 7.x-2.x
-projects[wysiwyg][patch][1489096] = http://drupal.org/files/wysiwyg-table-format.patch
+projects[wysiwyg][patch][1489096] = http://drupal.org/files/wysiwyg-table-format-1489096-7.patch
 projects[wysiwyg][patch][1786732] = http://drupal.org/files/wysiwyg-arbitrary_image_paths_markitup-1786732-3.patch
-projects[wysiwyg][patch][1802394] = http://drupal.org/files/wysiwyg-1802394-4.patch
 
 projects[wysiwyg_filter][version] = 1.x-dev
 projects[wysiwyg_filter][type] = module
@@ -53,6 +52,10 @@ projects[caption_filter][download][branch] = 7.x-1.x
 projects[caption_filter][patch][1432092] = http://drupal.org/files/1432092-button-and-image.patch
 
 ; Include our Editors
+
+libraries[ckeditor][download][type] = git
+libraries[ckeditor][download][revision] = a9514c2
+libraries[ckeditor][download][url] = https://github.com/ckeditor/ckeditor-releases.git
 
 libraries[tinymce][download][type] = git
 libraries[tinymce][download][revision] = ef85a05

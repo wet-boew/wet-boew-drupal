@@ -148,10 +148,77 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
           $settings['language'] = $language->language;
         }
       }
+      // Check existence of CKEditor which includes language pack by default.
+      if ($context['editor']['name'] == 'ckeditor') {
+        $settings['language'] = $language->language;
+      }
     }
   }
 
   switch ($context['editor']['name']) {
+    case 'ckeditor':
+      // Intranet Theme.
+      $wet_theme = '';
+      if ((variable_get('wetkit_wetboew_theme', 0) == 1)) {
+        $wet_theme = 'theme-base';
+      }
+      // Base Theme.
+      elseif ((variable_get('wetkit_wetboew_theme', 0) == 2)) {
+        $wet_theme = 'theme-gcwu-intranet';
+      }
+      // Internet Theme.
+      else {
+        $wet_theme = 'theme-gcwu-fegc';
+      }
+
+      // Start Up Settings
+      $settings['docType'] = '<!DOCTYPE html>';
+      $settings['startupMode'] = 'wysiwyg';
+
+      // Set CSS Files that absolutely need to be rendered inside the WYSIWYG
+      // leaves the interface in the frontend to be used for additional styles.
+      $settings['contentsCss'] = array(
+        libraries_get_path('wet-boew', TRUE) . '/dist/grids/css/util-min.css',
+        libraries_get_path('wet-boew', TRUE) . '/dist/js/css/pe-ap-min.css',
+        libraries_get_path('wet-boew', TRUE) . '/dist/' . $wet_theme . '/css/theme-min.css',
+      );
+
+      // Allow extra elements for Media module
+      // See - http://drupal.org/node/1963270
+      $settings['extraAllowedContent'] = array(
+        'img[src,title,alt,style,width,height,class,hspace,vspace,view_mode,format,fid]',
+      );
+
+      // Editor Configuration.
+      $settings['emailProtection'] = 'encode';
+      $settings['find_highlight'] = array(
+        'element' => 'span',
+        'styles' => array(
+          'background-color' => '#ff0',
+          'color' => '#00f',
+        ),
+      );
+      $settings['justifyClasses'] = array(
+        'align-left',
+        'align-center',
+        'align-right',
+      );
+      $settings['resize_enabled'] = TRUE;
+
+      // Toolbar Configuration.
+      $settings['toolbarCanCollapse'] = TRUE;
+      $settings['toolbarStartupExpanded'] = TRUE;
+
+      // Startup Outline Blocks
+      $settings['startupOutlineBlocks'] = FALSE;
+
+      // Enable SCAYT by default.
+      $settings['scayt_autoStartup'] = FALSE;
+      $settings['scayt_maxSuggestions'] = 5;
+      $settings['scayt_moreSuggestions'] = 'on';
+      $settings['scayt_sLang'] = ($settings['language'] == 'fr') ? 'fr_CA' : 'en_CA';
+      break;
+
     case 'tinymce':
       // Internet Theme.
       $wet_theme = '';
