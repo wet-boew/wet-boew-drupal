@@ -152,6 +152,31 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
   }
 
   switch ($context['editor']['name']) {
+    case 'ckeditor':
+      // Intranet Theme.
+      $wet_theme = '';
+      if ((variable_get('wetkit_wetboew_theme', 0) == 1)) {
+        $wet_theme = 'theme-base';
+      }
+      // Base Theme.
+      elseif ((variable_get('wetkit_wetboew_theme', 0) == 2)) {
+        $wet_theme = 'theme-gcwu-intranet';
+      }
+      // Internet Theme.
+      else {
+        $wet_theme = 'theme-gcwu-fegc';
+      }
+
+      // Set CSS Files that absolutely need to be rendered inside the WYSIWYG
+      // leaves the interface in the frontend to be used for additional styles.
+      $settings['contentsCss'] = array(
+        libraries_get_path('wet-boew', TRUE) . '/dist/grids/css/util-min.css',
+        libraries_get_path('wet-boew', TRUE) . '/dist/js/css/pe-ap-min.css',
+        libraries_get_path('wet-boew', TRUE) . '/dist/' . $wet_theme . '/css/theme-min.css',
+      );
+
+      break;
+
     case 'tinymce':
       // Intranet Theme.
       $wet_theme = '';

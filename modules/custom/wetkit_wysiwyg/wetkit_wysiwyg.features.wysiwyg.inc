@@ -17,7 +17,7 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
     'settings' => array(
       'default' => 1,
       'user_choose' => 0,
-      'show_toggle' => 0,
+      'show_toggle' => 1,
       'theme' => 'advanced',
       'language' => 'en',
       'buttons' => array(
@@ -52,7 +52,7 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
     'settings' => array(
       'default' => 1,
       'user_choose' => 0,
-      'show_toggle' => 0,
+      'show_toggle' => 1,
       'theme' => 'advanced',
       'language' => 'en',
       'buttons' => array(
@@ -104,6 +104,51 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
         'drupal' => array(
           'media' => 1,
           'break' => 1,
+        ),
+      ),
+      'toolbar_loc' => 'top',
+      'toolbar_align' => 'left',
+      'path_loc' => 'bottom',
+      'resizing' => 1,
+      'verify_html' => 1,
+      'preformatted' => 1,
+      'convert_fonts_to_spans' => 1,
+      'remove_linebreaks' => 0,
+      'apply_source_formatting' => 1,
+      'paste_auto_cleanup_on_paste' => 1,
+      'block_formats' => 'h1,h2,h3,h4,h5,h6',
+      'css_setting' => 'self',
+      'css_path' => '',
+      'css_classes' => 'module=module
+module-related=module-related
+module-billboard=module-billboard
+module-event=module-event
+module-menu-section=module-menu-section
+module-table-contents=module-table-contents
+module-poster=module-poster
+module-contact=module-contact
+module-news=module-news
+module-spotlight=module-spotlight
+module-comment=module-comment',
+    ),
+  );
+
+  // Exported profile: wetkit_inline_wysiwyg_text
+  $profiles['wetkit_inline_wysiwyg_text'] = array(
+    'format' => 'wetkit_inline_wysiwyg_text',
+    'editor' => 'ckeditor',
+    'settings' => array(
+      'default' => 1,
+      'user_choose' => 0,
+      'show_toggle' => 1,
+      'theme' => 'advanced',
+      'language' => 'en',
+      'buttons' => array(
+        'default' => array(
+          'Bold' => 1,
+          'Italic' => 1,
+          'Image' => 1,
+          'PasteFromWord' => 1,
         ),
       ),
       'toolbar_loc' => 'top',
