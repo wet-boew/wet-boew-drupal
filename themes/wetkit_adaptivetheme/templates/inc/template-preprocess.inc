@@ -170,7 +170,7 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
 
   // Internationalization Check.
   $is_multilingual = 0;
-  if (module_exists('i18n_menu')) {
+  if (module_exists('i18n_menu') && drupal_multilingual()) {
     $is_multilingual = 1;
   }
 
