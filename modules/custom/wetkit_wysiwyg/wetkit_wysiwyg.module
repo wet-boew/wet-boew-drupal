@@ -148,6 +148,10 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
           $settings['language'] = $language->language;
         }
       }
+      // Check existence of CKEditor which includes language pack by default.
+      if ($context['editor']['name'] == 'ckeditor') {
+        $settings['language'] = $language->language;
+      }
     }
   }
 
@@ -175,6 +179,11 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
         libraries_get_path('wet-boew', TRUE) . '/dist/' . $wet_theme . '/css/theme-min.css',
       );
 
+      // Allow extra elements for Media module
+      // See - http://drupal.org/node/1963270
+      $settings['extraAllowedContent'] = array(
+        'img[src,title,alt,style,width,height,class,hspace,vspace,view_mode,format,fid]',
+      );
       break;
 
     case 'tinymce':

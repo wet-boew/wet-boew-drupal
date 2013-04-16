@@ -717,7 +717,7 @@ wbr[class|dir<ltr?rtl|id|lang|style|title]',
   // Exported format: WYSIWYG.
   $formats['wetkit_wysiwyg_text'] = array(
     'format' => 'wetkit_wysiwyg_text',
-    'name' => 'WYSIWYG',
+    'name' => 'WYSIWYG TINYMCE',
     'cache' => 1,
     'status' => 1,
     'weight' => -10,
