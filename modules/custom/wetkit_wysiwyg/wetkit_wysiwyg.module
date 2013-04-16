@@ -171,6 +171,10 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
         $wet_theme = 'theme-gcwu-fegc';
       }
 
+      // Start Up Settings
+      $settings['docType'] = '<!DOCTYPE html>';
+      $settings['startupMode'] = 'wysiwyg';
+
       // Set CSS Files that absolutely need to be rendered inside the WYSIWYG
       // leaves the interface in the frontend to be used for additional styles.
       $settings['contentsCss'] = array(
@@ -184,6 +188,35 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
       $settings['extraAllowedContent'] = array(
         'img[src,title,alt,style,width,height,class,hspace,vspace,view_mode,format,fid]',
       );
+
+      // Editor Configuration.
+      $settings['emailProtection'] = 'encode';
+      $settings['find_highlight'] = array(
+        'element' => 'span',
+        'styles' => array(
+          'background-color' => '#ff0',
+          'color' => '#00f',
+        ),
+      );
+      $settings['justifyClasses'] = array(
+        'align-left',
+        'align-center',
+        'align-right',
+      );
+      $settings['resize_enabled'] = TRUE;
+
+      // Toolbar Configuration.
+      $settings['toolbarCanCollapse'] = TRUE;
+      $settings['toolbarStartupExpanded'] = TRUE;
+
+      // Startup Outline Blocks
+      $settings['startupOutlineBlocks'] = FALSE;
+
+      // Enable SCAYT by default.
+      $settings['scayt_autoStartup'] = TRUE;
+      $settings['scayt_maxSuggestions'] = 5;
+      $settings['scayt_moreSuggestions'] = 'on';
+      $settings['scayt_sLang'] = ($settings['language'] == 'fr') ? 'fr_CA' : 'en_CA';
       break;
 
     case 'tinymce':

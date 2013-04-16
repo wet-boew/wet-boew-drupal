@@ -17,7 +17,7 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
     'settings' => array(
       'default' => 1,
       'user_choose' => 0,
-      'show_toggle' => 1,
+      'show_toggle' => 0,
       'theme' => 'advanced',
       'language' => 'en',
       'buttons' => array(
@@ -52,7 +52,7 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
     'settings' => array(
       'default' => 1,
       'user_choose' => 0,
-      'show_toggle' => 1,
+      'show_toggle' => 0,
       'theme' => 'advanced',
       'language' => 'en',
       'buttons' => array(
@@ -89,6 +89,7 @@ function wetkit_wysiwyg_wysiwyg_default_profiles() {
           'Styles' => 1,
           'Table' => 1,
           'SelectAll' => 1,
+          'Find' => 1,
           'Replace' => 1,
           'CreateDiv' => 1,
           'Maximize' => 1,
@@ -132,7 +133,7 @@ module-contact=div.module-contact
 module-news=div.module-news
 module-spotlight=div.module-spotlight
 module-comment=div.module-comment',
-      'advanced__active_tab' => 'edit-css',
+      'advanced__active_tab' => 'edit-basic',
     ),
   );
 
@@ -143,7 +144,7 @@ module-comment=div.module-comment',
     'settings' => array(
       'default' => 1,
       'user_choose' => 0,
-      'show_toggle' => 1,
+      'show_toggle' => 0,
       'theme' => 'advanced',
       'language' => 'en',
       'buttons' => array(
