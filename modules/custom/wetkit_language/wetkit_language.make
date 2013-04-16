@@ -45,7 +45,6 @@ projects[l10n_client][subdir] = contrib
 projects[l10n_client][download][type] = git
 projects[l10n_client][download][revision] = 99dcad7
 projects[l10n_client][download][branch] = 7.x-1.x
-projects[l10n_client][patch][862590] = http://drupal.org/files/l10n_client-optimization-862590-48.patch
 
 projects[l10n_update][version] = 1.0-beta3
 projects[l10n_update][subdir] = contrib
