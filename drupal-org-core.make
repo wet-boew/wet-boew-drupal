@@ -1,11 +1,6 @@
 api = 2
 core = 7.22
 
-projects[drupal][version] = 7.22
-
-; Translations
-translations[] = fr
-
 ; Patches for Core
 projects[drupal][patch][728702] = "http://drupal.org/files/issues/install-redirect-on-empty-database-728702-36.patch"
 projects[drupal][patch][1470656] = "http://drupal.org/files/drupal-1470656-14.patch"

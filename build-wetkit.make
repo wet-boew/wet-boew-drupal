@@ -1,7 +1,5 @@
 api = 2
 core = 7.x
-
-includes[] = drupal-org-core.make
 	
 ; Drupal.org packaging standards
 projects[wetkit][type] = profile 

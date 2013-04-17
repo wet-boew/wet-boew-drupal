@@ -232,12 +232,12 @@ projects[title][patch][1907078] = http://drupal.org/files/undefined_index_field_
 projects[i18n][version] = 1.8
 projects[i18n][subdir] = contrib
 
-projects[i18n_panels][type] = module
-projects[i18n_panels][subdir] = contrib
-projects[i18n_panels][download][type] = git
-projects[i18n_panels][download][url] = http://git.drupal.org/sandbox/daspeter/1444130.git
-projects[i18n_panels][download][revision] = 9380b11
-projects[i18n_panels][download][branch] = 7.x-1.x
+;projects[i18n_panels][type] = module
+;projects[i18n_panels][subdir] = contrib
+;projects[i18n_panels][download][type] = git
+;projects[i18n_panels][download][url] = http://git.drupal.org/sandbox/daspeter/1444130.git
+;projects[i18n_panels][download][revision] = 9380b11
+;projects[i18n_panels][download][branch] = 7.x-1.x
 
 projects[i18nviews][version] = 3.x-dev
 projects[i18nviews][type] = module
