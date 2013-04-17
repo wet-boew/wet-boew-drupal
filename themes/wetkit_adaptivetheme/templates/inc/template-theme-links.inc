@@ -36,11 +36,17 @@ function wetkit_adaptivetheme_links__menu_terms_bar($variables) {
   $output = '';
 
   // Custom Logic Based on Theme Selection (Internet, Intranet or Base).
-  if (variable_get('wetkit_wetboew_theme', 0) == 2) {
+  if (variable_get('wetkit_wetboew_theme', 0) == 1) {
+    $theme_prefix = 'gcwu';
+  }
+  elseif (variable_get('wetkit_wetboew_theme', 0) == 2) {
+    $theme_prefix = 'gcwu';
+  }
+  elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
     $theme_prefix = 'base';
   }
   else {
-    $theme_prefix = 'gcwu';
+    $theme_prefix = 'wet';
   }
 
   if (count($links) > 0) {
@@ -128,11 +134,17 @@ function wetkit_adaptivetheme_links__menu_footer_bar($variables) {
   $output = '';
 
   // Custom Logic Based on Theme Selection (Internet, Intranet or Base).
-  if (variable_get('wetkit_wetboew_theme', 0) == 2) {
+  if (variable_get('wetkit_wetboew_theme', 0) == 1) {
+    $theme_prefix = 'gcwu';
+  }
+  elseif (variable_get('wetkit_wetboew_theme', 0) == 2) {
+    $theme_prefix = 'gcwu';
+  }
+  elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
     $theme_prefix = 'base';
   }
   else {
-    $theme_prefix = 'gcwu';
+    $theme_prefix = 'wet';
   }
 
   if (count($links) > 0) {
@@ -234,11 +246,17 @@ function wetkit_adaptivetheme_links__menu_nav_bar($variables) {
   $output = '';
 
   // Custom Logic Based on Theme Selection (Internet, Intranet or Base).
-  if (variable_get('wetkit_wetboew_theme', 0) == 2) {
-    $theme_prefix = 'base';
+  if (variable_get('wetkit_wetboew_theme', 0) == 1) {
+    $theme_prefix = 'gcwu-gcnb';
+  }
+  elseif (variable_get('wetkit_wetboew_theme', 0) == 2) {
+    $theme_prefix = 'gcwu-gcnb';
+  }
+  elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
+    $theme_prefix = 'base-gcnb';
   }
   else {
-    $theme_prefix = 'gcwu';
+    $theme_prefix = 'wet-fullhd-lang-';
   }
 
   if (count($links) > 0) {
@@ -281,7 +299,7 @@ function wetkit_adaptivetheme_links__menu_nav_bar($variables) {
       if (isset($link['href']) && ($link['href'] == $_GET['q'] || ($link['href'] == '<front>' && drupal_is_front_page())) && (empty($link['language']) || $link['language']->language == $language_url->language)) {
         $class[] = 'active';
       }
-      $output .= '<li id="' . $theme_prefix . '-gcnb' . $i . '"' . drupal_attributes(array('class' => $class)) . '>';
+      $output .= '<li id="' . $theme_prefix . $i . '"' . drupal_attributes(array('class' => $class)) . '>';
 
       if (isset($link['href'])) {
         // Pass in $link as $options, they share the same keys.

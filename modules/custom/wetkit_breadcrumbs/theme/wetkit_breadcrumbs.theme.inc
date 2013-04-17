@@ -19,7 +19,20 @@ function wetkit_breadcrumbs_breadcrumb($variables) {
 
     // Provide a navigational heading to give context for breadcrumb links to
     // screen-reader users. Make the heading invisible with .element-invisible.
-    $output = '<div id="gcwu-bc"><h2>' . t('Breadcrumb Trail') . '</h2>';
+    // Custom Logic Based on Theme Selection
+    if (variable_get('wetkit_wetboew_theme', 0) == 1) {
+      $theme_prefix = 'gcwu';
+    }
+    elseif (variable_get('wetkit_wetboew_theme', 0) == 2) {
+      $theme_prefix = 'gcwu';
+    }
+    elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
+      $theme_prefix = 'base';
+    }
+    else {
+      $theme_prefix = 'wet';
+    }
+    $output = '<div id="' . $theme_prefix . '-bc"><h2>' . t('Breadcrumb Trail') . '</h2>';
 
     // Hide breadcrumb navigation if it contains only one element.
     $hide_single_breadcrumb = variable_get('path_breadcrumbs_hide_single_breadcrumb', 0);
@@ -126,7 +139,7 @@ function wetkit_breadcrumbs_breadcrumb($variables) {
     }
 
     $delimiter = '';
-    $output .= '<div id="gcwu-bc-in"' . $root_property . '>' . '<ol>' . implode(' ' . trim($delimiter) . ' ', $breadcrumbs) . '</ol></div></div>';
+    $output .= '<div id="' . $theme_prefix . '-bc-in"' . $root_property . '>' . '<ol>' . implode(' ' . trim($delimiter) . ' ', $breadcrumbs) . '</ol></div></div>';
     return $output;
   }
 

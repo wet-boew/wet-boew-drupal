@@ -86,56 +86,29 @@
   <?php endif; ?>
   <div id="wb-head">
     <div id="wb-head-in">
-      <header id="header" class="clearfix" role="banner">
+      <header>
         <!-- HeaderStart -->
-        <nav role="navigation">
-          <div id="gcwu-gcnb">
+        <section>
+          <div id="wet-fullhd">
             <h2><span><?php print t('Site menu'); ?></span></h2>
-            <div id="gcwu-gcnb-in">
+            <div id="wet-fullhd-in">
               <?php print $menu_bar; ?>
-              <div id="gcwu-gcnb-fip">
-                <div id="gcwu-sig">
-                  <div id="gcwu-sig-in">
-                    <?php if ($language->language == 'en'): ?>
-                      <div id="gcwu-sig-eng" title="Government of Canada">
-                        <object data="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-fegc/images/sig-eng.svg" role="img" tabindex="-1" aria-label="Government of Canada" type="image/svg+xml">
-                          <img src="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-fegc/images/sig-eng.png" alt="Government of Canada" />
-                        </object>
-                      </div>
-                    <?php endif;?>
-                    <?php if ($language->language == 'fr'): ?>
-                      <div id="gcwu-sig-fra" title="Gouvernement du Canada">
-                        <object data="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-fegc/images/sig-eng.svg" role="img" tabindex="-1" aria-label="Gouvernement du Canada" type="image/svg+xml">
-                          <img src="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-fegc/images/sig-eng.png" alt="Gouvernement du Canada" />
-                        </object>
-                      </div>
-                    <?php endif;?>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
-        </nav>
-        <div id="gcwu-bnr" role="banner">
-          <div id="gcwu-bnr-in">
-            <div id="gcwu-wmms">
-              <div id="gcwu-wmms-in">
-                <?php if ($language->language == 'en'): ?>
-                  <object data="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-fegc/images/wmms.svg" role="img" tabindex="-1" aria-label="Symbol of the Government of Canada" type="image/svg+xml">
-                    <img src="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-fegc/images/wmms.png" alt="Symbol of the Government of Canada" />
-                  </object>
-                <?php endif;?>
-                <?php if ($language->language == 'fr'): ?>
-                  <object data="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-fegc/images/wmms.svg" role="img" tabindex="-1" aria-label="Symbole du gouvernement du Canada" type="image/svg+xml">
-                    <img src="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-gcwu-fegc/images/wmms.png" alt="Symbole du gouvernement du Canada" />
-                  </object>
-                <?php endif;?>
-              </div>
-            </div>
+        </section>
+        <div id="wet-bnr" role="banner">
+          <div id="wet-bnr-in">
             <?php if ($site_name || $site_slogan): ?>
-              <div id="gcwu-title">
+              <div id="wet-title">
                 <?php if ($site_name): ?>
-                  <p id="gcwu-title-in"><?php print $site_name; ?></p>
+                  <p id="wet-title-in">
+                    <a href="<?php print $site_name_frontpage; ?>">
+                      <object data="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-wet-boew/images/logo.svg" role="img" tabindex="-1" type="image/svg+xml">
+                        <img src="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-wet-boew/images/logo.png" alt="" />
+                      </object>
+                      <span><?php print $site_name; ?></span>
+                    </a>
+                  </p>
                 <?php endif; ?>
                 <?php if ($site_slogan): ?>
                   <h2 id="site-slogan"<?php print $site_slogan_attributes; ?>><?php print $site_slogan; ?></h2>
@@ -143,7 +116,7 @@
               </div>
             <?php endif; ?>
             <section role ="search">
-              <div id="gcwu-srchbx">
+              <div id="wet-srchbx">
                 <h2><?php print t('Search'); ?></h2>
                 <?php if ($search_box): ?>
                   <?php print $search_box; ?>
@@ -153,9 +126,9 @@
           </div>
         </div>
         <nav role="navigation">
-          <div id="gcwu-psnb">
+          <div id="wet-psnb">
             <h2><?php print t('<span>Site</span> Menu'); ?></h2>
-            <div id="gcwu-psnb-in">
+            <div id="wet-psnb-in">
               <div class="wet-boew-menubar mb-mega">
                 <div>
                   <!-- region: Mega Menu -->
@@ -197,27 +170,13 @@
       <footer>
         <h2 id="wb-nav"><?php print t('Footer'); ?></h2>
         <nav role="navigation">
-          <div id="gcwu-sft">
+          <div id="wet-sft">
             <h3><?php print t('Site Footer'); ?></h3>
-            <div id="gcwu-sft-in">
-              <div id="gcwu-tctr">
-                <?php print $menu_terms_bar; ?>
-              </div>
-              <div class="clear"></div>
+            <div id="wet-sft-in">
               <!-- region: Footer -->
               <?php if ($page['footer']): ?>
                 <?php print render($page['footer']); ?>
               <?php endif; ?>
-            </div>
-          </div>
-        </nav>
-        <nav role="navigation">
-          <div id="gcwu-gcft">
-            <h3><?php print t('Government of Canada Footer'); ?></h3>
-            <div id="gcwu-gcft-in">
-              <div id="gcwu-gcft-fip">
-                <?php print $menu_footer_bar; ?>        
-              </div>
             </div>
           </div>
         </nav>
