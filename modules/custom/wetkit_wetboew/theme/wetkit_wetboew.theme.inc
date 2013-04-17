@@ -28,11 +28,11 @@ function theme_wetkit_wetboew_status_messages($variables) {
         break;
 
       case 'warning':
-        $extraclass = $spanclass . ' module-alert';
+        $extraclass = $spanclass . ' module-attention';
         break;
 
       case 'error':
-        $extraclass = $spanclass . ' module-attention';
+        $extraclass = $spanclass . ' module-alert';
         break;
 
       case 'status':

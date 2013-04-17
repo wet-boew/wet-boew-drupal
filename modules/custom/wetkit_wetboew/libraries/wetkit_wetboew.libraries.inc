@@ -8,16 +8,35 @@
  * Implements hook_libraries_info().
  */
 function wetkit_wetboew_libraries_info() {
-  // A very simple library. No changing APIs (hence, no versions), no variants.
-  // Expected to be extracted into 'sites/all/libraries/wet-boew'.
   $libraries['wet-boew'] = array(
     'name' => 'WET-BOEW JS',
     'vendor url' => 'https://github.com/wet-boew/wet-boew',
     'download url' => 'https://github.com/wet-boew/wet-boew/downloads',
-    'version' => '3.0',
+    'version' => '3.1',
+    // WETBOEW THEME
     'files' => array(
       'css' => array(
         'dist/grids/css/util-ie-min.css' => array(
+          'browsers' => array(
+            'IE' => 'lte IE 8',
+            '!IE' => FALSE,
+          ),
+          'group' => CSS_DEFAULT,
+          'every_page' => TRUE,
+          'preprocess' => FALSE,
+          'weight' => 5,
+        ),
+        'dist/js/css/pe-ap-ie-min.css' => array(
+          'browsers' => array(
+            'IE' => 'lte IE 8',
+            '!IE' => FALSE,
+          ),
+          'group' => CSS_DEFAULT,
+          'every_page' => TRUE,
+          'preprocess' => FALSE,
+          'weight' => 5,
+        ),
+        'dist/theme-wet-boew/css/theme-ie-min.css' => array(
           'browsers' => array(
             'IE' => 'lte IE 8',
             '!IE' => FALSE,
@@ -35,16 +54,6 @@ function wetkit_wetboew_libraries_info() {
           'preprocess' => FALSE,
           'weight' => 5,
         ),
-        'dist/js/css/pe-ap-ie-min.css' => array(
-          'browsers' => array(
-            'IE' => 'lte IE 8',
-            '!IE' => FALSE,
-          ),
-          'group' => CSS_DEFAULT,
-          'every_page' => TRUE,
-          'preprocess' => FALSE,
-          'weight' => 5,
-        ),
         'dist/js/css/pe-ap-min.css' => array(
           'browsers' => array(
             'IE' => 'gt IE 8',
@@ -53,17 +62,7 @@ function wetkit_wetboew_libraries_info() {
           'preprocess' => FALSE,
           'weight' => 5,
         ),
-        'dist/theme-gcwu-fegc/css/theme-ie-min.css' => array(
-          'browsers' => array(
-            'IE' => 'lte IE 8',
-            '!IE' => FALSE,
-          ),
-          'group' => CSS_DEFAULT,
-          'every_page' => TRUE,
-          'preprocess' => FALSE,
-          'weight' => 5,
-        ),
-        'dist/theme-gcwu-fegc/css/theme-min.css' => array(
+        'dist/theme-wet-boew/css/theme-min.css' => array(
           'browsers' => array(
             'IE' => 'gt IE 8',
             '!IE' => TRUE,
@@ -73,7 +72,7 @@ function wetkit_wetboew_libraries_info() {
         ),
       ),
       'js' => array(
-        'dist/theme-gcwu-fegc/js/theme-min.js' => array(
+        'dist/theme-wet-boew/js/theme-min.js' => array(
           'preprocess' => FALSE,
           'scope' => 'footer',
           'weight' => 5,
@@ -88,12 +87,17 @@ function wetkit_wetboew_libraries_info() {
           'scope' => 'footer',
           'weight' => 5,
         ),
+        'dist/js/jquerymobile/jquery.mobile.min.js' => array(
+          'preprocess' => FALSE,
+          'scope' => 'footer',
+          'weight' => 5,
+        ),
       ),
     ),
-    // Optional: Specify alternative variants of the library, if available.
+    // VARIANTS
     'variants' => array(
-      // All properties defined for 'base_theme' override top-level properties.
-      'base_theme' => array(
+      // INTERNET THEME
+      'internet' => array(
         'files' => array(
           'css' => array(
             'dist/grids/css/util-ie-min.css' => array(
@@ -132,7 +136,7 @@ function wetkit_wetboew_libraries_info() {
               'preprocess' => FALSE,
               'weight' => 5,
             ),
-            'dist/theme-base/css/theme-ie-min.css' => array(
+            'dist/theme-gcwu-fegc/css/theme-ie-min.css' => array(
               'browsers' => array(
                 'IE' => 'lte IE 8',
                 '!IE' => FALSE,
@@ -142,7 +146,7 @@ function wetkit_wetboew_libraries_info() {
               'preprocess' => FALSE,
               'weight' => 5,
             ),
-            'dist/theme-base/css/theme-min.css' => array(
+            'dist/theme-gcwu-fegc/css/theme-min.css' => array(
               'browsers' => array(
                 'IE' => 'gt IE 8',
                 '!IE' => TRUE,
@@ -152,12 +156,12 @@ function wetkit_wetboew_libraries_info() {
             ),
           ),
           'js' => array(
-            'dist/theme-base/js/theme-min.js' => array(
+            'dist/js/settings.js' => array(
               'preprocess' => FALSE,
               'scope' => 'footer',
               'weight' => 5,
             ),
-            'dist/js/settings.js' => array(
+            'dist/theme-gcwu-fegc/js/theme-min.js' => array(
               'preprocess' => FALSE,
               'scope' => 'footer',
               'weight' => 5,
@@ -167,14 +171,19 @@ function wetkit_wetboew_libraries_info() {
               'scope' => 'footer',
               'weight' => 5,
             ),
+            'dist/js/jquerymobile/jquery.mobile.min.js' => array(
+              'preprocess' => FALSE,
+              'scope' => 'footer',
+              'weight' => 5,
+            ),
           ),
         ),
         'variant callback' => 'wetkit_wetboew_check_variant',
         'variant arguments' => array(
-          'variant' => 'base-theme',
+          'variant' => 'internet',
         ),
       ),
-      // All properties defined for 'intranet' override top-level properties.
+      // INTRANET THEME
       'intranet' => array(
         'files' => array(
           'css' => array(
@@ -249,11 +258,103 @@ function wetkit_wetboew_libraries_info() {
               'scope' => 'footer',
               'weight' => 5,
             ),
+            'dist/js/jquerymobile/jquery.mobile.min.js' => array(
+              'preprocess' => FALSE,
+              'scope' => 'footer',
+              'weight' => 5,
+            ),
           ),
         ),
         'variant callback' => 'wetkit_wetboew_check_variant',
         'variant arguments' => array(
           'variant' => 'intranet',
+        ),
+      ),
+      // BASE THEME
+      'base' => array(
+        'files' => array(
+          'css' => array(
+            'dist/grids/css/util-ie-min.css' => array(
+              'browsers' => array(
+                'IE' => 'lte IE 8',
+                '!IE' => FALSE,
+              ),
+              'group' => CSS_DEFAULT,
+              'every_page' => TRUE,
+              'preprocess' => FALSE,
+              'weight' => 5,
+            ),
+            'dist/js/css/pe-ap-ie-min.css' => array(
+              'browsers' => array(
+                'IE' => 'lte IE 8',
+                '!IE' => FALSE,
+              ),
+              'group' => CSS_DEFAULT,
+              'every_page' => TRUE,
+              'preprocess' => FALSE,
+              'weight' => 5,
+            ),
+            'dist/theme-base/css/theme-ie-min.css' => array(
+              'browsers' => array(
+                'IE' => 'lte IE 8',
+                '!IE' => FALSE,
+              ),
+              'group' => CSS_DEFAULT,
+              'every_page' => TRUE,
+              'preprocess' => FALSE,
+              'weight' => 5,
+            ),
+            'dist/grids/css/util-min.css' => array(
+              'browsers' => array(
+                'IE' => 'gt IE 8',
+                '!IE' => TRUE,
+              ),
+              'preprocess' => FALSE,
+              'weight' => 5,
+            ),
+            'dist/js/css/pe-ap-min.css' => array(
+              'browsers' => array(
+                'IE' => 'gt IE 8',
+                '!IE' => TRUE,
+              ),
+              'preprocess' => FALSE,
+              'weight' => 5,
+            ),
+            'dist/theme-base/css/theme-min.css' => array(
+              'browsers' => array(
+                'IE' => 'gt IE 8',
+                '!IE' => TRUE,
+              ),
+              'preprocess' => FALSE,
+              'weight' => 5,
+            ),
+          ),
+          'js' => array(
+            'dist/theme-base/js/theme-min.js' => array(
+              'preprocess' => FALSE,
+              'scope' => 'footer',
+              'weight' => 5,
+            ),
+            'dist/js/settings.js' => array(
+              'preprocess' => FALSE,
+              'scope' => 'footer',
+              'weight' => 5,
+            ),
+            'dist/js/pe-ap-min.js' => array(
+              'preprocess' => FALSE,
+              'scope' => 'footer',
+              'weight' => 5,
+            ),
+            'dist/js/jquerymobile/jquery.mobile.min.js' => array(
+              'preprocess' => FALSE,
+              'scope' => 'footer',
+              'weight' => 5,
+            ),
+          ),
+        ),
+        'variant callback' => 'wetkit_wetboew_check_variant',
+        'variant arguments' => array(
+          'variant' => 'base-theme',
         ),
       ),
     ),
@@ -273,10 +374,13 @@ function wetkit_wetboew_libraries_info() {
  *   Whether or not the variant can be manipulated
  */
 function wetkit_wetboew_check_variant($libary, $variant) {
-  if ((variable_get('wetkit_wetboew_theme', 0) == 1) && ($variant == 'intranet')) {
+  if ((variable_get('wetkit_wetboew_theme', 0) == 1) && ($variant == 'internet')) {
     return TRUE;
   }
-  elseif ((variable_get('wetkit_wetboew_theme', 0) == 2) && ($variant == 'base_theme')) {
+  elseif ((variable_get('wetkit_wetboew_theme', 0) == 2) && ($variant == 'intranet')) {
+    return TRUE;
+  }
+  elseif ((variable_get('wetkit_wetboew_theme', 0) == 3) && ($variant == 'base')) {
     return TRUE;
   }
   else {
