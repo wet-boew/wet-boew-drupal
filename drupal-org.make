@@ -1,7 +1,5 @@
 api = 2
-core = 7.x
-
-projects[drupal][version] = 7.22
+core = 7.22
 
 ; Panopoly Foundation
 
@@ -387,14 +385,13 @@ projects[caption_filter][download][revision] = c9794cf
 projects[caption_filter][download][branch] = 7.x-1.x
 projects[caption_filter][patch][1432092] = http://drupal.org/files/1432092-button-and-image.patch
 
-libraries[ckeditor][download][type] = git
-libraries[ckeditor][download][revision] = a9514c2
-libraries[ckeditor][download][url] = https://github.com/ckeditor/ckeditor-releases.git
+libraries[ckeditor][download][type] = get
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.1/ckeditor_4.1_standard.zip"
 
-libraries[tinymce][download][type] = git
-libraries[tinymce][download][revision] = ef85a05
-libraries[tinymce][download][url] = https://github.com/sylus/tinymce-wetkit.git
+libraries[tinymce][download][type] = get
+libraries[tinymce][download][url] = https://github.com/downloads/tinymce/tinymce/tinymce_3.5.8.zip
+libraries[tinymce][patch][1561882] = http://drupal.org/files/1561882-cirkuit-theme-tinymce-3.5.8.patch
 
-libraries[markitup][download][type] = git
-libraries[markitup][download][revision] = 4b77626
-libraries[markitup][download][url] = https://github.com/sylus/markitup-wetkit.git
+libraries[markitup][download][type] = get
+libraries[markitup][download][url] = https://github.com/markitup/1.x/tarball/master
+libraries[markitup][patch][1715642] = http://drupal.org/files/1715642-adding-html-set-markitup-editor.patch
