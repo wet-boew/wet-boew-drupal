@@ -1,5 +1,5 @@
 api = 2
-core = 7.22
+core = 7.x
 
 ; Panopoly Foundation
 
