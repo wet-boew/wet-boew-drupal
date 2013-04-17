@@ -59,14 +59,6 @@ projects[password_policy][subdir] = contrib
 projects[total_control][version] = 2.4
 projects[total_control][subdir] = contrib
 
-projects[views_atom][version] = 1.x-dev
-projects[views_atom][type] = module
-projects[views_atom][subdir] = contrib
-projects[views_atom][download][type] = git
-projects[views_atom][download][revision] = 96e735a2
-projects[views_atom][download][branch] = 7.x-1.x
-projects[views_atom][patch][1632362] = http://drupal.org/files/views_atom-Update_feeds_item_table_name-1632362-1.patch
-
 projects[webform][version] = 3.18
 projects[webform][subdir] = contrib
 
