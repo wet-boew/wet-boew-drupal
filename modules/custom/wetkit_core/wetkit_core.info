@@ -32,7 +32,6 @@ dependencies[] = text
 dependencies[] = total_control
 dependencies[] = transliteration
 dependencies[] = views
-dependencies[] = views_atom
 dependencies[] = views_content
 features[ctools][] = page_manager:pages_default:1
 features[ctools][] = strongarm:strongarm:1
