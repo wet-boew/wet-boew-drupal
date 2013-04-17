@@ -101,13 +101,16 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
     $panel_page = page_manager_get_current_page();
     if (!empty($panel_page)) {
       if (variable_get('wetkit_wetboew_theme', 0) == 1) {
-        $suggestions[] = 'page__panels__intranet';
+        $suggestions[] = 'page__panels__internet';
       }
       elseif (variable_get('wetkit_wetboew_theme', 0) == 2) {
+        $suggestions[] = 'page__panels__intranet';
+      }
+      elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
         $suggestions[] = 'page__panels__base';
       }
       else {
-        $suggestions[] = 'page__panels__internet';
+        $suggestions[] = 'page__panels__wet';
       }
       // Add the panel page machine name to the template suggestions.
       $suggestions[] = 'page__' . $panel_page['name'];
@@ -118,13 +121,16 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
     // Page template suggestions for normal pages.
     else {
       if (variable_get('wetkit_wetboew_theme', 0) == 1) {
-        $suggestions[] = 'page__intranet';
+        $suggestions[] = 'page__internet';
       }
       elseif (variable_get('wetkit_wetboew_theme', 0) == 2) {
+        $suggestions[] = 'page__intranet';
+      }
+      elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
         $suggestions[] = 'page__base';
       }
       else {
-        $suggestions[] = 'page__internet';
+        $suggestions[] = 'page__wet';
       }
       // Merge the suggestions in to the existing suggestions (as more specific
       // than the existing suggestions).
@@ -132,17 +138,39 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
     }
   }
 
-  // Custom Logic Based on Theme Selection (Internet, Intranet or Base).
-  if (variable_get('wetkit_wetboew_theme', 0) == 2) {
+  // Custom Logic Based on Theme Selection.
+  if (variable_get('wetkit_wetboew_theme', 0) == 1) {
+    $theme_prefix = 'gcwu';
+  }
+  elseif (variable_get('wetkit_wetboew_theme', 0) == 2) {
+    $theme_prefix = 'gcwu';
+  }
+  elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
     $theme_prefix = 'base';
   }
   else {
-    $theme_prefix = 'gcwu';
+    $theme_prefix = 'wet';
+    $variables['site_name_frontpage'] = '/' . variable_get('site_frontpage', 'node');
+    $variables['site_name'] = $variables['site_name_title'];
+  }
+
+  // Custom Logic Based on Theme Selection.
+  if (variable_get('wetkit_wetboew_theme', 0) == 1) {
+    $theme_menu_prefix = 'gcwu-gcnb';
+  }
+  elseif (variable_get('wetkit_wetboew_theme', 0) == 2) {
+    $theme_menu_prefix = 'gcwu-gcnb';
+  }
+  elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
+    $theme_menu_prefix = 'base-gcnb';
+  }
+  else {
+    $theme_menu_prefix = 'wet-fullhd';
   }
 
   // Internationalization Check.
   $is_multilingual = 0;
-  if (module_exists('i18n_menu')) {
+  if (module_exists('i18n_menu') && drupal_multilingual()) {
     $is_multilingual = 1;
   }
 
@@ -175,7 +203,7 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
   ));
   $nav_bar_markup = strip_tags($nav_bar_markup, '<li><a>');
   if (module_exists('wetkit_language')) {
-    $language_link_markup = '<li id="' . $theme_prefix . '-gcnb-lang">' . strip_tags($variables['menu_lang_bar'], '<a><span>') . '</li>';
+    $language_link_markup = '<li id="' . $theme_menu_prefix . '-lang">' . strip_tags($variables['menu_lang_bar'], '<a><span>') . '</li>';
     if (module_exists('edit')) {
       $quick_edit = edit_trigger_link();
       $variables['menu_bar'] = '<ul>' . $nav_bar_markup . $language_link_markup . '<li>' . drupal_render($quick_edit) . '</li>' . '</ul>';
@@ -253,6 +281,19 @@ function wetkit_adaptivetheme_preprocess_node(&$variables, $hook) {
   if (function_exists($function)) {
     $function($variables, $hook);
   }
+  // Date Support for different themes.
+  if (variable_get('wetkit_wetboew_theme', 0) == 1) {
+    $variables['date_mod'] = 'gcwu-date-mod';
+  }
+  elseif (variable_get('wetkit_wetboew_theme', 0) == 2) {
+    $variables['date_mod'] = 'gcwu-date-mod';
+  }
+  elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
+    $variables['date_mod'] = 'base-date-mod';
+  }
+  else {
+    $variables['date_mod'] = 'wet-date-mod';
+  }
   $node = $variables['node'];
   $variables['date'] = format_date($node->changed, 'custom', 'Y-m-d');
 }
@@ -294,14 +335,38 @@ function wetkit_adaptivetheme_preprocess_block(&$variables, $hook) {
 }
 
 /**
+ * Theme a panels pane.
+ *
+ * @param array $vars
+ *   The array used to modify the panels ipe placeholder pane.
+ */
+function wetkit_adaptivetheme_preprocess_panels_pane(&$variables) {
+  if ($variables['pane']->type == 'node_updated') { 
+    // Date Support for different themes.
+    if (variable_get('wetkit_wetboew_theme', 0) == 1) {
+      $variables['date_mod'] = 'gcwu-date-mod';
+    }
+    elseif (variable_get('wetkit_wetboew_theme', 0) == 2) {
+      $variables['date_mod'] = 'gcwu-date-mod';
+    }
+    elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
+      $variables['date_mod'] = 'base-date-mod';
+    }
+    else {
+      $variables['date_mod'] = 'wet-date-mod';
+    }
+  }
+}
+
+/**
  * Theme the 'placeholder' pane, which is shown on an active IPE.
  *
  * @param array $vars
  *   The array used to modify the panels ipe placeholder pane.
  */
-function wetkit_adaptivetheme_panels_ipe_placeholder_pane($vars) {
-  $region_id = $vars['region_id'];
-  $region_title = $vars['region_title'];
+function wetkit_adaptivetheme_panels_ipe_placeholder_pane($variables) {
+  $region_id = $variables['region_id'];
+  $region_title = $variables['region_title'];
 
   $output = '<div class="panels-ipe-placeholder-content">';
   $output .= "<h4>$region_title</h4>";
