@@ -1,0 +1,431 @@
+<?php
+
+/**
+ * @file
+ * Internationalization (i18n) submodule: Panels translation.
+ */
+
+/**
+ * Fetch the i18n_settings of the content type if there are any.
+ *
+ * @param stdClass $pane
+ *   The pane to deal with.
+ *
+ * @return array|false
+ *   Settings or FALSE if none are present.
+ */
+function wetkit_language_get_i18n_settings($pane) {
+  ctools_include('content');
+  $content_type = ctools_get_content_type($pane->type);
+  if (isset($content_type['i18n_settings'])) {
+    if (is_string($content_type['i18n_settings']) && function_exists($content_type['i18n_settings'])) {
+      $content_type['i18n_settings'] = $content_type['i18n_settings']($pane->configuration);
+    }
+  }
+  // Provide the override title string as translation for all panes that have
+  // this setting enabled.
+  if (isset($pane->configuration['override_title']) && $pane->configuration['override_title']) {
+    if (isset($content_type['i18n_settings']) && is_array($content_type['i18n_settings'])) {
+      $content_type['i18n_settings'][] = 'override_title_text';
+    }
+    else {
+      $content_type['i18n_settings'] = array('override_title_text');
+    }
+  }
+  return isset($content_type['i18n_settings']) ? $content_type['i18n_settings'] : FALSE;
+}
+
+/**
+ * Returns the translation object of the pane.
+ *
+ * @param stdClass $pane
+ *   The pane to deal with.
+ *
+ * @return stdClas|FALSE
+ *   Returns FALSE if no translation is necessary.
+ */
+function wetkit_language_get_i18n_translation_object($pane) {
+  $translation_object = array();
+
+  // Handle content type specific i18n settings.
+  if ($i18n_settings = wetkit_language_get_i18n_settings($pane)) {
+    // Register translatable settings.
+    foreach ($i18n_settings as $i18n_setting => $settings) {
+      if (!is_array($settings)) {
+        $i18n_setting = $settings;
+        $settings = array('format' => 'plain_text');
+      }
+      $translation_object[$i18n_setting] = NULL;
+      if (isset($pane->configuration[$i18n_setting])) {
+        $translation_object[$i18n_setting] = array(
+          'string' => $pane->configuration[$i18n_setting],
+          'format' => $settings['format'],
+        );
+        $translation_object['panels_i18n_settings'][$i18n_setting] = $settings;
+      }
+    }
+  }
+
+  // Check if this pane has a custom title enabled.
+  if (!empty($pane->configuration['override_title'])) {
+    $translation_object['title']['string'] = $pane->configuration['override_title_text'];
+  }
+  if (!empty($translation_object)) {
+    return (object) $translation_object;
+  }
+  return FALSE;
+}
+
+/**
+ * Implements hook_panels_pane_insert().
+ *
+ * @param stdClass $pane
+ *   The pane to deal with.
+ */
+function wetkit_language_panels_pane_insert($pane) {
+  wetkit_language_panels_pane_update($pane);
+}
+
+/**
+ * Implements hook_panels_pane_update().
+ *
+ * @param stdClass $pane
+ *   The pane to deal with.
+ */
+function wetkit_language_panels_pane_update($pane) {
+  if ($translation_object = wetkit_language_get_i18n_translation_object($pane)) {
+    $translation_object->uuid = $pane->uuid;
+    $status = i18n_string_object_update('pane_configuration', $translation_object);
+  }
+}
+
+/**
+ * Implements hook_panels_pane_delete().
+ *
+ * @param array $pids
+ *   Array with the panel ids to delete.
+ */
+function wetkit_language_panels_pane_delete($pids) {
+  if (!empty($pids)) {
+    // Fetch the uuids from the db.
+    $uuids = db_select('panels_pane')
+      ->fields('panels_pane', array('uuid'))
+      ->condition('pid', $pids)
+      ->execute()
+      ->fetchCol();
+    foreach ($uuids as $uuid) {
+      // Create dummy pane with uuid as property.
+      $pane = (object) array('uuid' => $uuid);
+      i18n_string_object_remove('pane_configuration', $pane);
+    }
+  }
+}
+
+/**
+ * Implements hook_panels_pane_prerender().
+ *
+ * @param stdClass $pane
+ *   The pane to deal with.
+ */
+function wetkit_language_panels_pane_prerender($pane) {
+  // Check if this pane has translations.
+  if (isset($pane->uuid) && $translation_object = wetkit_language_get_i18n_translation_object($pane)) {
+    $translation_object->uuid = $pane->uuid;
+    // Send to translation.
+    $translation_object = i18n_string_object_translate('pane_configuration', $translation_object);
+    unset($translation_object->uuid, $translation_object->i18n_settings);
+    foreach ($translation_object as $i18n_setting => $translated_setting) {
+      if ($i18n_setting != 'panels_i18n_settings') {
+        if (!is_array($translated_setting)) {
+          $pane->configuration[$i18n_setting] = $translated_setting;
+        }
+        else {
+          $pane->configuration[$i18n_setting] = $translated_setting['string'];
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_panels_display_save().
+ *
+ * @param panels_display $display
+ *   The display to deal with.
+ */
+function wetkit_language_panels_display_save($display) {
+  $status = i18n_string_object_update('display_configuration', $display);
+}
+
+/**
+ * Implements hook_panels_display_delete().
+ *
+ * @param int $did
+ *   Id of the display to delete.
+ */
+function wetkit_language_panels_delete_display($did) {
+  // Fetch uuid to delete the translations.
+  $uuid = db_select('panels_display')
+    ->fields('panels_display', array('uuid'))
+    ->condition('did', $did)
+    ->execute()
+    ->fetchColumn();
+  // Build a dummy display.
+  $display = (object) array('uuid' => $uuid);
+
+  // Check if this display was just saved in the db.
+  if (!_18n_panels_is_exported_panels_display($display)) {
+    // If the display was just saved in the db remove all translations.
+    i18n_string_object_remove('display_configuration', $display);
+    // Remove related pane translations too.
+    $pids = db_select('panels_pane')
+      ->fields('panels_pane', array('pid'))
+      ->condition('did', $did)
+      ->execute()
+      ->fetchCol();
+    wetkit_language_panels_pane_delete($pids);
+  }
+  else {
+    // If the display is exported leave the translated strings but give the user
+    // a hint how to clean up.
+    drupal_set_message(
+      t(
+        'The reverted panels display(s) were exported, please run a <a href="!link">string refresh</a> to update the translatable strings.',
+        array('!link' => url('admin/config/regional/translate/i18n_string'))
+      ),
+      'warning',
+      FALSE
+    );
+  }
+}
+
+/**
+ * Implements hook_panels_pre_render().
+ *
+ * This function must not rely on the passed $renderer parameter. The parameter
+ * could be empty because this function is reused in i18n_ctools_render_alter().
+ * @todo Check if a drupal_alter() in panels_display::get_title() is applicable.
+ *
+ * @see i18n_ctools_render_alter()
+ *
+ * @param panels_display $display
+ *   The display to deal with.
+ * @param panels_renderer_standard $renderer
+ *   The renderer to deal with.
+ */
+function wetkit_language_panels_pre_render(&$display, $renderer) {
+  // Avoid double translations.
+  if (!isset($display->wetkit_language_title_translated)) {
+    $translation = i18n_string_object_translate('display_configuration', $display);
+    if (is_array($translation->title)) {
+      $display->title = $translation->title['string'];
+    }
+    else {
+      $display->title = $translation->title;
+    }
+    $display->wetkit_language_title_translated = TRUE;
+  }
+}
+
+/**
+ * Implements hook_ctools_render_alter().
+ *
+ * Under some circumstances the title of the panel page is set before
+ * hook_panels_pre_render() is fired. Such cases can be handled with this hook.
+ * @todo Check if a drupal_alter() in panels_display::get_title() is applicable.
+ */
+function i18n_ctools_render_alter(&$info, $page, $context) {
+  // @todo Find a better way to detect a panels page.
+  if ($page === TRUE && !empty($info['content']['#display']) && $info['content']['#display'] instanceof panels_display) {
+    wetkit_language_panels_pre_render($info['content']['#display'], NULL);
+    // Set the info title. This is used to set the page title.
+    $info['title'] = $info['content']['#display']->get_title();
+  }
+}
+
+
+/**
+ * Implements hook_ctools_plugin_post_alter().
+ *
+ * Register some translatable configuration settings for plugins.
+ *
+ */
+function wetkit_language_ctools_plugin_post_alter(&$plugin, $plugin_type_info) {
+  if ($plugin_type_info['type'] == 'content_types') {
+    // Modify custom content.
+    if ($plugin['name'] == 'custom') {
+      // Register callback to get the translatable settings.
+      $plugin['i18n_settings'] = 'ctools_custom_content_type_i18n_settings';
+    }
+  }
+}
+
+/**
+ * Callback to provide the translatable settings appropriate to the config.
+ *
+ * @param array $conf
+ *   Content type configuration.
+ *
+ * @return array
+ *   i18n_settings configuration.
+ */
+function ctools_custom_content_type_i18n_settings($conf) {
+  return array(
+    'title',
+    'body' => array('format' => $conf['format']),
+  );
+}
+
+/**
+ * Implements hook_i18n_string_list_TEXTGROUP_alter().
+ *
+ * Necessary to support the dynamic translatable settings defined by ctools
+ * content types.
+ */
+function wetkit_language_i18n_string_list_panels_alter(&$strings, $type = NULL, $object = NULL) {
+  if (isset($object->panels_i18n_settings)) {
+    foreach ($object->panels_i18n_settings as $i18n_setting => $settings) {
+      if (isset($object->{$i18n_setting})) {
+        $strings['panels'][$type][$object->uuid][$i18n_setting] = $object->{$i18n_setting};
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_i18n_string_list().
+ *
+ * @todo Figure out a generic solution to fetch exported displays.
+ */
+function wetkit_language_i18n_string_list($group) {
+  $strings = array();
+  if ($group == 'panels') {
+
+    // Fetch all available displays.
+    $displays = _18n_panels_fetch_all_panel_displays();
+
+    foreach ($displays as $display) {
+      if (empty($display->uuid)) {
+        drupal_set_message(t('The display %display has no uuid, please resave or re-export it.', array('%display' => $display->did)), 'warning');
+        continue;
+      }
+      // Avoid duplicated runs _18n_panels_fetch_all_panel_displays() probably
+      // returns the same display twice, one for the db based and one for the
+      // exported one.
+      if (isset($strings['panels']['display_configuration'][$display->uuid])) {
+        continue;
+      }
+      $strings['panels']['display_configuration'][$display->uuid]['title']['string'] = $display->title;
+      foreach ($display->content as $pane) {
+        if (empty($pane->uuid)) {
+          // Fetch exported uuid and validate it.
+          $uuid = str_replace('new-', '', $pane->pid);
+          if (!panels_uuid_is_valid($uuid)) {
+            drupal_set_message(t('The pane %pane has no uuid, please resave or re-export it.', array('%pane' => $pane->pid)), 'warning');
+            continue;
+          }
+          $pane->uuid = $uuid;
+        }
+        if ($translation_object = wetkit_language_get_i18n_translation_object($pane)) {
+          // Split up all strings and add them to the list.
+          $pane_strings = (array) $translation_object;
+          unset($pane_strings['panels_i18n_settings']);
+          foreach ($pane_strings as $key => $pane_string) {
+            $strings['panels']['pane_configuration'][$pane->uuid][$key] = $pane_string;
+          }
+        }
+      }
+    }
+  }
+  return $strings;
+}
+
+/**
+ * Checks if the give display is exported or only stored in the db.
+ *
+ * @return boolean
+ *   TRUE if the display is available from code.
+ */
+function _18n_panels_is_exported_panels_display($display) {
+  if (isset($display->uuid)) {
+    $displays = _18n_panels_fetch_all_panel_displays();
+    return isset($displays['exported-' . $display->uuid]);
+  }
+  return FALSE;
+}
+
+/**
+ * Returns a list of really all available panel displays.
+ *
+ * The list is statically cached. Use the parameter $reset to refresh the list
+ * during the same request.
+ * Probably returns the same display twice - once with the db based and once
+ * the exported one.
+ *
+ * @todo I bet there are better ways to solve this mess.
+ *
+ * @param boolean $reset
+ *   Reset the static cache.
+ *
+ * @return array
+ *   List of all panel displays.
+ */
+function _18n_panels_fetch_all_panel_displays($reset = FALSE) {
+  $displays = &drupal_static(__FUNCTION__, array());
+  if (!empty($displays) && !$reset) {
+    return $displays;
+  }
+
+  // Fetch db based displays.
+  $dids = db_select('panels_display')->fields('panels_display', array('did'))->execute()->fetchCol();
+  $displays = panels_load_displays($dids);
+
+  // Fetch exported displays.
+  ctools_include('export');
+  foreach (ctools_export_crud_load_all('panels_display') as $panels_display) {
+    if (!empty($panels_display->uuid)) {
+      $displays['exported-' . $panels_display->uuid] = $panels_display;
+    }
+  }
+
+  // Fetch mini panels.
+  $mini_panels = ctools_export_crud_load_all('panels_mini');
+  foreach ($mini_panels as $pane) {
+    if (!empty($pane->display->uuid)) {
+      $displays['exported-' . $pane->display->uuid] = $pane->display;
+    }
+  }
+
+  // Fetch in page manager embedded displays.
+  if (module_exists('page_manager')) {
+    module_load_include('inc', 'page_manager', 'page_manager.admin');
+    $tasks = page_manager_get_tasks_by_type('page');
+    $pages = array('operations' => array(), 'tasks' => array());
+    page_manager_get_pages($tasks, $pages);
+
+    foreach ($pages['tasks'] as $task) {
+      $page = page_manager_cache_load($task);
+      $task_info = page_manager_get_task_subtasks($page->task);
+      foreach ($page->handler_info as $id => $info) {
+        $page_manager_handler = $page->handlers[$id];
+        if ($page_manager_handler->handler == 'panel_context') {
+
+          // @todo Is there really no better way to check this?
+          $is_exported = ($page_manager_handler->export_type == (EXPORT_IN_CODE | EXPORT_IN_DATABASE) || (isset($page->subtask['storage']) && $page->subtask['storage'] == t('Overridden')));
+
+          if (!empty($page_manager_handler->conf['display'])) {
+            $panels_display = $page_manager_handler->conf['display'];
+            $displays['exported-' . $panels_display->uuid] = $panels_display;
+          }
+          elseif ($is_exported && isset($page_manager_handler->conf['did'])) {
+            $panels_display = panels_load_display($page_manager_handler->conf['did']);
+            if (isset($panels_display->uuid)) {
+              $displays['exported-' . $panels_display->uuid] = $panels_display;
+            }
+          }
+        }
+      }
+    }
+  }
+  return $displays;
+}
