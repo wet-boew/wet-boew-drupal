@@ -28,3 +28,18 @@ function wetkit_breadcrumbs_install() {
     ->condition('name', 'wetkit_breadcrumbs')
     ->execute();
 }
+
+/**
+ * Implementations of hook_update_N().
+ */
+
+/**
+ * Set module weight to 1001.
+ */
+function wetkit_breadcrumbs_update_7101() {
+  // Ensure wetkit_breadcrumbs runs after path_breadcrumbs.
+  db_update('system')
+    ->fields(array('weight' => 1001))
+    ->condition('name', 'wetkit_breadcrumbs')
+    ->execute();
+}
