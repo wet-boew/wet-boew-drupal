@@ -17,3 +17,14 @@ function wetkit_breadcrumbs_uninstall() {
     }
   }
 }
+
+/**
+ * Set module weight to 1001.
+ */
+function wetkit_breadcrumbs_update_7301() {
+  db_update('system')
+    ->fields(array('weight' => 1001))
+    ->condition('name', 'wetkit_breadcrumbs')
+    ->condition('type', 'module')
+    ->execute();
+}
