@@ -90,8 +90,6 @@ projects[rules][subdir] = contrib
 projects[transliteration][version] = 3.1
 projects[transliteration][subdir] = contrib
 
-; Themes for WetKit
-
 projects[adaptivetheme][version] = 3.1
 
 projects[rubik][version] = 4.x-dev
@@ -112,8 +110,6 @@ projects[tao][download][type] = git
 projects[tao][download][revision] = f06452b
 projects[tao][download][branch] = 7.x-3.x
 projects[tao][patch][1016844] = http://drupal.org/files/tao_taxonomy_manager-1016844-12.patch
-
-; Libraries for WetKit
 
 libraries[querypath][download][type] = git
 libraries[querypath][download][branch] = 3.x
