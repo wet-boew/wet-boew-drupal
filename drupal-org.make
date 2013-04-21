@@ -48,7 +48,7 @@ projects[panopoly_admin][download][type] = git
 projects[panopoly_admin][download][revision] = 4d9d071
 projects[panopoly_admin][download][branch] = 7.x-1.x
 projects[panopoly_admin][patch][1967216] = http://drupal.org/files/panopoly_admin_make-1967216-01.patch
-projects[panopoly_admin][patch][1891482] = http://drupal.org/files/panopoly_pathauto-1891482-02.patch
+projects[panopoly_admin][patch][1891482] = http://drupal.org/files/panopoly_pathauto-1891482-03.patch
 
 projects[panopoly_users][version] = 1.x-dev
 projects[panopoly_users][subdir] = panopoly
