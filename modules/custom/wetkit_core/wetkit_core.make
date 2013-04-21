@@ -82,6 +82,7 @@ projects[workbench_moderation][patch][1919706] = http://drupal.org/files/1919706
 projects[workbench_moderation][patch][1919706] = http://drupal.org/files/workbench_moderation-revision-moderation-edit-link-1785798-14.patch
 projects[workbench_moderation][patch][1946392] = http://drupal.org/files/et_language-1946392-1.patch
 projects[workbench_moderation][patch][1969226] = http://drupal.org/files/workbench-pathauto-1969226-1.patch
+projects[workbench_moderation][patch][1852244] = http://drupal.org/files/1852244-setting_path_to_default_pathauto_value-3.patch
 
 projects[rules][version] = 2.3
 projects[rules][subdir] = contrib
