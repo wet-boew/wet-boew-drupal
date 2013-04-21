@@ -17,12 +17,15 @@ projects[title][version] = 1.x-dev
 projects[title][type] = module
 projects[title][subdir] = contrib
 projects[title][download][type] = git
-projects[title][download][revision] = b7a8663
+projects[title][download][revision] = 406103c
 projects[title][download][branch] = 7.x-1.x
-projects[title][patch][1907078] = http://drupal.org/files/undefined_index_field_name-1907078-2.patch
 
-projects[i18n][version] = 1.8
+projects[i18n][version] = 1.x-dev
+projects[i18n][type] = module
 projects[i18n][subdir] = contrib
+projects[i18n][download][type] = git
+projects[i18n][download][revision] = 3e290cd
+projects[i18n][download][branch] = 7.x-1.x
 
 projects[i18nviews][version] = 3.x-dev
 projects[i18nviews][type] = module
