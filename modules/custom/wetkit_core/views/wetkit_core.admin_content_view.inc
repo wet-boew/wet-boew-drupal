@@ -216,11 +216,11 @@ function wetkit_core_views_default_views_alter(&$views) {
         'label' => 'Demote from front page',
       ),
       'action::node_save_action' => array(
-        'selected' => 0,
+        'selected' => 1,
         'postpone_processing' => 0,
-        'skip_confirmation' => 0,
-        'override_label' => 0,
-        'label' => '',
+        'skip_confirmation' => 1,
+        'override_label' => 1,
+        'label' => 'Save content',
       ),
       'action::system_send_email_action' => array(
         'selected' => 0,
@@ -230,11 +230,11 @@ function wetkit_core_views_default_views_alter(&$views) {
         'label' => '',
       ),
       'action::workbench_moderation_set_state_action' => array(
-        'selected' => 0,
+        'selected' => 1,
         'postpone_processing' => 0,
-        'skip_confirmation' => 0,
-        'override_label' => 0,
-        'label' => '',
+        'skip_confirmation' => 1,
+        'override_label' => 1,
+        'label' => 'Set moderation state',
       ),
       'action::panelizer_set_status_action' => array(
         'selected' => 0,
@@ -420,5 +420,6 @@ function wetkit_core_views_default_views_alter(&$views) {
       t('Vocabulary'),
       t('System'),
     );
+    $views['admin_views_node'] = $view;
   }
 }
