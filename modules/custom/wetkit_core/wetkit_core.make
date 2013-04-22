@@ -81,15 +81,13 @@ projects[workbench_moderation][patch][1875700] = http://drupal.org/files/workben
 projects[workbench_moderation][patch][1919706] = http://drupal.org/files/1919706-1-no-node.patch
 projects[workbench_moderation][patch][1919706] = http://drupal.org/files/workbench_moderation-revision-moderation-edit-link-1785798-14.patch
 projects[workbench_moderation][patch][1946392] = http://drupal.org/files/et_language-1946392-1.patch
-projects[workbench_moderation][patch][1969226] = http://drupal.org/files/workbench-pathauto-1969226-1.patch
+projects[workbench_moderation][patch][1969226] = http://drupal.org/files/workbench-pathauto-1969226-2.patch
 
 projects[rules][version] = 2.3
 projects[rules][subdir] = contrib
 
 projects[transliteration][version] = 3.1
 projects[transliteration][subdir] = contrib
-
-; Themes for WetKit
 
 projects[adaptivetheme][version] = 3.1
 
@@ -111,8 +109,6 @@ projects[tao][download][type] = git
 projects[tao][download][revision] = f06452b
 projects[tao][download][branch] = 7.x-3.x
 projects[tao][patch][1016844] = http://drupal.org/files/tao_taxonomy_manager-1016844-12.patch
-
-; Libraries for WetKit
 
 libraries[querypath][download][type] = git
 libraries[querypath][download][branch] = 3.x
