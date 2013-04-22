@@ -353,7 +353,29 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
 
       // Allow extra elements for Media module
       // See - http://drupal.org/node/1835826
-      $settings['extended_valid_elements'] .= ',img[src|title|alt|style|width|height|class|hspace|vspace|view_mode|format|fid]';
+      if (empty($settings['extended_valid_elements'])) {
+        $settings['extended_valid_elements'] = 'img[!src|title|alt|style|width|height|class|hspace|vspace|view_mode|format|fid]';
+      }
+      else {
+        $settings['extended_valid_elements'] = array_merge(explode(',', $settings['extended_valid_elements']), array('img[!src|title|alt|style|width|height|class|hspace|vspace|view_mode|format|fid]'));
+
+        // When adding new elements to $settings['extended_valid_elements'], make sure
+        // that we're merging, and not overwriting.
+        $settings_array = array();
+        foreach($settings['extended_valid_elements'] as $tag) {
+          list($tag, $allowed_attributes) = explode('[', $tag);
+          $allowed_attributes = explode('|', trim($allowed_attributes, ']'));
+          foreach($allowed_attributes as $key => $attribute) {
+            $settings_array[$tag][$attribute] = $attribute;
+          }
+        }
+        $valid_elements = array();
+        foreach ($settings_array as $tag => $allowed_attributes) {
+          $attributes = in_array('*', $allowed_attributes) ? '*' : implode('|', $allowed_attributes);
+          $valid_elements[] = $tag . '[' . $attributes . ']';
+        }
+        $settings['extended_valid_elements'] = implode(',', $valid_elements);
+      }
       break;
 
     case 'markitup':
