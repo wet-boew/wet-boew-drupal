@@ -14,7 +14,7 @@
  * @return array|false
  *   Settings or FALSE if none are present.
  */
-function wetkit_language_get_i18n_settings($pane) {
+function wetkit_i18n_panels_get_i18n_settings($pane) {
   ctools_include('content');
   $content_type = ctools_get_content_type($pane->type);
   if (isset($content_type['i18n_settings'])) {
@@ -44,11 +44,11 @@ function wetkit_language_get_i18n_settings($pane) {
  * @return stdClas|FALSE
  *   Returns FALSE if no translation is necessary.
  */
-function wetkit_language_get_i18n_translation_object($pane) {
+function wetkit_i18n_panels_get_i18n_translation_object($pane) {
   $translation_object = array();
 
   // Handle content type specific i18n settings.
-  if ($i18n_settings = wetkit_language_get_i18n_settings($pane)) {
+  if ($i18n_settings = wetkit_i18n_panels_get_i18n_settings($pane)) {
     // Register translatable settings.
     foreach ($i18n_settings as $i18n_setting => $settings) {
       if (!is_array($settings)) {
@@ -82,8 +82,8 @@ function wetkit_language_get_i18n_translation_object($pane) {
  * @param stdClass $pane
  *   The pane to deal with.
  */
-function wetkit_language_panels_pane_insert($pane) {
-  wetkit_language_panels_pane_update($pane);
+function wetkit_i18n_panels_panels_pane_insert($pane) {
+  wetkit_i18n_panels_panels_pane_update($pane);
 }
 
 /**
@@ -92,8 +92,8 @@ function wetkit_language_panels_pane_insert($pane) {
  * @param stdClass $pane
  *   The pane to deal with.
  */
-function wetkit_language_panels_pane_update($pane) {
-  if ($translation_object = wetkit_language_get_i18n_translation_object($pane)) {
+function wetkit_i18n_panels_panels_pane_update($pane) {
+  if ($translation_object = wetkit_i18n_panels_get_i18n_translation_object($pane)) {
     $translation_object->uuid = $pane->uuid;
     $status = i18n_string_object_update('pane_configuration', $translation_object);
   }
@@ -105,7 +105,7 @@ function wetkit_language_panels_pane_update($pane) {
  * @param array $pids
  *   Array with the panel ids to delete.
  */
-function wetkit_language_panels_pane_delete($pids) {
+function wetkit_i18n_panels_panels_pane_delete($pids) {
   if (!empty($pids)) {
     // Fetch the uuids from the db.
     $uuids = db_select('panels_pane')
@@ -127,9 +127,9 @@ function wetkit_language_panels_pane_delete($pids) {
  * @param stdClass $pane
  *   The pane to deal with.
  */
-function wetkit_language_panels_pane_prerender($pane) {
+function wetkit_i18n_panels_panels_pane_prerender($pane) {
   // Check if this pane has translations.
-  if (isset($pane->uuid) && $translation_object = wetkit_language_get_i18n_translation_object($pane)) {
+  if (isset($pane->uuid) && $translation_object = wetkit_i18n_panels_get_i18n_translation_object($pane)) {
     $translation_object->uuid = $pane->uuid;
     // Send to translation.
     $translation_object = i18n_string_object_translate('pane_configuration', $translation_object);
@@ -153,7 +153,7 @@ function wetkit_language_panels_pane_prerender($pane) {
  * @param panels_display $display
  *   The display to deal with.
  */
-function wetkit_language_panels_display_save($display) {
+function wetkit_i18n_panels_panels_display_save($display) {
   $status = i18n_string_object_update('display_configuration', $display);
 }
 
@@ -163,7 +163,7 @@ function wetkit_language_panels_display_save($display) {
  * @param int $did
  *   Id of the display to delete.
  */
-function wetkit_language_panels_delete_display($did) {
+function wetkit_i18n_panels_panels_delete_display($did) {
   // Fetch uuid to delete the translations.
   $uuid = db_select('panels_display')
     ->fields('panels_display', array('uuid'))
@@ -183,7 +183,7 @@ function wetkit_language_panels_delete_display($did) {
       ->condition('did', $did)
       ->execute()
       ->fetchCol();
-    wetkit_language_panels_pane_delete($pids);
+    wetkit_i18n_panels_panels_pane_delete($pids);
   }
   else {
     // If the display is exported leave the translated strings but give the user
@@ -213,9 +213,9 @@ function wetkit_language_panels_delete_display($did) {
  * @param panels_renderer_standard $renderer
  *   The renderer to deal with.
  */
-function wetkit_language_panels_pre_render(&$display, $renderer) {
+function wetkit_i18n_panels_panels_pre_render(&$display, $renderer) {
   // Avoid double translations.
-  if (!isset($display->wetkit_language_title_translated)) {
+  if (!isset($display->wetkit_i18n_panels_title_translated)) {
     $translation = i18n_string_object_translate('display_configuration', $display);
     if (is_array($translation->title)) {
       $display->title = $translation->title['string'];
@@ -223,7 +223,7 @@ function wetkit_language_panels_pre_render(&$display, $renderer) {
     else {
       $display->title = $translation->title;
     }
-    $display->wetkit_language_title_translated = TRUE;
+    $display->wetkit_i18n_panels_title_translated = TRUE;
   }
 }
 
@@ -237,7 +237,7 @@ function wetkit_language_panels_pre_render(&$display, $renderer) {
 function i18n_ctools_render_alter(&$info, $page, $context) {
   // @todo Find a better way to detect a panels page.
   if ($page === TRUE && !empty($info['content']['#display']) && $info['content']['#display'] instanceof panels_display) {
-    wetkit_language_panels_pre_render($info['content']['#display'], NULL);
+    wetkit_i18n_panels_panels_pre_render($info['content']['#display'], NULL);
     // Set the info title. This is used to set the page title.
     $info['title'] = $info['content']['#display']->get_title();
   }
@@ -250,7 +250,7 @@ function i18n_ctools_render_alter(&$info, $page, $context) {
  * Register some translatable configuration settings for plugins.
  *
  */
-function wetkit_language_ctools_plugin_post_alter(&$plugin, $plugin_type_info) {
+function wetkit_i18n_panels_ctools_plugin_post_alter(&$plugin, $plugin_type_info) {
   if ($plugin_type_info['type'] == 'content_types') {
     // Modify custom content.
     if ($plugin['name'] == 'custom') {
@@ -282,7 +282,7 @@ function ctools_custom_content_type_i18n_settings($conf) {
  * Necessary to support the dynamic translatable settings defined by ctools
  * content types.
  */
-function wetkit_language_i18n_string_list_panels_alter(&$strings, $type = NULL, $object = NULL) {
+function wetkit_i18n_panels_i18n_string_list_panels_alter(&$strings, $type = NULL, $object = NULL) {
   if (isset($object->panels_i18n_settings)) {
     foreach ($object->panels_i18n_settings as $i18n_setting => $settings) {
       if (isset($object->{$i18n_setting})) {
@@ -297,7 +297,7 @@ function wetkit_language_i18n_string_list_panels_alter(&$strings, $type = NULL, 
  *
  * @todo Figure out a generic solution to fetch exported displays.
  */
-function wetkit_language_i18n_string_list($group) {
+function wetkit_i18n_panels_i18n_string_list($group) {
   $strings = array();
   if ($group == 'panels') {
 
@@ -326,7 +326,7 @@ function wetkit_language_i18n_string_list($group) {
           }
           $pane->uuid = $uuid;
         }
-        if ($translation_object = wetkit_language_get_i18n_translation_object($pane)) {
+        if ($translation_object = wetkit_i18n_panels_get_i18n_translation_object($pane)) {
           // Split up all strings and add them to the list.
           $pane_strings = (array) $translation_object;
           unset($pane_strings['panels_i18n_settings']);

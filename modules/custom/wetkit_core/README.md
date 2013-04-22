@@ -8,3 +8,6 @@ Key Features
 * Metatag Support
 * CTools custom plugins
 * Panels Style Plugins
+
+Important
+* This module also integrates the work done in: http://drupal.org/project/panel_schedule
