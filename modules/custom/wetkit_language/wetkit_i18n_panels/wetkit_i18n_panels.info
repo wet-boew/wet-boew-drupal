@@ -1,0 +1,10 @@
+name = WetKit Multilingualism
+description = Core Feature: Installs a multilingual site for relying on i18n module
+core = 7.x
+package = WetKit
+php = 5.2.4
+dependencies[] = i18n
+dependencies[] = panels
+dependencies[] = i18n_string
+dependencies[] = i18n_translation
+dependencies[] = wetkit_language

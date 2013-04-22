@@ -7,7 +7,7 @@
 /**
  * Implements hook_i18n_object_info().
  */
-function i18n_panels_i18n_object_info() {
+function wetkit_i18n_panels_i18n_object_info() {
   $info['pane_configuration'] = array(
     'title' => t('Pane Configuration'),
     'key' => 'uuid',
@@ -37,7 +37,7 @@ function i18n_panels_i18n_object_info() {
 /**
  * Implements hook_i18n_string_info().
  */
-function i18n_panels_i18n_string_info() {
+function wetkit_i18n_panels_i18n_string_info() {
   $groups['panels'] = array(
     'title' => t('Panels'),
     'description' => t('Translatable panels items: display and pane configuration items. E.g. Title.'),

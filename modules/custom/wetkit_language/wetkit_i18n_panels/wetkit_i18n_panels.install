@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Internationalization (i18n) submodule: Panels translation.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function wetkit_i18n_panels_requirements($phase) {
+  $requirements = array();
+  // Check only for status report, to allow update / install.
+  if ($phase == 'runtime') {
+    // Check if the panels module runs with uuids.
+    $requirements['uuid'] = array(
+      'title' => t('Panels uuid support.'),
+      'severity' => REQUIREMENT_OK,
+      'value' => t('Available'),
+    );
+    if (!db_field_exists('panels_pane', 'uuid')) {
+      $requirements['uuid']['severity'] = REQUIREMENT_ERROR;
+      $requirements['uuid']['value'] = t('Not found. Please apply the provided patches and run the update script.');
+    }
+  }
+  return $requirements;
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function wetkit_i18n_panels_uninstall() {
+  // Get global variable array.
+  global $conf;
+  foreach (array_keys($conf) as $key) {
+    // Find variables that have the module prefix.
+    if (strpos($key, 'wetkit_i18n_panels_') === 0) {
+      variable_del($key);
+    }
+  }
+}
