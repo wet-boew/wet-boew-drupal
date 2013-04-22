@@ -1,0 +1,89 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  wetkit_i18n_panels.i18n.inc: n/a
+#  wetkit_i18n_panels.module: n/a
+#  wetkit_i18n_panels.install: n/a
+#  wetkit_i18n_panels.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-04-21 20:39-0400\n"
+"PO-Revision-Date: 2013-04-21 20:39-0400\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: wetkit_i18n_panels.i18n.inc:12
+msgid "Pane Configuration"
+msgstr ""
+
+#: wetkit_i18n_panels.i18n.inc:18
+msgid "Pane Title"
+msgstr ""
+
+#: wetkit_i18n_panels.i18n.inc:23
+msgid "Display Configuration"
+msgstr ""
+
+#: wetkit_i18n_panels.i18n.inc:29
+msgid "Display Title"
+msgstr ""
+
+#: wetkit_i18n_panels.i18n.inc:42
+msgid "Panels"
+msgstr ""
+
+#: wetkit_i18n_panels.i18n.inc:43
+msgid "Translatable panels items: display and pane configuration items. E.g. Title."
+msgstr ""
+
+#: wetkit_i18n_panels.module:192
+msgid "The reverted panels display(s) were exported, please run a <a href=\"!link\">string refresh</a> to update the translatable strings."
+msgstr ""
+
+#: wetkit_i18n_panels.module:309
+msgid "The display %display has no uuid, please resave or re-export it."
+msgstr ""
+
+#: wetkit_i18n_panels.module:324
+msgid "The pane %pane has no uuid, please resave or re-export it."
+msgstr ""
+
+#: wetkit_i18n_panels.module:414
+msgid "Overridden"
+msgstr "Supplanté"
+
+#: wetkit_i18n_panels.install:17
+msgid "Panels uuid support."
+msgstr ""
+
+#: wetkit_i18n_panels.install:19
+msgid "Available"
+msgstr ""
+
+#: wetkit_i18n_panels.install:23
+msgid "Not found. Please apply the provided patches and run the update script."
+msgstr ""
+
+#: wetkit_i18n_panels.info:0
+msgid "WetKit Multilingualism"
+msgstr "Multilinguisme de la BOEW"
+
+#: wetkit_i18n_panels.info:0
+msgid "Core Feature: Installs a multilingual site for relying on i18n module"
+msgstr ""
+"Fonction principale: Installer un site multilingue fondé sur le "
+"module i18n"
+
+#: wetkit_i18n_panels.info:0
+msgid "WetKit"
+msgstr "WetKit"
+

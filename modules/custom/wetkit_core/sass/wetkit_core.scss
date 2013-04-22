@@ -203,8 +203,17 @@
 
 /* CTools Collapsible Container */
 
-.ctools-collapsible-container {
-  h2 { background: #1d5ea6; padding: 10px; color: #fff !important; font-size: 14px; font-weight: normal;}
-  .ctools-toggle-collapsed, .ctools-toggle { margin-top: 10px;  }
-  .page-node-edit fieldset { margin-top: 0; }
-}
+.ctools-collapsible-container h2 {
+  background: #eeeeee;
+  padding: 5px;
+  margin-bottom: 0;
+  color: black !important;
+  font-size: 14px;
+  font-weight: normal;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px; }
+.ctools-collapsible-container .ctools-toggle-collapsed, .ctools-collapsible-container .ctools-toggle {
+  margin-top: 5px; }
+.ctools-collapsible-container .page-node-edit fieldset {
+  margin-top: 0; }
