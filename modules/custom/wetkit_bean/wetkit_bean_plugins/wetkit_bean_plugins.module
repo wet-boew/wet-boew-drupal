@@ -1,0 +1,47 @@
+<?php
+/**
+ * @file
+ * Code for the WetKit Bean Plugins feature.
+ */
+
+include_once 'wetkit_bean_plugins.features.inc';
+
+/**
+ * Implements hook_bean_types_api_info().
+ */
+function wetkit_bean_plugins_bean_types_api_info() {
+  return array('api' => 4);
+}
+
+/**
+ * Implements hook_bean_types().
+ */
+function wetkit_bean_plugins_bean_types() {
+  $plugins = array();
+  $plugin_path = drupal_get_path('module', 'wetkit_bean_plugins') . '/plugins/bean';
+  $plugins['wetkit_highlight'] = array(
+    'label' => t('WetKit Highlight'),
+    'description' => t('A highlighted region for displaying beans.'),
+    'handler' => array(
+      'class' => 'WetKitHighlightBean',
+      'parent' => 'bean',
+    ),
+    'path' => $plugin_path,
+    'file' => 'wetkit_bean_plugins.highlight.inc',
+  );
+  return $plugins;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function wetkit_bean_plugins_theme() {
+  $items = array();
+  $items['wetkit_highlight_settings'] = array(
+    'arguments' => array(
+      'image_style' => NULL,
+    ),
+    'file' => 'theme/wetkit_bean_plugins.theme.inc',
+  );
+  return $items;
+}

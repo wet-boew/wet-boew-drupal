@@ -42,6 +42,7 @@ projects[hierarchical_select][download][branch] = 7.x-3.x
 projects[hierarchical_select][patch][1457252] = http://drupal.org/files/hierarchical_select-config_not_defined_1457252-2.patch
 projects[hierarchical_select][patch][1649706] = http://drupal.org/files/hs-menu-with-taxonomy-fix.patch
 projects[hierarchical_select][patch][1315192] = http://drupal.org/files/1315192-fix-syntax-error-8.patch
+projects[hierarchical_select][patch][1587570] = http://drupal.org/files/hierarchical_select-remove-array-to-string-error.patch
 
 projects[linkchecker][version] = 1.x-dev
 projects[linkchecker][type] = module

@@ -112,7 +112,7 @@ function wetkit_menu_menu_link_menu_block_minipanel($variables) {
       return '<section><h4>' . $has_nolink . '</h4><ul>' . $sub_menu . '</ul></section>';
     }
     else {
-      $element['#attributes']['class'][] = '';
+      $element['#attributes']['class'][] = 'top-level';
       return '<li' . drupal_attributes($element['#attributes']) . '>' . $has_nolink . '</li>';
     }
   }
