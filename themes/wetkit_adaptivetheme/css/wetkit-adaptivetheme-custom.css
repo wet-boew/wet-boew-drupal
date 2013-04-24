@@ -162,3 +162,10 @@ div#gcwu-headlines ul, div#gcwu-headlines ul li { list-style: none!important; ma
 .node-type-wetkit-documentation .block-content #tabs { margin-bottom: 10px; }
 
 #gcwu-sft li a[href^="mailto:"] { background-image: none; padding-left: 0px; }
+
+.page-node .image-widget-data .form-file { border: none; box-shadow: none; padding: 0px; }
+
+/* NavBar Support */
+.navbar-tray-open #wb-body { position: relative; }
+
+.navbar-horizontal .tab a.ui-link:visited, .navbar-vertical .tab a.ui-link:visited, .navbar-tray-open .tab a.ui-link:visited { color: #FFFFFF; }
