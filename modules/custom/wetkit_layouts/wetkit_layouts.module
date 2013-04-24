@@ -20,7 +20,7 @@ function wetkit_layouts_page_build() {
   global $theme;
   // Add a subset of the Web Experience Toolkit grid system to backend theme.
   // This will primarily assist the Panels Layouts screens.
-  if ($theme == 'wetkit_rubik') {
+  if ($theme == 'wetkit_rubik' || $theme == 'ember') {
     $url = parse_url(request_uri());
     if (strstr($url['path'], "/admin/structure/pages")) {
       drupal_add_css(drupal_get_path('module', 'wetkit_layouts') . '/css/layouts.css', array('group' => CSS_THEME, 'every_page' => TRUE));
