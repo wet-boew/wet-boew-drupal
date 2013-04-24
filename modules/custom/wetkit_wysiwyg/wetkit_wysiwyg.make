@@ -57,10 +57,6 @@ libraries[ckeditor][download][type] = git
 libraries[ckeditor][download][revision] = a9514c2
 libraries[ckeditor][download][url] = https://github.com/ckeditor/ckeditor-releases.git
 
-libraries[tinymce][download][type] = git
-libraries[tinymce][download][revision] = ef85a05
-libraries[tinymce][download][url] = https://github.com/sylus/tinymce-wetkit.git
-
 libraries[markitup][download][type] = git
 libraries[markitup][download][revision] = 4b77626
 libraries[markitup][download][url] = https://github.com/sylus/markitup-wetkit.git
