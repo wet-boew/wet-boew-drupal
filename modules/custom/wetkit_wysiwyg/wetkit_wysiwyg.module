@@ -211,6 +211,14 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
 
       // Startup Outline Blocks
       $settings['startupOutlineBlocks'] = FALSE;
+   
+      // On Bean pages lets make this smaller.
+      if (arg(0)=='block' && is_string(arg(1))) {
+        $settings['height'] = 200;
+      }
+      else {
+        $settings['height'] = 375;
+      }
 
       // Enable SCAYT by default.
       $settings['scayt_autoStartup'] = FALSE;

@@ -40,11 +40,6 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
               <?php print $content['secord_top_right_1']; ?>
             </div>
           </div>
-          <div class="region-secord-top-right-2 span-4 margin-bottom-none">
-            <div class="region-inner clearfix">
-              <?php print $content['secord_top_right_2']; ?>
-            </div>
-          </div>
         </div>
         <div class="clear"></div>
         <div class="region-secord-mid-left span-4 margin-bottom-none">
