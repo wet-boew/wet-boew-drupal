@@ -21,6 +21,7 @@ dependencies[] = locale
 dependencies[] = menu
 dependencies[] = menu_attributes
 dependencies[] = menu_block
+dependencies[] = navbar
 dependencies[] = options
 dependencies[] = page_manager
 dependencies[] = password_policy

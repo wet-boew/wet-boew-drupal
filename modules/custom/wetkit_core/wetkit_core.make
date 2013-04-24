@@ -54,6 +54,13 @@ projects[linkchecker][download][branch] = 7.x-1.x
 projects[menu_attributes][version] = 1.0-rc2
 projects[menu_attributes][subdir] = contrib
 
+projects[navbar][version] = 1.x-dev
+projects[navbar][subdir] = contrib
+projects[navbar][type] = module
+projects[navbar][download][type] = git
+projects[navbar][download][revision] = 184ce30
+projects[navbar][download][branch] = 7.x-1.x
+
 projects[password_policy][version] = 1.3
 projects[password_policy][subdir] = contrib
 
@@ -92,24 +99,18 @@ projects[transliteration][subdir] = contrib
 
 projects[adaptivetheme][version] = 3.1
 
-projects[rubik][version] = 4.x-dev
-projects[rubik][type] = theme
-projects[rubik][download][type] = git
-projects[rubik][download][revision] = e936b82
-projects[rubik][download][branch] = 7.x-4.x
-projects[rubik][patch][1730844] = http://drupal.org/files/rubik_inline_field_desc-1730844-06.patch
-projects[rubik][patch][944534] = http://drupal.org/files/rubik-table_input_fluid-944534-5.patch
-projects[rubik][patch][1445890] = http://drupal.org/files/editor-link-covered-1445890-2.patch
-projects[rubik][patch][1003820] = http://drupal.org/files/1003820-rubik-5.patch
-projects[rubik][patch][1440054] = http://drupal.org/files/patch_commit_96121294ba3b.patch
-projects[rubik][patch][1645148] = http://drupal.org/files/rubik-ie9-box-sizing-1645148-1.patch
+projects[ember][version] = 1.x-dev
+projects[ember][subdir] = contrib
+projects[ember][type] = module
+projects[ember][download][type] = git
+projects[ember][download][revision] = 34027ec
+projects[ember][download][branch] = 7.x-1.x
 
-projects[tao][version] = 3.x-dev
-projects[tao][type] = theme
-projects[tao][download][type] = git
-projects[tao][download][revision] = f06452b
-projects[tao][download][branch] = 7.x-3.x
-projects[tao][patch][1016844] = http://drupal.org/files/tao_taxonomy_manager-1016844-12.patch
+libraries[underscore][download][type] = get
+libraries[underscore][download][url] = https://github.com/documentcloud/underscore/archive/1.4.4.zip
+
+libraries[backbone][download][type] = get
+libraries[backbone][download][url] = https://github.com/documentcloud/backbone/archive/1.0.0.zip
 
 libraries[querypath][download][type] = git
 libraries[querypath][download][branch] = 3.x
