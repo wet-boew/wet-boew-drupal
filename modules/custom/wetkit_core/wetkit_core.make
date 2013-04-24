@@ -19,6 +19,13 @@ projects[better_formats][download][type] = git
 projects[better_formats][download][revision] = 3b4a8c9
 projects[better_formats][download][branch] = 7.x-1.x
 
+projects[breakpoints][version] = 1.x-dev
+projects[breakpoints][subdir] = contrib
+projects[breakpoints][type] = module
+projects[breakpoints][download][type] = git
+projects[breakpoints][download][revision] = 6170278
+projects[breakpoints][download][branch] = 7.x-1.x
+
 projects[diff][version] = 3.x-dev
 projects[diff][subdir] = contrib
 projects[diff][type] = module

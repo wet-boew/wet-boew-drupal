@@ -4,6 +4,7 @@ core = 7.x
 package = WetKit
 php = 5.2.4
 dependencies[] = advanced_help
+dependencies[] = breakpoints
 dependencies[] = contact
 dependencies[] = ctools
 dependencies[] = defaultconfig
