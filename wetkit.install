@@ -47,10 +47,10 @@ function wetkit_install() {
   db_update('system')
     ->fields(array('status' => 1))
     ->condition('type', 'theme')
-    ->condition('name', 'ember')
+    ->condition('name', 'wetkit_rubik')
     ->execute();
 
-  variable_set('admin_theme', 'ember');
+  variable_set('admin_theme', 'wetkit_rubik');
 }
 
 /**
