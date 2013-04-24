@@ -43,6 +43,7 @@ function wetkit_core_selection_form($form, &$form_state) {
       'tao',
       'wetkit_adaptivetheme_settings',
       'wetkit_rubik',
+      'ember',
       'wetkit_shiny'))) {
       $themes[$theme->name] = theme('image', array('path' => $theme->info['screenshot'])) . '<strong>' . $theme->info['name'] . '</strong><br /><p><em>' . $theme->info['description'] . '</em></p><p class="clearfix"></p>';
     }
@@ -87,7 +88,7 @@ function wetkit_core_selection_form_submit($form, &$form_state) {
 
   // Hack to fix a dependency issue with admin menu.
   // TODO: Fix dependency chain issue.
-  module_enable(array('admin_menu', 'admin_menu_toolbar'));
+  // module_enable(array('admin_menu', 'admin_menu_toolbar'));
 
   // Flush theme caches so things are right.
   system_rebuild_theme_data();

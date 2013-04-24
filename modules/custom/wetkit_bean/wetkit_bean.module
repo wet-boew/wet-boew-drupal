@@ -180,7 +180,7 @@ function wetkit_bean_delete_bean($bean_name) {
  * Implements hook_theme_registry_alter().
  */
 function wetkit_bean_theme_registry_alter(&$theme_registry) {
-  $mod_path = drupal_get_path('module', 'wetkit_bean') . '/theme';
+  $mod_path = drupal_get_path('module', 'wetkit_bean') . '/templates';
   $theme_registry_copy = $theme_registry;
   _theme_process_registry($theme_registry_copy, 'phptemplate', 'theme_engine', 'pow', $mod_path);
   $theme_registry += array_diff_key($theme_registry_copy, $theme_registry);
