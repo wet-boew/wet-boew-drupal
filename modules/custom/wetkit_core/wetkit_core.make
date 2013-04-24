@@ -107,8 +107,7 @@ projects[transliteration][subdir] = contrib
 projects[adaptivetheme][version] = 3.1
 
 projects[ember][version] = 1.x-dev
-projects[ember][subdir] = contrib
-projects[ember][type] = module
+projects[ember][type] = theme
 projects[ember][download][type] = git
 projects[ember][download][revision] = 34027ec
 projects[ember][download][branch] = 7.x-1.x
