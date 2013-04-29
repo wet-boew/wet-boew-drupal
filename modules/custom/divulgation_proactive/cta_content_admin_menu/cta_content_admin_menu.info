@@ -1,0 +1,12 @@
+name = OTC_CTA Content Admin Menu
+description = Menu containing PD admin
+core = 7.x
+package = Office des transports du Canada / Canadian Transportation Agency
+php = 5.2.4
+version = 7.x-1.0
+project = cta_content_admin_menu
+dependencies[] = features
+dependencies[] = menu
+features[features_api][] = api:1
+features[menu_custom][] = management
+project path = sites/all/modules/divulgation_proactive

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Workkflows feature.
+ */
+
+include_once 'pd_workkflows.features.inc';

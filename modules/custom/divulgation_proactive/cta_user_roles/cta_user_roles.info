@@ -1,0 +1,14 @@
+name = PD User Roles
+description = User roles
+core = 7.x
+package = Office des transports du Canada / Canadian Transportation Agency
+php = 5.2.4
+version = 7.x-1.0
+project = cta_user_roles
+dependencies[] = features
+features[features_api][] = api:1
+features[user_role][] = Proactive Disclosure (Communications)
+features[user_role][] = Proactive Disclosure (Finance)
+features[user_role][] = Proactive Disclosure (Secretariat)
+features[user_role][] = Proactive Disclosure (Translation)
+project path = sites/all/modules/divulgation_proactive

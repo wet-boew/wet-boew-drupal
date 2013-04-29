@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Rulings Views feature.
+ */
+
+include_once 'membres_views.features.inc';
