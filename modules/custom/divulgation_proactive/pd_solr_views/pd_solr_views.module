@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the PD Solr Views feature.
+ */
+
+include_once 'pd_solr_views.features.inc';

@@ -1,0 +1,12 @@
+name = PD Views
+description = PD Members view
+core = 7.x
+package = Office des transports du Canada / Canadian Transportation Agency
+php = 5.2.4
+version = 7.x-1.0
+project = membres_views
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[views_view][] = manage_members
+project path = sites/all/modules/divulgation_proactive

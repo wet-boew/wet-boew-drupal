@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Facets feature.
+ */
+
+include_once 'cta_facets.features.inc';

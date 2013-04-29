@@ -1,0 +1,14 @@
+name = PD Solr Views
+description = Creates the views for the proactive disclosures
+core = 7.x
+package = Proactive Disclosure
+php = 5.2.4
+version = 7.x-1.1
+project = pd_solr_views
+dependencies[] = apachesolr_views
+dependencies[] = ctools
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[views_view][] = pd_views_facet
+project path = sites/all/modules/divulgation_proactive

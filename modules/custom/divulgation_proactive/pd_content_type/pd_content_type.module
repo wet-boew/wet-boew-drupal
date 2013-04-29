@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Content Types feature.
+ */
+
+include_once 'pd_content_type.features.inc';
