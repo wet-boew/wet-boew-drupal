@@ -8,7 +8,7 @@ core = 7.x
 projects[wysiwyg][version] = 2.x-dev
 projects[wysiwyg][subdir] = contrib
 projects[wysiwyg][download][type] = git
-projects[wysiwyg][download][revision] = b0d16f2
+projects[wysiwyg][download][revision] = d9c3f65
 projects[wysiwyg][download][branch] = 7.x-2.x
 projects[wysiwyg][patch][1489096] = http://drupal.org/files/wysiwyg-table-format-1489096-7.patch
 projects[wysiwyg][patch][1786732] = http://drupal.org/files/wysiwyg-arbitrary_image_paths_markitup-1786732-3.patch
@@ -56,10 +56,6 @@ projects[caption_filter][patch][1432092] = http://drupal.org/files/1432092-butto
 libraries[ckeditor][download][type] = git
 libraries[ckeditor][download][revision] = a9514c2
 libraries[ckeditor][download][url] = https://github.com/ckeditor/ckeditor-releases.git
-
-libraries[tinymce][download][type] = git
-libraries[tinymce][download][revision] = ef85a05
-libraries[tinymce][download][url] = https://github.com/sylus/tinymce-wetkit.git
 
 libraries[markitup][download][type] = git
 libraries[markitup][download][revision] = 4b77626

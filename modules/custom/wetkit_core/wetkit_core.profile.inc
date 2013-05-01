@@ -43,6 +43,7 @@ function wetkit_core_selection_form($form, &$form_state) {
       'tao',
       'wetkit_adaptivetheme_settings',
       'wetkit_rubik',
+      'ember',
       'wetkit_shiny'))) {
       $themes[$theme->name] = theme('image', array('path' => $theme->info['screenshot'])) . '<strong>' . $theme->info['name'] . '</strong><br /><p><em>' . $theme->info['description'] . '</em></p><p class="clearfix"></p>';
     }

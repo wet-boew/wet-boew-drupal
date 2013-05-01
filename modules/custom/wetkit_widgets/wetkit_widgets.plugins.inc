@@ -164,7 +164,6 @@ function wetkit_widgets_field_formatter_info() {
 function wetkit_widgets_field_formatter_settings_summary($field, $instance, $view_mode) {
   $display = $instance['display'][$view_mode];
   $settings = $display['settings'];
-  $summary = NULL;
 
   if ($display['type'] == 'wetkit_widgets_lightbox') {
     // Destination image style.
@@ -279,7 +278,7 @@ function wetkit_widgets_field_formatter_settings_form($field, $instance, $view_m
   }
   elseif ($display['type'] == 'wetkit_tabbed_interface_default') {
     $element['image_style'] = array(
-      '#title' => t('Image style'),
+      '#title' => t('Image style'), 
       '#type' => 'select',
       '#options' => image_style_options(),
       '#default_value' => $settings['image_style'],
@@ -494,15 +493,13 @@ function wetkit_widgets_field_widget_form(&$form, &$form_state, $field, $instanc
  * Implements hook_field_presave().
  */
 function wetkit_widgets_field_presave($entity_type, $entity, $field, $instance, $langcode, &$items) {
-  // We need to set presave values if fids are not set. This shouldn't effect
-  // save operations.
-  // form API validation will prevent this from ever happening unless
-  // previewing.
+  // We need to set presave values if fids are not set. This shouldn't effect save operations
+  // form API validation will prevent this from ever happening unless previewing.
   if (!empty($items)) {
     foreach ($items as &$item) {
       if (empty($item['fid'])) {
         $fid = variable_get('wetkit_widgets_default_' . $entity->bundle . '_fid', NULL);
-
+        
         if (!empty($fid)) {
           $item['fid'] = $fid;
         }
@@ -564,8 +561,7 @@ function wetkit_widgets_field_prepare_view($entity_type, $entities, $field, $ins
   // TODO - make sure this works.
   foreach ($entities as $id => $entity) {
     if (empty($items[$id]) && $field['settings']['default_image']) {
-      $file = file_load($field['settings']['default_image']);
-      if (isset($file)) {
+      if ($file = file_load($field['settings']['default_image'])) {
         $items[$id][0] = (array) $file + array(
           'is_default' => TRUE,
           'alt' => '',

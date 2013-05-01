@@ -118,7 +118,7 @@ function wetkit_pages_landing_page_wizard_validate($form, &$form_state) {
   }
 
   // Set the Menu Parent to be The Chosen One.
-  if (!empty($form_state['values']['menu']['menu_entry']) && !empty($form_state['values']['menu']['parent'])) {
+  if (!empty($form_state['values']['menu_entry']) && !empty($form_state['values']['menu']['parent'])) {
     $form_state['wizard cache']->menu['parent'] = $form_state['values']['menu']['parent'];
   }
 }
@@ -137,7 +137,7 @@ function wetkit_pages_landing_page_wizard_submit($form, &$form_state) {
   page_manager_page_wizard_finish($form_state);
 
   // Modify the Menu.
-  if (!empty($form_state['values']['menu']['menu_entry'])) {
+  if (!empty($form_state['values']['menu_entry'])) {
     $mlid = db_select('menu_links', 'ml')
       ->condition('ml.link_path', $form_state['values']['path'])
       ->fields('ml', array('mlid'))

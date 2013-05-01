@@ -549,7 +549,7 @@ div.view div.view-header {
 /* Bring back label colors from before Admin Menu 3.x */
 
 .form-item label {
-  color: #666;
+  color: #333;
 }
 
 /* @TODO nicer hover effect for buttons */
@@ -833,4 +833,41 @@ h1.path-admin-config-workbench span.icon {
 
 .tao legend .fieldset-title {
   font-weight: bold;
+}
+
+.tao .text-format-wrapper .form-type-textarea {
+  border: none;
+}
+
+.tao .text-format-wrapper .form-type-select {
+  border: none;
+}
+
+.tao #bean-form .dependent-options {
+  margin-left: 0px;  
+}
+
+.tao .media-widget .media-item {
+  margin-left: 10px;
+}
+
+.block, .item-list, .help-items ul, .form-item, .confirmation ul, .admin-list, .node-type-list, .admin-panel {
+  border-color: #d4d4d4;
+}
+
+#field-bean-highlight-description-add-more-wrapper .description {
+  margin: 0px 10px 10px 10px;
+}
+
+.media-browser-tab .form-file {
+  border: none;
+  padding: 0px;
+}
+
+#media-browser-page-wrapper #media-browser-tabset h1 {
+  color: #FFFFFF;
+}
+
+#media-browser-page-wrapper #media-browser-tabset #branding {
+  background-image: none;
 }

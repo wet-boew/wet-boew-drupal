@@ -65,9 +65,7 @@ body #panels-dnd-main div.panel-region {
 }
 
 .page-admin-dashboard .panel-pane h2.pane-title {
-  margin-top: 15px;
-  margin-left: 0px;
-  font-size: 14px;
+  margin-top: 20px;
 }
 
 .page-admin-dashboard-files .view-filters form {

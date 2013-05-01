@@ -19,6 +19,13 @@ projects[better_formats][download][type] = git
 projects[better_formats][download][revision] = 3b4a8c9
 projects[better_formats][download][branch] = 7.x-1.x
 
+projects[breakpoints][version] = 1.x-dev
+projects[breakpoints][subdir] = contrib
+projects[breakpoints][type] = module
+projects[breakpoints][download][type] = git
+projects[breakpoints][download][revision] = 6170278
+projects[breakpoints][download][branch] = 7.x-1.x
+
 projects[diff][version] = 3.x-dev
 projects[diff][subdir] = contrib
 projects[diff][type] = module
@@ -42,6 +49,7 @@ projects[hierarchical_select][download][branch] = 7.x-3.x
 projects[hierarchical_select][patch][1457252] = http://drupal.org/files/hierarchical_select-config_not_defined_1457252-2.patch
 projects[hierarchical_select][patch][1649706] = http://drupal.org/files/hs-menu-with-taxonomy-fix.patch
 projects[hierarchical_select][patch][1315192] = http://drupal.org/files/1315192-fix-syntax-error-8.patch
+projects[hierarchical_select][patch][1587570] = http://drupal.org/files/hierarchical_select-remove-array-to-string-error.patch
 
 projects[linkchecker][version] = 1.x-dev
 projects[linkchecker][type] = module
@@ -52,6 +60,16 @@ projects[linkchecker][download][branch] = 7.x-1.x
 
 projects[menu_attributes][version] = 1.0-rc2
 projects[menu_attributes][subdir] = contrib
+
+projects[admin_menu][version] = 3.0-rc4
+projects[admin_menu][subdir] = contrib
+
+projects[navbar][version] = 1.x-dev
+projects[navbar][subdir] = contrib
+projects[navbar][type] = module
+projects[navbar][download][type] = git
+projects[navbar][download][revision] = 184ce30
+projects[navbar][download][branch] = 7.x-1.x
 
 projects[password_policy][version] = 1.3
 projects[password_policy][subdir] = contrib
@@ -81,15 +99,13 @@ projects[workbench_moderation][patch][1875700] = http://drupal.org/files/workben
 projects[workbench_moderation][patch][1919706] = http://drupal.org/files/1919706-1-no-node.patch
 projects[workbench_moderation][patch][1919706] = http://drupal.org/files/workbench_moderation-revision-moderation-edit-link-1785798-14.patch
 projects[workbench_moderation][patch][1946392] = http://drupal.org/files/et_language-1946392-1.patch
-projects[workbench_moderation][patch][1969226] = http://drupal.org/files/workbench-pathauto-1969226-1.patch
+projects[workbench_moderation][patch][1969226] = http://drupal.org/files/workbench-pathauto-1969226-2.patch
 
 projects[rules][version] = 2.3
 projects[rules][subdir] = contrib
 
 projects[transliteration][version] = 3.1
 projects[transliteration][subdir] = contrib
-
-; Themes for WetKit
 
 projects[adaptivetheme][version] = 3.1
 
@@ -112,7 +128,17 @@ projects[tao][download][revision] = f06452b
 projects[tao][download][branch] = 7.x-3.x
 projects[tao][patch][1016844] = http://drupal.org/files/tao_taxonomy_manager-1016844-12.patch
 
-; Libraries for WetKit
+projects[ember][version] = 1.x-dev
+projects[ember][type] = theme
+projects[ember][download][type] = git
+projects[ember][download][revision] = 34027ec
+projects[ember][download][branch] = 7.x-1.x
+
+libraries[underscore][download][type] = get
+libraries[underscore][download][url] = https://github.com/documentcloud/underscore/archive/1.4.4.zip
+
+libraries[backbone][download][type] = get
+libraries[backbone][download][url] = https://github.com/documentcloud/backbone/archive/1.0.0.zip
 
 libraries[querypath][download][type] = git
 libraries[querypath][download][branch] = 3.x

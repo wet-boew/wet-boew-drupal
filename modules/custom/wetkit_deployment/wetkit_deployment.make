@@ -12,6 +12,7 @@ projects[deploy][download][type] = git
 projects[deploy][download][revision] = 5cc4fc2
 projects[deploy][download][branch] = 7.x-2.x
 projects[deploy][patch][1604938] = http://drupal.org/files/deploy-1604938_1.patch
+projects[deploy][patch][1948186] = http://drupal.org/files/deploy_allow_revision_id-1948186-2.patch
 
 projects[entity_dependency][version] = 1.x-dev
 projects[entity_dependency][subdir] = contrib
@@ -24,6 +25,7 @@ projects[entity_dependency][patch][1545278] = http://drupal.org/files/entity-dep
 projects[entity_dependency][patch][1772372] = http://drupal.org/files/documentation-1772372.patch
 projects[entity_dependency][patch][1590280] = http://drupal.org/files/entity_dependency_comment_typos-1590280-1.patch
 projects[entity_dependency][patch][1589794] = http://drupal.org/files/entity_dependency_iterator_documentation-1589794-1.patch
+projects[entity_dependency][patch][1970760] = http://drupal.org/files/entity_dependency-keep-track-of-revision_id-1970760-1.patch
 
 projects[quicktabs][version] = 3.x-dev
 projects[quicktabs][subdir] = contrib

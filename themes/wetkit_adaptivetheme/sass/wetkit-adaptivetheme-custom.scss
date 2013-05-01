@@ -454,3 +454,25 @@ div#gcwu-headlines ul, div#gcwu-headlines ul li {
   background-image: none;
   padding-left: 0px;
 }
+
+.page-node .image-widget-data .form-file {
+  border: none;
+  box-shadow: none;
+  padding: 0px;
+}
+
+/*
+ * NavBar Support
+ */
+
+.navbar-tray-open #wb-body {
+  position: relative;
+}
+
+.navbar-horizontal,
+.navbar-vertical,
+.navbar-tray-open  {  
+  .tab  a.ui-link:visited {
+    color: #FFFFFF;
+  }
+}
