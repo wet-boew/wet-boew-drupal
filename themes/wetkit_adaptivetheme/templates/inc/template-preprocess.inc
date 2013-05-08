@@ -199,6 +199,7 @@ function wetkit_adaptivetheme_preprocess_page(&$variables, $hook) {
     $variables['custom_search']['#suffix'] = '</div>';
     $variables['custom_search']['actions']['submit']['#id'] = $theme_prefix . '-srch-submit';
     $variables['custom_search']['actions']['submit']['#attributes']['data-icon'] = 'search';
+    $variables['custom_search']['actions']['submit']['#attributes']['value'] = t('Search');
     $variables['search_box'] = render($variables['custom_search']);
     $variables['search_box'] = str_replace('type="text"', 'type="search"', $variables['search_box']);
   }
