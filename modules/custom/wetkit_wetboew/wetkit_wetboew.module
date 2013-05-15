@@ -60,6 +60,16 @@ function wetkit_wetboew_page_build() {
     'every_page' => TRUE,
   ));
 
+  // Add the jQuery Mobile Library WET Needs.
+  // Don't add it for logged in users as causing problems with some elements.
+  if (!user_is_logged_in()) {
+    drupal_add_js(libraries_get_path('wet-boew') . '/dist/js/jquerymobile/jquery.mobile.min.js', array(
+        'preprocess' => FALSE,
+        'scope' => 'footer',
+        'weight' => 5,
+      )
+    );
+  }
   // Add the noscipt css that WET expects.
   $element = array(
     '#type' => 'markup',

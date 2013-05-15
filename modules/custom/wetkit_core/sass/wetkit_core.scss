@@ -2,6 +2,8 @@
  * Stylesheet for WetKit WET-BOEW
  */
 
+@import 'compass';
+
 /* Global Admin Menu Fixes */
 
 #admin-menu {
@@ -22,6 +24,9 @@
     background-image:-moz-linear-gradient(#666,#545454)!important;
     background-image:-o-linear-gradient(#666,#545454)!important;
     background-image:linear-gradient(#666,#545454)!important;
+    @if $legacy-support-for-ie8 {
+      @include filter-gradient(#666, #545454);
+    }
   }
 }
 
@@ -56,7 +61,10 @@
     background-image:-webkit-linear-gradient(#176ca7,#135888)!important;
     background-image:-moz-linear-gradient(#176ca7,#135888)!important;
     background-image:-o-linear-gradient(#176ca7,#135888)!important;
-    background-image:linear-gradient(#176ca7,#135888)!important;  
+    background-image:linear-gradient(#176ca7,#135888)!important;
+    @if $legacy-support-for-ie8 {
+      @include filter-gradient(#176ca7, #135888);
+    }
 }
 
 .ctools-modal-content {
@@ -70,6 +78,9 @@
     background-image:-moz-linear-gradient(#176ca7,#135888)!important;
     background-image:-o-linear-gradient(#176ca7,#135888)!important;
     background-image:linear-gradient(#176ca7,#135888)!important;
+    @if $legacy-support-for-ie8 {
+      @include filter-gradient(#176ca7, #135888);
+    }
   }
 }
 
@@ -100,6 +111,9 @@
       background-image:-moz-linear-gradient(#eee,#dcdcdc)!important;
       background-image:-o-linear-gradient(#eee,#dcdcdc)!important;
       background-image:linear-gradient(#eee,#dcdcdc)!important;
+      @if $legacy-support-for-ie8 {
+        @include filter-gradient(#eee, #dcdcdc);
+      }
       span { color: #145E91;}
     }
   }
@@ -147,6 +161,9 @@
     background-image:-moz-linear-gradient(#666,#545454)!important;
     background-image:-o-linear-gradient(#666,#545454)!important;
     background-image:linear-gradient(#666,#545454)!important;
+    @if $legacy-support-for-ie8 {
+      @include filter-gradient(#666, #545454);
+    }
     .toggle {
       text-shadow:#222 0 1px 1px;
       background-repeat:repeat-x;
@@ -155,11 +172,18 @@
       background-image:-moz-linear-gradient(#176ca7,#135888)!important;
       background-image:-o-linear-gradient(#176ca7,#135888)!important;
       background-image:linear-gradient(#176ca7,#135888)!important;
+      @if $legacy-support-for-ie8 {
+        @include filter-gradient(#176ca7, #135888);
+      }
     } 
   }
 }
 
 /* Fields */
+
+.views-widget-filter-vid {
+  clear: both;
+}
 
 #edit-menu-options-attributes-rel,
 #edit-menu-options-attributes-class {
@@ -187,6 +211,14 @@
   }
 }
 
+.pane-node-form-path .form-item .description {
+  display: none; 
+}
+
+.ctools-collapsible-content .form-item {
+  margin-bottom: 0em;
+}
+
 /* Translation */
 
 .form-item {
@@ -203,17 +235,24 @@
 
 /* CTools Collapsible Container */
 
-.ctools-collapsible-container h2 {
-  background: #eeeeee;
-  padding: 5px;
-  margin-bottom: 0;
-  color: black !important;
-  font-size: 14px;
-  font-weight: normal;
-  -moz-border-radius-topleft: 8px;
-  -webkit-border-top-left-radius: 8px;
-  border-top-left-radius: 8px; }
-.ctools-collapsible-container .ctools-toggle-collapsed, .ctools-collapsible-container .ctools-toggle {
-  margin-top: 5px; }
-.ctools-collapsible-container .page-node-edit fieldset {
-  margin-top: 0; }
+.ctools-collapsible-container {
+  h2 { background: #eee; padding: 5px; margin-bottom: 0;  color: #000 !important; font-size: 14px; font-weight: normal; @include border-top-radius(5px); }
+  .ctools-toggle-collapsed, .ctools-toggle { margin-top: 5px;  }
+  .page-node-edit fieldset { margin-top: 0; }
+}
+
+/* LinkIT jQuery UI Fixes */
+
+#linkit-modal {
+  background-color: #FFF;
+}
+
+/* Twitter Bean */
+
+.pane-bean-panels .wet-boew-webwidget {
+  a {
+    display: inline !important;
+    width: auto !important;
+    padding: 0px;
+  }
+}

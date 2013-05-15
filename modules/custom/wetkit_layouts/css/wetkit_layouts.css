@@ -80,3 +80,11 @@ body #panels-dnd-main div.panel-region {
   border: 1px solid #000;
 }
 
+.panels-ipe-editing .region-laurier-first {
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.panels-ipe-placeholder {
+  z-index: 10;
+}

@@ -19,9 +19,10 @@ function wetkit_bean_plugins_bean_types_api_info() {
 function wetkit_bean_plugins_bean_types() {
   $plugins = array();
   $plugin_path = drupal_get_path('module', 'wetkit_bean_plugins') . '/plugins/bean';
+
   $plugins['wetkit_highlight'] = array(
     'label' => t('WetKit Highlight'),
-    'description' => t('A highlighted region for displaying beans.'),
+    'description' => t('A highlighted bean for displaying important blocks.'),
     'handler' => array(
       'class' => 'WetKitHighlightBean',
       'parent' => 'bean',
@@ -29,6 +30,47 @@ function wetkit_bean_plugins_bean_types() {
     'path' => $plugin_path,
     'file' => 'wetkit_bean_plugins.highlight.inc',
   );
+  $plugins['wetkit_search'] = array(
+    'label' => t('WetKit Search'),
+    'description' => t('A custom search bean for displaying search boxes.'),
+    'handler' => array(
+      'class' => 'WetKitSearchBean',
+      'parent' => 'bean',
+    ),
+    'path' => $plugin_path,
+    'file' => 'wetkit_bean_plugins.search.inc',
+  );
+  $plugins['wetkit_rate'] = array(
+    'label' => t('WetKit Rate'),
+    'description' => t('A custom rate bean for displaying a fivestar widget.'),
+    'handler' => array(
+      'class' => 'WetKitRateBean',
+      'parent' => 'bean',
+    ),
+    'path' => $plugin_path,
+    'file' => 'wetkit_bean_plugins.rate.inc',
+  );
+  $plugins['wetkit_share'] = array(
+    'label' => t('WetKit Share'),
+    'description' => t('A custom share bean for displaying share widgets.'),
+    'handler' => array(
+      'class' => 'WetKitShareBean',
+      'parent' => 'bean',
+    ),
+    'path' => $plugin_path,
+    'file' => 'wetkit_bean_plugins.share.inc',
+  );
+  $plugins['wetkit_twitter'] = array(
+    'label' => t('WetKit Twitter'),
+    'description' => t('A custom twitter bean for displaying twitter widgets.'),
+    'handler' => array(
+      'class' => 'WetKitTwitterBean',
+      'parent' => 'bean',
+    ),
+    'path' => $plugin_path,
+    'file' => 'wetkit_bean_plugins.twitter.inc',
+  );
+
   return $plugins;
 }
 

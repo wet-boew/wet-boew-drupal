@@ -23,7 +23,7 @@ function theme_wetkit_menu_wetkit_menu_settings_render_pane($vars) {
   $settings = $vars['settings'];
   $element = $content->content['#content'];
 
-  // Strips all of the sub-menu items.
+  // Strips all of the menus with sub-menu items.
   if (isset($settings['wetkit_menu_settings_strip_sub_items']) && ($settings['wetkit_menu_settings_strip_sub_items'] == 1)) {
     $children = array_intersect_key($element, array_flip(element_children($element)));
     foreach ($children as $element_key => $element_value) {

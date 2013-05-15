@@ -66,7 +66,7 @@ class WetKitHighlightBean extends BeanPlugin {
 
     $form['caption_settings'] = array(
       '#type' => 'fieldset',
-      '#title' => t('Configure Caption'),
+      '#title' => t('Configure Link Text'),
       '#tree' => TRUE,
       '#weight' => 2,
       '#collapsible' => TRUE,
@@ -94,13 +94,24 @@ class WetKitHighlightBean extends BeanPlugin {
    * Displays the bean.
    */
   public function view($bean, $content, $view_mode = 'default', $langcode = NULL) {
+
+    // Link Field
+    $link_path = field_get_items('bean', $bean, 'field_bean_highlight_link');
+    if (isset($link_path[0])) {
+      $link_url = $link_path[0]['display_url'];
+    }
+
     foreach($content['bean'] as &$child) {
       $title_background = isset($bean->title_settings['backgrounds']) ? $bean->title_settings['backgrounds'] : '';
 
+      if (isset($link_url)) {
+        $child['field_bean_highlight_image'][0]['#path']['path'] = $link_url;
+      }
+
       // Wrap the title field in WET background styles.
-      $child['title_field'][0]['#prefix'] =  '<h2 class="' . $title_background . '">';
+      $child['title_field'][0]['#prefix'] =  '<h3 class="' . $title_background . '">';
       $child['title_field'][0]['#markup'] =  $child['title_field'][0]['#markup'];
-      $child['title_field'][0]['#suffix'] =  '</h2>';
+      $child['title_field'][0]['#suffix'] =  '</h3>';
     }
     return $content;
   }
