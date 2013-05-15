@@ -19,12 +19,12 @@ projects[better_formats][download][type] = git
 projects[better_formats][download][revision] = 3b4a8c9
 projects[better_formats][download][branch] = 7.x-1.x
 
-projects[breakpoints][version] = 1.x-dev
-projects[breakpoints][subdir] = contrib
-projects[breakpoints][type] = module
-projects[breakpoints][download][type] = git
-projects[breakpoints][download][revision] = 6170278
-projects[breakpoints][download][branch] = 7.x-1.x
+;projects[breakpoints][version] = 1.x-dev
+;projects[breakpoints][subdir] = contrib
+;projects[breakpoints][type] = module
+;projects[breakpoints][download][type] = git
+;projects[breakpoints][download][revision] = 6170278
+;projects[breakpoints][download][branch] = 7.x-1.x
 
 projects[diff][version] = 3.x-dev
 projects[diff][subdir] = contrib
@@ -64,12 +64,12 @@ projects[menu_attributes][subdir] = contrib
 projects[admin_menu][version] = 3.0-rc4
 projects[admin_menu][subdir] = contrib
 
-projects[navbar][version] = 1.x-dev
-projects[navbar][subdir] = contrib
-projects[navbar][type] = module
-projects[navbar][download][type] = git
-projects[navbar][download][revision] = 184ce30
-projects[navbar][download][branch] = 7.x-1.x
+;projects[navbar][version] = 1.x-dev
+;projects[navbar][subdir] = contrib
+;projects[navbar][type] = module
+;projects[navbar][download][type] = git
+;projects[navbar][download][revision] = 184ce30
+;projects[navbar][download][branch] = 7.x-1.x
 
 projects[password_policy][version] = 1.3
 projects[password_policy][subdir] = contrib
@@ -128,17 +128,17 @@ projects[tao][download][revision] = f06452b
 projects[tao][download][branch] = 7.x-3.x
 projects[tao][patch][1016844] = http://drupal.org/files/tao_taxonomy_manager-1016844-12.patch
 
-projects[ember][version] = 1.x-dev
-projects[ember][type] = theme
-projects[ember][download][type] = git
-projects[ember][download][revision] = 34027ec
-projects[ember][download][branch] = 7.x-1.x
+;projects[ember][version] = 1.x-dev
+;projects[ember][type] = theme
+;projects[ember][download][type] = git
+;projects[ember][download][revision] = 34027ec
+;projects[ember][download][branch] = 7.x-1.x
 
-libraries[underscore][download][type] = get
-libraries[underscore][download][url] = https://github.com/documentcloud/underscore/archive/1.4.4.zip
+;libraries[underscore][download][type] = get
+;libraries[underscore][download][url] = https://github.com/documentcloud/underscore/archive/1.4.4.zip
 
-libraries[backbone][download][type] = get
-libraries[backbone][download][url] = https://github.com/documentcloud/backbone/archive/1.0.0.zip
+;libraries[backbone][download][type] = get
+;libraries[backbone][download][url] = https://github.com/documentcloud/backbone/archive/1.0.0.zip
 
 libraries[querypath][download][type] = git
 libraries[querypath][download][branch] = 3.x

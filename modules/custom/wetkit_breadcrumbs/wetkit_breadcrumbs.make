@@ -9,5 +9,5 @@ projects[path_breadcrumbs][version] = 3.x-dev
 projects[path_breadcrumbs][subdir] = contrib
 projects[path_breadcrumbs][type] = module
 projects[path_breadcrumbs][download][type] = git
-projects[path_breadcrumbs][download][revision] = 2fec9eb
+projects[path_breadcrumbs][download][revision] = f2a246b
 projects[path_breadcrumbs][download][branch] = 7.x-3.x
