@@ -27,7 +27,7 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
 <div id="wb-main" role="main">
   <div id="wb-main-in">
     <?php print $panel_prefix; ?>
-    <div class="at-panel panel-display secord clearfix" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
+    <div class="panel-display secord clearfix" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
       <div class="grid-12">
         <div class="region-secord-top-left span-8 margin-bottom-none">
           <div class="region-inner clearfix">
@@ -42,19 +42,21 @@ $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
           </div>
         </div>
         <div class="clear"></div>
-        <div class="region-secord-mid-left span-4 margin-bottom-none">
-          <div class="region-inner clearfix">
-            <?php print $content['secord_mid_left']; ?>
+        <div class="equalize">
+          <div class="region-secord-mid-left span-4 margin-bottom-large">
+            <div class="region-inner clearfix">
+              <?php print $content['secord_mid_left']; ?>
+            </div>
           </div>
-        </div>
-        <div class="region-secord-mid-center span-4 margin-bottom-none">
-          <div class="region-inner clearfix">
-            <?php print $content['secord_mid_center']; ?>
+          <div class="region-secord-mid-center span-4 margin-bottom-large">
+            <div class="region-inner clearfix">
+              <?php print $content['secord_mid_center']; ?>
+            </div>
           </div>
-        </div>
-        <div class="region-secord-mid-right span-4 margin-bottom-none">
-          <div class="region-inner clearfix">
-            <?php print $content['secord_mid_right']; ?>
+          <div class="region-secord-mid-right span-4 margin-bottom-large">
+            <div class="region-inner clearfix">
+              <?php print $content['secord_mid_right']; ?>
+            </div>
           </div>
         </div>
         <div class="clear"></div>

@@ -8,6 +8,16 @@ include_once 'wetkit_bean.default_content.inc';
 include_once 'wetkit_bean.features.inc';
 
 /**
+ * Implements hook_page_build().
+ */
+function wetkit_bean_page_build() {
+  drupal_add_css(drupal_get_path('module', 'wetkit_bean') . '/css/wetkit_bean.css', array(
+    'group' => CSS_THEME,
+    'every_page' => TRUE,
+  ));
+}
+
+/**
  * Implements hook_preprocess_hook().
  */
 function wetkit_bean_preprocess_entity(&$variables) {

@@ -8,11 +8,12 @@
     <?php if (isset($breadcrumb)): ?>
       <div class='breadcrumb clearfix'><?php print $breadcrumb ?></div>
     <?php endif; ?>
-    <?php if (!$overlay && isset($secondary_menu) && theme_get_setting('wetkit_rubik_show_user_menu')) : ?>
+    <?php if (isset($secondary_menu) && theme_get_setting('wetkit_rubik_show_user_menu')) : ?>
       
-      <?php print theme('links', array('links' => $secondary_menu, 'attributes' => array('class' => 'links secondary-menu'))) ?>
-      <?php print $menu_bar; ?>
-
+      <div id ="side-breadcrumbs">
+        <?php print theme('links', array('links' => $secondary_menu, 'attributes' => array('class' => 'links secondary-menu'))) ?>
+        <?php print $menu_bar; ?>
+      </div>
     <?php endif; ?>
   </div></div>
 

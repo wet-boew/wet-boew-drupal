@@ -36,3 +36,6 @@ div .markItUpHeader ul .markItUpSeparator { margin-top: 4px; }
 #modalContent div.ctools-modal-content .format-toggle label, .format-toggle label { float: left; margin-right: 5px; margin-top: 2px; font-weight: 400; display: block; width: auto; }
 
 div.ctools-modal-content .format-toggle, .format-toggle { float: right; margin-top: 5px; margin-bottom: 5px; }
+
+/** CKEditor */
+.wysiwygeditor { margin: 10px !important; }

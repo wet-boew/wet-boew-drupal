@@ -181,13 +181,17 @@ function wetkit_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
         libraries_get_path('wet-boew', TRUE) . '/dist/grids/css/util-min.css',
         libraries_get_path('wet-boew', TRUE) . '/dist/js/css/pe-ap-min.css',
         libraries_get_path('wet-boew', TRUE) . '/dist/' . $wet_theme . '/css/theme-min.css',
+        drupal_get_path('module', 'wetkit_wysiwyg') . '/css/wetkit-wysiwyg.css',
       );
 
       // Allow extra elements for Media module
       // See - http://drupal.org/node/1963270
-      $settings['extraAllowedContent'] = array(
-        'img[src,title,alt,style,width,height,class,hspace,vspace,view_mode,format,fid]',
-      );
+      //$settings['extraAllowedContent'] = array(
+      //  'img[src,title,alt,style,width,height,class,hspace,vspace,view_mode,format,fid]',
+      //  'area[href,title,alt,shape,coords]',
+      //  'map[name,id,title]',
+      //);
+      $settings['allowedContent'] = TRUE;
 
       // Editor Configuration.
       $settings['emailProtection'] = 'encode';

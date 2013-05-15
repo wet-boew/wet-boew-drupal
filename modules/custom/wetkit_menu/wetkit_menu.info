@@ -25,3 +25,10 @@ features[variable][] = menu_minipanels__enabled
 features[variable][] = menu_minipanels_admin_menu_enabled
 features[variable][] = menu_minipanels_devel_enabled
 files[] = import/migrate_wetkit_menu.inc
+
+; Information added by drupal.org packaging script on 2013-05-01
+version = "7.x-1.0-rc1+1-dev"
+core = "7.x"
+project = "wetkit"
+datestamp = "1367417911"
+

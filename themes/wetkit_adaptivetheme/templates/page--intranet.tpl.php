@@ -196,7 +196,7 @@
                 <?php if (isset($search_indexing_start)): ?>
                   <?php print $search_indexing_start; ?>
                 <?php endif; ?>                
-                <<?php print $tag; ?> id="main-content">
+                <section id="main-content">
                   <?php print render($title_prefix); ?>
                   <?php if ($title || $primary_local_tasks || $secondary_local_tasks || $action_links = render($action_links)): ?>
                     <header id="main-content-header">
@@ -227,7 +227,7 @@
                   <!-- Feed icons (RSS, Atom icons etc -->
                   <?php print $feed_icons; ?>
                   <?php print render($title_suffix); ?>
-                </<?php print $tag; ?>>
+                </section>
                 <?php if (isset($search_indexing_stop)): ?>
                   <?php print $search_indexing_stop; ?>
                 <?php endif; ?>

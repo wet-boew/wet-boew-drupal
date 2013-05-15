@@ -142,6 +142,7 @@
                 <?php endif; ?>
               </div>
             <?php endif; ?>
+            <?php if (!drupal_is_front_page()): ?>
             <section role ="search">
               <div id="gcwu-srchbx">
                 <h2><?php print t('Search'); ?></h2>
@@ -150,6 +151,7 @@
                 <?php endif; ?>
               </div>
             </section>
+            <?php endif; ?>
           </div>
         </div>
         <nav role="navigation">
@@ -180,13 +182,13 @@
       <?php if (isset($search_indexing_start)): ?>
         <?php print $search_indexing_start; ?>
       <?php endif; ?>
-      <<?php print $tag; ?> id="main-content">
+      <section id="main-content">
         <?php print $messages; ?>
         <!-- region: Main Content -->
         <?php if ($content = render($page['content'])): ?>
           <?php print $content; ?>
         <?php endif; ?>
-      </<?php print $tag; ?>>
+      </section>
       <?php if (isset($search_indexing_stop)): ?>
         <?php print $search_indexing_stop; ?>
       <?php endif; ?>
