@@ -9,7 +9,7 @@ projects[bean][version] = 1.x-dev
 projects[bean][subdir] = contrib
 projects[bean][type] = module
 projects[bean][download][type] = git
-projects[bean][download][revision] = d4038e7
+projects[bean][download][revision] = d57a519
 projects[bean][download][branch] = 7.x-1.x
 
 projects[bean_panels][version] = 1.x-dev
