@@ -476,3 +476,57 @@ div#gcwu-headlines ul, div#gcwu-headlines ul li {
     color: #FFFFFF;
   }
 }
+
+/* Views Responsive Grids */
+
+.views-responsive-grid img {
+  width: auto!important;
+  height: auto;
+  float: left;
+  margin-right: 10px;
+}
+
+.views-responsive-grid .views-row .span-3 {
+  padding-bottom: 10px;
+}
+
+.views-responsive-grid img {
+  border: 1px solid #CCC;
+}
+
+.region-hadfield-first {
+   margin-top: 7px;
+}
+
+.region-hadfield-first .panel-pane {
+   margin-bottom: 10px;
+}
+
+.region-pearson-second .panel-pane {
+  margin-bottom: 10px;
+}
+
+.region-pearson-first .rate-widget-fiveleaf {
+  float: right;
+  margin-right: 10px;
+}
+
+.pane-node-field-application-developer h3 {
+  margin: 0px;
+}
+
+.pane-node-field-application-categories h3 {
+  margin: 0px;
+}
+
+.pane-node-field-departments h3 {
+  margin: 0px;
+}
+
+.pane-node-field-device-formats h3 {
+  margin: 0px;
+}
+
+.view-id-apps .pager {
+  margin: 5px 5px 10px 5px;
+}

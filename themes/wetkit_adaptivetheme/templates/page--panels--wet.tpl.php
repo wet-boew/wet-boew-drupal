@@ -153,13 +153,13 @@
       <?php if (isset($search_indexing_start)): ?>
         <?php print $search_indexing_start; ?>
       <?php endif; ?>
-      <<?php print $tag; ?> id="main-content">
+      <section id="main-content">
         <?php print $messages; ?>
         <!-- region: Main Content -->
         <?php if ($content = render($page['content'])): ?>
           <?php print $content; ?>
         <?php endif; ?>
-      </<?php print $tag; ?>>
+      </section>
       <?php if (isset($search_indexing_stop)): ?>
         <?php print $search_indexing_stop; ?>
       <?php endif; ?>

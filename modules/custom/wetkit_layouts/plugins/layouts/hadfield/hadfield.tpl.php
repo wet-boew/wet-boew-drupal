@@ -25,34 +25,33 @@ $panel_prefix = isset($panel_prefix) ? $panel_prefix : '';
 $panel_suffix = isset($panel_suffix) ? $panel_suffix : '';
 ?>
 <?php print $panel_prefix; ?>
-<div class=at-panel panel-display riel clearfix" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
-  <?php if ($content['riel_top']): ?>
-  <div class="region-riel-top span-8">
+<div class="panel-display hadfield clearfix" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
+  <?php if ($content['hadfield_top']): ?>
+  <div class="region-hadfield-top span-8">
     <div class="region-inner clearfix">
-      <?php print $content['riel_top']; ?>
+      <?php print $content['hadfield_top']; ?>
     </div>
   </div>
   <div class="clear"></div>
   <?php endif; ?>
-  <div id="wb-main" role="main">
-    <div id="wb-main-in">
-       <div class="region-riel-first span-6 margin-bottom-none">
-         <div class="region-inner clearfix">
-           <?php print $content['riel_first']; ?>
-         </div>
-       </div>
-       <div class="region-riel-second span-2 margin-bottom-none">
-         <div class="region-inner clearfix">
-           <?php print $content['riel_second']; ?>
-         </div>
-       </div>
-       <div class="clear"></div>
-    </div>
+<div id="wb-main" role="main">
+  <div id="wb-main-in">
+      <div class="span-2 region-hadfield-first">
+        <div class="region-inner clearfix">
+          <?php print $content['hadfield_first']; ?>
+        </div>
+      </div>
+      <div class="span-6 region-hadfield-second">
+        <div class="region-inner clearfix">
+          <?php print $content['hadfield_second']; ?>
+        </div>
+      </div>
   </div>
-  <?php if ($content['riel_bottom']): ?>
-  <div class="region-riel-bottom span-8">
+</div>
+  <?php if ($content['hadfield_bottom']): ?>
+  <div class="region-hadfield-bottom span-8">
     <div class="region-inner clearfix">
-      <?php print $content['riel_bottom']; ?>
+      <?php print $content['hadfield_bottom']; ?>
     </div>
   </div>
   <div class="clear"></div>

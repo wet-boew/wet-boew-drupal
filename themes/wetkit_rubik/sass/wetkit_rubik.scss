@@ -1,3 +1,7 @@
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/images";
+
 /* Global styles
 -----------------------------------------------------------------------------*/
 body {
@@ -739,6 +743,9 @@ h1.path-admin-config-workbench span.icon {
   background-image:-o-linear-gradient(#176ca7,#135888)!important;
   background-image:linear-gradient(#176ca7,#135888)!important;
   height: 35px;
+  @if $legacy-support-for-ie8 {
+    @include filter-gradient(#176CA7, #135888);
+  } 
 }
 
 .tao .action-links a {
@@ -751,6 +758,9 @@ h1.path-admin-config-workbench span.icon {
   background-image:-o-linear-gradient(#176ca7,#135888)!important;
   background-image:linear-gradient(#176ca7,#135888)!important;
   padding: 0px 5px 0px 5px;
+  @if $legacy-support-for-ie8 {
+    @include filter-gradient(#176CA7, #135888);
+  } 
 }
 
 .tao .add-or-remove-shortcuts a span.text {
@@ -766,7 +776,10 @@ h1.path-admin-config-workbench span.icon {
   background-image:-webkit-linear-gradient(#176ca7,#135888)!important;
   background-image:-moz-linear-gradient(#176ca7,#135888)!important;
   background-image:-o-linear-gradient(#176ca7,#135888)!important;
-   background-image:linear-gradient(#176ca7,#135888)!important;
+  background-image:linear-gradient(#176ca7,#135888)!important;
+  @if $legacy-support-for-ie8 {
+    @include filter-gradient(#176CA7, #135888);
+  }
 }
 .secondary-tabs li.active a { background-color:#000; border-radius: 4px; }
 .secondary-tabs a:hover { background-color:#000; }
@@ -780,6 +793,9 @@ h1.path-admin-config-workbench span.icon {
   background-image:-moz-linear-gradient(#eee,#dcdcdc)!important;
   background-image:-o-linear-gradient(#eee,#dcdcdc)!important;
   background-image:linear-gradient(#eee,#dcdcdc)!important;
+  @if $legacy-support-for-ie8 {
+    @include filter-gradient(#eee, #dcdcdc);
+  }
 }
 
 .tao .fieldset-title .summary {
@@ -793,7 +809,9 @@ h1.path-admin-config-workbench span.icon {
   background-image:-moz-linear-gradient(#eee,#dcdcdc)!important;
   background-image:-o-linear-gradient(#eee,#dcdcdc)!important;
   background-image:linear-gradient(#eee,#dcdcdc)!important;
-  
+  @if $legacy-support-for-ie8 {
+    @include filter-gradient(#eee, #dcdcdc);
+  }
   input, select { min-height: 26px; }
   .description { display: none; }
   .form-autocomplete { padding: 3px; }
@@ -870,4 +888,8 @@ h1.path-admin-config-workbench span.icon {
 
 #media-browser-page-wrapper #media-browser-tabset #branding {
   background-image: none;
+}
+
+#overlay-content #side-breadcrumbs {
+  margin-right: 50px;
 }

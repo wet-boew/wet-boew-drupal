@@ -87,11 +87,11 @@ function wetkit_wetboew_libraries_info() {
           'scope' => 'footer',
           'weight' => 5,
         ),
-        'dist/js/jquerymobile/jquery.mobile.min.js' => array(
-          'preprocess' => FALSE,
-          'scope' => 'footer',
-          'weight' => 5,
-        ),
+        //'dist/js/jquerymobile/jquery.mobile.min.js' => array(
+        //  'preprocess' => FALSE,
+        //  'scope' => 'footer',
+        //  'weight' => 5,
+        //),
       ),
     ),
     // VARIANTS
@@ -171,11 +171,11 @@ function wetkit_wetboew_libraries_info() {
               'scope' => 'footer',
               'weight' => 5,
             ),
-            'dist/js/jquerymobile/jquery.mobile.min.js' => array(
-              'preprocess' => FALSE,
-              'scope' => 'footer',
-              'weight' => 5,
-            ),
+            //'dist/js/jquerymobile/jquery.mobile.min.js' => array(
+            //  'preprocess' => FALSE,
+            //  'scope' => 'footer',
+            //  'weight' => 5,
+            //),
           ),
         ),
         'variant callback' => 'wetkit_wetboew_check_variant',
@@ -258,11 +258,11 @@ function wetkit_wetboew_libraries_info() {
               'scope' => 'footer',
               'weight' => 5,
             ),
-            'dist/js/jquerymobile/jquery.mobile.min.js' => array(
-              'preprocess' => FALSE,
-              'scope' => 'footer',
-              'weight' => 5,
-            ),
+            //'dist/js/jquerymobile/jquery.mobile.min.js' => array(
+            //  'preprocess' => FALSE,
+            //  'scope' => 'footer',
+            //  'weight' => 5,
+            //),
           ),
         ),
         'variant callback' => 'wetkit_wetboew_check_variant',
@@ -345,11 +345,11 @@ function wetkit_wetboew_libraries_info() {
               'scope' => 'footer',
               'weight' => 5,
             ),
-            'dist/js/jquerymobile/jquery.mobile.min.js' => array(
-              'preprocess' => FALSE,
-              'scope' => 'footer',
-              'weight' => 5,
-            ),
+            //'dist/js/jquerymobile/jquery.mobile.min.js' => array(
+            //  'preprocess' => FALSE,
+            //  'scope' => 'footer',
+            //  'weight' => 5,
+            //),
           ),
         ),
         'variant callback' => 'wetkit_wetboew_check_variant',
