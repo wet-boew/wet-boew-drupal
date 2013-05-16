@@ -68,7 +68,7 @@ msgstr ""
 "représente la page d’accueil."
 
 #: wetkit_menu.features.menu_custom.inc:23
-msgid "Minipanel: WetKit"
+msgid "Menu Panel Insert: WetKit"
 msgstr ""
 
 #: wetkit_menu.module:205

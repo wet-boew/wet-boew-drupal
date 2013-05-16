@@ -13,14 +13,15 @@ function wetkit_menu_menu_default_menu_custom() {
   // Exported menu: wetkit-menu-minipanel.
   $menus['wetkit-menu-minipanel'] = array(
     'menu_name' => 'wetkit-menu-minipanel',
-    'title' => 'Minipanel: WetKit',
-    'description' => 'Minipanel: WetKit',
+    'title' => 'Menu Panel Insert',
+    'description' => 'Menu Panel Insert: WetKit',
     'language' => 'und',
-    'i18n_mode' => '5',
+    'i18n_mode' => 5,
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Minipanel: WetKit');
+  t('Menu Panel Insert: WetKit');
+
 
   return $menus;
 }
