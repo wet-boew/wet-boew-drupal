@@ -86,7 +86,7 @@
   <?php endif; ?>
   <div id="wb-head">
     <div id="wb-head-in">
-      <header id="header" class="clearfix" role="banner">
+      <header id="header" class="clearfix">
         <!-- HeaderStart -->
         <section>
           <div id="base-fullhd"><h2>Full-width header area</h2>
