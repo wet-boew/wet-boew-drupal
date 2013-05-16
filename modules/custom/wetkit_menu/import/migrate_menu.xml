@@ -5,13 +5,13 @@
             <section>
                 <source_id>wetkit_menu_minipanel</source_id>
                 <menu_name>wetkit-menu-minipanel</menu_name>
-                <title>Minipanel: WetKit</title>
+                <title>Menu Panel Insert</title>
                 <description>Minipanel: WetKit</description>
             </section>
             <section>
                 <source_id>wetkit_menu_minipanel-focus</source_id>
                 <menu_name>wetkit-menu-minipanel-focus</menu_name>
-                <title>Minipanel Focus: WetKit</title>
+                <title>Menu Panel Insert (Focus)</title>
                 <description>Minipanel Focus: WetKit</description>
             </section>
         </language>
