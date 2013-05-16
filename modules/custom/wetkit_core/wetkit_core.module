@@ -411,15 +411,3 @@ function wetkit_core_filter_xss($string, $allowed_tags = array(
 'br')) {
   return filter_xss($string, $allowed_tags);
 }
-
-/**
- * Implements hook_admin_paths_alter().
- */
-function wetkit_core_admin_paths_alter(&$paths) {
-  $paths['admin/structure/pages/nojs/operation/*/handlers/*/content'] = FALSE;
-}
-
-function wetkit_core_admin_paths() {
-  $paths['admin/structure/pages/nojs/operation/*/handlers/*/content'] = FALSE;
-  return $paths;
-}

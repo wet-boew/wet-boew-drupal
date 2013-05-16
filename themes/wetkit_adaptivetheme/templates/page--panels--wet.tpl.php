@@ -96,7 +96,7 @@
             </div>
           </div>
         </section>
-        <div id="wet-bnr" role="banner">
+        <div id="wet-bnr">
           <div id="wet-bnr-in">
             <?php if ($site_name || $site_slogan): ?>
               <div id="wet-title">
