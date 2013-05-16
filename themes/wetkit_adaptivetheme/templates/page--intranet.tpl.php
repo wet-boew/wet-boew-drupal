@@ -86,7 +86,7 @@
   <?php endif; ?>
   <div id="wb-head">
     <div id="wb-head-in">
-      <header id="header" class="clearfix" role="banner">
+      <header id="header" class="clearfix">
         <!-- HeaderStart -->
         <nav role="navigation">
           <div id="gcwu-gcnb">
