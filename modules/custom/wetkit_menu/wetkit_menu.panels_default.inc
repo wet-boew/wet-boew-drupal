@@ -47,8 +47,8 @@ function wetkit_menu_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'menu_name' => 'wetkit-menu-minipanel',
-      'parent_mlid' => 1254,
-      'parent' => 'wetkit-menu-minipanel:1254',
+      'parent_mlid' => _wetkit_menu_get_mlid('wetkit_menu_minipanel_links_eng_3_a'),
+      'parent' => 'wetkit-menu-minipanel:' . _wetkit_menu_get_mlid('wetkit_menu_minipanel_links_eng_3_a'),
       'title_link' => 1,
       'admin_title' => '',
       'level' => '1',
@@ -85,8 +85,8 @@ function wetkit_menu_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'menu_name' => 'wetkit-menu-minipanel',
-      'parent_mlid' => 1258,
-      'parent' => 'wetkit-menu-minipanel:1258',
+      'parent_mlid' => _wetkit_menu_get_mlid('wetkit_menu_minipanel_links_eng_3_e'),
+      'parent' => 'wetkit-menu-minipanel:' . _wetkit_menu_get_mlid('wetkit_menu_minipanel_links_eng_3_e'),
       'title_link' => 1,
       'admin_title' => '',
       'level' => '1',
@@ -156,8 +156,8 @@ function wetkit_menu_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'menu_name' => 'wetkit-menu-minipanel',
-      'parent_mlid' => 1241,
-      'parent' => 'wetkit-menu-minipanel:1241',
+      'parent_mlid' => _wetkit_menu_get_mlid('wetkit_menu_minipanel_links_eng_2'),
+      'parent' => 'wetkit-menu-minipanel:' . _wetkit_menu_get_mlid('wetkit_menu_minipanel_links_eng_2'),
       'title_link' => 1,
       'admin_title' => '',
       'level' => '1',
@@ -194,8 +194,8 @@ function wetkit_menu_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'menu_name' => 'wetkit-menu-minipanel',
-      'parent_mlid' => 1245,
-      'parent' => 'wetkit-menu-minipanel:1245',
+      'parent_mlid' => _wetkit_menu_get_mlid('wetkit_menu_minipanel_links_eng_2_d'),
+      'parent' => 'wetkit-menu-minipanel:' . _wetkit_menu_get_mlid('wetkit_menu_minipanel_links_eng_2_d'),
       'title_link' => 1,
       'admin_title' => '',
       'level' => '1',
@@ -232,8 +232,8 @@ function wetkit_menu_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'menu_name' => 'wetkit-menu-minipanel',
-      'parent_mlid' => 1248,
-      'parent' => 'wetkit-menu-minipanel:1248',
+      'parent_mlid' => _wetkit_menu_get_mlid('wetkit_menu_minipanel_links_eng_2_g'),
+      'parent' => 'wetkit-menu-minipanel:' . _wetkit_menu_get_mlid('wetkit_menu_minipanel_links_eng_2_g'),
       'title_link' => 1,
       'admin_title' => '',
       'level' => '1',
@@ -270,8 +270,8 @@ function wetkit_menu_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'menu_name' => 'wetkit-menu-minipanel-focus',
-      'parent_mlid' => '1235',
-      'parent' => 'wetkit-menu-minipanel-focus:1235',
+      'parent_mlid' => _wetkit_menu_get_mlid('wetkit_menu_minipanel_focus_links_eng_1'),
+      'parent' => 'wetkit-menu-minipanel-focus:' . _wetkit_menu_get_mlid('wetkit_menu_minipanel_focus_links_eng_1'),
       'title_link' => 0,
       'admin_title' => '',
       'level' => '1',
@@ -335,8 +335,8 @@ function wetkit_menu_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'menu_name' => 'wetkit-menu-minipanel',
-      'parent_mlid' => 1262,
-      'parent' => 'wetkit-menu-minipanel:1262',
+      'parent_mlid' => _wetkit_menu_get_mlid('wetkit_menu_minipanel_links_eng_4'),
+      'parent' => 'wetkit-menu-minipanel:' . _wetkit_menu_get_mlid('wetkit_menu_minipanel_links_eng_4'),
       'title_link' => 1,
       'admin_title' => '',
       'level' => '1',
@@ -400,8 +400,8 @@ function wetkit_menu_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'menu_name' => 'wetkit-menu-minipanel',
-      'parent_mlid' => '1239',
-      'parent' => 'wetkit-menu-minipanel:1239',
+      'parent_mlid' => _wetkit_menu_get_mlid('wetkit_menu_minipanel_links_eng_1'),
+      'parent' => 'wetkit-menu-minipanel:' . _wetkit_menu_get_mlid('wetkit_menu_minipanel_links_eng_1'),
       'title_link' => 0,
       'admin_title' => '',
       'level' => '1',
@@ -435,4 +435,23 @@ function wetkit_menu_default_panels_mini() {
   $export['wetkit_mini_panels_home'] = $mini;
 
   return $export;
+}
+
+/**
+ * Custom function for retrieving mlids by link path.
+ */
+function _wetkit_menu_get_mlid($source_id) {
+  if (db_table_exists('migrate_map_wetkitmigratemegamenulinks')) {
+    $menu_link = db_select('migrate_map_wetkitmigratemegamenulinks')
+        ->fields('migrate_map_wetkitmigratemegamenulinks')
+        ->condition('sourceid1', $source_id)
+        ->execute()->fetch();
+
+    if (isset($menu_link->destid1)) {
+      return $menu_link->destid1;
+    }
+  }
+  else {
+    return FALSE;
+  }
 }
