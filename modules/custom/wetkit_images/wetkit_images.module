@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * wetkit_images.module
- */
-
-include_once 'wetkit_images.features.inc';
