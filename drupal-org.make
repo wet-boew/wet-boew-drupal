@@ -191,17 +191,17 @@ projects[wetkit_git][download][url] = https://github.com/wet-boew-wem/wetkit-git
 projects[wetkit_adaptivetheme][type] = theme
 projects[wetkit_adaptivetheme][download][type] = git
 projects[wetkit_adaptivetheme][download][revision] = e6f4d12
-projects[wetkit_adaptivetheme][download][branch] = 7.x-3.x
+projects[wetkit_adaptivetheme][download][branch] = master
 projects[wetkit_adaptivetheme][download][url] = https://github.com/wet-boew-wem/wetkit-adaptivetheme.git
 
 projects[wetkit_rubik][type] = theme
 projects[wetkit_rubik][download][type] = git
 projects[wetkit_rubik][download][revision] = d4a0b3e
-projects[wetkit_rubik][download][branch] = 7.x-3.x
+projects[wetkit_rubik][download][branch] = master
 projects[wetkit_rubik][download][url] = https://github.com/wet-boew-wem/wetkit-adaptivetheme.git
 
 projects[wetkit_shiny][type] = theme
 projects[wetkit_shiny][download][type] = git
 projects[wetkit_shiny][download][revision] = 69e7fa4
-projects[wetkit_shiny][download][branch] = 7.x-3.x
+projects[wetkit_shiny][download][branch] = master
 projects[wetkit_shiny][download][url] = https://github.com/wet-boew-wem/wetkit-adaptivetheme.git
