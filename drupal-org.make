@@ -97,7 +97,7 @@ projects[wetkit_images][subdir] = custom
 projects[wetkit_images][download][type] = git
 projects[wetkit_images][download][revision] = 6936f98
 projects[wetkit_images][download][branch] = master
-projects[wetkit_images][download][url] = https://github.com/wet-boew-wem/wetkit-wysiwyg.git
+projects[wetkit_images][download][url] = https://github.com/wet-boew-wem/wetkit-images.git
 
 projects[wetkit_language][type] = module
 projects[wetkit_language][subdir] = custom
