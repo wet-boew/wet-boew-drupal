@@ -26,7 +26,7 @@ projects[panopoly_theme][patch][1967234] = http://drupal.org/files/panopoly_them
 projects[panopoly_magic][version] = 1.x-dev
 projects[panopoly_magic][subdir] = panopoly
 projects[panopoly_magic][download][type] = git
-projects[panopoly_magic][download][revision] = 623c6ff
+projects[panopoly_magic][download][revision] = 16add88
 projects[panopoly_magic][download][branch] = 7.x-1.x
 
 projects[panopoly_widgets][version] = 1.x-dev
