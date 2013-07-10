@@ -27,9 +27,9 @@ function _wetkit_bean_import($operation, &$context) {
     'fieldable_panels_pane' => 'fieldable_panels_pane',
     'bean' => 'bean',
     'node' => 0,
-    'file' => 0,
-    'taxonomy_term' => 0,
-    'user' => 0,
+    'file' => 'file',
+    'taxonomy_term' => 'taxonomy_term',
+    'user' => 'user',
   );
   variable_set('entity_translation_entity_types', $entity_translation_entity_types);
   entity_info_cache_clear();
