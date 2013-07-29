@@ -33,10 +33,20 @@ function wetkit_install_tasks(&$install_state) {
   );
 
   $tasks['wetkit_import_content'] = array(
-    'display_name' => st('Import content'),
+    'display_name' => st('Import required content'),
+    'type' => 'batch',
+    // Show this task only after the WetKit steps have been reached.
+    'display' => strpos($current_task, 'wetkit_') !== FALSE,
+  );
+
+  $tasks['wetkit_import_demo_content'] = array(
+    'display_name' => st('Import demo content'),
     'type' => 'batch',
     // Show this task only after the WetKit steps have bene reached.
     'display' => strpos($current_task, 'wetkit_') !== FALSE,
+    'run' => isset($install_state['parameters']['demo_content']) ?
+      $install_state['parameters']['demo_content'] == 1 ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP
+      : INSTALL_TASK_SKIP,
   );
 
   return $tasks;
@@ -149,6 +159,13 @@ function wetkit_form_install_configure_form_alter(&$form, $form_state) {
     $form['site_information']['site_mail']['#default_value'] = 'admin@' . $_SERVER['HTTP_HOST'];
     $form['admin_account']['account']['mail']['#default_value'] = 'admin@' . $_SERVER['HTTP_HOST'];
   }
+
+  $form['demo_content'] = array(
+    '#title' => st('Import demo content'),
+    '#description' => st('Whether demo content should imported.'),
+    '#type' => 'checkbox',
+  );
+  array_push($form['#submit'], 'wetkit_import_demo_content_form_submit');
 }
 
 /**
@@ -168,8 +185,36 @@ function wetkit_batch_processing(&$install_state) {
 
 /**
  * Task callback: return a batch API array with the products to be imported.
+ * Import required wetkit content
  */
 function wetkit_import_content() {
+  // Run Mega Menu migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateMegaMenu',
+    t('Importing content.'),
+  ));
+
+  $batch = array(
+    'title' => t('Importing content'),
+    'operations' => $operations,
+    'file' => drupal_get_path('profile', 'wetkit') . '/wetkit.install_callbacks.inc',
+  );
+  return $batch;
+}
+
+/**
+ * Form submit callback: Demo content form submit callback
+ */
+function wetkit_import_demo_content_form_submit($form, &$form_state) {
+  global $install_state;
+  $install_state['parameters']['demo_content'] = $form_state['values']['demo_content'];
+}
+
+/**
+ * Task callback: return a batch API array with the products to be imported.
+ *   Import demo wetkit content
+ */
+function wetkit_import_demo_content() {
   // Fixes problems when the CSV files used for importing have been created
   // on a Mac, by forcing PHP to detect the appropriate line endings.
   ini_set("auto_detect_line_endings", TRUE);
@@ -178,19 +223,18 @@ function wetkit_import_content() {
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateDefaultContent',
     t('Importing content.'),
-    ));
+  ));
 
-  // Run Mega Menu migration.
-  $operations[] = array('_wetkit_import', array(
-    'WetKitMigrateMegaMenu',
-    t('Importing content.'),
-    ));
+  $operations[] = array('module_enable', array(
+    'wetkit_demo',
+    t('Enabling wetkit_demo module.'),
+  ));
 
   // Run Mega Menu Links migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateMegaMenuLinks',
     t('Importing content.'),
-    ));
+  ));
 
   // Run bean import.
   $operations[] = array('_wetkit_bean_import', array(t('Importing Bean content.')));

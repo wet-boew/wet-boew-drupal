@@ -55,7 +55,6 @@ dependencies[] = wetkit_pages
 dependencies[] = wetkit_layouts
 dependencies[] = wetkit_search
 dependencies[] = wetkit_wysiwyg
-dependencies[] = wetkit_demo
 dependencies[] = wetkit_language
 dependencies[] = wetkit_i18n_panels
 dependencies[] = wetkit_migrate
