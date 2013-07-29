@@ -226,7 +226,7 @@ function wetkit_import_demo_content() {
   ));
 
   $operations[] = array('module_enable', array(
-    'wetkit_demo',
+    array('wetkit_demo'),
     t('Enabling wetkit_demo module.'),
   ));
 
