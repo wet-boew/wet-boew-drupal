@@ -21,11 +21,11 @@ dependencies[] = block
 dependencies[] = dblog
 dependencies[] = update
 dependencies[] = shortcut
-dependencies[] = overlay
+dependencies[] = contextual
 
 ; Drupal Core Disabled
+;dependencies[] = overlay
 ;dependencies[] = help
-;dependencies[] = contextual
 ;dependencies[] = rdf
 ;dependencies[] = statistics
 ;dependencies[] = simpletest
@@ -38,12 +38,6 @@ dependencies[] = panopoly_magic
 dependencies[] = panopoly_widgets
 dependencies[] = panopoly_admin
 dependencies[] = panopoly_users
-
-; Panopoly Recommended - Disabled
-;dependencies[] = devel
-;dependencies[] = navbar
-;dependencies[] = save_draft
-;dependencies[] = simplified_menu_admin
 
 ; Panopoly Recommended - Admin
 dependencies[] = backports
