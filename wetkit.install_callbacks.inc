@@ -26,7 +26,7 @@ function _wetkit_bean_import($operation, &$context) {
   $entity_translation_entity_types = array(
     'fieldable_panels_pane' => 'fieldable_panels_pane',
     'bean' => 'bean',
-    'node' => 0,
+    'node' => 'node',
     'file' => 'file',
     'taxonomy_term' => 'taxonomy_term',
     'user' => 'user',
