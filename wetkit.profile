@@ -219,6 +219,9 @@ function wetkit_import_demo_content() {
   // on a Mac, by forcing PHP to detect the appropriate line endings.
   ini_set("auto_detect_line_endings", TRUE);
 
+  // Run entities import.
+  $operations[] = array('_wetkit_entities_import', array(t('Initializing entities.')));
+
   // Run default_content migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateDefaultContent',
@@ -238,6 +241,9 @@ function wetkit_import_demo_content() {
 
   // Run bean import.
   $operations[] = array('_wetkit_bean_import', array(t('Importing Bean content.')));
+
+  // Page Manager Fix.
+  $operations[] = array('_wetkit_panels_fix', array(t('Fix Page Manager dependency chain issue.')));
 
   $batch = array(
     'title' => t('Importing content'),
