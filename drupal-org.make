@@ -6,9 +6,9 @@ core = 7.x
 projects[panopoly_core][version] = 1.x-dev
 projects[panopoly_core][subdir] = panopoly
 projects[panopoly_core][download][type] = git
-projects[panopoly_core][download][revision] = ef68207
+projects[panopoly_core][download][revision] = 68d38ad
 projects[panopoly_core][download][branch] = 7.x-1.x
-projects[panopoly_core][patch][1967238] = http://drupal.org/files/panopoly_core_make-1967238-11.patch
+projects[panopoly_core][patch][1967238] = http://drupal.org/files/panopoly_core_make-1967238-12.patch
 
 projects[panopoly_images][version] = 1.x-dev
 projects[panopoly_images][subdir] = panopoly
@@ -19,35 +19,35 @@ projects[panopoly_images][download][branch] = 7.x-1.x
 projects[panopoly_theme][version] = 1.x-dev
 projects[panopoly_theme][subdir] = panopoly
 projects[panopoly_theme][download][type] = git
-projects[panopoly_theme][download][revision] = 7715ded
+projects[panopoly_theme][download][revision] = 3451629
 projects[panopoly_theme][download][branch] = 7.x-1.x
-projects[panopoly_theme][patch][1967234] = http://drupal.org/files/panopoly_theme_make-1967234-01.patch
+projects[panopoly_theme][patch][1967234] = http://drupal.org/files/panopoly_theme_make-1967234-03.patch
 
 projects[panopoly_magic][version] = 1.x-dev
 projects[panopoly_magic][subdir] = panopoly
 projects[panopoly_magic][download][type] = git
-projects[panopoly_magic][download][revision] = 16add88
+projects[panopoly_magic][download][revision] = 7dc1a5e
 projects[panopoly_magic][download][branch] = 7.x-1.x
 
 projects[panopoly_widgets][version] = 1.x-dev
 projects[panopoly_widgets][subdir] = panopoly
 projects[panopoly_widgets][download][type] = git
-projects[panopoly_widgets][download][revision] = 17964b9
+projects[panopoly_widgets][download][revision] = 80f8cd4
 projects[panopoly_widgets][download][branch] = 7.x-1.x
-projects[panopoly_widgets][patch][1967230] = http://drupal.org/files/panopoly_widgets_make-1967230-11.patch
+projects[panopoly_widgets][patch][1967230] = http://drupal.org/files/panopoly_widgets_make-1967230-12.patch
 
 projects[panopoly_admin][version] = 1.x-dev
 projects[panopoly_admin][subdir] = panopoly
 projects[panopoly_admin][download][type] = git
-projects[panopoly_admin][download][revision] = a0e9881
+projects[panopoly_admin][download][revision] = 63ee504
 projects[panopoly_admin][download][branch] = 7.x-1.x
-projects[panopoly_admin][patch][1967216] = http://drupal.org/files/panopoly_admin_make-1967216-03.patch
-projects[panopoly_admin][patch][1891482] = http://drupal.org/files/panopoly_pathauto-1891482-03.patch
+projects[panopoly_admin][patch][1967216] = http://drupal.org/files/panopoly_admin_make-1967216-06.patch
+;projects[panopoly_admin][patch][1891482] = http://drupal.org/files/panopoly_pathauto-1891482-03.patch
 
 projects[panopoly_users][version] = 1.x-dev
 projects[panopoly_users][subdir] = panopoly
 projects[panopoly_users][download][type] = git
-projects[panopoly_users][download][revision] = cb4ca09
+projects[panopoly_users][download][revision] = 59951a1
 projects[panopoly_users][download][branch] = 7.x-1.x
 
 ; WetKit Foundation (Custom)
