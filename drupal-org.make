@@ -35,6 +35,7 @@ projects[panopoly_admin][download][type] = git
 projects[panopoly_admin][download][revision] = 63ee504
 projects[panopoly_admin][download][branch] = 7.x-1.x
 projects[panopoly_admin][patch][1967216] = http://drupal.org/files/panopoly_admin_make-1967216-06.patch
+projects[panopoly_admin][patch][1967216] = http://drupal.org/files/panopoly_admin_make-1967216-07.patch
 ;projects[panopoly_admin][patch][1891482] = http://drupal.org/files/panopoly_pathauto-1891482-03.patch
 
 ; WetKit Foundation (Custom)
