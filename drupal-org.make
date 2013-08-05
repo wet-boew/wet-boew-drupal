@@ -16,13 +16,6 @@ projects[panopoly_images][download][type] = git
 projects[panopoly_images][download][revision] = b57b48f
 projects[panopoly_images][download][branch] = 7.x-1.x
 
-projects[panopoly_theme][version] = 1.x-dev
-projects[panopoly_theme][subdir] = panopoly
-projects[panopoly_theme][download][type] = git
-projects[panopoly_theme][download][revision] = 3451629
-projects[panopoly_theme][download][branch] = 7.x-1.x
-projects[panopoly_theme][patch][1967234] = http://drupal.org/files/panopoly_theme_make-1967234-03.patch
-
 projects[panopoly_magic][version] = 1.x-dev
 projects[panopoly_magic][subdir] = panopoly
 projects[panopoly_magic][download][type] = git
@@ -43,12 +36,6 @@ projects[panopoly_admin][download][revision] = 63ee504
 projects[panopoly_admin][download][branch] = 7.x-1.x
 projects[panopoly_admin][patch][1967216] = http://drupal.org/files/panopoly_admin_make-1967216-06.patch
 ;projects[panopoly_admin][patch][1891482] = http://drupal.org/files/panopoly_pathauto-1891482-03.patch
-
-projects[panopoly_users][version] = 1.x-dev
-projects[panopoly_users][subdir] = panopoly
-projects[panopoly_users][download][type] = git
-projects[panopoly_users][download][revision] = 59951a1
-projects[panopoly_users][download][branch] = 7.x-1.x
 
 ; WetKit Foundation (Custom)
 
@@ -142,6 +129,20 @@ projects[wetkit_search][download][type] = git
 projects[wetkit_search][download][branch] = 7.x-1.x
 projects[wetkit_search][type] = module
 projects[wetkit_search][download][url] = https://github.com/wet-boew-wem/wetkit-search.git
+
+projects[wetkit_theme][version] = 1.x-dev
+projects[wetkit_theme][subdir] = custom
+projects[wetkit_theme][download][type] = git
+projects[wetkit_theme][download][branch] = 7.x-1.x
+projects[wetkit_theme][type] = module
+projects[wetkit_theme][download][url] = https://github.com/wet-boew-wem/wetkit-theme.git
+
+projects[wetkit_users][version] = 1.x-dev
+projects[wetkit_users][subdir] = custom
+projects[wetkit_users][download][type] = git
+projects[wetkit_users][download][branch] = 7.x-1.x
+projects[wetkit_users][type] = module
+projects[wetkit_users][download][url] = https://github.com/wet-boew-wem/wetkit-users.git
 
 projects[wetkit_wetboew][version] = 1.x-dev
 projects[wetkit_wetboew][subdir] = custom
