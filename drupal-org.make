@@ -177,11 +177,11 @@ projects[wetkit_git][download][url] = https://github.com/wet-boew-wem/wetkit-git
 
 ; WetKit Foundation (Themes)
 
-projects[wetkit_adaptivetheme][version] = 1.x-dev
-projects[wetkit_adaptivetheme][download][type] = git
-projects[wetkit_adaptivetheme][download][branch] = 7.x-1.x
-projects[wetkit_adaptivetheme][type] = theme
-projects[wetkit_adaptivetheme][download][url] = https://github.com/wet-boew-wem/wetkit-adaptivetheme.git
+projects[wetkit_omega][version] = 1.x-dev
+projects[wetkit_omega][download][type] = git
+projects[wetkit_omega][download][branch] = 7.x-1.x
+projects[wetkit_omega][type] = theme
+projects[wetkit_omega][download][url] = https://github.com/wet-boew-wem/wetkit-omega.git
 
 projects[wetkit_rubik][version] = 1.x-dev
 projects[wetkit_rubik][download][type] = git
