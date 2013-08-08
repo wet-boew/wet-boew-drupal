@@ -33,11 +33,9 @@ dependencies[] = contextual
 ; Panopoly Foundation
 dependencies[] = panopoly_core
 dependencies[] = panopoly_images
-dependencies[] = panopoly_theme
 dependencies[] = panopoly_magic
 dependencies[] = panopoly_widgets
 dependencies[] = panopoly_admin
-dependencies[] = panopoly_users
 
 ; Panopoly Recommended - Admin
 dependencies[] = backports
@@ -53,6 +51,7 @@ dependencies[] = wetkit_images
 dependencies[] = wetkit_widgets
 dependencies[] = wetkit_pages
 dependencies[] = wetkit_layouts
+dependencies[] = wetkit_theme
 dependencies[] = wetkit_search
 dependencies[] = wetkit_wysiwyg
 dependencies[] = wetkit_language
@@ -63,6 +62,7 @@ dependencies[] = wetkit_metatag
 dependencies[] = wetkit_menu
 dependencies[] = wetkit_wetboew
 dependencies[] = wetkit_breadcrumbs
+dependencies[] = wetkit_users
 
 ; WetKit Testing
 files[] = wetkit.test

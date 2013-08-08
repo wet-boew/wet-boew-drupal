@@ -5,7 +5,7 @@
 sleep 5
 cd build
 workspace=`pwd`
-drush si wetkit wetkit_wetboew_selection_form.theme=wetkit_adaptivetheme install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name="Web Experience Toolkit" --yes
+drush si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name="Web Experience Toolkit" --yes
 drush cc all --yes
 
 # Run Headless Testing Server
