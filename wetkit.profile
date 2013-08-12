@@ -229,12 +229,25 @@ function wetkit_import_demo_content() {
   // on a Mac, by forcing PHP to detect the appropriate line endings.
   ini_set("auto_detect_line_endings", TRUE);
 
-  // Run default_content migration.
+  // Run Site Menu migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateSiteMenu',
+    t('Importing content.'),
+  ));
+
+  // Run Site Menu Links migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateSiteMenuLinks',
+    t('Importing content.'),
+  ));
+
+  // Run Default_content migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateDefaultContent',
     t('Importing content.'),
   ));
 
+  // Enable WetKit Demo.
   $operations[] = array('module_enable', array(
     array('wetkit_demo'),
     t('Enabling wetkit_demo module.'),
@@ -246,7 +259,7 @@ function wetkit_import_demo_content() {
     t('Importing content.'),
   ));
 
-  // Run bean import.
+  // Install Bean demo content.
   $operations[] = array('_wetkit_bean_import', array(t('Importing Bean content.')));
 
   $batch = array(
