@@ -51,6 +51,7 @@ dependencies[] = wetkit_menu
 dependencies[] = wetkit_wetboew
 dependencies[] = wetkit_breadcrumbs
 dependencies[] = wetkit_users
+dependencies[] = wetkit_search
 
 ; WetKit Testing
 files[] = wetkit.test
