@@ -31,13 +31,11 @@ dependencies[] = contextual
 ;dependencies[] = simpletest
 
 ; Panopoly Foundation
-dependencies[] = panopoly_core
-dependencies[] = panopoly_images
-dependencies[] = panopoly_magic
-dependencies[] = panopoly_widgets
 dependencies[] = panopoly_admin
+dependencies[] = panopoly_core
+dependencies[] = panopoly_magic
 
-; Panopoly Recommended - Admin
+; Panopoly Recommended
 dependencies[] = backports
 dependencies[] = date_popup_authored
 dependencies[] = module_filter
@@ -55,7 +53,6 @@ dependencies[] = wetkit_theme
 dependencies[] = wetkit_search
 dependencies[] = wetkit_wysiwyg
 dependencies[] = wetkit_language
-dependencies[] = wetkit_i18n_panels
 dependencies[] = wetkit_migrate
 dependencies[] = wetkit_bean
 dependencies[] = wetkit_metatag
