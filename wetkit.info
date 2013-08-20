@@ -35,14 +35,6 @@ dependencies[] = panopoly_admin
 dependencies[] = panopoly_core
 dependencies[] = panopoly_magic
 
-; Panopoly Recommended
-dependencies[] = backports
-dependencies[] = date_popup_authored
-dependencies[] = module_filter
-dependencies[] = workbench
-dependencies[] = workbench_moderation
-dependencies[] = uuid
-
 ; WetKit Toolset
 dependencies[] = wetkit_core
 dependencies[] = wetkit_images
@@ -50,7 +42,6 @@ dependencies[] = wetkit_widgets
 dependencies[] = wetkit_pages
 dependencies[] = wetkit_layouts
 dependencies[] = wetkit_theme
-dependencies[] = wetkit_search
 dependencies[] = wetkit_wysiwyg
 dependencies[] = wetkit_language
 dependencies[] = wetkit_migrate
@@ -71,5 +62,3 @@ stylesheets[all][] = css/wetkit.css
 ; Settings
 variables[password_policy_show_restrictions] = 1
 variables[password_policy_new_login_change] = 0
-variables[password_policy_warning_subject] = "Password expiration warning at !site"
-variables[password_policy_warning_body] = "Your password at !site will expire in less than !days_left day(s).
