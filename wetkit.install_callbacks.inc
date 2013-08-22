@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains Batch API callbacks used during installation.
+ * Contains Batch API callbacks used during installation of Drupal WEM.
  */
 
 /**
@@ -24,8 +24,8 @@ function _wetkit_import($operation, $type, &$context) {
 function _wetkit_entities_import($operation, &$context) {
   $context['message'] = t('@operation', array('@operation' => $operation));
 
+  // Instantiate the entity translation entities.
   $entity_translation_entity_types = array(
-    'fieldable_panels_pane' => 'fieldable_panels_pane',
     'bean' => 'bean',
     'node' => 'node',
     'file' => 'file',

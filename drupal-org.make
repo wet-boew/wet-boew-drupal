@@ -1,31 +1,14 @@
 api = 2
 core = 7.x
 
-; Panopoly Foundation
-
-projects[panopoly_core][version] = 1.x-dev
-projects[panopoly_core][subdir] = panopoly
-projects[panopoly_core][download][type] = git
-projects[panopoly_core][download][revision] = 68d38ad
-projects[panopoly_core][download][branch] = 7.x-1.x
-projects[panopoly_core][patch][1967238] = http://drupal.org/files/panopoly_core_make-1967238-19.patch
-projects[panopoly_core][patch][2069403] = http://drupal.org/files/panopoly_core_info-2069403-01.patch
-
-projects[panopoly_magic][version] = 1.x-dev
-projects[panopoly_magic][subdir] = panopoly
-projects[panopoly_magic][download][type] = git
-projects[panopoly_magic][download][revision] = 7dc1a5e
-projects[panopoly_magic][download][branch] = 7.x-1.x
-
-projects[panopoly_admin][version] = 1.x-dev
-projects[panopoly_admin][subdir] = panopoly
-projects[panopoly_admin][download][type] = git
-projects[panopoly_admin][download][revision] = 63ee504
-projects[panopoly_admin][download][branch] = 7.x-1.x
-projects[panopoly_admin][patch][1967216] = http://drupal.org/files/panopoly_admin_make-1967216-06.patch
-projects[panopoly_admin][patch][1967217] = http://drupal.org/files/panopoly_admin_make-1967216-07.patch
-
 ; WetKit Foundation (Custom)
+
+projects[wetkit_admin][version] = 1.x-dev
+projects[wetkit_admin][subdir] = custom
+projects[wetkit_admin][download][type] = git
+projects[wetkit_admin][download][branch] = 7.x-1.x
+projects[wetkit_admin][type] = module
+projects[wetkit_admin][download][url] = https://github.com/wet-boew-wem/wetkit-admin.git
 
 projects[wetkit_bean][version] = 1.x-dev
 projects[wetkit_bean][subdir] = custom
@@ -68,6 +51,13 @@ projects[wetkit_images][download][type] = git
 projects[wetkit_images][download][branch] = 7.x-1.x
 projects[wetkit_images][type] = module
 projects[wetkit_images][download][url] = https://github.com/wet-boew-wem/wetkit-images.git
+
+projects[wetkit_git][version] = 1.x-dev
+projects[wetkit_git][subdir] = custom
+projects[wetkit_git][download][type] = git
+projects[wetkit_git][download][branch] = 7.x-1.x
+projects[wetkit_git][type] = module
+projects[wetkit_git][download][url] = https://github.com/wet-boew-wem/wetkit-git.git
 
 projects[wetkit_language][version] = 1.x-dev
 projects[wetkit_language][subdir] = custom
@@ -153,28 +143,19 @@ projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
 projects[wetkit_wysiwyg][type] = module
 projects[wetkit_wysiwyg][download][url] = https://github.com/wet-boew-wem/wetkit-wysiwyg.git
 
-; WetKit Foundation (DevTools)
-
-projects[wetkit_git][version] = 1.x-dev
-projects[wetkit_git][subdir] = devtools
-projects[wetkit_git][download][type] = git
-projects[wetkit_git][download][branch] = 7.x-1.x
-projects[wetkit_git][type] = module
-projects[wetkit_git][download][url] = https://github.com/wet-boew-wem/wetkit-git.git
-
 ; WetKit Foundation (Themes)
+
+projects[wetkit_ember][version] = 1.x-dev
+projects[wetkit_ember][download][type] = git
+projects[wetkit_ember][download][branch] = 7.x-1.x
+projects[wetkit_ember][type] = theme
+projects[wetkit_ember][download][url] = https://github.com/wet-boew-wem/wetkit-ember.git
 
 projects[wetkit_omega][version] = 1.x-dev
 projects[wetkit_omega][download][type] = git
 projects[wetkit_omega][download][branch] = 7.x-1.x
 projects[wetkit_omega][type] = theme
 projects[wetkit_omega][download][url] = https://github.com/wet-boew-wem/wetkit-omega.git
-
-projects[wetkit_rubik][version] = 1.x-dev
-projects[wetkit_rubik][download][type] = git
-projects[wetkit_rubik][download][branch] = 7.x-1.x
-projects[wetkit_rubik][type] = theme
-projects[wetkit_rubik][download][url] = https://github.com/wet-boew-wem/wetkit-rubik.git
 
 projects[wetkit_shiny][version] = 1.x-dev
 projects[wetkit_shiny][download][type] = git

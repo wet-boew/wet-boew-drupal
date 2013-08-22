@@ -1,6 +1,6 @@
-name = Web Experience Toolkit
+name = Drupal WEM
 distribution_name = WetKit
-description = Install Profile created for the Web Experience Toolkit using Drupal 7
+description = Installation Profile created for the Web Experience Toolkit using Drupal WEM.
 core = 7.x
 exclusive = 1
 
@@ -23,19 +23,15 @@ dependencies[] = update
 dependencies[] = shortcut
 dependencies[] = contextual
 
-; Drupal Core Disabled
+; Drupal Core (Disabled)
 ;dependencies[] = overlay
 ;dependencies[] = help
 ;dependencies[] = rdf
 ;dependencies[] = statistics
 ;dependencies[] = simpletest
 
-; Panopoly Foundation
-dependencies[] = panopoly_admin
-dependencies[] = panopoly_core
-dependencies[] = panopoly_magic
-
-; WetKit Toolset
+; WxtKit Foundation
+dependencies[] = wetkit_admin
 dependencies[] = wetkit_core
 dependencies[] = wetkit_images
 dependencies[] = wetkit_widgets
@@ -53,7 +49,7 @@ dependencies[] = wetkit_breadcrumbs
 dependencies[] = wetkit_users
 dependencies[] = wetkit_search
 
-; WetKit Testing
+; WxtKit Testing
 files[] = wetkit.test
 files[] = tests/simpletest/WetKitWebTestCase.inc
 
