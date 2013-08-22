@@ -1,7 +1,8 @@
 <?php
+
 /**
  * @file
- * wetkit.test
+ * Test code to assist in leveraging continuous integration for Drupal WEM.
  */
 
 /**

@@ -1,7 +1,8 @@
 <?php
+
 /**
  * @file
- * Code for the wetkit.profile file.
+ * Bootstrap profile for installation of Drupal WEM.
  */
 
 /**
@@ -82,8 +83,8 @@ function wetkit_install_tasks_alter(&$tasks, $install_state) {
   unset($tasks['install_import_locales_remaining']);
 
   // Magically go one level deeper in solving years of dependency problems.
-  require_once drupal_get_path('module', 'panopoly_core') . '/panopoly_core.profile.inc';
-  $tasks['install_load_profile']['function'] = 'panopoly_core_install_load_profile';
+  require_once drupal_get_path('module', 'wetkit_core') . '/wetkit_core.profile.inc';
+  $tasks['install_load_profile']['function'] = 'wetkit_core_install_load_profile';
 }
 
 /**
@@ -275,7 +276,7 @@ function wetkit_import_demo_content() {
  * Implements hook_form_FORM_ID_alter().
  */
 function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
-  // Hide some messages from various modules that are just too chatty.
+  // Hide some messages from various modules.
   drupal_get_messages('status');
   drupal_get_messages('warning');
   drupal_get_messages('error');

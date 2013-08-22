@@ -1,6 +1,6 @@
-name = Web Experience Toolkit
+name = Drupal WEM
 distribution_name = WetKit
-description = Install Profile created for the Web Experience Toolkit using Drupal 7
+description = Installation Profile created for the Web Experience Toolkit using Drupal WEM.
 core = 7.x
 exclusive = 1
 
@@ -23,39 +23,23 @@ dependencies[] = update
 dependencies[] = shortcut
 dependencies[] = contextual
 
-; Drupal Core Disabled
+; Drupal Core (Disabled)
 ;dependencies[] = overlay
 ;dependencies[] = help
 ;dependencies[] = rdf
 ;dependencies[] = statistics
 ;dependencies[] = simpletest
 
-; Panopoly Foundation
-dependencies[] = panopoly_core
-dependencies[] = panopoly_images
-dependencies[] = panopoly_magic
-dependencies[] = panopoly_widgets
-dependencies[] = panopoly_admin
-
-; Panopoly Recommended - Admin
-dependencies[] = backports
-dependencies[] = date_popup_authored
-dependencies[] = module_filter
-dependencies[] = workbench
-dependencies[] = workbench_moderation
-dependencies[] = uuid
-
-; WetKit Toolset
+; WxtKit Foundation
+dependencies[] = wetkit_admin
 dependencies[] = wetkit_core
 dependencies[] = wetkit_images
 dependencies[] = wetkit_widgets
 dependencies[] = wetkit_pages
 dependencies[] = wetkit_layouts
 dependencies[] = wetkit_theme
-dependencies[] = wetkit_search
 dependencies[] = wetkit_wysiwyg
 dependencies[] = wetkit_language
-dependencies[] = wetkit_i18n_panels
 dependencies[] = wetkit_migrate
 dependencies[] = wetkit_bean
 dependencies[] = wetkit_metatag
@@ -63,8 +47,9 @@ dependencies[] = wetkit_menu
 dependencies[] = wetkit_wetboew
 dependencies[] = wetkit_breadcrumbs
 dependencies[] = wetkit_users
+dependencies[] = wetkit_search
 
-; WetKit Testing
+; WxtKit Testing
 files[] = wetkit.test
 files[] = tests/simpletest/WetKitWebTestCase.inc
 
@@ -74,5 +59,3 @@ stylesheets[all][] = css/wetkit.css
 ; Settings
 variables[password_policy_show_restrictions] = 1
 variables[password_policy_new_login_change] = 0
-variables[password_policy_warning_subject] = "Password expiration warning at !site"
-variables[password_policy_warning_body] = "Your password at !site will expire in less than !days_left day(s).

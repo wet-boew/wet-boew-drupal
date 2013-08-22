@@ -1,7 +1,8 @@
 <?php
+
 /**
  * @file
- * Code for the wetkit.install file.
+ * Installation code for Drupal WEM.
  */
 
 /**
@@ -47,18 +48,8 @@ function wetkit_install() {
   db_update('system')
     ->fields(array('status' => 1))
     ->condition('type', 'theme')
-    ->condition('name', 'wetkit_rubik')
+    ->condition('name', 'wetkit_ember')
     ->execute();
 
-  variable_set('admin_theme', 'wetkit_rubik');
-}
-
-/**
- * Implements hook_update().
- *
- * Perform actions to update the site for this installation profile.
- */
-function wetkit_update_7101(&$sandbox) {
-  // Addition of new core module for better encapsulation.
-  module_enable(array('wetkit_core'));
+  variable_set('admin_theme', 'wetkit_ember');
 }
