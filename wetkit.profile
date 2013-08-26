@@ -191,7 +191,7 @@ function wetkit_batch_processing(&$install_state) {
 function wetkit_import_content() {
 
   // Features Rebuild.
-  if (module_exists('features') {
+  if (module_exists('features')) {
     features_rebuild();
     features_get_modules(NULL, TRUE);
   }
