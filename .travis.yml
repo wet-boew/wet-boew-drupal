@@ -3,10 +3,19 @@ language: php
 php:
   - 5.4
 
+env:
+  - DB=mysql
+  - DB=postgres
+
 mysql:
+  adapter: mysql2
   database: wetkit_db
   username: root
   encoding: utf8
+postgres:
+  adapter: postgresql
+  database: myapp_test
+  username: postgres
 
 before_script: ./scripts/travis_install.sh
 
