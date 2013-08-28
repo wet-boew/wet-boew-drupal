@@ -31,8 +31,8 @@ dependencies[] = contextual
 ;dependencies[] = simpletest
 
 ; WxtKit Foundation
-dependencies[] = wetkit_admin
 dependencies[] = wetkit_core
+dependencies[] = wetkit_admin
 dependencies[] = wetkit_images
 dependencies[] = wetkit_widgets
 dependencies[] = wetkit_pages

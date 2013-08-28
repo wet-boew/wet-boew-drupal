@@ -189,6 +189,7 @@ function wetkit_batch_processing(&$install_state) {
  * Import required wetkit content
  */
 function wetkit_import_content() {
+
   // Run Mega Menu migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateMegaMenu',
