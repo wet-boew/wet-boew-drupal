@@ -1,7 +1,7 @@
 # Declare testing language
 language: php
 
-# Language versioning
+# Language version(s)
 php:
   - 5.4
 
