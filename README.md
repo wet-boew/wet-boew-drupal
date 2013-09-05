@@ -28,7 +28,7 @@ Development has been tailored for organizations that need to comply with standar
 
 ### Changelog
 
-Changelog.md
+[CHANGELOG.md][changelog]
 
 ### Releases
 
@@ -55,17 +55,17 @@ specific language governing permissions and limitations under the License.
 
 [sylus]:                http://coderwall.com/sylus
 
+[changelog]:            https://github.com/wet-boew/wet-boew-drupal/blob/7.x-1.x/CHANGELOG.md
 [coderwall]:            http://coderwall.com/sylus
 [coderwall-badge]:      http://api.coderwall.com/sylus/endorsecount.png
 [docsite]:              http://docs.drupalwxt.org
 [docsite-drush-make]:   http://docs.drupalwxt.org/drush-make
 [drupal]:               http://drupal.org/project/wetkit
-[github]:               http://github.com/wet-boew/wet-boew-drupal
+[github]:               https://github.com/wet-boew/wet-boew-drupal
 [responsinator]:        http://responsinator.com/?url=sandbox.openplus.ca
 [selenium]:             https://saucelabs.com/u/sylus
 [selenium-badge]:       https://saucelabs.com/buildstatus/sylus
 [travisci]:             https://travis-ci.org/wet-boew/wet-boew-drupal
 [travisci-badge]:       https://secure.travis-ci.org/wet-boew/wet-boew-drupal.png?branch=master
-[vagrant-normandy]:     http://github.com/sylus/vagrant-normandy
-[wet-boew]:             http://github.com/wet-boew/wet-boew
-
+[vagrant-normandy]:     https://github.com/sylus/vagrant-normandy
+[wet-boew]:             https://github.com/wet-boew/wet-boew
