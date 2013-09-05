@@ -62,7 +62,7 @@ specific language governing permissions and limitations under the License.
 [docsite-drush-make]:   http://docs.drupalwxt.org/drush-make
 [drupal]:               http://drupal.org/project/wetkit
 [github]:               https://github.com/wet-boew/wet-boew-drupal
-[responsinator]:        http://responsinator.com/?url=sandbox.openplus.ca
+[responsinator]:        http://responsinator.com/?url=drupalwxt.org
 [selenium]:             https://saucelabs.com/u/sylus
 [selenium-badge]:       https://saucelabs.com/buildstatus/sylus
 [travisci]:             https://travis-ci.org/wet-boew/wet-boew-drupal
