@@ -60,7 +60,7 @@ specific language governing permissions and limitations under the License.
 [coderwall]:            http://coderwall.com/sylus
 [coderwall-badge]:      http://api.coderwall.com/sylus/endorsecount.png
 [docsite]:              http://docs.drupalwxt.org
-[docsite-drush-make]:   http://docs.drupalwxt.org/drush-make
+[docsite-drush-make]:   http://docs.drupalwxt.org/pages/drush-make
 [drupal]:               http://drupal.org/project/wetkit
 [github]:               https://github.com/wet-boew/wet-boew-drupal
 [responsinator]:        http://responsinator.com/?url=drupalwxt.org
