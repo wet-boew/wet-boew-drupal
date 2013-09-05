@@ -35,9 +35,9 @@ Development has been tailored for organizations that need to comply with standar
 
 v1.0-RC7 (released on August 28, 2013)
 
-## License and Author
+## License and Developer(s)
 
-Author:: [William Hearn][sylus] (<william.hearn@statcan.gc.ca>) // [![endorse][coderwall-badge]][coderwall]
+Developer:: [William Hearn][sylus] (<william.hearn@statcan.gc.ca>) // [![endorse][coderwall-badge]][coderwall]
 
 Contributor(s): https://github.com/wet-boew/wet-boew-drupal/graphs/contributors
 
