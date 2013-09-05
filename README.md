@@ -25,9 +25,9 @@ Development has been tailored for organizations that need to comply with standar
 
 ## License and Author
 
-Author:: [William Hearn][sylus] (<will@sylus.ca>) // [![endorse][coderwall-badge]][coderwall]
+Author:: [William Hearn][sylus] (<william.hearn@statcan.gc.ca>) // [![endorse][coderwall-badge]][coderwall]
 
-Contributor(s): https://github.com/sylus/vagrant-normandy/graphs/contributors
+Contributor(s): https://github.com/wet-boew/wet-boew-drupal/graphs/contributors
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
 this file except in compliance with the License. You may obtain a copy of the
