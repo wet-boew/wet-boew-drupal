@@ -11,6 +11,7 @@
 - Drupal Repository: [drupal.org/project/wetkit][drupal]
 - GitHub Repository: [wet-boew/wet-boew-drupal][github]
 - Live Demo: [responsinator][responsinator]
+- Run it Now: [simplytest.me][simplytest] 
 
 ## Overview
 
@@ -65,6 +66,7 @@ specific language governing permissions and limitations under the License.
 [responsinator]:        http://responsinator.com/?url=drupalwxt.org
 [selenium]:             https://saucelabs.com/u/sylus
 [selenium-badge]:       https://saucelabs.com/buildstatus/sylus
+[simplytest]:           http://simplytest.me/project/wetkit/7.x-1.x
 [travisci]:             https://travis-ci.org/wet-boew/wet-boew-drupal
 [travisci-badge]:       https://secure.travis-ci.org/wet-boew/wet-boew-drupal.png?branch=master
 [vagrant-normandy]:     https://github.com/sylus/vagrant-normandy
