@@ -7,6 +7,7 @@
 
 ## Important Links
 
+- Documentation Website: [docs.drupalwxt.org][docsite]
 - Drupal Repository: [drupal.org/project/wetkit][drupal]
 - GitHub Repository: [wet-boew/wet-boew-drupal][github]
 - Live Demo: [responsinator][responsinator]
@@ -20,8 +21,18 @@ Development has been tailored for organizations that need to comply with standar
 ## Installation Methods
 
 - Pre-Built Distribution: [drupal.org/project/wetkit][drupal] (Novice Users)
-- Drush Make: [Documentation][drupal] (Intermediate Users)
+- Drush Make: [Documentation Page][docsite-drush-make] (Intermediate Users)
 - Vagrant Virtual Machine: [sylus/vagrant-normandy][vagrant-normandy] (Advanced Users)
+
+## Version History
+
+### Changelog
+
+Changelog.md
+
+### Releases
+
+v1.0-RC7 (released on August 28, 2013)
 
 ## License and Author
 
@@ -46,6 +57,8 @@ specific language governing permissions and limitations under the License.
 
 [coderwall]:            http://coderwall.com/sylus
 [coderwall-badge]:      http://api.coderwall.com/sylus/endorsecount.png
+[docsite]:              http://docs.drupalwxt.org
+[docsite-drush-make]:   http://docs.drupalwxt.org/drush-make
 [drupal]:               http://drupal.org/project/wetkit
 [github]:               http://github.com/wet-boew/wet-boew-drupal
 [responsinator]:        http://responsinator.com/?url=sandbox.openplus.ca
