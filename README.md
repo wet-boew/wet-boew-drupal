@@ -7,7 +7,7 @@
 
 ## Important Links
 
-- Documentation Website: [docs.drupalwxt.org][docsite]
+- Documentation Website: [wiki.drupalwxt.org][docsite]
 - Drupal Repository: [drupal.org/project/wetkit][drupal]
 - GitHub Repository: [wet-boew/wet-boew-drupal][github]
 - Live Demo: [responsinator][responsinator]
@@ -59,8 +59,8 @@ specific language governing permissions and limitations under the License.
 [changelog]:            https://github.com/wet-boew/wet-boew-drupal/blob/7.x-1.x/CHANGELOG.md
 [coderwall]:            http://coderwall.com/sylus
 [coderwall-badge]:      http://api.coderwall.com/sylus/endorsecount.png
-[docsite]:              http://docs.drupalwxt.org
-[docsite-drush-make]:   http://docs.drupalwxt.org/pages/drush-make
+[docsite]:              http://wiki.drupalwxt.org
+[docsite-drush-make]:   http://wiki.drupalwxt.org/pages/drush-make
 [drupal]:               http://drupal.org/project/wetkit
 [github]:               https://github.com/wet-boew/wet-boew-drupal
 [responsinator]:        http://responsinator.com/?url=drupalwxt.org
