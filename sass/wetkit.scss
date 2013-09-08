@@ -1,8 +1,6 @@
 /**
- * Stylesheet for WetKit Profile
+ * Stylesheet for Installation Profile
  */
-
-/* Installation Screen */
 
 #wetkit-theme-selection-form {
   .form-item-theme {
@@ -18,14 +16,11 @@
 }
 
 .in-maintenance {
-  input[type="image"] + label, 
-  input[type="checkbox"] + label, 
+  input[type="image"] + label,
+  input[type="checkbox"] + label,
   input[type="radio"] + label {
     display: inline;
   }
-}
-
-.in-maintenance {
   #edit-theme {
     img{
       display: block;
@@ -35,48 +30,4 @@
   .messages {
     padding: 10px 10px 10px 10px;
   }
-}
-
-
-/* Global Fixes */
-
-.krumo-footnote {
-  img {
-    width: auto !important;
-  }
-}
-
-
-/* Media Browser */
-
-body.page-media-browser { min-width: auto; }
-
-.media-list-thumbnails {
-    $thumbWidth: 100px;
-    $thumbHeight: 100px;
-    li a { 
-        width: $thumbWidth;
-        height: $thumbHeight;
-    }
-
-    .media-item{
-        height: $thumbHeight;
-        img {
-            width:auto;
-            max-width: 90px;
-            max-height: 90px;
-        }
-        .label-wrapper label {
-            white-space: normal;
-            word-wrap:break-word;
-            line-height: 0;
-        }
-    }
-}
-
-.media-display-thumbnails .media-list-thumbnails .form-type-checkbox { 
-        bottom: 25px; 
-        left: 8px;
-        width: 10px;
-        border: none;
 }
