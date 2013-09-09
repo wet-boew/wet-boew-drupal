@@ -51,6 +51,6 @@ relative_assets = true
 #   the debug info removed.
 sass_options = (environment == :development) ? {:debug_info => true} : {:always_update => true}
 
-sass_options = {:debug_info=>false} # by Compass.app 
-output_style = :compact # by Compass.app 
-line_comments = false # by Compass.app 
+sass_options = {:debug_info=>false} # by Compass.app
+output_style = :compact # by Compass.app
+line_comments = false # by Compass.app
