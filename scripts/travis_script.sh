@@ -9,7 +9,7 @@ sh -c "if [ '$DB' = 'postgres' ]; then drush si wetkit wetkit_theme_selection_fo
 sh -c "if [ '$DB' = 'mysql' ]; then drush si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1:3306/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi"
 drush cc all --yes
 
-# Headless Testing Server(s)
+# Headless Testing Server
 export PHANTOMJS_EXECUTABLE='phantomjs --local-to-remote-url-access=yes --ignore-ssl-errors=yes'
 export DISPLAY=:99.0
 sh -e /etc/init.d/xvfb start
