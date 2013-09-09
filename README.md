@@ -11,13 +11,21 @@
 - Drupal Repository: [drupal.org/project/wetkit][drupal]
 - GitHub Repository: [wet-boew/wet-boew-drupal][github]
 - Live Demo: [responsinator][responsinator]
+<<<<<<< HEAD
 - Run it Now: [simplytest.me][simplytest]
+=======
+- Run it Now: [simplytest.me][simplytest] 
+>>>>>>> 948b71381c1c3d0addd012edb12c00c1d0b414b3
 
 ## Overview
 
 The WxT-Drupal distribution is a web content management system which assists in building and maintaining innovative Web sites that are accessible, usable, and interoperable. This distribution is open source software and free for use by departments and external Web communities. This distribution relies and integrates extensively on the [WET-BOEW jQuery Framework][wet-boew] to leverage much of the rendering and overall markup.
 
+<<<<<<< HEAD
 Development has been tailored for organizations that need to comply with standards for accessibility and bilingualism or that simply need a distribution that allows them to get up and running quickly using a carefully curated selection of modules that can support common enterprise business requirements.
+=======
+Development has been tailored for organizations that need to comply with standards for accessibility and bilingualism or that simply need a distribution that allows them to get up and running quickly using a carefully curated selection of modules that can support common enterprise business requirements. 
+>>>>>>> 948b71381c1c3d0addd012edb12c00c1d0b414b3
 
 ## Installation Methods
 
