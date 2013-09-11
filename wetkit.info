@@ -4,6 +4,9 @@ description = Installation Profile created for the Web Experience Toolkit using 
 core = 7.x
 exclusive = 1
 
+dependencies[] = kw_manifests
+dependencies[] = features
+
 ; Drupal Core
 dependencies[] = menu
 dependencies[] = image
