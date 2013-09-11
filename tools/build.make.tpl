@@ -1,7 +1,8 @@
 core = 7.x
 api = 2
 
-projects[drupal][version] = "7.23"
+; GitHub packaging standards
+includes[] = drupal-org-core.make
 
 projects[***MACHINE_NAME***][type] = "profile"
 projects[***MACHINE_NAME***][download][type] = "kraftwagen_directory"
