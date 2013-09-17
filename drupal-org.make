@@ -24,7 +24,7 @@ projects[wetkit_breadcrumbs][download][branch] = 7.x-1.x
 projects[wetkit_core][version] = 1.x-dev
 projects[wetkit_core][subdir] = custom
 projects[wetkit_core][download][type] = git
-projects[wetkit_core][download][revision] = 33227e9
+projects[wetkit_core][download][revision] = 9572d5c
 projects[wetkit_core][download][branch] = 7.x-1.x
 
 projects[wetkit_demo][version] = 1.x-dev
@@ -36,7 +36,7 @@ projects[wetkit_demo][download][branch] = 7.x-1.x
 projects[wetkit_deployment][version] = 1.x-dev
 projects[wetkit_deployment][subdir] = custom
 projects[wetkit_deployment][download][type] = git
-projects[wetkit_deployment][download][revision] = f6d9e30
+projects[wetkit_deployment][download][revision] = 9a26ba5
 projects[wetkit_deployment][download][branch] = 7.x-1.x
 
 projects[wetkit_images][version] = 1.x-dev
@@ -54,7 +54,7 @@ projects[wetkit_git][download][branch] = 7.x-1.x
 projects[wetkit_language][version] = 1.x-dev
 projects[wetkit_language][subdir] = custom
 projects[wetkit_language][download][type] = git
-projects[wetkit_language][download][revision] = d0a8f40
+projects[wetkit_language][download][revision] = 04b78fd
 projects[wetkit_language][download][branch] = 7.x-1.x
 
 projects[wetkit_layouts][version] = 1.x-dev
@@ -78,7 +78,7 @@ projects[wetkit_metatag][download][branch] = 7.x-1.x
 projects[wetkit_migrate][version] = 1.x-dev
 projects[wetkit_migrate][subdir] = custom
 projects[wetkit_migrate][download][type] = git
-projects[wetkit_migrate][download][revision] = fc9ff1d
+projects[wetkit_migrate][download][revision] = 28b1b08
 projects[wetkit_migrate][download][branch] = 7.x-1.x
 
 projects[wetkit_pages][version] = 1.x-dev
@@ -108,26 +108,26 @@ projects[wetkit_users][download][branch] = 7.x-1.x
 projects[wetkit_wetboew][version] = 1.x-dev
 projects[wetkit_wetboew][subdir] = custom
 projects[wetkit_wetboew][download][type] = git
-projects[wetkit_wetboew][download][revision] = 893afb2
+projects[wetkit_wetboew][download][revision] = 45f54ff
 projects[wetkit_wetboew][download][branch] = 7.x-1.x
 
 projects[wetkit_widgets][version] = 1.x-dev
 projects[wetkit_widgets][subdir] = custom
 projects[wetkit_widgets][download][type] = git
-projects[wetkit_widgets][download][revision] = 96eccc3
+projects[wetkit_widgets][download][revision] = d471558
 projects[wetkit_widgets][download][branch] = 7.x-1.x
 
 projects[wetkit_wysiwyg][version] = 1.x-dev
 projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_wysiwyg][download][type] = git
-projects[wetkit_wysiwyg][download][revision] = 42b1bf70
+projects[wetkit_wysiwyg][download][revision] = 42b1bf7
 projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
 
 ; WetKit Foundation (Themes)
 
 projects[wetkit_ember][version] = 1.x-dev
 projects[wetkit_ember][download][type] = git
-projects[wetkit_ember][download][revision] = 4b633b26
+projects[wetkit_ember][download][revision] = d111550
 projects[wetkit_ember][download][branch] = 7.x-1.x
 
 projects[wetkit_omega][version] = 1.x-dev
