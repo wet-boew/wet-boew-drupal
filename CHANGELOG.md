@@ -1,3 +1,16 @@
+## v1.0-RC10
+
+Features:
+
+  - Updated Omega + WetKit Omega to latest dev
+  - Ember is now a proper base theme
+
+Bugfixes:
+
+  - Fixed Deployment Source Translation Issue
+  - Fixed Entity i18n menu not working on node edit
+  - Fixed overall styling issues
+
 ## v1.0-RC9
 
 Features:
