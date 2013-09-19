@@ -8,8 +8,9 @@ Features:
 Bug Fixes:
 
   - (Commit: [463598d][RC11-Commit-463598d]) #[2092171][RC11-Issue-2092171] - Updated Pager to be more in line with WxT
-  - (Commit: [463598d][RC11-Commit-bac0d9b]) #[2092479][RC11-Issue-2092479] - Enable Linkit UUID as default
-  - (Commit: [463598d][RC11-Commit-0ce91ed]) #[2092479][RC11-Issue-2086139] - Batch Deploy sends Files/Beans/Users over right away
+  - (Commit: [bac0d9b][RC11-Commit-bac0d9b]) #[2092479][RC11-Issue-2092479] - Enable Linkit UUID as default
+  - (Commit: [0ce91ed][RC11-Commit-0ce91ed]) #[2086139][RC11-Issue-2086139] - Batch Deploy sends Files/Beans/Users over right away
+  - (Commit: [ebc70e4][RC11-Commit-ebc70e4]) #[2092085][RC11-Issue-2092085] - Fix WetKit Taxonomy make field instances work with deploy
 
 ## v1.0-RC10
 
@@ -67,8 +68,11 @@ Bug Fixes:
 [RC11-Commit-463598d]:            http://drupalcode.org/project/wetkit_omega.git/commit/463598d
 [RC11-Commit-bac0d9b]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/bac0d9b
 [RC11-Commit-0ce91ed]:            http://drupalcode.org/project/wetkit_deployment.git/commit/0ce91ed
+[RC11-Commit-ebc70e4]:            http://drupalcode.org/project/wetkit_core.git/commit/ebc70e4
+
 <!-- Issues -->
 
 [RC11-Issue-2092171]:             http://drupal.org/node/2092171
 [RC11-Issue-2092479]:             http://drupal.org/node/2092479
 [RC11-Issue-2086139]:             http://drupal.org/node/2086139
+[RC11-Issue-2092085]:             http://drupal.org/node/2092085
