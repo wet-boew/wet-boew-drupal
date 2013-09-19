@@ -11,6 +11,7 @@ Bug Fixes:
   - (Commit: [bac0d9b][RC11-Commit-bac0d9b]) #[2092479][RC11-Issue-2092479] - Enable Linkit UUID as default
   - (Commit: [0ce91ed][RC11-Commit-0ce91ed]) #[2086139][RC11-Issue-2086139] - Batch Deploy sends Files/Beans/Users over right away
   - (Commit: [ebc70e4][RC11-Commit-ebc70e4]) #[2092085][RC11-Issue-2092085] - Fix WetKit Taxonomy make field instances work with deploy
+  - (Commit: [7318b28][RC11-Commit-7318b28]) #[2090019][RC11-Issue-2090019] - H1 missing on create and edit node pages
 
 ## v1.0-RC10
 
@@ -69,6 +70,7 @@ Bug Fixes:
 [RC11-Commit-bac0d9b]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/bac0d9b
 [RC11-Commit-0ce91ed]:            http://drupalcode.org/project/wetkit_deployment.git/commit/0ce91ed
 [RC11-Commit-ebc70e4]:            http://drupalcode.org/project/wetkit_core.git/commit/ebc70e4
+[RC11-Commit-7318b28]:            http://drupalcode.org/project/wetkit_pages.git/commit/7318b28
 
 <!-- Issues -->
 
@@ -76,3 +78,4 @@ Bug Fixes:
 [RC11-Issue-2092479]:             http://drupal.org/node/2092479
 [RC11-Issue-2086139]:             http://drupal.org/node/2086139
 [RC11-Issue-2092085]:             http://drupal.org/node/2092085
+[RC11-Issue-2090019]:             http://drupal.org/node/2090019
