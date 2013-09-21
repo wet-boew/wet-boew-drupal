@@ -5,7 +5,6 @@
 
 -------------------------------------------------------------------
 
-
 # Lignes directrices pour les contributeurs - Boîte à outils de l’expérience Web (BOEW)
 
 * [Développer pour la BOEW](https://github.com/wet-boew/wet-boew/wiki/Développer-pour-la-boew)
