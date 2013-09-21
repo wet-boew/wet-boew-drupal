@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Bootstrap profile for installation of Drupal WEM.
+ * Bootstrap profile for installation of Drupal WxT.
  */
 
 /**
