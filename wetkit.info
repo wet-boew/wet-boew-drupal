@@ -1,6 +1,6 @@
 name = Drupal WEM
 distribution_name = WetKit
-description = Installation Profile created for the Web Experience Toolkit using Drupal WEM.
+description = Installation Profile created for the Web Experience Toolkit using Drupal WxT.
 core = 7.x
 exclusive = 1
 

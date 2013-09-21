@@ -1,3 +1,13 @@
+## v1.0-RC12-Pre-Release
+
+  Features:
+
+  - Deployment with Batch and In Memory are fully functional
+
+  Bug Fixes:
+
+  - (Commit: [0f684fa][RC11-Commit-0f684fa]) #[2093995][RC11-Issue-2093995] - Fixed WetKit deployment not working in RC11.
+
 ## v1.0-RC11
 
 Features:
@@ -64,7 +74,15 @@ Bug Fixes:
 <!-- Links Referenced -->
 
 
-<!-- Commits -->
+<!-- Commits RC11 -->
+
+[RC11-Commit-0f684fa]:            http://drupalcode.org/project/wetkit_deployment.git/commit/0f684fa
+
+<!-- Issues RC11 -->
+
+[RC11-Issue-2093995]:             http://drupal.org/node/2093995
+
+<!-- Commits RC10 -->
 
 [RC11-Commit-463598d]:            http://drupalcode.org/project/wetkit_omega.git/commit/463598d
 [RC11-Commit-bac0d9b]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/bac0d9b
@@ -72,7 +90,7 @@ Bug Fixes:
 [RC11-Commit-ebc70e4]:            http://drupalcode.org/project/wetkit_core.git/commit/ebc70e4
 [RC11-Commit-7318b28]:            http://drupalcode.org/project/wetkit_pages.git/commit/7318b28
 
-<!-- Issues -->
+<!-- Issues RC10 -->
 
 [RC11-Issue-2092171]:             http://drupal.org/node/2092171
 [RC11-Issue-2092479]:             http://drupal.org/node/2092479
