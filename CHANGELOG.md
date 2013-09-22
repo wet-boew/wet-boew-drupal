@@ -3,6 +3,7 @@
   Features:
 
   - Deployment with Batch and In Memory are fully functional
+  - Code Sniffer has been run on all modules / themes
 
   Bug Fixes:
 
