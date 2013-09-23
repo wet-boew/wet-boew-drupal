@@ -4,10 +4,12 @@
 
   - Deployment with Batch and In Memory are fully functional
   - Code Sniffer has been run on all modules / themes
+  - Metatag has been updated and features exported
 
   Bug Fixes:
 
   - (Commit: [0f684fa][RC11-Commit-0f684fa]) #[2093995][RC11-Issue-2093995] - Fixed WetKit deployment not working in RC11.
+  - (Commit: [3942966][RC11-Commit-3942966]) #[2094453][RC11-Issue-2094453] - WeTKit Batch Deployment screen - button style.
 
 ## v1.0-RC11
 
@@ -78,10 +80,12 @@ Bug Fixes:
 <!-- Commits RC11 -->
 
 [RC11-Commit-0f684fa]:            http://drupalcode.org/project/wetkit_deployment.git/commit/0f684fa
+[RC11-Commit-3942966]:            http://drupalcode.org/project/wetkit_deployment.git/commit/3942966
 
 <!-- Issues RC11 -->
 
 [RC11-Issue-2093995]:             http://drupal.org/node/2093995
+[RC11-Issue-2094453]:             http://drupal.org/node/2094453
 
 <!-- Commits RC10 -->
 
