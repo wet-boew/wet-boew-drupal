@@ -1,4 +1,14 @@
-## v1.0-RC12-Pre-Release
+## v1.0-RC13
+
+  Features:
+
+  - Further improvements to interface
+
+  Bug Fixes:
+
+  - (Commit: [17ff91a][RC122-Commit-17ff91a]) #[2095879][RC12-Issue-2095879] - Fixed for Maintenance Page (wetkit_preprocess()).
+
+## v1.0-RC12
 
   Features:
 
@@ -76,6 +86,14 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+
+<!-- Commits RC12 -->
+
+[RC122-Commit-17ff91a]:            http://drupalcode.org/project/wetkit_omega.git/commit/17ff91a
+
+<!-- Issues RC12 -->
+
+[RC12-Issue-2095879]:             http://drupal.org/node/2095879
 
 <!-- Commits RC11 -->
 
