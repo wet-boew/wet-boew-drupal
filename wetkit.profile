@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Bootstrap profile for installation of Drupal WEM.
+ * Bootstrap profile for installation of Drupal WxT.
  */
 
 /**
@@ -186,7 +186,6 @@ function wetkit_batch_processing(&$install_state) {
 
 /**
  * Task callback: return a batch API array with the products to be imported.
- * Import required wetkit content
  */
 function wetkit_import_content() {
 
@@ -194,17 +193,17 @@ function wetkit_import_content() {
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateMegaMenu',
     t('Importing content.'),
-  ));
+    ));
 
   // Run entities import.
   $operations[] = array('_wetkit_entities_import', array(
     t('Initializing entities.'),
-  ));
+    ));
 
   // Page Manager Fix.
   $operations[] = array('_wetkit_panels_fix', array(
     t('Fix Page Manager dependency chain issue.'),
-  ));
+    ));
 
   $batch = array(
     'title' => t('Importing content'),
@@ -215,7 +214,7 @@ function wetkit_import_content() {
 }
 
 /**
- * Form submit callback: Demo content form submit callback
+ * Form submit callback: Demo content form submit callback.
  */
 function wetkit_import_demo_content_form_submit($form, &$form_state) {
   global $install_state;
@@ -224,7 +223,6 @@ function wetkit_import_demo_content_form_submit($form, &$form_state) {
 
 /**
  * Task callback: return a batch API array with the products to be imported.
- *   Import demo wetkit content
  */
 function wetkit_import_demo_content() {
   // Fixes problems when the CSV files used for importing have been created
@@ -235,31 +233,31 @@ function wetkit_import_demo_content() {
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateSiteMenu',
     t('Importing content.'),
-  ));
+    ));
 
   // Run Site Menu Links migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateSiteMenuLinks',
     t('Importing content.'),
-  ));
+    ));
 
   // Run Default_content migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateDefaultContent',
     t('Importing content.'),
-  ));
+    ));
 
   // Enable WetKit Demo.
   $operations[] = array('module_enable', array(
     array('wetkit_demo'),
     t('Enabling wetkit_demo module.'),
-  ));
+    ));
 
   // Run Mega Menu Links migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateMegaMenuLinks',
     t('Importing content.'),
-  ));
+    ));
 
   // Install Bean demo content.
   $operations[] = array('_wetkit_bean_import', array(t('Importing Bean content.')));

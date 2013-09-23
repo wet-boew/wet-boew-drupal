@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains Batch API callbacks used during installation of Drupal WEM.
+ * Contains Batch API callbacks used during installation of Drupal WxT.
  */
 
 /**
