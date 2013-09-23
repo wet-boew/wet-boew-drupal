@@ -7,6 +7,7 @@
   Bug Fixes:
 
   - (Commit: [17ff91a][RC122-Commit-17ff91a]) #[2095879][RC12-Issue-2095879] - Fixed for Maintenance Page (wetkit_preprocess()).
+  - (Commit: [acf7958][RC122-Commit-acf7958]) #[2095957][RC12-Issue-2095957] - Fixed Deployment use language prefix instead of language->language.
 
 ## v1.0-RC12
 
@@ -90,10 +91,12 @@ Bug Fixes:
 <!-- Commits RC12 -->
 
 [RC122-Commit-17ff91a]:            http://drupalcode.org/project/wetkit_omega.git/commit/17ff91a
+[RC122-Commit-acf7958]:            http://drupalcode.org/project/wetkit_deployment.git/commit/acf7958
 
 <!-- Issues RC12 -->
 
 [RC12-Issue-2095879]:             http://drupal.org/node/2095879
+[RC12-Issue-2095957]:             http://drupal.org/node/2095957
 
 <!-- Commits RC11 -->
 
