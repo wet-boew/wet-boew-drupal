@@ -8,6 +8,7 @@
 
   - (Commit: [17ff91a][RC122-Commit-17ff91a]) #[2095879][RC12-Issue-2095879] - Fixed for Maintenance Page (wetkit_preprocess()).
   - (Commit: [acf7958][RC122-Commit-acf7958]) #[2095957][RC12-Issue-2095957] - Fixed Deployment use language prefix instead of language->language.
+  - (Commit: [e74fbef][RC122-Commit-e74fbef]) #[2094121][RC12-Issue-2094121] - Fixed Doohan layout has duplicated sections.
 
 ## v1.0-RC12
 
@@ -92,11 +93,13 @@ Bug Fixes:
 
 [RC122-Commit-17ff91a]:            http://drupalcode.org/project/wetkit_omega.git/commit/17ff91a
 [RC122-Commit-acf7958]:            http://drupalcode.org/project/wetkit_deployment.git/commit/acf7958
+[RC122-Commit-e74fbef]:            http://drupalcode.org/project/wetkit_layouts.git/commit/e74fbef
 
 <!-- Issues RC12 -->
 
 [RC12-Issue-2095879]:             http://drupal.org/node/2095879
 [RC12-Issue-2095957]:             http://drupal.org/node/2095957
+[RC12-Issue-2094121]:             http://drupal.org/node/2094121
 
 <!-- Commits RC11 -->
 
