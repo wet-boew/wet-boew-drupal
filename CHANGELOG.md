@@ -1,12 +1,12 @@
 ## v1.0-RC13
 
-  Features:
+Features:
 
   - Further improvements to interfaces especially deployment
   - Improvements to Media Modal
   - Minor updates to modules
 
-  Bug Fixes:
+Bug Fixes:
 
   - (Commit: [17ff91a][RC13-Commit-17ff91a]) #[2095879][RC13-Issue-2095879] - Fixed for Maintenance Page (wetkit_preprocess()).
   - (Commit: [acf7958][RC13-Commit-acf7958]) #[2095957][RC13-Issue-2095957] - Fixed Deployment use language prefix instead of language->language.
@@ -19,13 +19,13 @@
 
 ## v1.0-RC12
 
-  Features:
+Features:
 
   - Deployment with Batch and In Memory are fully functional
   - Code Sniffer has been run on all modules / themes
   - Metatag has been updated and features exported
 
-  Bug Fixes:
+Bug Fixes:
 
   - (Commit: [0f684fa][RC12-Commit-0f684fa]) #[2093995][RC12-Issue-2093995] - Fixed WetKit deployment not working in RC11.
   - (Commit: [3942966][RC12-Commit-3942966]) #[2094453][RC12-Issue-2094453] - WeTKit Batch Deployment screen - button style.
