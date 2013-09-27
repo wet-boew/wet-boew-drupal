@@ -33,7 +33,10 @@ Development has been tailored for organizations that need to comply with standar
 
 ### Releases
 
-v1.0-RC7 (released on August 28, 2013)
+- [RC13](https://drupal.org/node/2098149)
+- [RC12](https://drupal.org/node/2095505)
+- [RC11](https://drupal.org/node/2092703)
+- [Complete list of releases](https://drupal.org/node/1972380/release)
 
 ## License and Developer(s)
 
