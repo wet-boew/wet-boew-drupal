@@ -33,7 +33,50 @@ Development has been tailored for organizations that need to comply with standar
 
 ### Releases
 
-v1.0-RC7 (released on August 28, 2013)
+[Releases on Drupal.org](https://drupal.org/node/1972380/release)
+
+<table>
+  <tr>
+    <td>v1.0-RC14</td>
+    <td><a href="https://github.com/wet-boew/wet-boew-drupal/blob/7.x-1.x/CHANGELOG.md#v10-rc14-pre-release">Changelog</a></td>
+    <td>TBD</td>
+  </tr>
+  <tr>
+    <td><a href="https://drupal.org/node/2098149">v1.0-RC13</a></td>
+    <td><a href="https://github.com/wet-boew/wet-boew-drupal/blob/7.x-1.x/CHANGELOG.md#v10-rc13">Changelog</a></td>
+    <td>2013-09-26</td>
+  </tr>
+  <tr>
+    <td><a href="https://drupal.org/node/2095505">v1.0-RC12</a></td>
+    <td><a href="https://github.com/wet-boew/wet-boew-drupal/blob/7.x-1.x/CHANGELOG.md#v10-rc12">Changelog</a></td>
+    <td>2013-09-23</td>
+  </tr>
+  <tr>
+    <td><a href="https://drupal.org/node/2092703">v1.0-RC11</a></td>
+    <td><a href="https://github.com/wet-boew/wet-boew-drupal/blob/7.x-1.x/CHANGELOG.md#v10-rc11">Changelog</a></td>
+    <td>2013-09-19</td>
+  </tr>
+  <tr>
+    <td><a href="https://drupal.org/node/2091705">v1.0-RC10</a></td>
+    <td><a href="https://github.com/wet-boew/wet-boew-drupal/blob/7.x-1.x/CHANGELOG.md#v10-rc10">Changelog</a></td>
+    <td>2013-09-18</td>
+  </tr>
+  <tr>
+    <td><a href="https://drupal.org/node/2085157">v1.0-RC9</a></td>
+    <td><a href="https://github.com/wet-boew/wet-boew-drupal/blob/7.x-1.x/CHANGELOG.md#v10-rc9">Changelog</a></td>
+    <td>2013-09-09</td>
+  </tr>
+  <tr>
+    <td><a href="https://drupal.org/node/2084635">v1.0-RC8</a></td>
+    <td><a href="https://github.com/wet-boew/wet-boew-drupal/blob/7.x-1.x/CHANGELOG.md#v10-rc8">Changelog</a></td>
+    <td>2013-09-09</td>
+  </tr>
+  <tr>
+    <td><a href="https://drupal.org/node/2077043">v1.0-RC7</a></td>
+    <td><a href="https://github.com/wet-boew/wet-boew-drupal/blob/7.x-1.x/CHANGELOG.md#v10-rc7">Changelog</a></td>
+    <td>2013-08-29</td>
+  </tr>
+</table>
 
 ## License and Developer(s)
 
