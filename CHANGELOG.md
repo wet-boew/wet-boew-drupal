@@ -1,3 +1,13 @@
+## v1.0-RC14-Pre-Release
+
+Features:
+
+  - Streamline some modules from the distribution
+
+Bug Fixes:
+
+  - (Commit: [416f515][RC14-Commit-416f515]) #[2099029][RC14-Issue-2099029] - Fixed Remove Wysiwyg Filter in favor of CKEditor ACF.
+
 ## v1.0-RC13
 
 Features:
@@ -95,6 +105,14 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+
+<!-- Commits RC14 -->
+
+[RC14-Commit-416f515]:            http://drupalcode.org/project/wetkit_omega.git/commit/416f515
+
+<!-- Issues RC14 -->
+
+[RC14-Issue-2099029]:             http://drupal.org/node/2099029
 
 <!-- Commits RC13 -->
 
