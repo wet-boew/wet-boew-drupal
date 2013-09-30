@@ -33,7 +33,8 @@ Development has been tailored for organizations that need to comply with standar
 
 ### Releases
 
-v1.0-RC7 (released on August 28, 2013)
+[Drupal.org][release-drupal]
+[GitHub][release-github]
 
 ## License and Developer(s)
 
@@ -63,6 +64,8 @@ specific language governing permissions and limitations under the License.
 [docsite-drush-make]:   http://wiki.drupalwxt.org/concepts/drush-make
 [drupal]:               http://drupal.org/project/wetkit
 [github]:               https://github.com/wet-boew/wet-boew-drupal
+[release-drupal]:       https://drupal.org/node/1972380/release
+[release-github]:       https://github.com/wet-boew/wet-boew-drupal/releases
 [responsinator]:        http://responsinator.com/?url=drupalwxt.org
 [selenium]:             https://saucelabs.com/u/sylus
 [selenium-badge]:       https://saucelabs.com/buildstatus/sylus
