@@ -29,7 +29,7 @@ Development has been tailored for organizations that need to comply with standar
 
 ### Changelog
 
-[CHANGELOG.md][changelog]
+- [CHANGELOG.md][changelog]
 
 ### Releases
 
