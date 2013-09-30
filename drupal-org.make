@@ -36,7 +36,7 @@ projects[wetkit_demo][download][branch] = 7.x-1.x
 projects[wetkit_deployment][version] = 1.x-dev
 projects[wetkit_deployment][subdir] = custom
 projects[wetkit_deployment][download][type] = git
-projects[wetkit_deployment][download][revision] = 204c603
+projects[wetkit_deployment][download][revision] = ef0f5e1
 projects[wetkit_deployment][download][branch] = 7.x-1.x
 
 projects[wetkit_git][version] = 1.x-dev
@@ -66,7 +66,7 @@ projects[wetkit_layouts][download][branch] = 7.x-1.x
 projects[wetkit_menu][version] = 1.x-dev
 projects[wetkit_menu][subdir] = custom
 projects[wetkit_menu][download][type] = git
-projects[wetkit_menu][download][revision] = 1d5ac17
+projects[wetkit_menu][download][revision] = 104e468
 projects[wetkit_menu][download][branch] = 7.x-1.x
 
 projects[wetkit_metatag][version] = 1.x-dev
@@ -78,7 +78,7 @@ projects[wetkit_metatag][download][branch] = 7.x-1.x
 projects[wetkit_migrate][version] = 1.x-dev
 projects[wetkit_migrate][subdir] = custom
 projects[wetkit_migrate][download][type] = git
-projects[wetkit_migrate][download][revision] = dd243de
+projects[wetkit_migrate][download][revision] = b5143b9
 projects[wetkit_migrate][download][branch] = 7.x-1.x
 
 projects[wetkit_og][version] = 1.x-dev
@@ -102,7 +102,7 @@ projects[wetkit_search][download][branch] = 7.x-1.x
 projects[wetkit_theme][version] = 1.x-dev
 projects[wetkit_theme][subdir] = custom
 projects[wetkit_theme][download][type] = git
-projects[wetkit_theme][download][revision] = 634e4dd
+projects[wetkit_theme][download][revision] = 90f48a7
 projects[wetkit_theme][download][branch] = 7.x-1.x
 
 projects[wetkit_users][version] = 1.x-dev
@@ -133,12 +133,12 @@ projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
 
 projects[wetkit_ember][version] = 1.x-dev
 projects[wetkit_ember][download][type] = git
-projects[wetkit_ember][download][revision] = be5075b
+projects[wetkit_ember][download][revision] = d6f80e9
 projects[wetkit_ember][download][branch] = 7.x-1.x
 
 projects[wetkit_omega][version] = 1.x-dev
 projects[wetkit_omega][download][type] = git
-projects[wetkit_omega][download][revision] = f9bd779
+projects[wetkit_omega][download][revision] = 5cd81dc
 projects[wetkit_omega][download][branch] = 7.x-1.x
 
 projects[wetkit_shiny][version] = 1.x-dev

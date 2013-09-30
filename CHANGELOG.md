@@ -9,6 +9,8 @@ Bug Fixes:
 
   - (Commit: [416f515][RC14-Commit-416f515]) #[2099029][RC14-Issue-2099029] - Fixed Remove Wysiwyg Filter in favor of CKEditor ACF.
   - (Commit: [146f6f0][RC14-Commit-146f6f0]) #[2098583][RC14-Issue-2098583] - Fix post-install link to documentation.
+  - (Commit: [ef0f5e1][RC14-Commit-ef0f5e1]) #[2098143][RC14-Issue-2098143] - Fixed Menu links not deploying language/nested.
+  - (Commit: [5cd81dc][RC14-Commit-5cd81dc]) #[2094209][RC14-Issue-2094209] - Fixed Site logo always appearing.
 
 ## v1.0-RC13
 
@@ -112,11 +114,15 @@ Bug Fixes:
 
 [RC14-Commit-416f515]:            http://drupalcode.org/project/wetkit_omega.git/commit/416f515
 [RC14-Commit-146f6f0]:            http://drupalcode.org/project/wetkit_core.git/commit/146f6f0
+[RC14-Commit-ef0f5e1]:            http://drupalcode.org/project/wetkit_deployment.git/commit/ef0f5e1
+[RC14-Commit-5cd81dc]:            http://drupalcode.org/project/wetkit_omega.git/commit/5cd81dc
 
 <!-- Issues RC14 -->
 
 [RC14-Issue-2099029]:             http://drupal.org/node/2099029
 [RC14-Issue-2098583]:             http://drupal.org/node/2098583
+[RC14-Issue-2098143]:             http://drupal.org/node/2098143
+[RC14-Issue-2094209]:             http://drupal.org/node/2094209
 
 <!-- Commits RC13 -->
 
