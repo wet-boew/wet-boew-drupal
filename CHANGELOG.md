@@ -1,3 +1,16 @@
+## v1.0-RC15-Pre-Release
+
+Features:
+
+  - Content editing improvements
+
+Bug Fixes:
+
+  - (Commit: [c7187f1][RC15-Commit-c7187f1]) #[2101177][RC15-Issue-2101177] - Fixed On Page admin/content, search exact title.
+  - (Commit: [abc0e6e][RC15-Commit-abc0e6e]) #[2101291][RC15-Issue-2101291] - Fixed .form-buttons in view modal.
+  - (Commit: [f935873][RC15-Commit-f935873]) #[2099885][RC15-Issue-2099885] - Fixed No tokens in Path Breadcrumbs admin page.
+  - (Commit: [63444be][RC15-Commit-63444be]) #[2101233][RC15-Issue-2101233] - Fixed UUID Link not handling translations properly.
+
 ## v1.0-RC14
 
 Features:
@@ -109,6 +122,20 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+
+<!-- Commits RC15 -->
+
+[RC14-Commit-c7187f1]:            http://drupalcode.org/project/wetkit_core.git/commit/c7187f1
+[RC15-Commit-abc0e6e]:            http://drupalcode.org/project/wetkit_ember.git/commit/abc0e6e
+[RC15-Commit-f935873]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/f935873
+[RC15-Commit-63444be]:            http://drupalcode.org/project/wetkit_core.git/commit/63444be
+
+<!-- Issues RC15 -->
+
+[RC15-Issue-2101177]:             http://drupal.org/node/2101177
+[RC15-Issue-2101291]:             http://drupal.org/node/2101291
+[RC15-Issue-2099885]:             http://drupal.org/node/2099885
+[RC15-Issue-2101233]:             http://drupal.org/node/2101233
 
 <!-- Commits RC14 -->
 
