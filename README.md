@@ -33,8 +33,8 @@ Development has been tailored for organizations that need to comply with standar
 
 ### Releases
 
-[Drupal.org][release-drupal]
-[GitHub][release-github]
+- [Drupal.org][release-drupal]
+- [GitHub][release-github]
 
 ## License and Developer(s)
 
