@@ -3,6 +3,7 @@
 Features:
 
   - Content editing improvements
+  - Furthered along the preparation to move to localize.drupal.org
 
 Bug Fixes:
 
@@ -10,6 +11,8 @@ Bug Fixes:
   - (Commit: [abc0e6e][RC15-Commit-abc0e6e]) #[2101291][RC15-Issue-2101291] - Fixed .form-buttons in view modal.
   - (Commit: [f935873][RC15-Commit-f935873]) #[2099885][RC15-Issue-2099885] - Fixed No tokens in Path Breadcrumbs admin page.
   - (Commit: [63444be][RC15-Commit-63444be]) #[2101233][RC15-Issue-2101233] - Fixed UUID Link not handling translations properly.
+  - (Commit: [e371ec9][RC15-Commit-e371ec9]) #[2101341][RC15-Issue-2101341] - Fixed Categories taxonomy label missing.
+  - (Commit: [26217a4][RC15-Commit-26217a4]) #[2101501][RC15-Issue-2101501] - Fixed Taxonomy term feeds missing translations.
 
 ## v1.0-RC14
 
@@ -129,6 +132,8 @@ Bug Fixes:
 [RC15-Commit-abc0e6e]:            http://drupalcode.org/project/wetkit_ember.git/commit/abc0e6e
 [RC15-Commit-f935873]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/f935873
 [RC15-Commit-63444be]:            http://drupalcode.org/project/wetkit_core.git/commit/63444be
+[RC15-Commit-e371ec9]:            http://drupalcode.org/project/wetkit_pages.git/commit/e371ec9
+[RC15-Commit-26217a4]:            http://drupalcode.org/project/wetkit_core.git/commit/26217a4
 
 <!-- Issues RC15 -->
 
@@ -136,6 +141,8 @@ Bug Fixes:
 [RC15-Issue-2101291]:             http://drupal.org/node/2101291
 [RC15-Issue-2099885]:             http://drupal.org/node/2099885
 [RC15-Issue-2101233]:             http://drupal.org/node/2101233
+[RC15-Issue-2101341]:             http://drupal.org/node/2101341
+[RC15-Issue-2101501]:             http://drupal.org/node/2101501
 
 <!-- Commits RC14 -->
 
