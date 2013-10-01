@@ -1,4 +1,4 @@
-## v1.0-RC15-Pre-Release
+## v1.0-RC15
 
 Features:
 
