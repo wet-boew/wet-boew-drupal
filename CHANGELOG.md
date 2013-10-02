@@ -6,7 +6,7 @@ Features:
 
 Bug Fixes:
 
-  - (Commit: [0e15681][RC15-Commit-0e15681]) #[2102609][RC15-Issue-2102609] - Fixed Breadcrumbs missing a div.
+  - (Commit: [0e15681][RC16-Commit-0e15681]) #[2102609][RC16-Issue-2102609] - Fixed Breadcrumbs missing a div.
 
 ## v1.0-RC15
 
