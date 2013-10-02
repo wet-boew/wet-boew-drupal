@@ -1,3 +1,13 @@
+## v1.0-RC16-Pre-Release
+
+Features:
+
+  - Consistent experience between Browser Install + Drush
+
+Bug Fixes:
+
+  - (Commit: [0e15681][RC15-Commit-0e15681]) #[2102609][RC15-Issue-2102609] - Fixed Breadcrumbs missing a div.
+
 ## v1.0-RC15
 
 Features:
@@ -126,9 +136,17 @@ Bug Fixes:
 <!-- Links Referenced -->
 
 
+<!-- Commits RC16 -->
+
+[RC16-Commit-0e15681]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/0e15681
+
+<!-- Issues RC16 -->
+
+[RC16-Issue-2102609]:             http://drupal.org/node/2102609
+
 <!-- Commits RC15 -->
 
-[RC14-Commit-c7187f1]:            http://drupalcode.org/project/wetkit_core.git/commit/c7187f1
+[RC15-Commit-c7187f1]:            http://drupalcode.org/project/wetkit_core.git/commit/c7187f1
 [RC15-Commit-abc0e6e]:            http://drupalcode.org/project/wetkit_ember.git/commit/abc0e6e
 [RC15-Commit-f935873]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/f935873
 [RC15-Commit-63444be]:            http://drupalcode.org/project/wetkit_core.git/commit/63444be
