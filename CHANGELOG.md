@@ -5,6 +5,7 @@ Features:
   - Maintenance Pages has been extensively reworked
   - Minor module updates
   - Remove User Role + Permissions from WetKit Deployment
+  - Added fr.po back for now till can find a better way to package
 
 Bug Fixes:
 
