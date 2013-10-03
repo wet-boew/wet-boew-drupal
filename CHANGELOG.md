@@ -1,8 +1,10 @@
-## v1.0-RC17-Pre-Release
+## v1.0-RC17
 
 Features:
 
   - Maintenance Pages has been extensively reworked
+  - Minor module updates
+  - Remove User Role + Permissions from WetKit Deployment
 
 Bug Fixes:
 
@@ -155,7 +157,7 @@ Bug Fixes:
 <!-- Issues RC17 -->
 
 [RC17-Issue-2103047]:             http://drupal.org/node/2103047
-[RC17-Issue-83131d9]:             http://drupal.org/node/83131d9
+[RC17-Issue-2103273]:             http://drupal.org/node/2103273
 
 <!-- Commits RC16 -->
 
