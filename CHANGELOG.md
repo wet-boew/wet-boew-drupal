@@ -1,4 +1,15 @@
-## v1.0-RC16-Pre-Release
+## v1.0-RC17-Pre-Release
+
+Features:
+
+  - Maintenance Pages has been extensively reworked
+
+Bug Fixes:
+
+  - (Commit: [79c72b1][RC17-Commit-79c72b1]) #[2103047][RC17-Issue-2103047] - Fixed Errors on maintenance page.
+  - (Commit: [83131d9][RC17-Commit-83131d9]) #[2103273][RC17-Issue-2103273] - Fixed Path Breadcrumbs broken.
+
+## v1.0-RC16
 
 Features:
 
@@ -6,7 +17,7 @@ Features:
 
 Bug Fixes:
 
-  - (Commit: [0e15681][RC15-Commit-0e15681]) #[2102609][RC15-Issue-2102609] - Fixed Breadcrumbs missing a div.
+  - (Commit: [0e15681][RC16-Commit-0e15681]) #[2102609][RC16-Issue-2102609] - Fixed Breadcrumbs missing a div.
 
 ## v1.0-RC15
 
@@ -135,6 +146,16 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+
+<!-- Commits RC17 -->
+
+[RC17-Commit-79c72b1]:            http://drupalcode.org/project/wetkit_omega.git/commit/79c72b1
+[RC17-Commit-83131d9]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/83131d9
+
+<!-- Issues RC17 -->
+
+[RC17-Issue-2103047]:             http://drupal.org/node/2103047
+[RC17-Issue-83131d9]:             http://drupal.org/node/83131d9
 
 <!-- Commits RC16 -->
 
