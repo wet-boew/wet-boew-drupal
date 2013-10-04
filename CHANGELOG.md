@@ -1,3 +1,14 @@
+## v1.0-RC18-Pre-Release
+
+Features:
+
+  - Minor tweaks to Maintenance Pages + DB Offline support
+
+Bug Fixes:
+
+  - (Commit: [79c72b1][RC18-Commit-5203ff7]) #[2103047][RC18-Issue-2103047] - Fixed Errors on maintenance page.
+  - (Commit: [0c605c3][RC18-Commit-0c605c3]) #[2103273][RC18-Issue-2103273] - Fixed Path Breadcrumbs broken.
+
 ## v1.0-RC17
 
 Features:
@@ -149,6 +160,16 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+
+<!-- Commits RC18 -->
+
+[RC18-Commit-5203ff7]:            http://drupalcode.org/project/wetkit_omega.git/commit/5203ff7
+[RC18-Commit-0c605c3]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/0c605c3
+
+<!-- Issues RC18 -->
+
+[RC18-Issue-2103047]:             http://drupal.org/node/2103047
+[RC18-Issue-2103273]:             http://drupal.org/node/2103273
 
 <!-- Commits RC17 -->
 
