@@ -1,14 +1,16 @@
-## v1.0-RC18-Pre-Release
+## v1.0-RC18
 
 Features:
 
   - Minor tweaks to Maintenance Pages + DB Offline support
+  - Minor accessibility tweaks
 
 Bug Fixes:
 
   - (Commit: [79c72b1][RC18-Commit-5203ff7]) #[2103047][RC18-Issue-2103047] - Fixed Errors on maintenance page.
   - (Commit: [0c605c3][RC18-Commit-0c605c3]) #[2103273][RC18-Issue-2103273] - Fixed Path Breadcrumbs broken.
   - (Commit: [8874bcb][RC18-Commit-8874bcb]) #[2104319][RC18-Issue-2104319] - Fixed Problem with the mid-footer menu.
+  - (Commit: [05bb797][RC18-Commit-05bb797]) #[2082873][RC18-Issue-2082873] - Further work on size and positioning of media overlay dialogs.
 
 ## v1.0-RC17
 
@@ -167,12 +169,14 @@ Bug Fixes:
 [RC18-Commit-5203ff7]:            http://drupalcode.org/project/wetkit_omega.git/commit/5203ff7
 [RC18-Commit-0c605c3]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/0c605c3
 [RC18-Commit-8874bcb]:            http://drupalcode.org/project/wetkit_menu.git/commit/8874bcb
+[RC18-Commit-05bb797]:            http://drupalcode.org/project/wetkit_ember.git/commit/05bb797
 
 <!-- Issues RC18 -->
 
 [RC18-Issue-2103047]:             http://drupal.org/node/2103047
 [RC18-Issue-2103273]:             http://drupal.org/node/2103273
 [RC18-Issue-2104319]:             http://drupal.org/node/2104319
+[RC18-Issue-2082873]:             http://drupal.org/node/2082873
 
 <!-- Commits RC17 -->
 
