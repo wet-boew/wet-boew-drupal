@@ -12,6 +12,8 @@
 - GitHub Repository: [wet-boew/wet-boew-drupal][github]
 - Live Demo: [responsinator][responsinator]
 - Run it Now: [simplytest.me][simplytest]
+- Issue Queue: [Drupal][issue-drupal] (Primary)
+- Issue Queue: [GitHub][issue-github]
 
 ## Overview
 
@@ -64,6 +66,8 @@ specific language governing permissions and limitations under the License.
 [docsite-drush-make]:   http://wiki.drupalwxt.org/concepts/drush-make
 [drupal]:               http://drupal.org/project/wetkit
 [github]:               https://github.com/wet-boew/wet-boew-drupal
+[issue-drupal]:         https://drupal.org/project/issues/wetkit
+[issue-github]:         https://github.com/wet-boew/wet-boew-drupal/issues
 [release-drupal]:       https://drupal.org/node/1972380/release
 [release-github]:       https://github.com/wet-boew/wet-boew-drupal/releases
 [responsinator]:        http://responsinator.com/?url=drupalwxt.org
