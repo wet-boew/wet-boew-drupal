@@ -8,6 +8,7 @@
 ## Important Links
 
 - Documentation Website: [wiki.drupalwxt.org][docsite]
+- Screencasts: [youtube][youtube]
 - Drupal Repository: [drupal.org/project/wetkit][drupal]
 - GitHub Repository: [wet-boew/wet-boew-drupal][github]
 - Live Demo: [responsinator][responsinator]
@@ -78,3 +79,4 @@ specific language governing permissions and limitations under the License.
 [travisci-badge]:       https://secure.travis-ci.org/wet-boew/wet-boew-drupal.png?branch=7.x-1.x
 [vagrant-normandy]:     https://github.com/sylus/vagrant-normandy
 [wet-boew]:             https://github.com/wet-boew/wet-boew
+[youtube]:              http://www.youtube.com/playlist?list=PLjIClrDa-_ZFwO-0sT_y6PGljSdbYztwi
