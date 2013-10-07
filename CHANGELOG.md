@@ -1,3 +1,17 @@
+## v1.0-RC19-Pre-Release
+
+Features:
+
+  - Fixed up namespacing
+  - Minor accessibility tweaks
+
+Bug Fixes:
+
+  - (Commit: [e302ebf][RC19-Commit-e302ebf]) #[2106103][RC19-Issue-2106111] - Fixed Metatags support shouldn't occur on all entities.
+  - (Commit: [4c40fe2][RC19-Commit-4c40fe2]) #[2106103][RC19-Issue-2106103] - Fixed Duplicate class attribute on bean's div tag.
+  - (Commit: [79b4a97][RC19-Commit-79b4a97]) #[2106091][RC19-Issue-2106091] - Fixed Duplicate class attribute on body tag.
+  - (Commit: [d7cd687][RC19-Commit-d7cd687]) #[2105217][RC19-Issue-2105217] - Fixed $conf['title'] not used on maintenance pages?
+
 ## v1.0-RC18
 
 Features:
@@ -163,6 +177,20 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+
+<!-- Commits RC19 -->
+
+[RC19-Commit-e302ebf]:            http://drupalcode.org/project/wetkit_metatag.git/commit/e302ebf
+[RC19-Commit-4c40fe2]:            http://drupalcode.org/project/wetkit_bean.git/commit/4c40fe2
+[RC19-Commit-79b4a97]:            http://drupalcode.org/project/wetkit_omega.git/commit/79b4a97
+[RC19-Commit-d7cd687]:            http://drupalcode.org/project/wetkit_omega.git/commit/d7cd687
+
+<!-- Issues RC19 -->
+
+[RC19-Issue-2106111]:             http://drupal.org/node/2106111
+[RC19-Issue-2106103]:             http://drupal.org/node/2106103
+[RC19-Issue-2106091]:             http://drupal.org/node/2106091
+[RC19-Issue-2105217]:             http://drupal.org/node/2105217
 
 <!-- Commits RC18 -->
 
