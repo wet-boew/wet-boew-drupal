@@ -11,6 +11,7 @@ Bug Fixes:
   - (Commit: [4c40fe2][RC19-Commit-4c40fe2]) #[2106103][RC19-Issue-2106103] - Fixed Duplicate class attribute on bean's div tag.
   - (Commit: [79b4a97][RC19-Commit-79b4a97]) #[2106091][RC19-Issue-2106091] - Fixed Duplicate class attribute on body tag.
   - (Commit: [d7cd687][RC19-Commit-d7cd687]) #[2105217][RC19-Issue-2105217] - Fixed $conf['title'] not used on maintenance pages?
+  - (Commit: [d34578f][RC19-Commit-d34578f]) #[2106193][RC19-Issue-2106193] - Fixed Removing panels breadcrumbs in favor of Path Breadcrumbs.
 
 ## v1.0-RC18
 
@@ -184,6 +185,7 @@ Bug Fixes:
 [RC19-Commit-4c40fe2]:            http://drupalcode.org/project/wetkit_bean.git/commit/4c40fe2
 [RC19-Commit-79b4a97]:            http://drupalcode.org/project/wetkit_omega.git/commit/79b4a97
 [RC19-Commit-d7cd687]:            http://drupalcode.org/project/wetkit_omega.git/commit/d7cd687
+[RC19-Commit-d34578f]:            http://drupalcode.org/project/wetkit_core.git/commit/d34578f
 
 <!-- Issues RC19 -->
 
@@ -191,6 +193,7 @@ Bug Fixes:
 [RC19-Issue-2106103]:             http://drupal.org/node/2106103
 [RC19-Issue-2106091]:             http://drupal.org/node/2106091
 [RC19-Issue-2105217]:             http://drupal.org/node/2105217
+[RC19-Issue-2106193]:             http://drupal.org/node/2106193
 
 <!-- Commits RC18 -->
 
