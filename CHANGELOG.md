@@ -1,3 +1,20 @@
+## v1.0-RC20
+
+Features:
+
+  - Fixed up namespacing
+
+Bug Fixes:
+
+  - (Commit: [d5584ab][RC20-Commit-d5584ab]) #[2106483][RC20-Issue-2106483] - Fixed Using update.php shows maintenance page.
+  - (Commit: [c807ed3][RC20-Commit-c807ed3]) #[2107463][RC20-Issue-2107463] - Fixed Duplicate meta name="viewport" in pages.
+  - (Commit: [9be0927][RC20-Commit-9be0927]) #[2106641][RC20-Issue-2106641] - Fixed Menu links for default content out of date.
+  - (Commit: [d6dffc4][RC20-Commit-d6dffc4]) #[2097791][RC20-Issue-2097791] - Added French words to URL aliases 'Strings to Remove".
+  - (Commit: [9d406d2][RC20-Commit-9d406d2]) #[2094209][RC20-Issue-2094209] - Fixed Site logo always appearing.
+  - (Commit: [ea20310][RC20-Commit-ea20310]) #[2108463][RC20-Issue-2108463] - Fixed Sidebar doesn't work in all scenarios.
+  - (Commit: [3e6e51b][RC20-Commit-3e6e51b]) #[2106793][RC20-Issue-2106793] - Fixed Layouts extension configuration doesn't work as expected.
+  - (Commit: [c33cc27][RC20-Commit-c33cc27]) #[2108501][RC20-Issue-2108501] - Fixed Upgrade to latest stable of WET-BOEW jQuery Framework.
+
 ## v1.0-RC19
 
 Features:
@@ -128,56 +145,31 @@ Bug Fixes:
   - (Commit: [ebc70e4][RC11-Commit-ebc70e4]) #[2092085][RC11-Issue-2092085] - Fix WetKit Taxonomy make field instances work with deploy
   - (Commit: [7318b28][RC11-Commit-7318b28]) #[2090019][RC11-Issue-2090019] - H1 missing on create and edit node pages
 
-## v1.0-RC10
-
-Features:
-
-  - Updated Omega + WetKit Omega to latest dev
-  - Ember is now a proper base theme
-
-Bug Fixes:
-
-  - Fixed Deployment Source Translation Issue
-  - Fixed Entity i18n menu not working on node edit
-  - Fixed overall styling issues
-
-## v1.0-RC9
-
-Features:
-
-  - File Entity Types now are compatible with ET
-  - Synchronized with GitHub
-  - Aligned with Gov requirements on Search Form
-  - Fixed WetKit Search to not include ApacheSolr modules by default
-
-Bug Fixes:
-
-  - Media Browser is working again
-  - Numerous CSS Fixes
-
-## v1.0-RC8
-
-Bug Fixes:
-
-  - CSS Fixes
-  - Media Improvements
-
-## v1.0-RC7
-
-Features:
-
-  - Added Ember as the new backend theme
-  - Completely minimized the whole distribution
-  - Deployment (Content Staging) now works out of the box (Epic Win!)
-
-Bug Fixes:
-
-  - Problems with File Entity not saving
-  - Fixed deployment with menu links
-
 
 <!-- Links Referenced -->
 
+
+<!-- Commits RC20 -->
+
+[RC20-Commit-d5584ab]:            http://drupalcode.org/project/wetkit_omega.git/commit/d5584ab
+[RC20-Commit-c807ed3]:            http://drupalcode.org/project/wetkit_omega.git/commit/c807ed3
+[RC20-Commit-9be0927]:            http://drupalcode.org/project/wetkit_migrate.git/commit/9be0927
+[RC20-Commit-d6dffc4]:            http://drupalcode.org/project/wetkit_language.git/commit/d6dffc4
+[RC20-Commit-9d406d2]:            http://drupalcode.org/project/wetkit_omega.git/commit/9d406d2
+[RC20-Commit-ea20310]:            http://drupalcode.org/project/wetkit_menu.git/commit/ea20310
+[RC20-Commit-3e6e51b]:            http://drupalcode.org/project/wetkit_omega.git/commit/3e6e51b
+[RC20-Commit-c33cc27]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/c33cc27
+
+<!-- Issues RC20 -->
+
+[RC20-Issue-2106483]:             http://drupal.org/node/2106483
+[RC20-Issue-2107463]:             http://drupal.org/node/2107463
+[RC20-Issue-2106641]:             http://drupal.org/node/2106641
+[RC20-Issue-2097791]:             http://drupal.org/node/2097791
+[RC20-Issue-2094209]:             http://drupal.org/node/2094209
+[RC20-Issue-2108463]:             http://drupal.org/node/2108463
+[RC20-Issue-2106793]:             http://drupal.org/node/2106793
+[RC20-Issue-2108501]:             http://drupal.org/node/2108501
 
 <!-- Commits RC19 -->
 
