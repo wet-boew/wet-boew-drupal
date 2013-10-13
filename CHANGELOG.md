@@ -1,8 +1,8 @@
-## v1.0-RC20
+## v1.0-RC20-Pre-Release
 
 Features:
 
-  - Fixed up namespacing
+  - This will be the last release candidate!
 
 Bug Fixes:
 
@@ -14,6 +14,7 @@ Bug Fixes:
   - (Commit: [ea20310][RC20-Commit-ea20310]) #[2108463][RC20-Issue-2108463] - Fixed Sidebar doesn't work in all scenarios.
   - (Commit: [3e6e51b][RC20-Commit-3e6e51b]) #[2106793][RC20-Issue-2106793] - Fixed Layouts extension configuration doesn't work as expected.
   - (Commit: [c33cc27][RC20-Commit-c33cc27]) #[2108501][RC20-Issue-2108501] - Fixed Upgrade to latest stable of WET-BOEW jQuery Framework.
+  - (Commit: [4259fbf][RC20-Commit-4259fbf]) #[2111035][RC20-Issue-2111035] - Fixed jQuery Mobile 'undefined' and Site Path for main title.
 
 ## v1.0-RC19
 
@@ -159,6 +160,7 @@ Bug Fixes:
 [RC20-Commit-ea20310]:            http://drupalcode.org/project/wetkit_menu.git/commit/ea20310
 [RC20-Commit-3e6e51b]:            http://drupalcode.org/project/wetkit_omega.git/commit/3e6e51b
 [RC20-Commit-c33cc27]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/c33cc27
+[RC20-Commit-4259fbf]:            http://drupalcode.org/project/wetkit_omega.git/commit/4259fbf
 
 <!-- Issues RC20 -->
 
@@ -170,6 +172,7 @@ Bug Fixes:
 [RC20-Issue-2108463]:             http://drupal.org/node/2108463
 [RC20-Issue-2106793]:             http://drupal.org/node/2106793
 [RC20-Issue-2108501]:             http://drupal.org/node/2108501
+[RC20-Issue-2111035]:             http://drupal.org/node/2111035
 
 <!-- Commits RC19 -->
 
