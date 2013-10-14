@@ -23,19 +23,6 @@ function _wetkit_import($operation, $type, &$context) {
  */
 function _wetkit_entities_import($operation, &$context) {
   $context['message'] = t('@operation', array('@operation' => $operation));
-
-  // Instantiate the entity translation entities.
-  /*
-  $entity_translation_entity_types = array(
-    'bean' => 'bean',
-    'node' => 'node',
-    'file' => 'file',
-    'taxonomy_term' => 'taxonomy_term',
-    'user' => 'user',
-  );
-  variable_set('entity_translation_entity_types', $entity_translation_entity_types);
-  entity_info_cache_clear();
-  */
 }
 
 /**

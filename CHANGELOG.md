@@ -15,6 +15,7 @@ Bug Fixes:
   - (Commit: [3e6e51b][RC20-Commit-3e6e51b]) #[2106793][RC20-Issue-2106793] - Fixed Layouts extension configuration doesn't work as expected.
   - (Commit: [c33cc27][RC20-Commit-c33cc27]) #[2108501][RC20-Issue-2108501] - Fixed Upgrade to latest stable of WET-BOEW jQuery Framework.
   - (Commit: [4259fbf][RC20-Commit-4259fbf]) #[2111035][RC20-Issue-2111035] - Fixed jQuery Mobile 'undefined' and Site Path for main title.
+  - (Commit: [be62ada][RC20-Commit-be62ada]) #[2111215][RC20-Issue-2111215] - Fixed Metatags needs some improvements.
 
 ## v1.0-RC19
 
@@ -161,6 +162,7 @@ Bug Fixes:
 [RC20-Commit-3e6e51b]:            http://drupalcode.org/project/wetkit_omega.git/commit/3e6e51b
 [RC20-Commit-c33cc27]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/c33cc27
 [RC20-Commit-4259fbf]:            http://drupalcode.org/project/wetkit_omega.git/commit/4259fbf
+[RC20-Commit-be62ada]:            http://drupalcode.org/project/wetkit_omega.git/commit/be62ada
 
 <!-- Issues RC20 -->
 
@@ -173,6 +175,7 @@ Bug Fixes:
 [RC20-Issue-2106793]:             http://drupal.org/node/2106793
 [RC20-Issue-2108501]:             http://drupal.org/node/2108501
 [RC20-Issue-2111035]:             http://drupal.org/node/2111035
+[RC20-Issue-2111215]:             http://drupal.org/node/2111215
 
 <!-- Commits RC19 -->
 
