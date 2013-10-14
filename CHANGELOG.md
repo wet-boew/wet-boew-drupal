@@ -1,4 +1,4 @@
-## v1.0-RC20-Pre-Release
+## v1.0-RC20
 
 Features:
 
