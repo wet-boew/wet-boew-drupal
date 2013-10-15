@@ -1,8 +1,14 @@
+## v1.0-RC21
+
+Bug Fixes:
+
+  - (Commit: [9cd134a][RC21-Commit-9cd134a]) #[2111967][RC21-Issue-2111967] - Fixed Improve Batch Deployment Speed.
+
 ## v1.0-RC20
 
 Features:
 
-  - This will be the last release candidate!
+  - This will be the second to last release candidate!
 
 Bug Fixes:
 
@@ -151,6 +157,14 @@ Bug Fixes:
 <!-- Links Referenced -->
 
 
+<!-- Commits RC21 -->
+
+[RC21-Commit-d5584ab]:            http://drupalcode.org/project/wetkit_deployment.git/commit/9cd134a
+
+<!-- Issues RC21 -->
+
+[RC21-Issue-2111967]:             http://drupal.org/node/2111967
+
 <!-- Commits RC20 -->
 
 [RC20-Commit-d5584ab]:            http://drupalcode.org/project/wetkit_omega.git/commit/d5584ab
@@ -162,7 +176,7 @@ Bug Fixes:
 [RC20-Commit-3e6e51b]:            http://drupalcode.org/project/wetkit_omega.git/commit/3e6e51b
 [RC20-Commit-c33cc27]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/c33cc27
 [RC20-Commit-4259fbf]:            http://drupalcode.org/project/wetkit_omega.git/commit/4259fbf
-[RC20-Commit-be62ada]:            http://drupalcode.org/project/wetkit_omega.git/commit/be62ada
+[RC20-Commit-be62ada]:            http://drupalcode.org/project/wetkit_metatag.git/commit/be62ada
 
 <!-- Issues RC20 -->
 
