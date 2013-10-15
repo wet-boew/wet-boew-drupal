@@ -24,7 +24,7 @@ projects[wetkit_breadcrumbs][download][branch] = 7.x-1.x
 projects[wetkit_core][version] = 1.x-dev
 projects[wetkit_core][subdir] = custom
 projects[wetkit_core][download][type] = git
-projects[wetkit_core][download][revision] = 1d49641
+projects[wetkit_core][download][revision] = 2fc6c9a
 projects[wetkit_core][download][branch] = 7.x-1.x
 
 projects[wetkit_demo][version] = 1.x-dev
@@ -36,7 +36,7 @@ projects[wetkit_demo][download][branch] = 7.x-1.x
 projects[wetkit_deployment][version] = 1.x-dev
 projects[wetkit_deployment][subdir] = custom
 projects[wetkit_deployment][download][type] = git
-projects[wetkit_deployment][download][revision] = 007a8a5
+projects[wetkit_deployment][download][revision] = 93c112c
 projects[wetkit_deployment][download][branch] = 7.x-1.x
 
 projects[wetkit_git][version] = 1.x-dev
@@ -72,7 +72,7 @@ projects[wetkit_menu][download][branch] = 7.x-1.x
 projects[wetkit_metatag][version] = 1.x-dev
 projects[wetkit_metatag][subdir] = custom
 projects[wetkit_metatag][download][type] = git
-projects[wetkit_metatag][download][revision] = be62ada
+projects[wetkit_metatag][download][revision] = f7a3917
 projects[wetkit_metatag][download][branch] = 7.x-1.x
 
 projects[wetkit_migrate][version] = 1.x-dev
@@ -133,7 +133,7 @@ projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
 
 projects[wetkit_ember][version] = 1.x-dev
 projects[wetkit_ember][download][type] = git
-projects[wetkit_ember][download][revision] = 960b795
+projects[wetkit_ember][download][revision] = dfe82e5
 projects[wetkit_ember][download][branch] = 7.x-1.x
 
 projects[wetkit_omega][version] = 1.x-dev
