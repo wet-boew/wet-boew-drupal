@@ -33,4 +33,4 @@ sleep 5
 cd $workspace/profiles/wetkit/tests/behat/
 # behat.yml includes behat.local.yml so it must exist
 touch behat.local.yml
-/bin/behat
+behat
