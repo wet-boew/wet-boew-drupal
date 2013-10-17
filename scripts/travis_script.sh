@@ -10,8 +10,8 @@ cd ../../
 sleep 5
 cd build
 workspace=`pwd`
-sh -c "if [ '$DB' = 'postgres' ]; then drush si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=pgsql://postgres:@127.0.0.1:5432/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi"
-sh -c "if [ '$DB' = 'mysql' ]; then drush si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1:3306/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi"
+# sh -c "if [ '$DB' = 'postgres' ]; then drush si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=pgsql://postgres:@127.0.0.1:5432/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi"
+# sh -c "if [ '$DB' = 'mysql' ]; then drush si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1:3306/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi"
 drush cc all --yes
 
 # Headless Testing Server
@@ -36,5 +36,4 @@ java -jar selenium-server-standalone-2.25.0.jar -p 4444 &
 sleep 5
 
 # behat.yml includes behat.local.yml so it must exist
-touch $workspace/profiles/wetkit/tests/behat/behat.local.yml
-bin/behat
+behat
