@@ -14,15 +14,15 @@ cd ..
 cd $workspace/profiles/wetkit/tests/behat
 composer install
 cd $workspace
-cd ..
 
 # Headless Testing Server
 export PHANTOMJS_EXECUTABLE='phantomjs --local-to-remote-url-access=yes --ignore-ssl-errors=yes'
 export DISPLAY=:99.0
 sh -e /etc/init.d/xvfb start
 sleep 3 # give xvfb some time to start
-drush --root=$workspace runserver --server=builtin 8080 &
+drush runserver --server=builtin 8080 &
 sleep 3 # give xvfb some time to rebuild
+cd ..
 
 # Install + Run CasperJS Testing Suite
 git clone git://github.com/n1k0/casperjs.git
