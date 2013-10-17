@@ -19,17 +19,17 @@ sleep 3 # give xvfb some time to rebuild
 cd ..
 
 # Install + Run CasperJS Testing Suite
-git clone git://github.com/n1k0/casperjs.git
-cd casperjs
-git checkout tags/0.6.10
-cd ..
-DISPLAY=:99.0 ./casperjs/bin/casperjs test $workspace/profiles/wetkit/tests/casperjs/
+# git clone git://github.com/n1k0/casperjs.git
+# cd casperjs
+# git checkout tags/0.6.10
+# cd ..
+# DISPLAY=:99.0 ./casperjs/bin/casperjs test $workspace/profiles/wetkit/tests/casperjs/
 
 # Install + Run Selenium Testing Suite
-# wget http://selenium.googlecode.com/files/selenium-server-standalone-2.25.0.jar
-# java -jar selenium-server-standalone-2.25.0.jar -p 4444 &
-wget http://selenium.googlecode.com/files/selenium-server-standalone-2.15.0.jar
-java -jar selenium-server-standalone-2.15.0.jar -htmlSuite "*chrome" "http://127.0.0.1:8080" "$workspace/profiles/wetkit/tests/selenium/WetKitTestSuite.html" "$workspace/profiles/wetkit/tests/selenium/Result.html"
+wget http://selenium.googlecode.com/files/selenium-server-standalone-2.25.0.jar
+java -jar selenium-server-standalone-2.25.0.jar -p 4444 &
+# wget http://selenium.googlecode.com/files/selenium-server-standalone-2.15.0.jar
+# java -jar selenium-server-standalone-2.15.0.jar -htmlSuite "*chrome" "http://127.0.0.1:8080" "$workspace/profiles/wetkit/tests/selenium/WetKitTestSuite.html" "$workspace/profiles/wetkit/tests/selenium/Result.html"
 sleep 5
 
 # cd $workspace/profiles/wetkit/tests/behat/
