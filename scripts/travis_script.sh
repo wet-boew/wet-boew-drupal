@@ -1,6 +1,11 @@
 #!/bin/sh
 # Travis Script for CI Testing
 
+# Run composer
+cd ./tests/behat
+composer install
+cd ../../
+
 # Drush Site Installation
 sleep 5
 cd build
