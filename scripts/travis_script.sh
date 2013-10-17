@@ -8,6 +8,12 @@ workspace=`pwd`
 sh -c "if [ '$DB' = 'postgres' ]; then drush si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=pgsql://postgres:@127.0.0.1:5432/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi"
 sh -c "if [ '$DB' = 'mysql' ]; then drush si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1:3306/wetkit_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi"
 drush cc all --yes
+cd ..
+
+# Run composer
+cd $workspace/profiles/wetkit/tests/behat
+composer install
+cd $workspace
 
 # Headless Testing Server
 export PHANTOMJS_EXECUTABLE='phantomjs --local-to-remote-url-access=yes --ignore-ssl-errors=yes'
@@ -26,13 +32,10 @@ cd ..
 DISPLAY=:99.0 ./casperjs/bin/casperjs test $workspace/profiles/wetkit/tests/casperjs/
 
 # Install + Run Selenium Testing Suite
-# wget http://selenium.googlecode.com/files/selenium-server-standalone-2.25.0.jar
-# java -jar selenium-server-standalone-2.25.0.jar -p 4444 &
-wget http://selenium.googlecode.com/files/selenium-server-standalone-2.15.0.jar
-java -jar selenium-server-standalone-2.15.0.jar -htmlSuite "*chrome" "http://127.0.0.1:8080" "$workspace/profiles/wetkit/tests/selenium/WetKitTestSuite.html" "$workspace/profiles/wetkit/tests/selenium/Result.html"
+wget http://selenium.googlecode.com/files/selenium-server-standalone-2.25.0.jar
+java -jar selenium-server-standalone-2.25.0.jar -p 4444 &
 sleep 5
 
-# cd $workspace/profiles/wetkit/tests/behat/
-# behat.yml includes behat.local.yml so it must exist
-# touch behat.local.yml
-# ./bin/behat
+cd $workspace/profiles/wetkit/tests/behat
+touch behat.local.yml
+./bin/behat

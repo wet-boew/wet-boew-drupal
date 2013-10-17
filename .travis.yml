@@ -22,5 +22,7 @@ postgres:
   username: postgres
 
 # Travis scripts
-before_script: ./scripts/travis_before_script.sh
-script: ./scripts/travis_script.sh
+before_script:
+  - ./scripts/travis_before_script.sh
+script:
+  - ./scripts/travis_script.sh
