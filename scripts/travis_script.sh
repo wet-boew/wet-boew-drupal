@@ -15,7 +15,7 @@ export PHANTOMJS_EXECUTABLE='phantomjs --local-to-remote-url-access=yes --ignore
 export DISPLAY=:99.0
 sh -e /etc/init.d/xvfb start
 sleep 3 # give xvfb some time to start
-sudo drush --root=$PWD/wet-boew-drupal runserver --server=builtin 8080 &
+drush --root=$workspace/wet-boew-drupal runserver --server=builtin 8080 &
 sleep 3 # give xvfb some time to rebuild
 
 # Install + Run CasperJS Testing Suite
