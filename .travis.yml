@@ -27,4 +27,5 @@ before_script:
 script:
   - ./scripts/travis_script.sh
   - printenv
+  - which behat
   - ./bin/behat
