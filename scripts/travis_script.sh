@@ -10,6 +10,12 @@ sh -c "if [ '$DB' = 'mysql' ]; then drush si wetkit wetkit_theme_selection_form.
 drush cc all --yes
 cd ..
 
+# Run composer
+cd $workspace/wet-boew-drupal/profiles/wetkit/tests/behat
+composer install
+cd $workspace
+cd ..
+
 # Headless Testing Server
 export PHANTOMJS_EXECUTABLE='phantomjs --local-to-remote-url-access=yes --ignore-ssl-errors=yes'
 export DISPLAY=:99.0
@@ -31,3 +37,8 @@ java -jar selenium-server-standalone-2.25.0.jar -p 4444 &
 # wget http://selenium.googlecode.com/files/selenium-server-standalone-2.15.0.jar
 # java -jar selenium-server-standalone-2.15.0.jar -htmlSuite "*chrome" "http://127.0.0.1:8080" "$workspace/profiles/wetkit/tests/selenium/WetKitTestSuite.html" "$workspace/profiles/wetkit/tests/selenium/Result.html"
 sleep 5
+
+cd $workspace/wet-boew-drupal/profiles/wetkit/tests/behat
+touch behat.local.yml
+ls
+./bin/behat
