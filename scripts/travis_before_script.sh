@@ -10,11 +10,6 @@ pear channel-discover pear.drush.org
 pear install drush/drush-5.8.0
 phpenv rehash
 
-# Run composer
-# cd ./tests/behat
-# composer install
-# cd ../../
-
 # Drush Make / Build Drupal WEM
 workspace=`pwd`
 cat $workspace/build-wetkit-github.make | sed "s@master@$TRAVIS_COMMIT@g" | sed "s@wet-boew/wet-boew-drupal@$TRAVIS_REPO_SLUG@g" | drush make --prepare-install php://stdin $workspace/build
