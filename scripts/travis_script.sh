@@ -30,7 +30,6 @@ wget http://selenium.googlecode.com/files/selenium-server-standalone-2.25.0.jar
 java -jar selenium-server-standalone-2.25.0.jar -p 4444 &
 sleep 5
 
-cd $workspace/profiles/wetkit/tests/behat/
 # behat.yml includes behat.local.yml so it must exist
-touch behat.local.yml
-./bin/behat
+touch $workspace/profiles/wetkit/tests/behat/behat.local.yml
+sh -e /bin/behat
