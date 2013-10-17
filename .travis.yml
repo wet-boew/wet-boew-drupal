@@ -26,6 +26,6 @@ before_script:
   - ./scripts/travis_before_script.sh
 script:
   - ./scripts/travis_script.sh
-  - cd build/wet-boew-drupal/profiles/wetkit/tests/behat
+  - cd build/profiles/wetkit/tests/behat
   - touch behat.local.yml
   - ./bin/behat
