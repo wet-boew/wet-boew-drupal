@@ -26,6 +26,7 @@ before_script:
   - ./scripts/travis_before_script.sh
 script:
   - ./scripts/travis_script.sh
+  - ls -al
   - cd tests/behat
   - touch behat.local.yml
   - ./bin/behat
