@@ -7,8 +7,8 @@ Feature: Homepage
     Given I am on the homepage
     Then I should see "Web Experience Toolkit"
 
-  @api @javascript
+  @api
   Scenario: Logging into the site
-    Given I am logged in as a user with the "authenticated user" role
+    Given I am logged in as a user with the "administrator" role
     And I am on the homepage
     Then I should see "Log out"
