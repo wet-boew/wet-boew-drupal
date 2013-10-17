@@ -36,4 +36,4 @@ java -jar selenium-server-standalone-2.25.0.jar -p 4444 &
 sleep 5
 
 # behat.yml includes behat.local.yml so it must exist
-behat
+sh -c `./bin/behat`
