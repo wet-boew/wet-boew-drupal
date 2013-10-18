@@ -1,14 +1,27 @@
-## v1.0-RC21
+## v1.0-RC21-Pre-Release
+
+Features:
+
+  - This will be the last release candidate!
 
 Bug Fixes:
 
   - (Commit: [9cd134a][RC21-Commit-9cd134a]) #[2111967][RC21-Issue-2111967] - Fixed Improve Batch Deployment Speed.
+  - (Commit: [de060b1][RC21-Commit-de060b1]) #[2105087][RC21-Issue-2105087] - Fixed Cannot change Media properties after it is inserted.
+  - (Commit: [551f36a][RC21-Commit-551f36a]) #[2115137][RC21-Issue-2115137] - Fixed Features Export Issues RC4+ and Entity Api.
+  - (Commit: [a8c9683][RC21-Commit-a8c9683]) #[2113689][RC21-Issue-2113689] - Introduce Behat before Stable Release.
+  - (Commit: [fcc1c03][RC21-Commit-fcc1c03]) #[2109001][RC21-Issue-2109001] - Fixed Double display of English site name on maintenance pages.
+  - (Commit: [0f11be2][RC21-Commit-0f11be2]) #[2112113][RC21-Issue-2112113] - Fixed ajax error.
+  - (Commit: [dfe82e5][RC21-Commit-dfe82e5]) #[2112375][RC21-Issue-2112375] - Fixed Reversion of Ember Theme.
+  - (Commit: [71677ce][RC21-Commit-71677ce]) #[2112741][RC21-Issue-2112741] - Fixed Features Translations + Missing UUID for Taxonomy Terms.
+  - (Commit: [5ab672f][RC21-Commit-5ab672f]) #[2112357][RC21-Issue-2112357] - Fixed Undefined index in metatag_filter_values_from_defaults().
 
 ## v1.0-RC20
 
 Features:
 
   - This will be the second to last release candidate!
+  - General theming improvements
 
 Bug Fixes:
 
@@ -159,11 +172,27 @@ Bug Fixes:
 
 <!-- Commits RC21 -->
 
-[RC21-Commit-d5584ab]:            http://drupalcode.org/project/wetkit_deployment.git/commit/9cd134a
+[RC21-Commit-9cd134a]:            http://drupalcode.org/project/wetkit_deployment.git/commit/9cd134a
+[RC21-Commit-de060b1]:            http://drupalcode.org/project/wetkit_widgets.git/commit/de060b1
+[RC21-Commit-551f36a]:            http://drupalcode.org/project/wetkit_core.git/commit/551f36a
+[RC21-Commit-a8c9683]:            http://drupalcode.org/project/wetkit.git/commit/a8c9683
+[RC21-Commit-fcc1c03]:            http://drupalcode.org/project/wetkit_omega.git/commit/fcc1c03
+[RC21-Commit-0f11be2]:            http://drupalcode.org/project/wetkit_core.git/commit/0f11be2
+[RC21-Commit-dfe82e5]:            http://drupalcode.org/project/wetkit_ember.git/commit/dfe82e5
+[RC21-Commit-71677ce]:            http://drupalcode.org/project/wetkit_language.git/commit/71677ce
+[RC21-Commit-5ab672f]:            http://drupalcode.org/project/wetkit_metatag.git/commit/5ab672f
 
 <!-- Issues RC21 -->
 
 [RC21-Issue-2111967]:             http://drupal.org/node/2111967
+[RC21-Issue-2105087]:             http://drupal.org/node/2105087
+[RC21-Issue-2115137]:             http://drupal.org/node/2115137
+[RC21-Issue-2113689]:             http://drupal.org/node/2113689
+[RC21-Issue-2109001]:             http://drupal.org/node/2109001
+[RC21-Issue-2112113]:             http://drupal.org/node/2112113
+[RC21-Issue-2112375]:             http://drupal.org/node/2112375
+[RC21-Issue-2112741]:             http://drupal.org/node/2112741
+[RC21-Issue-2112357]:             http://drupal.org/node/2112357
 
 <!-- Commits RC20 -->
 
