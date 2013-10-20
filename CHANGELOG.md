@@ -17,6 +17,7 @@ Bug Fixes:
   - (Commit: [5ab672f][RC21-Commit-5ab672f]) #[2112357][RC21-Issue-2112357] - Fixed Undefined index in metatag_filter_values_from_defaults().
   - (Commit: [6bc007d][RC21-Commit-6bc007d]) #[2116253][RC21-Issue-2116253] - Fixed Add support for OGPL Theme.
   - (Commit: [be31887][RC21-Commit-be31887]) #[2116019][RC21-Issue-2116019] - Fixed WetKitMigrateDefaultContent shows Undefined property: $vid.
+  - (Commit: [eb51714][RC21-Commit-eb51714]) #[2095831][RC21-Issue-2095831] - Fixed When using the Linkit search, the search results are slow.
 
 ## v1.0-RC20
 
@@ -185,6 +186,7 @@ Bug Fixes:
 [RC21-Commit-5ab672f]:            http://drupalcode.org/project/wetkit_metatag.git/commit/5ab672f
 [RC21-Commit-6bc007d]:            http://drupalcode.org/project/wetkit_omega.git/commit/6bc007d
 [RC21-Commit-be31887]:            http://drupalcode.org/project/wetkit_migrate.git/commit/be31887
+[RC21-Commit-eb51714]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/eb51714
 
 <!-- Issues RC21 -->
 
@@ -199,6 +201,7 @@ Bug Fixes:
 [RC21-Issue-2112357]:             http://drupal.org/node/2112357
 [RC21-Issue-2116253]:             http://drupal.org/node/2116253
 [RC21-Issue-2116019]:             http://drupal.org/node/2116019
+[RC21-Issue-2095831]:             http://drupal.org/node/2095831
 
 <!-- Commits RC20 -->
 
