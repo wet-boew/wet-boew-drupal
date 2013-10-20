@@ -15,6 +15,7 @@ Bug Fixes:
   - (Commit: [dfe82e5][RC21-Commit-dfe82e5]) #[2112375][RC21-Issue-2112375] - Fixed Reversion of Ember Theme.
   - (Commit: [71677ce][RC21-Commit-71677ce]) #[2112741][RC21-Issue-2112741] - Fixed Features Translations + Missing UUID for Taxonomy Terms.
   - (Commit: [5ab672f][RC21-Commit-5ab672f]) #[2112357][RC21-Issue-2112357] - Fixed Undefined index in metatag_filter_values_from_defaults().
+  - (Commit: [6bc007d][RC21-Commit-6bc007d]) #[2116253][RC21-Issue-2116253] - Fixed Add support for OGPL Theme.
 
 ## v1.0-RC20
 
@@ -181,6 +182,7 @@ Bug Fixes:
 [RC21-Commit-dfe82e5]:            http://drupalcode.org/project/wetkit_ember.git/commit/dfe82e5
 [RC21-Commit-71677ce]:            http://drupalcode.org/project/wetkit_language.git/commit/71677ce
 [RC21-Commit-5ab672f]:            http://drupalcode.org/project/wetkit_metatag.git/commit/5ab672f
+[RC21-Commit-6bc007d]:            http://drupalcode.org/project/wetkit_omega.git/commit/6bc007d
 
 <!-- Issues RC21 -->
 
@@ -193,6 +195,7 @@ Bug Fixes:
 [RC21-Issue-2112375]:             http://drupal.org/node/2112375
 [RC21-Issue-2112741]:             http://drupal.org/node/2112741
 [RC21-Issue-2112357]:             http://drupal.org/node/2112357
+[RC21-Issue-2116253]:             http://drupal.org/node/2116253
 
 <!-- Commits RC20 -->
 
