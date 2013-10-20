@@ -78,7 +78,7 @@ projects[wetkit_metatag][download][branch] = 7.x-1.x
 projects[wetkit_migrate][version] = 1.x-dev
 projects[wetkit_migrate][subdir] = custom
 projects[wetkit_migrate][download][type] = git
-projects[wetkit_migrate][download][revision] = ca1950e
+projects[wetkit_migrate][download][revision] = be31887
 projects[wetkit_migrate][download][branch] = 7.x-1.x
 
 projects[wetkit_og][version] = 1.x-dev
@@ -126,7 +126,7 @@ projects[wetkit_widgets][download][branch] = 7.x-1.x
 projects[wetkit_wysiwyg][version] = 1.x-dev
 projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_wysiwyg][download][type] = git
-projects[wetkit_wysiwyg][download][revision] = 5e414e3
+projects[wetkit_wysiwyg][download][revision] = 7a41740
 projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
 
 ; WetKit Foundation (Themes)
@@ -138,7 +138,7 @@ projects[wetkit_ember][download][branch] = 7.x-1.x
 
 projects[wetkit_omega][version] = 1.x-dev
 projects[wetkit_omega][download][type] = git
-projects[wetkit_omega][download][revision] = 6bc007d
+projects[wetkit_omega][download][revision] = d778f08
 projects[wetkit_omega][download][branch] = 7.x-1.x
 
 projects[wetkit_shiny][version] = 1.x-dev
