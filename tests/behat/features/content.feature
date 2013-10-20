@@ -3,7 +3,6 @@ Feature: Content
   As a website user
   When I save a piece of content it should be created
 
-  @api
   Scenario: Create and view a node with fields
     Given I am viewing an "wetkit_page" node:
     | title | My article with fields! |
