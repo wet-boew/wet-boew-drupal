@@ -1,4 +1,4 @@
-## v1.0-RC21-Pre-Release
+## v1.0-RC21
 
 Features:
 
