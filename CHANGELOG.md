@@ -1,8 +1,19 @@
-## v1.0-RC21
+## v1.0-RC22-Pre-Release
 
 Features:
 
   - This will be the last release candidate!
+
+Bug Fixes:
+
+  - (Commit: [8a3cb01][RC22-Commit-8a3cb01]) #[2116909][RC22-Issue-2116909] - Fixed Issues with 'Submission form settings".
+  - (Commit: [843c156][RC22-Commit-843c156]) #[2117177][RC22-Issue-2117177] - Added Need to add the content path to the admin content view page.
+
+## v1.0-RC21
+
+Features:
+
+  - This will be the second to last release candidate!
 
 Bug Fixes:
 
@@ -23,7 +34,7 @@ Bug Fixes:
 
 Features:
 
-  - This will be the second to last release candidate!
+  - This will be the third to last release candidate!
   - General theming improvements
 
 Bug Fixes:
@@ -172,6 +183,16 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+
+<!-- Commits RC22 -->
+
+[RC22-Commit-8a3cb01]:            http://drupalcode.org/project/wetkit_ember.git/commit/8a3cb01
+[RC22-Commit-843c156]:            http://drupalcode.org/project/wetkit_core.git/commit/843c156
+
+<!-- Issues RC22 -->
+
+[RC22-Issue-2116909]:             http://drupal.org/node/2116909
+[RC22-Issue-2117177]:             http://drupal.org/node/2117177
 
 <!-- Commits RC21 -->
 
