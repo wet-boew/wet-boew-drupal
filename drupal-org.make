@@ -6,13 +6,13 @@ core = 7.x
 projects[wetkit_admin][version] = 1.x-dev
 projects[wetkit_admin][subdir] = custom
 projects[wetkit_admin][download][type] = git
-projects[wetkit_admin][download][revision] = 77fda24
+projects[wetkit_admin][download][revision] = b1c2be7
 projects[wetkit_admin][download][branch] = 7.x-1.x
 
 projects[wetkit_bean][version] = 1.x-dev
 projects[wetkit_bean][subdir] = custom
 projects[wetkit_bean][download][type] = git
-projects[wetkit_bean][download][revision] = 4c40fe2
+projects[wetkit_bean][download][revision] = 3d7a901
 projects[wetkit_bean][download][branch] = 7.x-1.x
 
 projects[wetkit_breadcrumbs][version] = 1.x-dev
@@ -133,7 +133,7 @@ projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
 
 projects[wetkit_ember][version] = 1.x-dev
 projects[wetkit_ember][download][type] = git
-projects[wetkit_ember][download][revision] = 8a3cb01
+projects[wetkit_ember][download][revision] = fc0f750
 projects[wetkit_ember][download][branch] = 7.x-1.x
 
 projects[wetkit_omega][version] = 1.x-dev
