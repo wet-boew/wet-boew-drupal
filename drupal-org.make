@@ -39,12 +39,6 @@ projects[wetkit_deployment][download][type] = git
 projects[wetkit_deployment][download][revision] = fad32e7
 projects[wetkit_deployment][download][branch] = 7.x-1.x
 
-projects[wetkit_git][version] = 1.x-dev
-projects[wetkit_git][subdir] = custom
-projects[wetkit_git][download][type] = git
-projects[wetkit_git][download][revision] = 43c9509
-projects[wetkit_git][download][branch] = 7.x-1.x
-
 projects[wetkit_images][version] = 1.x-dev
 projects[wetkit_images][subdir] = custom
 projects[wetkit_images][download][type] = git
