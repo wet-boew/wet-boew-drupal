@@ -2,7 +2,7 @@
 
 Features:
 
-  - This will be the last release candidate!
+  - This will be the last release candidate before an official release
 
 Bug Fixes:
 
@@ -13,7 +13,7 @@ Bug Fixes:
 
 Features:
 
-  - This will be the second to last release candidate!
+  - Introduction of Behat for testing
 
 Bug Fixes:
 
@@ -34,7 +34,6 @@ Bug Fixes:
 
 Features:
 
-  - This will be the third to last release candidate!
   - General theming improvements
 
 Bug Fixes:
