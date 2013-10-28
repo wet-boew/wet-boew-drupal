@@ -214,7 +214,7 @@ Bug Fixes:
 [RC22-Commit-7f96c76]:            http://drupalcode.org/project/wetkit_deployment.git/commit/7f96c76
 [RC22-Commit-c064f79]:            http://drupalcode.org/project/wetkit_deployment.git/commit/c064f79
 [RC22-Commit-a4eb33c]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/a4eb33c
-[RC22-Commit-a4eb33c]:            http://drupalcode.org/project/wetkit.git/commit/a4eb33c
+[RC22-Commit-8554596]:            http://drupalcode.org/project/wetkit.git/commit/8554596
 [RC22-Commit-7ed88d1]:            http://drupalcode.org/project/wetkit_widgets.git/commit/7ed88d1
 
 <!-- Issues RC22 -->
