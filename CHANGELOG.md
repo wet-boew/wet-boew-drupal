@@ -3,11 +3,26 @@
 Features:
 
   - This will be the last release candidate before an official release
+  - Media is stabilizing
 
 Bug Fixes:
 
   - (Commit: [8a3cb01][RC22-Commit-8a3cb01]) #[2116909][RC22-Issue-2116909] - Fixed Issues with 'Submission form settings".
   - (Commit: [843c156][RC22-Commit-843c156]) #[2117177][RC22-Issue-2117177] - Added Need to add the content path to the admin content view page.
+  - (Commit: [9455d67][RC22-Commit-9455d67]) #[2118603][RC22-Issue-2118603] - Wetkit_core(): features version.
+  - (Commit: [69669a4][RC22-Commit-69669a4]) #[2118769][RC22-Issue-2118769] - Wetkit_git(): no longer needed?.
+  - (Commit: [c722983][RC22-Commit-c722983]) #[2118781][RC22-Issue-2118781] - Wetkit_deployment(): deploy+services_client() patch.
+  - (Commit: [3ad6185][RC22-Commit-3ad6185]) #[2116019][RC22-Issue-2116019] - Fixed WetKitMigrateDefaultContent shows 'Undefined property: stdClass::$vid".
+  - (Commit: [6d8e78e][RC22-Commit-6d8e78e]) #[2120627][RC22-Issue-2120627] - Wetkit_wysiwyg() caption_filter() patch committed.
+  - (Commit: [46dfe67][RC22-Commit-46dfe67]) #[2119765][RC22-Issue-2119765] - Added Language switch should be generated with language_negotiation_get_switch_links().
+  - (Commit: [3dd433b][RC22-Commit-3dd433b]) #[2118881][RC22-Issue-2118881] - Fixed Undefined variable: site_slogan_attributes().
+  - (Commit: [8c158cf][RC22-Commit-8c158cf]) #[2118807][RC22-Issue-2118807] - Wetkit_deployment(): environment_indicator() patches.
+  - (Commit: [3d7a901][RC22-Commit-3d7a901]) #[2118017][RC22-Issue-2118017] - Wetkit_beans(): bean patches.
+  - (Commit: [7f96c76][RC22-Commit-7f96c76]) #[2118791][RC22-Issue-2118791] - Wetkit_deployment(): services patch.
+  - (Commit: [c064f79][RC22-Commit-c064f79]) #[2118797][RC22-Issue-2118797] - Wetkit_deployment(): quick tabs release.
+  - (Commit: [a4eb33c][RC22-Commit-a4eb33c]) #[2121865][RC22-Issue-2121865] - Fixed Contextual links don't show for Path Breadcrumbs.
+  - (Commit: [8554596][RC22-Commit-8554596]) #[2119777][RC22-Issue-2119777] - Fixed Missing Translations in Distribution?.
+  - (Commit: [7ed88d1][RC22-Commit-7ed88d1]) #[2118893][RC22-Issue-2118893] - Fixed Alt text and title for images in translation overwritten and not showing.
 
 ## v1.0-RC21
 
@@ -187,11 +202,39 @@ Bug Fixes:
 
 [RC22-Commit-8a3cb01]:            http://drupalcode.org/project/wetkit_ember.git/commit/8a3cb01
 [RC22-Commit-843c156]:            http://drupalcode.org/project/wetkit_core.git/commit/843c156
+[RC22-Commit-9455d67]:            http://drupalcode.org/project/wetkit_core.git/commit/9455d67
+[RC22-Commit-69669a4]:            http://drupalcode.org/project/wetkit.git/commit/69669a4
+[RC22-Commit-c722983]:            http://drupalcode.org/project/wetkit_deployment.git/commit/c722983
+[RC22-Commit-3ad6185]:            http://drupalcode.org/project/wetkit_migrate.git/commit/3ad6185
+[RC22-Commit-6d8e78e]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/6d8e78e
+[RC22-Commit-46dfe67]:            http://drupalcode.org/project/wetkit_language.git/commit/46dfe67
+[RC22-Commit-3dd433b]:            http://drupalcode.org/project/wetkit_omega.git/commit/3dd433b
+[RC22-Commit-8c158cf]:            http://drupalcode.org/project/wetkit_deployment.git/commit/8c158cf
+[RC22-Commit-3d7a901]:            http://drupalcode.org/project/wetkit_bean.git/commit/3d7a901
+[RC22-Commit-7f96c76]:            http://drupalcode.org/project/wetkit_deployment.git/commit/7f96c76
+[RC22-Commit-c064f79]:            http://drupalcode.org/project/wetkit_deployment.git/commit/c064f79
+[RC22-Commit-a4eb33c]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/a4eb33c
+[RC22-Commit-a4eb33c]:            http://drupalcode.org/project/wetkit.git/commit/a4eb33c
+[RC22-Commit-7ed88d1]:            http://drupalcode.org/project/wetkit_widgets.git/commit/7ed88d1
 
 <!-- Issues RC22 -->
 
 [RC22-Issue-2116909]:             http://drupal.org/node/2116909
 [RC22-Issue-2117177]:             http://drupal.org/node/2117177
+[RC22-Issue-2118603]:             http://drupal.org/node/2118603
+[RC22-Issue-2118769]:             http://drupal.org/node/2118769
+[RC22-Issue-2118781]:             http://drupal.org/node/2118781
+[RC22-Issue-2116019]:             http://drupal.org/node/2116019
+[RC22-Issue-2120627]:             http://drupal.org/node/2120627
+[RC22-Issue-2119765]:             http://drupal.org/node/2119765
+[RC22-Issue-2118881]:             http://drupal.org/node/2118881
+[RC22-Issue-2118807]:             http://drupal.org/node/2118807
+[RC22-Issue-2118017]:             http://drupal.org/node/2118017
+[RC22-Issue-2118791]:             http://drupal.org/node/2118791
+[RC22-Issue-2118797]:             http://drupal.org/node/2118797
+[RC22-Issue-2121865]:             http://drupal.org/node/2121865
+[RC22-Issue-2119777]:             http://drupal.org/node/2119777
+[RC22-Issue-2118893]:             http://drupal.org/node/2118893
 
 <!-- Commits RC21 -->
 
