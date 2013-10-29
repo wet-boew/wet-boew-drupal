@@ -1,3 +1,13 @@
+## v1.0-Pre-Release
+
+Features:
+
+  - This is the first official release of WxT
+
+Bug Fixes:
+
+  - (Commit: [722d722][R1-Commit-722d722]) #[2118017][R1-Issue-2118017] - Remove Beans Panels from make file.
+
 ## v1.0-RC22
 
 Features:
@@ -198,6 +208,14 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+
+<!-- Commits R1 -->
+
+[R1-Commit-722d722]:            http://drupalcode.org/project/wetkit_bean.git/commit/722d722
+
+<!-- Issues R1 -->
+
+[R1-Issue-2118017]:             http://drupal.org/node/2118017
 
 <!-- Commits RC22 -->
 
