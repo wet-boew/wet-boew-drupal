@@ -1,4 +1,4 @@
-## v1.0-RC22-Pre-Release
+## v1.0-RC22
 
 Features:
 
