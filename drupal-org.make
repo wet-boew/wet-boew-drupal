@@ -5,6 +5,7 @@ core = 7.x
 
 projects[wetkit_admin][version] = 1.0
 projects[wetkit_admin][subdir] = custom
+projects[wetkit_admin][patch][2123537] = http://drupal.org/files/jquery_wetkit_admin-2123537-1.patch
 
 projects[wetkit_bean][version] = 1.0
 projects[wetkit_bean][subdir] = custom
