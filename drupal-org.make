@@ -15,7 +15,7 @@ projects[wetkit_breadcrumbs][subdir] = custom
 projects[wetkit_core][version] = 1.x-dev
 projects[wetkit_core][subdir] = custom
 projects[wetkit_core][download][type] = git
-projects[wetkit_core][download][revision] = 0795cd8
+projects[wetkit_core][download][revision] = 5d65d67
 projects[wetkit_core][download][branch] = 7.x-1.x
 
 projects[wetkit_demo][version] = 1.0
@@ -30,7 +30,7 @@ projects[wetkit_deployment][download][branch] = 7.x-1.x
 projects[wetkit_images][version] = 1.0
 projects[wetkit_images][subdir] = custom
 
-projects[wetkit_language][version] = 1.0
+projects[wetkit_language][version] = 1.1
 projects[wetkit_language][subdir] = custom
 
 projects[wetkit_layouts][version] = 1.x-dev
