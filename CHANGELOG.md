@@ -23,6 +23,7 @@ Bug Fixes:
   - (Commit: [a4eb33c][RC22-Commit-a4eb33c]) #[2121865][RC22-Issue-2121865] - Fixed Contextual links don't show for Path Breadcrumbs.
   - (Commit: [8554596][RC22-Commit-8554596]) #[2119777][RC22-Issue-2119777] - Fixed Missing Translations in Distribution?.
   - (Commit: [7ed88d1][RC22-Commit-7ed88d1]) #[2118893][RC22-Issue-2118893] - Fixed Alt text and title for images in translation overwritten and not showing.
+  - (Commit: [c36eef4][RC22-Commit-c36eef4]) #[2122431][RC22-Issue-2122431] - Fixed JS error when creating rules actions.
 
 ## v1.0-RC21
 
@@ -216,6 +217,7 @@ Bug Fixes:
 [RC22-Commit-a4eb33c]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/a4eb33c
 [RC22-Commit-8554596]:            http://drupalcode.org/project/wetkit.git/commit/8554596
 [RC22-Commit-7ed88d1]:            http://drupalcode.org/project/wetkit_widgets.git/commit/7ed88d1
+[RC22-Commit-c36eef4]:            http://drupalcode.org/project/wetkit_core.git/commit/c36eef4
 
 <!-- Issues RC22 -->
 
@@ -235,6 +237,7 @@ Bug Fixes:
 [RC22-Issue-2121865]:             http://drupal.org/node/2121865
 [RC22-Issue-2119777]:             http://drupal.org/node/2119777
 [RC22-Issue-2118893]:             http://drupal.org/node/2118893
+[RC22-Issue-2122431]:             http://drupal.org/node/2122431
 
 <!-- Commits RC21 -->
 
