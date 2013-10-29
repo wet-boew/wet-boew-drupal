@@ -1,18 +1,31 @@
-## v1.0-Pre-Release
+## v1.0-RC23-Pre-Release
 
 Features:
 
-  - This is the first official release of WxT
+  - This will be the last release candidate before an official release
 
 Bug Fixes:
 
-  - (Commit: [722d722][R1-Commit-722d722]) #[2118017][R1-Issue-2118017] - Remove Beans Panels from make file.
+  - (Commit: [722d722][RC23-Commit-722d722]) #[2118017][RC23-Issue-2118017] - Remove Beans Panels from make file.
+  - (Commit: [31ba15c][RC23-Commit-31ba15c]) #[2118649][RC23-Issue-2118649] - Wetkit_breadcrumbs() 1.0 release.
+  - (Commit: [be64594][RC23-Commit-be64594]) #[2118645][RC23-Issue-2118645] - Wetkit_admin(): 1.0 release.
+  - (Commit: [722d722][RC23-Commit-722d722]) #[2120647][RC23-Issue-2120647] - Wetkit_bean(): 1.0 release.
+  - (Commit: [5678c6e][RC23-Commit-5678c6e]) #[2118655][RC23-Issue-2118655] - Wetkit_demo(): 1.0 release.
+  - (Commit: [1111463][RC23-Commit-1111463]) #[2118817][RC23-Issue-2118817] - Wetkit_images(): 1.0 release.
+  - (Commit: [6714f02][RC23-Commit-6714f02]) #[2120657][RC23-Issue-2120657] - Wetkit_og() 1.0 release.
+  - (Commit: [38f6e11][RC23-Commit-38f6e11]) #[2118959][RC23-Issue-2118959] - Wetkit_theme() 1.0 release.
+  - (Commit: [d177959][RC23-Commit-d177959]) #[2120675][RC23-Issue-2120675] - Wetkit_search() 1.0 release.
+  - (Commit: [3c4488e][RC23-Commit-3c4488e]) #[2118961][RC23-Issue-2118961] - Wetkit_users() 1.0 release.
+  - (Commit: [9af4013][RC23-Commit-9af4013]) #[2118845][RC23-Issue-2118845] - Wetkit_language() 1.0 release.
+  - (Commit: [49e6bdf][RC23-Commit-49e6bdf]) #[2118863][RC23-Issue-2118863] - Wetkit_menu() 1.0 release.
+  - (Commit: [a264653][RC23-Commit-a264653]) #[2120661][RC23-Issue-2120661] - Wetkit_wetboew() 1.0 release.
+  - (Commit: [0ad6a49][RC23-Commit-0ad6a49]) #[2123187][RC23-Issue-2123187] - Wetkit_metatag() 1.0 release.
+  - (Commit: [d8bfc36][RC23-Commit-d8bfc36]) #[2118933][RC23-Issue-2118933] - Wetkit_pages() 1.0 release.
 
 ## v1.0-RC22
 
 Features:
 
-  - This will be the last release candidate before an official release
   - Media is stabilizing
 
 Bug Fixes:
@@ -209,13 +222,15 @@ Bug Fixes:
 <!-- Links Referenced -->
 
 
-<!-- Commits R1 -->
+<!-- Commits RC23 -->
 
-[R1-Commit-722d722]:            http://drupalcode.org/project/wetkit_bean.git/commit/722d722
+[RC23-Commit-722d722]:            http://drupalcode.org/project/wetkit_bean.git/commit/722d722
+[RC23-Commit-31ba15c]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/31ba15c
 
-<!-- Issues R1 -->
+<!-- Issues RC23 -->
 
-[R1-Issue-2118017]:             http://drupal.org/node/2118017
+[RC23-Issue-2118017]:             http://drupal.org/node/2118017
+[RC23-Issue-2118649]:             http://drupal.org/node/2118649
 
 <!-- Commits RC22 -->
 
