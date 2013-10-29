@@ -1,4 +1,4 @@
-## v1.0-RC23-Pre-Release
+## v1.0-RC23
 
 Features:
 
@@ -21,6 +21,7 @@ Bug Fixes:
   - (Commit: [a264653][RC23-Commit-a264653]) #[2120661][RC23-Issue-2120661] - Wetkit_wetboew() 1.0 release.
   - (Commit: [0ad6a49][RC23-Commit-0ad6a49]) #[2123187][RC23-Issue-2123187] - Wetkit_metatag() 1.0 release.
   - (Commit: [d8bfc36][RC23-Commit-d8bfc36]) #[2118933][RC23-Issue-2118933] - Wetkit_pages() 1.0 release.
+  - (Commit: [5d65d67][RC23-Commit-5d65d67]) #[2123501][RC23-Issue-2123501] - Upgrade Webform to 4.x.
 
 ## v1.0-RC22
 
@@ -226,11 +227,39 @@ Bug Fixes:
 
 [RC23-Commit-722d722]:            http://drupalcode.org/project/wetkit_bean.git/commit/722d722
 [RC23-Commit-31ba15c]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/31ba15c
+[RC23-Commit-be64594]:            http://drupalcode.org/project/wetkit_admin.git/commit/be64594
+[RC23-Commit-722d722]:            http://drupalcode.org/project/wetkit_bean.git/commit/722d722
+[RC23-Commit-5678c6e]:            http://drupalcode.org/project/wetkit_demo.git/commit/5678c6e
+[RC23-Commit-1111463]:            http://drupalcode.org/project/wetkit_images.git/commit/1111463
+[RC23-Commit-6714f02]:            http://drupalcode.org/project/wetkit_og.git/commit/6714f02
+[RC23-Commit-38f6e11]:            http://drupalcode.org/project/wetkit_theme.git/commit/38f6e11
+[RC23-Commit-d177959]:            http://drupalcode.org/project/wetkit_search.git/commit/d177959
+[RC23-Commit-3c4488e]:            http://drupalcode.org/project/wetkit_users.git/commit/3c4488e
+[RC23-Commit-9af4013]:            http://drupalcode.org/project/wetkit_language.git/commit/9af4013
+[RC23-Commit-49e6bdf]:            http://drupalcode.org/project/wetkit_menu.git/commit/49e6bdf
+[RC23-Commit-a264653]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/a264653
+[RC23-Commit-0ad6a49]:            http://drupalcode.org/project/wetkit_metatag.git/commit/0ad6a49
+[RC23-Commit-d8bfc36]:            http://drupalcode.org/project/wetkit_pages.git/commit/d8bfc36
+[RC23-Commit-5d65d67]:            http://drupalcode.org/project/wetkit_core.git/commit/5d65d67
 
 <!-- Issues RC23 -->
 
 [RC23-Issue-2118017]:             http://drupal.org/node/2118017
 [RC23-Issue-2118649]:             http://drupal.org/node/2118649
+[RC23-Issue-2118645]:             http://drupal.org/node/2118645
+[RC23-Issue-2120647]:             http://drupal.org/node/2120647
+[RC23-Issue-2118655]:             http://drupal.org/node/2118655
+[RC23-Issue-2118817]:             http://drupal.org/node/2118817
+[RC23-Issue-2120657]:             http://drupal.org/node/2120657
+[RC23-Issue-2118959]:             http://drupal.org/node/2118959
+[RC23-Issue-2120675]:             http://drupal.org/node/2120675
+[RC23-Issue-2118961]:             http://drupal.org/node/2118961
+[RC23-Issue-2118845]:             http://drupal.org/node/2118845
+[RC23-Issue-2118863]:             http://drupal.org/node/2118863
+[RC23-Issue-2120661]:             http://drupal.org/node/2120661
+[RC23-Issue-2123187]:             http://drupal.org/node/2123187
+[RC23-Issue-2118933]:             http://drupal.org/node/2118933
+[RC23-Issue-2123501]:             http://drupal.org/node/2123501
 
 <!-- Commits RC22 -->
 
