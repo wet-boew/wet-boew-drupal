@@ -1,3 +1,13 @@
+## v1.0
+
+Features:
+
+  - The 1.0 Official Release of Drupal WxT
+
+Bug Fixes:
+
+  - (Commit: [ ][R1-Commit-]) #[ ][R1-Issue-] - Remove Beans Panels from make file.
+
 ## v1.0-RC23
 
 Features:
