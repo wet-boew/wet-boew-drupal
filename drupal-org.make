@@ -34,7 +34,7 @@ projects[wetkit_images][subdir] = custom
 
 projects[wetkit_language][version] = 1.1
 projects[wetkit_language][subdir] = custom
-projects[wetkit_admin][patch][2119765] = http://drupal.org/files/wetkit_language_switcher-2119765-01.patch
+projects[wetkit_language][patch][2119765] = http://drupal.org/files/wetkit_language_switcher-2119765-01.patch
 
 projects[wetkit_layouts][version] = 1.x-dev
 projects[wetkit_layouts][subdir] = custom
