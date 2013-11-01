@@ -12,5 +12,9 @@ default:
       blackbox: ~
       drush:
         alias: self
+      region_map:
+        Content Well: "#wb-main-in"
+        Left Sidebar: "#wb-sec-in"
+        Mega Menu: ".mb-menu"
 imports:
   - behat.local.yml
