@@ -7,6 +7,7 @@ Features:
 Bug Fixes:
 
   - (Commit: [3f84d12][R1-Commit-3f84d12]) #[2126505][R1-Issue-2126505] - CKEditor Improvements.
+  - (Commit: [57bd421][R1-Commit-57bd421]) #[2082873][R1-Issue-2082873] - Improve Z-Index for media popup.
 
 ## v1.0-RC23
 
@@ -236,10 +237,12 @@ Bug Fixes:
 <!-- Commits R1 -->
 
 [RC23-Commit-3f84d12]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/3f84d12
+[RC23-Commit-57bd421]:            http://drupalcode.org/project/wetkit_omega.git/commit/57bd421
 
 <!-- Issues R1 -->
 
 [RC23-Issue-2126505]:             http://drupal.org/node/2126505
+[RC23-Issue-2082873]:             http://drupal.org/node/2082873
 
 <!-- Commits RC23 -->
 
