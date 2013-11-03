@@ -6,7 +6,11 @@ Features:
 
 Bug Fixes:
 
-  - (Commit: [ ][R1-Commit-]) #[ ][R1-Issue-] - Remove Beans Panels from make file.
+  - (Commit: [3f84d12][R1-Commit-3f84d12]) #[2126505][R1-Issue-2126505] - CKEditor Improvements.
+  - (Commit: [57bd421][R1-Commit-57bd421]) #[2082873][R1-Issue-2082873] - Improve Z-Index for media popup.
+  - (Commit: [602e530][R1-Commit-602e530]) #[2118893][R1-Issue-2118893] - Alt text and title for images in translation overwritten and not showing (1).
+  - (Commit: [61320e7][R1-Commit-61320e7]) #[2118893][R1-Issue-2118893] - Alt text and title for images in translation overwritten and not showing (2).
+  - (Commit: [befa62b][R1-Commit-befa62b]) #[2126549][R1-Issue-2126549] - Improve Demo Module (1).
 
 ## v1.0-RC23
 
@@ -232,6 +236,21 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+
+<!-- Commits R1 -->
+
+[RC23-Commit-3f84d12]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/3f84d12
+[RC23-Commit-57bd421]:            http://drupalcode.org/project/wetkit_omega.git/commit/57bd421
+[RC23-Commit-602e530]:            http://drupalcode.org/project/wetkit_widgets.git/commit/602e530
+[RC23-Commit-61320e7]:            http://drupalcode.org/project/wetkit_migrate.git/commit/61320e7
+[RC23-Commit-befa62b]:            http://drupalcode.org/project/wetkit_migrate.git/commit/befa62b
+
+<!-- Issues R1 -->
+
+[RC23-Issue-2126505]:             http://drupal.org/node/2126505
+[RC23-Issue-2082873]:             http://drupal.org/node/2082873
+[RC23-Issue-2118893]:             http://drupal.org/node/2118893
+[RC23-Issue-2126549]:             http://drupal.org/node/2126549
 
 <!-- Commits RC23 -->
 
