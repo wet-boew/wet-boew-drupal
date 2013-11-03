@@ -6,7 +6,7 @@ Features:
 
 Bug Fixes:
 
-  - (Commit: [ ][R1-Commit-]) #[ ][R1-Issue-] - Remove Beans Panels from make file.
+  - (Commit: [3f84d12][R1-Commit-3f84d12]) #[2126505][R1-Issue-2126505] - CKEditor Improvements.
 
 ## v1.0-RC23
 
@@ -232,6 +232,14 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+
+<!-- Commits R1 -->
+
+[RC23-Commit-3f84d12]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/3f84d12
+
+<!-- Issues R1 -->
+
+[RC23-Issue-2126505]:             http://drupal.org/node/2126505
 
 <!-- Commits RC23 -->
 
