@@ -241,7 +241,13 @@ function wetkit_import_demo_content() {
     t('Importing content.'),
     ));
 
-  // Run Default_content migration.
+  // Run Default Content Media migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateDefaultContentMedia',
+    t('Importing media.'),
+    ));
+
+  // Run Default Content migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateDefaultContent',
     t('Importing content.'),

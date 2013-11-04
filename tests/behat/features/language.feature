@@ -5,6 +5,6 @@ Feature: Search
 
   @api
   Scenario: Using language toggle
-    Given I am on "content/wetkit-features"
+    Given I am on "en/content/drupal-wxt"
     When I click "Français"
     Then I should not see "Page non trouvée"
