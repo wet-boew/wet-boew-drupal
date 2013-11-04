@@ -3,6 +3,8 @@ core = 7.x
 
 projects[drupal][version] = 7.23
 projects[drupal][type] = core
+projects[drupal][download][type] = get
+projects[drupal][download][url] = http://ftp.drupal.org/files/projects/drupal-7.23.tar.gz
 
 ; Patches for Drupal Core
 projects[drupal][patch][728702]  = http://drupal.org/files/issues/install-redirect-on-empty-database-728702-36.patch
