@@ -11,6 +11,7 @@ Bug Fixes:
   - (Commit: [602e530][R1-Commit-602e530]) #[2118893][R1-Issue-2118893] - Alt text and title for images in translation overwritten and not showing (1).
   - (Commit: [61320e7][R1-Commit-61320e7]) #[2118893][R1-Issue-2118893] - Alt text and title for images in translation overwritten and not showing (2).
   - (Commit: [befa62b][R1-Commit-befa62b]) #[2126549][R1-Issue-2126549] - Improve Demo Module (1).
+  - (Commit: [2774fb3][R1-Commit-2774fb3]) #[2126549][R1-Issue-2126549] - Improve Demo Module (2).
 
 ## v1.0-RC23
 
@@ -244,6 +245,7 @@ Bug Fixes:
 [R1-Commit-602e530]:            http://drupalcode.org/project/wetkit_widgets.git/commit/602e530
 [R1-Commit-61320e7]:            http://drupalcode.org/project/wetkit_migrate.git/commit/61320e7
 [R1-Commit-befa62b]:            http://drupalcode.org/project/wetkit_migrate.git/commit/befa62b
+[R1-Commit-2774fb3]:            http://drupalcode.org/project/wetkit_migrate.git/commit/2774fb3
 
 <!-- Issues R1 -->
 
