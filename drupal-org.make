@@ -90,16 +90,19 @@ projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
 ; WetKit Foundation (Themes)
 
 projects[wetkit_ember][version] = 1.x-dev
+projects[wetkit_ember][type] = theme
 projects[wetkit_ember][download][type] = git
 projects[wetkit_ember][download][revision] = 20cc694
 projects[wetkit_ember][download][branch] = 7.x-1.x
 
 projects[wetkit_omega][version] = 1.x-dev
+projects[wetkit_omega][type] = theme
 projects[wetkit_omega][download][type] = git
 projects[wetkit_omega][download][revision] = 57bd421
 projects[wetkit_omega][download][branch] = 7.x-1.x
 
 projects[wetkit_shiny][version] = 1.x-dev
+projects[wetkit_omega][type] = theme
 projects[wetkit_shiny][download][type] = git
 projects[wetkit_shiny][download][revision] = d115664
 projects[wetkit_shiny][download][branch] = 7.x-1.x
