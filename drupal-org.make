@@ -3,13 +3,17 @@ core = 7.x
 
 ; WetKit Foundation (Custom)
 
-projects[wetkit_admin][version] = 1.0
+projects[wetkit_admin][version] = 1.x-dev
 projects[wetkit_admin][subdir] = custom
-projects[wetkit_admin][patch][2123537] = http://drupal.org/files/jquery_wetkit_admin-2123537-1.patch
-projects[wetkit_admin][patch][2124073] = http://drupal.org/files/jquery_wetkit_admin-2124073-1.patch
+projects[wetkit_admin][download][type] = git
+projects[wetkit_admin][download][revision] = bc70efd
+projects[wetkit_admin][download][branch] = 7.x-1.x
 
-projects[wetkit_bean][version] = 1.0
+projects[wetkit_bean][version] = 1.x-dev
 projects[wetkit_bean][subdir] = custom
+projects[wetkit_bean][download][type] = git
+projects[wetkit_bean][download][revision] = e1ecc27
+projects[wetkit_bean][download][branch] = 7.x-1.x
 
 projects[wetkit_breadcrumbs][version] = 1.0
 projects[wetkit_breadcrumbs][subdir] = custom
@@ -32,9 +36,11 @@ projects[wetkit_deployment][download][branch] = 7.x-1.x
 projects[wetkit_images][version] = 1.0
 projects[wetkit_images][subdir] = custom
 
-projects[wetkit_language][version] = 1.1
+projects[wetkit_language][version] = 1.x-dev
 projects[wetkit_language][subdir] = custom
-projects[wetkit_language][patch][2119765] = http://drupal.org/files/wetkit_language_switcher-2119765-01.patch
+projects[wetkit_language][download][type] = git
+projects[wetkit_language][download][revision] = bfeb6c6
+projects[wetkit_language][download][branch] = 7.x-1.x
 
 projects[wetkit_layouts][version] = 1.x-dev
 projects[wetkit_layouts][subdir] = custom
