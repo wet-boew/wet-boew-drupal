@@ -1,4 +1,4 @@
-name = Drupal WEM
+name = Drupal WxT
 distribution_name = WetKit
 description = Installation Profile created for the Web Experience Toolkit using Drupal WxT.
 core = 7.x

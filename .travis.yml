@@ -13,7 +13,7 @@ env:
 # Specifications of database(s)
 mysql:
   adapter: mysql2
-  database: wetkit_db
+  database: drupal_db
   username: root
   encoding: utf8
 postgres:

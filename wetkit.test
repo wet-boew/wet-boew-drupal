@@ -6,7 +6,7 @@
  */
 
 /**
- * This Test class will test various functionality related to WxT-Drupal
+ * This Test class will test various functionality related to Drupal WxT.
  */
 class WetKitArchivedWidgetTestCase extends WetKitWebTestCase {
 
@@ -17,7 +17,7 @@ class WetKitArchivedWidgetTestCase extends WetKitWebTestCase {
     return array(
       'name' => 'Archived widget pane',
       'description' => 'Archived widget pane.',
-      'group' => 'WetKit',
+      'group' => 'WxT',
     );
   }
 
