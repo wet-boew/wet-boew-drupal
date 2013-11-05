@@ -1,6 +1,6 @@
 <img alt="Banner" src="http://dl.dropbox.com/u/38413195/banner.jpeg" title="By Y Anderson (Own work) [CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0" class="img-responsive">
 
-# Web Experience Toolkit: Drupal WEM
+# Web Experience Toolkit: Drupal WxT
 
 [![Build Status][travisci-badge]][travisci]
 [![Selenium Test Status][selenium-badge]][selenium]
@@ -18,7 +18,7 @@
 
 ## Overview
 
-The WxT-Drupal distribution is a web content management system which assists in building and maintaining innovative Web sites that are accessible, usable, and interoperable. This distribution is open source software and free for use by departments and external Web communities. This distribution relies and integrates extensively on the [WET-BOEW jQuery Framework][wet-boew] to leverage much of the rendering and overall markup.
+The Drupal WxT distribution is a web content management system which assists in building and maintaining innovative Web sites that are accessible, usable, and interoperable. This distribution is open source software and free for use by departments and external Web communities. This distribution relies and integrates extensively on the [WET-BOEW jQuery Framework][wet-boew] to leverage much of the rendering and overall markup.
 
 Development has been tailored for organizations that need to comply with standards for accessibility and bilingualism or that simply need a distribution that allows them to get up and running quickly using a carefully curated selection of modules that can support common enterprise business requirements.
 
