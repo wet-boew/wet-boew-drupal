@@ -1,25 +1,27 @@
-## v1.0
+## v1.0-RC24
 
 Features:
 
-  - The 1.0 Official Release of Drupal WxT
+  - Closing in on a 1.0 release but too many bug fixes need to be pushed up so RC24.
 
 Bug Fixes:
 
-  - (Commit: [3f84d12][R1-Commit-3f84d12]) #[2126505][R1-Issue-2126505] - CKEditor Improvements.
-  - (Commit: [57bd421][R1-Commit-57bd421]) #[2082873][R1-Issue-2082873] - Improve Z-Index for media popup.
-  - (Commit: [602e530][R1-Commit-602e530]) #[2118893][R1-Issue-2118893] - Alt text and title for images in translation overwritten and not showing (1).
-  - (Commit: [61320e7][R1-Commit-61320e7]) #[2118893][R1-Issue-2118893] - Alt text and title for images in translation overwritten and not showing (2).
-  - (Commit: [befa62b][R1-Commit-befa62b]) #[2126549][R1-Issue-2126549] - Improve Demo Module (1).
-  - (Commit: [2774fb3][R1-Commit-2774fb3]) #[2126549][R1-Issue-2126549] - Improve Demo Module (2).
-  - (Commit: [12e2ffe][R1-Commit-12e2ffe]) #[2124987][R1-Issue-2124987] - Invalid argument supplied for foreach() in wetkit_admin_panels_pane_content_alter().
-  - (Commit: [f688a27][R1-Commit-f688a27]) #[2129371][R1-Issue-2129371] - Cannot enable WxT layout, get "Attempt to modify property of non-object" warning.
+  - (Commit: [3f84d12][RC24-Commit-3f84d12]) #[2126505][RC24-Issue-2126505] - CKEditor Improvements.
+  - (Commit: [57bd421][RC24-Commit-57bd421]) #[2082873][RC24-Issue-2082873] - Improve Z-Index for media popup.
+  - (Commit: [602e530][RC24-Commit-602e530]) #[2118893][RC24-Issue-2118893] - Alt text and title for images in translation overwritten and not showing (1).
+  - (Commit: [61320e7][RC24-Commit-61320e7]) #[2118893][RC24-Issue-2118893] - Alt text and title for images in translation overwritten and not showing (2).
+  - (Commit: [befa62b][RC24-Commit-befa62b]) #[2126549][RC24-Issue-2126549] - Improve Demo Module (1).
+  - (Commit: [2774fb3][RC24-Commit-2774fb3]) #[2126549][RC24-Issue-2126549] - Improve Demo Module (2).
+  - (Commit: [12e2ffe][RC24-Commit-12e2ffe]) #[2124987][RC24-Issue-2124987] - Invalid argument supplied for foreach() in wetkit_admin_panels_pane_content_alter().
+  - (Commit: [f688a27][RC24-Commit-f688a27]) #[2129371][RC24-Issue-2129371] - Cannot enable WxT layout, get "Attempt to modify property of non-object" warning.
+  - (Commit: [8e2175a][RC24-Commit-8e2175a]) #[2125205][RC24-Issue-2125205] - Wetkit Ember has layout issues.
+  - (Commit: [00b9f8b][RC24-Commit-00b9f8b]) #[2123903][RC24-Issue-2123903] - Undefined index: label in entity_translation_admin_form()
 
 ## v1.0-RC23
 
 Features:
 
-  - This will be the last release candidate before an official release
+  - Webform with Entity support
 
 Bug Fixes:
 
@@ -240,25 +242,29 @@ Bug Fixes:
 <!-- Links Referenced -->
 
 
-<!-- Commits R1 -->
+<!-- Commits RC24 -->
 
-[R1-Commit-3f84d12]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/3f84d12
-[R1-Commit-57bd421]:            http://drupalcode.org/project/wetkit_omega.git/commit/57bd421
-[R1-Commit-602e530]:            http://drupalcode.org/project/wetkit_widgets.git/commit/602e530
-[R1-Commit-61320e7]:            http://drupalcode.org/project/wetkit_migrate.git/commit/61320e7
-[R1-Commit-befa62b]:            http://drupalcode.org/project/wetkit_migrate.git/commit/befa62b
-[R1-Commit-2774fb3]:            http://drupalcode.org/project/wetkit_migrate.git/commit/2774fb3
-[R1-Commit-12e2ffe]:            http://drupalcode.org/project/wetkit_admin.git/commit/12e2ffe
-[R1-Commit-f688a27]:            http://drupalcode.org/project/wetkit_admin.git/commit/f688a27
+[RC24-Commit-3f84d12]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/3f84d12
+[RC24-Commit-57bd421]:            http://drupalcode.org/project/wetkit_omega.git/commit/57bd421
+[RC24-Commit-602e530]:            http://drupalcode.org/project/wetkit_widgets.git/commit/602e530
+[RC24-Commit-61320e7]:            http://drupalcode.org/project/wetkit_migrate.git/commit/61320e7
+[RC24-Commit-befa62b]:            http://drupalcode.org/project/wetkit_migrate.git/commit/befa62b
+[RC24-Commit-2774fb3]:            http://drupalcode.org/project/wetkit_migrate.git/commit/2774fb3
+[RC24-Commit-12e2ffe]:            http://drupalcode.org/project/wetkit_admin.git/commit/12e2ffe
+[RC24-Commit-f688a27]:            http://drupalcode.org/project/wetkit_admin.git/commit/f688a27
+[RC24-Commit-8e2175a]:            http://drupalcode.org/project/wetkit_ember.git/commit/8e2175a
+[RC24-Commit-00b9f8b]:            http://drupalcode.org/project/wetkit_metatag.git/commit/00b9f8b
 
-<!-- Issues R1 -->
+<!-- Issues RC24 -->
 
-[R1-Issue-2126505]:             http://drupal.org/node/2126505
-[R1-Issue-2082873]:             http://drupal.org/node/2082873
-[R1-Issue-2118893]:             http://drupal.org/node/2118893
-[R1-Issue-2126549]:             http://drupal.org/node/2126549
-[R1-Issue-2124987]:             http://drupal.org/node/2124987
-[R1-Issue-2129371]:             http://drupal.org/node/2129371
+[RC24-Issue-2126505]:             http://drupal.org/node/2126505
+[RC24-Issue-2082873]:             http://drupal.org/node/2082873
+[RC24-Issue-2118893]:             http://drupal.org/node/2118893
+[RC24-Issue-2126549]:             http://drupal.org/node/2126549
+[RC24-Issue-2124987]:             http://drupal.org/node/2124987
+[RC24-Issue-2129371]:             http://drupal.org/node/2129371
+[RC24-Issue-2125205]:             http://drupal.org/node/2125205
+[RC24-Issue-2123903]:             http://drupal.org/node/2123903
 
 <!-- Commits RC23 -->
 
