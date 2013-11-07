@@ -16,6 +16,7 @@ Bug Fixes:
   - (Commit: [f688a27][RC24-Commit-f688a27]) #[2129371][RC24-Issue-2129371] - Cannot enable WxT layout, get "Attempt to modify property of non-object" warning.
   - (Commit: [8e2175a][RC24-Commit-8e2175a]) #[2125205][RC24-Issue-2125205] - Wetkit Ember has layout issues.
   - (Commit: [00b9f8b][RC24-Commit-00b9f8b]) #[2123903][RC24-Issue-2123903] - Undefined index: label in entity_translation_admin_form()
+  - (Commit: [370bd75][RC24-Commit-370bd75]) #[2098125][RC24-Issue-2098125] - Last Revision Author preferred in Content listing.
 
 ## v1.0-RC23
 
@@ -254,6 +255,7 @@ Bug Fixes:
 [RC24-Commit-f688a27]:            http://drupalcode.org/project/wetkit_admin.git/commit/f688a27
 [RC24-Commit-8e2175a]:            http://drupalcode.org/project/wetkit_ember.git/commit/8e2175a
 [RC24-Commit-00b9f8b]:            http://drupalcode.org/project/wetkit_metatag.git/commit/00b9f8b
+[RC24-Commit-370bd75]:            http://drupalcode.org/project/wetkit_core.git/commit/370bd75
 
 <!-- Issues RC24 -->
 
@@ -265,6 +267,7 @@ Bug Fixes:
 [RC24-Issue-2129371]:             http://drupal.org/node/2129371
 [RC24-Issue-2125205]:             http://drupal.org/node/2125205
 [RC24-Issue-2123903]:             http://drupal.org/node/2123903
+[RC24-Issue-2098125]:             http://drupal.org/node/2098125
 
 <!-- Commits RC23 -->
 
