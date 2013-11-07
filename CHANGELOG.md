@@ -1,3 +1,13 @@
+## v1.0-PreRelease
+
+Features:
+
+  - Official 1.0 Release
+
+Bug Fixes:
+
+  - (Commit: [ee24fdf][R1-Commit-ee24fdf]) #[2128509][R1-Issue-2128509] - Twitter bean plugin requires customisation form.
+
 ## v1.0-RC24
 
 Features:
@@ -243,6 +253,14 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+
+<!-- Commits R1 -->
+
+[R1-Commit-ee24fdf]:            http://drupalcode.org/project/wetkit_bean.git/commit/ee24fdf
+
+<!-- Issues R1 -->
+
+[R1-Issue-2128509]:             http://drupal.org/node/2128509
 
 <!-- Commits RC24 -->
 
