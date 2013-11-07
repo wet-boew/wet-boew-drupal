@@ -12,6 +12,7 @@ Bug Fixes:
   - (Commit: [61320e7][R1-Commit-61320e7]) #[2118893][R1-Issue-2118893] - Alt text and title for images in translation overwritten and not showing (2).
   - (Commit: [befa62b][R1-Commit-befa62b]) #[2126549][R1-Issue-2126549] - Improve Demo Module (1).
   - (Commit: [2774fb3][R1-Commit-2774fb3]) #[2126549][R1-Issue-2126549] - Improve Demo Module (2).
+  - (Commit: [12e2ffe][R1-Commit-12e2ffe]) #[2124987][R1-Issue-2124987] - Invalid argument supplied for foreach() in wetkit_admin_panels_pane_content_alter().
 
 ## v1.0-RC23
 
@@ -246,6 +247,7 @@ Bug Fixes:
 [R1-Commit-61320e7]:            http://drupalcode.org/project/wetkit_migrate.git/commit/61320e7
 [R1-Commit-befa62b]:            http://drupalcode.org/project/wetkit_migrate.git/commit/befa62b
 [R1-Commit-2774fb3]:            http://drupalcode.org/project/wetkit_migrate.git/commit/2774fb3
+[R1-Commit-12e2ffe]:            http://drupalcode.org/project/wetkit_admin.git/commit/12e2ffe
 
 <!-- Issues R1 -->
 
@@ -253,6 +255,7 @@ Bug Fixes:
 [R1-Issue-2082873]:             http://drupal.org/node/2082873
 [R1-Issue-2118893]:             http://drupal.org/node/2118893
 [R1-Issue-2126549]:             http://drupal.org/node/2126549
+[R1-Issue-2124987]:             http://drupal.org/node/2124987
 
 <!-- Commits RC23 -->
 
