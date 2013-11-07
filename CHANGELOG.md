@@ -17,6 +17,7 @@ Bug Fixes:
   - (Commit: [8e2175a][RC24-Commit-8e2175a]) #[2125205][RC24-Issue-2125205] - Wetkit Ember has layout issues.
   - (Commit: [00b9f8b][RC24-Commit-00b9f8b]) #[2123903][RC24-Issue-2123903] - Undefined index: label in entity_translation_admin_form()
   - (Commit: [370bd75][RC24-Commit-370bd75]) #[2098125][RC24-Issue-2098125] - Last Revision Author preferred in Content listing.
+  - (Commit: [674007f][RC24-Commit-674007f]) #[2129393][RC24-Issue-2129393] - Megamenu minipanels not loading in admin pages.
 
 ## v1.0-RC23
 
@@ -256,6 +257,7 @@ Bug Fixes:
 [RC24-Commit-8e2175a]:            http://drupalcode.org/project/wetkit_ember.git/commit/8e2175a
 [RC24-Commit-00b9f8b]:            http://drupalcode.org/project/wetkit_metatag.git/commit/00b9f8b
 [RC24-Commit-370bd75]:            http://drupalcode.org/project/wetkit_core.git/commit/370bd75
+[RC24-Commit-674007f]:            http://drupalcode.org/project/wetkit_menu.git/commit/674007f
 
 <!-- Issues RC24 -->
 
@@ -268,6 +270,7 @@ Bug Fixes:
 [RC24-Issue-2125205]:             http://drupal.org/node/2125205
 [RC24-Issue-2123903]:             http://drupal.org/node/2123903
 [RC24-Issue-2098125]:             http://drupal.org/node/2098125
+[RC24-Issue-2129393]:             http://drupal.org/node/2129393
 
 <!-- Commits RC23 -->
 

@@ -48,8 +48,11 @@ projects[wetkit_layouts][download][type] = git
 projects[wetkit_layouts][download][revision] = 7f93268
 projects[wetkit_layouts][download][branch] = 7.x-1.x
 
-projects[wetkit_menu][version] = 1.0
+projects[wetkit_menu][version] = 1.x-dev
 projects[wetkit_menu][subdir] = custom
+projects[wetkit_menu][download][type] = git
+projects[wetkit_menu][download][revision] = 674007f
+projects[wetkit_menu][download][branch] = 7.x-1.x
 
 projects[wetkit_metatag][version] = 1.x-dev
 projects[wetkit_metatag][subdir] = custom
