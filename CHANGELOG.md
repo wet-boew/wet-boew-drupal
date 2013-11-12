@@ -8,7 +8,7 @@ Bug Fixes:
 
   - (Commit: [ee24fdf][R1-Commit-ee24fdf]) #[2128509][R1-Issue-2128509] - Twitter bean plugin requires customisation form.
   - (Commit: [27066a5][R1-Commit-27066a5]) #[2133467][R1-Issue-2133467] - Breadcrumbs show up in English even if viewing page in French.
-
+  - (Commit: [a6a2baa][R1-Commit-a6a2baa]) #[2134109][R1-Issue-2134109] - Migrated content has wrong workbench moderation state.
 ## v1.0-RC24
 
 Features:
@@ -259,11 +259,13 @@ Bug Fixes:
 
 [R1-Commit-ee24fdf]:            http://drupalcode.org/project/wetkit_bean.git/commit/ee24fdf
 [R1-Commit-27066a5]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/27066a5
+[R1-Commit-a6a2baa]:            http://drupalcode.org/project/wetkit_migrate.git/commit/a6a2baa
 
 <!-- Issues R1 -->
 
 [R1-Issue-2128509]:             http://drupal.org/node/2128509
 [R1-Issue-2133467]:             http://drupal.org/node/2133467
+[R1-Issue-2134109]:             http://drupal.org/node/2134109
 
 <!-- Commits RC24 -->
 
