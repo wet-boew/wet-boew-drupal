@@ -262,12 +262,14 @@ Bug Fixes:
 [R1-Commit-ee24fdf]:            http://drupalcode.org/project/wetkit_bean.git/commit/ee24fdf
 [R1-Commit-27066a5]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/27066a5
 [R1-Commit-a6a2baa]:            http://drupalcode.org/project/wetkit_migrate.git/commit/a6a2baa
+[R1-Commit-afe7c34]:            http://drupalcode.org/project/wetkit_menu.git/commit/afe7c34
 
 <!-- Issues R1 -->
 
 [R1-Issue-2128509]:             http://drupal.org/node/2128509
 [R1-Issue-2133467]:             http://drupal.org/node/2133467
 [R1-Issue-2134109]:             http://drupal.org/node/2134109
+[R1-Issue-2131827]:             http://drupal.org/node/2131827
 
 <!-- Commits RC24 -->
 
