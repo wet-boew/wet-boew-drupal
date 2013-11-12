@@ -10,6 +10,7 @@ Bug Fixes:
   - (Commit: [27066a5][R1-Commit-27066a5]) #[2133467][R1-Issue-2133467] - Breadcrumbs show up in English even if viewing page in French.
   - (Commit: [a6a2baa][R1-Commit-a6a2baa]) #[2134109][R1-Issue-2134109] - Migrated content has wrong workbench moderation state.
   - (Commit: [afe7c34][R1-Commit-afe7c34]) #[2131827][R1-Issue-2131827] - Sidebar menu not outputting depth 3 and 4 correctly.
+  - (Commit: [7b8ce8c][R1-Commit-7b8ce8c]) #[2125487][R1-Issue-2125487] - Missing text format: filtered_html().
 
 ## v1.0-RC24
 
@@ -263,6 +264,7 @@ Bug Fixes:
 [R1-Commit-27066a5]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/27066a5
 [R1-Commit-a6a2baa]:            http://drupalcode.org/project/wetkit_migrate.git/commit/a6a2baa
 [R1-Commit-afe7c34]:            http://drupalcode.org/project/wetkit_menu.git/commit/afe7c34
+[R1-Commit-7b8ce8c]:            http://drupalcode.org/project/wetkit_core.git/commit/7b8ce8c
 
 <!-- Issues R1 -->
 
@@ -270,6 +272,7 @@ Bug Fixes:
 [R1-Issue-2133467]:             http://drupal.org/node/2133467
 [R1-Issue-2134109]:             http://drupal.org/node/2134109
 [R1-Issue-2131827]:             http://drupal.org/node/2131827
+[R1-Issue-2125487]:             http://drupal.org/node/2125487
 
 <!-- Commits RC24 -->
 
