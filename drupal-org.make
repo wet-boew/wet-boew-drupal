@@ -15,8 +15,11 @@ projects[wetkit_bean][download][type] = git
 projects[wetkit_bean][download][revision] = ee24fdf
 projects[wetkit_bean][download][branch] = 7.x-1.x
 
-projects[wetkit_breadcrumbs][version] = 1.0
+projects[wetkit_breadcrumbs][version] = 1.x-dev
 projects[wetkit_breadcrumbs][subdir] = custom
+projects[wetkit_breadcrumbs][download][type] = git
+projects[wetkit_breadcrumbs][download][revision] = 27066a5
+projects[wetkit_breadcrumbs][download][branch] = 7.x-1.x
 
 projects[wetkit_core][version] = 1.x-dev
 projects[wetkit_core][subdir] = custom
