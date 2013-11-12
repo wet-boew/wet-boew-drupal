@@ -18,13 +18,13 @@ projects[wetkit_bean][download][branch] = 7.x-1.x
 projects[wetkit_breadcrumbs][version] = 1.x-dev
 projects[wetkit_breadcrumbs][subdir] = custom
 projects[wetkit_breadcrumbs][download][type] = git
-projects[wetkit_breadcrumbs][download][revision] = 27066a5
+projects[wetkit_breadcrumbs][download][revision] = 5ef985b
 projects[wetkit_breadcrumbs][download][branch] = 7.x-1.x
 
 projects[wetkit_core][version] = 1.x-dev
 projects[wetkit_core][subdir] = custom
 projects[wetkit_core][download][type] = git
-projects[wetkit_core][download][revision] = 7b8ce8c
+projects[wetkit_core][download][revision] = 2117b10
 projects[wetkit_core][download][branch] = 7.x-1.x
 
 projects[wetkit_demo][version] = 1.0

@@ -3,6 +3,7 @@
 Features:
 
   - Official 1.0 Release
+  - Entity API has been patched so important to watch for possible regressions
 
 Bug Fixes:
 
@@ -11,6 +12,7 @@ Bug Fixes:
   - (Commit: [a6a2baa][R1-Commit-a6a2baa]) #[2134109][R1-Issue-2134109] - Migrated content has wrong workbench moderation state.
   - (Commit: [afe7c34][R1-Commit-afe7c34]) #[2131827][R1-Issue-2131827] - Sidebar menu not outputting depth 3 and 4 correctly.
   - (Commit: [7b8ce8c][R1-Commit-7b8ce8c]) #[2125487][R1-Issue-2125487] - Missing text format: filtered_html().
+  - (Commit: [2117b10][R1-Commit-2117b10]) #[2124031][R1-Issue-2124031] - Entity_access() fails when using entity reference.
 
 ## v1.0-RC24
 
@@ -265,6 +267,7 @@ Bug Fixes:
 [R1-Commit-a6a2baa]:            http://drupalcode.org/project/wetkit_migrate.git/commit/a6a2baa
 [R1-Commit-afe7c34]:            http://drupalcode.org/project/wetkit_menu.git/commit/afe7c34
 [R1-Commit-7b8ce8c]:            http://drupalcode.org/project/wetkit_core.git/commit/7b8ce8c
+[R1-Commit-2117b10]:            http://drupalcode.org/project/wetkit_core.git/commit/2117b10
 
 <!-- Issues R1 -->
 
@@ -273,6 +276,7 @@ Bug Fixes:
 [R1-Issue-2134109]:             http://drupal.org/node/2134109
 [R1-Issue-2131827]:             http://drupal.org/node/2131827
 [R1-Issue-2125487]:             http://drupal.org/node/2125487
+[R1-Issue-2124031]:             http://drupal.org/node/2124031
 
 <!-- Commits RC24 -->
 
