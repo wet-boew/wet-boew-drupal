@@ -4,6 +4,7 @@ Features:
 
   - Official 1.0 Release
   - Entity API has been patched so important to watch for possible regressions
+  - jQuery Mobile now requires a permission to be set and by default only works with Anonymous Users
 
 Bug Fixes:
 
@@ -16,6 +17,7 @@ Bug Fixes:
   - (Commit: [cbf7c30][R1-Commit-cbf7c30]) #[2134621][R1-Issue-2134621] - Migration isn't stripping <attribute_title()>.
   - (Commit: [66474de][R1-Commit-66474de]) #[2134053][R1-Issue-2134053] - Site slogan not appearing correctly.
   - (Commit: [e987370][R1-Commit-e987370]) #[2082873][R1-Issue-2082873] - Fix size and positioning of media overlay dialogs.
+  - (Commit: [c6386b0][R1-Commit-c6386b0]) #[2131881][R1-Issue-2131881] - Mobile menu not showing while logged in.
 
 ## v1.0-RC24
 
@@ -273,6 +275,7 @@ Bug Fixes:
 [R1-Commit-2117b10]:            http://drupalcode.org/project/wetkit_core.git/commit/2117b10
 [R1-Commit-cbf7c30]:            http://drupalcode.org/project/wetkit_migrate.git/commit/cbf7c30
 [R1-Commit-66474de]:            http://drupalcode.org/project/wetkit_omega.git/commit/66474de
+[R1-Commit-c6386b0]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/c6386b0
 
 <!-- Issues R1 -->
 
@@ -284,6 +287,7 @@ Bug Fixes:
 [R1-Issue-2124031]:             http://drupal.org/node/2124031
 [R1-Issue-2134621]:             http://drupal.org/node/2134621
 [R1-Issue-2134053]:             http://drupal.org/node/2134053
+[R1-Issue-2131881]:             http://drupal.org/node/2131881
 
 <!-- Commits RC24 -->
 
