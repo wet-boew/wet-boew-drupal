@@ -13,6 +13,7 @@ Bug Fixes:
   - (Commit: [afe7c34][R1-Commit-afe7c34]) #[2131827][R1-Issue-2131827] - Sidebar menu not outputting depth 3 and 4 correctly.
   - (Commit: [7b8ce8c][R1-Commit-7b8ce8c]) #[2125487][R1-Issue-2125487] - Missing text format: filtered_html().
   - (Commit: [2117b10][R1-Commit-2117b10]) #[2124031][R1-Issue-2124031] - Entity_access() fails when using entity reference.
+  - (Commit: [cbf7c30][R1-Commit-cbf7c30]) #[2134621][R1-Issue-2134621] - Migration isn't stripping <attribute_title()>.
 
 ## v1.0-RC24
 
@@ -268,6 +269,7 @@ Bug Fixes:
 [R1-Commit-afe7c34]:            http://drupalcode.org/project/wetkit_menu.git/commit/afe7c34
 [R1-Commit-7b8ce8c]:            http://drupalcode.org/project/wetkit_core.git/commit/7b8ce8c
 [R1-Commit-2117b10]:            http://drupalcode.org/project/wetkit_core.git/commit/2117b10
+[R1-Commit-cbf7c30]:            http://drupalcode.org/project/wetkit_migrate.git/commit/cbf7c30
 
 <!-- Issues R1 -->
 
@@ -277,6 +279,7 @@ Bug Fixes:
 [R1-Issue-2131827]:             http://drupal.org/node/2131827
 [R1-Issue-2125487]:             http://drupal.org/node/2125487
 [R1-Issue-2124031]:             http://drupal.org/node/2124031
+[R1-Issue-2134621]:             http://drupal.org/node/2134621
 
 <!-- Commits RC24 -->
 
