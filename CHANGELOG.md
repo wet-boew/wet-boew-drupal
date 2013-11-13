@@ -14,6 +14,7 @@ Bug Fixes:
   - (Commit: [7b8ce8c][R1-Commit-7b8ce8c]) #[2125487][R1-Issue-2125487] - Missing text format: filtered_html().
   - (Commit: [2117b10][R1-Commit-2117b10]) #[2124031][R1-Issue-2124031] - Entity_access() fails when using entity reference.
   - (Commit: [cbf7c30][R1-Commit-cbf7c30]) #[2134621][R1-Issue-2134621] - Migration isn't stripping <attribute_title()>.
+  - (Commit: [66474de][R1-Commit-66474de]) #[2134053][R1-Issue-2134053] - Site slogan not appearing correctly.
 
 ## v1.0-RC24
 
@@ -270,6 +271,7 @@ Bug Fixes:
 [R1-Commit-7b8ce8c]:            http://drupalcode.org/project/wetkit_core.git/commit/7b8ce8c
 [R1-Commit-2117b10]:            http://drupalcode.org/project/wetkit_core.git/commit/2117b10
 [R1-Commit-cbf7c30]:            http://drupalcode.org/project/wetkit_migrate.git/commit/cbf7c30
+[R1-Commit-66474de]:            http://drupalcode.org/project/wetkit_omega.git/commit/66474de
 
 <!-- Issues R1 -->
 
@@ -280,6 +282,7 @@ Bug Fixes:
 [R1-Issue-2125487]:             http://drupal.org/node/2125487
 [R1-Issue-2124031]:             http://drupal.org/node/2124031
 [R1-Issue-2134621]:             http://drupal.org/node/2134621
+[R1-Issue-2134053]:             http://drupal.org/node/2134053
 
 <!-- Commits RC24 -->
 
