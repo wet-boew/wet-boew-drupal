@@ -15,6 +15,7 @@ Bug Fixes:
   - (Commit: [2117b10][R1-Commit-2117b10]) #[2124031][R1-Issue-2124031] - Entity_access() fails when using entity reference.
   - (Commit: [cbf7c30][R1-Commit-cbf7c30]) #[2134621][R1-Issue-2134621] - Migration isn't stripping <attribute_title()>.
   - (Commit: [66474de][R1-Commit-66474de]) #[2134053][R1-Issue-2134053] - Site slogan not appearing correctly.
+  - (Commit: [e987370][R1-Commit-e987370]) #[2082873][R1-Issue-2082873] - Fix size and positioning of media overlay dialogs.
 
 ## v1.0-RC24
 
