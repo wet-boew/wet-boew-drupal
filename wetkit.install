@@ -52,4 +52,11 @@ function wetkit_install() {
     ->execute();
 
   variable_set('admin_theme', 'wetkit_ember');
+
+  //Remove specific permission Drupal automatically detects.
+  $rid = array_search('administrator', user_roles());
+  db_delete('role_permission')
+    ->condition('rid', $rid)
+    ->condition('module', 'wetkit_wetboew', '=')
+    ->execute();
 }
