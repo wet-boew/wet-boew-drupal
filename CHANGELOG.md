@@ -277,6 +277,7 @@ Bug Fixes:
 [RC25-Commit-cbf7c30]:            http://drupalcode.org/project/wetkit_migrate.git/commit/cbf7c30
 [RC25-Commit-66474de]:            http://drupalcode.org/project/wetkit_omega.git/commit/66474de
 [RC25-Commit-c6386b0]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/c6386b0
+[RC25-Commit-e987370]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/e987370
 
 <!-- Issues RC25 -->
 
@@ -289,6 +290,7 @@ Bug Fixes:
 [RC25-Issue-2134621]:             http://drupal.org/node/2134621
 [RC25-Issue-2134053]:             http://drupal.org/node/2134053
 [RC25-Issue-2131881]:             http://drupal.org/node/2131881
+[RC25-Issue-2082873]:             http://drupal.org/node/2082873
 
 <!-- Commits RC24 -->
 
