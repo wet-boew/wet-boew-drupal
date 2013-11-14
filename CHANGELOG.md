@@ -1,23 +1,24 @@
-## v1.0-PreRelease
+## v1.0-RC25
 
 Features:
 
-  - Official 1.0 Release
+  - All reported bugs fixed
   - Entity API has been patched so important to watch for possible regressions
   - jQuery Mobile now requires a permission to be set and by default only works with Anonymous Users
+  - Final RC before 1.0 release in a few days
 
 Bug Fixes:
 
-  - (Commit: [ee24fdf][R1-Commit-ee24fdf]) #[2128509][R1-Issue-2128509] - Twitter bean plugin requires customisation form.
-  - (Commit: [27066a5][R1-Commit-27066a5]) #[2133467][R1-Issue-2133467] - Breadcrumbs show up in English even if viewing page in French.
-  - (Commit: [a6a2baa][R1-Commit-a6a2baa]) #[2134109][R1-Issue-2134109] - Migrated content has wrong workbench moderation state.
-  - (Commit: [afe7c34][R1-Commit-afe7c34]) #[2131827][R1-Issue-2131827] - Sidebar menu not outputting depth 3 and 4 correctly.
-  - (Commit: [7b8ce8c][R1-Commit-7b8ce8c]) #[2125487][R1-Issue-2125487] - Missing text format: filtered_html().
-  - (Commit: [2117b10][R1-Commit-2117b10]) #[2124031][R1-Issue-2124031] - Entity_access() fails when using entity reference.
-  - (Commit: [cbf7c30][R1-Commit-cbf7c30]) #[2134621][R1-Issue-2134621] - Migration isn't stripping <attribute_title()>.
-  - (Commit: [66474de][R1-Commit-66474de]) #[2134053][R1-Issue-2134053] - Site slogan not appearing correctly.
-  - (Commit: [e987370][R1-Commit-e987370]) #[2082873][R1-Issue-2082873] - Fix size and positioning of media overlay dialogs.
-  - (Commit: [c6386b0][R1-Commit-c6386b0]) #[2131881][R1-Issue-2131881] - Mobile menu not showing while logged in.
+  - (Commit: [ee24fdf][RC25-Commit-ee24fdf]) #[2128509][RC25-Issue-2128509] - Twitter bean plugin requires customisation form.
+  - (Commit: [27066a5][RC25-Commit-27066a5]) #[2133467][RC25-Issue-2133467] - Breadcrumbs show up in English even if viewing page in French.
+  - (Commit: [a6a2baa][RC25-Commit-a6a2baa]) #[2134109][RC25-Issue-2134109] - Migrated content has wrong workbench moderation state.
+  - (Commit: [afe7c34][RC25-Commit-afe7c34]) #[2131827][RC25-Issue-2131827] - Sidebar menu not outputting depth 3 and 4 correctly.
+  - (Commit: [7b8ce8c][RC25-Commit-7b8ce8c]) #[2125487][RC25-Issue-2125487] - Missing text format: filtered_html().
+  - (Commit: [2117b10][RC25-Commit-2117b10]) #[2124031][RC25-Issue-2124031] - Entity_access() fails when using entity reference.
+  - (Commit: [cbf7c30][RC25-Commit-cbf7c30]) #[2134621][RC25-Issue-2134621] - Migration isn't stripping <attribute_title()>.
+  - (Commit: [66474de][RC25-Commit-66474de]) #[2134053][RC25-Issue-2134053] - Site slogan not appearing correctly.
+  - (Commit: [e987370][RC25-Commit-e987370]) #[2082873][RC25-Issue-2082873] - Fix size and positioning of media overlay dialogs.
+  - (Commit: [c6386b0][RC25-Commit-c6386b0]) #[2131881][RC25-Issue-2131881] - Mobile menu not showing while logged in.
 
 ## v1.0-RC24
 
@@ -265,29 +266,29 @@ Bug Fixes:
 <!-- Links Referenced -->
 
 
-<!-- Commits R1 -->
+<!-- Commits RC25 -->
 
-[R1-Commit-ee24fdf]:            http://drupalcode.org/project/wetkit_bean.git/commit/ee24fdf
-[R1-Commit-27066a5]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/27066a5
-[R1-Commit-a6a2baa]:            http://drupalcode.org/project/wetkit_migrate.git/commit/a6a2baa
-[R1-Commit-afe7c34]:            http://drupalcode.org/project/wetkit_menu.git/commit/afe7c34
-[R1-Commit-7b8ce8c]:            http://drupalcode.org/project/wetkit_core.git/commit/7b8ce8c
-[R1-Commit-2117b10]:            http://drupalcode.org/project/wetkit_core.git/commit/2117b10
-[R1-Commit-cbf7c30]:            http://drupalcode.org/project/wetkit_migrate.git/commit/cbf7c30
-[R1-Commit-66474de]:            http://drupalcode.org/project/wetkit_omega.git/commit/66474de
-[R1-Commit-c6386b0]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/c6386b0
+[RC25-Commit-ee24fdf]:            http://drupalcode.org/project/wetkit_bean.git/commit/ee24fdf
+[RC25-Commit-27066a5]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/27066a5
+[RC25-Commit-a6a2baa]:            http://drupalcode.org/project/wetkit_migrate.git/commit/a6a2baa
+[RC25-Commit-afe7c34]:            http://drupalcode.org/project/wetkit_menu.git/commit/afe7c34
+[RC25-Commit-7b8ce8c]:            http://drupalcode.org/project/wetkit_core.git/commit/7b8ce8c
+[RC25-Commit-2117b10]:            http://drupalcode.org/project/wetkit_core.git/commit/2117b10
+[RC25-Commit-cbf7c30]:            http://drupalcode.org/project/wetkit_migrate.git/commit/cbf7c30
+[RC25-Commit-66474de]:            http://drupalcode.org/project/wetkit_omega.git/commit/66474de
+[RC25-Commit-c6386b0]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/c6386b0
 
-<!-- Issues R1 -->
+<!-- Issues RC25 -->
 
-[R1-Issue-2128509]:             http://drupal.org/node/2128509
-[R1-Issue-2133467]:             http://drupal.org/node/2133467
-[R1-Issue-2134109]:             http://drupal.org/node/2134109
-[R1-Issue-2131827]:             http://drupal.org/node/2131827
-[R1-Issue-2125487]:             http://drupal.org/node/2125487
-[R1-Issue-2124031]:             http://drupal.org/node/2124031
-[R1-Issue-2134621]:             http://drupal.org/node/2134621
-[R1-Issue-2134053]:             http://drupal.org/node/2134053
-[R1-Issue-2131881]:             http://drupal.org/node/2131881
+[RC25-Issue-2128509]:             http://drupal.org/node/2128509
+[RC25-Issue-2133467]:             http://drupal.org/node/2133467
+[RC25-Issue-2134109]:             http://drupal.org/node/2134109
+[RC25-Issue-2131827]:             http://drupal.org/node/2131827
+[RC25-Issue-2125487]:             http://drupal.org/node/2125487
+[RC25-Issue-2124031]:             http://drupal.org/node/2124031
+[RC25-Issue-2134621]:             http://drupal.org/node/2134621
+[RC25-Issue-2134053]:             http://drupal.org/node/2134053
+[RC25-Issue-2131881]:             http://drupal.org/node/2131881
 
 <!-- Commits RC24 -->
 
