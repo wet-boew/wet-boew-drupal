@@ -1,3 +1,9 @@
+## v1.0
+
+Features:
+
+  - Official 1.0 Release
+
 ## v1.0-RC25
 
 Features:
