@@ -34,21 +34,19 @@ function wetkit_install_tasks(&$install_state) {
   );
 
   $tasks['wetkit_import_content'] = array(
-    'display_name' => st('Import required content'),
+    'display_name' => st('Import Required Content'),
     'type' => 'batch',
-    // Show this task only after the WetKit steps have been reached.
-    'display' => strpos($current_task, 'wetkit_') !== FALSE,
+    'display' => TRUE,
   );
 
-  $tasks['wetkit_import_demo_content'] = array(
-    'display_name' => st('Import demo content'),
-    'type' => 'batch',
-    // Show this task only after the WetKit steps have bene reached.
-    'display' => strpos($current_task, 'wetkit_') !== FALSE,
-    'run' => isset($install_state['parameters']['demo_content']) ?
-      $install_state['parameters']['demo_content'] == 1 ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP
-      : INSTALL_TASK_SKIP,
-  );
+  if (isset($install_state['parameters']['demo_content'])) {
+    $tasks['wetkit_import_demo_content'] = array(
+      'display_name' => st('Import Demo Content'),
+      'type' => 'batch',
+      'display' => $install_state['parameters']['demo_content'] == 1,
+      'run' => $install_state['parameters']['demo_content'] == 1 ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
+    );
+  }
 
   return $tasks;
 }
@@ -161,10 +159,16 @@ function wetkit_form_install_configure_form_alter(&$form, $form_state) {
     $form['admin_account']['account']['mail']['#default_value'] = 'admin@' . $_SERVER['HTTP_HOST'];
   }
 
-  $form['demo_content'] = array(
-    '#title' => st('Import demo content'),
+  $form['wetkit_settings'] = array(
+    '#type' =>  'fieldset',
+    '#title' => st('WXT Settings'),
+  );
+
+  $form['wetkit_settings']['demo_content'] = array(
+    '#title' => st('Import Demo Content'),
     '#description' => st('Whether demo content should imported.'),
     '#type' => 'checkbox',
+    '#default_value' => TRUE,
   );
   array_push($form['#submit'], 'wetkit_import_demo_content_form_submit');
 }
