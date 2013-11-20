@@ -6,8 +6,9 @@ Features:
 
 Bug Fixes:
 
-  - (Commit: [5f22301][RC25-Commit-5f22301]) #[2140071][RC25-Issue-2140071] - Removal of two Contribs (Image Resize Filter + Caption Filter).
-  - (Commit: [639f8d2][RC25-Commit-639f8d2]) #[2140071][RC25-Issue-2140071] - Removal of two Contribs (Image Resize Filter + Caption Filter).
+  - (Commit: [5f22301][R1-Commit-5f22301]) #[2140071][R1-Issue-2140071] - Removal of two Contribs (Image Resize Filter + Caption Filter).
+  - (Commit: [639f8d2][R1-Commit-639f8d2]) #[2140071][R1-Issue-2140071] - Removal of two Contribs (Image Resize Filter + Caption Filter).
+  - (Commit: [44f9c47][R1-Commit-44f9c47]) #[2140335][R1-Issue-2140335] - Metatag dcterms.creator is not translatable.
 
 ## v1.0-RC25
 
@@ -277,14 +278,16 @@ Bug Fixes:
 <!-- Links Referenced -->
 
 
-<!-- Commits RC25 -->
+<!-- Commits R1 -->
 
 [R1-Commit-5f22301]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/5f22301
 [R1-Commit-639f8d2]:            http://drupalcode.org/project/wetkit_images.git/commit/639f8d2
+[R1-Commit-44f9c47]:            http://drupalcode.org/project/wetkit_metatag.git/commit/44f9c47
 
-<!-- Issues RC25 -->
+<!-- Issues R1 -->
 
 [R1-Issue-2140071]:             http://drupal.org/node/2140071
+[R1-Issue-2140335]:             http://drupal.org/node/2140335
 
 <!-- Commits RC25 -->
 
