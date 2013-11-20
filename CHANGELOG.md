@@ -4,6 +4,11 @@ Features:
 
   - Official 1.0 Release
 
+Bug Fixes:
+
+  - (Commit: [5f22301][RC25-Commit-5f22301]) #[2140071][RC25-Issue-2140071] - Removal of two Contribs (Image Resize Filter + Caption Filter).
+  - (Commit: [639f8d2][RC25-Commit-639f8d2]) #[2140071][RC25-Issue-2140071] - Removal of two Contribs (Image Resize Filter + Caption Filter).
+
 ## v1.0-RC25
 
 Features:
@@ -271,6 +276,15 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+
+<!-- Commits RC25 -->
+
+[R1-Commit-5f22301]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/5f22301
+[R1-Commit-639f8d2]:            http://drupalcode.org/project/wetkit_images.git/commit/639f8d2
+
+<!-- Issues RC25 -->
+
+[R1-Issue-2140071]:             http://drupal.org/node/2140071
 
 <!-- Commits RC25 -->
 
