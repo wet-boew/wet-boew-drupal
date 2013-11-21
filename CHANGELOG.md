@@ -295,7 +295,7 @@ Bug Fixes:
 [R1-Issue-2140071]:             http://drupal.org/node/2140071
 [R1-Issue-2140335]:             http://drupal.org/node/2140335
 [R1-Issue-2139487]:             http://drupal.org/node/2139487
-[R1-Issue-2139487]:             http://drupal.org/node/2140049
+[R1-Issue-2140049]:             http://drupal.org/node/2140049
 [R1-Issue-2139307]:             http://drupal.org/node/2139307
 
 <!-- Commits RC25 -->
