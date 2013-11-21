@@ -11,6 +11,7 @@ Bug Fixes:
   - (Commit: [44f9c47][R1-Commit-44f9c47]) #[2140335][R1-Issue-2140335] - Metatag dcterms.creator is not translatable.
   - (Commit: [350b1e6][R1-Commit-350b1e6]) #[2139487][R1-Issue-2139487] - How to remove gcwu-subsite div.
   - (Commit: [ca05e21][R1-Commit-ca05e21]) #[2140049][R1-Issue-2140049] - New Bean Support for Tabbed Interface.
+  - (Commit: [2145f2e][R1-Commit-2145f2e]) #[2139307][R1-Issue-2139307] - Mega Menu should be bold for top level link.
 
 ## v1.0-RC25
 
@@ -287,6 +288,7 @@ Bug Fixes:
 [R1-Commit-44f9c47]:            http://drupalcode.org/project/wetkit_metatag.git/commit/44f9c47
 [R1-Commit-350b1e6]:            http://drupalcode.org/project/wetkit_omega.git/commit/350b1e6
 [R1-Commit-ca05e21]:            http://drupalcode.org/project/wetkit_bean.git/commit/ca05e21
+[R1-Commit-2145f2e]:            http://drupalcode.org/project/wetkit_menu.git/commit/2145f2e
 
 <!-- Issues R1 -->
 
@@ -294,6 +296,7 @@ Bug Fixes:
 [R1-Issue-2140335]:             http://drupal.org/node/2140335
 [R1-Issue-2139487]:             http://drupal.org/node/2139487
 [R1-Issue-2139487]:             http://drupal.org/node/2140049
+[R1-Issue-2139307]:             http://drupal.org/node/2139307
 
 <!-- Commits RC25 -->
 
