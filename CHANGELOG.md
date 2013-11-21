@@ -9,6 +9,8 @@ Bug Fixes:
   - (Commit: [5f22301][R1-Commit-5f22301]) #[2140071][R1-Issue-2140071] - Removal of two Contribs (Image Resize Filter + Caption Filter).
   - (Commit: [639f8d2][R1-Commit-639f8d2]) #[2140071][R1-Issue-2140071] - Removal of two Contribs (Image Resize Filter + Caption Filter).
   - (Commit: [44f9c47][R1-Commit-44f9c47]) #[2140335][R1-Issue-2140335] - Metatag dcterms.creator is not translatable.
+  - (Commit: [350b1e6][R1-Commit-350b1e6]) #[2139487][R1-Issue-2139487] - How to remove gcwu-subsite div.
+  - (Commit: [ca05e21][R1-Commit-ca05e21]) #[2140049][R1-Issue-2140049] - New Bean Support for Tabbed Interface.
 
 ## v1.0-RC25
 
@@ -283,11 +285,15 @@ Bug Fixes:
 [R1-Commit-5f22301]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/5f22301
 [R1-Commit-639f8d2]:            http://drupalcode.org/project/wetkit_images.git/commit/639f8d2
 [R1-Commit-44f9c47]:            http://drupalcode.org/project/wetkit_metatag.git/commit/44f9c47
+[R1-Commit-350b1e6]:            http://drupalcode.org/project/wetkit_omega.git/commit/350b1e6
+[R1-Commit-ca05e21]:            http://drupalcode.org/project/wetkit_bean.git/commit/ca05e21
 
 <!-- Issues R1 -->
 
 [R1-Issue-2140071]:             http://drupal.org/node/2140071
 [R1-Issue-2140335]:             http://drupal.org/node/2140335
+[R1-Issue-2139487]:             http://drupal.org/node/2139487
+[R1-Issue-2139487]:             http://drupal.org/node/2140049
 
 <!-- Commits RC25 -->
 
