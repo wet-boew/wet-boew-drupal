@@ -168,7 +168,7 @@ function wetkit_form_install_configure_form_alter(&$form, $form_state) {
     '#title' => st('Import Demo Content'),
     '#description' => st('Whether demo content should imported.'),
     '#type' => 'checkbox',
-    '#default_value' => TRUE,
+    '#default_value' => drupal_is_cli() ? FALSE : TRUE,
   );
   array_push($form['#submit'], 'wetkit_import_demo_content_form_submit');
 }

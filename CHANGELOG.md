@@ -14,6 +14,7 @@ Bug Fixes:
   - (Commit: [2145f2e][R1-Commit-2145f2e]) #[2139307][R1-Issue-2139307] - Mega Menu should be bold for top level link.
   - (Commit: [ba5c48e][R1-Commit-ba5c48e]) #[2141703][R1-Issue-2141703] - A few Metatag Problems.
   - (Commit: [3c5d580][R1-Commit-3c5d580]) #[2141705][R1-Issue-2141705] - Update to Drupal 7.24 (Security Release).
+  - (Commit: [b6b9a81][R1-Commit-b6b9a81]) #[2140013][R1-Issue-2140013] - Drush si - always installing demo content.
 
 ## v1.0-RC25
 
