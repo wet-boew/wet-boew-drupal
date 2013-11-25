@@ -33,7 +33,7 @@ projects[wetkit_demo][subdir] = custom
 projects[wetkit_deployment][version] = 1.x-dev
 projects[wetkit_deployment][subdir] = custom
 projects[wetkit_deployment][download][type] = git
-projects[wetkit_deployment][download][revision] = aea0661
+projects[wetkit_deployment][download][revision] = 9c3e755
 projects[wetkit_deployment][download][branch] = 7.x-1.x
 
 projects[wetkit_images][version] = 1.x-dev
