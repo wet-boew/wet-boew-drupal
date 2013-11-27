@@ -18,7 +18,6 @@ function wetkit_install_tasks(&$install_state) {
   // Hide some messages from various modules that are just too chatty.
   drupal_get_messages('status');
   drupal_get_messages('warning');
-  drupal_get_messages('error');
 
   $tasks = array();
   $current_task = variable_get('install_task', 'done');
