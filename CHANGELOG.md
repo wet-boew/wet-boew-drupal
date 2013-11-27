@@ -16,6 +16,7 @@ Bug Fixes:
   - (Commit: [3c5d580][R1-Commit-3c5d580]) #[2141705][R1-Issue-2141705] - Update to Drupal 7.24 (Security Release).
   - (Commit: [b6b9a81][R1-Commit-b6b9a81]) #[2140013][R1-Issue-2140013] - Drush si - always installing demo content.
   - (Commit: [67fec86][R1-Commit-67fec86]) #[2144347][R1-Issue-2144347] - Web Installer doesn't display errors.
+  - (Commit: [b53eb2c][R1-Commit-b53eb2c]) #[2131881][R1-Issue-2131881] - Mobile menu not showing while logged in.
 
 ## v1.0-RC25
 
@@ -297,6 +298,7 @@ Bug Fixes:
 [R1-Commit-3c5d580]:            http://drupalcode.org/project/wetkit.git/commit/3c5d580
 [R1-Commit-b6b9a81]:            http://drupalcode.org/project/wetkit.git/commit/b6b9a81
 [R1-Commit-67fec86]:            http://drupalcode.org/project/wetkit.git/commit/67fec86
+[R1-Commit-b53eb2c]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/b53eb2c
 
 <!-- Issues R1 -->
 
@@ -309,6 +311,7 @@ Bug Fixes:
 [R1-Issue-2141705]:             http://drupal.org/node/2141705
 [R1-Issue-2140013]:             http://drupal.org/node/2140013
 [R1-Issue-2144347]:             http://drupal.org/node/2144347
+[R1-Issue-2131881]:             http://drupal.org/node/2131881
 
 <!-- Commits RC25 -->
 
