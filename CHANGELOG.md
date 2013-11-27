@@ -18,6 +18,7 @@ Bug Fixes:
   - (Commit: [67fec86][R1-Commit-67fec86]) #[2144347][R1-Issue-2144347] - Web Installer doesn't display errors.
   - (Commit: [b53eb2c][R1-Commit-b53eb2c]) #[2131881][R1-Issue-2131881] - Mobile menu not showing while logged in.
   - (Commit: [1678d32][R1-Commit-1678d32]) #[2143951][R1-Issue-2143951] - Default front page is used as link to Site name but not absolute paths.
+  - (Commit: [78912e5][R1-Commit-78912e5]) #[2139351][R1-Issue-2139351] - Breadcrumb should not have title attribute.
 
 ## v1.0-RC25
 
@@ -301,6 +302,7 @@ Bug Fixes:
 [R1-Commit-67fec86]:            http://drupalcode.org/project/wetkit.git/commit/67fec86
 [R1-Commit-b53eb2c]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/b53eb2c
 [R1-Commit-1678d32]:            http://drupalcode.org/project/wetkit_omega.git/commit/1678d32
+[R1-Commit-78912e5]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/78912e5
 
 <!-- Issues R1 -->
 
@@ -315,6 +317,7 @@ Bug Fixes:
 [R1-Issue-2144347]:             http://drupal.org/node/2144347
 [R1-Issue-2131881]:             http://drupal.org/node/2131881
 [R1-Issue-2143951]:             http://drupal.org/node/2143951
+[R1-Issue-2139351]:             http://drupal.org/node/2139351
 
 <!-- Commits RC25 -->
 
