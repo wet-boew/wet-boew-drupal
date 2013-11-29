@@ -208,6 +208,11 @@ function wetkit_import_content() {
     t('Fix Page Manager dependency chain issue.'),
     ));
 
+  // Permissions Fix.
+  $operations[] = array('_wetkit_permissions_fix', array(
+    t('Fix Permissions for Administrator Role.'),
+    ));
+
   $batch = array(
     'title' => t('Importing content'),
     'operations' => $operations,
