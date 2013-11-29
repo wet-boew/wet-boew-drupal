@@ -20,6 +20,10 @@ Bug Fixes:
   - (Commit: [1678d32][R1-Commit-1678d32]) #[2143951][R1-Issue-2143951] - Default front page is used as link to Site name but not absolute paths.
   - (Commit: [78912e5][R1-Commit-78912e5]) #[2139351][R1-Issue-2139351] - Breadcrumb should not have title attribute.
   - (Commit: [c4a05b4][R1-Commit-c4a05b4]) #[2145555][R1-Issue-2145555] - CTools Contexts are missing UUID support.
+  - (Commit: [7a708b5][R1-Commit-7a708b5]) #[2146757][R1-Issue-2146757] - Hierarchical Select "Add" causes a reload which requires pressing "Add" again.
+  - (Commit: [208753e][R1-Commit-208753e]) #[2142137][R1-Issue-2142137] - Menu link deployment not working correctly.
+  - (Commit: [a8073fc][R1-Commit-a8073fc]) #[2142299][R1-Issue-2142299] - Metatags are not translatable when used with workbench moderation.
+  - (Commit: [64eedbb][R1-Commit-64eedbb]) #[2146227][R1-Issue-2146227] - Deploy should be expanded by default (when enabled).
 
 ## v1.0-RC25
 
@@ -305,6 +309,10 @@ Bug Fixes:
 [R1-Commit-1678d32]:            http://drupalcode.org/project/wetkit_omega.git/commit/1678d32
 [R1-Commit-78912e5]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/78912e5
 [R1-Commit-c4a05b4]:            http://drupalcode.org/project/wetkit_core.git/commit/c4a05b4
+[R1-Commit-7a708b5]:            http://drupalcode.org/project/wetkit_core.git/commit/7a708b5
+[R1-Commit-208753e]:            http://drupalcode.org/project/wetkit_deployment.git/commit/208753e
+[R1-Commit-a8073fc]:            http://drupalcode.org/project/wetkit_metatag.git/commit/a8073fc
+[R1-Commit-64eedbb]:            http://drupalcode.org/project/wetkit_deployment.git/commit/64eedbb
 
 <!-- Issues R1 -->
 
@@ -321,6 +329,10 @@ Bug Fixes:
 [R1-Issue-2143951]:             http://drupal.org/node/2143951
 [R1-Issue-2139351]:             http://drupal.org/node/2139351
 [R1-Issue-2145555]:             http://drupal.org/node/2145555
+[R1-Issue-2146757]:             http://drupal.org/node/2146757
+[R1-Issue-2142137]:             http://drupal.org/node/2142137
+[R1-Issue-2142299]:             http://drupal.org/node/2142299
+[R1-Issue-2146227]:             http://drupal.org/node/2146227
 
 <!-- Commits RC25 -->
 
