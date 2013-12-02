@@ -24,6 +24,7 @@ Bug Fixes:
   - (Commit: [208753e][R1-Commit-208753e]) #[2142137][R1-Issue-2142137] - Menu link deployment not working correctly.
   - (Commit: [a8073fc][R1-Commit-a8073fc]) #[2142299][R1-Issue-2142299] - Metatags are not translatable when used with workbench moderation.
   - (Commit: [64eedbb][R1-Commit-64eedbb]) #[2146227][R1-Issue-2146227] - Deploy should be expanded by default (when enabled).
+  - (Commit: [687eff4][R1-Commit-687eff4]) #[2148227][R1-Issue-2148227] - Addition of support for Multimedia Player (Video / Audio).
 
 ## v1.0-RC25
 
@@ -313,6 +314,7 @@ Bug Fixes:
 [R1-Commit-208753e]:            http://drupalcode.org/project/wetkit_deployment.git/commit/208753e
 [R1-Commit-a8073fc]:            http://drupalcode.org/project/wetkit_metatag.git/commit/a8073fc
 [R1-Commit-64eedbb]:            http://drupalcode.org/project/wetkit_deployment.git/commit/64eedbb
+[R1-Commit-687eff4]:            http://drupalcode.org/project/wetkit_bean.git/commit/687eff4
 
 <!-- Issues R1 -->
 
@@ -333,6 +335,7 @@ Bug Fixes:
 [R1-Issue-2142137]:             http://drupal.org/node/2142137
 [R1-Issue-2142299]:             http://drupal.org/node/2142299
 [R1-Issue-2146227]:             http://drupal.org/node/2146227
+[R1-Issue-2148227]:             http://drupal.org/node/2148227
 
 <!-- Commits RC25 -->
 
