@@ -1,30 +1,30 @@
-## v1.0
+## v1.0-RC26
 
 Features:
 
-  - Official 1.0 Release
+  - The Final Release Candidate.
 
 Bug Fixes:
 
-  - (Commit: [5f22301][R1-Commit-5f22301]) #[2140071][R1-Issue-2140071] - Removal of two Contribs (Image Resize Filter + Caption Filter).
-  - (Commit: [639f8d2][R1-Commit-639f8d2]) #[2140071][R1-Issue-2140071] - Removal of two Contribs (Image Resize Filter + Caption Filter).
-  - (Commit: [44f9c47][R1-Commit-44f9c47]) #[2140335][R1-Issue-2140335] - Metatag dcterms.creator is not translatable.
-  - (Commit: [350b1e6][R1-Commit-350b1e6]) #[2139487][R1-Issue-2139487] - How to remove gcwu-subsite div.
-  - (Commit: [ca05e21][R1-Commit-ca05e21]) #[2140049][R1-Issue-2140049] - New Bean Support for Tabbed Interface.
-  - (Commit: [2145f2e][R1-Commit-2145f2e]) #[2139307][R1-Issue-2139307] - Mega Menu should be bold for top level link.
-  - (Commit: [ba5c48e][R1-Commit-ba5c48e]) #[2141703][R1-Issue-2141703] - A few Metatag Problems.
-  - (Commit: [3c5d580][R1-Commit-3c5d580]) #[2141705][R1-Issue-2141705] - Update to Drupal 7.24 (Security Release).
-  - (Commit: [b6b9a81][R1-Commit-b6b9a81]) #[2140013][R1-Issue-2140013] - Drush si - always installing demo content.
-  - (Commit: [67fec86][R1-Commit-67fec86]) #[2144347][R1-Issue-2144347] - Web Installer doesn't display errors.
-  - (Commit: [b53eb2c][R1-Commit-b53eb2c]) #[2131881][R1-Issue-2131881] - Mobile menu not showing while logged in.
-  - (Commit: [1678d32][R1-Commit-1678d32]) #[2143951][R1-Issue-2143951] - Default front page is used as link to Site name but not absolute paths.
-  - (Commit: [78912e5][R1-Commit-78912e5]) #[2139351][R1-Issue-2139351] - Breadcrumb should not have title attribute.
-  - (Commit: [c4a05b4][R1-Commit-c4a05b4]) #[2145555][R1-Issue-2145555] - CTools Contexts are missing UUID support.
-  - (Commit: [7a708b5][R1-Commit-7a708b5]) #[2146757][R1-Issue-2146757] - Hierarchical Select "Add" causes a reload which requires pressing "Add" again.
-  - (Commit: [208753e][R1-Commit-208753e]) #[2142137][R1-Issue-2142137] - Menu link deployment not working correctly.
-  - (Commit: [a8073fc][R1-Commit-a8073fc]) #[2142299][R1-Issue-2142299] - Metatags are not translatable when used with workbench moderation.
-  - (Commit: [64eedbb][R1-Commit-64eedbb]) #[2146227][R1-Issue-2146227] - Deploy should be expanded by default (when enabled).
-  - (Commit: [687eff4][R1-Commit-687eff4]) #[2148227][R1-Issue-2148227] - Addition of support for Multimedia Player (Video / Audio).
+  - (Commit: [5f22301][RC26-Commit-5f22301]) #[2140071][RC26-Issue-2140071] - Removal of two Contribs (Image Resize Filter + Caption Filter).
+  - (Commit: [639f8d2][RC26-Commit-639f8d2]) #[2140071][RC26-Issue-2140071] - Removal of two Contribs (Image Resize Filter + Caption Filter).
+  - (Commit: [44f9c47][RC26-Commit-44f9c47]) #[2140335][RC26-Issue-2140335] - Metatag dcterms.creator is not translatable.
+  - (Commit: [350b1e6][RC26-Commit-350b1e6]) #[2139487][RC26-Issue-2139487] - How to remove gcwu-subsite div.
+  - (Commit: [ca05e21][RC26-Commit-ca05e21]) #[2140049][RC26-Issue-2140049] - New Bean Support for Tabbed Interface.
+  - (Commit: [2145f2e][RC26-Commit-2145f2e]) #[2139307][RC26-Issue-2139307] - Mega Menu should be bold for top level link.
+  - (Commit: [ba5c48e][RC26-Commit-ba5c48e]) #[2141703][RC26-Issue-2141703] - A few Metatag Problems.
+  - (Commit: [3c5d580][RC26-Commit-3c5d580]) #[2141705][RC26-Issue-2141705] - Update to Drupal 7.24 (Security Release).
+  - (Commit: [b6b9a81][RC26-Commit-b6b9a81]) #[2140013][RC26-Issue-2140013] - Drush si - always installing demo content.
+  - (Commit: [67fec86][RC26-Commit-67fec86]) #[2144347][RC26-Issue-2144347] - Web Installer doesn't display errors.
+  - (Commit: [b53eb2c][RC26-Commit-b53eb2c]) #[2131881][RC26-Issue-2131881] - Mobile menu not showing while logged in.
+  - (Commit: [1678d32][RC26-Commit-1678d32]) #[2143951][RC26-Issue-2143951] - Default front page is used as link to Site name but not absolute paths.
+  - (Commit: [78912e5][RC26-Commit-78912e5]) #[2139351][RC26-Issue-2139351] - Breadcrumb should not have title attribute.
+  - (Commit: [c4a05b4][RC26-Commit-c4a05b4]) #[2145555][RC26-Issue-2145555] - CTools Contexts are missing UUID support.
+  - (Commit: [7a708b5][RC26-Commit-7a708b5]) #[2146757][RC26-Issue-2146757] - Hierarchical Select "Add" causes a reload which requires pressing "Add" again.
+  - (Commit: [208753e][RC26-Commit-208753e]) #[2142137][RC26-Issue-2142137] - Menu link deployment not working correctly.
+  - (Commit: [a8073fc][RC26-Commit-a8073fc]) #[2142299][RC26-Issue-2142299] - Metatags are not translatable when used with workbench moderation.
+  - (Commit: [64eedbb][RC26-Commit-64eedbb]) #[2146227][RC26-Issue-2146227] - Deploy should be expanded by default (when enabled).
+  - (Commit: [687eff4][RC26-Commit-687eff4]) #[2148227][RC26-Issue-2148227] - Addition of support for Multimedia Player (Video / Audio).
 
 ## v1.0-RC25
 
@@ -33,7 +33,6 @@ Features:
   - All reported bugs fixed
   - Entity API has been patched so important to watch for possible regressions
   - jQuery Mobile now requires a permission to be set and by default only works with Anonymous Users
-  - Final RC before 1.0 release in a few days
 
 Bug Fixes:
 
@@ -294,48 +293,48 @@ Bug Fixes:
 <!-- Links Referenced -->
 
 
-<!-- Commits R1 -->
+<!-- Commits RC26 -->
 
-[R1-Commit-5f22301]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/5f22301
-[R1-Commit-639f8d2]:            http://drupalcode.org/project/wetkit_images.git/commit/639f8d2
-[R1-Commit-44f9c47]:            http://drupalcode.org/project/wetkit_metatag.git/commit/44f9c47
-[R1-Commit-350b1e6]:            http://drupalcode.org/project/wetkit_omega.git/commit/350b1e6
-[R1-Commit-ca05e21]:            http://drupalcode.org/project/wetkit_bean.git/commit/ca05e21
-[R1-Commit-2145f2e]:            http://drupalcode.org/project/wetkit_menu.git/commit/2145f2e
-[R1-Commit-ba5c48e]:            http://drupalcode.org/project/wetkit_metatag.git/commit/ba5c48e
-[R1-Commit-3c5d580]:            http://drupalcode.org/project/wetkit.git/commit/3c5d580
-[R1-Commit-b6b9a81]:            http://drupalcode.org/project/wetkit.git/commit/b6b9a81
-[R1-Commit-67fec86]:            http://drupalcode.org/project/wetkit.git/commit/67fec86
-[R1-Commit-b53eb2c]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/b53eb2c
-[R1-Commit-1678d32]:            http://drupalcode.org/project/wetkit_omega.git/commit/1678d32
-[R1-Commit-78912e5]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/78912e5
-[R1-Commit-c4a05b4]:            http://drupalcode.org/project/wetkit_core.git/commit/c4a05b4
-[R1-Commit-7a708b5]:            http://drupalcode.org/project/wetkit_core.git/commit/7a708b5
-[R1-Commit-208753e]:            http://drupalcode.org/project/wetkit_deployment.git/commit/208753e
-[R1-Commit-a8073fc]:            http://drupalcode.org/project/wetkit_metatag.git/commit/a8073fc
-[R1-Commit-64eedbb]:            http://drupalcode.org/project/wetkit_deployment.git/commit/64eedbb
-[R1-Commit-687eff4]:            http://drupalcode.org/project/wetkit_bean.git/commit/687eff4
+[RC26-Commit-5f22301]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/5f22301
+[RC26-Commit-639f8d2]:            http://drupalcode.org/project/wetkit_images.git/commit/639f8d2
+[RC26-Commit-44f9c47]:            http://drupalcode.org/project/wetkit_metatag.git/commit/44f9c47
+[RC26-Commit-350b1e6]:            http://drupalcode.org/project/wetkit_omega.git/commit/350b1e6
+[RC26-Commit-ca05e21]:            http://drupalcode.org/project/wetkit_bean.git/commit/ca05e21
+[RC26-Commit-2145f2e]:            http://drupalcode.org/project/wetkit_menu.git/commit/2145f2e
+[RC26-Commit-ba5c48e]:            http://drupalcode.org/project/wetkit_metatag.git/commit/ba5c48e
+[RC26-Commit-3c5d580]:            http://drupalcode.org/project/wetkit.git/commit/3c5d580
+[RC26-Commit-b6b9a81]:            http://drupalcode.org/project/wetkit.git/commit/b6b9a81
+[RC26-Commit-67fec86]:            http://drupalcode.org/project/wetkit.git/commit/67fec86
+[RC26-Commit-b53eb2c]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/b53eb2c
+[RC26-Commit-1678d32]:            http://drupalcode.org/project/wetkit_omega.git/commit/1678d32
+[RC26-Commit-78912e5]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/78912e5
+[RC26-Commit-c4a05b4]:            http://drupalcode.org/project/wetkit_core.git/commit/c4a05b4
+[RC26-Commit-7a708b5]:            http://drupalcode.org/project/wetkit_core.git/commit/7a708b5
+[RC26-Commit-208753e]:            http://drupalcode.org/project/wetkit_deployment.git/commit/208753e
+[RC26-Commit-a8073fc]:            http://drupalcode.org/project/wetkit_metatag.git/commit/a8073fc
+[RC26-Commit-64eedbb]:            http://drupalcode.org/project/wetkit_deployment.git/commit/64eedbb
+[RC26-Commit-687eff4]:            http://drupalcode.org/project/wetkit_bean.git/commit/687eff4
 
-<!-- Issues R1 -->
+<!-- Issues RC26 -->
 
-[R1-Issue-2140071]:             http://drupal.org/node/2140071
-[R1-Issue-2140335]:             http://drupal.org/node/2140335
-[R1-Issue-2139487]:             http://drupal.org/node/2139487
-[R1-Issue-2140049]:             http://drupal.org/node/2140049
-[R1-Issue-2139307]:             http://drupal.org/node/2139307
-[R1-Issue-2141703]:             http://drupal.org/node/2141703
-[R1-Issue-2141705]:             http://drupal.org/node/2141705
-[R1-Issue-2140013]:             http://drupal.org/node/2140013
-[R1-Issue-2144347]:             http://drupal.org/node/2144347
-[R1-Issue-2131881]:             http://drupal.org/node/2131881
-[R1-Issue-2143951]:             http://drupal.org/node/2143951
-[R1-Issue-2139351]:             http://drupal.org/node/2139351
-[R1-Issue-2145555]:             http://drupal.org/node/2145555
-[R1-Issue-2146757]:             http://drupal.org/node/2146757
-[R1-Issue-2142137]:             http://drupal.org/node/2142137
-[R1-Issue-2142299]:             http://drupal.org/node/2142299
-[R1-Issue-2146227]:             http://drupal.org/node/2146227
-[R1-Issue-2148227]:             http://drupal.org/node/2148227
+[RC26-Issue-2140071]:             http://drupal.org/node/2140071
+[RC26-Issue-2140335]:             http://drupal.org/node/2140335
+[RC26-Issue-2139487]:             http://drupal.org/node/2139487
+[RC26-Issue-2140049]:             http://drupal.org/node/2140049
+[RC26-Issue-2139307]:             http://drupal.org/node/2139307
+[RC26-Issue-2141703]:             http://drupal.org/node/2141703
+[RC26-Issue-2141705]:             http://drupal.org/node/2141705
+[RC26-Issue-2140013]:             http://drupal.org/node/2140013
+[RC26-Issue-2144347]:             http://drupal.org/node/2144347
+[RC26-Issue-2131881]:             http://drupal.org/node/2131881
+[RC26-Issue-2143951]:             http://drupal.org/node/2143951
+[RC26-Issue-2139351]:             http://drupal.org/node/2139351
+[RC26-Issue-2145555]:             http://drupal.org/node/2145555
+[RC26-Issue-2146757]:             http://drupal.org/node/2146757
+[RC26-Issue-2142137]:             http://drupal.org/node/2142137
+[RC26-Issue-2142299]:             http://drupal.org/node/2142299
+[RC26-Issue-2146227]:             http://drupal.org/node/2146227
+[RC26-Issue-2148227]:             http://drupal.org/node/2148227
 
 <!-- Commits RC25 -->
 
