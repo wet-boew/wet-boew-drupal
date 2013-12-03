@@ -7,13 +7,13 @@ This is a list of major known issues. For the latest list of all issues see the
 
 When you follow a specific workflow of creating nodes with translated menu items attached, you can end up in a situation where the node edit form for the translation can't find the associate menu item.
 
-[Entity Translation][entity_translation] Bug: #[2125569][known-issue-2125569]
+Bug: [Entity Translation][entity_translation] Issue #[2125569][known-issue-2125569]
 
 ## Metatag has been having a rough time with Entity Translation + Revisions
 
-There are a few issues associated with this problem but the meta issue is referenced below. Essentially metatags can sometimes end up overwriting each other when saving in the non @source language. We believe this problem is solved by a rather hefty patch to metatag. Therefore is one to look out for.
+There are a few issues associated with this problem but the meta issue is referenced below. Essentially metatags can sometimes end up overwriting each other when saving in the non @source language. We believe this problem is solved by a rather hefty patch to metatag.
 
-[Metatag][metatag] Bug: #[2142299][known-issue-2142299]
+Bug: [Metatag][metatag] Issue #[2142299][known-issue-2142299]
 
 
 <!-- Links Referenced -->
