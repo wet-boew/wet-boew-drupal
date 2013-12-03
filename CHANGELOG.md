@@ -8,6 +8,8 @@ Features:
   - Field Collection has been added to finally satisfy the use case of Tabbed Interface and Multimedia Player.
   - Patches and updates to more stable release of modules including a security release of Drupal Core.
   - Content Staging has been further streamlined.
+  - WetKit Bean is now one module instead of two and minimally refactored for more readability of the codebase.
+  - WxT Mobile Permission has been negated to work properly in expected contexts.
 
 Bug Fixes:
 
