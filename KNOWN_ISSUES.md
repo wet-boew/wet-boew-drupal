@@ -1,0 +1,25 @@
+# Known Issues
+
+This is a list of major known issues. For the latest list of all issues see the
+[Drupal Issue Queue][drupal-queue].
+
+## Existing menu missing on node edit pages based on certain context
+
+When you follow a specific workflow of creating nodes with translated menu items attached, you can end up in a situation where the node edit form for the translation can't find the associate menu item.
+
+[Entity Translation][entity_translation] Bug: #[2125569][known-issue-2125569]
+
+## Metatag has been having a rough time with Entity Translation + Revisions
+
+There are a few issues associated with this problem but the meta issue is referenced below. Essentially metatags can sometimes end up overwriting each other when saving in the non @source language. We believe this problem is solved by a rather hefty patch to metatag. Therefore is one to look out for.
+
+[Metatag][metatag] Bug: #[2142299][known-issue-2142299]
+
+
+<!-- Links Referenced -->
+
+[drupal-queue]:                https://drupal.org/project/issues/wetkit?categories=All
+[entity_translation]:          https://drupal.org/project/entity_translation
+[metatag]:                     https://drupal.org/project/metatag
+[known-issue-2125569]:         https://drupal.org/node/2125569
+[known-issue-2142299]:         https://drupal.org/node/2142299
