@@ -3,6 +3,11 @@
 Features:
 
   - The Final Release Candidate.
+  - Another Coder Review run.
+  - Improvements such that metatags should be functional again.
+  - Field Collection has been added to finally satisfy the use case of Tabbed Interface and Multimedia Player.
+  - Patches and updates to more stable release of modules including a security release of Drupal Core.
+  - Content Staging has been further streamlined.
 
 Bug Fixes:
 
