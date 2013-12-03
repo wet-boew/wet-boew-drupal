@@ -118,12 +118,12 @@ projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
 
 projects[wetkit_ember][version] = 1.x-dev
 projects[wetkit_ember][download][type] = git
-projects[wetkit_ember][download][revision] = 2ddecb7
+projects[wetkit_ember][download][revision] = 30a59cb
 projects[wetkit_ember][download][branch] = 7.x-1.x
 
 projects[wetkit_omega][version] = 1.x-dev
 projects[wetkit_omega][download][type] = git
-projects[wetkit_omega][download][revision] = 1678d32
+projects[wetkit_omega][download][revision] = 224981b
 projects[wetkit_omega][download][branch] = 7.x-1.x
 
 projects[wetkit_shiny][version] = 1.0
