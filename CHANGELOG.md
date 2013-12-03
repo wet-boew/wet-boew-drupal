@@ -25,6 +25,7 @@ Bug Fixes:
   - (Commit: [a8073fc][RC26-Commit-a8073fc]) #[2142299][RC26-Issue-2142299] - Metatags are not translatable when used with workbench moderation.
   - (Commit: [64eedbb][RC26-Commit-64eedbb]) #[2146227][RC26-Issue-2146227] - Deploy should be expanded by default (when enabled).
   - (Commit: [687eff4][RC26-Commit-687eff4]) #[2148227][RC26-Issue-2148227] - Addition of support for Multimedia Player (Video / Audio).
+  - (Commit: [293d68b][RC26-Commit-293d68b]) #[2117859][RC26-Issue-2117859] - HTML 5 Tools.
 
 ## v1.0-RC25
 
@@ -314,6 +315,7 @@ Bug Fixes:
 [RC26-Commit-a8073fc]:            http://drupalcode.org/project/wetkit_metatag.git/commit/a8073fc
 [RC26-Commit-64eedbb]:            http://drupalcode.org/project/wetkit_deployment.git/commit/64eedbb
 [RC26-Commit-687eff4]:            http://drupalcode.org/project/wetkit_bean.git/commit/687eff4
+[RC26-Commit-293d68b]:            http://drupalcode.org/project/wetkit_core.git/commit/293d68b
 
 <!-- Issues RC26 -->
 
@@ -335,6 +337,7 @@ Bug Fixes:
 [RC26-Issue-2142299]:             http://drupal.org/node/2142299
 [RC26-Issue-2146227]:             http://drupal.org/node/2146227
 [RC26-Issue-2148227]:             http://drupal.org/node/2148227
+[RC26-Issue-2117859]:             http://drupal.org/node/2117859
 
 <!-- Commits RC25 -->
 

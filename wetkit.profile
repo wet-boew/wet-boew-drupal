@@ -20,7 +20,6 @@ function wetkit_install_tasks(&$install_state) {
   drupal_get_messages('warning');
 
   $tasks = array();
-  $current_task = variable_get('install_task', 'done');
 
   // Add the WetKit theme selection to the installation process.
   require_once drupal_get_path('module', 'wetkit_theme') . '/wetkit_theme.profile.inc';
@@ -159,7 +158,7 @@ function wetkit_form_install_configure_form_alter(&$form, $form_state) {
   }
 
   $form['wetkit_settings'] = array(
-    '#type' =>  'fieldset',
+    '#type' => 'fieldset',
     '#title' => st('WXT Settings'),
   );
 
