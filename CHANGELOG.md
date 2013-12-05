@@ -2,6 +2,16 @@
 
 Features:
 
+  - The Official 1.0 Release
+
+Bug Fixes:
+
+  - (Commit: [b987712][R1-Commit-b987712]) #[2148823][R1-Issue-2148823] - Rules disappearing when updated.
+
+## v1.0-RC26
+
+Features:
+
   - The Final Release Candidate.
   - Another Coder Review run.
   - Improvements such that metatags should be functional again.
@@ -300,6 +310,14 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+
+<!-- Commits R1 -->
+
+[R1-Commit-b987712]:            http://drupalcode.org/project/wetkit.git/commit/b987712
+
+<!-- Issues R1 -->
+
+[R1-Issue-2148823]:             http://drupal.org/node/2148823
 
 <!-- Commits RC26 -->
 
