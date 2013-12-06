@@ -16,7 +16,7 @@ projects[wetkit_core][version] = 1.x-dev
 projects[wetkit_core][subdir] = contrib
 projects[wetkit_core][type] = module
 projects[wetkit_core][download][type] = git
-projects[wetkit_core][download][revision] = b987712
+projects[wetkit_core][download][revision] = b6b28b4
 projects[wetkit_core][download][branch] = 7.x-1.x
 
 projects[wetkit_demo][version] = 1.1
@@ -72,7 +72,7 @@ projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_ember][version] = 1.0
 projects[wetkit_ember][type] = theme
 
-projects[wetkit_omega][version] = 1.0
+projects[wetkit_omega][version] = 1.1
 projects[wetkit_omega][type] = theme
 
 projects[wetkit_shiny][version] = 1.1
