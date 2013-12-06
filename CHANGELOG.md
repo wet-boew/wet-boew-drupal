@@ -7,6 +7,9 @@ Features:
 Bug Fixes:
 
   - (Commit: [b987712][R1-Commit-b987712]) #[2148823][R1-Issue-2148823] - Rules disappearing when updated.
+  - (Commit: [6c9cc22][R1-Commit-6c9cc22]) #[2151161][R1-Issue-2151161] - Basic Page should use Panels instead of Panelizer by Default.
+  - (Commit: [1b1f833][R1-Commit-1b1f833]) #[2149943][R1-Issue-2149943] - View Draft Link from Node Edit Page and View Link on moderate page not working.
+  - (Commit: [b6b28b4][R1-Commit-b6b28b4]) #[2151399][R1-Issue-2151399] - Updates to WetKit Core.
 
 ## v1.0-RC26
 
@@ -314,10 +317,16 @@ Bug Fixes:
 <!-- Commits R1 -->
 
 [R1-Commit-b987712]:            http://drupalcode.org/project/wetkit.git/commit/b987712
+[R1-Commit-6c9cc22]:            http://drupalcode.org/project/wetkit_pages.git/commit/6c9cc22
+[R1-Commit-1b1f833]:            http://drupalcode.org/project/wetkit.git/commit/1b1f833
+[R1-Commit-b6b28b4]:            http://drupalcode.org/project/wetkit_core.git/commit/b6b28b4
 
 <!-- Issues R1 -->
 
 [R1-Issue-2148823]:             http://drupal.org/node/2148823
+[R1-Issue-2151161]:             http://drupal.org/node/2151161
+[R1-Issue-2149943]:             http://drupal.org/node/2149943
+[R1-Issue-2151399]:             http://drupal.org/node/2151399
 
 <!-- Commits RC26 -->
 
