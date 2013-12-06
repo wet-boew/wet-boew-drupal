@@ -42,7 +42,7 @@ projects[wetkit_migrate][subdir] = custom
 projects[wetkit_og][version] = 1.0
 projects[wetkit_og][subdir] = custom
 
-projects[wetkit_pages][version] = 1.1
+projects[wetkit_pages][version] = 1.2
 projects[wetkit_pages][subdir] = custom
 
 projects[wetkit_search][version] = 1.1
