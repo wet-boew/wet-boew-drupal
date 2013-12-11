@@ -2,9 +2,9 @@
 
 Features:
 
-  - (Commit: [41c8765][R1-Commit-41c8765]) #[2154261][R1-Issue-2154261] - Add Full support for WxT's Responsive Images (Bean).
-  - (Commit: [8bd38f7][R1-Commit-8bd38f7]) #[8bd38f7][R1-Issue-2154261] - Add Full support for WxT's Responsive Images (Images).
-  - (Commit: [0617a33][R1-Commit-0617a33]) #[2154261][R1-Issue-2154261] - Add Full support for WxT's Responsive Images (Wysiwyg).
+  - (Commit: [41c8765][R2-Commit-41c8765]) #[2154261][R2-Issue-2154261] - Add Full support for WxT's Responsive Images (Bean).
+  - (Commit: [8bd38f7][R2-Commit-8bd38f7]) #[8bd38f7][R2-Issue-2154261] - Add Full support for WxT's Responsive Images (Images).
+  - (Commit: [0617a33][R2-Commit-0617a33]) #[2154261][R2-Issue-2154261] - Add Full support for WxT's Responsive Images (Wysiwyg).
 
 ## v1.0
 
