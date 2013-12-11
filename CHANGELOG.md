@@ -1,4 +1,12 @@
-## v1.0-RC26
+## v1.x (In Development)
+
+Features:
+
+  - (Commit: [41c8765][R1-Commit-41c8765]) #[2154261][R1-Issue-2154261] - Add Full support for WxT's Responsive Images (Bean).
+  - (Commit: [8bd38f7][R1-Commit-8bd38f7]) #[8bd38f7][R1-Issue-2154261] - Add Full support for WxT's Responsive Images (Images).
+  - (Commit: [0617a33][R1-Commit-0617a33]) #[2154261][R1-Issue-2154261] - Add Full support for WxT's Responsive Images (Wysiwyg).
+
+## v1.0
 
 Features:
 
@@ -313,6 +321,15 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+<!-- Commits R2 -->
+
+[R2-Commit-0617a33]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/0617a33
+[R2-Commit-8bd38f7]:            http://drupalcode.org/project/wetkit_images.git/commit/8bd38f7
+[R2-Commit-41c8765]:            http://drupalcode.org/project/wetkit_bean.git/commit/41c8765
+
+<!-- Issues R2 -->
+
+[R2-Issue-2154261]:             http://drupal.org/node/2154261
 
 <!-- Commits R1 -->
 
