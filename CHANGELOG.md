@@ -2,9 +2,10 @@
 
 Features:
 
-  - (Commit: [41c8765][R2-Commit-41c8765]) #[2154261][R2-Issue-2154261] - Add Full support for WxT's Responsive Images (Bean).
-  - (Commit: [8bd38f7][R2-Commit-8bd38f7]) #[8bd38f7][R2-Issue-2154261] - Add Full support for WxT's Responsive Images (Images).
-  - (Commit: [0617a33][R2-Commit-0617a33]) #[2154261][R2-Issue-2154261] - Add Full support for WxT's Responsive Images (Wysiwyg).
+  - (Commit: [41c8765][R1.2-Commit-41c8765]) #[2154261][R1.2-Issue-2154261] - Add Full support for WxT's Responsive Images (Bean).
+  - (Commit: [8bd38f7][R1.2-Commit-8bd38f7]) #[8bd38f7][R1.2-Issue-2154261] - Add Full support for WxT's Responsive Images (Images).
+  - (Commit: [0617a33][R1.2-Commit-0617a33]) #[2154261][R1.2-Issue-2154261] - Add Full support for WxT's Responsive Images (Wysiwyg).
+  - (Commit: [e154bcf][R1.2-Commit-e154bcf]) #[2149799][R1.2-Issue-2149799] - Configure Pane Background should have default.
 
 ## v1.0
 
@@ -321,15 +322,18 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
-<!-- Commits R2 -->
 
-[R2-Commit-0617a33]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/0617a33
-[R2-Commit-8bd38f7]:            http://drupalcode.org/project/wetkit_images.git/commit/8bd38f7
-[R2-Commit-41c8765]:            http://drupalcode.org/project/wetkit_bean.git/commit/41c8765
+<!-- Commits R1.2 -->
 
-<!-- Issues R2 -->
+[R1.2-Commit-0617a33]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/0617a33
+[R1.2-Commit-8bd38f7]:            http://drupalcode.org/project/wetkit_images.git/commit/8bd38f7
+[R1.2-Commit-41c8765]:            http://drupalcode.org/project/wetkit_bean.git/commit/41c8765
+[R1.2-Commit-e154bcf]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/e154bcf
 
-[R2-Issue-2154261]:             http://drupal.org/node/2154261
+<!-- Issues R1.2 -->
+
+[R1.2-Issue-2154261]:             http://drupal.org/node/2154261
+[R1.2-Issue-2149799]:             http://drupal.org/node/2149799
 
 <!-- Commits R1 -->
 
