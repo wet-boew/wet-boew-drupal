@@ -6,6 +6,7 @@ Features:
   - (Commit: [8bd38f7][R1.2-Commit-8bd38f7]) #[8bd38f7][R1.2-Issue-2154261] - Add Full support for WxT's Responsive Images (Images).
   - (Commit: [0617a33][R1.2-Commit-0617a33]) #[2154261][R1.2-Issue-2154261] - Add Full support for WxT's Responsive Images (Wysiwyg).
   - (Commit: [e154bcf][R1.2-Commit-e154bcf]) #[2149799][R1.2-Issue-2149799] - Configure Pane Background should have default.
+  - (Commit: [ee5adf0][R1.2-Commit-ee5adf0]) #[2155337][R1.2-Issue-2155337] - Prevent WxT Mobile + Permission.
 
 ## v1.0
 
@@ -329,11 +330,13 @@ Bug Fixes:
 [R1.2-Commit-8bd38f7]:            http://drupalcode.org/project/wetkit_images.git/commit/8bd38f7
 [R1.2-Commit-41c8765]:            http://drupalcode.org/project/wetkit_bean.git/commit/41c8765
 [R1.2-Commit-e154bcf]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/e154bcf
+[R1.2-Commit-ee5adf0]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/ee5adf0
 
 <!-- Issues R1.2 -->
 
 [R1.2-Issue-2154261]:             http://drupal.org/node/2154261
 [R1.2-Issue-2149799]:             http://drupal.org/node/2149799
+[R1.2-Issue-2155337]:             http://drupal.org/node/2155337
 
 <!-- Commits R1 -->
 
