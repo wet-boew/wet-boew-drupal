@@ -8,6 +8,7 @@ Features:
   - (Commit: [e154bcf][R1.2-Commit-e154bcf]) #[2149799][R1.2-Issue-2149799] - Configure Pane Background should have default.
   - (Commit: [ee5adf0][R1.2-Commit-ee5adf0]) #[2155337][R1.2-Issue-2155337] - Prevent WxT Mobile + Permission.
   - (Commit: [1c4970e][R1.2-Commit-1c4970e]) #[2155371][R1.2-Issue-2155371] - Mislabelled File Name in WetKit Search API.
+  - (Commit: [9b9071f][R1.2-Commit-9b9071f]) #[2158659][R1.2-Issue-2158659] - Addition of Mackenzie Layout.
 
 ## v1.0
 
@@ -333,6 +334,7 @@ Bug Fixes:
 [R1.2-Commit-e154bcf]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/e154bcf
 [R1.2-Commit-ee5adf0]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/ee5adf0
 [R1.2-Commit-1c4970e]:            http://drupalcode.org/project/wetkit_search.git/commit/1c4970e
+[R1.2-Commit-9b9071f]:            http://drupalcode.org/project/wetkit_layouts.git/commit/9b9071f
 
 <!-- Issues R1.2 -->
 
@@ -340,6 +342,7 @@ Bug Fixes:
 [R1.2-Issue-2149799]:             http://drupal.org/node/2149799
 [R1.2-Issue-2155337]:             http://drupal.org/node/2155337
 [R1.2-Issue-2155371]:             http://drupal.org/node/2155371
+[R1.2-Issue-2158659]:             http://drupal.org/node/2158659
 
 <!-- Commits R1 -->
 
