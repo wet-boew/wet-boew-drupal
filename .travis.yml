@@ -4,7 +4,6 @@ language: php
 # Language versioning
 php:
   - 5.4
-  - hhvm
 
 # Envars for contextual operations
 env:
