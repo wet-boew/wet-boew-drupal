@@ -12,6 +12,7 @@ Features:
   - (Commit: [3f340d2][R1.1-Commit-3f340d2]) #[2155411][R1.1-Issue-2155411] - Activating Theme Developer module brings site down.
   - (Commit: [d4a45a2][R1.1-Commit-d4a45a2]) #[2155545][R1.1-Issue-2155545] - Admin title for search facet in panels.
   - (Commit: [9be1cac][R1.1-Commit-9be1cac]) #[2153185][R1.1-Issue-2153185] - Uuid_features - undefined_index with bundles.
+  - (Commit: [48f8970][R1.1-Commit-48f8970]) #[2144347][R1.1-Issue-2144347] - Web Installer doesn't display errors.
 
 ## v1.0
 
@@ -341,6 +342,7 @@ Bug Fixes:
 [R1.1-Commit-3f340d2]:            http://drupalcode.org/project/wetkit_menu.git/commit/3f340d2
 [R1.1-Commit-d4a45a2]:            http://drupalcode.org/project/wetkit_search.git/commit/d4a45a2
 [R1.1-Commit-9be1cac]:            http://drupalcode.org/project/wetkit_core.git/commit/9be1cac
+[R1.1-Commit-48f8970]:            http://drupalcode.org/project/wetkit.git/commit/48f8970
 
 <!-- Issues R1.1 -->
 
@@ -352,6 +354,7 @@ Bug Fixes:
 [R1.1-Issue-2155411]:             http://drupal.org/node/2155411
 [R1.1-Issue-2155545]:             http://drupal.org/node/2155545
 [R1.1-Issue-2153185]:             http://drupal.org/node/2153185
+[R1.1-Issue-2144347]:             http://drupal.org/node/2144347
 
 <!-- Commits R1 -->
 
