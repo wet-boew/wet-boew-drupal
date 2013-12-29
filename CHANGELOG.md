@@ -2,13 +2,18 @@
 
 Features:
 
-  - (Commit: [41c8765][R1.2-Commit-41c8765]) #[2154261][R1.2-Issue-2154261] - Add Full support for WxT's Responsive Images (Bean).
-  - (Commit: [8bd38f7][R1.2-Commit-8bd38f7]) #[8bd38f7][R1.2-Issue-2154261] - Add Full support for WxT's Responsive Images (Images).
-  - (Commit: [0617a33][R1.2-Commit-0617a33]) #[2154261][R1.2-Issue-2154261] - Add Full support for WxT's Responsive Images (Wysiwyg).
-  - (Commit: [e154bcf][R1.2-Commit-e154bcf]) #[2149799][R1.2-Issue-2149799] - Configure Pane Background should have default.
-  - (Commit: [ee5adf0][R1.2-Commit-ee5adf0]) #[2155337][R1.2-Issue-2155337] - Prevent WxT Mobile + Permission.
-  - (Commit: [1c4970e][R1.2-Commit-1c4970e]) #[2155371][R1.2-Issue-2155371] - Mislabelled File Name in WetKit Search API.
-  - (Commit: [9b9071f][R1.2-Commit-9b9071f]) #[2158659][R1.2-Issue-2158659] - Addition of Mackenzie Layout.
+  - (Commit: [41c8765][R1.1-Commit-41c8765]) #[2154261][R1.1-Issue-2154261] - Add Full support for WxT's Responsive Images (Bean).
+  - (Commit: [8bd38f7][R1.1-Commit-8bd38f7]) #[8bd38f7][R1.1-Issue-2154261] - Add Full support for WxT's Responsive Images (Images).
+  - (Commit: [0617a33][R1.1-Commit-0617a33]) #[2154261][R1.1-Issue-2154261] - Add Full support for WxT's Responsive Images (Wysiwyg).
+  - (Commit: [e154bcf][R1.1-Commit-e154bcf]) #[2149799][R1.1-Issue-2149799] - Configure Pane Background should have default.
+  - (Commit: [ee5adf0][R1.1-Commit-ee5adf0]) #[2155337][R1.1-Issue-2155337] - Prevent WxT Mobile + Permission.
+  - (Commit: [1c4970e][R1.1-Commit-1c4970e]) #[2155371][R1.1-Issue-2155371] - Mislabelled File Name in WetKit Search API.
+  - (Commit: [9b9071f][R1.1-Commit-9b9071f]) #[2158659][R1.1-Issue-2158659] - Addition of Mackenzie Layout.
+  - (Commit: [3f340d2][R1.1-Commit-3f340d2]) #[2155411][R1.1-Issue-2155411] - Activating Theme Developer module brings site down.
+  - (Commit: [d4a45a2][R1.1-Commit-d4a45a2]) #[2155545][R1.1-Issue-2155545] - Admin title for search facet in panels.
+  - (Commit: [9be1cac][R1.1-Commit-9be1cac]) #[2153185][R1.1-Issue-2153185] - Uuid_features - undefined_index with bundles.
+  - (Commit: [48f8970][R1.1-Commit-48f8970]) #[2144347][R1.1-Issue-2144347] - Web Installer doesn't display errors.
+  - (Commit: [21957bd][R1.1-Commit-21957bd]) #[2160657][R1.1-Issue-2160657] - Media Filter doesn't correctly handle multiple images.
 
 ## v1.0
 
@@ -326,23 +331,33 @@ Bug Fixes:
 <!-- Links Referenced -->
 
 
-<!-- Commits R1.2 -->
+<!-- Commits R1.1 -->
 
-[R1.2-Commit-0617a33]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/0617a33
-[R1.2-Commit-8bd38f7]:            http://drupalcode.org/project/wetkit_images.git/commit/8bd38f7
-[R1.2-Commit-41c8765]:            http://drupalcode.org/project/wetkit_bean.git/commit/41c8765
-[R1.2-Commit-e154bcf]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/e154bcf
-[R1.2-Commit-ee5adf0]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/ee5adf0
-[R1.2-Commit-1c4970e]:            http://drupalcode.org/project/wetkit_search.git/commit/1c4970e
-[R1.2-Commit-9b9071f]:            http://drupalcode.org/project/wetkit_layouts.git/commit/9b9071f
+[R1.1-Commit-0617a33]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/0617a33
+[R1.1-Commit-8bd38f7]:            http://drupalcode.org/project/wetkit_images.git/commit/8bd38f7
+[R1.1-Commit-41c8765]:            http://drupalcode.org/project/wetkit_bean.git/commit/41c8765
+[R1.1-Commit-e154bcf]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/e154bcf
+[R1.1-Commit-ee5adf0]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/ee5adf0
+[R1.1-Commit-1c4970e]:            http://drupalcode.org/project/wetkit_search.git/commit/1c4970e
+[R1.1-Commit-9b9071f]:            http://drupalcode.org/project/wetkit_layouts.git/commit/9b9071f
+[R1.1-Commit-3f340d2]:            http://drupalcode.org/project/wetkit_menu.git/commit/3f340d2
+[R1.1-Commit-d4a45a2]:            http://drupalcode.org/project/wetkit_search.git/commit/d4a45a2
+[R1.1-Commit-9be1cac]:            http://drupalcode.org/project/wetkit_core.git/commit/9be1cac
+[R1.1-Commit-48f8970]:            http://drupalcode.org/project/wetkit.git/commit/48f8970
+[R1.1-Commit-21957bd]:            http://drupalcode.org/project/wetkit_widgets.git/commit/21957bd
 
-<!-- Issues R1.2 -->
+<!-- Issues R1.1 -->
 
-[R1.2-Issue-2154261]:             http://drupal.org/node/2154261
-[R1.2-Issue-2149799]:             http://drupal.org/node/2149799
-[R1.2-Issue-2155337]:             http://drupal.org/node/2155337
-[R1.2-Issue-2155371]:             http://drupal.org/node/2155371
-[R1.2-Issue-2158659]:             http://drupal.org/node/2158659
+[R1.1-Issue-2154261]:             http://drupal.org/node/2154261
+[R1.1-Issue-2149799]:             http://drupal.org/node/2149799
+[R1.1-Issue-2155337]:             http://drupal.org/node/2155337
+[R1.1-Issue-2155371]:             http://drupal.org/node/2155371
+[R1.1-Issue-2158659]:             http://drupal.org/node/2158659
+[R1.1-Issue-2155411]:             http://drupal.org/node/2155411
+[R1.1-Issue-2155545]:             http://drupal.org/node/2155545
+[R1.1-Issue-2153185]:             http://drupal.org/node/2153185
+[R1.1-Issue-2144347]:             http://drupal.org/node/2144347
+[R1.1-Issue-2160657]:             http://drupal.org/node/2160657
 
 <!-- Commits R1 -->
 

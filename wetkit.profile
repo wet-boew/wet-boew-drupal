@@ -59,7 +59,6 @@ function wetkit_install_tasks_alter(&$tasks, $install_state) {
   // Hide some messages from various modules that are just too chatty.
   drupal_get_messages('status');
   drupal_get_messages('warning');
-  drupal_get_messages('error');
 
   // The "Welcome" screen needs to come after the first two steps
   // (profile and language selection), despite the fact that they are disabled.
@@ -143,7 +142,6 @@ function wetkit_form_install_configure_form_alter(&$form, $form_state) {
   // Hide some messages from various modules that are just too chatty.
   drupal_get_messages('status');
   drupal_get_messages('warning');
-  drupal_get_messages('error');
 
   // Set reasonable defaults for site configuration form.
   $form['site_information']['site_name']['#default_value'] = 'Web Experience Toolkit';
@@ -291,7 +289,6 @@ function wetkit_form_apps_profile_apps_select_form_alter(&$form, $form_state) {
   // Hide some messages from various modules.
   drupal_get_messages('status');
   drupal_get_messages('warning');
-  drupal_get_messages('error');
 
   // For some things there are no need.
   $form['apps_message']['#access'] = FALSE;
