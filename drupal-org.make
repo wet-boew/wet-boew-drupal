@@ -60,7 +60,7 @@ projects[wetkit_pages][subdir] = custom
 projects[wetkit_search][version] = 1.x-dev
 projects[wetkit_search][subdir] = custom
 projects[wetkit_search][download][type] = git
-projects[wetkit_search][download][revision] = 1c4970e
+projects[wetkit_search][download][revision] = d4a45a2
 projects[wetkit_search][download][branch] = 7.x-1.x
 
 projects[wetkit_theme][version] = 1.0
