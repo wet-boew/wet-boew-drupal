@@ -13,7 +13,9 @@ Features:
   - (Commit: [d4a45a2][R1.1-Commit-d4a45a2]) #[2155545][R1.1-Issue-2155545] - Admin title for search facet in panels.
   - (Commit: [9be1cac][R1.1-Commit-9be1cac]) #[2153185][R1.1-Issue-2153185] - Uuid_features - undefined_index with bundles.
   - (Commit: [48f8970][R1.1-Commit-48f8970]) #[2144347][R1.1-Issue-2144347] - Web Installer doesn't display errors.
-  - (Commit: [21957bd][R1.1-Commit-21957bd]) #[2160657][R1.1-Issue-2160657] - Media Filter doesn't correctly handle multiple images.
+  - (Commit: [21957bd][R1.1-Commit-21957bd]) #[2160657][R1.1-Issue-2160657] - Media Filter doesn't correctly handle multiple images (1).
+  - (Commit: [05f03ff][R1.1-Commit-05f03ff]) #[2160657][R1.1-Issue-2160657] - Media Filter doesn't correctly handle multiple images (2).
+  - (Commit: [9dd8772][R1.1-Commit-9dd8772]) #[2157757][R1.1-Issue-2157757] - Using Format Grid w/ Striping Enabled Does Not Work.
 
 ## v1.0
 
@@ -345,6 +347,8 @@ Bug Fixes:
 [R1.1-Commit-9be1cac]:            http://drupalcode.org/project/wetkit_core.git/commit/9be1cac
 [R1.1-Commit-48f8970]:            http://drupalcode.org/project/wetkit.git/commit/48f8970
 [R1.1-Commit-21957bd]:            http://drupalcode.org/project/wetkit_widgets.git/commit/21957bd
+[R1.1-Commit-05f03ff]:            http://drupalcode.org/project/wetkit_widgets.git/commit/05f03ff
+[R1.1-Commit-9dd8772]:            http://drupalcode.org/project/wetkit_core.git/commit/9dd8772
 
 <!-- Issues R1.1 -->
 
@@ -358,6 +362,7 @@ Bug Fixes:
 [R1.1-Issue-2153185]:             http://drupal.org/node/2153185
 [R1.1-Issue-2144347]:             http://drupal.org/node/2144347
 [R1.1-Issue-2160657]:             http://drupal.org/node/2160657
+[R1.1-Issue-2157757]:             http://drupal.org/node/2157757
 
 <!-- Commits R1 -->
 
