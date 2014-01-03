@@ -19,7 +19,8 @@ Features:
   - (Commit: [5cf0580][R1.1-Commit-5cf0580]) #[2165193][R1.1-Issue-2165193] - Metatag description not displaying in HTML head.
   - (Commit: [fdf2891][R1.1-Commit-fdf2891]) #[2155581][R1.1-Issue-2155581] - JS errors keep incrementing when inspecting in Chrome.
   - (Commit: [f4c0404][R1.1-Commit-f4c0404]) #[2166741][R1.1-Issue-2166741] - Update Metatags to latest dev (Full Revision Support).
-  - (Commit: [eb75425][R1.1-Commit-eb75425]) #[2160677][R1.1-Issue-2160677] - Double drop down menu arrows in Internet Explorer (IE) .
+  - (Commit: [eb75425][R1.1-Commit-eb75425]) #[2160677][R1.1-Issue-2160677] - Double drop down menu arrows in Internet Explorer (IE).
+  - (Commit: [8e29480][R1.1-Commit-8e29480]) #[2166803][R1.1-Issue-2166803] - Issue #2166803 by sylus: Update Drupal to 7.25.
 
 ## v1.0
 
@@ -357,6 +358,7 @@ Bug Fixes:
 [R1.1-Commit-fdf2891]:            http://drupalcode.org/project/wetkit_omega.git/commit/fdf2891
 [R1.1-Commit-f4c0404]:            http://drupalcode.org/project/wetkit_metatag.git/commit/f4c0404
 [R1.1-Commit-eb75425]:            http://drupalcode.org/project/wetkit_ember.git/commit/eb75425
+[R1.1-Commit-8e29480]:            http://drupalcode.org/project/wetkit.git/commit/8e29480
 
 <!-- Issues R1.1 -->
 
@@ -375,6 +377,7 @@ Bug Fixes:
 [R1.1-Issue-2155581]:             http://drupal.org/node/2155581
 [R1.1-Issue-2166741]:             http://drupal.org/node/2166741
 [R1.1-Issue-2160677]:             http://drupal.org/node/2160677
+[R1.1-Issue-2166803]:             http://drupal.org/node/2166803
 
 <!-- Commits R1 -->
 
