@@ -18,7 +18,7 @@ Features:
   - (Commit: [9dd8772][R1.1-Commit-9dd8772]) #[2157757][R1.1-Issue-2157757] - Using Format Grid w/ Striping Enabled Does Not Work.
   - (Commit: [5cf0580][R1.1-Commit-5cf0580]) #[2165193][R1.1-Issue-2165193] - Metatag description not displaying in HTML head.
   - (Commit: [fdf2891][R1.1-Commit-fdf2891]) #[2155581][R1.1-Issue-2155581] - JS errors keep incrementing when inspecting in Chrome.
-  - (Commit: [3a9c346][R1.1-Commit-3a9c346]) #[2166741][R1.1-Issue-2166741] - Update Metatags to latest dev (Full Revision Support).
+  - (Commit: [f4c0404][R1.1-Commit-f4c0404]) #[2166741][R1.1-Issue-2166741] - Update Metatags to latest dev (Full Revision Support).
 
 ## v1.0
 
