@@ -16,6 +16,8 @@ Features:
   - (Commit: [21957bd][R1.1-Commit-21957bd]) #[2160657][R1.1-Issue-2160657] - Media Filter doesn't correctly handle multiple images (1).
   - (Commit: [05f03ff][R1.1-Commit-05f03ff]) #[2160657][R1.1-Issue-2160657] - Media Filter doesn't correctly handle multiple images (2).
   - (Commit: [9dd8772][R1.1-Commit-9dd8772]) #[2157757][R1.1-Issue-2157757] - Using Format Grid w/ Striping Enabled Does Not Work.
+  - (Commit: [5cf0580][R1.1-Commit-5cf0580]) #[2165193][R1.1-Issue-2165193] - Metatag description not displaying in HTML head.
+  - (Commit: [fdf2891][R1.1-Commit-fdf2891]) #[2155581][R1.1-Issue-2155581] - JS errors keep incrementing when inspecting in Chrome.
 
 ## v1.0
 
@@ -349,6 +351,8 @@ Bug Fixes:
 [R1.1-Commit-21957bd]:            http://drupalcode.org/project/wetkit_widgets.git/commit/21957bd
 [R1.1-Commit-05f03ff]:            http://drupalcode.org/project/wetkit_widgets.git/commit/05f03ff
 [R1.1-Commit-9dd8772]:            http://drupalcode.org/project/wetkit_core.git/commit/9dd8772
+[R1.1-Commit-5cf0580]:            http://drupalcode.org/project/wetkit_metatag.git/commit/5cf0580
+[R1.1-Commit-fdf2891]:            http://drupalcode.org/project/wetkit_omega.git/commit/fdf2891
 
 <!-- Issues R1.1 -->
 
@@ -363,6 +367,8 @@ Bug Fixes:
 [R1.1-Issue-2144347]:             http://drupal.org/node/2144347
 [R1.1-Issue-2160657]:             http://drupal.org/node/2160657
 [R1.1-Issue-2157757]:             http://drupal.org/node/2157757
+[R1.1-Issue-2165193]:             http://drupal.org/node/2165193
+[R1.1-Issue-2155581]:             http://drupal.org/node/2155581
 
 <!-- Commits R1 -->
 
