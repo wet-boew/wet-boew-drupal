@@ -354,7 +354,7 @@ Bug Fixes:
 [R1.1-Commit-9dd8772]:            http://drupalcode.org/project/wetkit_core.git/commit/9dd8772
 [R1.1-Commit-5cf0580]:            http://drupalcode.org/project/wetkit_metatag.git/commit/5cf0580
 [R1.1-Commit-fdf2891]:            http://drupalcode.org/project/wetkit_omega.git/commit/fdf2891
-[R1.1-Commit-3a9c346]:            http://drupalcode.org/project/wetkit_metatag.git/commit/3a9c346
+[R1.1-Commit-f4c0404]:            http://drupalcode.org/project/wetkit_metatag.git/commit/f4c0404
 
 <!-- Issues R1.1 -->
 
