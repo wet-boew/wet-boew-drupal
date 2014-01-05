@@ -24,6 +24,7 @@ Features:
   - (Commit: [973d251][R1.1-Commit-973d251]) #[2167311][R1.1-Issue-2167311] - Update Ember depdendency for WetKit Ember.
   - (Commit: [4c72796][R1.1-Commit-4c72796]) #[2094209][R1.1-Issue-2094209] - Site logo always appearing.
   - (Commit: [4decafc][R1.1-Commit-4decafc]) #[2151499][R1.1-Issue-2151499] - Migrated default content adds extra undefined language alt text for images.
+  - (Commit: [3c3b646][R1.1-Commit-3c3b646]) #[2167557][R1.1-Issue-2167557] - Remove media_bulk_upload.
 
 ## v1.0
 
@@ -365,6 +366,7 @@ Bug Fixes:
 [R1.1-Commit-eb75425]:            http://drupalcode.org/project/wetkit_ember.git/commit/eb75425
 [R1.1-Commit-4c72796]:            http://drupalcode.org/project/wetkit_omega.git/commit/4c72796
 [R1.1-Commit-4decafc]:            http://drupalcode.org/project/wetkit_migrate.git/commit/4decafc
+[R1.1-Commit-3c3b646]:            http://drupalcode.org/project/wetkit_widgets.git/commit/3c3b646
 
 <!-- Issues R1.1 -->
 
@@ -387,6 +389,7 @@ Bug Fixes:
 [R1.1-Issue-2167311]:             http://drupal.org/node/2167311
 [R1.1-Issue-2094209]:             http://drupal.org/node/2094209
 [R1.1-Issue-2151499]:             http://drupal.org/node/2151499
+[R1.1-Issue-2167557]:             http://drupal.org/node/2167557
 
 <!-- Commits R1 -->
 
