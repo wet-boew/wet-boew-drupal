@@ -51,11 +51,14 @@ projects[wetkit_menu][download][branch] = 7.x-1.x
 projects[wetkit_metatag][version] = 1.x-dev
 projects[wetkit_metatag][subdir] = custom
 projects[wetkit_metatag][download][type] = git
-projects[wetkit_metatag][download][revision] = f4c0404
+projects[wetkit_metatag][download][revision] = 13432a3
 projects[wetkit_metatag][download][branch] = 7.x-1.x
 
-projects[wetkit_migrate][version] = 1.0
+projects[wetkit_migrate][version] = 1.x-dev
 projects[wetkit_migrate][subdir] = custom
+projects[wetkit_migrate][download][type] = git
+projects[wetkit_migrate][download][revision] = 4decafc
+projects[wetkit_migrate][download][branch] = 7.x-1.x
 
 projects[wetkit_og][version] = 1.0
 projects[wetkit_og][subdir] = custom
@@ -84,25 +87,25 @@ projects[wetkit_wetboew][download][branch] = 7.x-1.x
 projects[wetkit_widgets][version] = 1.x-dev
 projects[wetkit_widgets][subdir] = custom
 projects[wetkit_widgets][download][type] = git
-projects[wetkit_widgets][download][revision] = 05f03ff
+projects[wetkit_widgets][download][revision] = 3c3b646
 projects[wetkit_widgets][download][branch] = 7.x-1.x
 
 projects[wetkit_wysiwyg][version] = 1.x-dev
 projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_wysiwyg][download][type] = git
-projects[wetkit_wysiwyg][download][revision] = 0617a33
+projects[wetkit_wysiwyg][download][revision] = e15997a
 projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
 
 ; WxT Foundation (Themes)
 
 projects[wetkit_ember][version] = 1.x-dev
 projects[wetkit_ember][download][type] = git
-projects[wetkit_ember][download][revision] = eb75425
+projects[wetkit_ember][download][revision] = 973d251
 projects[wetkit_ember][download][branch] = 7.x-1.x
 
 projects[wetkit_omega][version] = 1.x-dev
 projects[wetkit_omega][download][type] = git
-projects[wetkit_omega][download][revision] = fdf2891
+projects[wetkit_omega][download][revision] = 4c72796
 projects[wetkit_omega][download][branch] = 7.x-1.x
 
 projects[wetkit_shiny][version] = 1.1
