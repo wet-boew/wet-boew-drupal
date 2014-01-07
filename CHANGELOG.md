@@ -370,7 +370,7 @@ Bug Fixes:
 [R1.1-Commit-f4c0404]:            http://drupalcode.org/project/wetkit_metatag.git/commit/f4c0404
 [R1.1-Commit-eb75425]:            http://drupalcode.org/project/wetkit_ember.git/commit/eb75425
 [R1.1-Commit-8e29480]:            http://drupalcode.org/project/wetkit.git/commit/8e29480
-[R1.1-Commit-eb75425]:            http://drupalcode.org/project/wetkit_ember.git/commit/eb75425
+[R1.1-Commit-973d251]:            http://drupalcode.org/project/wetkit_ember.git/commit/973d251
 [R1.1-Commit-4c72796]:            http://drupalcode.org/project/wetkit_omega.git/commit/4c72796
 [R1.1-Commit-4decafc]:            http://drupalcode.org/project/wetkit_migrate.git/commit/4decafc
 [R1.1-Commit-3c3b646]:            http://drupalcode.org/project/wetkit_widgets.git/commit/3c3b646
