@@ -1,4 +1,10 @@
-## v1.x (In Development)
+## v1.1
+
+Features:
+
+  - More Stabilization
+  - Lots of minor bugs fixed
+  - Introduction of Picture + Media Query
 
 Bug Fixes:
 
