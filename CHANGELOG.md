@@ -1,6 +1,6 @@
 ## v1.x (In Development)
 
-Features:
+Bug Fixes:
 
   - (Commit: [41c8765][R1.1-Commit-41c8765]) #[2154261][R1.1-Issue-2154261] - Add Full support for WxT's Responsive Images (Bean).
   - (Commit: [8bd38f7][R1.1-Commit-8bd38f7]) #[8bd38f7][R1.1-Issue-2154261] - Add Full support for WxT's Responsive Images (Images).
