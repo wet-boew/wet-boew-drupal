@@ -18,6 +18,7 @@ Bug Fixes:
   - (Commit: [41c8765][R1.2-Commit-9756256]) #[2173391][R1.2-Issue-2173391] - Updating share widget for email and source tag.
   - (Commit: [b107e98][R1.2-Commit-b107e98]) #[2176457][R1.2-Issue-2176457] - Small adjustments to WetKit Search.
   - (Commit: [2383101][R1.2-Commit-2383101]) #[2176487][R1.2-Issue-2176487] - WetKit Core Updates.
+  - (Commit: [9ccea63][R1.2-Commit-9ccea63]) #[2176519][R1.2-Issue-2176519] - WetKit Breadcrumbs Update.
 
 ## v1.1
 
@@ -383,6 +384,7 @@ Bug Fixes:
 [R1.2-Commit-9756256]:            http://drupalcode.org/project/wetkit_bean.git/commit/9756256
 [R1.2-Commit-b107e98]:            http://drupalcode.org/project/wetkit_search.git/commit/b107e98
 [R1.2-Commit-2383101]:            http://drupalcode.org/project/wetkit_core.git/commit/2383101
+[R1.2-Commit-9ccea63]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/9ccea63
 
 <!-- Issues R1.2 -->
 
@@ -391,6 +393,7 @@ Bug Fixes:
 [R1.2-Issue-2173391]:             http://drupal.org/node/2173391
 [R1.2-Issue-2176457]:             http://drupal.org/node/2176457
 [R1.2-Issue-2176487]:             http://drupal.org/node/2176487
+[R1.2-Issue-2176519]:             http://drupal.org/node/2176519
 
 <!-- Commits R1.1 -->
 
