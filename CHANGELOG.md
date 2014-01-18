@@ -1,3 +1,24 @@
+## v1.2
+
+Security Update:
+
+  - Drupal Core (7.26)
+  - Entity API
+
+Features:
+
+  - More Stabilization
+  - Lots of minor bugs fixed
+  - Introduction of Picture + Media Query
+
+Bug Fixes:
+
+  - (Commit: [26bfbe5][R1.2-Commit-26bfbe5]) #[2173403][R1.2-Issue-2173403] - Adding extra sharing sites.
+  - (Commit: [470071c][R1.2-Commit-470071c]) #[2175767][R1.2-Issue-2175767] - Declare translatable field for Featured Image.
+  - (Commit: [41c8765][R1.2-Commit-9756256]) #[2173391][R1.2-Issue-2173391] - Updating share widget for email and source tag.
+  - (Commit: [b107e98][R1.2-Commit-b107e98]) #[2176457][R1.2-Issue-2176457] - Small adjustments to WetKit Search.
+  - (Commit: [2383101][R1.2-Commit-2383101]) #[2176487][R1.2-Issue-2176487] - WetKit Core Updates.
+
 ## v1.1
 
 Features:
@@ -370,7 +391,7 @@ Bug Fixes:
 [R1.1-Commit-f4c0404]:            http://drupalcode.org/project/wetkit_metatag.git/commit/f4c0404
 [R1.1-Commit-eb75425]:            http://drupalcode.org/project/wetkit_ember.git/commit/eb75425
 [R1.1-Commit-8e29480]:            http://drupalcode.org/project/wetkit.git/commit/8e29480
-[R1.1-Commit-eb75425]:            http://drupalcode.org/project/wetkit_ember.git/commit/eb75425
+[R1.1-Commit-973d251]:            http://drupalcode.org/project/wetkit_ember.git/commit/973d251
 [R1.1-Commit-4c72796]:            http://drupalcode.org/project/wetkit_omega.git/commit/4c72796
 [R1.1-Commit-4decafc]:            http://drupalcode.org/project/wetkit_migrate.git/commit/4decafc
 [R1.1-Commit-3c3b646]:            http://drupalcode.org/project/wetkit_widgets.git/commit/3c3b646

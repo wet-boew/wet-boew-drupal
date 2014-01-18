@@ -6,14 +6,20 @@ core = 7.x
 projects[wetkit_admin][version] = 1.1
 projects[wetkit_admin][subdir] = custom
 
-projects[wetkit_bean][version] = 1.3
+projects[wetkit_bean][version] = 1.x-dev
 projects[wetkit_bean][subdir] = custom
+projects[wetkit_bean][download][type] = git
+projects[wetkit_bean][download][revision] = 9756256
+projects[wetkit_bean][download][branch] = 7.x-1.x
 
 projects[wetkit_breadcrumbs][version] = 1.1
 projects[wetkit_breadcrumbs][subdir] = custom
 
-projects[wetkit_core][version] = 1.3
+projects[wetkit_core][version] = 1.x-dev
 projects[wetkit_core][subdir] = custom
+projects[wetkit_core][download][type] = git
+projects[wetkit_core][download][revision] = 2383101
+projects[wetkit_core][download][branch] = 7.x-1.x
 
 projects[wetkit_demo][version] = 1.1
 projects[wetkit_demo][subdir] = custom
@@ -45,8 +51,11 @@ projects[wetkit_og][subdir] = custom
 projects[wetkit_pages][version] = 1.2
 projects[wetkit_pages][subdir] = custom
 
-projects[wetkit_search][version] = 1.2
+projects[wetkit_search][version] = 1.x-dev
 projects[wetkit_search][subdir] = custom
+projects[wetkit_search][download][type] = git
+projects[wetkit_search][download][revision] = b107e98
+projects[wetkit_search][download][branch] = 7.x-1.x
 
 projects[wetkit_theme][version] = 1.0
 projects[wetkit_theme][subdir] = custom
