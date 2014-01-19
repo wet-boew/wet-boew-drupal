@@ -16,6 +16,8 @@ Bug Fixes:
   - (Commit: [d5f1d97][R1.2-Commit-d5f1d97]) #[2176527][R1.2-Issue-2176527] - WetKit Metatags Update.
   - (Commit: [482f756][R1.2-Commit-482f756]) #[2176527][R1.2-Issue-2176567] - Fix for undefined panels display::UUID in wetkit_i18n_panels.
   - (Commit: [3a018be][R1.2-Commit-3a018be]) #[2176571][R1.2-Issue-2176571] - Updates to WetKit Language.
+  - (Commit: [3178bf4][R1.2-Commit-3178bf4]) #[2176577][R1.2-Issue-2176577] - Remove widget Tabbed Inteface in favor of the Bean Media functionality.
+  - (Commit: [cc4e7bb][R1.2-Commit-cc4e7bb]) #[2176527][R1.2-Issue-2176527] - WetKit Metatags Update.
 
 ## v1.1
 
@@ -385,6 +387,8 @@ Bug Fixes:
 [R1.2-Commit-d5f1d97]:            http://drupalcode.org/project/wetkit_metatag.git/commit/d5f1d97
 [R1.2-Commit-482f756]:            http://drupalcode.org/project/wetkit_language.git/commit/482f756
 [R1.2-Commit-3a018be]:            http://drupalcode.org/project/wetkit_language.git/commit/3a018be
+[R1.2-Commit-3178bf4]:            http://drupalcode.org/project/wetkit_widgets.git/commit/3178bf4
+[R1.2-Commit-cc4e7bb]:            http://drupalcode.org/project/wetkit_metatag.git/commit/cc4e7bb
 
 <!-- Issues R1.2 -->
 
@@ -397,6 +401,7 @@ Bug Fixes:
 [R1.2-Issue-2176527]:             http://drupal.org/node/2176527
 [R1.2-Issue-2176567]:             http://drupal.org/node/2176567
 [R1.2-Issue-2176571]:             http://drupal.org/node/2176571
+[R1.2-Issue-2176577]:             http://drupal.org/node/2176577
 
 <!-- Commits R1.1 -->
 
