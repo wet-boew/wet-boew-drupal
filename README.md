@@ -76,7 +76,7 @@ specific language governing permissions and limitations under the License.
 [selenium-badge]:       https://saucelabs.com/buildstatus/sylus
 [simplytest]:           http://simplytest.me/project/wetkit/7.x-1.x
 [travisci]:             https://travis-ci.org/wet-boew/wet-boew-drupal
-[travisci-badge]:       https://secure.travis-ci.org/wet-boew/wet-boew-drupal.png?branch=7.x-1.x
+[travisci-badge]:       https://travis-ci.org/wet-boew/wet-boew-drupal.png?branch=7.x-1.x
 [vagrant-normandy]:     https://github.com/sylus/vagrant-normandy
 [wet-boew]:             https://github.com/wet-boew/wet-boew
 [youtube]:              http://www.youtube.com/playlist?list=PLjIClrDa-_ZFwO-0sT_y6PGljSdbYztwi
