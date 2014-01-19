@@ -19,10 +19,11 @@ Bug Fixes:
   - (Commit: [3178bf4][R1.2-Commit-3178bf4]) #[2176577][R1.2-Issue-2176577] - Remove widget Tabbed Inteface in favor of the Bean Media functionality.
   - (Commit: [cc4e7bb][R1.2-Commit-cc4e7bb]) #[2176527][R1.2-Issue-2176527] - WetKit Metatags Update.
   - (Commit: [cc4e7bb][R1.2-Commit-cc4e7bb]) #[2176527][R1.2-Issue-2176527] - WetKit Metatags Update.
-  - (Commit: [fcaae17][R1.2-Commit-fcaae17]) #[2176603][R1.2-Issue-2176603] - Improve Ember base Theme.
+  - (Commit: [fcaae17][R1.2-Commit-fcaae17]) #[2176603][R1.2-Issue-2176603] - Improve Ember base Theme (Part 1).
   - (Commit: [75e5f04][R1.2-Commit-75e5f04]) #[2176825][R1.2-Issue-2176825] - CodeSniffer Updates (WetKit Admin).
   - (Commit: [517a8f5][R1.2-Commit-517a8f5]) #[2176825][R1.2-Issue-2176825] - CodeSniffer Updates (WetKit Wysiwyg).
   - (Commit: [a5f02e6][R1.2-Commit-a5f02e6]) #[2176487][R1.2-Issue-2176487] - WetKit Core Updates (Part 2).
+  - (Commit: [8981be2][R1.2-Commit-8981be2]) #[2176603][R1.2-Issue-2176603] - Improve Ember base Theme (Part 2).
 
 ## v1.1
 
@@ -398,6 +399,7 @@ Bug Fixes:
 [R1.2-Commit-75e5f04]:            http://drupalcode.org/project/wetkit_admin.git/commit/75e5f04
 [R1.2-Commit-517a8f5]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/517a8f5
 [R1.2-Commit-a5f02e6]:            http://drupalcode.org/project/wetkit_core.git/commit/a5f02e6
+[R1.2-Commit-8981be2]:            http://drupalcode.org/project/wetkit_ember.git/commit/8981be2
 
 <!-- Issues R1.2 -->
 
