@@ -1,10 +1,10 @@
 # French translation of Web Experience Toolkit (7.x-1.0-rc23)
-# Copyright (c) 2013 by the French translation team
+# Copyright (c) 2014 by the French translation team
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Web Experience Toolkit (7.x-1.0-rc23)\n"
-"POT-Creation-Date: 2013-11-30 22:36+0000\n"
+"POT-Creation-Date: 2014-01-02 21:41+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -33700,6 +33700,8 @@ msgstr ""
 "conditions."
 msgid "Completed."
 msgstr "Terminé."
+msgid "Revision settings"
+msgstr "Paramètres des révisions"
 msgid "Hide page title"
 msgstr "Masquer le titre de page"
 msgid "Number of enabled modules"
