@@ -6,7 +6,7 @@ core = 7.x
 projects[wetkit_admin][version] = 1.x-dev
 projects[wetkit_admin][subdir] = custom
 projects[wetkit_admin][download][type] = git
-projects[wetkit_admin][download][revision] = 75e5f04
+projects[wetkit_admin][download][revision] = f61ec36
 projects[wetkit_admin][download][branch] = 7.x-1.x
 
 projects[wetkit_bean][version] = 1.x-dev
@@ -72,8 +72,11 @@ projects[wetkit_search][download][type] = git
 projects[wetkit_search][download][revision] = b107e98
 projects[wetkit_search][download][branch] = 7.x-1.x
 
-projects[wetkit_theme][version] = 1.0
+projects[wetkit_theme][version] = 1.x-dev
 projects[wetkit_theme][subdir] = custom
+projects[wetkit_theme][download][type] = git
+projects[wetkit_theme][download][revision] = 192811a
+projects[wetkit_theme][download][branch] = 7.x-1.x
 
 projects[wetkit_users][version] = 1.0
 projects[wetkit_users][subdir] = custom
@@ -102,7 +105,7 @@ projects[wetkit_ember][download][branch] = 7.x-1.x
 
 projects[wetkit_omega][version] = 1.x-dev
 projects[wetkit_omega][download][type] = git
-projects[wetkit_omega][download][revision] = b357bac
+projects[wetkit_omega][download][revision] = 677730d
 projects[wetkit_omega][download][branch] = 7.x-1.x
 
 projects[wetkit_shiny][version] = 1.1
