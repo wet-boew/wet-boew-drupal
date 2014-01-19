@@ -86,8 +86,10 @@ projects[wetkit_wysiwyg][subdir] = custom
 
 ; WxT Foundation (Themes)
 
-projects[wetkit_ember][version] = 1.1
-projects[wetkit_ember][type] = theme
+projects[wetkit_ember][version] = 1.x-dev
+projects[wetkit_ember][download][type] = git
+projects[wetkit_ember][download][revision] = fcaae17
+projects[wetkit_ember][download][branch] = 7.x-1.x
 
 projects[wetkit_omega][version] = 1.2
 projects[wetkit_omega][type] = theme
