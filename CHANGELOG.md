@@ -11,7 +11,7 @@ Bug Fixes:
   - (Commit: [470071c][R1.2-Commit-470071c]) #[2175767][R1.2-Issue-2175767] - Declare translatable field for Featured Image.
   - (Commit: [41c8765][R1.2-Commit-9756256]) #[2173391][R1.2-Issue-2173391] - Updating share widget for email and source tag.
   - (Commit: [b107e98][R1.2-Commit-b107e98]) #[2176457][R1.2-Issue-2176457] - Small adjustments to WetKit Search.
-  - (Commit: [2383101][R1.2-Commit-2383101]) #[2176487][R1.2-Issue-2176487] - WetKit Core Updates.
+  - (Commit: [2383101][R1.2-Commit-2383101]) #[2176487][R1.2-Issue-2176487] - WetKit Core Updates (Part 1).
   - (Commit: [9ccea63][R1.2-Commit-9ccea63]) #[2176519][R1.2-Issue-2176519] - WetKit Breadcrumbs Update.
   - (Commit: [d5f1d97][R1.2-Commit-d5f1d97]) #[2176527][R1.2-Issue-2176527] - WetKit Metatags Update.
   - (Commit: [482f756][R1.2-Commit-482f756]) #[2176527][R1.2-Issue-2176567] - Fix for undefined panels display::UUID in wetkit_i18n_panels.
@@ -20,6 +20,9 @@ Bug Fixes:
   - (Commit: [cc4e7bb][R1.2-Commit-cc4e7bb]) #[2176527][R1.2-Issue-2176527] - WetKit Metatags Update.
   - (Commit: [cc4e7bb][R1.2-Commit-cc4e7bb]) #[2176527][R1.2-Issue-2176527] - WetKit Metatags Update.
   - (Commit: [fcaae17][R1.2-Commit-fcaae17]) #[2176603][R1.2-Issue-2176603] - Improve Ember base Theme.
+  - (Commit: [75e5f04][R1.2-Commit-75e5f04]) #[2176825][R1.2-Issue-2176825] - CodeSniffer Updates (WetKit Admin).
+  - (Commit: [517a8f5][R1.2-Commit-517a8f5]) #[2176825][R1.2-Issue-2176825] - CodeSniffer Updates (WetKit Wysiwyg).
+  - (Commit: [a5f02e6][R1.2-Commit-a5f02e6]) #[2176487][R1.2-Issue-2176487] - WetKit Core Updates (Part 2).
 
 ## v1.1
 
@@ -392,6 +395,9 @@ Bug Fixes:
 [R1.2-Commit-3178bf4]:            http://drupalcode.org/project/wetkit_widgets.git/commit/3178bf4
 [R1.2-Commit-cc4e7bb]:            http://drupalcode.org/project/wetkit_metatag.git/commit/cc4e7bb
 [R1.2-Commit-fcaae17]:            http://drupalcode.org/project/wetkit_ember.git/commit/fcaae17
+[R1.2-Commit-75e5f04]:            http://drupalcode.org/project/wetkit_admin.git/commit/75e5f04
+[R1.2-Commit-517a8f5]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/517a8f5
+[R1.2-Commit-a5f02e6]:            http://drupalcode.org/project/wetkit_core.git/commit/a5f02e6
 
 <!-- Issues R1.2 -->
 
@@ -406,6 +412,7 @@ Bug Fixes:
 [R1.2-Issue-2176571]:             http://drupal.org/node/2176571
 [R1.2-Issue-2176577]:             http://drupal.org/node/2176577
 [R1.2-Issue-2176603]:             http://drupal.org/node/2176603
+[R1.2-Issue-2176825]:             http://drupal.org/node/2176825
 
 <!-- Commits R1.1 -->
 
