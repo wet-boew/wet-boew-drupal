@@ -5,12 +5,6 @@ Security Update:
   - Drupal Core (7.26)
   - Entity API
 
-Features:
-
-  - More Stabilization
-  - Lots of minor bugs fixed
-  - Introduction of Picture + Media Query
-
 Bug Fixes:
 
   - (Commit: [26bfbe5][R1.2-Commit-26bfbe5]) #[2173403][R1.2-Issue-2173403] - Adding extra sharing sites.
