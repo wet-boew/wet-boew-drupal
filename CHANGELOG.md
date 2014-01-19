@@ -5,6 +5,12 @@ Security Update:
   - Drupal Core (7.26)
   - Entity API
 
+Features:
+
+  - A great deal of modules have been set to stable tag
+  - Ember base theme has been significantly improved
+  - Performance improvements
+
 Bug Fixes:
 
   - (Commit: [26bfbe5][R1.2-Commit-26bfbe5]) #[2173403][R1.2-Issue-2173403] - Adding extra sharing sites.
