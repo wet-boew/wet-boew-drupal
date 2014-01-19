@@ -1,4 +1,4 @@
-## v1.2
+## v1.2 (In Development)
 
 Security Update:
 
@@ -15,6 +15,7 @@ Bug Fixes:
   - (Commit: [9ccea63][R1.2-Commit-9ccea63]) #[2176519][R1.2-Issue-2176519] - WetKit Breadcrumbs Update.
   - (Commit: [d5f1d97][R1.2-Commit-d5f1d97]) #[2176527][R1.2-Issue-2176527] - WetKit Metatags Update.
   - (Commit: [482f756][R1.2-Commit-482f756]) #[2176527][R1.2-Issue-2176567] - Fix for undefined panels display::UUID in wetkit_i18n_panels.
+  - (Commit: [3a018be][R1.2-Commit-3a018be]) #[2176571][R1.2-Issue-2176571] - Updates to WetKit Language.
 
 ## v1.1
 
@@ -383,6 +384,7 @@ Bug Fixes:
 [R1.2-Commit-9ccea63]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/9ccea63
 [R1.2-Commit-d5f1d97]:            http://drupalcode.org/project/wetkit_metatag.git/commit/d5f1d97
 [R1.2-Commit-482f756]:            http://drupalcode.org/project/wetkit_language.git/commit/482f756
+[R1.2-Commit-3a018be]:            http://drupalcode.org/project/wetkit_language.git/commit/3a018be
 
 <!-- Issues R1.2 -->
 
@@ -394,6 +396,7 @@ Bug Fixes:
 [R1.2-Issue-2176519]:             http://drupal.org/node/2176519
 [R1.2-Issue-2176527]:             http://drupal.org/node/2176527
 [R1.2-Issue-2176567]:             http://drupal.org/node/2176567
+[R1.2-Issue-2176571]:             http://drupal.org/node/2176571
 
 <!-- Commits R1.1 -->
 
