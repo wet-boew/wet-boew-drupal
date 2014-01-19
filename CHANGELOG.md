@@ -5,6 +5,12 @@ Security Update:
   - Drupal Core (7.26)
   - Entity API
 
+Features:
+
+  - A great deal of modules have been set to stable tag
+  - Ember base theme has been significantly improved
+  - Performance improvements
+
 Bug Fixes:
 
   - (Commit: [26bfbe5][R1.2-Commit-26bfbe5]) #[2173403][R1.2-Issue-2173403] - Adding extra sharing sites.
@@ -24,6 +30,8 @@ Bug Fixes:
   - (Commit: [517a8f5][R1.2-Commit-517a8f5]) #[2176825][R1.2-Issue-2176825] - CodeSniffer Updates (WetKit Wysiwyg).
   - (Commit: [a5f02e6][R1.2-Commit-a5f02e6]) #[2176487][R1.2-Issue-2176487] - WetKit Core Updates (Part 2).
   - (Commit: [8981be2][R1.2-Commit-8981be2]) #[2176603][R1.2-Issue-2176603] - Improve Ember base Theme (Part 2).
+  - (Commit: [eb311e3][R1.2-Commit-eb311e3]) #[2176603][R1.2-Issue-2176603] - Improve Ember base Theme (Part 3).
+  - (Commit: [b357bac][R1.2-Commit-b357bac]) #[2168363][R1.2-Issue-2168363] - Site_name_url without clean url .
 
 ## v1.1
 
@@ -400,6 +408,8 @@ Bug Fixes:
 [R1.2-Commit-517a8f5]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/517a8f5
 [R1.2-Commit-a5f02e6]:            http://drupalcode.org/project/wetkit_core.git/commit/a5f02e6
 [R1.2-Commit-8981be2]:            http://drupalcode.org/project/wetkit_ember.git/commit/8981be2
+[R1.2-Commit-eb311e3]:            http://drupalcode.org/project/wetkit_ember.git/commit/eb311e3
+[R1.2-Commit-b357bac]:            http://drupalcode.org/project/wetkit_omega.git/commit/b357bac
 
 <!-- Issues R1.2 -->
 
@@ -415,6 +425,7 @@ Bug Fixes:
 [R1.2-Issue-2176577]:             http://drupal.org/node/2176577
 [R1.2-Issue-2176603]:             http://drupal.org/node/2176603
 [R1.2-Issue-2176825]:             http://drupal.org/node/2176825
+[R1.2-Issue-2168363]:             http://drupal.org/node/2168363
 
 <!-- Commits R1.1 -->
 

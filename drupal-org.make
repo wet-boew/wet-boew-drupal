@@ -97,11 +97,13 @@ projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
 
 projects[wetkit_ember][version] = 1.x-dev
 projects[wetkit_ember][download][type] = git
-projects[wetkit_ember][download][revision] = 8981be2
+projects[wetkit_ember][download][revision] = eb311e3
 projects[wetkit_ember][download][branch] = 7.x-1.x
 
-projects[wetkit_omega][version] = 1.2
-projects[wetkit_omega][type] = theme
+projects[wetkit_omega][version] = 1.x-dev
+projects[wetkit_omega][download][type] = git
+projects[wetkit_omega][download][revision] = b357bac
+projects[wetkit_omega][download][branch] = 7.x-1.x
 
 projects[wetkit_shiny][version] = 1.1
 projects[wetkit_shiny][type] = theme
