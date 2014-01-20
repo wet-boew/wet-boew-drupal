@@ -10,8 +10,9 @@ Features:
   - A great deal of modules have been set to stable tag
   - Ember base theme has been significantly improved
   - Performance improvements
+  - Work will now being on 2.x branch for bootstrap (stability for 1.x)
 
-Bug Fixes:
+Fixes:
 
   - (Commit: [26bfbe5][R1.2-Commit-26bfbe5]) #[2173403][R1.2-Issue-2173403] - Adding extra sharing sites.
   - (Commit: [470071c][R1.2-Commit-470071c]) #[2175767][R1.2-Issue-2175767] - Declare translatable field for Featured Image.
@@ -35,6 +36,8 @@ Bug Fixes:
   - (Commit: [677730d][R1.2-Commit-677730d]) #[2168363][R1.2-Issue-2168363] - Site_name_url without clean url (Part 2).
   - (Commit: [192811a][R1.2-Commit-192811a]) #[2176973][R1.2-Issue-2176973] -  Fix admin_menu implementation (Part 1).
   - (Commit: [f61ec36][R1.2-Commit-f61ec36]) #[2176973][R1.2-Issue-2176973] -  Fix admin_menu implementation (Part 2).
+  - (Commit: [309895b][R1.2-Commit-309895b]) #[2176523][R1.2-Issue-2176523] -  Why no more "Promoted to front page"? (Part 1).
+  - (Commit: [37b5d37][R1.2-Commit-37b5d37]) #[2176523][R1.2-Issue-2176523] -  Why no more "Promoted to front page"? (Part 2).
 
 ## v1.1
 
@@ -416,6 +419,8 @@ Bug Fixes:
 [R1.2-Commit-677730d]:            http://drupalcode.org/project/wetkit_omega.git/commit/677730d
 [R1.2-Commit-192811a]:            http://drupalcode.org/project/wetkit_theme.git/commit/192811a
 [R1.2-Commit-f61ec36]:            http://drupalcode.org/project/wetkit_admin.git/commit/f61ec36
+[R1.2-Commit-309895b]:            http://drupalcode.org/project/wetkit_pages.git/commit/309895b
+[R1.2-Commit-37b5d37]:            http://drupalcode.org/project/wetkit_admin.git/commit/37b5d37
 
 <!-- Issues R1.2 -->
 
@@ -433,6 +438,7 @@ Bug Fixes:
 [R1.2-Issue-2176825]:             http://drupal.org/node/2176825
 [R1.2-Issue-2168363]:             http://drupal.org/node/2168363
 [R1.2-Issue-2176973]:             http://drupal.org/node/2176973
+[R1.2-Issue-2176523]:             http://drupal.org/node/2176523
 
 <!-- Commits R1.1 -->
 
