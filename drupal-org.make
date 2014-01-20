@@ -65,7 +65,7 @@ projects[wetkit_wysiwyg][subdir] = custom
 
 ; WxT Foundation (Themes)
 
-projects[wetkit_ember][version] = 1.2
+projects[wetkit_ember][version] = 1.3
 projects[wetkit_ember][type] = theme
 
 projects[wetkit_omega][version] = 1.3
