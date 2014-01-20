@@ -11,6 +11,7 @@ Features:
   - Ember base theme has been significantly improved
   - Performance improvements
   - Work will now being on 2.x branch for bootstrap (stability for 1.x)
+  - New release cycle at mid month when security releases come out
 
 Fixes:
 
