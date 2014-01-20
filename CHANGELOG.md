@@ -38,6 +38,7 @@ Fixes:
   - (Commit: [f61ec36][R1.2-Commit-f61ec36]) #[2176973][R1.2-Issue-2176973] -  Fix admin_menu implementation (Part 2).
   - (Commit: [309895b][R1.2-Commit-309895b]) #[2176523][R1.2-Issue-2176523] -  Why no more "Promoted to front page"? (Part 1).
   - (Commit: [37b5d37][R1.2-Commit-37b5d37]) #[2176523][R1.2-Issue-2176523] -  Why no more "Promoted to front page"? (Part 2).
+  - (Commit: [4e36f15][R1.2-Commit-4e36f15]) #[2176523][R1.2-Issue-2176523] -  Why no more "Promoted to front page"? (Part 3).
 
 ## v1.1
 
@@ -421,6 +422,7 @@ Bug Fixes:
 [R1.2-Commit-f61ec36]:            http://drupalcode.org/project/wetkit_admin.git/commit/f61ec36
 [R1.2-Commit-309895b]:            http://drupalcode.org/project/wetkit_pages.git/commit/309895b
 [R1.2-Commit-37b5d37]:            http://drupalcode.org/project/wetkit_admin.git/commit/37b5d37
+[R1.2-Commit-4e36f15]:            http://drupalcode.org/project/wetkit_core.git/commit/4e36f15
 
 <!-- Issues R1.2 -->
 
