@@ -39,6 +39,7 @@ Fixes:
   - (Commit: [309895b][R1.2-Commit-309895b]) #[2176523][R1.2-Issue-2176523] -  Why no more "Promoted to front page"? (Part 1).
   - (Commit: [37b5d37][R1.2-Commit-37b5d37]) #[2176523][R1.2-Issue-2176523] -  Why no more "Promoted to front page"? (Part 2).
   - (Commit: [4e36f15][R1.2-Commit-4e36f15]) #[2176523][R1.2-Issue-2176523] -  Why no more "Promoted to front page"? (Part 3).
+  - (Commit: [0be3895][R1.2-Commit-0be3895]) #[2160677][R1.2-Issue-2160677] -  Double drop down arrows in IE 9.
 
 ## v1.1
 
@@ -423,6 +424,7 @@ Bug Fixes:
 [R1.2-Commit-309895b]:            http://drupalcode.org/project/wetkit_pages.git/commit/309895b
 [R1.2-Commit-37b5d37]:            http://drupalcode.org/project/wetkit_admin.git/commit/37b5d37
 [R1.2-Commit-4e36f15]:            http://drupalcode.org/project/wetkit_core.git/commit/4e36f15
+[R1.2-Commit-0be3895]:            http://drupalcode.org/project/wetkit_ember.git/commit/0be3895
 
 <!-- Issues R1.2 -->
 
@@ -441,6 +443,7 @@ Bug Fixes:
 [R1.2-Issue-2168363]:             http://drupal.org/node/2168363
 [R1.2-Issue-2176973]:             http://drupal.org/node/2176973
 [R1.2-Issue-2176523]:             http://drupal.org/node/2176523
+[R1.2-Issue-2160677]:             http://drupal.org/node/2160677
 
 <!-- Commits R1.1 -->
 
