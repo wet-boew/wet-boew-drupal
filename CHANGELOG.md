@@ -1,3 +1,16 @@
+## v1.3 (In Development)
+
+Fixes:
+
+  - (Commit: [677730d][R1.3-Commit-677730d]) #[2177753][R1.3-Issue-2177753] -  Configuring pane title background style.
+  - (Commit: [c0fe19d][R1.3-Commit-c0fe19d]) #[2177741][R1.3-Issue-2177741] -  Needs a setting to configure pane title background.
+  - (Commit: [1886fad][R1.3-Commit-1886fad]) #[2178341][R1.3-Issue-2178341] -  Wetkit Bean outputs an empty H2 and assiated title_field markup.
+  - (Commit: [32fa225][R1.3-Commit-32fa225]) #[2177627][R1.3-Issue-2177627] -  Allowing to add classes to a top-section menu item.
+  - (Commit: [f70a208][R1.3-Commit-f70a208]) #[2185513][R1.3-Issue-2185513] -  Wetkit_bean slideshow generates errors.
+  - (Commit: [de72d0d][R1.3-Commit-de72d0d]) #[2178469][R1.3-Issue-2178469] -  Linkit search results should include the URL of the page.
+  - (Commit: [a7691a2][R1.3-Commit-a7691a2]) #[2181155][R1.3-Issue-2181155] -  Bean for implementing a Slide-out tab.
+  - (Commit: [8128ef6][R1.3-Commit-8128ef6]) #[2184761][R1.3-Issue-2184761] -  Webform conditional not working.
+
 ## v1.2
 
 Security Update:
@@ -392,6 +405,28 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+
+<!-- Commits R1.3 -->
+
+[R1.3-Commit-677730d]:            http://drupalcode.org/project/wetkit_omega.git/commit/677730d
+[R1.3-Commit-c0fe19d]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/c0fe19d
+[R1.3-Commit-1886fad]:            http://drupalcode.org/project/wetkit_bean.git/commit/1886fad
+[R1.3-Commit-32fa225]:            http://drupalcode.org/project/wetkit_menu.git/commit/32fa225
+[R1.3-Commit-f70a208]:            http://drupalcode.org/project/wetkit_bean.git/commit/f70a208
+[R1.3-Commit-de72d0d]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/de72d0d
+[R1.3-Commit-a7691a2]:            http://drupalcode.org/project/wetkit_bean.git/commit/a7691a2
+[R1.3-Commit-8128ef6]:            http://drupalcode.org/project/wetkit_omega.git/commit/8128ef6
+
+<!-- Issues R1.3 -->
+
+[R1.3-Issue-2177753]:             http://drupal.org/node/2177753
+[R1.3-Issue-2177741]:             http://drupal.org/node/2177741
+[R1.3-Issue-2178341]:             http://drupal.org/node/2178341
+[R1.3-Issue-2177627]:             http://drupal.org/node/2177627
+[R1.3-Issue-2185513]:             http://drupal.org/node/2185513
+[R1.3-Issue-2178469]:             http://drupal.org/node/2178469
+[R1.3-Issue-2181155]:             http://drupal.org/node/2181155
+[R1.3-Issue-2184761]:             http://drupal.org/node/2184761
 
 <!-- Commits R1.2 -->
 
