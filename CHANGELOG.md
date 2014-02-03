@@ -10,6 +10,7 @@ Fixes:
   - (Commit: [de72d0d][R1.3-Commit-de72d0d]) #[2178469][R1.3-Issue-2178469] -  Linkit search results should include the URL of the page.
   - (Commit: [a7691a2][R1.3-Commit-a7691a2]) #[2181155][R1.3-Issue-2181155] -  Bean for implementing a Slide-out tab.
   - (Commit: [8128ef6][R1.3-Commit-8128ef6]) #[2184761][R1.3-Issue-2184761] -  Webform conditional not working.
+  - (Commit: [ece42ff][R1.3-Commit-ece42ff]) #[2187447][R1.3-Issue-2187447] -  Update views bulk operations.
 
 ## v1.2
 
@@ -416,6 +417,7 @@ Bug Fixes:
 [R1.3-Commit-de72d0d]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/de72d0d
 [R1.3-Commit-a7691a2]:            http://drupalcode.org/project/wetkit_bean.git/commit/a7691a2
 [R1.3-Commit-8128ef6]:            http://drupalcode.org/project/wetkit_omega.git/commit/8128ef6
+[R1.3-Commit-ece42ff]:            http://drupalcode.org/project/wetkit_core.git/commit/ece42ff
 
 <!-- Issues R1.3 -->
 
@@ -427,6 +429,7 @@ Bug Fixes:
 [R1.3-Issue-2178469]:             http://drupal.org/node/2178469
 [R1.3-Issue-2181155]:             http://drupal.org/node/2181155
 [R1.3-Issue-2184761]:             http://drupal.org/node/2184761
+[R1.3-Issue-2187447]:             http://drupal.org/node/2187447
 
 <!-- Commits R1.2 -->
 
