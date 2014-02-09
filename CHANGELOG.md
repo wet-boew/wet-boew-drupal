@@ -16,7 +16,7 @@ Fixes:
   - (Commit: [6220b31][R1.3-Commit-6220b31]) #[2192263][R1.3-Issue-2192263] -  Important jQuery Update patches.
   - (Commit: [3374402][R1.3-Commit-3374402]) #[2192269][R1.3-Issue-2192269] -  Upgrade Path Breadcrumbs to 3.0-rc1.
   - (Commit: [33ed1c8][R1.3-Commit-33ed1c8]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core.
-  - (Commit: [9e802d1][R1.3-Commit-9e802d1]) #[2187771][R1.3-Issue-2187771] -  Saving Media in IE + FF.
+  - (Commit: [9e802d1][R1.3-Commit-a93f218]) #[2187771][R1.3-Issue-a93f218] -  Saving Media in IE + FF.
 
 ## v1.2
 
@@ -429,7 +429,7 @@ Bug Fixes:
 [R1.3-Commit-6220b31]:            http://drupalcode.org/project/wetkit_admin.git/commit/6220b31
 [R1.3-Commit-3374402]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/3374402
 [R1.3-Commit-33ed1c8]:            http://drupalcode.org/project/wetkit_core.git/commit/33ed1c8
-[R1.3-Commit-9e802d1]:            http://drupalcode.org/project/wetkit_widgets.git/commit/9e802d1
+[R1.3-Commit-a93f218]:            http://drupalcode.org/project/wetkit_widgets.git/commit/a93f218
 
 <!-- Issues R1.3 -->
 
