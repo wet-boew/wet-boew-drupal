@@ -17,6 +17,7 @@ Fixes:
   - (Commit: [3374402][R1.3-Commit-3374402]) #[2192269][R1.3-Issue-2192269] -  Upgrade Path Breadcrumbs to 3.0-rc1.
   - (Commit: [ece42ff][R1.3-Commit-ece42ff]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core.
   - (Commit: [a93f218][R1.3-Commit-a93f218]) #[2187771][R1.3-Issue-a93f218] -  Saving Media in IE + FF.
+  - (Commit: [7c0c721][R1.3-Commit-7c0c721]) #[2192255][R1.3-Issue-2192255] -  Update Omega to stable 4.2 (Part 2).
 
 ## v1.2
 
@@ -430,6 +431,7 @@ Bug Fixes:
 [R1.3-Commit-3374402]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/3374402
 [R1.3-Commit-ece42ff]:            http://drupalcode.org/project/wetkit_core.git/commit/ece42ff
 [R1.3-Commit-a93f218]:            http://drupalcode.org/project/wetkit_widgets.git/commit/a93f218
+[R1.3-Commit-7c0c721]:            http://drupalcode.org/project/wetkit_omega.git/commit/7c0c721
 
 <!-- Issues R1.3 -->
 
