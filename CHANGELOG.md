@@ -13,7 +13,7 @@ Fixes:
   - (Commit: [ece42ff][R1.3-Commit-ece42ff]) #[2187447][R1.3-Issue-2187447] -  Update views bulk operations.
   - (Commit: [ba0c210][R1.3-Commit-ba0c210]) #[2192255][R1.3-Issue-2192255] -  Update Omega to stable 4.2 (Part 1).
   - (Commit: [81e8629][R1.3-Commit-81e8629]) #[2192261][R1.3-Issue-2192261] -  Ember Padding is to aggressive.
-  - (Commit: [6220b31][R1.3-Commit-6220b31]) #[2192263][R1.3-Issue-2192263] -  Important jQuery Update patches.
+  - (Commit: [93a41e2][R1.3-Commit-93a41e2]) #[2192263][R1.3-Issue-2192263] -  Important jQuery Update patches.
   - (Commit: [3374402][R1.3-Commit-3374402]) #[2192269][R1.3-Issue-2192269] -  Upgrade Path Breadcrumbs to 3.0-rc1.
   - (Commit: [ece42ff][R1.3-Commit-ece42ff]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core.
   - (Commit: [a93f218][R1.3-Commit-a93f218]) #[2187771][R1.3-Issue-a93f218] -  Saving Media in IE + FF.
@@ -426,7 +426,7 @@ Bug Fixes:
 [R1.3-Commit-ece42ff]:            http://drupalcode.org/project/wetkit_core.git/commit/ece42ff
 [R1.3-Commit-ba0c210]:            http://drupalcode.org/project/wetkit_omega.git/commit/ba0c210
 [R1.3-Commit-81e8629]:            http://drupalcode.org/project/wetkit_ember.git/commit/81e8629
-[R1.3-Commit-6220b31]:            http://drupalcode.org/project/wetkit_admin.git/commit/6220b31
+[R1.3-Commit-93a41e2]:            http://drupalcode.org/project/wetkit_admin.git/commit/93a41e2
 [R1.3-Commit-3374402]:            http://drupalcode.org/project/wetkit_breadcrumbs.git/commit/3374402
 [R1.3-Commit-ece42ff]:            http://drupalcode.org/project/wetkit_core.git/commit/ece42ff
 [R1.3-Commit-a93f218]:            http://drupalcode.org/project/wetkit_widgets.git/commit/a93f218
