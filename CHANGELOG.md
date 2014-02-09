@@ -18,6 +18,8 @@ Fixes:
   - (Commit: [ece42ff][R1.3-Commit-ece42ff]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core.
   - (Commit: [a93f218][R1.3-Commit-a93f218]) #[2187771][R1.3-Issue-a93f218] -  Saving Media in IE + FF.
   - (Commit: [7c0c721][R1.3-Commit-7c0c721]) #[2192255][R1.3-Issue-2192255] -  Update Omega to stable 4.2 (Part 2).
+  - (Commit: [f4adba4][R1.3-Commit-f4adba4]) #[2187383][R1.3-Issue-2187383] -  Align with upcoming stable release of Panels + CTools.
+  - (Commit: [6de3bd9][R1.3-Commit-6de3bd9]) #[2187383][R1.3-Issue-2187383] -  Align with upcoming stable release of Panels + CTools.
 
 ## v1.2
 
@@ -432,6 +434,8 @@ Bug Fixes:
 [R1.3-Commit-ece42ff]:            http://drupalcode.org/project/wetkit_core.git/commit/ece42ff
 [R1.3-Commit-a93f218]:            http://drupalcode.org/project/wetkit_widgets.git/commit/a93f218
 [R1.3-Commit-7c0c721]:            http://drupalcode.org/project/wetkit_omega.git/commit/7c0c721
+[R1.3-Commit-f4adba4]:            http://drupalcode.org/project/wetkit_language.git/commit/f4adba4
+[R1.3-Commit-6de3bd9]:            http://drupalcode.org/project/wetkit_core.git/commit/6de3bd9
 
 <!-- Issues R1.3 -->
 
@@ -450,6 +454,7 @@ Bug Fixes:
 [R1.3-Issue-2192269]:             http://drupal.org/node/2192269
 [R1.3-Issue-2192275]:             http://drupal.org/node/2192275
 [R1.3-Issue-2187771]:             http://drupal.org/node/2187771
+[R1.3-Issue-2187383]:             http://drupal.org/node/2187383
 
 <!-- Commits R1.2 -->
 
