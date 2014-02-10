@@ -15,11 +15,12 @@ Fixes:
   - (Commit: [81e8629][R1.3-Commit-81e8629]) #[2192261][R1.3-Issue-2192261] -  Ember Padding is to aggressive.
   - (Commit: [93a41e2][R1.3-Commit-93a41e2]) #[2192263][R1.3-Issue-2192263] -  Important jQuery Update patches.
   - (Commit: [3374402][R1.3-Commit-3374402]) #[2192269][R1.3-Issue-2192269] -  Upgrade Path Breadcrumbs to 3.0-rc1.
-  - (Commit: [ece42ff][R1.3-Commit-ece42ff]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core.
+  - (Commit: [ece42ff][R1.3-Commit-ece42ff]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core (Part 1).
   - (Commit: [a93f218][R1.3-Commit-a93f218]) #[2187771][R1.3-Issue-a93f218] -  Saving Media in IE + FF.
   - (Commit: [7c0c721][R1.3-Commit-7c0c721]) #[2192255][R1.3-Issue-2192255] -  Update Omega to stable 4.2 (Part 2).
   - (Commit: [f4adba4][R1.3-Commit-f4adba4]) #[2187383][R1.3-Issue-2187383] -  Align with upcoming stable release of Panels + CTools.
   - (Commit: [6de3bd9][R1.3-Commit-6de3bd9]) #[2187383][R1.3-Issue-2187383] -  Align with upcoming stable release of Panels + CTools.
+  - (Commit: [1f43792][R1.3-Commit-1f43792]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core (Part 2).
 
 ## v1.2
 
@@ -436,6 +437,7 @@ Bug Fixes:
 [R1.3-Commit-7c0c721]:            http://drupalcode.org/project/wetkit_omega.git/commit/7c0c721
 [R1.3-Commit-f4adba4]:            http://drupalcode.org/project/wetkit_language.git/commit/f4adba4
 [R1.3-Commit-6de3bd9]:            http://drupalcode.org/project/wetkit_core.git/commit/6de3bd9
+[R1.3-Commit-1f43792]:            http://drupalcode.org/project/wetkit_core.git/commit/1f43792
 
 <!-- Issues R1.3 -->
 
