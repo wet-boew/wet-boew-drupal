@@ -23,6 +23,7 @@ Fixes:
   - (Commit: [1f43792][R1.3-Commit-1f43792]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core (Part 2).
   - (Commit: [5ec2cb8][R1.3-Commit-5ec2cb8]) #[2192255][R1.3-Issue-2192255] -  Update Omega to stable 4.2 (Part 3).
   - (Commit: [0371ea4][R1.3-Commit-0371ea4]) #[2192395][R1.3-Issue-2192395] -  WetKit Images + WetKit Wysiwyg Features Overridden.
+  - (Commit: [58d2d8b][R1.3-Commit-58d2d8b]) #[2192413][R1.3-Issue-2192413] -  Updates to WetKit Language.
 
 ## v1.2
 
@@ -442,6 +443,7 @@ Bug Fixes:
 [R1.3-Commit-1f43792]:            http://drupalcode.org/project/wetkit_core.git/commit/1f43792
 [R1.3-Commit-5ec2cb8]:            http://drupalcode.org/project/wetkit_omega.git/commit/5ec2cb8
 [R1.3-Commit-0371ea4]:            http://drupalcode.org/project/wetkit_widgets.git/commit/0371ea4
+[R1.3-Commit-58d2d8b]:            http://drupalcode.org/project/wetkit_language.git/commit/58d2d8b
 
 <!-- Issues R1.3 -->
 
@@ -462,6 +464,7 @@ Bug Fixes:
 [R1.3-Issue-2187771]:             http://drupal.org/node/2187771
 [R1.3-Issue-2187383]:             http://drupal.org/node/2187383
 [R1.3-Issue-2192395]:             http://drupal.org/node/2192395
+[R1.3-Issue-2192413]:             http://drupal.org/node/2192413
 
 <!-- Commits R1.2 -->
 
