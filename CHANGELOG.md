@@ -21,6 +21,8 @@ Fixes:
   - (Commit: [f4adba4][R1.3-Commit-f4adba4]) #[2187383][R1.3-Issue-2187383] -  Align with upcoming stable release of Panels + CTools.
   - (Commit: [6de3bd9][R1.3-Commit-6de3bd9]) #[2187383][R1.3-Issue-2187383] -  Align with upcoming stable release of Panels + CTools.
   - (Commit: [1f43792][R1.3-Commit-1f43792]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core (Part 2).
+  - (Commit: [5ec2cb8][R1.3-Commit-5ec2cb8]) #[2192255][R1.3-Issue-2192255] -  Update Omega to stable 4.2 (Part 3).
+  - (Commit: [0371ea4][R1.3-Commit-0371ea4]) #[2192395][R1.3-Issue-2192395] -  WetKit Images + WetKit Wysiwyg Features Overridden.
 
 ## v1.2
 
@@ -438,6 +440,8 @@ Bug Fixes:
 [R1.3-Commit-f4adba4]:            http://drupalcode.org/project/wetkit_language.git/commit/f4adba4
 [R1.3-Commit-6de3bd9]:            http://drupalcode.org/project/wetkit_core.git/commit/6de3bd9
 [R1.3-Commit-1f43792]:            http://drupalcode.org/project/wetkit_core.git/commit/1f43792
+[R1.3-Commit-5ec2cb8]:            http://drupalcode.org/project/wetkit_omega.git/commit/5ec2cb8
+[R1.3-Commit-0371ea4]:            http://drupalcode.org/project/wetkit_widgets.git/commit/0371ea4
 
 <!-- Issues R1.3 -->
 
@@ -457,6 +461,7 @@ Bug Fixes:
 [R1.3-Issue-2192275]:             http://drupal.org/node/2192275
 [R1.3-Issue-2187771]:             http://drupal.org/node/2187771
 [R1.3-Issue-2187383]:             http://drupal.org/node/2187383
+[R1.3-Issue-2192395]:             http://drupal.org/node/2192395
 
 <!-- Commits R1.2 -->
 
