@@ -26,6 +26,7 @@ Fixes:
   - (Commit: [58d2d8b][R1.3-Commit-58d2d8b]) #[2192413][R1.3-Issue-2192413] -  Updates to WetKit Language.
   - (Commit: [16e955b][R1.3-Commit-16e955b]) #[2192413][R1.3-Issue-2192413] -  Updates to WetKit Core (Part 3).
   - (Commit: [43ea1b2][R1.3-Commit-43ea1b2]) #[2187383][R1.3-Issue-2187383] -  Align with upcoming stable release of Panels + CTools.
+  - (Commit: [3f08637][R1.3-Commit-3f08637]) #[2194969][R1.3-Issue-2194969] -  Issue #2194969 by sylus: Webform Security Release.
 
 ## v1.2
 
@@ -448,6 +449,7 @@ Bug Fixes:
 [R1.3-Commit-58d2d8b]:            http://drupalcode.org/project/wetkit_language.git/commit/58d2d8b
 [R1.3-Commit-16e955b]:            http://drupalcode.org/project/wetkit_core.git/commit/16e955b
 [R1.3-Commit-43ea1b2]:            http://drupalcode.org/project/wetkit_core.git/commit/43ea1b2
+[R1.3-Commit-3f08637]:            http://drupalcode.org/project/wetkit_core.git/commit/3f08637
 
 <!-- Issues R1.3 -->
 
@@ -469,6 +471,7 @@ Bug Fixes:
 [R1.3-Issue-2187383]:             http://drupal.org/node/2187383
 [R1.3-Issue-2192395]:             http://drupal.org/node/2192395
 [R1.3-Issue-2192413]:             http://drupal.org/node/2192413
+[R1.3-Issue-2194969]:             http://drupal.org/node/2194969
 
 <!-- Commits R1.2 -->
 
