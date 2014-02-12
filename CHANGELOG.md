@@ -25,6 +25,7 @@ Fixes:
   - (Commit: [0371ea4][R1.3-Commit-0371ea4]) #[2192395][R1.3-Issue-2192395] -  WetKit Images + WetKit Wysiwyg Features Overridden.
   - (Commit: [58d2d8b][R1.3-Commit-58d2d8b]) #[2192413][R1.3-Issue-2192413] -  Updates to WetKit Language.
   - (Commit: [16e955b][R1.3-Commit-16e955b]) #[2192413][R1.3-Issue-2192413] -  Updates to WetKit Core (Part 3).
+  - (Commit: [43ea1b2][R1.3-Commit-43ea1b2]) #[2187383][R1.3-Issue-2187383] -  Align with upcoming stable release of Panels + CTools.
 
 ## v1.2
 
@@ -446,6 +447,7 @@ Bug Fixes:
 [R1.3-Commit-0371ea4]:            http://drupalcode.org/project/wetkit_widgets.git/commit/0371ea4
 [R1.3-Commit-58d2d8b]:            http://drupalcode.org/project/wetkit_language.git/commit/58d2d8b
 [R1.3-Commit-16e955b]:            http://drupalcode.org/project/wetkit_core.git/commit/16e955b
+[R1.3-Commit-43ea1b2]:            http://drupalcode.org/project/wetkit_core.git/commit/43ea1b2
 
 <!-- Issues R1.3 -->
 
