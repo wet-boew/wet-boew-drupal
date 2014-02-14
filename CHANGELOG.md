@@ -26,8 +26,9 @@ Fixes:
   - (Commit: [58d2d8b][R1.3-Commit-58d2d8b]) #[2192413][R1.3-Issue-2192413] -  Updates to WetKit Language.
   - (Commit: [16e955b][R1.3-Commit-16e955b]) #[2192413][R1.3-Issue-2192413] -  Updates to WetKit Core (Part 3).
   - (Commit: [43ea1b2][R1.3-Commit-43ea1b2]) #[2187383][R1.3-Issue-2187383] -  Align with upcoming stable release of Panels + CTools.
-  - (Commit: [3f08637][R1.3-Commit-3f08637]) #[2194969][R1.3-Issue-2194969] -  Issue #2194969 by sylus: Webform Security Release.
-  - (Commit: [061f981][R1.3-Commit-061f981]) #[2195995][R1.3-Issue-2195995] -  Issue #2195995 by sylus: Fix Permission Issue with WxT.
+  - (Commit: [3f08637][R1.3-Commit-3f08637]) #[2194969][R1.3-Issue-2194969] -  Webform Security Release.
+  - (Commit: [061f981][R1.3-Commit-061f981]) #[2195995][R1.3-Issue-2195995] -  Fix Permission Issue with WxT.
+  - (Commit: [82c0d96][R1.3-Commit-82c0d96]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core (Part 3).
 
 ## v1.2
 
@@ -452,6 +453,7 @@ Bug Fixes:
 [R1.3-Commit-43ea1b2]:            http://drupalcode.org/project/wetkit_core.git/commit/43ea1b2
 [R1.3-Commit-3f08637]:            http://drupalcode.org/project/wetkit_core.git/commit/3f08637
 [R1.3-Commit-061f981]:            http://drupalcode.org/project/wetkit_admin.git/commit/061f981
+[R1.3-Commit-82c0d96]:            http://drupalcode.org/project/wetkit_core.git/commit/82c0d96
 
 <!-- Issues R1.3 -->
 
