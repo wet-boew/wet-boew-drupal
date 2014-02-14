@@ -13,9 +13,7 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 composer global require drush/drush:6.*
 
 # Run composer
-cd $workspace/profiles/wetkit/tests/behat
 composer install
-cd $workspace
 
 # Drush Make / Build Drupal WxT
 
