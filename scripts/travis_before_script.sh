@@ -14,6 +14,7 @@ composer update
 composer global require --no-interaction drush/drush:6.*
 composer install
 which drush
+phpenv rehash
 
 # Drush Make / Build Drupal WxT
 
