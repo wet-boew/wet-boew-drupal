@@ -11,9 +11,8 @@ sh -c "if [ '$DB' = 'mysql' ]; then mysql -e 'create database IF NOT EXISTS drup
 # Install Drush
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 composer update
-composer global require --no-interaction drush/drush:6.*
+composer global require --no-interaction drush/drush:5.8.0
 composer install
-which drush
 phpenv rehash
 
 # Drush Make / Build Drupal WxT
