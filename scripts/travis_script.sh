@@ -1,11 +1,6 @@
 #!/bin/sh
 # Travis Script for CI Testing
 
-# Install Drush
-export PATH="$HOME/.composer/vendor/bin:$PATH"
-composer update
-composer global require drush/drush:6.2.0
-
 # Drush Site Installation
 sleep 5
 cd build
