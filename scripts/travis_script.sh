@@ -1,6 +1,10 @@
 #!/bin/sh
 # Travis Script for CI Testing
 
+# Globals
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+phpenv rehash
+
 # Drush Site Installation
 sleep 5
 cd build
@@ -20,7 +24,7 @@ cd ..
 
 # Run composer
 cd $workspace/profiles/wetkit/tests/behat
-composer install
+composer install --prefer-dist
 cd $workspace
 
 # Install + Run CasperJS Testing Suite
