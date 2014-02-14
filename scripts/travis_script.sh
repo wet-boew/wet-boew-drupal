@@ -19,6 +19,11 @@ drush runserver --server=builtin 8080 &
 sleep 3 # give xvfb some time to rebuild
 cd ..
 
+# Run composer
+cd $workspace/profiles/wetkit/tests/behat
+composer install
+cd $workspace
+
 # Install + Run CasperJS Testing Suite
 git clone git://github.com/n1k0/casperjs.git
 cd casperjs
