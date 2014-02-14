@@ -29,6 +29,7 @@ Fixes:
   - (Commit: [3f08637][R1.3-Commit-3f08637]) #[2194969][R1.3-Issue-2194969] -  Webform Security Release.
   - (Commit: [061f981][R1.3-Commit-061f981]) #[2195995][R1.3-Issue-2195995] -  Fix Permission Issue with WxT.
   - (Commit: [82c0d96][R1.3-Commit-82c0d96]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core (Part 3).
+  - (Commit: [d872c8a][R1.3-Commit-d872c8a]) #[2196529][R1.3-Issue-2196529] -  Minor Stable Release updates to WxT Deploy.
 
 ## v1.2
 
@@ -454,6 +455,7 @@ Bug Fixes:
 [R1.3-Commit-3f08637]:            http://drupalcode.org/project/wetkit_core.git/commit/3f08637
 [R1.3-Commit-061f981]:            http://drupalcode.org/project/wetkit_admin.git/commit/061f981
 [R1.3-Commit-82c0d96]:            http://drupalcode.org/project/wetkit_core.git/commit/82c0d96
+[R1.3-Commit-d872c8a]:            http://drupalcode.org/project/wetkit_deployment.git/commit/d872c8a
 
 <!-- Issues R1.3 -->
 
@@ -477,6 +479,7 @@ Bug Fixes:
 [R1.3-Issue-2192413]:             http://drupal.org/node/2192413
 [R1.3-Issue-2194969]:             http://drupal.org/node/2194969
 [R1.3-Issue-2195995]:             http://drupal.org/node/2195995
+[R1.3-Issue-2196529]:             http://drupal.org/node/2196529
 
 <!-- Commits R1.2 -->
 
