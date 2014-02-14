@@ -27,6 +27,7 @@ Fixes:
   - (Commit: [16e955b][R1.3-Commit-16e955b]) #[2192413][R1.3-Issue-2192413] -  Updates to WetKit Core (Part 3).
   - (Commit: [43ea1b2][R1.3-Commit-43ea1b2]) #[2187383][R1.3-Issue-2187383] -  Align with upcoming stable release of Panels + CTools.
   - (Commit: [3f08637][R1.3-Commit-3f08637]) #[2194969][R1.3-Issue-2194969] -  Issue #2194969 by sylus: Webform Security Release.
+  - (Commit: [061f981][R1.3-Commit-061f981]) #[2195995][R1.3-Issue-2195995] -  Issue #2195995 by sylus: Fix Permission Issue with WxT.
 
 ## v1.2
 
