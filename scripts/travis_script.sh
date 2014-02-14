@@ -10,11 +10,6 @@ sh -c "if [ '$DB' = 'mysql' ]; then drush si wetkit wetkit_theme_selection_form.
 drush cc all --yes
 cd ..
 
-# Run composer
-cd $workspace/profiles/wetkit/tests/behat
-composer install
-cd $workspace
-
 # Headless Testing Server
 export PHANTOMJS_EXECUTABLE='phantomjs --local-to-remote-url-access=yes --ignore-ssl-errors=yes'
 export DISPLAY=:99.0
