@@ -8,7 +8,6 @@ workspace=`pwd`
 sh -c "if [ '$DB' = 'postgres' ]; then $HOME/.composer/vendor/bin/drush si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=pgsql://postgres:@127.0.0.1:5432/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi"
 sh -c "if [ '$DB' = 'mysql' ]; then $HOME/.composer/vendor/bin/drush si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1:3306/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi"
 $HOME/.composer/vendor/bin/drush cc all --yes
-cd ..
 
 # Headless Testing Server
 export PHANTOMJS_EXECUTABLE='phantomjs --local-to-remote-url-access=yes --ignore-ssl-errors=yes'
