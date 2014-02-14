@@ -1,12 +1,14 @@
 #!/bin/sh
 # Travis Script for CI Testing
 
+DRUSH = $HOME/.composer/vendor/bin/drush
+
 # Drush Site Installation
 sleep 5
 cd build
 workspace=`pwd`
-sh -c "if [ '$DB' = 'postgres' ]; then drush si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=pgsql://postgres:@127.0.0.1:5432/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi"
-sh -c "if [ '$DB' = 'mysql' ]; then drush si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1:3306/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi"
+sh -c "if [ '$DB' = 'postgres' ]; then $DRUSH si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=pgsql://postgres:@127.0.0.1:5432/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi"
+sh -c "if [ '$DB' = 'mysql' ]; then $DRUSH si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1:3306/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi"
 drush cc all --yes
 cd ..
 
@@ -15,7 +17,7 @@ export PHANTOMJS_EXECUTABLE='phantomjs --local-to-remote-url-access=yes --ignore
 export DISPLAY=:99.0
 sh -e /etc/init.d/xvfb start
 sleep 3 # give xvfb some time to start
-drush runserver --server=builtin 8080 &
+$DRUSH runserver --server=builtin 8080 &
 sleep 3 # give xvfb some time to rebuild
 cd ..
 
