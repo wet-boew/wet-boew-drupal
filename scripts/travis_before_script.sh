@@ -12,7 +12,8 @@ sh -c "if [ '$DB' = 'mysql' ]; then mysql -e 'create database IF NOT EXISTS drup
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 composer update
 composer global require --no-interaction drush/drush:6.*
-composer install
+composer install --prefer-dist
+phpenv rehash
 
 # Drush Make / Build Drupal WxT
 cat $workspace/build-wetkit-github.make | sed "s@master@$TRAVIS_COMMIT@g" | sed "s@wet-boew/wet-boew-drupal@$TRAVIS_REPO_SLUG@g" | drush make --prepare-install php://stdin $workspace/build
