@@ -13,8 +13,7 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 composer global require drush/drush:6.2.0
 
 # Run composer
-composer update
-composer install
+composer global install
 
 # Drush Make / Build Drupal WxT
 
