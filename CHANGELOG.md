@@ -16,7 +16,7 @@ Fixes:
   - (Commit: [93a41e2][R1.3-Commit-93a41e2]) #[2192263][R1.3-Issue-2192263] -  Important jQuery Update patches.
   - (Commit: [3374402][R1.3-Commit-3374402]) #[2192269][R1.3-Issue-2192269] -  Upgrade Path Breadcrumbs to 3.0-rc1.
   - (Commit: [ece42ff][R1.3-Commit-ece42ff]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core (Part 1).
-  - (Commit: [a93f218][R1.3-Commit-a93f218]) #[2187771][R1.3-Issue-a93f218] -  Saving Media in IE + FF.
+  - (Commit: [a93f218][R1.3-Commit-a93f218]) #[2187771][R1.3-Issue-2187771] -  Saving Media in IE + FF.
   - (Commit: [7c0c721][R1.3-Commit-7c0c721]) #[2192255][R1.3-Issue-2192255] -  Update Omega to stable 4.2 (Part 2).
   - (Commit: [f4adba4][R1.3-Commit-f4adba4]) #[2187383][R1.3-Issue-2187383] -  Align with upcoming stable release of Panels + CTools.
   - (Commit: [6de3bd9][R1.3-Commit-6de3bd9]) #[2187383][R1.3-Issue-2187383] -  Align with upcoming stable release of Panels + CTools.
@@ -30,6 +30,7 @@ Fixes:
   - (Commit: [061f981][R1.3-Commit-061f981]) #[2195995][R1.3-Issue-2195995] -  Fix Permission Issue with WxT.
   - (Commit: [82c0d96][R1.3-Commit-82c0d96]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core (Part 3).
   - (Commit: [d872c8a][R1.3-Commit-d872c8a]) #[2196529][R1.3-Issue-2196529] -  Minor Stable Release updates to WxT Deploy.
+  - (Commit: [91c498d][R1.3-Commit-91c498d]) #[2197929][R1.3-Issue-2197929] -  Adopt Open Atriums concept of Distribution Update module.
 
 ## v1.2
 
@@ -456,6 +457,7 @@ Bug Fixes:
 [R1.3-Commit-061f981]:            http://drupalcode.org/project/wetkit_admin.git/commit/061f981
 [R1.3-Commit-82c0d96]:            http://drupalcode.org/project/wetkit_core.git/commit/82c0d96
 [R1.3-Commit-d872c8a]:            http://drupalcode.org/project/wetkit_deployment.git/commit/d872c8a
+[R1.3-Commit-91c498d]:            http://drupalcode.org/project/wetkit_core.git/commit/91c498d
 
 <!-- Issues R1.3 -->
 
@@ -480,6 +482,7 @@ Bug Fixes:
 [R1.3-Issue-2194969]:             http://drupal.org/node/2194969
 [R1.3-Issue-2195995]:             http://drupal.org/node/2195995
 [R1.3-Issue-2196529]:             http://drupal.org/node/2196529
+[R1.3-Issue-2197929]:             http://drupal.org/node/2197929
 
 <!-- Commits R1.2 -->
 
