@@ -16,5 +16,3 @@ Bug: [Entity Translation][entity_translation] Issue #[2125569][known-issue-21255
 [uuid_features]:               https://drupal.org/project/uuid_features
 [metatag]:                     https://drupal.org/project/metatag
 [known-issue-2125569]:         https://drupal.org/node/2125569
-[known-issue-2142299]:         https://drupal.org/node/2142299
-[known-issue-7583827]:         https://drupal.org/node/7583827
