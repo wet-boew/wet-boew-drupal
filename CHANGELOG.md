@@ -31,6 +31,7 @@ Fixes:
   - (Commit: [82c0d96][R1.3-Commit-82c0d96]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core (Part 3).
   - (Commit: [d872c8a][R1.3-Commit-d872c8a]) #[2196529][R1.3-Issue-2196529] -  Minor Stable Release updates to WxT Deploy.
   - (Commit: [91c498d][R1.3-Commit-91c498d]) #[2197929][R1.3-Issue-2197929] -  Adopt Open Atriums concept of Distribution Update module.
+  - (Commit: [9cbb486][R1.3-Commit-9cbb486]) #[2197991][R1.3-Issue-2197991] -  Adopt Open Atriums concept of Distribution Update module.
 
 ## v1.2
 
@@ -458,6 +459,7 @@ Bug Fixes:
 [R1.3-Commit-82c0d96]:            http://drupalcode.org/project/wetkit_core.git/commit/82c0d96
 [R1.3-Commit-d872c8a]:            http://drupalcode.org/project/wetkit_deployment.git/commit/d872c8a
 [R1.3-Commit-91c498d]:            http://drupalcode.org/project/wetkit_core.git/commit/91c498d
+[R1.3-Commit-9cbb486]:            http://drupalcode.org/project/wetkit_core.git/commit/9cbb486
 
 <!-- Issues R1.3 -->
 
@@ -483,6 +485,7 @@ Bug Fixes:
 [R1.3-Issue-2195995]:             http://drupal.org/node/2195995
 [R1.3-Issue-2196529]:             http://drupal.org/node/2196529
 [R1.3-Issue-2197929]:             http://drupal.org/node/2197929
+[R1.3-Issue-2197991]:             http://drupal.org/node/2197991
 
 <!-- Commits R1.2 -->
 
