@@ -32,6 +32,8 @@ Fixes:
   - (Commit: [d872c8a][R1.3-Commit-d872c8a]) #[2196529][R1.3-Issue-2196529] -  Minor Stable Release updates to WxT Deploy.
   - (Commit: [91c498d][R1.3-Commit-91c498d]) #[2197929][R1.3-Issue-2197929] -  Adopt Open Atriums concept of Distribution Update module.
   - (Commit: [9cbb486][R1.3-Commit-9cbb486]) #[2197991][R1.3-Issue-2197991] -  Adopt Open Atriums concept of Distribution Update module.
+  - (Commit: [bf841c3][R1.3-Commit-bf841c3]) #[2182663][R1.3-Issue-2182663] -  Page variants re-ordering (Pages).
+  - (Commit: [599d4e1][R1.3-Commit-599d4e1]) #[2182663][R1.3-Issue-2182663] -  Page variants re-ordering (Migrate).
 
 ## v1.2
 
@@ -460,6 +462,8 @@ Bug Fixes:
 [R1.3-Commit-d872c8a]:            http://drupalcode.org/project/wetkit_deployment.git/commit/d872c8a
 [R1.3-Commit-91c498d]:            http://drupalcode.org/project/wetkit_core.git/commit/91c498d
 [R1.3-Commit-9cbb486]:            http://drupalcode.org/project/wetkit_core.git/commit/9cbb486
+[R1.3-Commit-bf841c3]:            http://drupalcode.org/project/wetkit_pages.git/commit/bf841c3
+[R1.3-Commit-599d4e1]:            http://drupalcode.org/project/wetkit_migrate.git/commit/599d4e1
 
 <!-- Issues R1.3 -->
 
@@ -486,6 +490,7 @@ Bug Fixes:
 [R1.3-Issue-2196529]:             http://drupal.org/node/2196529
 [R1.3-Issue-2197929]:             http://drupal.org/node/2197929
 [R1.3-Issue-2197991]:             http://drupal.org/node/2197991
+[R1.3-Issue-2182663]:             http://drupal.org/node/2182663
 
 <!-- Commits R1.2 -->
 
