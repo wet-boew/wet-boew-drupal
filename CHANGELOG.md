@@ -34,6 +34,7 @@ Fixes:
   - (Commit: [9cbb486][R1.3-Commit-9cbb486]) #[2197991][R1.3-Issue-2197991] -  Adopt Open Atriums concept of Distribution Update module.
   - (Commit: [bf841c3][R1.3-Commit-bf841c3]) #[2182663][R1.3-Issue-2182663] -  Page variants re-ordering (Pages).
   - (Commit: [599d4e1][R1.3-Commit-599d4e1]) #[2182663][R1.3-Issue-2182663] -  Page variants re-ordering (Migrate).
+  - (Commit: [b0c8ff8][R1.3-Commit-b0c8ff8]) #[2198973][R1.3-Issue-2198973] -  Update File Entity.
 
 ## v1.2
 
@@ -464,6 +465,7 @@ Bug Fixes:
 [R1.3-Commit-9cbb486]:            http://drupalcode.org/project/wetkit_core.git/commit/9cbb486
 [R1.3-Commit-bf841c3]:            http://drupalcode.org/project/wetkit_pages.git/commit/bf841c3
 [R1.3-Commit-599d4e1]:            http://drupalcode.org/project/wetkit_migrate.git/commit/599d4e1
+[R1.3-Commit-b0c8ff8]:            http://drupalcode.org/project/wetkit_widgets.git/commit/b0c8ff8
 
 <!-- Issues R1.3 -->
 
@@ -491,6 +493,7 @@ Bug Fixes:
 [R1.3-Issue-2197929]:             http://drupal.org/node/2197929
 [R1.3-Issue-2197991]:             http://drupal.org/node/2197991
 [R1.3-Issue-2182663]:             http://drupal.org/node/2182663
+[R1.3-Issue-2198973]:             http://drupal.org/node/2198973
 
 <!-- Commits R1.2 -->
 
