@@ -36,6 +36,7 @@ Fixes:
   - (Commit: [599d4e1][R1.3-Commit-599d4e1]) #[2182663][R1.3-Issue-2182663] -  Page variants re-ordering (Migrate).
   - (Commit: [b0c8ff8][R1.3-Commit-b0c8ff8]) #[2198973][R1.3-Issue-2198973] -  Update File Entity.
   - (Commit: [605119b][R1.3-Commit-605119b]) #[2198991][R1.3-Issue-2198991] -  Update WetKit Menu.
+  - (Commit: [cbd0ed2][R1.3-Commit-cbd0ed2]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core (Part 4).
 
 ## v1.2
 
@@ -468,6 +469,7 @@ Bug Fixes:
 [R1.3-Commit-599d4e1]:            http://drupalcode.org/project/wetkit_migrate.git/commit/599d4e1
 [R1.3-Commit-b0c8ff8]:            http://drupalcode.org/project/wetkit_widgets.git/commit/b0c8ff8
 [R1.3-Commit-605119b]:            http://drupalcode.org/project/wetkit_menu.git/commit/605119b
+[R1.3-Commit-cbd0ed2]:            http://drupalcode.org/project/wetkit_menu.git/commit/cbd0ed2
 
 <!-- Issues R1.3 -->
 
