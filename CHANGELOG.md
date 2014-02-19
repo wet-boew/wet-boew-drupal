@@ -43,6 +43,7 @@ Fixes:
   - (Commit: [caff26a][R1.3-Commit-caff26a]) #[2199997][R1.3-Issue-2199997] -  Improve the whole menu workflow (Core).
   - (Commit: [4af8a78][R1.3-Commit-4af8a78]) #[2199997][R1.3-Issue-2199997] -  Improve the whole menu workflow (Menu).
   - (Commit: [6686f74][R1.3-Commit-6686f74]) #[2199997][R1.3-Issue-2199997] -  Improve the whole menu workflow (Menu).
+  - (Commit: [74847a1][R1.3-Commit-74847a1]) #[2199997][R1.3-Issue-2199997] -  Improve the whole menu workflow (Menu).
 
 ## v1.2
 
@@ -482,6 +483,7 @@ Bug Fixes:
 [R1.3-Commit-caff26a]:            http://drupalcode.org/project/wetkit_core.git/commit/caff26a
 [R1.3-Commit-4af8a78]:            http://drupalcode.org/project/wetkit_menu.git/commit/4af8a78
 [R1.3-Commit-6686f74]:            http://drupalcode.org/project/wetkit_menu.git/commit/6686f74
+[R1.3-Commit-74847a1]:            http://drupalcode.org/project/wetkit_menu.git/commit/74847a1
 
 <!-- Issues R1.3 -->
 
