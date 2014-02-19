@@ -39,6 +39,8 @@ Fixes:
   - (Commit: [cbd0ed2][R1.3-Commit-cbd0ed2]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core (Part 4).
   - (Commit: [b6e9f33][R1.3-Commit-b6e9f33]) #[2192275][R1.3-Issue-2198973] -  Update File Entity + Fix Features Overrides.
   - (Commit: [c50303b][R1.3-Commit-c50303b]) #[2192275][R1.3-Issue-2198973] -  Fix Features Overrides.
+  - (Commit: [d840632][R1.3-Commit-d840632]) #[2199997][R1.3-Issue-2199997] -  Improve the whole menu workflow (Widgets).
+  - (Commit: [caff26a][R1.3-Commit-caff26a]) #[2199997][R1.3-Issue-2199997] -  Improve the whole menu workflow (Core).
 
 ## v1.2
 
@@ -474,6 +476,8 @@ Bug Fixes:
 [R1.3-Commit-cbd0ed2]:            http://drupalcode.org/project/wetkit_core.git/commit/cbd0ed2
 [R1.3-Commit-b6e9f33]:            http://drupalcode.org/project/wetkit_widgets.git/commit/b6e9f33
 [R1.3-Commit-c50303b]:            http://drupalcode.org/project/wetkit_bean.git/commit/c50303b
+[R1.3-Commit-d840632]:            http://drupalcode.org/project/wetkit_widgets.git/commit/d840632
+[R1.3-Commit-caff26a]:            http://drupalcode.org/project/wetkit_core.git/commit/caff26a
 
 <!-- Issues R1.3 -->
 
@@ -503,6 +507,7 @@ Bug Fixes:
 [R1.3-Issue-2182663]:             http://drupal.org/node/2182663
 [R1.3-Issue-2198973]:             http://drupal.org/node/2198973
 [R1.3-Issue-2198991]:             http://drupal.org/node/2198991
+[R1.3-Issue-2199997]:             http://drupal.org/node/2199997
 
 <!-- Commits R1.2 -->
 
