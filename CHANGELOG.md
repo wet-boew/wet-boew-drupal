@@ -41,6 +41,7 @@ Fixes:
   - (Commit: [c50303b][R1.3-Commit-c50303b]) #[2192275][R1.3-Issue-2198973] -  Fix Features Overrides.
   - (Commit: [d840632][R1.3-Commit-d840632]) #[2199997][R1.3-Issue-2199997] -  Improve the whole menu workflow (Widgets).
   - (Commit: [caff26a][R1.3-Commit-caff26a]) #[2199997][R1.3-Issue-2199997] -  Improve the whole menu workflow (Core).
+  - (Commit: [4af8a78][R1.3-Commit-4af8a78]) #[2199997][R1.3-Issue-2199997] -  Improve the whole menu workflow (Menu).
 
 ## v1.2
 
@@ -478,6 +479,7 @@ Bug Fixes:
 [R1.3-Commit-c50303b]:            http://drupalcode.org/project/wetkit_bean.git/commit/c50303b
 [R1.3-Commit-d840632]:            http://drupalcode.org/project/wetkit_widgets.git/commit/d840632
 [R1.3-Commit-caff26a]:            http://drupalcode.org/project/wetkit_core.git/commit/caff26a
+[R1.3-Commit-4af8a78]:            http://drupalcode.org/project/wetkit_menu.git/commit/4af8a78
 
 <!-- Issues R1.3 -->
 
