@@ -22,6 +22,8 @@ postgres:
   username: postgres
 
 # Travis scripts
+install:
+  - sudo apt-get update > /dev/null
 before_script:
   - ./scripts/travis_before_script.sh
 script:

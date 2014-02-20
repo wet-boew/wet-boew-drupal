@@ -17,9 +17,9 @@ drush cc all --yes
 export PHANTOMJS_EXECUTABLE='phantomjs --local-to-remote-url-access=yes --ignore-ssl-errors=yes'
 export DISPLAY=:99.0
 sh -e /etc/init.d/xvfb start
-sleep 3 # give xvfb some time to start
-drush runserver --server=builtin 8080 &
-sleep 3 # give xvfb some time to rebuild
+sleep 5 # give xvfb some time to start
+drush runserver --server=builtin 8080 > /dev/null 2>&1 &
+sleep 5 # give xvfb some time to rebuild
 cd ..
 
 # Run composer
@@ -35,9 +35,12 @@ cd ..
 DISPLAY=:99.0 ./casperjs/bin/casperjs test $workspace/profiles/wetkit/tests/casperjs/
 
 # Install + Run Selenium Testing Suite
-wget http://selenium.googlecode.com/files/selenium-server-standalone-2.25.0.jar
-java -jar selenium-server-standalone-2.25.0.jar -p 4444 &
+wget http://selenium.googlecode.com/files/selenium-server-standalone-2.37.0.jar
+java -jar selenium-server-standalone-2.37.0.jar > /dev/null 2>&1 &
 sleep 5
+
+# Disable sendmail
+echo sendmail_path=`which true` >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 
 # Install + Run Behat
 cd $workspace/profiles/wetkit/tests/behat
