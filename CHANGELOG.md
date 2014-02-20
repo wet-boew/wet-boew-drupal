@@ -47,6 +47,7 @@ Fixes:
   - (Commit: [551a9a3][R1.3-Commit-551a9a3]) #[2199997][R1.3-Issue-2199997] -  Improve the whole menu workflow (Core).
   - (Commit: [74aa724][R1.3-Commit-74aa724]) #[2199997][R1.3-Issue-2199997] -  Improve the whole menu workflow (Core).
   - (Commit: [b5143be][R1.3-Commit-b5143be]) #[2199997][R1.3-Issue-2199997] -  Improve the whole menu workflow (Menu).
+  - (Commit: [51af187][R1.3-Commit-51af187]) #[2200933][R1.3-Issue-2200933] -  Remove panelizer as default for WetKit Page.
 
 ## v1.2
 
@@ -490,6 +491,7 @@ Bug Fixes:
 [R1.3-Commit-551a9a3]:            http://drupalcode.org/project/wetkit_core.git/commit/551a9a3
 [R1.3-Commit-74aa724]:            http://drupalcode.org/project/wetkit_core.git/commit/74aa724
 [R1.3-Commit-b5143be]:            http://drupalcode.org/project/wetkit_menu.git/commit/b5143be
+[R1.3-Commit-51af187]:            http://drupalcode.org/project/wetkit_pages.git/commit/51af187
 
 <!-- Issues R1.3 -->
 
@@ -520,6 +522,7 @@ Bug Fixes:
 [R1.3-Issue-2198973]:             http://drupal.org/node/2198973
 [R1.3-Issue-2198991]:             http://drupal.org/node/2198991
 [R1.3-Issue-2199997]:             http://drupal.org/node/2199997
+[R1.3-Issue-2200933]:             http://drupal.org/node/2200933
 
 <!-- Commits R1.2 -->
 
