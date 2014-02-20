@@ -42,4 +42,4 @@ sleep 5
 # Install + Run Behat
 cd $workspace/profiles/wetkit/tests/behat
 touch behat.local.yml
-./bin/behat
+./bin/behat --config behat.travis.yml
