@@ -24,8 +24,8 @@ postgres:
 # Travis scripts
 install:
   - sudo apt-get update > /dev/null
-  - if [[ '$DB' == 'pgsql' ]]; then psql -c 'create database drupal_db;' -U postgres; fi
-  - if [[ '$DB' == 'mysql' ]]; then mysql -e 'create database IF NOT EXISTS drupal_db;'; fi
+  - if [[ "$DB" == "pgsql" ]]; then psql -c 'create database drupal_db;' -U postgres; fi
+  - if [[ "$DB" == "mysql" ]]; then mysql -e 'create database IF NOT EXISTS drupal_db;'; fi
 
   # Install latest Drush 6.
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
@@ -73,8 +73,8 @@ install:
 before_script:
   # Do the site install (either the current revision or old for the upgrade).
   - if [[ "$UPGRADE" == none ]]; then cd drupal; else cd wetkit-$UPGRADE; fi
-  - if [[ '$DB' == 'postgres' ]]; then php `pear config-get php_dir`/drush/drush.php si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=pgsql://postgres:@127.0.0.1:5432/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi
-  - if [[ '$DB' == 'mysql' ]]; then php `pear config-get php_dir`/drush/drush.php  si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1:3306/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi
+  - if [[ "$DB" == "postgres" ]]; then php `pear config-get php_dir`/drush/drush.php si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --db-url=pgsql://postgres:@127.0.0.1:5432/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi
+  - if [[ "$DB" == "mysql" ]]; then php `pear config-get php_dir`/drush/drush.php si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --db-url=mysql://root:@127.0.0.1:3306/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi
   - cd ../drupal
 
   # If we're an upgrade test, run the upgrade process.
