@@ -81,7 +81,7 @@ before_script:
   - if [[ "$UPGRADE" != none ]]; then cp -a ../wetkit-$UPGRADE/sites/default/* sites/default/ && drush updb --yes; fi
 
   # Run the server
-  - drush runserver --server=builtin 8888 > /dev/null 2>&1 &
+  - drush runserver --server=builtin 8080 > /dev/null 2>&1 &
   - sleep 3
   - cd profiles/wetkit/tests/behat
 
