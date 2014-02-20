@@ -4,16 +4,15 @@ default:
     bootstrap: 'features/bootstrap'
   extensions:
     Behat\MinkExtension\Extension:
+      base_url:  'http://127.0.0.1:8080'
       goutte: ~
       selenium2: ~
-      base_url:  'http://127.0.0.1:8080'
-      files_path: ../../
       default_session: 'goutte'
       javascript_session: 'selenium2'
     Drupal\DrupalExtension\Extension:
       blackbox: ~
       drush:
-        alias: dev
+        alias: self
       region_map:
         Breadcrumb: ".breadcrumb ol"
         Content Well: "#wb-main-in"
