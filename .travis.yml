@@ -7,8 +7,8 @@ php:
 
 # Envars for contextual operations
 env:
-  - DB=mysql
-  - DB=postgres
+  - DB=mysql UPGRADE=none
+  - DB=postgres UPGRADE=none
 
 # Specifications of database(s)
 mysql:
@@ -24,7 +24,67 @@ postgres:
 # Travis scripts
 install:
   - sudo apt-get update > /dev/null
+  - if [ '$DB' = 'pgsql' ]; then psql -c 'create database drupal_db;' -U postgres; fi
+  - if [ '$DB' = 'mysql' ]; then mysql -e 'create database IF NOT EXISTS drupal_db;'; fi
+
+  # Build Behat dependencies
+  - cd ./tests/behat
+  - composer install --no-interaction
+  # - cp behat.template.yml behat.local.yml
+  - cd ../../../
+
+  # Build Codebase
+  - mkdir private_files
+  - mkdir profiles
+  - mv wet-boew-drupal wetkit
+  - mv wetkit profiles/
+  - mkdir drupal
+  - mv profiles drupal/
+
+  # Test the current branch
+  - cd drupal
+  - drush make --yes profiles/wetkit/drupal-org-core.make --prepare-install
+  - drush make --yes profiles/wetkit/drupal-org.make --no-core --contrib-destination=profiles/wetkit
+  - drush dl wetkit_demo-1.x-dev
+  - cd ../
+
+  # Download an old version to test upgrading from.
+  - if [[ "$UPGRADE" != none ]]; then drush dl wetkit-$UPGRADE; fi
+
+  # Setup files
+  - sudo chmod -R 777 drupal/sites/all
+
+  # Setup display for Selenium
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sleep 5
+
+  # Get Selenium
+  - wget http://selenium.googlecode.com/files/selenium-server-standalone-2.37.0.jar
+  - java -jar selenium-server-standalone-2.37.0.jar > /dev/null 2>&1 &
+  - sleep 5
+
+  # Disable sendmail
+  - echo sendmail_path=`which true` >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+
 before_script:
-  - ./scripts/travis_before_script.sh
+  - WXT_VERSION =`echo $UPGRADE | sed -e s/^7.x-//`
+
+  # Do the site install (either the current revision or old for the upgrade).
+  - if [[ "$UPGRADE" == none ]]; then cd drupal; else cd wetkit-$UPGRADE; fi
+
+
+  - if [ '$DB' = 'postgres' ]; then php `pear config-get php_dir`/drush/drush.php si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=pgsql://postgres:@127.0.0.1:5432/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi
+  - if [ '$DB' = 'mysql' ]; then php `pear config-get php_dir`/drush/drush.php  si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1:3306/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi
+  - cd ../drupal
+
+  # If we're an upgrade test, run the upgrade process.
+  - if [[ "$UPGRADE" != none ]]; then cp -a ../wetkit-$UPGRADE/sites/default/* sites/default/ && drush updb --yes; fi
+
+  # Run the server
+  - drush runserver --server=builtin 8888 > /dev/null 2>&1 &
+  - sleep 3
+  - cd profiles/wetkit/tests/behat
+
 script:
-  - ./scripts/travis_script.sh
+  - ./bin/behat --config behat.travis.yml
