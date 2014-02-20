@@ -49,7 +49,6 @@ install:
   - cd drupal
   - drush make --yes profiles/wetkit/drupal-org-core.make --prepare-install
   - drush make --yes profiles/wetkit/drupal-org.make --no-core --contrib-destination=profiles/wetkit
-  - drush dl wetkit_demo-1.x-dev
   - cd ../
 
   # Download an old version to test upgrading from.
@@ -72,8 +71,6 @@ install:
   - echo sendmail_path=`which true` >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 
 before_script:
-  - WXT_VERSION =`echo $UPGRADE | sed -e s/^7.x-//`
-
   # Do the site install (either the current revision or old for the upgrade).
   - if [[ "$UPGRADE" == none ]]; then cd drupal; else cd wetkit-$UPGRADE; fi
 
