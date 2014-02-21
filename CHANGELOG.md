@@ -48,6 +48,7 @@ Fixes:
   - (Commit: [74aa724][R1.3-Commit-74aa724]) #[2199997][R1.3-Issue-2199997] -  Improve the whole menu workflow (Core).
   - (Commit: [b5143be][R1.3-Commit-b5143be]) #[2199997][R1.3-Issue-2199997] -  Improve the whole menu workflow (Menu).
   - (Commit: [51af187][R1.3-Commit-51af187]) #[2200933][R1.3-Issue-2200933] -  Remove panelizer as default for WetKit Page.
+  - (Commit: [f15a135][R1.3-Commit-f15a135]) #[2199391][R1.3-Issue-2199391] -  Javascript error Cannot set property Layout of undefined.
 
 ## v1.2
 
