@@ -42,19 +42,6 @@ class FeatureContext extends DrupalContext
   }
 
   /**
-   * Opens homepage.
-   *
-   * @Given /^(?:|I )am on (?:|the )homepath$/
-   * @When /^(?:|I )go to (?:|the )homepath$/
-   */
-  public function iAmOnHomepath()
-  {
-    $this->spin(function($context) {
-      return ($context->getSession()->visit($this->locatePath('/')));
-    },5);
-  }
-
-  /**
    * @Then /^I should see the image alt "(?P<link>[^"]*)" in the "(?P<region>[^"]*)"(?:| region)$/
    *
    * @throws \Exception
