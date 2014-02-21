@@ -1,3 +1,4 @@
+@7.x-1.1 @7.x-1.2
 Feature: Add landing page
   In order to create a fully customizable page
   As a site administrator

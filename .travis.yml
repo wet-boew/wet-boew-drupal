@@ -91,4 +91,6 @@ before_script:
   - cd profiles/wetkit/tests/behat
 
 script:
-  - ./bin/behat --config behat.travis.yml
+  - if [[ "$UPGRADE" == "7.x-1.2" ]]; then ./bin/behat --config behat.travis.yml --tags '@7.x-1.2'; fi
+  - if [[ "$UPGRADE" == "7.x-1.1" ]]; then ./bin/behat --config behat.travis.yml --tags '@7.x-1.1'; fi
+  - if [[ "$UPGRADE" == none ]]; then ./bin/behat --config behat.travis.yml; fi
