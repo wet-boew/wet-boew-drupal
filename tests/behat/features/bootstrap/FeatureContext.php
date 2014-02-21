@@ -44,10 +44,10 @@ class FeatureContext extends DrupalContext
   /**
    * Opens homepage.
    *
-   * @Given /^(?:|I )am on (?:|the )homepage$/
-   * @When /^(?:|I )go to (?:|the )homepage$/
+   * @Given /^(?:|I )am on (?:|the )homepath$/
+   * @When /^(?:|I )go to (?:|the )homepath$/
    */
-  public function iAmOnHomepage()
+  public function iAmOnHomepath()
   {
     $this->spin(function($context) {
       return ($context->getSession()->visit($this->locatePath('/')));
