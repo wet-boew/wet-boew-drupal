@@ -24,6 +24,37 @@ class FeatureContext extends DrupalContext
 {
 
   /**
+   * A step to deal with slow loading pages.
+   */
+  public function spin ($lambda, $wait = 120) {
+    for ($i = 0; $i < $wait; $i++) {
+      try {
+        if ($lambda($this)) {
+          return true;
+        }
+      } catch (Exception $e) {
+             // do nothing
+      }
+      sleep(1);
+    }
+    $backtrace = debug_backtrace();
+    throw new Exception('Something took too long to load at ' . $this->getSession()->getCurrentUrl());
+  }
+
+  /**
+   * Opens homepage.
+   *
+   * @Given /^(?:|I )am on (?:|the )homepage$/
+   * @When /^(?:|I )go to (?:|the )homepage$/
+   */
+  public function iAmOnHomepage()
+  {
+    $this->spin(function($context) {
+      return ($context->getSession()->visit($this->locatePath('/')));
+    },5);
+  }
+
+  /**
    * @Then /^I should see the image alt "(?P<link>[^"]*)" in the "(?P<region>[^"]*)"(?:| region)$/
    *
    * @throws \Exception
