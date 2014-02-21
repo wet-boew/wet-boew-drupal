@@ -1,4 +1,3 @@
-@7.x-1.1 @7.x-1.2
 Feature: Search
   In order to know search is working
   As a website user

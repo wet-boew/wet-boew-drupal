@@ -1,4 +1,3 @@
-@7.x-1.2
 Feature: Accessibility
   In order to know that images are providing meaningful text to screen readers
   As a website user
