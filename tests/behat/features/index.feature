@@ -1,3 +1,4 @@
+@7.x-1.2
 Feature: Homepage
   In order to know the website is running
   As a website user
