@@ -9,6 +9,8 @@ php:
 env:
   - DB=mysql UPGRADE=none
   - DB=postgres UPGRADE=none
+  - DB=mysql UPGRADE=7.x-1.1
+  - DB=postgres UPGRADE=7.x-1.1
 
 # Specifications of database(s)
 mysql:
