@@ -78,9 +78,6 @@ before_script:
   - if [[ "$DB" == "postgres" ]]; then drush si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=pgsql://postgres:@127.0.0.1:5432/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi
   - if [[ "$DB" == "mysql" ]]; then drush si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1:3306/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi
   - drush cc all
-  - drush dl cache_warmer
-  - drush en cache_warmer -y
-  - drush cache-warmer --latest-n=10 http://127.0.0.1:8080
   - cd ../drupal
 
   # If we're an upgrade test, run the upgrade process.
@@ -92,4 +89,4 @@ before_script:
   - cd profiles/wetkit/tests/behat
 
 script:
-  - ./bin/behat --config behat.travis.yml
+  - if [[ "$UPGRADE" == none ]]; then ./bin/behat --config behat.travis.yml; fi
