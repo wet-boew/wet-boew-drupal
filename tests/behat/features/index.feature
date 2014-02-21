@@ -5,11 +5,11 @@ Feature: Homepage
   I need to be able to view the site title and login
 
   Scenario: Viewing the site title
-    Given I am on the homepath
+    Given I am on the homesite
     Then I should see "Web Experience Toolkit"
 
   @api
   Scenario: Logging into the site
     Given I am logged in as a user with the "administrator" role
-    And I am on the homepath
+    And I am on the homesite
     Then I should see "Log out"
