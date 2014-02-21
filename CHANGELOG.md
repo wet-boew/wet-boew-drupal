@@ -493,6 +493,7 @@ Bug Fixes:
 [R1.3-Commit-74aa724]:            http://drupalcode.org/project/wetkit_core.git/commit/74aa724
 [R1.3-Commit-b5143be]:            http://drupalcode.org/project/wetkit_menu.git/commit/b5143be
 [R1.3-Commit-51af187]:            http://drupalcode.org/project/wetkit_pages.git/commit/51af187
+[R1.3-Commit-f15a135]:            http://drupalcode.org/project/wetkit_core.git/commit/f15a135
 
 <!-- Issues R1.3 -->
 
@@ -524,6 +525,7 @@ Bug Fixes:
 [R1.3-Issue-2198991]:             http://drupal.org/node/2198991
 [R1.3-Issue-2199997]:             http://drupal.org/node/2199997
 [R1.3-Issue-2200933]:             http://drupal.org/node/2200933
+[R1.3-Issue-2199391]:             http://drupal.org/node/2199391
 
 <!-- Commits R1.2 -->
 
