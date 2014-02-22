@@ -52,7 +52,7 @@ Fixes:
   - (Commit: [07266d8][R1.3-Commit-07266d8]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core (Part 5).
   - (Commit: [3d5a897][R1.3-Commit-3d5a897]) #[2202319][R1.3-Issue-2202319] -  Use the administration theme when editing or creating content.
   - (Commit: [0bfc560][R1.3-Commit-0bfc560]) #[2202319][R1.3-Issue-2202319] -  Use the administration theme when editing or creating content.
-  - (Commit: [07266d8][R1.3-Commit-07266d8]) #[2202319][R1.3-Issue-2202319] -  Use the administration theme when editing or creating content.
+  - (Commit: [48c1e40][R1.3-Commit-48c1e40]) #[2202319][R1.3-Issue-2202319] -  Use the administration theme when editing or creating content.
 
 ## v1.2
 
@@ -501,7 +501,7 @@ Bug Fixes:
 [R1.3-Commit-07266d8]:            http://drupalcode.org/project/wetkit_core.git/commit/07266d8
 [R1.3-Commit-3d5a897]:            http://drupalcode.org/project/wetkit_core.git/commit/3d5a897
 [R1.3-Commit-0bfc560]:            http://drupalcode.org/project/wetkit_ember.git/commit/0bfc560
-[R1.3-Commit-07266d8]:            http://drupalcode.org/project/wetkit_pages.git/commit/07266d8
+[R1.3-Commit-48c1e40]:            http://drupalcode.org/project/wetkit_pages.git/commit/48c1e40
 
 <!-- Issues R1.3 -->
 
