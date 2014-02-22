@@ -49,6 +49,7 @@ Fixes:
   - (Commit: [b5143be][R1.3-Commit-b5143be]) #[2199997][R1.3-Issue-2199997] -  Improve the whole menu workflow (Menu).
   - (Commit: [51af187][R1.3-Commit-51af187]) #[2200933][R1.3-Issue-2200933] -  Remove panelizer as default for WetKit Page.
   - (Commit: [f15a135][R1.3-Commit-f15a135]) #[2199391][R1.3-Issue-2199391] -  Javascript error Cannot set property Layout of undefined.
+  - (Commit: [07266d8][R1.3-Commit-07266d8]) #[2192275][R1.3-Issue-2192275] -  Updates to WetKit Core (Part 5).
 
 ## v1.2
 
@@ -494,6 +495,7 @@ Bug Fixes:
 [R1.3-Commit-b5143be]:            http://drupalcode.org/project/wetkit_menu.git/commit/b5143be
 [R1.3-Commit-51af187]:            http://drupalcode.org/project/wetkit_pages.git/commit/51af187
 [R1.3-Commit-f15a135]:            http://drupalcode.org/project/wetkit_core.git/commit/f15a135
+[R1.3-Commit-07266d8]:            http://drupalcode.org/project/wetkit_core.git/commit/07266d8
 
 <!-- Issues R1.3 -->
 
