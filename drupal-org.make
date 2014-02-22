@@ -106,10 +106,8 @@ projects[wetkit_ember][download][type] = git
 projects[wetkit_ember][download][revision] = 81e8629
 projects[wetkit_ember][download][branch] = 7.x-1.x
 
-projects[wetkit_omega][version] = 1.x-dev
-projects[wetkit_omega][download][type] = git
-projects[wetkit_omega][download][revision] = 6af4da7
-projects[wetkit_omega][download][branch] = 7.x-1.x
+projects[wetkit_omega][version] = 1.4
+projects[wetkit_omega][type] = theme
 
 projects[wetkit_shiny][version] = 1.1
 projects[wetkit_shiny][type] = theme
