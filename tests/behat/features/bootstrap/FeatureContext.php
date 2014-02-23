@@ -24,6 +24,31 @@ class FeatureContext extends DrupalContext
 {
 
   /**
+   * @Then /^I should see the breadcrumb "([^"]*)"$/
+   * @param string $breadcrumb
+   *   Breadcrumb link on the current page
+   * @param boolean $present
+   *   Return True if success, false otherwise
+   */
+  public function checkBreadcrumb($breadcrumb, $present = true) {
+    $result = $this->getSession()->getPage()->find('xpath', '//div[@id="wet-bc"]//div[@id="wet-bc-in"]//a[text()="' . $breadcrumb . '"]');
+    if ($present && empty($result)) {
+      throw new Exception("The breadcrumb \"" . $breadcrumb . "\" was not found on the page");
+    }
+    elseif (!$present && !empty($result)) {
+      throw new Exception("The breadcrumb \"" . $breadcrumb . "\" was found on the page which should not be");
+    }
+  }
+
+  /**
+   * @Given /^I should not see the breadcrumb "([^"]*)"$/
+   */
+  public function iShouldNotSeeTheBreadcrumb($breadcrumb) {
+    //To check for the breadcrumb link exists
+    $this->checkBreadcrumb($breadcrumb, false);
+  }
+
+  /**
    * A step to deal with slow loading pages.
    */
   public function spin ($lambda, $wait = 120) {

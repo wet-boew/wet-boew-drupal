@@ -1,4 +1,20 @@
-## v1.3 (In Development)
+## v1.3
+
+Security Update:
+
+  - Services
+  - Webform
+
+Features:
+
+  - Node Edit screen now prefers backend theme
+  - Behat Tests
+  - Features are completely reverted
+  - New submodule wetkit_update to guide user in upgrade process
+  - Even more modules have been set to stable release tag
+  - Panelizer removed as default for wetkit_page
+  - Styling improvement for Views + Ember
+  - Refactored menu workflow (menu block works with WxT markup)
 
 Fixes:
 
