@@ -69,11 +69,8 @@ projects[wetkit_theme][subdir] = custom
 projects[wetkit_users][version] = 1.0
 projects[wetkit_users][subdir] = custom
 
-projects[wetkit_wetboew][version] = 1.x-dev
+projects[wetkit_wetboew][version] = 1.3
 projects[wetkit_wetboew][subdir] = custom
-projects[wetkit_wetboew][download][type] = git
-projects[wetkit_wetboew][download][revision] = c0fe19d
-projects[wetkit_wetboew][download][branch] = 7.x-1.x
 
 projects[wetkit_widgets][version] = 1.x-dev
 projects[wetkit_widgets][subdir] = custom
