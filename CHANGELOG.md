@@ -54,6 +54,8 @@ Fixes:
   - (Commit: [0bfc560][R1.3-Commit-0bfc560]) #[2202319][R1.3-Issue-2202319] -  Use the administration theme when editing or creating content.
   - (Commit: [48c1e40][R1.3-Commit-48c1e40]) #[2202319][R1.3-Issue-2202319] -  Use the administration theme when editing or creating content.
   - (Commit: [5afb762][R1.3-Commit-5afb762]) #[2201483][R1.3-Issue-2201483] -  Best way to offer more rich-text editor controls to the user.
+  - (Commit: [0eb3bcc][R1.3-Commit-0eb3bcc]) #[2203141][R1.3-Issue-2203141] -  Fix for new Media Browser Title.
+  - (Commit: [0e2af9e][R1.3-Commit-0e2af9e]) #[2203141][R1.3-Issue-2203141] -  Fix for new Media Browser Title.
 
 ## v1.2
 
@@ -504,6 +506,8 @@ Bug Fixes:
 [R1.3-Commit-0bfc560]:            http://drupalcode.org/project/wetkit_ember.git/commit/0bfc560
 [R1.3-Commit-48c1e40]:            http://drupalcode.org/project/wetkit_pages.git/commit/48c1e40
 [R1.3-Commit-5afb762]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/5afb762
+[R1.3-Commit-0eb3bcc]:            http://drupalcode.org/project/wetkit_ember.git/commit/0eb3bcc
+[R1.3-Commit-0e2af9e]:            http://drupalcode.org/project/wetkit_omega.git/commit/0e2af9e
 
 <!-- Issues R1.3 -->
 
@@ -538,6 +542,7 @@ Bug Fixes:
 [R1.3-Issue-2199391]:             http://drupal.org/node/2199391
 [R1.3-Issue-2202319]:             http://drupal.org/node/2202319
 [R1.3-Issue-2201483]:             http://drupal.org/node/2201483
+[R1.3-Issue-2203141]:             http://drupal.org/node/2203141
 
 <!-- Commits R1.2 -->
 
