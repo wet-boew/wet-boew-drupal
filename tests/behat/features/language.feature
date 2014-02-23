@@ -1,7 +1,7 @@
 Feature: Search
   In order to know that multilingualism is working
   As a website user
-  When I change the language of content I should see  the expected results
+  When I change the language of content I should see the expected results
 
   @api
   Scenario: Using the language toggle
