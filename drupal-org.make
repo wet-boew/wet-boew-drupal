@@ -36,11 +36,8 @@ projects[wetkit_language][subdir] = custom
 projects[wetkit_layouts][version] = 1.1
 projects[wetkit_layouts][subdir] = custom
 
-projects[wetkit_menu][version] = 1.x-dev
+projects[wetkit_menu][version] = 1.3
 projects[wetkit_menu][subdir] = custom
-projects[wetkit_menu][download][type] = git
-projects[wetkit_menu][download][revision] = b5143be
-projects[wetkit_menu][download][branch] = 7.x-1.x
 
 projects[wetkit_metatag][version] = 1.3
 projects[wetkit_metatag][subdir] = custom
