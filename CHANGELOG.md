@@ -9,6 +9,7 @@
   - (Commit: [2021c16][R1.4-Commit-2021c16]) #[2212501][R1.4-Issue-2212501] -  Mini pager needs to be better themed.
   - (Commit: [23426f0][R1.4-Commit-23426f0]) #[2227857][R1.4-Issue-2227857] -  Upgrade Migrate to latest Dev.
   - (Commit: [b97b38f][R1.4-Commit-b97b38f]) #[2227873][R1.4-Issue-2227873] -  Update Ember.
+  - (Commit: [678b249][R1.4-Commit-678b249]) #[2211505][R1.4-Issue-2211505] -  Focus on last CKEditor Instance.
 
 ## v1.3
 
@@ -489,6 +490,7 @@ Bug Fixes:
 [R1.4-Commit-2021c16]:            http://drupalcode.org/project/wetkit_omega.git/commit/2021c16
 [R1.4-Commit-23426f0]:            http://drupalcode.org/project/wetkit_migrate.git/commit/23426f0
 [R1.4-Commit-b97b38f]:            http://drupalcode.org/project/wetkit_ember.git/commit/b97b38f
+[R1.4-Commit-678b249]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/678b249
 
 <!-- Issues R1.4 -->
 
@@ -498,6 +500,7 @@ Bug Fixes:
 [R1.4-Issue-2212501]:             http://drupal.org/node/2212501
 [R1.4-Issue-2227857]:             http://drupal.org/node/2227857
 [R1.4-Issue-2227873]:             http://drupal.org/node/2227873
+[R1.4-Issue-2211505]:             http://drupal.org/node/2211505
 
 <!-- Commits R1.3 -->
 
