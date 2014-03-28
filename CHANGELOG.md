@@ -8,6 +8,7 @@
   - (Commit: [ac36290][R1.4-Commit-ac36290]) #[2212509][R1.4-Issue-2212509] -  Editor role (Part 2).
   - (Commit: [2021c16][R1.4-Commit-2021c16]) #[2212501][R1.4-Issue-2212501] -  Mini pager needs to be better themed.
   - (Commit: [23426f0][R1.4-Commit-23426f0]) #[2227857][R1.4-Issue-2227857] -  Upgrade Migrate to latest Dev.
+  - (Commit: [b97b38f][R1.4-Commit-b97b38f]) #[2227873][R1.4-Issue-2227873] -  Update Ember.
 
 ## v1.3
 
@@ -487,6 +488,7 @@ Bug Fixes:
 [R1.4-Commit-ac36290]:            http://drupalcode.org/project/wetkit_users.git/commit/ac36290
 [R1.4-Commit-2021c16]:            http://drupalcode.org/project/wetkit_omega.git/commit/2021c16
 [R1.4-Commit-23426f0]:            http://drupalcode.org/project/wetkit_migrate.git/commit/23426f0
+[R1.4-Commit-b97b38f]:            http://drupalcode.org/project/wetkit_ember.git/commit/b97b38f
 
 <!-- Issues R1.4 -->
 
@@ -495,6 +497,7 @@ Bug Fixes:
 [R1.4-Issue-2212509]:             http://drupal.org/node/2212509
 [R1.4-Issue-2212501]:             http://drupal.org/node/2212501
 [R1.4-Issue-2227857]:             http://drupal.org/node/2227857
+[R1.4-Issue-2227873]:             http://drupal.org/node/2227873
 
 <!-- Commits R1.3 -->
 
