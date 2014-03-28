@@ -1,3 +1,13 @@
+## v1.4 (In Development)
+
+  Fixes:
+
+  - (Commit: [5d45a49][R1.4-Commit-5d45a49]) #[2227797][R1.4-Issue-2227797] -  CTools Patches since 1.4.
+  - (Commit: [b540b79][R1.4-Commit-b540b79]) #[2219547][R1.4-Issue-2219547] -  Date facets.
+  - (Commit: [f54c85e][R1.4-Commit-f54c85e]) #[2212509][R1.4-Issue-2212509] -  Editor role (Part 1).
+  - (Commit: [ac36290][R1.4-Commit-ac36290]) #[2212509][R1.4-Issue-2212509] -  Editor role (Part 2).
+  - (Commit: [2021c16][R1.4-Commit-2021c16]) #[2212501][R1.4-Issue-2212501] -  Mini pager needs to be better themed.
+
 ## v1.3
 
 Security Update:
@@ -467,6 +477,21 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+
+<!-- Commits R1.4 -->
+
+[R1.4-Commit-5d45a49]:            http://drupalcode.org/project/wetkit_core.git/commit/5d45a49
+[R1.4-Commit-b540b79]:            http://drupalcode.org/project/wetkit_search.git/commit/b540b79
+[R1.4-Commit-f54c85e]:            http://drupalcode.org/project/wetkit_users.git/commit/f54c85e
+[R1.4-Commit-ac36290]:            http://drupalcode.org/project/wetkit_users.git/commit/ac36290
+[R1.4-Commit-2021c16]:            http://drupalcode.org/project/wetkit_omega.git/commit/2021c16
+
+<!-- Issues R1.4 -->
+
+[R1.4-Issue-2227797]:             http://drupal.org/node/2227797
+[R1.4-Issue-2219547]:             http://drupal.org/node/2219547
+[R1.4-Issue-2212509]:             http://drupal.org/node/2212509
+[R1.4-Issue-2212501]:             http://drupal.org/node/2212501
 
 <!-- Commits R1.3 -->
 
