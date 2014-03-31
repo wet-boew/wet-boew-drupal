@@ -16,7 +16,8 @@
   - (Commit: [3942f3d][R1.4-Commit-3942f3d]) #[2229469][R1.4-Issue-2229469] -  Minor HTML encoding issues with WetKit Users.
   - (Commit: [1205dda][R1.4-Commit-1205dda]) #[2229481][R1.4-Issue-2229481] -  Media Images default view mode broken on edit.
   - (Commit: [11443b3][R1.4-Commit-11443b3]) #[2229525][R1.4-Issue-2229525] -  WetKit Admin Panels Pages warnings in php 5.4.
-  - (Commit: [041e2b8][R1.4-Commit-041e2b8]) #[2229529][R1.4-Issue-2229529] -  WetKit Admin Panels Pages warnings in php 5.4.
+  - (Commit: [041e2b8][R1.4-Commit-041e2b8]) #[2229529][R1.4-Issue-2229529] -  Updates to WetKit Core (Part 1).
+  - (Commit: [613b771][R1.4-Commit-613b771]) #[2229529][R1.4-Issue-2229529] -  Updates to WetKit Core (Part 2).
 
 ## v1.3
 
@@ -505,6 +506,7 @@ Bug Fixes:
 [R1.4-Commit-adf7583]:            http://drupalcode.org/project/wetkit_ember.git/commit/adf7583
 [R1.4-Commit-11443b3]:            http://drupalcode.org/project/wetkit_admin.git/commit/11443b3
 [R1.4-Commit-041e2b8]:            http://drupalcode.org/project/wetkit_core.git/commit/041e2b8
+[R1.4-Commit-613b771]:            http://drupalcode.org/project/wetkit_core.git/commit/613b771
 
 <!-- Issues R1.4 -->
 
