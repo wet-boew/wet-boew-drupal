@@ -75,7 +75,7 @@ projects[wetkit_widgets][subdir] = custom
 projects[wetkit_wysiwyg][version] = 1.x-dev
 projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_wysiwyg][download][type] = git
-projects[wetkit_wysiwyg][download][revision] = 8fec444
+projects[wetkit_wysiwyg][download][revision] = dfd921d
 projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
 
 ; WxT Foundation (Themes)
