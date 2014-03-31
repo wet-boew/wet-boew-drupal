@@ -8,7 +8,8 @@
   - (Commit: [ac36290][R1.4-Commit-ac36290]) #[2212509][R1.4-Issue-2212509] -  Editor role (Part 2).
   - (Commit: [2021c16][R1.4-Commit-2021c16]) #[2212501][R1.4-Issue-2212501] -  Mini pager needs to be better themed.
   - (Commit: [23426f0][R1.4-Commit-23426f0]) #[2227857][R1.4-Issue-2227857] -  Upgrade Migrate to latest Dev.
-  - (Commit: [b97b38f][R1.4-Commit-b97b38f]) #[2227873][R1.4-Issue-2227873] -  Update Ember.
+  - (Commit: [b97b38f][R1.4-Commit-b97b38f]) #[2227873][R1.4-Issue-2227873] -  Update Ember (Part 1).
+  - (Commit: [adf7583][R1.4-Commit-adf7583]) #[2227873][R1.4-Issue-2227873] -  Update Ember (Part 2).
   - (Commit: [c175a13][R1.4-Commit-c175a13]) #[2229433][R1.4-Issue-2229433] -  WetKit Search incorrectly redirects Search API.
   - (Commit: [8fec444][R1.4-Commit-8fec444]) #[2229457][R1.4-Issue-2229457] -  Patch WYSIWYG so can hit text filter selection form.
   - (Commit: [678b249][R1.4-Commit-678b249]) #[2211505][R1.4-Issue-2211505] -  Focus on last CKEditor Instance.
@@ -499,6 +500,7 @@ Bug Fixes:
 [R1.4-Commit-678b249]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/678b249
 [R1.4-Commit-3942f3d]:            http://drupalcode.org/project/wetkit_users.git/commit/3942f3d
 [R1.4-Commit-1205dda]:            http://drupalcode.org/project/wetkit_images.git/commit/1205dda
+[R1.4-Commit-adf7583]:            http://drupalcode.org/project/wetkit_ember.git/commit/adf7583
 
 <!-- Issues R1.4 -->
 
