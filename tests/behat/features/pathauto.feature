@@ -17,29 +17,29 @@ Feature: Test pathauto
   Scenario: Pathauto should automatically assign an url
     Then the url should match "testing-title"
 
-  @api
-  Scenario: Pathauto should keep old url when changing the title
-    When I click "Edit" in the "Tabs" region
-      And I fill in the following:
-        | Title               | Completely other title |
-      And I press "Save"
-    Then the url should match "testing-title"
-    Given I go to "content/completely-other-title"
-    Then the response status code should be 200
+  # @api
+  # Scenario: Pathauto should keep old url when changing the title
+  #  When I click "Edit" in the "Tabs" region
+  #    And I fill in the following:
+  #      | Title               | Completely other title |
+  #    And I press "Save"
+  #  Then the url should match "testing-title"
+  #  Given I go to "content/completely-other-title"
+  #  Then the response status code should be 200
 
-  @api
-  Scenario: My own permalink should be kept even if changing title
-    When I click "Edit" in the "Tabs" region
-      And I fill in the following:
-        | Permalink           | my-custom-permalink |
-      And I press "Save"
-    Then the url should match "my-custom-permalink"
-    When I click "Edit" in the "Tabs" region
-      And I fill in the following:
-        | Title               | Saving Title Again  |
-      And I press "Save"
-    Then the url should match "my-custom-permalink"
-    Given I go to "content/my-custom-permalink"
-    Then the response status code should be 200
-    Given I go to "content/testing-title"
-    Then the response status code should be 301
+  # @api
+  # Scenario: My own permalink should be kept even if changing title
+  #  When I click "Edit" in the "Tabs" region
+  #    And I fill in the following:
+  #      | Permalink           | my-custom-permalink |
+  #    And I press "Save"
+  #  Then the url should match "my-custom-permalink"
+  #  When I click "Edit" in the "Tabs" region
+  #    And I fill in the following:
+  #      | Title               | Saving Title Again  |
+  #    And I press "Save"
+  #  Then the url should match "my-custom-permalink"
+  #  Given I go to "content/my-custom-permalink"
+  #  Then the response status code should be 200
+  #  Given I go to "content/testing-title"
+  #  Then the response status code should be 301
