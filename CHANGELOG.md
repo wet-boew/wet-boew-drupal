@@ -15,6 +15,7 @@
   - (Commit: [678b249][R1.4-Commit-678b249]) #[2211505][R1.4-Issue-2211505] -  Focus on last CKEditor Instance.
   - (Commit: [3942f3d][R1.4-Commit-3942f3d]) #[2229469][R1.4-Issue-2229469] -  Minor HTML encoding issues with WetKit Users.
   - (Commit: [1205dda][R1.4-Commit-1205dda]) #[2229481][R1.4-Issue-2229481] -  Media Images default view mode broken on edit.
+  - (Commit: [11443b3][R1.4-Commit-11443b3]) #[2229525][R1.4-Issue-2229525] -  WetKit Admin Panels Pages warnings in php 5.4.
 
 ## v1.3
 
@@ -501,6 +502,7 @@ Bug Fixes:
 [R1.4-Commit-3942f3d]:            http://drupalcode.org/project/wetkit_users.git/commit/3942f3d
 [R1.4-Commit-1205dda]:            http://drupalcode.org/project/wetkit_images.git/commit/1205dda
 [R1.4-Commit-adf7583]:            http://drupalcode.org/project/wetkit_ember.git/commit/adf7583
+[R1.4-Commit-11443b3]:            http://drupalcode.org/project/wetkit_admin.git/commit/11443b3
 
 <!-- Issues R1.4 -->
 
@@ -515,6 +517,7 @@ Bug Fixes:
 [R1.4-Issue-2211505]:             http://drupal.org/node/2211505
 [R1.4-Issue-2229469]:             http://drupal.org/node/2229469
 [R1.4-Issue-2229481]:             http://drupal.org/node/2229481
+[R1.4-Issue-2229525]:             http://drupal.org/node/2229525
 
 <!-- Commits R1.3 -->
 
