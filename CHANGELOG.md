@@ -11,6 +11,7 @@
   - (Commit: [b97b38f][R1.4-Commit-b97b38f]) #[2227873][R1.4-Issue-2227873] -  Update Ember.
   - (Commit: [c175a13][R1.4-Commit-c175a13]) #[2229433][R1.4-Issue-2229433] -  WetKit Search incorrectly redirects Search API.
   - (Commit: [8fec444][R1.4-Commit-8fec444]) #[2229457][R1.4-Issue-2229457] -  Patch WYSIWYG so can hit text filter selection form.
+  - (Commit: [678b249][R1.4-Commit-678b249]) #[2211505][R1.4-Issue-2211505] -  Focus on last CKEditor Instance.
 
 ## v1.3
 
@@ -493,6 +494,7 @@ Bug Fixes:
 [R1.4-Commit-b97b38f]:            http://drupalcode.org/project/wetkit_ember.git/commit/b97b38f
 [R1.4-Commit-c175a13]:            http://drupalcode.org/project/wetkit_search.git/commit/c175a13
 [R1.4-Commit-8fec444]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/8fec444
+[R1.4-Commit-678b249]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/678b249
 
 <!-- Issues R1.4 -->
 
@@ -504,6 +506,7 @@ Bug Fixes:
 [R1.4-Issue-2227873]:             http://drupal.org/node/2227873
 [R1.4-Issue-2229433]:             http://drupal.org/node/2229433
 [R1.4-Issue-2229457]:             http://drupal.org/node/2229457
+[R1.4-Issue-2211505]:             http://drupal.org/node/2211505
 
 <!-- Commits R1.3 -->
 
