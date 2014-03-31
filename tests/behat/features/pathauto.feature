@@ -24,7 +24,7 @@ Feature: Test pathauto
         | Title               | Completely other title |
       And I press "Save"
     Then the url should match "testing-title"
-    Given I go to "completely-other-title"
+    Given I go to "content/completely-other-title"
     Then the response status code should be 200
 
   @api
@@ -39,7 +39,7 @@ Feature: Test pathauto
         | Title               | Saving Title Again  |
       And I press "Save"
     Then the url should match "my-custom-permalink"
-    Given I go to "my-custom-permalink"
+    Given I go to "content/my-custom-permalink"
     Then the response status code should be 200
-    Given I go to "testing-title"
+    Given I go to "content/testing-title"
     Then the response status code should be 301
