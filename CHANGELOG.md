@@ -12,6 +12,7 @@
   - (Commit: [c175a13][R1.4-Commit-c175a13]) #[2229433][R1.4-Issue-2229433] -  WetKit Search incorrectly redirects Search API.
   - (Commit: [8fec444][R1.4-Commit-8fec444]) #[2229457][R1.4-Issue-2229457] -  Patch WYSIWYG so can hit text filter selection form.
   - (Commit: [678b249][R1.4-Commit-678b249]) #[2211505][R1.4-Issue-2211505] -  Focus on last CKEditor Instance.
+  - (Commit: [3942f3d][R1.4-Commit-3942f3d]) #[2229469][R1.4-Issue-2229469] -  Minor HTML encoding issues with WetKit Users.
 
 ## v1.3
 
@@ -495,6 +496,7 @@ Bug Fixes:
 [R1.4-Commit-c175a13]:            http://drupalcode.org/project/wetkit_search.git/commit/c175a13
 [R1.4-Commit-8fec444]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/8fec444
 [R1.4-Commit-678b249]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/678b249
+[R1.4-Commit-3942f3d]:            http://drupalcode.org/project/wetkit_users.git/commit/3942f3d
 
 <!-- Issues R1.4 -->
 
@@ -507,6 +509,7 @@ Bug Fixes:
 [R1.4-Issue-2229433]:             http://drupal.org/node/2229433
 [R1.4-Issue-2229457]:             http://drupal.org/node/2229457
 [R1.4-Issue-2211505]:             http://drupal.org/node/2211505
+[R1.4-Issue-2229469]:             http://drupal.org/node/2229469
 
 <!-- Commits R1.3 -->
 
