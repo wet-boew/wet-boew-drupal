@@ -10,7 +10,7 @@ Feature: Test pathauto
         | Title               | Testing title |
         | Editor              | plain_text    |
         | body[und][0][value]  | Testing body  |
-      And I press "Publish"
+      And I press "Save"
     Then the "h1" element should contain "Testing title"
 
   @api
