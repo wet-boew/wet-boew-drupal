@@ -9,7 +9,7 @@ Feature: Test pathauto
       And I fill in the following:
         | Title               | Testing title |
         | Editor              | plain_text    |
-        | body[en][0][value]  | Testing body  |
+        | body[und][0][value]  | Testing body  |
       And I press "Publish"
     Then the "h1" element should contain "Testing title"
 

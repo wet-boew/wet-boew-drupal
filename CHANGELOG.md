@@ -13,6 +13,7 @@
   - (Commit: [8fec444][R1.4-Commit-8fec444]) #[2229457][R1.4-Issue-2229457] -  Patch WYSIWYG so can hit text filter selection form.
   - (Commit: [678b249][R1.4-Commit-678b249]) #[2211505][R1.4-Issue-2211505] -  Focus on last CKEditor Instance.
   - (Commit: [3942f3d][R1.4-Commit-3942f3d]) #[2229469][R1.4-Issue-2229469] -  Minor HTML encoding issues with WetKit Users.
+  - (Commit: [1205dda][R1.4-Commit-1205dda]) #[2229481][R1.4-Issue-2229481] -  Media Images default view mode broken on edit.
 
 ## v1.3
 
@@ -497,6 +498,7 @@ Bug Fixes:
 [R1.4-Commit-8fec444]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/8fec444
 [R1.4-Commit-678b249]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/678b249
 [R1.4-Commit-3942f3d]:            http://drupalcode.org/project/wetkit_users.git/commit/3942f3d
+[R1.4-Commit-1205dda]:            http://drupalcode.org/project/wetkit_images.git/commit/1205dda
 
 <!-- Issues R1.4 -->
 
@@ -510,6 +512,7 @@ Bug Fixes:
 [R1.4-Issue-2229457]:             http://drupal.org/node/2229457
 [R1.4-Issue-2211505]:             http://drupal.org/node/2211505
 [R1.4-Issue-2229469]:             http://drupal.org/node/2229469
+[R1.4-Issue-2229481]:             http://drupal.org/node/2229481
 
 <!-- Commits R1.3 -->
 
