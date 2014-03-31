@@ -91,7 +91,7 @@ projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
 
 projects[wetkit_ember][version] = 1.x-dev
 projects[wetkit_ember][download][type] = git
-projects[wetkit_ember][download][revision] = 47b981c
+projects[wetkit_ember][download][revision] = 7af8b89
 projects[wetkit_ember][download][branch] = 7.x-1.x
 
 projects[wetkit_omega][version] = 1.x-dev
