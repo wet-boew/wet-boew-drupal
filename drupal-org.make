@@ -3,8 +3,11 @@ core = 7.x
 
 ; WxT Foundation (Custom)
 
-projects[wetkit_admin][version] = 1.3
+projects[wetkit_admin][version] = 1.x-dev
 projects[wetkit_admin][subdir] = custom
+projects[wetkit_admin][download][type] = git
+projects[wetkit_admin][download][revision] = 11443b3
+projects[wetkit_admin][download][branch] = 7.x-1.x
 
 projects[wetkit_bean][version] = 1.5
 projects[wetkit_bean][subdir] = custom
@@ -88,7 +91,7 @@ projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
 
 projects[wetkit_ember][version] = 1.x-dev
 projects[wetkit_ember][download][type] = git
-projects[wetkit_ember][download][revision] = adf7583
+projects[wetkit_ember][download][revision] = 3a2795f
 projects[wetkit_ember][download][branch] = 7.x-1.x
 
 projects[wetkit_omega][version] = 1.x-dev
