@@ -15,9 +15,14 @@ default:
       drush:
         alias: dev
       region_map:
+        # Common Regions for Drupal WxT
         Breadcrumb: ".breadcrumb ol"
         Content Well: "#wb-main-in"
         Left Sidebar: "#wb-sec-in"
         Mega Menu: ".mb-menu"
+        Tabs: ".tabs.primary"
+        # For Panels / Panopoly specific regions.
+        CTools modal: "#modalContent"
+        Live preview: "fieldset.widget-preview"
 imports:
   - behat.local.yml

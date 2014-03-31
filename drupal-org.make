@@ -30,8 +30,11 @@ projects[wetkit_images][download][type] = git
 projects[wetkit_images][download][revision] = 1205dda
 projects[wetkit_images][download][branch] = 7.x-1.x
 
-projects[wetkit_language][version] = 1.5
+projects[wetkit_language][version] = 1.x-dev
 projects[wetkit_language][subdir] = custom
+projects[wetkit_language][download][type] = git
+projects[wetkit_language][download][revision] = b699277
+projects[wetkit_language][download][branch] = 7.x-1.x
 
 projects[wetkit_layouts][version] = 1.1
 projects[wetkit_layouts][subdir] = custom
@@ -66,7 +69,7 @@ projects[wetkit_theme][subdir] = custom
 projects[wetkit_users][version] = 1.x-dev
 projects[wetkit_users][subdir] = custom
 projects[wetkit_users][download][type] = git
-projects[wetkit_users][download][revision] = ac36290
+projects[wetkit_users][download][revision] = aed34fe
 projects[wetkit_users][download][branch] = 7.x-1.x
 
 projects[wetkit_wetboew][version] = 1.3
