@@ -19,6 +19,7 @@
   - (Commit: [041e2b8][R1.4-Commit-041e2b8]) #[2229529][R1.4-Issue-2229529] -  Updates to WetKit Core (Part 1).
   - (Commit: [613b771][R1.4-Commit-613b771]) #[2229529][R1.4-Issue-2229529] -  Updates to WetKit Core (Part 2).
   - (Commit: [6e5db22][R1.4-Commit-6e5db22]) #[2230019][R1.4-Issue-2230019] -  Dashboard error array_key_exists when comments enabled.
+  - (Commit: [f171bdc][R1.4-Commit-f171bdc]) #[2230929][R1.4-Issue-2230929] -  Remove "Disable Developer Modules" link in admin menu.
 
 ## v1.3
 
@@ -509,6 +510,7 @@ Bug Fixes:
 [R1.4-Commit-041e2b8]:            http://drupalcode.org/project/wetkit_core.git/commit/041e2b8
 [R1.4-Commit-613b771]:            http://drupalcode.org/project/wetkit_core.git/commit/613b771
 [R1.4-Commit-6e5db22]:            http://drupalcode.org/project/wetkit_core.git/commit/6e5db22
+[R1.4-Commit-f171bdc]:            http://drupalcode.org/project/wetkit_core.git/commit/f171bdc
 
 <!-- Issues R1.4 -->
 
@@ -526,6 +528,7 @@ Bug Fixes:
 [R1.4-Issue-2229525]:             http://drupal.org/node/2229525
 [R1.4-Issue-2229529]:             http://drupal.org/node/2229529
 [R1.4-Issue-2230019]:             http://drupal.org/node/2230019
+[R1.4-Issue-2230929]:             http://drupal.org/node/2230929
 
 <!-- Commits R1.3 -->
 
