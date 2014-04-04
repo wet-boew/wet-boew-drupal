@@ -22,6 +22,7 @@
   - (Commit: [f171bdc][R1.4-Commit-f171bdc]) #[2230929][R1.4-Issue-2230929] -  Remove "Disable Developer Modules" link in admin menu.
   - (Commit: [ef5fa1e][R1.4-Commit-ef5fa1e]) #[2219805][R1.4-Issue-2219805] -  Customize our CKEditor build (Community).
   - (Commit: [f74ab60][R1.4-Commit-f74ab60]) #[2231787][R1.4-Issue-2231787] -  Field_group module "div" formatter outputs invalid markup.
+  - (Commit: [586ed8c][R1.4-Commit-586ed8c]) #[2232913][R1.4-Issue-2232913] -  Update jQuery Update latest stable.
 
 ## v1.3
 
@@ -515,6 +516,7 @@ Bug Fixes:
 [R1.4-Commit-f171bdc]:            http://drupalcode.org/project/wetkit_core.git/commit/f171bdc
 [R1.4-Commit-ef5fa1e]:            http://drupalcode.org/project/wetkit_wyiswyg.git/commit/ef5fa1e
 [R1.4-Commit-f74ab60]:            http://drupalcode.org/project/wetkit_core.git/commit/f74ab60
+[R1.4-Commit-586ed8c]:            http://drupalcode.org/project/wetkit_admin.git/commit/586ed8c
 
 <!-- Issues R1.4 -->
 
@@ -535,6 +537,7 @@ Bug Fixes:
 [R1.4-Issue-2230929]:             http://drupal.org/node/2230929
 [R1.4-Issue-2219805]:             http://drupal.org/node/2219805
 [R1.4-Issue-2231787]:             http://drupal.org/node/2231787
+[R1.4-Issue-2232913]:             http://drupal.org/node/2232913
 
 <!-- Commits R1.3 -->
 
