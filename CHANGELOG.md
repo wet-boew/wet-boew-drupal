@@ -464,7 +464,7 @@ Bug Fixes:
 [R1.4-Commit-599ac18]:            http://drupalcode.org/project/wetkit_language.git/commit/599ac18
 [R1.4-Commit-fecc3b1]:            http://drupalcode.org/project/wetkit_og.git/commit/fecc3b1
 [R1.4-Commit-756c476]:            http://drupalcode.org/project/wetkit_deployment.git/commit/756c476
-[R1.4-Commit-9b9ef1b]:            http://drupalcode.org/project/wetkit_deployment.git/commit/9b9ef1b
+[R1.4-Commit-9b9ef1b]:            http://drupalcode.org/project/wetkit_widgets.git/commit/9b9ef1b
 
 <!-- Issues R1.4 -->
 
