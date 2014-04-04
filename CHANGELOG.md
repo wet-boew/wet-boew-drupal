@@ -545,7 +545,7 @@ Bug Fixes:
 [R1.4-Issue-2231787]:             http://drupal.org/node/2231787
 [R1.4-Issue-2232913]:             http://drupal.org/node/2232913
 [R1.4-Issue-2232923]:             http://drupal.org/node/2232923
-[R1.4-Issue-2232923]:             http://drupal.org/node/2232923
+[R1.4-Issue-2232935]:             http://drupal.org/node/2232935
 [R1.4-Issue-2232947]:             http://drupal.org/node/2232947
 
 <!-- Commits R1.3 -->
