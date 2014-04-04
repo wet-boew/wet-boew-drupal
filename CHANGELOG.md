@@ -26,6 +26,7 @@
   - (Commit: [7bb2b8f][R1.4-Commit-7bb2b8f]) #[2232923][R1.4-Issue-2232923] -  Bean ET Block Translation Patch.
   - (Commit: [599ac18][R1.4-Commit-599ac18]) #[2232935][R1.4-Issue-2232935] -  WetKit Language update.
   - (Commit: [fecc3b1][R1.4-Commit-fecc3b1]) #[2232947][R1.4-Issue-2232947] -  WetKit OG Updates.
+  - (Commit: [756c476][R1.4-Commit-756c476]) #[2232951][R1.4-Issue-2232951] -  Wetkit Deployment Updates (v1.4).
 
 ## v1.3
 
@@ -523,6 +524,7 @@ Bug Fixes:
 [R1.4-Commit-7bb2b8f]:            http://drupalcode.org/project/wetkit_bean.git/commit/7bb2b8f
 [R1.4-Commit-599ac18]:            http://drupalcode.org/project/wetkit_language.git/commit/599ac18
 [R1.4-Commit-fecc3b1]:            http://drupalcode.org/project/wetkit_og.git/commit/fecc3b1
+[R1.4-Commit-756c476]:            http://drupalcode.org/project/wetkit_deployment.git/commit/756c476
 
 <!-- Issues R1.4 -->
 
@@ -547,6 +549,7 @@ Bug Fixes:
 [R1.4-Issue-2232923]:             http://drupal.org/node/2232923
 [R1.4-Issue-2232935]:             http://drupal.org/node/2232935
 [R1.4-Issue-2232947]:             http://drupal.org/node/2232947
+[R1.4-Issue-2232951]:             http://drupal.org/node/2232951
 
 <!-- Commits R1.3 -->
 
