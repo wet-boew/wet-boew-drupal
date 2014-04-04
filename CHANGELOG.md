@@ -27,7 +27,7 @@
   - (Commit: [599ac18][R1.4-Commit-599ac18]) #[2232935][R1.4-Issue-2232935] -  WetKit Language update.
   - (Commit: [fecc3b1][R1.4-Commit-fecc3b1]) #[2232947][R1.4-Issue-2232947] -  WetKit OG Updates.
   - (Commit: [756c476][R1.4-Commit-756c476]) #[2232951][R1.4-Issue-2232951] -  Wetkit Deployment Updates (v1.4).
-  - (Commit: [9b9ef1b][R1.4-Commit-9b9ef1b]) #[2232953][R1.4-Issue-2232953] -  WetKit Widgets Update (v1.4).
+  - (Commit: [b3770f9][R1.4-Commit-b3770f9]) #[2232953][R1.4-Issue-2232953] -  WetKit Widgets Update (v1.4).
   - (Commit: [42c031d][R1.4-Commit-42c031d]) #[2232957][R1.4-Issue-2232957] -  WetKit Search Updates (v1.4).
 
 ## v1.3
@@ -465,7 +465,7 @@ Bug Fixes:
 [R1.4-Commit-599ac18]:            http://drupalcode.org/project/wetkit_language.git/commit/599ac18
 [R1.4-Commit-fecc3b1]:            http://drupalcode.org/project/wetkit_og.git/commit/fecc3b1
 [R1.4-Commit-756c476]:            http://drupalcode.org/project/wetkit_deployment.git/commit/756c476
-[R1.4-Commit-9b9ef1b]:            http://drupalcode.org/project/wetkit_widgets.git/commit/9b9ef1b
+[R1.4-Commit-b3770f9]:            http://drupalcode.org/project/wetkit_widgets.git/commit/b3770f9
 [R1.4-Commit-42c031d]:            http://drupalcode.org/project/wetkit_search.git/commit/42c031d
 
 <!-- Issues R1.4 -->
