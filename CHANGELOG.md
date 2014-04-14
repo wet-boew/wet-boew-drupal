@@ -18,6 +18,7 @@
   - (Commit: [11443b3][R1.4-Commit-11443b3]) #[2229525][R1.4-Issue-2229525] -  WetKit Admin Panels Pages warnings in php 5.4.
   - (Commit: [041e2b8][R1.4-Commit-041e2b8]) #[2229529][R1.4-Issue-2229529] -  Updates to WetKit Core (Part 1).
   - (Commit: [613b771][R1.4-Commit-613b771]) #[2229529][R1.4-Issue-2229529] -  Updates to WetKit Core (Part 2).
+  - (Commit: [de0a193][R1.4-Commit-de0a193]) #[2229529][R1.4-Issue-2229529] -  Updates to WetKit Core (Part 3).
   - (Commit: [6e5db22][R1.4-Commit-6e5db22]) #[2230019][R1.4-Issue-2230019] -  Dashboard error array_key_exists when comments enabled.
   - (Commit: [f171bdc][R1.4-Commit-f171bdc]) #[2230929][R1.4-Issue-2230929] -  Remove "Disable Developer Modules" link in admin menu.
   - (Commit: [ef5fa1e][R1.4-Commit-ef5fa1e]) #[2219805][R1.4-Issue-2219805] -  Customize our CKEditor build (Community).
@@ -29,6 +30,7 @@
   - (Commit: [756c476][R1.4-Commit-756c476]) #[2232951][R1.4-Issue-2232951] -  Wetkit Deployment Updates (v1.4).
   - (Commit: [b3770f9][R1.4-Commit-b3770f9]) #[2232953][R1.4-Issue-2232953] -  WetKit Widgets Update (v1.4).
   - (Commit: [42c031d][R1.4-Commit-42c031d]) #[2232957][R1.4-Issue-2232957] -  WetKit Search Updates (v1.4).
+  - (Commit: [af200f0][R1.4-Commit-af200f0]) #[2232957][R1.4-Issue-2232957] -  WetKit Search Updates (v1.4).
 
 ## v1.3
 
@@ -467,6 +469,8 @@ Bug Fixes:
 [R1.4-Commit-756c476]:            http://drupalcode.org/project/wetkit_deployment.git/commit/756c476
 [R1.4-Commit-b3770f9]:            http://drupalcode.org/project/wetkit_widgets.git/commit/b3770f9
 [R1.4-Commit-42c031d]:            http://drupalcode.org/project/wetkit_search.git/commit/42c031d
+[R1.4-Commit-de0a193]:            http://drupalcode.org/project/wetkit_core.git/commit/de0a193
+[R1.4-Commit-af200f0]:            http://drupalcode.org/project/wetkit_search.git/commit/af200f0
 
 <!-- Issues R1.4 -->
 
