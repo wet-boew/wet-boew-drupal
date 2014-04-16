@@ -15,9 +15,10 @@
         "symfony/console": "2.4.2",
         "symfony/process": "2.4.2",
         "symfony/dom-crawler": "2.4.2",
-        "behat/symfony2-extension": "1.1.1",
         "symfony/form": "2.4.2",
         "symfony/validator": "2.4.2",
+        "symfony/browser-kit": "2.4.2",
+        "behat/symfony2-extension": "1.1.1",
         "behat/mink-extension": "1.2.0",
         "symfony/http-kernel": "2.4.2",
         "fabpot/goutte": "1.0.3"
