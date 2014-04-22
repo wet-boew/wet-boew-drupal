@@ -1,6 +1,14 @@
 ## v1.4 (In Development)
 
-  Fixes:
+Security Update:
+
+  - Drupal Core
+
+Features:
+
+  - Stabilization of WxT Search modules.
+
+Fixes:
 
   - (Commit: [5d45a49][R1.4-Commit-5d45a49]) #[2227797][R1.4-Issue-2227797] -  CTools Patches since 1.4.
   - (Commit: [b540b79][R1.4-Commit-b540b79]) #[2219547][R1.4-Issue-2219547] -  Date facets.
@@ -31,6 +39,13 @@
   - (Commit: [b3770f9][R1.4-Commit-b3770f9]) #[2232953][R1.4-Issue-2232953] -  WetKit Widgets Update (v1.4).
   - (Commit: [42c031d][R1.4-Commit-42c031d]) #[2232957][R1.4-Issue-2232957] -  WetKit Search Updates (v1.4).
   - (Commit: [af200f0][R1.4-Commit-af200f0]) #[2232957][R1.4-Issue-2232957] -  WetKit Search Updates (v1.4).
+  - (Commit: [63ff1cd][R1.4-Commit-63ff1cd]) #[2199997][R1.4-Issue-2199997] -  Improve the whole menu workflow.
+  - (Commit: [4334ac7][R1.4-Commit-4334ac7]) #[2246827][R1.4-Issue-2246827] -  Missing access control for WxT Migrate.
+  - (Commit: [4fdda14][R1.4-Commit-4fdda14]) #[2246833][R1.4-Issue-2246833] -  WxT Images is to aggressive in labels.
+  - (Commit: [ad9334b][R1.4-Commit-ad9334b]) #[2246835][R1.4-Issue-2246835] -  Missing access control for WxT Deployment.
+  - (Commit: [ebdb70d][R1.4-Commit-ebdb70d]) #[2246837][R1.4-Issue-2246837] -  Add Drupal static caching to WxT Menu.
+  - (Commit: [b485439][R1.4-Commit-b485439]) #[2246839][R1.4-Issue-2246839] -  Caching of regions populated in hook_preprocess_page().
+  - (Commit: [9c71601][R1.4-Commit-9c71601]) #[2246841][R1.4-Issue-2246841] -  Updates to WxT Ember (7.x-1.4).
 
 ## v1.3
 
@@ -471,6 +486,13 @@ Bug Fixes:
 [R1.4-Commit-42c031d]:            http://drupalcode.org/project/wetkit_search.git/commit/42c031d
 [R1.4-Commit-de0a193]:            http://drupalcode.org/project/wetkit_core.git/commit/de0a193
 [R1.4-Commit-af200f0]:            http://drupalcode.org/project/wetkit_search.git/commit/af200f0
+[R1.4-Commit-63ff1cd]:            http://drupalcode.org/project/wetkit_core.git/commit/63ff1cd
+[R1.4-Commit-4334ac7]:            http://drupalcode.org/project/wetkit_migrate.git/commit/4334ac7
+[R1.4-Commit-4fdda14]:            http://drupalcode.org/project/wetkit_images.git/commit/4fdda14
+[R1.4-Commit-ad9334b]:            http://drupalcode.org/project/wetkit_deployment.git/commit/ad9334b
+[R1.4-Commit-ebdb70d]:            http://drupalcode.org/project/wetkit_menu.git/commit/ebdb70d
+[R1.4-Commit-b485439]:            http://drupalcode.org/project/wetkit_omega.git/commit/b485439
+[R1.4-Commit-9c71601]:            http://drupalcode.org/project/wetkit_ember.git/commit/9c71601
 
 <!-- Issues R1.4 -->
 
@@ -498,6 +520,13 @@ Bug Fixes:
 [R1.4-Issue-2232951]:             http://drupal.org/node/2232951
 [R1.4-Issue-2232953]:             http://drupal.org/node/2232953
 [R1.4-Issue-2232957]:             http://drupal.org/node/2232957
+[R1.4-Issue-2199997]:             http://drupal.org/node/2199997
+[R1.4-Issue-2246827]:             http://drupal.org/node/2246827
+[R1.4-Issue-2246833]:             http://drupal.org/node/2246833
+[R1.4-Issue-2246835]:             http://drupal.org/node/2246835
+[R1.4-Issue-2246837]:             http://drupal.org/node/2246837
+[R1.4-Issue-2246839]:             http://drupal.org/node/2246839
+[R1.4-Issue-2246841]:             http://drupal.org/node/2246841
 
 <!-- Commits R1.3 -->
 
