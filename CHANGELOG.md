@@ -46,6 +46,8 @@ Fixes:
   - (Commit: [ebdb70d][R1.4-Commit-ebdb70d]) #[2246837][R1.4-Issue-2246837] -  Add Drupal static caching to WxT Menu.
   - (Commit: [b485439][R1.4-Commit-b485439]) #[2246839][R1.4-Issue-2246839] -  Caching of regions populated in hook_preprocess_page().
   - (Commit: [9c71601][R1.4-Commit-9c71601]) #[2246841][R1.4-Issue-2246841] -  Updates to WxT Ember (7.x-1.4).
+  - (Commit: [82fa4cc][R1.4-Commit-82fa4cc]) #[2246853][R1.4-Issue-2246853] -  Update to Drupal 7.27 for SA-CORE-2014-002.
+  - (Commit: [864c97a][R1.4-Commit-864c97a]) #[2215023][R1.4-Issue-2215023] -  Font-family on submit buttons not working (CSS error).
 
 ## v1.3
 
@@ -493,6 +495,8 @@ Bug Fixes:
 [R1.4-Commit-ebdb70d]:            http://drupalcode.org/project/wetkit_menu.git/commit/ebdb70d
 [R1.4-Commit-b485439]:            http://drupalcode.org/project/wetkit_omega.git/commit/b485439
 [R1.4-Commit-9c71601]:            http://drupalcode.org/project/wetkit_ember.git/commit/9c71601
+[R1.4-Commit-82fa4cc]:            http://drupalcode.org/project/wetkit_core.git/commit/82fa4cc
+[R1.4-Commit-864c97a]:            http://drupalcode.org/project/wetkit_admin.git/commit/864c97a
 
 <!-- Issues R1.4 -->
 
@@ -527,6 +531,8 @@ Bug Fixes:
 [R1.4-Issue-2246837]:             http://drupal.org/node/2246837
 [R1.4-Issue-2246839]:             http://drupal.org/node/2246839
 [R1.4-Issue-2246841]:             http://drupal.org/node/2246841
+[R1.4-Issue-2246853]:             http://drupal.org/node/2246853
+[R1.4-Issue-2215023]:             http://drupal.org/node/2215023
 
 <!-- Commits R1.3 -->
 
