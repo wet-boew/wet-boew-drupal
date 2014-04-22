@@ -48,6 +48,7 @@ Fixes:
   - (Commit: [9c71601][R1.4-Commit-9c71601]) #[2246841][R1.4-Issue-2246841] -  Updates to WxT Ember (7.x-1.4).
   - (Commit: [82fa4cc][R1.4-Commit-82fa4cc]) #[2246853][R1.4-Issue-2246853] -  Update to Drupal 7.27 for SA-CORE-2014-002.
   - (Commit: [864c97a][R1.4-Commit-864c97a]) #[2215023][R1.4-Issue-2215023] -  Font-family on submit buttons not working (CSS error).
+  - (Commit: [21d8e98][R1.4-Commit-21d8e98]) #[2171255][R1.4-Issue-2171255] -  When LinkIt loads the popup isn't aligned.
 
 ## v1.3
 
@@ -497,6 +498,7 @@ Bug Fixes:
 [R1.4-Commit-9c71601]:            http://drupalcode.org/project/wetkit_ember.git/commit/9c71601
 [R1.4-Commit-82fa4cc]:            http://drupalcode.org/project/wetkit_core.git/commit/82fa4cc
 [R1.4-Commit-864c97a]:            http://drupalcode.org/project/wetkit_admin.git/commit/864c97a
+[R1.4-Commit-21d8e98]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/21d8e98
 
 <!-- Issues R1.4 -->
 
@@ -533,6 +535,7 @@ Bug Fixes:
 [R1.4-Issue-2246841]:             http://drupal.org/node/2246841
 [R1.4-Issue-2246853]:             http://drupal.org/node/2246853
 [R1.4-Issue-2215023]:             http://drupal.org/node/2215023
+[R1.4-Issue-2171255]:             http://drupal.org/node/2171255
 
 <!-- Commits R1.3 -->
 
