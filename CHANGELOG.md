@@ -49,6 +49,7 @@ Fixes:
   - (Commit: [82fa4cc][R1.4-Commit-82fa4cc]) #[2246853][R1.4-Issue-2246853] -  Update to Drupal 7.27 for SA-CORE-2014-002.
   - (Commit: [864c97a][R1.4-Commit-864c97a]) #[2215023][R1.4-Issue-2215023] -  Font-family on submit buttons not working (CSS error).
   - (Commit: [21d8e98][R1.4-Commit-21d8e98]) #[2171255][R1.4-Issue-2171255] -  When LinkIt loads the popup isn't aligned.
+  - (Commit: [62064fb][R1.4-Commit-62064fb]) #[2232467][R1.4-Issue-2232467] -  Wetkit_omega node.tpl is outputting 'class' twices.
 
 ## v1.3
 
@@ -499,6 +500,7 @@ Bug Fixes:
 [R1.4-Commit-82fa4cc]:            http://drupalcode.org/project/wetkit_core.git/commit/82fa4cc
 [R1.4-Commit-864c97a]:            http://drupalcode.org/project/wetkit_admin.git/commit/864c97a
 [R1.4-Commit-21d8e98]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/21d8e98
+[R1.4-Commit-62064fb]:            http://drupalcode.org/project/wetkit_omega.git/commit/62064fb
 
 <!-- Issues R1.4 -->
 
@@ -536,6 +538,7 @@ Bug Fixes:
 [R1.4-Issue-2246853]:             http://drupal.org/node/2246853
 [R1.4-Issue-2215023]:             http://drupal.org/node/2215023
 [R1.4-Issue-2171255]:             http://drupal.org/node/2171255
+[R1.4-Issue-2232467]:             http://drupal.org/node/2232467
 
 <!-- Commits R1.3 -->
 
