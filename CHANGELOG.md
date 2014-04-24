@@ -50,6 +50,8 @@ Fixes:
   - (Commit: [864c97a][R1.4-Commit-864c97a]) #[2215023][R1.4-Issue-2215023] -  Font-family on submit buttons not working (CSS error).
   - (Commit: [21d8e98][R1.4-Commit-21d8e98]) #[2171255][R1.4-Issue-2171255] -  When LinkIt loads the popup isn't aligned.
   - (Commit: [62064fb][R1.4-Commit-62064fb]) #[2232467][R1.4-Issue-2232467] -  Wetkit_omega node.tpl is outputting 'class' twices.
+  - (Commit: [53099b9][R1.4-Commit-53099b9]) #[2248433][R1.4-Issue-2248433] -  SA-CONTRIB-2014-043 - Custom Search (XSS).
+  - (Commit: [58e1342][R1.4-Commit-58e1342]) #[2248435][R1.4-Issue-2248435] -  SA-CONTRIB-2014-042 - Internationalization.
 
 ## v1.3
 
@@ -501,6 +503,8 @@ Bug Fixes:
 [R1.4-Commit-864c97a]:            http://drupalcode.org/project/wetkit_admin.git/commit/864c97a
 [R1.4-Commit-21d8e98]:            http://drupalcode.org/project/wetkit_wysiwyg.git/commit/21d8e98
 [R1.4-Commit-62064fb]:            http://drupalcode.org/project/wetkit_omega.git/commit/62064fb
+[R1.4-Commit-53099b9]:            http://drupalcode.org/project/wetkit_search.git/commit/53099b9
+[R1.4-Commit-58e1342]:            http://drupalcode.org/project/wetkit_language.git/commit/58e1342
 
 <!-- Issues R1.4 -->
 
@@ -539,6 +543,8 @@ Bug Fixes:
 [R1.4-Issue-2215023]:             http://drupal.org/node/2215023
 [R1.4-Issue-2171255]:             http://drupal.org/node/2171255
 [R1.4-Issue-2232467]:             http://drupal.org/node/2232467
+[R1.4-Issue-2248433]:             http://drupal.org/node/2248433
+[R1.4-Issue-2248435]:             http://drupal.org/node/2248435
 
 <!-- Commits R1.3 -->
 
