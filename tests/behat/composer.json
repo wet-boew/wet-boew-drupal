@@ -23,7 +23,6 @@
         "symfony/http-kernel": "2.4.2",
         "fabpot/goutte": "1.0.3"
     },
-    "minimum-stability": "stable",
     "config": {
         "bin-dir": "bin"
     }
