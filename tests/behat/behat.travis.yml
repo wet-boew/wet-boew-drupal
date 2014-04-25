@@ -1,7 +1,8 @@
 default:
   paths:
     features: 'features'
-    bootstrap: 'features/bootstrap'
+  filters:
+    tags: "~@chrome"
   extensions:
     Behat\MinkExtension\Extension:
       base_url:  'http://127.0.0.1:8080'
@@ -9,6 +10,7 @@ default:
       selenium2: ~
       default_session: 'goutte'
       javascript_session: 'selenium2'
+      files_path: ../../images
     Drupal\DrupalExtension\Extension:
       blackbox: ~
       drush:
@@ -20,8 +22,23 @@ default:
         Left Sidebar: "#wb-sec-in"
         Mega Menu: ".mb-menu"
         Tabs: ".tabs--primary"
-        # For Panels / Panopoly specific regions.
+        # Panels Layout Regions for Drupal WxT
+        Pearson Content: ".region-pearson-first"
+        Pearson Sidebar: ".region-pearson-second"
+        # For Panels / WxT specific regions.
         CTools modal: "#modalContent"
         Live preview: "fieldset.widget-preview"
-imports:
-  - behat.local.yml
+
+# Additional options.
+# imports:
+#   - behat.yml
+
+# Setup for Google Chrome only tests.
+chrome:
+  filters:
+    tags: "@chrome"
+  extensions:
+    Behat\MinkExtension\Extension:
+      selenium2:
+        browser: chrome
+        capabilities: {"browser": "chrome", "browserName": "chrome", "browserVersion": "ANY", "version": "ANY"}

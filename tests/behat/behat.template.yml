@@ -1,19 +1,18 @@
 default:
   paths:
     features: 'features'
-    bootstrap: 'features/bootstrap'
   extensions:
     Behat\MinkExtension\Extension:
+      base_url: http://${drupal.uri}
       goutte: ~
       selenium2: ~
-      base_url:  'http://127.0.0.1:8080'
-      files_path: ../../
       default_session: 'goutte'
       javascript_session: 'selenium2'
+      files_path: ../../images
     Drupal\DrupalExtension\Extension:
       blackbox: ~
       drush:
-        alias: dev
+        root: ${drush.root}
       region_map:
         # Common Regions for Drupal WxT
         Breadcrumb: ".breadcrumb ol"
@@ -21,8 +20,9 @@ default:
         Left Sidebar: "#wb-sec-in"
         Mega Menu: ".mb-menu"
         Tabs: ".tabs--primary"
-        # For Panels / Panopoly specific regions.
+        # Panels Layout Regions for Drupal WxT
+        Pearson Content: ".region-pearson-first"
+        Bryant Sidebar: ".region-pearson-second"
+        # For Panels / WxT specific regions.
         CTools modal: "#modalContent"
         Live preview: "fieldset.widget-preview"
-imports:
-  - behat.local.yml
