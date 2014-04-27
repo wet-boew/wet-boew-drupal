@@ -24,49 +24,153 @@ class FeatureContext extends DrupalContext
 {
 
   /**
-   * @Then /^I should see the breadcrumb "([^"]*)"$/
-   * @param string $breadcrumb
-   *   Breadcrumb link on the current page
-   * @param boolean $present
-   *   Return True if success, false otherwise
+   * Initializes context.
+   * Every scenario gets it's own context object.
+   *
+   * @param array $parameters context parameters (set them up through behat.yml)
    */
-  public function checkBreadcrumb($breadcrumb, $present = true) {
-    $result = $this->getSession()->getPage()->find('xpath', '//div[@id="wet-bc"]//div[@id="wet-bc-in"]//a[text()="' . $breadcrumb . '"]');
-    if ($present && empty($result)) {
-      throw new Exception("The breadcrumb \"" . $breadcrumb . "\" was not found on the page");
-    }
-    elseif (!$present && !empty($result)) {
-      throw new Exception("The breadcrumb \"" . $breadcrumb . "\" was found on the page which should not be");
-    }
+  public function __construct(array $parameters) {
+    // Initialize your context here
+    $this->useContext('panels', new PanelsSubContext());
+    $this->useContext('wysiwyg', new WysiwygSubContext());
+    $this->useContext('media', new MediaSubContext());
   }
 
-  /**
-   * @Given /^I should not see the breadcrumb "([^"]*)"$/
-   */
-  public function iShouldNotSeeTheBreadcrumb($breadcrumb) {
-    //To check for the breadcrumb link exists
-    $this->checkBreadcrumb($breadcrumb, false);
-  }
+  //
+  // Place your definition and hook methods here:
+  //
+  //    /**
+  //     * @Given /^I have done something with "([^"]*)"$/
+  //     */
+  //    public function iHaveDoneSomethingWith($argument)
+  //    {
+  //        doSomethingWith($argument);
+  //    }
+  //
+  //
 
   /**
-   * A step to deal with slow loading pages.
+   * @Then /^I should see the "([^"]*)" button$/
    */
-  public function spin ($lambda, $wait = 120) {
-    for ($i = 0; $i < $wait; $i++) {
-      try {
-        if ($lambda($this)) {
-          return true;
+  public function assertButton($label) {
+    $page = $this->getSession()->getPage();
+    $results = $page->findAll('css', "input[type=submit],input[type=button],button");
+    if (!empty($results)) {
+      foreach ($results as $result) {
+        if ($result->getTagName() == 'input' && $result->getAttribute('value') == $label) {
+          return;
         }
-      } catch (Exception $e) {
-             // do nothing
+        elseif ($result->getText() == $label) {
+          return;
+        }
       }
-      sleep(1);
     }
-    $backtrace = debug_backtrace();
-    throw new Exception('Something took too long to load at ' . $this->getSession()->getCurrentUrl());
+    throw new \Exception(sprintf('The "%s" button was not found on the page %s', $label, $region, $this->getSession()->getCurrentUrl()));
   }
 
   /**
+   * @Then /^I should see the "([^"]*)" button in the "([^"]*)" region$/
+   */
+  public function assertRegionButton($label, $region) {
+    $regionObj = $this->getRegion($region);
+    $results = $regionObj->findAll('css', "input[type=submit],input[type=button],button");
+    if (!empty($results)) {
+      foreach ($results as $result) {
+        if ($result->getTagName() == 'input' && $result->getAttribute('value') == $label) {
+          return;
+        }
+        elseif ($result->getText() == $label) {
+          return;
+        }
+      }
+    }
+    throw new \Exception(sprintf('The "%s" button was not found in the "%s" region on the page %s', $label, $region, $this->getSession()->getCurrentUrl()));
+  }
+
+  /**
+   * @Then /^I should see the "([^"]*)" element in the "([^"]*)" region$/
+   */
+  public function assertRegionElement($tag, $region) {
+    $regionObj = $this->getRegion($region);
+    $elements = $regionObj->findAll('css', $tag);
+    if (!empty($elements)) {
+      return;
+    }
+    throw new \Exception(sprintf('The element "%s" was not found in the "%s" region on the page %s', $tag, $region, $this->getSession()->getCurrentUrl()));
+  }
+
+  /**
+   * @Then /^I should not see the "([^"]*)" element in the "([^"]*)" region$/
+   */
+  public function assertNotRegionElement($tag, $region) {
+    $regionObj = $this->getRegion($region);
+    $result = $regionObj->findAll('css', $tag);
+    if (!empty($result)) {
+      throw new \Exception(sprintf('Element "%s" was found in the "%s" region on the page %s', $tag, $region, $this->getSession()->getCurrentUrl()));
+    }
+  }
+
+  /**
+   * @Then /^I should see "([^"]*)" in the "([^"]*)" element in the "([^"]*)" region$/
+   */
+  public function assertRegionElementText($text, $tag, $region) {
+    $regionObj = $this->getRegion($region);
+    $results = $regionObj->findAll('css', $tag);
+    if (!empty($results)) {
+      foreach ($results as $result) {
+        if ($result->getText() == $text) {
+          return;
+        }
+      }
+    }
+    throw new \Exception(sprintf('The text "%s" was not found in the "%s" element in the "%s" region on the page %s', $text, $tag, $region, $this->getSession()->getCurrentUrl()));
+  }
+
+  /**
+   * @Then /^I should see "([^"]*)" in the "([^"]*)" element with the "([^"]*)" CSS property set to "([^"]*)" in the "([^"]*)" region$/
+   */
+  public function assertRegionElementTextCss($text, $tag, $property, $value, $region) {
+    $regionObj = $this->getRegion($region);
+    $elements = $regionObj->findAll('css', $tag);
+    if (empty($elements)) {
+      throw new \Exception(sprintf('The element "%s" was not found in the "%s" region on the page %s', $tag, $region, $this->getSession()->getCurrentUrl()));
+    }
+
+    $found = FALSE;
+    foreach ($elements as $element) {
+      if ($element->getText() == $text) {
+        $found = TRUE;
+        break;
+      }
+    }
+    if (!$found) {
+      throw new \Exception(sprintf('The text "%s" was not found in the "%s" element in the "%s" region on the page %s', $text, $tag, $region, $this->getSession()->getCurrentUrl()));
+    }
+
+    if (!empty($property)) {
+      $style = $element->getAttribute('style');
+      if (strpos($style, "$property: $value") === FALSE) {
+        throw new \Exception(sprintf('The "%s" property does not equal "%s" on the element "%s" in the "%s" region on the page %s', $property, $value, $tag, $region, $this->getSession()->getCurrentUrl()));
+      }
+    }
+  }
+
+  /**
+   * @Then /^I should not see "([^"]*)" in the "([^"]*)" element in the "([^"]*)" region$/
+   */
+  public function assertNotRegionElementText($text, $tag, $region) {
+    $regionObj = $this->getRegion($region);
+    $results = $regionObj->findAll('css', $tag);
+    if (!empty($results)) {
+      foreach ($results as $result) {
+        if ($result->getText() == $text) {
+          throw new \Exception(sprintf('The text "%s" was found in the "%s" element in the "%s" region on the page %s', $text, $tag, $region, $this->getSession()->getCurrentUrl()));
+        }
+      }
+    }
+  }
+
+   /**
    * @Then /^I should see the image alt "(?P<link>[^"]*)" in the "(?P<region>[^"]*)"(?:| region)$/
    *
    * @throws \Exception
@@ -107,17 +211,6 @@ class FeatureContext extends DrupalContext
   }
 
   /**
-   * Initializes context.
-   * Every scenario gets it's own context object.
-   *
-   * @param array $parameters context parameters (set them up through behat.yml)
-   */
-  public function __construct(array $parameters) {
-    // Initialize your context here
-    $this->useContext('panels', new PanelsSubContext());
-  }
-
-  /**
    * @AfterStep @javascript
    *
    * After every step in a @javascript scenario, we want to wait for AJAX
@@ -127,6 +220,31 @@ class FeatureContext extends DrupalContext
     if ($event->getResult() === 0) {
       $this->iWaitForAJAX();
     }
+  }
+
+  /**
+   * @Then /^I should see the breadcrumb "([^"]*)"$/
+   * @param string $breadcrumb
+   *   Breadcrumb link on the current page
+   * @param boolean $present
+   *   Return True if success, false otherwise
+   */
+  public function checkBreadcrumb($breadcrumb, $present = true) {
+    $result = $this->getSession()->getPage()->find('xpath', '//div[@id="wet-bc"]//div[@id="wet-bc-in"]//a[text()="' . $breadcrumb . '"]');
+    if ($present && empty($result)) {
+      throw new Exception("The breadcrumb \"" . $breadcrumb . "\" was not found on the page");
+    }
+    elseif (!$present && !empty($result)) {
+      throw new Exception("The breadcrumb \"" . $breadcrumb . "\" was found on the page which should not be");
+    }
+  }
+
+  /**
+   * @Given /^I should not see the breadcrumb "([^"]*)"$/
+   */
+  public function iShouldNotSeeTheBreadcrumb($breadcrumb) {
+    //To check for the breadcrumb link exists
+    $this->checkBreadcrumb($breadcrumb, false);
   }
 
   /**
@@ -154,24 +272,6 @@ class FeatureContext extends DrupalContext
    */
   public function enableManualPanopolyMagicLivePreview() {
     $this->getDriver('drush')->vset('panopoly_magic_live_preview 2 --yes');
-  }
-
-  /**
-   * @Given /^(?:|I )wait(?:| for) (\d+) seconds?$/
-   *
-   * Wait for the given number of seconds. ONLY USE FOR DEBUGGING!
-   */
-  public function iWaitForSeconds($arg1) {
-    sleep($arg1);
-  }
-
-  /**
-   * @Given /^(?:|I )wait for AJAX loading to finish$/
-   *
-   * Wait for the jQuery AJAX loading to finish. ONLY USE FOR DEBUGGING!
-   */
-  public function iWaitForAJAX() {
-    $this->getSession()->wait(5000, 'jQuery.active === 0');
   }
 
   /**
@@ -215,4 +315,55 @@ class FeatureContext extends DrupalContext
 
     return $argument;
   }
+
+  /**
+   * @Given /^(?:|I )wait(?:| for) (\d+) seconds?$/
+   *
+   * Wait for the given number of seconds. ONLY USE FOR DEBUGGING!
+   */
+  public function iWaitForSeconds($arg1) {
+    sleep($arg1);
+  }
+
+  /**
+   * @Given /^(?:|I )wait for AJAX loading to finish$/
+   *
+   * Wait for the jQuery AJAX loading to finish. ONLY USE FOR DEBUGGING!
+   */
+  public function iWaitForAJAX() {
+    $this->getSession()->wait(5000, 'jQuery.active === 0');
+  }
+
+  /**
+   * @Given /^I switch to the frame "([^"]*)"$/
+   */
+  public function iSwitchToTheFrame($frame) {
+    $this->getSession()->switchToIFrame($frame);
+  }
+
+  /**
+   * @Given /^I switch out of all frames$/
+   */
+  public function iSwitchOutOfAllFrames() {
+    $this->getSession()->switchToIFrame();
+  }
+
+  /**
+   * A step to deal with slow loading pages.
+   */
+  public function spin ($lambda, $wait = 120) {
+    for ($i = 0; $i < $wait; $i++) {
+      try {
+        if ($lambda($this)) {
+          return true;
+        }
+      } catch (Exception $e) {
+             // do nothing
+      }
+      sleep(1);
+    }
+    $backtrace = debug_backtrace();
+    throw new Exception('Something took too long to load at ' . $this->getSession()->getCurrentUrl());
+  }
+
 }
