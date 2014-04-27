@@ -1,4 +1,4 @@
-b0Feature: Use rich text editor
+Feature: Use rich text editor
   In order to format the content of my pages
   As a site builder
   I need to be able to use a WYSIWYG editor
