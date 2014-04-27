@@ -14,7 +14,7 @@ Feature: Use rich text editor
   Scenario Outline: Format text in the editor (first toolbar)
     When I click the "<Action>" button in the "edit-body-und-0-value" WYSIWYG editor
       And I type "Testing body" in the "edit-body-und-0-value" WYSIWYG editor
-      And I press "Publish"
+      And I press "Save"
     Then I should see "Testing body" in the "<Element>" element with the "<Property>" CSS property set to "<Value>" in the "Pearson Content" region
 
     Examples:
@@ -33,7 +33,7 @@ Feature: Use rich text editor
   Scenario Outline: Format text in the editor (advanced toolbar)
     When I click the "<Action>" button in the "edit-body-und-0-value" WYSIWYG editor
       And I type "Testing body" in the "edit-body-und-0-value" WYSIWYG editor
-      And I press "Publish"
+      And I press "Save"
     Then I should see "Testing body" in the "<Element>" element with the "<Property>" CSS property set to "<Value>" in the "Pearson Content" region
 
     Examples:
@@ -72,7 +72,7 @@ Feature: Use rich text editor
       And I click the fake "Submit" button
       And I switch out of all frames
     # Save the whole node.
-    When I press "Publish"
+    When I press "Save"
     # See the image on the view page.
     Then I should see the "img" element in the "Pearson Content" region
       And I should see the image alt "Sample alt text" in the "Pearson Content" region
