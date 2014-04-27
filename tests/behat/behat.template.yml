@@ -21,8 +21,10 @@ default:
         Mega Menu: ".mb-menu"
         Tabs: ".tabs--primary"
         # Panels Layout Regions for Drupal WxT
+        Burr Flipped Content: ".burr-flipped-content-region"
+        Burr Flipped Sidebar: ".burr-flipped-sidebar-region"
         Pearson Content: ".region-pearson-first"
         Bryant Sidebar: ".region-pearson-second"
-        # For Panels / WxT specific regions.
+        # For Panels / WxT specific regions
         CTools modal: "#modalContent"
         Live preview: "fieldset.widget-preview"

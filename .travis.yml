@@ -38,7 +38,7 @@ install:
 
   # Install latest Drush 6.
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
-  - composer global require --prefer-source --no-interaction drush/drush:6.*@dev
+  - composer global require --prefer-source --no-interaction drush/drush:6.*
 
   # Build Behat dependencies
   - cd ./tests/behat
