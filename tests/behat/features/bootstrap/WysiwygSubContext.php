@@ -66,10 +66,15 @@ class WysiwygSubContext extends BehatContext implements DrupalSubContextInterfac
   protected function getWysiwygToolbar($instanceId, $editorType) {
     $driver = $this->getSession()->getDriver();
 
-    // TODO: This is tinyMCE specific. We should probably do a switch statement
-    // based on $editorType.
-    $toolbarElement = $driver->find("//div[@id='{$instanceId}_toolbargroup']");
-    $toolbarElement = !empty($toolbarElement) ? $toolbarElement[0] : NULL;
+    if ($editorType == 'ckeditor') {
+      $toolbarElement = $driver->find("//div[@class='cke_toolbox']");
+      $toolbarElement = !empty($toolbarElement) ? $toolbarElement[0] : NULL;
+    }
+    else {
+      $toolbarElement = $driver->find("//div[@id='{$instanceId}_toolbargroup']");
+      $toolbarElement = !empty($toolbarElement) ? $toolbarElement[0] : NULL;
+    }
+
     if (!$toolbarElement) {
       throw new \Exception(sprintf('Toolbar for editor "%s" was not found on the page %s', $instanceId, $this->getSession()->getCurrentUrl()));
     }
