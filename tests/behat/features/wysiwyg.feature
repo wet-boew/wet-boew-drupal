@@ -52,9 +52,7 @@ Feature: Use rich text editor
       And I switch to the frame "mediaBrowser"
       And I attach the file "wetkit.png" to "files[upload]"
       And I press "Next"
-      And I wait 2 seconds
-    Then I should see a "#edit-submit" element
-      And I should see the "Previous" button
+    Then I should see "wetkit.png"
     # Fields for the image.
     When I fill in the following:
         | Alt Text   | Sample alt text   |
