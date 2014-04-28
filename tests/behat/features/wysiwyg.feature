@@ -52,7 +52,7 @@ Feature: Use rich text editor
       And I switch to the frame "mediaBrowser"
       And I attach the file "wetkit.png" to "files[upload]"
       And I press "Next"
-    Then I should see "wetkit.png"
+    Then I should see "File name"
     # Fields for the image.
     When I fill in the following:
         | Alt Text   | Sample alt text   |
