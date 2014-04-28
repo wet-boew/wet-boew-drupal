@@ -18,16 +18,16 @@ Feature: Use rich text editor
     Then I should see "Testing body" in the "<Element>" element with the "<Property>" CSS property set to "<Value>" in the "Pearson Content" region
 
     Examples:
-      | Action                        | Element    | Property        | Value        |
-      # | Bold                          | strong     |                 |              |
-      # | Italic                        | em         |                 |              |
-      | Strikethrough                 | span       | text-decoration | line-through |
-      | Insert/Remove Bulleted List   | ul > li    |                 |              |
-      | Insert/Remove Numbered List   | ol > li    |                 |              |
-      | Block Quote                   | blockquote |                 |              |
-      | Align Left                    | p          | text-align      | left         |
-      | Align Center                  | p          | text-align      | center       |
-      | Align Right                   | p          | text-align      | right        |
+      | Action                         | Element    | Property        | Value        |
+      # | Bold                         | strong     |                 |              |
+      # | Italic                       | em         |                 |              |
+      | Strike through                 | span       | text-decoration | line-through |
+      | Insert/Remove Bulleted List    | ul > li    |                 |              |
+      | Insert/Remove Numbered List    | ol > li    |                 |              |
+      | Block Quote                    | blockquote |                 |              |
+      | Align Left                     | p          | text-align      | left         |
+      | Align Center                   | p          | text-align      | center       |
+      | Align Right                    | p          | text-align      | right        |
 
   @api @javascript
   Scenario Outline: Format text in the editor (advanced toolbar)
