@@ -6,7 +6,7 @@ I want to be able to login
   Scenario: Admin user is able to login
     Given I am on "/user"
     When I fill in "admin" for "edit-name"
-    And I fill in "admin" for "edit-pass"
+    And I fill in "WetKit@2012" for "edit-pass"
     And I press "Log in"
     Then I should see "Log out"
 
@@ -27,8 +27,8 @@ I want to be able to login
       And I should see "This login can be used only once."
     When I press the "Log in" button
     Then I should see "You have just used your one-time login link. It is no longer necessary to use this link to log in. Please change your password."
-    When I fill in "mycoolpassword" for "Password"
-      And I fill in "mycoolpassword" for "Confirm password"
+    When I fill in "WetKit@2013" for "Password"
+      And I fill in "WetKit@2013" for "Confirm password"
       And I press "Save"
     Then I should see "The changes have been saved."
     When I click "Log out"
