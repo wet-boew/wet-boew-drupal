@@ -39,6 +39,8 @@ install:
   # Install latest Drush 6.
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - composer global require --prefer-source --no-interaction drush/drush:6.*
+  - drush dl -y drupalorg_drush-7.x-1.x-dev --destination=$HOME/.drush
+  - drush cc drush
 
   # Build Behat dependencies
   - cd ./tests/behat
@@ -52,7 +54,7 @@ install:
   - mkdir drupal
   - mv profiles drupal/
 
-  # Test the current branch
+  # Build the current branch
   - cd drupal
   - drush make --yes profiles/wetkit/drupal-org-core.make --prepare-install
   - drush make --yes profiles/wetkit/drupal-org.make --no-core --contrib-destination=profiles/wetkit
@@ -60,6 +62,10 @@ install:
   - mkdir sites/default/private/files
   - mkdir sites/default/private/temp
   - cd ../
+
+  # Verify that all the .make files will work on Drupal.org.
+  - drush verify-makefile drupal/profiles/wetkit/drupal-org.make
+  - find drupal/profiles/wetkit/custom -name \*.make -print0 | xargs -0 -n1 drush verify-makefile
 
   # Download an old version to test upgrading from.
   - if [[ "$UPGRADE" != none ]]; then drush dl wetkit-$UPGRADE; fi
