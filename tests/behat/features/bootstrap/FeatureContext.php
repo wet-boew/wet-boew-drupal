@@ -404,7 +404,7 @@ class FeatureContext extends DrupalContext
    */
   public function debugText($text, $tag) {
     $page = $this->getSession()->getPage();
-    $results = $page->getContent()
+    $results = $page->getContent();
     $this->printDebug($results);
   }
 
