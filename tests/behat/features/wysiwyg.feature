@@ -11,36 +11,19 @@ Feature: Use rich text editor
         | body[und][0][format] | wetkit_wysiwyg_text |
 
   @api @javascript
-  Scenario Outline: Format text in the editor (first toolbar)
+  Scenario Outline: Format text in the editor
     When I click the "<Action>" button in the "edit-body-und-0-value" WYSIWYG editor
       And I type "Testing body" in the "edit-body-und-0-value" WYSIWYG editor
       And I press "Save"
     Then I should see "Testing body" in the "<Element>" element with the "<Property>" CSS property set to "<Value>" in the "Pearson Content" region
 
     Examples:
-      | Action                         | Element    | Property        | Value        |
-      # | Bold                         | strong     |                 |              |
-      # | Italic                       | em         |                 |              |
-      | Strike through                 | span       | text-decoration | line-through |
-      | Insert/Remove Bulleted List    | ul > li    |                 |              |
-      | Insert/Remove Numbered List    | ol > li    |                 |              |
-      | Block Quote                    | blockquote |                 |              |
-      | Align Left                     | p          | text-align      | left         |
-      | Align Center                   | p          | text-align      | center       |
-      | Align Right                    | p          | text-align      | right        |
-
-  @api @javascript
-  Scenario Outline: Format text in the editor (advanced toolbar)
-    When I click the "<Action>" button in the "edit-body-und-0-value" WYSIWYG editor
-      And I type "Testing body" in the "edit-body-und-0-value" WYSIWYG editor
-      And I press "Save"
-    Then I should see "Testing body" in the "<Element>" element with the "<Property>" CSS property set to "<Value>" in the "Pearson Content" region
-
-    Examples:
-      | Action          | Element | Property        | Value     |
-      | Underline       | span    | text-decoration | underline |
-      | Align Full      | p       | text-align      | justify   |
-      | Increase Indent | p       | padding-left    | 30px      |
+      | Action          | Element    | Property        | Value        |
+      | bold            | strong     |                 |              |
+      | italic          | em         |                 |              |
+      | bulletedlist    | ul > li    |                 |              |
+      | numberedlist    | ol > li    |                 |              |
+      | blockquote      | blockquote |                 |              |
 
   # TODO: About 10% of the time this test will hang with Firefox, so for now,
   # we will run in Chrome only on Travis-CI to get consistent builds.
