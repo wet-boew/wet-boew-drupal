@@ -31,7 +31,7 @@ Feature: Use rich text editor
   Scenario: Add an image with format and alt text
     When I type "Testing body" in the "edit-body-und-0-value" WYSIWYG editor
     # Upload the file.
-    When I click the "Add media" button in the "edit-body-und-0-value" WYSIWYG editor
+    When I click the "media" button in the "edit-body-und-0-value" WYSIWYG editor
       And I switch to the frame "mediaBrowser"
       And I attach the file "wetkit.png" to "files[upload]"
       And I press "Next"
