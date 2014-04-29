@@ -67,7 +67,7 @@ class WysiwygSubContext extends BehatContext implements DrupalSubContextInterfac
     $driver = $this->getSession()->getDriver();
 
     if ($editorType == 'ckeditor') {
-      $toolbarElement = $driver->find("//span[@class='cke_toolbox_main']");
+      $toolbarElement = $driver->find("//div[@id='cke_edit-body-und-0-value']");
       $toolbarElement = !empty($toolbarElement) ? $toolbarElement[0] : NULL;
     }
     else {

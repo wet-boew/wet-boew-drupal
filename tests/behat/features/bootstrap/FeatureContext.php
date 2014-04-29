@@ -317,6 +317,39 @@ class FeatureContext extends DrupalContext
   }
 
   /**
+   * @Given /^I log in with the One Time Login Url$/
+   */
+  public function iLogInWithTheOneTimeLoginUrl() {
+    if ($this->loggedIn()) {
+      $this->logOut();
+    }
+    // Create user (and project)
+    $user = (object) array(
+      'name' => Random::name(8),
+      'pass' => Random::name(16),
+      'role' => 'authenticated user',
+    );
+    $user->mail = "{$user->name}@example.com";
+
+    // Create a new user.
+    $this->getDriver()->userCreate($user);
+
+    $this->users[$user->name] = $this->user = $user;
+
+    $base_url = rtrim($this->locatePath('/'), '/');
+    $login_link = $this->getMainContext()->getDriver('drush')->drush('uli', array(
+      "'$user->name'",
+      '--browser=0',
+      "--uri=${base_url}",
+    ));
+    // Trim EOL characters. Required or else visiting the link won't work.
+    $login_link = trim($login_link);
+    $login_link = str_replace("/login", '', $login_link);
+    $this->getSession()->visit($this->locatePath($login_link));
+    return TRUE;
+  }
+
+  /**
    * @Given /^(?:|I )wait(?:| for) (\d+) seconds?$/
    *
    * Wait for the given number of seconds. ONLY USE FOR DEBUGGING!
