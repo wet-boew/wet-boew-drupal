@@ -399,4 +399,13 @@ class FeatureContext extends DrupalContext
     throw new Exception('Something took too long to load at ' . $this->getSession()->getCurrentUrl());
   }
 
+  /**
+   * @Then /^I should debug "([^"]*)" in the "([^"]*)" element$/
+   */
+  public function debugText($text, $tag) {
+    $page = $this->getSession()->getPage();
+    $results = $page->findAll('css', $tag);
+    $this->printDebug($results);
+  }
+
 }

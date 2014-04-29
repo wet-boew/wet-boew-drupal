@@ -35,7 +35,7 @@ Feature: Use rich text editor
       And I switch to the frame "mediaBrowser"
       And I attach the file "wetkit.png" to "files[upload]"
       And I press "Next"
-    Then I should see "Destination"
+    Then I should debug "Destination" in the "#page" element
     # Select the destination (public/private files).
     When I select the radio button "Public local files served by the webserver."
       And I press "Next"
