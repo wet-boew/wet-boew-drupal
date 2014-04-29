@@ -40,7 +40,7 @@ class WysiwygSubContext extends BehatContext implements DrupalSubContextInterfac
    *   A Javascript expression representing the WYSIWYG instance.
    */
   protected function getWysiwygInstance($instanceId) {
-    $instance = "Drupal.wysiwyg.instances['$instanceId']";
+    $instance = "CKEDITOR.instances['$instanceId']";
 
     if (!$this->getSession()->evaluateScript("return !!$instance")) {
       throw new \Exception(sprintf('The editor "%s" was not found on the page %s', $instanceId, $this->getSession()->getCurrentUrl()));
@@ -87,7 +87,7 @@ class WysiwygSubContext extends BehatContext implements DrupalSubContextInterfac
    */
   public function iTypeInTheWysiwygEditor($text, $instanceId) {
     $instance = $this->getWysiwygInstance($instanceId);
-    $this->getSession()->executeScript("$instance.insert(\"$text\");");
+    $this->getSession()->executeScript("$instance.insertText(\"$text\");");
   }
 
   /**
@@ -95,7 +95,7 @@ class WysiwygSubContext extends BehatContext implements DrupalSubContextInterfac
    */
   public function iFillInTheWysiwygEditor($text, $instanceId) {
     $instance = $this->getWysiwygInstance($instanceId);
-    $this->getSession()->executeScript("$instance.setContent(\"$text\");");
+    $this->getSession()->executeScript("$instance.setData(\"$text\");");
   }
 
   /**
@@ -105,12 +105,9 @@ class WysiwygSubContext extends BehatContext implements DrupalSubContextInterfac
     $driver = $this->getSession()->getDriver();
 
     $instance = $this->getWysiwygInstance($instanceId);
-    $editorType = $this->getSession()->evaluateScript("return $instance.editor");
-    $toolbarElement = $this->getWysiwygToolbar($instanceId, $editorType);
 
-    // Click the action button.
-    $button = $toolbarElement->find("xpath", "//a[starts-with(@title, '$action')]");
-    $button->click();
+    // Simulate click using ExecCommand.
+    $this->getSession()->executeScript("CKEDITOR.instances[\"$instanceId\"].execCommand(\"$action\");");
     $driver->wait(1000, TRUE);
   }
 
@@ -140,7 +137,7 @@ class WysiwygSubContext extends BehatContext implements DrupalSubContextInterfac
    */
   public function assertContentInWysiwygEditor($text, $tag, $region) {
     $instance = $this->getWysiwygInstance($instanceId);
-    $content = $this->evaluateScript("return $instance.getContent()");
+    $content = $this->evaluateScript("return $instance.getData()");
     if (strpos($text, $content) === FALSE) {
       throw new \Exception(sprintf('The text "%s" was not found in the "%s" WYSWIYG editor on the page %s', $text, $instanceId, $this->getSession()->getCurrentUrl()));
     }
@@ -151,7 +148,7 @@ class WysiwygSubContext extends BehatContext implements DrupalSubContextInterfac
    */
   public function assertContentNotInWysiwygEditor($text, $tag, $region) {
     $instance = $this->getWysiwygInstance($instanceId);
-    $content = $this->evaluateScript("return $instance.getContent()");
+    $content = $this->evaluateScript("return $instance.getData()");
     if (strpos($text, $content) !== FALSE) {
       throw new \Exception(sprintf('The text "%s" was found in the "%s" WYSWIYG editor on the page %s', $text, $instanceId, $this->getSession()->getCurrentUrl()));
     }
