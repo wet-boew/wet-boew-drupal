@@ -31,4 +31,4 @@ I want to be able to login
       And I fill in "WetKit@2013" for "Confirm password"
       And I press "Save"
     Then I should see "The changes have been saved."
-    When I click "Log out"
+
