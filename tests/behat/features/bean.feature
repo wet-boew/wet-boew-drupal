@@ -3,7 +3,8 @@ Feature: Test Bean Types
   As a site administrator
   I need to be able to trust that bean types work consistently
 
-  Background:
+  @api
+  Scenario: User save Twitter Bean
     Given I am logged in as a user with the "administrator" role
     When I visit "/block/add/wetkit-twitter"
       And I fill in the following:
