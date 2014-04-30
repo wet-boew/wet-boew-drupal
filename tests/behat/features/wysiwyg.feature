@@ -74,4 +74,7 @@ Feature: Use rich text editor
         | linkit_search   | Drupal Collaboration |
       And I wait 4 seconds
       And I click on the linkit result with selector ".better-autocomplete .highlight"
-      And I press "Linkit insert"
+      And I press "Insert link"
+    When I press "Save"
+      And I click "Drupal Collaboration" in the "Pearson Content" region
+    Then I should be on "en/content/drupal-collaboration"
