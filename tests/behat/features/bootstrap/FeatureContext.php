@@ -365,7 +365,7 @@ class FeatureContext extends DrupalContext
    */
   public function iWaitForAJAX() {
     $this->getSession()->wait(5000,
-               "if (typeof jQuery != undefined) {
+               "if (typeof jQuery != 'undefined') {
                  function loadScript(scriptUrl)
                  {
                    var head =  document.getElementsByTagName('head')[0];
