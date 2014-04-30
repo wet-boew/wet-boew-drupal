@@ -14,4 +14,6 @@ Feature: Test Bean Types
         | twitter_settings[username]    | WebExpToolkit      |
         | twitter_settings[widget_id]   | 461316119865737216 |
       And I press "Save"
-    Then I should see the ".twitter-timeline-rendered" element in the "Content Well" region
+      And I wait 2 seconds
+      And I switch to the frame "twitter-widget-0"
+    Then I should see a ".stream" element
