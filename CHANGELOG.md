@@ -52,6 +52,7 @@ Fixes:
   - (Commit: [62064fb][R1.4-Commit-62064fb]) #[2232467][R1.4-Issue-2232467] -  Wetkit_omega node.tpl is outputting 'class' twices.
   - (Commit: [53099b9][R1.4-Commit-53099b9]) #[2248433][R1.4-Issue-2248433] -  SA-CONTRIB-2014-043 - Custom Search (XSS).
   - (Commit: [58e1342][R1.4-Commit-58e1342]) #[2248435][R1.4-Issue-2248435] -  SA-CONTRIB-2014-042 - Internationalization.
+  - (Commit: [8c687dc][R1.4-Commit-8c687dc]) #[2254353][R1.4-Issue-2254353] -  Issue #2254353 by sylus: Fixes for WxT Bean + Behat.
 
 ## v1.3
 
@@ -505,6 +506,7 @@ Bug Fixes:
 [R1.4-Commit-62064fb]:            http://drupalcode.org/project/wetkit_omega.git/commit/62064fb
 [R1.4-Commit-53099b9]:            http://drupalcode.org/project/wetkit_search.git/commit/53099b9
 [R1.4-Commit-58e1342]:            http://drupalcode.org/project/wetkit_language.git/commit/58e1342
+[R1.4-Commit-8c687dc]:            http://drupalcode.org/project/wetkit_bean.git/commit/8c687dc
 
 <!-- Issues R1.4 -->
 
@@ -545,6 +547,7 @@ Bug Fixes:
 [R1.4-Issue-2232467]:             http://drupal.org/node/2232467
 [R1.4-Issue-2248433]:             http://drupal.org/node/2248433
 [R1.4-Issue-2248435]:             http://drupal.org/node/2248435
+[R1.4-Issue-2254353]:             http://drupal.org/node/2254353
 
 <!-- Commits R1.3 -->
 
