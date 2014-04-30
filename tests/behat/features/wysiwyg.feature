@@ -70,3 +70,8 @@ Feature: Use rich text editor
     When I click the "linkit" button in the "edit-body-und-0-value" WYSIWYG editor
       And I wait 2 seconds
     Then I should see a "#linkit-modal" element
+    When I fill in the following:
+        | linkit_search   | Drupal Collaboration |
+      And I wait 4 seconds
+      And I click on the linkit result with selector ".better-autocomplete .highlight"
+      And I press "Linkit insert"

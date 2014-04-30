@@ -34,6 +34,7 @@ class FeatureContext extends DrupalContext
     $this->useContext('panels', new PanelsSubContext());
     $this->useContext('wysiwyg', new WysiwygSubContext());
     $this->useContext('media', new MediaSubContext());
+    $this->useContext('linkit', new LinkitSubContext());
   }
 
   //
