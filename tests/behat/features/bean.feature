@@ -15,5 +15,6 @@ Feature: Test Bean Types
         | twitter_settings[widget_id]   | 461316119865737216 |
         | twitter_settings[tweet_limit] | 5                  |
       And I press "Save"
+      And I switch to the frame "mediaBrowser"
       And I wait 10 seconds
-    Then I should debug "twitter" in the ".page-block-wxt-feed" element
+    Then I should debug "Twitter" in the "#twitter-widget-0" element
