@@ -25,10 +25,12 @@ Feature: Use rich text editor
       | numberedlist    | ol > li    |                 |              |
       | blockquote      | blockquote |                 |              |
 
-  # TODO: About 10% of the time this test will hang with Firefox, so for now,
+  # TODO: About 10% of the time these tests will hang with Firefox, so for now,
   # we will run in Chrome only on Travis-CI to get consistent builds.
+
+  # Test the Media plugin.
   @api @javascript @chrome
-  Scenario: Add an image with format and alt text
+  Scenario: Add an image with format and alt text using Media
     When I type "Testing body" in the "edit-body-und-0-value" WYSIWYG editor
     # Upload the file.
     When I click the "media" button in the "edit-body-und-0-value" WYSIWYG editor
@@ -59,3 +61,20 @@ Feature: Use rich text editor
     # See the image on the view page.
     Then I should see the "img" element in the "Pearson Content" region
       And I should see the image alt "Sample alt text" in the "Pearson Content" region
+
+  # Test the Linkit plugin.
+  @api @javascript @chrome
+  Scenario: Add an link using Linkit
+    When I type "Testing body" in the "edit-body-und-0-value" WYSIWYG editor
+    # Insert a link.
+    When I click the "linkit" button in the "edit-body-und-0-value" WYSIWYG editor
+      And I wait 2 seconds
+    Then I should see a "#linkit-modal" element
+    When I fill in the following:
+        | linkit_search   | Drupal Collaboration |
+      And I wait 4 seconds
+      And I click on the linkit result with selector ".better-autocomplete .highlight"
+      And I press "Insert link"
+    When I press "Save"
+      And I click "Drupal Collaboration" in the "Pearson Content" region
+    Then I should be on "en/content/drupal-collaboration"

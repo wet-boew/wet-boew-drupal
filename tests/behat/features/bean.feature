@@ -15,5 +15,5 @@ Feature: Test Bean Types
         | twitter_settings[widget_id]   | 461316119865737216 |
         | twitter_settings[tweet_limit] | 5                  |
       And I press "Save"
-      And I wait 10 seconds
-    Then I should debug "twitter" in the ".page-block-wxt-feed" element
+      And I wait 2 seconds
+  Then I should see a ".wet-boew-webwidget" element
