@@ -365,20 +365,19 @@ class FeatureContext extends DrupalContext
    */
   public function iWaitForAJAX() {
     $this->getSession()->wait(5000,
-               "if (typeof jQuery != 'undefined') {
-                 function loadScript(scriptUrl)
-                 {
-                   var head =  document.getElementsByTagName('head')[0];
-                   var script = document.createElement('script');
-                   script.type = 'text/javascript';
-                   script.src = scriptUrl;
-                   head.appendChild(script);
-                 }
-                 loadScript('https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js');
-                 loadScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js');
-               } else {
-                  jQuery.active === 0;
-               }");
+      "if (typeof jQuery == 'undefined') {
+        function loadScript(scriptUrl) {
+          var head =  document.getElementsByTagName('head')[0];
+          var script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.src = scriptUrl;
+          head.appendChild(script);
+        }
+        loadScript('https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js');
+        loadScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js');
+      } else {
+          jQuery.active === 0;
+      }");
   }
 
   /**
