@@ -55,6 +55,7 @@ Fixes:
   - (Commit: [8c687dc][R1.4-Commit-8c687dc]) #[2254353][R1.4-Issue-2254353] -  Fixes for WxT Bean + Behat.
   - (Commit: [19ee35e][R1.4-Commit-19ee35e]) #[2255169][R1.4-Issue-2255169] -  Updates to WxT Language (7.x-1.6).
   - (Commit: [36eceda][R1.4-Commit-36eceda]) #[2229529][R1.4-Issue-2229529] -  Updates to WetKit Core (7.x-1.8).
+  - (Commit: [e54529c][R1.4-Commit-e54529c]) #[2187771][R1.4-Issue-2187771] -  Media patches for WxT.
 
 ## v1.3
 
@@ -511,6 +512,7 @@ Bug Fixes:
 [R1.4-Commit-8c687dc]:            http://drupalcode.org/project/wetkit_bean.git/commit/8c687dc
 [R1.4-Commit-19ee35e]:            http://drupalcode.org/project/wetkit_language.git/commit/19ee35e
 [R1.4-Commit-36eceda]:            http://drupalcode.org/project/wetkit_core.git/commit/36eceda
+[R1.4-Commit-e54529c]:            http://drupalcode.org/project/wetkit_widgets.git/commit/e54529c
 
 <!-- Issues R1.4 -->
 
@@ -553,6 +555,7 @@ Bug Fixes:
 [R1.4-Issue-2248435]:             http://drupal.org/node/2248435
 [R1.4-Issue-2254353]:             http://drupal.org/node/2254353
 [R1.4-Issue-2255169]:             http://drupal.org/node/2255169
+[R1.4-Issue-2187771]:             http://drupal.org/node/2187771
 
 <!-- Commits R1.3 -->
 
