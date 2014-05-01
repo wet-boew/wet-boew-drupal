@@ -49,7 +49,7 @@ Feature: Use rich text editor
         | Title Text | Sample title text |
       And I press "Save"
     # The media style selector.
-    When I wait 2 seconds
+    When I wait 10 seconds
       And I switch to the frame "mediaStyleSelector"
       And I select "WYSIWYG" from "format"
     Then the "Alt Text" field should contain "Sample Alt text"
