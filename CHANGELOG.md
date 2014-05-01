@@ -1,12 +1,20 @@
 ## v1.4 (In Development)
 
-Security Update:
+Security Update(s):
 
   - Drupal Core
+  - Custom Search
+  - Fape
+  - Internationalization
 
 Features:
 
   - Stabilization of WxT Search modules.
+  - Multiple Bean fixes
+  - Multiple theme layer fixes
+  - Performance improvements from Acquia
+  - Numerous Behat additions
+  - Switch to full build of CKEditor
 
 Fixes:
 
@@ -59,7 +67,7 @@ Fixes:
 
 ## v1.3
 
-Security Update:
+Security Update(s):
 
   - Services
   - Webform
@@ -134,7 +142,7 @@ Fixes:
 
 ## v1.2
 
-Security Update:
+Security Update(s):
 
   - Drupal Core (7.26)
   - Entity API

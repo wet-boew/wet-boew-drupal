@@ -51,7 +51,6 @@ Feature: Use rich text editor
     # The media style selector.
     When I wait 2 seconds
       And I switch to the frame "mediaStyleSelector"
-      And I select "WYSIWYG" from "format"
     Then the "Alt Text" field should contain "Sample Alt text"
       And the "Title Text" field should contain "Sample Title text"
       And I click the fake "Submit" button
