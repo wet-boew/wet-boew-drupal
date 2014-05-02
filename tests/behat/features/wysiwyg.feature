@@ -8,7 +8,7 @@ Feature: Use rich text editor
     When I visit "/node/add/wetkit-page"
       And I fill in the following:
         | Title                | Testing WYSIWYG       |
-        | body[und][0][format] | wetkit_wysiwyg_text |
+        | body[und][0][format] | wetkit_wysiwyg_text   |
 
   @api @javascript
   Scenario Outline: Format text in the editor
