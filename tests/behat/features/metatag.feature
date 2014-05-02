@@ -17,7 +17,7 @@ Feature: Metatags
       And I fill in the following:
         | Title                          | Testing Title                |
         | body[und][0][format]           | wetkit_wysiwyg_text          |
-        | Page Title                     | SEO optimized title          |
+        | Page title                     | SEO optimized title          |
         | Description                    | SEO optimized description    |
         | metatags[keywords][value]      | SEO optimized keywords       |
         | workbench_moderation_state_new | published                    |
