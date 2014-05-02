@@ -26,6 +26,6 @@ Feature: Metatags
       And I press "Save"
       And I wait 2 seconds
     Then the "h1" element should contain "Testing title"
-      And I should see "SEO optimized title" in the "Title" element
+      And I should see "SEO optimized title" in the "title" element
       And the metatag attribute "description" should have the value "SEO optimized description"
       And the metatag attribute "keywords" should have the value "SEO optimized keywords"
