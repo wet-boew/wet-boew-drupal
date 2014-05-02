@@ -14,13 +14,12 @@ Feature: Metatags
   Scenario: Evaluating created metatags
     Given I am logged in as a user with the "administrator" role
     When I visit "/node/add/wetkit-page"
-      And I click "Defaults" in the "Edit Metatags" region
       And I fill in the following:
         | Title                          | Testing Title                |
         | Language                       | en                           |
         | body[en][0][format]            | wetkit_wysiwyg_text          |
-        | metatags[title][value]         | SEO optimized title          |
-        | metatags[description][value]   | SEO optimized description    |
+        | Page Title                     | SEO optimized title          |
+        | Description                    | SEO optimized description    |
         | metatags[keywords][value]      | SEO optimized keywords       |
         | workbench_moderation_state_new | published                    |
       And I press "Save"
