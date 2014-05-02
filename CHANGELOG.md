@@ -15,6 +15,7 @@ Features:
   - Performance improvements from Acquia
   - Numerous Behat additions
   - Switch to full build of CKEditor
+  - Updated WxT jQuery framework to v3 release (3.1.10) before move to bootstrap in v4
 
 Fixes:
 
@@ -65,6 +66,7 @@ Fixes:
   - (Commit: [36eceda][R1.4-Commit-36eceda]) #[2229529][R1.4-Issue-2229529] -  Updates to WetKit Core (7.x-1.8).
   - (Commit: [e54529c][R1.4-Commit-e54529c]) #[2187771][R1.4-Issue-2187771] -  Media patches for WxT.
   - (Commit: [7469676][R1.4-Commit-7469676]) #[2256611][R1.4-Issue-2256611] -  Updates to WxT Admin (7.x-1.4).
+  - (Commit: [8fa448f][R1.4-Commit-8fa448f]) #[2256723][R1.4-Issue-2256723] -  Update core jQuery WET-BOEW to v3.1.10.
 
 ## v1.3
 
@@ -523,6 +525,7 @@ Bug Fixes:
 [R1.4-Commit-36eceda]:            http://drupalcode.org/project/wetkit_core.git/commit/36eceda
 [R1.4-Commit-e54529c]:            http://drupalcode.org/project/wetkit_widgets.git/commit/e54529c
 [R1.4-Commit-7469676]:            http://drupalcode.org/project/wetkit_admin.git/commit/7469676
+[R1.4-Commit-8fa448f]:            http://drupalcode.org/project/wetkit_wetboew.git/commit/8fa448f
 
 <!-- Issues R1.4 -->
 
@@ -566,6 +569,7 @@ Bug Fixes:
 [R1.4-Issue-2254353]:             http://drupal.org/node/2254353
 [R1.4-Issue-2255169]:             http://drupal.org/node/2255169
 [R1.4-Issue-2187771]:             http://drupal.org/node/2187771
+[R1.4-Issue-2256723]:             http://drupal.org/node/2256723
 
 <!-- Commits R1.3 -->
 
