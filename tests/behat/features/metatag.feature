@@ -13,8 +13,8 @@ Feature: Metatags
   @api @javascript
   Scenario: Evaluating created metatags
     Given I am logged in as a user with the "administrator" role
-    And I click "Defaults" in the "Edit Metatags" region
     When I visit "/node/add/wetkit-page"
+      And I click "Defaults" in the "Edit Metatags" region
       And I fill in the following:
         | Title                          | Testing Title                |
         | body[und][0][format]           | wetkit_wysiwyg_text          |
