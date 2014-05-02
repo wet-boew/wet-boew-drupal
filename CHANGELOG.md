@@ -1,4 +1,4 @@
-## v1.4 (In Development)
+## v1.4
 
 Security Update(s):
 
