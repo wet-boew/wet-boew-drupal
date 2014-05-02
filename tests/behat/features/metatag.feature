@@ -10,7 +10,7 @@ Feature: Metatags
     And I am on "fr/contenu/wxt-drupal"
     Then the metatag attribute "dcterms.title" should have the value "WxT Drupal"
 
-  @api @javascript
+  @api @javascript @chrome
   Scenario: Evaluating created metatags
     Given I am logged in as a user with the "administrator" role
     When I visit "/node/add/wetkit-page"
