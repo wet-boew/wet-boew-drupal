@@ -10,14 +10,14 @@ Feature: Metatags
     And I am on "fr/contenu/wxt-drupal"
     Then the metatag attribute "dcterms.title" should have the value "WxT Drupal"
 
-  @api @javascript @chrome
+  @api @javascript
   Scenario: Evaluating created metatags
     Given I am logged in as a user with the "administrator" role
     When I visit "/node/add/wetkit-page"
       And I fill in the following:
-        | Title                          | Testing WYSIWYG              |
+        | Title                          | Testing Title                |
         | Language                       | en                           |
-        | body[und][0][format]           | wetkit_wysiwyg_text          |
+        | body[en][0][format]            | wetkit_wysiwyg_text          |
         | metatags[title][value]         | SEO optimized title          |
         | metatags[description][value]   | SEO optimized description    |
         | metatags[keywords][value]      | SEO optimized keywords       |
