@@ -27,6 +27,8 @@ default:
         Burr Flipped Sidebar: ".burr-flipped-sidebar-region"
         Pearson Content: ".region-pearson-first"
         Pearson Sidebar: ".region-pearson-second"
+        # For Metatag specific regions
+        Edit Metatags: "#edit-metatags"
         # For Panels / WxT specific regions
         CTools modal: "#modalContent"
         Live preview: "fieldset.widget-preview"
