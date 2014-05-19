@@ -45,8 +45,11 @@ projects[wetkit_metatag][subdir] = custom
 projects[wetkit_migrate][version] = 1.3
 projects[wetkit_migrate][subdir] = custom
 
-projects[wetkit_og][version] = 1.1
+projects[wetkit_og][version] = 1.x-dev
 projects[wetkit_og][subdir] = custom
+projects[wetkit_og][download][type] = git
+projects[wetkit_og][download][revision] = a06f14f
+projects[wetkit_og][download][branch] = 7.x-1.x
 
 projects[wetkit_pages][version] = 1.4
 projects[wetkit_pages][subdir] = custom

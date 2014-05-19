@@ -14,6 +14,7 @@ Fixes:
   - (Commit: [0ec9bea][R1.5-Commit-0ec9bea]) #[2269099][R1.5-Issue-2269099] -  Force password change on next login prevents logins.
   - (Commit: [11340a9][R1.5-Commit-11340a9]) #[2256435][R1.5-Issue-2256435] -  New layout (Polley).
   - (Commit: [df07c24][R1.5-Commit-df07c24]) #[2219473][R1.5-Issue-2219473] -  Allow for the disabling of Update Manager.
+  - (Commit: [a06f14f][R1.5-Commit-a06f14f]) #[2262919][R1.5-Issue-2262919] -  Organic Groups (OG) - Access Bypass.
 
 ## v1.4
 
@@ -499,6 +500,7 @@ Bug Fixes:
 [R1.5-Commit-0ec9bea]:            http://drupalcode.org/project/wetkit_core.git/commit/0ec9bea
 [R1.5-Commit-11340a9]:            http://drupalcode.org/project/wetkit_layouts.git/commit/11340a9
 [R1.5-Commit-df07c24]:            http://drupalcode.org/project/wetkit_core.git/commit/df07c24
+[R1.5-Commit-a06f14f]:            http://drupalcode.org/project/wetkit_og.git/commit/a06f14f
 
 <!-- Issues R1.5 -->
 
@@ -506,6 +508,7 @@ Bug Fixes:
 [R1.5-Issue-2269099]:             http://drupal.org/node/2269099
 [R1.5-Issue-2256435]:             http://drupal.org/node/2256435
 [R1.5-Issue-2219473]:             http://drupal.org/node/2219473
+[R1.5-Issue-2262919]:             http://drupal.org/node/2262919
 
 <!-- Commits R1.4 -->
 
