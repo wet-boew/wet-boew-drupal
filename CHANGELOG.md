@@ -1,3 +1,17 @@
+## v1.5 (In Development)
+
+Security Update(s):
+
+  - Drupal Core
+
+Features:
+
+  -
+
+Fixes:
+
+  - (Commit: [96fd513][R1.5-Commit-96fd513]) #[2262917][R1.5-Issue-2262917] -  Update Drupal Core to 7.28.
+
 ## v1.4
 
 Security Update(s):
@@ -475,6 +489,14 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+
+<!-- Commits R1.5 -->
+
+[R1.5-Commit-96fd513]:            http://drupalcode.org/project/wetkit.git/commit/96fd513
+
+<!-- Issues R1.5 -->
+
+[R1.5-Issue-2262917]:             http://drupal.org/node/2262917
 
 <!-- Commits R1.4 -->
 
