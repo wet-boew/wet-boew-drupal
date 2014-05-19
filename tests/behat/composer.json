@@ -1,6 +1,6 @@
 {
   "require": {
-    "drupal/drupal-extension": "*",
+    "drupal/drupal-extension": "1.0.0",
 
     "symfony/css-selector": "2.4.2",
     "symfony/finder": "2.4.2",
