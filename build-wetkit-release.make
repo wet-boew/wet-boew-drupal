@@ -2,7 +2,7 @@ api = 2
 core = 7.x
 
 ; Drupal.org packaging standards
-projects[drupal][version] = 7.27
+projects[drupal][version] = 7.28
 
 projects[wetkit][type] = profile
-projects[wetkit][version] = 1.3
+projects[wetkit][version] = 1.4

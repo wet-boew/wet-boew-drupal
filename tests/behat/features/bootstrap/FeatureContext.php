@@ -291,9 +291,10 @@ class FeatureContext extends DrupalContext
       if ($end === FALSE) {
         break;
       }
+      $random_generator = new Random;
       $name = substr($argument, $start + 1, $end - $start - 1);
       if ($name == 'random') {
-        $this->vars[$name] = Random::name(8);
+        $this->vars[$name] = $random_generator->name(8);
         $random[] = $this->vars[$name];
       }
       // In order to test previous random values stored in the form,
@@ -324,10 +325,13 @@ class FeatureContext extends DrupalContext
     if ($this->loggedIn()) {
       $this->logOut();
     }
+
+    $random = new Random;
+
     // Create user (and project)
     $user = (object) array(
-      'name' => Random::name(8),
-      'pass' => Random::name(16),
+      'name' => $random->name(8),
+      'pass' => $random->name(16),
       'role' => 'authenticated user',
     );
     $user->mail = "{$user->name}@example.com";
