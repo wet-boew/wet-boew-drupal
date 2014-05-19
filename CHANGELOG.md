@@ -13,6 +13,7 @@ Fixes:
   - (Commit: [96fd513][R1.5-Commit-96fd513]) #[2262917][R1.5-Issue-2262917] -  Update Drupal Core to 7.28.
   - (Commit: [0ec9bea][R1.5-Commit-0ec9bea]) #[2269099][R1.5-Issue-2269099] -  Force password change on next login prevents logins.
   - (Commit: [11340a9][R1.5-Commit-11340a9]) #[2256435][R1.5-Issue-2256435] -  New layout (Polley).
+  - (Commit: [df07c24][R1.5-Commit-df07c24]) #[2219473][R1.5-Issue-2219473] -  Allow for the disabling of Update Manager.
 
 ## v1.4
 
@@ -497,12 +498,14 @@ Bug Fixes:
 [R1.5-Commit-96fd513]:            http://drupalcode.org/project/wetkit.git/commit/96fd513
 [R1.5-Commit-0ec9bea]:            http://drupalcode.org/project/wetkit_core.git/commit/0ec9bea
 [R1.5-Commit-11340a9]:            http://drupalcode.org/project/wetkit_layouts.git/commit/11340a9
+[R1.5-Commit-df07c24]:            http://drupalcode.org/project/wetkit_core.git/commit/df07c24
 
 <!-- Issues R1.5 -->
 
 [R1.5-Issue-2262917]:             http://drupal.org/node/2262917
 [R1.5-Issue-2269099]:             http://drupal.org/node/2269099
 [R1.5-Issue-2256435]:             http://drupal.org/node/2256435
+[R1.5-Issue-2219473]:             http://drupal.org/node/2219473
 
 <!-- Commits R1.4 -->
 
