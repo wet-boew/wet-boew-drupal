@@ -11,6 +11,7 @@ Features:
 Fixes:
 
   - (Commit: [96fd513][R1.5-Commit-96fd513]) #[2262917][R1.5-Issue-2262917] -  Update Drupal Core to 7.28.
+  - (Commit: [0ec9bea][R1.5-Commit-0ec9bea]) #[2269099][R1.5-Issue-2269099] -  Force password change on next login prevents logins.
 
 ## v1.4
 
@@ -493,10 +494,12 @@ Bug Fixes:
 <!-- Commits R1.5 -->
 
 [R1.5-Commit-96fd513]:            http://drupalcode.org/project/wetkit.git/commit/96fd513
+[R1.5-Commit-0ec9bea]:            http://drupalcode.org/project/wetkit_core.git/commit/0ec9bea
 
 <!-- Issues R1.5 -->
 
 [R1.5-Issue-2262917]:             http://drupal.org/node/2262917
+[R1.5-Issue-2269099]:             http://drupal.org/node/2269099
 
 <!-- Commits R1.4 -->
 
