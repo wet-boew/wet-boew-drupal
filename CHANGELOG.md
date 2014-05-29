@@ -3,10 +3,11 @@
 Security Update(s):
 
   - Drupal Core
+  - Organic Groups
 
 Features:
 
-  -
+  - Panels DX improvements
 
 Fixes:
 
@@ -15,6 +16,7 @@ Fixes:
   - (Commit: [11340a9][R1.5-Commit-11340a9]) #[2256435][R1.5-Issue-2256435] -  New layout (Polley).
   - (Commit: [df07c24][R1.5-Commit-df07c24]) #[2219473][R1.5-Issue-2219473] -  Allow for the disabling of Update Manager.
   - (Commit: [a06f14f][R1.5-Commit-a06f14f]) #[2262919][R1.5-Issue-2262919] -  Organic Groups (OG) - Access Bypass.
+  - (Commit: [589f2fe][R1.5-Commit-589f2fe]) #[2275701][R1.5-Issue-2275701] -  Added Ctools patches.
 
 ## v1.4
 
@@ -501,6 +503,7 @@ Bug Fixes:
 [R1.5-Commit-11340a9]:            http://drupalcode.org/project/wetkit_layouts.git/commit/11340a9
 [R1.5-Commit-df07c24]:            http://drupalcode.org/project/wetkit_core.git/commit/df07c24
 [R1.5-Commit-a06f14f]:            http://drupalcode.org/project/wetkit_og.git/commit/a06f14f
+[R1.5-Commit-589f2fe]:            http://drupalcode.org/project/wetkit_core.git/commit/589f2fe
 
 <!-- Issues R1.5 -->
 
@@ -509,6 +512,7 @@ Bug Fixes:
 [R1.5-Issue-2256435]:             http://drupal.org/node/2256435
 [R1.5-Issue-2219473]:             http://drupal.org/node/2219473
 [R1.5-Issue-2262919]:             http://drupal.org/node/2262919
+[R1.5-Issue-2275701]:             http://drupal.org/node/2275701
 
 <!-- Commits R1.4 -->
 
