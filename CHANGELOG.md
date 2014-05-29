@@ -20,6 +20,7 @@ Fixes:
   - (Commit: [fe98705][R1.5-Commit-fe98705]) #[2275217][R1.5-Issue-2275217] -  Cannot unset string offsets
   - (Commit: [c925292][R1.5-Commit-c925292]) #[2250501][R1.5-Issue-2250501] -  Fixed Node edit page shows menu items in all languages.
   - (Commit: [1babea2][R1.5-Commit-1babea2]) #[2271403][R1.5-Issue-2271403] -  Fixed Cannot access empty property field.attach.inc.
+  - (Commit: [1e60e61][RC15-Commit-1e60e61]) #[2276049][RC15-Issue-2276049] -  Update l10n_update to 1.0 release.
 
 ## v1.4
 
@@ -510,6 +511,7 @@ Bug Fixes:
 [R1.5-Commit-fe98705]:            http://drupalcode.org/project/wetkit_language.git/commit/fe98705
 [R1.5-Commit-c925292]:            http://drupalcode.org/project/wetkit_language.git/commit/c925292
 [R1.5-Commit-1babea2]:            http://drupalcode.org/project/wetkit_widgets.git/commit/1babea2
+[R1.5-Commit-1e60e61]:            http://drupalcode.org/project/wetkit_language.git/commit/1e60e61
 
 <!-- Issues R1.5 -->
 
@@ -522,6 +524,7 @@ Bug Fixes:
 [R1.5-Issue-2275217]:             http://drupal.org/node/2275217
 [R1.5-Issue-2250501]:             http://drupal.org/node/2250501
 [R1.5-Issue-2271403]:             http://drupal.org/node/2271403
+[R1.5-Issue-2276049]:             http://drupal.org/node/2276049
 
 <!-- Commits R1.4 -->
 
