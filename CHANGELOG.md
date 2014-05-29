@@ -17,6 +17,7 @@ Fixes:
   - (Commit: [df07c24][R1.5-Commit-df07c24]) #[2219473][R1.5-Issue-2219473] -  Allow for the disabling of Update Manager.
   - (Commit: [a06f14f][R1.5-Commit-a06f14f]) #[2262919][R1.5-Issue-2262919] -  Organic Groups (OG) - Access Bypass.
   - (Commit: [7723c47][R1.5-Commit-7723c47]) #[2275701][R1.5-Issue-2275701] -  Added Ctools patches.
+  - (Commit: [fe98705][R1.5-Commit-fe98705]) #[2275217][R1.5-Issue-2275217] -  Cannot unset string offsets
 
 ## v1.4
 
@@ -504,6 +505,7 @@ Bug Fixes:
 [R1.5-Commit-df07c24]:            http://drupalcode.org/project/wetkit_core.git/commit/df07c24
 [R1.5-Commit-a06f14f]:            http://drupalcode.org/project/wetkit_og.git/commit/a06f14f
 [R1.5-Commit-7723c47]:            http://drupalcode.org/project/wetkit_core.git/commit/7723c47
+[R1.5-Commit-fe98705]:            http://drupalcode.org/project/wetkit_language.git/commit/fe98705
 
 <!-- Issues R1.5 -->
 
@@ -513,6 +515,7 @@ Bug Fixes:
 [R1.5-Issue-2219473]:             http://drupal.org/node/2219473
 [R1.5-Issue-2262919]:             http://drupal.org/node/2262919
 [R1.5-Issue-2275701]:             http://drupal.org/node/2275701
+[R1.5-Issue-2275217]:             http://drupal.org/node/2275217
 
 <!-- Commits R1.4 -->
 
