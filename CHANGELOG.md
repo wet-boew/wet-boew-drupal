@@ -18,6 +18,7 @@ Fixes:
   - (Commit: [a06f14f][R1.5-Commit-a06f14f]) #[2262919][R1.5-Issue-2262919] -  Organic Groups (OG) - Access Bypass.
   - (Commit: [7723c47][R1.5-Commit-7723c47]) #[2275701][R1.5-Issue-2275701] -  Added Ctools patches.
   - (Commit: [fe98705][R1.5-Commit-fe98705]) #[2275217][R1.5-Issue-2275217] -  Cannot unset string offsets
+  - (Commit: [c925292][R1.5-Commit-c925292]) #[2250501][R1.5-Issue-2250501] -  Fixed Node edit page shows menu items in all languages.
 
 ## v1.4
 
@@ -506,6 +507,7 @@ Bug Fixes:
 [R1.5-Commit-a06f14f]:            http://drupalcode.org/project/wetkit_og.git/commit/a06f14f
 [R1.5-Commit-7723c47]:            http://drupalcode.org/project/wetkit_core.git/commit/7723c47
 [R1.5-Commit-fe98705]:            http://drupalcode.org/project/wetkit_language.git/commit/fe98705
+[R1.5-Commit-c925292]:            http://drupalcode.org/project/wetkit_language.git/commit/c925292
 
 <!-- Issues R1.5 -->
 
@@ -516,6 +518,7 @@ Bug Fixes:
 [R1.5-Issue-2262919]:             http://drupal.org/node/2262919
 [R1.5-Issue-2275701]:             http://drupal.org/node/2275701
 [R1.5-Issue-2275217]:             http://drupal.org/node/2275217
+[R1.5-Issue-2250501]:             http://drupal.org/node/2250501
 
 <!-- Commits R1.4 -->
 
