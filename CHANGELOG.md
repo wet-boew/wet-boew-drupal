@@ -21,6 +21,7 @@ Fixes:
   - (Commit: [c925292][R1.5-Commit-c925292]) #[2250501][R1.5-Issue-2250501] -  Fixed Node edit page shows menu items in all languages.
   - (Commit: [1babea2][R1.5-Commit-1babea2]) #[2271403][R1.5-Issue-2271403] -  Fixed Cannot access empty property field.attach.inc.
   - (Commit: [1e60e61][RC15-Commit-1e60e61]) #[2276049][RC15-Issue-2276049] -  Update l10n_update to 1.0 release.
+  - (Commit: [e360c6a][RC15-Commit-e360c6a]) #[2271309][RC15-Issue-2271309] -  Fixed Adding a wet video through Media renders with errors.
 
 ## v1.4
 
@@ -512,6 +513,7 @@ Bug Fixes:
 [R1.5-Commit-c925292]:            http://drupalcode.org/project/wetkit_language.git/commit/c925292
 [R1.5-Commit-1babea2]:            http://drupalcode.org/project/wetkit_widgets.git/commit/1babea2
 [R1.5-Commit-1e60e61]:            http://drupalcode.org/project/wetkit_language.git/commit/1e60e61
+[R1.5-Commit-e360c6a]:            http://drupalcode.org/project/wetkit_widgets.git/commit/e360c6a
 
 <!-- Issues R1.5 -->
 
@@ -525,6 +527,7 @@ Bug Fixes:
 [R1.5-Issue-2250501]:             http://drupal.org/node/2250501
 [R1.5-Issue-2271403]:             http://drupal.org/node/2271403
 [R1.5-Issue-2276049]:             http://drupal.org/node/2276049
+[R1.5-Issue-2271309]:             http://drupal.org/node/2271309
 
 <!-- Commits R1.4 -->
 
