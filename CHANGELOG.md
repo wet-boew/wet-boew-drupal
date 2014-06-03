@@ -22,6 +22,10 @@ Fixes:
   - (Commit: [1babea2][R1.5-Commit-1babea2]) #[2271403][R1.5-Issue-2271403] -  Fixed Cannot access empty property field.attach.inc.
   - (Commit: [1e60e61][RC15-Commit-1e60e61]) #[2276049][RC15-Issue-2276049] -  Update l10n_update to 1.0 release.
   - (Commit: [e360c6a][RC15-Commit-e360c6a]) #[2271309][RC15-Issue-2271309] -  Fixed Adding a wet video through Media renders with errors.
+  - (Commit: [f8227ff][RC15-Commit-f8227ff]) #[2278399][RC15-Issue-2278399] -  Fixed Saving translation text can result in error.
+  - (Commit: [4890142][RC15-Commit-4890142]) #[2278755][RC15-Issue-2278755] -  Fixed Security updates for Views + Password Policy.
+  - (Commit: [7b7e3d5][RC15-Commit-7b7e3d5]) #[2278759][RC15-Issue-2278759] -  Fixed Update admin views.
+  - (Commit: [48fd741][RC15-Commit-48fd741]) #[2275851][RC15-Issue-2275851] -  Picture plugin (wysiwyg) updates.
 
 ## v1.4
 
@@ -514,6 +518,10 @@ Bug Fixes:
 [R1.5-Commit-1babea2]:            http://drupalcode.org/project/wetkit_widgets.git/commit/1babea2
 [R1.5-Commit-1e60e61]:            http://drupalcode.org/project/wetkit_language.git/commit/1e60e61
 [R1.5-Commit-e360c6a]:            http://drupalcode.org/project/wetkit_widgets.git/commit/e360c6a
+[R1.5-Commit-f8227ff]:            http://drupalcode.org/project/wetkit_language.git/commit/f8227ff
+[R1.5-Commit-4890142]:            http://drupalcode.org/project/wetkit_core.git/commit/4890142
+[R1.5-Commit-7b7e3d5]:            http://drupalcode.org/project/wetkit_admin.git/commit/7b7e3d5
+[R1.5-Commit-48fd741]:            http://drupalcode.org/project/wetkit_images.git/commit/48fd741
 
 <!-- Issues R1.5 -->
 
@@ -528,6 +536,10 @@ Bug Fixes:
 [R1.5-Issue-2271403]:             http://drupal.org/node/2271403
 [R1.5-Issue-2276049]:             http://drupal.org/node/2276049
 [R1.5-Issue-2271309]:             http://drupal.org/node/2271309
+[R1.5-Issue-2278399]:             http://drupal.org/node/2278399
+[R1.5-Issue-2278755]:             http://drupal.org/node/2278755
+[R1.5-Issue-2278759]:             http://drupal.org/node/2278759
+[R1.5-Issue-2275851]:             http://drupal.org/node/2275851
 
 <!-- Commits R1.4 -->
 
