@@ -20,15 +20,15 @@ Fixes:
   - (Commit: [fe98705][R1.5-Commit-fe98705]) #[2275217][R1.5-Issue-2275217] -  Cannot unset string offsets
   - (Commit: [c925292][R1.5-Commit-c925292]) #[2250501][R1.5-Issue-2250501] -  Fixed Node edit page shows menu items in all languages.
   - (Commit: [1babea2][R1.5-Commit-1babea2]) #[2271403][R1.5-Issue-2271403] -  Fixed Cannot access empty property field.attach.inc.
-  - (Commit: [1e60e61][RC15-Commit-1e60e61]) #[2276049][RC15-Issue-2276049] -  Update l10n_update to 1.0 release.
-  - (Commit: [e360c6a][RC15-Commit-e360c6a]) #[2271309][RC15-Issue-2271309] -  Fixed Adding a wet video through Media renders with errors.
-  - (Commit: [f8227ff][RC15-Commit-f8227ff]) #[2278399][RC15-Issue-2278399] -  Fixed Saving translation text can result in error.
-  - (Commit: [4890142][RC15-Commit-4890142]) #[2278755][RC15-Issue-2278755] -  Fixed Security updates for Views + Password Policy.
-  - (Commit: [7b7e3d5][RC15-Commit-7b7e3d5]) #[2278759][RC15-Issue-2278759] -  Fixed Update admin views.
-  - (Commit: [48fd741][RC15-Commit-48fd741]) #[2275851][RC15-Issue-2275851] -  Picture plugin (wysiwyg) updates.
-  - (Commit: [569a370][RC15-Commit-569a370]) #[2279051][RC15-Issue-2279051] -  Add new backend layout (Siris).
-  - (Commit: [fc167b3][RC15-Commit-fc167b3]) #[2279067][RC15-Issue-2279067] -  Fixed Deletes metatag content when revision is empty.
-  - (Commit: [966911a][RC15-Commit-966911a]) #[2279085][RC15-Issue-2279085] -  Add Term access handler for UUID.
+  - (Commit: [1e60e61][R1.5-Commit-1e60e61]) #[2276049][R1.5-Issue-2276049] -  Update l10n_update to 1.0 release.
+  - (Commit: [e360c6a][R1.5-Commit-e360c6a]) #[2271309][R1.5-Issue-2271309] -  Fixed Adding a wet video through Media renders with errors.
+  - (Commit: [f8227ff][R1.5-Commit-f8227ff]) #[2278399][R1.5-Issue-2278399] -  Fixed Saving translation text can result in error.
+  - (Commit: [4890142][R1.5-Commit-4890142]) #[2278755][R1.5-Issue-2278755] -  Fixed Security updates for Views + Password Policy.
+  - (Commit: [7b7e3d5][R1.5-Commit-7b7e3d5]) #[2278759][R1.5-Issue-2278759] -  Fixed Update admin views.
+  - (Commit: [48fd741][R1.5-Commit-48fd741]) #[2275851][R1.5-Issue-2275851] -  Picture plugin (wysiwyg) updates.
+  - (Commit: [569a370][R1.5-Commit-569a370]) #[2279051][R1.5-Issue-2279051] -  Add new backend layout (Siris).
+  - (Commit: [fc167b3][R1.5-Commit-fc167b3]) #[2279067][R1.5-Issue-2279067] -  Fixed Deletes metatag content when revision is empty.
+  - (Commit: [966911a][R1.5-Commit-966911a]) #[2279085][R1.5-Issue-2279085] -  Add Term access handler for UUID.
 
 ## v1.4
 
