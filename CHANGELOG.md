@@ -27,6 +27,7 @@ Fixes:
   - (Commit: [7b7e3d5][RC15-Commit-7b7e3d5]) #[2278759][RC15-Issue-2278759] -  Fixed Update admin views.
   - (Commit: [48fd741][RC15-Commit-48fd741]) #[2275851][RC15-Issue-2275851] -  Picture plugin (wysiwyg) updates.
   - (Commit: [569a370][RC15-Commit-569a370]) #[2279051][RC15-Issue-2279051] -  Add new backend layout (Siris).
+  - (Commit: [fc167b3][RC15-Commit-fc167b3]) #[2279067][RC15-Issue-2279067] -  Fixed Deletes metatag content when revision is empty.
 
 ## v1.4
 
@@ -524,6 +525,7 @@ Bug Fixes:
 [R1.5-Commit-7b7e3d5]:            http://drupalcode.org/project/wetkit_admin.git/commit/7b7e3d5
 [R1.5-Commit-48fd741]:            http://drupalcode.org/project/wetkit_images.git/commit/48fd741
 [R1.5-Commit-569a370]:            http://drupalcode.org/project/wetkit_theme.git/commit/569a370
+[R1.5-Commit-fc167b3]:            http://drupalcode.org/project/wetkit_metatag.git/commit/fc167b3
 
 <!-- Issues R1.5 -->
 
@@ -543,6 +545,7 @@ Bug Fixes:
 [R1.5-Issue-2278759]:             http://drupal.org/node/2278759
 [R1.5-Issue-2275851]:             http://drupal.org/node/2275851
 [R1.5-Issue-2279051]:             http://drupal.org/node/2279051
+[R1.5-Issue-2279067]:             http://drupal.org/node/2279067
 
 <!-- Commits R1.4 -->
 
