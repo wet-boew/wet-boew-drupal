@@ -36,7 +36,7 @@ Fixes:
   - (Commit: [452bb91][R1.5-Commit-452bb91]) #[2279251][R1.5-Issue-2279251] -  Fixed delete a menu item on source does not delete on dest.
   - (Commit: [00c5069][R1.5-Commit-00c5069]) #[2279943][R1.5-Issue-2279943] -  Fixed Metatags + Entity Translation + Deployment.
   - (Commit: [0fb5cd3][R1.5-Commit-0fb5cd3]) #[2280109][R1.5-Issue-2280109] -  Fixed Patches to Entity Translation 1.0-beta3.
-  - (Commit: [e8a9b68][R1.5-Commit-e8a9b68]) #[2280115][R1.5-Issue-2280115] -  Fixed Patches to Omega 4.2 (Remove Nag Screen + Metatags Order).
+  - (Commit: [93a8fa1][R1.5-Commit-93a8fa1]) #[2280115][R1.5-Issue-2280115] -  Fixed Patches to Omega 4.2 (Remove Nag Screen + Metatags Order).
 
 ## v1.4
 
@@ -543,7 +543,7 @@ Bug Fixes:
 [R1.5-Commit-452bb91]:            http://drupalcode.org/project/wetkit_deployment.git/commit/452bb91
 [R1.5-Commit-00c5069]:            http://drupalcode.org/project/wetkit_metatag.git/commit/00c5069
 [R1.5-Commit-0fb5cd3]:            http://drupalcode.org/project/wetkit_language.git/commit/0fb5cd3
-[R1.5-Commit-e8a9b68]:            http://drupalcode.org/project/wetkit_omega.git/commit/e8a9b68
+[R1.5-Commit-93a8fa1]:            http://drupalcode.org/project/wetkit_omega.git/commit/93a8fa1
 
 <!-- Issues R1.5 -->
 
