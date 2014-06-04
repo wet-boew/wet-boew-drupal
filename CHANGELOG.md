@@ -32,6 +32,7 @@ Fixes:
   - (Commit: [c0e67a2][R1.5-Commit-c0e67a2]) #[2279665][R1.5-Issue-2279665] -  Fixed CTools Patches for minor bugs.
   - (Commit: [7e06ba0][R1.5-Commit-7e06ba0]) #[2279759][R1.5-Issue-2279759] -  Fixed Update File Entity + Media to latest dev.
   - (Commit: [d87e659][R1.5-Commit-d87e659]) #[2279771][R1.5-Issue-2279771] -  Fixed Workbench Moderation + VBO.
+  - (Commit: [32b0d9b][R1.5-Commit-32b0d9b]) #[2279795][R1.5-Issue-2279795] -  Fixed Panels tabs styles don't allow custom naming.
 
 ## v1.4
 
@@ -534,6 +535,7 @@ Bug Fixes:
 [R1.5-Commit-c0e67a2]:            http://drupalcode.org/project/wetkit_core.git/commit/c0e67a2
 [R1.5-Commit-7e06ba0]:            http://drupalcode.org/project/wetkit_widgets.git/commit/7e06ba0
 [R1.5-Commit-d87e659]:            http://drupalcode.org/project/wetkit_core.git/commit/d87e659
+[R1.5-Commit-32b0d9b]:            http://drupalcode.org/project/wetkit_core.git/commit/32b0d9b
 
 <!-- Issues R1.5 -->
 
@@ -558,6 +560,7 @@ Bug Fixes:
 [R1.5-Issue-2279665]:             http://drupal.org/node/2279665
 [R1.5-Issue-2279759]:             http://drupal.org/node/2279759
 [R1.5-Issue-2279771]:             http://drupal.org/node/2279771
+[R1.5-Issue-2279795]:             http://drupal.org/node/2279795
 
 <!-- Commits R1.4 -->
 
