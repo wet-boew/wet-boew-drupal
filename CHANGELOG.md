@@ -29,7 +29,8 @@ Fixes:
   - (Commit: [569a370][R1.5-Commit-569a370]) #[2279051][R1.5-Issue-2279051] -  Add new backend layout (Siris).
   - (Commit: [fc167b3][R1.5-Commit-fc167b3]) #[2279067][R1.5-Issue-2279067] -  Fixed Deletes metatag content when revision is empty.
   - (Commit: [966911a][R1.5-Commit-966911a]) #[2279085][R1.5-Issue-2279085] -  Add Term access handler for UUID.
-  - (Commit: [c0e67a2][R1.5-Commit-c0e67a2]) #[2279665][R1.5-Issue-2279665] -  Fixed CTools Patches for minor bugs
+  - (Commit: [c0e67a2][R1.5-Commit-c0e67a2]) #[2279665][R1.5-Issue-2279665] -  Fixed CTools Patches for minor bugs.
+  - (Commit: [7e06ba0][R1.5-Commit-7e06ba0]) #[2279759][R1.5-Issue-2279759] -  Fixed Update File Entity + Media to latest dev.
 
 ## v1.4
 
@@ -530,6 +531,7 @@ Bug Fixes:
 [R1.5-Commit-fc167b3]:            http://drupalcode.org/project/wetkit_metatag.git/commit/fc167b3
 [R1.5-Commit-966911a]:            http://drupalcode.org/project/wetkit_core.git/commit/966911a
 [R1.5-Commit-c0e67a2]:            http://drupalcode.org/project/wetkit_core.git/commit/c0e67a2
+[R1.5-Commit-7e06ba0]:            http://drupalcode.org/project/wetkit_widgets.git/commit/7e06ba0
 
 <!-- Issues R1.5 -->
 
@@ -552,6 +554,7 @@ Bug Fixes:
 [R1.5-Issue-2279067]:             http://drupal.org/node/2279067
 [R1.5-Issue-2279085]:             http://drupal.org/node/2279085
 [R1.5-Issue-2279665]:             http://drupal.org/node/2279665
+[R1.5-Issue-2279759]:             http://drupal.org/node/2279759
 
 <!-- Commits R1.4 -->
 
