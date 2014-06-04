@@ -34,6 +34,7 @@ Fixes:
   - (Commit: [d87e659][R1.5-Commit-d87e659]) #[2279771][R1.5-Issue-2279771] -  Fixed Workbench Moderation + VBO.
   - (Commit: [32b0d9b][R1.5-Commit-32b0d9b]) #[2279795][R1.5-Issue-2279795] -  Fixed Panels tabs styles don't allow custom naming.
   - (Commit: [452bb91][R1.5-Commit-452bb91]) #[2279251][R1.5-Issue-2279251] -  Fixed delete a menu item on source does not delete on dest.
+  - (Commit: [00c5069][R1.5-Commit-00c5069]) #[2279943][R1.5-Issue-2279943] -  Fixed Metatags + Entity Translation + Deployment.
 
 ## v1.4
 
@@ -538,6 +539,7 @@ Bug Fixes:
 [R1.5-Commit-d87e659]:            http://drupalcode.org/project/wetkit_core.git/commit/d87e659
 [R1.5-Commit-32b0d9b]:            http://drupalcode.org/project/wetkit_core.git/commit/32b0d9b
 [R1.5-Commit-452bb91]:            http://drupalcode.org/project/wetkit_deployment.git/commit/452bb91
+[R1.5-Commit-00c5069]:            http://drupalcode.org/project/wetkit_metatag.git/commit/00c5069
 
 <!-- Issues R1.5 -->
 
@@ -564,6 +566,7 @@ Bug Fixes:
 [R1.5-Issue-2279771]:             http://drupal.org/node/2279771
 [R1.5-Issue-2279795]:             http://drupal.org/node/2279795
 [R1.5-Issue-2279251]:             http://drupal.org/node/2279251
+[R1.5-Issue-2279943]:             http://drupal.org/node/2279943
 
 <!-- Commits R1.4 -->
 
