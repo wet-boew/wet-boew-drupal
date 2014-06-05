@@ -43,6 +43,7 @@ Fixes:
   - (Commit: [0fb5cd3][R1.5-Commit-0fb5cd3]) #[2280109][R1.5-Issue-2280109] -  Fixed Patches to Entity Translation 1.0-beta3.
   - (Commit: [93a8fa1][R1.5-Commit-93a8fa1]) #[2280115][R1.5-Issue-2280115] -  Fixed Patches to Omega 4.2 (Remove Nag Screen + Metatags Order).
   - (Commit: [3cd5200][R1.5-Commit-3cd5200]) #[2280189][R1.5-Issue-2280189] -  Fixed Custom Search + Search API with Solr support.
+  - (Commit: [e615e65][R1.5-Commit-e615e65]) #[2280679][R1.5-Issue-2280679] -  Fixed update date_facets in wetkit_search.
 
 ## v1.4
 
@@ -551,6 +552,7 @@ Bug Fixes:
 [R1.5-Commit-0fb5cd3]:            http://drupalcode.org/project/wetkit_language.git/commit/0fb5cd3
 [R1.5-Commit-93a8fa1]:            http://drupalcode.org/project/wetkit_omega.git/commit/93a8fa1
 [R1.5-Commit-3cd5200]:            http://drupalcode.org/project/wetkit_search.git/commit/3cd5200
+[R1.5-Commit-e615e65]:            http://drupalcode.org/project/wetkit_search.git/commit/e615e65
 
 <!-- Issues R1.5 -->
 
@@ -581,6 +583,7 @@ Bug Fixes:
 [R1.5-Issue-2280109]:             http://drupal.org/node/2280109
 [R1.5-Issue-2280115]:             http://drupal.org/node/2280115
 [R1.5-Issue-2280189]:             http://drupal.org/node/2280189
+[R1.5-Issue-2280679]:             http://drupal.org/node/2280679
 
 <!-- Commits R1.4 -->
 
