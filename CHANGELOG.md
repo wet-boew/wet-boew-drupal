@@ -29,6 +29,14 @@ Fixes:
   - (Commit: [569a370][R1.5-Commit-569a370]) #[2279051][R1.5-Issue-2279051] -  Add new backend layout (Siris).
   - (Commit: [fc167b3][R1.5-Commit-fc167b3]) #[2279067][R1.5-Issue-2279067] -  Fixed Deletes metatag content when revision is empty.
   - (Commit: [966911a][R1.5-Commit-966911a]) #[2279085][R1.5-Issue-2279085] -  Add Term access handler for UUID.
+  - (Commit: [c0e67a2][R1.5-Commit-c0e67a2]) #[2279665][R1.5-Issue-2279665] -  Fixed CTools Patches for minor bugs.
+  - (Commit: [7e06ba0][R1.5-Commit-7e06ba0]) #[2279759][R1.5-Issue-2279759] -  Fixed Update File Entity + Media to latest dev.
+  - (Commit: [d87e659][R1.5-Commit-d87e659]) #[2279771][R1.5-Issue-2279771] -  Fixed Workbench Moderation + VBO.
+  - (Commit: [32b0d9b][R1.5-Commit-32b0d9b]) #[2279795][R1.5-Issue-2279795] -  Fixed Panels tabs styles don't allow custom naming.
+  - (Commit: [452bb91][R1.5-Commit-452bb91]) #[2279251][R1.5-Issue-2279251] -  Fixed delete a menu item on source does not delete on dest.
+  - (Commit: [00c5069][R1.5-Commit-00c5069]) #[2279943][R1.5-Issue-2279943] -  Fixed Metatags + Entity Translation + Deployment.
+  - (Commit: [0fb5cd3][R1.5-Commit-0fb5cd3]) #[2280109][R1.5-Issue-2280109] -  Fixed Patches to Entity Translation 1.0-beta3.
+  - (Commit: [93a8fa1][R1.5-Commit-93a8fa1]) #[2280115][R1.5-Issue-2280115] -  Fixed Patches to Omega 4.2 (Remove Nag Screen + Metatags Order).
 
 ## v1.4
 
@@ -528,6 +536,14 @@ Bug Fixes:
 [R1.5-Commit-569a370]:            http://drupalcode.org/project/wetkit_theme.git/commit/569a370
 [R1.5-Commit-fc167b3]:            http://drupalcode.org/project/wetkit_metatag.git/commit/fc167b3
 [R1.5-Commit-966911a]:            http://drupalcode.org/project/wetkit_core.git/commit/966911a
+[R1.5-Commit-c0e67a2]:            http://drupalcode.org/project/wetkit_core.git/commit/c0e67a2
+[R1.5-Commit-7e06ba0]:            http://drupalcode.org/project/wetkit_widgets.git/commit/7e06ba0
+[R1.5-Commit-d87e659]:            http://drupalcode.org/project/wetkit_core.git/commit/d87e659
+[R1.5-Commit-32b0d9b]:            http://drupalcode.org/project/wetkit_core.git/commit/32b0d9b
+[R1.5-Commit-452bb91]:            http://drupalcode.org/project/wetkit_deployment.git/commit/452bb91
+[R1.5-Commit-00c5069]:            http://drupalcode.org/project/wetkit_metatag.git/commit/00c5069
+[R1.5-Commit-0fb5cd3]:            http://drupalcode.org/project/wetkit_language.git/commit/0fb5cd3
+[R1.5-Commit-93a8fa1]:            http://drupalcode.org/project/wetkit_omega.git/commit/93a8fa1
 
 <!-- Issues R1.5 -->
 
@@ -549,6 +565,14 @@ Bug Fixes:
 [R1.5-Issue-2279051]:             http://drupal.org/node/2279051
 [R1.5-Issue-2279067]:             http://drupal.org/node/2279067
 [R1.5-Issue-2279085]:             http://drupal.org/node/2279085
+[R1.5-Issue-2279665]:             http://drupal.org/node/2279665
+[R1.5-Issue-2279759]:             http://drupal.org/node/2279759
+[R1.5-Issue-2279771]:             http://drupal.org/node/2279771
+[R1.5-Issue-2279795]:             http://drupal.org/node/2279795
+[R1.5-Issue-2279251]:             http://drupal.org/node/2279251
+[R1.5-Issue-2279943]:             http://drupal.org/node/2279943
+[R1.5-Issue-2280109]:             http://drupal.org/node/2280109
+[R1.5-Issue-2280115]:             http://drupal.org/node/2280115
 
 <!-- Commits R1.4 -->
 
