@@ -4,10 +4,15 @@ Security Update(s):
 
   - Drupal Core
   - Organic Groups
+  - Password Policy
+  - Views
 
 Features:
 
   - Panels DX improvements
+  - Numerous bug fixes across contrib + custom space
+  - Tighter deploy + uuid handling for edge cases
+  - Multilingual fixes to i18n
 
 Fixes:
 
