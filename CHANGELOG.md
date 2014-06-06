@@ -13,6 +13,7 @@ Features:
   - Numerous bug fixes across contrib + custom space
   - Tighter deploy + uuid handling for edge cases
   - Multilingual fixes to i18n
+  - Panelizer Updates (Module should still be used with caution)
 
 Fixes:
 
@@ -44,6 +45,7 @@ Fixes:
   - (Commit: [93a8fa1][R1.5-Commit-93a8fa1]) #[2280115][R1.5-Issue-2280115] -  Fixed Patches to Omega 4.2 (Remove Nag Screen + Metatags Order).
   - (Commit: [3cd5200][R1.5-Commit-3cd5200]) #[2280189][R1.5-Issue-2280189] -  Fixed Custom Search + Search API with Solr support.
   - (Commit: [e615e65][R1.5-Commit-e615e65]) #[2280679][R1.5-Issue-2280679] -  Fixed update date_facets in wetkit_search.
+  - (Commit: [f15ff03][R1.5-Commit-f15ff03]) #[2280863][R1.5-Issue-2280863] -  Fixed Update Panelizer to latest dev.
 
 ## v1.4
 
@@ -522,6 +524,7 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+  - (Commit: [f15ff03][R1.5-Commit-f15ff03]) #[2280863][R1.5-Issue-2280863] -  Fixed Update Panelizer to latest dev.
 
 <!-- Commits R1.5 -->
 
@@ -553,6 +556,7 @@ Bug Fixes:
 [R1.5-Commit-93a8fa1]:            http://drupalcode.org/project/wetkit_omega.git/commit/93a8fa1
 [R1.5-Commit-3cd5200]:            http://drupalcode.org/project/wetkit_search.git/commit/3cd5200
 [R1.5-Commit-e615e65]:            http://drupalcode.org/project/wetkit_search.git/commit/e615e65
+[R1.5-Commit-f15ff03]:            http://drupalcode.org/project/wetkit_core.git/commit/f15ff03
 
 <!-- Issues R1.5 -->
 
@@ -584,6 +588,7 @@ Bug Fixes:
 [R1.5-Issue-2280115]:             http://drupal.org/node/2280115
 [R1.5-Issue-2280189]:             http://drupal.org/node/2280189
 [R1.5-Issue-2280679]:             http://drupal.org/node/2280679
+[R1.5-Issue-2280863]:             http://drupal.org/node/2280863
 
 <!-- Commits R1.4 -->
 
