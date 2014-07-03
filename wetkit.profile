@@ -195,11 +195,6 @@ function wetkit_import_content() {
     t('Importing content.'),
     ));
 
-  // Run entities import.
-  $operations[] = array('_wetkit_entities_import', array(
-    t('Initializing entities.'),
-    ));
-
   // Page Manager Fix.
   $operations[] = array('_wetkit_panels_fix', array(
     t('Fix Page Manager dependency chain issue.'),
@@ -246,6 +241,12 @@ function wetkit_import_demo_content() {
     t('Importing content.'),
     ));
 
+  // Run Mega Menu Links migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateMegaMenuLinks',
+    t('Importing content.'),
+    ));
+
   // Run Default Content Media migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateDefaultContentMedia',
@@ -258,23 +259,20 @@ function wetkit_import_demo_content() {
     t('Importing content.'),
     ));
 
+  // Run Beans migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateBean',
+    t('Importing content.'),
+    ));
+
   // Enable WetKit Demo.
   $operations[] = array('module_enable', array(
     array('wetkit_demo'),
     t('Enabling wetkit_demo module.'),
     ));
 
-  // Run Mega Menu Links migration.
-  $operations[] = array('_wetkit_import', array(
-    'WetKitMigrateMegaMenuLinks',
-    t('Importing content.'),
-    ));
-
-  // Install Bean demo content.
-  $operations[] = array('_wetkit_bean_import', array(t('Importing Bean content.')));
-
   $batch = array(
-    'title' => t('Importing content'),
+    'title' => t('Importing demo content'),
     'operations' => $operations,
     'file' => drupal_get_path('profile', 'wetkit') . '/wetkit.install_callbacks.inc',
   );

@@ -6,4 +6,4 @@ projects[drupal][version] = 7.28
 
 projects[wetkit][type] = profile
 projects[wetkit][download][type] = git
-projects[wetkit][download][branch] = 7.x-1.x
+projects[wetkit][download][branch] = 7.x-2.x

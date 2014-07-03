@@ -21,25 +21,6 @@ function _wetkit_import($operation, $type, &$context) {
  *
  * @see wetkit_import_content()
  */
-function _wetkit_entities_import($operation, &$context) {
-  $context['message'] = t('@operation', array('@operation' => $operation));
-}
-
-/**
- * BatchAPI callback.
- *
- * @see wetkit_import_content()
- */
-function _wetkit_bean_import($operation, &$context) {
-  $context['message'] = t('@operation', array('@operation' => $operation));
-  _wetkit_bean_load();
-}
-
-/**
- * BatchAPI callback.
- *
- * @see wetkit_import_content()
- */
 function _wetkit_panels_fix($operation, &$context) {
   $context['message'] = t('@operation', array('@operation' => $operation));
 
