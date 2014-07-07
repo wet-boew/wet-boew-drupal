@@ -9,4 +9,4 @@ Feature: Search
     And I am on the homepage
     And I enter "stuff" for "Search"
     And press "Search"
-    Then I should see "Enter your keywords"
+    Then I should see "Your search yielded no results"

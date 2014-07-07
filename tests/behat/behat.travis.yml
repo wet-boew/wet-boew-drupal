@@ -17,7 +17,7 @@ default:
         alias: self
       region_map:
         # Common Regions for Drupal WxT
-        Breadcrumb: ".breadcrumb ol"
+        Breadcrumb: "ol.breadcrumb"
         Content Well: "#wb-main-in"
         Left Sidebar: "#wb-sec-in"
         Mega Menu: ".mb-menu"
