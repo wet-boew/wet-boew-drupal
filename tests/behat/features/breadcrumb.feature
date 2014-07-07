@@ -6,6 +6,6 @@ Feature: Breadcrumb
   @api
   Scenario: User leveraging the breadcrumbs to navigate the site
     Given I am on "en/content/drupal-wxt"
-    Then I should see the breadcrumb "Drupal WxT"
+    Then I should see the breadcrumb "Drupal WxT" in the "Breadcrumb"
     And I am on "fr/contenu/wxt-drupal"
-    Then I should see the breadcrumb "WxT Drupal"
+    Then I should see the breadcrumb "WxT Drupal" in the "Breadcrumb"
