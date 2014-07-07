@@ -247,18 +247,6 @@ function wetkit_import_demo_content() {
     t('Importing content.'),
     ));
 
-  // Run Default Content Media migration.
-  $operations[] = array('_wetkit_import', array(
-    'WetKitMigrateDefaultContentMedia',
-    t('Importing media.'),
-    ));
-
-  // Run Default Content migration.
-  $operations[] = array('_wetkit_import', array(
-    'WetKitMigrateDefaultContent',
-    t('Importing content.'),
-    ));
-
   // Run Beans migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateTaxonomy',
@@ -293,6 +281,18 @@ function wetkit_import_demo_content() {
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateFldCollectionSlides',
     t('Importing Field Collection.'),
+    ));
+
+  // Run Default Content Media migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateDefaultContentMedia',
+    t('Importing media.'),
+    ));
+
+  // Run Default Content migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateDefaultContent',
+    t('Importing content.'),
     ));
 
   // Enable WetKit Demo.
