@@ -261,8 +261,38 @@ function wetkit_import_demo_content() {
 
   // Run Beans migration.
   $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateTaxonomy',
+    t('Importing taxonomy.'),
+    ));
+
+  // Run Beans migration.
+  $operations[] = array('_wetkit_import', array(
     'WetKitMigrateBean',
     t('Importing content.'),
+    ));
+
+  // Run Beans migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateBeanSlideOut',
+    t('Importing content.'),
+    ));
+
+  // Run Beans migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateBeanSlideShow',
+    t('Importing content.'),
+    ));
+
+  // Run Files migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateFileBeanSlideShow',
+    t('Importing Files.'),
+    ));
+
+  // Run Files migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateFldCollectionSlides',
+    t('Importing Field Collection.'),
     ));
 
   // Enable WetKit Demo.
