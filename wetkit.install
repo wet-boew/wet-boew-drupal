@@ -52,4 +52,11 @@ function wetkit_install() {
     ->execute();
 
   variable_set('admin_theme', 'wetkit_ember');
+
+  // Set the Bootstrap Theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'bootstrap')
+    ->execute();
 }
