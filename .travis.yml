@@ -113,7 +113,8 @@ before_script:
   - drush runserver --server=builtin 8080 > /dev/null 2>&1 &
   - SERVER_PID=$!
   - sleep 3
-  - curl http://127.0.0.1:8080/en/content/drupal-wxt > /dev/null 2>&1 &
+  - drush cc all
+  - drush core-cron
   - cd profiles/wetkit/tests/behat
 
   # Make the Travis tests repos agnostic by injecting drupal_root with BEHAT_PARAMS

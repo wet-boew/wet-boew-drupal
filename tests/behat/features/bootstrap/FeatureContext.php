@@ -231,7 +231,7 @@ class FeatureContext extends DrupalContext
    *   Return True if success, false otherwise
    */
   public function checkBreadcrumb($breadcrumb, $present = true) {
-    $result = $this->getSession()->getPage()->find('xpath', '//div[@id="wet-bc"]//div[@id="wet-bc-in"]//a[text()="' . $breadcrumb . '"]');
+    $result = $this->getSession()->getPage()->find('xpath', '//nav[@id="wb-bc"]//ol[@class="breadcrumb"]//a[text()="' . $breadcrumb . '"]');
     if ($present && empty($result)) {
       throw new Exception("The breadcrumb \"" . $breadcrumb . "\" was not found on the page");
     }
