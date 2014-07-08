@@ -16,9 +16,9 @@ default:
       region_map:
         # Common Regions for Drupal WxT
         Breadcrumb: "ol.breadcrumb"
-        Content Well: "#wb-main-in"
-        Left Sidebar: "#wb-sec-in"
-        Mega Menu: ".mb-menu"
+        Content Well: "main.container"
+        Left Sidebar: "#wb-sec"
+        Mega Menu: ".wb-menu"
         Tabs: ".tabs--primary"
         # Panels Layout Regions for Drupal WxT
         Burr Flipped Content: ".burr-flipped-content-region"
