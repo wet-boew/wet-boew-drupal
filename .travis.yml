@@ -99,6 +99,10 @@ install:
   - java -jar selenium-server-standalone-2.41.0.jar -Dwebdriver.chrome.driver=`pwd`/chromedriver > /dev/null 2>&1 &
   - sleep 5
 
+  # Upping Mysql values
+  - echo -e "[server]\nmax_allowed_packet=92M" | sudo tee -a /etc/mysql/conf.d/drupal.cnf
+  - sudo service mysql restart
+
   # Disable sendmail
   - echo sendmail_path=`which true` >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 
