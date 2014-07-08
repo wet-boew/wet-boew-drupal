@@ -21,123 +21,29 @@ postgres:
   database: drupal_db
   username: postgres
 
-# Matrix param(s)
+# Params for matrices
 matrix:
   fast_finish: true
 
-# Travis scripts
+# Travis script(s)
 install:
-  # Add the Google Chrome packages.
-  - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-  - sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-  - sudo apt-get update > /dev/null
+  # Make some variables available to the travis-ci.sh script.
+  - export UPDATE TRAVIS_BUILD_DIR
 
-  # Create a database for our Drupal site.
-  - if [[ "$DB" == "pgsql" ]]; then psql -c 'create database drupal_db;' -U postgres; fi
-  - if [[ "$DB" == "mysql" ]]; then mysql -e 'create database IF NOT EXISTS drupal_db;'; fi
+  # Copy the script into a stable location.
+  - cp scripts/travis-ci.sh $HOME/
 
-  # Install latest Drush 6.
-  - export PATH="$HOME/.composer/vendor/bin:$PATH"
-  - composer global require --prefer-source --no-interaction drush/drush:6.*
-  - drush dl -y drupalorg_drush-7.x-1.x-dev --destination=$HOME/.drush
-  - drush cc drush
+  # Move to the directory above, where we should remain.
+  - cd ..
 
-  # Build Behat dependencies
-  - cd ./tests/behat
-  - composer install --prefer-source --no-interaction
-  - cd ../../../
-
-  # Build Codebase
-  - mkdir profiles
-  - mv wet-boew-drupal wetkit
-  - mv wetkit profiles/
-  - mkdir drupal
-  - mv profiles drupal/
-
-  # Build the current branch
-  - cd drupal
-  - drush make --yes profiles/wetkit/drupal-org-core.make --prepare-install
-  - drush make --yes profiles/wetkit/drupal-org.make --no-core --contrib-destination=profiles/wetkit
-  - mkdir sites/default/private
-  - mkdir sites/default/private/files
-  - mkdir sites/default/private/temp
-  - cd ../
-
-  # Verify that all the .make files will work on Drupal.org.
-  # - drush verify-makefile drupal/profiles/wetkit/drupal-org.make
-  # - find drupal/profiles/wetkit/modules -name \*.make -print0 | xargs -0 -n1 drush verify-makefile
-  # - find drupal/profiles/wetkit/themes -name \*.make ! -name libraries.make -print0 | xargs -0 -n1 drush verify-makefile
-
-  # Download an old version to test upgrading from.
-  - if [[ "$UPGRADE" != none ]]; then drush dl wetkit-$UPGRADE; fi
-
-  # Setup files
-  - sudo chmod -R 777 drupal/sites/all
-
-  # Setup display for Selenium
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - sleep 5
-
-  # Get Chrome and ChromeDriver
-  - sudo apt-get install google-chrome-stable
-  - wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip
-  - unzip -a chromedriver_linux64.zip
-
-  # Insane hack from jsdevel:
-  #   https://github.com/jsdevel/travis-debugging/blob/master/shim.bash
-  # This allows chrome-sandbox to work in side of OpenVZ, because I can't
-  # figure out how to start chrome with --no-sandbox.
-  - export CHROME_SANDBOX=/opt/google/chrome/chrome-sandbox
-  - sudo rm -f $CHROME_SANDBOX
-  - sudo wget https://googledrive.com/host/0B5VlNZ_Rvdw6NTJoZDBSVy1ZdkE -O $CHROME_SANDBOX
-  - sudo chown root:root $CHROME_SANDBOX; sudo chmod 4755 $CHROME_SANDBOX
-  - sudo md5sum $CHROME_SANDBOX
-
-  # Get Selenium
-  - wget http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar
-  - java -jar selenium-server-standalone-2.41.0.jar -Dwebdriver.chrome.driver=`pwd`/chromedriver > /dev/null 2>&1 &
-  - sleep 5
-
-  # Upping Mysql values
-  - echo -e "[server]\nmax_allowed_packet=92M" | sudo tee -a /etc/mysql/conf.d/drupal.cnf
-  - sudo service mysql restart
-
-  # Disable sendmail
-  - echo sendmail_path=`which true` >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  # Start by doing system installation.
+  - $HOME/travis-ci.sh system-install
 
 before_script:
-  # Do the site install (either the current revision or old for the upgrade).
-  - if [[ "$UPGRADE" == none ]]; then cd drupal; else cd wetkit-$UPGRADE; fi
-  - if [[ "$DB" == "postgres" ]]; then drush si wetkit wetkit_theme_selection_form.theme=wetkit_bootstrap install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=pgsql://postgres:@127.0.0.1:5432/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi
-  - if [[ "$DB" == "mysql" ]]; then drush si wetkit wetkit_theme_selection_form.theme=wetkit_bootstrap install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1:3306/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes; fi
-  - drush dis -y dblog
-  - drush vset -y file_private_path "sites/default/private/files"
-  - drush vset -y file_temporary_path "sites/default/private/temp"
-  - cd ../drupal
-
-  # If we're an upgrade test, run the upgrade process.
-  - if [[ "$UPGRADE" != none ]]; then cp -a ../wetkit-$UPGRADE/sites/default/* sites/default/ && drush updb --yes; fi
-
-  - drush runserver --server=builtin 8080 > /dev/null 2>&1 &
-  - SERVER_PID=$!
-  - sleep 3
-  - drush cc all
-  - drush core-cron
-  - cd profiles/wetkit/tests/behat
-
-  # Make the Travis tests repos agnostic by injecting drupal_root with BEHAT_PARAMS
-  - BUILD_OWNER=`dirname $TRAVIS_BUILD_DIR`
-  - export BEHAT_PARAMS="extensions[Drupal\\DrupalExtension\\Extension][drupal][drupal_root]=$BUILD_OWNER/drupal"
+  - $HOME/travis-ci.sh before-tests
 
 script:
-  # First, run all the tests in Firefox.
-  - if [[ "$UPGRADE" == none ]]; then ./bin/behat --config behat.travis.yml; fi
-
-  # Then run some Chrome-only tests.
-  - if [[ "$UPGRADE" == none ]]; then ./bin/behat --config behat.travis.yml -p chrome; fi
+  - $HOME/travis-ci.sh run-tests
 
 after_script:
-
-  # Stop the webserver so that it's not still running when MySQL is stopped.
-  - kill $SERVER_PID
+  - $HOME/travis-ci.sh after-tests

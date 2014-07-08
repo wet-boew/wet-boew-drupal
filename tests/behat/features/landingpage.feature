@@ -4,7 +4,7 @@ Feature: Add landing page
   I need to be able to create a landing page
 
   # @javascript is needed for the machine name
-  @api @javascript
+  @api @javascript @wetkit_pages
   Scenario: Add a landing page
     Given I am logged in as a user with the "administrator" role
     When I visit "/node/add/landing_page"
@@ -12,4 +12,4 @@ Feature: Add landing page
         | Title | Testing [random] landing page title |
         | URL   | lp-[random:1]             |
       And I press "Create Page"
-    Then the "title" element should contain "Testing [random:1] landing page title"
+    Then the "h1" element should contain "Testing [random:1] landing page title"

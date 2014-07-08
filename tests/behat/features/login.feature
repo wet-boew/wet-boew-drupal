@@ -3,6 +3,7 @@ In order to access content for authenticated users
 As an anonymous user
 I want to be able to login
 
+  @standard_login
   Scenario: Admin user is able to login
     Given I am on "/user"
     When I fill in "admin" for "edit-name"
@@ -10,6 +11,7 @@ I want to be able to login
     And I press "Log in"
     Then I should see "Log out"
 
+  @standard_login
   Scenario: User can request a new password if it has been lost
     Given I am on "/user/login"
     Then I should see "If you forgot your password, request a new password."
@@ -20,7 +22,7 @@ I want to be able to login
     Then I should see "Further instructions have been sent to your e-mail address."
       And I should see "Log in"
 
-  @drush
+  @drush @standard_login
   Scenario: User can change password after using one-time-login-url
     Given I log in with the One Time Login Url
     Then I should see the heading "Reset password"
@@ -31,4 +33,4 @@ I want to be able to login
       And I fill in "WetKit@2013" for "Confirm password"
       And I press "Save"
     Then I should see "The changes have been saved."
-
+    When I click "Log out"

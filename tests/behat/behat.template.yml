@@ -3,16 +3,17 @@ default:
     features: 'features'
   extensions:
     Behat\MinkExtension\Extension:
-      base_url: http://${drupal.uri}
       goutte: ~
       selenium2: ~
-      default_session: 'goutte'
-      javascript_session: 'selenium2'
+      base_url: http://${drupal.uri}
       files_path: ../../images
     Drupal\DrupalExtension\Extension:
       blackbox: ~
       drush:
         root: ${drush.root}
+      drupal:
+        drupal_root: '/path/to/drupal/root'
+      api_driver: 'drupal'
       region_map:
         # Common Regions for Drupal WxT
         Breadcrumb: "ol.breadcrumb"
@@ -28,5 +29,38 @@ default:
         # For Metatag specific regions
         Edit Metatags: "#edit-metatags"
         # For Panels / WxT specific regions
+        # The region on panopoly_page where the body appears (frequently
+        # customized on child distributions).
+        Panopoly Page Content: '.bryant-content'
+        # Regions for Panopoly Layouts
+        Boxton Content: ".boxton-content"
+        Bryant Content: ".bryant-content"
+        Bryant Sidebar: ".bryant-sidebar"
+        Bryant Flipped Content: ".bryant-flipped-content"
+        Bryant Flipped Sidebar: ".bryant-flipped-sidebar"
+        # For Panels / Panopoly specific regions.
         CTools modal: "#modalContent"
         Live preview: "fieldset.widget-preview"
+        Linkit modal: "#linkit-modal"
+        # For the Media Browser
+        Media web tab: '#media-tab-media_internet'
+        Media upload tab: '#media-tab-upload'
+        Media library tab: '#media-tab-media_default--media_browser_1'
+        # These are the regions for responsive_bartik.
+        Header: ".region-header"
+        Featured: ".region-featured"
+        Highlighted: ".region-highlighted"
+        Help: ".region-help"
+        Tabs: ".tabs"
+        Content: ".region-content"
+        Sidebar first: ".region-sidebar-first"
+        Sidebar second: ".region-sidebar-second"
+        Triptych first: ".region-triptych-first"
+        Triptych middle: ".region-triptych-middle"
+        Triptych last: ".region-triptych-last"
+        Footer first column: ".region-footer-firstcolumn"
+        Footer second column: ".region-footer-secondcolumn"
+        Footer third column: ".region-footer-thirdcolumn"
+        Footer fourth column: ".region-footer-fourthcolumn"
+        Footer: ".region-footer"
+        Tabs: ".tabs.primary"

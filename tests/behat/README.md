@@ -19,3 +19,11 @@ Setup
  4. Run Behat and examine test results!
 
     bin/behat
+
+More information
+----------------
+
+For detailed instructions, see:
+
+  https://drupal.org/node/2271009
+
