@@ -113,11 +113,13 @@ before_script:
   - cd ../drupal
 
   # If we're an upgrade test, run the upgrade process.
-  - if [[ "$UPGRADE" != none ]]; then cp -a ../wetkit-$UPGRADE/sites/default/* sites/default/ && drush updb --yes; drush cc all; drush core-cron; fi
+  - if [[ "$UPGRADE" != none ]]; then cp -a ../wetkit-$UPGRADE/sites/default/* sites/default/ && drush updb --yes; fi
 
   - drush runserver --server=builtin 8080 > /dev/null 2>&1 &
   - SERVER_PID=$!
   - sleep 3
+  - drush cc all
+  - drush core-cron
   - cd profiles/wetkit/tests/behat
 
   # Make the Travis tests repos agnostic by injecting drupal_root with BEHAT_PARAMS
