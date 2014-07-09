@@ -126,6 +126,7 @@ before_tests() {
   fi
 
   drush dis -y dblog
+  drush cc all
   drush vset -y file_private_path "sites/default/private/files"
   drush vset -y file_temporary_path "sites/default/private/temp"
   cd ../drupal
