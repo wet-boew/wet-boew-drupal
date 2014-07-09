@@ -12,4 +12,4 @@ Feature: Add landing page
         | Title | Testing [random] landing page title |
         | URL   | lp-[random:1]             |
       And I press "Create Page"
-    Then the "h1" element should contain "Testing [random:1] landing page title"
+    Then the "title" element should contain "Testing [random:1] landing page title"

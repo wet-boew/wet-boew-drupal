@@ -7,7 +7,7 @@ default:
     Behat\MinkExtension\Extension:
       goutte: ~
       selenium2: ~
-      base_url: http://127.0.0.1:8080
+      base_url: http://127.0.0.1:8888
       files_path: ../../images
     Drupal\DrupalExtension\Extension:
       blackbox: ~
@@ -55,7 +55,6 @@ default:
         Featured: ".region-featured"
         Highlighted: ".region-highlighted"
         Help: ".region-help"
-        Tabs: ".tabs"
         Content: ".region-content"
         Sidebar first: ".region-sidebar-first"
         Sidebar second: ".region-sidebar-second"
@@ -67,7 +66,6 @@ default:
         Footer third column: ".region-footer-thirdcolumn"
         Footer fourth column: ".region-footer-fourthcolumn"
         Footer: ".region-footer"
-        Tabs: ".tabs.primary"
 
 # Additional options.
 # imports:

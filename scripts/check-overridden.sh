@@ -3,7 +3,7 @@
 : ${DRUSH:=drush}
 : ${DRUSH_ARGS:=}
 
-WxT_FEATURES="wetkit_admin wetkit_bean wetkit_core wetkit_demo wetkit_images wetkit_pages wetkit_search wetkit_theme wetkit_users wetkit_widgets wetkit_wysiwyg"
+WxT_FEATURES="wetkit_admin wetkit_bean wetkit_breadcrumbs wetkit_core wetkit_demo wetkit_images wetkit_language wetkit_menu wetkit_metatag wetkit_migrate wetkit_pages wetkit_search wetkit_theme wetkit_wetboew wetkit_widgets wetkit_wysiwyg"
 
 # TODO: We should make sure that 'diff' is downloaded first!
 $DRUSH $DRUSH_ARGS en -y diff

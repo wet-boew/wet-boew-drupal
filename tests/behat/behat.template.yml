@@ -1,18 +1,22 @@
+# Run command: export BEHAT_PARAMS="formatter[name]=progress&context[parameters][base_url]=http://localhost"
 default:
   paths:
     features: 'features'
   extensions:
     Behat\MinkExtension\Extension:
       goutte: ~
-      selenium2: ~
-      base_url: http://${drupal.uri}
+      selenium2:
+        wd_host: http://127.0.0.1:4444/wd/hub
+        capabilities:
+          version: ''
+      base_url: http://normandy.dev:8080
       files_path: ../../images
     Drupal\DrupalExtension\Extension:
       blackbox: ~
       drush:
-        root: ${drush.root}
+        alias: self
       drupal:
-        drupal_root: '/path/to/drupal/root'
+        drupal_root: '/mnt/www/html/wet-boew-drupal'
       api_driver: 'drupal'
       region_map:
         # Common Regions for Drupal WxT
@@ -51,7 +55,6 @@ default:
         Featured: ".region-featured"
         Highlighted: ".region-highlighted"
         Help: ".region-help"
-        Tabs: ".tabs"
         Content: ".region-content"
         Sidebar first: ".region-sidebar-first"
         Sidebar second: ".region-sidebar-second"
@@ -63,4 +66,3 @@ default:
         Footer third column: ".region-footer-thirdcolumn"
         Footer fourth column: ".region-footer-fourthcolumn"
         Footer: ".region-footer"
-        Tabs: ".tabs.primary"
