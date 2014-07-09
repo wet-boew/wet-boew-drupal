@@ -1,4 +1,4 @@
-Feature: Search
+Feature: Language
   In order to know that multilingualism is working
   As a website user
   When I change the language of content I should see the expected results
