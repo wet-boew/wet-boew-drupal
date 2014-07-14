@@ -229,24 +229,6 @@ function wetkit_import_demo_content() {
   // on a Mac, by forcing PHP to detect the appropriate line endings.
   ini_set("auto_detect_line_endings", TRUE);
 
-  // Run Site Menu migration.
-  $operations[] = array('_wetkit_import', array(
-    'WetKitMigrateSiteMenu',
-    t('Importing content.'),
-    ));
-
-  // Run Site Menu Links migration.
-  $operations[] = array('_wetkit_import', array(
-    'WetKitMigrateSiteMenuLinks',
-    t('Importing content.'),
-    ));
-
-  // Run Mega Menu Links migration.
-  $operations[] = array('_wetkit_import', array(
-    'WetKitMigrateMegaMenuLinks',
-    t('Importing content.'),
-    ));
-
   // Run Beans migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateTaxonomy',
@@ -292,6 +274,24 @@ function wetkit_import_demo_content() {
   // Run Default Content migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateDefaultContent',
+    t('Importing content.'),
+    ));
+
+  // Run Site Menu migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateSiteMenu',
+    t('Importing content.'),
+    ));
+
+  // Run Site Menu Links migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateSiteMenuLinks',
+    t('Importing content.'),
+    ));
+
+  // Run Mega Menu Links migration.
+  $operations[] = array('_wetkit_import', array(
+    'WetKitMigrateMegaMenuLinks',
     t('Importing content.'),
     ));
 
