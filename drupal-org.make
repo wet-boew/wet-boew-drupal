@@ -83,7 +83,6 @@ projects[wetkit_theme][version] = 2.x-dev
 projects[wetkit_theme][subdir] = custom
 projects[wetkit_theme][download][type] = git
 projects[wetkit_theme][download][branch] = 7.x-2.x
-projects[wetkit_theme][download][url] = https://github.com/wet-boew-wem/wetkit-theme.git
 
 projects[wetkit_users][version] = 2.x-dev
 projects[wetkit_users][subdir] = custom
@@ -104,7 +103,6 @@ projects[wetkit_wysiwyg][version] = 2.x-dev
 projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_wysiwyg][download][type] = git
 projects[wetkit_wysiwyg][download][branch] = 7.x-2.x
-projects[wetkit_wysiwyg][download][url] = https://github.com/wet-boew-wem/wetkit-wysiwyg.git
 
 ; WxT Foundation (Themes)
 
