@@ -139,7 +139,7 @@ before_tests() {
   if [[ "$UPGRADE" != none ]]; then
     header Upgrading to latest version
     cp -a ../wetkit-$UPGRADE/sites/default/* sites/default/ && drush updb --yes
-    # drush cc all
+    drush cc all
   fi
 
   # Run the webserver
