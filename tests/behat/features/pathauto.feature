@@ -10,9 +10,6 @@ Feature: Test pathauto
         | Title  | Testing title |
         | Editor | plain_text    |
         | Body   | Testing body  |
-    # Normally, here we'd press "Publish", however some child distribtions
-    # don't use 'save_draft', and this makes this test compatible with them.
-    #When I press "Publish"
     When I press "edit-submit"
     Then the "h1" element should contain "Testing title"
 
@@ -25,7 +22,7 @@ Feature: Test pathauto
     When I click "Edit" in the "Tabs" region
       And I fill in the following:
         | Title               | Completely other title |
-      And I press "Save"
+      And I press "edit-submit"
     Then the url should match "testing-title"
     Given I go to "completely-other-title"
     Then the response status code should be 404
@@ -35,12 +32,12 @@ Feature: Test pathauto
     When I click "Edit" in the "Tabs" region
       And I fill in the following:
         | Permalink           | my-custom-permalink |
-      And I press "Save"
+      And I press "edit-submit"
     Then the url should match "my-custom-permalink"
     When I click "Edit" in the "Tabs" region
       And I fill in the following:
         | Title               | Saving Title Again  |
-      And I press "Save"
+      And I press "edit-submit"
     Then the url should match "my-custom-permalink"
     Given I go to "my-custom-permalink"
     Then the response status code should be 200
