@@ -272,12 +272,12 @@ class FeatureContext extends DrupalContext
       // bootstrapping Drupal again will fix it! I suspect the CTools plugin
       // cache is being built too early, ie. before we change to the Drupal
       // directory - but I haven't been able to confirm that.
-      $drupal->clearCache();
-      $drupal->bootstrap();
+      //$drupal->clearCache();
+      //$drupal->bootstrap();
 
       // We occasionally get errors about not finding the ctools_get_export_ui()
       // function, so we force it to be loaded. No idea what's causing this.
-      ctools_include('export-ui');
+      //ctools_include('export-ui');
 
       $this->bootstrapped = TRUE;
     }
