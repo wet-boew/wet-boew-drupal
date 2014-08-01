@@ -14,7 +14,7 @@ Feature: Use rich text editor
   Scenario Outline: Format text in the editor
     When I click the "<Action>" button in the "edit-body-und-0-value" WYSIWYG editor
       And I type "Testing body" in the "edit-body-und-0-value" WYSIWYG editor
-      And I press "Save"
+      And I press "edit-submit"
     Then I should see "Testing body" in the "<Element>" element with the "<Property>" CSS property set to "<Value>" in the "Pearson Content" region
 
     Examples:
@@ -47,7 +47,7 @@ Feature: Use rich text editor
     When I fill in the following:
         | Alt Text   | Sample alt text   |
         | Title Text | Sample title text |
-      And I press "Save"
+      And I press "edit-submit"
     # The media style selector.
     When I wait 10 seconds
       And I switch to the frame "mediaStyleSelector"
