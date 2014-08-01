@@ -126,7 +126,7 @@ before_tests() {
   fi
 
   if [[ "$DB" == "mysql" ]]; then
-    drush si wetkit wetkit_theme_selection_form.theme=wetkit_bootstrap install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1:3306/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes;
+    drush si wetkit wetkit_theme_selection_form.theme=wetkit_bootstrap install_configure_form.demo_content=FALSE --sites-subdir=default --db-url=mysql://root:@127.0.0.1:3306/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes;
   fi
 
   drush dis -y dblog
