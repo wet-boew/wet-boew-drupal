@@ -100,8 +100,8 @@ system_install() {
   echo sendmail_path=`which true` >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 
   # Upping Mysql values
-  echo -e "[server]\nmax_allowed_packet=128M" | sudo tee -a /etc/mysql/conf.d/drupal.cnf
-  sudo service mysql restart
+  # echo -e "[server]\nmax_allowed_packet=128M" | sudo tee -a /etc/mysql/conf.d/drupal.cnf
+  # sudo service mysql restart
 }
 
 # before_tests
@@ -126,7 +126,7 @@ before_tests() {
   fi
 
   drush dis -y dblog
-  drush cc all
+  # drush cc all
   drush vset -y file_private_path "sites/default/private/files"
   drush vset -y file_temporary_path "sites/default/private/temp"
   cd ../drupal
