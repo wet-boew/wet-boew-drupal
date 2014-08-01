@@ -23,6 +23,9 @@ system_install() {
   sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
   sudo apt-get update > /dev/null
 
+  # Increase PHP memory limit.
+  phpenv config-add wet-boew-drupal/scripts/travis.php.ini
+
   # Create a database for our Drupal site.
   if [[ "$DB" == "pgsql" ]]; then psql -c 'create database drupal_db;' -U postgres; fi
   if [[ "$DB" == "mysql" ]]; then mysql -e 'create database IF NOT EXISTS drupal_db;'; fi
