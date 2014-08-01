@@ -10,7 +10,7 @@ Feature: Use rich text editor
         | Title                | Testing WYSIWYG       |
         | body[und][0][format] | wetkit_wysiwyg_text   |
 
-  @api @javascript
+  @api @javascript @chrome
   Scenario Outline: Format text in the editor
     When I click the "<Action>" button in the "edit-body-und-0-value" WYSIWYG editor
       And I type "Testing body" in the "edit-body-und-0-value" WYSIWYG editor
