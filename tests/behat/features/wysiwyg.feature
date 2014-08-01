@@ -57,7 +57,7 @@ Feature: Use rich text editor
       And I click the fake "Submit" button
       And I switch out of all frames
     # Save the whole node.
-    When I press "Save"
+    When I press "edit-submit"
     # See the image on the view page.
     Then I should see the "img" element in the "Pearson Content" region
       And I should see the image alt "Sample alt text" in the "Pearson Content" region
@@ -75,6 +75,6 @@ Feature: Use rich text editor
       And I wait 4 seconds
       And I click on the linkit result with selector ".better-autocomplete .highlight"
       And I press "Insert link"
-    When I press "Save"
+    When I press "edit-submit"
       And I click "Drupal Collaboration" in the "Pearson Content" region
     Then I should be on "en/content/drupal-collaboration"

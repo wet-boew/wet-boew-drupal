@@ -23,7 +23,7 @@ Feature: Metatags
         | metatags[keywords][value]      | SEO optimized keywords       |
         | workbench_moderation_state_new | published                    |
       And I type "Testing metatags" in the "edit-body-und-0-value" WYSIWYG editor
-      And I press "Save"
+      And I press "edit-submit"
       And I wait 2 seconds
     Then the "h1" element should contain "Testing title"
       # And I should see "SEO optimized title" in the "title" element
