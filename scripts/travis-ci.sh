@@ -103,8 +103,9 @@ system_install() {
   echo sendmail_path=`which true` >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 
   # Upping Mysql values
-  # echo -e "[server]\nmax_allowed_packet=128M" | sudo tee -a /etc/mysql/conf.d/drupal.cnf
-  # sudo service mysql restart
+  echo -e "[server]\nmax_allowed_packet=256M" | sudo tee -a /etc/mysql/conf.d/drupal.cnf
+  echo -e "[server]\wait_timeout=300" | sudo tee -a /etc/mysql/conf.d/drupal.cnf
+  sudo service mysql restart
 }
 
 # before_tests
