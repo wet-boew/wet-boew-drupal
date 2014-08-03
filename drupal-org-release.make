@@ -48,6 +48,9 @@ projects[wetkit_pages][subdir] = custom
 projects[wetkit_search][version] = 2.0
 projects[wetkit_search][subdir] = custom
 
+projects[wetkit_test][version] = 2.0
+projects[wetkit_test][subdir] = custom
+
 projects[wetkit_theme][version] = 2.0
 projects[wetkit_theme][subdir] = custom
 
