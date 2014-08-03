@@ -36,12 +36,6 @@ system_install() {
   drush dl -y drupalorg_drush-7.x-1.x-dev --destination=$HOME/.drush
   drush cc drush
 
-  # Build Behat dependencies
-  header Installing Behat
-  cd wet-boew-drupal/tests/behat
-  composer install --prefer-source --no-interaction
-  cd ../../..
-
   # Build Codebase
   mkdir profiles
   mv wet-boew-drupal wetkit
@@ -57,7 +51,11 @@ system_install() {
   mkdir sites/default/private
   mkdir sites/default/private/files
   mkdir sites/default/private/temp
-  cd ../
+
+  # Build Behat dependencies
+  cd profiles/wetkit/modules/custom/wetkit_test/tests
+  composer install --prefer-source --no-interaction
+  cd ../../../../../../../
 
   # Verify that all the .make files will work on Drupal.org.
   header Verifying .make file
@@ -133,6 +131,8 @@ before_tests() {
   drush cc all
   drush vset -y file_private_path "sites/default/private/files"
   drush vset -y file_temporary_path "sites/default/private/temp"
+
+  # Switch to the WetKit platform built from Git (if we aren't there already).
   cd ../drupal
 
   # If we're an upgrade test, run the upgrade process.
@@ -141,6 +141,9 @@ before_tests() {
     cp -a ../wetkit-$UPGRADE/sites/default/* sites/default/ && drush updb --yes
     drush cc all
   fi
+
+  # Our tests depend on wetkit_test.
+  drush en -y wetkit_test
 
   # Run the webserver
   header Starting webserver
@@ -167,11 +170,11 @@ run_tests() {
   # Make the Travis tests repos agnostic by injecting drupal_root with BEHAT_PARAMS
   export BEHAT_PARAMS="extensions[Drupal\\DrupalExtension\\Extension][drupal][drupal_root]=$BUILD_TOP/drupal"
 
-  cd drupal/profiles/wetkit/tests/behat
+  cd drupal/profiles/wetkit/modules/custom/wetkit_test/tests
 
   # If this isn't an upgrade, we test if any features are overridden.
   if [[ "$UPGRADE" == none ]]; then
-    run_test ../../scripts/check-overridden.sh
+    run_test ../../../../scripts/check-overridden.sh
   fi
 
   # First, run all the tests in Firefox.
