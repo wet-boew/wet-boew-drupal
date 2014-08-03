@@ -37,6 +37,7 @@ system_install() {
   drush cc drush
 
   # Build Codebase
+  mkdir profiles
   mv wet-boew-drupal wetkit
   mv wetkit profiles/
   mkdir drupal
