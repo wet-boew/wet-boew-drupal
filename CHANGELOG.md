@@ -1,3 +1,9 @@
+## v2.0-beta1
+
+New Features:
+
+  - Initial Release
+
 ## v1.5
 
 Security Update(s):
