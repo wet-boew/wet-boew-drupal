@@ -19,3 +19,6 @@ compass_app_log.txt
 
 # Ignore Contributed Themes
 /themes/
+
+# Ignore Git Release Notes
+release_notes
