@@ -27,7 +27,7 @@ projects[wetkit_demo][subdir] = custom
 projects[wetkit_deployment][version] = 1.x-dev
 projects[wetkit_deployment][subdir] = custom
 projects[wetkit_deployment][download][type] = git
-projects[wetkit_deployment][download][revision] = 94bb744
+projects[wetkit_deployment][download][revision] = 7afcd78
 projects[wetkit_deployment][download][branch] = 7.x-1.x
 
 projects[wetkit_language][version] = 1.4
@@ -45,11 +45,8 @@ projects[wetkit_menu][subdir] = custom
 projects[wetkit_metatag][version] = 1.4
 projects[wetkit_metatag][subdir] = custom
 
-projects[wetkit_migrate][version] = 1.x-dev
+projects[wetkit_migrate][version] = 1.5
 projects[wetkit_migrate][subdir] = custom
-projects[wetkit_migrate][download][type] = git
-projects[wetkit_migrate][download][revision] = e6b531e
-projects[wetkit_migrate][download][branch] = 7.x-1.x
 
 projects[wetkit_og][version] = 1.2
 projects[wetkit_og][subdir] = custom
