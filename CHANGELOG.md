@@ -1,3 +1,31 @@
+# CHANGELOG.md
+
+## v1.6
+
+Fixes:
+
+  - (Commit: [7ee8329][R1.6-Commit-7ee8329]) Update drupal-org.make file.
+  - (Commit: [ea44037][R1.6-Commit-ea44037]) Update WetKit Deployment for #[2321597][R1.6-Issue-2321597] - Fixed Deployment screen occasionally doesn't work.
+  - (Commit: [6bb7b0c][R1.6-Commit-6bb7b0c]) Update WetKit Migration for #[2321597][R1.6-Issue-2321597] - Fixed Deployment screen occasionally doesn't work.
+  - (Commit: [eea2fd8][R1.6-Commit-eea2fd8]) Update drupal-org.make to point to stable revisions.
+  - (Commit: [1969bde][R1.6-Commit-1969bde]) Update WetKit Core for #[2282933][R1.6-Issue-2282933] - Fixed Menu Block support UUID.
+  - (Commit: [80b8707][R1.6-Commit-80b8707]) Update WetKit Migration for #[2290027][R1.6-Issue-2290027] - Fixed Migrate - Create stub does not keep existing UUID.
+  - (Commit: [eb8589f][R1.6-Commit-eb8589f]) Update WetKit Ember for #[2284345][R1.6-Issue-2284345] - Fixed views add button above field section instead of inside field section.
+  - (Commit: [08637fc][R1.6-Commit-08637fc]) Update WetKit Widgets for #[2321011][R1.6-Issue-2321011] - Fixed File Entity + Media updates.
+  - (Commit: [c912fc0][R1.6-Commit-c912fc0]) Update WetKit Core for #[2289085][R1.6-Issue-2289085] - Added Allow user to delete the current non-published revision.
+  - (Commit: [9b3540d][R1.6-Commit-9b3540d]) Update WetKit Ember for #[2303747][R1.6-Issue-2303747] - Fixed admin theme wetkit_ember causes Problems in Metatag option to 'Browse available tokens'.
+  - (Commit: [5641133][R1.6-Commit-5641133]) Update WetKit Metatag for #[2297969][R1.6-Issue-2297969] - Fixed French home page identifies it's language as ENG.
+  - (Commit: [89a5e7c][R1.6-Commit-89a5e7c]) Update WetKit Omega for #[2308809][R1.6-Issue-2308809] - Fixed Some regions selectable using block UI but fail to show block content.
+  - (Commit: [2a2addf][R1.6-Commit-2a2addf]) Update WetKit Widgets for #[2281631][R1.6-Issue-2281631] - Fixed Cannot use the media browser after upgrade to 1.5.
+  - (Commit: [8f42e12][R1.6-Commit-8f42e12]) Update WetKit Deployment for #[2282931][R1.6-Issue-2282931] - Fixed Incorrect roles are sometimes saved by UUID services via deploy.
+  - (Commit: [8679753][R1.6-Commit-8679753]) Update WetKit Breadcrumbs for #[2301697][R1.6-Issue-2301697] - Wetkit Breadcrumb "You are here" should be removed.
+  - (Commit: [549c932][R1.6-Commit-549c932]) Update WetKit Omega for #[2232467][R1.6-Issue-2232467] - Fixed wetkit_omega node.tpl is outputting 'class' twices.
+  - (Commit: [853acf7][R1.6-Commit-853acf7]) Update WetKit Omega for #[2303623][R1.6-Issue-2303623] - Fixed custom_search outputting empty attributes.
+  - (Commit: [bf9fc59][R1.6-Commit-bf9fc59]) #[2289353][R1.6-Issue-2289353] - Fixed patch to core in order to pass w3c url validation (proper encoding for square brackets).
+  - (Commit: [15b381a][R1.6-Commit-15b381a]) Update Drupal from 7.28 to 7.31 stable.
+  - (Commit: [b600df5][R1.6-Commit-b600df5]) Update WetKit Core for #[2319887][R1.6-Issue-2319887] - Fixed Security Updates + Fixes for WetKit Core (1.x).
+  - (Commit: [fb15246][R1.6-Commit-fb15246]) Prepare for next 1.x release.
+
 ## v1.5
 
 Security Update(s):
@@ -524,7 +552,55 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
-  - (Commit: [f15ff03][R1.5-Commit-f15ff03]) #[2280863][R1.5-Issue-2280863] -  Fixed Update Panelizer to latest dev.
+<!-- Commits R1.6 -->
+
+[R1.6-Commit-7ee8329]: http://drupalcode.org/project/wetkit.git/commit/7ee8329
+[R1.6-Commit-ea65aba]: http://drupalcode.org/project/wetkit.git/commit/ea65aba
+[R1.6-Commit-ea44037]: http://drupalcode.org/project/wetkit.git/commit/ea44037
+[R1.6-Commit-6bb7b0c]: http://drupalcode.org/project/wetkit.git/commit/6bb7b0c
+[R1.6-Commit-eea2fd8]: http://drupalcode.org/project/wetkit.git/commit/eea2fd8
+[R1.6-Commit-1969bde]: http://drupalcode.org/project/wetkit.git/commit/1969bde
+[R1.6-Commit-80b8707]: http://drupalcode.org/project/wetkit.git/commit/80b8707
+[R1.6-Commit-eb8589f]: http://drupalcode.org/project/wetkit.git/commit/eb8589f
+[R1.6-Commit-08637fc]: http://drupalcode.org/project/wetkit.git/commit/08637fc
+[R1.6-Commit-14631c8]: http://drupalcode.org/project/wetkit.git/commit/14631c8
+[R1.6-Commit-c912fc0]: http://drupalcode.org/project/wetkit.git/commit/c912fc0
+[R1.6-Commit-9b3540d]: http://drupalcode.org/project/wetkit.git/commit/9b3540d
+[R1.6-Commit-15f338b]: http://drupalcode.org/project/wetkit.git/commit/15f338b
+[R1.6-Commit-5641133]: http://drupalcode.org/project/wetkit.git/commit/5641133
+[R1.6-Commit-89a5e7c]: http://drupalcode.org/project/wetkit.git/commit/89a5e7c
+[R1.6-Commit-3d6758d]: http://drupalcode.org/project/wetkit.git/commit/3d6758d
+[R1.6-Commit-2a2addf]: http://drupalcode.org/project/wetkit.git/commit/2a2addf
+[R1.6-Commit-8f42e12]: http://drupalcode.org/project/wetkit.git/commit/8f42e12
+[R1.6-Commit-8679753]: http://drupalcode.org/project/wetkit.git/commit/8679753
+[R1.6-Commit-baba462]: http://drupalcode.org/project/wetkit.git/commit/baba462
+[R1.6-Commit-491f7aa]: http://drupalcode.org/project/wetkit.git/commit/491f7aa
+[R1.6-Commit-549c932]: http://drupalcode.org/project/wetkit.git/commit/549c932
+[R1.6-Commit-853acf7]: http://drupalcode.org/project/wetkit.git/commit/853acf7
+[R1.6-Commit-bf9fc59]: http://drupalcode.org/project/wetkit.git/commit/bf9fc59
+[R1.6-Commit-15b381a]: http://drupalcode.org/project/wetkit.git/commit/15b381a
+[R1.6-Commit-b600df5]: http://drupalcode.org/project/wetkit.git/commit/b600df5
+[R1.6-Commit-fb15246]: http://drupalcode.org/project/wetkit.git/commit/fb15246
+
+<!-- Issues R1.6 -->
+
+[R1.6-Issue-2321597]: http://drupal.org/node/2321597
+[R1.6-Issue-2321597]: http://drupal.org/node/2321597
+[R1.6-Issue-2282933]: http://drupal.org/node/2282933
+[R1.6-Issue-2290027]: http://drupal.org/node/2290027
+[R1.6-Issue-2284345]: http://drupal.org/node/2284345
+[R1.6-Issue-2321011]: http://drupal.org/node/2321011
+[R1.6-Issue-2289085]: http://drupal.org/node/2289085
+[R1.6-Issue-2303747]: http://drupal.org/node/2303747
+[R1.6-Issue-2297969]: http://drupal.org/node/2297969
+[R1.6-Issue-2308809]: http://drupal.org/node/2308809
+[R1.6-Issue-2281631]: http://drupal.org/node/2281631
+[R1.6-Issue-2282931]: http://drupal.org/node/2282931
+[R1.6-Issue-2301697]: http://drupal.org/node/2301697
+[R1.6-Issue-2232467]: http://drupal.org/node/2232467
+[R1.6-Issue-2303623]: http://drupal.org/node/2303623
+[R1.6-Issue-2289353]: http://drupal.org/node/2289353
+[R1.6-Issue-2319887]: http://drupal.org/node/2319887
 
 <!-- Commits R1.5 -->
 
