@@ -12,7 +12,7 @@ projects[wetkit_bean][subdir] = custom
 projects[wetkit_breadcrumbs][version] = 1.4
 projects[wetkit_breadcrumbs][subdir] = custom
 
-projects[wetkit_core][version] = 1.11
+projects[wetkit_core][version] = 1.13
 projects[wetkit_core][subdir] = custom
 
 projects[wetkit_demo][version] = 1.1
@@ -21,7 +21,7 @@ projects[wetkit_demo][subdir] = custom
 projects[wetkit_deployment][version] = 1.6
 projects[wetkit_deployment][subdir] = custom
 
-projects[wetkit_images][version] = 1.4
+projects[wetkit_images][version] = 1.5
 projects[wetkit_images][subdir] = custom
 
 projects[wetkit_language][version] = 1.7
