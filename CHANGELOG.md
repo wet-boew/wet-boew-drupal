@@ -2,6 +2,10 @@
 
 ## v1.6
 
+Security Update(s):
+
+  - Drupal Core
+
 Fixes:
 
   - (Commit: [7ee8329][R1.6-Commit-7ee8329]) Update drupal-org.make file.
