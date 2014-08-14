@@ -21,8 +21,8 @@ projects[wetkit_demo][subdir] = custom
 projects[wetkit_deployment][version] = 1.6
 projects[wetkit_deployment][subdir] = custom
 
-projects[wetkit_language][version] = 1.4
-projects[wetkit_language][subdir] = custom
+projects[wetkit_images][version] = 1.4
+projects[wetkit_images][subdir] = custom
 
 projects[wetkit_language][version] = 1.7
 projects[wetkit_language][subdir] = custom
