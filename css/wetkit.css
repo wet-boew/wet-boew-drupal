@@ -5,3 +5,9 @@
 .in-maintenance input[type="image"] + label, .in-maintenance input[type="checkbox"] + label, .in-maintenance input[type="radio"] + label { display: inline; }
 .in-maintenance #edit-theme img { display: block; width: 275px; }
 .in-maintenance .messages { padding: 10px 10px 10px 10px; }
+
+#responsive-preview-navbar-tab ul li button,
+#responsive-preview-navbar-tab ul li a,
+#language-switch-navbar-tab ul li a {
+  color: #000 !important;
+}
