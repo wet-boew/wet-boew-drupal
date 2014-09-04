@@ -46,12 +46,13 @@ projects[wetkit_images][download][branch] = 7.x-2.x
 projects[wetkit_language][version] = 2.x-dev
 projects[wetkit_language][subdir] = custom
 projects[wetkit_language][download][type] = git
-projects[wetkit_language][download][revision] = 4487c77
+projects[wetkit_language][download][revision] = 3e05a6d
 projects[wetkit_language][download][branch] = 7.x-2.x
 
 projects[wetkit_layouts][version] = 2.x-dev
 projects[wetkit_layouts][subdir] = custom
 projects[wetkit_layouts][download][type] = git
+projects[wetkit_layouts][download][revision] = f85a5e6
 projects[wetkit_layouts][download][branch] = 7.x-2.x
 
 projects[wetkit_menu][version] = 2.x-dev
@@ -84,7 +85,7 @@ projects[wetkit_pages][download][branch] = 7.x-2.x
 projects[wetkit_search][version] = 2.x-dev
 projects[wetkit_search][subdir] = custom
 projects[wetkit_search][download][type] = git
-projects[wetkit_search][download][revision] = 50ec027
+projects[wetkit_search][download][revision] = d289255
 projects[wetkit_search][download][branch] = 7.x-2.x
 
 projects[wetkit_test][version] = 2.x-dev
@@ -101,6 +102,7 @@ projects[wetkit_theme][download][branch] = 7.x-2.x
 projects[wetkit_users][version] = 2.x-dev
 projects[wetkit_users][subdir] = custom
 projects[wetkit_users][download][type] = git
+projects[wetkit_users][download][revision] = 2c97eb2
 projects[wetkit_users][download][branch] = 7.x-2.x
 
 projects[wetkit_wetboew][version] = 2.x-dev
@@ -117,7 +119,7 @@ projects[wetkit_widgets][download][branch] = 7.x-2.x
 projects[wetkit_wysiwyg][version] = 2.x-dev
 projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_wysiwyg][download][type] = git
-projects[wetkit_wysiwyg][download][revision] = b2f58ac
+projects[wetkit_wysiwyg][download][revision] = d968448
 projects[wetkit_wysiwyg][download][branch] = 7.x-2.x
 
 ; WxT Foundation (Themes)
