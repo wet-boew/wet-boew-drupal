@@ -130,7 +130,7 @@ projects[wetkit_ember][download][branch] = 7.x-2.x
 
 projects[wetkit_bootstrap][version] = 2.x-dev
 projects[wetkit_bootstrap][download][type] = git$
-projects[wetkit_bootstrap][download][revision] = aba2706
+projects[wetkit_bootstrap][download][revision] = a8ad951
 projects[wetkit_bootstrap][download][branch] = 7.x-2.x
 
 projects[wetkit_shiny][version] = 2.x-dev
