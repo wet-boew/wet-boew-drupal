@@ -126,6 +126,7 @@ projects[wetkit_wysiwyg][download][branch] = 7.x-2.x
 
 projects[wetkit_ember][version] = 2.x-dev
 projects[wetkit_ember][download][type] = git
+projects[wetkit_ember][download][revision] = 1c8ee97
 projects[wetkit_ember][download][branch] = 7.x-2.x
 
 projects[wetkit_bootstrap][version] = 2.x-dev
