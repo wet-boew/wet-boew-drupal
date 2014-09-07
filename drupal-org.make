@@ -13,7 +13,7 @@ projects[wetkit_admin][download][branch] = 7.x-2.x
 projects[wetkit_bean][version] = 2.x-dev
 projects[wetkit_bean][subdir] = custom
 projects[wetkit_bean][download][type] = git
-projects[wetkit_bean][download][revision] = 8f293dc
+projects[wetkit_bean][download][revision] = ace7266
 projects[wetkit_bean][download][branch] = 7.x-2.x
 
 projects[wetkit_breadcrumbs][version] = 2.x-dev
@@ -53,7 +53,7 @@ projects[wetkit_language][download][branch] = 7.x-2.x
 projects[wetkit_layouts][version] = 2.x-dev
 projects[wetkit_layouts][subdir] = custom
 projects[wetkit_layouts][download][type] = git
-projects[wetkit_layouts][download][revision] = 6130b78
+projects[wetkit_layouts][download][revision] = d9c266f
 projects[wetkit_layouts][download][branch] = 7.x-2.x
 
 projects[wetkit_menu][version] = 2.x-dev
@@ -97,7 +97,7 @@ projects[wetkit_test][download][branch] = 7.x-2.x
 projects[wetkit_theme][version] = 2.x-dev
 projects[wetkit_theme][subdir] = custom
 projects[wetkit_theme][download][type] = git
-projects[wetkit_theme][download][revision] = 1ec0ae4
+projects[wetkit_theme][download][revision] = 6110f79
 projects[wetkit_theme][download][branch] = 7.x-2.x
 
 projects[wetkit_users][version] = 2.x-dev
@@ -115,7 +115,7 @@ projects[wetkit_wetboew][download][branch] = 7.x-2.x
 projects[wetkit_widgets][version] = 2.x-dev
 projects[wetkit_widgets][subdir] = custom
 projects[wetkit_widgets][download][type] = git
-projects[wetkit_widgets][download][revision] = 0ccc938
+projects[wetkit_widgets][download][revision] = 0911b03
 projects[wetkit_widgets][download][branch] = 7.x-2.x
 
 projects[wetkit_wysiwyg][version] = 2.x-dev
@@ -133,7 +133,7 @@ projects[wetkit_ember][download][branch] = 7.x-2.x
 
 projects[wetkit_bootstrap][version] = 2.x-dev
 projects[wetkit_bootstrap][download][type] = git
-projects[wetkit_bootstrap][download][revision] = 227ef4a
+projects[wetkit_bootstrap][download][revision] = cf36d52
 projects[wetkit_bootstrap][download][branch] = 7.x-2.x
 
 projects[wetkit_shiny][version] = 2.x-dev
