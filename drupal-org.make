@@ -110,7 +110,7 @@ projects[wetkit_users][download][branch] = 7.x-2.x
 projects[wetkit_wetboew][version] = 2.x-dev
 projects[wetkit_wetboew][subdir] = custom
 projects[wetkit_wetboew][download][type] = git
-projects[wetkit_wetboew][download][revision] = a37ebaa
+projects[wetkit_wetboew][download][revision] = d22b8c9
 projects[wetkit_wetboew][download][branch] = 7.x-2.x
 
 projects[wetkit_widgets][version] = 2.x-dev
