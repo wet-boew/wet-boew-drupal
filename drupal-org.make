@@ -99,7 +99,7 @@ projects[wetkit_test][download][branch] = 7.x-2.x
 projects[wetkit_theme][version] = 2.x-dev
 projects[wetkit_theme][subdir] = custom
 projects[wetkit_theme][download][type] = git
-projects[wetkit_theme][download][revision] = b2469ec
+projects[wetkit_theme][download][revision] = 7e1731b
 projects[wetkit_theme][download][branch] = 7.x-2.x
 
 projects[wetkit_users][version] = 2.x-dev
