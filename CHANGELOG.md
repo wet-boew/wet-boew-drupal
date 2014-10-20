@@ -1,5 +1,43 @@
 # CHANGELOG.md
 
+## v1.7
+
+Security Update(s):
+
+  - Drupal Core
+
+Fixes:
+
+  - (Commit: [3c70096][R1.7-Commit-3c70096]) Upgrade devevelopment files to latest core.
+  - (Commit: [8ef7017][R1.7-Commit-8ef7017]) Upgrade to Drupal Core 7.32 (Security Release)
+  - (Commit: [6e86a04][R1.7-Commit-6e86a04]) Update WetKit Bean for Performance improvements for Bean module thanks to static invokation.
+  - (Commit: [6da3dfe][R1.7-Commit-6da3dfe]) Update WetKit WYSIWYG for #[2346033][R1.7-Issue-2346033] - Fixed WetKit WYSIWYG Content CSS Files Do Not Add User Define CSS Paths.
+  - (Commit: [18b9269][R1.7-Commit-18b9269]) Update WetKit Omega for #[2344473][R1.7-Issue-2344473] - Fixed Make "Modified date" reflect translation updates.
+  - (Commit: [d18eafd][R1.7-Commit-d18eafd]) Update WetKit Core for #[2336189][R1.7-Issue-2336189] - Fixed deploying user-cancel from source site that has entities with no uuids remove anonymous user.
+  - (Commit: [2e6d961][R1.7-Commit-2e6d961]) Update WetKit Omega for #[2343641][R1.7-Issue-2343641] - Fixed field.tpl.php.txt file appears old and out of date.
+  - (Commit: [fd95d4a][R1.7-Commit-fd95d4a]) Update WetKit Core for #[2343541][R1.7-Issue-2343541] - Fixed Exposed form in block doesn't redirect to right path.
+  - (Commit: [e6a5044][R1.7-Commit-e6a5044]) Update WetKit Core for #[2304581][R1.7-Issue-2304581] - Fixed Panels pane style getting applied region.
+  - (Commit: [387cc3c][R1.7-Commit-387cc3c]) Update WetKit Search for Remove invalid patch specification.
+  - (Commit: [a2ced2d][R1.7-Commit-a2ced2d]) Update WetKit Users for #[2304393][R1.7-Issue-2304393] - Fixed Feature conflict in default install.
+  - (Commit: [6fd8dd4][R1.7-Commit-6fd8dd4]) Update WetKit Language for #[2325435][R1.7-Issue-2325435] - Fixed can't create features.
+  - (Commit: [833dc54][R1.7-Commit-833dc54]) Update WetKit WYSIWYG for Remove invalid modules on 1.x branch.
+  - (Commit: [8780e63][R1.7-Commit-8780e63]) Update WetKit Search for #[2328105][R1.7-Issue-2328105] - Fixed Custom Search JavaScript Typo.
+  - (Commit: [cfe3f5f][R1.7-Commit-cfe3f5f]) Update WetKit Core for #[2327287][R1.7-Issue-2327287] - Fixed Webforms on submit give 404.
+  - (Commit: [ada6840][R1.7-Commit-ada6840]) Update WetKit Bean for #[2332281][R1.7-Issue-2332281] - Fixed Search Data label not translatable"
+  - (Commit: [5a996de][R1.7-Commit-5a996de]) Update WetKit Admin for #[2332275][R1.7-Issue-2332275] - Fixed Update contrib modules for WetKit Admin v1.6.
+  - (Commit: [6716ba0][R1.7-Commit-6716ba0]) Update WetKit Breadcrumbs for #[2332263][R1.7-Issue-2332263] - Fixed Update contrib modules for WetKit Breadcrumbs v1.5.
+  - (Commit: [21efa14][R1.7-Commit-21efa14]) Update WetKit Core for Move Querypath library to WetKit Migrate.
+  - (Commit: [b6bd721][R1.7-Commit-b6bd721]) Update WetKit Search for correct hash.
+  - (Commit: [4f20669][R1.7-Commit-4f20669]) Update WetKit Migration for #[2332207][R1.7-Issue-2332207] - Fixed Update contrib modules for WetKit Migrate v1.6.
+  - (Commit: [8a736d2][R1.7-Commit-8a736d2]) Update WetKit Language for #[2332147][R1.7-Issue-2332147] - Fixed Update contrib modules for Language v1.8.
+  - (Commit: [000f863][R1.7-Commit-000f863]) Update WetKit Search for #[2331839][R1.7-Issue-2331839] - Fixed Update contrib modules for WetKit Search v1.6.
+  - (Commit: [79ed87d][R1.7-Commit-79ed87d]) Update WetKit WYSIWYG for Remove deprecated TinyMCE plugin.
+  - (Commit: [98b7538][R1.7-Commit-98b7538]) Update WetKit Ember for #[2331755][R1.7-Issue-2331755] - Fixed Update Ember Theme.
+  - (Commit: [10fff90][R1.7-Commit-10fff90]) Update WetKit Ember for #[2331755][R1.7-Issue-2331755] - Fixed Update Ember Theme.
+  - (Commit: [74959b8][R1.7-Commit-74959b8]) Updates git hash for WetKit Wysiwyg.
+  - (Commit: [4b5edb4][R1.7-Commit-4b5edb4]) Start work for next release of the 1.7 version.
+  - (Commit: [d42e551][R1.7-Commit-d42e551]) Update WetKit Wysiwyg for #[2331671][R1.7-Issue-2331671] - Fixed Update linkit and wysiwyg to latest dev.
+
 ## v1.6
 
 Security Update(s):
@@ -556,6 +594,72 @@ Bug Fixes:
 
 <!-- Links Referenced -->
 
+<!-- Commits R1.7 -->
+
+[R1.7-Commit-3c70096]: http://drupalcode.org/project/wetkit.git/commit/3c70096
+[R1.7-Commit-8ef7017]: http://drupalcode.org/project/wetkit.git/commit/8ef7017
+[R1.7-Commit-0e00a77]: http://drupalcode.org/project/wetkit.git/commit/0e00a77
+[R1.7-Commit-6e86a04]: http://drupalcode.org/project/wetkit.git/commit/6e86a04
+[R1.7-Commit-78d264e]: http://drupalcode.org/project/wetkit.git/commit/78d264e
+[R1.7-Commit-cd6b683]: http://drupalcode.org/project/wetkit.git/commit/cd6b683
+[R1.7-Commit-d096950]: http://drupalcode.org/project/wetkit.git/commit/d096950
+[R1.7-Commit-6da3dfe]: http://drupalcode.org/project/wetkit.git/commit/6da3dfe
+[R1.7-Commit-5d6d479]: http://drupalcode.org/project/wetkit.git/commit/5d6d479
+[R1.7-Commit-18b9269]: http://drupalcode.org/project/wetkit.git/commit/18b9269
+[R1.7-Commit-e22caa9]: http://drupalcode.org/project/wetkit.git/commit/e22caa9
+[R1.7-Commit-d18eafd]: http://drupalcode.org/project/wetkit.git/commit/d18eafd
+[R1.7-Commit-b7dc699]: http://drupalcode.org/project/wetkit.git/commit/b7dc699
+[R1.7-Commit-2e6d961]: http://drupalcode.org/project/wetkit.git/commit/2e6d961
+[R1.7-Commit-fd95d4a]: http://drupalcode.org/project/wetkit.git/commit/fd95d4a
+[R1.7-Commit-98bfaec]: http://drupalcode.org/project/wetkit.git/commit/98bfaec
+[R1.7-Commit-e6a5044]: http://drupalcode.org/project/wetkit.git/commit/e6a5044
+[R1.7-Commit-387cc3c]: http://drupalcode.org/project/wetkit.git/commit/387cc3c
+[R1.7-Commit-1422500]: http://drupalcode.org/project/wetkit.git/commit/1422500
+[R1.7-Commit-a2ced2d]: http://drupalcode.org/project/wetkit.git/commit/a2ced2d
+[R1.7-Commit-6fd8dd4]: http://drupalcode.org/project/wetkit.git/commit/6fd8dd4
+[R1.7-Commit-833dc54]: http://drupalcode.org/project/wetkit.git/commit/833dc54
+[R1.7-Commit-8780e63]: http://drupalcode.org/project/wetkit.git/commit/8780e63
+[R1.7-Commit-f2c3f50]: http://drupalcode.org/project/wetkit.git/commit/f2c3f50
+[R1.7-Commit-cfe3f5f]: http://drupalcode.org/project/wetkit.git/commit/cfe3f5f
+[R1.7-Commit-ada6840]: http://drupalcode.org/project/wetkit.git/commit/ada6840
+[R1.7-Commit-9f24cc8]: http://drupalcode.org/project/wetkit.git/commit/9f24cc8
+[R1.7-Commit-5a996de]: http://drupalcode.org/project/wetkit.git/commit/5a996de
+[R1.7-Commit-6716ba0]: http://drupalcode.org/project/wetkit.git/commit/6716ba0
+[R1.7-Commit-21efa14]: http://drupalcode.org/project/wetkit.git/commit/21efa14
+[R1.7-Commit-b6bd721]: http://drupalcode.org/project/wetkit.git/commit/b6bd721
+[R1.7-Commit-4f20669]: http://drupalcode.org/project/wetkit.git/commit/4f20669
+[R1.7-Commit-8a736d2]: http://drupalcode.org/project/wetkit.git/commit/8a736d2
+[R1.7-Commit-27c5f16]: http://drupalcode.org/project/wetkit.git/commit/27c5f16
+[R1.7-Commit-000f863]: http://drupalcode.org/project/wetkit.git/commit/000f863
+[R1.7-Commit-6757211]: http://drupalcode.org/project/wetkit.git/commit/6757211
+[R1.7-Commit-79ed87d]: http://drupalcode.org/project/wetkit.git/commit/79ed87d
+[R1.7-Commit-98b7538]: http://drupalcode.org/project/wetkit.git/commit/98b7538
+[R1.7-Commit-10fff90]: http://drupalcode.org/project/wetkit.git/commit/10fff90
+[R1.7-Commit-74959b8]: http://drupalcode.org/project/wetkit.git/commit/74959b8
+[R1.7-Commit-4b5edb4]: http://drupalcode.org/project/wetkit.git/commit/4b5edb4
+[R1.7-Commit-d42e551]: http://drupalcode.org/project/wetkit.git/commit/d42e551
+
+ <!-- Issues R1.7 -->
+
+[R1.7-Issue-2346033]: http://drupal.org/node/2346033
+[R1.7-Issue-2344473]: http://drupal.org/node/2344473
+[R1.7-Issue-2336189]: http://drupal.org/node/2336189
+[R1.7-Issue-2343641]: http://drupal.org/node/2343641
+[R1.7-Issue-2343541]: http://drupal.org/node/2343541
+[R1.7-Issue-2304581]: http://drupal.org/node/2304581
+[R1.7-Issue-2304393]: http://drupal.org/node/2304393
+[R1.7-Issue-2325435]: http://drupal.org/node/2325435
+[R1.7-Issue-2328105]: http://drupal.org/node/2328105
+[R1.7-Issue-2327287]: http://drupal.org/node/2327287
+[R1.7-Issue-2332281]: http://drupal.org/node/2332281
+[R1.7-Issue-2332275]: http://drupal.org/node/2332275
+[R1.7-Issue-2332263]: http://drupal.org/node/2332263
+[R1.7-Issue-2332207]: http://drupal.org/node/2332207
+[R1.7-Issue-2332147]: http://drupal.org/node/2332147
+[R1.7-Issue-2331839]: http://drupal.org/node/2331839
+[R1.7-Issue-2331755]: http://drupal.org/node/2331755
+[R1.7-Issue-2331755]: http://drupal.org/node/2331755
+[R1.7-Issue-2331671]: http://drupal.org/node/2331671
 <!-- Commits R1.6 -->
 
 [R1.6-Commit-7ee8329]: http://drupalcode.org/project/wetkit.git/commit/7ee8329
