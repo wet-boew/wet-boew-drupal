@@ -660,6 +660,7 @@ Bug Fixes:
 [R1.7-Issue-2331755]: http://drupal.org/node/2331755
 [R1.7-Issue-2331755]: http://drupal.org/node/2331755
 [R1.7-Issue-2331671]: http://drupal.org/node/2331671
+
 <!-- Commits R1.6 -->
 
 [R1.6-Commit-7ee8329]: http://drupalcode.org/project/wetkit.git/commit/7ee8329
