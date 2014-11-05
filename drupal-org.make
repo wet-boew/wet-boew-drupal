@@ -100,7 +100,7 @@ projects[wetkit_test][download][branch] = 7.x-2.x
 projects[wetkit_theme][version] = 2.x-dev
 projects[wetkit_theme][subdir] = custom
 projects[wetkit_theme][download][type] = git
-projects[wetkit_theme][download][revision] = 7e1731b
+projects[wetkit_theme][download][revision] = ddee606
 projects[wetkit_theme][download][branch] = 7.x-2.x
 
 projects[wetkit_users][version] = 2.x-dev
@@ -112,7 +112,7 @@ projects[wetkit_users][download][branch] = 7.x-2.x
 projects[wetkit_wetboew][version] = 2.x-dev
 projects[wetkit_wetboew][subdir] = custom
 projects[wetkit_wetboew][download][type] = git
-projects[wetkit_wetboew][download][revision] = b0cdbd9
+projects[wetkit_wetboew][download][revision] = 42d4fe7
 projects[wetkit_wetboew][download][branch] = 7.x-2.x
 
 projects[wetkit_widgets][version] = 2.x-dev
