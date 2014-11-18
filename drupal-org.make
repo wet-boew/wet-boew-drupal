@@ -7,7 +7,7 @@ core = 7.x
 projects[wetkit_admin][version] = 2.x-dev
 projects[wetkit_admin][subdir] = custom
 projects[wetkit_admin][download][type] = git
-projects[wetkit_admin][download][revision] = a15cafd
+projects[wetkit_admin][download][revision] = a3b05c2
 projects[wetkit_admin][download][branch] = 7.x-2.x
 
 projects[wetkit_bean][version] = 2.x-dev
