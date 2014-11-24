@@ -192,7 +192,7 @@ function wetkit_import_content() {
   // Run Mega Menu migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateMegaMenu',
-    t('Importing content.'),
+    t('Importing Mega Menu.'),
     ));
 
   // Run entities import.
@@ -237,37 +237,37 @@ function wetkit_import_demo_content() {
   // Run Site Menu migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateSiteMenu',
-    t('Importing content.'),
+    t('Importing Site Menu.'),
     ));
 
   // Run Site Menu Links migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateSiteMenuLinks',
-    t('Importing content.'),
+    t('Importing Site Menu Links.'),
     ));
 
   // Run Default Content Media migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateDefaultContentMedia',
-    t('Importing media.'),
+    t('Importing Default Content Media.'),
     ));
 
   // Run Default Content migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateDefaultContent',
-    t('Importing content.'),
+    t('Importing Default Content.'),
     ));
 
   // Enable WetKit Demo.
   $operations[] = array('module_enable', array(
     array('wetkit_demo'),
-    t('Enabling wetkit_demo module.'),
+    t('Enabling WetKit Demo module.'),
     ));
 
   // Run Mega Menu Links migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateMegaMenuLinks',
-    t('Importing content.'),
+    t('Importing Menu Links.'),
     ));
 
   // Install Bean demo content.
