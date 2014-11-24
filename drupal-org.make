@@ -59,7 +59,7 @@ projects[wetkit_layouts][download][branch] = 7.x-2.x
 projects[wetkit_menu][version] = 2.x-dev
 projects[wetkit_menu][subdir] = custom
 projects[wetkit_menu][download][type] = git
-projects[wetkit_menu][download][revision] = 644cd59
+projects[wetkit_menu][download][revision] = 48f812d
 projects[wetkit_menu][download][branch] = 7.x-2.x
 
 projects[wetkit_metatag][version] = 2.x-dev
