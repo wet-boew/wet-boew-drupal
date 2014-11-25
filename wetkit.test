@@ -15,9 +15,9 @@ class WetKitArchivedWidgetTestCase extends WetKitWebTestCase {
    */
   public static function getInfo() {
     return array(
-      'name' => 'Archived widget pane',
-      'description' => 'Archived widget pane.',
-      'group' => 'WxT',
+      'name' => t('Archived widget pane'),
+      'description' => t('Archived widget pane.'),
+      'group' => t('WxT'),
     );
   }
 
@@ -39,6 +39,6 @@ class WetKitArchivedWidgetTestCase extends WetKitWebTestCase {
     // Check that the plugin exists.
     ctools_include('plugins');
     $plugin = ctools_get_plugins('ctools', 'content_types', 'archived_widget');
-    $this->assertTrue($plugin, 'The archived widget plugin exists');
+    $this->assertTrue($plugin, t('The archived widget plugin exists'));
   }
 }

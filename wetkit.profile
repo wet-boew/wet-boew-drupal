@@ -238,67 +238,67 @@ function wetkit_import_demo_content() {
   // Run Beans migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateBean',
-    t('Importing content.'),
+    t('Importing Bean content.'),
     ));
 
   // Run Beans migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateBeanSlideOut',
-    t('Importing content.'),
+    t('Importing Bean Slideout.'),
     ));
 
   // Run Beans migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateBeanSlideShow',
-    t('Importing content.'),
+    t('Importing Beans Slideshow.'),
     ));
 
   // Run Files migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateFileBeanSlideShow',
-    t('Importing Files.'),
+    t('Importing File Bean Slideshow.'),
     ));
 
   // Run Files migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateFldCollectionSlides',
-    t('Importing Field Collection.'),
+    t('Importing Field Collection Slides.'),
     ));
 
   // Run Default Content Media migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateDefaultContentMedia',
-    t('Importing media.'),
+    t('Importing Default Content Media.'),
     ));
 
   // Run Default Content migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateDefaultContent',
-    t('Importing content.'),
+    t('Importing Default Content.'),
     ));
 
   // Run Site Menu migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateSiteMenu',
-    t('Importing content.'),
+    t('Importing Site Menu.'),
     ));
 
   // Run Site Menu Links migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateSiteMenuLinks',
-    t('Importing content.'),
+    t('Importing Site Menu Links.'),
     ));
 
   // Run Mega Menu Links migration.
   $operations[] = array('_wetkit_import', array(
     'WetKitMigrateMegaMenuLinks',
-    t('Importing content.'),
+    t('Importing Mega Menu Links.'),
     ));
 
   // Enable WetKit Demo.
   $operations[] = array('module_enable', array(
     array('wetkit_demo'),
-    t('Enabling wetkit_demo module.'),
+    t('Enabling WetKit Demo module.'),
     ));
 
   $batch = array(
