@@ -61,7 +61,7 @@ projects[wetkit_menu][download][branch] = 7.x-1.x
 projects[wetkit_metatag][version] = 1.x-dev
 projects[wetkit_metatag][subdir] = custom
 projects[wetkit_metatag][download][type] = git
-projects[wetkit_metatag][download][revision] = ad7ec7f
+projects[wetkit_metatag][download][revision] = 1f69d1e
 projects[wetkit_metatag][download][branch] = 7.x-1.x
 
 projects[wetkit_migrate][version] = 1.x-dev
@@ -82,6 +82,7 @@ projects[wetkit_pages][download][branch] = 7.x-1.x
 projects[wetkit_search][version] = 1.x-dev
 projects[wetkit_search][subdir] = custom
 projects[wetkit_search][download][type] = git
+projects[wetkit_search][download][revision] = 884531d
 projects[wetkit_search][download][branch] = 7.x-1.x
 
 projects[wetkit_theme][version] = 1.x-dev
