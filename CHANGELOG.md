@@ -1,5 +1,49 @@
 # CHANGELOG.md
 
+## v2.x
+
+  Once Beta is released CHANGELOG.md for this branch will start to be autopopulated.
+
+## v1.8
+
+Security Update(s):
+
+  - Drupal Core
+  - Services
+
+Features:
+
+  - Updates to Media + File Entity (Dev to Stable tags)
+  - Updated to official Metatag release (Tested update to ensure data integrity)
+  - Linkit support for Entity Translation Fields with fallback option
+
+Fixes:
+
+  - (Commit: [b98f6db][R1.8-Commit-b98f6db]) Update WetKit Metatag for #[2382711][R1.8-Issue-2382711] - Metatag needs to be updated
+  - (Commit: [8ad2839][R1.8-Commit-8ad2839]) Update WetKit Search for Fix undefined index for Facetapi.
+  - (Commit: [50c6cc2][R1.8-Commit-50c6cc2]) Update WetKit Metatag for #[2382711][R1.8-Issue-2382711] - Metatag needs to be updated
+  - (Commit: [86e827f][R1.8-Commit-86e827f]) Update WetKit Metatag for #[2382711][R1.8-Issue-2382711] - Metatag needs to be updated
+  - (Commit: [a78e206][R1.8-Commit-a78e206]) Update WetKit Widgets for #[2366631][R1.8-Issue-2366631] - File Entity select uploaded file loc & fix replace code + Update Media
+  - (Commit: [1b7e74c][R1.8-Commit-1b7e74c]) Update WetKit Bean for #[2381947][R1.8-Issue-2381947] - Translate the Override Settings string in wetkit bean
+  - (Commit: [05274c8][R1.8-Commit-05274c8]) Update WetKit Bean for #[2382051][R1.8-Issue-2382051] - Make the placeholder_text in bean.search translatable
+  - (Commit: [6129cee][R1.8-Commit-6129cee]) Update WetKit Breadcrumbs for #[2382087][R1.8-Issue-2382087] - Breadcrumb Settings string should be translatable
+  - (Commit: [edb6305][R1.8-Commit-edb6305]) Update WetKit Admin for #[2381917][R1.8-Issue-2381917] - Custom (Code) string in panels layouts should be multilingual
+  - (Commit: [b5b5846][R1.8-Commit-b5b5846]) Update WetKit Panel Layouts for #[2363257][R1.8-Issue-2363257] - Extra closing div in Dallaire layout
+  - (Commit: [d266613][R1.8-Commit-d266613]) Update WetKit Panel Layouts for #[2363257][R1.8-Issue-2363257] - Extra closing div in Dallaire layout.
+  - (Commit: [b2e0fdd][R1.8-Commit-b2e0fdd]) Update WetKit Admin for #[2364301][R1.8-Issue-2364301] - Provide UI to change number of terms listed on admin pages
+  - (Commit: [c19dfa3][R1.8-Commit-c19dfa3]) Update WetKit Admin for #[2364301][R1.8-Issue-2364301] - Provide UI to change number of terms listed on admin pages
+  - (Commit: [54e7b56][R1.8-Commit-54e7b56]) Update WetKit WYSIWYG for #[2381549][R1.8-Issue-2381549] - Linkit Improvements
+  - (Commit: [e7f9a83][R1.8-Commit-e7f9a83]) Update WetKit Menu for #[2351629][R1.8-Issue-2351629] - Mega Menu minipanel not showing properly on /user/*/edit
+  - (Commit: [fc59fdb][R1.8-Commit-fc59fdb]) #[2381409][R1.8-Issue-2381409] - Make install profile progress messages more descriptive
+  - (Commit: [ff261ac][R1.8-Commit-ff261ac]) Update WetKit Menu for #[2339465][R1.8-Issue-2339465] - Double rendering of mini panels
+  - (Commit: [354563d][R1.8-Commit-354563d]) #[2381391][R1.8-Issue-2381391] - Add multilingual to wetkit.test
+  - (Commit: [614f2fd][R1.8-Commit-614f2fd]) Update WetKit Menu for #[2361983][R1.8-Issue-2361983] - Remove WetKit Menu's dependency on Migrate modules
+  - (Commit: [23a0ac7][R1.8-Commit-23a0ac7]) Update Drupal core to 7.34.
+  - (Commit: [2029c68][R1.8-Commit-2029c68]) Update WetKit Omega for git commit -m '#[2374829][R1.8-Issue-2374829] - panels-pane.tpl.php files out of date in wetkit-omega'
+  - (Commit: [75fcfcc][R1.8-Commit-75fcfcc]) Update WetKit Theme for #[2381345][R1.8-Issue-2381345] - Missing a translation option for Choose theme submit button
+  - (Commit: [d0e09e9][R1.8-Commit-d0e09e9]) Update WetKit WET-BOEW for git commit -m '#[2363233][R1.8-Issue-2363233] - content->css_class not declared'
+  - (Commit: [bf41193][R1.8-Commit-bf41193]) Prepare for next version release.
+
 ## v1.7
 
 Security Update(s):
@@ -355,6 +399,59 @@ Bug Fixes:
   - (Commit: [b6b28b4][R1-Commit-b6b28b4]) #[2151399][R1-Issue-2151399] - Updates to WetKit Core.
 
 <!-- Links Referenced -->
+
+<!-- Commits R1.8 -->
+
+[R1.8-Commit-b98f6db]: http://drupalcode.org/project/wetkit.git/commit/b98f6db
+[R1.8-Commit-8ad2839]: http://drupalcode.org/project/wetkit.git/commit/8ad2839
+[R1.8-Commit-50c6cc2]: http://drupalcode.org/project/wetkit.git/commit/50c6cc2
+[R1.8-Commit-86e827f]: http://drupalcode.org/project/wetkit.git/commit/86e827f
+[R1.8-Commit-a78e206]: http://drupalcode.org/project/wetkit.git/commit/a78e206
+[R1.8-Commit-1b7e74c]: http://drupalcode.org/project/wetkit.git/commit/1b7e74c
+[R1.8-Commit-05274c8]: http://drupalcode.org/project/wetkit.git/commit/05274c8
+[R1.8-Commit-6129cee]: http://drupalcode.org/project/wetkit.git/commit/6129cee
+[R1.8-Commit-edb6305]: http://drupalcode.org/project/wetkit.git/commit/edb6305
+[R1.8-Commit-abb11c0]: http://drupalcode.org/project/wetkit.git/commit/abb11c0
+[R1.8-Commit-b5b5846]: http://drupalcode.org/project/wetkit.git/commit/b5b5846
+[R1.8-Commit-d266613]: http://drupalcode.org/project/wetkit.git/commit/d266613
+[R1.8-Commit-b2e0fdd]: http://drupalcode.org/project/wetkit.git/commit/b2e0fdd
+[R1.8-Commit-c19dfa3]: http://drupalcode.org/project/wetkit.git/commit/c19dfa3
+[R1.8-Commit-54e7b56]: http://drupalcode.org/project/wetkit.git/commit/54e7b56
+[R1.8-Commit-22dde9a]: http://drupalcode.org/project/wetkit.git/commit/22dde9a
+[R1.8-Commit-e7f9a83]: http://drupalcode.org/project/wetkit.git/commit/e7f9a83
+[R1.8-Commit-fc59fdb]: http://drupalcode.org/project/wetkit.git/commit/fc59fdb
+[R1.8-Commit-ff261ac]: http://drupalcode.org/project/wetkit.git/commit/ff261ac
+[R1.8-Commit-354563d]: http://drupalcode.org/project/wetkit.git/commit/354563d
+[R1.8-Commit-614f2fd]: http://drupalcode.org/project/wetkit.git/commit/614f2fd
+[R1.8-Commit-23a0ac7]: http://drupalcode.org/project/wetkit.git/commit/23a0ac7
+[R1.8-Commit-2029c68]: http://drupalcode.org/project/wetkit.git/commit/2029c68
+[R1.8-Commit-75fcfcc]: http://drupalcode.org/project/wetkit.git/commit/75fcfcc
+[R1.8-Commit-d0e09e9]: http://drupalcode.org/project/wetkit.git/commit/d0e09e9
+[R1.8-Commit-bf41193]: http://drupalcode.org/project/wetkit.git/commit/bf41193
+
+ <!-- Issues R1.8 -->
+
+[R1.8-Issue-2382711]: http://drupal.org/node/2382711
+[R1.8-Issue-2382711]: http://drupal.org/node/2382711
+[R1.8-Issue-2382711]: http://drupal.org/node/2382711
+[R1.8-Issue-2366631]: http://drupal.org/node/2366631
+[R1.8-Issue-2381947]: http://drupal.org/node/2381947
+[R1.8-Issue-2382051]: http://drupal.org/node/2382051
+[R1.8-Issue-2382087]: http://drupal.org/node/2382087
+[R1.8-Issue-2381917]: http://drupal.org/node/2381917
+[R1.8-Issue-2363257]: http://drupal.org/node/2363257
+[R1.8-Issue-2363257]: http://drupal.org/node/2363257
+[R1.8-Issue-2364301]: http://drupal.org/node/2364301
+[R1.8-Issue-2364301]: http://drupal.org/node/2364301
+[R1.8-Issue-2381549]: http://drupal.org/node/2381549
+[R1.8-Issue-2351629]: http://drupal.org/node/2351629
+[R1.8-Issue-2381409]: http://drupal.org/node/2381409
+[R1.8-Issue-2339465]: http://drupal.org/node/2339465
+[R1.8-Issue-2381391]: http://drupal.org/node/2381391
+[R1.8-Issue-2361983]: http://drupal.org/node/2361983
+[R1.8-Issue-2374829]: http://drupal.org/node/2374829
+[R1.8-Issue-2381345]: http://drupal.org/node/2381345
+[R1.8-Issue-2363233]: http://drupal.org/node/2363233
 
 <!-- Commits R1.7 -->
 
