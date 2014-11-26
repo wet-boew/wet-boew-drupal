@@ -19,6 +19,7 @@ projects[wetkit_bean][download][branch] = 7.x-2.x
 projects[wetkit_breadcrumbs][version] = 2.x-dev
 projects[wetkit_breadcrumbs][subdir] = custom
 projects[wetkit_breadcrumbs][download][type] = git
+projects[wetkit_breadcrumbs][download][revision] = 623abd3
 projects[wetkit_breadcrumbs][download][branch] = 7.x-2.x
 
 projects[wetkit_core][version] = 2.x-dev
