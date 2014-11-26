@@ -1,5 +1,5 @@
 #!/bin/sh
-# usage: changelog.sh 7.x-1.6 7.x-1.x 1.7
+# usage: changelog.sh 7.x-1.7 7.x-1.x 1.8
 
 # Variables
 SHA1=$(git rev-parse HEAD | cut -c 1-7)
