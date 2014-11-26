@@ -66,7 +66,7 @@ projects[wetkit_menu][download][branch] = 7.x-2.x
 projects[wetkit_metatag][version] = 2.x-dev
 projects[wetkit_metatag][subdir] = custom
 projects[wetkit_metatag][download][type] = git
-projects[wetkit_metatag][download][revision] = 536c9d9
+projects[wetkit_metatag][download][revision] = ffec5e6
 projects[wetkit_metatag][download][branch] = 7.x-2.x
 
 projects[wetkit_migrate][version] = 2.x-dev
