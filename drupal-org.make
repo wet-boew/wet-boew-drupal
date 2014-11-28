@@ -85,12 +85,6 @@ projects[wetkit_search][download][type] = git
 projects[wetkit_search][download][revision] = 884531d
 projects[wetkit_search][download][branch] = 7.x-1.x
 
-projects[wetkit_test][version] = 1.x-dev
-projects[wetkit_test][subdir] = custom
-projects[wetkit_test][download][type] = git
-projects[wetkit_test][download][revision] = 2a25ee7
-projects[wetkit_test][download][branch] = 7.x-1.x
-
 projects[wetkit_theme][version] = 1.x-dev
 projects[wetkit_theme][subdir] = custom
 projects[wetkit_theme][download][type] = git
