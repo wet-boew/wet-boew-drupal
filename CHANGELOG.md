@@ -19,6 +19,18 @@ Features:
 
 Fixes:
 
+  - (Commit: [68cc5a3][R1.8-Commit-68cc5a3]) Update WetKit Core for Update Panopoly Magic to latest official 1.14 version.
+  - (Commit: [65b260c][R1.8-Commit-65b260c]) Update WetKit Omega for Update Omega to latest official release 4.3 version.
+  - (Commit: [97fd8f7][R1.8-Commit-97fd8f7]) Update WetKit Language for Update to l10n_update module.
+  - (Commit: [4d0d63e][R1.8-Commit-4d0d63e]) Update WetKit Deployment for Update to services module.
+  - (Commit: [c04df4e][R1.8-Commit-c04df4e]) Update WetKit Core for Updates to link and webform module.
+  - (Commit: [a1be830][R1.8-Commit-a1be830]) Update WetKit Widgets for Fix for media + file entity schema issue.
+  - (Commit: [6429123][R1.8-Commit-6429123]) Fix for broken Behat tests on 1.x branch.
+  - (Commit: [cd0b4f0][R1.8-Commit-cd0b4f0]) Update WetKit Widgets for #[2129273][R1.8-Issue-2129273] - Media alt attributes only work via the interface (Field.attach.inc)
+  - (Commit: [cf60ef5][R1.8-Commit-cf60ef5]) Update drupal-org.make
+  - (Commit: [d23e033][R1.8-Commit-d23e033]) Update drupal-org.make
+  - (Commit: [58dfcf7][R1.8-Commit-58dfcf7]) Add module wetkit_test for Behat abstraction.
+  - (Commit: [74b7341][R1.8-Commit-74b7341]) Update changelog.md file.
   - (Commit: [b98f6db][R1.8-Commit-b98f6db]) Update WetKit Metatag for #[2382711][R1.8-Issue-2382711] - Metatag needs to be updated
   - (Commit: [8ad2839][R1.8-Commit-8ad2839]) Update WetKit Search for Fix undefined index for Facetapi.
   - (Commit: [50c6cc2][R1.8-Commit-50c6cc2]) Update WetKit Metatag for #[2382711][R1.8-Issue-2382711] - Metatag needs to be updated
@@ -402,10 +414,31 @@ Bug Fixes:
 
 <!-- Commits R1.8 -->
 
+[R1.8-Commit-68cc5a3]: http://drupalcode.org/project/wetkit.git/commit/68cc5a3
+[R1.8-Commit-65b260c]: http://drupalcode.org/project/wetkit.git/commit/65b260c
+[R1.8-Commit-97fd8f7]: http://drupalcode.org/project/wetkit.git/commit/97fd8f7
+[R1.8-Commit-4d0d63e]: http://drupalcode.org/project/wetkit.git/commit/4d0d63e
+[R1.8-Commit-c04df4e]: http://drupalcode.org/project/wetkit.git/commit/c04df4e
+[R1.8-Commit-7a71e59]: http://drupalcode.org/project/wetkit.git/commit/7a71e59
+[R1.8-Commit-a1be830]: http://drupalcode.org/project/wetkit.git/commit/a1be830
+[R1.8-Commit-a204b12]: http://drupalcode.org/project/wetkit.git/commit/a204b12
+[R1.8-Commit-6429123]: http://drupalcode.org/project/wetkit.git/commit/6429123
+[R1.8-Commit-dc2879f]: http://drupalcode.org/project/wetkit.git/commit/dc2879f
+[R1.8-Commit-cd0b4f0]: http://drupalcode.org/project/wetkit.git/commit/cd0b4f0
+[R1.8-Commit-b7191ac]: http://drupalcode.org/project/wetkit.git/commit/b7191ac
+[R1.8-Commit-cf60ef5]: http://drupalcode.org/project/wetkit.git/commit/cf60ef5
+[R1.8-Commit-67333e0]: http://drupalcode.org/project/wetkit.git/commit/67333e0
+[R1.8-Commit-d23e033]: http://drupalcode.org/project/wetkit.git/commit/d23e033
+[R1.8-Commit-05e5be7]: http://drupalcode.org/project/wetkit.git/commit/05e5be7
+[R1.8-Commit-58dfcf7]: http://drupalcode.org/project/wetkit.git/commit/58dfcf7
+[R1.8-Commit-74b7341]: http://drupalcode.org/project/wetkit.git/commit/74b7341
+[R1.8-Commit-eeded35]: http://drupalcode.org/project/wetkit.git/commit/eeded35
 [R1.8-Commit-b98f6db]: http://drupalcode.org/project/wetkit.git/commit/b98f6db
 [R1.8-Commit-8ad2839]: http://drupalcode.org/project/wetkit.git/commit/8ad2839
+[R1.8-Commit-d2fa696]: http://drupalcode.org/project/wetkit.git/commit/d2fa696
 [R1.8-Commit-50c6cc2]: http://drupalcode.org/project/wetkit.git/commit/50c6cc2
 [R1.8-Commit-86e827f]: http://drupalcode.org/project/wetkit.git/commit/86e827f
+[R1.8-Commit-aed6712]: http://drupalcode.org/project/wetkit.git/commit/aed6712
 [R1.8-Commit-a78e206]: http://drupalcode.org/project/wetkit.git/commit/a78e206
 [R1.8-Commit-1b7e74c]: http://drupalcode.org/project/wetkit.git/commit/1b7e74c
 [R1.8-Commit-05274c8]: http://drupalcode.org/project/wetkit.git/commit/05274c8
@@ -429,8 +462,9 @@ Bug Fixes:
 [R1.8-Commit-d0e09e9]: http://drupalcode.org/project/wetkit.git/commit/d0e09e9
 [R1.8-Commit-bf41193]: http://drupalcode.org/project/wetkit.git/commit/bf41193
 
- <!-- Issues R1.8 -->
+<!-- Issues R1.8 -->
 
+[R1.8-Issue-2129273]: http://drupal.org/node/2129273
 [R1.8-Issue-2382711]: http://drupal.org/node/2382711
 [R1.8-Issue-2382711]: http://drupal.org/node/2382711
 [R1.8-Issue-2382711]: http://drupal.org/node/2382711
@@ -498,7 +532,7 @@ Bug Fixes:
 [R1.7-Commit-4b5edb4]: http://drupalcode.org/project/wetkit.git/commit/4b5edb4
 [R1.7-Commit-d42e551]: http://drupalcode.org/project/wetkit.git/commit/d42e551
 
- <!-- Issues R1.7 -->
+<!-- Issues R1.7 -->
 
 [R1.7-Issue-2346033]: http://drupal.org/node/2346033
 [R1.7-Issue-2344473]: http://drupal.org/node/2344473
