@@ -15,6 +15,8 @@ Features:
 
 Fixes:
 
+  - (Commit: [0b4acde][R1.8-Commit-0b4acde]) Update WetKit Omega for Fix for theme hook registry issue with latest Omega.
+  - (Commit: [461a9ab][R1.8-Commit-461a9ab]) Prepare for 1.8 release.
   - (Commit: [68cc5a3][R1.8-Commit-68cc5a3]) Update WetKit Core for Update Panopoly Magic to latest official 1.14 version.
   - (Commit: [65b260c][R1.8-Commit-65b260c]) Update WetKit Omega for Update Omega to latest official release 4.3 version.
   - (Commit: [97fd8f7][R1.8-Commit-97fd8f7]) Update WetKit Language for Update to l10n_update module.
@@ -648,6 +650,10 @@ Bug Fixes:
 
 <!-- Commits R1.8 -->
 
+[R1.8-Commit-0b4acde]: http://drupalcode.org/project/wetkit.git/commit/0b4acde
+[R1.8-Commit-166b36e]: http://drupalcode.org/project/wetkit.git/commit/166b36e
+[R1.8-Commit-342a934]: http://drupalcode.org/project/wetkit.git/commit/342a934
+[R1.8-Commit-461a9ab]: http://drupalcode.org/project/wetkit.git/commit/461a9ab
 [R1.8-Commit-68cc5a3]: http://drupalcode.org/project/wetkit.git/commit/68cc5a3
 [R1.8-Commit-65b260c]: http://drupalcode.org/project/wetkit.git/commit/65b260c
 [R1.8-Commit-97fd8f7]: http://drupalcode.org/project/wetkit.git/commit/97fd8f7
