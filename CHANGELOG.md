@@ -19,7 +19,7 @@ Features:
 
 Fixes:
 
-  - (Commit: [2ebdbaa][R1.8-Commit-2ebdbaa]) Drupal Core performance patches.
+  - (Commit: [2ebdbaa][R1.8-Commit-2ebdbaa]) Issue #[2387925][R1.8-Issue-2387925]: Release 1.8 blocker + Drupal 7.33 performance
   - (Commit: [c40c182][R1.8-Commit-c40c182]) Update Changelog File for 1.x branch.
   - (Commit: [0b4acde][R1.8-Commit-0b4acde]) Update WetKit Omega for Fix for theme hook registry issue with latest Omega.
   - (Commit: [461a9ab][R1.8-Commit-461a9ab]) Prepare for 1.8 release.
@@ -714,6 +714,7 @@ Bug Fixes:
 
 <!-- Issues R1.8 -->
 
+[R1.8-Issue-2387925]: http://drupal.org/node/2387925
 [R1.8-Issue-2129273]: http://drupal.org/node/2129273
 [R1.8-Issue-2382711]: http://drupal.org/node/2382711
 [R1.8-Issue-2382711]: http://drupal.org/node/2382711
