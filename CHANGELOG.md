@@ -7,6 +7,10 @@ Security Update(s):
   - Drupal Core
   - Services
 
+Performance Update(s)
+
+  - Two patches to Drupal Core
+
 Features:
 
   - Updates to Media + File Entity (Dev to Stable tags)
@@ -15,6 +19,8 @@ Features:
 
 Fixes:
 
+  - (Commit: [2ebdbaa][R1.8-Commit-2ebdbaa]) Issue #[2387925][R1.8-Issue-2387925]: Release 1.8 blocker + Drupal 7.33 performance
+  - (Commit: [c40c182][R1.8-Commit-c40c182]) Update Changelog File for 1.x branch.
   - (Commit: [0b4acde][R1.8-Commit-0b4acde]) Update WetKit Omega for Fix for theme hook registry issue with latest Omega.
   - (Commit: [461a9ab][R1.8-Commit-461a9ab]) Prepare for 1.8 release.
   - (Commit: [68cc5a3][R1.8-Commit-68cc5a3]) Update WetKit Core for Update Panopoly Magic to latest official 1.14 version.
@@ -650,6 +656,10 @@ Bug Fixes:
 
 <!-- Commits R1.8 -->
 
+[R1.8-Commit-b74064b]: http://drupalcode.org/project/wetkit.git/commit/b74064b
+[R1.8-Commit-2ebdbaa]: http://drupalcode.org/project/wetkit.git/commit/2ebdbaa
+[R1.8-Commit-0127ecb]: http://drupalcode.org/project/wetkit.git/commit/0127ecb
+[R1.8-Commit-c40c182]: http://drupalcode.org/project/wetkit.git/commit/c40c182
 [R1.8-Commit-0b4acde]: http://drupalcode.org/project/wetkit.git/commit/0b4acde
 [R1.8-Commit-166b36e]: http://drupalcode.org/project/wetkit.git/commit/166b36e
 [R1.8-Commit-342a934]: http://drupalcode.org/project/wetkit.git/commit/342a934
@@ -704,6 +714,7 @@ Bug Fixes:
 
 <!-- Issues R1.8 -->
 
+[R1.8-Issue-2387925]: http://drupal.org/node/2387925
 [R1.8-Issue-2129273]: http://drupal.org/node/2129273
 [R1.8-Issue-2382711]: http://drupal.org/node/2382711
 [R1.8-Issue-2382711]: http://drupal.org/node/2382711
