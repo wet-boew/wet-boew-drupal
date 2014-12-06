@@ -1,5 +1,5 @@
 #!/bin/sh
-# Script to build WxT 7.x-1.x
+# Script to build WxT 7.x-4.x
 # Make sure the correct number of args was passed from the command line
 
 if [ $# -eq 0 ]; then

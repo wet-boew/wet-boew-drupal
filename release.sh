@@ -1,45 +1,63 @@
-#!/bin/sh
-# Script to generate release notes for the WxT installation profile
-# This command expects to be run within the WxT profile.
-# To use this command you must have Git Release Notes for Drush installed
-# @see https://drupal.org/project/grn
+#!/bin/bash
+# Release and push tags to remotes on Drupal and GitHub
 
-if [ $# -ne 2 ]; then
-  echo "Usage $0 previous_tag latest_tag"
-  exit 1
-fi
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-BASE_PATH=`pwd`
+# Variables
+BRANCH="7.x-$1"
+TAG="7.x-$2"
 
-# Create a directory to store all the release notes
-mkdir $BASE_PATH/release_notes/
+function git_tag_recurse()
+{
+  for i in * ; do
+    if [ -d "$i" ]; then
+      if [[ "$i" == *wetkit* ]]; then
+        cd $i
 
-echo "creating release notes for wxt"
+        # Init 4.x branch
+        exists=`git show-ref refs/heads/$BRANCH`
+        if [ -n "$exists" ]; then
+          echo "Branch name $BRANCH already exists."
+        else
+          echo "Branch name $BRANCH is being created."
+          git branch $BRANCH
+        fi
 
-echo "<p><strong>Instructions on how to upgrade:</strong></p>" > $BASE_PATH/release_notes/wxt.html
+        # Checkout branch
+        echo "Checking out $BRANCH"
+        git checkout $BRANCH
 
-echo "<ol>" >> $BASE_PATH/release_notes/wxt.html
-echo "<li>Download the latest packaged version of WxT from Drupal.org. This will include updated versions of all of WxT's bundled modules, themes, and libraries.</li>" >> $BASE_PATH/release_notes/wxt.html
-echo "<li>Upgrade your existing site to use the code you just downloaded. Check out these instructions for more information: <a href='http://drupal.org/node/1223018'>http://drupal.org/node/1223018</a></li>" >> $BASE_PATH/release_notes/wxt.html
-echo "<li>Backup your database and run update.php *TWICE* on your site. This may perform several database updates for WxT and its bundled apps and modules.</li>" >> $BASE_PATH/release_notes/wxt.html
-echo "<li>Navigate to the admin screen for Features (admin/structure/features) and revert any overridden features (unless you have intentionally made overrides you want to keep).</li>" >> $BASE_PATH/release_notes/wxt.html
-echo "</ol>" >> $BASE_PATH/release_notes/wxt.html
+        # Tag + Push release
+        RES=`git tag | grep "^$TAG\$"`
+        if [ "$RES" == "$TAG" ]; then
+            echo "Tag name $TAG already exists."
+        else
+            echo "Tag name $TAG is being created."
+            git tag $TAG
+        fi
 
-echo "<strong>Updates in this release:</strong>" >> $BASE_PATH/release_notes/wxt.html
+        # Push new branches to remote
+        echo "Pushing branches to remote(s)"
+        git push origin $BRANCH
+        git push github $BRANCH
 
-# Create the release notes for the distro
-drush rn $1 $2 >> $BASE_PATH/release_notes/wxt.html
+        # Push new tags to remote
+        echo "Pushing tags to remote(s)"
+        git push origin $TAG
+        git push github $TAG
 
-# For each module, create some html release notes.
-for MODULE in wetkit_admin wetkit_bean wetkit_breadcrumbs wetkit_core wetkit_demo wetkit_deployment wetkit_images wetkit_language wetkit_layouts wetkit_menu wetkit_metatag wetkit_migrate wetkit_og wetkit_pages wetkit_search wetkit_theme wetkit_users wetkit_wetboew wetkit_widgets wetkit_wysiwyg
-do
-  MODULENAME=`echo ${MODULE//_/ }`
-  echo "creating release notes for $MODULENAME"
-  cd modules/custom/$MODULE
-  drush rn $1 $2 > $BASE_PATH/release_notes/$MODULE.html
+        cd ..
+      fi
+    fi
+  done
+}
 
-  echo "<h2>$MODULENAME</h2>" >> $BASE_PATH/release_notes/wxt.html
-  drush rn $1 $2 >> $BASE_PATH/release_notes/wxt.html
+# Initialize all custom modules
+cd modules/custom/
+git_tag_recurse
+cd $DIR
 
-  cd $BASE_PATH
-done
+# Initialize all custom themes
+cd themes/
+git_tag_recurse
+cd $DIR
