@@ -36,7 +36,7 @@ projects[wetkit_menu][subdir] = custom
 projects[wetkit_metatag][version] = 4.0-beta1
 projects[wetkit_metatag][subdir] = custom
 
-projects[wetkit_migrate][version] = 4.0-beta1
+projects[wetkit_migrate][version] = 4.0-beta2
 projects[wetkit_migrate][subdir] = custom
 
 projects[wetkit_og][version] = 4.0-beta1
