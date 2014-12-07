@@ -60,7 +60,7 @@ specific language governing permissions and limitations under the License.
 
 [sylus]:                http://coderwall.com/sylus
 
-[changelog]:            https://github.com/wet-boew/wet-boew-drupal/blob/7.x-1.x/CHANGELOG.md
+[changelog]:            https://github.com/wet-boew/wet-boew-drupal/blob/7.x-4.x/CHANGELOG.md
 [coderwall]:            http://coderwall.com/sylus
 [coderwall-badge]:      http://api.coderwall.com/sylus/endorsecount.png
 [docsite]:              http://wiki.drupalwxt.org
@@ -74,9 +74,9 @@ specific language governing permissions and limitations under the License.
 [responsinator]:        http://responsinator.com/?url=drupalwxt.org
 [selenium]:             https://saucelabs.com/u/sylus
 [selenium-badge]:       https://saucelabs.com/buildstatus/sylus
-[simplytest]:           http://simplytest.me/project/wetkit/7.x-1.x
+[simplytest]:           http://simplytest.me/project/wetkit/7.x-4.x
 [travisci]:             https://travis-ci.org/wet-boew/wet-boew-drupal
-[travisci-badge]:       https://travis-ci.org/wet-boew/wet-boew-drupal.png?branch=7.x-2.x
+[travisci-badge]:       https://travis-ci.org/wet-boew/wet-boew-drupal.png?branch=7.x-4.x
 [vagrant-normandy]:     https://github.com/sylus/vagrant-normandy
 [wet-boew]:             https://github.com/wet-boew/wet-boew
 [youtube]:              http://www.youtube.com/playlist?list=PLjIClrDa-_ZFwO-0sT_y6PGljSdbYztwi
