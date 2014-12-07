@@ -2,7 +2,7 @@
 
 ## v4.x
 
-  Once Beta is released CHANGELOG.md for this branch will start to be autopopulated.
+  Once Beta is released CHANGELOG.md for this branch will start to be populated.
 
 ## v1.8
 
