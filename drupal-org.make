@@ -6,7 +6,7 @@ core = 7.x
 projects[wetkit_admin][version] = 4.0-beta1
 projects[wetkit_admin][subdir] = custom
 
-projects[wetkit_bean][version] = 4.0-beta1
+projects[wetkit_bean][version] = 4.0-beta2
 projects[wetkit_bean][subdir] = custom
 
 projects[wetkit_breadcrumbs][version] = 4.0-beta1
@@ -21,7 +21,7 @@ projects[wetkit_demo][subdir] = custom
 projects[wetkit_deployment][version] = 4.0-beta1
 projects[wetkit_deployment][subdir] = custom
 
-projects[wetkit_images][version] = 4.0-beta1
+projects[wetkit_images][version] = 4.0-beta2
 projects[wetkit_images][subdir] = custom
 
 projects[wetkit_language][version] = 4.0-beta1
@@ -60,7 +60,7 @@ projects[wetkit_users][subdir] = custom
 projects[wetkit_wetboew][version] = 4.0-beta1
 projects[wetkit_wetboew][subdir] = custom
 
-projects[wetkit_widgets][version] = 4.0-beta1
+projects[wetkit_widgets][version] = 4.0-beta2
 projects[wetkit_widgets][subdir] = custom
 
 projects[wetkit_wysiwyg][version] = 4.0-beta1
