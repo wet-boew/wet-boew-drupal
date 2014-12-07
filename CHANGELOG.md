@@ -1,6 +1,6 @@
 # CHANGELOG.md
 
-## v2.x
+## v4.x
 
   Once Beta is released CHANGELOG.md for this branch will start to be autopopulated.
 
