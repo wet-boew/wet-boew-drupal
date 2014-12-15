@@ -71,7 +71,7 @@ specific language governing permissions and limitations under the License.
 [issue-github]:         https://github.com/wet-boew/wet-boew-drupal/issues
 [release-drupal]:       https://drupal.org/node/1972380/release
 [release-github]:       https://github.com/wet-boew/wet-boew-drupal/releases
-[responsinator]:        http://responsinator.com/?url=demo.drupalwxt.org
+[responsinator]:        http://www.responsinator.com/?url=demo.drupalwxt.org
 [selenium]:             https://saucelabs.com/u/sylus
 [selenium-badge]:       https://saucelabs.com/buildstatus/sylus
 [simplytest]:           http://simplytest.me/project/wetkit/7.x-1.x
