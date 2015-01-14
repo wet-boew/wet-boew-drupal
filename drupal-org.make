@@ -123,6 +123,7 @@ projects[wetkit_wysiwyg][download][branch] = 7.x-4.x
 
 projects[wetkit_ember][version] = 4.x-dev
 projects[wetkit_ember][download][type] = git
+projects[wetkit_ember][download][revision] = 09a0808
 projects[wetkit_ember][download][branch] = 7.x-4.x
 
 projects[wetkit_bootstrap][version] = 4.x-dev
