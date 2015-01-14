@@ -21,7 +21,7 @@ projects[wetkit_breadcrumbs][download][branch] = 7.x-1.x
 projects[wetkit_core][version] = 1.x-dev
 projects[wetkit_core][subdir] = custom
 projects[wetkit_core][download][type] = git
-projects[wetkit_core][download][revision] = 8645fb0
+projects[wetkit_core][download][revision] = f1c7536
 projects[wetkit_core][download][branch] = 7.x-1.x
 
 projects[wetkit_demo][version] = 1.x-dev
@@ -32,6 +32,7 @@ projects[wetkit_demo][download][branch] = 7.x-1.x
 projects[wetkit_deployment][version] = 1.x-dev
 projects[wetkit_deployment][subdir] = custom
 projects[wetkit_deployment][download][type] = git
+projects[wetkit_deployment][download][revision] = 7b7787b
 projects[wetkit_deployment][download][branch] = 7.x-1.x
 
 projects[wetkit_images][version] = 1.x-dev
@@ -58,11 +59,13 @@ projects[wetkit_menu][download][branch] = 7.x-1.x
 projects[wetkit_metatag][version] = 1.x-dev
 projects[wetkit_metatag][subdir] = custom
 projects[wetkit_metatag][download][type] = git
+projects[wetkit_metatag][download][revision] = ee9c020
 projects[wetkit_metatag][download][branch] = 7.x-1.x
 
 projects[wetkit_migrate][version] = 1.x-dev
 projects[wetkit_migrate][subdir] = custom
 projects[wetkit_migrate][download][type] = git
+projects[wetkit_migrate][download][revision] = fae66a6
 projects[wetkit_migrate][download][branch] = 7.x-1.x
 
 projects[wetkit_og][version] = 1.x-dev
@@ -78,6 +81,7 @@ projects[wetkit_pages][download][branch] = 7.x-1.x
 projects[wetkit_search][version] = 1.x-dev
 projects[wetkit_search][subdir] = custom
 projects[wetkit_search][download][type] = git
+projects[wetkit_search][download][revision] = 7a5f02f
 projects[wetkit_search][download][branch] = 7.x-1.x
 
 projects[wetkit_theme][version] = 1.x-dev
@@ -104,6 +108,7 @@ projects[wetkit_widgets][download][branch] = 7.x-1.x
 projects[wetkit_wysiwyg][version] = 1.x-dev
 projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_wysiwyg][download][type] = git
+projects[wetkit_wysiwyg][download][revision] = 92c0913
 projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
 
 ; WxT Foundation (Themes)
