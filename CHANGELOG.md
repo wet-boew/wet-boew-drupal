@@ -20,6 +20,20 @@ Features:
 
 Fixes:
 
+  - (Commit: [ff9da11][R1.9-Commit-ff9da11]) Fixed WetKit Admin for #[2445137][R1.9-Issue-2445137] - Clear link placement problem on Modules admin page
+  - (Commit: [8ce6a95][R1.9-Commit-8ce6a95]) Fixed WetKit WYSIWYG for #[2444357][R1.9-Issue-2444357] - Codemirror Activeline not displaying correctly
+  - (Commit: [5538dce][R1.9-Commit-5538dce]) Fixed WetKit Deployment for #[2142137][R1.9-Issue-2142137] - menu link deployment - correctly deploying menu items in a language other than the current interface or current context
+  - (Commit: [3fbf523][R1.9-Commit-3fbf523]) Fixed WetKit Bean for #[2442793][R1.9-Issue-2442793] - Twitter bean custom CSS does not render
+  - (Commit: [aa8ad8b][R1.9-Commit-aa8ad8b]) Fixed WetKit Core for #[2442731][R1.9-Issue-2442731] - Entity API 7.x-1.6 released
+  - (Commit: [168b09a][R1.9-Commit-168b09a]) Fixed WetKit Core for #[2432913][R1.9-Issue-2432913] - warning messages from hierarchical_select and features
+  - (Commit: [879fb94][R1.9-Commit-879fb94]) Fixed WetKit Search for #[2423961][R1.9-Issue-2423961] - Updates for WetKit Widgets (1.9, 4.0-beta2)
+  - (Commit: [b4f2144][R1.9-Commit-b4f2144]) Fixed WetKit Core for #[2423861][R1.9-Issue-2423861] - Updates for WetKit Core (1.9, 4.0-beta2)
+  - (Commit: [f69c712][R1.9-Commit-f69c712]) Fixed WetKit Admin for #[2423955][R1.9-Issue-2423955] - Updates for WetKit Admin (1.9, 4.0-beta2)
+  - (Commit: [ba1e694][R1.9-Commit-ba1e694]) Fixed WetKit Deployment for #[2089133][R1.9-Issue-2089133] - Cannot create a new menu when Wetkit Deployment Source is enabled and configured
+  - (Commit: [cac17b8][R1.9-Commit-cac17b8]) #[2427429][R1.9-Issue-2427429] - Drupal core performance if menu item is hidden skip it
+  - (Commit: [50cd0cf][R1.9-Commit-50cd0cf]) #[2427399][R1.9-Issue-2427399] - drupal core performance inline-file_uri_scheme
+  - (Commit: [edce880][R1.9-Commit-edce880]) Fixed WetKit Core for #[2427411][R1.9-Issue-2427411] - wetkit core performance link why is reloading the entity
+  - (Commit: [4dd4748][R1.9-Commit-4dd4748]) Populate changelog preparing for release.
   - (Commit: [48fa88d][R1.9-Commit-48fa88d]) Fixed WetKit Core for Fix for CTools undefined string context.
   - (Commit: [a9cba89][R1.9-Commit-a9cba89]) Fixed WetKit Menu for Improve performance with minipanels + theme registry.
   - (Commit: [eb7d201][R1.9-Commit-eb7d201]) Addition of core patch for module_implements() verified static cache.
@@ -728,6 +742,24 @@ Bug Fixes:
 
 <!-- Commits R1.9 -->
 
+[R1.9-Commit-ff9da11]: http://drupalcode.org/project/wetkit.git/commit/ff9da11
+[R1.9-Commit-8ce6a95]: http://drupalcode.org/project/wetkit.git/commit/8ce6a95
+[R1.9-Commit-43ca1e9]: http://drupalcode.org/project/wetkit.git/commit/43ca1e9
+[R1.9-Commit-5538dce]: http://drupalcode.org/project/wetkit.git/commit/5538dce
+[R1.9-Commit-3fbf523]: http://drupalcode.org/project/wetkit.git/commit/3fbf523
+[R1.9-Commit-aa8ad8b]: http://drupalcode.org/project/wetkit.git/commit/aa8ad8b
+[R1.9-Commit-168b09a]: http://drupalcode.org/project/wetkit.git/commit/168b09a
+[R1.9-Commit-cb35715]: http://drupalcode.org/project/wetkit.git/commit/cb35715
+[R1.9-Commit-879fb94]: http://drupalcode.org/project/wetkit.git/commit/879fb94
+[R1.9-Commit-b4f2144]: http://drupalcode.org/project/wetkit.git/commit/b4f2144
+[R1.9-Commit-f69c712]: http://drupalcode.org/project/wetkit.git/commit/f69c712
+[R1.9-Commit-ba1e694]: http://drupalcode.org/project/wetkit.git/commit/ba1e694
+[R1.9-Commit-d661932]: http://drupalcode.org/project/wetkit.git/commit/d661932
+[R1.9-Commit-cac17b8]: http://drupalcode.org/project/wetkit.git/commit/cac17b8
+[R1.9-Commit-50cd0cf]: http://drupalcode.org/project/wetkit.git/commit/50cd0cf
+[R1.9-Commit-edce880]: http://drupalcode.org/project/wetkit.git/commit/edce880
+[R1.9-Commit-f653ac1]: http://drupalcode.org/project/wetkit.git/commit/f653ac1
+[R1.9-Commit-4dd4748]: http://drupalcode.org/project/wetkit.git/commit/4dd4748
 [R1.9-Commit-48fa88d]: http://drupalcode.org/project/wetkit.git/commit/48fa88d
 [R1.9-Commit-a9cba89]: http://drupalcode.org/project/wetkit.git/commit/a9cba89
 [R1.9-Commit-eb7d201]: http://drupalcode.org/project/wetkit.git/commit/eb7d201
@@ -795,6 +827,19 @@ Bug Fixes:
 
 <!-- Issues R1.9 -->
 
+[R1.9-Issue-2445137]: http://drupal.org/node/2445137
+[R1.9-Issue-2444357]: http://drupal.org/node/2444357
+[R1.9-Issue-2142137]: http://drupal.org/node/2142137
+[R1.9-Issue-2442793]: http://drupal.org/node/2442793
+[R1.9-Issue-2442731]: http://drupal.org/node/2442731
+[R1.9-Issue-2432913]: http://drupal.org/node/2432913
+[R1.9-Issue-2423961]: http://drupal.org/node/2423961
+[R1.9-Issue-2423861]: http://drupal.org/node/2423861
+[R1.9-Issue-2423955]: http://drupal.org/node/2423955
+[R1.9-Issue-2089133]: http://drupal.org/node/2089133
+[R1.9-Issue-2427429]: http://drupal.org/node/2427429
+[R1.9-Issue-2427399]: http://drupal.org/node/2427399
+[R1.9-Issue-2427411]: http://drupal.org/node/2427411
 [R1.9-Issue-2423861]: http://drupal.org/node/2423861
 [R1.9-Issue-2394485]: http://drupal.org/node/2394485
 [R1.9-Issue-2424241]: http://drupal.org/node/2424241
