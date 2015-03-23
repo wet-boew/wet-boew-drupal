@@ -1,11 +1,12 @@
 api = 2
 core = 7.x
 
-projects[drupal][version] = 7.34
+projects[drupal][version] = 7.35
 projects[drupal][type] = core
 
 ; Patches for Drupal Core
 projects[drupal][patch][405360] = http://drupal.org/files/issues/aria-describedby_2.patch
+projects[drupal][patch][460408] = https://www.drupal.org/files/issues/menu-access_unpublished-nodes_460408-157.patch
 projects[drupal][patch][728702]  = http://drupal.org/files/issues/install-redirect-on-empty-database-728702-36.patch
 projects[drupal][patch][865536]  = http://drupal.org/files/drupal-865536-204.patch
 projects[drupal][patch][1081266] = http://drupal.org/files/drupal-1081266-102-drupal_get_filename-D7.patch
