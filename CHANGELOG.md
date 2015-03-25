@@ -20,6 +20,28 @@ Features:
 
 Fixes:
 
+  - (Commit: [1542376][R1.9-Commit-1542376]) Fixed WetKit Core for #[2423861][R1.9-Issue-2423861] - Updates for WetKit Core (1.9, 4.0-beta2)
+  - (Commit: [6731667][R1.9-Commit-6731667]) Fixed WetKit Widgets for #[2458841][R1.9-Issue-2458841] - Features Module 2.4 changes
+  - (Commit: [380f7d9][R1.9-Commit-380f7d9]) Fixed WetKit Users for #[2458841][R1.9-Issue-2458841] - Features Module 2.4 changes
+  - (Commit: [dc7da9f][R1.9-Commit-dc7da9f]) Fixed WetKit Images for #[2458841][R1.9-Issue-2458841] - Features Module 2.4 changes
+  - (Commit: [6705d70][R1.9-Commit-6705d70]) Fixed WetKit Core for #[2458841][R1.9-Issue-2458841] - Features Module 2.4 changes
+  - (Commit: [d7e7373][R1.9-Commit-d7e7373]) Fixed WetKit Bean for #[2458841][R1.9-Issue-2458841] - Features Module 2.4 changes
+  - (Commit: [3c1c21b][R1.9-Commit-3c1c21b]) Fixed WetKit Deployment for #[2449043][R1.9-Issue-2449043] - batch deployment regression > wetkit 1.2 < 4.x dev
+  - (Commit: [dcdee32][R1.9-Commit-dcdee32]) Fixed WetKit Deployment for #[2450967][R1.9-Issue-2450967] - remove conflicting css
+  - (Commit: [3984d0d][R1.9-Commit-3984d0d]) Fixed WetKit Core for #[2423861][R1.9-Issue-2423861] - Updates for WetKit Core (1.9, 4.0-beta2)
+  - (Commit: [4ae4906][R1.9-Commit-4ae4906]) Fixed WetKit Deployment for #[2136621][R1.9-Issue-2136621] - improve usability of wetkit_deployment
+  - (Commit: [c01c353][R1.9-Commit-c01c353]) Fixed WetKit Core for #[2447305][R1.9-Issue-2447305] - add new term reference of type hierarchical_select
+  - (Commit: [a53110e][R1.9-Commit-a53110e]) #[2456355][R1.9-Issue-2456355] - Drupal 7.35 released
+  - (Commit: [70354fc][R1.9-Commit-70354fc]) Fixed WetKit Bean for #[2449035][R1.9-Issue-2449035] - Wetkit Search Bean - Placeholder text not working
+  - (Commit: [31f4488][R1.9-Commit-31f4488]) Fixed WetKit Core for #[2423861][R1.9-Issue-2423861] - Updates for WetKit Core (1.9, 4.0-beta2)
+  - (Commit: [d1e2995][R1.9-Commit-d1e2995]) Fixed WetKit WYSIWYG for #[2447395][R1.9-Issue-2447395] - Allow linkit for taxonomy terms
+  - (Commit: [f50ee31][R1.9-Commit-f50ee31]) Fixed WetKit Ember for #[2447297][R1.9-Issue-2447297] - admin/modules screen and Ember theme
+  - (Commit: [1565b9a][R1.9-Commit-1565b9a]) Remove .gitignore file.
+  - (Commit: [49b3b65][R1.9-Commit-49b3b65]) Fixed WetKit Omega for #[2446627][R1.9-Issue-2446627] - Linkit and Media dialogs open behind CKEditor in fullscreen mode
+  - (Commit: [eacb563][R1.9-Commit-eacb563]) Fixed WetKit Theme for Move burr_flipped_flexible to wetkit_theme folder.
+  - (Commit: [2798aae][R1.9-Commit-2798aae]) Fixed WetKit Panel Layouts for Move burr_flipped_flexible to wetkit_theme folder.
+  - (Commit: [9312c3b][R1.9-Commit-9312c3b]) Delete .gitignore file.
+  - (Commit: [a841b3b][R1.9-Commit-a841b3b]) Update CHANGELOG.md file.
   - (Commit: [ff9da11][R1.9-Commit-ff9da11]) Fixed WetKit Admin for #[2445137][R1.9-Issue-2445137] - Clear link placement problem on Modules admin page
   - (Commit: [8ce6a95][R1.9-Commit-8ce6a95]) Fixed WetKit WYSIWYG for #[2444357][R1.9-Issue-2444357] - Codemirror Activeline not displaying correctly
   - (Commit: [5538dce][R1.9-Commit-5538dce]) Fixed WetKit Deployment for #[2142137][R1.9-Issue-2142137] - menu link deployment - correctly deploying menu items in a language other than the current interface or current context
@@ -742,6 +764,38 @@ Bug Fixes:
 
 <!-- Commits R1.9 -->
 
+[R1.9-Commit-1542376]: http://drupalcode.org/project/wetkit.git/commit/1542376
+[R1.9-Commit-6731667]: http://drupalcode.org/project/wetkit.git/commit/6731667
+[R1.9-Commit-380f7d9]: http://drupalcode.org/project/wetkit.git/commit/380f7d9
+[R1.9-Commit-dc7da9f]: http://drupalcode.org/project/wetkit.git/commit/dc7da9f
+[R1.9-Commit-6705d70]: http://drupalcode.org/project/wetkit.git/commit/6705d70
+[R1.9-Commit-d7e7373]: http://drupalcode.org/project/wetkit.git/commit/d7e7373
+[R1.9-Commit-c3194b2]: http://drupalcode.org/project/wetkit.git/commit/c3194b2
+[R1.9-Commit-3c1c21b]: http://drupalcode.org/project/wetkit.git/commit/3c1c21b
+[R1.9-Commit-dcdee32]: http://drupalcode.org/project/wetkit.git/commit/dcdee32
+[R1.9-Commit-2c04e88]: http://drupalcode.org/project/wetkit.git/commit/2c04e88
+[R1.9-Commit-3984d0d]: http://drupalcode.org/project/wetkit.git/commit/3984d0d
+[R1.9-Commit-4ae4906]: http://drupalcode.org/project/wetkit.git/commit/4ae4906
+[R1.9-Commit-92583ed]: http://drupalcode.org/project/wetkit.git/commit/92583ed
+[R1.9-Commit-c01c353]: http://drupalcode.org/project/wetkit.git/commit/c01c353
+[R1.9-Commit-a53110e]: http://drupalcode.org/project/wetkit.git/commit/a53110e
+[R1.9-Commit-70354fc]: http://drupalcode.org/project/wetkit.git/commit/70354fc
+[R1.9-Commit-c009d3e]: http://drupalcode.org/project/wetkit.git/commit/c009d3e
+[R1.9-Commit-31f4488]: http://drupalcode.org/project/wetkit.git/commit/31f4488
+[R1.9-Commit-17c2847]: http://drupalcode.org/project/wetkit.git/commit/17c2847
+[R1.9-Commit-d1e2995]: http://drupalcode.org/project/wetkit.git/commit/d1e2995
+[R1.9-Commit-f50ee31]: http://drupalcode.org/project/wetkit.git/commit/f50ee31
+[R1.9-Commit-c7331f6]: http://drupalcode.org/project/wetkit.git/commit/c7331f6
+[R1.9-Commit-1565b9a]: http://drupalcode.org/project/wetkit.git/commit/1565b9a
+[R1.9-Commit-49b3b65]: http://drupalcode.org/project/wetkit.git/commit/49b3b65
+[R1.9-Commit-a08bbea]: http://drupalcode.org/project/wetkit.git/commit/a08bbea
+[R1.9-Commit-ce5f2b5]: http://drupalcode.org/project/wetkit.git/commit/ce5f2b5
+[R1.9-Commit-eacb563]: http://drupalcode.org/project/wetkit.git/commit/eacb563
+[R1.9-Commit-2798aae]: http://drupalcode.org/project/wetkit.git/commit/2798aae
+[R1.9-Commit-fa87e38]: http://drupalcode.org/project/wetkit.git/commit/fa87e38
+[R1.9-Commit-9312c3b]: http://drupalcode.org/project/wetkit.git/commit/9312c3b
+[R1.9-Commit-a841b3b]: http://drupalcode.org/project/wetkit.git/commit/a841b3b
+[R1.9-Commit-2e13766]: http://drupalcode.org/project/wetkit.git/commit/2e13766
 [R1.9-Commit-ff9da11]: http://drupalcode.org/project/wetkit.git/commit/ff9da11
 [R1.9-Commit-8ce6a95]: http://drupalcode.org/project/wetkit.git/commit/8ce6a95
 [R1.9-Commit-43ca1e9]: http://drupalcode.org/project/wetkit.git/commit/43ca1e9
@@ -827,6 +881,23 @@ Bug Fixes:
 
 <!-- Issues R1.9 -->
 
+[R1.9-Issue-2423861]: http://drupal.org/node/2423861
+[R1.9-Issue-2458841]: http://drupal.org/node/2458841
+[R1.9-Issue-2458841]: http://drupal.org/node/2458841
+[R1.9-Issue-2458841]: http://drupal.org/node/2458841
+[R1.9-Issue-2458841]: http://drupal.org/node/2458841
+[R1.9-Issue-2458841]: http://drupal.org/node/2458841
+[R1.9-Issue-2449043]: http://drupal.org/node/2449043
+[R1.9-Issue-2450967]: http://drupal.org/node/2450967
+[R1.9-Issue-2423861]: http://drupal.org/node/2423861
+[R1.9-Issue-2136621]: http://drupal.org/node/2136621
+[R1.9-Issue-2447305]: http://drupal.org/node/2447305
+[R1.9-Issue-2456355]: http://drupal.org/node/2456355
+[R1.9-Issue-2449035]: http://drupal.org/node/2449035
+[R1.9-Issue-2423861]: http://drupal.org/node/2423861
+[R1.9-Issue-2447395]: http://drupal.org/node/2447395
+[R1.9-Issue-2447297]: http://drupal.org/node/2447297
+[R1.9-Issue-2446627]: http://drupal.org/node/2446627
 [R1.9-Issue-2445137]: http://drupal.org/node/2445137
 [R1.9-Issue-2444357]: http://drupal.org/node/2444357
 [R1.9-Issue-2142137]: http://drupal.org/node/2142137
