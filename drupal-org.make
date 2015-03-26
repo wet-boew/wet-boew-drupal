@@ -12,11 +12,8 @@ projects[wetkit_bean][subdir] = custom
 projects[wetkit_breadcrumbs][version] = 1.7
 projects[wetkit_breadcrumbs][subdir] = custom
 
-projects[wetkit_core][version] = 1.x-dev
+projects[wetkit_core][version] = 1.17
 projects[wetkit_core][subdir] = custom
-projects[wetkit_core][download][type] = git
-projects[wetkit_core][download][revision] = a4580f1
-projects[wetkit_core][download][branch] = 7.x-1.x
 
 projects[wetkit_demo][version] = 1.1
 projects[wetkit_demo][subdir] = custom
@@ -71,7 +68,7 @@ projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_ember][version] = 1.9
 projects[wetkit_ember][type] = theme
 
-projects[wetkit_omega][version] = 1.11
+projects[wetkit_omega][version] = 1.12
 projects[wetkit_omega][type] = theme
 
 projects[wetkit_shiny][version] = 1.1

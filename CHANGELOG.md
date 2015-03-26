@@ -20,6 +20,11 @@ Features:
 
 Fixes:
 
+  - (Commit: [67998b2][R1.9-Commit-67998b2]) Spelling mistake for theme declaration.
+  - (Commit: [097e8db][R1.9-Commit-097e8db]) Prepare for 1.9 release.
+  - (Commit: [9530015][R1.9-Commit-9530015]) Fixed WetKit Pages for Fix use of hardcoded layout name.
+  - (Commit: [9b96886][R1.9-Commit-9b96886]) Fixed WetKit Theme for Fix for hidden themes displaying on install.
+  - (Commit: [6ca2313][R1.9-Commit-6ca2313]) Update CHANGELOG.md file.
   - (Commit: [b98c10b][R1.9-Commit-b98c10b]) Fixed WetKit Core for Fix for invalid CTools string context.
   - (Commit: [735121c][R1.9-Commit-735121c]) Fixed WetKit Admin for Fix for invalid contexts causing ctools missing string.
   - (Commit: [62ddde1][R1.9-Commit-62ddde1]) Fixed WetKit Theme for Fix for hidden themes displaying on install.
@@ -771,12 +776,19 @@ Bug Fixes:
 
 <!-- Commits R1.9 -->
 
+[R1.9-Commit-8343247]: http://drupalcode.org/project/wetkit.git/commit/8343247
+[R1.9-Commit-67998b2]: http://drupalcode.org/project/wetkit.git/commit/67998b2
+[R1.9-Commit-097e8db]: http://drupalcode.org/project/wetkit.git/commit/097e8db
+[R1.9-Commit-9530015]: http://drupalcode.org/project/wetkit.git/commit/9530015
+[R1.9-Commit-9b96886]: http://drupalcode.org/project/wetkit.git/commit/9b96886
+[R1.9-Commit-6ca2313]: http://drupalcode.org/project/wetkit.git/commit/6ca2313
 [R1.9-Commit-b98c10b]: http://drupalcode.org/project/wetkit.git/commit/b98c10b
 [R1.9-Commit-735121c]: http://drupalcode.org/project/wetkit.git/commit/735121c
 [R1.9-Commit-62ddde1]: http://drupalcode.org/project/wetkit.git/commit/62ddde1
 [R1.9-Commit-a71f941]: http://drupalcode.org/project/wetkit.git/commit/a71f941
 [R1.9-Commit-4e8a32b]: http://drupalcode.org/project/wetkit.git/commit/4e8a32b
 [R1.9-Commit-faa8b69]: http://drupalcode.org/project/wetkit.git/commit/faa8b69
+[R1.9-Commit-89cc1d8]: http://drupalcode.org/project/wetkit.git/commit/89cc1d8
 [R1.9-Commit-430d09c]: http://drupalcode.org/project/wetkit.git/commit/430d09c
 [R1.9-Commit-1542376]: http://drupalcode.org/project/wetkit.git/commit/1542376
 [R1.9-Commit-6731667]: http://drupalcode.org/project/wetkit.git/commit/6731667
