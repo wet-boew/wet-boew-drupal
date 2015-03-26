@@ -72,7 +72,7 @@ projects[wetkit_ember][version] = 1.9
 projects[wetkit_ember][type] = theme
 
 projects[wetkit_omega][version] = 1.11
-projects[wetkit_omega][type] = themex
+projects[wetkit_omega][type] = theme
 
 projects[wetkit_shiny][version] = 1.1
 projects[wetkit_shiny][type] = theme
