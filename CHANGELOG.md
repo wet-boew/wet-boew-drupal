@@ -22,6 +22,7 @@ Features:
 
 Fixes:
 
+  - (Commit: [9a29304][R4.0-rc1-Commit-9a29304]) Update CHANGELOG.md file.
   - (Commit: [596a470][R4.0-rc1-Commit-596a470]) Fixed WetKit Core for #[2352895][R4.0-rc1-Issue-2352895] - Pathauto Persist?
   - (Commit: [a34f8ac][R4.0-rc1-Commit-a34f8ac]) Update CHANGELOG.md file.
   - (Commit: [9a0da7b][R4.0-rc1-Commit-9a0da7b]) Fixed WetKit Test for #[2457949][R4.0-rc1-Issue-2457949] - Behat tests expansion
@@ -587,6 +588,7 @@ Bug Fixes:
 
 <!-- Commits R4.0-rc1 -->
 
+[R4.0-rc1-Commit-9a29304]: http://drupalcode.org/project/wetkit.git/commit/9a29304
 [R4.0-rc1-Commit-596a470]: http://drupalcode.org/project/wetkit.git/commit/596a470
 [R4.0-rc1-Commit-a34f8ac]: http://drupalcode.org/project/wetkit.git/commit/a34f8ac
 [R4.0-rc1-Commit-9a0da7b]: http://drupalcode.org/project/wetkit.git/commit/9a0da7b
