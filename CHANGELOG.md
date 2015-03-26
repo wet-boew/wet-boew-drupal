@@ -20,6 +20,8 @@ Features:
 
 Fixes:
 
+  - (Commit: [faa8b69][R1.9-Commit-faa8b69]) Fixed WetKit Core for #[2352895][R1.9-Issue-2352895] - Pathauto Persist?
+  - (Commit: [430d09c][R1.9-Commit-430d09c]) Update CHANGELOG.md file.
   - (Commit: [1542376][R1.9-Commit-1542376]) Fixed WetKit Core for #[2423861][R1.9-Issue-2423861] - Updates for WetKit Core (1.9, 4.0-beta2)
   - (Commit: [6731667][R1.9-Commit-6731667]) Fixed WetKit Widgets for #[2458841][R1.9-Issue-2458841] - Features Module 2.4 changes
   - (Commit: [380f7d9][R1.9-Commit-380f7d9]) Fixed WetKit Users for #[2458841][R1.9-Issue-2458841] - Features Module 2.4 changes
@@ -764,6 +766,8 @@ Bug Fixes:
 
 <!-- Commits R1.9 -->
 
+[R1.9-Commit-faa8b69]: http://drupalcode.org/project/wetkit.git/commit/faa8b69
+[R1.9-Commit-430d09c]: http://drupalcode.org/project/wetkit.git/commit/430d09c
 [R1.9-Commit-1542376]: http://drupalcode.org/project/wetkit.git/commit/1542376
 [R1.9-Commit-6731667]: http://drupalcode.org/project/wetkit.git/commit/6731667
 [R1.9-Commit-380f7d9]: http://drupalcode.org/project/wetkit.git/commit/380f7d9
@@ -881,6 +885,7 @@ Bug Fixes:
 
 <!-- Issues R1.9 -->
 
+[R1.9-Issue-2352895]: http://drupal.org/node/2352895
 [R1.9-Issue-2423861]: http://drupal.org/node/2423861
 [R1.9-Issue-2458841]: http://drupal.org/node/2458841
 [R1.9-Issue-2458841]: http://drupal.org/node/2458841
