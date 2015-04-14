@@ -22,6 +22,23 @@ Features:
 
 Fixes:
 
+  - (Commit: [76d7793][R4.0-rc1-Commit-76d7793]) Fixed WetKit Core for #[2423861][R4.0-rc1-Issue-2423861] - Updates for WetKit Core (1.9, 4.0-beta2)
+  - (Commit: [55f8702][R4.0-rc1-Commit-55f8702]) Prepare for 4.0-rc1 release.
+  - (Commit: [e8a7269][R4.0-rc1-Commit-e8a7269]) Fixed WetKit Admin for Fix for invalid patch format.
+  - (Commit: [50a5678][R4.0-rc1-Commit-50a5678]) Fixed WetKit Test for #[2457949][R4.0-rc1-Issue-2457949] - Behat tests expansion
+  - (Commit: [5e5be8c][R4.0-rc1-Commit-5e5be8c]) Fixed WetKit Pages for #[2460287][R4.0-rc1-Issue-2460287] - Landing page creation confirmation message always says Sutherland
+  - (Commit: [7747838][R4.0-rc1-Commit-7747838]) Fixed WetKit Core for #[2464421][R4.0-rc1-Issue-2464421] - Password Policy Security Release
+  - (Commit: [473d043][R4.0-rc1-Commit-473d043]) Fixed WetKit Bootstrap for #[2464413][R4.0-rc1-Issue-2464413] - Add support for GCWeb cdn for Megamenu + Footer
+  - (Commit: [18b4762][R4.0-rc1-Commit-18b4762]) Fixed WetKit WET-BOEW for Missing logic for theme.min.js.
+  - (Commit: [2a51bca][R4.0-rc1-Commit-2a51bca]) Fixed WetKit Bootstrap for Minor CSS adjustment for Dashboard screen.
+  - (Commit: [1d00d8f][R4.0-rc1-Commit-1d00d8f]) Fixed WetKit Menu for Remove deprecated WxT requirements functionality.
+  - (Commit: [d9d2fe3][R4.0-rc1-Commit-d9d2fe3]) Fixed WetKit Bootstrap for Improve display of status report table.
+  - (Commit: [62cd71a][R4.0-rc1-Commit-62cd71a]) Fixed WetKit Admin for Fix for invalid contexts causing ctools missing string.
+  - (Commit: [664fde7][R4.0-rc1-Commit-664fde7]) Fixed WetKit Theme for Fix for hidden themes displaying on install.
+  - (Commit: [f04bc92][R4.0-rc1-Commit-f04bc92]) Fixed WetKit Pages for Fix use of hardcoded layout name.
+  - (Commit: [b90eb27][R4.0-rc1-Commit-b90eb27]) Fixed WetKit Images for Fix incorrect label for view modes.
+  - (Commit: [bd07962][R4.0-rc1-Commit-bd07962]) Fixed WetKit Core for Remove patch for CTools string context.
+  - (Commit: [b45d657][R4.0-rc1-Commit-b45d657]) Update CHANGELOG.md file.
   - (Commit: [9a29304][R4.0-rc1-Commit-9a29304]) Update CHANGELOG.md file.
   - (Commit: [596a470][R4.0-rc1-Commit-596a470]) Fixed WetKit Core for #[2352895][R4.0-rc1-Issue-2352895] - Pathauto Persist?
   - (Commit: [a34f8ac][R4.0-rc1-Commit-a34f8ac]) Update CHANGELOG.md file.
@@ -588,8 +605,29 @@ Bug Fixes:
 
 <!-- Commits R4.0-rc1 -->
 
+[R4.0-rc1-Commit-76d7793]: http://drupalcode.org/project/wetkit.git/commit/76d7793
+[R4.0-rc1-Commit-55f8702]: http://drupalcode.org/project/wetkit.git/commit/55f8702
+[R4.0-rc1-Commit-e8a7269]: http://drupalcode.org/project/wetkit.git/commit/e8a7269
+[R4.0-rc1-Commit-50a5678]: http://drupalcode.org/project/wetkit.git/commit/50a5678
+[R4.0-rc1-Commit-5e5be8c]: http://drupalcode.org/project/wetkit.git/commit/5e5be8c
+[R4.0-rc1-Commit-b5cc4ee]: http://drupalcode.org/project/wetkit.git/commit/b5cc4ee
+[R4.0-rc1-Commit-7747838]: http://drupalcode.org/project/wetkit.git/commit/7747838
+[R4.0-rc1-Commit-473d043]: http://drupalcode.org/project/wetkit.git/commit/473d043
+[R4.0-rc1-Commit-18b4762]: http://drupalcode.org/project/wetkit.git/commit/18b4762
+[R4.0-rc1-Commit-1d9fa4e]: http://drupalcode.org/project/wetkit.git/commit/1d9fa4e
+[R4.0-rc1-Commit-2a51bca]: http://drupalcode.org/project/wetkit.git/commit/2a51bca
+[R4.0-rc1-Commit-1d00d8f]: http://drupalcode.org/project/wetkit.git/commit/1d00d8f
+[R4.0-rc1-Commit-d9d2fe3]: http://drupalcode.org/project/wetkit.git/commit/d9d2fe3
+[R4.0-rc1-Commit-d1b5c74]: http://drupalcode.org/project/wetkit.git/commit/d1b5c74
+[R4.0-rc1-Commit-62cd71a]: http://drupalcode.org/project/wetkit.git/commit/62cd71a
+[R4.0-rc1-Commit-664fde7]: http://drupalcode.org/project/wetkit.git/commit/664fde7
+[R4.0-rc1-Commit-f04bc92]: http://drupalcode.org/project/wetkit.git/commit/f04bc92
+[R4.0-rc1-Commit-b90eb27]: http://drupalcode.org/project/wetkit.git/commit/b90eb27
+[R4.0-rc1-Commit-bd07962]: http://drupalcode.org/project/wetkit.git/commit/bd07962
+[R4.0-rc1-Commit-b45d657]: http://drupalcode.org/project/wetkit.git/commit/b45d657
 [R4.0-rc1-Commit-9a29304]: http://drupalcode.org/project/wetkit.git/commit/9a29304
 [R4.0-rc1-Commit-596a470]: http://drupalcode.org/project/wetkit.git/commit/596a470
+[R4.0-rc1-Commit-2048b96]: http://drupalcode.org/project/wetkit.git/commit/2048b96
 [R4.0-rc1-Commit-a34f8ac]: http://drupalcode.org/project/wetkit.git/commit/a34f8ac
 [R4.0-rc1-Commit-9a0da7b]: http://drupalcode.org/project/wetkit.git/commit/9a0da7b
 [R4.0-rc1-Commit-6f14f60]: http://drupalcode.org/project/wetkit.git/commit/6f14f60
@@ -769,6 +807,11 @@ Bug Fixes:
 
 <!-- Issues R4.0-rc1 -->
 
+[R4.0-rc1-Issue-2423861]: http://drupal.org/node/2423861
+[R4.0-rc1-Issue-2457949]: http://drupal.org/node/2457949
+[R4.0-rc1-Issue-2460287]: http://drupal.org/node/2460287
+[R4.0-rc1-Issue-2464421]: http://drupal.org/node/2464421
+[R4.0-rc1-Issue-2464413]: http://drupal.org/node/2464413
 [R4.0-rc1-Issue-2352895]: http://drupal.org/node/2352895
 [R4.0-rc1-Issue-2457949]: http://drupal.org/node/2457949
 [R4.0-rc1-Issue-2423861]: http://drupal.org/node/2423861
