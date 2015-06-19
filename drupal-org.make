@@ -94,6 +94,7 @@ projects[wetkit_users][download][branch] = 7.x-1.x
 projects[wetkit_wetboew][version] = 1.x-dev
 projects[wetkit_wetboew][subdir] = custom
 projects[wetkit_wetboew][download][type] = git
+projects[wetkit_wetboew][download][revision] = 7ccb290
 projects[wetkit_wetboew][download][branch] = 7.x-1.x
 
 projects[wetkit_widgets][version] = 1.x-dev
