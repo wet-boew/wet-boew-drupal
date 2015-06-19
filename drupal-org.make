@@ -126,7 +126,7 @@ projects[wetkit_ember][download][branch] = 7.x-4.x
 
 projects[wetkit_bootstrap][version] = 4.x-dev
 projects[wetkit_bootstrap][download][type] = git
-projects[wetkit_bootstrap][download][revision] = e83dbbc
+projects[wetkit_bootstrap][download][revision] = 6805efa
 projects[wetkit_bootstrap][download][branch] = 7.x-4.x
 
 projects[wetkit_shiny][version] = 4.x-dev
