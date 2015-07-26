@@ -100,10 +100,19 @@ system_install() {
   # Disable sendmail
   echo sendmail_path=`which true` >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 
-  # Upping Mysql values
-  echo -e "[server]\nmax_allowed_packet=256M" | sudo tee -a /etc/mysql/conf.d/drupal.cnf
-  echo -e "[server]\wait_timeout=300" | sudo tee -a /etc/mysql/conf.d/drupal.cnf
-  sudo service mysql restart
+  # Enable APC
+  if [[ $TRAVIS_PHP_VERSION < "5.5" ]]; then
+    echo "extension=apc.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+    echo "apc.shm_size=256M" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  fi
+
+  # Increase the MySQL connection timeout on the PHP end.
+  echo "mysql.connect_timeout=3000" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  echo "default_socket_timeout=3000" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+
+  # Increase the MySQL server timetout and packet size.
+  mysql -e "SET GLOBAL wait_timeout = 36000;"
+  mysql -e "SET GLOBAL max_allowed_packet = 33554432;"
 }
 
 # before_tests
