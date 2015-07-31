@@ -80,8 +80,20 @@ install:
   - sleep 5
 
   # Get Chrome and ChromeDriver
-  - sudo apt-get install google-chrome-stable
-  - wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip
+  # @todo: We should install the latest Chrome via this command:
+  #
+  #   sudo apt-get install -y --force-yes google-chrome-stable
+  #
+  # However, currently, our tests are failing with Chrome 44, so we're forced
+  # to manually download the Chrome 43 package from a mirror and install that.
+  #
+  # @see https://www.drupal.org/node/2537902
+  # @see https://github.com/minkphp/MinkSelenium2Driver/issues/213
+  - wget http://mirror.pcbeta.com/google/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_43.0.2357.134-1_amd64.deb -O google-chrome-stable.deb
+  - sudo apt-get install gdebi
+  - sudo gdebi -n google-chrome-stable.deb
+  # Install chromedriver.
+  - wget http://chromedriver.storage.googleapis.com/2.16/chromedriver_linux64.zip
   - unzip -a chromedriver_linux64.zip
 
   # Insane hack from jsdevel:
