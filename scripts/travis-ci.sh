@@ -79,8 +79,20 @@ system_install() {
 
   # Get Chrome and ChromeDriver
   header Installing Google Chrome
-  sudo apt-get install google-chrome-stable
-  wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip
+  # @todo: We should install the latest Chrome via this command:
+  #
+  #   sudo apt-get install -y --force-yes google-chrome-stable
+  #
+  # However, currently, our tests are failing with Chrome 44, so we're forced
+  # to manually download the Chrome 43 package from a mirror and install that.
+  #
+  # @see https://www.drupal.org/node/2537902
+  # @see https://github.com/minkphp/MinkSelenium2Driver/issues/213
+  wget http://mirror.pcbeta.com/google/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_43.0.2357.134-1_amd64.deb -O google-chrome-stable.deb
+  sudo apt-get install gdebi
+  sudo gdebi -n google-chrome-stable.deb
+  # Install chromedriver.
+  wget http://chromedriver.storage.googleapis.com/2.16/chromedriver_linux64.zip
   unzip -a chromedriver_linux64.zip
 
   # Insane hack from jsdevel:
@@ -95,7 +107,7 @@ system_install() {
 
   # Get Selenium
   header Downloading Selenium
-  wget http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar
+  wget http://selenium-release.storage.googleapis.com/2.47/selenium-server-standalone-2.47.0.jar
 
   # Disable sendmail
   echo sendmail_path=`which true` >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
@@ -164,7 +176,7 @@ before_tests() {
 
   # Run the selenium server
   header Starting selenium
-  java -jar selenium-server-standalone-2.41.0.jar -Dwebdriver.chrome.driver=`pwd`/chromedriver > /dev/null 2>&1 &
+  java -jar selenium-server-standalone-2.47.0.jar -Dwebdriver.chrome.driver=`pwd`/chromedriver > /dev/null 2>&1 &
   echo $! > /tmp/selenium-server-pid
   sleep 5
 }
