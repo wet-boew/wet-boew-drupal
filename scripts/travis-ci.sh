@@ -164,7 +164,7 @@ before_tests() {
 
   # Run the selenium server
   header Starting selenium
-  java -jar selenium-server-standalone-2.41.0.jar -Dwebdriver.chrome.driver=`pwd`/chromedriver > /dev/null 2>&1 &
+  java -jar selenium-server-standalone-2.47.0.jar -Dwebdriver.chrome.driver=`pwd`/chromedriver > /dev/null 2>&1 &
   echo $! > /tmp/selenium-server-pid
   sleep 5
 }
