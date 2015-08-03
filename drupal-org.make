@@ -71,7 +71,7 @@ projects[wetkit_metatag][download][branch] = 7.x-4.x
 projects[wetkit_migrate][version] = 4.x-dev
 projects[wetkit_migrate][subdir] = custom
 projects[wetkit_migrate][download][type] = git
-projects[wetkit_migrate][download][revision] = 9f8d582
+projects[wetkit_migrate][download][revision] = 976c827
 projects[wetkit_migrate][download][branch] = 7.x-4.x
 
 projects[wetkit_og][version] = 4.x-dev
