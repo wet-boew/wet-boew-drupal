@@ -16,7 +16,7 @@ Performance Update(s)
   - Improved theme registry performance
   - Render caching for computation heavy functions in hook_preprocess_page()
   - Hierarchical Taxonomy performance on Edit Draft page
-  - Path Breadcrumbs caching enabled by defaults
+  - Path Breadcrumbs caching enabled by default
 
 Features:
 
