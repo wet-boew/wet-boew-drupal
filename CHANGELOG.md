@@ -8,6 +8,7 @@ Security Update(s):
   - Admin Views
   - jQuery
   - Path Breadcrumbs
+  - Services
   - Views Bulk Operations
 
 Performance Update(s)
@@ -15,6 +16,7 @@ Performance Update(s)
   - Improved theme registry performance
   - Render caching for computation heavy functions in hook_preprocess_page()
   - Hierarchical Taxonomy performance on Edit Draft page
+  - Path Breadcrumbs caching enabled by defaults
 
 Features:
 
@@ -26,6 +28,7 @@ Features:
   - Improved base theme logic when handling subtheme logo settings
 
 Fixes:
+
   - (Commit: [1ef9c25][R4.0-rc2-Commit-1ef9c25]) Fixed WetKit Images for Update breakpoint performance patch.
   - (Commit: [b4c747d][R4.0-rc2-Commit-b4c747d]) Fixed WetKit Core for Update panopoly_magic to latest official release.
   - (Commit: [bb9754f][R4.0-rc2-Commit-bb9754f]) Fixed WetKit Migration for #[2543762][R4.0-rc2-Issue-2543762] - Convert wetkit slider to WET 4 and make it more versatile
