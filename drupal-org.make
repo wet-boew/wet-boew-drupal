@@ -3,23 +3,14 @@ core = 7.x
 
 ; WxT Foundation (Custom)
 
-projects[wetkit_admin][version] = 1.x-dev
+projects[wetkit_admin][version] = 1.10
 projects[wetkit_admin][subdir] = custom
-projects[wetkit_admin][download][type] = git
-projects[wetkit_admin][download][revision] = 330ffef
-projects[wetkit_admin][download][branch] = 7.x-1.x
 
-projects[wetkit_bean][version] = 1.x-dev
+projects[wetkit_bean][version] = 1.10
 projects[wetkit_bean][subdir] = custom
-projects[wetkit_bean][download][type] = git
-projects[wetkit_bean][download][revision] = a1d6ae4
-projects[wetkit_bean][download][branch] = 7.x-1.x
 
-projects[wetkit_breadcrumbs][version] = 1.x-dev
+projects[wetkit_breadcrumbs][version] = 1.8
 projects[wetkit_breadcrumbs][subdir] = custom
-projects[wetkit_breadcrumbs][download][type] = git
-projects[wetkit_breadcrumbs][download][revision] = bef3a0c
-projects[wetkit_breadcrumbs][download][branch] = 7.x-1.x
 
 projects[wetkit_core][version] = 1.x-dev
 projects[wetkit_core][subdir] = custom
@@ -27,15 +18,13 @@ projects[wetkit_core][download][type] = git
 projects[wetkit_core][download][revision] = 5476b8b
 projects[wetkit_core][download][branch] = 7.x-1.x
 
-projects[wetkit_demo][version] = 1.x-dev
+projects[wetkit_demo][version] = 1.1
 projects[wetkit_demo][subdir] = custom
-projects[wetkit_demo][download][type] = git
-projects[wetkit_demo][download][branch] = 7.x-1.x
 
 projects[wetkit_deployment][version] = 1.x-dev
 projects[wetkit_deployment][subdir] = custom
 projects[wetkit_deployment][download][type] = git
-projects[wetkit_deployment][download][revision] = 8ef17b7
+projects[wetkit_deployment][download][revision] = e311a90
 projects[wetkit_deployment][download][branch] = 7.x-1.x
 
 projects[wetkit_images][version] = 1.x-dev
