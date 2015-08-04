@@ -29,6 +29,7 @@ Features:
 
 Fixes:
 
+  - (Commit: [0e3f6cf][R4.0-rc2-Commit-0e3f6cf]) Fixed WetKit WYSIWYG for Enable line wrapping in Wysiwyg by default.
   - (Commit: [1ef9c25][R4.0-rc2-Commit-1ef9c25]) Fixed WetKit Images for Update breakpoint performance patch.
   - (Commit: [b4c747d][R4.0-rc2-Commit-b4c747d]) Fixed WetKit Core for Update panopoly_magic to latest official release.
   - (Commit: [bb9754f][R4.0-rc2-Commit-bb9754f]) Fixed WetKit Migration for #[2543762][R4.0-rc2-Issue-2543762] - Convert wetkit slider to WET 4 and make it more versatile
@@ -761,6 +762,7 @@ Bug Fixes:
 
 <!-- Commits R4.0-rc2 -->
 
+[R4.0-rc2-Commit-0e3f6cf]: http://drupalcode.org/project/wetkit.git/commit/0e3f6cf
 [R4.0-rc2-Commit-0ca5816]: http://drupalcode.org/project/wetkit.git/commit/0ca5816
 [R4.0-rc2-Commit-1ef9c25]: http://drupalcode.org/project/wetkit.git/commit/1ef9c25
 [R4.0-rc2-Commit-fff836e]: http://drupalcode.org/project/wetkit.git/commit/fff836e
