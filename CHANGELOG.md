@@ -8,7 +8,7 @@ Security Update(s):
   - Admin Views
   - jQuery
   - Path Breadcrumbs
-  - Services
+  - Service
   - Views Bulk Operations
 
 Performance Update(s)
