@@ -1,5 +1,161 @@
 # CHANGELOG.md
 
+## v4.0-RC2
+
+Security Update(s):
+
+  - Drupal Core
+  - Admin Views
+  - jQuery
+  - Path Breadcrumbs
+  - Services
+  - Views Bulk Operations
+
+Performance Update(s)
+
+  - Improved theme registry performance
+  - Render caching for computation heavy functions in hook_preprocess_page()
+  - Hierarchical Taxonomy performance on Edit Draft page
+  - Path Breadcrumbs caching enabled by default
+
+Features:
+
+  - Update Panel Layout icons + markup
+  - Improved Tabbed Interface support
+  - Updates to WxT jQuery Framework
+  - Aggresive caching to hook_preprocess_page for improved page performance
+  - Date Modified CTools plugin is now working as expected
+  - Improved base theme logic when handling subtheme logo settings
+
+Fixes:
+
+  - (Commit: [1ef9c25][R4.0-rc2-Commit-1ef9c25]) Fixed WetKit Images for Update breakpoint performance patch.
+  - (Commit: [b4c747d][R4.0-rc2-Commit-b4c747d]) Fixed WetKit Core for Update panopoly_magic to latest official release.
+  - (Commit: [bb9754f][R4.0-rc2-Commit-bb9754f]) Fixed WetKit Migration for #[2543762][R4.0-rc2-Issue-2543762] - Convert wetkit slider to WET 4 and make it more versatile
+  - (Commit: [bb4cfc8][R4.0-rc2-Commit-bb4cfc8]) Fixed WetKit Migration for #[2543762][R4.0-rc2-Issue-2543762] - Convert wetkit slider to WET 4 and make it more versatile
+  - (Commit: [d1fd844][R4.0-rc2-Commit-d1fd844]) Fixed WetKit Bean for #[2543762][R4.0-rc2-Issue-2543762] - Convert wetkit slider to WET 4 and make it more versatile
+  - (Commit: [716ea83][R4.0-rc2-Commit-716ea83]) Fixed WetKit Bean for #[2543762][R4.0-rc2-Issue-2543762] - Convert wetkit slider to WET 4 and make it more versatile
+  - (Commit: [f8f44f5][R4.0-rc2-Commit-f8f44f5]) Attempt to resolve Chrome issues.
+  - (Commit: [b54db53][R4.0-rc2-Commit-b54db53]) Fixed WetKit Test for Test with just firefox and no chrome exception.
+  - (Commit: [b44918d][R4.0-rc2-Commit-b44918d]) Fix for missing selenium.
+  - (Commit: [fef9df4][R4.0-rc2-Commit-fef9df4]) Update Selenium to latest version.
+  - (Commit: [f6da1a4][R4.0-rc2-Commit-f6da1a4]) Update Selenium to latest version.
+  - (Commit: [a4a190d][R4.0-rc2-Commit-a4a190d]) Fixed WetKit Migration for Add support for latest Entity Translation revision addition.
+  - (Commit: [402c9bc][R4.0-rc2-Commit-402c9bc]) Fixed WetKit Bootstrap for Fix for cache issue with Custom Search.
+  - (Commit: [ece283d][R4.0-rc2-Commit-ece283d]) Fixed WetKit Language for #[2537760][R4.0-rc2-Issue-2537760] - wetkit_language ET and FT upgrade
+  - (Commit: [2e52684][R4.0-rc2-Commit-2e52684]) Fixed WetKit Admin for Add missing title to Panes layout.
+  - (Commit: [939e69b][R4.0-rc2-Commit-939e69b]) Fixed WetKit Panel Layouts for Minor markup adjustments for Boxton layout.
+  - (Commit: [39e22bb][R4.0-rc2-Commit-39e22bb]) Fixed WetKit Bean for Fix for Code style issue.
+  - (Commit: [c4fbaeb][R4.0-rc2-Commit-c4fbaeb]) Fixed WetKit Language for Update Features Translation to latest stable.
+  - (Commit: [7e72c20][R4.0-rc2-Commit-7e72c20]) Fix WetKit Layouts for #[2532600][R4.0-rc2-Issue-2532600] - Update Icons for layouts to be understandable, and cleaner.
+  - (Commit: [4c9c53a][R4.0-rc2-Commit-4c9c53a]) Fixed WetKit Bootstrap for #[2533860][R4.0-rc2-Issue-2533860] - disabling "Show 'Home' breadcrumb link" in wetkit_bootstrap arbitrarily pops off first breadcrumb element
+  - (Commit: [f872756][R4.0-rc2-Commit-f872756]) Fixed WetKit Bootstrap for #[2530288][R4.0-rc2-Issue-2530288] - Logo settings in sub-theme not working
+  - (Commit: [6ef6131][R4.0-rc2-Commit-6ef6131]) Adjust Travis env params.
+  - (Commit: [cb7d1f6][R4.0-rc2-Commit-cb7d1f6]) Fixed WetKit Language for #[2533850][R4.0-rc2-Issue-2533850] - use i18n_variables to set Home / Accueil translation
+  - (Commit: [79dd079][R4.0-rc2-Commit-79dd079]) Fixed WetKit Breadcrumbs for Enable temporary caching by default.
+  - (Commit: [290cf2d][R4.0-rc2-Commit-290cf2d]) Fixed WetKit Core for #[2537780][R4.0-rc2-Issue-2537780] - wetkit_core features and webforms upgrade
+  - (Commit: [88164b3][R4.0-rc2-Commit-88164b3]) Fixed WetKit Core for #[2484927][R4.0-rc2-Issue-2484927] - Display entity label and UUID in dialog
+  - (Commit: [d51c391][R4.0-rc2-Commit-d51c391]) Streamline Password Reset process for Issue #889772.
+  - (Commit: [7e33550][R4.0-rc2-Commit-7e33550]) Fixed WetKit Admin for #[2537750][R4.0-rc2-Issue-2537750] - admin_views SA-CONTRIB-2015-132
+  - (Commit: [3c42eb9][R4.0-rc2-Commit-3c42eb9]) Fixed WetKit Panel Layouts for Cleanup of Panel Layouts.
+  - (Commit: [aefabd1][R4.0-rc2-Commit-aefabd1]) Fixed WetKit Breadcrumbs for Update path breadcrumbs to latest official (SA-CONTRIB-2015-133)
+  - (Commit: [8af7e3e][R4.0-rc2-Commit-8af7e3e]) Fixed WetKit Panel Layouts for Cleanup of Panel Layouts.
+  - (Commit: [594765f][R4.0-rc2-Commit-594765f]) Fixed WetKit Test for Update Behat for Date Modified improvements.
+  - (Commit: [f773c17][R4.0-rc2-Commit-f773c17]) Fixed WetKit Theme for #[2530288][R4.0-rc2-Issue-2530288] - Logo settings in sub-theme not working
+  - (Commit: [9610eee][R4.0-rc2-Commit-9610eee]) Fixed WetKit Bootstrap for #[2530288][R4.0-rc2-Issue-2530288] - Logo settings in sub-theme not working
+  - (Commit: [81e22f7][R4.0-rc2-Commit-81e22f7]) Fixed WetKit Panel Layouts for #[2530220][R4.0-rc2-Issue-2530220] - Mackenzie layout is missing the bootstrap container class
+  - (Commit: [179bfcc][R4.0-rc2-Commit-179bfcc]) Fixed WetKit Core for #[2529722][R4.0-rc2-Issue-2529722] - The UUIDs of cloned variant and relative panes are the same of original ones
+  - (Commit: [cfa7a1f][R4.0-rc2-Commit-cfa7a1f]) Fixed WetKit WET-BOEW for #[2434721][R4.0-rc2-Issue-2434721] - Date modified - bugs
+  - (Commit: [c64fec2][R4.0-rc2-Commit-c64fec2]) Fixed WetKit Migration for Fix for slow Taxonomy import related to Pathauto.
+  - (Commit: [4f19cfe][R4.0-rc2-Commit-4f19cfe]) Fixed WetKit Bootstrap for #[2527832][R4.0-rc2-Issue-2527832] - Additional caching for hook_preprocess_page()
+  - (Commit: [5b19e48][R4.0-rc2-Commit-5b19e48]) Fixed WetKit Bean for #[2528454][R4.0-rc2-Issue-2528454] - Render Caching for slideout_bean
+  - (Commit: [23fb291][R4.0-rc2-Commit-23fb291]) Fixed WetKit Test for Fix for removed accessibility permissions causing failed test.
+  - (Commit: [92b5862][R4.0-rc2-Commit-92b5862]) Fixed WetKit Deployment for #[2528666][R4.0-rc2-Issue-2528666] - Removal of unused xautoload + configuration
+  - (Commit: [65bf07d][R4.0-rc2-Commit-65bf07d]) Fixed WetKit WYSIWYG for #[2528658][R4.0-rc2-Issue-2528658] - Removing deprecated Accessibility module
+  - (Commit: [daa7976][R4.0-rc2-Commit-daa7976]) Fixed WetKit Core for #[2528658][R4.0-rc2-Issue-2528658] - Removing deprecated Accessibility module
+  - (Commit: [80c26a2][R4.0-rc2-Commit-80c26a2]) Fixed WetKit Core for #[2528658][R4.0-rc2-Issue-2528658] - Removing deprecated Accessibility module
+  - (Commit: [05d2a58][R4.0-rc2-Commit-05d2a58]) Fixed WetKit Bean for #[2528454][R4.0-rc2-Issue-2528454] - Render Caching for slideout_bean
+  - (Commit: [439eb5a][R4.0-rc2-Commit-439eb5a]) Fixed WetKit Core for Allow for more granular control to flush WxT render caches.
+  - (Commit: [28aabac][R4.0-rc2-Commit-28aabac]) Fixed WetKit Bean for #[2528454][R4.0-rc2-Issue-2528454] - Render Caching for slideout_bean
+  - (Commit: [07755b3][R4.0-rc2-Commit-07755b3]) Fixed WetKit Bootstrap for #[2527832][R4.0-rc2-Issue-2527832] - Additional caching for hook_preprocess_page()
+  - (Commit: [621f9a9][R4.0-rc2-Commit-621f9a9]) Fixed WetKit WET-BOEW for Support for cache clearing when switching WxT themes.
+  - (Commit: [e7e14e6][R4.0-rc2-Commit-e7e14e6]) Fixed WetKit Menu for Remove expensive calls in WetKit Menu relating to custom css.
+  - (Commit: [55b818f][R4.0-rc2-Commit-55b818f]) Fixed WetKit Migration for Enforce description for every Migration class.
+  - (Commit: [a868925][R4.0-rc2-Commit-a868925]) Fixed WetKit Migration for Attempt to improve Taxonomy insert speed.
+  - (Commit: [23ac052][R4.0-rc2-Commit-23ac052]) Fixed WetKit Migration for Update the Migrate module to latest stable release.
+  - (Commit: [f1932b2][R4.0-rc2-Commit-f1932b2]) Fixed WetKit Users for #[2522698][R4.0-rc2-Issue-2522698] - Wetkit users image style settings for profile picture
+  - (Commit: [3d36e18][R4.0-rc2-Commit-3d36e18]) Fixed WetKit Test for Remove check for active-trail as conflicts with caching introduced in #2527832
+  - (Commit: [6673a57][R4.0-rc2-Commit-6673a57]) Fixed WetKit Bootstrap for #[2527832][R4.0-rc2-Issue-2527832] - Additional caching for hook_preprocess_page()
+  - (Commit: [c318e50][R4.0-rc2-Commit-c318e50]) Fixed WetKit Breadcrumbs for #[2511662][R4.0-rc2-Issue-2511662] - Changing the wetkit breadcrumb/path breadcrumb home link title doesn't work when not using path breadcrumbs
+  - (Commit: [3ce3f08][R4.0-rc2-Commit-3ce3f08]) Fixed WetKit Core for #[2516906][R4.0-rc2-Issue-2516906] - SA-CONTRIB-2015-131 upgrade to views_bulk_operations v 3.3
+  - (Commit: [9a9b2ce][R4.0-rc2-Commit-9a9b2ce]) Fixed WetKit Bean for #[2521828][R4.0-rc2-Issue-2521828] - Wetkit bean twitter block renders an empty h2
+  - (Commit: [2a7e9c4][R4.0-rc2-Commit-2a7e9c4]) Fixed WetKit Bootstrap for Fix for logging wrapper collapsed.
+  - (Commit: [5106eb8][R4.0-rc2-Commit-5106eb8]) Fixed WetKit Theme for Small css adjustments for Modal.
+  - (Commit: [32566fd][R4.0-rc2-Commit-32566fd]) Fixed WetKit Theme for Small css adjustments for Modal.
+  - (Commit: [f88b321][R4.0-rc2-Commit-f88b321]) Fixed WetKit Theme for Small css adjustments for Modal.
+  - (Commit: [bd5bce2][R4.0-rc2-Commit-bd5bce2]) Fixed WetKit Widgets for Fix for media exposed filter on libraries tab.
+  - (Commit: [f756176][R4.0-rc2-Commit-f756176]) Fixed WetKit Theme for Small css adjustments for Modal.
+  - (Commit: [5a70e6b][R4.0-rc2-Commit-5a70e6b]) Fixed WetKit WET-BOEW for #[2509414][R4.0-rc2-Issue-2509414] - Updating WxT from v4.0.10 to v4.0.14
+  - (Commit: [dcf704d][R4.0-rc2-Commit-dcf704d]) Fixed WetKit WET-BOEW for #[2509414][R4.0-rc2-Issue-2509414] - Updating WxT from v4.0.10 to v4.0.14
+  - (Commit: [67254bb][R4.0-rc2-Commit-67254bb]) Fixed WetKit Bean for Fix for Tabbed Interface adding active to every tablist liste item.
+  - (Commit: [afc918d][R4.0-rc2-Commit-afc918d]) Fixed WetKit Images for Update picture module to the 2.9 version.
+  - (Commit: [fb47e1a][R4.0-rc2-Commit-fb47e1a]) Fixed WetKit Demo for Remove bad contexts that shouldn't be assigned.
+  - (Commit: [32a4350][R4.0-rc2-Commit-32a4350]) Fixed WetKit Core for Updates to advanced_help, hierarchical_select, and panopoly_magic.
+  - (Commit: [1747ca3][R4.0-rc2-Commit-1747ca3]) Fixed WetKit Bean for Update Bean module to 1.9 version.
+  - (Commit: [7ea771d][R4.0-rc2-Commit-7ea771d]) Fixed WetKit Theme for Adjustments for modifications made to advanced help menu path.
+  - (Commit: [fa5f8c7][R4.0-rc2-Commit-fa5f8c7]) Fixed WetKit Bootstrap for Fix for visual regression on fieldsets leveraging bootstrap panel class
+  - (Commit: [9201285][R4.0-rc2-Commit-9201285]) Fixed WetKit Admin for #[2508399][R4.0-rc2-Issue-2508399] - JQuery  SA-CONTRIB-2015-123 - Open Redirect
+  - (Commit: [754a6e4][R4.0-rc2-Commit-754a6e4]) Fixed WetKit Search for #[2302955][R4.0-rc2-Issue-2302955] - Unable to search from 404 page
+  - (Commit: [44ab705][R4.0-rc2-Commit-44ab705]) Fixed WetKit Theme for Fix for option text-aligner using inline-block instead of float.
+  - (Commit: [ff1342d][R4.0-rc2-Commit-ff1342d]) Fixed WetKit Core for Removal of legacy CSS causing issues with Modal.
+  - (Commit: [4e961fc][R4.0-rc2-Commit-4e961fc]) Fixed WetKit Theme for Small css adjustments for Modal.
+  - (Commit: [f087f04][R4.0-rc2-Commit-f087f04]) Fixed WetKit WET-BOEW for #[2509414][R4.0-rc2-Issue-2509414] - Updating WxT from v4.0.10 to v4.0.14
+  - (Commit: [f1b5d5a][R4.0-rc2-Commit-f1b5d5a]) Fixed WetKit Theme for #[2400083][R4.0-rc2-Issue-2400083] - Horizontal tab region on front page always has title "Search"
+  - (Commit: [e19387f][R4.0-rc2-Commit-e19387f]) Fixed WetKit Widgets for Small accessibility improvement to Media + Minor alt handling updates.
+  - (Commit: [b776797][R4.0-rc2-Commit-b776797]) Fixed WetKit Bootstrap for LinkIT styling issues on dialog open.
+  - (Commit: [b1e6849][R4.0-rc2-Commit-b1e6849]) Fixed WetKit Core for #[2484927][R4.0-rc2-Issue-2484927] - Display entity label and UUID in dialog
+  - (Commit: [c326c65][R4.0-rc2-Commit-c326c65]) Fixed WetKit Admin for #[2508399][R4.0-rc2-Issue-2508399] - JQuery  SA-CONTRIB-2015-123 - Open Redirect
+  - (Commit: [cb65092][R4.0-rc2-Commit-cb65092]) Fixed WetKit Core for #[2434721][R4.0-rc2-Issue-2434721] - Date modified - bugs
+  - (Commit: [0bb2cf5][R4.0-rc2-Commit-0bb2cf5]) Fixed WetKit WET-BOEW for #[2434721][R4.0-rc2-Issue-2434721] - Date modified - bugs
+  - (Commit: [eb3b23f][R4.0-rc2-Commit-eb3b23f]) Fixed WetKit Test for #[2434721][R4.0-rc2-Issue-2434721] - Date modified - bugs
+  - (Commit: [13917f3][R4.0-rc2-Commit-13917f3]) Fixed WetKit Core for #[2503341][R4.0-rc2-Issue-2503341] - Region title for wetkit tabs
+  - (Commit: [bea4e37][R4.0-rc2-Commit-bea4e37]) Fixed WetKit Test for #[2434721][R4.0-rc2-Issue-2434721] - Date modified - bugs
+  - (Commit: [3d03d6d][R4.0-rc2-Commit-3d03d6d]) Fixed WetKit Core for #[2434721][R4.0-rc2-Issue-2434721] - Date modified - bugs
+  - (Commit: [cbd2bf8][R4.0-rc2-Commit-cbd2bf8]) Fixed WetKit WET-BOEW for #[2434721][R4.0-rc2-Issue-2434721] - Date modified - bugs
+  - (Commit: [28fe52d][R4.0-rc2-Commit-28fe52d]) Fixed WetKit Menu for #[2506647][R4.0-rc2-Issue-2506647] -  Call to undefined function wetkit_menu_requirements()
+  - (Commit: [2ff38bf][R4.0-rc2-Commit-2ff38bf]) Fixed WetKit Language for #[2508465][R4.0-rc2-Issue-2508465] - i18n 7.x-1.13 drupal core compatibility update
+  - (Commit: [0598438][R4.0-rc2-Commit-0598438]) #[2508275][R4.0-rc2-Issue-2508275] - Drupal 7.38 released with SA critical
+  - (Commit: [43852be][R4.0-rc2-Commit-43852be]) Fixed WetKit Test for #[2494539][R4.0-rc2-Issue-2494539] - WxT Behat tests expansion
+  - (Commit: [ddb2985][R4.0-rc2-Commit-ddb2985]) Fixed WetKit Test for #[2494539][R4.0-rc2-Issue-2494539] - WxT Behat tests expansion
+  - (Commit: [33bd0d5][R4.0-rc2-Commit-33bd0d5]) Fixed WetKit Test for #[2494539][R4.0-rc2-Issue-2494539] - WxT Behat tests expansion
+  - (Commit: [5198c58][R4.0-rc2-Commit-5198c58]) Update WetKit Test for more Behat additions.
+  - (Commit: [0e072c6][R4.0-rc2-Commit-0e072c6]) Fixed WetKit Core for Update panopoly magic to show single preview mode.
+  - (Commit: [11522b6][R4.0-rc2-Commit-11522b6]) Fixed WetKit Menu for #[2496495][R4.0-rc2-Issue-2496495] - New group-list menu theme functions
+  - (Commit: [43242f8][R4.0-rc2-Commit-43242f8]) Fixed WetKit Core for #[2482943][R4.0-rc2-Issue-2482943] - upgrade to views v 3.11
+  - (Commit: [09a48e7][R4.0-rc2-Commit-09a48e7]) Fixed WetKit Bootstrap for wetkit bootstrap breadcrumbs showing duplicate titles
+  - (Commit: [8a507db][R4.0-rc2-Commit-8a507db]) Fixed WetKit Bootstrap for #[2496481][R4.0-rc2-Issue-2496481] - Need menu_tree wrapper for a new group-list menu
+  - (Commit: [4240873][R4.0-rc2-Commit-4240873]) Fixed WetKit Panel Layouts for #[2496453][R4.0-rc2-Issue-2496453] - Some layouts not ported to 4.x correctly
+  - (Commit: [1a1c4e6][R4.0-rc2-Commit-1a1c4e6]) Fixed WetKit Bootstrap for #[2498363][R4.0-rc2-Issue-2498363] - WxT Bootstrap Settings instructions for Search box visibility fixed
+  - (Commit: [fc62047][R4.0-rc2-Commit-fc62047]) Fixed WetKit Bootstrap for #[2499125][R4.0-rc2-Issue-2499125] - Customization Overrides - Disable rendering of menu items instructions fixed
+  - (Commit: [cf55b77][R4.0-rc2-Commit-cf55b77]) Fixed WetKit Panel Layouts for #[2500369][R4.0-rc2-Issue-2500369] - Boxton layout is missing the bootstrap container class
+  - (Commit: [57b7247][R4.0-rc2-Commit-57b7247]) Fixed WetKit Theme for #[2500585][R4.0-rc2-Issue-2500585] - wetkit theme change text 2x to 4x
+  - (Commit: [932b8a3][R4.0-rc2-Commit-932b8a3]) Fixed WetKit Bootstrap for #[2492305][R4.0-rc2-Issue-2492305] - button theme function needs an accessible icon only option
+  - (Commit: [089578a][R4.0-rc2-Commit-089578a]) Second loop in module_implements() being repeated for no reason
+  - (Commit: [d792752][R4.0-rc2-Commit-d792752]) Fixed WetKit Test for Fix for Bean Follow link.
+  - (Commit: [ef7fb5a][R4.0-rc2-Commit-ef7fb5a]) Fixed WetKit Bean for Remove unneeded dependency.
+  - (Commit: [088d936][R4.0-rc2-Commit-088d936]) Fixed WetKit Bean for Missing body in search bean (field definition).
+  - (Commit: [6414a8c][R4.0-rc2-Commit-6414a8c]) Fixed WetKit Core for Update panopoly_magic and webform to latest stable.
+  - (Commit: [f532905][R4.0-rc2-Commit-f532905]) Fixed WetKit Bean for Missing body in search bean.
+  - (Commit: [ab869e6][R4.0-rc2-Commit-ab869e6]) Fixed WetKit Core for Update features to 2.5 version.
+  - (Commit: [83e4044][R4.0-rc2-Commit-83e4044]) Fixed WetKit Deployment for #[2482837][R4.0-rc2-Issue-2482837] - distinct query fix bulk deployment view
+  - (Commit: [be9bcdd][R4.0-rc2-Commit-be9bcdd]) Fixed WetKit Core for #[2482943][R4.0-rc2-Issue-2482943] - upgrade to views v 3.11
+  - (Commit: [a311c83][R4.0-rc2-Commit-a311c83]) Fixed WetKit Core for #[2480345][R4.0-rc2-Issue-2480345] - "Edit Draft" hs_taxonomy performance fix for wetkit 1.9 and 4.0 rc1
+  - (Commit: [3de578a][R4.0-rc2-Commit-3de578a]) #[2487085][R4.0-rc2-Issue-2487085] - Wetkit Improve theme registry build performance by 85%
+  - (Commit: [865c06a][R4.0-rc2-Commit-865c06a]) Fixed WetKit Deployment for #[2485619][R4.0-rc2-Issue-2485619] - Resolve SA for services module
+  - (Commit: [2430f17][R4.0-rc2-Commit-2430f17]) Fixed WetKit Language for #[2479349][R4.0-rc2-Issue-2479349] - Language switcher does not preserve query parameters
+  - (Commit: [5462b10][R4.0-rc2-Commit-5462b10]) Fixed WetKit Core for #[2145567][R4.0-rc2-Issue-2145567] - CTools Contexts are missing UUID support
+  - (Commit: [166414b][R4.0-rc2-Commit-166414b]) Prepare for next release.
+
 ## v4.0-RC1
 
 Security Update(s):
@@ -602,6 +758,228 @@ Bug Fixes:
   - (Commit: [b6b28b4][R1-Commit-b6b28b4]) #[2151399][R1-Issue-2151399] - Updates to WetKit Core.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.0-rc2 -->
+
+[R4.0-rc2-Commit-0ca5816]: http://drupalcode.org/project/wetkit.git/commit/0ca5816
+[R4.0-rc2-Commit-1ef9c25]: http://drupalcode.org/project/wetkit.git/commit/1ef9c25
+[R4.0-rc2-Commit-fff836e]: http://drupalcode.org/project/wetkit.git/commit/fff836e
+[R4.0-rc2-Commit-f2f434c]: http://drupalcode.org/project/wetkit.git/commit/f2f434c
+[R4.0-rc2-Commit-b4c747d]: http://drupalcode.org/project/wetkit.git/commit/b4c747d
+[R4.0-rc2-Commit-bde68fc]: http://drupalcode.org/project/wetkit.git/commit/bde68fc
+[R4.0-rc2-Commit-bb9754f]: http://drupalcode.org/project/wetkit.git/commit/bb9754f
+[R4.0-rc2-Commit-763a107]: http://drupalcode.org/project/wetkit.git/commit/763a107
+[R4.0-rc2-Commit-bb4cfc8]: http://drupalcode.org/project/wetkit.git/commit/bb4cfc8
+[R4.0-rc2-Commit-d1fd844]: http://drupalcode.org/project/wetkit.git/commit/d1fd844
+[R4.0-rc2-Commit-716ea83]: http://drupalcode.org/project/wetkit.git/commit/716ea83
+[R4.0-rc2-Commit-a9f0e4d]: http://drupalcode.org/project/wetkit.git/commit/a9f0e4d
+[R4.0-rc2-Commit-f8f44f5]: http://drupalcode.org/project/wetkit.git/commit/f8f44f5
+[R4.0-rc2-Commit-e320e57]: http://drupalcode.org/project/wetkit.git/commit/e320e57
+[R4.0-rc2-Commit-b54db53]: http://drupalcode.org/project/wetkit.git/commit/b54db53
+[R4.0-rc2-Commit-b44918d]: http://drupalcode.org/project/wetkit.git/commit/b44918d
+[R4.0-rc2-Commit-fef9df4]: http://drupalcode.org/project/wetkit.git/commit/fef9df4
+[R4.0-rc2-Commit-f6da1a4]: http://drupalcode.org/project/wetkit.git/commit/f6da1a4
+[R4.0-rc2-Commit-7120517]: http://drupalcode.org/project/wetkit.git/commit/7120517
+[R4.0-rc2-Commit-a4a190d]: http://drupalcode.org/project/wetkit.git/commit/a4a190d
+[R4.0-rc2-Commit-402c9bc]: http://drupalcode.org/project/wetkit.git/commit/402c9bc
+[R4.0-rc2-Commit-ece283d]: http://drupalcode.org/project/wetkit.git/commit/ece283d
+[R4.0-rc2-Commit-7d4b428]: http://drupalcode.org/project/wetkit.git/commit/7d4b428
+[R4.0-rc2-Commit-2e52684]: http://drupalcode.org/project/wetkit.git/commit/2e52684
+[R4.0-rc2-Commit-939e69b]: http://drupalcode.org/project/wetkit.git/commit/939e69b
+[R4.0-rc2-Commit-39e22bb]: http://drupalcode.org/project/wetkit.git/commit/39e22bb
+[R4.0-rc2-Commit-c4fbaeb]: http://drupalcode.org/project/wetkit.git/commit/c4fbaeb
+[R4.0-rc2-Commit-d2ed1be]: http://drupalcode.org/project/wetkit.git/commit/d2ed1be
+[R4.0-rc2-Commit-7e72c20]: http://drupalcode.org/project/wetkit.git/commit/7e72c20
+[R4.0-rc2-Commit-4c9c53a]: http://drupalcode.org/project/wetkit.git/commit/4c9c53a
+[R4.0-rc2-Commit-f872756]: http://drupalcode.org/project/wetkit.git/commit/f872756
+[R4.0-rc2-Commit-6ef6131]: http://drupalcode.org/project/wetkit.git/commit/6ef6131
+[R4.0-rc2-Commit-cb7d1f6]: http://drupalcode.org/project/wetkit.git/commit/cb7d1f6
+[R4.0-rc2-Commit-79dd079]: http://drupalcode.org/project/wetkit.git/commit/79dd079
+[R4.0-rc2-Commit-290cf2d]: http://drupalcode.org/project/wetkit.git/commit/290cf2d
+[R4.0-rc2-Commit-88164b3]: http://drupalcode.org/project/wetkit.git/commit/88164b3
+[R4.0-rc2-Commit-d51c391]: http://drupalcode.org/project/wetkit.git/commit/d51c391
+[R4.0-rc2-Commit-7e33550]: http://drupalcode.org/project/wetkit.git/commit/7e33550
+[R4.0-rc2-Commit-3c42eb9]: http://drupalcode.org/project/wetkit.git/commit/3c42eb9
+[R4.0-rc2-Commit-aefabd1]: http://drupalcode.org/project/wetkit.git/commit/aefabd1
+[R4.0-rc2-Commit-f49e2c4]: http://drupalcode.org/project/wetkit.git/commit/f49e2c4
+[R4.0-rc2-Commit-8af7e3e]: http://drupalcode.org/project/wetkit.git/commit/8af7e3e
+[R4.0-rc2-Commit-594765f]: http://drupalcode.org/project/wetkit.git/commit/594765f
+[R4.0-rc2-Commit-f773c17]: http://drupalcode.org/project/wetkit.git/commit/f773c17
+[R4.0-rc2-Commit-9610eee]: http://drupalcode.org/project/wetkit.git/commit/9610eee
+[R4.0-rc2-Commit-81e22f7]: http://drupalcode.org/project/wetkit.git/commit/81e22f7
+[R4.0-rc2-Commit-179bfcc]: http://drupalcode.org/project/wetkit.git/commit/179bfcc
+[R4.0-rc2-Commit-cfa7a1f]: http://drupalcode.org/project/wetkit.git/commit/cfa7a1f
+[R4.0-rc2-Commit-488d86a]: http://drupalcode.org/project/wetkit.git/commit/488d86a
+[R4.0-rc2-Commit-c64fec2]: http://drupalcode.org/project/wetkit.git/commit/c64fec2
+[R4.0-rc2-Commit-03064ad]: http://drupalcode.org/project/wetkit.git/commit/03064ad
+[R4.0-rc2-Commit-4f19cfe]: http://drupalcode.org/project/wetkit.git/commit/4f19cfe
+[R4.0-rc2-Commit-5b19e48]: http://drupalcode.org/project/wetkit.git/commit/5b19e48
+[R4.0-rc2-Commit-23fb291]: http://drupalcode.org/project/wetkit.git/commit/23fb291
+[R4.0-rc2-Commit-92b5862]: http://drupalcode.org/project/wetkit.git/commit/92b5862
+[R4.0-rc2-Commit-65bf07d]: http://drupalcode.org/project/wetkit.git/commit/65bf07d
+[R4.0-rc2-Commit-daa7976]: http://drupalcode.org/project/wetkit.git/commit/daa7976
+[R4.0-rc2-Commit-80c26a2]: http://drupalcode.org/project/wetkit.git/commit/80c26a2
+[R4.0-rc2-Commit-05d2a58]: http://drupalcode.org/project/wetkit.git/commit/05d2a58
+[R4.0-rc2-Commit-439eb5a]: http://drupalcode.org/project/wetkit.git/commit/439eb5a
+[R4.0-rc2-Commit-28aabac]: http://drupalcode.org/project/wetkit.git/commit/28aabac
+[R4.0-rc2-Commit-07755b3]: http://drupalcode.org/project/wetkit.git/commit/07755b3
+[R4.0-rc2-Commit-621f9a9]: http://drupalcode.org/project/wetkit.git/commit/621f9a9
+[R4.0-rc2-Commit-e7e14e6]: http://drupalcode.org/project/wetkit.git/commit/e7e14e6
+[R4.0-rc2-Commit-55b818f]: http://drupalcode.org/project/wetkit.git/commit/55b818f
+[R4.0-rc2-Commit-d2912f6]: http://drupalcode.org/project/wetkit.git/commit/d2912f6
+[R4.0-rc2-Commit-a868925]: http://drupalcode.org/project/wetkit.git/commit/a868925
+[R4.0-rc2-Commit-23ac052]: http://drupalcode.org/project/wetkit.git/commit/23ac052
+[R4.0-rc2-Commit-f1932b2]: http://drupalcode.org/project/wetkit.git/commit/f1932b2
+[R4.0-rc2-Commit-3d36e18]: http://drupalcode.org/project/wetkit.git/commit/3d36e18
+[R4.0-rc2-Commit-6673a57]: http://drupalcode.org/project/wetkit.git/commit/6673a57
+[R4.0-rc2-Commit-c318e50]: http://drupalcode.org/project/wetkit.git/commit/c318e50
+[R4.0-rc2-Commit-3ce3f08]: http://drupalcode.org/project/wetkit.git/commit/3ce3f08
+[R4.0-rc2-Commit-accf5c7]: http://drupalcode.org/project/wetkit.git/commit/accf5c7
+[R4.0-rc2-Commit-9a9b2ce]: http://drupalcode.org/project/wetkit.git/commit/9a9b2ce
+[R4.0-rc2-Commit-2a7e9c4]: http://drupalcode.org/project/wetkit.git/commit/2a7e9c4
+[R4.0-rc2-Commit-5106eb8]: http://drupalcode.org/project/wetkit.git/commit/5106eb8
+[R4.0-rc2-Commit-18e1463]: http://drupalcode.org/project/wetkit.git/commit/18e1463
+[R4.0-rc2-Commit-32566fd]: http://drupalcode.org/project/wetkit.git/commit/32566fd
+[R4.0-rc2-Commit-f88b321]: http://drupalcode.org/project/wetkit.git/commit/f88b321
+[R4.0-rc2-Commit-bd5bce2]: http://drupalcode.org/project/wetkit.git/commit/bd5bce2
+[R4.0-rc2-Commit-24f6426]: http://drupalcode.org/project/wetkit.git/commit/24f6426
+[R4.0-rc2-Commit-f756176]: http://drupalcode.org/project/wetkit.git/commit/f756176
+[R4.0-rc2-Commit-5a70e6b]: http://drupalcode.org/project/wetkit.git/commit/5a70e6b
+[R4.0-rc2-Commit-b0db9c3]: http://drupalcode.org/project/wetkit.git/commit/b0db9c3
+[R4.0-rc2-Commit-dcf704d]: http://drupalcode.org/project/wetkit.git/commit/dcf704d
+[R4.0-rc2-Commit-67254bb]: http://drupalcode.org/project/wetkit.git/commit/67254bb
+[R4.0-rc2-Commit-afc918d]: http://drupalcode.org/project/wetkit.git/commit/afc918d
+[R4.0-rc2-Commit-5c2f20d]: http://drupalcode.org/project/wetkit.git/commit/5c2f20d
+[R4.0-rc2-Commit-fb47e1a]: http://drupalcode.org/project/wetkit.git/commit/fb47e1a
+[R4.0-rc2-Commit-32a4350]: http://drupalcode.org/project/wetkit.git/commit/32a4350
+[R4.0-rc2-Commit-1747ca3]: http://drupalcode.org/project/wetkit.git/commit/1747ca3
+[R4.0-rc2-Commit-7ea771d]: http://drupalcode.org/project/wetkit.git/commit/7ea771d
+[R4.0-rc2-Commit-fa5f8c7]: http://drupalcode.org/project/wetkit.git/commit/fa5f8c7
+[R4.0-rc2-Commit-9201285]: http://drupalcode.org/project/wetkit.git/commit/9201285
+[R4.0-rc2-Commit-0a66c6a]: http://drupalcode.org/project/wetkit.git/commit/0a66c6a
+[R4.0-rc2-Commit-754a6e4]: http://drupalcode.org/project/wetkit.git/commit/754a6e4
+[R4.0-rc2-Commit-44ab705]: http://drupalcode.org/project/wetkit.git/commit/44ab705
+[R4.0-rc2-Commit-ff1342d]: http://drupalcode.org/project/wetkit.git/commit/ff1342d
+[R4.0-rc2-Commit-4e961fc]: http://drupalcode.org/project/wetkit.git/commit/4e961fc
+[R4.0-rc2-Commit-f087f04]: http://drupalcode.org/project/wetkit.git/commit/f087f04
+[R4.0-rc2-Commit-f1b5d5a]: http://drupalcode.org/project/wetkit.git/commit/f1b5d5a
+[R4.0-rc2-Commit-e19387f]: http://drupalcode.org/project/wetkit.git/commit/e19387f
+[R4.0-rc2-Commit-b776797]: http://drupalcode.org/project/wetkit.git/commit/b776797
+[R4.0-rc2-Commit-b1e6849]: http://drupalcode.org/project/wetkit.git/commit/b1e6849
+[R4.0-rc2-Commit-c326c65]: http://drupalcode.org/project/wetkit.git/commit/c326c65
+[R4.0-rc2-Commit-cb65092]: http://drupalcode.org/project/wetkit.git/commit/cb65092
+[R4.0-rc2-Commit-0bb2cf5]: http://drupalcode.org/project/wetkit.git/commit/0bb2cf5
+[R4.0-rc2-Commit-eb3b23f]: http://drupalcode.org/project/wetkit.git/commit/eb3b23f
+[R4.0-rc2-Commit-13917f3]: http://drupalcode.org/project/wetkit.git/commit/13917f3
+[R4.0-rc2-Commit-bea4e37]: http://drupalcode.org/project/wetkit.git/commit/bea4e37
+[R4.0-rc2-Commit-3d03d6d]: http://drupalcode.org/project/wetkit.git/commit/3d03d6d
+[R4.0-rc2-Commit-cbd2bf8]: http://drupalcode.org/project/wetkit.git/commit/cbd2bf8
+[R4.0-rc2-Commit-28fe52d]: http://drupalcode.org/project/wetkit.git/commit/28fe52d
+[R4.0-rc2-Commit-2ff38bf]: http://drupalcode.org/project/wetkit.git/commit/2ff38bf
+[R4.0-rc2-Commit-0598438]: http://drupalcode.org/project/wetkit.git/commit/0598438
+[R4.0-rc2-Commit-8605a82]: http://drupalcode.org/project/wetkit.git/commit/8605a82
+[R4.0-rc2-Commit-43852be]: http://drupalcode.org/project/wetkit.git/commit/43852be
+[R4.0-rc2-Commit-ddb2985]: http://drupalcode.org/project/wetkit.git/commit/ddb2985
+[R4.0-rc2-Commit-33bd0d5]: http://drupalcode.org/project/wetkit.git/commit/33bd0d5
+[R4.0-rc2-Commit-5198c58]: http://drupalcode.org/project/wetkit.git/commit/5198c58
+[R4.0-rc2-Commit-0e072c6]: http://drupalcode.org/project/wetkit.git/commit/0e072c6
+[R4.0-rc2-Commit-11522b6]: http://drupalcode.org/project/wetkit.git/commit/11522b6
+[R4.0-rc2-Commit-43242f8]: http://drupalcode.org/project/wetkit.git/commit/43242f8
+[R4.0-rc2-Commit-09a48e7]: http://drupalcode.org/project/wetkit.git/commit/09a48e7
+[R4.0-rc2-Commit-8a507db]: http://drupalcode.org/project/wetkit.git/commit/8a507db
+[R4.0-rc2-Commit-4240873]: http://drupalcode.org/project/wetkit.git/commit/4240873
+[R4.0-rc2-Commit-1a1c4e6]: http://drupalcode.org/project/wetkit.git/commit/1a1c4e6
+[R4.0-rc2-Commit-fc62047]: http://drupalcode.org/project/wetkit.git/commit/fc62047
+[R4.0-rc2-Commit-cf55b77]: http://drupalcode.org/project/wetkit.git/commit/cf55b77
+[R4.0-rc2-Commit-57b7247]: http://drupalcode.org/project/wetkit.git/commit/57b7247
+[R4.0-rc2-Commit-b7cc84d]: http://drupalcode.org/project/wetkit.git/commit/b7cc84d
+[R4.0-rc2-Commit-932b8a3]: http://drupalcode.org/project/wetkit.git/commit/932b8a3
+[R4.0-rc2-Commit-089578a]: http://drupalcode.org/project/wetkit.git/commit/089578a
+[R4.0-rc2-Commit-d792752]: http://drupalcode.org/project/wetkit.git/commit/d792752
+[R4.0-rc2-Commit-ef7fb5a]: http://drupalcode.org/project/wetkit.git/commit/ef7fb5a
+[R4.0-rc2-Commit-088d936]: http://drupalcode.org/project/wetkit.git/commit/088d936
+[R4.0-rc2-Commit-6414a8c]: http://drupalcode.org/project/wetkit.git/commit/6414a8c
+[R4.0-rc2-Commit-f532905]: http://drupalcode.org/project/wetkit.git/commit/f532905
+[R4.0-rc2-Commit-ab869e6]: http://drupalcode.org/project/wetkit.git/commit/ab869e6
+[R4.0-rc2-Commit-83e4044]: http://drupalcode.org/project/wetkit.git/commit/83e4044
+[R4.0-rc2-Commit-be9bcdd]: http://drupalcode.org/project/wetkit.git/commit/be9bcdd
+[R4.0-rc2-Commit-a311c83]: http://drupalcode.org/project/wetkit.git/commit/a311c83
+[R4.0-rc2-Commit-3de578a]: http://drupalcode.org/project/wetkit.git/commit/3de578a
+[R4.0-rc2-Commit-865c06a]: http://drupalcode.org/project/wetkit.git/commit/865c06a
+[R4.0-rc2-Commit-2430f17]: http://drupalcode.org/project/wetkit.git/commit/2430f17
+[R4.0-rc2-Commit-5462b10]: http://drupalcode.org/project/wetkit.git/commit/5462b10
+[R4.0-rc2-Commit-166414b]: http://drupalcode.org/project/wetkit.git/commit/166414b
+
+<!-- Issues R4.0-rc2 -->
+
+[R4.0-rc2-Issue-2543762]: http://drupal.org/node/2543762
+[R4.0-rc2-Issue-2543762]: http://drupal.org/node/2543762
+[R4.0-rc2-Issue-2543762]: http://drupal.org/node/2543762
+[R4.0-rc2-Issue-2543762]: http://drupal.org/node/2543762
+[R4.0-rc2-Issue-2537760]: http://drupal.org/node/2537760
+[R4.0-rc2-Issue-2532600]: http://drupal.org/node/2532600
+[R4.0-rc2-Issue-2533860]: http://drupal.org/node/2533860
+[R4.0-rc2-Issue-2530288]: http://drupal.org/node/2530288
+[R4.0-rc2-Issue-2533850]: http://drupal.org/node/2533850
+[R4.0-rc2-Issue-2537780]: http://drupal.org/node/2537780
+[R4.0-rc2-Issue-2484927]: http://drupal.org/node/2484927
+[R4.0-rc2-Issue-2537750]: http://drupal.org/node/2537750
+[R4.0-rc2-Issue-2530288]: http://drupal.org/node/2530288
+[R4.0-rc2-Issue-2530288]: http://drupal.org/node/2530288
+[R4.0-rc2-Issue-2530220]: http://drupal.org/node/2530220
+[R4.0-rc2-Issue-2529722]: http://drupal.org/node/2529722
+[R4.0-rc2-Issue-2434721]: http://drupal.org/node/2434721
+[R4.0-rc2-Issue-2527832]: http://drupal.org/node/2527832
+[R4.0-rc2-Issue-2528454]: http://drupal.org/node/2528454
+[R4.0-rc2-Issue-2528666]: http://drupal.org/node/2528666
+[R4.0-rc2-Issue-2528658]: http://drupal.org/node/2528658
+[R4.0-rc2-Issue-2528658]: http://drupal.org/node/2528658
+[R4.0-rc2-Issue-2528658]: http://drupal.org/node/2528658
+[R4.0-rc2-Issue-2528454]: http://drupal.org/node/2528454
+[R4.0-rc2-Issue-2528454]: http://drupal.org/node/2528454
+[R4.0-rc2-Issue-2527832]: http://drupal.org/node/2527832
+[R4.0-rc2-Issue-2522698]: http://drupal.org/node/2522698
+[R4.0-rc2-Issue-2527832]: http://drupal.org/node/2527832
+[R4.0-rc2-Issue-2511662]: http://drupal.org/node/2511662
+[R4.0-rc2-Issue-2516906]: http://drupal.org/node/2516906
+[R4.0-rc2-Issue-2521828]: http://drupal.org/node/2521828
+[R4.0-rc2-Issue-2509414]: http://drupal.org/node/2509414
+[R4.0-rc2-Issue-2509414]: http://drupal.org/node/2509414
+[R4.0-rc2-Issue-2508399]: http://drupal.org/node/2508399
+[R4.0-rc2-Issue-2302955]: http://drupal.org/node/2302955
+[R4.0-rc2-Issue-2509414]: http://drupal.org/node/2509414
+[R4.0-rc2-Issue-2400083]: http://drupal.org/node/2400083
+[R4.0-rc2-Issue-2484927]: http://drupal.org/node/2484927
+[R4.0-rc2-Issue-2508399]: http://drupal.org/node/2508399
+[R4.0-rc2-Issue-2434721]: http://drupal.org/node/2434721
+[R4.0-rc2-Issue-2434721]: http://drupal.org/node/2434721
+[R4.0-rc2-Issue-2434721]: http://drupal.org/node/2434721
+[R4.0-rc2-Issue-2503341]: http://drupal.org/node/2503341
+[R4.0-rc2-Issue-2434721]: http://drupal.org/node/2434721
+[R4.0-rc2-Issue-2434721]: http://drupal.org/node/2434721
+[R4.0-rc2-Issue-2434721]: http://drupal.org/node/2434721
+[R4.0-rc2-Issue-2506647]: http://drupal.org/node/2506647
+[R4.0-rc2-Issue-2508465]: http://drupal.org/node/2508465
+[R4.0-rc2-Issue-2508275]: http://drupal.org/node/2508275
+[R4.0-rc2-Issue-2494539]: http://drupal.org/node/2494539
+[R4.0-rc2-Issue-2494539]: http://drupal.org/node/2494539
+[R4.0-rc2-Issue-2494539]: http://drupal.org/node/2494539
+[R4.0-rc2-Issue-2496495]: http://drupal.org/node/2496495
+[R4.0-rc2-Issue-2482943]: http://drupal.org/node/2482943
+[R4.0-rc2-Issue-2496481]: http://drupal.org/node/2496481
+[R4.0-rc2-Issue-2496453]: http://drupal.org/node/2496453
+[R4.0-rc2-Issue-2498363]: http://drupal.org/node/2498363
+[R4.0-rc2-Issue-2499125]: http://drupal.org/node/2499125
+[R4.0-rc2-Issue-2500369]: http://drupal.org/node/2500369
+[R4.0-rc2-Issue-2500585]: http://drupal.org/node/2500585
+[R4.0-rc2-Issue-2492305]: http://drupal.org/node/2492305
+[R4.0-rc2-Issue-2482837]: http://drupal.org/node/2482837
+[R4.0-rc2-Issue-2482943]: http://drupal.org/node/2482943
+[R4.0-rc2-Issue-2480345]: http://drupal.org/node/2480345
+[R4.0-rc2-Issue-2487085]: http://drupal.org/node/2487085
+[R4.0-rc2-Issue-2485619]: http://drupal.org/node/2485619
+[R4.0-rc2-Issue-2479349]: http://drupal.org/node/2479349
+[R4.0-rc2-Issue-2145567]: http://drupal.org/node/2145567
 
 <!-- Commits R4.0-rc1 -->
 
