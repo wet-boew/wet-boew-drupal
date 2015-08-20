@@ -12,7 +12,7 @@ projects[wetkit_bean][subdir] = custom
 projects[wetkit_breadcrumbs][version] = 4.1
 projects[wetkit_breadcrumbs][subdir] = custom
 
-projects[wetkit_core][version] = 4.0-rc5
+projects[wetkit_core][version] = 4.0-rc6
 projects[wetkit_core][subdir] = custom
 
 projects[wetkit_demo][version] = 4.1
