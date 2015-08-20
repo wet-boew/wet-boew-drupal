@@ -6,13 +6,13 @@ core = 7.x
 projects[wetkit_admin][version] = 4.0-rc2
 projects[wetkit_admin][subdir] = custom
 
-projects[wetkit_bean][version] = 4.0-rc2
+projects[wetkit_bean][version] = 4.0-rc3
 projects[wetkit_bean][subdir] = custom
 
 projects[wetkit_breadcrumbs][version] = 4.1
 projects[wetkit_breadcrumbs][subdir] = custom
 
-projects[wetkit_core][version] = 4.0-rc3
+projects[wetkit_core][version] = 4.0-rc4
 projects[wetkit_core][subdir] = custom
 
 projects[wetkit_demo][version] = 4.1
@@ -24,7 +24,7 @@ projects[wetkit_deployment][subdir] = custom
 projects[wetkit_images][version] = 4.1
 projects[wetkit_images][subdir] = custom
 
-projects[wetkit_language][version] = 4.0-rc2
+projects[wetkit_language][version] = 4.0-rc3
 projects[wetkit_language][subdir] = custom
 
 projects[wetkit_layouts][version] = 4.0-rc2
@@ -45,7 +45,7 @@ projects[wetkit_og][subdir] = custom
 projects[wetkit_pages][version] = 4.1
 projects[wetkit_pages][subdir] = custom
 
-projects[wetkit_search][version] = 4.0-rc2
+projects[wetkit_search][version] = 4.0-rc3
 projects[wetkit_search][subdir] = custom
 
 projects[wetkit_test][version] = 4.1
@@ -71,7 +71,7 @@ projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_ember][version] = 4.1
 projects[wetkit_ember][type] = theme
 
-projects[wetkit_bootstrap][version] = 4.0-rc2
+projects[wetkit_bootstrap][version] = 4.0-rc3
 projects[wetkit_bootstrap][type] = theme
 
 projects[wetkit_shiny][version] = 4.0
