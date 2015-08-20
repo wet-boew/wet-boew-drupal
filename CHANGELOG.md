@@ -1,5 +1,22 @@
 # CHANGELOG.md
 
+## v1.11
+
+Security Update(s):
+
+  - Drupal Core
+  - CTools
+
+Fixes:
+
+  - (Commit: [59dc519][R1.11-Commit-59dc519]) Fixed WetKit Core for #[2554209][R1.11-Issue-2554209] - CTools SA-CONTRIB-2015-141
+  - (Commit: [fbe00fe][R1.11-Commit-fbe00fe]) #[2554195][R1.11-Issue-2554195] - DRUPAL-SA-CORE-2015-003 (Critical)
+  - (Commit: [30c96f5][R1.11-Commit-30c96f5]) Fixed WetKit Core for #[2298877][R1.11-Issue-2298877] - Migration doesn't take into account language of host entity
+  - (Commit: [48891d1][R1.11-Commit-48891d1]) Fixed WetKit Language for #[2547781][R1.11-Issue-2547781] - i18nviews update for plugin fix
+  - (Commit: [2e334bf][R1.11-Commit-2e334bf]) Point make file to dev branches.
+  - (Commit: [921b449][R1.11-Commit-921b449]) Start work on next release.
+  - (Commit: [cbf69ca][R1.11-Commit-cbf69ca]) Start work on next release.
+
 ## v1.10
 
 Security Update(s):
@@ -840,6 +857,25 @@ Bug Fixes:
   - (Commit: [26217a4][RC15-Commit-26217a4]) #[2101501][RC15-Issue-2101501] - Fixed Taxonomy term feeds missing translations.
 
 <!-- Links Referenced -->
+
+<!-- Commits R1.11 -->
+
+[R1.11-Commit-59dc519]: http://drupalcode.org/project/wetkit.git/commit/59dc519
+[R1.11-Commit-fbe00fe]: http://drupalcode.org/project/wetkit.git/commit/fbe00fe
+[R1.11-Commit-30c96f5]: http://drupalcode.org/project/wetkit.git/commit/30c96f5
+[R1.11-Commit-48891d1]: http://drupalcode.org/project/wetkit.git/commit/48891d1
+[R1.11-Commit-d652f8e]: http://drupalcode.org/project/wetkit.git/commit/d652f8e
+[R1.11-Commit-2e334bf]: http://drupalcode.org/project/wetkit.git/commit/2e334bf
+[R1.11-Commit-921b449]: http://drupalcode.org/project/wetkit.git/commit/921b449
+[R1.11-Commit-8a567bb]: http://drupalcode.org/project/wetkit.git/commit/8a567bb
+[R1.11-Commit-cbf69ca]: http://drupalcode.org/project/wetkit.git/commit/cbf69ca
+
+<!-- Issues R1.11 -->
+
+[R1.11-Issue-2554209]: http://drupal.org/node/2554209
+[R1.11-Issue-2554195]: http://drupal.org/node/2554195
+[R1.11-Issue-2298877]: http://drupal.org/node/2298877
+[R1.11-Issue-2547781]: http://drupal.org/node/2547781
 
 <!-- Commits R1.10 -->
 
