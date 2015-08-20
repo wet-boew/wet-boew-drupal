@@ -1,5 +1,28 @@
 # CHANGELOG.md
 
+## v4.0-RC3
+
+Security Update(s):
+
+  - Drupal Core
+  - CTools
+
+Fixes:
+  - (Commit: [7168c0c][R4.0-rc3-Commit-7168c0c]) Fixed WetKit Core for #[2554209][R4.0-rc3-Issue-2554209] - CTools SA-CONTRIB-2015-141
+  - (Commit: [4fa3d0f][R4.0-rc3-Commit-4fa3d0f]) #[2554195][R4.0-rc3-Issue-2554195] - DRUPAL-SA-CORE-2015-003 (Critical)
+  - (Commit: [cc16c08][R4.0-rc3-Commit-cc16c08]) Fixed WetKit Bootstrap for Fix for wetkit_bean search input fields.
+  - (Commit: [b432db8][R4.0-rc3-Commit-b432db8]) Fixed WetKit Bootstrap for Fix for wetkit_bean search input fields.
+  - (Commit: [528a768][R4.0-rc3-Commit-528a768]) Fixed WetKit Bootstrap for Fix for extra padding on hamburger icon in mobile view.
+  - (Commit: [653578c][R4.0-rc3-Commit-653578c]) Fixed WetKit Core for #[2298877][R4.0-rc3-Issue-2298877] - Migration doesn't take into account language of host entity
+  - (Commit: [d4d626c][R4.0-rc3-Commit-d4d626c]) Fixed WetKit Search for Remove patch breaking make build for dependencies.
+  - (Commit: [fe457a5][R4.0-rc3-Commit-fe457a5]) Fixed WetKit Search for Update Search API makefile + associated features to Solr 5.21
+  - (Commit: [97b5b17][R4.0-rc3-Commit-97b5b17]) Fix for incorrect SHA for wetkit_bootstrap.
+  - (Commit: [91d8029][R4.0-rc3-Commit-91d8029]) Fixed WetKit Language for #[2547781][R4.0-rc3-Issue-2547781] - i18nviews update for plugin fix
+  - (Commit: [942a08b][R4.0-rc3-Commit-942a08b]) Fixed WetKit Bootstrap for #[2552591][R4.0-rc3-Issue-2552591] - preg_grep in _bootstrap_process_theme_registry_suggestions slow
+  - (Commit: [65d9136][R4.0-rc3-Commit-65d9136]) Fixed WetKit Bootstrap for #[2552591][R4.0-rc3-Issue-2552591] - preg_grep in _bootstrap_process_theme_registry_suggestions slow
+  - (Commit: [8c56ad2][R4.0-rc3-Commit-8c56ad2]) Fixed WetKit Bean for #[2545682][R4.0-rc3-Issue-2545682] - Better drupal_alter on wetkit_slide_collection
+  - (Commit: [bdfafc6][R4.0-rc3-Commit-bdfafc6]) Start work on next release.
+
 ## v4.0-RC2
 
 Security Update(s):
@@ -759,6 +782,33 @@ Bug Fixes:
   - (Commit: [b6b28b4][R1-Commit-b6b28b4]) #[2151399][R1-Issue-2151399] - Updates to WetKit Core.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.0-rc3 -->
+
+[R4.0-rc3-Commit-7168c0c]: http://drupalcode.org/project/wetkit.git/commit/7168c0c
+[R4.0-rc3-Commit-4fa3d0f]: http://drupalcode.org/project/wetkit.git/commit/4fa3d0f
+[R4.0-rc3-Commit-cc16c08]: http://drupalcode.org/project/wetkit.git/commit/cc16c08
+[R4.0-rc3-Commit-b432db8]: http://drupalcode.org/project/wetkit.git/commit/b432db8
+[R4.0-rc3-Commit-528a768]: http://drupalcode.org/project/wetkit.git/commit/528a768
+[R4.0-rc3-Commit-653578c]: http://drupalcode.org/project/wetkit.git/commit/653578c
+[R4.0-rc3-Commit-d4d626c]: http://drupalcode.org/project/wetkit.git/commit/d4d626c
+[R4.0-rc3-Commit-fe457a5]: http://drupalcode.org/project/wetkit.git/commit/fe457a5
+[R4.0-rc3-Commit-97b5b17]: http://drupalcode.org/project/wetkit.git/commit/97b5b17
+[R4.0-rc3-Commit-91d8029]: http://drupalcode.org/project/wetkit.git/commit/91d8029
+[R4.0-rc3-Commit-942a08b]: http://drupalcode.org/project/wetkit.git/commit/942a08b
+[R4.0-rc3-Commit-65d9136]: http://drupalcode.org/project/wetkit.git/commit/65d9136
+[R4.0-rc3-Commit-8c56ad2]: http://drupalcode.org/project/wetkit.git/commit/8c56ad2
+[R4.0-rc3-Commit-bdfafc6]: http://drupalcode.org/project/wetkit.git/commit/bdfafc6
+
+<!-- Issues R4.0-rc3 -->
+
+[R4.0-rc3-Issue-2554209]: http://drupal.org/node/2554209
+[R4.0-rc3-Issue-2554195]: http://drupal.org/node/2554195
+[R4.0-rc3-Issue-2298877]: http://drupal.org/node/2298877
+[R4.0-rc3-Issue-2547781]: http://drupal.org/node/2547781
+[R4.0-rc3-Issue-2552591]: http://drupal.org/node/2552591
+[R4.0-rc3-Issue-2552591]: http://drupal.org/node/2552591
+[R4.0-rc3-Issue-2545682]: http://drupal.org/node/2545682
 
 <!-- Commits R4.0-rc2 -->
 
