@@ -56,7 +56,7 @@ env:
 
     # === Behat specific variables.
     # This is relative to $TRAVIS_BUILD_DIR
-    - DRUPAL_TI_BEHAT_DIR="./profiles/wetkit/modules/wetkit/wetkit_test/tests"
+    - DRUPAL_TI_BEHAT_DIR="./profiles/wetkit/modules/custom/wetkit_test/tests"
     # These arguments are passed to the bin/behat command.
     - DRUPAL_TI_BEHAT_ARGS=""
     # Specify the filename of the behat.yml with the $DRUPAL_TI_DRUPAL_DIR variables.
