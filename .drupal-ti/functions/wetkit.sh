@@ -70,8 +70,8 @@ function wetkit_build_distribution() {
 	# Verify that all the .make files will work on Drupal.org.
 	wetkit_header Verifying .make file
 	drush verify-makefile profiles/wetkit/drupal-org.make
-  find drupal/profiles/wetkit/modules -name \*.make -print0 | xargs -0 -n1 drush verify-makefile
-  find drupal/profiles/wetkit/themes -name \*.make ! -name libraries.make -print0 | xargs -0 -n1 drush verify-makefile
+  find profiles/wetkit/modules -name \*.make -print0 | xargs -0 -n1 drush verify-makefile
+  find profiles/wetkit/themes -name \*.make ! -name libraries.make -print0 | xargs -0 -n1 drush verify-makefile
 
 	# Download an old version to test upgrading from.
 	if [[ "$UPGRADE" != none ]]
