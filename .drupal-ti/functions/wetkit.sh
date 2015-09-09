@@ -1,6 +1,8 @@
 #!/bin/bash
 # @file
 # Common functionality for wetkit distribution.
+#
+# Template modified from http://drupal.org/project/panopoly
 
 #
 # Ensures that the right drush version is installed.
