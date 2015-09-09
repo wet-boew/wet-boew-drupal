@@ -54,6 +54,7 @@ function wetkit_build_distribution() {
 
 	# Build Codebase
   mkdir profiles
+  ls -al
   mv wet-boew-drupal wetkit
   mv wetkit profiles/
   mkdir drupal
