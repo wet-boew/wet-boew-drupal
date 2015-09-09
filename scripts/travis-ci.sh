@@ -141,11 +141,11 @@ before_tests() {
   fi
 
   if [[ "$DB" == "postgres" ]]; then
-    drush si wetkit wetkit_theme_selection_form.theme=wetkit_bootstrap install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=pgsql://postgres:@127.0.0.1:5432/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes;
+    drush si wetkit wetkit_theme_selection_form.theme=wetkit_bootstrap install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=pgsql://postgres:@127.0.0.1:5432/drupal_db --account-name=admin --account-pass=WetKit@2015 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes;
   fi
 
   if [[ "$DB" == "mysql" ]]; then
-    drush si wetkit wetkit_theme_selection_form.theme=wetkit_bootstrap install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1:3306/drupal_db --account-name=admin --account-pass=WetKit@2012 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes;
+    drush si wetkit wetkit_theme_selection_form.theme=wetkit_bootstrap install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1:3306/drupal_db --account-name=admin --account-pass=WetKit@2015 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes;
   fi
 
   drush dis -y dblog
@@ -201,10 +201,10 @@ run_tests() {
   fi
 
   # First, run all the tests in Firefox.
-  run_test ./bin/behat --config behat.travis.yml
+  run_test ./bin/behat --config behat.common.yml
 
   # Then run some Chrome-only tests.
-  run_test ./bin/behat --config behat.travis.yml -p chrome
+  run_test ./bin/behat --config behat.common.yml -p chrome
 }
 
 # after_tests
