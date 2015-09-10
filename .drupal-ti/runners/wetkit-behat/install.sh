@@ -1,6 +1,8 @@
 #!/bin/bash
 # @file
 # Behat integration - Install step.
+#
+## Template modified from http://drupal.org/project/panopoly
 
 set -e $DRUPAL_TI_DEBUG
 

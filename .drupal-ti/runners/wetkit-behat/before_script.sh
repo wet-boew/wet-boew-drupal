@@ -1,5 +1,7 @@
 #!/bin/bash
 # Simple script to install drupal for travis-ci running.
+#
+## Template modified from http://drupal.org/project/panopoly
 
 set -e $DRUPAL_TI_DEBUG
 
