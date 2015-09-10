@@ -109,7 +109,7 @@ function drupal_ti_ensure_drupal() {
 
 	# Create database and install Drupal.
   if [[ "$DB" == "postgres" ]]; then psql -c "create database $DRUPAL_TI_POSTGRES_DB;" -U postgres; fi
-  if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS $DRUPAL_MYSQL_TI_DB;"; fi
+  if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS $DRUPAL_TI_MYSQL_DB;"; fi
 
 	mkdir -p "$DRUPAL_TI_DRUPAL_BASE"
 	cd "$DRUPAL_TI_DRUPAL_BASE"
@@ -135,7 +135,7 @@ function drupal_ti_install_drupal() {
   fi
 
   if [[ "$DB" == "mysql" ]]; then
-    php -d sendmail_path=$(which true) ~/.composer/vendor/bin/drush.php si wetkit wetkit_theme_selection_form.theme=wetkit_bootstrap install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1:3306/drupal_db --account-name=admin --account-pass=WetKit@2015 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes;
+    php -d sendmail_path=$(which true) ~/.composer/vendor/bin/drush.php si wetkit wetkit_theme_selection_form.theme=wetkit_bootstrap install_configure_form.demo_content=TRUE --sites-subdir=default --db-url="$DRUPAL_TI_MYSQL_DB_URL" --account-name=admin --account-pass=WetKit@2015 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes;
   fi
 
 	drush vset -y file_private_path "sites/default/private/files"
