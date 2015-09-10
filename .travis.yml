@@ -43,7 +43,7 @@ env:
 
     # Drupal specific variables.
     - DRUPAL_TI_MYSQL_DB="drupal_travis_db"
-    - DRUPAL_TI_MYSQL_DB_URL="mysql://root:@127.0.0.1:3306/drupal_travis_db"
+    - DRUPAL_TI_MYSQL_DB_URL="mysql://root:@127.0.0.1/drupal_travis_db"
     - DRUPAL_TI_POSTGRES_DB="drupal_travis_db"
     - DRUPAL_TI_POSTGRES_DB_URL="pgsql://postgres:@127.0.0.1:5432/drupal_travis_db"
     # Note: Do not add a trailing slash here.
