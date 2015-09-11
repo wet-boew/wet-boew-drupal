@@ -29,7 +29,7 @@ function wetkit_install() {
     'policy' => serialize($policy),
     'enabled' => 1,
     'expiration' => '90',
-    'warning' => '7, 14',
+    'warning' => '7,14',
     'created' => REQUEST_TIME,
   ))
   ->execute();
