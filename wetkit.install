@@ -14,7 +14,7 @@ function wetkit_install() {
   // Set password_policy module defaults.
   $policy = array();
   $policy = array(
-    'complexity' => 3,
+    'character_types' => 3,
     'delay' => 0,
     'digit_placement' => 2,
     'history' => 24,
