@@ -17,7 +17,6 @@ projects[wetkit_bean][download][branch] = 7.x-4.x
 projects[wetkit_breadcrumbs][version] = 4.x-dev
 projects[wetkit_breadcrumbs][subdir] = custom
 projects[wetkit_breadcrumbs][download][type] = git
-projects[wetkit_breadcrumbs][download][revision] = ad3c043
 projects[wetkit_breadcrumbs][download][branch] = 7.x-4.x
 
 projects[wetkit_core][version] = 4.x-dev
@@ -57,7 +56,7 @@ projects[wetkit_layouts][download][branch] = 7.x-4.x
 projects[wetkit_menu][version] = 4.x-dev
 projects[wetkit_menu][subdir] = custom
 projects[wetkit_menu][download][type] = git
-projects[wetkit_menu][download][revision] = 2153bd7
+projects[wetkit_menu][download][revision] = 4d34efe
 projects[wetkit_menu][download][branch] = 7.x-4.x
 
 projects[wetkit_metatag][version] = 4.x-dev
@@ -89,7 +88,7 @@ projects[wetkit_search][download][branch] = 7.x-4.x
 projects[wetkit_test][version] = 4.x-dev
 projects[wetkit_test][subdir] = custom
 projects[wetkit_test][download][type] = git
-projects[wetkit_test][download][revision] = 4614679
+projects[wetkit_test][download][revision] = 31990dc
 projects[wetkit_test][download][branch] = 7.x-4.x
 
 projects[wetkit_theme][version] = 4.x-dev
@@ -106,7 +105,7 @@ projects[wetkit_users][download][branch] = 7.x-4.x
 projects[wetkit_wetboew][version] = 4.x-dev
 projects[wetkit_wetboew][subdir] = custom
 projects[wetkit_wetboew][download][type] = git
-projects[wetkit_wetboew][download][revision] = 2c4ad9a
+projects[wetkit_wetboew][download][revision] = 219b049
 projects[wetkit_wetboew][download][branch] = 7.x-4.x
 
 projects[wetkit_widgets][version] = 4.x-dev
@@ -118,7 +117,7 @@ projects[wetkit_widgets][download][branch] = 7.x-4.x
 projects[wetkit_wysiwyg][version] = 4.x-dev
 projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_wysiwyg][download][type] = git
-projects[wetkit_wysiwyg][download][revision] = 3432fce
+projects[wetkit_wysiwyg][download][revision] = 2718fc0
 projects[wetkit_wysiwyg][download][branch] = 7.x-4.x
 
 ; WxT Foundation (Themes)
@@ -129,7 +128,7 @@ projects[wetkit_ember][download][branch] = 7.x-4.x
 
 projects[wetkit_bootstrap][version] = 4.x-dev
 projects[wetkit_bootstrap][download][type] = git
-projects[wetkit_bootstrap][download][revision] = db060a3
+projects[wetkit_bootstrap][download][revision] = af620ae
 projects[wetkit_bootstrap][download][branch] = 7.x-4.x
 
 projects[wetkit_shiny][version] = 4.x-dev
