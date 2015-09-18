@@ -11,6 +11,10 @@ drupal_ti_ensure_php_for_drush_webserver
 
 # Ensure that drush and addons are installed.
 wetkit_header Installing Drush
+
+# Build off of stable releases.
+export DRUPAL_TI_DRUSH_VERSION="drush/drush:8.0.0-beta14"
+
 wetkit_ensure_drush
 
 # Ensure the distribution is linked into the code base.
