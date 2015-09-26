@@ -1,5 +1,22 @@
 # CHANGELOG.md
 
+## v1.12
+
+Performance Update(s)
+
+  - Improved parsing of .info files
+
+Fixes:
+  - (Commit: [3b9a580][R1.12-Commit-3b9a580]) Fixed WetKit Omega for #[2575115][R1.12-Issue-2575115] - Undefined index leaderboard in include page--panels--internet.tpl.php
+  - (Commit: [11e33c1][R1.12-Commit-11e33c1]) #[2573945][R1.12-Issue-2573945] - D7 core -Speed up drupal_parse_info_format() 3x and reduce memory 95%
+  - (Commit: [4043d85][R1.12-Commit-4043d85]) Fixed WetKit Core for #[2574027][R1.12-Issue-2574027] - webforms release 4.11
+  - (Commit: [3f4e3d4][R1.12-Commit-3f4e3d4]) Fixed WetKit Widgets for #[2537314][R1.12-Issue-2537314] - Media wysiwyg embed issue with apostrophe in title/alt attribute
+  - (Commit: [63539cf][R1.12-Commit-63539cf]) Fixed WetKit WET-BOEW for #[2558667][R1.12-Issue-2558667] - multimedia player in Chrome
+  - (Commit: [ca18d57][R1.12-Commit-ca18d57]) Fixed WetKit Deployment for #[2555451][R1.12-Issue-2555451] - Deploy dashboard show content always linked to ID 1
+  - (Commit: [5cfcf39][R1.12-Commit-5cfcf39]) Fixed WetKit Language for #[2557443][R1.12-Issue-2557443] - Edit Draft functionality broken in Entity Translation Beta4 due to static cache change
+  - (Commit: [94a1c18][R1.12-Commit-94a1c18]) Start work on next release.
+  - (Commit: [4ffea19][R1.12-Commit-4ffea19]) Add back .gitignore file.
+
 ## v1.11
 
 Security Update(s):
@@ -857,6 +874,31 @@ Bug Fixes:
   - (Commit: [26217a4][RC15-Commit-26217a4]) #[2101501][RC15-Issue-2101501] - Fixed Taxonomy term feeds missing translations.
 
 <!-- Links Referenced -->
+
+<!-- Commits R1.12 -->
+
+[R1.12-Commit-3b9a580]: http://drupalcode.org/project/wetkit.git/commit/3b9a580
+[R1.12-Commit-11e33c1]: http://drupalcode.org/project/wetkit.git/commit/11e33c1
+[R1.12-Commit-4043d85]: http://drupalcode.org/project/wetkit.git/commit/4043d85
+[R1.12-Commit-b6b34eb]: http://drupalcode.org/project/wetkit.git/commit/b6b34eb
+[R1.12-Commit-3f4e3d4]: http://drupalcode.org/project/wetkit.git/commit/3f4e3d4
+[R1.12-Commit-63539cf]: http://drupalcode.org/project/wetkit.git/commit/63539cf
+[R1.12-Commit-b339c5c]: http://drupalcode.org/project/wetkit.git/commit/b339c5c
+[R1.12-Commit-ca18d57]: http://drupalcode.org/project/wetkit.git/commit/ca18d57
+[R1.12-Commit-5cfcf39]: http://drupalcode.org/project/wetkit.git/commit/5cfcf39
+[R1.12-Commit-94a1c18]: http://drupalcode.org/project/wetkit.git/commit/94a1c18
+[R1.12-Commit-1e76d14]: http://drupalcode.org/project/wetkit.git/commit/1e76d14
+[R1.12-Commit-4ffea19]: http://drupalcode.org/project/wetkit.git/commit/4ffea19
+
+<!-- Issues R1.12 -->
+
+[R1.12-Issue-2575115]: http://drupal.org/node/2575115
+[R1.12-Issue-2573945]: http://drupal.org/node/2573945
+[R1.12-Issue-2574027]: http://drupal.org/node/2574027
+[R1.12-Issue-2537314]: http://drupal.org/node/2537314
+[R1.12-Issue-2558667]: http://drupal.org/node/2558667
+[R1.12-Issue-2555451]: http://drupal.org/node/2555451
+[R1.12-Issue-2557443]: http://drupal.org/node/2557443
 
 <!-- Commits R1.11 -->
 
