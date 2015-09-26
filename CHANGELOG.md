@@ -1,6 +1,6 @@
 # CHANGELOG.md
 
-## v4.0-RC4
+## v4.0
 
 Security Update(s):
 
@@ -17,7 +17,7 @@ Features:
 
   - Convert to upstream wet-boew cdn format for smaller library sizes (important)
   - Proper nolink support for all custom menu block configurations
-  - Last release candidate before official release
+  - Official release
 
 Fixes:
   - (Commit: [69271e7][R4.0-rc4-Commit-69271e7]) Fixed WetKit Bootstrap for #[2556745][R4.0-rc4-Issue-2556745] - Chrome/IE throw JavaScript exception on wetkit slideshow since rc2
