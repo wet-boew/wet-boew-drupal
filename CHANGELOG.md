@@ -21,7 +21,6 @@ Features:
 
 Fixes:
   - (Commit: [63a66ed][R4.0-Commit-63a66ed]) Fixed WetKit Ember for #[2576461][R4.0-Issue-2576461] - Ember logic causing issues with views multiple fields
-  - (Commit: [2622e36][R4.0-Commit-2622e36]) Fixed WetKit Theme for #[2576461][R4.0-Issue-2576461] - Ember logic causing issues with views multiple fields
   - (Commit: [69271e7][R4.0-Commit-69271e7]) Fixed WetKit Bootstrap for #[2556745][R4.0-Issue-2556745] - Chrome/IE throw JavaScript exception on wetkit slideshow since rc2
   - (Commit: [5aaeabb][R4.0-Commit-5aaeabb]) #[2573945][R4.0-Issue-2573945] - D7 core -Speed up drupal_parse_info_format() 3x and reduce memory 95%
   - (Commit: [bbf9cdc][R4.0-Commit-bbf9cdc]) Fixed WetKit Core for #[2574027][R4.0-Issue-2574027] - webforms release 4.11
