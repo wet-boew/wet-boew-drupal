@@ -11,6 +11,7 @@ projects[drupal][patch][728702] = http://drupal.org/files/issues/install-redirec
 projects[drupal][patch][865536] = http://drupal.org/files/drupal-865536-204.patch
 projects[drupal][patch][889772] = http://drupal.org/files/issues/drupal7-backport-889772-114.patch
 projects[drupal][patch][1081266] = http://drupal.org/files/drupal-1081266-102-drupal_get_filename-D7.patch
+projects[drupal][patch][1443308] = http://drupal.org/files/issues/drupal-1443308-49-module_load_include-static-cache.patch
 projects[drupal][patch][1443342] = http://drupal.org/files/drupal-1443342-1-inline-file_uri_scheme-in-file_stream_wrapper_uri_normalize.patch
 projects[drupal][patch][1470656] = http://drupal.org/files/drupal-1470656-14.patch
 projects[drupal][patch][1710656] = http://drupal.org/files/drupal-1710656-3-skip-hidden-menu-items-D7.patch
