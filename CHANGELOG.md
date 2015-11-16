@@ -1,6 +1,6 @@
 # CHANGELOG.md
 
-## v1.12
+## v1.12 (In development)
 
 Security Update(s):
 
