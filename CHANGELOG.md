@@ -1,12 +1,31 @@
 # CHANGELOG.md
 
-## v1.12
+## v1.12 (In development)
+
+Security Update(s):
+
+  - Drupal Core
 
 Performance Update(s)
 
   - Improved parsing of .info files
 
+Features:
+
+  - Improved webform translations
+
 Fixes:
+  - (Commit: [bf8f52c][R1.12-Commit-bf8f52c]) Fixed WetKit Core for Backport 4.x fixes to password policy module update.
+  - (Commit: [aac8164][R1.12-Commit-aac8164]) Fixed WetKit Core for Backport some 4.x module updates to 1.x branch.
+  - (Commit: [9451cbc][R1.12-Commit-9451cbc]) Fixed WetKit Admin for Update jQuery Update to 2.7 version.
+  - (Commit: [f9b2f78][R1.12-Commit-f9b2f78]) Fixed WetKit WYSIWYG for Update linkit module to 3.4 version.
+  - (Commit: [6840770][R1.12-Commit-6840770]) #[2594333][R1.12-Issue-2594333] - D7.41 released
+  - (Commit: [ec2ae03][R1.12-Commit-ec2ae03]) Fixed WetKit Widgets for Backport 4.x module updates to 1.x branch.
+  - (Commit: [44b7b20][R1.12-Commit-44b7b20]) Fixed WetKit Language for Fix bad version.
+  - (Commit: [644f7d4][R1.12-Commit-644f7d4]) Fixed WetKit Core for #[2606628][R1.12-Issue-2606628] - wetkit_core Features version 7.x-2.7 released
+  - (Commit: [f348d93][R1.12-Commit-f348d93]) Fixed WetKit Language for #[2382607][R1.12-Issue-2382607] - Module to make webform translations easier
+  - (Commit: [db73d7a][R1.12-Commit-db73d7a]) Fixed WetKit Ember for #[2576461][R1.12-Issue-2576461] - Ember logic causing issues with views multiple fields
+  - (Commit: [4d88b76][R1.12-Commit-4d88b76]) Update changelog.md file.
   - (Commit: [3b9a580][R1.12-Commit-3b9a580]) Fixed WetKit Omega for #[2575115][R1.12-Issue-2575115] - Undefined index leaderboard in include page--panels--internet.tpl.php
   - (Commit: [11e33c1][R1.12-Commit-11e33c1]) #[2573945][R1.12-Issue-2573945] - D7 core -Speed up drupal_parse_info_format() 3x and reduce memory 95%
   - (Commit: [4043d85][R1.12-Commit-4043d85]) Fixed WetKit Core for #[2574027][R1.12-Issue-2574027] - webforms release 4.11
@@ -877,7 +896,23 @@ Bug Fixes:
 
 <!-- Commits R1.12 -->
 
+[R1.12-Commit-85cc46b]: http://drupalcode.org/project/wetkit.git/commit/85cc46b
+[R1.12-Commit-bf8f52c]: http://drupalcode.org/project/wetkit.git/commit/bf8f52c
+[R1.12-Commit-aac8164]: http://drupalcode.org/project/wetkit.git/commit/aac8164
+[R1.12-Commit-9451cbc]: http://drupalcode.org/project/wetkit.git/commit/9451cbc
+[R1.12-Commit-f9b2f78]: http://drupalcode.org/project/wetkit.git/commit/f9b2f78
+[R1.12-Commit-6840770]: http://drupalcode.org/project/wetkit.git/commit/6840770
+[R1.12-Commit-ec2ae03]: http://drupalcode.org/project/wetkit.git/commit/ec2ae03
+[R1.12-Commit-44b7b20]: http://drupalcode.org/project/wetkit.git/commit/44b7b20
+[R1.12-Commit-644f7d4]: http://drupalcode.org/project/wetkit.git/commit/644f7d4
+[R1.12-Commit-f348d93]: http://drupalcode.org/project/wetkit.git/commit/f348d93
+[R1.12-Commit-390e5d8]: http://drupalcode.org/project/wetkit.git/commit/390e5d8
+[R1.12-Commit-8393044]: http://drupalcode.org/project/wetkit.git/commit/8393044
+[R1.12-Commit-db73d7a]: http://drupalcode.org/project/wetkit.git/commit/db73d7a
+[R1.12-Commit-4d88b76]: http://drupalcode.org/project/wetkit.git/commit/4d88b76
+[R1.12-Commit-03627cd]: http://drupalcode.org/project/wetkit.git/commit/03627cd
 [R1.12-Commit-3b9a580]: http://drupalcode.org/project/wetkit.git/commit/3b9a580
+[R1.12-Commit-38921aa]: http://drupalcode.org/project/wetkit.git/commit/38921aa
 [R1.12-Commit-11e33c1]: http://drupalcode.org/project/wetkit.git/commit/11e33c1
 [R1.12-Commit-4043d85]: http://drupalcode.org/project/wetkit.git/commit/4043d85
 [R1.12-Commit-b6b34eb]: http://drupalcode.org/project/wetkit.git/commit/b6b34eb
@@ -892,6 +927,10 @@ Bug Fixes:
 
 <!-- Issues R1.12 -->
 
+[R1.12-Issue-2594333]: http://drupal.org/node/2594333
+[R1.12-Issue-2606628]: http://drupal.org/node/2606628
+[R1.12-Issue-2382607]: http://drupal.org/node/2382607
+[R1.12-Issue-2576461]: http://drupal.org/node/2576461
 [R1.12-Issue-2575115]: http://drupal.org/node/2575115
 [R1.12-Issue-2573945]: http://drupal.org/node/2573945
 [R1.12-Issue-2574027]: http://drupal.org/node/2574027
