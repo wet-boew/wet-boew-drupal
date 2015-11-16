@@ -1,5 +1,54 @@
 # CHANGELOG.md
 
+## v4.1 (In Development)
+
+Security Update(s):
+
+  - Drupal Core
+
+Performance Update(s)
+
+  - Add static cache to module_load_include
+
+Features:
+
+  - Improved webform translations
+  - Updated wb share widget with latest filters
+  - Sidebar menu now supports up to 4 levels
+
+Fixes:
+  - (Commit: [05aa4d8][R4.1-Commit-05aa4d8]) Fixed WetKit Bean for Add none to share widget grid columns.
+  - (Commit: [f393fbd][R4.1-Commit-f393fbd]) Fixed WetKit Menu for #[2485817][R4.1-Issue-2485817] - sidebar menu 4 levels deep in 4.x
+  - (Commit: [a68fce4][R4.1-Commit-a68fce4]) Fixed WetKit Core for Patch for fontawesome favoring status report messaging.
+  - (Commit: [78b396d][R4.1-Commit-78b396d]) Fixed WetKit Deployment for Remove duplicate services module.
+  - (Commit: [2e94132][R4.1-Commit-2e94132]) Fixed WetKit Menu for #[2485817][R4.1-Issue-2485817] - sidebar menu 4 levels deep in 4.x
+  - (Commit: [72e0097][R4.1-Commit-72e0097]) Fixed WetKit Metatag for #[2615858][R4.1-Issue-2615858] - Patch metatag for 1.7 release caused metatag translation deletions.
+  - (Commit: [553a860][R4.1-Commit-553a860]) Update patch for user password reset.
+  - (Commit: [1ecf9ae][R4.1-Commit-1ecf9ae]) #[2594333][R4.1-Issue-2594333] - D7.41 released
+  - (Commit: [b5aeecb][R4.1-Commit-b5aeecb]) Fixed WetKit Core for Remove fontawesome patch.
+  - (Commit: [85d2dee][R4.1-Commit-85d2dee]) Fixed WetKit Core for Update fontawesome to 2.5 version.
+  - (Commit: [a7cf1cb][R4.1-Commit-a7cf1cb]) Fixed WetKit Admin for Update jquery update to 2.7 version.
+  - (Commit: [25581dc][R4.1-Commit-25581dc]) Fixed WetKit Core for Update panopoly_magic to 1.28 version.
+  - (Commit: [f41a01a][R4.1-Commit-f41a01a]) Fixed WetKit Core for Update views module to 3.13 version.
+  - (Commit: [12c6eb7][R4.1-Commit-12c6eb7]) #[2590817][R4.1-Issue-2590817] - wetkit Add static cache to module_load_include
+  - (Commit: [002a0b2][R4.1-Commit-002a0b2]) Fixed WetKit Images for #[2590491][R4.1-Issue-2590491] - wetkit_core defaultconfig, pathauto, picture, uuid releases
+  - (Commit: [aa0ffe2][R4.1-Commit-aa0ffe2]) Fixed WetKit Test for Update share widget field test.
+  - (Commit: [e343da6][R4.1-Commit-e343da6]) Fixed WetKit Pages for Update features export.
+  - (Commit: [f825cd4][R4.1-Commit-f825cd4]) Fixed WetKit Core for Fix bad version.
+  - (Commit: [227d548][R4.1-Commit-227d548]) Fixed WetKit Language for Fix bad version.
+  - (Commit: [96cc861][R4.1-Commit-96cc861]) Fixed WetKit Core for #[2590491][R4.1-Issue-2590491] - wetkit_core defaultconfig, pathauto, picture, uuid releases
+  - (Commit: [f12cd58][R4.1-Commit-f12cd58]) Fixed WetKit Core for #[2590491][R4.1-Issue-2590491] - wetkit_core defaultconfig, pathauto, picture, uuid releases
+  - (Commit: [eadc9de][R4.1-Commit-eadc9de]) Fixed WetKit Core for #[2590491][R4.1-Issue-2590491] - wetkit_core defaultconfig, pathauto, picture, uuid releases
+  - (Commit: [f0da4c8][R4.1-Commit-f0da4c8]) Fixed WetKit Core for #[2606628][R4.1-Issue-2606628] - wetkit_core Features version 7.x-2.7 released
+  - (Commit: [40d68b4][R4.1-Commit-40d68b4]) Fixed WetKit Language for #[2382607][R4.1-Issue-2382607] - Module to make webform translations easier
+  - (Commit: [deded82][R4.1-Commit-deded82]) Fixed WetKit Core for #[2615018][R4.1-Issue-2615018] - wetkit_share4x share this NONE throws warnings
+  - (Commit: [27df9aa][R4.1-Commit-27df9aa]) Fixed WetKit Bean for #[2615018][R4.1-Issue-2615018] - wetkit_share4x share this NONE throws warnings
+  - (Commit: [efa71ea][R4.1-Commit-efa71ea]) Fixed WetKit Core for #[2604368][R4.1-Issue-2604368] - wetkit_core Fix incorrect hook name in libraries.api.php
+  - (Commit: [481a330][R4.1-Commit-481a330]) Fixed WetKit Bootstrap for #[2610244][R4.1-Issue-2610244] - wet-boew.min.js not found.
+  - (Commit: [af39a5b][R4.1-Commit-af39a5b]) Fixed WetKit Bootstrap for #[2585085][R4.1-Issue-2585085] - Multilingual variables + Bootstrap Theme Wizard
+  - (Commit: [b379dfd][R4.1-Commit-b379dfd]) Fixed WetKit Panel Layouts for #[2610234][R4.1-Issue-2610234] - mccrae layout missing css
+  - (Commit: [78253a7][R4.1-Commit-78253a7]) Start work on next release.
+
 ## v4.0
 
 Security Update(s):
@@ -863,6 +912,63 @@ Bug Fixes:
   - (Commit: [b6b28b4][R1-Commit-b6b28b4]) #[2151399][R1-Issue-2151399] - Updates to WetKit Core.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.1 -->
+
+[R4.1-Commit-05aa4d8]: http://drupalcode.org/project/wetkit.git/commit/05aa4d8
+[R4.1-Commit-f393fbd]: http://drupalcode.org/project/wetkit.git/commit/f393fbd
+[R4.1-Commit-a68fce4]: http://drupalcode.org/project/wetkit.git/commit/a68fce4
+[R4.1-Commit-501ca5c]: http://drupalcode.org/project/wetkit.git/commit/501ca5c
+[R4.1-Commit-78b396d]: http://drupalcode.org/project/wetkit.git/commit/78b396d
+[R4.1-Commit-3ff027b]: http://drupalcode.org/project/wetkit.git/commit/3ff027b
+[R4.1-Commit-2e94132]: http://drupalcode.org/project/wetkit.git/commit/2e94132
+[R4.1-Commit-6c5adfc]: http://drupalcode.org/project/wetkit.git/commit/6c5adfc
+[R4.1-Commit-72e0097]: http://drupalcode.org/project/wetkit.git/commit/72e0097
+[R4.1-Commit-553a860]: http://drupalcode.org/project/wetkit.git/commit/553a860
+[R4.1-Commit-1ecf9ae]: http://drupalcode.org/project/wetkit.git/commit/1ecf9ae
+[R4.1-Commit-b5aeecb]: http://drupalcode.org/project/wetkit.git/commit/b5aeecb
+[R4.1-Commit-85d2dee]: http://drupalcode.org/project/wetkit.git/commit/85d2dee
+[R4.1-Commit-a7cf1cb]: http://drupalcode.org/project/wetkit.git/commit/a7cf1cb
+[R4.1-Commit-25581dc]: http://drupalcode.org/project/wetkit.git/commit/25581dc
+[R4.1-Commit-f41a01a]: http://drupalcode.org/project/wetkit.git/commit/f41a01a
+[R4.1-Commit-12c6eb7]: http://drupalcode.org/project/wetkit.git/commit/12c6eb7
+[R4.1-Commit-002a0b2]: http://drupalcode.org/project/wetkit.git/commit/002a0b2
+[R4.1-Commit-aa0ffe2]: http://drupalcode.org/project/wetkit.git/commit/aa0ffe2
+[R4.1-Commit-e343da6]: http://drupalcode.org/project/wetkit.git/commit/e343da6
+[R4.1-Commit-f825cd4]: http://drupalcode.org/project/wetkit.git/commit/f825cd4
+[R4.1-Commit-227d548]: http://drupalcode.org/project/wetkit.git/commit/227d548
+[R4.1-Commit-96cc861]: http://drupalcode.org/project/wetkit.git/commit/96cc861
+[R4.1-Commit-f12cd58]: http://drupalcode.org/project/wetkit.git/commit/f12cd58
+[R4.1-Commit-eadc9de]: http://drupalcode.org/project/wetkit.git/commit/eadc9de
+[R4.1-Commit-f0da4c8]: http://drupalcode.org/project/wetkit.git/commit/f0da4c8
+[R4.1-Commit-40d68b4]: http://drupalcode.org/project/wetkit.git/commit/40d68b4
+[R4.1-Commit-deded82]: http://drupalcode.org/project/wetkit.git/commit/deded82
+[R4.1-Commit-27df9aa]: http://drupalcode.org/project/wetkit.git/commit/27df9aa
+[R4.1-Commit-efa71ea]: http://drupalcode.org/project/wetkit.git/commit/efa71ea
+[R4.1-Commit-481a330]: http://drupalcode.org/project/wetkit.git/commit/481a330
+[R4.1-Commit-af39a5b]: http://drupalcode.org/project/wetkit.git/commit/af39a5b
+[R4.1-Commit-b379dfd]: http://drupalcode.org/project/wetkit.git/commit/b379dfd
+[R4.1-Commit-78253a7]: http://drupalcode.org/project/wetkit.git/commit/78253a7
+
+<!-- Issues R4.1 -->
+
+[R4.1-Issue-2485817]: http://drupal.org/node/2485817
+[R4.1-Issue-2485817]: http://drupal.org/node/2485817
+[R4.1-Issue-2615858]: http://drupal.org/node/2615858
+[R4.1-Issue-2594333]: http://drupal.org/node/2594333
+[R4.1-Issue-2590817]: http://drupal.org/node/2590817
+[R4.1-Issue-2590491]: http://drupal.org/node/2590491
+[R4.1-Issue-2590491]: http://drupal.org/node/2590491
+[R4.1-Issue-2590491]: http://drupal.org/node/2590491
+[R4.1-Issue-2590491]: http://drupal.org/node/2590491
+[R4.1-Issue-2606628]: http://drupal.org/node/2606628
+[R4.1-Issue-2382607]: http://drupal.org/node/2382607
+[R4.1-Issue-2615018]: http://drupal.org/node/2615018
+[R4.1-Issue-2615018]: http://drupal.org/node/2615018
+[R4.1-Issue-2604368]: http://drupal.org/node/2604368
+[R4.1-Issue-2610244]: http://drupal.org/node/2610244
+[R4.1-Issue-2585085]: http://drupal.org/node/2585085
+[R4.1-Issue-2610234]: http://drupal.org/node/2610234
 
 <!-- Commits R4.0-rc4 -->
 
