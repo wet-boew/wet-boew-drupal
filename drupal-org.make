@@ -107,6 +107,7 @@ projects[wetkit_users][download][branch] = 7.x-4.x
 projects[wetkit_webform][version] = 4.x-dev
 projects[wetkit_webform][subdir] = custom
 projects[wetkit_webform][download][type] = git
+projects[wetkit_webform][download][revision] = cd57aec
 projects[wetkit_webform][download][branch] = 7.x-4.x
 
 projects[wetkit_wetboew][version] = 4.x-dev
@@ -117,6 +118,7 @@ projects[wetkit_wetboew][download][branch] = 7.x-4.x
 projects[wetkit_widgets][version] = 4.x-dev
 projects[wetkit_widgets][subdir] = custom
 projects[wetkit_widgets][download][type] = git
+projects[wetkit_widgets][download][revision] = cfd97a3
 projects[wetkit_widgets][download][branch] = 7.x-4.x
 
 projects[wetkit_wysiwyg][version] = 4.x-dev
