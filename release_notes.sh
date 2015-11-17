@@ -31,7 +31,7 @@ echo "<strong>Updates in this release:</strong>" >> $BASE_PATH/release_notes/wxt
 drush rn $1 $2 >> $BASE_PATH/release_notes/wxt.html
 
 # For each module, create some html release notes.
-for MODULE in wetkit_admin wetkit_bean wetkit_breadcrumbs wetkit_core wetkit_demo wetkit_deployment wetkit_images wetkit_language wetkit_layouts wetkit_menu wetkit_metatag wetkit_migrate wetkit_og wetkit_pages wetkit_search wetkit_theme wetkit_users wetkit_wetboew wetkit_widgets wetkit_wysiwyg
+for MODULE in wetkit_admin wetkit_bean wetkit_breadcrumbs wetkit_core wetkit_demo wetkit_deployment wetkit_images wetkit_language wetkit_layouts wetkit_menu wetkit_metatag wetkit_migrate wetkit_og wetkit_pages wetkit_search wetkit_theme wetkit_users wetkit_webform wetkit_wetboew wetkit_widgets wetkit_wysiwyg
 do
   MODULENAME=`echo ${MODULE//_/ }`
   echo "creating release notes for $MODULENAME"
