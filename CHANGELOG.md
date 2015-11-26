@@ -17,6 +17,23 @@ Features:
   - Sidebar menu now supports up to 4 levels
 
 Fixes:
+
+  - (Commit: [725b2c2][R4.1-Commit-725b2c2]) Fixed WetKit Deployment for #[2622202][R4.1-Issue-2622202] - wetkit_deployment entity_menu_links PDOException for sqlsrv
+  - (Commit: [263058e][R4.1-Commit-263058e]) Fixed WetKit Deployment for #[2621604][R4.1-Issue-2621604] - admin/dashboard/deployment redirects to home page instead of itself
+  - (Commit: [77ac467][R4.1-Commit-77ac467]) Fixed WetKit Core for #[2619078][R4.1-Issue-2619078] - Tokens: Dropdown arrow for Replacement Patterns not working correctly
+  - (Commit: [5759ff7][R4.1-Commit-5759ff7]) Fixed WetKit Bootstrap for Correct label.
+  - (Commit: [4bd25db][R4.1-Commit-4bd25db]) Fixed WetKit Bootstrap for #[2622216][R4.1-Issue-2622216] - Webforms Inline Label not working ( with CSS fix )
+  - (Commit: [779dd53][R4.1-Commit-779dd53]) Fixed WetKit Core for #[2619268][R4.1-Issue-2619268] - Patch for Views-based search
+  - (Commit: [b2dcea0][R4.1-Commit-b2dcea0]) Fixed WetKit Bootstrap for Override some deploy module css adjustments to deploy layout.
+  - (Commit: [e119bc9][R4.1-Commit-e119bc9]) Fixed WetKit Deployment for #[2621604][R4.1-Issue-2621604] - admin/dashboard/deployment redirects to home page instead of it'self
+  - (Commit: [558fae8][R4.1-Commit-558fae8]) #[2617576][R4.1-Issue-2617576] - Strong tag HTML showing when deleting node
+  - (Commit: [f871102][R4.1-Commit-f871102]) Fixed WetKit Deployment for #[2434461][R4.1-Issue-2434461] - bean workflow (published-deploy, unpublished-nodeploy)
+  - (Commit: [05fb6a6][R4.1-Commit-05fb6a6]) Fixed WetKit Bean for Undefined index wetkit_bean_link $settings.
+  - (Commit: [8faaf9b][R4.1-Commit-8faaf9b]) Fixed WetKit Webform for #[2617408][R4.1-Issue-2617408] - Update webform to 4.12 version
+  - (Commit: [de7f6d8][R4.1-Commit-de7f6d8]) Fixed WetKit Widgets for #[2357309][R4.1-Issue-2357309] - JS error when pasting HTML code into a WYSIWYG textarea
+  - (Commit: [696a311][R4.1-Commit-696a311]) Addition of wetkit_webform module.
+  - (Commit: [7a54af8][R4.1-Commit-7a54af8]) Fixed WetKit Menu for #[2485817][R4.1-Issue-2485817] - sidebar menu 4 levels deep in 4.x
+  - (Commit: [c7e13ce][R4.1-Commit-c7e13ce]) Update changelog.md file.
   - (Commit: [05aa4d8][R4.1-Commit-05aa4d8]) Fixed WetKit Bean for Add none to share widget grid columns.
   - (Commit: [f393fbd][R4.1-Commit-f393fbd]) Fixed WetKit Menu for #[2485817][R4.1-Issue-2485817] - sidebar menu 4 levels deep in 4.x
   - (Commit: [a68fce4][R4.1-Commit-a68fce4]) Fixed WetKit Core for Patch for fontawesome favoring status report messaging.
@@ -915,6 +932,22 @@ Bug Fixes:
 
 <!-- Commits R4.1 -->
 
+[R4.1-Commit-725b2c2]: http://drupalcode.org/project/wetkit.git/commit/725b2c2
+[R4.1-Commit-263058e]: http://drupalcode.org/project/wetkit.git/commit/263058e
+[R4.1-Commit-77ac467]: http://drupalcode.org/project/wetkit.git/commit/77ac467
+[R4.1-Commit-5759ff7]: http://drupalcode.org/project/wetkit.git/commit/5759ff7
+[R4.1-Commit-4bd25db]: http://drupalcode.org/project/wetkit.git/commit/4bd25db
+[R4.1-Commit-779dd53]: http://drupalcode.org/project/wetkit.git/commit/779dd53
+[R4.1-Commit-b2dcea0]: http://drupalcode.org/project/wetkit.git/commit/b2dcea0
+[R4.1-Commit-e119bc9]: http://drupalcode.org/project/wetkit.git/commit/e119bc9
+[R4.1-Commit-558fae8]: http://drupalcode.org/project/wetkit.git/commit/558fae8
+[R4.1-Commit-f871102]: http://drupalcode.org/project/wetkit.git/commit/f871102
+[R4.1-Commit-05fb6a6]: http://drupalcode.org/project/wetkit.git/commit/05fb6a6
+[R4.1-Commit-8faaf9b]: http://drupalcode.org/project/wetkit.git/commit/8faaf9b
+[R4.1-Commit-de7f6d8]: http://drupalcode.org/project/wetkit.git/commit/de7f6d8
+[R4.1-Commit-696a311]: http://drupalcode.org/project/wetkit.git/commit/696a311
+[R4.1-Commit-7a54af8]: http://drupalcode.org/project/wetkit.git/commit/7a54af8
+[R4.1-Commit-c7e13ce]: http://drupalcode.org/project/wetkit.git/commit/c7e13ce
 [R4.1-Commit-05aa4d8]: http://drupalcode.org/project/wetkit.git/commit/05aa4d8
 [R4.1-Commit-f393fbd]: http://drupalcode.org/project/wetkit.git/commit/f393fbd
 [R4.1-Commit-a68fce4]: http://drupalcode.org/project/wetkit.git/commit/a68fce4
@@ -952,6 +985,17 @@ Bug Fixes:
 
 <!-- Issues R4.1 -->
 
+[R4.1-Issue-2622202]: http://drupal.org/node/2622202
+[R4.1-Issue-2621604]: http://drupal.org/node/2621604
+[R4.1-Issue-2619078]: http://drupal.org/node/2619078
+[R4.1-Issue-2622216]: http://drupal.org/node/2622216
+[R4.1-Issue-2619268]: http://drupal.org/node/2619268
+[R4.1-Issue-2621604]: http://drupal.org/node/2621604
+[R4.1-Issue-2617576]: http://drupal.org/node/2617576
+[R4.1-Issue-2434461]: http://drupal.org/node/2434461
+[R4.1-Issue-2617408]: http://drupal.org/node/2617408
+[R4.1-Issue-2357309]: http://drupal.org/node/2357309
+[R4.1-Issue-2485817]: http://drupal.org/node/2485817
 [R4.1-Issue-2485817]: http://drupal.org/node/2485817
 [R4.1-Issue-2485817]: http://drupal.org/node/2485817
 [R4.1-Issue-2615858]: http://drupal.org/node/2615858
