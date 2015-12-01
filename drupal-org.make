@@ -11,6 +11,7 @@ projects[wetkit_admin][download][branch] = 7.x-4.x
 projects[wetkit_bean][version] = 4.x-dev
 projects[wetkit_bean][subdir] = custom
 projects[wetkit_bean][download][type] = git
+projects[wetkit_bean][download][revision] = 6d24ba4
 projects[wetkit_bean][download][branch] = 7.x-4.x
 
 projects[wetkit_breadcrumbs][version] = 4.x-dev
@@ -83,6 +84,7 @@ projects[wetkit_search][download][branch] = 7.x-4.x
 projects[wetkit_test][version] = 4.x-dev
 projects[wetkit_test][subdir] = custom
 projects[wetkit_test][download][type] = git
+projects[wetkit_test][download][revision] = f46e89e
 projects[wetkit_test][download][branch] = 7.x-4.x
 
 projects[wetkit_theme][version] = 4.x-dev
