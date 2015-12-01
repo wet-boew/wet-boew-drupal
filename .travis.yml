@@ -21,4 +21,4 @@ script:
   - echo ${SLACK_TOKEN}
 
 notifications:
-  slack: ${SLACK_USER}:2bEjIi41VlFH25ikExKRrJ3i
+  slack: $SLACK_USER:2bEjIi41VlFH25ikExKRrJ3i
