@@ -17,7 +17,8 @@ php:
   - 5.4
 
 script:
-  - echo "Test"
+  - echo ${SLACK_USER}
+  - echo ${SLACK_TOKEN}
 
 notifications:
   slack: ${SLACK_USER}:2bEjIi41VlFH25ikExKRrJ3i
