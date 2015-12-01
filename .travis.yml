@@ -137,3 +137,6 @@ script:
 
 after_script:
   - drupal-ti after_script
+
+notifications:
+  slack: ${SLACK}
