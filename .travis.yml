@@ -20,4 +20,4 @@ script:
   - echo "Test"
 
 notifications:
-  slack: "${SLACK}"
+  slack: $SLACK
