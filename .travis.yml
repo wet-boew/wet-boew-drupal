@@ -3,8 +3,7 @@ sudo: false
 php:
 - 5.4
 script:
-- echo ${SLACK_USER}
-- echo ${SLACK_TOKEN}
+- echo "Test"
 notifications:
   slack:
     secure: DmyDubX22ddlj2Da6mUmMLxCFRMFfDwZ1SX9Nza3GGBUwIRKUJBsOccqS5IQ3hymoq0BK339r6OVV08dTwF1AQcOdT7yFJQY/VMXx0EiU0FZLJKMGUjPil0qN6wOpSjmP6GZQB4f38aWkDlDZbrpsGL0wB+jdyFrMpHTUNbvDXg=
