@@ -1,0 +1,23 @@
+# @file
+# .travis.yml - Drupal for Travis CI Integration
+#
+# Template provided by https://github.com/LionsAd/drupal_ti.
+#
+# Based for simpletest upon:
+#   https://github.com/sonnym/travis-ci-drupal-module-example
+
+# Declare testing language
+language: php
+
+# Container infrastructure
+sudo: false
+
+# Language versioning
+php:
+  - 5.4
+
+script:
+  - echo "Test"
+
+notifications:
+  slack: "${SLACK}"
