@@ -1,24 +1,10 @@
-# @file
-# .travis.yml - Drupal for Travis CI Integration
-#
-# Template provided by https://github.com/LionsAd/drupal_ti.
-#
-# Based for simpletest upon:
-#   https://github.com/sonnym/travis-ci-drupal-module-example
-
-# Declare testing language
 language: php
-
-# Container infrastructure
 sudo: false
-
-# Language versioning
 php:
-  - 5.4
-
+- 5.4
 script:
-  - echo ${SLACK_USER}
-  - echo ${SLACK_TOKEN}
-
+- echo ${SLACK_USER}
+- echo ${SLACK_TOKEN}
 notifications:
-  slack: $SLACK_USER:2bEjIi41VlFH25ikExKRrJ3i
+  slack:
+    secure: DmyDubX22ddlj2Da6mUmMLxCFRMFfDwZ1SX9Nza3GGBUwIRKUJBsOccqS5IQ3hymoq0BK339r6OVV08dTwF1AQcOdT7yFJQY/VMXx0EiU0FZLJKMGUjPil0qN6wOpSjmP6GZQB4f38aWkDlDZbrpsGL0wB+jdyFrMpHTUNbvDXg=
