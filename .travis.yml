@@ -20,4 +20,4 @@ script:
   - echo "Test"
 
 notifications:
-  slack: stcadsd:2bEjIi41VlFH25ikExKRrJ3i
+  slack: stcadsd:${SLACK_TOKEN}
