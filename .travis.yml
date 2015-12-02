@@ -139,4 +139,5 @@ after_script:
   - drupal-ti after_script
 
 notifications:
-  slack: "${SLACK}"
+  slack:
+    secure: DmyDubX22ddlj2Da6mUmMLxCFRMFfDwZ1SX9Nza3GGBUwIRKUJBsOccqS5IQ3hymoq0BK339r6OVV08dTwF1AQcOdT7yFJQY/VMXx0EiU0FZLJKMGUjPil0qN6wOpSjmP6GZQB4f38aWkDlDZbrpsGL0wB+jdyFrMpHTUNbvDXg=
