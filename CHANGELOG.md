@@ -1,5 +1,34 @@
 # CHANGELOG.md
 
+## v4.2 (In Development)
+
+Features:
+
+  - Sidebar menu option chevrons support
+
+Fixes:
+  - (Commit: [fbaec3d][R4.2-Commit-fbaec3d]) Fixed WetKit Core for Update panopoly_magic to 1.29 version.
+  - (Commit: [b2b9f20][R4.2-Commit-b2b9f20]) Fixed WetKit Deployment for Update environment indicator to version 2.8.
+  - (Commit: [2b3de32][R4.2-Commit-2b3de32]) Fixed WetKit Deployment for #[2627756][R4.2-Issue-2627756] - Update Entity Menu Links
+  - (Commit: [3f717fc][R4.2-Commit-3f717fc]) Fixed WetKit Admin for #[2617966][R4.2-Issue-2617966] - media bean example mp4 and example caption
+  - (Commit: [2e0ce16][R4.2-Commit-2e0ce16]) Fixed WetKit Bootstrap for #[2627614][R4.2-Issue-2627614] - Canada FIP not showing up in mobile
+  - (Commit: [c0afa16][R4.2-Commit-c0afa16]) Fixed WetKit Panel Layouts for #[2627392][R4.2-Issue-2627392] - wetkit_layouts polley tpl missing container class
+  - (Commit: [3d16cfc][R4.2-Commit-3d16cfc]) Fixed WetKit Deployment for #[2626830][R4.2-Issue-2626830] - Allow editor role to use deployment dashboard
+  - (Commit: [f361675][R4.2-Commit-f361675]) Add slack integration.
+  - (Commit: [4a69a39][R4.2-Commit-4a69a39]) Fixed WetKit Bean for #[2623858][R4.2-Issue-2623858] - Destination error EntityMalformedException when deploying a newly created bean from source
+  - (Commit: [2950069][R4.2-Commit-2950069]) Adjust slack notifications.
+  - (Commit: [12af774][R4.2-Commit-12af774]) Fixed WetKit Test for Refactor metatag tests.
+  - (Commit: [2dfa74a][R4.2-Commit-2dfa74a]) Add slack notifications.
+  - (Commit: [db4b89f][R4.2-Commit-db4b89f]) Fixed WetKit Panel Layouts for #[2625780][R4.2-Issue-2625780] - Pearson layout missing row in Bottom element
+  - (Commit: [b271cb1][R4.2-Commit-b271cb1]) Fixed WetKit Ember for #[2625316][R4.2-Issue-2625316] - File Entity edit screen from CKEditor missing title
+  - (Commit: [7b8a9fa][R4.2-Commit-7b8a9fa]) Fixed WetKit Bootstrap for Tidy up translation field in modal window.
+  - (Commit: [5d33257][R4.2-Commit-5d33257]) Fixed WetKit Widgets for #[2625308][R4.2-Issue-2625308] - menu_translate errors on file structure types screen
+  - (Commit: [fbfcada][R4.2-Commit-fbfcada]) Fixed WetKit Bootstrap for #[2624520][R4.2-Issue-2624520] - Bean WYSIWYG internal uuid links for images/media/file
+  - (Commit: [30f90f6][R4.2-Commit-30f90f6]) Fixed WetKit Theme for #[2624456][R4.2-Issue-2624456] - Make chevrons configurable from Sidebar
+  - (Commit: [3178307][R4.2-Commit-3178307]) Fixed WetKit Menu for #[2624456][R4.2-Issue-2624456] - Make chevrons configurable from Sidebar
+  - (Commit: [e042e47][R4.2-Commit-e042e47]) Fixed WetKit Bootstrap for #[2624456][R4.2-Issue-2624456] - Make chevrons configurable from Sidebar
+  - (Commit: [dd46bc2][R4.2-Commit-dd46bc2]) Start work on next release.
+
 ## v4.1
 
 Security Update(s):
@@ -929,6 +958,46 @@ Bug Fixes:
   - (Commit: [b6b28b4][R1-Commit-b6b28b4]) #[2151399][R1-Issue-2151399] - Updates to WetKit Core.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.2 -->
+
+[R4.2-Commit-fbaec3d]: http://drupalcode.org/project/wetkit.git/commit/fbaec3d
+[R4.2-Commit-b2b9f20]: http://drupalcode.org/project/wetkit.git/commit/b2b9f20
+[R4.2-Commit-2b3de32]: http://drupalcode.org/project/wetkit.git/commit/2b3de32
+[R4.2-Commit-3f717fc]: http://drupalcode.org/project/wetkit.git/commit/3f717fc
+[R4.2-Commit-2e0ce16]: http://drupalcode.org/project/wetkit.git/commit/2e0ce16
+[R4.2-Commit-c0afa16]: http://drupalcode.org/project/wetkit.git/commit/c0afa16
+[R4.2-Commit-3d16cfc]: http://drupalcode.org/project/wetkit.git/commit/3d16cfc
+[R4.2-Commit-f361675]: http://drupalcode.org/project/wetkit.git/commit/f361675
+[R4.2-Commit-4a69a39]: http://drupalcode.org/project/wetkit.git/commit/4a69a39
+[R4.2-Commit-2950069]: http://drupalcode.org/project/wetkit.git/commit/2950069
+[R4.2-Commit-12af774]: http://drupalcode.org/project/wetkit.git/commit/12af774
+[R4.2-Commit-2dfa74a]: http://drupalcode.org/project/wetkit.git/commit/2dfa74a
+[R4.2-Commit-db4b89f]: http://drupalcode.org/project/wetkit.git/commit/db4b89f
+[R4.2-Commit-b271cb1]: http://drupalcode.org/project/wetkit.git/commit/b271cb1
+[R4.2-Commit-7b8a9fa]: http://drupalcode.org/project/wetkit.git/commit/7b8a9fa
+[R4.2-Commit-5d33257]: http://drupalcode.org/project/wetkit.git/commit/5d33257
+[R4.2-Commit-fbfcada]: http://drupalcode.org/project/wetkit.git/commit/fbfcada
+[R4.2-Commit-30f90f6]: http://drupalcode.org/project/wetkit.git/commit/30f90f6
+[R4.2-Commit-3178307]: http://drupalcode.org/project/wetkit.git/commit/3178307
+[R4.2-Commit-e042e47]: http://drupalcode.org/project/wetkit.git/commit/e042e47
+[R4.2-Commit-dd46bc2]: http://drupalcode.org/project/wetkit.git/commit/dd46bc2
+
+<!-- Issues R4.2 -->
+
+[R4.2-Issue-2627756]: http://drupal.org/node/2627756
+[R4.2-Issue-2617966]: http://drupal.org/node/2617966
+[R4.2-Issue-2627614]: http://drupal.org/node/2627614
+[R4.2-Issue-2627392]: http://drupal.org/node/2627392
+[R4.2-Issue-2626830]: http://drupal.org/node/2626830
+[R4.2-Issue-2623858]: http://drupal.org/node/2623858
+[R4.2-Issue-2625780]: http://drupal.org/node/2625780
+[R4.2-Issue-2625316]: http://drupal.org/node/2625316
+[R4.2-Issue-2625308]: http://drupal.org/node/2625308
+[R4.2-Issue-2624520]: http://drupal.org/node/2624520
+[R4.2-Issue-2624456]: http://drupal.org/node/2624456
+[R4.2-Issue-2624456]: http://drupal.org/node/2624456
+[R4.2-Issue-2624456]: http://drupal.org/node/2624456
 
 <!-- Commits R4.1 -->
 
