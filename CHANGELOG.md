@@ -7,6 +7,9 @@ Features:
   - Sidebar menu option chevrons support
 
 Fixes:
+  - (Commit: [fbaec3d][R4.2-Commit-fbaec3d]) Fixed WetKit Core for Update panopoly_magic to 1.29 version.
+  - (Commit: [b2b9f20][R4.2-Commit-b2b9f20]) Fixed WetKit Deployment for Update environment indicator to version 2.8.
+  - (Commit: [2b3de32][R4.2-Commit-2b3de32]) Fixed WetKit Deployment for #[2627756][R4.2-Issue-2627756] - Update Entity Menu Links
   - (Commit: [3f717fc][R4.2-Commit-3f717fc]) Fixed WetKit Admin for #[2617966][R4.2-Issue-2617966] - media bean example mp4 and example caption
   - (Commit: [2e0ce16][R4.2-Commit-2e0ce16]) Fixed WetKit Bootstrap for #[2627614][R4.2-Issue-2627614] - Canada FIP not showing up in mobile
   - (Commit: [c0afa16][R4.2-Commit-c0afa16]) Fixed WetKit Panel Layouts for #[2627392][R4.2-Issue-2627392] - wetkit_layouts polley tpl missing container class
@@ -958,6 +961,9 @@ Bug Fixes:
 
 <!-- Commits R4.2 -->
 
+[R4.2-Commit-fbaec3d]: http://drupalcode.org/project/wetkit.git/commit/fbaec3d
+[R4.2-Commit-b2b9f20]: http://drupalcode.org/project/wetkit.git/commit/b2b9f20
+[R4.2-Commit-2b3de32]: http://drupalcode.org/project/wetkit.git/commit/2b3de32
 [R4.2-Commit-3f717fc]: http://drupalcode.org/project/wetkit.git/commit/3f717fc
 [R4.2-Commit-2e0ce16]: http://drupalcode.org/project/wetkit.git/commit/2e0ce16
 [R4.2-Commit-c0afa16]: http://drupalcode.org/project/wetkit.git/commit/c0afa16
@@ -979,6 +985,7 @@ Bug Fixes:
 
 <!-- Issues R4.2 -->
 
+[R4.2-Issue-2627756]: http://drupal.org/node/2627756
 [R4.2-Issue-2617966]: http://drupal.org/node/2617966
 [R4.2-Issue-2627614]: http://drupal.org/node/2627614
 [R4.2-Issue-2627392]: http://drupal.org/node/2627392
