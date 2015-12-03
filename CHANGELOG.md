@@ -4,9 +4,17 @@
 
 Features:
 
+  - jQuery Update is now using v1.10
   - Sidebar menu option chevrons support
 
 Fixes:
+  - (Commit: [c7278b1][R4.2-Commit-c7278b1]) Fixed WetKit Language for #[2628254][R4.2-Issue-2628254] - RTBC "$.browser is undefined" for jQuery >= 1.9
+  - (Commit: [84a7a9b][R4.2-Commit-84a7a9b]) Fixed WetKit Deployment for #[2628240][R4.2-Issue-2628240] - Syndicated to: site doesn't take into account current language
+  - (Commit: [041b225][R4.2-Commit-041b225]) Update changelog.md file.
+  - (Commit: [35b720c][R4.2-Commit-35b720c]) Fixed WetKit Search for Update apachesolr legacy suite of modules.
+  - (Commit: [16a7f29][R4.2-Commit-16a7f29]) Fixed WetKit Language for #[2627812][R4.2-Issue-2627812] - Undefined index: nid in webform_localization_preprocess_webform_components_form()
+  - (Commit: [dbc7c7c][R4.2-Commit-dbc7c7c]) Fixed WetKit Ember for Remove error messages till #2062365 resolved.
+  - (Commit: [be2f1f5][R4.2-Commit-be2f1f5]) Update changelog.md file.
   - (Commit: [fbaec3d][R4.2-Commit-fbaec3d]) Fixed WetKit Core for Update panopoly_magic to 1.29 version.
   - (Commit: [b2b9f20][R4.2-Commit-b2b9f20]) Fixed WetKit Deployment for Update environment indicator to version 2.8.
   - (Commit: [2b3de32][R4.2-Commit-2b3de32]) Fixed WetKit Deployment for #[2627756][R4.2-Issue-2627756] - Update Entity Menu Links
@@ -961,6 +969,13 @@ Bug Fixes:
 
 <!-- Commits R4.2 -->
 
+[R4.2-Commit-c7278b1]: http://drupalcode.org/project/wetkit.git/commit/c7278b1
+[R4.2-Commit-84a7a9b]: http://drupalcode.org/project/wetkit.git/commit/84a7a9b
+[R4.2-Commit-041b225]: http://drupalcode.org/project/wetkit.git/commit/041b225
+[R4.2-Commit-35b720c]: http://drupalcode.org/project/wetkit.git/commit/35b720c
+[R4.2-Commit-16a7f29]: http://drupalcode.org/project/wetkit.git/commit/16a7f29
+[R4.2-Commit-dbc7c7c]: http://drupalcode.org/project/wetkit.git/commit/dbc7c7c
+[R4.2-Commit-be2f1f5]: http://drupalcode.org/project/wetkit.git/commit/be2f1f5
 [R4.2-Commit-fbaec3d]: http://drupalcode.org/project/wetkit.git/commit/fbaec3d
 [R4.2-Commit-b2b9f20]: http://drupalcode.org/project/wetkit.git/commit/b2b9f20
 [R4.2-Commit-2b3de32]: http://drupalcode.org/project/wetkit.git/commit/2b3de32
@@ -985,6 +1000,9 @@ Bug Fixes:
 
 <!-- Issues R4.2 -->
 
+[R4.2-Issue-2628254]: http://drupal.org/node/2628254
+[R4.2-Issue-2628240]: http://drupal.org/node/2628240
+[R4.2-Issue-2627812]: http://drupal.org/node/2627812
 [R4.2-Issue-2627756]: http://drupal.org/node/2627756
 [R4.2-Issue-2617966]: http://drupal.org/node/2617966
 [R4.2-Issue-2627614]: http://drupal.org/node/2627614
