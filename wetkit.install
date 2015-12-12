@@ -60,3 +60,10 @@ function wetkit_install() {
     ->condition('name', 'bootstrap')
     ->execute();
 }
+
+/**
+ * Workbench Moderation schema correction.
+ */
+function wetkit_update_7100() {
+    drupal_set_installed_schema_version('workbench_moderation', '7010');
+}
