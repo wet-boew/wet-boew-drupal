@@ -26,7 +26,6 @@ Development has been tailored for organizations that need to comply with standar
 
 - Pre-Built Distribution: [drupal.org/project/wetkit][drupal] (Novice Users)
 - Drush Make: [Documentation Page][docsite-drush-make] (Intermediate Users)
-- Vagrant Virtual Machine: [sylus/vagrant-normandy][vagrant-normandy] (Advanced Users)
 
 ## Version History
 
@@ -77,6 +76,5 @@ specific language governing permissions and limitations under the License.
 [simplytest]:           http://simplytest.me/project/wetkit/7.x-4.x
 [travisci]:             https://travis-ci.org/wet-boew/wet-boew-drupal
 [travisci-badge]:       https://travis-ci.org/wet-boew/wet-boew-drupal.png?branch=7.x-4.x
-[vagrant-normandy]:     https://github.com/sylus/vagrant-normandy
 [wet-boew]:             https://github.com/wet-boew/wet-boew
 [youtube]:              http://www.youtube.com/playlist?list=PLjIClrDa-_ZFwO-0sT_y6PGljSdbYztwi
