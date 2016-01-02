@@ -96,7 +96,7 @@ projects[wetkit_test][download][branch] = 7.x-4.x
 projects[wetkit_theme][version] = 4.x-dev
 projects[wetkit_theme][subdir] = custom
 projects[wetkit_theme][download][type] = git
-projects[wetkit_theme][download][revision] = 17b7634
+projects[wetkit_theme][download][revision] = a504b34
 projects[wetkit_theme][download][branch] = 7.x-4.x
 
 projects[wetkit_users][version] = 4.x-dev
