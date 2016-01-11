@@ -18,6 +18,7 @@ projects[wetkit_bean][download][branch] = 7.x-4.x
 projects[wetkit_breadcrumbs][version] = 4.x-dev
 projects[wetkit_breadcrumbs][subdir] = custom
 projects[wetkit_breadcrumbs][download][type] = git
+projects[wetkit_breadcrumbs][download][revision] = e1de5d5
 projects[wetkit_breadcrumbs][download][branch] = 7.x-4.x
 
 projects[wetkit_core][version] = 4.x-dev
@@ -90,13 +91,13 @@ projects[wetkit_search][download][branch] = 7.x-4.x
 projects[wetkit_test][version] = 4.x-dev
 projects[wetkit_test][subdir] = custom
 projects[wetkit_test][download][type] = git
-projects[wetkit_test][download][revision] = e67234a
+projects[wetkit_test][download][revision] = c131821
 projects[wetkit_test][download][branch] = 7.x-4.x
 
 projects[wetkit_theme][version] = 4.x-dev
 projects[wetkit_theme][subdir] = custom
 projects[wetkit_theme][download][type] = git
-projects[wetkit_theme][download][revision] = a504b34
+projects[wetkit_theme][download][revision] = 753cd84
 projects[wetkit_theme][download][branch] = 7.x-4.x
 
 projects[wetkit_users][version] = 4.x-dev
@@ -136,7 +137,7 @@ projects[wetkit_ember][download][branch] = 7.x-4.x
 
 projects[wetkit_bootstrap][version] = 4.x-dev
 projects[wetkit_bootstrap][download][type] = git
-projects[wetkit_bootstrap][download][revision] = 3ca1ee5
+projects[wetkit_bootstrap][download][revision] = 49ea008
 projects[wetkit_bootstrap][download][branch] = 7.x-4.x
 
 projects[wetkit_shiny][version] = 4.x-dev
