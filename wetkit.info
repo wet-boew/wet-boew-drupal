@@ -30,7 +30,7 @@ dependencies[] = contextual
 ;dependencies[] = statistics
 ;dependencies[] = simpletest
 
-; WxtKit Foundation
+; WxT Foundation
 dependencies[] = wetkit_core
 dependencies[] = wetkit_admin
 dependencies[] = wetkit_images
@@ -49,7 +49,10 @@ dependencies[] = wetkit_breadcrumbs
 dependencies[] = wetkit_users
 dependencies[] = wetkit_search
 
-; WxtKit Testing
+; WxT Recommended
+dependencies[] = l10n_client
+
+; WxT Testing
 files[] = wetkit.test
 files[] = tests/simpletest/WetKitWebTestCase.inc
 
