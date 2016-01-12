@@ -5,9 +5,11 @@
 Performance Update(s)
 
   - title_field_replacement_info calls entity_get_info twice
+  - bootstrap (3.4) theme registry improvements
 
 Features:
 
+  - Bootstrap has been updated to v3.4
   - Deploy improvements + enhanced integration with Deploy Plus
   - jQuery Update is now using v1.10
   - Sidebar menu option chevrons support
@@ -15,8 +17,34 @@ Features:
   - Workbench Moderation updated to latest official with added Behat tests
   - PHP7 minor code style fixes to CTools + Views so no errors
   - WxT jQuery Framework updated to v4.0.20
+  - Simpletest fixes to allow for tests to be run in install profile
+  - Additional UI refinements for common administrative pages
+  - New menu_block CTools plugin for blockreference
 
 Fixes:
+  - (Commit: [b91f450][R4.2-Commit-b91f450]) Patch for install profiles + simpletests not detecting modules.
+  - (Commit: [437b954][R4.2-Commit-437b954]) Fixed WetKit Language for #[2647048][R4.2-Issue-2647048] - make it possible to disable l10n_client
+  - (Commit: [ac026a2][R4.2-Commit-ac026a2]) Fixed WetKit Bootstrap for #[2556733][R4.2-Issue-2556733] - Update to latest bootstrap 7.x-3.4
+  - (Commit: [b4cb261][R4.2-Commit-b4cb261]) Fixed WetKit Bootstrap for Add contextual links region for path breadcrumbs to breadcrumb region.
+  - (Commit: [c66ae44][R4.2-Commit-c66ae44]) Fixed WetKit Bootstrap for Adjust admin-index to be split as per drupal default.
+  - (Commit: [6c116a5][R4.2-Commit-6c116a5]) Fixed WetKit Bootstrap for Adjust admin-page to be split as per drupal default.
+  - (Commit: [263f808][R4.2-Commit-263f808]) Fixed WetKit Core for Add descriptions to dashboard + help in admin screen.
+  - (Commit: [9d5f614][R4.2-Commit-9d5f614]) Fixed WetKit Admin for Add description to hook_menu for caches.
+  - (Commit: [2686959][R4.2-Commit-2686959]) Fixed WetKit Admin for Remove escape_admin disabled and uninstalled in earlier release.
+  - (Commit: [ed53dc1][R4.2-Commit-ed53dc1]) Fixed WetKit Bootstrap for #[2556733][R4.2-Issue-2556733] - Update to latest bootstrap 7.x-3.4
+  - (Commit: [a321812][R4.2-Commit-a321812]) Fixed WetKit Migration for Remove data specifics for migrated content.
+  - (Commit: [4a5b1cc][R4.2-Commit-4a5b1cc]) Fixed WetKit Deployment for Use wetkit_deployment_source form_alter().
+  - (Commit: [5463abd][R4.2-Commit-5463abd]) Fixed WetKit Core for #[2644630][R4.2-Issue-2644630] - Menu Block + Block Reference Integration
+  - (Commit: [cc4db9d][R4.2-Commit-cc4db9d]) Fixed WetKit Bootstrap for #[2556733][R4.2-Issue-2556733] - Update to latest bootstrap 7.x-3.4
+  - (Commit: [debd83e][R4.2-Commit-debd83e]) Fixed WetKit Bootstrap for #[2556733][R4.2-Issue-2556733] - Update to latest bootstrap 7.x-3.4
+  - (Commit: [62944cf][R4.2-Commit-62944cf]) Fixed WetKit Test for #[2556733][R4.2-Issue-2556733] - Update to latest bootstrap 7.x-3.4
+  - (Commit: [3cd83d9][R4.2-Commit-3cd83d9]) Fixed WetKit Theme for #[2556733][R4.2-Issue-2556733] - Update to latest bootstrap 7.x-3.4
+  - (Commit: [f171aaa][R4.2-Commit-f171aaa]) Fixed WetKit Bootstrap for Minor string update for Theme.
+  - (Commit: [076fe3a][R4.2-Commit-076fe3a]) Fixed WetKit Breadcrumbs for #[2556733][R4.2-Issue-2556733] - Update to latest bootstrap 7.x-3.4
+  - (Commit: [236e61b][R4.2-Commit-236e61b]) Fixed WetKit Test for #[2556733][R4.2-Issue-2556733] - Update to latest bootstrap 7.x-3.4
+  - (Commit: [951187a][R4.2-Commit-951187a]) Fixed WetKit Bootstrap for #[2556733][R4.2-Issue-2556733] - Update to latest bootstrap 7.x-3.4
+  - (Commit: [ab4e0a4][R4.2-Commit-ab4e0a4]) Fixed WetKit Test for (behat) Expand tags for @standard_login.
+  - (Commit: [21b17f6][R4.2-Commit-21b17f6]) Updates to changelog.md file.
   - (Commit: [2ac4938][R4.2-Commit-2ac4938]) Fixed WetKit WET-BOEW for #[2628456][R4.2-Issue-2628456] - WET-BOEW v4.0.20 Release
   - (Commit: [14d379e][R4.2-Commit-14d379e]) Fixed WetKit Core for #[2635072][R4.2-Issue-2635072] - wetkit_media related to upgrading to jQuery 1.10
   - (Commit: [77ea0ad][R4.2-Commit-77ea0ad]) Fixed WetKit Theme for #[2635072][R4.2-Issue-2635072] - wetkit_media related to upgrading to jQuery 1.10
@@ -109,7 +137,7 @@ Fixes:
   - (Commit: [2dfa74a][R4.2-Commit-2dfa74a]) Add slack notifications.
   - (Commit: [db4b89f][R4.2-Commit-db4b89f]) Fixed WetKit Panel Layouts for #[2625780][R4.2-Issue-2625780] - Pearson layout missing row in Bottom element
   - (Commit: [b271cb1][R4.2-Commit-b271cb1]) Fixed WetKit Ember for #[2625316][R4.2-Issue-2625316] - File Entity edit screen from CKEditor missing title
-  - (Commit: [7b8a9fa][R4.2-Commit-7b8a9fa]) Fixed WetKit Bootstrap for Tidy up entity translation field in modal window.
+  - (Commit: [7b8a9fa][R4.2-Commit-7b8a9fa]) Fixed WetKit Bootstrap for Tidy up entranslation translation field in modal window.
   - (Commit: [5d33257][R4.2-Commit-5d33257]) Fixed WetKit Widgets for #[2625308][R4.2-Issue-2625308] - menu_translate errors on file structure types screen
   - (Commit: [fbfcada][R4.2-Commit-fbfcada]) Fixed WetKit Bootstrap for #[2624520][R4.2-Issue-2624520] - Bean WYSIWYG internal uuid links for images/media/file
   - (Commit: [30f90f6][R4.2-Commit-30f90f6]) Fixed WetKit Theme for #[2624456][R4.2-Issue-2624456] - Make chevrons configurable from Sidebar
@@ -635,6 +663,29 @@ Fixes:
 
 <!-- Commits R4.2 -->
 
+[R4.2-Commit-b91f450]: http://drupalcode.org/project/wetkit.git/commit/b91f450
+[R4.2-Commit-437b954]: http://drupalcode.org/project/wetkit.git/commit/437b954
+[R4.2-Commit-ac026a2]: http://drupalcode.org/project/wetkit.git/commit/ac026a2
+[R4.2-Commit-b4cb261]: http://drupalcode.org/project/wetkit.git/commit/b4cb261
+[R4.2-Commit-c66ae44]: http://drupalcode.org/project/wetkit.git/commit/c66ae44
+[R4.2-Commit-6c116a5]: http://drupalcode.org/project/wetkit.git/commit/6c116a5
+[R4.2-Commit-263f808]: http://drupalcode.org/project/wetkit.git/commit/263f808
+[R4.2-Commit-9d5f614]: http://drupalcode.org/project/wetkit.git/commit/9d5f614
+[R4.2-Commit-2686959]: http://drupalcode.org/project/wetkit.git/commit/2686959
+[R4.2-Commit-ed53dc1]: http://drupalcode.org/project/wetkit.git/commit/ed53dc1
+[R4.2-Commit-a321812]: http://drupalcode.org/project/wetkit.git/commit/a321812
+[R4.2-Commit-4a5b1cc]: http://drupalcode.org/project/wetkit.git/commit/4a5b1cc
+[R4.2-Commit-5463abd]: http://drupalcode.org/project/wetkit.git/commit/5463abd
+[R4.2-Commit-cc4db9d]: http://drupalcode.org/project/wetkit.git/commit/cc4db9d
+[R4.2-Commit-debd83e]: http://drupalcode.org/project/wetkit.git/commit/debd83e
+[R4.2-Commit-62944cf]: http://drupalcode.org/project/wetkit.git/commit/62944cf
+[R4.2-Commit-3cd83d9]: http://drupalcode.org/project/wetkit.git/commit/3cd83d9
+[R4.2-Commit-f171aaa]: http://drupalcode.org/project/wetkit.git/commit/f171aaa
+[R4.2-Commit-076fe3a]: http://drupalcode.org/project/wetkit.git/commit/076fe3a
+[R4.2-Commit-236e61b]: http://drupalcode.org/project/wetkit.git/commit/236e61b
+[R4.2-Commit-951187a]: http://drupalcode.org/project/wetkit.git/commit/951187a
+[R4.2-Commit-ab4e0a4]: http://drupalcode.org/project/wetkit.git/commit/ab4e0a4
+[R4.2-Commit-21b17f6]: http://drupalcode.org/project/wetkit.git/commit/21b17f6
 [R4.2-Commit-2ac4938]: http://drupalcode.org/project/wetkit.git/commit/2ac4938
 [R4.2-Commit-14d379e]: http://drupalcode.org/project/wetkit.git/commit/14d379e
 [R4.2-Commit-dc0775d]: http://drupalcode.org/project/wetkit.git/commit/dc0775d
@@ -762,6 +813,17 @@ Fixes:
 
 <!-- Issues R4.2 -->
 
+[R4.2-Issue-2647048]: http://drupal.org/node/2647048
+[R4.2-Issue-2556733]: http://drupal.org/node/2556733
+[R4.2-Issue-2556733]: http://drupal.org/node/2556733
+[R4.2-Issue-2644630]: http://drupal.org/node/2644630
+[R4.2-Issue-2556733]: http://drupal.org/node/2556733
+[R4.2-Issue-2556733]: http://drupal.org/node/2556733
+[R4.2-Issue-2556733]: http://drupal.org/node/2556733
+[R4.2-Issue-2556733]: http://drupal.org/node/2556733
+[R4.2-Issue-2556733]: http://drupal.org/node/2556733
+[R4.2-Issue-2556733]: http://drupal.org/node/2556733
+[R4.2-Issue-2556733]: http://drupal.org/node/2556733
 [R4.2-Issue-2628456]: http://drupal.org/node/2628456
 [R4.2-Issue-2635072]: http://drupal.org/node/2635072
 [R4.2-Issue-2635072]: http://drupal.org/node/2635072
