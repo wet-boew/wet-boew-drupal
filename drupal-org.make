@@ -132,15 +132,18 @@ projects[wetkit_wysiwyg][download][branch] = 7.x-4.x
 ; WxT Foundation (Themes)
 
 projects[wetkit_ember][version] = 4.x-dev
+projects[wetkit_ember][type] = theme
 projects[wetkit_ember][download][type] = git
 projects[wetkit_ember][download][revision] = 7fd3ae4
 projects[wetkit_ember][download][branch] = 7.x-4.x
 
 projects[wetkit_bootstrap][version] = 4.x-dev
+projects[wetkit_bootstrap][type] = theme
 projects[wetkit_bootstrap][download][type] = git
 projects[wetkit_bootstrap][download][revision] = 849fdaf
 projects[wetkit_bootstrap][download][branch] = 7.x-4.x
 
 projects[wetkit_shiny][version] = 4.x-dev
+projects[wetkit_shiny][type] = theme
 projects[wetkit_shiny][download][type] = git
 projects[wetkit_shiny][download][branch] = 7.x-4.x
