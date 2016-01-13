@@ -5,23 +5,37 @@
 Performance Update(s)
 
   - title_field_replacement_info calls entity_get_info twice
-  - bootstrap (3.4) theme registry improvements
+  - Bootstrap (3.4) theme registry improvements
+  - PHP7 is now officially supported
 
 Features:
 
   - Bootstrap has been updated to v3.4
-  - Deploy improvements + enhanced integration with Deploy Plus
+  - Deploy improvements + integration with Deploy Plus
   - jQuery Update is now using v1.10
   - Sidebar menu option chevrons support
   - Field Collection updated to latest official with updated Entity Translation patch
   - Workbench Moderation updated to latest official with added Behat tests
-  - PHP7 minor code style fixes to CTools + Views so no errors
+  - PHP7 code style fixes to CTools + Field Group + Views (constructor + uniform var syntax)
   - WxT jQuery Framework updated to v4.0.20
   - Simpletest fixes to allow for tests to be run in install profile
-  - Additional UI refinements for common administrative pages
-  - New menu_block CTools plugin for blockreference
+  - Additional UI refinements for common admin pages
+  - Menu block CTools plugin for blockreference (Provides additional menu workflow)
 
 Fixes:
+  - (Commit: [4ac3c4e][R4.2-Commit-4ac3c4e]) Fixed WetKit Test for Update Behat tests for Wysiwyg to align with linkit updates.
+  - (Commit: [8eafea2][R4.2-Commit-8eafea2]) Fixed WetKit Core for PHP Uniform Variable Syntax for Field Group + PHP7.
+  - (Commit: [45d8a9c][R4.2-Commit-45d8a9c]) Fixed WetKit Core for Field Group DRUPAL-SA-CONTRIB-2016-001.
+  - (Commit: [9dd28ec][R4.2-Commit-9dd28ec]) Fixed WetKit WYSIWYG for Update linkit to the latest official version 3.5.
+  - (Commit: [15a5529][R4.2-Commit-15a5529]) Fixed WetKit Breadcrumbs for #[2614240][R4.2-Issue-2614240] - Remove "Bootstrap 3 compatibility"
+  - (Commit: [cbda96a][R4.2-Commit-cbda96a]) Update TravisCI  drush runner to 8.0.2.
+  - (Commit: [90a8a25][R4.2-Commit-90a8a25]) Drush versions + make put themes into modules folder (drush #1781).
+  - (Commit: [8f497d6][R4.2-Commit-8f497d6]) Fixed WetKit Test for Update Drupal Extension for Behat.
+  - (Commit: [7ccf29f][R4.2-Commit-7ccf29f]) Fixed WetKit Test for Update Drupal Extension for Behat.
+  - (Commit: [6b61c96][R4.2-Commit-6b61c96]) Increment tests by version to support PHP7
+  - (Commit: [493dbf0][R4.2-Commit-493dbf0]) Increment tests by version to support PHP7
+  - (Commit: [5e5f7a8][R4.2-Commit-5e5f7a8]) Fixed WetKit Core for #[2635876][R4.2-Issue-2635876] - PHP7 - Uniform Variable Syntax + exported pages
+  - (Commit: [1801de0][R4.2-Commit-1801de0]) Update changelog.md file.
   - (Commit: [b91f450][R4.2-Commit-b91f450]) Patch for install profiles + simpletests not detecting modules.
   - (Commit: [437b954][R4.2-Commit-437b954]) Fixed WetKit Language for #[2647048][R4.2-Issue-2647048] - make it possible to disable l10n_client
   - (Commit: [ac026a2][R4.2-Commit-ac026a2]) Fixed WetKit Bootstrap for #[2556733][R4.2-Issue-2556733] - Update to latest bootstrap 7.x-3.4
@@ -663,6 +677,19 @@ Fixes:
 
 <!-- Commits R4.2 -->
 
+[R4.2-Commit-4ac3c4e]: http://drupalcode.org/project/wetkit.git/commit/4ac3c4e
+[R4.2-Commit-8eafea2]: http://drupalcode.org/project/wetkit.git/commit/8eafea2
+[R4.2-Commit-45d8a9c]: http://drupalcode.org/project/wetkit.git/commit/45d8a9c
+[R4.2-Commit-9dd28ec]: http://drupalcode.org/project/wetkit.git/commit/9dd28ec
+[R4.2-Commit-15a5529]: http://drupalcode.org/project/wetkit.git/commit/15a5529
+[R4.2-Commit-cbda96a]: http://drupalcode.org/project/wetkit.git/commit/cbda96a
+[R4.2-Commit-90a8a25]: http://drupalcode.org/project/wetkit.git/commit/90a8a25
+[R4.2-Commit-8f497d6]: http://drupalcode.org/project/wetkit.git/commit/8f497d6
+[R4.2-Commit-7ccf29f]: http://drupalcode.org/project/wetkit.git/commit/7ccf29f
+[R4.2-Commit-6b61c96]: http://drupalcode.org/project/wetkit.git/commit/6b61c96
+[R4.2-Commit-493dbf0]: http://drupalcode.org/project/wetkit.git/commit/493dbf0
+[R4.2-Commit-5e5f7a8]: http://drupalcode.org/project/wetkit.git/commit/5e5f7a8
+[R4.2-Commit-1801de0]: http://drupalcode.org/project/wetkit.git/commit/1801de0
 [R4.2-Commit-b91f450]: http://drupalcode.org/project/wetkit.git/commit/b91f450
 [R4.2-Commit-437b954]: http://drupalcode.org/project/wetkit.git/commit/437b954
 [R4.2-Commit-ac026a2]: http://drupalcode.org/project/wetkit.git/commit/ac026a2
@@ -813,6 +840,8 @@ Fixes:
 
 <!-- Issues R4.2 -->
 
+[R4.2-Issue-2614240]: http://drupal.org/node/2614240
+[R4.2-Issue-2635876]: http://drupal.org/node/2635876
 [R4.2-Issue-2647048]: http://drupal.org/node/2647048
 [R4.2-Issue-2556733]: http://drupal.org/node/2556733
 [R4.2-Issue-2556733]: http://drupal.org/node/2556733
