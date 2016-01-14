@@ -11,6 +11,7 @@ Performance Update(s)
 Features:
 
   - Bootstrap has been updated to v3.4
+  - Support for container-fluid across panels and regular pages
   - Deploy improvements + integration with Deploy Plus
   - jQuery Update is now using v1.10
   - Sidebar menu option chevrons support
@@ -23,6 +24,9 @@ Features:
   - Menu block CTools plugin for blockreference (Provides additional menu workflow)
 
 Fixes:
+  - (Commit: [a0c6855][R4.2-Commit-a0c6855]) Fixed WetKit Bootstrap for #[2649916][R4.2-Issue-2649916] - Support for Container-Fluid
+  - (Commit: [a2870c3][R4.2-Commit-a2870c3]) Fixed WetKit Panel Layouts for #[2649916][R4.2-Issue-2649916] - Support for Container-Fluid
+  - (Commit: [c7d5fae][R4.2-Commit-c7d5fae]) Update changelog.md file.
   - (Commit: [4ac3c4e][R4.2-Commit-4ac3c4e]) Fixed WetKit Test for Update Behat tests for Wysiwyg to align with linkit updates.
   - (Commit: [8eafea2][R4.2-Commit-8eafea2]) Fixed WetKit Core for PHP Uniform Variable Syntax for Field Group + PHP7.
   - (Commit: [45d8a9c][R4.2-Commit-45d8a9c]) Fixed WetKit Core for Field Group DRUPAL-SA-CONTRIB-2016-001.
@@ -677,6 +681,9 @@ Fixes:
 
 <!-- Commits R4.2 -->
 
+[R4.2-Commit-a0c6855]: http://drupalcode.org/project/wetkit.git/commit/a0c6855
+[R4.2-Commit-a2870c3]: http://drupalcode.org/project/wetkit.git/commit/a2870c3
+[R4.2-Commit-c7d5fae]: http://drupalcode.org/project/wetkit.git/commit/c7d5fae
 [R4.2-Commit-4ac3c4e]: http://drupalcode.org/project/wetkit.git/commit/4ac3c4e
 [R4.2-Commit-8eafea2]: http://drupalcode.org/project/wetkit.git/commit/8eafea2
 [R4.2-Commit-45d8a9c]: http://drupalcode.org/project/wetkit.git/commit/45d8a9c
@@ -840,6 +847,8 @@ Fixes:
 
 <!-- Issues R4.2 -->
 
+[R4.2-Issue-2649916]: http://drupal.org/node/2649916
+[R4.2-Issue-2649916]: http://drupal.org/node/2649916
 [R4.2-Issue-2614240]: http://drupal.org/node/2614240
 [R4.2-Issue-2635876]: http://drupal.org/node/2635876
 [R4.2-Issue-2647048]: http://drupal.org/node/2647048
