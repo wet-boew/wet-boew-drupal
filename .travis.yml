@@ -31,8 +31,6 @@ matrix:
       env: DB=postgres UPGRADE=none
     - php: "7.0"
       env: DB=postgres UPGRADE=none
-  allow_failures:
-    - php: "7.0"
 
 env:
   global:
