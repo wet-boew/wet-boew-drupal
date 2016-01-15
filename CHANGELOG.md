@@ -2,6 +2,10 @@
 
 ## v4.2 (In Development)
 
+Security Update(s):
+
+  - Field Group
+
 Performance Update(s)
 
   - title_field_replacement_info calls entity_get_info twice
@@ -24,6 +28,9 @@ Features:
   - Menu block CTools plugin for blockreference (Provides additional menu workflow)
 
 Fixes:
+  - (Commit: [ccbe539][R4.2-Commit-ccbe539]) Fixed WetKit Metatag for #[2615858][R4.2-Issue-2615858] - Metatag 1.7 release caused metatag translation deletions.
+  - (Commit: [45f742e][R4.2-Commit-45f742e]) Fixed WetKit Bootstrap for Adjust padding-left for .input-group-addon .icon
+  - (Commit: [9c0cfde][R4.2-Commit-9c0cfde]) Update changelog.md file.
   - (Commit: [a0c6855][R4.2-Commit-a0c6855]) Fixed WetKit Bootstrap for #[2649916][R4.2-Issue-2649916] - Support for Container-Fluid
   - (Commit: [a2870c3][R4.2-Commit-a2870c3]) Fixed WetKit Panel Layouts for #[2649916][R4.2-Issue-2649916] - Support for Container-Fluid
   - (Commit: [c7d5fae][R4.2-Commit-c7d5fae]) Update changelog.md file.
@@ -681,16 +688,23 @@ Fixes:
 
 <!-- Commits R4.2 -->
 
+[R4.2-Commit-ccbe539]: http://drupalcode.org/project/wetkit.git/commit/ccbe539
+[R4.2-Commit-45f742e]: http://drupalcode.org/project/wetkit.git/commit/45f742e
+[R4.2-Commit-b728630]: http://drupalcode.org/project/wetkit.git/commit/b728630
+[R4.2-Commit-9c0cfde]: http://drupalcode.org/project/wetkit.git/commit/9c0cfde
 [R4.2-Commit-a0c6855]: http://drupalcode.org/project/wetkit.git/commit/a0c6855
 [R4.2-Commit-a2870c3]: http://drupalcode.org/project/wetkit.git/commit/a2870c3
 [R4.2-Commit-c7d5fae]: http://drupalcode.org/project/wetkit.git/commit/c7d5fae
+[R4.2-Commit-00bfa47]: http://drupalcode.org/project/wetkit.git/commit/00bfa47
 [R4.2-Commit-4ac3c4e]: http://drupalcode.org/project/wetkit.git/commit/4ac3c4e
 [R4.2-Commit-8eafea2]: http://drupalcode.org/project/wetkit.git/commit/8eafea2
 [R4.2-Commit-45d8a9c]: http://drupalcode.org/project/wetkit.git/commit/45d8a9c
 [R4.2-Commit-9dd28ec]: http://drupalcode.org/project/wetkit.git/commit/9dd28ec
 [R4.2-Commit-15a5529]: http://drupalcode.org/project/wetkit.git/commit/15a5529
+[R4.2-Commit-37f6438]: http://drupalcode.org/project/wetkit.git/commit/37f6438
 [R4.2-Commit-cbda96a]: http://drupalcode.org/project/wetkit.git/commit/cbda96a
 [R4.2-Commit-90a8a25]: http://drupalcode.org/project/wetkit.git/commit/90a8a25
+[R4.2-Commit-c5ede7a]: http://drupalcode.org/project/wetkit.git/commit/c5ede7a
 [R4.2-Commit-8f497d6]: http://drupalcode.org/project/wetkit.git/commit/8f497d6
 [R4.2-Commit-7ccf29f]: http://drupalcode.org/project/wetkit.git/commit/7ccf29f
 [R4.2-Commit-6b61c96]: http://drupalcode.org/project/wetkit.git/commit/6b61c96
@@ -699,7 +713,9 @@ Fixes:
 [R4.2-Commit-1801de0]: http://drupalcode.org/project/wetkit.git/commit/1801de0
 [R4.2-Commit-b91f450]: http://drupalcode.org/project/wetkit.git/commit/b91f450
 [R4.2-Commit-437b954]: http://drupalcode.org/project/wetkit.git/commit/437b954
+[R4.2-Commit-5d78d11]: http://drupalcode.org/project/wetkit.git/commit/5d78d11
 [R4.2-Commit-ac026a2]: http://drupalcode.org/project/wetkit.git/commit/ac026a2
+[R4.2-Commit-df93e53]: http://drupalcode.org/project/wetkit.git/commit/df93e53
 [R4.2-Commit-b4cb261]: http://drupalcode.org/project/wetkit.git/commit/b4cb261
 [R4.2-Commit-c66ae44]: http://drupalcode.org/project/wetkit.git/commit/c66ae44
 [R4.2-Commit-6c116a5]: http://drupalcode.org/project/wetkit.git/commit/6c116a5
@@ -708,8 +724,10 @@ Fixes:
 [R4.2-Commit-2686959]: http://drupalcode.org/project/wetkit.git/commit/2686959
 [R4.2-Commit-ed53dc1]: http://drupalcode.org/project/wetkit.git/commit/ed53dc1
 [R4.2-Commit-a321812]: http://drupalcode.org/project/wetkit.git/commit/a321812
+[R4.2-Commit-97140c6]: http://drupalcode.org/project/wetkit.git/commit/97140c6
 [R4.2-Commit-4a5b1cc]: http://drupalcode.org/project/wetkit.git/commit/4a5b1cc
 [R4.2-Commit-5463abd]: http://drupalcode.org/project/wetkit.git/commit/5463abd
+[R4.2-Commit-af7ea91]: http://drupalcode.org/project/wetkit.git/commit/af7ea91
 [R4.2-Commit-cc4db9d]: http://drupalcode.org/project/wetkit.git/commit/cc4db9d
 [R4.2-Commit-debd83e]: http://drupalcode.org/project/wetkit.git/commit/debd83e
 [R4.2-Commit-62944cf]: http://drupalcode.org/project/wetkit.git/commit/62944cf
@@ -718,7 +736,9 @@ Fixes:
 [R4.2-Commit-076fe3a]: http://drupalcode.org/project/wetkit.git/commit/076fe3a
 [R4.2-Commit-236e61b]: http://drupalcode.org/project/wetkit.git/commit/236e61b
 [R4.2-Commit-951187a]: http://drupalcode.org/project/wetkit.git/commit/951187a
+[R4.2-Commit-4850eae]: http://drupalcode.org/project/wetkit.git/commit/4850eae
 [R4.2-Commit-ab4e0a4]: http://drupalcode.org/project/wetkit.git/commit/ab4e0a4
+[R4.2-Commit-98ff19d]: http://drupalcode.org/project/wetkit.git/commit/98ff19d
 [R4.2-Commit-21b17f6]: http://drupalcode.org/project/wetkit.git/commit/21b17f6
 [R4.2-Commit-2ac4938]: http://drupalcode.org/project/wetkit.git/commit/2ac4938
 [R4.2-Commit-14d379e]: http://drupalcode.org/project/wetkit.git/commit/14d379e
@@ -847,6 +867,7 @@ Fixes:
 
 <!-- Issues R4.2 -->
 
+[R4.2-Issue-2615858]: http://drupal.org/node/2615858
 [R4.2-Issue-2649916]: http://drupal.org/node/2649916
 [R4.2-Issue-2649916]: http://drupal.org/node/2649916
 [R4.2-Issue-2614240]: http://drupal.org/node/2614240
