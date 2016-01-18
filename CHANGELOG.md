@@ -28,6 +28,14 @@ Features:
   - Menu block CTools plugin for blockreference (Provides additional menu workflow)
 
 Fixes:
+  - (Commit: [c8311ba][R4.2-Commit-c8311ba]) Fixed WetKit Theme for Update default settings for wetkit_bootstrap + sub themes.
+  - (Commit: [1396b13][R4.2-Commit-1396b13]) Fixed WetKit Core for #[2633456][R4.2-Issue-2633456] - Workbench Moderation bring back to stable
+  - (Commit: [066e333][R4.2-Commit-066e333]) Fixed WetKit Core for #[2633456][R4.2-Issue-2633456] - Workbench Moderation bring back to stable
+  - (Commit: [08c13dd][R4.2-Commit-08c13dd]) Fixed WetKit Theme for Update default settings for wetkit_bootstrap + sub themes.
+  - (Commit: [fe92e2a][R4.2-Commit-fe92e2a]) Fixed WetKit Core for Resolve temporary errors in workbench moderation run before data model change in hook_update_n().
+  - (Commit: [256279a][R4.2-Commit-256279a]) Fixed WetKit Deployment for #[2638916][R4.2-Issue-2638916] - Align deployment interface with Deploy Plus
+  - (Commit: [e19aa2f][R4.2-Commit-e19aa2f]) Fixed WetKit Core for #[2635876][R4.2-Issue-2635876] - PHP7 - Uniform Variable Syntax updates are causing exported pages to not have names
+  - (Commit: [d28928f][R4.2-Commit-d28928f]) Update changelog.md file.
   - (Commit: [ce2cab7][R4.2-Commit-ce2cab7]) Fixed WetKit Core for Patch for link field type + language prefix + relative links.
   - (Commit: [37ccf89][R4.2-Commit-37ccf89]) Fixed WetKit Theme for Pointing to incorrect module admin form in wetkit_emberx.
   - (Commit: [c66c7a7][R4.2-Commit-c66c7a7]) Fixed WetKit Bean for Set better defaults for media + slide image styles.
@@ -697,6 +705,14 @@ Fixes:
 
 <!-- Commits R4.2 -->
 
+[R4.2-Commit-c8311ba]: http://drupalcode.org/project/wetkit.git/commit/c8311ba
+[R4.2-Commit-1396b13]: http://drupalcode.org/project/wetkit.git/commit/1396b13
+[R4.2-Commit-066e333]: http://drupalcode.org/project/wetkit.git/commit/066e333
+[R4.2-Commit-08c13dd]: http://drupalcode.org/project/wetkit.git/commit/08c13dd
+[R4.2-Commit-fe92e2a]: http://drupalcode.org/project/wetkit.git/commit/fe92e2a
+[R4.2-Commit-256279a]: http://drupalcode.org/project/wetkit.git/commit/256279a
+[R4.2-Commit-e19aa2f]: http://drupalcode.org/project/wetkit.git/commit/e19aa2f
+[R4.2-Commit-d28928f]: http://drupalcode.org/project/wetkit.git/commit/d28928f
 [R4.2-Commit-ce2cab7]: http://drupalcode.org/project/wetkit.git/commit/ce2cab7
 [R4.2-Commit-37ccf89]: http://drupalcode.org/project/wetkit.git/commit/37ccf89
 [R4.2-Commit-c66c7a7]: http://drupalcode.org/project/wetkit.git/commit/c66c7a7
@@ -885,6 +901,10 @@ Fixes:
 
 <!-- Issues R4.2 -->
 
+[R4.2-Issue-2633456]: http://drupal.org/node/2633456
+[R4.2-Issue-2633456]: http://drupal.org/node/2633456
+[R4.2-Issue-2638916]: http://drupal.org/node/2638916
+[R4.2-Issue-2635876]: http://drupal.org/node/2635876
 [R4.2-Issue-1344672]: http://drupal.org/node/1344672
 [R4.2-Issue-2615858]: http://drupal.org/node/2615858
 [R4.2-Issue-2649916]: http://drupal.org/node/2649916
