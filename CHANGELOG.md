@@ -28,6 +28,8 @@ Features:
   - Menu block CTools plugin for blockreference (Provides additional menu workflow)
 
 Fixes:
+  - (Commit: [e417990][R4.2-Commit-e417990]) Fixed WetKit Theme for Update default settings for wetkit_bootstrap + sub themes.
+  - (Commit: [8e41fa4][R4.2-Commit-8e41fa4]) Fixed WetKit Theme for Update default settings for wetkit_bootstrap + sub themes.
   - (Commit: [c8311ba][R4.2-Commit-c8311ba]) Fixed WetKit Theme for Update default settings for wetkit_bootstrap + sub themes.
   - (Commit: [1396b13][R4.2-Commit-1396b13]) Fixed WetKit Core for #[2633456][R4.2-Issue-2633456] - Workbench Moderation bring back to stable
   - (Commit: [066e333][R4.2-Commit-066e333]) Fixed WetKit Core for #[2633456][R4.2-Issue-2633456] - Workbench Moderation bring back to stable
@@ -705,6 +707,8 @@ Fixes:
 
 <!-- Commits R4.2 -->
 
+[R4.2-Commit-e417990]: http://drupalcode.org/project/wetkit.git/commit/e417990
+[R4.2-Commit-8e41fa4]: http://drupalcode.org/project/wetkit.git/commit/8e41fa4
 [R4.2-Commit-c8311ba]: http://drupalcode.org/project/wetkit.git/commit/c8311ba
 [R4.2-Commit-1396b13]: http://drupalcode.org/project/wetkit.git/commit/1396b13
 [R4.2-Commit-066e333]: http://drupalcode.org/project/wetkit.git/commit/066e333
