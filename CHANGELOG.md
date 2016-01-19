@@ -1,6 +1,6 @@
 # CHANGELOG.md
 
-## v4.2 (In Development)
+## v4.2
 
 Security Update(s):
 
@@ -44,7 +44,7 @@ Fixes:
   - (Commit: [2c02bfd][R4.2-Commit-2c02bfd]) Fixed WetKit Theme for Disable popover by default.
   - (Commit: [8b92a01][R4.2-Commit-8b92a01]) Fixed WetKit Migration for Fix for missing taxonomy item.
   - (Commit: [edf00f7][R4.2-Commit-edf00f7]) Fixed WetKit Bean for Update wetkit_bean export and remove default image style highlighted.
-  - (Commit: [5ac7039][R4.2-Commit-5ac7039]) Fixed WetKit Core for Update link modul from 1.3 to 1.4.
+  - (Commit: [5ac7039][R4.2-Commit-5ac7039]) Fixed WetKit Core for Update link module from 1.3 to 1.4.
   - (Commit: [86c4326][R4.2-Commit-86c4326]) Fixed WetKit Core for #[1344672][R4.2-Issue-1344672] - Field translation (entity_translation) support
   - (Commit: [48a8ea0][R4.2-Commit-48a8ea0]) Update changelog.md file.
   - (Commit: [ccbe539][R4.2-Commit-ccbe539]) Fixed WetKit Metatag for #[2615858][R4.2-Issue-2615858] - Metatag 1.7 release caused metatag translation deletions.
@@ -58,7 +58,7 @@ Fixes:
   - (Commit: [45d8a9c][R4.2-Commit-45d8a9c]) Fixed WetKit Core for Field Group DRUPAL-SA-CONTRIB-2016-001.
   - (Commit: [9dd28ec][R4.2-Commit-9dd28ec]) Fixed WetKit WYSIWYG for Update linkit to the latest official version 3.5.
   - (Commit: [15a5529][R4.2-Commit-15a5529]) Fixed WetKit Breadcrumbs for #[2614240][R4.2-Issue-2614240] - Remove "Bootstrap 3 compatibility"
-  - (Commit: [cbda96a][R4.2-Commit-cbda96a]) Update TravisCI  drush runner to 8.0.2.
+  - (Commit: [cbda96a][R4.2-Commit-cbda96a]) Update TravisCI Drush runner to 8.0.2.
   - (Commit: [90a8a25][R4.2-Commit-90a8a25]) Drush versions + make put themes into modules folder (drush #1781).
   - (Commit: [8f497d6][R4.2-Commit-8f497d6]) Fixed WetKit Test for Update Drupal Extension for Behat.
   - (Commit: [7ccf29f][R4.2-Commit-7ccf29f]) Fixed WetKit Test for Update Drupal Extension for Behat.
