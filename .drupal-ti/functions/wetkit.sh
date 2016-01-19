@@ -61,8 +61,8 @@ function wetkit_build_distribution() {
   # Build the current branch.
   wetkit_header Building WetKit from current branch
   cd drupal
-  drush make --yes profiles/wetkit/drupal-org-core.make --prepare-install
-  drush make --yes profiles/wetkit/drupal-org.make --no-core --contrib-destination=profiles/wetkit
+  drush make -v --yes profiles/wetkit/drupal-org-core.make --prepare-install
+  drush make -v --yes profiles/wetkit/drupal-org.make --no-core --contrib-destination=profiles/wetkit
   drush dl diff
   mkdir -p sites/default/private/files
   mkdir -p sites/default/private/temp
