@@ -74,7 +74,7 @@ projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_ember][version] = 4.3
 projects[wetkit_ember][type] = theme
 
-projects[wetkit_bootstrap][version] = 4.1
+projects[wetkit_bootstrap][version] = 4.2
 projects[wetkit_bootstrap][type] = theme
 ;projects[wetkit_bootstrap][download][type] = git
 ;projects[wetkit_bootstrap][download][revision] = 5c7c8f6
