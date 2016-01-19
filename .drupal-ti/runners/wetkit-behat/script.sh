@@ -23,7 +23,7 @@ cd "$DRUPAL_TI_BEHAT_DIR"
 
 wetkit_header Debug travis
 
-ls -al "$TRAVIS_BUILD_DIR"/themes/wetkit_bootstrap
+ls -al "$TRAVIS_BUILD_DIR"/themes/wetkit_bootstrap/templates
 
 wetkit_header Running tests
 
