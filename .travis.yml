@@ -107,10 +107,10 @@ env:
     - DB=postgres UPGRADE=none
 
 # Cache Composer & Drush directories.
-cache:
-  directories:
-    - $HOME/.composer/cache
-    - $HOME/.drush/cache
+#cache:
+#  directories:
+#    - $HOME/.composer/cache
+#    - $HOME/.drush/cache
 
 # Specifications of database(s)
 mysql:
