@@ -21,6 +21,10 @@ fi
 # needed for example for the drush runner.
 cd "$DRUPAL_TI_BEHAT_DIR"
 
+wetkit_header Debug travis
+
+ls -al "$TRAVIS_BUILD_DIR"/themes/wetkit_bootstrap/templates
+
 wetkit_header Running tests
 
 # Copy into place because it doesn't come with wetkit_test.
