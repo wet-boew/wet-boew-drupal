@@ -2,11 +2,19 @@
 
 ## v4.3 (In Development)
 
+Performance Update(s)
+
+  - Improved caching with Metatag (issue in 1.9)
+
 Features:
 
   - Metatag + i18n translate regressions have been addressed as of update to 1.10
 
 Fixes:
+  - (Commit: [99cce5f][R4.3-Commit-99cce5f]) #[2460833][R4.3-Issue-2460833] - drupal_session_destroy() should return boolean
+  - (Commit: [d784bb2][R4.3-Commit-d784bb2]) Fixed WetKit Bootstrap for Missing container_class in maintenance pages.
+  - (Commit: [e867374][R4.3-Commit-e867374]) Update changelog.md file.
+  - (Commit: [4e03add][R4.3-Commit-4e03add]) Fixed WetKit Deployment for #[2655888][R4.3-Issue-2655888] - Fix version contraint for deploy
   - (Commit: [21cc956][R4.3-Commit-21cc956]) Fixed WetKit Metatag for #[2615858][R4.3-Issue-2615858] - Patch metatag for 1.7 release caused metatag translation deletions.
   - (Commit: [95e303d][R4.3-Commit-95e303d]) Fixed WetKit Metatag for Minor correction to text.
   - (Commit: [4d25f0b][R4.3-Commit-4d25f0b]) Remove Schema correction resolved directly in Workbench Moderation.
@@ -719,6 +727,10 @@ Fixes:
 
 <!-- Commits R4.3 -->
 
+[R4.3-Commit-99cce5f]: http://drupalcode.org/project/wetkit.git/commit/99cce5f
+[R4.3-Commit-d784bb2]: http://drupalcode.org/project/wetkit.git/commit/d784bb2
+[R4.3-Commit-e867374]: http://drupalcode.org/project/wetkit.git/commit/e867374
+[R4.3-Commit-4e03add]: http://drupalcode.org/project/wetkit.git/commit/4e03add
 [R4.3-Commit-21cc956]: http://drupalcode.org/project/wetkit.git/commit/21cc956
 [R4.3-Commit-95e303d]: http://drupalcode.org/project/wetkit.git/commit/95e303d
 [R4.3-Commit-fa8eab5]: http://drupalcode.org/project/wetkit.git/commit/fa8eab5
@@ -727,6 +739,8 @@ Fixes:
 
 <!-- Issues R4.3 -->
 
+[R4.3-Issue-2460833]: http://drupal.org/node/2460833
+[R4.3-Issue-2655888]: http://drupal.org/node/2655888
 [R4.3-Issue-2615858]: http://drupal.org/node/2615858
 
 <!-- Commits R4.2 -->
