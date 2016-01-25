@@ -20,3 +20,4 @@ projects[drupal][patch][1772316] = http://drupal.org/files/drupal7-allow_change_
 projects[drupal][patch][2289867] = http://drupal.org/files/issues/D7_port_fix_w3c_url_validation_html5_changes-2289867-1.patch
 projects[drupal][patch][2383823] = http://drupal.org/files/issues/2383823-check_name_empty-1.patch
 projects[drupal][patch][2339447] = http://drupal.org/files/issues/2339447-73-optimize_drupal_find_theme_functions.patch
+projects[drupal][patch][2460833] = http://drupal.org/files/issues/drupal-session_destroy_return_bool-2460833-2-D7.patch
