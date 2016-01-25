@@ -10,13 +10,14 @@ Features:
 
   - Metatag + i18n translate regressions have been addressed as of update to 1.10
   - Regression in Code Mirror + CKEditor 4.3+
+  - PHP7 fix for logging out and _ drupal_session_destroy().
 
 Fixes:
   - (Commit: [145e6bd][R4.3-Commit-145e6bd]) Fixed WetKit WYSIWYG for #[2654658][R4.3-Issue-2654658] - Codemirror incompatible with more recent versions of CKEditor
   - (Commit: [c84a8e1][R4.3-Commit-c84a8e1]) Fixed WetKit Test for Switch test from chrome to firefox.
   - (Commit: [f65a038][R4.3-Commit-f65a038]) Fixed WetKit Test for Remove debug logic from tests.
   - (Commit: [887bea7][R4.3-Commit-887bea7]) Update changelog.md file.
-  - (Commit: [99cce5f][R4.3-Commit-99cce5f]) #[2460833][R4.3-Issue-2460833] - drupal_session_destroy() should return boolean
+  - (Commit: [99cce5f][R4.3-Commit-99cce5f]) #[2460833][R4.3-Issue-2460833] - _ drupal_session_destroy() should return boolean
   - (Commit: [d784bb2][R4.3-Commit-d784bb2]) Fixed WetKit Bootstrap for Missing container_class in maintenance pages.
   - (Commit: [e867374][R4.3-Commit-e867374]) Update changelog.md file.
   - (Commit: [4e03add][R4.3-Commit-4e03add]) Fixed WetKit Deployment for #[2655888][R4.3-Issue-2655888] - Fix version contraint for deploy
