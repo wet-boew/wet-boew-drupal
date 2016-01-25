@@ -1,5 +1,17 @@
 # CHANGELOG.md
 
+## v4.3 (In Development)
+
+Features:
+
+  - Metatag + i18n translate regressions have been addressed as of update to 1.10
+
+Fixes:
+  - (Commit: [21cc956][R4.3-Commit-21cc956]) Fixed WetKit Metatag for #[2615858][R4.3-Issue-2615858] - Patch metatag for 1.7 release caused metatag translation deletions.
+  - (Commit: [95e303d][R4.3-Commit-95e303d]) Fixed WetKit Metatag for Minor correction to text.
+  - (Commit: [4d25f0b][R4.3-Commit-4d25f0b]) Remove Schema correction resolved directly in Workbench Moderation.
+  - (Commit: [067bf46][R4.3-Commit-067bf46]) Start work for next release.
+
 ## v4.2
 
 Security Update(s):
@@ -705,6 +717,14 @@ Fixes:
 
 <!-- Links Referenced -->
 
+<!-- Commits R4.3 --> \n
+[R4.3-Commit-21cc956]: http://drupalcode.org/project/wetkit.git/commit/21cc956
+[R4.3-Commit-95e303d]: http://drupalcode.org/project/wetkit.git/commit/95e303d
+[R4.3-Commit-fa8eab5]: http://drupalcode.org/project/wetkit.git/commit/fa8eab5
+[R4.3-Commit-4d25f0b]: http://drupalcode.org/project/wetkit.git/commit/4d25f0b
+[R4.3-Commit-067bf46]: http://drupalcode.org/project/wetkit.git/commit/067bf46
+\n <!-- Issues R4.3 --> \n
+[R4.3-Issue-2615858]: http://drupal.org/node/2615858
 <!-- Commits R4.2 -->
 
 [R4.2-Commit-e417990]: http://drupalcode.org/project/wetkit.git/commit/e417990
