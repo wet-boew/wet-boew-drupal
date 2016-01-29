@@ -1,5 +1,27 @@
 # CHANGELOG.md
 
+## v4.4 (In Development)
+
+Features:
+
+  - PHP7 fix for migrate module
+  - Resolved issue with Bootstrap + Splash pages
+  - Further metatag improvements
+
+Fixes:
+  - (Commit: [ba72306][R4.4-Commit-ba72306]) Fixed WetKit Language for #[1967692][R4.4-Issue-1967692] - Make a release (i18nviews).
+  - (Commit: [961aec9][R4.4-Commit-961aec9]) Fixed WetKit Core for Wrong patch for features module for PHP 7 features manage page.
+  - (Commit: [a055bff][R4.4-Commit-a055bff]) Fixed WetKit Core for #[2288395][R4.4-Issue-2288395] - Manage Features page empty in PHP 7.
+  - (Commit: [c86f093][R4.4-Commit-c86f093]) Fixed WetKit Migration for #[2654222][R4.4-Issue-2654222] - PHP7 Uniform Variable Syntax.
+  - (Commit: [ce68535][R4.4-Commit-ce68535]) Fixed WetKit Metatag for Update metatag to 1.11 release for minor bug fixes.
+  - (Commit: [255c645][R4.4-Commit-255c645]) Fixed WetKit Theme for #[2658276][R4.4-Issue-2658276] - Disable rendering of the mb main link inside the mega menu option gone in 4.0
+  - (Commit: [8c0725c][R4.4-Commit-8c0725c]) Fixed WetKit Bootstrap for #[2658276][R4.4-Issue-2658276] - Disable rendering of the mb main link inside the mega menu option gone in 4.0
+  - (Commit: [622dcf1][R4.4-Commit-622dcf1]) Fixed WetKit Admin for #[2658366][R4.4-Issue-2658366] - Content-type names not translated in Navbar
+  - (Commit: [45bbc8f][R4.4-Commit-45bbc8f]) Fixed WetKit WYSIWYG for #[2658336][R4.4-Issue-2658336] - Body background image being added to wetkit wysiwyg
+  - (Commit: [bf345dc][R4.4-Commit-bf345dc]) Fixed WetKit Core for #[2657866][R4.4-Issue-2657866] - ctools_context_optional() not usable since "Deprecating PHP4 style constructors" was commited
+  - (Commit: [0c0a2e3][R4.4-Commit-0c0a2e3]) Fixed WetKit Bootstrap for #[2658376][R4.4-Issue-2658376] - Splash Pages broken with Bootstrap Update
+  - (Commit: [a790cb8][R4.4-Commit-a790cb8]) Start work on next release.
+
 ## v4.3
 
 Performance Update(s)
@@ -731,6 +753,34 @@ Fixes:
 
 <!-- Links Referenced -->
 
+<!-- Commits R4.4 -->
+
+[R4.4-Commit-fda2833]: http://drupalcode.org/project/wetkit.git/commit/fda2833
+[R4.4-Commit-ba72306]: http://drupalcode.org/project/wetkit.git/commit/ba72306
+[R4.4-Commit-dff8552]: http://drupalcode.org/project/wetkit.git/commit/dff8552
+[R4.4-Commit-961aec9]: http://drupalcode.org/project/wetkit.git/commit/961aec9
+[R4.4-Commit-a055bff]: http://drupalcode.org/project/wetkit.git/commit/a055bff
+[R4.4-Commit-c86f093]: http://drupalcode.org/project/wetkit.git/commit/c86f093
+[R4.4-Commit-ce68535]: http://drupalcode.org/project/wetkit.git/commit/ce68535
+[R4.4-Commit-255c645]: http://drupalcode.org/project/wetkit.git/commit/255c645
+[R4.4-Commit-8c0725c]: http://drupalcode.org/project/wetkit.git/commit/8c0725c
+[R4.4-Commit-622dcf1]: http://drupalcode.org/project/wetkit.git/commit/622dcf1
+[R4.4-Commit-45bbc8f]: http://drupalcode.org/project/wetkit.git/commit/45bbc8f
+[R4.4-Commit-bf345dc]: http://drupalcode.org/project/wetkit.git/commit/bf345dc
+[R4.4-Commit-0c0a2e3]: http://drupalcode.org/project/wetkit.git/commit/0c0a2e3
+[R4.4-Commit-a790cb8]: http://drupalcode.org/project/wetkit.git/commit/a790cb8
+
+<!-- Issues R4.4 -->
+
+[R4.4-Issue-1967692]: http://drupal.org/node/1967692
+[R4.4-Issue-2288395]: http://drupal.org/node/2288395
+[R4.4-Issue-2654222]: http://drupal.org/node/2654222
+[R4.4-Issue-2658276]: http://drupal.org/node/2658276
+[R4.4-Issue-2658276]: http://drupal.org/node/2658276
+[R4.4-Issue-2658366]: http://drupal.org/node/2658366
+[R4.4-Issue-2658336]: http://drupal.org/node/2658336
+[R4.4-Issue-2657866]: http://drupal.org/node/2657866
+[R4.4-Issue-2658376]: http://drupal.org/node/2658376
 <!-- Commits R4.4 --> \n
 \n <!-- Issues R4.4 --> \n
 <!-- Commits R4.3 -->
