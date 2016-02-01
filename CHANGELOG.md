@@ -13,6 +13,8 @@ Features:
   - Further metatag improvements
 
 Fixes:
+  - (Commit: [1be519f][R4.4-Commit-1be519f]) Fixed WetKit Metatag for Patch metatag for metatag panels regression.
+  - (Commit: [21ed5e8][R4.4-Commit-21ed5e8]) Update changelog.md file.
   - (Commit: [1aaeec9][R4.4-Commit-1aaeec9]) #[2411917][R4.4-Issue-2411917] - _ block_rehash() performance issue
   - (Commit: [53fad2f][R4.4-Commit-53fad2f]) Fixed WetKit Deployment for Workaround for large file entity deployments.
   - (Commit: [1b9999c][R4.4-Commit-1b9999c]) Fixed WetKit Admin for #[2644930][R4.4-Issue-2644930] - Navbar link language render to user preference
@@ -763,6 +765,8 @@ Fixes:
 
 <!-- Commits R4.4 -->
 
+[R4.4-Commit-1be519f]: http://drupalcode.org/project/wetkit.git/commit/1be519f
+[R4.4-Commit-21ed5e8]: http://drupalcode.org/project/wetkit.git/commit/21ed5e8
 [R4.4-Commit-1aaeec9]: http://drupalcode.org/project/wetkit.git/commit/1aaeec9
 [R4.4-Commit-53fad2f]: http://drupalcode.org/project/wetkit.git/commit/53fad2f
 [R4.4-Commit-1b9999c]: http://drupalcode.org/project/wetkit.git/commit/1b9999c

@@ -33,10 +33,12 @@ projects[wetkit_layouts][subdir] = custom
 projects[wetkit_menu][version] = 4.2
 projects[wetkit_menu][subdir] = custom
 
-projects[wetkit_metatag][version] = 4.4
+projects[wetkit_metatag][version] = 4.x-dev
 projects[wetkit_metatag][subdir] = custom
+projects[wetkit_metatag][download][type] = git
+projects[wetkit_metatag][download][branch] = 7.x-4.x
 
-projects[wetkit_migrate][version] = 4.1
+projects[wetkit_migrate][version] = 4.2
 projects[wetkit_migrate][subdir] = custom
 
 projects[wetkit_og][version] = 4.0
@@ -51,7 +53,7 @@ projects[wetkit_search][subdir] = custom
 projects[wetkit_test][version] = 4.5
 projects[wetkit_test][subdir] = custom
 
-projects[wetkit_theme][version] = 4.2
+projects[wetkit_theme][version] = 4.3
 projects[wetkit_theme][subdir] = custom
 
 projects[wetkit_users][version] = 4.1
@@ -66,7 +68,7 @@ projects[wetkit_wetboew][subdir] = custom
 projects[wetkit_widgets][version] = 4.4
 projects[wetkit_widgets][subdir] = custom
 
-projects[wetkit_wysiwyg][version] = 4.4
+projects[wetkit_wysiwyg][version] = 4.5
 projects[wetkit_wysiwyg][subdir] = custom
 
 ; WxT Foundation (Themes)
@@ -74,7 +76,7 @@ projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_ember][version] = 4.3
 projects[wetkit_ember][type] = theme
 
-projects[wetkit_bootstrap][version] = 4.4
+projects[wetkit_bootstrap][version] = 4.5
 projects[wetkit_bootstrap][type] = theme
 
 projects[wetkit_shiny][version] = 4.0
