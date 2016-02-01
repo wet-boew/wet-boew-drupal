@@ -33,10 +33,8 @@ projects[wetkit_layouts][subdir] = custom
 projects[wetkit_menu][version] = 4.2
 projects[wetkit_menu][subdir] = custom
 
-projects[wetkit_metatag][version] = 4.x-dev
+projects[wetkit_metatag][version] = 4.5
 projects[wetkit_metatag][subdir] = custom
-projects[wetkit_metatag][download][type] = git
-projects[wetkit_metatag][download][branch] = 7.x-4.x
 
 projects[wetkit_migrate][version] = 4.2
 projects[wetkit_migrate][subdir] = custom
