@@ -2,6 +2,10 @@
 
 ## v4.4 (In Development)
 
+Performance:
+
+  - Block reshash() performance issues (speeds up Beans)
+
 Features:
 
   - PHP7 fix for migrate module
@@ -9,6 +13,10 @@ Features:
   - Further metatag improvements
 
 Fixes:
+  - (Commit: [1aaeec9][R4.4-Commit-1aaeec9]) #[2411917][R4.4-Issue-2411917] - _ block_rehash() performance issue
+  - (Commit: [53fad2f][R4.4-Commit-53fad2f]) Fixed WetKit Deployment for Workaround for large file entity deployments.
+  - (Commit: [1b9999c][R4.4-Commit-1b9999c]) Fixed WetKit Admin for #[2644930][R4.4-Issue-2644930] - Navbar link language render to user preference
+  - (Commit: [9a9b2cc][R4.4-Commit-9a9b2cc]) Update changelog.md file.
   - (Commit: [ba72306][R4.4-Commit-ba72306]) Fixed WetKit Language for #[1967692][R4.4-Issue-1967692] - Make a release (i18nviews).
   - (Commit: [961aec9][R4.4-Commit-961aec9]) Fixed WetKit Core for Wrong patch for features module for PHP 7 features manage page.
   - (Commit: [a055bff][R4.4-Commit-a055bff]) Fixed WetKit Core for #[2288395][R4.4-Issue-2288395] - Manage Features page empty in PHP 7.
@@ -755,6 +763,10 @@ Fixes:
 
 <!-- Commits R4.4 -->
 
+[R4.4-Commit-1aaeec9]: http://drupalcode.org/project/wetkit.git/commit/1aaeec9
+[R4.4-Commit-53fad2f]: http://drupalcode.org/project/wetkit.git/commit/53fad2f
+[R4.4-Commit-1b9999c]: http://drupalcode.org/project/wetkit.git/commit/1b9999c
+[R4.4-Commit-9a9b2cc]: http://drupalcode.org/project/wetkit.git/commit/9a9b2cc
 [R4.4-Commit-fda2833]: http://drupalcode.org/project/wetkit.git/commit/fda2833
 [R4.4-Commit-ba72306]: http://drupalcode.org/project/wetkit.git/commit/ba72306
 [R4.4-Commit-dff8552]: http://drupalcode.org/project/wetkit.git/commit/dff8552
@@ -772,6 +784,8 @@ Fixes:
 
 <!-- Issues R4.4 -->
 
+[R4.4-Issue-2411917]: http://drupal.org/node/2411917
+[R4.4-Issue-2644930]: http://drupal.org/node/2644930
 [R4.4-Issue-1967692]: http://drupal.org/node/1967692
 [R4.4-Issue-2288395]: http://drupal.org/node/2288395
 [R4.4-Issue-2654222]: http://drupal.org/node/2654222
@@ -781,8 +795,7 @@ Fixes:
 [R4.4-Issue-2658336]: http://drupal.org/node/2658336
 [R4.4-Issue-2657866]: http://drupal.org/node/2657866
 [R4.4-Issue-2658376]: http://drupal.org/node/2658376
-<!-- Commits R4.4 --> \n
-\n <!-- Issues R4.4 --> \n
+
 <!-- Commits R4.3 -->
 
 [R4.3-Commit-145e6bd]: http://drupalcode.org/project/wetkit.git/commit/145e6bd
