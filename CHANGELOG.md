@@ -1,6 +1,6 @@
 # CHANGELOG.md
 
-## v4.4 (In Development)
+## v4.4
 
 Performance:
 
@@ -13,6 +13,7 @@ Features:
   - Further metatag improvements
 
 Fixes:
+
   - (Commit: [1be519f][R4.4-Commit-1be519f]) Fixed WetKit Metatag for Patch metatag for metatag panels regression.
   - (Commit: [21ed5e8][R4.4-Commit-21ed5e8]) Update changelog.md file.
   - (Commit: [1aaeec9][R4.4-Commit-1aaeec9]) #[2411917][R4.4-Issue-2411917] - _ block_rehash() performance issue
