@@ -1,5 +1,24 @@
 # CHANGELOG.md
 
+## v4.5 (In Development)
+
+Performance Update(s)
+
+  - 2 patches to Drupal Core are now in 7.42
+
+Features:
+
+  - Drupal Core maintenance release (7.42)
+  - Minor regressions in Deploy UI
+
+Fixes:
+
+  - (Commit: [fc99fe0][R4.5-Commit-fc99fe0]) #[2662652][R4.5-Issue-2662652] - Drupal Core 7.42 release
+  - (Commit: [c887928][R4.5-Commit-c887928]) Fixed WetKit WYSIWYG for #[2662148][R4.5-Issue-2662148] - CSS issue with Alerts inside of WYSIWYG
+  - (Commit: [ae089a1][R4.5-Commit-ae089a1]) Fixed WetKit Deployment for #[2661268][R4.5-Issue-2661268] - Deployment Screen UI Bugs
+  - (Commit: [f3f7780][R4.5-Commit-f3f7780]) Update changelog.md file.
+  - (Commit: [2ab872c][R4.5-Commit-2ab872c]) Start work on next release.
+
 ## v4.4
 
 Performance:
@@ -46,6 +65,7 @@ Features:
   - PHP7 fix for logging out and _ drupal_session_destroy().
 
 Fixes:
+
   - (Commit: [145e6bd][R4.3-Commit-145e6bd]) Fixed WetKit WYSIWYG for #[2654658][R4.3-Issue-2654658] - Codemirror incompatible with more recent versions of CKEditor
   - (Commit: [c84a8e1][R4.3-Commit-c84a8e1]) Fixed WetKit Test for Switch test from chrome to firefox.
   - (Commit: [f65a038][R4.3-Commit-f65a038]) Fixed WetKit Test for Remove debug logic from tests.
@@ -87,6 +107,7 @@ Features:
   - Menu block CTools plugin for blockreference (Provides additional menu workflow)
 
 Fixes:
+
   - (Commit: [e417990][R4.2-Commit-e417990]) Fixed WetKit Theme for Update default settings for wetkit_bootstrap + sub themes.
   - (Commit: [8e41fa4][R4.2-Commit-8e41fa4]) Fixed WetKit Theme for Update default settings for wetkit_bootstrap + sub themes.
   - (Commit: [c8311ba][R4.2-Commit-c8311ba]) Fixed WetKit Theme for Update default settings for wetkit_bootstrap + sub themes.
@@ -334,6 +355,7 @@ Features:
   - Official release
 
 Fixes:
+
   - (Commit: [63a66ed][R4.0-Commit-63a66ed]) Fixed WetKit Ember for #[2576461][R4.0-Issue-2576461] - Ember logic causing issues with views multiple fields
   - (Commit: [69271e7][R4.0-Commit-69271e7]) Fixed WetKit Bootstrap for #[2556745][R4.0-Issue-2556745] - Chrome/IE throw JavaScript exception on wetkit slideshow since rc2
   - (Commit: [5aaeabb][R4.0-Commit-5aaeabb]) #[2573945][R4.0-Issue-2573945] - D7 core -Speed up drupal_parse_info_format() 3x and reduce memory 95%
@@ -403,6 +425,7 @@ Security Update(s):
   - CTools
 
 Fixes:
+
   - (Commit: [7168c0c][R4.0-rc3-Commit-7168c0c]) Fixed WetKit Core for #[2554209][R4.0-rc3-Issue-2554209] - CTools SA-CONTRIB-2015-141
   - (Commit: [4fa3d0f][R4.0-rc3-Commit-4fa3d0f]) #[2554195][R4.0-rc3-Issue-2554195] - DRUPAL-SA-CORE-2015-003 (Critical)
   - (Commit: [cc16c08][R4.0-rc3-Commit-cc16c08]) Fixed WetKit Bootstrap for Fix for wetkit_bean search input fields.
@@ -763,6 +786,20 @@ Fixes:
   - (Commit: [0fc2202][R4.0-rc1-Commit-0fc2202]) Point responsinator to live demo site.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.5 -->
+
+[R4.5-Commit-fc99fe0]: http://drupalcode.org/project/wetkit.git/commit/fc99fe0
+[R4.5-Commit-c887928]: http://drupalcode.org/project/wetkit.git/commit/c887928
+[R4.5-Commit-ae089a1]: http://drupalcode.org/project/wetkit.git/commit/ae089a1
+[R4.5-Commit-f3f7780]: http://drupalcode.org/project/wetkit.git/commit/f3f7780
+[R4.5-Commit-2ab872c]: http://drupalcode.org/project/wetkit.git/commit/2ab872c
+
+<!-- Issues R4.5 -->
+
+[R4.5-Issue-2662652]: http://drupal.org/node/2662652
+[R4.5-Issue-2662148]: http://drupal.org/node/2662148
+[R4.5-Issue-2661268]: http://drupal.org/node/2661268
 
 <!-- Commits R4.4 -->
 
