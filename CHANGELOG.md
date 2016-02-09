@@ -1,6 +1,6 @@
 # CHANGELOG.md
 
-## v4.5 (In Development)
+## v4.5
 
 Performance Update(s)
 
