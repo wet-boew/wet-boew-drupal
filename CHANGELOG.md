@@ -12,9 +12,12 @@ Features:
   - Resolved CTools optional contexts regression introduced in PHP 7 patch
   - Drupal Core maintenance release (7.42)
   - Minor regressions in Deploy UI
+  - New Workbench Moderation CTools Argument for Revision ID plugin
 
 Fixes:
 
+  - (Commit: [a7a1373][R4.5-Commit-a7a1373]) Update changelog.md file.
+  - (Commit: [f9c55f6][R4.5-Commit-f9c55f6]) Update changelog.md file.
   - (Commit: [4bb5995][R4.5-Commit-4bb5995]) Fixed WetKit Language for #[2338735][R4.5-Issue-2338735] - hook_menu_link_alter() should set $item['i18n_tsid']
   - (Commit: [2cfcf63][R4.5-Commit-2cfcf63]) Fixed WetKit Deployment for #[2207897][R4.5-Issue-2207897] - Environment indicator cache is written on every request and uses altered version
   - (Commit: [f56bea1][R4.5-Commit-f56bea1]) Fixed WetKit Deployment for #[2207897][R4.5-Issue-2207897] - Environment indicator cache is written on every request and uses altered version
@@ -804,6 +807,8 @@ Fixes:
 
 <!-- Commits R4.5 -->
 
+[R4.5-Commit-a7a1373]: http://drupalcode.org/project/wetkit.git/commit/a7a1373
+[R4.5-Commit-f9c55f6]: http://drupalcode.org/project/wetkit.git/commit/f9c55f6
 [R4.5-Commit-4bb5995]: http://drupalcode.org/project/wetkit.git/commit/4bb5995
 [R4.5-Commit-2cfcf63]: http://drupalcode.org/project/wetkit.git/commit/2cfcf63
 [R4.5-Commit-f56bea1]: http://drupalcode.org/project/wetkit.git/commit/f56bea1
