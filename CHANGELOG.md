@@ -1,6 +1,6 @@
 # CHANGELOG.md
 
-## v4.5 (In Development)
+## v4.5
 
 Performance Update(s)
 
@@ -16,6 +16,9 @@ Features:
 
 Fixes:
 
+  - (Commit: [0d7a884][R4.5-Commit-0d7a884]) Update drupal-org.make.
+  - (Commit: [39ada8a][R4.5-Commit-39ada8a]) Fixed WetKit Core for #[2662600][R4.5-Issue-2662600] - Workbench Moderation Revision ID argument context
+  - (Commit: [cf4b1b6][R4.5-Commit-cf4b1b6]) Update changelog.md file.
   - (Commit: [a7a1373][R4.5-Commit-a7a1373]) Update changelog.md file.
   - (Commit: [f9c55f6][R4.5-Commit-f9c55f6]) Update changelog.md file.
   - (Commit: [4bb5995][R4.5-Commit-4bb5995]) Fixed WetKit Language for #[2338735][R4.5-Issue-2338735] - hook_menu_link_alter() should set $item['i18n_tsid']
@@ -807,6 +810,9 @@ Fixes:
 
 <!-- Commits R4.5 -->
 
+[R4.5-Commit-0d7a884]: http://drupalcode.org/project/wetkit.git/commit/0d7a884
+[R4.5-Commit-39ada8a]: http://drupalcode.org/project/wetkit.git/commit/39ada8a
+[R4.5-Commit-cf4b1b6]: http://drupalcode.org/project/wetkit.git/commit/cf4b1b6
 [R4.5-Commit-a7a1373]: http://drupalcode.org/project/wetkit.git/commit/a7a1373
 [R4.5-Commit-f9c55f6]: http://drupalcode.org/project/wetkit.git/commit/f9c55f6
 [R4.5-Commit-4bb5995]: http://drupalcode.org/project/wetkit.git/commit/4bb5995
@@ -834,6 +840,7 @@ Fixes:
 
 <!-- Issues R4.5 -->
 
+[R4.5-Issue-2662600]: http://drupal.org/node/2662600
 [R4.5-Issue-2338735]: http://drupal.org/node/2338735
 [R4.5-Issue-2207897]: http://drupal.org/node/2207897
 [R4.5-Issue-2207897]: http://drupal.org/node/2207897
