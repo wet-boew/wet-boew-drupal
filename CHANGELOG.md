@@ -8,6 +8,7 @@ Performance Update(s)
 
 Features:
 
+  - Resolved CTools optional contexts regression introduced in PHP 7 patch
   - Drupal Core maintenance release (7.42)
   - Minor regressions in Deploy UI
 
