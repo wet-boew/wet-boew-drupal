@@ -34,22 +34,6 @@ Fixes:
   - (Commit: [f3f7780][R4.5-Commit-f3f7780]) Update changelog.md file.
   - (Commit: [2ab872c][R4.5-Commit-2ab872c]) Start work on next release.
 
-Fixes:
-
-  - (Commit: [b2edcf3][R4.5-Commit-b2edcf3]) Fixed WetKit Deployment for Update services module to v3.13 release.
-  - (Commit: [2c3e745][R4.5-Commit-2c3e745]) Fixed WetKit Deployment for #[2655888][R4.5-Issue-2655888] - Fix version contraint for deploy
-  - (Commit: [b7ee6eb][R4.5-Commit-b7ee6eb]) Correct recent release of WetKit Core.
-  - (Commit: [81e4bb6][R4.5-Commit-81e4bb6]) Fixed WetKit Core for Remove patch committed in Field Collection 7.x-1.0-beta11
-  - (Commit: [8c862ae][R4.5-Commit-8c862ae]) Fixed WetKit Metatag for Update metatag to v1.13 release.
-  - (Commit: [35caee3][R4.5-Commit-35caee3]) Fixed WetKit Core for #[2599248][R4.5-Issue-2599248] - array_filter() issue after upgrading to 7.x-1.0-beta10
-  - (Commit: [904a1f2][R4.5-Commit-904a1f2]) Fixed WetKit Metatag for #[2662962][R4.5-Issue-2662962] - Metatag v1.12 release + i18n integration
-  - (Commit: [2a2a071][R4.5-Commit-2a2a071]) Update changelog.md file.
-  - (Commit: [fc99fe0][R4.5-Commit-fc99fe0]) #[2662652][R4.5-Issue-2662652] - Drupal Core 7.42 release
-  - (Commit: [c887928][R4.5-Commit-c887928]) Fixed WetKit WYSIWYG for #[2662148][R4.5-Issue-2662148] - CSS issue with Alerts inside of WYSIWYG
-  - (Commit: [ae089a1][R4.5-Commit-ae089a1]) Fixed WetKit Deployment for #[2661268][R4.5-Issue-2661268] - Deployment Screen UI Bugs
-  - (Commit: [f3f7780][R4.5-Commit-f3f7780]) Update changelog.md file.
-  - (Commit: [2ab872c][R4.5-Commit-2ab872c]) Start work on next release.
-
 ## v4.4
 
 Performance:
@@ -818,7 +802,8 @@ Fixes:
 
 <!-- Links Referenced -->
 
-<!-- Commits R4.5 --> \n
+<!-- Commits R4.5 -->
+
 [R4.5-Commit-4bb5995]: http://drupalcode.org/project/wetkit.git/commit/4bb5995
 [R4.5-Commit-2cfcf63]: http://drupalcode.org/project/wetkit.git/commit/2cfcf63
 [R4.5-Commit-f56bea1]: http://drupalcode.org/project/wetkit.git/commit/f56bea1
@@ -841,39 +826,13 @@ Fixes:
 [R4.5-Commit-4c0a871]: http://drupalcode.org/project/wetkit.git/commit/4c0a871
 [R4.5-Commit-f3f7780]: http://drupalcode.org/project/wetkit.git/commit/f3f7780
 [R4.5-Commit-2ab872c]: http://drupalcode.org/project/wetkit.git/commit/2ab872c
-\n <!-- Issues R4.5 --> \n
+
+<!-- Issues R4.5 -->
+
 [R4.5-Issue-2338735]: http://drupal.org/node/2338735
 [R4.5-Issue-2207897]: http://drupal.org/node/2207897
 [R4.5-Issue-2207897]: http://drupal.org/node/2207897
 [R4.5-Issue-2662600]: http://drupal.org/node/2662600
-[R4.5-Issue-2655888]: http://drupal.org/node/2655888
-[R4.5-Issue-2599248]: http://drupal.org/node/2599248
-[R4.5-Issue-2662962]: http://drupal.org/node/2662962
-[R4.5-Issue-2662652]: http://drupal.org/node/2662652
-[R4.5-Issue-2662148]: http://drupal.org/node/2662148
-[R4.5-Issue-2661268]: http://drupal.org/node/2661268
-<!-- Commits R4.5 -->
-
-[R4.5-Commit-b2edcf3]: http://drupalcode.org/project/wetkit.git/commit/b2edcf3
-[R4.5-Commit-2c3e745]: http://drupalcode.org/project/wetkit.git/commit/2c3e745
-[R4.5-Commit-b7ee6eb]: http://drupalcode.org/project/wetkit.git/commit/b7ee6eb
-[R4.5-Commit-81e4bb6]: http://drupalcode.org/project/wetkit.git/commit/81e4bb6
-[R4.5-Commit-8c862ae]: http://drupalcode.org/project/wetkit.git/commit/8c862ae
-[R4.5-Commit-35caee3]: http://drupalcode.org/project/wetkit.git/commit/35caee3
-[R4.5-Commit-47c301a]: http://drupalcode.org/project/wetkit.git/commit/47c301a
-[R4.5-Commit-904a1f2]: http://drupalcode.org/project/wetkit.git/commit/904a1f2
-[R4.5-Commit-0579f16]: http://drupalcode.org/project/wetkit.git/commit/0579f16
-[R4.5-Commit-5d59e8d]: http://drupalcode.org/project/wetkit.git/commit/5d59e8d
-[R4.5-Commit-2a2a071]: http://drupalcode.org/project/wetkit.git/commit/2a2a071
-[R4.5-Commit-fc99fe0]: http://drupalcode.org/project/wetkit.git/commit/fc99fe0
-[R4.5-Commit-c887928]: http://drupalcode.org/project/wetkit.git/commit/c887928
-[R4.5-Commit-ae089a1]: http://drupalcode.org/project/wetkit.git/commit/ae089a1
-[R4.5-Commit-4c0a871]: http://drupalcode.org/project/wetkit.git/commit/4c0a871
-[R4.5-Commit-f3f7780]: http://drupalcode.org/project/wetkit.git/commit/f3f7780
-[R4.5-Commit-2ab872c]: http://drupalcode.org/project/wetkit.git/commit/2ab872c
-
-<!-- Issues R4.5 -->
-
 [R4.5-Issue-2655888]: http://drupal.org/node/2655888
 [R4.5-Issue-2599248]: http://drupal.org/node/2599248
 [R4.5-Issue-2662962]: http://drupal.org/node/2662962
