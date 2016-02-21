@@ -1,5 +1,18 @@
 # CHANGELOG.md
 
+## v4.6
+
+Features:
+
+  - Improved UX for deployment screen
+
+Fixes:
+
+  - (Commit: [ea96838][R4.6-Commit-ea96838]) Fixed WetKit Bootstrap for #[2666318][R4.6-Issue-2666318] - entity field over calendar popup
+  - (Commit: [7d340f4][R4.6-Commit-7d340f4]) Fixed WetKit Deployment for #[2665558][R4.6-Issue-2665558] - wetkit_deployment views tweaks
+  - (Commit: [552e8bc][R4.6-Commit-552e8bc]) Fixed WetKit Bootstrap for #[2666192][R4.6-Issue-2666192] - double set of table classes
+  - (Commit: [ff327d5][R4.6-Commit-ff327d5]) Start work on next release.
+
 ## v4.5
 
 Performance Update(s)
@@ -807,6 +820,19 @@ Fixes:
   - (Commit: [0fc2202][R4.0-rc1-Commit-0fc2202]) Point responsinator to live demo site.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.6 -->
+
+[R4.6-Commit-ea96838]: http://drupalcode.org/project/wetkit.git/commit/ea96838
+[R4.6-Commit-7d340f4]: http://drupalcode.org/project/wetkit.git/commit/7d340f4
+[R4.6-Commit-552e8bc]: http://drupalcode.org/project/wetkit.git/commit/552e8bc
+[R4.6-Commit-ff327d5]: http://drupalcode.org/project/wetkit.git/commit/ff327d5
+
+<!-- Issues R4.6 -->
+
+[R4.6-Issue-2666318]: http://drupal.org/node/2666318
+[R4.6-Issue-2665558]: http://drupal.org/node/2665558
+[R4.6-Issue-2666192]: http://drupal.org/node/2666192
 
 <!-- Commits R4.5 -->
 
