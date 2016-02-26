@@ -1,6 +1,10 @@
 # CHANGELOG.md
 
-## v4.6
+## v4.6 (In Development)
+
+Security Update(s):
+
+  - Drupal Core (7.43)
 
 Features:
 
@@ -8,6 +12,14 @@ Features:
 
 Fixes:
 
+  - (Commit: [5a25771][R4.6-Commit-5a25771]) #[2675184][R4.6-Issue-2675184] - Drupal Core - SA-CORE-2016-001
+  - (Commit: [ac946e6][R4.6-Commit-ac946e6]) Fixed WetKit Deployment for #[2628240][R4.6-Issue-2628240] - Syndicated to: site doesn't take into account current language
+  - (Commit: [827b5fc][R4.6-Commit-827b5fc]) Fixed WetKit Test for Fixed WetKit Test for Fix for menu link attributes now in fieldset.
+  - (Commit: [c04e9c6][R4.6-Commit-c04e9c6]) Fixed WetKit Test for Fix for menu link attributes now in fieldset.
+  - (Commit: [677d87a][R4.6-Commit-677d87a]) Fixed WetKit Language for Update webform localization to v4.2
+  - (Commit: [b74b53b][R4.6-Commit-b74b53b]) Fixed WetKit Core for Updates to apps, better formats, and menu_attributes.
+  - (Commit: [562f121][R4.6-Commit-562f121]) Fixed WetKit Organic Groups for Update Organic Groups to v2.8
+  - (Commit: [b7ba712][R4.6-Commit-b7ba712]) Update changelog.md file.
   - (Commit: [ea96838][R4.6-Commit-ea96838]) Fixed WetKit Bootstrap for #[2666318][R4.6-Issue-2666318] - entity field over calendar popup
   - (Commit: [7d340f4][R4.6-Commit-7d340f4]) Fixed WetKit Deployment for #[2665558][R4.6-Issue-2665558] - wetkit_deployment views tweaks
   - (Commit: [552e8bc][R4.6-Commit-552e8bc]) Fixed WetKit Bootstrap for #[2666192][R4.6-Issue-2666192] - double set of table classes
@@ -823,6 +835,14 @@ Fixes:
 
 <!-- Commits R4.6 -->
 
+[R4.6-Commit-5a25771]: http://drupalcode.org/project/wetkit.git/commit/5a25771
+[R4.6-Commit-ac946e6]: http://drupalcode.org/project/wetkit.git/commit/ac946e6
+[R4.6-Commit-827b5fc]: http://drupalcode.org/project/wetkit.git/commit/827b5fc
+[R4.6-Commit-c04e9c6]: http://drupalcode.org/project/wetkit.git/commit/c04e9c6
+[R4.6-Commit-677d87a]: http://drupalcode.org/project/wetkit.git/commit/677d87a
+[R4.6-Commit-b74b53b]: http://drupalcode.org/project/wetkit.git/commit/b74b53b
+[R4.6-Commit-562f121]: http://drupalcode.org/project/wetkit.git/commit/562f121
+[R4.6-Commit-b7ba712]: http://drupalcode.org/project/wetkit.git/commit/b7ba712
 [R4.6-Commit-ea96838]: http://drupalcode.org/project/wetkit.git/commit/ea96838
 [R4.6-Commit-7d340f4]: http://drupalcode.org/project/wetkit.git/commit/7d340f4
 [R4.6-Commit-552e8bc]: http://drupalcode.org/project/wetkit.git/commit/552e8bc
@@ -830,6 +850,8 @@ Fixes:
 
 <!-- Issues R4.6 -->
 
+[R4.6-Issue-2675184]: http://drupal.org/node/2675184
+[R4.6-Issue-2628240]: http://drupal.org/node/2628240
 [R4.6-Issue-2666318]: http://drupal.org/node/2666318
 [R4.6-Issue-2665558]: http://drupal.org/node/2665558
 [R4.6-Issue-2666192]: http://drupal.org/node/2666192
