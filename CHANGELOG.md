@@ -12,6 +12,8 @@ Features:
 
 Fixes:
 
+  - (Commit: [215eaa0][R4.6-Commit-215eaa0]) Fixed WetKit Core for Update panopoly_magic to v1.31
+  - (Commit: [d99553a][R4.6-Commit-d99553a]) Update changelog.md file.
   - (Commit: [5a25771][R4.6-Commit-5a25771]) #[2675184][R4.6-Issue-2675184] - Drupal Core - SA-CORE-2016-001
   - (Commit: [ac946e6][R4.6-Commit-ac946e6]) Fixed WetKit Deployment for #[2628240][R4.6-Issue-2628240] - Syndicated to: site doesn't take into account current language
   - (Commit: [827b5fc][R4.6-Commit-827b5fc]) Fixed WetKit Test for Fixed WetKit Test for Fix for menu link attributes now in fieldset.
@@ -835,13 +837,20 @@ Fixes:
 
 <!-- Commits R4.6 -->
 
+[R4.6-Commit-215eaa0]: http://drupalcode.org/project/wetkit.git/commit/215eaa0
+[R4.6-Commit-6388168]: http://drupalcode.org/project/wetkit.git/commit/6388168
+[R4.6-Commit-d99553a]: http://drupalcode.org/project/wetkit.git/commit/d99553a
+[R4.6-Commit-9b4997c]: http://drupalcode.org/project/wetkit.git/commit/9b4997c
 [R4.6-Commit-5a25771]: http://drupalcode.org/project/wetkit.git/commit/5a25771
+[R4.6-Commit-69e1ffe]: http://drupalcode.org/project/wetkit.git/commit/69e1ffe
 [R4.6-Commit-ac946e6]: http://drupalcode.org/project/wetkit.git/commit/ac946e6
+[R4.6-Commit-aecd4a9]: http://drupalcode.org/project/wetkit.git/commit/aecd4a9
 [R4.6-Commit-827b5fc]: http://drupalcode.org/project/wetkit.git/commit/827b5fc
 [R4.6-Commit-c04e9c6]: http://drupalcode.org/project/wetkit.git/commit/c04e9c6
 [R4.6-Commit-677d87a]: http://drupalcode.org/project/wetkit.git/commit/677d87a
 [R4.6-Commit-b74b53b]: http://drupalcode.org/project/wetkit.git/commit/b74b53b
 [R4.6-Commit-562f121]: http://drupalcode.org/project/wetkit.git/commit/562f121
+[R4.6-Commit-c8933f0]: http://drupalcode.org/project/wetkit.git/commit/c8933f0
 [R4.6-Commit-b7ba712]: http://drupalcode.org/project/wetkit.git/commit/b7ba712
 [R4.6-Commit-ea96838]: http://drupalcode.org/project/wetkit.git/commit/ea96838
 [R4.6-Commit-7d340f4]: http://drupalcode.org/project/wetkit.git/commit/7d340f4
