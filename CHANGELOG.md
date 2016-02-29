@@ -4,7 +4,7 @@
 
 Features:
 
-  - Improved Field Collection + Entity Translation
+  - Improved Field Collection + Entity Translation integration
 
 Fixes:
 
