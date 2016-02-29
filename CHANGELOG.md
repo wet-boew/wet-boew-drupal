@@ -1,5 +1,17 @@
 # CHANGELOG.md
 
+## v4.7 (In Development)
+
+Features:
+
+  - Improved Field Collection + Entity Translation
+
+Fixes:
+
+  - (Commit: [af912da][R4.7-Commit-af912da]) Fixed WetKit Core for #[1344672][R4.7-Issue-1344672] - Field translation (entity_translation) support
+  - (Commit: [d243754][R4.7-Commit-d243754]) Fixed WetKit Language for #[2339315][R4.7-Issue-2339315] - Source language prepopulated values should be also included in $form_state['field']
+  - (Commit: [d5065ea][R4.7-Commit-d5065ea]) Start work on next release.
+
 ## v4.6
 
 Security Update(s):
@@ -834,6 +846,17 @@ Fixes:
   - (Commit: [0fc2202][R4.0-rc1-Commit-0fc2202]) Point responsinator to live demo site.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.7 -->
+
+[R4.7-Commit-af912da]: http://drupalcode.org/project/wetkit.git/commit/af912da
+[R4.7-Commit-d243754]: http://drupalcode.org/project/wetkit.git/commit/d243754
+[R4.7-Commit-d5065ea]: http://drupalcode.org/project/wetkit.git/commit/d5065ea
+
+<!-- Issues R4.7 -->
+
+[R4.7-Issue-1344672]: http://drupal.org/node/1344672
+[R4.7-Issue-2339315]: http://drupal.org/node/2339315
 
 <!-- Commits R4.6 -->
 
