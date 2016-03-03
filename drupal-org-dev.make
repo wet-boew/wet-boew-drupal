@@ -106,13 +106,16 @@ projects[wetkit_wysiwyg][download][branch] = 7.x-1.x
 ; WxT Foundation (Themes)
 
 projects[wetkit_ember][version] = 1.x-dev
+projects[wetkit_ember][type] = theme
 projects[wetkit_ember][download][type] = git
 projects[wetkit_ember][download][branch] = 7.x-1.x
 
 projects[wetkit_omega][version] = 1.x-dev
+projects[wetkit_omega][type] = theme
 projects[wetkit_omega][download][type] = git
 projects[wetkit_omega][download][branch] = 7.x-1.x
 
 projects[wetkit_shiny][version] = 1.x-dev
+projects[wetkit_shiny][type] = theme
 projects[wetkit_shiny][download][type] = git
 projects[wetkit_shiny][download][branch] = 7.x-1.x
