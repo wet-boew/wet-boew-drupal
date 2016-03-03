@@ -1,5 +1,22 @@
 # CHANGELOG.md
 
+## v1.13 (In Development)
+
+Security Update(s):
+
+  - Drupal Core
+  - jQuery WxT v3.1.x (legacy)
+
+Features:
+
+  - No "Greene" opposite layout
+
+Fixes:\n
+  - (Commit: [e69611a][R1.13-Commit-e69611a]) Fixed WetKit WET-BOEW for Security patch for legacy v3.1.x jQuery WxT.
+  - (Commit: [99389d8][R1.13-Commit-99389d8]) #[2675184][R1.13-Issue-2675184] - Drupal Core - SA-CORE-2016-001
+  - (Commit: [4e51f59][R1.13-Commit-4e51f59]) Fixed WetKit Panel Layouts for #[2635054][R1.13-Issue-2635054] - No "Greene" opposite Layout
+  - (Commit: [1ea6cff][R1.13-Commit-1ea6cff]) Fixed WetKit Core for #[2619268][R1.13-Issue-2619268] - Patch for Views-based search
+  - (Commit: [9078dc6][R1.13-Commit-9078dc6]) Start work on next release
 ## v1.12
 
 Security Update(s):
@@ -289,7 +306,7 @@ Fixes:
   - (Commit: [b2e0fdd][R1.8-Commit-b2e0fdd]) Update WetKit Admin for #[2364301][R1.8-Issue-2364301] - Provide UI to change number of terms listed on admin pages
   - (Commit: [c19dfa3][R1.8-Commit-c19dfa3]) Update WetKit Admin for #[2364301][R1.8-Issue-2364301] - Provide UI to change number of terms listed on admin pages
   - (Commit: [54e7b56][R1.8-Commit-54e7b56]) Update WetKit WYSIWYG for #[2381549][R1.8-Issue-2381549] - Linkit Improvements
-  - (Commit: [e7f9a83][R1.8-Commit-e7f9a83]) Update WetKit Menu for #[2351629][R1.8-Issue-2351629] - Mega Menu minipanel not showing properly on /user/*/edit
+  - (Commit: [e7f9a83][R1.8-Commit-e7f9a83]) Update WetKit Menu for #[2351629][R1.8-Issue-2351629] - Mega Menu minipanel not showing properly on /user//edit
   - (Commit: [fc59fdb][R1.8-Commit-fc59fdb]) #[2381409][R1.8-Issue-2381409] - Make install profile progress messages more descriptive
   - (Commit: [ff261ac][R1.8-Commit-ff261ac]) Update WetKit Menu for #[2339465][R1.8-Issue-2339465] - Double rendering of mini panels
   - (Commit: [354563d][R1.8-Commit-354563d]) #[2381391][R1.8-Issue-2381391] - Add multilingual to wetkit.test
@@ -893,6 +910,23 @@ Bug Fixes:
   - (Commit: [26217a4][RC15-Commit-26217a4]) #[2101501][RC15-Issue-2101501] - Fixed Taxonomy term feeds missing translations.
 
 <!-- Links Referenced -->
+
+<!-- Commits R1.13 -->
+
+[R1.13-Commit-e69611a]: http://drupalcode.org/project/wetkit.git/commit/e69611a
+[R1.13-Commit-99389d8]: http://drupalcode.org/project/wetkit.git/commit/99389d8
+[R1.13-Commit-4bd30fb]: http://drupalcode.org/project/wetkit.git/commit/4bd30fb
+[R1.13-Commit-4e51f59]: http://drupalcode.org/project/wetkit.git/commit/4e51f59
+[R1.13-Commit-4cdc79b]: http://drupalcode.org/project/wetkit.git/commit/4cdc79b
+[R1.13-Commit-1ea6cff]: http://drupalcode.org/project/wetkit.git/commit/1ea6cff
+[R1.13-Commit-21b5990]: http://drupalcode.org/project/wetkit.git/commit/21b5990
+[R1.13-Commit-9078dc6]: http://drupalcode.org/project/wetkit.git/commit/9078dc6
+
+<!-- Issues R1.13 -->
+
+[R1.13-Issue-2675184]: http://drupal.org/node/2675184
+[R1.13-Issue-2635054]: http://drupal.org/node/2635054
+[R1.13-Issue-2619268]: http://drupal.org/node/2619268
 
 <!-- Commits R1.12 -->
 
