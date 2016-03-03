@@ -54,7 +54,7 @@ projects[wetkit_theme][subdir] = custom
 projects[wetkit_users][version] = 1.3
 projects[wetkit_users][subdir] = custom
 
-projects[wetkit_wetboew][version] = 1.9
+projects[wetkit_wetboew][version] = 1.10
 projects[wetkit_wetboew][subdir] = custom
 
 projects[wetkit_widgets][version] = 1.11
