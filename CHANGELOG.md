@@ -1,22 +1,27 @@
 # CHANGELOG.md
 
-## v1.13 (In Development)
+## v1.13
 
 Security Update(s):
 
   - Drupal Core
   - jQuery WxT v3.1.x (legacy)
+  - Field Group
 
 Features:
 
   - No "Greene" opposite layout
 
-Fixes:\n
+Fixes:
+
+  - (Commit: [579ffd4][R1.13-Commit-579ffd4]) Fixed WetKit Core for Field Group: SA-CONTRIB-2016-001 (wxt.1x backport)
+  - (Commit: [3889f13][R1.13-Commit-3889f13]) Update changelog.md file.
   - (Commit: [e69611a][R1.13-Commit-e69611a]) Fixed WetKit WET-BOEW for Security patch for legacy v3.1.x jQuery WxT.
   - (Commit: [99389d8][R1.13-Commit-99389d8]) #[2675184][R1.13-Issue-2675184] - Drupal Core - SA-CORE-2016-001
   - (Commit: [4e51f59][R1.13-Commit-4e51f59]) Fixed WetKit Panel Layouts for #[2635054][R1.13-Issue-2635054] - No "Greene" opposite Layout
   - (Commit: [1ea6cff][R1.13-Commit-1ea6cff]) Fixed WetKit Core for #[2619268][R1.13-Issue-2619268] - Patch for Views-based search
   - (Commit: [9078dc6][R1.13-Commit-9078dc6]) Start work on next release
+
 ## v1.12
 
 Security Update(s):
@@ -913,6 +918,8 @@ Bug Fixes:
 
 <!-- Commits R1.13 -->
 
+[R1.13-Commit-579ffd4]: http://drupalcode.org/project/wetkit.git/commit/579ffd4
+[R1.13-Commit-3889f13]: http://drupalcode.org/project/wetkit.git/commit/3889f13
 [R1.13-Commit-e69611a]: http://drupalcode.org/project/wetkit.git/commit/e69611a
 [R1.13-Commit-99389d8]: http://drupalcode.org/project/wetkit.git/commit/99389d8
 [R1.13-Commit-4bd30fb]: http://drupalcode.org/project/wetkit.git/commit/4bd30fb
