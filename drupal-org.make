@@ -130,7 +130,7 @@ projects[wetkit_ember][download][branch] = 7.x-4.x
 projects[wetkit_bootstrap][version] = 4.x-dev
 projects[wetkit_bootstrap][type] = theme
 projects[wetkit_bootstrap][download][type] = git
-projects[wetkit_bootstrap][download][revision] = 37a4637
+projects[wetkit_bootstrap][download][revision] = 52b5718
 projects[wetkit_bootstrap][download][branch] = 7.x-4.x
 
 projects[wetkit_shiny][version] = 4.x-dev
