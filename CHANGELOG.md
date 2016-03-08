@@ -4,9 +4,19 @@
 
 Features:
 
+  - Duplicate 'main' role fix for WxT Bootstrap
   - Improved Field Collection + Entity Translation integration
 
 Fixes:
+
+  - (Commit: [6063c45][R4.7-Commit-6063c45]) Fixed WetKit Core for Update panopoly_magic to v1.32.
+  - (Commit: [2567570][R4.7-Commit-2567570]) Fixed WetKit Search for Update date_facets + facetapi_bonus to stable releases.
+  - (Commit: [08adfb1][R4.7-Commit-08adfb1]) Fixed WetKit Ember for Update ember to 2.0-alpha4 version.
+  - (Commit: [4ea5f0d][R4.7-Commit-4ea5f0d]) Update changelog.md file.
+  - (Commit: [d0e7d2b][R4.7-Commit-d0e7d2b]) Fixed WetKit Panel Layouts for #[2681213][R4.7-Issue-2681213] - The "main" role has been used more then once
+  - (Commit: [0d14f43][R4.7-Commit-0d14f43]) Fixed WetKit Bootstrap for #[2681213][R4.7-Issue-2681213] - The "main" role has been used more then once
+  - (Commit: [eb0969b][R4.7-Commit-eb0969b]) Fixed WetKit Widgets for #[2682941][R4.7-Issue-2682941] - File icon too close to filename
+  - (Commit: [ab2aa26][R4.7-Commit-ab2aa26]) Update changelog.md file.
   - (Commit: [383a583][R4.7-Commit-383a583]) Fixed WetKit Widgets for #[2568123][R4.7-Issue-2568123] - "Unable to create directory" when used in installation profile
   - (Commit: [11710b8][R4.7-Commit-11710b8]) Fixed WetKit Admin for #[2682263][R4.7-Issue-2682263] - wetkit_navbar doesn't take into account og node access
   - (Commit: [9982eb5][R4.7-Commit-9982eb5]) Fixed WetKit Search for Update search404 to v1.4
@@ -856,6 +866,14 @@ Fixes:
 
 <!-- Commits R4.7 -->
 
+[R4.7-Commit-6063c45]: http://drupalcode.org/project/wetkit.git/commit/6063c45
+[R4.7-Commit-2567570]: http://drupalcode.org/project/wetkit.git/commit/2567570
+[R4.7-Commit-08adfb1]: http://drupalcode.org/project/wetkit.git/commit/08adfb1
+[R4.7-Commit-4ea5f0d]: http://drupalcode.org/project/wetkit.git/commit/4ea5f0d
+[R4.7-Commit-d0e7d2b]: http://drupalcode.org/project/wetkit.git/commit/d0e7d2b
+[R4.7-Commit-0d14f43]: http://drupalcode.org/project/wetkit.git/commit/0d14f43
+[R4.7-Commit-eb0969b]: http://drupalcode.org/project/wetkit.git/commit/eb0969b
+[R4.7-Commit-ab2aa26]: http://drupalcode.org/project/wetkit.git/commit/ab2aa26
 [R4.7-Commit-383a583]: http://drupalcode.org/project/wetkit.git/commit/383a583
 [R4.7-Commit-11710b8]: http://drupalcode.org/project/wetkit.git/commit/11710b8
 [R4.7-Commit-9982eb5]: http://drupalcode.org/project/wetkit.git/commit/9982eb5
@@ -870,6 +888,9 @@ Fixes:
 
 <!-- Issues R4.7 -->
 
+[R4.7-Issue-2681213]: http://drupal.org/node/2681213
+[R4.7-Issue-2681213]: http://drupal.org/node/2681213
+[R4.7-Issue-2682941]: http://drupal.org/node/2682941
 [R4.7-Issue-2568123]: http://drupal.org/node/2568123
 [R4.7-Issue-2682263]: http://drupal.org/node/2682263
 [R4.7-Issue-2680783]: http://drupal.org/node/2680783
