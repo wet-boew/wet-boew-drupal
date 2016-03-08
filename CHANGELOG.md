@@ -4,20 +4,26 @@
 
 Features:
 
+  - Duplicate 'main' role fix for WxT Bootstrap
   - Improved Field Collection + Entity Translation integration
 
 Fixes:
-  - (Commit: [383a583][R4.7-Commit-383a583]) Fixed WetKit Widgets for #[2568123][R4.7-Issue-2568123] - "Unable to create directory" when used in installation profile
-  - (Commit: [11710b8][R4.7-Commit-11710b8]) Fixed WetKit Admin for #[2682263][R4.7-Issue-2682263] - wetkit_navbar doesn't take into account og node access
-  - (Commit: [9982eb5][R4.7-Commit-9982eb5]) Fixed WetKit Search for Update search404 to v1.4
-  - (Commit: [353cc56][R4.7-Commit-353cc56]) Fixed WetKit Bootstrap for #[2680783][R4.7-Issue-2680783] - Update bootstrap to v3.5
-  - (Commit: [fc626fb][R4.7-Commit-fc626fb]) Fixed WetKit Menu for #[2680619][R4.7-Issue-2680619] - Sidebar Menu extra / missing tags
-  - (Commit: [7a85323][R4.7-Commit-7a85323]) Fixed WetKit Theme for #[2678744][R4.7-Issue-2678744] - Bootstrap Horiz Tabs Style (Sort by Title)
-  - (Commit: [a038154][R4.7-Commit-a038154]) Update changelog.md file.
-  - (Commit: [e834001][R4.7-Commit-e834001]) Update changelog.md file.
-  - (Commit: [af912da][R4.7-Commit-af912da]) Fixed WetKit Core for #[1344672][R4.7-Issue-1344672] - Field translation (entity_translation) support
-  - (Commit: [d243754][R4.7-Commit-d243754]) Fixed WetKit Language for #[2339315][R4.7-Issue-2339315] - Source language prepopulated values should be also included in $form_state['field']
-  - (Commit: [d5065ea][R4.7-Commit-d5065ea]) Start work on next release.
+
+  - (Commit: [d0e7d2b][R4.7-Commit-d0e7d2b]) Fixed WetKit Panel Layouts for #[2681213][R4.7-Issue-2681213] - The "main" role has been used more then once 
+  - (Commit: [0d14f43][R4.7-Commit-0d14f43]) Fixed WetKit Bootstrap for #[2681213][R4.7-Issue-2681213] - The "main" role has been used more then once 
+  - (Commit: [eb0969b][R4.7-Commit-eb0969b]) Fixed WetKit Widgets for #[2682941][R4.7-Issue-2682941] - File icon too close to filename 
+  - (Commit: [ab2aa26][R4.7-Commit-ab2aa26]) Update changelog.md file. 
+  - (Commit: [383a583][R4.7-Commit-383a583]) Fixed WetKit Widgets for #[2568123][R4.7-Issue-2568123] - "Unable to create directory" when used in installation profile 
+  - (Commit: [11710b8][R4.7-Commit-11710b8]) Fixed WetKit Admin for #[2682263][R4.7-Issue-2682263] - wetkit_navbar doesn't take into account og node access 
+  - (Commit: [9982eb5][R4.7-Commit-9982eb5]) Fixed WetKit Search for Update search404 to v1.4 
+  - (Commit: [353cc56][R4.7-Commit-353cc56]) Fixed WetKit Bootstrap for #[2680783][R4.7-Issue-2680783] - Update bootstrap to v3.5 
+  - (Commit: [fc626fb][R4.7-Commit-fc626fb]) Fixed WetKit Menu for #[2680619][R4.7-Issue-2680619] - Sidebar Menu extra / missing tags 
+  - (Commit: [7a85323][R4.7-Commit-7a85323]) Fixed WetKit Theme for #[2678744][R4.7-Issue-2678744] - Bootstrap Horiz Tabs Style (Sort by Title) 
+  - (Commit: [a038154][R4.7-Commit-a038154]) Update changelog.md file. 
+  - (Commit: [e834001][R4.7-Commit-e834001]) Update changelog.md file. 
+  - (Commit: [af912da][R4.7-Commit-af912da]) Fixed WetKit Core for #[1344672][R4.7-Issue-1344672] - Field translation (entity_translation) support 
+  - (Commit: [d243754][R4.7-Commit-d243754]) Fixed WetKit Language for #[2339315][R4.7-Issue-2339315] - Source language prepopulated values should be also included in $form_state['field'] 
+  - (Commit: [d5065ea][R4.7-Commit-d5065ea]) Start work on next release. 
 
 ## v4.6
 
@@ -856,6 +862,10 @@ Fixes:
 
 <!-- Commits R4.7 -->
 
+[R4.7-Commit-d0e7d2b]: http://drupalcode.org/project/wetkit.git/commit/d0e7d2b
+[R4.7-Commit-0d14f43]: http://drupalcode.org/project/wetkit.git/commit/0d14f43
+[R4.7-Commit-eb0969b]: http://drupalcode.org/project/wetkit.git/commit/eb0969b
+[R4.7-Commit-ab2aa26]: http://drupalcode.org/project/wetkit.git/commit/ab2aa26
 [R4.7-Commit-383a583]: http://drupalcode.org/project/wetkit.git/commit/383a583
 [R4.7-Commit-11710b8]: http://drupalcode.org/project/wetkit.git/commit/11710b8
 [R4.7-Commit-9982eb5]: http://drupalcode.org/project/wetkit.git/commit/9982eb5
@@ -870,6 +880,9 @@ Fixes:
 
 <!-- Issues R4.7 -->
 
+[R4.7-Issue-2681213]: http://drupal.org/node/2681213
+[R4.7-Issue-2681213]: http://drupal.org/node/2681213
+[R4.7-Issue-2682941]: http://drupal.org/node/2682941
 [R4.7-Issue-2568123]: http://drupal.org/node/2568123
 [R4.7-Issue-2682263]: http://drupal.org/node/2682263
 [R4.7-Issue-2680783]: http://drupal.org/node/2680783
