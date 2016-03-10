@@ -2,6 +2,10 @@
 
 ## v4.7 (In Development)
 
+Performance Update(s)
+
+  - Panels Mini caching
+
 Features:
 
   - Duplicate 'main' role fix for WxT Bootstrap
@@ -9,6 +13,11 @@ Features:
 
 Fixes:
 
+  - (Commit: [00f35bc][R4.7-Commit-00f35bc]) Fixed WetKit Bean for #[2685101][R4.7-Issue-2685101] - Issue with wetkit Twitter Bean and Twitter embed rules.
+  - (Commit: [bf03a76][R4.7-Commit-bf03a76]) Fixed WetKit Core for #[2685173][R4.7-Issue-2685173] - panels_mini_load & friends need caching
+  - (Commit: [ce3d6d0][R4.7-Commit-ce3d6d0]) Fixed WetKit Core for Only recommend but not enforce panels preview (panopoly_magic).
+  - (Commit: [8939fc6][R4.7-Commit-8939fc6]) #[2460833][R4.7-Issue-2460833] - drupal_session_destroy() should return boolean
+  - (Commit: [bfd48a9][R4.7-Commit-bfd48a9]) Update changelog.md file.
   - (Commit: [6063c45][R4.7-Commit-6063c45]) Fixed WetKit Core for Update panopoly_magic to v1.32.
   - (Commit: [2567570][R4.7-Commit-2567570]) Fixed WetKit Search for Update date_facets + facetapi_bonus to stable releases.
   - (Commit: [08adfb1][R4.7-Commit-08adfb1]) Fixed WetKit Ember for Update ember to 2.0-alpha4 version.
@@ -866,6 +875,12 @@ Fixes:
 
 <!-- Commits R4.7 -->
 
+[R4.7-Commit-00f35bc]: http://drupalcode.org/project/wetkit.git/commit/00f35bc
+[R4.7-Commit-bf03a76]: http://drupalcode.org/project/wetkit.git/commit/bf03a76
+[R4.7-Commit-ce3d6d0]: http://drupalcode.org/project/wetkit.git/commit/ce3d6d0
+[R4.7-Commit-8939fc6]: http://drupalcode.org/project/wetkit.git/commit/8939fc6
+[R4.7-Commit-e84eb6f]: http://drupalcode.org/project/wetkit.git/commit/e84eb6f
+[R4.7-Commit-bfd48a9]: http://drupalcode.org/project/wetkit.git/commit/bfd48a9
 [R4.7-Commit-6063c45]: http://drupalcode.org/project/wetkit.git/commit/6063c45
 [R4.7-Commit-2567570]: http://drupalcode.org/project/wetkit.git/commit/2567570
 [R4.7-Commit-08adfb1]: http://drupalcode.org/project/wetkit.git/commit/08adfb1
@@ -888,6 +903,9 @@ Fixes:
 
 <!-- Issues R4.7 -->
 
+[R4.7-Issue-2685101]: http://drupal.org/node/2685101
+[R4.7-Issue-2685173]: http://drupal.org/node/2685173
+[R4.7-Issue-2460833]: http://drupal.org/node/2460833
 [R4.7-Issue-2681213]: http://drupal.org/node/2681213
 [R4.7-Issue-2681213]: http://drupal.org/node/2681213
 [R4.7-Issue-2682941]: http://drupal.org/node/2682941

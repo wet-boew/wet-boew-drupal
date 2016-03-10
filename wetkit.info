@@ -51,6 +51,7 @@ dependencies[] = wetkit_search
 
 ; WxT Recommended
 dependencies[] = l10n_client
+dependencies[] = panopoly_magic
 
 ; WxT Testing
 files[] = wetkit.test
