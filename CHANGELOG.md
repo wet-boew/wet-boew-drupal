@@ -3,6 +3,10 @@
 
 ## v4.7 (In Development)
 
+Security Update(s):
+
+  - Deploy
+
 Performance Update(s)
 
   - Panels Mini caching
@@ -14,6 +18,9 @@ Features:
 
 Fixes:
 
+  - (Commit: [5cc1ba3][R4.7-Commit-5cc1ba3]) Fixed WetKit Bootstrap for #[2696167][R4.7-Issue-2696167] - Language Toggle not visible on mobile when using the "Internet" as base theme
+  - (Commit: [41e62c6][R4.7-Commit-41e62c6]) Fixed WetKit Language for #[2509060][R4.7-Issue-2509060] - Plan for Title 7.x-1.0 release
+  - (Commit: [c5c2bd7][R4.7-Commit-c5c2bd7]) Update changelog.md file.
   - (Commit: [bab3cc1][R4.7-Commit-bab3cc1]) Fixed WetKit Core for Update features from v2.7 to v2.8 release.
   - (Commit: [68e5bff][R4.7-Commit-68e5bff]) Fixed WetKit Deployment for #[2692531][R4.7-Issue-2692531] - Security update for Deploy 7.x-2.0-beta2
   - (Commit: [6215ccd][R4.7-Commit-6215ccd]) Fixed WetKit Language for Update webform_localization from v4.2 to v4.3 release.
@@ -884,6 +891,9 @@ Fixes:
 
 <!-- Commits R4.7 -->
 
+[R4.7-Commit-5cc1ba3]: http://drupalcode.org/project/wetkit.git/commit/5cc1ba3
+[R4.7-Commit-41e62c6]: http://drupalcode.org/project/wetkit.git/commit/41e62c6
+[R4.7-Commit-c5c2bd7]: http://drupalcode.org/project/wetkit.git/commit/c5c2bd7
 [R4.7-Commit-bab3cc1]: http://drupalcode.org/project/wetkit.git/commit/bab3cc1
 [R4.7-Commit-68e5bff]: http://drupalcode.org/project/wetkit.git/commit/68e5bff
 [R4.7-Commit-6215ccd]: http://drupalcode.org/project/wetkit.git/commit/6215ccd
@@ -925,6 +935,8 @@ Fixes:
 
 <!-- Issues R4.7 -->
 
+[R4.7-Issue-2696167]: http://drupal.org/node/2696167
+[R4.7-Issue-2509060]: http://drupal.org/node/2509060
 [R4.7-Issue-2692531]: http://drupal.org/node/2692531
 [R4.7-Issue-2690309]: http://drupal.org/node/2690309
 [R4.7-Issue-2687299]: http://drupal.org/node/2687299
