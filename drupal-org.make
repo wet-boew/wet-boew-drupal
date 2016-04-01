@@ -23,7 +23,7 @@ projects[wetkit_breadcrumbs][download][branch] = 7.x-4.x
 projects[wetkit_core][version] = 4.x-dev
 projects[wetkit_core][subdir] = custom
 projects[wetkit_core][download][type] = git
-projects[wetkit_core][download][revision] = d720789
+projects[wetkit_core][download][revision] = ae6cb33
 projects[wetkit_core][download][branch] = 7.x-4.x
 
 projects[wetkit_demo][version] = 4.x-dev
@@ -83,7 +83,7 @@ projects[wetkit_pages][download][branch] = 7.x-4.x
 projects[wetkit_search][version] = 4.x-dev
 projects[wetkit_search][subdir] = custom
 projects[wetkit_search][download][type] = git
-projects[wetkit_search][download][revision] = 0943341
+projects[wetkit_search][download][revision] = 364c3db
 projects[wetkit_search][download][branch] = 7.x-4.x
 
 projects[wetkit_test][version] = 4.x-dev
