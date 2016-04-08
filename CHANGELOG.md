@@ -1,6 +1,5 @@
 # CHANGELOG.md
 
-
 ## v4.7 (In Development)
 
 Security Update(s):
@@ -15,9 +14,17 @@ Features:
 
   - Duplicate 'main' role fix for WxT Bootstrap
   - Improved Field Collection + Entity Translation integration
+  - Sidebar Right theming support
+  - Language Toggle for Internet theme
 
 Fixes:
 
+  - (Commit: [d8c11b8][R4.7-Commit-d8c11b8]) Fixed WetKit Menu for #[2700677][R4.7-Issue-2700677] - Wetkit menu Right sidebar
+  - (Commit: [bb01523][R4.7-Commit-bb01523]) Issue #889772 Following a password reset link while logged in leaves users unable to change their password
+  - (Commit: [d379f8f][R4.7-Commit-d379f8f]) Fixed WetKit Bootstrap for #[2702145][R4.7-Issue-2702145] - Overly aggressive css change hiding top level main megamenu links in mobile view
+  - (Commit: [d1b8606][R4.7-Commit-d1b8606]) Fixed WetKit Search for Update facetapi_bonus to latest v1.3-rc1 release.
+  - (Commit: [206e93e][R4.7-Commit-206e93e]) Fixed WetKit Core for #[2633456][R4.7-Issue-2633456] - Workbench Moderation bring back to stable
+  - (Commit: [398364b][R4.7-Commit-398364b]) Update changelog.md file.
   - (Commit: [5cc1ba3][R4.7-Commit-5cc1ba3]) Fixed WetKit Bootstrap for #[2696167][R4.7-Issue-2696167] - Language Toggle not visible on mobile when using the "Internet" as base theme
   - (Commit: [41e62c6][R4.7-Commit-41e62c6]) Fixed WetKit Language for #[2509060][R4.7-Issue-2509060] - Plan for Title 7.x-1.0 release
   - (Commit: [c5c2bd7][R4.7-Commit-c5c2bd7]) Update changelog.md file.
@@ -891,11 +898,22 @@ Fixes:
 
 <!-- Commits R4.7 -->
 
+[R4.7-Commit-d8c11b8]: http://drupalcode.org/project/wetkit.git/commit/d8c11b8
+[R4.7-Commit-bb01523]: http://drupalcode.org/project/wetkit.git/commit/bb01523
+[R4.7-Commit-d379f8f]: http://drupalcode.org/project/wetkit.git/commit/d379f8f
+[R4.7-Commit-4541ab4]: http://drupalcode.org/project/wetkit.git/commit/4541ab4
+[R4.7-Commit-d1b8606]: http://drupalcode.org/project/wetkit.git/commit/d1b8606
+[R4.7-Commit-206e93e]: http://drupalcode.org/project/wetkit.git/commit/206e93e
+[R4.7-Commit-f765305]: http://drupalcode.org/project/wetkit.git/commit/f765305
+[R4.7-Commit-398364b]: http://drupalcode.org/project/wetkit.git/commit/398364b
 [R4.7-Commit-5cc1ba3]: http://drupalcode.org/project/wetkit.git/commit/5cc1ba3
+[R4.7-Commit-305d937]: http://drupalcode.org/project/wetkit.git/commit/305d937
 [R4.7-Commit-41e62c6]: http://drupalcode.org/project/wetkit.git/commit/41e62c6
+[R4.7-Commit-361f5d5]: http://drupalcode.org/project/wetkit.git/commit/361f5d5
 [R4.7-Commit-c5c2bd7]: http://drupalcode.org/project/wetkit.git/commit/c5c2bd7
 [R4.7-Commit-bab3cc1]: http://drupalcode.org/project/wetkit.git/commit/bab3cc1
 [R4.7-Commit-68e5bff]: http://drupalcode.org/project/wetkit.git/commit/68e5bff
+[R4.7-Commit-1b495f5]: http://drupalcode.org/project/wetkit.git/commit/1b495f5
 [R4.7-Commit-6215ccd]: http://drupalcode.org/project/wetkit.git/commit/6215ccd
 [R4.7-Commit-18fb1ac]: http://drupalcode.org/project/wetkit.git/commit/18fb1ac
 [R4.7-Commit-2843f87]: http://drupalcode.org/project/wetkit.git/commit/2843f87
@@ -935,6 +953,9 @@ Fixes:
 
 <!-- Issues R4.7 -->
 
+[R4.7-Issue-2700677]: http://drupal.org/node/2700677
+[R4.7-Issue-2702145]: http://drupal.org/node/2702145
+[R4.7-Issue-2633456]: http://drupal.org/node/2633456
 [R4.7-Issue-2696167]: http://drupal.org/node/2696167
 [R4.7-Issue-2509060]: http://drupal.org/node/2509060
 [R4.7-Issue-2692531]: http://drupal.org/node/2692531
