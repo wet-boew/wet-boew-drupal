@@ -19,6 +19,10 @@ Features:
 
 Fixes:
 
+  - (Commit: [ec8d70b][R4.7-Commit-ec8d70b]) Fixed WetKit Search for Update facetapi_bonus from 1.3-rc1 to 1.3-rc2 version.
+  - (Commit: [ff86d6b][R4.7-Commit-ff86d6b]) Fixed WetKit Metatag for Update metatag from 1.13 to 1.14 version.
+  - (Commit: [fac6b90][R4.7-Commit-fac6b90]) Fixed WetKit Deployment for Update UUID Redirect to use stable release + patches from dev.
+  - (Commit: [60daebd][R4.7-Commit-60daebd]) Update changelog.md file.
   - (Commit: [d8c11b8][R4.7-Commit-d8c11b8]) Fixed WetKit Menu for #[2700677][R4.7-Issue-2700677] - Wetkit menu Right sidebar
   - (Commit: [bb01523][R4.7-Commit-bb01523]) Issue #889772 Following a password reset link while logged in leaves users unable to change their password
   - (Commit: [d379f8f][R4.7-Commit-d379f8f]) Fixed WetKit Bootstrap for #[2702145][R4.7-Issue-2702145] - Overly aggressive css change hiding top level main megamenu links in mobile view
@@ -898,6 +902,10 @@ Fixes:
 
 <!-- Commits R4.7 -->
 
+[R4.7-Commit-ec8d70b]: http://drupalcode.org/project/wetkit.git/commit/ec8d70b
+[R4.7-Commit-ff86d6b]: http://drupalcode.org/project/wetkit.git/commit/ff86d6b
+[R4.7-Commit-fac6b90]: http://drupalcode.org/project/wetkit.git/commit/fac6b90
+[R4.7-Commit-60daebd]: http://drupalcode.org/project/wetkit.git/commit/60daebd
 [R4.7-Commit-d8c11b8]: http://drupalcode.org/project/wetkit.git/commit/d8c11b8
 [R4.7-Commit-bb01523]: http://drupalcode.org/project/wetkit.git/commit/bb01523
 [R4.7-Commit-d379f8f]: http://drupalcode.org/project/wetkit.git/commit/d379f8f
