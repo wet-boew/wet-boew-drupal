@@ -19,6 +19,10 @@ Features:
 
 Fixes:
 
+  - (Commit: [68997ad][R4.7-Commit-68997ad]) Fixed WetKit WET-BOEW for #[2705527][R4.7-Issue-2705527] - Web Experience Toolkit jQuery v4.0.21 release
+  - (Commit: [1bdfe45][R4.7-Commit-1bdfe45]) Fixed WetKit Deployment for #[2704741][R4.7-Issue-2704741] - Content Deployment Performance issues with complex content relationships
+  - (Commit: [1009c8a][R4.7-Commit-1009c8a]) Fixed WetKit Deployment for #[2697989][R4.7-Issue-2697989] - Possiible issue with entities deployment screen
+  - (Commit: [f069f70][R4.7-Commit-f069f70]) Update changelog.md file.
   - (Commit: [ec8d70b][R4.7-Commit-ec8d70b]) Fixed WetKit Search for Update facetapi_bonus from 1.3-rc1 to 1.3-rc2 version.
   - (Commit: [ff86d6b][R4.7-Commit-ff86d6b]) Fixed WetKit Metatag for Update metatag from 1.13 to 1.14 version.
   - (Commit: [fac6b90][R4.7-Commit-fac6b90]) Fixed WetKit Deployment for Update UUID Redirect to use stable release + patches from dev.
@@ -902,6 +906,10 @@ Fixes:
 
 <!-- Commits R4.7 -->
 
+[R4.7-Commit-68997ad]: http://drupalcode.org/project/wetkit.git/commit/68997ad
+[R4.7-Commit-1bdfe45]: http://drupalcode.org/project/wetkit.git/commit/1bdfe45
+[R4.7-Commit-1009c8a]: http://drupalcode.org/project/wetkit.git/commit/1009c8a
+[R4.7-Commit-f069f70]: http://drupalcode.org/project/wetkit.git/commit/f069f70
 [R4.7-Commit-ec8d70b]: http://drupalcode.org/project/wetkit.git/commit/ec8d70b
 [R4.7-Commit-ff86d6b]: http://drupalcode.org/project/wetkit.git/commit/ff86d6b
 [R4.7-Commit-fac6b90]: http://drupalcode.org/project/wetkit.git/commit/fac6b90
@@ -961,6 +969,9 @@ Fixes:
 
 <!-- Issues R4.7 -->
 
+[R4.7-Issue-2705527]: http://drupal.org/node/2705527
+[R4.7-Issue-2704741]: http://drupal.org/node/2704741
+[R4.7-Issue-2697989]: http://drupal.org/node/2697989
 [R4.7-Issue-2700677]: http://drupal.org/node/2700677
 [R4.7-Issue-2702145]: http://drupal.org/node/2702145
 [R4.7-Issue-2633456]: http://drupal.org/node/2633456
