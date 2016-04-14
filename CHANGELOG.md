@@ -19,6 +19,13 @@ Features:
 
 Fixes:
 
+  - (Commit: [11f3834][R4.7-Commit-11f3834]) Fixed WetKit Admin for Extra handling for whether field_featured_categories exists.
+  - (Commit: [558294a][R4.7-Commit-558294a]) Fixed WetKit Core for Better check for empty $form options on field edit.
+  - (Commit: [4e2f0ae][R4.7-Commit-4e2f0ae]) Fixed WetKit Bootstrap for #[2705737][R4.7-Issue-2705737] - Accessibility improvements to status message
+  - (Commit: [d6947a8][R4.7-Commit-d6947a8]) Update changelog.md file.
+  - (Commit: [165a013][R4.7-Commit-165a013]) Fixed WetKit Core for Fix for diff + PHP7 style constructors.
+  - (Commit: [d853776][R4.7-Commit-d853776]) Fixed WetKit Panel Layouts for Conditionally set wb-eqht if regions aren't empty, preventing JS error.
+  - (Commit: [db507a9][R4.7-Commit-db507a9]) Update changelog.md file.
   - (Commit: [68997ad][R4.7-Commit-68997ad]) Fixed WetKit WET-BOEW for #[2705527][R4.7-Issue-2705527] - Web Experience Toolkit jQuery v4.0.21 release
   - (Commit: [1bdfe45][R4.7-Commit-1bdfe45]) Fixed WetKit Deployment for #[2704741][R4.7-Issue-2704741] - Content Deployment Performance issues with complex content relationships
   - (Commit: [1009c8a][R4.7-Commit-1009c8a]) Fixed WetKit Deployment for #[2697989][R4.7-Issue-2697989] - Possiible issue with entities deployment screen
@@ -906,6 +913,13 @@ Fixes:
 
 <!-- Commits R4.7 -->
 
+[R4.7-Commit-11f3834]: http://drupalcode.org/project/wetkit.git/commit/11f3834
+[R4.7-Commit-558294a]: http://drupalcode.org/project/wetkit.git/commit/558294a
+[R4.7-Commit-4e2f0ae]: http://drupalcode.org/project/wetkit.git/commit/4e2f0ae
+[R4.7-Commit-d6947a8]: http://drupalcode.org/project/wetkit.git/commit/d6947a8
+[R4.7-Commit-165a013]: http://drupalcode.org/project/wetkit.git/commit/165a013
+[R4.7-Commit-d853776]: http://drupalcode.org/project/wetkit.git/commit/d853776
+[R4.7-Commit-db507a9]: http://drupalcode.org/project/wetkit.git/commit/db507a9
 [R4.7-Commit-68997ad]: http://drupalcode.org/project/wetkit.git/commit/68997ad
 [R4.7-Commit-1bdfe45]: http://drupalcode.org/project/wetkit.git/commit/1bdfe45
 [R4.7-Commit-1009c8a]: http://drupalcode.org/project/wetkit.git/commit/1009c8a
@@ -969,6 +983,7 @@ Fixes:
 
 <!-- Issues R4.7 -->
 
+[R4.7-Issue-2705737]: http://drupal.org/node/2705737
 [R4.7-Issue-2705527]: http://drupal.org/node/2705527
 [R4.7-Issue-2704741]: http://drupal.org/node/2704741
 [R4.7-Issue-2697989]: http://drupal.org/node/2697989
