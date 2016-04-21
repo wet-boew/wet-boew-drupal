@@ -5,6 +5,8 @@
 Security Update(s):
 
   - Deploy
+  - Organic Groups
+  - Features
 
 Performance Update(s)
 
@@ -19,6 +21,10 @@ Features:
 
 Fixes:
 
+  - (Commit: [b9a3fc0][R4.7-Commit-b9a3fc0]) Fixed WetKit Organic Groups for #[2710981][R4.7-Issue-2710981] - Organic groups - DRUPAL-SA-CONTRIB-2016-023
+  - (Commit: [460e71a][R4.7-Commit-460e71a]) Fixed WetKit Test for Add new file needed for drone builds.
+  - (Commit: [6d3a10c][R4.7-Commit-6d3a10c]) Fixed WetKit Core for #[2707153][R4.7-Issue-2707153] - Features - Less Critical - SA-CONTRIB-2016-020
+  - (Commit: [a1f24a6][R4.7-Commit-a1f24a6]) Update changelog.md file.
   - (Commit: [11f3834][R4.7-Commit-11f3834]) Fixed WetKit Admin for Extra handling for whether field_featured_categories exists.
   - (Commit: [558294a][R4.7-Commit-558294a]) Fixed WetKit Core for Better check for empty $form options on field edit.
   - (Commit: [4e2f0ae][R4.7-Commit-4e2f0ae]) Fixed WetKit Bootstrap for #[2705737][R4.7-Issue-2705737] - Accessibility improvements to status message
@@ -913,20 +919,28 @@ Fixes:
 
 <!-- Commits R4.7 -->
 
+[R4.7-Commit-b9a3fc0]: http://drupalcode.org/project/wetkit.git/commit/b9a3fc0
+[R4.7-Commit-460e71a]: http://drupalcode.org/project/wetkit.git/commit/460e71a
+[R4.7-Commit-6d3a10c]: http://drupalcode.org/project/wetkit.git/commit/6d3a10c
+[R4.7-Commit-34f2abc]: http://drupalcode.org/project/wetkit.git/commit/34f2abc
+[R4.7-Commit-a1f24a6]: http://drupalcode.org/project/wetkit.git/commit/a1f24a6
 [R4.7-Commit-11f3834]: http://drupalcode.org/project/wetkit.git/commit/11f3834
 [R4.7-Commit-558294a]: http://drupalcode.org/project/wetkit.git/commit/558294a
 [R4.7-Commit-4e2f0ae]: http://drupalcode.org/project/wetkit.git/commit/4e2f0ae
+[R4.7-Commit-27547f1]: http://drupalcode.org/project/wetkit.git/commit/27547f1
 [R4.7-Commit-d6947a8]: http://drupalcode.org/project/wetkit.git/commit/d6947a8
 [R4.7-Commit-165a013]: http://drupalcode.org/project/wetkit.git/commit/165a013
 [R4.7-Commit-d853776]: http://drupalcode.org/project/wetkit.git/commit/d853776
 [R4.7-Commit-db507a9]: http://drupalcode.org/project/wetkit.git/commit/db507a9
 [R4.7-Commit-68997ad]: http://drupalcode.org/project/wetkit.git/commit/68997ad
 [R4.7-Commit-1bdfe45]: http://drupalcode.org/project/wetkit.git/commit/1bdfe45
+[R4.7-Commit-5ad1e79]: http://drupalcode.org/project/wetkit.git/commit/5ad1e79
 [R4.7-Commit-1009c8a]: http://drupalcode.org/project/wetkit.git/commit/1009c8a
 [R4.7-Commit-f069f70]: http://drupalcode.org/project/wetkit.git/commit/f069f70
 [R4.7-Commit-ec8d70b]: http://drupalcode.org/project/wetkit.git/commit/ec8d70b
 [R4.7-Commit-ff86d6b]: http://drupalcode.org/project/wetkit.git/commit/ff86d6b
 [R4.7-Commit-fac6b90]: http://drupalcode.org/project/wetkit.git/commit/fac6b90
+[R4.7-Commit-1c441a0]: http://drupalcode.org/project/wetkit.git/commit/1c441a0
 [R4.7-Commit-60daebd]: http://drupalcode.org/project/wetkit.git/commit/60daebd
 [R4.7-Commit-d8c11b8]: http://drupalcode.org/project/wetkit.git/commit/d8c11b8
 [R4.7-Commit-bb01523]: http://drupalcode.org/project/wetkit.git/commit/bb01523
@@ -983,6 +997,8 @@ Fixes:
 
 <!-- Issues R4.7 -->
 
+[R4.7-Issue-2710981]: http://drupal.org/node/2710981
+[R4.7-Issue-2707153]: http://drupal.org/node/2707153
 [R4.7-Issue-2705737]: http://drupal.org/node/2705737
 [R4.7-Issue-2705527]: http://drupal.org/node/2705527
 [R4.7-Issue-2704741]: http://drupal.org/node/2704741
