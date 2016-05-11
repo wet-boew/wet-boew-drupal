@@ -21,6 +21,17 @@ Features:
 
 Fixes:
 
+  - (Commit: [2c13b6b][R4.7-Commit-2c13b6b]) Fixed WetKit Language for #[2723281][R4.7-Issue-2723281] - Update Entity Translation to 1.0-beta5
+  - (Commit: [ce2b535][R4.7-Commit-ce2b535]) Fixed WetKit Core for Update hierarchical select to 3.0-beta5.
+  - (Commit: [6ab33b9][R4.7-Commit-6ab33b9]) Fixed WetKit Core for Password Policy and undefined property (account->original).
+  - (Commit: [3240111][R4.7-Commit-3240111]) Fixed WetKit Core for Password Policy issue with Postgresql.
+  - (Commit: [c81fb6a][R4.7-Commit-c81fb6a]) Fixed WetKit Language for Update webform localization to 4.5 version.
+  - (Commit: [ff22451][R4.7-Commit-ff22451]) Fixed WetKit Core for Update hierarchical select to 3.0-beta4 version.
+  - (Commit: [729d8c7][R4.7-Commit-729d8c7]) Fixed WetKit Language for Update webform_localization to 4.4 version.
+  - (Commit: [fc1db53][R4.7-Commit-fc1db53]) Fixed WetKit Core for Update panopoly_magic to 1.34 version.
+  - (Commit: [5701b66][R4.7-Commit-5701b66]) Fixed WetKit Core for Update features to 2.10 verison.
+  - (Commit: [2bb72a7][R4.7-Commit-2bb72a7]) Fixed WetKit Core for #[2428185][R4.7-Issue-2428185] - Language prefix and relative links broken
+  - (Commit: [d9f6e81][R4.7-Commit-d9f6e81]) Update changelog.md file.
   - (Commit: [b9a3fc0][R4.7-Commit-b9a3fc0]) Fixed WetKit Organic Groups for #[2710981][R4.7-Issue-2710981] - Organic groups - DRUPAL-SA-CONTRIB-2016-023
   - (Commit: [460e71a][R4.7-Commit-460e71a]) Fixed WetKit Test for Add new file needed for drone builds.
   - (Commit: [6d3a10c][R4.7-Commit-6d3a10c]) Fixed WetKit Core for #[2707153][R4.7-Issue-2707153] - Features - Less Critical - SA-CONTRIB-2016-020
@@ -919,8 +930,26 @@ Fixes:
 
 <!-- Commits R4.7 -->
 
+[R4.7-Commit-2c13b6b]: http://drupalcode.org/project/wetkit.git/commit/2c13b6b
+[R4.7-Commit-ce2b535]: http://drupalcode.org/project/wetkit.git/commit/ce2b535
+[R4.7-Commit-6ab33b9]: http://drupalcode.org/project/wetkit.git/commit/6ab33b9
+[R4.7-Commit-a0ab82c]: http://drupalcode.org/project/wetkit.git/commit/a0ab82c
+[R4.7-Commit-3240111]: http://drupalcode.org/project/wetkit.git/commit/3240111
+[R4.7-Commit-b3b4fe9]: http://drupalcode.org/project/wetkit.git/commit/b3b4fe9
+[R4.7-Commit-c81fb6a]: http://drupalcode.org/project/wetkit.git/commit/c81fb6a
+[R4.7-Commit-ff22451]: http://drupalcode.org/project/wetkit.git/commit/ff22451
+[R4.7-Commit-e990837]: http://drupalcode.org/project/wetkit.git/commit/e990837
+[R4.7-Commit-729d8c7]: http://drupalcode.org/project/wetkit.git/commit/729d8c7
+[R4.7-Commit-fc1db53]: http://drupalcode.org/project/wetkit.git/commit/fc1db53
+[R4.7-Commit-f05316a]: http://drupalcode.org/project/wetkit.git/commit/f05316a
+[R4.7-Commit-5701b66]: http://drupalcode.org/project/wetkit.git/commit/5701b66
+[R4.7-Commit-2bb72a7]: http://drupalcode.org/project/wetkit.git/commit/2bb72a7
+[R4.7-Commit-b495a53]: http://drupalcode.org/project/wetkit.git/commit/b495a53
+[R4.7-Commit-d9f6e81]: http://drupalcode.org/project/wetkit.git/commit/d9f6e81
 [R4.7-Commit-b9a3fc0]: http://drupalcode.org/project/wetkit.git/commit/b9a3fc0
+[R4.7-Commit-bc6ebeb]: http://drupalcode.org/project/wetkit.git/commit/bc6ebeb
 [R4.7-Commit-460e71a]: http://drupalcode.org/project/wetkit.git/commit/460e71a
+[R4.7-Commit-10e6309]: http://drupalcode.org/project/wetkit.git/commit/10e6309
 [R4.7-Commit-6d3a10c]: http://drupalcode.org/project/wetkit.git/commit/6d3a10c
 [R4.7-Commit-34f2abc]: http://drupalcode.org/project/wetkit.git/commit/34f2abc
 [R4.7-Commit-a1f24a6]: http://drupalcode.org/project/wetkit.git/commit/a1f24a6
@@ -997,6 +1026,8 @@ Fixes:
 
 <!-- Issues R4.7 -->
 
+[R4.7-Issue-2723281]: http://drupal.org/node/2723281
+[R4.7-Issue-2428185]: http://drupal.org/node/2428185
 [R4.7-Issue-2710981]: http://drupal.org/node/2710981
 [R4.7-Issue-2707153]: http://drupal.org/node/2707153
 [R4.7-Issue-2705737]: http://drupal.org/node/2705737
