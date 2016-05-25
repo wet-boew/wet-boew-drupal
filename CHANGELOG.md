@@ -18,6 +18,7 @@ Features:
   - Improved Field Collection + Entity Translation integration
   - Sidebar Right theming support
   - Language Toggle for Internet theme
+  - Deploy Plus Bootstrap Improvements
 
 Fixes:
 
