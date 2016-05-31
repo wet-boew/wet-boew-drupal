@@ -1,5 +1,15 @@
 # CHANGELOG.md
 
+## v4.8
+
+Features:
+
+  - Fix PHP 5.3 Fatal Error Issue
+
+Fixes:
+
+  - (Commit: [892b540][R4.8-Commit-892b540]) Fixed WetKit Menu for #[2737701][R4.8-Issue-2737701] - PHP 5.3 Fatal Error
+
 ## v4.7
 
 Security Update(s):
@@ -939,6 +949,14 @@ Fixes:
   - (Commit: [0fc2202][R4.0-rc1-Commit-0fc2202]) Point responsinator to live demo site.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.8 -->
+
+[R4.8-Commit-892b540]: http://drupalcode.org/project/wetkit.git/commit/892b540
+
+<!-- Issues R4.8 -->
+
+[R4.7-Issue-2737701]: http://drupal.org/node/2737701
 
 <!-- Commits R4.7 -->
 
