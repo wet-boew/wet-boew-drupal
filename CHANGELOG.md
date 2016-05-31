@@ -1,6 +1,6 @@
 # CHANGELOG.md
 
-## v4.7 (In Development)
+## v4.7
 
 Security Update(s):
 
@@ -22,6 +22,17 @@ Features:
 
 Fixes:
 
+  - (Commit: [7614f5e][R4.7-Commit-7614f5e]) Fixed WetKit Deployment for #[2723471][R4.7-Issue-2723471] - Megamenu system path
+  - (Commit: [69f5d2c][R4.7-Commit-69f5d2c]) Fixed WetKit Deployment for Add pager to deployment dashboard for taxonomy.
+  - (Commit: [35b76d6][R4.7-Commit-35b76d6]) Update changelog.md file.
+  - (Commit: [79310e9][R4.7-Commit-79310e9]) Fixed WetKit Deployment for Add additional multiple user context to deploy.
+  - (Commit: [8b84061][R4.7-Commit-8b84061]) Fixed WetKit Deployment for Add additional multiple user context to deploy.
+  - (Commit: [df7ff29][R4.7-Commit-df7ff29]) Fixed WetKit Deployment for Fix for undefined entity wrapper.
+  - (Commit: [7c014dd][R4.7-Commit-7c014dd]) Fixed WetKit Deployment for Update deploy plus to 2.3 version.
+  - (Commit: [24223ae][R4.7-Commit-24223ae]) Fixed WetKit Deployment for Adjust deployment interface to support wb-tabs.
+  - (Commit: [6e3277b][R4.7-Commit-6e3277b]) Fixed WetKit Core for Update hierarchical select to 3.0-beta5.
+  - (Commit: [4f61b4e][R4.7-Commit-4f61b4e]) Fixed WetKit Core for Update libraries module to 2.3 version.
+  - (Commit: [03084cf][R4.7-Commit-03084cf]) Update changelog.md file.
   - (Commit: [2c13b6b][R4.7-Commit-2c13b6b]) Fixed WetKit Language for #[2723281][R4.7-Issue-2723281] - Update Entity Translation to 1.0-beta5
   - (Commit: [ce2b535][R4.7-Commit-ce2b535]) Fixed WetKit Core for Update hierarchical select to 3.0-beta5.
   - (Commit: [6ab33b9][R4.7-Commit-6ab33b9]) Fixed WetKit Core for Password Policy and undefined property (account->original).
@@ -931,6 +942,22 @@ Fixes:
 
 <!-- Commits R4.7 -->
 
+[R4.7-Commit-7614f5e]: http://drupalcode.org/project/wetkit.git/commit/7614f5e
+[R4.7-Commit-69f5d2c]: http://drupalcode.org/project/wetkit.git/commit/69f5d2c
+[R4.7-Commit-6cc5d30]: http://drupalcode.org/project/wetkit.git/commit/6cc5d30
+[R4.7-Commit-35b76d6]: http://drupalcode.org/project/wetkit.git/commit/35b76d6
+[R4.7-Commit-79310e9]: http://drupalcode.org/project/wetkit.git/commit/79310e9
+[R4.7-Commit-dd0bbfa]: http://drupalcode.org/project/wetkit.git/commit/dd0bbfa
+[R4.7-Commit-c1565d2]: http://drupalcode.org/project/wetkit.git/commit/c1565d2
+[R4.7-Commit-8b84061]: http://drupalcode.org/project/wetkit.git/commit/8b84061
+[R4.7-Commit-df7ff29]: http://drupalcode.org/project/wetkit.git/commit/df7ff29
+[R4.7-Commit-7c014dd]: http://drupalcode.org/project/wetkit.git/commit/7c014dd
+[R4.7-Commit-24223ae]: http://drupalcode.org/project/wetkit.git/commit/24223ae
+[R4.7-Commit-8ae97f3]: http://drupalcode.org/project/wetkit.git/commit/8ae97f3
+[R4.7-Commit-6e3277b]: http://drupalcode.org/project/wetkit.git/commit/6e3277b
+[R4.7-Commit-4f61b4e]: http://drupalcode.org/project/wetkit.git/commit/4f61b4e
+[R4.7-Commit-df449af]: http://drupalcode.org/project/wetkit.git/commit/df449af
+[R4.7-Commit-03084cf]: http://drupalcode.org/project/wetkit.git/commit/03084cf
 [R4.7-Commit-2c13b6b]: http://drupalcode.org/project/wetkit.git/commit/2c13b6b
 [R4.7-Commit-ce2b535]: http://drupalcode.org/project/wetkit.git/commit/ce2b535
 [R4.7-Commit-6ab33b9]: http://drupalcode.org/project/wetkit.git/commit/6ab33b9
@@ -1027,6 +1054,7 @@ Fixes:
 
 <!-- Issues R4.7 -->
 
+[R4.7-Issue-2723471]: http://drupal.org/node/2723471
 [R4.7-Issue-2723281]: http://drupal.org/node/2723281
 [R4.7-Issue-2428185]: http://drupal.org/node/2428185
 [R4.7-Issue-2710981]: http://drupal.org/node/2710981
