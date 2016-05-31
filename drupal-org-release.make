@@ -30,7 +30,7 @@ projects[wetkit_language][subdir] = custom
 projects[wetkit_layouts][version] = 4.3
 projects[wetkit_layouts][subdir] = custom
 
-projects[wetkit_menu][version] = 4.3
+projects[wetkit_menu][version] = 4.5
 projects[wetkit_menu][subdir] = custom
 
 projects[wetkit_metatag][version] = 4.7
