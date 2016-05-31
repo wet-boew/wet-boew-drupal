@@ -956,7 +956,7 @@ Fixes:
 
 <!-- Issues R4.8 -->
 
-[R4.7-Issue-2737701]: http://drupal.org/node/2737701
+[R4.8-Issue-2737701]: http://drupal.org/node/2737701
 
 <!-- Commits R4.7 -->
 
