@@ -1,5 +1,21 @@
 # CHANGELOG.md
 
+## v4.9 (In Development)
+
+Features:
+
+  - Update media + file_entity
+
+Fixes:
+
+  - (Commit: [2666e3e][R4.9-Commit-2666e3e]) Fixed WetKit Core for #[2704907][R4.9-Issue-2704907] - Views exposed filter hiding Is empty (NULL)/ Is not empty (NOT NULL) issue
+  - (Commit: [af2fb5b][R4.9-Commit-af2fb5b]) Fixed WetKit Language for #[2635758][R4.9-Issue-2635758] - workbench revision deletes and views content display
+  - (Commit: [5080666][R4.9-Commit-5080666]) Fixed WetKit Core for #[2704907][R4.9-Issue-2704907] - Views exposed filter hiding Is empty (NULL)/ Is not empty (NOT NULL) issue
+  - (Commit: [4c2318f][R4.9-Commit-4c2318f]) Fixed WetKit Core for #[2704907][R4.9-Issue-2704907] - Views exposed filter hiding Is empty (NULL)/ Is not empty (NOT NULL) issue
+  - (Commit: [aa2c4ca][R4.9-Commit-aa2c4ca]) Fixed WetKit Widgets for #[2737597][R4.9-Issue-2737597] - Update Media + File Entity
+  - (Commit: [526e696][R4.9-Commit-526e696]) Fixed WetKit Widgets for #[2737597][R4.9-Issue-2737597] - Update Media + File Entity
+  - (Commit: [073a212][R4.9-Commit-073a212]) Start work on next release.
+
 ## v4.8
 
 Features:
@@ -949,6 +965,28 @@ Fixes:
   - (Commit: [0fc2202][R4.0-rc1-Commit-0fc2202]) Point responsinator to live demo site.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.9 -->
+
+[R4.9-Commit-9d082bc]: http://drupalcode.org/project/wetkit.git/commit/9d082bc
+[R4.9-Commit-5e5ae6e]: http://drupalcode.org/project/wetkit.git/commit/5e5ae6e
+[R4.9-Commit-25df390]: http://drupalcode.org/project/wetkit.git/commit/25df390
+[R4.9-Commit-2666e3e]: http://drupalcode.org/project/wetkit.git/commit/2666e3e
+[R4.9-Commit-af2fb5b]: http://drupalcode.org/project/wetkit.git/commit/af2fb5b
+[R4.9-Commit-5080666]: http://drupalcode.org/project/wetkit.git/commit/5080666
+[R4.9-Commit-4c2318f]: http://drupalcode.org/project/wetkit.git/commit/4c2318f
+[R4.9-Commit-aa2c4ca]: http://drupalcode.org/project/wetkit.git/commit/aa2c4ca
+[R4.9-Commit-526e696]: http://drupalcode.org/project/wetkit.git/commit/526e696
+[R4.9-Commit-073a212]: http://drupalcode.org/project/wetkit.git/commit/073a212
+
+<!-- Issues R4.9 -->
+
+[R4.9-Issue-2704907]: http://drupal.org/node/2704907
+[R4.9-Issue-2635758]: http://drupal.org/node/2635758
+[R4.9-Issue-2704907]: http://drupal.org/node/2704907
+[R4.9-Issue-2704907]: http://drupal.org/node/2704907
+[R4.9-Issue-2737597]: http://drupal.org/node/2737597
+[R4.9-Issue-2737597]: http://drupal.org/node/2737597
 
 <!-- Commits R4.8 -->
 
