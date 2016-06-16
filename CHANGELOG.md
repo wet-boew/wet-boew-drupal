@@ -1,20 +1,28 @@
 # CHANGELOG.md
 
-## v4.9 (In Development)
+## v4.9
+
+Security Update(s):
+
+  - Drupal Core (7.43)
+  - Views (3.14)
 
 Features:
 
-  - Update media + file_entity
+  - Updates to media + file_entity
 
 Fixes:
 
-  - (Commit: [2666e3e][R4.9-Commit-2666e3e]) Fixed WetKit Core for #[2704907][R4.9-Issue-2704907] - Views exposed filter hiding Is empty (NULL)/ Is not empty (NOT NULL) issue
-  - (Commit: [af2fb5b][R4.9-Commit-af2fb5b]) Fixed WetKit Language for #[2635758][R4.9-Issue-2635758] - workbench revision deletes and views content display
-  - (Commit: [5080666][R4.9-Commit-5080666]) Fixed WetKit Core for #[2704907][R4.9-Issue-2704907] - Views exposed filter hiding Is empty (NULL)/ Is not empty (NOT NULL) issue
-  - (Commit: [4c2318f][R4.9-Commit-4c2318f]) Fixed WetKit Core for #[2704907][R4.9-Issue-2704907] - Views exposed filter hiding Is empty (NULL)/ Is not empty (NOT NULL) issue
-  - (Commit: [aa2c4ca][R4.9-Commit-aa2c4ca]) Fixed WetKit Widgets for #[2737597][R4.9-Issue-2737597] - Update Media + File Entity
-  - (Commit: [526e696][R4.9-Commit-526e696]) Fixed WetKit Widgets for #[2737597][R4.9-Issue-2737597] - Update Media + File Entity
-  - (Commit: [073a212][R4.9-Commit-073a212]) Start work on next release.
+  - (Commit: [8ce2fe3][R4.9-Commit-8ce2fe3]) Fixed WetKit Core for #[2750029][R4.9-Issue-2750029] - Views - Less Critical - Access Bypass - SA-CONTRIB-2016-036
+  - (Commit: [4357122][R4.9-Commit-4357122]) Fixed WetKit Core for #[2748483][R4.9-Issue-2748483] - Hierarchical Select + Uncaught Syntax error, unrecognized expression
+  - (Commit: [0b07876][R4.9-Commit-0b07876]) Fixed WetKit Search for Update facetapi_bonus to 1.3-rc3 version.
+  - (Commit: [5f7a6f7][R4.9-Commit-5f7a6f7]) Fixed WetKit Metatag for Update metatag to 1.16 version.
+  - (Commit: [89b9c85][R4.9-Commit-89b9c85]) Fixed WetKit Core for Update hierarchical select to 3.0-beta7.
+  - (Commit: [3ff0191][R4.9-Commit-3ff0191]) Fixed WetKit Language for #[2635758][R4.9-Issue-2635758] - workbench revision deletes and views content display
+  - (Commit: [5894f4c][R4.9-Commit-5894f4c]) Fix WetKit Core for #[2738855][R4.9-Issue-2738855] - RSS Feed Title Double Encoding
+  - (Commit: [7251bd4][R4.9-Commit-7251bd4]) Update changelog.md file.
+  - (Commit: [a143777][R4.9-Commit-a143777]) Start work on next release. (#1854)
+  - (Commit: [9d082bc][R4.9-Commit-9d082bc]) Start work on next release.
 
 ## v4.8
 
@@ -966,6 +974,25 @@ Fixes:
 
 <!-- Links Referenced -->
 
+<!-- Commits R4.9 --> \n
+[R4.9-Commit-8ce2fe3]: http://drupalcode.org/project/wetkit.git/commit/8ce2fe3
+[R4.9-Commit-4357122]: http://drupalcode.org/project/wetkit.git/commit/4357122
+[R4.9-Commit-3ec3beb]: http://drupalcode.org/project/wetkit.git/commit/3ec3beb
+[R4.9-Commit-0b07876]: http://drupalcode.org/project/wetkit.git/commit/0b07876
+[R4.9-Commit-5f7a6f7]: http://drupalcode.org/project/wetkit.git/commit/5f7a6f7
+[R4.9-Commit-89b9c85]: http://drupalcode.org/project/wetkit.git/commit/89b9c85
+[R4.9-Commit-cb34270]: http://drupalcode.org/project/wetkit.git/commit/cb34270
+[R4.9-Commit-3ff0191]: http://drupalcode.org/project/wetkit.git/commit/3ff0191
+[R4.9-Commit-5894f4c]: http://drupalcode.org/project/wetkit.git/commit/5894f4c
+[R4.9-Commit-e478922]: http://drupalcode.org/project/wetkit.git/commit/e478922
+[R4.9-Commit-7251bd4]: http://drupalcode.org/project/wetkit.git/commit/7251bd4
+[R4.9-Commit-a143777]: http://drupalcode.org/project/wetkit.git/commit/a143777
+[R4.9-Commit-9d082bc]: http://drupalcode.org/project/wetkit.git/commit/9d082bc
+\n <!-- Issues R4.9 --> \n
+[R4.9-Issue-2750029]: http://drupal.org/node/2750029
+[R4.9-Issue-2748483]: http://drupal.org/node/2748483
+[R4.9-Issue-2635758]: http://drupal.org/node/2635758
+[R4.9-Issue-2738855]: http://drupal.org/node/2738855
 <!-- Commits R4.9 -->
 
 [R4.9-Commit-9d082bc]: http://drupalcode.org/project/wetkit.git/commit/9d082bc
