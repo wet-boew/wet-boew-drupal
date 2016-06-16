@@ -9,7 +9,7 @@ Security Update(s):
 
 Features:
 
-  - Update media + file_entity
+  - Updates to media + file_entity
 
 Fixes:
 
