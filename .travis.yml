@@ -89,26 +89,26 @@ install:
   #
   # @see https://www.drupal.org/node/2537902
   # @see https://github.com/minkphp/MinkSelenium2Driver/issues/213
-  - wget http://mirror.pcbeta.com/google/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_43.0.2357.134-1_amd64.deb -O google-chrome-stable.deb
-  - sudo apt-get install gdebi
-  - sudo gdebi -n google-chrome-stable.deb
+  # - wget http://mirror.pcbeta.com/google/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_43.0.2357.134-1_amd64.deb -O google-chrome-stable.deb
+  # - sudo apt-get install gdebi
+  # - sudo gdebi -n google-chrome-stable.deb
   # Install chromedriver.
-  - wget http://chromedriver.storage.googleapis.com/2.16/chromedriver_linux64.zip
-  - unzip -a chromedriver_linux64.zip
+  #- wget http://chromedriver.storage.googleapis.com/2.16/chromedriver_linux64.zip
+  #- unzip -a chromedriver_linux64.zip
 
   # Insane hack from jsdevel:
   #   https://github.com/jsdevel/travis-debugging/blob/master/shim.bash
   # This allows chrome-sandbox to work in side of OpenVZ, because I can't
   # figure out how to start chrome with --no-sandbox.
-  - export CHROME_SANDBOX=/opt/google/chrome/chrome-sandbox
-  - sudo rm -f $CHROME_SANDBOX
-  - sudo wget https://googledrive.com/host/0B5VlNZ_Rvdw6NTJoZDBSVy1ZdkE -O $CHROME_SANDBOX
-  - sudo chown root:root $CHROME_SANDBOX; sudo chmod 4755 $CHROME_SANDBOX
-  - sudo md5sum $CHROME_SANDBOX
+  #- export CHROME_SANDBOX=/opt/google/chrome/chrome-sandbox
+  #- sudo rm -f $CHROME_SANDBOX
+  #- sudo wget https://googledrive.com/host/0B5VlNZ_Rvdw6NTJoZDBSVy1ZdkE -O $CHROME_SANDBOX
+  #- sudo chown root:root $CHROME_SANDBOX; sudo chmod 4755 $CHROME_SANDBOX
+  #- sudo md5sum $CHROME_SANDBOX
 
   # Get Selenium
   - wget http://selenium-release.storage.googleapis.com/2.46/selenium-server-standalone-2.46.0.jar
-  - java -jar selenium-server-standalone-2.46.0.jar -Dwebdriver.chrome.driver=`pwd`/chromedriver > /dev/null 2>&1 &
+  - java -jar selenium-server-standalone-2.46.0.jar > /dev/null 2>&1 &
   - sleep 5
 
   # Disable sendmail
@@ -140,7 +140,7 @@ script:
   - if [[ "$UPGRADE" == none ]]; then ./bin/behat --config behat.travis.yml; fi
 
   # Then run some Chrome-only tests.
-  - if [[ "$UPGRADE" == none ]]; then ./bin/behat --config behat.travis.yml -p chrome; fi
+  # - if [[ "$UPGRADE" == none ]]; then ./bin/behat --config behat.travis.yml -p chrome; fi
 
 after_script:
 
