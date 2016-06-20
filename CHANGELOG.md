@@ -974,7 +974,8 @@ Fixes:
 
 <!-- Links Referenced -->
 
-<!-- Commits R4.9 --> \n
+<!-- Commits R4.9 -->
+
 [R4.9-Commit-8ce2fe3]: http://drupalcode.org/project/wetkit.git/commit/8ce2fe3
 [R4.9-Commit-4357122]: http://drupalcode.org/project/wetkit.git/commit/4357122
 [R4.9-Commit-3ec3beb]: http://drupalcode.org/project/wetkit.git/commit/3ec3beb
@@ -988,11 +989,14 @@ Fixes:
 [R4.9-Commit-7251bd4]: http://drupalcode.org/project/wetkit.git/commit/7251bd4
 [R4.9-Commit-a143777]: http://drupalcode.org/project/wetkit.git/commit/a143777
 [R4.9-Commit-9d082bc]: http://drupalcode.org/project/wetkit.git/commit/9d082bc
-\n <!-- Issues R4.9 --> \n
+
+<!-- Issues R4.9 -->
+
 [R4.9-Issue-2750029]: http://drupal.org/node/2750029
 [R4.9-Issue-2748483]: http://drupal.org/node/2748483
 [R4.9-Issue-2635758]: http://drupal.org/node/2635758
 [R4.9-Issue-2738855]: http://drupal.org/node/2738855
+
 <!-- Commits R4.9 -->
 
 [R4.9-Commit-9d082bc]: http://drupalcode.org/project/wetkit.git/commit/9d082bc
