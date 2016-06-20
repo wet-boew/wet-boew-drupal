@@ -9,6 +9,11 @@ Security Update(s):
   - Features
   - Views
 
+Fixes:
+
+  - (Commit: [69ff875][R1.14-Commit-69ff875]) Security updates to features, views, and entity_translation.
+  - (Commit: [81ef7aa][R1.14-Commit-81ef7aa]) #[2750027][R1.14-Issue-2750027] - Drupal Core - Moderately Critical - Multiple Vulnerabilities - SA-CORE-2016-002
+
 ## v1.13
 
 Security Update(s):
@@ -924,6 +929,15 @@ Bug Fixes:
   - (Commit: [26217a4][RC15-Commit-26217a4]) #[2101501][RC15-Issue-2101501] - Fixed Taxonomy term feeds missing translations.
 
 <!-- Links Referenced -->
+
+<!-- Commits R1.14 -->
+
+[R1.14-Commit-69ff875]: http://drupalcode.org/project/wetkit.git/commit/69ff875
+[R1.14-Commit-81ef7aa]: http://drupalcode.org/project/wetkit.git/commit/81ef7aa
+
+<!-- Issues R1.14 -->
+
+[R1.14-Issue-2750027]: http://drupal.org/node/2750027
 
 <!-- Commits R1.13 -->
 
