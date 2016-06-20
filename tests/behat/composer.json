@@ -1,4 +1,10 @@
 {
+  "repositories": [
+    {
+      "url": "https://github.com/jhedstrom/drupalextension.git",
+      "type": "git"
+    }
+  ],
   "require": {
     "drupal/drupal-extension": "1.0.0",
 
