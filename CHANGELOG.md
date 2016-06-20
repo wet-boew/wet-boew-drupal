@@ -1,5 +1,14 @@
 # CHANGELOG.md
 
+## v1.14
+
+Security Update(s):
+
+  - Drupal Core
+  - Entity Translation
+  - Features
+  - Views
+
 ## v1.13
 
 Security Update(s):
