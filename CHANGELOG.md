@@ -4,7 +4,7 @@
 
 Security Update(s):
 
-  - Drupal Core
+  - Drupal Core (7.44)
   - Entity Translation
   - Features
   - Views
