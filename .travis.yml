@@ -124,7 +124,7 @@ postgres:
 
 before_install:
   - composer self-update
-  - composer global require "lionsad/drupal_ti:dev-master"
+  - composer global require "lionsad/drupal_ti:1.4.4"
   - drupal-ti before_install
 
 install:
