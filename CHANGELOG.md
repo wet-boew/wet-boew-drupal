@@ -4,7 +4,7 @@
 
 Security Update(s):
 
-  - Drupal Core (7.43)
+  - Drupal Core (7.44)
   - Views (3.14)
 
 Features:
