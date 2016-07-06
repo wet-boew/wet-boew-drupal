@@ -37,6 +37,7 @@ projects[wetkit_deployment][download][branch] = 7.x-4.x
 projects[wetkit_images][version] = 4.x-dev
 projects[wetkit_images][subdir] = custom
 projects[wetkit_images][download][type] = git
+projects[wetkit_images][download][revision] = 9c19c13
 projects[wetkit_images][download][branch] = 7.x-4.x
 
 projects[wetkit_language][version] = 4.x-dev
