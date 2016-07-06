@@ -12,6 +12,8 @@ Features(s):
 
 Fixes:
 
+  - (Commit: [66ff275][R4.10-Commit-66ff275]) Fixed WetKit Language for #[2761601][R4.10-Issue-2761601] - Update Webform Localization to 4.6
+  - (Commit: [f275dc5][R4.10-Commit-f275dc5]) Update changelog.md file.
   - (Commit: [371c7a2][R4.10-Commit-371c7a2]) Fixed WetKit Images for #[2761543][R4.10-Issue-2761543] - Illegal string offset adding Embedded Images
   - (Commit: [4b7ca76][R4.10-Commit-4b7ca76]) Fixed WetKit Metatag for #[2761477][R4.10-Issue-2761477] - Media Module - Missing Argument for media_wysiwyg_filter
   - (Commit: [2d7001c][R4.10-Commit-2d7001c]) Fixed WetKit Bootstrap for #[2761031][R4.10-Issue-2761031] - Follow canada.ca capitalization of second words
@@ -997,6 +999,8 @@ Fixes:
 
 <!-- Commits R4.10 -->
 
+[R4.10-Commit-66ff275]: http://drupalcode.org/project/wetkit.git/commit/66ff275
+[R4.10-Commit-f275dc5]: http://drupalcode.org/project/wetkit.git/commit/f275dc5
 [R4.10-Commit-e26ffa9]: http://drupalcode.org/project/wetkit.git/commit/e26ffa9
 [R4.10-Commit-371c7a2]: http://drupalcode.org/project/wetkit.git/commit/371c7a2
 [R4.10-Commit-4b7ca76]: http://drupalcode.org/project/wetkit.git/commit/4b7ca76
@@ -1012,6 +1016,7 @@ Fixes:
 
 <!-- Issues R4.10 -->
 
+[R4.10-Issue-2761601]: http://drupal.org/node/2761601
 [R4.10-Issue-2761543]: http://drupal.org/node/2761543
 [R4.10-Issue-2761477]: http://drupal.org/node/2761477
 [R4.10-Issue-2761031]: http://drupal.org/node/2761031
