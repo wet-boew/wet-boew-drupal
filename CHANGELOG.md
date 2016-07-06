@@ -1,5 +1,26 @@
 # CHANGELOG.md
 
+## v4.10 (In Development)
+
+Features(s):
+
+  - Panelizer (3.2)
+  - Services (3.15)
+  - Metatag (1.17) - hook_update_n is expensive
+  - Embedded images + Hierarchical Select undefined index
+  - Metatag missing argument for media_wysiwyg_filter
+
+Fixes:
+
+  - (Commit: [371c7a2][R4.10-Commit-371c7a2]) Fixed WetKit Images for #[2761543][R4.10-Issue-2761543] - Illegal string offset adding Embedded Images
+  - (Commit: [4b7ca76][R4.10-Commit-4b7ca76]) Fixed WetKit Metatag for #[2761477][R4.10-Issue-2761477] - Media Module - Missing Argument for media_wysiwyg_filter
+  - (Commit: [2d7001c][R4.10-Commit-2d7001c]) Fixed WetKit Bootstrap for #[2761031][R4.10-Issue-2761031] - Follow canada.ca capitalization of second words
+  - (Commit: [a5c7e32][R4.10-Commit-a5c7e32]) Fixed WetKit Core for Minor patch to hierarchical select undefined index.
+  - (Commit: [7ef7f9d][R4.10-Commit-7ef7f9d]) Minor correction to changelog.md file to reflect actual update.
+  - (Commit: [a674eea][R4.10-Commit-a674eea]) Stable release of Drupal TI.
+  - (Commit: [dc4c62b][R4.10-Commit-dc4c62b]) Start work on next release.
+  - (Commit: [2b93e27][R4.10-Commit-2b93e27]) Remove newlines from changelog.md file.
+
 ## v4.9
 
 Security Update(s):
@@ -973,6 +994,27 @@ Fixes:
   - (Commit: [0fc2202][R4.0-rc1-Commit-0fc2202]) Point responsinator to live demo site.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.10 -->
+
+[R4.10-Commit-e26ffa9]: http://drupalcode.org/project/wetkit.git/commit/e26ffa9
+[R4.10-Commit-371c7a2]: http://drupalcode.org/project/wetkit.git/commit/371c7a2
+[R4.10-Commit-4b7ca76]: http://drupalcode.org/project/wetkit.git/commit/4b7ca76
+[R4.10-Commit-2d7001c]: http://drupalcode.org/project/wetkit.git/commit/2d7001c
+[R4.10-Commit-a5c7e32]: http://drupalcode.org/project/wetkit.git/commit/a5c7e32
+[R4.10-Commit-7ef7f9d]: http://drupalcode.org/project/wetkit.git/commit/7ef7f9d
+[R4.10-Commit-cc0be3b]: http://drupalcode.org/project/wetkit.git/commit/cc0be3b
+[R4.10-Commit-a674eea]: http://drupalcode.org/project/wetkit.git/commit/a674eea
+[R4.10-Commit-0e32cd0]: http://drupalcode.org/project/wetkit.git/commit/0e32cd0
+[R4.10-Commit-dc4c62b]: http://drupalcode.org/project/wetkit.git/commit/dc4c62b
+[R4.10-Commit-4b0ad5c]: http://drupalcode.org/project/wetkit.git/commit/4b0ad5c
+[R4.10-Commit-2b93e27]: http://drupalcode.org/project/wetkit.git/commit/2b93e27
+
+<!-- Issues R4.10 -->
+
+[R4.10-Issue-2761543]: http://drupal.org/node/2761543
+[R4.10-Issue-2761477]: http://drupal.org/node/2761477
+[R4.10-Issue-2761031]: http://drupal.org/node/2761031
 
 <!-- Commits R4.9 -->
 
