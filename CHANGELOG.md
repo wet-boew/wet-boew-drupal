@@ -4,6 +4,7 @@
 
 Features(s):
 
+  - Drupal Core (7.50)
   - Panelizer (3.2)
   - Services (3.15)
   - Metatag (1.17) - hook_update_n is expensive
