@@ -40,8 +40,6 @@ Development has been tailored for organizations that need to comply with standar
 
 ## License and Developer(s)
 
-Developer:: [William Hearn][sylus] (<william.hearn@statcan.gc.ca>) // [![endorse][coderwall-badge]][coderwall]
-
 Contributor(s): https://github.com/wet-boew/wet-boew-drupal/graphs/contributors
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use

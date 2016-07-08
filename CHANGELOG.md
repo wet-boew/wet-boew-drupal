@@ -1,6 +1,6 @@
 # CHANGELOG.md
 
-## v4.10 (In Development)
+## v4.10
 
 Features(s):
 
@@ -13,6 +13,8 @@ Features(s):
 
 Fixes:
 
+  - (Commit: [4e20aef][R4.10-Commit-4e20aef]) #[2761529][R4.10-Issue-2761529] - Drupal 7.50 core release
+  - (Commit: [c59908c][R4.10-Commit-c59908c]) Update changelog.md file.
   - (Commit: [66ff275][R4.10-Commit-66ff275]) Fixed WetKit Language for #[2761601][R4.10-Issue-2761601] - Update Webform Localization to 4.6
   - (Commit: [f275dc5][R4.10-Commit-f275dc5]) Update changelog.md file.
   - (Commit: [371c7a2][R4.10-Commit-371c7a2]) Fixed WetKit Images for #[2761543][R4.10-Issue-2761543] - Illegal string offset adding Embedded Images
@@ -1000,6 +1002,8 @@ Fixes:
 
 <!-- Commits R4.10 -->
 
+[R4.10-Commit-4e20aef]: http://drupalcode.org/project/wetkit.git/commit/4e20aef
+[R4.10-Commit-c59908c]: http://drupalcode.org/project/wetkit.git/commit/c59908c
 [R4.10-Commit-66ff275]: http://drupalcode.org/project/wetkit.git/commit/66ff275
 [R4.10-Commit-f275dc5]: http://drupalcode.org/project/wetkit.git/commit/f275dc5
 [R4.10-Commit-e26ffa9]: http://drupalcode.org/project/wetkit.git/commit/e26ffa9
@@ -1017,6 +1021,7 @@ Fixes:
 
 <!-- Issues R4.10 -->
 
+[R4.10-Issue-2761529]: http://drupal.org/node/2761529
 [R4.10-Issue-2761601]: http://drupal.org/node/2761601
 [R4.10-Issue-2761543]: http://drupal.org/node/2761543
 [R4.10-Issue-2761477]: http://drupal.org/node/2761477
