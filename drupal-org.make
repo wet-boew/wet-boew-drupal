@@ -12,6 +12,7 @@ projects[wetkit_admin][download][branch] = 7.x-4.x
 projects[wetkit_bean][version] = 4.x-dev
 projects[wetkit_bean][subdir] = custom
 projects[wetkit_bean][download][type] = git
+projects[wetkit_bean][download][revision] = 2b82f1d
 projects[wetkit_bean][download][branch] = 7.x-4.x
 
 projects[wetkit_breadcrumbs][version] = 4.x-dev
