@@ -1,5 +1,30 @@
 # CHANGELOG.md
 
+## v4.11 (In Development)
+
+Security Update(s):
+
+  - Admin Views (1.6)
+
+Features(s):
+
+  - Moderate updates to UUID
+  - Significant updates to Bootstrap theme
+  - Separated out webform_uuid from patch into module
+
+Fixes:
+
+  - (Commit: [fdfe820][R4.11-Commit-fdfe820]) Fixed WetKit Core for Update UUID to 1.0-beta2.
+  - (Commit: [135c9c1][R4.11-Commit-135c9c1]) Fixed WetKit Bean for Update bean module to 1.10 version.
+  - (Commit: [b7f4749][R4.11-Commit-b7f4749]) Fixed WetKit Admin for #[2779053][R4.11-Issue-2779053] - Administration Views - Critical - Access bypass
+  - (Commit: [94aec3d][R4.11-Commit-94aec3d]) PHP hardcode PHP7 to 7.0.8
+  - (Commit: [a814b41][R4.11-Commit-a814b41]) Fixed WetKit Webform for #[2330581][R4.11-Issue-2330581] - newer versions of webform might require a new patch in order to be deployable
+  - (Commit: [ad27a75][R4.11-Commit-ad27a75]) Fixed WetKit Metatag for #[2778009][R4.11-Issue-2778009] - Incorrect Metatag Translation
+  - (Commit: [248b2f9][R4.11-Commit-248b2f9]) Fixed WetKit Bootstrap for Update to Bootstrap 3.6 version.
+  - (Commit: [b012f4a][R4.11-Commit-b012f4a]) Fixed WetKit Webform for Update webform module to 4.13 version.
+  - (Commit: [e5136d5][R4.11-Commit-e5136d5]) Fixed WetKit Deployment for Update services to version 3.16.
+  - (Commit: [9fa09d7][R4.11-Commit-9fa09d7]) Start work on next release.
+
 ## v4.10
 
 Features(s):
@@ -999,6 +1024,26 @@ Fixes:
   - (Commit: [0fc2202][R4.0-rc1-Commit-0fc2202]) Point responsinator to live demo site.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.11 -->
+
+[R4.11-Commit-fdfe820]: http://drupalcode.org/project/wetkit.git/commit/fdfe820
+[R4.11-Commit-135c9c1]: http://drupalcode.org/project/wetkit.git/commit/135c9c1
+[R4.11-Commit-b7f4749]: http://drupalcode.org/project/wetkit.git/commit/b7f4749
+[R4.11-Commit-94aec3d]: http://drupalcode.org/project/wetkit.git/commit/94aec3d
+[R4.11-Commit-a814b41]: http://drupalcode.org/project/wetkit.git/commit/a814b41
+[R4.11-Commit-ad27a75]: http://drupalcode.org/project/wetkit.git/commit/ad27a75
+[R4.11-Commit-248b2f9]: http://drupalcode.org/project/wetkit.git/commit/248b2f9
+[R4.11-Commit-b012f4a]: http://drupalcode.org/project/wetkit.git/commit/b012f4a
+[R4.11-Commit-e5136d5]: http://drupalcode.org/project/wetkit.git/commit/e5136d5
+[R4.11-Commit-79e6605]: http://drupalcode.org/project/wetkit.git/commit/79e6605
+[R4.11-Commit-9fa09d7]: http://drupalcode.org/project/wetkit.git/commit/9fa09d7
+
+<!-- Issues R4.11 -->
+
+[R4.11-Issue-2779053]: http://drupal.org/node/2779053
+[R4.11-Issue-2330581]: http://drupal.org/node/2330581
+[R4.11-Issue-2778009]: http://drupal.org/node/2778009
 
 <!-- Commits R4.10 -->
 
