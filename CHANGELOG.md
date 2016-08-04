@@ -8,7 +8,6 @@ Security Update(s):
 
 Features(s):
 
-  - Moderate updates to UUID
   - Significant updates to Bootstrap theme
   - Separated out webform_uuid from patch into module
 
