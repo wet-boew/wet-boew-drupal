@@ -3,22 +3,22 @@ core = 7.x
 
 ; WxT Foundation (Custom)
 
-projects[wetkit_admin][version] = 4.4
+projects[wetkit_admin][version] = 4.5
 projects[wetkit_admin][subdir] = custom
 
-projects[wetkit_bean][version] = 4.3
+projects[wetkit_bean][version] = 4.4
 projects[wetkit_bean][subdir] = custom
 
 projects[wetkit_breadcrumbs][version] = 4.5
 projects[wetkit_breadcrumbs][subdir] = custom
 
-projects[wetkit_core][version] = 4.8
+projects[wetkit_core][version] = 4.9
 projects[wetkit_core][subdir] = custom
 
 projects[wetkit_demo][version] = 4.1
 projects[wetkit_demo][subdir] = custom
 
-projects[wetkit_deployment][version] = 4.10
+projects[wetkit_deployment][version] = 4.11
 projects[wetkit_deployment][subdir] = custom
 
 projects[wetkit_images][version] = 4.5
@@ -57,7 +57,7 @@ projects[wetkit_theme][subdir] = custom
 projects[wetkit_users][version] = 4.1
 projects[wetkit_users][subdir] = custom
 
-projects[wetkit_webform][version] = 4.0
+projects[wetkit_webform][version] = 4.11
 projects[wetkit_webform][subdir] = custom
 
 projects[wetkit_wetboew][version] = 4.2
@@ -74,7 +74,7 @@ projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_ember][version] = 4.4
 projects[wetkit_ember][type] = theme
 
-projects[wetkit_bootstrap][version] = 4.8
+projects[wetkit_bootstrap][version] = 4.9
 projects[wetkit_bootstrap][type] = theme
 
 projects[wetkit_shiny][version] = 4.0

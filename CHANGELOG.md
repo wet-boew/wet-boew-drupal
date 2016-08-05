@@ -1,6 +1,6 @@
 # CHANGELOG.md
 
-## v4.11 (In Development)
+## v4.11
 
 Security Update(s):
 
@@ -8,11 +8,13 @@ Security Update(s):
 
 Features(s):
 
-  - Significant updates to Bootstrap theme
+  - Theme updates to Bootstrap theme
   - Separated out webform_uuid from patch into module
+  - Several bean related bug fixes
 
 Fixes:
 
+  - (Commit: [538dd93][R4.11-Commit-538dd93]) Update CHANGELOG.md file.
   - (Commit: [fdfe820][R4.11-Commit-fdfe820]) Fixed WetKit Core for Update UUID to 1.0-beta2.
   - (Commit: [135c9c1][R4.11-Commit-135c9c1]) Fixed WetKit Bean for Update bean module to 1.10 version.
   - (Commit: [b7f4749][R4.11-Commit-b7f4749]) Fixed WetKit Admin for #[2779053][R4.11-Issue-2779053] - Administration Views - Critical - Access bypass
@@ -1026,6 +1028,8 @@ Fixes:
 
 <!-- Commits R4.11 -->
 
+[R4.11-Commit-a3df010]: http://drupalcode.org/project/wetkit.git/commit/a3df010
+[R4.11-Commit-538dd93]: http://drupalcode.org/project/wetkit.git/commit/538dd93
 [R4.11-Commit-fdfe820]: http://drupalcode.org/project/wetkit.git/commit/fdfe820
 [R4.11-Commit-135c9c1]: http://drupalcode.org/project/wetkit.git/commit/135c9c1
 [R4.11-Commit-b7f4749]: http://drupalcode.org/project/wetkit.git/commit/b7f4749
