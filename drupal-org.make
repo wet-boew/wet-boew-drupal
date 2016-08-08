@@ -68,6 +68,7 @@ projects[wetkit_migrate][download][branch] = 7.x-1.x
 projects[wetkit_og][version] = 1.x-dev
 projects[wetkit_og][subdir] = custom
 projects[wetkit_og][download][type] = git
+projects[wetkit_og][download][revision] = a1f292e
 projects[wetkit_og][download][branch] = 7.x-1.x
 
 projects[wetkit_pages][version] = 1.x-dev
