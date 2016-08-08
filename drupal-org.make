@@ -6,6 +6,7 @@ core = 7.x
 projects[wetkit_admin][version] = 1.x-dev
 projects[wetkit_admin][subdir] = custom
 projects[wetkit_admin][download][type] = git
+projects[wetkit_admin][download][revision] = b39f5aa
 projects[wetkit_admin][download][branch] = 7.x-1.x
 
 projects[wetkit_bean][version] = 1.x-dev
