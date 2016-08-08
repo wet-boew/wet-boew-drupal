@@ -1,5 +1,20 @@
 # CHANGELOG.md
 
+## v1.15 (In Development)
+
+Security Update(s):
+
+  - Admin Views
+  - Deploy
+  - OG
+
+Fixes:
+
+  - (Commit: [042d6a8][R1.15-Commit-042d6a8]) Fixed WetKit Organic Groups for Security Update for OG.
+  - (Commit: [eee4655][R1.15-Commit-eee4655]) Fixed WetKit Deployment for Security Update for Deploy
+  - (Commit: [dd465b1][R1.15-Commit-dd465b1]) Fixed WetKit Admin for Security update for Admin Views.
+  - (Commit: [e556ded][R1.15-Commit-e556ded]) Start Work on Legacy Release 1.15
+
 ## v1.14
 
 Security Update(s):
@@ -929,6 +944,15 @@ Bug Fixes:
   - (Commit: [26217a4][RC15-Commit-26217a4]) #[2101501][RC15-Issue-2101501] - Fixed Taxonomy term feeds missing translations.
 
 <!-- Links Referenced -->
+
+<!-- Commits R1.15 -->
+
+[R1.15-Commit-042d6a8]: http://drupalcode.org/project/wetkit.git/commit/042d6a8
+[R1.15-Commit-eee4655]: http://drupalcode.org/project/wetkit.git/commit/eee4655
+[R1.15-Commit-dd465b1]: http://drupalcode.org/project/wetkit.git/commit/dd465b1
+[R1.15-Commit-e556ded]: http://drupalcode.org/project/wetkit.git/commit/e556ded
+
+<!-- Issues R1.15 -->
 
 <!-- Commits R1.14 -->
 
