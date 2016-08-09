@@ -3,7 +3,7 @@ core = 7.x
 
 ; WxT Foundation (Custom)
 
-projects[wetkit_admin][version] = 1.11
+projects[wetkit_admin][version] = 1.12
 projects[wetkit_admin][subdir] = custom
 
 projects[wetkit_bean][version] = 1.11
@@ -18,7 +18,7 @@ projects[wetkit_core][subdir] = custom
 projects[wetkit_demo][version] = 1.1
 projects[wetkit_demo][subdir] = custom
 
-projects[wetkit_deployment][version] = 1.12
+projects[wetkit_deployment][version] = 1.13
 projects[wetkit_deployment][subdir] = custom
 
 projects[wetkit_images][version] = 1.7
@@ -39,7 +39,7 @@ projects[wetkit_metatag][subdir] = custom
 projects[wetkit_migrate][version] = 1.9
 projects[wetkit_migrate][subdir] = custom
 
-projects[wetkit_og][version] = 1.3
+projects[wetkit_og][version] = 1.4
 projects[wetkit_og][subdir] = custom
 
 projects[wetkit_pages][version] = 1.6
