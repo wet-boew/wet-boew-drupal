@@ -13,9 +13,12 @@ Feature(s):
   - Panopoly Magic preview pane CSS adjustments
   - Panels has added a new quick-filter js for panels pane selections
   - Numerous other Panels, CTools, and Panelizer bug fixes
+  - Deploy Plus updates related to entity dependency
 
 Fixes:
 
+  - (Commit: [cedce7c][R4.12-Commit-cedce7c]) Fixed WetKit Deployment for Update deploy plus from v2.3 to v2.5.
+  - (Commit: [6d96449][R4.12-Commit-6d96449]) Update changelog.md file.
   - (Commit: [8aa0c7c][R4.12-Commit-8aa0c7c]) Fixed WetKit Core for #[2785917][R4.12-Issue-2785917] - Underscores in CSS IDs for panes are converted to hyphens after 3.6 update
   - (Commit: [1be2bb2][R4.12-Commit-1be2bb2]) Fixed WetKit Theme for Updates Panels styling to match panopoly_magic changes.
   - (Commit: [318c7ef][R4.12-Commit-318c7ef]) Fixed WetKit Core for #[2785845][R4.12-Issue-2785845] - Security releases for Panels + Panelizer
@@ -1067,6 +1070,8 @@ Fixes:
 
 <!-- Commits R4.12 -->
 
+[R4.12-Commit-cedce7c]: http://drupalcode.org/project/wetkit.git/commit/cedce7c
+[R4.12-Commit-6d96449]: http://drupalcode.org/project/wetkit.git/commit/6d96449
 [R4.12-Commit-8aa0c7c]: http://drupalcode.org/project/wetkit.git/commit/8aa0c7c
 [R4.12-Commit-1be2bb2]: http://drupalcode.org/project/wetkit.git/commit/1be2bb2
 [R4.12-Commit-318c7ef]: http://drupalcode.org/project/wetkit.git/commit/318c7ef
@@ -1107,16 +1112,6 @@ Fixes:
 [R4.12-Issue-2785955]: http://drupal.org/node/2785955
 [R4.12-Issue-2785955]: http://drupal.org/node/2785955
 [R4.12-Issue-2785915]: http://drupal.org/node/2785915
-[R4.12-Issue-2785845]: http://drupal.org/node/2785845
-
-<!-- Commits R4.12 -->
-
-[R4.12-Commit-c4633d0]: http://drupalcode.org/project/wetkit.git/commit/c4633d0
-[R4.12-Commit-62e46e4]: http://drupalcode.org/project/wetkit.git/commit/62e46e4
-[R4.12-Commit-eda45a9]: http://drupalcode.org/project/wetkit.git/commit/eda45a9
-
-<!-- Issues R4.12 -->
-
 [R4.12-Issue-2785845]: http://drupal.org/node/2785845
 
 <!-- Commits R4.11 -->
