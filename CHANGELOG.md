@@ -9,10 +9,35 @@ Security Update(s):
 
 Feature(s):
 
-  - Bean module update to fix issue with Views
+  - Bean module update to fix issue with Views introduced in previous release
+  - Panopoly Magic preview pane CSS adjustments
+  - Panels has added a new quick-filter js for panels pane selections
+  - Numerous other Panels, CTools, and Panelizer bug fixes
+  - Deploy Plus updates related to entity dependency
 
 Fixes:
 
+  - (Commit: [cedce7c][R4.12-Commit-cedce7c]) Fixed WetKit Deployment for Update deploy plus from v2.3 to v2.5.
+  - (Commit: [6d96449][R4.12-Commit-6d96449]) Update changelog.md file.
+  - (Commit: [8aa0c7c][R4.12-Commit-8aa0c7c]) Fixed WetKit Core for #[2785917][R4.12-Issue-2785917] - Underscores in CSS IDs for panes are converted to hyphens after 3.6 update
+  - (Commit: [1be2bb2][R4.12-Commit-1be2bb2]) Fixed WetKit Theme for Updates Panels styling to match panopoly_magic changes.
+  - (Commit: [318c7ef][R4.12-Commit-318c7ef]) Fixed WetKit Core for #[2785845][R4.12-Issue-2785845] - Security releases for Panels + Panelizer
+  - (Commit: [9b3a0a8][R4.12-Commit-9b3a0a8]) Fixed WetKit Core for #[2785845][R4.12-Issue-2785845] - Security releases for Panels + Panelizer
+  - (Commit: [0e0156c][R4.12-Commit-0e0156c]) Fixed WetKit Core for #[2785845][R4.12-Issue-2785845] - Security releases for Panels + Panelizer
+  - (Commit: [b735975][R4.12-Commit-b735975]) Fixed WetKit Core for Update CTools from to v1.10 version to align with Panels update.
+  - (Commit: [9d21fd4][R4.12-Commit-9d21fd4]) Fixed WetKit Core for #[2785845][R4.12-Issue-2785845] - Security releases for Panels + Panelizer
+  - (Commit: [dff46c3][R4.12-Commit-dff46c3]) Fixed WetKit Menu for #[2785955][R4.12-Issue-2785955] - Add missing storage ids to work with new Panels ACL
+  - (Commit: [ae042bd][R4.12-Commit-ae042bd]) Fixed WetKit Webform for #[2785955][R4.12-Issue-2785955] - Add missing storage ids to work with new Panels ACL
+  - (Commit: [441b206][R4.12-Commit-441b206]) Fixed WetKit Users for #[2785955][R4.12-Issue-2785955] - Add missing storage ids to work with new Panels ACL
+  - (Commit: [0050f8d][R4.12-Commit-0050f8d]) Fixed WetKit Test for #[2785955][R4.12-Issue-2785955] - Add missing storage ids to work with new Panels ACL
+  - (Commit: [d32f266][R4.12-Commit-d32f266]) Fixed WetKit Pages for #[2785955][R4.12-Issue-2785955] - Add missing storage ids to work with new Panels ACL
+  - (Commit: [718b42c][R4.12-Commit-718b42c]) Fixed WetKit Migration for #[2785955][R4.12-Issue-2785955] - Add missing storage ids to work with new Panels ACL
+  - (Commit: [d518778][R4.12-Commit-d518778]) Fixed WetKit Metatag for Features update to metatag module.
+  - (Commit: [e5fae5b][R4.12-Commit-e5fae5b]) Fixed WetKit Demo for #[2785955][R4.12-Issue-2785955] - Add missing storage ids to work with new Panels ACL
+  - (Commit: [639b2f5][R4.12-Commit-639b2f5]) Fixed WetKit Core for #[2785955][R4.12-Issue-2785955] - Add missing storage ids to work with new Panels ACL
+  - (Commit: [666210b][R4.12-Commit-666210b]) Fixed WetKit Admin for #[2785955][R4.12-Issue-2785955] - Add missing storage ids to work with new Panels ACL
+  - (Commit: [c0fb502][R4.12-Commit-c0fb502]) Fixed WetKit Core for #[2785915][R4.12-Issue-2785915] - Panels permissions update causes access denied on page manager pages
+  - (Commit: [1277cdd][R4.12-Commit-1277cdd]) Update changelog.md file.
   - (Commit: [c4633d0][R4.12-Commit-c4633d0]) Fixed WetKit Bean for Update bean module to v1.11 to fix issue with views.
   - (Commit: [62e46e4][R4.12-Commit-62e46e4]) Fixed WetKit Core for #[2785845][R4.12-Issue-2785845] - Security releases for Panels + Panelizer
   - (Commit: [eda45a9][R4.12-Commit-eda45a9]) Start work on next release.
@@ -1045,12 +1070,48 @@ Fixes:
 
 <!-- Commits R4.12 -->
 
+[R4.12-Commit-cedce7c]: http://drupalcode.org/project/wetkit.git/commit/cedce7c
+[R4.12-Commit-6d96449]: http://drupalcode.org/project/wetkit.git/commit/6d96449
+[R4.12-Commit-8aa0c7c]: http://drupalcode.org/project/wetkit.git/commit/8aa0c7c
+[R4.12-Commit-1be2bb2]: http://drupalcode.org/project/wetkit.git/commit/1be2bb2
+[R4.12-Commit-318c7ef]: http://drupalcode.org/project/wetkit.git/commit/318c7ef
+[R4.12-Commit-9b3a0a8]: http://drupalcode.org/project/wetkit.git/commit/9b3a0a8
+[R4.12-Commit-0e0156c]: http://drupalcode.org/project/wetkit.git/commit/0e0156c
+[R4.12-Commit-b735975]: http://drupalcode.org/project/wetkit.git/commit/b735975
+[R4.12-Commit-9d21fd4]: http://drupalcode.org/project/wetkit.git/commit/9d21fd4
+[R4.12-Commit-dff46c3]: http://drupalcode.org/project/wetkit.git/commit/dff46c3
+[R4.12-Commit-ae042bd]: http://drupalcode.org/project/wetkit.git/commit/ae042bd
+[R4.12-Commit-441b206]: http://drupalcode.org/project/wetkit.git/commit/441b206
+[R4.12-Commit-0050f8d]: http://drupalcode.org/project/wetkit.git/commit/0050f8d
+[R4.12-Commit-d32f266]: http://drupalcode.org/project/wetkit.git/commit/d32f266
+[R4.12-Commit-718b42c]: http://drupalcode.org/project/wetkit.git/commit/718b42c
+[R4.12-Commit-d518778]: http://drupalcode.org/project/wetkit.git/commit/d518778
+[R4.12-Commit-e5fae5b]: http://drupalcode.org/project/wetkit.git/commit/e5fae5b
+[R4.12-Commit-639b2f5]: http://drupalcode.org/project/wetkit.git/commit/639b2f5
+[R4.12-Commit-666210b]: http://drupalcode.org/project/wetkit.git/commit/666210b
+[R4.12-Commit-c0fb502]: http://drupalcode.org/project/wetkit.git/commit/c0fb502
+[R4.12-Commit-1277cdd]: http://drupalcode.org/project/wetkit.git/commit/1277cdd
 [R4.12-Commit-c4633d0]: http://drupalcode.org/project/wetkit.git/commit/c4633d0
 [R4.12-Commit-62e46e4]: http://drupalcode.org/project/wetkit.git/commit/62e46e4
 [R4.12-Commit-eda45a9]: http://drupalcode.org/project/wetkit.git/commit/eda45a9
 
 <!-- Issues R4.12 -->
 
+[R4.12-Issue-2785917]: http://drupal.org/node/2785917
+[R4.12-Issue-2785845]: http://drupal.org/node/2785845
+[R4.12-Issue-2785845]: http://drupal.org/node/2785845
+[R4.12-Issue-2785845]: http://drupal.org/node/2785845
+[R4.12-Issue-2785845]: http://drupal.org/node/2785845
+[R4.12-Issue-2785955]: http://drupal.org/node/2785955
+[R4.12-Issue-2785955]: http://drupal.org/node/2785955
+[R4.12-Issue-2785955]: http://drupal.org/node/2785955
+[R4.12-Issue-2785955]: http://drupal.org/node/2785955
+[R4.12-Issue-2785955]: http://drupal.org/node/2785955
+[R4.12-Issue-2785955]: http://drupal.org/node/2785955
+[R4.12-Issue-2785955]: http://drupal.org/node/2785955
+[R4.12-Issue-2785955]: http://drupal.org/node/2785955
+[R4.12-Issue-2785955]: http://drupal.org/node/2785955
+[R4.12-Issue-2785915]: http://drupal.org/node/2785915
 [R4.12-Issue-2785845]: http://drupal.org/node/2785845
 
 <!-- Commits R4.11 -->
