@@ -105,6 +105,7 @@ projects[wetkit_users][download][branch] = 7.x-4.x
 projects[wetkit_webform][version] = 4.x-dev
 projects[wetkit_webform][subdir] = custom
 projects[wetkit_webform][download][type] = git
+projects[wetkit_webform][download][revision] = b8bcb0f
 projects[wetkit_webform][download][branch] = 7.x-4.x
 
 projects[wetkit_wetboew][version] = 4.x-dev
