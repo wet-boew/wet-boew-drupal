@@ -14,9 +14,19 @@ Feature(s):
   - Panels has added a new quick-filter js for panels pane selections
   - Numerous other Panels, CTools, and Panelizer bug fixes
   - Deploy Plus updates related to entity dependency
+  - UUID module has refined the UUID validation pattern
 
 Fixes:
 
+  - (Commit: [f59ba38][R4.12-Commit-f59ba38]) Fixed WetKit Deployment for #[2786521][R4.12-Issue-2786521] - Updates for UUID to 1.0-beta2
+  - (Commit: [88f6f05][R4.12-Commit-88f6f05]) Fixed WetKit Menu for #[2786521][R4.12-Issue-2786521] - Updates for UUID to 1.0-beta2
+  - (Commit: [e15b6c2][R4.12-Commit-e15b6c2]) Fixed WetKit Users for #[2786521][R4.12-Issue-2786521] - Updates for UUID to 1.0-beta2
+  - (Commit: [3b6ab79][R4.12-Commit-3b6ab79]) Fixed WetKit Pages for #[2786521][R4.12-Issue-2786521] - Updates for UUID to 1.0-beta2
+  - (Commit: [0576297][R4.12-Commit-0576297]) Fixed WetKit Migration for #[2786521][R4.12-Issue-2786521] - Updates for UUID to 1.0-beta2
+  - (Commit: [3601295][R4.12-Commit-3601295]) Fixed WetKit Demo for #[2786521][R4.12-Issue-2786521] - Updates for UUID to 1.0-beta2
+  - (Commit: [0ec09dd][R4.12-Commit-0ec09dd]) Fixed WetKit Core for #[2786521][R4.12-Issue-2786521] - Updates for UUID to 1.0-beta2
+  - (Commit: [3babc7a][R4.12-Commit-3babc7a]) Fixed WetKit Admin for #[2365281][R4.12-Issue-2365281] - UUID validation pattern needs refinement
+  - (Commit: [e63725e][R4.12-Commit-e63725e]) Update changelog.md file.
   - (Commit: [4129974][R4.12-Commit-4129974]) Fixed WetKit Deployment for #[2448825][R4.12-Issue-2448825] - Wrong indentation in Panels exports
   - (Commit: [e929a06][R4.12-Commit-e929a06]) Fixed WetKit Test for #[2448825][R4.12-Issue-2448825] - Wrong indentation in Panels exports
   - (Commit: [4cff97d][R4.12-Commit-4cff97d]) Fixed WetKit WET-BOEW for Minor features export extra padding correction.
@@ -1082,6 +1092,15 @@ Fixes:
 
 <!-- Commits R4.12 -->
 
+[R4.12-Commit-f59ba38]: http://drupalcode.org/project/wetkit.git/commit/f59ba38
+[R4.12-Commit-88f6f05]: http://drupalcode.org/project/wetkit.git/commit/88f6f05
+[R4.12-Commit-e15b6c2]: http://drupalcode.org/project/wetkit.git/commit/e15b6c2
+[R4.12-Commit-3b6ab79]: http://drupalcode.org/project/wetkit.git/commit/3b6ab79
+[R4.12-Commit-0576297]: http://drupalcode.org/project/wetkit.git/commit/0576297
+[R4.12-Commit-3601295]: http://drupalcode.org/project/wetkit.git/commit/3601295
+[R4.12-Commit-0ec09dd]: http://drupalcode.org/project/wetkit.git/commit/0ec09dd
+[R4.12-Commit-3babc7a]: http://drupalcode.org/project/wetkit.git/commit/3babc7a
+[R4.12-Commit-e63725e]: http://drupalcode.org/project/wetkit.git/commit/e63725e
 [R4.12-Commit-4129974]: http://drupalcode.org/project/wetkit.git/commit/4129974
 [R4.12-Commit-e929a06]: http://drupalcode.org/project/wetkit.git/commit/e929a06
 [R4.12-Commit-4cff97d]: http://drupalcode.org/project/wetkit.git/commit/4cff97d
@@ -1123,6 +1142,14 @@ Fixes:
 
 <!-- Issues R4.12 -->
 
+[R4.12-Issue-2786521]: http://drupal.org/node/2786521
+[R4.12-Issue-2786521]: http://drupal.org/node/2786521
+[R4.12-Issue-2786521]: http://drupal.org/node/2786521
+[R4.12-Issue-2786521]: http://drupal.org/node/2786521
+[R4.12-Issue-2786521]: http://drupal.org/node/2786521
+[R4.12-Issue-2786521]: http://drupal.org/node/2786521
+[R4.12-Issue-2786521]: http://drupal.org/node/2786521
+[R4.12-Issue-2365281]: http://drupal.org/node/2365281
 [R4.12-Issue-2448825]: http://drupal.org/node/2448825
 [R4.12-Issue-2448825]: http://drupal.org/node/2448825
 [R4.12-Issue-2448825]: http://drupal.org/node/2448825
