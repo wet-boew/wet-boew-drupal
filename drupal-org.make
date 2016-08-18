@@ -29,7 +29,7 @@ projects[wetkit_core][download][branch] = 7.x-4.x
 projects[wetkit_demo][version] = 4.x-dev
 projects[wetkit_demo][subdir] = custom
 projects[wetkit_demo][download][type] = git
-projects[wetkit_demo][download][revision] = 976bf22
+projects[wetkit_demo][download][revision] = 2dd5adf
 projects[wetkit_demo][download][branch] = 7.x-4.x
 
 projects[wetkit_deployment][version] = 4.x-dev
