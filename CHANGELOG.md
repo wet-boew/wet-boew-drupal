@@ -17,6 +17,18 @@ Feature(s):
 
 Fixes:
 
+  - (Commit: [4129974][R4.12-Commit-4129974]) Fixed WetKit Deployment for #[2448825][R4.12-Issue-2448825] - Wrong indentation in Panels exports
+  - (Commit: [e929a06][R4.12-Commit-e929a06]) Fixed WetKit Test for #[2448825][R4.12-Issue-2448825] - Wrong indentation in Panels exports
+  - (Commit: [4cff97d][R4.12-Commit-4cff97d]) Fixed WetKit WET-BOEW for Minor features export extra padding correction.
+  - (Commit: [2cd63e7][R4.12-Commit-2cd63e7]) Fixed WetKit Users for #[2448825][R4.12-Issue-2448825] - Wrong indentation in Panels exports
+  - (Commit: [b91548e][R4.12-Commit-b91548e]) Fixed WetKit Pages for #[2448825][R4.12-Issue-2448825] - Wrong indentation in Panels exports
+  - (Commit: [f4d1a9d][R4.12-Commit-f4d1a9d]) Fixed WetKit Migration for #[2448825][R4.12-Issue-2448825] - Wrong indentation in Panels exports
+  - (Commit: [e6fe03c][R4.12-Commit-e6fe03c]) Fixed WetKit Menu for #[2448825][R4.12-Issue-2448825] - Wrong indentation in Panels exports
+  - (Commit: [49acf71][R4.12-Commit-49acf71]) Fixed WetKit Menu for #[2448825][R4.12-Issue-2448825] - Wrong indentation in Panels exports
+  - (Commit: [08f910d][R4.12-Commit-08f910d]) Fixed WetKit Demo for #[2448825][R4.12-Issue-2448825] - Wrong indentation in Panels exports
+  - (Commit: [dda280e][R4.12-Commit-dda280e]) Fixed WetKit Core for #[2448825][R4.12-Issue-2448825] - Wrong indentation in Panels exports
+  - (Commit: [d89dd99][R4.12-Commit-d89dd99]) Fixed WetKit Admin for #[2448825][R4.12-Issue-2448825] - Wrong indentation in Panels exports
+  - (Commit: [5faa067][R4.12-Commit-5faa067]) Update changelog.md file.
   - (Commit: [cedce7c][R4.12-Commit-cedce7c]) Fixed WetKit Deployment for Update deploy plus from v2.3 to v2.5.
   - (Commit: [6d96449][R4.12-Commit-6d96449]) Update changelog.md file.
   - (Commit: [8aa0c7c][R4.12-Commit-8aa0c7c]) Fixed WetKit Core for #[2785917][R4.12-Issue-2785917] - Underscores in CSS IDs for panes are converted to hyphens after 3.6 update
@@ -1070,9 +1082,23 @@ Fixes:
 
 <!-- Commits R4.12 -->
 
+[R4.12-Commit-4129974]: http://drupalcode.org/project/wetkit.git/commit/4129974
+[R4.12-Commit-e929a06]: http://drupalcode.org/project/wetkit.git/commit/e929a06
+[R4.12-Commit-4cff97d]: http://drupalcode.org/project/wetkit.git/commit/4cff97d
+[R4.12-Commit-2cd63e7]: http://drupalcode.org/project/wetkit.git/commit/2cd63e7
+[R4.12-Commit-b91548e]: http://drupalcode.org/project/wetkit.git/commit/b91548e
+[R4.12-Commit-f4d1a9d]: http://drupalcode.org/project/wetkit.git/commit/f4d1a9d
+[R4.12-Commit-e6fe03c]: http://drupalcode.org/project/wetkit.git/commit/e6fe03c
+[R4.12-Commit-49acf71]: http://drupalcode.org/project/wetkit.git/commit/49acf71
+[R4.12-Commit-08f910d]: http://drupalcode.org/project/wetkit.git/commit/08f910d
+[R4.12-Commit-dda280e]: http://drupalcode.org/project/wetkit.git/commit/dda280e
+[R4.12-Commit-d89dd99]: http://drupalcode.org/project/wetkit.git/commit/d89dd99
+[R4.12-Commit-5a8af86]: http://drupalcode.org/project/wetkit.git/commit/5a8af86
+[R4.12-Commit-5faa067]: http://drupalcode.org/project/wetkit.git/commit/5faa067
 [R4.12-Commit-cedce7c]: http://drupalcode.org/project/wetkit.git/commit/cedce7c
 [R4.12-Commit-6d96449]: http://drupalcode.org/project/wetkit.git/commit/6d96449
 [R4.12-Commit-8aa0c7c]: http://drupalcode.org/project/wetkit.git/commit/8aa0c7c
+[R4.12-Commit-190bf66]: http://drupalcode.org/project/wetkit.git/commit/190bf66
 [R4.12-Commit-1be2bb2]: http://drupalcode.org/project/wetkit.git/commit/1be2bb2
 [R4.12-Commit-318c7ef]: http://drupalcode.org/project/wetkit.git/commit/318c7ef
 [R4.12-Commit-9b3a0a8]: http://drupalcode.org/project/wetkit.git/commit/9b3a0a8
@@ -1097,6 +1123,16 @@ Fixes:
 
 <!-- Issues R4.12 -->
 
+[R4.12-Issue-2448825]: http://drupal.org/node/2448825
+[R4.12-Issue-2448825]: http://drupal.org/node/2448825
+[R4.12-Issue-2448825]: http://drupal.org/node/2448825
+[R4.12-Issue-2448825]: http://drupal.org/node/2448825
+[R4.12-Issue-2448825]: http://drupal.org/node/2448825
+[R4.12-Issue-2448825]: http://drupal.org/node/2448825
+[R4.12-Issue-2448825]: http://drupal.org/node/2448825
+[R4.12-Issue-2448825]: http://drupal.org/node/2448825
+[R4.12-Issue-2448825]: http://drupal.org/node/2448825
+[R4.12-Issue-2448825]: http://drupal.org/node/2448825
 [R4.12-Issue-2785917]: http://drupal.org/node/2785917
 [R4.12-Issue-2785845]: http://drupal.org/node/2785845
 [R4.12-Issue-2785845]: http://drupal.org/node/2785845
