@@ -1,5 +1,22 @@
 # CHANGELOG.md
 
+## v4.12 (In Development)
+
+Security Update(s):
+
+  - Panels (3.3)
+  - Panelizer (3.6)
+
+Feature(s):
+
+  - Bean module update to fix issue with Views
+
+Fixes:
+
+  - (Commit: [c4633d0][R4.12-Commit-c4633d0]) Fixed WetKit Bean for Update bean module to v1.11 to fix issue with views.
+  - (Commit: [62e46e4][R4.12-Commit-62e46e4]) Fixed WetKit Core for #[2785845][R4.12-Issue-2785845] - Security releases for Panels + Panelizer
+  - (Commit: [eda45a9][R4.12-Commit-eda45a9]) Start work on next release.
+
 ## v4.11
 
 Security Update(s):
@@ -1025,6 +1042,16 @@ Fixes:
   - (Commit: [0fc2202][R4.0-rc1-Commit-0fc2202]) Point responsinator to live demo site.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.12 -->
+
+[R4.12-Commit-c4633d0]: http://drupalcode.org/project/wetkit.git/commit/c4633d0
+[R4.12-Commit-62e46e4]: http://drupalcode.org/project/wetkit.git/commit/62e46e4
+[R4.12-Commit-eda45a9]: http://drupalcode.org/project/wetkit.git/commit/eda45a9
+
+<!-- Issues R4.12 -->
+
+[R4.12-Issue-2785845]: http://drupal.org/node/2785845
 
 <!-- Commits R4.11 -->
 
