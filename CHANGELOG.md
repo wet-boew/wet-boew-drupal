@@ -9,6 +9,7 @@ Security Update(s):
 
 Feature(s):
 
+  - WxT jQuery library updated from v4.0.21 -> v4.0.22
   - Bean module update to fix issue with Views introduced in previous release
   - Panopoly Magic preview pane CSS adjustments
   - Panels has added a new quick-filter js for panels pane selections
