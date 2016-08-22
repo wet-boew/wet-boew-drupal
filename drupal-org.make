@@ -60,11 +60,8 @@ projects[wetkit_users][subdir] = custom
 projects[wetkit_webform][version] = 4.12
 projects[wetkit_webform][subdir] = custom
 
-projects[wetkit_wetboew][version] = 4.x-dev
+projects[wetkit_wetboew][version] = 4.3
 projects[wetkit_wetboew][subdir] = custom
-projects[wetkit_wetboew][download][type] = git
-projects[wetkit_wetboew][download][revision] = ed7efcb
-projects[wetkit_wetboew][download][branch] = 7.x-4.x
 
 projects[wetkit_widgets][version] = 4.6
 projects[wetkit_widgets][subdir] = custom

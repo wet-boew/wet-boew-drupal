@@ -18,6 +18,8 @@ Feature(s):
 
 Fixes:
 
+  - (Commit: [218a6e3][R4.12-Commit-218a6e3]) Fixed WetKit WET-BOEW for #[2787733][R4.12-Issue-2787733] - Update wet-boew jQuery library from v4.0.21 to v4.0.22
+  - (Commit: [e729513][R4.12-Commit-e729513]) Update changelog.md file.
   - (Commit: [4663834][R4.12-Commit-4663834]) Fixed WetKit Core for #[2785845][R4.12-Issue-2785845] - Security releases for Panels + Panelizer
   - (Commit: [ca22e8d][R4.12-Commit-ca22e8d]) Fixed WetKit Core for Update patches for panelizer (3.3) + panels (3.6) to fix issues after release
   - (Commit: [43489c3][R4.12-Commit-43489c3]) Update changelog.md file.
@@ -1095,6 +1097,8 @@ Fixes:
 
 <!-- Commits R4.12 -->
 
+[R4.12-Commit-218a6e3]: http://drupalcode.org/project/wetkit.git/commit/218a6e3
+[R4.12-Commit-e729513]: http://drupalcode.org/project/wetkit.git/commit/e729513
 [R4.12-Commit-4663834]: http://drupalcode.org/project/wetkit.git/commit/4663834
 [R4.12-Commit-ca22e8d]: http://drupalcode.org/project/wetkit.git/commit/ca22e8d
 [R4.12-Commit-43489c3]: http://drupalcode.org/project/wetkit.git/commit/43489c3
@@ -1148,6 +1152,7 @@ Fixes:
 
 <!-- Issues R4.12 -->
 
+[R4.12-Issue-2787733]: http://drupal.org/node/2787733
 [R4.12-Issue-2785845]: http://drupal.org/node/2785845
 [R4.12-Issue-2786521]: http://drupal.org/node/2786521
 [R4.12-Issue-2786521]: http://drupal.org/node/2786521
