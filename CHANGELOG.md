@@ -1,14 +1,15 @@
 # CHANGELOG.md
 
-## v4.12 (In Development)
+## v4.12
 
 Security Update(s):
 
-  - Panels (3.3)
-  - Panelizer (3.6)
+  - Panels (3.4)
+  - Panelizer (3.7)
 
 Feature(s):
 
+  - WxT jQuery library updated from v4.0.21 -> v4.0.22
   - Bean module update to fix issue with Views introduced in previous release
   - Panopoly Magic preview pane CSS adjustments
   - Panels has added a new quick-filter js for panels pane selections
@@ -18,6 +19,11 @@ Feature(s):
 
 Fixes:
 
+  - (Commit: [218a6e3][R4.12-Commit-218a6e3]) Fixed WetKit WET-BOEW for #[2787733][R4.12-Issue-2787733] - Update wet-boew jQuery library from v4.0.21 to v4.0.22
+  - (Commit: [e729513][R4.12-Commit-e729513]) Update changelog.md file.
+  - (Commit: [4663834][R4.12-Commit-4663834]) Fixed WetKit Core for #[2785845][R4.12-Issue-2785845] - Security releases for Panels + Panelizer
+  - (Commit: [ca22e8d][R4.12-Commit-ca22e8d]) Fixed WetKit Core for Update patches for panelizer (3.3) + panels (3.6) to fix issues after release
+  - (Commit: [43489c3][R4.12-Commit-43489c3]) Update changelog.md file.
   - (Commit: [f59ba38][R4.12-Commit-f59ba38]) Fixed WetKit Deployment for #[2786521][R4.12-Issue-2786521] - Updates for UUID to 1.0-beta2
   - (Commit: [88f6f05][R4.12-Commit-88f6f05]) Fixed WetKit Menu for #[2786521][R4.12-Issue-2786521] - Updates for UUID to 1.0-beta2
   - (Commit: [e15b6c2][R4.12-Commit-e15b6c2]) Fixed WetKit Users for #[2786521][R4.12-Issue-2786521] - Updates for UUID to 1.0-beta2
@@ -1092,6 +1098,11 @@ Fixes:
 
 <!-- Commits R4.12 -->
 
+[R4.12-Commit-218a6e3]: http://drupalcode.org/project/wetkit.git/commit/218a6e3
+[R4.12-Commit-e729513]: http://drupalcode.org/project/wetkit.git/commit/e729513
+[R4.12-Commit-4663834]: http://drupalcode.org/project/wetkit.git/commit/4663834
+[R4.12-Commit-ca22e8d]: http://drupalcode.org/project/wetkit.git/commit/ca22e8d
+[R4.12-Commit-43489c3]: http://drupalcode.org/project/wetkit.git/commit/43489c3
 [R4.12-Commit-f59ba38]: http://drupalcode.org/project/wetkit.git/commit/f59ba38
 [R4.12-Commit-88f6f05]: http://drupalcode.org/project/wetkit.git/commit/88f6f05
 [R4.12-Commit-e15b6c2]: http://drupalcode.org/project/wetkit.git/commit/e15b6c2
@@ -1142,6 +1153,8 @@ Fixes:
 
 <!-- Issues R4.12 -->
 
+[R4.12-Issue-2787733]: http://drupal.org/node/2787733
+[R4.12-Issue-2785845]: http://drupal.org/node/2785845
 [R4.12-Issue-2786521]: http://drupal.org/node/2786521
 [R4.12-Issue-2786521]: http://drupal.org/node/2786521
 [R4.12-Issue-2786521]: http://drupal.org/node/2786521
