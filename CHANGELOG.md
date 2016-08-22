@@ -4,8 +4,8 @@
 
 Security Update(s):
 
-  - Panels (3.3)
-  - Panelizer (3.6)
+  - Panels (3.4)
+  - Panelizer (3.7)
 
 Feature(s):
 
@@ -18,6 +18,9 @@ Feature(s):
 
 Fixes:
 
+  - (Commit: [4663834][R4.12-Commit-4663834]) Fixed WetKit Core for #[2785845][R4.12-Issue-2785845] - Security releases for Panels + Panelizer
+  - (Commit: [ca22e8d][R4.12-Commit-ca22e8d]) Fixed WetKit Core for Update patches for panelizer (3.3) + panels (3.6) to fix issues after release
+  - (Commit: [43489c3][R4.12-Commit-43489c3]) Update changelog.md file.
   - (Commit: [f59ba38][R4.12-Commit-f59ba38]) Fixed WetKit Deployment for #[2786521][R4.12-Issue-2786521] - Updates for UUID to 1.0-beta2
   - (Commit: [88f6f05][R4.12-Commit-88f6f05]) Fixed WetKit Menu for #[2786521][R4.12-Issue-2786521] - Updates for UUID to 1.0-beta2
   - (Commit: [e15b6c2][R4.12-Commit-e15b6c2]) Fixed WetKit Users for #[2786521][R4.12-Issue-2786521] - Updates for UUID to 1.0-beta2
@@ -1092,6 +1095,9 @@ Fixes:
 
 <!-- Commits R4.12 -->
 
+[R4.12-Commit-4663834]: http://drupalcode.org/project/wetkit.git/commit/4663834
+[R4.12-Commit-ca22e8d]: http://drupalcode.org/project/wetkit.git/commit/ca22e8d
+[R4.12-Commit-43489c3]: http://drupalcode.org/project/wetkit.git/commit/43489c3
 [R4.12-Commit-f59ba38]: http://drupalcode.org/project/wetkit.git/commit/f59ba38
 [R4.12-Commit-88f6f05]: http://drupalcode.org/project/wetkit.git/commit/88f6f05
 [R4.12-Commit-e15b6c2]: http://drupalcode.org/project/wetkit.git/commit/e15b6c2
@@ -1142,6 +1148,7 @@ Fixes:
 
 <!-- Issues R4.12 -->
 
+[R4.12-Issue-2785845]: http://drupal.org/node/2785845
 [R4.12-Issue-2786521]: http://drupal.org/node/2786521
 [R4.12-Issue-2786521]: http://drupal.org/node/2786521
 [R4.12-Issue-2786521]: http://drupal.org/node/2786521
