@@ -1,5 +1,21 @@
 # CHANGELOG.md
 
+## v4.13 (In Development)
+
+Feature(s):
+
+  - Fixes for regressions introduced in latest Panelizer
+  - Fix for hierarchical hook_update_n wrong invocation
+
+Fixes:
+
+  - (Commit: [0c9ca39][R4.13-Commit-0c9ca39]) Fixed WetKit Deployment for Update services module to v3.17.
+  - (Commit: [3bb1db4][R4.13-Commit-3bb1db4]) Fixed WetKit Core for Update Panopoly Magic to v1.40.
+  - (Commit: [ea0f217][R4.13-Commit-ea0f217]) Fixed WetKit Core for #[2789331][R4.13-Issue-2789331] - panelizer_update_7120: Not null violation: 7 ERROR: null value in column "pid" violates not-null
+  - (Commit: [d1aa086][R4.13-Commit-d1aa086]) Fixed WetKit Core for #[2789333][R4.13-Issue-2789333] -  ParseError: syntax error, unexpected ',' in features_get_normal() + Hierarchical Select Update Patch bug
+  - (Commit: [7c528a0][R4.13-Commit-7c528a0]) Fixed WetKit Core for #[2789333][R4.13-Issue-2789333] -  ParseError: syntax error, unexpected ',' in features_get_normal() + Hierarchical Select Update Patch bug
+  - (Commit: [74ed660][R4.13-Commit-74ed660]) Start work on next release.
+
 ## v4.12
 
 Security Update(s):
@@ -1095,6 +1111,21 @@ Fixes:
   - (Commit: [0fc2202][R4.0-rc1-Commit-0fc2202]) Point responsinator to live demo site.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.13 -->
+
+[R4.13-Commit-0c9ca39]: http://drupalcode.org/project/wetkit.git/commit/0c9ca39
+[R4.13-Commit-3bb1db4]: http://drupalcode.org/project/wetkit.git/commit/3bb1db4
+[R4.13-Commit-ea0f217]: http://drupalcode.org/project/wetkit.git/commit/ea0f217
+[R4.13-Commit-d1aa086]: http://drupalcode.org/project/wetkit.git/commit/d1aa086
+[R4.13-Commit-7c528a0]: http://drupalcode.org/project/wetkit.git/commit/7c528a0
+[R4.13-Commit-74ed660]: http://drupalcode.org/project/wetkit.git/commit/74ed660
+
+<!-- Issues R4.13 -->
+
+[R4.13-Issue-2789331]: http://drupal.org/node/2789331
+[R4.13-Issue-2789333]: http://drupal.org/node/2789333
+[R4.13-Issue-2789333]: http://drupal.org/node/2789333
 
 <!-- Commits R4.12 -->
 
