@@ -4,11 +4,33 @@
 
 Feature(s):
 
+  - Drupal Core updated to 7.51
   - Fixes for regressions introduced in latest Panelizer
   - Fix for hierarchical hook_update_n wrong invocation
+  - Updates for CTools + Panels
+  - Updates for i18n + webform localization
 
 Fixes:
 
+  - (Commit: [63114c4][R4.13-Commit-63114c4]) Fixed WetKit Language for Update i18n + webform localizaton to latest stable
+  - (Commit: [86de534][R4.13-Commit-86de534]) Fixed WetKit Core for Update CTools, FontAwesome, and Panels to latest stable
+  - (Commit: [ff38548][R4.13-Commit-ff38548]) Fixed WetKit Language for Update webform_localization to v4.8
+  - (Commit: [64a3d6e][R4.13-Commit-64a3d6e]) Fixed WetKit Breadcrumbs for #[2810523][R4.13-Issue-2810523] - Titles missing in breadcrumbs when using menu trail
+  - (Commit: [53c5fa2][R4.13-Commit-53c5fa2]) Fixed WetKit Core for Update entity + entityreference to latest stable releases.
+  - (Commit: [7b1cb9c][R4.13-Commit-7b1cb9c]) Fixed WetKit Bootstrap for #[2799287][R4.13-Issue-2799287] - Update to gcweb footer
+  - (Commit: [46a5061][R4.13-Commit-46a5061]) Fixed WetKit Test for Correct composer.json syntax.
+  - (Commit: [0c92cf9][R4.13-Commit-0c92cf9]) Fixed WetKit Test for Pin version of Behat testing against.
+  - (Commit: [42072ba][R4.13-Commit-42072ba]) Fixed WetKit Test for Minor fix to afterUserCreate().
+  - (Commit: [810cfc1][R4.13-Commit-810cfc1]) Fixed WetKit Breadcrumbs for #[2768899][R4.13-Issue-2768899] - Provide an option to force page title on unmanaged breadcrumbs
+  - (Commit: [a5b98b5][R4.13-Commit-a5b98b5]) Fixed WetKit Breadcrumbs for #[2801613][R4.13-Issue-2801613] - Support for HTML em + abbr tags in title for breadcrumbs
+  - (Commit: [9ef936d][R4.13-Commit-9ef936d]) Minor correction to make file.
+  - (Commit: [a7a597e][R4.13-Commit-a7a597e]) Fixed WetKit Panel Layouts for #[2799393][R4.13-Issue-2799393] - Secondary menus
+  - (Commit: [9e46965][R4.13-Commit-9e46965]) Fixed WetKit Breadcrumbs for #[2801613][R4.13-Issue-2801613] - Support for HTML em + abbr tags in title for breadcrumbs
+  - (Commit: [8e27fc2][R4.13-Commit-8e27fc2]) Fixed WetKit Theme for Temporary language patch for Search string.
+  - (Commit: [6709bb6][R4.13-Commit-6709bb6]) Fixed WetKit Webform for Update webform to v4.14 release.
+  - (Commit: [1bea663][R4.13-Commit-1bea663]) Fixed WetKit Language for Update webform localization to v4.7 release.
+  - (Commit: [f0a7e14][R4.13-Commit-f0a7e14]) Fixed WetKit Deployment for Update services to v3.18 release.
+  - (Commit: [fb620a4][R4.13-Commit-fb620a4]) Update changelog.md file.
   - (Commit: [0c9ca39][R4.13-Commit-0c9ca39]) Fixed WetKit Deployment for Update services module to v3.17.
   - (Commit: [3bb1db4][R4.13-Commit-3bb1db4]) Fixed WetKit Core for Update Panopoly Magic to v1.40.
   - (Commit: [ea0f217][R4.13-Commit-ea0f217]) Fixed WetKit Core for #[2789331][R4.13-Issue-2789331] - panelizer_update_7120: Not null violation: 7 ERROR: null value in column "pid" violates not-null
@@ -1112,6 +1134,53 @@ Fixes:
 
 <!-- Links Referenced -->
 
+<!-- Commits R4.13 --> \n
+[R4.13-Commit-63114c4]: http://drupalcode.org/project/wetkit.git/commit/63114c4
+[R4.13-Commit-86de534]: http://drupalcode.org/project/wetkit.git/commit/86de534
+[R4.13-Commit-ff38548]: http://drupalcode.org/project/wetkit.git/commit/ff38548
+[R4.13-Commit-64a3d6e]: http://drupalcode.org/project/wetkit.git/commit/64a3d6e
+[R4.13-Commit-11b494a]: http://drupalcode.org/project/wetkit.git/commit/11b494a
+[R4.13-Commit-530009d]: http://drupalcode.org/project/wetkit.git/commit/530009d
+[R4.13-Commit-53c5fa2]: http://drupalcode.org/project/wetkit.git/commit/53c5fa2
+[R4.13-Commit-0461a1d]: http://drupalcode.org/project/wetkit.git/commit/0461a1d
+[R4.13-Commit-9c170d0]: http://drupalcode.org/project/wetkit.git/commit/9c170d0
+[R4.13-Commit-7b1cb9c]: http://drupalcode.org/project/wetkit.git/commit/7b1cb9c
+[R4.13-Commit-46a5061]: http://drupalcode.org/project/wetkit.git/commit/46a5061
+[R4.13-Commit-0c92cf9]: http://drupalcode.org/project/wetkit.git/commit/0c92cf9
+[R4.13-Commit-814193c]: http://drupalcode.org/project/wetkit.git/commit/814193c
+[R4.13-Commit-42072ba]: http://drupalcode.org/project/wetkit.git/commit/42072ba
+[R4.13-Commit-810cfc1]: http://drupalcode.org/project/wetkit.git/commit/810cfc1
+[R4.13-Commit-b5dc336]: http://drupalcode.org/project/wetkit.git/commit/b5dc336
+[R4.13-Commit-a5b98b5]: http://drupalcode.org/project/wetkit.git/commit/a5b98b5
+[R4.13-Commit-9ef936d]: http://drupalcode.org/project/wetkit.git/commit/9ef936d
+[R4.13-Commit-a7a597e]: http://drupalcode.org/project/wetkit.git/commit/a7a597e
+[R4.13-Commit-9e46965]: http://drupalcode.org/project/wetkit.git/commit/9e46965
+[R4.13-Commit-8e27fc2]: http://drupalcode.org/project/wetkit.git/commit/8e27fc2
+[R4.13-Commit-9455053]: http://drupalcode.org/project/wetkit.git/commit/9455053
+[R4.13-Commit-0fbd561]: http://drupalcode.org/project/wetkit.git/commit/0fbd561
+[R4.13-Commit-246727c]: http://drupalcode.org/project/wetkit.git/commit/246727c
+[R4.13-Commit-6709bb6]: http://drupalcode.org/project/wetkit.git/commit/6709bb6
+[R4.13-Commit-1bea663]: http://drupalcode.org/project/wetkit.git/commit/1bea663
+[R4.13-Commit-f0a7e14]: http://drupalcode.org/project/wetkit.git/commit/f0a7e14
+[R4.13-Commit-fb620a4]: http://drupalcode.org/project/wetkit.git/commit/fb620a4
+[R4.13-Commit-0c9ca39]: http://drupalcode.org/project/wetkit.git/commit/0c9ca39
+[R4.13-Commit-3bb1db4]: http://drupalcode.org/project/wetkit.git/commit/3bb1db4
+[R4.13-Commit-ea0f217]: http://drupalcode.org/project/wetkit.git/commit/ea0f217
+[R4.13-Commit-d1aa086]: http://drupalcode.org/project/wetkit.git/commit/d1aa086
+[R4.13-Commit-7c528a0]: http://drupalcode.org/project/wetkit.git/commit/7c528a0
+[R4.13-Commit-74ed660]: http://drupalcode.org/project/wetkit.git/commit/74ed660
+\n <!-- Issues R4.13 --> \n
+[R4.13-Issue-2810523]: http://drupal.org/node/2810523
+[R4.13-Issue-2799287]: http://drupal.org/node/2799287
+[R4.13-Issue-2768899]: http://drupal.org/node/2768899
+[R4.13-Issue-2801613]: http://drupal.org/node/2801613
+[R4.13-Issue-2799393]: http://drupal.org/node/2799393
+[R4.13-Issue-2801613]: http://drupal.org/node/2801613
+[R4.13-Issue-2789331]: http://drupal.org/node/2789331
+[R4.13-Issue-2789333]: http://drupal.org/node/2789333
+[R4.13-Issue-2789333]: http://drupal.org/node/2789333
+<!-- Commits R --> \n
+\n <!-- Issues R --> \n
 <!-- Commits R4.13 -->
 
 [R4.13-Commit-0c9ca39]: http://drupalcode.org/project/wetkit.git/commit/0c9ca39
