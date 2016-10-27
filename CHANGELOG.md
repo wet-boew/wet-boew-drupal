@@ -13,6 +13,8 @@ Feature(s):
 
 Fixes:
 
+  - (Commit: [f1ed944][R4.13-Commit-f1ed944]) Fixed WetKit Core for #[2789415][R4.13-Issue-2789415] - Menu Block: unable to choose "Advanced Options"
+  - (Commit: [69476a4][R4.13-Commit-69476a4]) Update changelog.md file.
   - (Commit: [443dd39][R4.13-Commit-443dd39]) Fixed WetKit Migration for #[2799287][R4.13-Issue-2799287] - Update to gcweb footer (migrate support)
   - (Commit: [ca85197][R4.13-Commit-ca85197]) Fixed WetKit Bean for #[2812665][R4.13-Issue-2812665] - share button needs to be inline-block (latest GCWeb look)
   - (Commit: [c174834][R4.13-Commit-c174834]) Fixed WetKit Demo for Features Override + Storage id update.
@@ -1142,6 +1144,8 @@ Fixes:
 
 <!-- Commits R4.13 -->
 
+[R4.13-Commit-f1ed944]: http://drupalcode.org/project/wetkit.git/commit/f1ed944
+[R4.13-Commit-69476a4]: http://drupalcode.org/project/wetkit.git/commit/69476a4
 [R4.13-Commit-443dd39]: http://drupalcode.org/project/wetkit.git/commit/443dd39
 [R4.13-Commit-ca85197]: http://drupalcode.org/project/wetkit.git/commit/ca85197
 [R4.13-Commit-c174834]: http://drupalcode.org/project/wetkit.git/commit/c174834
@@ -1184,6 +1188,7 @@ Fixes:
 
 <!-- Issues R4.13 -->
 
+[R4.13-Issue-2789415]: http://drupal.org/node/2789415
 [R4.13-Issue-2799287]: http://drupal.org/node/2799287
 [R4.13-Issue-2812665]: http://drupal.org/node/2812665
 [R4.13-Issue-2810523]: http://drupal.org/node/2810523
