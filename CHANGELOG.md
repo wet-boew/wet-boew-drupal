@@ -1,6 +1,6 @@
 # CHANGELOG.md
 
-## v4.13 (In Development)
+## v4.13
 
 Feature(s):
 
@@ -13,6 +13,7 @@ Feature(s):
 
 Fixes:
 
+  - (Commit: [585c583][R4.13-Commit-585c583]) Update changelog.md file.
   - (Commit: [f1ed944][R4.13-Commit-f1ed944]) Fixed WetKit Core for #[2789415][R4.13-Issue-2789415] - Menu Block: unable to choose "Advanced Options"
   - (Commit: [69476a4][R4.13-Commit-69476a4]) Update changelog.md file.
   - (Commit: [443dd39][R4.13-Commit-443dd39]) Fixed WetKit Migration for #[2799287][R4.13-Issue-2799287] - Update to gcweb footer (migrate support)
@@ -1144,10 +1145,13 @@ Fixes:
 
 <!-- Commits R4.13 -->
 
+[R4.13-Commit-9aabc53]: http://drupalcode.org/project/wetkit.git/commit/9aabc53
+[R4.13-Commit-585c583]: http://drupalcode.org/project/wetkit.git/commit/585c583
 [R4.13-Commit-f1ed944]: http://drupalcode.org/project/wetkit.git/commit/f1ed944
 [R4.13-Commit-69476a4]: http://drupalcode.org/project/wetkit.git/commit/69476a4
 [R4.13-Commit-443dd39]: http://drupalcode.org/project/wetkit.git/commit/443dd39
 [R4.13-Commit-ca85197]: http://drupalcode.org/project/wetkit.git/commit/ca85197
+[R4.13-Commit-8d62b43]: http://drupalcode.org/project/wetkit.git/commit/8d62b43
 [R4.13-Commit-c174834]: http://drupalcode.org/project/wetkit.git/commit/c174834
 [R4.13-Commit-f7c3ee8]: http://drupalcode.org/project/wetkit.git/commit/f7c3ee8
 [R4.13-Commit-42ef884]: http://drupalcode.org/project/wetkit.git/commit/42ef884
@@ -1155,6 +1159,7 @@ Fixes:
 [R4.13-Commit-86de534]: http://drupalcode.org/project/wetkit.git/commit/86de534
 [R4.13-Commit-ff38548]: http://drupalcode.org/project/wetkit.git/commit/ff38548
 [R4.13-Commit-64a3d6e]: http://drupalcode.org/project/wetkit.git/commit/64a3d6e
+[R4.13-Commit-894919c]: http://drupalcode.org/project/wetkit.git/commit/894919c
 [R4.13-Commit-11b494a]: http://drupalcode.org/project/wetkit.git/commit/11b494a
 [R4.13-Commit-530009d]: http://drupalcode.org/project/wetkit.git/commit/530009d
 [R4.13-Commit-53c5fa2]: http://drupalcode.org/project/wetkit.git/commit/53c5fa2
