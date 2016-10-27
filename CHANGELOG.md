@@ -9,9 +9,15 @@ Feature(s):
   - Fix for hierarchical hook_update_n wrong invocation
   - Updates for CTools + Panels
   - Updates for i18n + webform localization
+  - Updated gcweb footer + migrate scripts (drush mi WetKitMigrateSiteMenuLinks)
 
 Fixes:
 
+  - (Commit: [443dd39][R4.13-Commit-443dd39]) Fixed WetKit Migration for #[2799287][R4.13-Issue-2799287] - Update to gcweb footer (migrate support)
+  - (Commit: [ca85197][R4.13-Commit-ca85197]) Fixed WetKit Bean for #[2812665][R4.13-Issue-2812665] - share button needs to be inline-block (latest GCWeb look)
+  - (Commit: [c174834][R4.13-Commit-c174834]) Fixed WetKit Demo for Features Override + Storage id update.
+  - (Commit: [f7c3ee8][R4.13-Commit-f7c3ee8]) Fixed WetKit Core for Features Override + Storage id update.
+  - (Commit: [42ef884][R4.13-Commit-42ef884]) Update changelog.md file.
   - (Commit: [63114c4][R4.13-Commit-63114c4]) Fixed WetKit Language for Update i18n + webform localizaton to latest stable
   - (Commit: [86de534][R4.13-Commit-86de534]) Fixed WetKit Core for Update CTools, FontAwesome, and Panels to latest stable
   - (Commit: [ff38548][R4.13-Commit-ff38548]) Fixed WetKit Language for Update webform_localization to v4.8
@@ -1134,7 +1140,13 @@ Fixes:
 
 <!-- Links Referenced -->
 
-<!-- Commits R4.13 --> \n
+<!-- Commits R4.13 -->
+
+[R4.13-Commit-443dd39]: http://drupalcode.org/project/wetkit.git/commit/443dd39
+[R4.13-Commit-ca85197]: http://drupalcode.org/project/wetkit.git/commit/ca85197
+[R4.13-Commit-c174834]: http://drupalcode.org/project/wetkit.git/commit/c174834
+[R4.13-Commit-f7c3ee8]: http://drupalcode.org/project/wetkit.git/commit/f7c3ee8
+[R4.13-Commit-42ef884]: http://drupalcode.org/project/wetkit.git/commit/42ef884
 [R4.13-Commit-63114c4]: http://drupalcode.org/project/wetkit.git/commit/63114c4
 [R4.13-Commit-86de534]: http://drupalcode.org/project/wetkit.git/commit/86de534
 [R4.13-Commit-ff38548]: http://drupalcode.org/project/wetkit.git/commit/ff38548
@@ -1169,29 +1181,17 @@ Fixes:
 [R4.13-Commit-d1aa086]: http://drupalcode.org/project/wetkit.git/commit/d1aa086
 [R4.13-Commit-7c528a0]: http://drupalcode.org/project/wetkit.git/commit/7c528a0
 [R4.13-Commit-74ed660]: http://drupalcode.org/project/wetkit.git/commit/74ed660
-\n <!-- Issues R4.13 --> \n
+
+<!-- Issues R4.13 -->
+
+[R4.13-Issue-2799287]: http://drupal.org/node/2799287
+[R4.13-Issue-2812665]: http://drupal.org/node/2812665
 [R4.13-Issue-2810523]: http://drupal.org/node/2810523
 [R4.13-Issue-2799287]: http://drupal.org/node/2799287
 [R4.13-Issue-2768899]: http://drupal.org/node/2768899
 [R4.13-Issue-2801613]: http://drupal.org/node/2801613
 [R4.13-Issue-2799393]: http://drupal.org/node/2799393
 [R4.13-Issue-2801613]: http://drupal.org/node/2801613
-[R4.13-Issue-2789331]: http://drupal.org/node/2789331
-[R4.13-Issue-2789333]: http://drupal.org/node/2789333
-[R4.13-Issue-2789333]: http://drupal.org/node/2789333
-<!-- Commits R --> \n
-\n <!-- Issues R --> \n
-<!-- Commits R4.13 -->
-
-[R4.13-Commit-0c9ca39]: http://drupalcode.org/project/wetkit.git/commit/0c9ca39
-[R4.13-Commit-3bb1db4]: http://drupalcode.org/project/wetkit.git/commit/3bb1db4
-[R4.13-Commit-ea0f217]: http://drupalcode.org/project/wetkit.git/commit/ea0f217
-[R4.13-Commit-d1aa086]: http://drupalcode.org/project/wetkit.git/commit/d1aa086
-[R4.13-Commit-7c528a0]: http://drupalcode.org/project/wetkit.git/commit/7c528a0
-[R4.13-Commit-74ed660]: http://drupalcode.org/project/wetkit.git/commit/74ed660
-
-<!-- Issues R4.13 -->
-
 [R4.13-Issue-2789331]: http://drupal.org/node/2789331
 [R4.13-Issue-2789333]: http://drupal.org/node/2789333
 [R4.13-Issue-2789333]: http://drupal.org/node/2789333
