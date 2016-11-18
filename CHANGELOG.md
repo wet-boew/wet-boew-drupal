@@ -1,5 +1,31 @@
 # CHANGELOG.md
 
+## v4.12
+
+Security Update(s):
+
+  - Drupal Core (7.52)
+  - Bootstrap (3.8)
+
+Feature(s):
+
+  - Postgres issue with identifiers longer then 63 characters
+  - Numerous bug fixes related to Media module
+  - Field Collection officially supports Entity Translation (patch no longer needed)
+
+Fixes:
+
+  - (Commit: [9b6688f][R4.14-Commit-9b6688f]) Fixed WetKit Widgets for #[2828668][R4.14-Issue-2828668] - Update Media from v2.0-beta2 to v2.0-beta7
+  - (Commit: [59aee00][R4.14-Commit-59aee00]) Fixed WetKit Migration for #[2825808][R4.14-Issue-2825808] - Canada.ca menu migrations not translated properly
+  - (Commit: [8b08572][R4.14-Commit-8b08572]) #[2828688][R4.14-Issue-2828688] - Postgres issue with Index identifiers (noticed on field collection addition of value index)
+  - (Commit: [5c5b3d3][R4.14-Commit-5c5b3d3]) Fixed WetKit Bean for #[2828678][R4.14-Issue-2828678] - Update Field Collection from 1.0-beta11 to 1.0-beta12
+  - (Commit: [58416c2][R4.14-Commit-58416c2]) Fixed WetKit Core for Restore #[2828678][R4.14-Issue-2828678] - Update Field Collection from 1.0-beta11 to 1.0-beta12
+  - (Commit: [4e133be][R4.14-Commit-4e133be]) Fixed WetKit Core for Update Panopoly Magic to v1.41
+  - (Commit: [768979e][R4.14-Commit-768979e]) Fixed WetKit Core for #[2828678][R4.14-Issue-2828678] - Update Field Collection from 1.0-beta11 to 1.0-beta12
+  - (Commit: [df0e08a][R4.14-Commit-df0e08a]) Fixed WetKit Core for #[2828635][R4.14-Issue-2828635] - Security + Bug Fixes for Workbench Moderation (3.0)
+  - (Commit: [1f78ac0][R4.14-Commit-1f78ac0]) Fixed WetKit Bootstrap for #[2828628][R4.14-Issue-2828628] - Security + Bug Fixes for Bootstrap (3.8)
+  - (Commit: [43180eb][R4.14-Commit-43180eb]) #[2828594][R4.14-Issue-2828594] - Update Drupal Core to 7.52 (SA-CORE-2016-005)
+
 ## v4.13
 
 Feature(s):
@@ -1142,6 +1168,33 @@ Fixes:
   - (Commit: [0fc2202][R4.0-rc1-Commit-0fc2202]) Point responsinator to live demo site.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.14 -->
+
+[R4.14-Commit-9b6688f]: http://drupalcode.org/project/wetkit.git/commit/9b6688f
+[R4.14-Commit-59aee00]: http://drupalcode.org/project/wetkit.git/commit/59aee00
+[R4.14-Commit-8b08572]: http://drupalcode.org/project/wetkit.git/commit/8b08572
+[R4.14-Commit-5c5b3d3]: http://drupalcode.org/project/wetkit.git/commit/5c5b3d3
+[R4.14-Commit-58416c2]: http://drupalcode.org/project/wetkit.git/commit/58416c2
+[R4.14-Commit-4e133be]: http://drupalcode.org/project/wetkit.git/commit/4e133be
+[R4.14-Commit-aff193d]: http://drupalcode.org/project/wetkit.git/commit/aff193d
+[R4.14-Commit-768979e]: http://drupalcode.org/project/wetkit.git/commit/768979e
+[R4.14-Commit-786cc58]: http://drupalcode.org/project/wetkit.git/commit/786cc58
+[R4.14-Commit-df0e08a]: http://drupalcode.org/project/wetkit.git/commit/df0e08a
+[R4.14-Commit-1f78ac0]: http://drupalcode.org/project/wetkit.git/commit/1f78ac0
+[R4.14-Commit-43180eb]: http://drupalcode.org/project/wetkit.git/commit/43180eb
+
+<!-- Issues R4.14 -->
+
+[R4.14-Issue-2828668]: http://drupal.org/node/2828668
+[R4.14-Issue-2825808]: http://drupal.org/node/2825808
+[R4.14-Issue-2828688]: http://drupal.org/node/2828688
+[R4.14-Issue-2828678]: http://drupal.org/node/2828678
+[R4.14-Issue-2828678]: http://drupal.org/node/2828678
+[R4.14-Issue-2828678]: http://drupal.org/node/2828678
+[R4.14-Issue-2828635]: http://drupal.org/node/2828635
+[R4.14-Issue-2828628]: http://drupal.org/node/2828628
+[R4.14-Issue-2828594]: http://drupal.org/node/2828594
 
 <!-- Commits R4.13 -->
 
