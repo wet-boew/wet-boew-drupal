@@ -14,7 +14,8 @@ Feature(s):
   - Field Collection officially supports Entity Translation (patch no longer needed)
 
 Fixes:
-
+  - (Commit: [303c69d][R4.14-Commit-303c69d]) Fixed WetKit Widgets for Restore #[2828668][R4.14-Issue-2828668] - Update Media from v2.0-beta2 to v2.0-beta7
+  - (Commit: [42fe6de][R4.14-Commit-42fe6de]) Update changelog.md file.
   - (Commit: [9b6688f][R4.14-Commit-9b6688f]) Fixed WetKit Widgets for #[2828668][R4.14-Issue-2828668] - Update Media from v2.0-beta2 to v2.0-beta7
   - (Commit: [59aee00][R4.14-Commit-59aee00]) Fixed WetKit Migration for #[2825808][R4.14-Issue-2825808] - Canada.ca menu migrations not translated properly
   - (Commit: [8b08572][R4.14-Commit-8b08572]) #[2828688][R4.14-Issue-2828688] - Postgres issue with Index identifiers (noticed on field collection addition of value index)
@@ -1171,6 +1172,9 @@ Fixes:
 
 <!-- Commits R4.14 -->
 
+[R4.14-Commit-303c69d]: http://drupalcode.org/project/wetkit.git/commit/303c69d
+[R4.14-Commit-291b5a9]: http://drupalcode.org/project/wetkit.git/commit/291b5a9
+[R4.14-Commit-42fe6de]: http://drupalcode.org/project/wetkit.git/commit/42fe6de
 [R4.14-Commit-9b6688f]: http://drupalcode.org/project/wetkit.git/commit/9b6688f
 [R4.14-Commit-59aee00]: http://drupalcode.org/project/wetkit.git/commit/59aee00
 [R4.14-Commit-8b08572]: http://drupalcode.org/project/wetkit.git/commit/8b08572
@@ -1186,6 +1190,7 @@ Fixes:
 
 <!-- Issues R4.14 -->
 
+[R4.14-Issue-2828668]: http://drupal.org/node/2828668
 [R4.14-Issue-2828668]: http://drupal.org/node/2828668
 [R4.14-Issue-2825808]: http://drupal.org/node/2825808
 [R4.14-Issue-2828688]: http://drupal.org/node/2828688
