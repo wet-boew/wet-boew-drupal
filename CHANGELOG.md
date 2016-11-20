@@ -1,6 +1,6 @@
 # CHANGELOG.md
 
-## v4.12
+## v4.14
 
 Security Update(s):
 
@@ -14,6 +14,16 @@ Feature(s):
   - Field Collection officially supports Entity Translation (patch no longer needed)
 
 Fixes:
+
+  - (Commit: [6586bb6][R4.14-Commit-6586bb6]) Fixed WetKit Test for Remove debug and increase timeout.
+  - (Commit: [7928195][R4.14-Commit-7928195]) Fixed WetKit Widgets for Restore #[2828668][R4.14-Issue-2828668] - Update Media from v2.0-beta2 to v2.0-beta7
+  - (Commit: [e14bf10][R4.14-Commit-e14bf10]) Fixed WetKit Test for Debug TravisCI failed error.
+  - (Commit: [d68b199][R4.14-Commit-d68b199]) Fixed WetKit Test for Debug TravisCI failed error.
+  - (Commit: [6914bfa][R4.14-Commit-6914bfa]) Fixed WetKit Test for Debug TravisCI failed error.
+  - (Commit: [96a0899][R4.14-Commit-96a0899]) Fixed WetKit Test for Debug TravisCI failed error.
+  - (Commit: [09ef54d][R4.14-Commit-09ef54d]) Fixed WetKit Widgets for Restore #[2828668][R4.14-Issue-2828668] - Update Media from v2.0-beta2 to v2.0-beta7
+  - (Commit: [89b5fbb][R4.14-Commit-89b5fbb]) Fixed WetKit Widgets for Restore #[2828668][R4.14-Issue-2828668] - Update Media from v2.0-beta2 to v2.0-beta7
+  - (Commit: [4d9ad94][R4.14-Commit-4d9ad94]) Update changelog.md file.
   - (Commit: [303c69d][R4.14-Commit-303c69d]) Fixed WetKit Widgets for Restore #[2828668][R4.14-Issue-2828668] - Update Media from v2.0-beta2 to v2.0-beta7
   - (Commit: [42fe6de][R4.14-Commit-42fe6de]) Update changelog.md file.
   - (Commit: [9b6688f][R4.14-Commit-9b6688f]) Fixed WetKit Widgets for #[2828668][R4.14-Issue-2828668] - Update Media from v2.0-beta2 to v2.0-beta7
@@ -1172,6 +1182,15 @@ Fixes:
 
 <!-- Commits R4.14 -->
 
+[R4.14-Commit-6586bb6]: http://drupalcode.org/project/wetkit.git/commit/6586bb6
+[R4.14-Commit-7928195]: http://drupalcode.org/project/wetkit.git/commit/7928195
+[R4.14-Commit-e14bf10]: http://drupalcode.org/project/wetkit.git/commit/e14bf10
+[R4.14-Commit-d68b199]: http://drupalcode.org/project/wetkit.git/commit/d68b199
+[R4.14-Commit-6914bfa]: http://drupalcode.org/project/wetkit.git/commit/6914bfa
+[R4.14-Commit-96a0899]: http://drupalcode.org/project/wetkit.git/commit/96a0899
+[R4.14-Commit-09ef54d]: http://drupalcode.org/project/wetkit.git/commit/09ef54d
+[R4.14-Commit-89b5fbb]: http://drupalcode.org/project/wetkit.git/commit/89b5fbb
+[R4.14-Commit-4d9ad94]: http://drupalcode.org/project/wetkit.git/commit/4d9ad94
 [R4.14-Commit-303c69d]: http://drupalcode.org/project/wetkit.git/commit/303c69d
 [R4.14-Commit-291b5a9]: http://drupalcode.org/project/wetkit.git/commit/291b5a9
 [R4.14-Commit-42fe6de]: http://drupalcode.org/project/wetkit.git/commit/42fe6de
@@ -1190,6 +1209,9 @@ Fixes:
 
 <!-- Issues R4.14 -->
 
+[R4.14-Issue-2828668]: http://drupal.org/node/2828668
+[R4.14-Issue-2828668]: http://drupal.org/node/2828668
+[R4.14-Issue-2828668]: http://drupal.org/node/2828668
 [R4.14-Issue-2828668]: http://drupal.org/node/2828668
 [R4.14-Issue-2828668]: http://drupal.org/node/2828668
 [R4.14-Issue-2825808]: http://drupal.org/node/2825808
