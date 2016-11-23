@@ -15,6 +15,9 @@ Feature(s):
 
 Fixes:
 
+  - (Commit: [c870683][R4.14-Commit-c870683]) Fixed WetKit Core for Update CTools from v1.11 to v1.12
+  - (Commit: [db85cfd][R4.14-Commit-db85cfd]) Fixed WetKit WET-BOEW for #[2829184][R4.14-Issue-2829184] - Update wet-boew from v4.0.22 to v4.0.23
+  - (Commit: [bc402b8][R4.14-Commit-bc402b8]) Update changelog.md file.
   - (Commit: [6586bb6][R4.14-Commit-6586bb6]) Fixed WetKit Test for Remove debug and increase timeout.
   - (Commit: [7928195][R4.14-Commit-7928195]) Fixed WetKit Widgets for Restore #[2828668][R4.14-Issue-2828668] - Update Media from v2.0-beta2 to v2.0-beta7
   - (Commit: [e14bf10][R4.14-Commit-e14bf10]) Fixed WetKit Test for Debug TravisCI failed error.
@@ -1182,6 +1185,9 @@ Fixes:
 
 <!-- Commits R4.14 -->
 
+[R4.14-Commit-c870683]: http://drupalcode.org/project/wetkit.git/commit/c870683
+[R4.14-Commit-db85cfd]: http://drupalcode.org/project/wetkit.git/commit/db85cfd
+[R4.14-Commit-bc402b8]: http://drupalcode.org/project/wetkit.git/commit/bc402b8
 [R4.14-Commit-6586bb6]: http://drupalcode.org/project/wetkit.git/commit/6586bb6
 [R4.14-Commit-7928195]: http://drupalcode.org/project/wetkit.git/commit/7928195
 [R4.14-Commit-e14bf10]: http://drupalcode.org/project/wetkit.git/commit/e14bf10
@@ -1209,6 +1215,7 @@ Fixes:
 
 <!-- Issues R4.14 -->
 
+[R4.14-Issue-2829184]: http://drupal.org/node/2829184
 [R4.14-Issue-2828668]: http://drupal.org/node/2828668
 [R4.14-Issue-2828668]: http://drupal.org/node/2828668
 [R4.14-Issue-2828668]: http://drupal.org/node/2828668
