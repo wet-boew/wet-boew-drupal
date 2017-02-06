@@ -1,6 +1,6 @@
 # CHANGELOG.md
 
-## v4.15
+## v4.15 (In Development)
 
 Security Update(s):
 
@@ -16,6 +16,11 @@ Feature(s):
 
 Fixes:
 
+  - (Commit: [a618698][R4.15-Commit-a618698]) Fixed WetKit Metatag for Update metatag from version 1.17 to 1.20.
+  - (Commit: [739af88][R4.15-Commit-739af88]) Fixed WetKit WYSIWYG for #[2849960][R4.15-Issue-2849960] - Update modules suite from WxT Wysiwyg
+  - (Commit: [ce3395e][R4.15-Commit-ce3395e]) Fixed WetKit WYSIWYG for #[2849960][R4.15-Issue-2849960] - Update modules suite from WxT Wysiwyg
+  - (Commit: [cde09d7][R4.15-Commit-cde09d7]) Fixed WetKit WYSIWYG for #[2849960][R4.15-Issue-2849960] - Update modules suite from WxT Wysiwyg
+  - (Commit: [a701530][R4.15-Commit-a701530]) Update changelog.md file.
   - (Commit: [91a0fc2][R4.15-Commit-91a0fc2]) Fixed WetKit WYSIWYG for #[2849960][R4.15-Issue-2849960] - Update modules suite from WxT Wysiwyg
   - (Commit: [913400b][R4.15-Commit-913400b]) Fixed WetKit Bootstrap for #[2835893][R4.15-Issue-2835893] - Canada (gcweb) theme footer has a div in a ul
   - (Commit: [da5d1ff][R4.15-Commit-da5d1ff]) Fixed WetKit Bootstrap for #[2836112][R4.15-Issue-2836112] - Canada (gcweb) theme menu-wet-terms footer has a ul with empty class and id
@@ -1212,11 +1217,19 @@ Fixes:
 
 <!-- Commits R4.15 -->
 
+[R4.15-Commit-f4ec2c1]: http://drupalcode.org/project/wetkit.git/commit/f4ec2c1
+[R4.15-Commit-a618698]: http://drupalcode.org/project/wetkit.git/commit/a618698
+[R4.15-Commit-c3067c3]: http://drupalcode.org/project/wetkit.git/commit/c3067c3
+[R4.15-Commit-739af88]: http://drupalcode.org/project/wetkit.git/commit/739af88
+[R4.15-Commit-ce3395e]: http://drupalcode.org/project/wetkit.git/commit/ce3395e
+[R4.15-Commit-cde09d7]: http://drupalcode.org/project/wetkit.git/commit/cde09d7
+[R4.15-Commit-a701530]: http://drupalcode.org/project/wetkit.git/commit/a701530
 [R4.15-Commit-91a0fc2]: http://drupalcode.org/project/wetkit.git/commit/91a0fc2
 [R4.15-Commit-913400b]: http://drupalcode.org/project/wetkit.git/commit/913400b
 [R4.15-Commit-da5d1ff]: http://drupalcode.org/project/wetkit.git/commit/da5d1ff
 [R4.15-Commit-7e4ebfc]: http://drupalcode.org/project/wetkit.git/commit/7e4ebfc
 [R4.15-Commit-99d25ca]: http://drupalcode.org/project/wetkit.git/commit/99d25ca
+[R4.15-Commit-22ed22d]: http://drupalcode.org/project/wetkit.git/commit/22ed22d
 [R4.15-Commit-b1170a6]: http://drupalcode.org/project/wetkit.git/commit/b1170a6
 [R4.15-Commit-daa5ff6]: http://drupalcode.org/project/wetkit.git/commit/daa5ff6
 [R4.15-Commit-e73bf07]: http://drupalcode.org/project/wetkit.git/commit/e73bf07
@@ -1225,6 +1238,9 @@ Fixes:
 
 <!-- Issues R4.15 -->
 
+[R4.15-Issue-2849960]: http://drupal.org/node/2849960
+[R4.15-Issue-2849960]: http://drupal.org/node/2849960
+[R4.15-Issue-2849960]: http://drupal.org/node/2849960
 [R4.15-Issue-2849960]: http://drupal.org/node/2849960
 [R4.15-Issue-2835893]: http://drupal.org/node/2835893
 [R4.15-Issue-2836112]: http://drupal.org/node/2836112
