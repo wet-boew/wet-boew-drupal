@@ -1,5 +1,32 @@
 # CHANGELOG.md
 
+## v4.15
+
+Security Update(s):
+
+  - Title (token value not sanitized)
+
+Feature(s):
+
+  - Drupal Core updated to 7.54
+  - Diff numerous bug improvements along with improved CSS and i18n support
+  - Services 204 + 304 error responses not conforming to IETF specification
+  - Services comment handling with invalid CID
+  - Wysiwyg release with numerous improvements
+
+Fixes:
+
+  - (Commit: [91a0fc2][R4.15-Commit-91a0fc2]) Fixed WetKit WYSIWYG for #[2849960][R4.15-Issue-2849960] - Update modules suite from WxT Wysiwyg
+  - (Commit: [913400b][R4.15-Commit-913400b]) Fixed WetKit Bootstrap for #[2835893][R4.15-Issue-2835893] - Canada (gcweb) theme footer has a div in a ul
+  - (Commit: [da5d1ff][R4.15-Commit-da5d1ff]) Fixed WetKit Bootstrap for #[2836112][R4.15-Issue-2836112] - Canada (gcweb) theme menu-wet-terms footer has a ul with empty class and id
+  - (Commit: [7e4ebfc][R4.15-Commit-7e4ebfc]) Fixed WetKit Bootstrap for #[2849956][R4.15-Issue-2849956] - Update WxT Bootstrap upstream
+  - (Commit: [99d25ca][R4.15-Commit-99d25ca]) Fixed WetKit Core for #[2849945][R4.15-Issue-2849945] - Update modules suite from WxT Core
+  - (Commit: [b1170a6][R4.15-Commit-b1170a6]) Fixed WetKit Language for #[2849947][R4.15-Issue-2849947] - Update modules suite from WxT Language
+  - (Commit: [daa5ff6][R4.15-Commit-daa5ff6]) Update changelog.md file.
+  - (Commit: [e73bf07][R4.15-Commit-e73bf07]) Update changelog.md file.
+  - (Commit: [b6cc8b8][R4.15-Commit-b6cc8b8]) Fixed WetKit Deployment for #[2849946][R4.15-Issue-2849946] - Update modules suite from WxT Deployment
+  - (Commit: [a6582fc][R4.15-Commit-a6582fc]) #[2849943][R4.15-Issue-2849943] - Update Drupal Core to v7.54
+
 ## v4.14
 
 Security Update(s):
@@ -1182,6 +1209,30 @@ Fixes:
   - (Commit: [0fc2202][R4.0-rc1-Commit-0fc2202]) Point responsinator to live demo site.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.15 -->
+
+[R4.15-Commit-91a0fc2]: http://drupalcode.org/project/wetkit.git/commit/91a0fc2
+[R4.15-Commit-913400b]: http://drupalcode.org/project/wetkit.git/commit/913400b
+[R4.15-Commit-da5d1ff]: http://drupalcode.org/project/wetkit.git/commit/da5d1ff
+[R4.15-Commit-7e4ebfc]: http://drupalcode.org/project/wetkit.git/commit/7e4ebfc
+[R4.15-Commit-99d25ca]: http://drupalcode.org/project/wetkit.git/commit/99d25ca
+[R4.15-Commit-b1170a6]: http://drupalcode.org/project/wetkit.git/commit/b1170a6
+[R4.15-Commit-daa5ff6]: http://drupalcode.org/project/wetkit.git/commit/daa5ff6
+[R4.15-Commit-e73bf07]: http://drupalcode.org/project/wetkit.git/commit/e73bf07
+[R4.15-Commit-b6cc8b8]: http://drupalcode.org/project/wetkit.git/commit/b6cc8b8
+[R4.15-Commit-a6582fc]: http://drupalcode.org/project/wetkit.git/commit/a6582fc
+
+<!-- Issues R4.15 -->
+
+[R4.15-Issue-2849960]: http://drupal.org/node/2849960
+[R4.15-Issue-2835893]: http://drupal.org/node/2835893
+[R4.15-Issue-2836112]: http://drupal.org/node/2836112
+[R4.15-Issue-2849956]: http://drupal.org/node/2849956
+[R4.15-Issue-2849945]: http://drupal.org/node/2849945
+[R4.15-Issue-2849947]: http://drupal.org/node/2849947
+[R4.15-Issue-2849946]: http://drupal.org/node/2849946
+[R4.15-Issue-2849943]: http://drupal.org/node/2849943
 
 <!-- Commits R4.14 -->
 
