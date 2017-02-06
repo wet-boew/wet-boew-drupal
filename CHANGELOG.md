@@ -2,10 +2,14 @@
 
 ## v4.15
 
+Security Update(s):
+
+  - Title (token value not sanitized)
+
 Feature(s):
 
   - Drupal Core updated to 7.54
-  - Diff improvements
+  - Diff numerous bug improvements along with improved CSS and i18n support
   - Services 204 + 304 error responses not conforming to IETF specification
   - Services comment handling with invalid CID
 
