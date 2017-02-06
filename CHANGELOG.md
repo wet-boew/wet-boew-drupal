@@ -1,5 +1,18 @@
 # CHANGELOG.md
 
+## v4.15
+
+Feature(s):
+
+  - Drupal Core updated to 7.54
+  - Services 204 + 304 error responses not conforming to IETF specification
+  - Services comment handling with invalid CID
+
+Fixes:
+
+  - (Commit: [b6cc8b8][R4.15-Commit-b6cc8b8]) Fixed WetKit Deployment for #[2849946][R4.15-Issue-2849946] - Update modules suite from WxT Deployment
+  - (Commit: [a6582fc][R4.15-Commit-a6582fc]) #[2849943][R4.15-Issue-2849943] - Update Drupal Core to v7.54
+
 ## v4.14
 
 Security Update(s):
@@ -1182,6 +1195,16 @@ Fixes:
   - (Commit: [0fc2202][R4.0-rc1-Commit-0fc2202]) Point responsinator to live demo site.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.15 -->
+
+[R4.15-Commit-b6cc8b8]: http://drupalcode.org/project/wetkit.git/commit/b6cc8b8
+[R4.15-Commit-a6582fc]: http://drupalcode.org/project/wetkit.git/commit/a6582fc
+
+<!-- Issues R4.15 -->
+
+[R4.15-Issue-2849946]: http://drupal.org/node/2849946
+[R4.15-Issue-2849943]: http://drupal.org/node/2849943
 
 <!-- Commits R4.14 -->
 
