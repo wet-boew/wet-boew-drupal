@@ -5,6 +5,7 @@
 Security Update(s):
 
   - Title (token value not sanitized)
+  - i18n (Inconsistent name for term access query)
 
 Feature(s):
 
@@ -13,9 +14,15 @@ Feature(s):
   - Services 204 + 304 error responses not conforming to IETF specification
   - Services comment handling with invalid CID
   - Wysiwyg release with numerous improvements
+  - Media is now in release candidate phase for greater stability
 
 Fixes:
 
+  - (Commit: [1077d95][R4.15-Commit-1077d95]) Fixed WetKit Core for Update panels from version 3.8 to 3.9 version
+  - (Commit: [d1f16c3][R4.15-Commit-d1f16c3]) Fixed WetKit Language for #[2849947][R4.15-Issue-2849947] - Update modules suite from WxT Language
+  - (Commit: [16f85b6][R4.15-Commit-16f85b6]) Fixed WetKit Widgets for #[2834397][R4.15-Issue-2834397] - Update to media module
+  - (Commit: [9516084][R4.15-Commit-9516084]) Fixed WetKit Core for Update uuid_features from version 1.0-alpha1 to 1.0-rc1.
+  - (Commit: [e270494][R4.15-Commit-e270494]) Update changelog.md file.
   - (Commit: [a618698][R4.15-Commit-a618698]) Fixed WetKit Metatag for Update metatag from version 1.17 to 1.20.
   - (Commit: [739af88][R4.15-Commit-739af88]) Fixed WetKit WYSIWYG for #[2849960][R4.15-Issue-2849960] - Update modules suite from WxT Wysiwyg
   - (Commit: [ce3395e][R4.15-Commit-ce3395e]) Fixed WetKit WYSIWYG for #[2849960][R4.15-Issue-2849960] - Update modules suite from WxT Wysiwyg
@@ -1217,6 +1224,15 @@ Fixes:
 
 <!-- Commits R4.15 -->
 
+[R4.15-Commit-1077d95]: http://drupalcode.org/project/wetkit.git/commit/1077d95
+[R4.15-Commit-4d7314a]: http://drupalcode.org/project/wetkit.git/commit/4d7314a
+[R4.15-Commit-c295df0]: http://drupalcode.org/project/wetkit.git/commit/c295df0
+[R4.15-Commit-d1f16c3]: http://drupalcode.org/project/wetkit.git/commit/d1f16c3
+[R4.15-Commit-e0c7188]: http://drupalcode.org/project/wetkit.git/commit/e0c7188
+[R4.15-Commit-16f85b6]: http://drupalcode.org/project/wetkit.git/commit/16f85b6
+[R4.15-Commit-a4127fb]: http://drupalcode.org/project/wetkit.git/commit/a4127fb
+[R4.15-Commit-9516084]: http://drupalcode.org/project/wetkit.git/commit/9516084
+[R4.15-Commit-e270494]: http://drupalcode.org/project/wetkit.git/commit/e270494
 [R4.15-Commit-f4ec2c1]: http://drupalcode.org/project/wetkit.git/commit/f4ec2c1
 [R4.15-Commit-a618698]: http://drupalcode.org/project/wetkit.git/commit/a618698
 [R4.15-Commit-c3067c3]: http://drupalcode.org/project/wetkit.git/commit/c3067c3
@@ -1238,6 +1254,8 @@ Fixes:
 
 <!-- Issues R4.15 -->
 
+[R4.15-Issue-2849947]: http://drupal.org/node/2849947
+[R4.15-Issue-2834397]: http://drupal.org/node/2834397
 [R4.15-Issue-2849960]: http://drupal.org/node/2849960
 [R4.15-Issue-2849960]: http://drupal.org/node/2849960
 [R4.15-Issue-2849960]: http://drupal.org/node/2849960
