@@ -1,6 +1,6 @@
 # CHANGELOG.md
 
-## v4.15 (In Development)
+## v4.15
 
 Security Update(s):
 
