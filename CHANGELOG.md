@@ -4,7 +4,7 @@
 
 Security Update(s):
 
-  - Metag
+  - Metag (v1.21)
 
 Feature(s):
 
@@ -14,6 +14,7 @@ Feature(s):
 
 Fixes:
 
+  - (Commit: [a507114][R4.16-Commit-a507114]) Fixed WetKit Metatag for #[2864527][R4.16-Issue-2864527] - Update Metatag from v1.20 to v1.21
   - (Commit: [561f02b][R4.16-Commit-561f02b]) Fixed WetKit Panel Layouts for #[2849167][R4.16-Issue-2849167] - Pearson Layout hides sidebar title fields
   - (Commit: [cd2fe2e][R4.16-Commit-cd2fe2e]) Fixed WetKit Core for #[2830560][R4.16-Issue-2830560] - CTools v1.12 Regression with Panels Page Titles etc
   - (Commit: [96db944][R4.16-Commit-96db944]) Fixed WetKit Bootstrap for #[2852591][R4.16-Issue-2852591] - GCWeb footer logo has wrong word-mark text
@@ -1246,6 +1247,7 @@ Fixes:
 
 <!-- Commits R4.16 -->
 
+[R4.16-Commit-a507114]: http://drupalcode.org/project/wetkit.git/commit/a507114
 [R4.16-Commit-b85da99]: http://drupalcode.org/project/wetkit.git/commit/b85da99
 [R4.16-Commit-561f02b]: http://drupalcode.org/project/wetkit.git/commit/561f02b
 [R4.16-Commit-cd2fe2e]: http://drupalcode.org/project/wetkit.git/commit/cd2fe2e
@@ -1257,6 +1259,7 @@ Fixes:
 
 <!-- Issues R4.16 -->
 
+[R4.16-Issue-2864527]: http://drupal.org/node/2864527
 [R4.16-Issue-2849167]: http://drupal.org/node/2849167
 [R4.16-Issue-2830560]: http://drupal.org/node/2830560
 [R4.16-Issue-2852591]: http://drupal.org/node/2852591
