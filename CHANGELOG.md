@@ -14,6 +14,10 @@ Feature(s):
 
 Fixes:
 
+  - (Commit: [dd2b996][R4.16-Commit-dd2b996]) Fixed WetKit Core for Update Panopoly Magic to v1.43 (field collection)
+  - (Commit: [ee1aa55][R4.16-Commit-ee1aa55]) Fixed WetKit Core for Update hierarchical select to v3.0-beta8 (remove patches)
+  - (Commit: [035f39e][R4.16-Commit-035f39e]) Fixed WetKit Deployment for Update Services to v3.19 security issue against vnd.php.serialized response
+  - (Commit: [de73759][R4.16-Commit-de73759]) Fixed WetKit Core for Update icon to v.1.0 (tag)
   - (Commit: [a507114][R4.16-Commit-a507114]) Fixed WetKit Metatag for #[2864527][R4.16-Issue-2864527] - Update Metatag from v1.20 to v1.21
   - (Commit: [561f02b][R4.16-Commit-561f02b]) Fixed WetKit Panel Layouts for #[2849167][R4.16-Issue-2849167] - Pearson Layout hides sidebar title fields
   - (Commit: [cd2fe2e][R4.16-Commit-cd2fe2e]) Fixed WetKit Core for #[2830560][R4.16-Issue-2830560] - CTools v1.12 Regression with Panels Page Titles etc
@@ -1247,6 +1251,10 @@ Fixes:
 
 <!-- Commits R4.16 -->
 
+[R4.16-Commit-dd2b996]: http://drupalcode.org/project/wetkit.git/commit/dd2b996
+[R4.16-Commit-ee1aa55]: http://drupalcode.org/project/wetkit.git/commit/ee1aa55
+[R4.16-Commit-035f39e]: http://drupalcode.org/project/wetkit.git/commit/035f39e
+[R4.16-Commit-de73759]: http://drupalcode.org/project/wetkit.git/commit/de73759
 [R4.16-Commit-a507114]: http://drupalcode.org/project/wetkit.git/commit/a507114
 [R4.16-Commit-b85da99]: http://drupalcode.org/project/wetkit.git/commit/b85da99
 [R4.16-Commit-561f02b]: http://drupalcode.org/project/wetkit.git/commit/561f02b
