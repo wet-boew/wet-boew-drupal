@@ -1,5 +1,27 @@
 # CHANGELOG.md
 
+## v4.16
+
+Security Update(s):
+
+  - Metag
+
+Feature(s):
+
+  - Custom gcweb CDN location in Bootstrap Settings
+  - Resolution to media wysiwyg image dimensions
+  - Fix Regression with Panels Page Titles
+
+Fixes:
+
+  - (Commit: [561f02b][R4.16-Commit-561f02b]) Fixed WetKit Panel Layouts for #[2849167][R4.16-Issue-2849167] - Pearson Layout hides sidebar title fields
+  - (Commit: [cd2fe2e][R4.16-Commit-cd2fe2e]) Fixed WetKit Core for #[2830560][R4.16-Issue-2830560] - CTools v1.12 Regression with Panels Page Titles etc
+  - (Commit: [96db944][R4.16-Commit-96db944]) Fixed WetKit Bootstrap for #[2852591][R4.16-Issue-2852591] - GCWeb footer logo has wrong word-mark text
+  - (Commit: [72006c5][R4.16-Commit-72006c5]) Fixed WetKit Core for #[2855979][R4.16-Issue-2855979] - Missing method clone_pane() error when cloning variant
+  - (Commit: [777f481][R4.16-Commit-777f481]) Fixed WetKit Widgets for #[2855850][R4.16-Issue-2855850] - Media Wyswiyg adds images with size 100 x 100 ignoring view modes
+  - (Commit: [b8c3243][R4.16-Commit-b8c3243]) Fixed WetKit Bootstrap for #[2858529][R4.16-Issue-2858529] - Enhance the gcweb CDN megamenu to use a custom path
+  - (Commit: [62ed151][R4.16-Commit-62ed151]) Start work on next release (v4.16)
+
 ## v4.15
 
 Security Update(s):
@@ -1221,6 +1243,26 @@ Fixes:
   - (Commit: [0fc2202][R4.0-rc1-Commit-0fc2202]) Point responsinator to live demo site.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.16 -->
+
+[R4.16-Commit-b85da99]: http://drupalcode.org/project/wetkit.git/commit/b85da99
+[R4.16-Commit-561f02b]: http://drupalcode.org/project/wetkit.git/commit/561f02b
+[R4.16-Commit-cd2fe2e]: http://drupalcode.org/project/wetkit.git/commit/cd2fe2e
+[R4.16-Commit-96db944]: http://drupalcode.org/project/wetkit.git/commit/96db944
+[R4.16-Commit-72006c5]: http://drupalcode.org/project/wetkit.git/commit/72006c5
+[R4.16-Commit-777f481]: http://drupalcode.org/project/wetkit.git/commit/777f481
+[R4.16-Commit-b8c3243]: http://drupalcode.org/project/wetkit.git/commit/b8c3243
+[R4.16-Commit-62ed151]: http://drupalcode.org/project/wetkit.git/commit/62ed151
+
+<!-- Issues R4.16 -->
+
+[R4.16-Issue-2849167]: http://drupal.org/node/2849167
+[R4.16-Issue-2830560]: http://drupal.org/node/2830560
+[R4.16-Issue-2852591]: http://drupal.org/node/2852591
+[R4.16-Issue-2855979]: http://drupal.org/node/2855979
+[R4.16-Issue-2855850]: http://drupal.org/node/2855850
+[R4.16-Issue-2858529]: http://drupal.org/node/2858529
 
 <!-- Commits R4.15 -->
 
