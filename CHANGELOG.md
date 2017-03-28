@@ -17,6 +17,10 @@ Feature(s):
   - Replace `_bootstrap_filter_xss()` with `filter_xss_admin()`
 
 Fixes:
+
+  - (Commit: [e53ac02][R4.16-Commit-e53ac02]) Fixed WetKit Core for #[2844320][R4.16-Issue-2844320] - Panelizer - PDOException: SQLSTATE[42000] Group By Clause
+  - (Commit: [e0390df][R4.16-Commit-e0390df]) Fixed WetKit Widgets for #[2232247][R4.16-Issue-2232247] - Show language field on file creation
+  - (Commit: [3f54648][R4.16-Commit-3f54648]) Update CHANGELOG.md file
   - (Commit: [8d1df86][R4.16-Commit-8d1df86]) Fixed WetKit Bootstrap for Adjust screen reader to wb-inv from sr-only against bootstrap updates
   - (Commit: [4a6ed97][R4.16-Commit-4a6ed97]) Update CHANGELOG.md file
   - (Commit: [b3ffefc][R4.16-Commit-b3ffefc]) Update CHANGELOG.md file
@@ -1261,6 +1265,10 @@ Fixes:
 
 <!-- Commits R4.16 -->
 
+[R4.16-Commit-e53ac02]: http://drupalcode.org/project/wetkit.git/commit/e53ac02
+[R4.16-Commit-e0390df]: http://drupalcode.org/project/wetkit.git/commit/e0390df
+[R4.16-Commit-382ed3c]: http://drupalcode.org/project/wetkit.git/commit/382ed3c
+[R4.16-Commit-3f54648]: http://drupalcode.org/project/wetkit.git/commit/3f54648
 [R4.16-Commit-8d1df86]: http://drupalcode.org/project/wetkit.git/commit/8d1df86
 [R4.16-Commit-6ae66e5]: http://drupalcode.org/project/wetkit.git/commit/6ae66e5
 [R4.16-Commit-4a6ed97]: http://drupalcode.org/project/wetkit.git/commit/4a6ed97
@@ -1285,6 +1293,8 @@ Fixes:
 
 <!-- Issues R4.16 -->
 
+[R4.16-Issue-2844320]: http://drupal.org/node/2844320
+[R4.16-Issue-2232247]: http://drupal.org/node/2232247
 [R4.16-Issue-2839880]: http://drupal.org/node/2839880
 [R4.16-Issue-2840791]: http://drupal.org/node/2840791
 [R4.16-Issue-2864527]: http://drupal.org/node/2864527
