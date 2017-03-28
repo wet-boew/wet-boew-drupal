@@ -1,5 +1,40 @@
 # CHANGELOG.md
 
+## v4.16 (In Development)
+
+Security Update(s):
+
+  - Metag (v1.21) (Information non-disclosure)
+  - Services (v3.19) (application/vnd.php.serialized)
+
+Feature(s):
+
+  - Custom gcweb CDN location in Bootstrap Settings
+  - Resolution to media wysiwyg image dimensions
+  - Fix Regression with Panels Page Titles
+  - Bootstrap bug fixes (Menu HTML / Devel breaks)
+  - Icon support to link theme hook (bootstrap)
+  - Replace `_bootstrap_filter_xss()` with `filter_xss_admin()`
+
+Fixes:
+
+  - (Commit: [16a5740][R4.16-Commit-16a5740]) Fixed WetKit Bootstrap for Sync up with rest of Bootstrap templates changes v3.12
+  - (Commit: [8451f73][R4.16-Commit-8451f73]) Fixed WetKit Bootstrap for #[2839880][R4.16-Issue-2839880] - Add date/calendar module template
+  - (Commit: [1bf5794][R4.16-Commit-1bf5794]) Fixed WetKit Bootstrap for #[2840791][R4.16-Issue-2840791] - Add icon support to "link" theme hook
+  - (Commit: [88b2d5a][R4.16-Commit-88b2d5a]) Update CHANGELOG.md file.
+  - (Commit: [dd2b996][R4.16-Commit-dd2b996]) Fixed WetKit Core for Update Panopoly Magic to v1.43 (field collection)
+  - (Commit: [ee1aa55][R4.16-Commit-ee1aa55]) Fixed WetKit Core for Update hierarchical select to v3.0-beta8 (remove patches)
+  - (Commit: [035f39e][R4.16-Commit-035f39e]) Fixed WetKit Deployment for Update Services to v3.19 security issue against vnd.php.serialized response
+  - (Commit: [de73759][R4.16-Commit-de73759]) Fixed WetKit Core for Update icon to v.1.0 (tag)
+  - (Commit: [a507114][R4.16-Commit-a507114]) Fixed WetKit Metatag for #[2864527][R4.16-Issue-2864527] - Update Metatag from v1.20 to v1.21
+  - (Commit: [561f02b][R4.16-Commit-561f02b]) Fixed WetKit Panel Layouts for #[2849167][R4.16-Issue-2849167] - Pearson Layout hides sidebar title fields
+  - (Commit: [cd2fe2e][R4.16-Commit-cd2fe2e]) Fixed WetKit Core for #[2830560][R4.16-Issue-2830560] - CTools v1.12 Regression with Panels Page Titles etc
+  - (Commit: [96db944][R4.16-Commit-96db944]) Fixed WetKit Bootstrap for #[2852591][R4.16-Issue-2852591] - GCWeb footer logo has wrong word-mark text
+  - (Commit: [72006c5][R4.16-Commit-72006c5]) Fixed WetKit Core for #[2855979][R4.16-Issue-2855979] - Missing method clone_pane() error when cloning variant
+  - (Commit: [777f481][R4.16-Commit-777f481]) Fixed WetKit Widgets for #[2855850][R4.16-Issue-2855850] - Media Wyswiyg adds images with size 100 x 100 ignoring view modes
+  - (Commit: [b8c3243][R4.16-Commit-b8c3243]) Fixed WetKit Bootstrap for #[2858529][R4.16-Issue-2858529] - Enhance the gcweb CDN megamenu to use a custom path
+  - (Commit: [62ed151][R4.16-Commit-62ed151]) Start work on next release (v4.16)
+
 ## v4.15
 
 Security Update(s):
@@ -1221,6 +1256,38 @@ Fixes:
   - (Commit: [0fc2202][R4.0-rc1-Commit-0fc2202]) Point responsinator to live demo site.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.16 -->
+
+[R4.16-Commit-16a5740]: http://drupalcode.org/project/wetkit.git/commit/16a5740
+[R4.16-Commit-8451f73]: http://drupalcode.org/project/wetkit.git/commit/8451f73
+[R4.16-Commit-1bf5794]: http://drupalcode.org/project/wetkit.git/commit/1bf5794
+[R4.16-Commit-88b2d5a]: http://drupalcode.org/project/wetkit.git/commit/88b2d5a
+[R4.16-Commit-dd2b996]: http://drupalcode.org/project/wetkit.git/commit/dd2b996
+[R4.16-Commit-ee1aa55]: http://drupalcode.org/project/wetkit.git/commit/ee1aa55
+[R4.16-Commit-035f39e]: http://drupalcode.org/project/wetkit.git/commit/035f39e
+[R4.16-Commit-de73759]: http://drupalcode.org/project/wetkit.git/commit/de73759
+[R4.16-Commit-a507114]: http://drupalcode.org/project/wetkit.git/commit/a507114
+[R4.16-Commit-b85da99]: http://drupalcode.org/project/wetkit.git/commit/b85da99
+[R4.16-Commit-561f02b]: http://drupalcode.org/project/wetkit.git/commit/561f02b
+[R4.16-Commit-cd2fe2e]: http://drupalcode.org/project/wetkit.git/commit/cd2fe2e
+[R4.16-Commit-96db944]: http://drupalcode.org/project/wetkit.git/commit/96db944
+[R4.16-Commit-72006c5]: http://drupalcode.org/project/wetkit.git/commit/72006c5
+[R4.16-Commit-777f481]: http://drupalcode.org/project/wetkit.git/commit/777f481
+[R4.16-Commit-b8c3243]: http://drupalcode.org/project/wetkit.git/commit/b8c3243
+[R4.16-Commit-62ed151]: http://drupalcode.org/project/wetkit.git/commit/62ed151
+
+<!-- Issues R4.16 -->
+
+[R4.16-Issue-2839880]: http://drupal.org/node/2839880
+[R4.16-Issue-2840791]: http://drupal.org/node/2840791
+[R4.16-Issue-2864527]: http://drupal.org/node/2864527
+[R4.16-Issue-2849167]: http://drupal.org/node/2849167
+[R4.16-Issue-2830560]: http://drupal.org/node/2830560
+[R4.16-Issue-2852591]: http://drupal.org/node/2852591
+[R4.16-Issue-2855979]: http://drupal.org/node/2855979
+[R4.16-Issue-2855850]: http://drupal.org/node/2855850
+[R4.16-Issue-2858529]: http://drupal.org/node/2858529
 
 <!-- Commits R4.15 -->
 
