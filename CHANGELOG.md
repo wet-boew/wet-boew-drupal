@@ -17,7 +17,9 @@ Feature(s):
   - Replace `_bootstrap_filter_xss()` with `filter_xss_admin()`
 
 Fixes:
-
+  - (Commit: [8d1df86][R4.16-Commit-8d1df86]) Fixed WetKit Bootstrap for Adjust screen reader to wb-inv from sr-only against bootstrap updates
+  - (Commit: [4a6ed97][R4.16-Commit-4a6ed97]) Update CHANGELOG.md file
+  - (Commit: [b3ffefc][R4.16-Commit-b3ffefc]) Update CHANGELOG.md file
   - (Commit: [16a5740][R4.16-Commit-16a5740]) Fixed WetKit Bootstrap for Sync up with rest of Bootstrap templates changes v3.12
   - (Commit: [8451f73][R4.16-Commit-8451f73]) Fixed WetKit Bootstrap for #[2839880][R4.16-Issue-2839880] - Add date/calendar module template
   - (Commit: [1bf5794][R4.16-Commit-1bf5794]) Fixed WetKit Bootstrap for #[2840791][R4.16-Issue-2840791] - Add icon support to "link" theme hook
@@ -1259,6 +1261,10 @@ Fixes:
 
 <!-- Commits R4.16 -->
 
+[R4.16-Commit-8d1df86]: http://drupalcode.org/project/wetkit.git/commit/8d1df86
+[R4.16-Commit-6ae66e5]: http://drupalcode.org/project/wetkit.git/commit/6ae66e5
+[R4.16-Commit-4a6ed97]: http://drupalcode.org/project/wetkit.git/commit/4a6ed97
+[R4.16-Commit-b3ffefc]: http://drupalcode.org/project/wetkit.git/commit/b3ffefc
 [R4.16-Commit-16a5740]: http://drupalcode.org/project/wetkit.git/commit/16a5740
 [R4.16-Commit-8451f73]: http://drupalcode.org/project/wetkit.git/commit/8451f73
 [R4.16-Commit-1bf5794]: http://drupalcode.org/project/wetkit.git/commit/1bf5794
