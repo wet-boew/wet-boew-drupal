@@ -4,16 +4,24 @@
 
 Security Update(s):
 
-  - Metag (v1.21)
+  - Metag (v1.21) (Information non-disclosure)
+  - Services (v3.19) (application/vnd.php.serialized)
 
 Feature(s):
 
   - Custom gcweb CDN location in Bootstrap Settings
   - Resolution to media wysiwyg image dimensions
   - Fix Regression with Panels Page Titles
+  - Bootstrap bug fixes (Menu HTML / Devel breaks)
+  - Icon support to link theme hook (bootstrap)
+  - Replace `_bootstrap_filter_xss()` with `filter_xss_admin()`
 
 Fixes:
 
+  - (Commit: [16a5740][R4.16-Commit-16a5740]) Fixed WetKit Bootstrap for Sync up with rest of Bootstrap templates changes v3.12
+  - (Commit: [8451f73][R4.16-Commit-8451f73]) Fixed WetKit Bootstrap for #[2839880][R4.16-Issue-2839880] - Add date/calendar module template
+  - (Commit: [1bf5794][R4.16-Commit-1bf5794]) Fixed WetKit Bootstrap for #[2840791][R4.16-Issue-2840791] - Add icon support to "link" theme hook
+  - (Commit: [88b2d5a][R4.16-Commit-88b2d5a]) Update CHANGELOG.md file.
   - (Commit: [dd2b996][R4.16-Commit-dd2b996]) Fixed WetKit Core for Update Panopoly Magic to v1.43 (field collection)
   - (Commit: [ee1aa55][R4.16-Commit-ee1aa55]) Fixed WetKit Core for Update hierarchical select to v3.0-beta8 (remove patches)
   - (Commit: [035f39e][R4.16-Commit-035f39e]) Fixed WetKit Deployment for Update Services to v3.19 security issue against vnd.php.serialized response
@@ -1251,6 +1259,10 @@ Fixes:
 
 <!-- Commits R4.16 -->
 
+[R4.16-Commit-16a5740]: http://drupalcode.org/project/wetkit.git/commit/16a5740
+[R4.16-Commit-8451f73]: http://drupalcode.org/project/wetkit.git/commit/8451f73
+[R4.16-Commit-1bf5794]: http://drupalcode.org/project/wetkit.git/commit/1bf5794
+[R4.16-Commit-88b2d5a]: http://drupalcode.org/project/wetkit.git/commit/88b2d5a
 [R4.16-Commit-dd2b996]: http://drupalcode.org/project/wetkit.git/commit/dd2b996
 [R4.16-Commit-ee1aa55]: http://drupalcode.org/project/wetkit.git/commit/ee1aa55
 [R4.16-Commit-035f39e]: http://drupalcode.org/project/wetkit.git/commit/035f39e
@@ -1267,6 +1279,8 @@ Fixes:
 
 <!-- Issues R4.16 -->
 
+[R4.16-Issue-2839880]: http://drupal.org/node/2839880
+[R4.16-Issue-2840791]: http://drupal.org/node/2840791
 [R4.16-Issue-2864527]: http://drupal.org/node/2864527
 [R4.16-Issue-2849167]: http://drupal.org/node/2849167
 [R4.16-Issue-2830560]: http://drupal.org/node/2830560
