@@ -5,4 +5,4 @@ core = 7.x
 projects[drupal][version] = 7.54
 
 projects[wetkit][type] = profile
-projects[wetkit][version] = 4.14
+projects[wetkit][version] = 4.16
