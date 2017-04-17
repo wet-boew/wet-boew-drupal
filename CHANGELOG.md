@@ -2,8 +2,20 @@
 
 ## v4.17
 
+Feature(s):
+
+  - Update to WxT v4.0.24
+  - Date numerous bug fixes
+  - Views numerous bug fixes
+
 Fixes:
 
+  - (Commit: [183932b][R4.17-Commit-183932b]) Fixed WetKit Core for Minor workbench moderation documentation code comment
+  - (Commit: [27382c5][R4.17-Commit-27382c5]) Fixed WetKit WET-BOEW for #[2865488][R4.17-Issue-2865488] - Update wet-boew to 4.0.24
+  - (Commit: [286daba][R4.17-Commit-286daba]) Fixed WetKit Core for Update views to v3.16 release
+  - (Commit: [36e4ece][R4.17-Commit-36e4ece]) Fixed WetKit Core for Update date to v2.10 release (numerous bug fixes)
+  - (Commit: [cb94eef][R4.17-Commit-cb94eef]) Fixed WetKit Core for Update views_bulk_operations to v3.4
+  - (Commit: [4532361][R4.17-Commit-4532361]) Fixed WetKit Webform for Update webform from v4.14 to v4.15
   - (Commit: [ac7a487][R4.17-Commit-ac7a487]) Start work on next release.
 
 ## v4.16
@@ -1271,9 +1283,17 @@ Fixes:
 
 <!-- Commits R4.17 -->
 
+[R4.17-Commit-183932b]: http://drupalcode.org/project/wetkit.git/commit/183932b
+[R4.17-Commit-27382c5]: http://drupalcode.org/project/wetkit.git/commit/27382c5
+[R4.17-Commit-286daba]: http://drupalcode.org/project/wetkit.git/commit/286daba
+[R4.17-Commit-36e4ece]: http://drupalcode.org/project/wetkit.git/commit/36e4ece
+[R4.17-Commit-cb94eef]: http://drupalcode.org/project/wetkit.git/commit/cb94eef
+[R4.17-Commit-4532361]: http://drupalcode.org/project/wetkit.git/commit/4532361
 [R4.17-Commit-ac7a487]: http://drupalcode.org/project/wetkit.git/commit/ac7a487
 
 <!-- Issues R4.17 -->
+
+[R4.17-Issue-2865488]: http://drupal.org/node/2865488
 
 <!-- Commits R4.16 -->
 
