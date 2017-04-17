@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## v4.17
+
+Fixes:
+
+  - (Commit: [ac7a487][R4.17-Commit-ac7a487]) Start work on next release.
+
 ## v4.16
 
 Security Update(s):
@@ -1262,6 +1268,12 @@ Fixes:
   - (Commit: [0fc2202][R4.0-rc1-Commit-0fc2202]) Point responsinator to live demo site.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.17 -->
+
+[R4.17-Commit-ac7a487]: http://drupalcode.org/project/wetkit.git/commit/ac7a487
+
+<!-- Issues R4.17 -->
 
 <!-- Commits R4.16 -->
 
