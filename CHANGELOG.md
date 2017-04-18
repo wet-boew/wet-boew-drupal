@@ -4,12 +4,18 @@
 
 Feature(s):
 
+  - Media is now stable @ v2.0
   - Update to WxT v4.0.24
   - Date numerous bug fixes
   - Views numerous bug fixes
+  - Entity Translation numerous bug fixes
 
 Fixes:
 
+  - (Commit: [cda749c][R4.17-Commit-cda749c]) Fixed WetKit Widgets for #[2867711][R4.17-Issue-2867711] - updates to media 7.x-2.0 + entity_translation 1.0-beta6
+  - (Commit: [f32035c][R4.17-Commit-f32035c]) Fixed WetKit Language for #[2867711][R4.17-Issue-2867711] - updates to media 7.x-2.0 + entity_translation 1.0-beta6
+  - (Commit: [7536bf0][R4.17-Commit-7536bf0]) Force chromedriver to v2.28
+  - (Commit: [e313d61][R4.17-Commit-e313d61]) Update changelog.md file
   - (Commit: [183932b][R4.17-Commit-183932b]) Fixed WetKit Core for Minor workbench moderation documentation code comment
   - (Commit: [27382c5][R4.17-Commit-27382c5]) Fixed WetKit WET-BOEW for #[2865488][R4.17-Issue-2865488] - Update wet-boew to 4.0.24
   - (Commit: [286daba][R4.17-Commit-286daba]) Fixed WetKit Core for Update views to v3.16 release
@@ -1283,6 +1289,10 @@ Fixes:
 
 <!-- Commits R4.17 -->
 
+[R4.17-Commit-cda749c]: http://drupalcode.org/project/wetkit.git/commit/cda749c
+[R4.17-Commit-f32035c]: http://drupalcode.org/project/wetkit.git/commit/f32035c
+[R4.17-Commit-7536bf0]: http://drupalcode.org/project/wetkit.git/commit/7536bf0
+[R4.17-Commit-e313d61]: http://drupalcode.org/project/wetkit.git/commit/e313d61
 [R4.17-Commit-183932b]: http://drupalcode.org/project/wetkit.git/commit/183932b
 [R4.17-Commit-27382c5]: http://drupalcode.org/project/wetkit.git/commit/27382c5
 [R4.17-Commit-286daba]: http://drupalcode.org/project/wetkit.git/commit/286daba
@@ -1293,6 +1303,8 @@ Fixes:
 
 <!-- Issues R4.17 -->
 
+[R4.17-Issue-2867711]: http://drupal.org/node/2867711
+[R4.17-Issue-2867711]: http://drupal.org/node/2867711
 [R4.17-Issue-2865488]: http://drupal.org/node/2865488
 
 <!-- Commits R4.16 -->
