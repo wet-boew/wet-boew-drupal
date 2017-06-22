@@ -12,6 +12,8 @@ Feature(s):
 
 Fixes:
 
+  - (Commit: [bcc3900][R4.17-Commit-bcc3900]) Fixed WetKit Widgets for feat(media): Update file_entity to v2.2 + media to v2.8
+  - (Commit: [1ccab72][R4.17-Commit-1ccab72]) Update changelog.md file
   - (Commit: [cda749c][R4.17-Commit-cda749c]) Fixed WetKit Widgets for #[2867711][R4.17-Issue-2867711] - updates to media 7.x-2.0 + entity_translation 1.0-beta6
   - (Commit: [f32035c][R4.17-Commit-f32035c]) Fixed WetKit Language for #[2867711][R4.17-Issue-2867711] - updates to media 7.x-2.0 + entity_translation 1.0-beta6
   - (Commit: [7536bf0][R4.17-Commit-7536bf0]) Force chromedriver to v2.28
@@ -1289,8 +1291,12 @@ Fixes:
 
 <!-- Commits R4.17 -->
 
+[R4.17-Commit-bcc3900]: http://drupalcode.org/project/wetkit.git/commit/bcc3900
+[R4.17-Commit-abc5e4b]: http://drupalcode.org/project/wetkit.git/commit/abc5e4b
+[R4.17-Commit-1ccab72]: http://drupalcode.org/project/wetkit.git/commit/1ccab72
 [R4.17-Commit-cda749c]: http://drupalcode.org/project/wetkit.git/commit/cda749c
 [R4.17-Commit-f32035c]: http://drupalcode.org/project/wetkit.git/commit/f32035c
+[R4.17-Commit-0ab8be2]: http://drupalcode.org/project/wetkit.git/commit/0ab8be2
 [R4.17-Commit-7536bf0]: http://drupalcode.org/project/wetkit.git/commit/7536bf0
 [R4.17-Commit-e313d61]: http://drupalcode.org/project/wetkit.git/commit/e313d61
 [R4.17-Commit-183932b]: http://drupalcode.org/project/wetkit.git/commit/183932b
