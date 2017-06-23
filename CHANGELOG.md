@@ -14,6 +14,7 @@ Feature(s):
 
 Fixes:
 
+  - (Commit: [82b13a3][R4.17-Commit-82b13a3]) Fixed WetKit Language for #[2888646][R4.17-Issue-2888646] - Update i18n to v1.18
   - (Commit: [c8398d3][R4.17-Commit-c8398d3]) Fixed WetKit Core for #[2888641][R4.17-Issue-2888641] - Update modules for WxT Core v4.17
   - (Commit: [89dfc3a][R4.17-Commit-89dfc3a]) Fixed WetKit WYSIWYG for #[2888640][R4.17-Issue-2888640] - Update wysiwyg to v2.4
   - (Commit: [3743eb1][R4.17-Commit-3743eb1]) Fixed WetKit Search for feat(update): Update search404 to v1.5
@@ -1299,6 +1300,8 @@ Fixes:
 
 <!-- Commits R4.17 -->
 
+[R4.17-Commit-82b13a3]: http://drupalcode.org/project/wetkit.git/commit/82b13a3
+[R4.17-Commit-f70d8f8]: http://drupalcode.org/project/wetkit.git/commit/f70d8f8
 [R4.17-Commit-c8398d3]: http://drupalcode.org/project/wetkit.git/commit/c8398d3
 [R4.17-Commit-89dfc3a]: http://drupalcode.org/project/wetkit.git/commit/89dfc3a
 [R4.17-Commit-3743eb1]: http://drupalcode.org/project/wetkit.git/commit/3743eb1
@@ -1324,6 +1327,7 @@ Fixes:
 
 <!-- Issues R4.17 -->
 
+[R4.17-Issue-2888646]: http://drupal.org/node/2888646
 [R4.17-Issue-2888641]: http://drupal.org/node/2888641
 [R4.17-Issue-2888640]: http://drupal.org/node/2888640
 [R4.17-Issue-2867711]: http://drupal.org/node/2867711
