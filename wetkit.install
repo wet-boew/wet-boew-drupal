@@ -12,8 +12,8 @@
  */
 function wetkit_install() {
   // Set password_policy module defaults.
-  $constraint = array();
-  $constraint = array(
+  $policy = array();
+  $policy = array(
     'character_types' => 3,
     'delay' => 0,
     'digit_placement' => 2,
@@ -26,7 +26,7 @@ function wetkit_install() {
   ->fields(array(
     'name' => 'WetKit Default',
     'description' => 'The default password policy implementation included with the WetKit distribution.',
-    'constraint' => serialize($constraint),
+    'constraints' => serialize($policy),
     'enabled' => 1,
     'expiration' => '90',
     'warning' => '7,14',
