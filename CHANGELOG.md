@@ -14,6 +14,11 @@ Feature(s):
 
 Fixes:
 
+  - (Commit: [09a485f][R4.17-Commit-09a485f]) Fixed WetKit WET-BOEW for #[2888662][R4.17-Issue-2888662] - Update WxT jQuery Framework to v4.0.25
+  - (Commit: [1cbe797][R4.17-Commit-1cbe797]) Fixed WetKit WYSIWYG for #[2888640][R4.17-Issue-2888640] - Update wysiwyg to v2.4
+  - (Commit: [8bdb069][R4.17-Commit-8bdb069]) feat(install): Update to password_policy db field change
+  - (Commit: [39d83af][R4.17-Commit-39d83af]) feat(install): Update to password_policy db field change
+  - (Commit: [8e4de3f][R4.17-Commit-8e4de3f]) Update changelog.md file
   - (Commit: [82b13a3][R4.17-Commit-82b13a3]) Fixed WetKit Language for #[2888646][R4.17-Issue-2888646] - Update i18n to v1.18
   - (Commit: [c8398d3][R4.17-Commit-c8398d3]) Fixed WetKit Core for #[2888641][R4.17-Issue-2888641] - Update modules for WxT Core v4.17
   - (Commit: [89dfc3a][R4.17-Commit-89dfc3a]) Fixed WetKit WYSIWYG for #[2888640][R4.17-Issue-2888640] - Update wysiwyg to v2.4
@@ -1300,6 +1305,11 @@ Fixes:
 
 <!-- Commits R4.17 -->
 
+[R4.17-Commit-09a485f]: http://drupalcode.org/project/wetkit.git/commit/09a485f
+[R4.17-Commit-1cbe797]: http://drupalcode.org/project/wetkit.git/commit/1cbe797
+[R4.17-Commit-8bdb069]: http://drupalcode.org/project/wetkit.git/commit/8bdb069
+[R4.17-Commit-39d83af]: http://drupalcode.org/project/wetkit.git/commit/39d83af
+[R4.17-Commit-8e4de3f]: http://drupalcode.org/project/wetkit.git/commit/8e4de3f
 [R4.17-Commit-82b13a3]: http://drupalcode.org/project/wetkit.git/commit/82b13a3
 [R4.17-Commit-f70d8f8]: http://drupalcode.org/project/wetkit.git/commit/f70d8f8
 [R4.17-Commit-c8398d3]: http://drupalcode.org/project/wetkit.git/commit/c8398d3
@@ -1327,6 +1337,8 @@ Fixes:
 
 <!-- Issues R4.17 -->
 
+[R4.17-Issue-2888662]: http://drupal.org/node/2888662
+[R4.17-Issue-2888640]: http://drupal.org/node/2888640
 [R4.17-Issue-2888646]: http://drupal.org/node/2888646
 [R4.17-Issue-2888641]: http://drupal.org/node/2888641
 [R4.17-Issue-2888640]: http://drupal.org/node/2888640
