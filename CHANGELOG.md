@@ -6,7 +6,7 @@ Feature(s):
 
   - Drupal Core updated to 7.56
   - Media is now stable @ v2.8
-  - Update to WxT v4.0.24
+  - Update to WxT v4.0.25
   - Date numerous bug fixes
   - Views numerous bug fixes
   - Entity Translation numerous bug fixes
