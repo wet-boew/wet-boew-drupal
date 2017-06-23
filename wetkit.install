@@ -26,7 +26,7 @@ function wetkit_install() {
   ->fields(array(
     'name' => 'WetKit Default',
     'description' => 'The default password policy implementation included with the WetKit distribution.',
-    'policy' => serialize($policy),
+    'constraints' => serialize($policy),
     'enabled' => 1,
     'expiration' => '90',
     'warning' => '7,14',

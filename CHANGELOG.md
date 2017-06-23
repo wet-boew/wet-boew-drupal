@@ -4,14 +4,28 @@
 
 Feature(s):
 
-  - Media is now stable @ v2.0
-  - Update to WxT v4.0.24
+  - Drupal Core updated to 7.56
+  - Media is now stable @ v2.8
+  - Update to WxT v4.0.25
   - Date numerous bug fixes
   - Views numerous bug fixes
   - Entity Translation numerous bug fixes
+  - Entity Reference maintenance update
 
 Fixes:
 
+  - (Commit: [09a485f][R4.17-Commit-09a485f]) Fixed WetKit WET-BOEW for #[2888662][R4.17-Issue-2888662] - Update WxT jQuery Framework to v4.0.25
+  - (Commit: [1cbe797][R4.17-Commit-1cbe797]) Fixed WetKit WYSIWYG for #[2888640][R4.17-Issue-2888640] - Update wysiwyg to v2.4
+  - (Commit: [8bdb069][R4.17-Commit-8bdb069]) feat(install): Update to password_policy db field change
+  - (Commit: [39d83af][R4.17-Commit-39d83af]) feat(install): Update to password_policy db field change
+  - (Commit: [8e4de3f][R4.17-Commit-8e4de3f]) Update changelog.md file
+  - (Commit: [82b13a3][R4.17-Commit-82b13a3]) Fixed WetKit Language for #[2888646][R4.17-Issue-2888646] - Update i18n to v1.18
+  - (Commit: [c8398d3][R4.17-Commit-c8398d3]) Fixed WetKit Core for #[2888641][R4.17-Issue-2888641] - Update modules for WxT Core v4.17
+  - (Commit: [89dfc3a][R4.17-Commit-89dfc3a]) Fixed WetKit WYSIWYG for #[2888640][R4.17-Issue-2888640] - Update wysiwyg to v2.4
+  - (Commit: [3743eb1][R4.17-Commit-3743eb1]) Fixed WetKit Search for feat(update): Update search404 to v1.5
+  - (Commit: [66796ab][R4.17-Commit-66796ab]) Fixed WetKit Deployment for feat(update): Update quicktabs to v3.8
+  - (Commit: [60a3ea7][R4.17-Commit-60a3ea7]) Fixed WetKit Admin for feat(update): Update module_filter to v2.1
+  - (Commit: [0aec5b0][R4.17-Commit-0aec5b0]) Update file_entity to v2.2 + media to v2.8
   - (Commit: [bcc3900][R4.17-Commit-bcc3900]) Fixed WetKit Widgets for feat(media): Update file_entity to v2.2 + media to v2.8
   - (Commit: [1ccab72][R4.17-Commit-1ccab72]) Update changelog.md file
   - (Commit: [cda749c][R4.17-Commit-cda749c]) Fixed WetKit Widgets for #[2867711][R4.17-Issue-2867711] - updates to media 7.x-2.0 + entity_translation 1.0-beta6
@@ -1291,6 +1305,20 @@ Fixes:
 
 <!-- Commits R4.17 -->
 
+[R4.17-Commit-09a485f]: http://drupalcode.org/project/wetkit.git/commit/09a485f
+[R4.17-Commit-1cbe797]: http://drupalcode.org/project/wetkit.git/commit/1cbe797
+[R4.17-Commit-8bdb069]: http://drupalcode.org/project/wetkit.git/commit/8bdb069
+[R4.17-Commit-39d83af]: http://drupalcode.org/project/wetkit.git/commit/39d83af
+[R4.17-Commit-8e4de3f]: http://drupalcode.org/project/wetkit.git/commit/8e4de3f
+[R4.17-Commit-82b13a3]: http://drupalcode.org/project/wetkit.git/commit/82b13a3
+[R4.17-Commit-f70d8f8]: http://drupalcode.org/project/wetkit.git/commit/f70d8f8
+[R4.17-Commit-c8398d3]: http://drupalcode.org/project/wetkit.git/commit/c8398d3
+[R4.17-Commit-89dfc3a]: http://drupalcode.org/project/wetkit.git/commit/89dfc3a
+[R4.17-Commit-3743eb1]: http://drupalcode.org/project/wetkit.git/commit/3743eb1
+[R4.17-Commit-66796ab]: http://drupalcode.org/project/wetkit.git/commit/66796ab
+[R4.17-Commit-60a3ea7]: http://drupalcode.org/project/wetkit.git/commit/60a3ea7
+[R4.17-Commit-7e9c1f1]: http://drupalcode.org/project/wetkit.git/commit/7e9c1f1
+[R4.17-Commit-0aec5b0]: http://drupalcode.org/project/wetkit.git/commit/0aec5b0
 [R4.17-Commit-bcc3900]: http://drupalcode.org/project/wetkit.git/commit/bcc3900
 [R4.17-Commit-abc5e4b]: http://drupalcode.org/project/wetkit.git/commit/abc5e4b
 [R4.17-Commit-1ccab72]: http://drupalcode.org/project/wetkit.git/commit/1ccab72
@@ -1309,6 +1337,11 @@ Fixes:
 
 <!-- Issues R4.17 -->
 
+[R4.17-Issue-2888662]: http://drupal.org/node/2888662
+[R4.17-Issue-2888640]: http://drupal.org/node/2888640
+[R4.17-Issue-2888646]: http://drupal.org/node/2888646
+[R4.17-Issue-2888641]: http://drupal.org/node/2888641
+[R4.17-Issue-2888640]: http://drupal.org/node/2888640
 [R4.17-Issue-2867711]: http://drupal.org/node/2867711
 [R4.17-Issue-2867711]: http://drupal.org/node/2867711
 [R4.17-Issue-2865488]: http://drupal.org/node/2865488
