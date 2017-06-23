@@ -1,5 +1,3 @@
-<img alt="Banner" src="http://dl.dropbox.com/u/38413195/banner.jpeg" title="By Y Anderson (Own work) [CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0" class="img-responsive">
-
 # Web Experience Toolkit: Drupal WxT
 
 [![Build Status][travisci-badge]][travisci]
@@ -73,6 +71,6 @@ specific language governing permissions and limitations under the License.
 [selenium-badge]:       https://saucelabs.com/buildstatus/sylus
 [simplytest]:           http://simplytest.me/project/wetkit/7.x-4.x
 [travisci]:             https://travis-ci.org/wet-boew/wet-boew-drupal
-[travisci-badge]:       https://travis-ci.org/wet-boew/wet-boew-drupal.png?branch=7.x-4.x
+[travisci-badge]:       https://api.travis-ci.org/wet-boew/wet-boew-drupal.svg?branch=7.x-4.x
 [wet-boew]:             https://github.com/wet-boew/wet-boew
 [youtube]:              http://www.youtube.com/playlist?list=PLjIClrDa-_ZFwO-0sT_y6PGljSdbYztwi
