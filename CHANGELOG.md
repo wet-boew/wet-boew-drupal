@@ -2,6 +2,10 @@
 
 ## v4.17
 
+Security Update(s):
+
+  - Drupal Core 7.56
+
 Feature(s):
 
   - Drupal Core updated to 7.56
