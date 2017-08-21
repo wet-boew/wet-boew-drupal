@@ -1,5 +1,31 @@
 # CHANGELOG.md
 
+## v4.18 (In Development)
+
+Security Update(s):
+
+  - Views 3.17
+  - Services 3.20
+  - Entity Reference 1.5
+
+Feature(s):
+
+  - Update to WxT v4.0.26
+  - Bootstrap 3.14 and associated template fixes
+
+Fixes:
+
+  - (Commit: [5a653328][R4.18-Commit-5a653328]) Fixed WetKit Bootstrap for #[2903651][R4.18-Issue-2903651] - Update Bootstrap to v3.14
+  - (Commit: [d263d5ef][R4.18-Commit-d263d5ef]) Fixed WetKit Deployment for #[2903653][R4.18-Issue-2903653] - Services update to v3.20 SA-CONTRIB-2017-054
+  - (Commit: [bd7e70f4][R4.18-Commit-bd7e70f4]) Fixed WetKit Core for #[2903652][R4.18-Issue-2903652] - Update EntityReference to v1.5 Access Bypass - DRUPAL-SA-CONTRIB-2017-067
+  - (Commit: [4975b85a][R4.18-Commit-4975b85a]) Fixed WetKit Deployment for Update entity dependency to v1.0 (same as v1.0-alpha2)
+  - (Commit: [76b405f9][R4.18-Commit-76b405f9]) Fixed WetKit Bootstrap for #[2903651][R4.18-Issue-2903651] - Update Bootstrap to v3.14
+  - (Commit: [b2b20ece][R4.18-Commit-b2b20ece]) Fixed WetKit Core for #[2903641][R4.18-Issue-2903641] - Views v3.17 Access Bypass - DRUPAL-SA-CONTRIB-2017-068
+  - (Commit: [7b9dc8ec][R4.18-Commit-7b9dc8ec]) Fixed WetKit WET-BOEW for #[2903615][R4.18-Issue-2903615] - Update WxT to v4.0.26
+  - (Commit: [a2fcc841][R4.18-Commit-a2fcc841]) Start work on next release.
+  - (Commit: [f4fc1040][R4.18-Commit-f4fc1040]) Official Release of 4.17 version
+  - (Commit: [45089654][R4.18-Commit-45089654]) Official Release of 4.17 version
+
 ## v4.17
 
 Security Update(s):
@@ -1306,6 +1332,30 @@ Fixes:
   - (Commit: [0fc2202][R4.0-rc1-Commit-0fc2202]) Point responsinator to live demo site.
 
 <!-- Links Referenced -->
+
+<!-- Commits R4.18 -->
+
+[R4.18-Commit-5a653328]: http://drupalcode.org/project/wetkit.git/commit/5a653328
+[R4.18-Commit-d263d5ef]: http://drupalcode.org/project/wetkit.git/commit/d263d5ef
+[R4.18-Commit-bd7e70f4]: http://drupalcode.org/project/wetkit.git/commit/bd7e70f4
+[R4.18-Commit-4975b85a]: http://drupalcode.org/project/wetkit.git/commit/4975b85a
+[R4.18-Commit-76b405f9]: http://drupalcode.org/project/wetkit.git/commit/76b405f9
+[R4.18-Commit-b2b20ece]: http://drupalcode.org/project/wetkit.git/commit/b2b20ece
+[R4.18-Commit-7b9dc8ec]: http://drupalcode.org/project/wetkit.git/commit/7b9dc8ec
+[R4.18-Commit-9ab59fa8]: http://drupalcode.org/project/wetkit.git/commit/9ab59fa8
+[R4.18-Commit-a2fcc841]: http://drupalcode.org/project/wetkit.git/commit/a2fcc841
+[R4.18-Commit-254dfb0a]: http://drupalcode.org/project/wetkit.git/commit/254dfb0a
+[R4.18-Commit-f4fc1040]: http://drupalcode.org/project/wetkit.git/commit/f4fc1040
+[R4.18-Commit-45089654]: http://drupalcode.org/project/wetkit.git/commit/45089654
+
+<!-- Issues R4.18 -->
+
+[R4.18-Issue-2903651]: http://drupal.org/node/2903651
+[R4.18-Issue-2903653]: http://drupal.org/node/2903653
+[R4.18-Issue-2903652]: http://drupal.org/node/2903652
+[R4.18-Issue-2903651]: http://drupal.org/node/2903651
+[R4.18-Issue-2903641]: http://drupal.org/node/2903641
+[R4.18-Issue-2903615]: http://drupal.org/node/2903615
 
 <!-- Commits R4.17 -->
 
