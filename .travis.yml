@@ -16,6 +16,18 @@ sudo: false
 php:
   - 7.0
 
+matrix:
+  fast_finish: true
+  include:
+    - php: "5.6"
+      env: DB=mysql UPGRADE=none
+    - php: "7.0.8"
+      env: DB=mysql UPGRADE=none
+    - php: "5.6"
+      env: DB=postgres UPGRADE=none
+    - php: "7.0.8"
+      env: DB=postgres UPGRADE=none
+
 # Firefox versioning
 addons:
   firefox: "31.0esr"
