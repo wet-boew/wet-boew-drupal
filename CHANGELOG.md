@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## v4.19
+
+Feature(s):
+
+  - Update to WxT v4.0.27
+  - Add service and accessRights metatags to wetkit_metatag #[2924139][R4.19-Issue-2924139]
+
 ## v4.18
 
 Security Update(s):
