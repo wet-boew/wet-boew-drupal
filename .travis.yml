@@ -14,23 +14,23 @@ sudo: false
 
 # Language versioning
 php:
-  - 5.4
+  - 7.0
 
 matrix:
   fast_finish: true
   include:
-    - php: "5.5"
-      env: DB=mysql UPGRADE=none
     - php: "5.6"
       env: DB=mysql UPGRADE=none
     - php: "7.0.8"
       env: DB=mysql UPGRADE=none
-    - php: "5.5"
-      env: DB=postgres UPGRADE=none
     - php: "5.6"
       env: DB=postgres UPGRADE=none
     - php: "7.0.8"
       env: DB=postgres UPGRADE=none
+
+# Firefox versioning
+addons:
+  firefox: "31.0esr"
 
 env:
   global:
@@ -131,6 +131,7 @@ install:
   - drupal-ti install
 
 before_script:
+  - sudo sed -i 's/127.0.0.1.*/127.0.0.1 localhost/' /etc/hosts
   - drupal-ti before_script
 
 script:
