@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## v4.20
+
+Security Update(s):
+
+  - Entity API 1.9
+
 ## v4.19
 
 Feature(s):
