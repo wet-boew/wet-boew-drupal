@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## v4.20
+
+Security Update(s):
+
+  - Entity API 1.9
+  - Drupal Core 7.57
+
 ## v4.19
 
 Feature(s):
