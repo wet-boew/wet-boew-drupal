@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## v4.21
+
+Security Update(s):
+
+  - Drupal Core 7.58
+
 ## v4.20
 
 Security Update(s):
