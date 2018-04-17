@@ -9,7 +9,7 @@ Feature(s):
     - Field Group (field_group) 7.x-1.6
     - Font Awesome Icons (fontawesome) 7.x-2.7
     - Password Policy (password_policy) 7.x-1.15
-    - Views (views) 7.x-3.18
+    - Views (views) 7.x-3.20
     - Views Bootstrap (views_bootstrap) 7.x-3.2
 
 ## v4.21
