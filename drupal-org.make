@@ -15,7 +15,7 @@ projects[wetkit_breadcrumbs][subdir] = custom
 projects[wetkit_core][version] = 4.20
 projects[wetkit_core][subdir] = custom
 
-projects[wetkit_demo][version] = 4.3
+projects[wetkit_demo][version] = 4.4
 projects[wetkit_demo][subdir] = custom
 
 projects[wetkit_deployment][version] = 4.17
