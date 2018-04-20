@@ -11,6 +11,31 @@ Feature(s):
     - Password Policy (password_policy) 7.x-1.15
     - Views (views) 7.x-3.20
     - Views Bootstrap (views_bootstrap) 7.x-3.2
+    - Advanced help (advanced_help) 7.x-1.4
+    - Panopoly Magic (panopoly_magic) 7.x-1.51
+    - Font Awesome Icons (fontawesome) 7.x-2.8
+  - wetkit_deployment contrib updates.:
+    - Environment Indicator (environment_indicator) 7.x-2.9
+  - wetkit_images contrib updates.:
+    - Breakpoints (breakpoints) 7.x-1.6
+  - wetkit_language contrib updates.:
+    - Entity Translation (entity_translation) 7.x-1.0
+    - Internationalization (i18n) 7.x-1.22
+  - wetkit_metatag contrib updates.:
+    - Metatag (metatag) 7.x-1.22
+  - wetkit_migrate contrib updates.:
+    - Migrate (migrate) 7.x-2.9
+  - wetkit_search contrib updates.:
+    - Search 404 (search404) 7.x-1.6
+  - wetkit_webform contrib updates.:
+    - Webform (webform) 7.x-4.16
+    - Webform UUID (webform_uuid) 7.x-1.3
+  - wetkit_widgets contrib updates.:
+    - File Entity (fieldable files) (file_entity) 7.x-2.20
+    - Media (media) 7.x-2.18
+  - wetkit_wysiwyg contrib updates.:
+    - WYSIWYG (wysiwyg) 7.x-2.5
+    - CKEDITOR standard 4.9.2
 
 ## v4.21
 

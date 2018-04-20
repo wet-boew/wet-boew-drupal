@@ -1,7 +1,7 @@
 api = 2
 core = 7.x
 
-; GitHub packaging standards
+; Include the definition for how to build Drupal core directly, including patches:
 includes[] = drupal-org-core.make
 
 projects[wetkit][type] = profile

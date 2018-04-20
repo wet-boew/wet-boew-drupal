@@ -1,8 +1,8 @@
 api = 2
 core = 7.x
 
-; Drupal.org packaging standards
-projects[drupal][version] = 7.58
+; Include the definition for how to build Drupal core directly, including patches:
+includes[] = drupal-org-core.make
 
 projects[wetkit][type] = profile
 projects[wetkit][download][type] = git
