@@ -35,6 +35,7 @@ Feature(s):
     - Media (media) 7.x-2.18
   - wetkit_wysiwyg contrib updates.:
     - WYSIWYG (wysiwyg) 7.x-2.5
+    - CKEditor (library) 4.9.2
 
 ## v4.21
 
