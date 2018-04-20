@@ -38,7 +38,7 @@ matrix:
 
 # Firefox versioning
 addons:
-  firefox: "latest-esr"
+  firefox: "31.0esr"
 
 env:
   global:
