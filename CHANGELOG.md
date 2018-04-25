@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## v4.23
+
+Security Update(s):
+
+  - Drupal Core 7.59
+
 ## v4.22
 
 Feature(s):
