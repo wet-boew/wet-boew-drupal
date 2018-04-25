@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## v4.24
+
+Security Update(s):
+
+  - Media 2.19
+
 ## v4.23
 
 Security Update(s):
