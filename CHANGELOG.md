@@ -1,5 +1,35 @@
 # CHANGELOG.md
 
+## v4.25
+
+Feature(s):
+
+  - wetkit_bootstrap
+    - Update Bootstrap (bootstrap) 7.x-3.17
+  - wetkit_core
+    - Improve hierarchical_select performance (#2939111)
+    - Update Devel (devel) 7.x-1.6
+    - Update Panopoly Magic (panopoly_magic) 7.x-1.54
+    - Update Link (link) 7.x-1.5
+    - Update Rules (rules) 7.x-2.11
+    - Update Views Bulk Operations (views_bulk_operations) 7.x-3.5
+    - Update Elements (elements) 7.x-1.5
+  - wetkit_ember
+    - Fix WetKit Ember error in Views under PHP 7.1/7.2 (#2976137)
+  - wetkit-language
+    - Update Internationalization (i18n) 7.x-2.24
+    - Update Webform Localization (webform_localization) 7.x-4.14
+  - wetkit_layouts
+    - Fix issue with empty h2 tag in Pearson Layout (#2912204)
+  - wetkit_metatag
+    - Make the removal of canonical metatags a configuration (#2968540)
+  - wetkit_migrate
+    - Update Migrate (migrate) 7.x-2.11
+  - wetkit_webform
+    - Update Webform (webform) 7.x-4.17
+  - wetkit_widgets
+    - Update File Entity (file_entity) 7.x-2.24
+
 ## v4.24
 
 Security Update(s):
