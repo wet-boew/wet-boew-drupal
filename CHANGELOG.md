@@ -4,8 +4,8 @@
 
 Feature(s):
 
-  - wetkit_bootstrap 7.x-4.15
-    - Update Bootstrap (bootstrap) 7.x-3.17
+  - wetkit_bootstrap 7.x-4.16
+    - Update Bootstrap (bootstrap) 7.x-3.20
   - wetkit_core 7.x-4.23
     - Improve hierarchical_select performance (#2939111)
     - Update Devel (devel) 7.x-1.6
