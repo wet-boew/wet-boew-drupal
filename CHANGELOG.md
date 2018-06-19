@@ -4,9 +4,9 @@
 
 Feature(s):
 
-  - wetkit_bootstrap
+  - wetkit_bootstrap 7.x-4.15
     - Update Bootstrap (bootstrap) 7.x-3.17
-  - wetkit_core
+  - wetkit_core 7.x-4.23
     - Improve hierarchical_select performance (#2939111)
     - Update Devel (devel) 7.x-1.6
     - Update Panopoly Magic (panopoly_magic) 7.x-1.54
@@ -14,20 +14,20 @@ Feature(s):
     - Update Rules (rules) 7.x-2.11
     - Update Views Bulk Operations (views_bulk_operations) 7.x-3.5
     - Update Elements (elements) 7.x-1.5
-  - wetkit_ember
+  - wetkit_ember 7.x-4.5
     - Fix WetKit Ember error in Views under PHP 7.1/7.2 (#2976137)
-  - wetkit-language
+  - wetkit_language 7.x-4.14
     - Update Internationalization (i18n) 7.x-2.24
     - Update Webform Localization (webform_localization) 7.x-4.14
-  - wetkit_layouts
+  - wetkit_layouts 7.x-4.7
     - Fix issue with empty h2 tag in Pearson Layout (#2912204)
-  - wetkit_metatag
+  - wetkit_metatag 7.x-4.16
     - Make the removal of canonical metatags a configuration (#2968540)
-  - wetkit_migrate
+  - wetkit_migrate 7.x-4.7
     - Update Migrate (migrate) 7.x-2.11
-  - wetkit_webform
+  - wetkit_webform 7.x-4.16
     - Update Webform (webform) 7.x-4.17
-  - wetkit_widgets
+  - wetkit_widgets 7.x-4.13
     - Update File Entity (file_entity) 7.x-2.24
 
 ## v4.24
