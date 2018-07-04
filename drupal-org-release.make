@@ -39,7 +39,7 @@ projects[wetkit_metatag][subdir] = custom
 projects[wetkit_migrate][version] = 4.7
 projects[wetkit_migrate][subdir] = custom
 
-projects[wetkit_og][version] = 4.2
+projects[wetkit_og][version] = 4.3
 projects[wetkit_og][subdir] = custom
 
 projects[wetkit_pages][version] = 4.3
