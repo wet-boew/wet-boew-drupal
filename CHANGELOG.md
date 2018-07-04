@@ -7,8 +7,8 @@ Feature(s):
     - Update Hierarchical Select (hierarchical_select) to 7.x-3.0-beta9
   - wetkit_og 7.x-4.3
     - Update Oragnic Groups (og) to 7.x-2.10
-  - wetkit_wetboew 7.x-4.8
-    - Update WET-BOEW to 4.0.28
+  - wetkit_wetboew 7.x-4.9
+    - Update WET-BOEW to 4.0.28.1
 
 ## v4.25
 
