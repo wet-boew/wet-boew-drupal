@@ -60,7 +60,7 @@ projects[wetkit_users][subdir] = custom
 projects[wetkit_webform][version] = 4.16
 projects[wetkit_webform][subdir] = custom
 
-projects[wetkit_wetboew][version] = 4.7
+projects[wetkit_wetboew][version] = 4.8
 projects[wetkit_wetboew][subdir] = custom
 
 projects[wetkit_widgets][version] = 4.13
