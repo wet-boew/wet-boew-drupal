@@ -5,7 +5,7 @@
 Feature(s):
   - wetkit_bootstrap 7.x-4.x
     - Empty role attribute on <main> element on wetkit_bootstrap panels (#2980577)
-  - wetkit_core 7.x-4.x
+  - wetkit_core 7.x-4.25
     - Update Hierarchical Select (hierarchical_select) to 7.x-3.0-beta9
     - Update Panopoly Magic (panopoly_magic) to 7.x-1.55
     - Update UUID (uuid) to 7.x-1.1
