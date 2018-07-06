@@ -3,13 +3,16 @@
 ## v4.26
 
 Feature(s):
+  - wetkit_bootstrap 7.x-4.x
+    - Empty role attribute on <main> element on wetkit_bootstrap panels (#2980577)
   - wetkit_core 7.x-4.x
     - Update Hierarchical Select (hierarchical_select) to 7.x-3.0-beta9
+    - Update Panopoly Magic (panopoly_magic) to 7.x-1.55
     - Update UUID (uuid) to 7.x-1.1
   - wetkit_og 7.x-4.3
     - Update Oragnic Groups (og) to 7.x-2.10
   - wetkit_wetboew 7.x-4.9
-    - Update WET-BOEW to 4.0.28.1
+    - Update WET-BOEW to 4.0.28.1 - Please note the base, gc-intranet, gcwu-fegc, and ogpl themes are dropped in 4.0.28. We are including the 4.0.27 versions to support the Drupal implementations we currently have. See [this github issue]( https://github.com/wet-boew/themes-cdn/issues/4#issuecomment-403163889) for more details.
 
 ## v4.25
 
