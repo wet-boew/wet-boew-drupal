@@ -8,8 +8,8 @@ Security Update(s):
 
 Feature(s):
   - wetkit_bootstrap 7.x-4.18
-    - Resolve Empty role attribute on <main> element on wetkit_bootstrap panels (#2980577)
-    - Resolve Banner and navigation roles causing W3C validation warnings for wetkit_bootstrap panels (#2980583)
+    - Fix Empty role attribute on <main> element on wetkit_bootstrap panels (#2980577)
+    - Fix Banner and navigation roles causing W3C validation warnings for wetkit_bootstrap panels (#2980583)
   - wetkit_core 7.x-4.26
     - Update Hierarchical Select (hierarchical_select) to 7.x-3.0-beta9
     - Update Panopoly Magic (panopoly_magic) to 7.x-1.55
