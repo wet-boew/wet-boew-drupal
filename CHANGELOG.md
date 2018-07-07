@@ -7,13 +7,16 @@ Security Update(s):
     - Update UUID (uuid) to 7.x-1.1
 
 Feature(s):
-  - wetkit_bootstrap 7.x-4.17
+  - wetkit_bootstrap 7.x-4.18
     - Resolve Empty role attribute on <main> element on wetkit_bootstrap panels (#2980577)
-  - wetkit_core 7.x-4.25
+    - Resolve Banner and navigation roles causing W3C validation warnings for wetkit_bootstrap panels (#2980583)
+  - wetkit_core 7.x-4.26
     - Update Hierarchical Select (hierarchical_select) to 7.x-3.0-beta9
     - Update Panopoly Magic (panopoly_magic) to 7.x-1.55
   - wetkit_ember 7.x-4.6
     - Resolve WetKit Ember illegal string offset in Views (PHP 7.1) (#2983436)
+  - wetkit_layouts 7.x-4.8
+    - Fix W3C Validation Warnings with Pearson Layout (#2980525)
   - wetkit_og 7.x-4.3
     - Update Oragnic Groups (og) to 7.x-2.10
   - wetkit_wetboew 7.x-4.9
