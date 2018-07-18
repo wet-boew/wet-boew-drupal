@@ -39,7 +39,7 @@ Feature(s):
   - wetkit_ember 7.x-4.5
     - Fix WetKit Ember error in Views under PHP 7.1/7.2 (#2976137)
   - wetkit_language 7.x-4.14
-    - Update Internationalization (i18n) 7.x-2.24
+    - Update Internationalization (i18n) 7.x-1.24
     - Update Webform Localization (webform_localization) 7.x-4.14
   - wetkit_layouts 7.x-4.7
     - Fix issue with empty h2 tag in Pearson Layout (#2912204)
