@@ -50,7 +50,7 @@ Feature(s):
   - wetkit_webform 7.x-4.16
     - Update Webform (webform) 7.x-4.17
   - wetkit_widgets 7.x-4.13
-    - Update File Entity (file_entity) 7.x-2.24
+    - Update File Entity (file_entity) 7.x-2.22
 
 ## v4.24
 
