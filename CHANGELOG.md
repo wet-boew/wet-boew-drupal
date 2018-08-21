@@ -1,5 +1,21 @@
 # CHANGELOG.md
 
+## v4.27
+
+Feature(s)/Fixes:
+  - wetkit_bootstrap 7.x-4.19
+    - Views exposed filter submit button has empty name attribute casuing error on W3C validation (#2986639)
+    - When tooltips are disabled in wetkit_bootstrap the aria-describedby points to element that does not exist (#2986135)
+    - Managed file upload accessibility problem (#2968478)
+    - Navigation roles on Nav elements causing W3C validation warnings for wetkit_bootstrap (#2986389)
+    - Banner and navigation roles causing W3C validation warnings for wetkit_bootstrap panels (#2980583)
+    - Managed file upload accessibility problem (#2968478)
+    - Navigation roles on Nav elements causing W3C validation warnings for wetkit_bootstrap (#2986389)
+    - Banner and navigation roles causing W3C validation warnings for wetkit_bootstrap panels (#2980583)
+  - wetkit_core 7.x-4.27
+    - Collapsible region handle title not translatable (#2986907)
+    - Update uuid to resolve File Deploy appending \_.txt to some files (#2992033)
+
 ## v4.26
 
 Security Update(s):
