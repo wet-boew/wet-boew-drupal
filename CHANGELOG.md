@@ -4,11 +4,9 @@
 
 Feature(s)/Fixes:
   - wetkit_bootstrap 7.x-4.19
+    - Reference SVG logos with img elements instead of object elements (http://wet-boew.github.io/wet-boew-documentation/decision/1.html)
     - Views exposed filter submit button has empty name attribute casuing error on W3C validation (#2986639)
     - When tooltips are disabled in wetkit_bootstrap the aria-describedby points to element that does not exist (#2986135)
-    - Managed file upload accessibility problem (#2968478)
-    - Navigation roles on Nav elements causing W3C validation warnings for wetkit_bootstrap (#2986389)
-    - Banner and navigation roles causing W3C validation warnings for wetkit_bootstrap panels (#2980583)
     - Managed file upload accessibility problem (#2968478)
     - Navigation roles on Nav elements causing W3C validation warnings for wetkit_bootstrap (#2986389)
     - Banner and navigation roles causing W3C validation warnings for wetkit_bootstrap panels (#2980583)

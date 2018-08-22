@@ -12,7 +12,7 @@ projects[wetkit_bean][subdir] = custom
 projects[wetkit_breadcrumbs][version] = 4.6
 projects[wetkit_breadcrumbs][subdir] = custom
 
-projects[wetkit_core][version] = 4.26
+projects[wetkit_core][version] = 4.27
 projects[wetkit_core][subdir] = custom
 
 projects[wetkit_demo][version] = 4.4
@@ -74,7 +74,7 @@ projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_ember][version] = 4.6
 projects[wetkit_ember][type] = theme
 
-projects[wetkit_bootstrap][version] = 4.18
+projects[wetkit_bootstrap][version] = 4.19
 projects[wetkit_bootstrap][type] = theme
 
 projects[wetkit_shiny][version] = 4.0
