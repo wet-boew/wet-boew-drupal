@@ -12,6 +12,7 @@ Feature(s)/Fixes:
     - Managed file upload accessibility problem (#2968478)
     - Navigation roles on Nav elements causing W3C validation warnings for wetkit_bootstrap (#2986389)
     - Banner and navigation roles causing W3C validation warnings for wetkit_bootstrap panels (#2980583)
+    - Reference SVG logos with img elements instead of object elements (http://wet-boew.github.io/wet-boew-documentation/decision/1.html)
   - wetkit_core 7.x-4.27
     - Collapsible region handle title not translatable (#2986907)
     - Update uuid to resolve File Deploy appending \_.txt to some files (#2992033)
