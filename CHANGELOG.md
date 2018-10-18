@@ -5,6 +5,10 @@
 Security Update(s):
   - Drupal Core 7.60
 
+Feature(s)/Fixes:
+  - wetkit_wysiwyg 7.x-4.14
+    - Update markitup to 1.1.15
+
 ## v4.27
 
 Feature(s)/Fixes:

@@ -66,7 +66,7 @@ projects[wetkit_wetboew][subdir] = custom
 projects[wetkit_widgets][version] = 4.13
 projects[wetkit_widgets][subdir] = custom
 
-projects[wetkit_wysiwyg][version] = 4.13
+projects[wetkit_wysiwyg][version] = 4.14
 projects[wetkit_wysiwyg][subdir] = custom
 
 ; WxT Foundation (Themes)
