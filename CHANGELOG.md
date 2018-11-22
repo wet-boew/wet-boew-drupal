@@ -17,6 +17,8 @@ Feature(s)/Fixes:
     - Update features (features) to 7.x-2.11 (#3012857)
     - Update diff (diff) to 7.x-3.4 (#3012857)
     - Update libraries (libraries) to 7.x-2.5 (#3012857)
+  - wetkit_test 7.x-4.12
+    - Update body selector more specific for issue introduced in (#3003591)
 
 ## v4.28
 
