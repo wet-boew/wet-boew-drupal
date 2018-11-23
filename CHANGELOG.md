@@ -6,7 +6,7 @@ Feature(s)/Fixes:
   - Drupal Core 7.61 (#3012857)
   - wetkit_deployment 7.x-4.19
     - Patch deploy_services_client for https (#3013418)
-  - wetkit_bootstrap 7.x-4.21
+  - wetkit_bootstrap 7.x-4.22
     - Replace name with property attribute for dcterms (#2997301)
     - Prevent the duplication of classes due to array_merge in wetkit_bootstrap_preprocess_link hook (#?)
     - Add missing "You are here" heading for breadcrumb section (#3010814)
