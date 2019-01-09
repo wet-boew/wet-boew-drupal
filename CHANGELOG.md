@@ -21,6 +21,8 @@ Feature(s)/Fixes:
     - Update Panopoly Magic (panopoly_magic) 7.x-1.58
   - wetkit_language 7.x-4.15
     - Update Internationalization (i18n) 7.x-1.26
+  - wetkit_migrate 7.x-4.8
+    - Fix issues with updating bean and bean migrations.
   - wetkit_wetboew 7.x-4.10
     - Update WET-BOEW to 4.0.29 - Please note the gcweb theme has a new look/version as documented [here](http://wet-boew.github.io/themes-dist/GCWeb/gcweb-theme/index.html), We are keeping the gcweb theme on 4.0.28.1 and have started a new implemenation for Canada 2.0 (gcweb2). Feel free to contibute [here] (wekit_wetboew) and [here] (wetkit_bootstrap) if this is important to you.
   - wetkit_widgets 7.x-4.14
