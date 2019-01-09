@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## v4.30
+
+Security Update(s):
+- wetkit_core 7.x-4.29
+  - Password Policy (password_policy) 7.x-1.16
+
 ## v4.29
 
 Feature(s)/Fixes:
