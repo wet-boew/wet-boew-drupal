@@ -11,7 +11,6 @@ drupal_ti_ensure_php_for_drush_webserver
 
 # Ensure that drush and addons are installed.
 wetkit_header Installing Drush
-
 wetkit_ensure_drush
 
 # Ensure the distribution is linked into the code base.

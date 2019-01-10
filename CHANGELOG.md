@@ -26,7 +26,7 @@ Feature(s)/Fixes:
     - Fix issues with updating bean and bean migrations.
   - wetkit_wetboew 7.x-4.11
     - Update WET-BOEW to 4.0.29
-    **Please note the gcweb will be changing and has a new look/version as documented [here](http://wet-boew.github.io/themes-dist/GCWeb/gcweb-theme/index.html). We are planning on keeping the gcweb theme on 4.0.29 and implementing a new gcweb2 theme for 4.0.30 and above. Feel free to contibute [here] (https://www.drupal.org/project/wetkit/issues/3024655) if this is important to you.**
+    **Please note the gcweb will be changing and has a new look/version as documented [here](http://wet-boew.github.io/themes-dist/GCWeb/gcweb-theme/index.html). We are planning on keeping the gcweb theme on 4.0.29 and implementing a new gcweb2 theme for 4.0.30 and above. Feel free to contibute [here](https://www.drupal.org/project/wetkit/issues/3024655) if this is important to you.**
   - wetkit_widgets 7.x-4.14
     - Update File Entity (fieldable files) (file_entity) 7.x-2.25
     - Update Media (media) 7.x-2.21
