@@ -25,6 +25,10 @@ matrix:
   - php: "7.2"
     env: DB=postgres UPGRADE=none
 
+# Firefox versioning
+addons:
+  firefox: "64.0"
+
 env:
   global:
     # add composer's global bin directory to the path
@@ -68,7 +72,7 @@ env:
     # This is used to setup Xvfb.
     - DRUPAL_TI_BEHAT_SCREENSIZE_COLOR="1920x1080x24"
     # The version of selenium that should be used.
-    - DRUPAL_TI_BEHAT_SELENIUM_VERSION="2.47.1"
+    - DRUPAL_TI_BEHAT_SELENIUM_VERSION="3.141.0"
     - DRUPAL_TI_BEHAT_DRIVER="selenium"
     # We use both chrome and firefox, but this makes chromedriver available.
     - DRUPAL_TI_BEHAT_BROWSER="chrome"
