@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## v4.31 - UNRELEASED WIP
+
+Feature(s)/Fixes:
+  - wetkit_test 7.x-4.13
+    - Updates to support newer php versions in CI/travis
+
 ## v4.30
 
 Security Update(s):
@@ -31,8 +37,6 @@ Feature(s)/Fixes:
     - Update File Entity (fieldable files) (file_entity) 7.x-2.25
     - Update Media (media) 7.x-2.21
 
-
-
 ## v4.29
 
 Feature(s)/Fixes:
@@ -51,9 +55,6 @@ Feature(s)/Fixes:
     - Update features (features) to 7.x-2.11 (#3012857)
     - Update diff (diff) to 7.x-3.4 (#3012857)
     - Update libraries (libraries) to 7.x-2.5 (#3012857)
-  - wetkit_test 7.x-4.12
-    - Update body selector more specific for issue introduced in (#3003591)
-
 
 ## v4.28
 

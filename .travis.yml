@@ -18,19 +18,11 @@ php:
 
 matrix:
   fast_finish: true
-  include:
+  allow_failures:
   - php: "7.2"
     env: DB=mysql UPGRADE=none
   - php: "7.2"
     env: DB=postgres UPGRADE=none
-  - php: "7.3"
-    env: DB=mysql UPGRADE=none
-  - php: "7.3"
-    env: DB=postgres UPGRADE=non
-
-# Firefox versioning
-addons:
-  firefox: "31.0esr"
 
 env:
   global:

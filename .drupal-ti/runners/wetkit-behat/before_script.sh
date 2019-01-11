@@ -20,11 +20,3 @@ drupal_ti_run_server
 # Start xvfb and selenium.
 drupal_ti_ensure_xvfb
 drupal_ti_ensure_webdriver
-
-# Force chromedriver to v2.28
-cd $DRUPAL_TI_BIN_DIR
-rm chromedriver
-wget http://chromedriver.storage.googleapis.com/2.28/chromedriver_linux64.zip
-unzip chromedriver_linux64.zip
-rm -f chromedriver_linux64.zip
-chmod a+x chromedriver
