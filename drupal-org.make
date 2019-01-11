@@ -48,10 +48,8 @@ projects[wetkit_pages][subdir] = custom
 projects[wetkit_search][version] = 4.5
 projects[wetkit_search][subdir] = custom
 
-projects[wetkit_test][version] = 4.x
+projects[wetkit_test][version] = 4.13
 projects[wetkit_test][subdir] = custom
-projects[wetkit_test][download][type] = git
-projects[wetkit_test][download][branch] = 7.x-4.x
 
 projects[wetkit_theme][version] = 4.5
 projects[wetkit_theme][subdir] = custom
