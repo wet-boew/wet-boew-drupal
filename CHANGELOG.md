@@ -1,6 +1,9 @@
 # CHANGELOG.md
 
-## v4.31 - UNRELEASED WIP
+## v4.31
+
+Security Update(s):
+  - Drupal Core 7.62 [SA-CORE-2019-002](https://www.drupal.org/sa-core-2019-002)
 
 Feature(s)/Fixes:
   - wetkit_test 7.x-4.13
