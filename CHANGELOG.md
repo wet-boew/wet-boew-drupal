@@ -3,7 +3,7 @@
 ## v4.31
 
 Security Update(s):
-  - Drupal Core 7.62 [SA-CORE-2019-002](https://www.drupal.org/sa-core-2019-002)
+  - Drupal Core 7.62 [SA-CORE-2019-001](https://www.drupal.org/sa-core-2019-001), [SA-CORE-2019-002](https://www.drupal.org/sa-core-2019-002)
 
 Feature(s)/Fixes:
   - wetkit_test 7.x-4.13
