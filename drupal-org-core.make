@@ -1,7 +1,7 @@
 api = 2
 core = 7.x
 
-projects[drupal][version] = 7.62
+projects[drupal][version] = 7.63
 projects[drupal][type] = core
 
 ; Patches for Drupal Core
