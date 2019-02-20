@@ -4,7 +4,7 @@
 
 Feature(s)/Fixe(s):
 
-  - Drupal Core 7.63
+  - Drupal Core 7.64
   - wetkit_core 7.x-4.31
     - Update Field Collection (field_collection) 7.x-1.0-beta13
     - Update Panopoly Magic (panopoly_magic) 7.x-1.60
