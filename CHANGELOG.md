@@ -13,8 +13,8 @@ Feature(s)/Fixe(s):
     - Update Bootstrap (bootstrap) 7.x-3.23
     - Update menu-link.func.php Issue #3021341 by markcarver, rschwab: Syntax error, unrecognized expression: #
   - wetkit_core 7.x-4.32
-	  - Update Chaos Tool Suite (ctools) 7.x-1.15
-	  - Update Panopoly Magic (panopoly_magic) 7.x-1.62
+    - Update Chaos Tool Suite (ctools) 7.x-1.15
+    - Update Panopoly Magic (panopoly_magic) 7.x-1.62
 
 ## v4.32
 
