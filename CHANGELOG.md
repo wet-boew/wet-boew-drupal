@@ -1,5 +1,21 @@
 # CHANGELOG.md
 
+## v4.33
+
+Security Update(s):
+  - wetkit_breadcrumbs 7.x-4.7
+    - Update Path Breadcrumbs (path_breadcrumbs) 7.x-3.4 [SA-CONTRIB-2019-027](https://www.drupal.org/sa-contrib-2019-027)
+  - wetkit_deployment 7.x-4.21
+    - Update service (services) 7.x-3.23 [SA-CONTRIB-2019-026](https://www.drupal.org/sa-contrib-2019-026)
+
+Feature(s)/Fixe(s):
+  - wetkit_bootstrap 7.x-4.25
+    - Update Bootstrap (bootstrap) 7.x-3.23
+    - Update menu-link.func.php Issue #3021341 by markcarver, rschwab: Syntax error, unrecognized expression: #
+  - wetkit_core 7.x-4.32
+	  - Update Chaos Tool Suite (ctools) 7.x-1.15
+	  - Update Panopoly Magic (panopoly_magic) 7.x-1.62
+
 ## v4.32
 
 Feature(s)/Fixe(s):

@@ -9,16 +9,16 @@ projects[wetkit_admin][subdir] = custom
 projects[wetkit_bean][version] = 4.8
 projects[wetkit_bean][subdir] = custom
 
-projects[wetkit_breadcrumbs][version] = 4.6
+projects[wetkit_breadcrumbs][version] = 4.7
 projects[wetkit_breadcrumbs][subdir] = custom
 
-projects[wetkit_core][version] = 4.31
+projects[wetkit_core][version] = 4.32
 projects[wetkit_core][subdir] = custom
 
 projects[wetkit_demo][version] = 4.4
 projects[wetkit_demo][subdir] = custom
 
-projects[wetkit_deployment][version] = 4.20
+projects[wetkit_deployment][version] = 4.21
 projects[wetkit_deployment][subdir] = custom
 
 projects[wetkit_images][version] = 4.6
@@ -74,7 +74,7 @@ projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_ember][version] = 4.6
 projects[wetkit_ember][type] = theme
 
-projects[wetkit_bootstrap][version] = 4.24
+projects[wetkit_bootstrap][version] = 4.25
 projects[wetkit_bootstrap][type] = theme
 
 projects[wetkit_shiny][version] = 4.0
