@@ -1,5 +1,14 @@
 # CHANGELOG.md
 
+## v4.34
+
+Security Update(s):
+  - wetkit_core 7.x-4.33
+    - Update Views (views) 7.x-3.21 [SA-CONTRIB-2019-034](https://www.drupal.org/sa-contrib-2019-034) [SA-CONTRIB-2019-035](https://www.drupal.org/sa-contrib-2019-035) [SA-CONTRIB-2019-036](https://www.drupal.org/sa-contrib-2019-036)
+Feature(s)/Fixe(s):
+  - wetkit_core 7.x-4.33
+    - Update Devel (devel) 7.x-1.7
+
 ## v4.33
 
 Security Update(s):
