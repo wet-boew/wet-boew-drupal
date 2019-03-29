@@ -2,6 +2,11 @@
 
 ## v4.36
 
+Security Update(s):
+
+  - wetkit_admin 7.x-4.9
+    - Update module_filter 7.x-2.2 [SA-CONTRIB-2019-042](https://www.drupal.org/sa-contrib-2019-042)
+
 Fixe(s):
 
   - wetkit_bean 7.x-4.9

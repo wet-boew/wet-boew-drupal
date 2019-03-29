@@ -3,7 +3,7 @@ core = 7.x
 
 ; WxT Foundation (Custom)
 
-projects[wetkit_admin][version] = 4.8
+projects[wetkit_admin][version] = 4.9
 projects[wetkit_admin][subdir] = custom
 
 projects[wetkit_bean][version] = 4.9
