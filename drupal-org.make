@@ -6,7 +6,7 @@ core = 7.x
 projects[wetkit_admin][version] = 4.8
 projects[wetkit_admin][subdir] = custom
 
-projects[wetkit_bean][version] = 4.8
+projects[wetkit_bean][version] = 4.9
 projects[wetkit_bean][subdir] = custom
 
 projects[wetkit_breadcrumbs][version] = 4.7

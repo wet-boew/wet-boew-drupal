@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## v4.36
+
+Fixe(s):
+
+  - wetkit_bean 7.x-4.9
+    - Revert patch for #2857677 since it breaks content deployment (#3044062)
+
 ## v4.35
 
 Security Update(s):
