@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## v4.37
+
+Security Update(s):
+
+  - wetkit_deployment 7.x-4.22
+    - Update services 7.x-3.24 [SA-CONTRIB-2019-043](https://www.drupal.org/sa-contrib-2019-043)
+
 ## v4.36
 
 Security Update(s):
