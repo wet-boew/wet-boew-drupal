@@ -1,21 +1,23 @@
 # CHANGELOG.md
 
+## v4.38
+
+Security Update(s):
+  - Drupal Core 7.66 [SA-CORE-2019-006](https://www.drupal.org/sa-core-2019-006)
+
 ## v4.37
 
 Security Update(s):
-
   - wetkit_deployment 7.x-4.22
     - Update services 7.x-3.24 [SA-CONTRIB-2019-043](https://www.drupal.org/sa-contrib-2019-043)
 
 ## v4.36
 
 Security Update(s):
-
   - wetkit_admin 7.x-4.9
     - Update module_filter 7.x-2.2 [SA-CONTRIB-2019-042](https://www.drupal.org/sa-contrib-2019-042)
 
 Fixe(s):
-
   - wetkit_bean 7.x-4.9
     - Revert patch for #2857677 since it breaks content deployment (#3044062)
 
