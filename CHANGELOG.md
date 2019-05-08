@@ -5,6 +5,8 @@
 Security Update(s):
   - Drupal Core 7.67 [SA-CORE-2019-007](https://www.drupal.org/sa-core-2019-007)
 
+**Please note Starting in April 2019 there will be no more new features integrated into the 7.x-4.x branch. Only security and minor bug fixes will be merged into the codebase for a period of 6 months. Users are strongly encouraged to use, upgrade, and contribute to the [Drupal 8 version of the distribution](https://www.drupal.org/project/wxt). If you want to discuss, comment on [this issue](https://www.drupal.org/project/wetkit/issues/3053513) on Drupal.org.
+
 ## v4.38
 
 Security Update(s):
