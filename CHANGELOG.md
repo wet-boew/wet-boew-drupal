@@ -14,6 +14,9 @@ Feature(s)/Fixe(s):
     - Update Views (views) 7.x-3.23
   - wetkit_deployment 7.x-4.23
     - Update services 7.x-3.25
+  - wetkit_wetboew 7.x-4.12
+    - Update WET-BOEW to 4.0.30
+  - [GCWeb version 5](https://www.drupal.org/project/wetkit/issues/3024655) (wetkit_bootstrap 7.x-4.26, wetkit_menu 7.x-4.7, wetkit_migrate 7.x-4.10, wetkit_layouts 7.x-4.9, wetkit_wetboew 7.x-4.12)
 
 ## v4.39
 
