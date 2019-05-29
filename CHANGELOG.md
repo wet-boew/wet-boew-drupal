@@ -1,11 +1,26 @@
 # CHANGELOG.md
 
+## v4.40
+
+Security Update(s):
+  - wetkit_core 7.x-4.34
+    - Update UUID (uuid) 7.x-1.3 [SA-CONTRIB-2019-052](https://www.drupal.org/sa-contrib-2019-052)
+
+Feature(s)/Fixe(s):
+  - wetkit_bootstrap 7.x-4.26
+    - Update Bootstrap (bootstrap) 7.x-3.25
+  - wetkit_core 7.x-4.34
+    - Update Panopoly Magic (panopoly_magic) 7.x-1.68
+    - Update Views (views) 7.x-3.23
+  - wetkit_deployment 7.x-4.23
+    - Update services 7.x-3.25
+
 ## v4.39
 
 Security Update(s):
   - Drupal Core 7.67 [SA-CORE-2019-007](https://www.drupal.org/sa-core-2019-007)
 
-**Please note Starting in April 2019 there will be no more new features integrated into the 7.x-4.x branch. Only security and minor bug fixes will be merged into the codebase for a period of 6 months. Users are strongly encouraged to use, upgrade, and contribute to the [Drupal 8 version of the distribution](https://www.drupal.org/project/wxt). If you want to discuss, comment on [this issue](https://www.drupal.org/project/wetkit/issues/3053513) on Drupal.org.
+**Please note Starting in April 2019 there will be no more new features integrated into the 7.x-4.x branch. Only security and minor bug fixes will be merged into the codebase for a period of 6 months. Users are strongly encouraged to use, upgrade, and contribute to the [Drupal 8 version of the distribution](https://www.drupal.org/project/wxt). If you want to discuss, comment on [this issue](https://www.drupal.org/project/wetkit/issues/3053513) on Drupal.org.**
 
 ## v4.38
 
