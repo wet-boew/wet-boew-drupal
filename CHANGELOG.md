@@ -1,5 +1,37 @@
 # CHANGELOG.md
 
+## v4.41
+
+Security Update(s):
+  - wetkit_admin 7.x-4.10
+    - Administration Views (admin_views) to 7.x-1.7 for [SA-CONTRIB-2019-076](https://www.drupal.org/sa-contrib-2019-076)
+  - wetkit_language 7.x-4.16
+    - Update Localization update (l10n_update) to 7.x-1.2 for [SA-CONTRIB-2019-072](https://www.drupal.org/sa-contrib-2019-072)
+
+Feature(s)/Fixe(s):
+  - wetkit_bootstrap 7.x-4.27
+    - Update Bootstrap (bootstrap) 7.x-3.26
+  - wetkit_core 7.x-4.35
+    - Update Field collection (field_collection) to 7.x-1.1
+    - Update Link (link) 7.x-1.7
+    - Update Panopoly Magic (panopoly_magic) 7.x-1.71
+    - Update UUID Features Integration (uuid_features) to 7.x-1.0-rc2
+  - wetkit_language 7.x-4.16
+    - Update Entity Translation (entity_translation) to 7.x-1.1
+    - Update Title (title) to 7.x-1.0-beta3
+  - wetkit_search 7.x-4.7
+    - Update Facet API (facetapi) to 7.x-1.6
+    - Update Facet API Bonus (facetapi_bonus) to 7.x-1.3
+  - wetkit_webform 7.x-4.18
+    - Update Webform (webform) 7.x-4.20
+  - wetkit_wetboew 7.x-4.13
+    - Update WET-BOEW to 4.0.32 and gcweb to 5.1
+  - wetkit_widgets 7.x-4.15
+    - Update File Entity (fieldable files) (file_entity) to 7.x-2.27
+    - Update Media (media) to 7.x-2.24
+  - wetkit_wysiwyg 7.x-4.15
+    - Update WYSIWYG (wysiwyg) to 7.x-2.6
+
 ## v4.40
 
 Security Update(s):
