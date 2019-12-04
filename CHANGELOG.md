@@ -19,7 +19,7 @@ Feature(s)/Fixe(s):
   - wetkit_language 7.x-4.16
     - Update Entity Translation (entity_translation) to 7.x-1.1
     - Update Title (title) to 7.x-1.0-beta3
-  - wetkit_search 7.x-4.7
+  - wetkit_search 7.x-4.8
     - Update Facet API (facetapi) to 7.x-1.6
     - Update Facet API Bonus (facetapi_bonus) to 7.x-1.3
   - wetkit_webform 7.x-4.18

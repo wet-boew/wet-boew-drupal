@@ -45,7 +45,7 @@ projects[wetkit_og][subdir] = custom
 projects[wetkit_pages][version] = 4.3
 projects[wetkit_pages][subdir] = custom
 
-projects[wetkit_search][version] = 4.7
+projects[wetkit_search][version] = 4.8
 projects[wetkit_search][subdir] = custom
 
 projects[wetkit_test][version] = 4.13
