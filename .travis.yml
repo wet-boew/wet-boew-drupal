@@ -9,6 +9,12 @@
 # Declare testing language
 language: php
 
+# Start MySQL and Postgres per move to xenial 
+# see https://docs.travis-ci.com/user/database-setup
+services:
+  - mysql
+  - postgres
+
 # Container infrastructure
 sudo: false
 
