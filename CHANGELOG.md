@@ -18,9 +18,9 @@ Feature(s)/Fixe(s):
     - Update Link (link) 7.x-1.7
     - Update Panopoly Magic (panopoly_magic) 7.x-1.71
     - Update UUID Features Integration (uuid_features) to 7.x-1.0-rc2
-  - wetkit_language 7.x-4.16
+  - wetkit_language 7.x-4.17
     - Update Entity Translation (entity_translation) to 7.x-1.1
-    - Update Title (title) to 7.x-1.0-beta3
+    - Update Title (title) to 7.x-1.0-beta3 (and fix draft titles issue #3100045)
   - wetkit_search 7.x-4.8
     - Update Facet API (facetapi) to 7.x-1.6
     - Update Facet API Bonus (facetapi_bonus) to 7.x-1.3
