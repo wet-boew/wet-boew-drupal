@@ -9,6 +9,8 @@ Security Update(s):
     - Update Localization update (l10n_update) to 7.x-1.2 for [SA-CONTRIB-2019-072](https://www.drupal.org/sa-contrib-2019-072)
 
 Feature(s)/Fixe(s):
+  - wetkit_bean 7.x-4.10
+    - Update features export
   - wetkit_bootstrap 7.x-4.27
     - Update Bootstrap (bootstrap) 7.x-3.26
   - wetkit_core 7.x-4.35
