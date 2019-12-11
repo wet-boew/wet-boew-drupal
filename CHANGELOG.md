@@ -1,11 +1,22 @@
 # CHANGELOG.md
 
+## v4.42
+
+Security Update(s):
+  - wetkit_webform 7.x-4.19
+    - Webform (webform) to 7.x-4.21 for [SA-CONTRIB-2019-096](https://www.drupal.org/sa-contrib-2019-096)
+
+Feature(s)/Fixe(s):
+  - wetkit_language 7.x-4.18
+    - Update Localization update (l10n_update) to 7.x-1.3
+
+
 ## v4.41
 
 Security Update(s):
   - wetkit_admin 7.x-4.10
     - Administration Views (admin_views) to 7.x-1.7 for [SA-CONTRIB-2019-076](https://www.drupal.org/sa-contrib-2019-076)
-  - wetkit_language 7.x-4.16
+  - wetkit_language 7.x-4.17
     - Update Localization update (l10n_update) to 7.x-1.2 for [SA-CONTRIB-2019-072](https://www.drupal.org/sa-contrib-2019-072)
 
 Feature(s)/Fixe(s):
