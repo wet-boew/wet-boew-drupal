@@ -10,7 +10,6 @@ Feature(s)/Fixe(s):
   - wetkit_language 7.x-4.18
     - Update Localization update (l10n_update) to 7.x-1.3
 
-
 ## v4.41
 
 Security Update(s):
