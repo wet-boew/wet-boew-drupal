@@ -1,4 +1,8 @@
 # CHANGELOG.md
+## v4.43
+
+Security Update(s):
+  - Drupal Core 7.69 [SA-CORE-2019-012](https://www.drupal.org/sa-core-2019-012)
 
 ## v4.42
 
