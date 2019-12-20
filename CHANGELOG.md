@@ -4,6 +4,9 @@
 Security Update(s):
   - Drupal Core 7.69 [SA-CORE-2019-012](https://www.drupal.org/sa-core-2019-012)
 
+Known Issues.:
+  - If you have included javascript files in your code for specific browsers using `$item['browsers']['IE'] === TRUE && $item['browsers']['!IE']` there could be an issue with this not getting added as expected. If you use these attributes please contribute to [#865536](https://www.drupal.org/project/drupal/issues/865536). As far as we can tell this isn't an issue in the distro.
+
 ## v4.42
 
 Security Update(s):
