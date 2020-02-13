@@ -1,4 +1,20 @@
 # CHANGELOG.md
+## v4.44
+
+Feature(s)/Fixe(s):
+  - wetkit_bootstrap 7.x-4.29
+    - (Commit: c0f07146 · Issue #3025528 by joel_osc: Another count() Warning message on wetkit_bootstrap_table())
+    - (Commit: 861dd143 · Issue #2986092 by smulvih2, mhowe91: Main and contentinfo roles causing W3C validation warnings for wetkit_bootstrap)
+    - (Commit: c1ef2179 · Issue #3102784 by rikarux: dcterms uses property attribute instead of name)
+  - wetkit_core 7.x-4.36
+    - Update Panolopoy magic (panopoly_magic) to 7.x-1.72
+  - wetkit_language 7.x-4.19
+    - Update Localization update (l10n_update) to 7.x-2.3
+  - wetkit_metatag 7.x-4.17
+    - Update metatag module (metatag) to 7.x-1.26
+  - wetkit_wetboew 7.x-4.15
+    - Update wet-boew to 4.0.33
+
 ## v4.43
 
 Security Update(s):

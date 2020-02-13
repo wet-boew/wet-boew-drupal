@@ -33,7 +33,7 @@ projects[wetkit_layouts][subdir] = custom
 projects[wetkit_menu][version] = 4.7
 projects[wetkit_menu][subdir] = custom
 
-projects[wetkit_metatag][version] = 4.16
+projects[wetkit_metatag][version] = 4.17
 projects[wetkit_metatag][subdir] = custom
 
 projects[wetkit_migrate][version] = 4.10
@@ -60,7 +60,7 @@ projects[wetkit_users][subdir] = custom
 projects[wetkit_webform][version] = 4.19
 projects[wetkit_webform][subdir] = custom
 
-projects[wetkit_wetboew][version] = 4.13
+projects[wetkit_wetboew][version] = 4.15
 projects[wetkit_wetboew][subdir] = custom
 
 projects[wetkit_widgets][version] = 4.15
@@ -74,7 +74,7 @@ projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_ember][version] = 4.6
 projects[wetkit_ember][type] = theme
 
-projects[wetkit_bootstrap][version] = 4.27
+projects[wetkit_bootstrap][version] = 4.29
 projects[wetkit_bootstrap][type] = theme
 
 projects[wetkit_shiny][version] = 4.0
