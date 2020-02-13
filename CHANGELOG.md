@@ -10,8 +10,8 @@ Feature(s)/Fixe(s):
     - Update Panolopoy magic (panopoly_magic) to 7.x-1.72
   - wetkit_language 7.x-4.19
     - Update Localization update (l10n_update) to 7.x-2.3
-  - wetkit_metatag 7.x-4.17
-    - Update metatag module (metatag) to 7.x-1.26
+  - wetkit_metatag 7.x-4.18
+    - Update metatag module (metatag) to 7.x-1.27
   - wetkit_wetboew 7.x-4.15
     - Update wet-boew to 4.0.33
 
