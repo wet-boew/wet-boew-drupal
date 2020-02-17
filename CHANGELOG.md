@@ -12,8 +12,10 @@ Feature(s)/Fixe(s):
     - Update Localization update (l10n_update) to 7.x-2.3
   - wetkit_metatag 7.x-4.18
     - Update metatag module (metatag) to 7.x-1.27
-  - wetkit_wetboew 7.x-4.15
-    - Update wet-boew to 4.0.33
+  - wekite_webform 7.x-4.20
+    - Updare webform module (webform) to 4.22
+  - wetkit_wetboew 7.x-4.14
+    - Update wet-boew to 4.0.31
 
 ## v4.43
 
