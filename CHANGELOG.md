@@ -14,8 +14,8 @@ Feature(s)/Fixe(s):
     - Update metatag module (metatag) to 7.x-1.27
   - wekite_webform 7.x-4.20
     - Updare webform module (webform) to 4.22
-  - wetkit_wetboew 7.x-4.14
-    - Update wet-boew to 4.0.31
+  - wetkit_wetboew 7.x-4.16
+    - Revert wet-boew to 4.0.30 due to JS erros in wet-boew 4.0.31 and up
 
 ## v4.43
 
