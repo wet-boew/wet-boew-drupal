@@ -1,4 +1,12 @@
 # CHANGELOG.md
+## v4.45-rc2
+
+Feature(s)/Fixe(s):
+  - wetkit_bootstrap 7.x-4.30-rc1
+    - Updated templates to accept gcweb v6.0
+  - wetkit_wetboew 7.x-4.17-rc2
+    - Update missing gcweb v6.0 variables
+
 ## v4.45-rc1
 
 Feature(s)/Fixe(s):

@@ -60,7 +60,7 @@ projects[wetkit_users][subdir] = custom
 projects[wetkit_webform][version] = 4.20
 projects[wetkit_webform][subdir] = custom
 
-projects[wetkit_wetboew][version] = 4.17-rc1
+projects[wetkit_wetboew][version] = 4.17-rc2
 projects[wetkit_wetboew][subdir] = custom
 
 projects[wetkit_widgets][version] = 4.15
@@ -74,7 +74,7 @@ projects[wetkit_wysiwyg][subdir] = custom
 projects[wetkit_ember][version] = 4.6
 projects[wetkit_ember][type] = theme
 
-projects[wetkit_bootstrap][version] = 4.29
+projects[wetkit_bootstrap][version] = 4.30-rc1
 projects[wetkit_bootstrap][type] = theme
 
 projects[wetkit_shiny][version] = 4.0
