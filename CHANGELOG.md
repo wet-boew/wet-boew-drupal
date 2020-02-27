@@ -1,4 +1,10 @@
 # CHANGELOG.md
+## v4.45-rc1
+
+Feature(s)/Fixe(s):
+  - wetkit_wetboew 7.x-4.17-rc
+    - Update WET-BOEW to 4.0.32 and added gcweb v6.0
+
 ## v4.44
 
 Feature(s)/Fixe(s):
