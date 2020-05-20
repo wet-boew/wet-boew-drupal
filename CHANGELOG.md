@@ -1,4 +1,16 @@
 # CHANGELOG.md
+## v4.46
+Security Update(s):
+  - Drupal Core 7.70 [SA-CORE-2020-002](https://www.drupal.org/sa-core-2020-002) / [SA-CORE-2020-003](https://www.drupal.org/sa-core-2020-003)
+
+Feature(s)/Fix(es):
+  - wetkit_core 7.x-4.49
+    - Update Advanced Help (advanced_help) to 7.x-1.6
+    - Update Menu Attributes (menu_attributes) to 7.x-1.1
+    - Update Views (for Drupal 7) (views) to 7.x-3.24
+  - wetkit_widgets 7.x-4.16
+    - Update Media (media) to 7.x-2.26
+
 ## v4.45-rc2
 
 Feature(s)/Fixe(s):
