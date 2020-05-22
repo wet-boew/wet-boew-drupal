@@ -1,4 +1,8 @@
 # CHANGELOG.md
+
+## v4.47
+Same as 4.46 which for some reason didn't build on drupal.org.
+
 ## v4.46
 Security Update(s):
   - Drupal Core 7.70 [SA-CORE-2020-002](https://www.drupal.org/sa-core-2020-002) / [SA-CORE-2020-003](https://www.drupal.org/sa-core-2020-003)
