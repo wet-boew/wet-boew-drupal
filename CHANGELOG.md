@@ -1,5 +1,22 @@
 # CHANGELOG.md
 
+## v4.49
+Feature(s)/Fix(es):
+  - wetkit_bootstrap 7.x-4.30
+    - Update templates to fix issue with gcweb 5/6
+
+## v4.48
+Feature(s)/Fix(es):
+  - wetkit_core 7.x-4.50
+    - Update Panolopoy magic (panopoly_magic) to 7.x-1.74
+  - wetkit_language 7.x-4.20
+    - Update Localization update (l10n_update) to 7.x-2.4
+  - wetkit_migrate 7.x-4.11
+    - Add patch [138436](https://www.drupal.org/files/issues/2020-05-21/migrate_extras-3138436-01.patch) to pass PHP 7.2 for Travis-CI
+  - wetkit_wetboew 7.x-4.18
+    - Upgrade wet-boew to 4.0.35
+    - Add Canada v6 theme
+
 ## v4.47
 Same as 4.46 which for some reason didn't build on drupal.org.
 
