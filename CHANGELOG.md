@@ -4,6 +4,14 @@
 Feature(s)/Fix(es):
   - wetkit_bootstrap 7.x-4.30
     - Update templates to fix issue with gcweb 5/6
+  - wetkit_core 7.x-4.51
+    - Update Views Bulk Operations (VBO) (views_bulk_operations) to 7.x-3.6
+  - wetkit_deployment 7.x-4.24
+    - Update Services (services) to 7.x-3.27 for [SA-CONTRIB-2020-022](https://www.drupal.org/sa-contrib-2020-022)
+  - wetkit_webform 7.x-4.21
+    - Update Webform (webform) to 7.x-4.23
+  - wetkit_widgets 7.x-4.17
+    - Update File Entity (fieldable files) (file_entity) to 7.x-4.17
 
 ## v4.48
 Feature(s)/Fix(es):
