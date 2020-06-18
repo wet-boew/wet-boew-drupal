@@ -1,5 +1,17 @@
 # CHANGELOG.md
 
+## v4.50
+Security Update(s):
+  - Drupal Core 7.72 [SA-CORE-2020-004](https://www.drupal.org/sa-core-2020-004)
+
+Feature(s)/Fix(es):
+  - wetkit_language 7.x-4.21
+    - Update Internationalization (i18n) to 7.x-1.27
+  - wetkit_widgets 7.x-4.18
+    - Update File Entity (fieldable files) (file_entity) to 7.x-2.30
+
+
+
 ## v4.49
 Feature(s)/Fix(es):
   - wetkit_bootstrap 7.x-4.30
