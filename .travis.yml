@@ -9,7 +9,7 @@
 # Declare testing language
 language: php
 
-# Start MySQL and Postgres per move to xenial 
+# Start MySQL and Postgres per move to xenial
 # see https://docs.travis-ci.com/user/database-setup
 services:
   - mysql
@@ -21,14 +21,10 @@ sudo: false
 # Language versioning
 php:
   - 7.1
+  - 7.2
 
 matrix:
   fast_finish: true
-  allow_failures:
-    - php: "7.2"
-      env: "DB=mysql UPGRADE=none"
-    - php: "7.2"
-      env: "DB=postgres UPGRADE=none"
   include:
     - php: "7.2"
       env: "DB=mysql UPGRADE=none"
