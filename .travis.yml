@@ -22,6 +22,7 @@ sudo: false
 php:
   - 7.1
   - 7.2
+  - 7.3 
 
 matrix:
   fast_finish: true
@@ -30,7 +31,11 @@ matrix:
       env: "DB=mysql UPGRADE=none"
     - php: "7.2"
       env: "DB=postgres UPGRADE=none"
-
+    - php: "7.3"
+      env: "DB=mysql UPGRADE=none"
+    - php: "7.3"
+      env: "DB=postgres UPGRADE=none"
+      
 # Firefox versioning
 addons:
   firefox: "31.0esr"
