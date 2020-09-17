@@ -1,5 +1,18 @@
 # CHANGELOG.md
 
+## v4.51
+Security Update(s):
+  - Drupal Core 7.73 [SA-CORE-2020-007](https://www.drupal.org/sa-core-2020-007)
+
+Feature(s)/Fix(es):
+  - wetkit_core 7.x-4.53
+    - Removed [code_cleanup-2856088-5.patch](http://drupal.org/files/issues/panels_3_9_code_cleanup-2856088-5.patch) as it is no longer needed (comitted upstream in [f9f0eaa](https://git.drupalcode.org/project/panels/commit/f9f0eaa)).
+    - Update Panels (panels) to 7.x-3-10
+    - Update Panolopoy magic (panopoly_magic) to 7.x-1.75
+    - Update Views Bootstrap (views_bootstrap) to 7.x-3.3
+  - wetkit_bootstrap 7.x-4.31
+    - GCWeb 5/6: Fix Search bar displaying Search instead of magnifying glass
+
 ## v4.50
 Security Update(s):
   - Drupal Core 7.72 [SA-CORE-2020-004](https://www.drupal.org/sa-core-2020-004)
@@ -9,8 +22,6 @@ Feature(s)/Fix(es):
     - Update Internationalization (i18n) to 7.x-1.27
   - wetkit_widgets 7.x-4.18
     - Update File Entity (fieldable files) (file_entity) to 7.x-2.30
-
-
 
 ## v4.49
 Feature(s)/Fix(es):
