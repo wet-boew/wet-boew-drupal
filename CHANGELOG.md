@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## v4.52
+Feature(s)/Fix(es):
+  - wetkit_core 7.x-4.54
+    - Update Panolopoy magic (panopoly_magic) to 7.x-1.76
+  - wetkit_wetboew 7.x-4.19
+    - Update gcweb-theme-v6 package to v6.1
+
 ## v4.51
 Security Update(s):
   - Drupal Core 7.73 [SA-CORE-2020-007](https://www.drupal.org/sa-core-2020-007)
