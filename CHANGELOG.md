@@ -6,6 +6,8 @@ Feature(s)/Fix(es):
     - Update Panolopoy magic (panopoly_magic) to 7.x-1.76
   - wetkit_wetboew 7.x-4.19
     - Update gcweb-theme-v6 package to v6.1
+  - wetkit_bootstrap 7.x-4.32
+    - Added customization option to modify HTML element properties in page template.
 
 ## v4.51
 Security Update(s):
