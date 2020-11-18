@@ -1,5 +1,15 @@
 # CHANGELOG.md
 
+## v4.53
+Security Update(s):
+  - Drupal Core 7.74 [SA-CORE-2020-012](https://www.drupal.org/sa-core-2020-012)
+
+Feature(s)/Fix(es):
+  - wetkit_core 7.x-4.55
+    - Update Chaos Tool Suite (ctools) to 7.x-1.17
+    - Update Features (features) to 7.x-2.12
+    - Udpate Views Bootstrap (views_bootstrap) to 7.x-3.5
+
 ## v4.52
 Feature(s)/Fix(es):
   - wetkit_core 7.x-4.54
