@@ -134,8 +134,9 @@ postgres:
   encoding: utf8
 
 before_install:
-  - composer self-update
+  - composer self-update --1
   - composer global require "lionsad/drupal_ti:1.4.4"
+  - composer global update --1
   - drupal-ti before_install
 
 install:
