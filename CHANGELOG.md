@@ -1,5 +1,23 @@
 # CHANGELOG.md
 
+## v4.54
+Security Update(s):
+  - Drupal Core 7.78 [SA-CORE-2021-001](https://www.drupal.org/sa-core-2021-001)
+
+Feature(s)/Fix(es):
+  - wetkit_core 7.x-4.56
+    - Update Chaos Tool Suite (ctools) to 7.x-1.18
+    - Update Features (features) to 7.x-2.13
+    - Update Panopoly Magic (panopoly_magic) to 7.x-1.79
+    - Update Field Collection (field_collection) to 7.x-1.2
+    - Removed [ctools-2399313-1-Relationship-optional-context.patch](https://www.drupal.org/files/issues/ctools-2399313-1-Relationship-optional-context.patch) as it is no longer needed (comitted upstream in [4f4c425](https://git.drupalcode.org/project/ctools/commit/4f4c425)).
+  - wetkit_wetboew 7.x-4.20
+    - Update WET-BOEW to 4.0.41.
+    - Update GCWeb (Canada.ca) theme to 9.1.0.
+    - Refactored GCWeb version naming theme to Canada (GCWeb v9.1.0) and Canada Legacy (v4.0.29).
+  - wetkit_bootstrap 7.x-4.33
+    - Refactored theme template suggestions in accordance with the changes in wetkit_wetboew to -gcweb and -gcweb-legacy.
+
 ## v4.53
 Security Update(s):
   - Drupal Core 7.74 [SA-CORE-2020-012](https://www.drupal.org/sa-core-2020-012)
