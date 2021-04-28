@@ -5,4 +5,4 @@ core = 7.x
 includes[] = drupal-org-core.make
 
 projects[wetkit][type] = profile
-projects[wetkit][version] = 4.54
+projects[wetkit][version] = 4.55

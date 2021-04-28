@@ -1,5 +1,20 @@
 # CHANGELOG.md
 
+## v4.55
+Security Update(s):
+  - Drupal Core 7.80 [SA_CORE-2021-002](https://www.drupal.org/sa-core-2021-002)
+
+Feature(s)/Fix(es):
+  - wetkit_core 7.x-4.57
+    - Update Chaos Tool Suite )ctools) to 7.x-1.19
+    - Update Date (date) to 7.x-2.11
+    - Update Panopoly Magic (panopoly_magic) to 7.x-1.80
+  - wetkit_language 7.x-4.22
+    - Update Internationalization (i18n) to 7.x-1.31
+    - Update Title (title) to 1.0-beta4
+  - wetkit_widget 7.x-4.19
+    - Update Media (media) to 7.x-2.27
+
 ## v4.54
 Security Update(s):
   - Drupal Core 7.78 [SA-CORE-2021-001](https://www.drupal.org/sa-core-2021-001)
