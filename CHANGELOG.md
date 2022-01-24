@@ -1,5 +1,34 @@
 # CHANGELOG.md
 
+## v4.56
+Security Update(s):
+  - Drupal Core 7.87 [SA_CORE-2022-001](https://www.drupal.org/sa-core-2022-001)
+
+Feature(s)/Fix(es):
+  - wetkit_admin 7.x-4.11
+    - Update Administration Views (admin_views) to 7.x-1.8
+  - wetkit_core 7.x-4.58
+    - Update Chaos Tool Suite (ctools) to 7.x-1.20
+    - Update Date (date) to 7.x-2.12
+    - Update Entity API (entity) to 7.x-1.10
+    - Update Menu (menu_block) to 7.x-2.9
+    - Update Panopoly Magic (panopoly_magic) to 7.x-1.85
+    - Update Rules (rules) to 7.x-2.13
+    - Update Token (token) to 7.x-1.9
+    - Update Views (views) to 7.x-3.25
+  - wetkit_language 7.x-4.23
+    - Update Localization (l10n_update) to 7.x-2.6
+  - wetkit_metatag 7.x-4.19
+    - Update Metatag (metatag) to 7.x-1.28
+  - wetkit_search 7.x-4.9
+    - Update Facet API (facetapi) to 7.x-1.9
+  - wetkit_webform 7.x-4.22
+    - Update Webform (webform) to 7.x-4.24
+  - wetkit_wysiwyg 7.x-4.16
+    - Update LinkIT (linkit) to 7.x-3.5
+    - Update WYSIWYG (wysiwyg) to 7.x-2.9
+    - Update CKEditor to 4.17.1
+
 ## v4.55
 Security Update(s):
   - Drupal Core 7.80 [SA_CORE-2021-002](https://www.drupal.org/sa-core-2021-002)

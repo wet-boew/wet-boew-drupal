@@ -1,12 +1,11 @@
 api = 2
 core = 7.x
 
-projects[drupal][version] = 7.80
+projects[drupal][version] = 7.87
 projects[drupal][type] = core
 
 ; Patches for Drupal Core
 projects[drupal][patch][405360] = http://drupal.org/files/issues/aria-describedby_2.patch
-projects[drupal][patch][460408] = http://drupal.org/files/issues/menu-access_unpublished-nodes_460408-157.patch
 projects[drupal][patch][728702] = http://drupal.org/files/issues/install-redirect-on-empty-database-728702-36.patch
 ; This needs to be rerolled to apply cleanly and work due to changes in 7.68 #
 projects[drupal][patch][865536] = https://www.drupal.org/files/issues/2019-12-18/Drupal-core--865536-263--brower-key-for-js-do-not-test.patch
